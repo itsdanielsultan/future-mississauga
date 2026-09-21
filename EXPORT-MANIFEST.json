@@ -1,12 +1,17 @@
 {
   "edition": "Transit Revamp",
-  "siteOrigin": "https://itsdanielsultan.github.io/future-mississauga/",
+  "siteOrigin": "https://futuremississauga.com/",
   "finalRenderLockAcknowledged": true,
   "files": [
     {
       "file": ".nojekyll",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "CNAME",
+      "bytes": 22,
+      "sha256": "69b7e2d297a684bab475321326f08f913676ce1ac3e12909f95c28a2f6060d47"
     },
     {
       "file": "app.js",
@@ -575,8 +580,18 @@
     },
     {
       "file": "explore.html",
-      "bytes": 11193,
-      "sha256": "96fd4004312881450dc1b3f33f80db4df5b3cb3970200ade035bd86b4ca6294d"
+      "bytes": 11101,
+      "sha256": "889bfc0dc81e9a28aa03d3ae87c292c146224505952407519ede092659d17399"
+    },
+    {
+      "file": "gallery.css",
+      "bytes": 12005,
+      "sha256": "cefd2fdb0ad1c3b2fd1a3fe0cbc19fd62fa6c4197de1175016898273976c8409"
+    },
+    {
+      "file": "gallery.js",
+      "bytes": 6216,
+      "sha256": "75c88e9240600d4594f0b415231875cf971d3a786af7f1c270ba12ac9969b071"
     },
     {
       "file": "gallery/Downtown-transformation.mp4",
@@ -754,19 +769,9 @@
       "sha256": "e73263fad70a9e64eee02e792df9db66d5d6854900d5c06d3e864ea1ecb41cdf"
     },
     {
-      "file": "gallery.css",
-      "bytes": 12005,
-      "sha256": "cefd2fdb0ad1c3b2fd1a3fe0cbc19fd62fa6c4197de1175016898273976c8409"
-    },
-    {
-      "file": "gallery.js",
-      "bytes": 6216,
-      "sha256": "75c88e9240600d4594f0b415231875cf971d3a786af7f1c270ba12ac9969b071"
-    },
-    {
       "file": "index.html",
-      "bytes": 13813,
-      "sha256": "8c8e890c59db850cc5baae9314582820dfc19c004ebe81751bbb0d92e40e5447"
+      "bytes": 13721,
+      "sha256": "c740e785a9f0e2520cf3cc816f2229f946714090843cc766922e006c72cbd8f5"
     },
     {
       "file": "licenses/CREDITS.md",
@@ -1510,13 +1515,13 @@
     },
     {
       "file": "robots.txt",
-      "bytes": 98,
-      "sha256": "e355868145a6cf23b52b533fc9e49ebc5a186671e0d94ac2f1df6ee6a5330b08"
+      "bytes": 75,
+      "sha256": "188b312502b202cce579216e9cac953d01821c17a86b741ead0cc1a541ed7b98"
     },
     {
       "file": "sitemap.xml",
-      "bytes": 271,
-      "sha256": "f2d5e185d3259f8d8864daa0597560054f7ebff3aa83c4c50fee1bbb9e03a3e6"
+      "bytes": 225,
+      "sha256": "a6ff4311f702d28a8442552f376bb9c5b4fcba72876ab1dd648a377a4e2dc287"
     },
     {
       "file": "style.css",
@@ -1619,12 +1624,13 @@
       "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
     }
   ],
-  "publishedBytes": 760586649,
+  "publishedBytes": 760586418,
   "originalPNGCount": 33,
   "originalPNGsByteIdentical": true,
   "hostMediaReferencesRewritten": 79,
   "privateCorrespondenceIncluded": false,
   "rawSourceArchivesIncluded": false,
   "sceneFilesIncluded": false,
-  "originalBackupModified": false
+  "originalBackupModified": false,
+  "publicationDomain": "futuremississauga.com"
 }
