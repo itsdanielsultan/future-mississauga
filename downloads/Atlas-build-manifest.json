@@ -1,10 +1,10 @@
 {
   "edition": "Transit Depth 2026-09-21",
-  "builtAt": "2026-09-21T21:34:46.316694+00:00",
+  "builtAt": "2026-09-21T23:01:31.586535+00:00",
   "reviewDate": "2026-09-20",
   "file": "Future-Mississauga-Atlas.pdf",
-  "bytes": 24464489,
-  "sha256": "33ba50e63a5b9efb5ea818e7376549b21552ce956a2f6adadaa3f6832f79fda6",
+  "bytes": 24403010,
+  "sha256": "a430c346df5e7eef27805c28eea95813e3e015c07f2aa559b4ea61f1f6f8d34b",
   "pageCount": 35,
   "sourceImageCount": 33,
   "sourceImageDimensions": [
@@ -36,8 +36,6 @@
     "all35PagesVisuallyReviewedAsContactSheets": true,
     "allCaptionStripsVisuallyReviewed": true,
     "fullPageChecks": [
-      5,
-      6,
       34,
       35
     ],
@@ -552,5 +550,50 @@
     }
   ],
   "limitations": "Source and construction observations have different dates. M City reconstructions, Absolute interpolation, selected concept models and transit profiles retain their cited uncertainty; no common completion year or current aerial survey is claimed. Inland water levels are terrain-derived display estimates. Transit routes obey scene depth: buildings, bridges and terrain intentionally occlude segments behind them; continuity in route data does not imply that every segment is visible. Construction tree crowns use future-envelope clearances; the landscaping is not a dated construction survey.",
-  "transitDepthEvidence": "research/transit-depth/Geometry-depth-correction.json"
+  "transitDepthEvidence": "research/transit-depth/Geometry-depth-correction.json",
+  "typography": {
+    "family": "Bricolage Grotesque",
+    "scope": "All PDF text",
+    "instances": [
+      {
+        "role": "Body",
+        "file": "fonts/bricolage-grotesque/BricolageGrotesque-TextRegular.ttf",
+        "postScriptName": "BricolageGrotesqueAtlas-TextRegular",
+        "axes": {
+          "wght": 400,
+          "opsz": 14,
+          "wdth": 100
+        },
+        "bytes": 91140,
+        "sha256": "459062161e7b895f1c5fe78344a8bf1f8d3d5395e304e2fc67f3920c921c7703"
+      },
+      {
+        "role": "BodyBold",
+        "file": "fonts/bricolage-grotesque/BricolageGrotesque-TextSemiBold.ttf",
+        "postScriptName": "BricolageGrotesqueAtlas-TextSemiBold",
+        "axes": {
+          "wght": 600,
+          "opsz": 14,
+          "wdth": 100
+        },
+        "bytes": 91236,
+        "sha256": "76902f8c3ce2cb8b9cd12770996257e5ae80c036f9cf1f8170b707842d7f2162"
+      },
+      {
+        "role": "Display",
+        "file": "fonts/bricolage-grotesque/BricolageGrotesque-DisplaySemiBold.ttf",
+        "postScriptName": "BricolageGrotesqueAtlas-DisplaySemiBold",
+        "axes": {
+          "wght": 600,
+          "opsz": 48,
+          "wdth": 100
+        },
+        "bytes": 91252,
+        "sha256": "7a1134e51e9a90e76999946f102bb1a4179f9209404e58c875321b322553eaef"
+      }
+    ],
+    "provenance": "licenses/BricolageGrotesque-Atlas-provenance.json",
+    "license": "licenses/BricolageGrotesque-OFL.txt"
+  },
+  "fontCredit": "Bricolage Grotesque, Copyright 2022 The Bricolage Grotesque Project Authors. Embedded static instances from the official Google Fonts variable font, licensed under SIL Open Font License 1.1."
 }
