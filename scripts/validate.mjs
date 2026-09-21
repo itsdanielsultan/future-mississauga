@@ -134,6 +134,7 @@ export async function validate(site = join(ROOT, 'public')) {
       assert(!/["'`]\/(?:api|auth|media)\//.test(text), 'Server-dependent request remains: ' + name);
     }
     if (extname(file) === '.html') {
+      assert(!/(?:src|poster)\s*=\s*["']gallery\/originals\//.test(text), 'Full-size original used as a displayed HTML image: ' + name);
       const refs = [...text.matchAll(/(?:src|href|poster)\s*=\s*["']([^"']+)["']/g)].map(m => m[1]);
       for (const ref of refs) {
         localReference(site, names, file, ref, 'HTML');
@@ -166,9 +167,23 @@ export async function validate(site = join(ROOT, 'public')) {
     assert.equal(header.readUInt32BE(16), picture.width);
     assert.equal(header.readUInt32BE(20), picture.height);
     assert.equal(picture.width, 3840, 'Expected original 4K width: ' + name);
+    const preview = picture.display;
+    assert(preview, 'Missing half-size display picture: ' + name);
+    assert.equal(preview.url, `gallery/previews/${picture.sha256.slice(0,16)}/${name}`);
+    assert.equal(preview.sourceSHA256, picture.sha256, 'Display picture refers to a stale master: ' + name);
+    assert.equal(preview.scale, 0.5);
+    assert.equal(preview.width, picture.width / 2, 'Display width must be exactly half: ' + name);
+    assert.equal(preview.height, picture.height / 2, 'Display height must be exactly half: ' + name);
+    const displayPath = join(site, preview.url);
+    assert.equal((await stat(displayPath)).size, preview.bytes, 'Display PNG byte count mismatch: ' + name);
+    assert.equal(await sha(displayPath), preview.sha256, 'Display PNG checksum mismatch: ' + name);
+    const displayHeader = await readFile(displayPath);
+    assert.equal(displayHeader.subarray(0, 8).toString('hex'), '89504e470d0a1a0a');
+    assert.equal(displayHeader.readUInt32BE(16), preview.width);
+    assert.equal(displayHeader.readUInt32BE(20), preview.height);
   }
   const documentLinks = await validateDocumentLinks(site);
-  const report = {files: files.length, publishedBytes: bytes, originalPNGs: entries.length, modelDownloads, ...documentLinks, districtMetadata, PNGchecksumsVerified: true, noHostedRuntime: true, noPrivateArtifacts: true};
+  const report = {files: files.length, publishedBytes: bytes, originalPNGs: entries.length, halfSizeDisplayPNGs: entries.length, modelDownloads, ...documentLinks, districtMetadata, PNGchecksumsVerified: true, noHostedRuntime: true, noPrivateArtifacts: true};
   console.log(JSON.stringify(report, null, 2));
   return report;
 }

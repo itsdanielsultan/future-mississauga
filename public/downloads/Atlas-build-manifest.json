@@ -1,10 +1,10 @@
 {
-  "edition": "Transit Revamp 2026-09-20",
-  "builtAt": "2026-09-21T11:15:08.607508+00:00",
+  "edition": "Transit Depth 2026-09-21",
+  "builtAt": "2026-09-21T21:34:46.316694+00:00",
   "reviewDate": "2026-09-20",
   "file": "Future-Mississauga-Atlas.pdf",
-  "bytes": 24601365,
-  "sha256": "20e74b268e85f7fed3ed70510769695e6c90168a456412f474e1e9bbd60267cc",
+  "bytes": 24464489,
+  "sha256": "33ba50e63a5b9efb5ea818e7376549b21552ce956a2f6adadaa3f6832f79fda6",
   "pageCount": 35,
   "sourceImageCount": 33,
   "sourceImageDimensions": [
@@ -30,7 +30,7 @@
   "linkedProjectSourceURLs": 376,
   "refinementAssets": 24,
   "modelManifestSHA256": "b059f609930ca3d15477bf207bb6d1e2c9eaf632212fe2fec83d39d14b683824",
-  "inputLockedAt": "2026-09-21T10:28:05.089643+00:00",
+  "inputLockedAt": "2026-09-21T19:58:07.864526+00:00",
   "validation": {
     "allPagesRenderedBy": "Poppler pdftoppm",
     "all35PagesVisuallyReviewedAsContactSheets": true,
@@ -48,10 +48,32 @@
     "all33CurrentRenderSourcesVerified": true,
     "unchangedLockedInputs": 232,
     "evidenceURLCheck": {
+      "checkedAt": "2026-09-21T21:31:36.241083+00:00",
       "distinctURLs": 54,
-      "http200": 50,
-      "notFoundOrGone": 0,
-      "accessLimitedOrUnverified": 4,
+      "successes": 50,
+      "definitelyMissing": [],
+      "accessLimitedOrUnverified": [
+        {
+          "url": "https://urbantoronto.ca/",
+          "status": 403,
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://urbantoronto.ca/news/2024/12/mississaugas-high-point-passes-exchange-district-condos.57488",
+          "status": 403,
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://www.i-mad.com/projects/absolute-towers",
+          "status": 429,
+          "error": "HTTP Error 429: Too Many Requests"
+        },
+        {
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/01/22112618/OZ-25-17-W1-Notice-of-Passing-public-notice.pdf",
+          "status": 403,
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
       "note": "403 responses denote access restrictions, not proof of a missing page. URL availability does not validate every model claim."
     }
   },
@@ -204,9 +226,9 @@
         3840,
         2400
       ],
-      "bytes": 15528460,
-      "sha256": "d6efc96576a9b1f5a4e508f1fcaa5dd3108fef3094b0a4caca5fc294e4fccc9c",
-      "pixelSHA256": "6b43430fa3a5fcaef0c52787668b2e32fbd7e7bd3bdace5f79387a8a2fa77331"
+      "bytes": 15583638,
+      "sha256": "e16d9350c55994d33bcae45056defd218aeebd77082a8a6d7706d2a35b591800",
+      "pixelSHA256": "3dea237d657d338bd4f2a3f3466764a61230946b06f58e326dcda14a23875d4a"
     },
     {
       "file": "renders/cooksville-future.png",
@@ -214,9 +236,9 @@
         3840,
         2400
       ],
-      "bytes": 15794737,
-      "sha256": "e297af529410220fc24d6c2e98970e36e2ef9c63efe665cf5e3f9d92715a7a13",
-      "pixelSHA256": "0449383060aa118120bcf7f7edfdbe827c17f8100982af45845927da22ee93d5"
+      "bytes": 15834506,
+      "sha256": "0f80e034f24c38b3f271212aaae552548ab3bfe91d8f80b2d806aac719cd80bd",
+      "pixelSHA256": "98a74e3343bce0af3a82e197e24dff04c2f88c1a76cf458fb173ec0239935445"
     },
     {
       "file": "renders/uptown-future.png",
@@ -224,9 +246,9 @@
         3840,
         2400
       ],
-      "bytes": 15929070,
-      "sha256": "9c8a3da6cd7fe0df2cdb8572d9f0a44b2903d133514f298867bd41b07c941c21",
-      "pixelSHA256": "0de9e0d0953017cf25b498c5fe295016e5c9ae3a0047cce06bdb0e1daf82bf27"
+      "bytes": 15990232,
+      "sha256": "4e6699670d68d1bacd80da88eed5400b22272c5c307184d8f27d97a1231430a7",
+      "pixelSHA256": "ebad7edb01a507e4c73242d3a9b3c38cd27c1cff3b486a2dfb5969633a11dead"
     },
     {
       "file": "renders/dixie-applewood-future.png",
@@ -234,9 +256,9 @@
         3840,
         2400
       ],
-      "bytes": 16386334,
-      "sha256": "4a046f6009290b7072a2149e3dc38c95f97e35f05318b86f15ea5ef6c4728405",
-      "pixelSHA256": "94b3b42c78dcc4a7461ec0bc4f88708178510efa93fb7fd271b7aa2d16a90cb7"
+      "bytes": 16401356,
+      "sha256": "177da4016b694758320f8fa3fa321e21b38f8f123031a69e3aca0048ce7e57e9",
+      "pixelSHA256": "4de921731a077fe1c28d7075cbc554c5f781cd8582a7bdc167d4fcc2778ec58d"
     },
     {
       "file": "renders/erindale-future.png",
@@ -244,9 +266,9 @@
         3840,
         2400
       ],
-      "bytes": 18804864,
-      "sha256": "830492c85e7bfeb4b00dbcd4470ee93cda4f40132226c9aa456422147ceeab9f",
-      "pixelSHA256": "08f9bbc73a9bed4f920b4ce78e48d0f35196f7b4888165d84dc02401c77fc9a2"
+      "bytes": 18824638,
+      "sha256": "75ac2b4714df7db36bb0a1fb52813bc3d10fcc4061ff25d5a20b038cd9d6919f",
+      "pixelSHA256": "3efa71c5e8209141128add78ff41456348526900f412a2485b48276dec0e611d"
     },
     {
       "file": "renders/heartland-future.png",
@@ -254,9 +276,9 @@
         3840,
         2400
       ],
-      "bytes": 14622393,
-      "sha256": "f3d07f9c81656fd3989954c3c7bb901568bb33e3739b242209e08fec248cc284",
-      "pixelSHA256": "c8f3c90e3d9f645b889dd888761ed463bb7c1649b0af72b491039cc705473dab"
+      "bytes": 14654800,
+      "sha256": "3c99b7de150f15534db9f10f615e4cac5786cc86c2dab17fc219f2a89dd3d05b",
+      "pixelSHA256": "45df9ecfb62ac1d42e391fa4b0d447bc5a7011336b6447978c34a99859c94d14"
     },
     {
       "file": "renders/citywide-future.png",
@@ -264,9 +286,9 @@
         3840,
         2400
       ],
-      "bytes": 13823019,
-      "sha256": "acacfcd6a102a6fd0257adfa11dd6b95cb2f75a816a6760da3c9614232994df2",
-      "pixelSHA256": "cfd6755d376c19584f4c1ac995421491f1d935901f6862630c72ab78cfba37d9"
+      "bytes": 13818255,
+      "sha256": "61834647a27f4f8da05ee107ee072cc6b1919687ed819ab1f671655343c4585d",
+      "pixelSHA256": "6097a6ca5bcd9000ec0bdad6e2c75134ebbfb04a30f1db80311fe5ce04af153a"
     },
     {
       "file": "renders/port-credit-future.png",
@@ -274,9 +296,9 @@
         3840,
         2400
       ],
-      "bytes": 15774286,
-      "sha256": "88196b4051bae3c48a43297753077d605103d2a0424104ba440cf7eacd638196",
-      "pixelSHA256": "87afa87a834dbf451f8592520de837e76803a73415cedcaa3cfcea66031e24d8"
+      "bytes": 15796411,
+      "sha256": "a5b73f54d0854bec7853f60326ec3f2efe43b2687dbc29b79df07cb227dbeea6",
+      "pixelSHA256": "5c6e6c0c099413eb721987a846144abe80bef6ec0f753d830614917a8100e593"
     },
     {
       "file": "renders/lakeview-future.png",
@@ -284,9 +306,9 @@
         3840,
         2400
       ],
-      "bytes": 13637341,
-      "sha256": "72844f58f9c0bc643c82b4529f338398d20ba8e9d4a24e1bb6f38db73c137fbc",
-      "pixelSHA256": "f11a5fc2744890bc4e6262470ce66bae03f8f130ac93f9953be0f4e988749461"
+      "bytes": 13655178,
+      "sha256": "420a2dbc3b022b03ff416f125a7a6d71dd37fcfbdf3eaf952e87c1506002d774",
+      "pixelSHA256": "b06dd6d595ffca37500d3500feaa316720ee7e6a4fdfc04014d61586d316d755"
     },
     {
       "file": "renders/clarkson-future.png",
@@ -294,9 +316,9 @@
         3840,
         2400
       ],
-      "bytes": 15208854,
-      "sha256": "480e0da765ab0fd403e30362a3b6e6f6ba4d7eaa5fade3499c34630db8089308",
-      "pixelSHA256": "1cfad3d7489c165fa98afd456c932b1ca7ee7f06a7c470bc7a49cb9d89c0381a"
+      "bytes": 15224193,
+      "sha256": "533ceb5357ca1dcb57b0fc0db6b7334f93d6bd0224bccf14db1a22c27d4e2090",
+      "pixelSHA256": "566e68b550a78a0d8d1dacca7a7984bbb462faa151de9835688519a722191697"
     },
     {
       "file": "renders/downtown-existing.png",
@@ -304,9 +326,9 @@
         3840,
         2400
       ],
-      "bytes": 15484964,
-      "sha256": "e171d7c6b3e86966cd662ca0d2aea53634b09f2f5d7c81c4e6695e91c92e726a",
-      "pixelSHA256": "117a07d3f6b31e98c5d1ce5c0e06da7df1e0b5dbdeb6b7350c85ee7b8e66f952"
+      "bytes": 15514524,
+      "sha256": "8957aeec063d1f3a36ca523c3f8293148c2c580cba83ef290ece061b3d931c5c",
+      "pixelSHA256": "1ed63b2ed31edf4a484b16a16f2051f989ba82a4df0fc07e7ff70b58a5f62048"
     },
     {
       "file": "renders/port-credit-existing.png",
@@ -314,9 +336,9 @@
         3840,
         2400
       ],
-      "bytes": 15684244,
-      "sha256": "0c54e46e84c675084eeb1d535171c1f9fbf2b0cd04ff897c2b19bc4cd52a621b",
-      "pixelSHA256": "77484f2ee203a60abdf5205b9ffea1d03b714b45a2b517fc6b3566ea0dd1eff2"
+      "bytes": 15705054,
+      "sha256": "a683bbffd25ca8b6527dcaa2411c14e7039e1f4dc412f836f386606d7326b04d",
+      "pixelSHA256": "10a41587aeadf332d279b907289dede58bedb7d15b86ea3518b3cb0485b3ad39"
     },
     {
       "file": "renders/lakeview-existing.png",
@@ -324,9 +346,9 @@
         3840,
         2400
       ],
-      "bytes": 13596797,
-      "sha256": "1f44ebb88b3b23c06823b3cb94981e0993f6d4bf6356f87a9be575884ec88371",
-      "pixelSHA256": "f5042410198f476cd964f46a39d7b7f46f56adfea72d1c059309c8a984c89b10"
+      "bytes": 13614690,
+      "sha256": "14daa6999e01dd22b88c6358324adb573b65bb4aa4a34fc7c2e56d53d9ed4829",
+      "pixelSHA256": "d1c1175aa4874d0c05919537ebe20c401ca39e10de6b2bb57ee12a30f6dfb8c7"
     },
     {
       "file": "renders/clarkson-existing.png",
@@ -334,9 +356,9 @@
         3840,
         2400
       ],
-      "bytes": 15214871,
-      "sha256": "88050df6d74fa4105071bd29ba51b6566cfe0c46f8ac154fba89e9b21dbcaf04",
-      "pixelSHA256": "525e02c88342b45821cf5a26302f28242f0d332ce9161fc19cedbc1addaa6a57"
+      "bytes": 15229881,
+      "sha256": "a5bd37f817ee5559223a2b300e392f3dd8758858e556455669c8eb052d930f5b",
+      "pixelSHA256": "199da7c6d798c5f4dcbece329f1b8c8d13768a1b8a86a29dc5c8f0420c82cb9b"
     },
     {
       "file": "renders/downtown-skyline-existing.png",
@@ -344,9 +366,9 @@
         3840,
         1400
       ],
-      "bytes": 9153944,
-      "sha256": "79af9a584ec516cad9b7eee943d93a61c7721b66b87209a8f755e85bc3691dda",
-      "pixelSHA256": "f8cbba4243334bd7500e5171d8ec95d9ce4b6420fdebccb0397b2de8cb22bcdb"
+      "bytes": 9164378,
+      "sha256": "8577a172f1ad2af09fbaf0d9736d065a6f0e059d73023deada03a844060ddb76",
+      "pixelSHA256": "fa482eb74cfc11f3387e59fcf908901176206e6eecd9662e3e193b2831b2b898"
     },
     {
       "file": "renders/downtown-skyline-construction.png",
@@ -354,9 +376,9 @@
         3840,
         1400
       ],
-      "bytes": 9237137,
-      "sha256": "7fd03ca2b6ce9d6c151a1137abe74c0eb3e1e0011d14e0953d25e4c818fb052f",
-      "pixelSHA256": "e51fde611ba7c328f7429e9f09d1d61c7d2f279540359df5300e6496f8837794"
+      "bytes": 9255824,
+      "sha256": "ee142451af7d34a391de7f36f08d453461218f71e57e51429ced15ab255b4904",
+      "pixelSHA256": "51c55728f88d2ee990dc6b7d984e96064b2e1ca0eb0a08f9ead4eba510c12b19"
     },
     {
       "file": "renders/downtown-skyline-future.png",
@@ -364,9 +386,9 @@
         3840,
         1400
       ],
-      "bytes": 9156505,
-      "sha256": "dd77ac613b46f83e3a96ba8e9a20c501820acd47286b07df1a550d865db2d0f8",
-      "pixelSHA256": "dd0c8f2762d273aaf6e54fee870496282de10442b81ebd25470f1ba9113f7dc3"
+      "bytes": 9165693,
+      "sha256": "49d7cd8834b168f22fc70f2097dabddde6c41fc891f769d88c5e2485f53aa5f4",
+      "pixelSHA256": "c405cfb4536e3adca3f06a6045fa5525680b83827e588725d1598951368ee5f4"
     },
     {
       "file": "renders/port-credit-skyline-future.png",
@@ -374,9 +396,9 @@
         3840,
         1400
       ],
-      "bytes": 9557072,
-      "sha256": "02f9e89820bc4fbdb05eb98a685c8f1417159dda4cff95ebebfc1014597af2af",
-      "pixelSHA256": "8e74203c468a1c3809d5f2dacff302591a98597d637875a604f8f1869081267d"
+      "bytes": 9561099,
+      "sha256": "ff4a2437eda55517e70273366908e921038aeddcc8caf32dd0c3d13101e280ed",
+      "pixelSHA256": "27380f43664466860b8ce9ec5be828fd7bd3b8665b2c4b131044425357400b28"
     },
     {
       "file": "renders/lakeview-skyline-future.png",
@@ -384,9 +406,9 @@
         3840,
         1400
       ],
-      "bytes": 8302947,
-      "sha256": "afcb6542fab900bf26679a1540c542988e84c6851518033a8c69c640d509495a",
-      "pixelSHA256": "1e9c20aa774cf633600c3fdc94a05131c94f191002e824aa48e7e44b9b511632"
+      "bytes": 8309121,
+      "sha256": "fd28d441aeea763fd8c297d016803b2ebf88b4faeab5be9ba611d5697511b118",
+      "pixelSHA256": "a54355cd8029742bca15267d0da3c203e6f5b945ec669a005744f2fe0af0fb15"
     },
     {
       "file": "renders/clarkson-skyline-future.png",
@@ -394,9 +416,9 @@
         3840,
         1400
       ],
-      "bytes": 9944073,
-      "sha256": "83877a79d59c92129bb15a2ebbc80a30c35717f9f39a3a8096fb272ad882fa60",
-      "pixelSHA256": "6f502bea8592dab28ab55957acd4e9880095e2e06a42e83208bf823064c13151"
+      "bytes": 9951371,
+      "sha256": "eeb2bb09d88f603176bbbb5a05c81bd6b1484cb7c6bd41072a15370c03e7be36",
+      "pixelSHA256": "43640c6f88e9561a2538291b5b81a2a49437acce9f0ea212a26129c426884a55"
     },
     {
       "file": "renders/downtown-portrait-future.png",
@@ -404,9 +426,9 @@
         3840,
         2400
       ],
-      "bytes": 15917308,
-      "sha256": "a256c59dc59453c1a72d30a1435e595e507dc790dc125569db0360c0e8200131",
-      "pixelSHA256": "bcf4de77a59b74d0e713c5f044c0b6e86f05f6f95f6f0430113f39d6ca95bb60"
+      "bytes": 15929469,
+      "sha256": "53798549377ee44cb03d2f6bad5102175d2a86aba5e5c4a656c1bc2ff8312282",
+      "pixelSHA256": "9e23c1096a084029483edf7fe0bf714b6af2a6d8d80d4febb5d8784d12c73dd0"
     },
     {
       "file": "renders/port-credit-portrait-future.png",
@@ -414,9 +436,9 @@
         3840,
         2400
       ],
-      "bytes": 16395340,
-      "sha256": "9815f4a1c7538a0f7cd21f5a69bae14ce0e2184d016b36cf22be64a9920da59b",
-      "pixelSHA256": "e3b3db10b345873b91385bc9f64924e74bf0b132665e1ed4db74b6a647499529"
+      "bytes": 16414883,
+      "sha256": "26a276f36e971e062a66123c863936fb169bc6cad91e7b1c42d7f12beeb1194b",
+      "pixelSHA256": "ac54b5076dca087e5d7ba07630b94f4ae287c682114a48fb1ba031ae41a23558"
     },
     {
       "file": "renders/lakeview-portrait-future.png",
@@ -424,9 +446,9 @@
         3840,
         2400
       ],
-      "bytes": 13693219,
-      "sha256": "7c638719f65fba702107c14afa3992aade29081a00a2f7564865c397124ffd4b",
-      "pixelSHA256": "26f38e511144df5065394be729553632059d668584f276de56ab9826dcb7b1d2"
+      "bytes": 13703475,
+      "sha256": "c853f602e4ce86ce6e0645a713c273a27e82b774a210c3610da51fde39b69c9c",
+      "pixelSHA256": "85f7637792d9dc9aeb3f86ccf9d51e5d24b89f47ea6cbb5500564dcfbb5b904d"
     },
     {
       "file": "renders/clarkson-portrait-future.png",
@@ -434,9 +456,9 @@
         3840,
         2400
       ],
-      "bytes": 15993388,
-      "sha256": "027ceb5d47fdb7e09e3cfb2c47e86e4adc682451c3b3919f3026642c1923d67d",
-      "pixelSHA256": "d2d8f303bfdb1125d57464d756f721d5d93f43066d08dc7c1186315a92b26123"
+      "bytes": 16020810,
+      "sha256": "9d7c306cb697ae1da1f02fa1d90b2701adfb41eb123a3c7db2cc29f3d408a9fc",
+      "pixelSHA256": "f1c99863e78e4a53218521d062757ebaebbd6f128cef8bcc9b9377e212c5ab55"
     },
     {
       "file": "renders/cooksville-portrait-future.png",
@@ -444,9 +466,9 @@
         3840,
         2400
       ],
-      "bytes": 14814695,
-      "sha256": "457339e54faa388324d390c77216ae208e44ddf90780feffda47bfb86edcf90d",
-      "pixelSHA256": "c51eddc0c4e05b337719f48b28fc0b34c77060e4d203134087800d88223a10a8"
+      "bytes": 14851674,
+      "sha256": "72e2fe7d43a294c7c0fcf99a0948643a94a8617de21b04dbc4ff547dc4d70e45",
+      "pixelSHA256": "9809ef659651425f0657cc6203428158199309de2d3f7c2e0e50a9635209192b"
     },
     {
       "file": "renders/uptown-portrait-future.png",
@@ -454,9 +476,9 @@
         3840,
         2400
       ],
-      "bytes": 15630511,
-      "sha256": "2fd9d56cb28f355fe7676487065d7ba1017cc4e05f7b63c06c8ef5f83bbc18f5",
-      "pixelSHA256": "d7e40cf4e2baefc88fae2759fa7e43af9203f8cb8f6843f1ca7d45edf23d0560"
+      "bytes": 15658640,
+      "sha256": "1202fcaa2170e0954fd8deee1f44570b22d875e063de1307d8c9fac8b6a1ff66",
+      "pixelSHA256": "ae5ab0c48cf2fa02095ef18df4b73fdf8b9ad151d086ee1f7eb22973155b3cb1"
     },
     {
       "file": "renders/malton-future.png",
@@ -464,9 +486,9 @@
         3840,
         2400
       ],
-      "bytes": 14665767,
-      "sha256": "d8b1b7322397f5c7dc1db293b7c8bfc85b4b773789c8a789ba59bf296fd0062f",
-      "pixelSHA256": "3acb722a5862c853e5d01108158e385419401aab0310c991e025e411551e057c"
+      "bytes": 14683776,
+      "sha256": "cab65388d7b141af74a5936db1bc99c15ca7b6128fc20e68ac94f578e1fcd8fe",
+      "pixelSHA256": "6214d1f6497badb403311b924c1e7500ff0ac431d02ef19c0a205fae21a023cf"
     },
     {
       "file": "renders/airport-corporate-future.png",
@@ -474,9 +496,9 @@
         3840,
         2400
       ],
-      "bytes": 12683802,
-      "sha256": "2a7678dbc9d2842503920d4f809ac1fdb3c7a5d6fd84c319a2188e643ef915f7",
-      "pixelSHA256": "c19390062dc2c9d2b63dd3c3a6d43122086c5e3544a20fd33f1ef5d50bfa310c"
+      "bytes": 12695576,
+      "sha256": "113885ed0295a571526663c6fd04ed6f2863496a32109f0d40e2934f18fc1392",
+      "pixelSHA256": "f40a6c5096e7dee66d768574de1651b85092679a9e46c1284b10e624cd6bb45b"
     },
     {
       "file": "renders/meadowvale-future.png",
@@ -484,9 +506,9 @@
         3840,
         2400
       ],
-      "bytes": 16562874,
-      "sha256": "caa6f3d5810155f075bc36b6ae718e89d6c03796ae0f26995b8b6dd3a11d680a",
-      "pixelSHA256": "e3b6536652944f720e6e7464f8e72b7ce952f8cb8d4c2ab1b4fc85d7b16d7302"
+      "bytes": 16574676,
+      "sha256": "b7b84e2d0ceb9777c3dfcd806fcf733c687ebd14dc491e1aea5cc1711d640cc0",
+      "pixelSHA256": "933351b6321c64b4bfc7de791d9d206daa41276caaf6b47265992137d29c9ab4"
     },
     {
       "file": "renders/streetsville-future.png",
@@ -494,9 +516,9 @@
         3840,
         2400
       ],
-      "bytes": 17100293,
-      "sha256": "15260fcc79b156eaa1a8a87b99cb17a72316599f4762741eba7cb7243deb46c7",
-      "pixelSHA256": "3c78d6157bc62ce36b3236eecede22eab0fa4f0679f21e6074b7f34825b10f22"
+      "bytes": 17121464,
+      "sha256": "aa48b43c4fb79cfc5dd9d4f40df1ee525b8659e9a6b0efc7943c569ae05a9960",
+      "pixelSHA256": "847ccfca3422ef807530a045b51697f312204818f424dc1c562ac1968ebdebea"
     },
     {
       "file": "renders/erin-mills-future.png",
@@ -504,9 +526,9 @@
         3840,
         2400
       ],
-      "bytes": 18023305,
-      "sha256": "35b0d66b1ae223011e57e46aeff267a46620647ac2787d433929da2d57095d66",
-      "pixelSHA256": "47b17d2f37b97e083304c35bc58de76df4d725dfc0c7c82a01b27b9579259b41"
+      "bytes": 18039059,
+      "sha256": "6dde1b1976371c30587d36463aa296fdf3639a484b9160371a4b3050331bfe83",
+      "pixelSHA256": "30490c05885632f1d82e7014c93aed6423b33dd300d1e1d756783047e39c1e75"
     },
     {
       "file": "renders/downtown-landmark-future.png",
@@ -514,9 +536,9 @@
         3840,
         2400
       ],
-      "bytes": 12337575,
-      "sha256": "909515e2597e8eedbf7edc6f56f57a6d92e95c86dffb33d3a935a9d29e44da23",
-      "pixelSHA256": "b9daf387dbfbaf64e65c28a803190c95b95f3c768ee58fa6156a2493c8fb036c"
+      "bytes": 12387342,
+      "sha256": "5439247b023d156c0f2679e175a553a5355f3bf4232fa20040ec0dbfcf4e26a4",
+      "pixelSHA256": "85de0030b895f4179b268a22f9db209b7a7ee2288ada37ad55516a4399672b23"
     },
     {
       "file": "renders/downtown-junction-future.png",
@@ -524,10 +546,11 @@
         3840,
         2400
       ],
-      "bytes": 11907503,
-      "sha256": "b3b1aa6623d08dee221fb839fd24cc84ff30cd7ebf54e5d1509b43736816f168",
-      "pixelSHA256": "f4616987ca0597d1a165d1372d68e02b2eec2595129054a52523e8fa8ae47e1e"
+      "bytes": 12051913,
+      "sha256": "25825e0dc1673a30af058d388c04db4a8bdc726d5a75605bf304c19b4e8d8f38",
+      "pixelSHA256": "615e9ef7077cf976270558051add3eedd519023dc7accaf3e09390cf75f4262d"
     }
   ],
-  "limitations": "Source and construction observations have different dates. M City reconstructions, Absolute interpolation, selected concept models and transit profiles retain their cited uncertainty; no common completion year or current aerial survey is claimed. Inland water levels are terrain-derived display estimates."
+  "limitations": "Source and construction observations have different dates. M City reconstructions, Absolute interpolation, selected concept models and transit profiles retain their cited uncertainty; no common completion year or current aerial survey is claimed. Inland water levels are terrain-derived display estimates. Transit routes obey scene depth: buildings, bridges and terrain intentionally occlude segments behind them; continuity in route data does not imply that every segment is visible. Construction tree crowns use future-envelope clearances; the landscaping is not a dated construction survey.",
+  "transitDepthEvidence": "research/transit-depth/Geometry-depth-correction.json"
 }

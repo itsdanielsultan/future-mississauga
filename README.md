@@ -2,13 +2,13 @@
 
 An independent visual atlas for Daniel Sultan: original 4K pictures, a research register, and an interactive city model with existing GO rail corridors, the Mississauga Transitway and the Hazel McCallion Line.
 
-The website is entirely static. It requires no Sites or OpenAI service, account, server API, application database, or secret. Three.js and meshoptimizer are included locally with their upstream notices. DM Sans and Manrope web fonts are bundled under `public/vendor/fonts/`, including the official Google Fonts source record and SIL Open Font License notices; font rendering makes no external request. The original PNG files live at `public/gallery/originals/` and are checksum-verified against the picture index. They are not recompressed.
+The website is entirely static. It requires no Sites or OpenAI service, account, server API, application database, or secret. Three.js and meshoptimizer are included locally with their upstream notices. DM Sans and Manrope web fonts are bundled under `public/vendor/fonts/`, including the official Google Fonts source record and SIL Open Font License notices; font rendering makes no external request. The original PNG files live at `public/gallery/originals/` and are checksum-verified against the picture index. They are not recompressed. Displayed model pictures use separate PNG previews at exactly half the width and height (1920 pixels wide), under `public/gallery/previews/`. Download Image links point to the untouched 3840-pixel masters. The picture index records both versions and their hashes.
 
 ## View locally
 
 With Node 22 or newer, run `npm run dev` and open the printed local URL. No dependency installation is required. Opening the HTML directly through `file://` may prevent the browser from fetching the model files.
 
-Run `npm run check` to verify HTML and Markdown links, local stylesheet/font dependencies, original image hashes, publication size and excluded private artifacts. `npm run build` validates and copies the static files into `dist/`. `npm run preview` serves that built folder. For a project-path check, use `node scripts/serve.mjs --base /future-mississauga/`.
+Run `npm run check` to verify HTML and Markdown links, local stylesheet/font dependencies, original and half-size image hashes, publication size and excluded private artifacts. `npm run build` validates and copies the static files into `dist/`. `npm run preview` serves that built folder. For a project-path check, use `node scripts/serve.mjs --base /future-mississauga/`.
 
 ## GitHub Pages
 
@@ -28,7 +28,7 @@ Official guidance: [Pages limits](https://docs.github.com/en/pages/getting-start
 
 The explorer combines reviewed municipal building geometry, documented replacement models, context, landscape and transit. A standalone building GLB does not contain that complete layered assembly. The current reviewed/reconciled models are the recommended building exports. Untouched municipal source snapshots are provenance material and must not be presented as the current assembled model.
 
-GO stays green, the Transitway blue and HML gold. These are unlit cartographic route guides, separate from grey physical tracks. Their display elevations keep service paths readable through bridge and below-grade crossings; they are not surveyed engineering profiles. Incomplete second-track mapping and the HML turnout reconstruction retain explicit schematic labels. The current research and model guides explain the remaining building, landscape and transit uncertainties.
+GO stays green, the Transitway blue and HML gold. These are unlit route guides, separate from grey physical tracks. They follow the physical display profiles and use normal scene depth, so buildings, roofs, bridges and ground hide obstructed sections. They are not surveyed engineering profiles. Incomplete second-track mapping and the HML turnout reconstruction retain explicit schematic labels. The current research and model guides explain the remaining building, landscape and transit uncertainties.
 
 ## Rights and attribution
 

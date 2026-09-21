@@ -1,26 +1,26 @@
 {
   "reviewDate": "2026-09-21",
-  "linkedEvidenceFiles": 45,
+  "linkedEvidenceFiles": 39,
   "copiedOrValidated": [
     {
       "source": "research/Model-guide.md",
       "public": "downloads/Model-guide.md",
-      "bytes": 43632,
-      "sha256": "8ce31fa822d20c2295bcc219fa7a27c2e519030aa109e73648ba20fd10e20338",
+      "bytes": 45341,
+      "sha256": "f94b0f8ed2e3e9efd3fc334d12f534cc8b1dc647e684adc6701151e8f9ff8ac8",
       "sourceBytesUnchanged": false
     },
     {
       "source": "research/Refinement-notes.md",
       "public": "downloads/Refinement-notes.md",
-      "bytes": 32072,
-      "sha256": "07f1308150fb0857731db6eed75d274d1c78dad0bae53b1eb5a87757a73b5304",
+      "bytes": 33390,
+      "sha256": "ada6b283a2b2e67cae5b78bffb0e415c3ccf7e699c371c776065a94f2d9db677",
       "sourceBytesUnchanged": false
     },
     {
       "source": "research/Accuracy-and-coverage-audit.md",
       "public": "downloads/Accuracy-and-coverage-audit.md",
-      "bytes": 30175,
-      "sha256": "057df998f4716b06b22b93bc6661ca0268404c21f48da8e4508ffa0050dd514a",
+      "bytes": 30621,
+      "sha256": "63a6b1fa2c4587301a906259edeae7d05857ef42a7e167d6bdeb0aef927d185c",
       "sourceBytesUnchanged": false
     },
     {
@@ -54,22 +54,36 @@
     {
       "source": "models/supplemental/transit-revamp/transit-layer-manifest.json",
       "public": "models/supplemental/transit-revamp/transit-layer-manifest.json",
-      "bytes": 358654,
-      "sha256": "fa8258b8226a0a9e111f76bb04742eacf441ea43c4d08275c7b9e31e2f572214",
+      "bytes": 358697,
+      "sha256": "17a7384352a8d566b8c97d3518bbb32a71fa9b8b3346a919704875fee9f6c25f",
       "sourceBytesUnchanged": true
     },
     {
       "source": "models/supplemental/transit-revamp/transit-network.json",
       "public": "models/supplemental/transit-revamp/transit-network.json",
-      "bytes": 2823317,
-      "sha256": "a24192858bb4b65a6bdb1de9d2855a5d56eea4d9434073a634862377490f24c8",
+      "bytes": 2811050,
+      "sha256": "00faf110158eda2af0161538c4023ea381a19b5115a51b7e8cb80116a0eac370",
       "sourceBytesUnchanged": true
     },
     {
-      "source": "research/revamp/transit-visibility/Visibility-audit.md",
-      "public": "downloads/revamp/transit-visibility/Visibility-audit.md",
-      "bytes": 3764,
-      "sha256": "8d3f7647e7119d806e5c328d8bc13cfadd5646c78d647a918f7729622f2e0cd3",
+      "source": "research/transit-depth/Geometry-depth-correction.json",
+      "public": "downloads/transit-depth/Geometry-depth-correction.json",
+      "bytes": 275735,
+      "sha256": "9899315fc4a31d0182b19ab322ef4955d3c942c5439eb0b3b2a5db0c59dc2c77",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/transit-depth/Transit-depth-review.md",
+      "public": "downloads/transit-depth/Transit-depth-review.md",
+      "bytes": 2467,
+      "sha256": "2c9077d2d1a3f69da0ef44f7799f3dc52875144845c5d497e5491bd553c1d211",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/transit-depth/Public-transit-guide-and-reference-audit.json",
+      "public": "downloads/transit-depth/Public-transit-guide-and-reference-audit.json",
+      "bytes": 84822,
+      "sha256": "e60f2efc77cce11f3cefd8de458ace1725039d2bce4d360a1eaaab9a582cd22e",
       "sourceBytesUnchanged": true
     },
     {
@@ -152,8 +166,8 @@
     {
       "source": "models/supplemental/transit-revamp/README.md",
       "public": "models/supplemental/transit-revamp/README.md",
-      "bytes": 9107,
-      "sha256": "0ecf96d15abdf1def8f46e7ccff7f0192426161c79c5e70c0e2006c79dcc0f75",
+      "bytes": 9861,
+      "sha256": "50e60de4fb83d377563f0f160247c9db3cd001adb4762f725e38308b217b4fba",
       "sourceBytesUnchanged": true
     },
     {
@@ -220,45 +234,10 @@
       "sourceBytesUnchanged": true
     },
     {
-      "source": "research/revamp/transit-visibility/visibility-checks/downtown-junction-before.png",
-      "public": "downloads/revamp/transit-visibility/visibility-checks/downtown-junction-before.png",
-      "bytes": 2026508,
-      "sha256": "df1f8c815555f0900637e7109e232580bc0f6cfe0306975526a35f9231c2d7c5",
-      "sourceBytesUnchanged": true
-    },
-    {
-      "source": "research/revamp/transit-visibility/visibility-checks/downtown-junction-after.png",
-      "public": "downloads/revamp/transit-visibility/visibility-checks/downtown-junction-after.png",
-      "bytes": 2037121,
-      "sha256": "982d9b34f414b6ecdcd931153b11f757c679f65a05e7ea923b6420004bec8949",
-      "sourceBytesUnchanged": true
-    },
-    {
-      "source": "research/revamp/transit-visibility/visibility-checks/port-credit-go-before.png",
-      "public": "downloads/revamp/transit-visibility/visibility-checks/port-credit-go-before.png",
-      "bytes": 2005293,
-      "sha256": "12604777c640a9bb813106aee28130813f8c1c010b0e31351695d87a235163f6",
-      "sourceBytesUnchanged": true
-    },
-    {
-      "source": "research/revamp/transit-visibility/visibility-checks/port-credit-go-after.png",
-      "public": "downloads/revamp/transit-visibility/visibility-checks/port-credit-go-after.png",
-      "bytes": 2010743,
-      "sha256": "2ce95cb2a5f426d70ba1be983196bcae5c7a9663424aa831a86a124e71d9f5c8",
-      "sourceBytesUnchanged": true
-    },
-    {
-      "source": "research/revamp/transit-visibility/visibility-checks/milton-crossing-before.png",
-      "public": "downloads/revamp/transit-visibility/visibility-checks/milton-crossing-before.png",
-      "bytes": 1808597,
-      "sha256": "c1885a819db9fbd4d885ec852d8ce7d815163d23cbeb58a2fc4626c0de3bbeb5",
-      "sourceBytesUnchanged": true
-    },
-    {
-      "source": "research/revamp/transit-visibility/visibility-checks/milton-crossing-after.png",
-      "public": "downloads/revamp/transit-visibility/visibility-checks/milton-crossing-after.png",
-      "bytes": 1810450,
-      "sha256": "bf567be5d6a19a28b4112bf7cf09e54dae36636277be152858d08616d7e20007",
+      "source": "research/transit-depth/HML-alignment-and-stage-review.json",
+      "public": "downloads/transit-depth/HML-alignment-and-stage-review.json",
+      "bytes": 7542,
+      "sha256": "55f6dd1b0fa54e0a230b624c5c73dbace5bec908a4569eba420f9c595ba39ab7",
       "sourceBytesUnchanged": true
     },
     {
@@ -269,56 +248,35 @@
       "sourceBytesUnchanged": true
     },
     {
-      "source": "models/supplemental/transit-revamp/Visibility-audit.md",
-      "public": "models/supplemental/transit-revamp/Visibility-audit.md",
-      "bytes": 3764,
-      "sha256": "8d3f7647e7119d806e5c328d8bc13cfadd5646c78d647a918f7729622f2e0cd3",
+      "source": "research/transit-depth/Transit-depth-review.md",
+      "public": "research/transit-depth/Transit-depth-review.md",
+      "bytes": 2467,
+      "sha256": "2c9077d2d1a3f69da0ef44f7799f3dc52875144845c5d497e5491bd553c1d211",
       "sourceBytesUnchanged": true
     },
     {
-      "source": "models/supplemental/transit-revamp/visibility-checks/downtown-junction-before.png",
-      "public": "models/supplemental/transit-revamp/visibility-checks/downtown-junction-before.png",
-      "bytes": 2026508,
-      "sha256": "df1f8c815555f0900637e7109e232580bc0f6cfe0306975526a35f9231c2d7c5",
+      "source": "research/transit-depth/Geometry-depth-correction.json",
+      "public": "research/transit-depth/Geometry-depth-correction.json",
+      "bytes": 275735,
+      "sha256": "9899315fc4a31d0182b19ab322ef4955d3c942c5439eb0b3b2a5db0c59dc2c77",
       "sourceBytesUnchanged": true
     },
     {
-      "source": "models/supplemental/transit-revamp/visibility-checks/downtown-junction-after.png",
-      "public": "models/supplemental/transit-revamp/visibility-checks/downtown-junction-after.png",
-      "bytes": 2037121,
-      "sha256": "982d9b34f414b6ecdcd931153b11f757c679f65a05e7ea923b6420004bec8949",
+      "source": "research/transit-depth/Public-transit-guide-and-reference-audit.json",
+      "public": "research/transit-depth/Public-transit-guide-and-reference-audit.json",
+      "bytes": 84822,
+      "sha256": "e60f2efc77cce11f3cefd8de458ace1725039d2bce4d360a1eaaab9a582cd22e",
       "sourceBytesUnchanged": true
     },
     {
-      "source": "models/supplemental/transit-revamp/visibility-checks/port-credit-go-before.png",
-      "public": "models/supplemental/transit-revamp/visibility-checks/port-credit-go-before.png",
-      "bytes": 2005293,
-      "sha256": "12604777c640a9bb813106aee28130813f8c1c010b0e31351695d87a235163f6",
-      "sourceBytesUnchanged": true
-    },
-    {
-      "source": "models/supplemental/transit-revamp/visibility-checks/port-credit-go-after.png",
-      "public": "models/supplemental/transit-revamp/visibility-checks/port-credit-go-after.png",
-      "bytes": 2010743,
-      "sha256": "2ce95cb2a5f426d70ba1be983196bcae5c7a9663424aa831a86a124e71d9f5c8",
-      "sourceBytesUnchanged": true
-    },
-    {
-      "source": "models/supplemental/transit-revamp/visibility-checks/milton-crossing-before.png",
-      "public": "models/supplemental/transit-revamp/visibility-checks/milton-crossing-before.png",
-      "bytes": 1808597,
-      "sha256": "c1885a819db9fbd4d885ec852d8ce7d815163d23cbeb58a2fc4626c0de3bbeb5",
-      "sourceBytesUnchanged": true
-    },
-    {
-      "source": "models/supplemental/transit-revamp/visibility-checks/milton-crossing-after.png",
-      "public": "models/supplemental/transit-revamp/visibility-checks/milton-crossing-after.png",
-      "bytes": 1810450,
-      "sha256": "bf567be5d6a19a28b4112bf7cf09e54dae36636277be152858d08616d7e20007",
+      "source": "research/transit-depth/HML-alignment-and-stage-review.json",
+      "public": "research/transit-depth/HML-alignment-and-stage-review.json",
+      "bytes": 7542,
+      "sha256": "55f6dd1b0fa54e0a230b624c5c73dbace5bec908a4569eba420f9c595ba39ab7",
       "sourceBytesUnchanged": true
     }
   ],
-  "markdownLinkChecks": 73,
+  "markdownLinkChecks": 85,
   "localLinks": [
     {
       "document": "downloads/Accuracy-and-coverage-audit.md",
@@ -394,13 +352,19 @@
     },
     {
       "document": "downloads/Accuracy-and-coverage-audit.md",
-      "target": "revamp/transit-visibility/Visibility-audit.md",
+      "target": "transit-depth/Geometry-depth-correction.json",
       "exists": true,
       "insidePublic": true
     },
     {
       "document": "downloads/Accuracy-and-coverage-audit.md",
-      "target": "../models/supplemental/transit-revamp/transit-layer-manifest.json",
+      "target": "transit-depth/Transit-depth-review.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "transit-depth/Public-transit-guide-and-reference-audit.json",
       "exists": true,
       "insidePublic": true
     },
@@ -424,13 +388,19 @@
     },
     {
       "document": "downloads/Model-guide.md",
-      "target": "revamp/transit-visibility/Visibility-audit.md",
+      "target": "transit-depth/Geometry-depth-correction.json",
       "exists": true,
       "insidePublic": true
     },
     {
       "document": "downloads/Model-guide.md",
-      "target": "../models/supplemental/transit-revamp/transit-layer-manifest.json",
+      "target": "transit-depth/Transit-depth-review.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "transit-depth/Public-transit-guide-and-reference-audit.json",
       "exists": true,
       "insidePublic": true
     },
@@ -562,13 +532,19 @@
     },
     {
       "document": "downloads/Refinement-notes.md",
-      "target": "revamp/transit-visibility/Visibility-audit.md",
+      "target": "transit-depth/Geometry-depth-correction.json",
       "exists": true,
       "insidePublic": true
     },
     {
       "document": "downloads/Refinement-notes.md",
-      "target": "../models/supplemental/transit-revamp/transit-layer-manifest.json",
+      "target": "transit-depth/Transit-depth-review.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "transit-depth/Public-transit-guide-and-reference-audit.json",
       "exists": true,
       "insidePublic": true
     },
@@ -646,6 +622,12 @@
     },
     {
       "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
+      "target": "../../transit-depth/Transit-depth-review.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
       "target": "visibility-checks/downtown-junction-before.png",
       "exists": true,
       "insidePublic": true
@@ -677,6 +659,24 @@
     {
       "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
       "target": "visibility-checks/milton-crossing-after.png",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/transit-depth/Transit-depth-review.md",
+      "target": "Geometry-depth-correction.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/transit-depth/Transit-depth-review.md",
+      "target": "HML-alignment-and-stage-review.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/transit-depth/Transit-depth-review.md",
+      "target": "Public-transit-guide-and-reference-audit.json",
       "exists": true,
       "insidePublic": true
     },
@@ -718,7 +718,19 @@
     },
     {
       "document": "models/supplemental/transit-revamp/README.md",
-      "target": "Visibility-audit.md",
+      "target": "../../../research/transit-depth/Transit-depth-review.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "models/supplemental/transit-revamp/README.md",
+      "target": "../../../research/transit-depth/Geometry-depth-correction.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "models/supplemental/transit-revamp/README.md",
+      "target": "../../../research/transit-depth/Public-transit-guide-and-reference-audit.json",
       "exists": true,
       "insidePublic": true
     },
@@ -755,6 +767,24 @@
     {
       "document": "models/supplemental/transit-revamp/Visibility-audit.md",
       "target": "visibility-checks/milton-crossing-after.png",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "research/transit-depth/Transit-depth-review.md",
+      "target": "Geometry-depth-correction.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "research/transit-depth/Transit-depth-review.md",
+      "target": "HML-alignment-and-stage-review.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "research/transit-depth/Transit-depth-review.md",
+      "target": "Public-transit-guide-and-reference-audit.json",
       "exists": true,
       "insidePublic": true
     }

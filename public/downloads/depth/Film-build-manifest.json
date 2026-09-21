@@ -1,0 +1,71 @@
+{
+  "edition": "Transit Depth 2026-09-21",
+  "researchReviewed": "2026-09-20",
+  "builtAt": "2026-09-21T21:28:31.028450+00:00",
+  "file": "renders/Downtown-transformation.mp4",
+  "bytes": 1331067,
+  "sha256": "e710c9b2d5fe629870534137a69f4d50972c9e073e997fd371f9db8b0c46d0f7",
+  "width": 1920,
+  "height": 850,
+  "durationSeconds": 15.0,
+  "frameRate": "30/1",
+  "frameCount": 450,
+  "inputLockedAt": "2026-09-21T19:58:07.864526+00:00",
+  "inputLockSHA256": "5db5703db70aa583c899e7b5756edce589e2ae3300d544b885b8e31d2d1e38c1",
+  "sourceImages": [
+    {
+      "file": "renders/downtown-skyline-existing.png",
+      "dimensions": [
+        3840,
+        1400
+      ],
+      "sha256": "8577a172f1ad2af09fbaf0d9736d065a6f0e059d73023deada03a844060ddb76",
+      "pixelSHA256": "fa482eb74cfc11f3387e59fcf908901176206e6eecd9662e3e193b2831b2b898"
+    },
+    {
+      "file": "renders/downtown-skyline-construction.png",
+      "dimensions": [
+        3840,
+        1400
+      ],
+      "sha256": "ee142451af7d34a391de7f36f08d453461218f71e57e51429ced15ab255b4904",
+      "pixelSHA256": "51c55728f88d2ee990dc6b7d984e96064b2e1ca0eb0a08f9ead4eba510c12b19"
+    },
+    {
+      "file": "renders/downtown-skyline-future.png",
+      "dimensions": [
+        3840,
+        1400
+      ],
+      "sha256": "49d7cd8834b168f22fc70f2097dabddde6c41fc891f769d88c5e2485f53aa5f4",
+      "pixelSHA256": "c405cfb4536e3adca3f06a6045fa5525680b83827e588725d1598951368ee5f4"
+    }
+  ],
+  "originalPNGMastersUnchanged": true,
+  "sourceGeometryChangedByFilm": false,
+  "method": "Labelled fixed-camera wipe between three native model renderings; no invented intermediate buildings or generated imagery.",
+  "transitVisibility": "Normal scene depth; terrain, buildings and bridges may obscure routes. Mapped route profiles retain their documented schematic limits.",
+  "manualVisualReviewPending": false,
+  "manualVisualReviewAt": "2026-09-21T21:34:40.753004+00:00",
+  "visualReview": {
+    "timestampsSeconds": [
+      1,
+      5.5,
+      7.5,
+      9.5,
+      13
+    ],
+    "stages": [
+      "existing",
+      "transition to construction",
+      "construction",
+      "transition to future",
+      "future"
+    ],
+    "all450FramesDecoded": true,
+    "labelsAndAttributionInsideFrame": true,
+    "fixedCameraCompositionPreserved": true,
+    "noGeometrySynthesizedBetweenStates": true
+  },
+  "landscapingLimit": "Construction tree crowns use future-envelope clearances; the landscaping is illustrative and not a dated construction survey."
+}

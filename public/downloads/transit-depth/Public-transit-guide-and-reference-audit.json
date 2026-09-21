@@ -1,0 +1,2283 @@
+{
+  "reviewedAt": "2026-09-21T19:54:23.346Z",
+  "scope": "Read-only current public model/dependency and decoded transit-compression audit. Final render assets and unrelated future changes are outside this snapshot.",
+  "districts": 15,
+  "layerModelURLs": 64,
+  "transitFiles": 25,
+  "guideInstancesChecked": 74,
+  "uniqueGuideSourceRoutes": 23,
+  "localReferencesChecked": 190,
+  "allPassed": true,
+  "models": [
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/cooksville-toc-2025-tower-envelopes.glb",
+      "source": "outputs/models/supplemental/refinement-downtown/cooksville-toc-2025-tower-envelopes.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/promenade-infill-plan-derived.glb",
+      "source": "outputs/models/supplemental/refinement-downtown/promenade-infill-plan-derived.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/square-one-block5-t1-plan-derived.glb",
+      "source": "outputs/models/supplemental/refinement-downtown/square-one-block5-t1-plan-derived.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/mcity-m3-crown-silhouette.glb",
+      "source": "outputs/models/supplemental/refinement-downtown/mcity-m3-crown-silhouette.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/mcity-m5-developer-proxy.glb",
+      "source": "outputs/models/supplemental/refinement-downtown/mcity-m5-developer-proxy.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/voya-towers-plan-derived.glb",
+      "source": "outputs/models/supplemental/refinement-downtown/voya-towers-plan-derived.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/26-park-current-plan.glb",
+      "source": "outputs/models/supplemental/refinement-waterfront/26-park-current-plan.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/clarkson-toc-current-plan.glb",
+      "source": "outputs/models/supplemental/refinement-waterfront/clarkson-toc-current-plan.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/50-high-current-plan.glb",
+      "source": "outputs/models/supplemental/refinement-waterfront/50-high-current-plan.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/128-lakeshore-current-plan.glb",
+      "source": "outputs/models/supplemental/refinement-waterfront/128-lakeshore-current-plan.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/900-lakeshore-current-plan.glb",
+      "source": "outputs/models/supplemental/refinement-waterfront/900-lakeshore-current-plan.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/brightwater-missing-blocks-concept.glb",
+      "source": "outputs/models/supplemental/refinement-waterfront/brightwater-missing-blocks-concept.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/70-park-settlement-envelope.glb",
+      "source": "outputs/models/supplemental/refinement-waterfront/70-park-settlement-envelope.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/170-lakeshore-settlement-envelope.glb",
+      "source": "outputs/models/supplemental/refinement-waterfront/170-lakeshore-settlement-envelope.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/exchange-recorded-topped-structures.glb",
+      "source": "outputs/models/supplemental/refinement-progress/exchange-recorded-topped-structures.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/mcity-m4-recorded-level41.glb",
+      "source": "outputs/models/supplemental/refinement-progress/mcity-m4-recorded-level41.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/aura-townhome-envelopes.glb",
+      "source": "outputs/models/supplemental/refinement-lakeview/aura-townhome-envelopes.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/lakeview-mapped-waterfront.glb",
+      "source": "outputs/models/supplemental/refinement-lakeview/lakeview-mapped-waterfront.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/absolute-world-source-derived.glb",
+      "source": "outputs/models/supplemental/revamp/absolute-world-source-derived.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/bough-beeches-2026-plan.glb",
+      "source": "outputs/models/supplemental/revamp/bough-beeches-2026-plan.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/chelsea-2026-b4.glb",
+      "source": "outputs/models/supplemental/revamp/chelsea-2026-b4.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/chelsea-2026-b5.glb",
+      "source": "outputs/models/supplemental/revamp/chelsea-2026-b5.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/chelsea-2026-b6.glb",
+      "source": "outputs/models/supplemental/revamp/chelsea-2026-b6.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "refinement-models",
+      "url": "models/refinement/dundas-55-2025-plan.glb",
+      "source": "outputs/models/supplemental/revamp/dundas-55-2025-plan.glb",
+      "downloadSHA256": null
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/citywide-go-go.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/citywide/go.glb",
+      "downloadSHA256": "fb9f7549403f54c9c8747e1f15aa14985ab59596c2cf61f0181a86aca87213e8"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/citywide-transitway-transitway.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/citywide/transitway.glb",
+      "downloadSHA256": "8169bc4a20dd608fb34c4b369408783b964c1fb6aa1d568a60e7306e9eb08502"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/citywide-hml-hml.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/citywide/hml.glb",
+      "downloadSHA256": "f1321a76c16d86ed6883d45f5ccb2b65e563941c79a3ce01ffa278ff7d5e5a78"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/downtown-go-go.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/downtown/go.glb",
+      "downloadSHA256": "8f9c78e193851011fe93feb26150b03050950c7c69e9ca2b1462034dff46649e"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/downtown-transitway-transitway.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/downtown/transitway.glb",
+      "downloadSHA256": "415e3e57c373202f612d30194d0538e0e8cbaaed8de44cca0b591f29ed76dfd0"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/downtown-hml-hml.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/downtown/hml.glb",
+      "downloadSHA256": "dae8aaa0572f1be733549608dacb47e91b324e6b5af9eec5230e9e3c259cfa84"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/port-credit-go-go.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/port-credit/go.glb",
+      "downloadSHA256": "751ae2abe81bf1154a7f09447dafe4975588167ec6ddc21c0c6979ca9f1f860c"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/port-credit-hml-hml.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/port-credit/hml.glb",
+      "downloadSHA256": "185e96300900e3db3655987bc9bc9d619f91fe8987b836084e7c344a889bfcd9"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/lakeview-go-go.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/lakeview/go.glb",
+      "downloadSHA256": "14096c8acbb21f11fd9eac43fd05e53b8ba54e88d247b15f2672472295ee42b2"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/clarkson-go-go.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/clarkson/go.glb",
+      "downloadSHA256": "68a7659bdba571dcece0bc228a81accf481d02596652762e1fd6b44c023efce2"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/cooksville-go-go.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/cooksville/go.glb",
+      "downloadSHA256": "e4cf741e578b1ba0bd83ad8779f76b5cb57dcc294863246013979101f87a3576"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/cooksville-hml-hml.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/cooksville/hml.glb",
+      "downloadSHA256": "3a49c2c7362a4a8923905c88d08f68d025bfdd4cf3cfccb263cf0277bce77443"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/uptown-transitway-transitway.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/uptown/transitway.glb",
+      "downloadSHA256": "0bce015a2a9a75a33106d63176b0fd76cddc49074de3102eb46fe1bd81a189af"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/uptown-hml-hml.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/uptown/hml.glb",
+      "downloadSHA256": "4baaee36e3c45d465d8f58f82dfb8a47db45acb9a06d36fd80858a873f44b858"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/erin-mills-go-go.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/erin-mills/go.glb",
+      "downloadSHA256": "b1c044b948da1f302d9d3cf784708da7e244b9d2cfd9a1cde472dc6ff7a0a4e2"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/erin-mills-transitway-transitway.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/erin-mills/transitway.glb",
+      "downloadSHA256": "7228968824758c2f3c5f52d07ddecfab1fb33fc88b655db11a3ee7f0ade04098"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/streetsville-go-go.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/streetsville/go.glb",
+      "downloadSHA256": "09b7bf53dd3a7b4cadc641b04c35dceea57eb98bebaa17d8edc947acc9c279d8"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/meadowvale-go-go.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/meadowvale/go.glb",
+      "downloadSHA256": "e9013dab8599289a8cd080041097e13396ec6cf6f74fd46bb302dc0dc113adac"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/malton-go-go.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/malton/go.glb",
+      "downloadSHA256": "2b98ac90da672c46e33362b05b7bb0e7ed360272caf4428e65ec4159420e296f"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/dixie-applewood-go-go.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/dixie-applewood/go.glb",
+      "downloadSHA256": "c98d1ef1ac662600d3094fb6460aa6e289eaa5df8f5a46f57678dfd2ab09a87f"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/dixie-applewood-transitway-transitway.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/dixie-applewood/transitway.glb",
+      "downloadSHA256": "6990f56e6f5742a5a1adf3554564be597c1d1653d12a23e74c8466ad7b43d330"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/erindale-go-go.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/erindale/go.glb",
+      "downloadSHA256": "5518bba404051b05f93233202842601ad1bae0aad47f8e786fe2333edd830d54"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/erindale-transitway-transitway.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/erindale/transitway.glb",
+      "downloadSHA256": "c50ae8d5cca147e2d86560e0b60918ad0fc0e4744afc58fabd828f487082b60c"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/airport-corporate-transitway-transitway.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/airport-corporate/transitway.glb",
+      "downloadSHA256": "6bb5acd9be9c18bb74b1f8da07541734be49790a48d85f60b240cb8e7f73ce25"
+    },
+    {
+      "kind": "transit-layer-manifest",
+      "url": "models/revamp/heartland-hml-hml.glb",
+      "source": "outputs/models/supplemental/transit-revamp/districts/heartland/hml.glb",
+      "downloadSHA256": "a257eef7ae3a78a5e35c57b462e8973ef5fc4091795c8be13763359027e66c10"
+    },
+    {
+      "kind": "landscape-layer-manifest",
+      "url": "models/revamp/citywide--citywide-mapped-surfaces.glb",
+      "source": "outputs/models/supplemental/revamp-landscape/citywide-mapped-surfaces.glb",
+      "downloadSHA256": "d116c48257b80f6394eed32eea3bb0d92d249c38bb261189c2e8897267ebb01f"
+    },
+    {
+      "kind": "landscape-layer-manifest",
+      "url": "models/revamp/downtown--downtown-mapped-surfaces.glb",
+      "source": "outputs/models/supplemental/revamp-landscape/downtown-mapped-surfaces.glb",
+      "downloadSHA256": "65240dc686c38f56cc26545c3c34fa3e9956a66d4ed335d2d2aaad8960d8e6dd"
+    },
+    {
+      "kind": "landscape-layer-manifest",
+      "url": "models/revamp/port-credit--port-credit-mapped-surfaces.glb",
+      "source": "outputs/models/supplemental/revamp-landscape/port-credit-mapped-surfaces.glb",
+      "downloadSHA256": "034139afcc8a15e93c1dd12ac342933aeb4d587e676469906ccd9cf0ae30b6a6"
+    },
+    {
+      "kind": "landscape-layer-manifest",
+      "url": "models/revamp/lakeview--lakeview-mapped-surfaces.glb",
+      "source": "outputs/models/supplemental/revamp-landscape/lakeview-mapped-surfaces.glb",
+      "downloadSHA256": "db58969c64bc6d1ada9102bb1a95a185b7694d7ffc49e08bc40b10ad4d9d88a9"
+    },
+    {
+      "kind": "landscape-layer-manifest",
+      "url": "models/revamp/clarkson--clarkson-mapped-surfaces.glb",
+      "source": "outputs/models/supplemental/revamp-landscape/clarkson-mapped-surfaces.glb",
+      "downloadSHA256": "c4987a38ca7170b96dc2cf99c9eb2291d4160b87c9dbb4091f1658063580ae25"
+    },
+    {
+      "kind": "landscape-layer-manifest",
+      "url": "models/revamp/cooksville--cooksville-mapped-surfaces.glb",
+      "source": "outputs/models/supplemental/revamp-landscape/cooksville-mapped-surfaces.glb",
+      "downloadSHA256": "06f0a61e4c8b2f7bdf2610b5c042b70aa4a386e91fb60a75ccce3b56ba0a8e67"
+    },
+    {
+      "kind": "landscape-layer-manifest",
+      "url": "models/revamp/uptown--uptown-mapped-surfaces.glb",
+      "source": "outputs/models/supplemental/revamp-landscape/uptown-mapped-surfaces.glb",
+      "downloadSHA256": "035f5e3e1b4b185240c71810438dd92a5fffa7e8d070f129ce850762703839da"
+    },
+    {
+      "kind": "landscape-layer-manifest",
+      "url": "models/revamp/erin-mills--erin-mills-mapped-surfaces.glb",
+      "source": "outputs/models/supplemental/revamp-landscape/erin-mills-mapped-surfaces.glb",
+      "downloadSHA256": "370558a66ea0f56dd3223a7a3eb345cab0eb4861d65062d224f12bf8863f67a6"
+    },
+    {
+      "kind": "landscape-layer-manifest",
+      "url": "models/revamp/streetsville--streetsville-mapped-surfaces.glb",
+      "source": "outputs/models/supplemental/revamp-landscape/streetsville-mapped-surfaces.glb",
+      "downloadSHA256": "f8dd23ff8198d08c28c3f8384ddaaf9697406a1afd0653000523a4b35f7d4ea6"
+    },
+    {
+      "kind": "landscape-layer-manifest",
+      "url": "models/revamp/meadowvale--meadowvale-mapped-surfaces.glb",
+      "source": "outputs/models/supplemental/revamp-landscape/meadowvale-mapped-surfaces.glb",
+      "downloadSHA256": "e2ef0cec634f102f046033fa2d8e30367be826d4dcec2bab0133a620bcdcb71e"
+    },
+    {
+      "kind": "landscape-layer-manifest",
+      "url": "models/revamp/malton--malton-mapped-surfaces.glb",
+      "source": "outputs/models/supplemental/revamp-landscape/malton-mapped-surfaces.glb",
+      "downloadSHA256": "e34f2e8409655f4ea034a417fb42e21c45b8b14e6bd2884fc7778766e92355e8"
+    },
+    {
+      "kind": "landscape-layer-manifest",
+      "url": "models/revamp/dixie-applewood--dixie-applewood-mapped-surfaces.glb",
+      "source": "outputs/models/supplemental/revamp-landscape/dixie-applewood-mapped-surfaces.glb",
+      "downloadSHA256": "5530b526f18a07fbcb491433acc94859eca477fea510683c48d4e9d8d2880675"
+    },
+    {
+      "kind": "landscape-layer-manifest",
+      "url": "models/revamp/erindale--erindale-mapped-surfaces.glb",
+      "source": "outputs/models/supplemental/revamp-landscape/erindale-mapped-surfaces.glb",
+      "downloadSHA256": "fe6dbd5ffb32cea83e69c5e91d68c2b7674a547aaccefc9637fceabd014fc3e6"
+    },
+    {
+      "kind": "landscape-layer-manifest",
+      "url": "models/revamp/airport-corporate--airport-corporate-mapped-surfaces.glb",
+      "source": "outputs/models/supplemental/revamp-landscape/airport-corporate-mapped-surfaces.glb",
+      "downloadSHA256": "ca8498924afd2ce30b4300263638974b449eacc8f7daa98f177f675e2b421061"
+    },
+    {
+      "kind": "landscape-layer-manifest",
+      "url": "models/revamp/heartland--heartland-mapped-surfaces.glb",
+      "source": "outputs/models/supplemental/revamp-landscape/heartland-mapped-surfaces.glb",
+      "downloadSHA256": "13ca0ccfd25fe4d0018eee53e324ad40755f23f702e03c0163b396aa224dd820"
+    }
+  ],
+  "guides": [
+    {
+      "file": "models/revamp/citywide-go-go.glb",
+      "node": "service-guide-go-MI-0",
+      "system": "GO",
+      "sourceRouteId": "go-MI-0",
+      "semanticColour": "#25825e",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-go-go.glb",
+      "node": "service-guide-go-LW-0",
+      "system": "GO",
+      "sourceRouteId": "go-LW-0",
+      "semanticColour": "#25825e",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-go-go.glb",
+      "node": "service-guide-go-KI-0",
+      "system": "GO",
+      "sourceRouteId": "go-KI-0",
+      "semanticColour": "#25825e",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090150-dedicated-busway-0-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090150-dedicated-busway-0-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090150-dedicated-busway-1-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090150-dedicated-busway-1-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090150-dedicated-busway-1-1",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090150-dedicated-busway-1-1",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090150-on-road-connection-0-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090150-on-road-connection-0-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090151-dedicated-busway-0-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090151-dedicated-busway-0-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090151-dedicated-busway-0-1",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090151-dedicated-busway-0-1",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090151-dedicated-busway-1-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090151-dedicated-busway-1-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090151-on-road-connection-0-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090151-on-road-connection-0-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090151-on-road-connection-1-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090151-on-road-connection-1-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090151-on-road-connection-2-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090151-on-road-connection-2-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-hml-hml.glb",
+      "node": "service-guide-hml-main-a-0",
+      "system": "HML",
+      "sourceRouteId": "hml-main-a-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-hml-hml.glb",
+      "node": "service-guide-hml-main-b-0",
+      "system": "HML",
+      "sourceRouteId": "hml-main-b-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-hml-hml.glb",
+      "node": "service-guide-hml-city-centre-a-0",
+      "system": "HML",
+      "sourceRouteId": "hml-city-centre-a-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-hml-hml.glb",
+      "node": "service-guide-hml-city-centre-b-0",
+      "system": "HML",
+      "sourceRouteId": "hml-city-centre-b-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-hml-hml.glb",
+      "node": "service-guide-hml-wye-south-a-0",
+      "system": "HML",
+      "sourceRouteId": "hml-wye-south-a-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-hml-hml.glb",
+      "node": "service-guide-hml-wye-south-b-0",
+      "system": "HML",
+      "sourceRouteId": "hml-wye-south-b-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-hml-hml.glb",
+      "node": "service-guide-hml-depot-1173099569-0",
+      "system": "HML",
+      "sourceRouteId": "hml-depot-1173099569-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-hml-hml.glb",
+      "node": "service-guide-hml-depot-1173099570-0",
+      "system": "HML",
+      "sourceRouteId": "hml-depot-1173099570-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-hml-hml.glb",
+      "node": "service-guide-hml-depot-1300452970-0",
+      "system": "HML",
+      "sourceRouteId": "hml-depot-1300452970-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/citywide-hml-hml.glb",
+      "node": "service-guide-hml-depot-1300452972-0",
+      "system": "HML",
+      "sourceRouteId": "hml-depot-1300452972-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/downtown-go-go.glb",
+      "node": "service-guide-go-MI-0",
+      "system": "GO",
+      "sourceRouteId": "go-MI-0",
+      "semanticColour": "#25825e",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/downtown-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090150-dedicated-busway-1-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090150-dedicated-busway-1-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/downtown-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090150-on-road-connection-0-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090150-on-road-connection-0-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/downtown-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090151-dedicated-busway-0-1",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090151-dedicated-busway-0-1",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/downtown-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090151-on-road-connection-0-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090151-on-road-connection-0-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/downtown-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090151-on-road-connection-1-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090151-on-road-connection-1-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/downtown-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090151-on-road-connection-2-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090151-on-road-connection-2-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/downtown-hml-hml.glb",
+      "node": "service-guide-hml-main-a-0",
+      "system": "HML",
+      "sourceRouteId": "hml-main-a-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/downtown-hml-hml.glb",
+      "node": "service-guide-hml-main-b-0",
+      "system": "HML",
+      "sourceRouteId": "hml-main-b-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/downtown-hml-hml.glb",
+      "node": "service-guide-hml-city-centre-a-0",
+      "system": "HML",
+      "sourceRouteId": "hml-city-centre-a-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/downtown-hml-hml.glb",
+      "node": "service-guide-hml-city-centre-b-0",
+      "system": "HML",
+      "sourceRouteId": "hml-city-centre-b-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/downtown-hml-hml.glb",
+      "node": "service-guide-hml-wye-south-a-0",
+      "system": "HML",
+      "sourceRouteId": "hml-wye-south-a-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/downtown-hml-hml.glb",
+      "node": "service-guide-hml-wye-south-b-0",
+      "system": "HML",
+      "sourceRouteId": "hml-wye-south-b-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/port-credit-go-go.glb",
+      "node": "service-guide-go-LW-0",
+      "system": "GO",
+      "sourceRouteId": "go-LW-0",
+      "semanticColour": "#25825e",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/port-credit-hml-hml.glb",
+      "node": "service-guide-hml-main-a-0",
+      "system": "HML",
+      "sourceRouteId": "hml-main-a-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/port-credit-hml-hml.glb",
+      "node": "service-guide-hml-main-b-0",
+      "system": "HML",
+      "sourceRouteId": "hml-main-b-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/lakeview-go-go.glb",
+      "node": "service-guide-go-LW-0",
+      "system": "GO",
+      "sourceRouteId": "go-LW-0",
+      "semanticColour": "#25825e",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/clarkson-go-go.glb",
+      "node": "service-guide-go-LW-0",
+      "system": "GO",
+      "sourceRouteId": "go-LW-0",
+      "semanticColour": "#25825e",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/cooksville-go-go.glb",
+      "node": "service-guide-go-MI-0",
+      "system": "GO",
+      "sourceRouteId": "go-MI-0",
+      "semanticColour": "#25825e",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/cooksville-hml-hml.glb",
+      "node": "service-guide-hml-main-a-0",
+      "system": "HML",
+      "sourceRouteId": "hml-main-a-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/cooksville-hml-hml.glb",
+      "node": "service-guide-hml-main-b-0",
+      "system": "HML",
+      "sourceRouteId": "hml-main-b-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/uptown-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090150-dedicated-busway-1-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090150-dedicated-busway-1-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/uptown-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090150-on-road-connection-0-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090150-on-road-connection-0-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/uptown-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090151-dedicated-busway-0-1",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090151-dedicated-busway-0-1",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/uptown-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090151-on-road-connection-0-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090151-on-road-connection-0-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/uptown-hml-hml.glb",
+      "node": "service-guide-hml-main-a-0",
+      "system": "HML",
+      "sourceRouteId": "hml-main-a-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/uptown-hml-hml.glb",
+      "node": "service-guide-hml-main-b-0",
+      "system": "HML",
+      "sourceRouteId": "hml-main-b-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/uptown-hml-hml.glb",
+      "node": "service-guide-hml-city-centre-a-0",
+      "system": "HML",
+      "sourceRouteId": "hml-city-centre-a-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/uptown-hml-hml.glb",
+      "node": "service-guide-hml-city-centre-b-0",
+      "system": "HML",
+      "sourceRouteId": "hml-city-centre-b-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/uptown-hml-hml.glb",
+      "node": "service-guide-hml-wye-south-a-0",
+      "system": "HML",
+      "sourceRouteId": "hml-wye-south-a-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/uptown-hml-hml.glb",
+      "node": "service-guide-hml-wye-south-b-0",
+      "system": "HML",
+      "sourceRouteId": "hml-wye-south-b-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/erin-mills-go-go.glb",
+      "node": "service-guide-go-MI-0",
+      "system": "GO",
+      "sourceRouteId": "go-MI-0",
+      "semanticColour": "#25825e",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/erin-mills-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090150-dedicated-busway-0-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090150-dedicated-busway-0-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/erin-mills-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090150-on-road-connection-0-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090150-on-road-connection-0-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/erin-mills-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090151-dedicated-busway-1-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090151-dedicated-busway-1-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/erin-mills-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090151-on-road-connection-2-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090151-on-road-connection-2-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/streetsville-go-go.glb",
+      "node": "service-guide-go-MI-0",
+      "system": "GO",
+      "sourceRouteId": "go-MI-0",
+      "semanticColour": "#25825e",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/meadowvale-go-go.glb",
+      "node": "service-guide-go-MI-0",
+      "system": "GO",
+      "sourceRouteId": "go-MI-0",
+      "semanticColour": "#25825e",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/malton-go-go.glb",
+      "node": "service-guide-go-KI-0",
+      "system": "GO",
+      "sourceRouteId": "go-KI-0",
+      "semanticColour": "#25825e",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/dixie-applewood-go-go.glb",
+      "node": "service-guide-go-MI-0",
+      "system": "GO",
+      "sourceRouteId": "go-MI-0",
+      "semanticColour": "#25825e",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/dixie-applewood-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090150-dedicated-busway-1-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090150-dedicated-busway-1-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/dixie-applewood-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090151-dedicated-busway-0-1",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090151-dedicated-busway-0-1",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/erindale-go-go.glb",
+      "node": "service-guide-go-MI-0",
+      "system": "GO",
+      "sourceRouteId": "go-MI-0",
+      "semanticColour": "#25825e",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/erindale-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090150-on-road-connection-0-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090150-on-road-connection-0-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/erindale-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090151-on-road-connection-2-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090151-on-road-connection-2-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/airport-corporate-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090150-dedicated-busway-1-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090150-dedicated-busway-1-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/airport-corporate-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090150-dedicated-busway-1-1",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090150-dedicated-busway-1-1",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/airport-corporate-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090151-dedicated-busway-0-0",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090151-dedicated-busway-0-0",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/airport-corporate-transitway-transitway.glb",
+      "node": "service-guide-transitway-1090151-dedicated-busway-0-1",
+      "system": "Transitway",
+      "sourceRouteId": "transitway-1090151-dedicated-busway-0-1",
+      "semanticColour": "#1175b6",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/heartland-hml-hml.glb",
+      "node": "service-guide-hml-main-a-0",
+      "system": "HML",
+      "sourceRouteId": "hml-main-a-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    },
+    {
+      "file": "models/revamp/heartland-hml-hml.glb",
+      "node": "service-guide-hml-main-b-0",
+      "system": "HML",
+      "sourceRouteId": "hml-main-b-0",
+      "semanticColour": "#d6ac39",
+      "widthM": 3,
+      "metadataPreserved": true,
+      "uniformColourAndUnlitChecked": true
+    }
+  ],
+  "references": [
+    {
+      "url": "models/refinement/cooksville-toc-2025-tower-envelopes.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 16484,
+      "sha256": "9509a7705840cbbb7dcb9a8b7efe4ea4dd680ae8914196ea263c410f61550a22"
+    },
+    {
+      "url": "models/refinement/promenade-infill-plan-derived.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 230376,
+      "sha256": "4c93c5ced26ad1b2aa495135dbf9dec8b1d1770f93280d4e4a2ae2b94b0b431c"
+    },
+    {
+      "url": "models/refinement/square-one-block5-t1-plan-derived.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 16760,
+      "sha256": "b1e0c1a79522c81f2fa82990f28132c299e4e83fe6abb314264589244cfabaf6"
+    },
+    {
+      "url": "models/refinement/mcity-m3-crown-silhouette.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 20252,
+      "sha256": "fba3afd818534ba6152bf436bd6d15970a57810d6dbee9bb3be01a299940bb13"
+    },
+    {
+      "url": "models/refinement/mcity-m5-developer-proxy.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 9452,
+      "sha256": "2aae3db6fa73b801eab356839b37c10587316bf29ff2c2d4ab66c694dc5ed1a6"
+    },
+    {
+      "url": "models/refinement/voya-towers-plan-derived.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 401156,
+      "sha256": "f876a440f538b0d8ebcb7672267e93b7ffb3591b2d8f58a527b869d2f5b69781"
+    },
+    {
+      "url": "models/refinement/26-park-current-plan.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 3444,
+      "sha256": "c245fa1beebfe015b7058a7514672d4f438071bfea3d7fdeb9f1ad2d98b6f535"
+    },
+    {
+      "url": "models/refinement/clarkson-toc-current-plan.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 11060,
+      "sha256": "4eee723872e2223150098bab18a9b5add839546d420096465c84947099ea42ac"
+    },
+    {
+      "url": "models/refinement/50-high-current-plan.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 13572,
+      "sha256": "a29d2aaab4d41e70ea9a8e5c12b107748f472ef6e59c2da6a9269c29543e760e"
+    },
+    {
+      "url": "models/refinement/128-lakeshore-current-plan.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 13884,
+      "sha256": "4968bd32c72d643d0d6cdf945a745bc717502599e4ddff52c86e59e0ee89b5ad"
+    },
+    {
+      "url": "models/refinement/900-lakeshore-current-plan.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 79920,
+      "sha256": "374df3398a5605fd2d1b0150457e2d095696e5da86f2cdff81dc75e4cb35a739"
+    },
+    {
+      "url": "models/refinement/brightwater-missing-blocks-concept.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 42620,
+      "sha256": "8c9f2e7653fca28b1b4207b307778af311e2174e441b594f044c8955d6db401f"
+    },
+    {
+      "url": "models/refinement/70-park-settlement-envelope.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 10420,
+      "sha256": "782d8f11fd1783be35681983f706d6e04357651eecc06fde5e351353f6076f5e"
+    },
+    {
+      "url": "models/refinement/170-lakeshore-settlement-envelope.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 5564,
+      "sha256": "9799bb5fe28a28dd08a5faa6572cba1841d499d0a1a07b6116274e59b86283e3"
+    },
+    {
+      "url": "models/refinement/exchange-recorded-topped-structures.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 5012832,
+      "sha256": "d9bb50e7f2dc040fbdc141f5d66cbb13b07aec4ca463801fa4c7f26e1fe4ba6b"
+    },
+    {
+      "url": "models/refinement/mcity-m4-recorded-level41.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 3716,
+      "sha256": "73f017176574c17fc72b4e1af6c93320350ed4fd8cc1978c92b7f94538c1e033"
+    },
+    {
+      "url": "models/refinement/aura-townhome-envelopes.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 37788,
+      "sha256": "d8f22813da8f7ffc9f899a522de899b042579a2f953754e95fc89dac45f1ebbe"
+    },
+    {
+      "url": "models/refinement/lakeview-mapped-waterfront.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 77572,
+      "sha256": "888093e65327b15d77da7071425713c4c85b54294c28feb40b75fdb4ea6cc130"
+    },
+    {
+      "url": "models/refinement/absolute-world-source-derived.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 1411960,
+      "sha256": "41445758ac502b76269f11d0dd8296a9af640f13b68f0766f0ea7bc041bab5c5"
+    },
+    {
+      "url": "models/refinement/bough-beeches-2026-plan.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 44396,
+      "sha256": "f85cc5f9a90055e5de2b75a67cebeddf4ba1eb5aad7ec1dcfb96b19d3a3611f6"
+    },
+    {
+      "url": "models/refinement/chelsea-2026-b4.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 33760,
+      "sha256": "cf0f3167ac72b276faab0a10c7b86286398fb4fda1bca9eaf0fe570efab8d98d"
+    },
+    {
+      "url": "models/refinement/chelsea-2026-b5.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 33732,
+      "sha256": "2cebb708872c0d846a9d2cf1ed00ab3dbeff90a2230f0f4600766ca49e802f1f"
+    },
+    {
+      "url": "models/refinement/chelsea-2026-b6.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 34792,
+      "sha256": "87b434d5e993df9578bcfaa2633dd8942738f3ca4045696fdc71e49e7b4dd64c"
+    },
+    {
+      "url": "models/refinement/dundas-55-2025-plan.glb",
+      "origin": "data/refinement-models.json",
+      "bytes": 10752,
+      "sha256": "3b474ec4e4b62178f3b60f16849ac5eadae34f1b3d3321ca94205984d153b453"
+    },
+    {
+      "url": "models/revamp/citywide-go-go.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 3152716,
+      "sha256": "fb9f7549403f54c9c8747e1f15aa14985ab59596c2cf61f0181a86aca87213e8"
+    },
+    {
+      "url": "models/revamp/citywide-transitway-transitway.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 344024,
+      "sha256": "8169bc4a20dd608fb34c4b369408783b964c1fb6aa1d568a60e7306e9eb08502"
+    },
+    {
+      "url": "models/revamp/citywide-hml-hml.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 1289988,
+      "sha256": "f1321a76c16d86ed6883d45f5ccb2b65e563941c79a3ce01ffa278ff7d5e5a78"
+    },
+    {
+      "url": "models/revamp/downtown-go-go.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 127900,
+      "sha256": "8f9c78e193851011fe93feb26150b03050950c7c69e9ca2b1462034dff46649e"
+    },
+    {
+      "url": "models/revamp/downtown-transitway-transitway.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 87736,
+      "sha256": "415e3e57c373202f612d30194d0538e0e8cbaaed8de44cca0b591f29ed76dfd0"
+    },
+    {
+      "url": "models/revamp/downtown-hml-hml.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 367952,
+      "sha256": "dae8aaa0572f1be733549608dacb47e91b324e6b5af9eec5230e9e3c259cfa84"
+    },
+    {
+      "url": "models/revamp/port-credit-go-go.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 366176,
+      "sha256": "751ae2abe81bf1154a7f09447dafe4975588167ec6ddc21c0c6979ca9f1f860c"
+    },
+    {
+      "url": "models/revamp/port-credit-hml-hml.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 130676,
+      "sha256": "185e96300900e3db3655987bc9bc9d619f91fe8987b836084e7c344a889bfcd9"
+    },
+    {
+      "url": "models/revamp/lakeview-go-go.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 351496,
+      "sha256": "14096c8acbb21f11fd9eac43fd05e53b8ba54e88d247b15f2672472295ee42b2"
+    },
+    {
+      "url": "models/revamp/clarkson-go-go.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 534128,
+      "sha256": "68a7659bdba571dcece0bc228a81accf481d02596652762e1fd6b44c023efce2"
+    },
+    {
+      "url": "models/revamp/cooksville-go-go.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 309536,
+      "sha256": "e4cf741e578b1ba0bd83ad8779f76b5cb57dcc294863246013979101f87a3576"
+    },
+    {
+      "url": "models/revamp/cooksville-hml-hml.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 406644,
+      "sha256": "3a49c2c7362a4a8923905c88d08f68d025bfdd4cf3cfccb263cf0277bce77443"
+    },
+    {
+      "url": "models/revamp/uptown-transitway-transitway.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 62424,
+      "sha256": "0bce015a2a9a75a33106d63176b0fd76cddc49074de3102eb46fe1bd81a189af"
+    },
+    {
+      "url": "models/revamp/uptown-hml-hml.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 550024,
+      "sha256": "4baaee36e3c45d465d8f58f82dfb8a47db45acb9a06d36fd80858a873f44b858"
+    },
+    {
+      "url": "models/revamp/erin-mills-go-go.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 234952,
+      "sha256": "b1c044b948da1f302d9d3cf784708da7e244b9d2cfd9a1cde472dc6ff7a0a4e2"
+    },
+    {
+      "url": "models/revamp/erin-mills-transitway-transitway.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 89952,
+      "sha256": "7228968824758c2f3c5f52d07ddecfab1fb33fc88b655db11a3ee7f0ade04098"
+    },
+    {
+      "url": "models/revamp/streetsville-go-go.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 425920,
+      "sha256": "09b7bf53dd3a7b4cadc641b04c35dceea57eb98bebaa17d8edc947acc9c279d8"
+    },
+    {
+      "url": "models/revamp/meadowvale-go-go.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 524772,
+      "sha256": "e9013dab8599289a8cd080041097e13396ec6cf6f74fd46bb302dc0dc113adac"
+    },
+    {
+      "url": "models/revamp/malton-go-go.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 430684,
+      "sha256": "2b98ac90da672c46e33362b05b7bb0e7ed360272caf4428e65ec4159420e296f"
+    },
+    {
+      "url": "models/revamp/dixie-applewood-go-go.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 274300,
+      "sha256": "c98d1ef1ac662600d3094fb6460aa6e289eaa5df8f5a46f57678dfd2ab09a87f"
+    },
+    {
+      "url": "models/revamp/dixie-applewood-transitway-transitway.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 54316,
+      "sha256": "6990f56e6f5742a5a1adf3554564be597c1d1653d12a23e74c8466ad7b43d330"
+    },
+    {
+      "url": "models/revamp/erindale-go-go.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 247348,
+      "sha256": "5518bba404051b05f93233202842601ad1bae0aad47f8e786fe2333edd830d54"
+    },
+    {
+      "url": "models/revamp/erindale-transitway-transitway.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 48556,
+      "sha256": "c50ae8d5cca147e2d86560e0b60918ad0fc0e4744afc58fabd828f487082b60c"
+    },
+    {
+      "url": "models/revamp/airport-corporate-transitway-transitway.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 104276,
+      "sha256": "6bb5acd9be9c18bb74b1f8da07541734be49790a48d85f60b240cb8e7f73ce25"
+    },
+    {
+      "url": "models/revamp/heartland-hml-hml.glb",
+      "origin": "data/transit-layer-manifest.json",
+      "bytes": 507992,
+      "sha256": "a257eef7ae3a78a5e35c57b462e8973ef5fc4091795c8be13763359027e66c10"
+    },
+    {
+      "url": "models/revamp/citywide--citywide-mapped-surfaces.glb",
+      "origin": "data/landscape-layer-manifest.json",
+      "bytes": 2434432,
+      "sha256": "d116c48257b80f6394eed32eea3bb0d92d249c38bb261189c2e8897267ebb01f"
+    },
+    {
+      "url": "models/revamp/downtown--downtown-mapped-surfaces.glb",
+      "origin": "data/landscape-layer-manifest.json",
+      "bytes": 654916,
+      "sha256": "65240dc686c38f56cc26545c3c34fa3e9956a66d4ed335d2d2aaad8960d8e6dd"
+    },
+    {
+      "url": "models/revamp/port-credit--port-credit-mapped-surfaces.glb",
+      "origin": "data/landscape-layer-manifest.json",
+      "bytes": 19556,
+      "sha256": "034139afcc8a15e93c1dd12ac342933aeb4d587e676469906ccd9cf0ae30b6a6"
+    },
+    {
+      "url": "models/revamp/lakeview--lakeview-mapped-surfaces.glb",
+      "origin": "data/landscape-layer-manifest.json",
+      "bytes": 58512,
+      "sha256": "db58969c64bc6d1ada9102bb1a95a185b7694d7ffc49e08bc40b10ad4d9d88a9"
+    },
+    {
+      "url": "models/revamp/clarkson--clarkson-mapped-surfaces.glb",
+      "origin": "data/landscape-layer-manifest.json",
+      "bytes": 111100,
+      "sha256": "c4987a38ca7170b96dc2cf99c9eb2291d4160b87c9dbb4091f1658063580ae25"
+    },
+    {
+      "url": "models/revamp/cooksville--cooksville-mapped-surfaces.glb",
+      "origin": "data/landscape-layer-manifest.json",
+      "bytes": 169464,
+      "sha256": "06f0a61e4c8b2f7bdf2610b5c042b70aa4a386e91fb60a75ccce3b56ba0a8e67"
+    },
+    {
+      "url": "models/revamp/uptown--uptown-mapped-surfaces.glb",
+      "origin": "data/landscape-layer-manifest.json",
+      "bytes": 264188,
+      "sha256": "035f5e3e1b4b185240c71810438dd92a5fffa7e8d070f129ce850762703839da"
+    },
+    {
+      "url": "models/revamp/erin-mills--erin-mills-mapped-surfaces.glb",
+      "origin": "data/landscape-layer-manifest.json",
+      "bytes": 397740,
+      "sha256": "370558a66ea0f56dd3223a7a3eb345cab0eb4861d65062d224f12bf8863f67a6"
+    },
+    {
+      "url": "models/revamp/streetsville--streetsville-mapped-surfaces.glb",
+      "origin": "data/landscape-layer-manifest.json",
+      "bytes": 178540,
+      "sha256": "f8dd23ff8198d08c28c3f8384ddaaf9697406a1afd0653000523a4b35f7d4ea6"
+    },
+    {
+      "url": "models/revamp/meadowvale--meadowvale-mapped-surfaces.glb",
+      "origin": "data/landscape-layer-manifest.json",
+      "bytes": 282276,
+      "sha256": "e2ef0cec634f102f046033fa2d8e30367be826d4dcec2bab0133a620bcdcb71e"
+    },
+    {
+      "url": "models/revamp/malton--malton-mapped-surfaces.glb",
+      "origin": "data/landscape-layer-manifest.json",
+      "bytes": 111784,
+      "sha256": "e34f2e8409655f4ea034a417fb42e21c45b8b14e6bd2884fc7778766e92355e8"
+    },
+    {
+      "url": "models/revamp/dixie-applewood--dixie-applewood-mapped-surfaces.glb",
+      "origin": "data/landscape-layer-manifest.json",
+      "bytes": 223096,
+      "sha256": "5530b526f18a07fbcb491433acc94859eca477fea510683c48d4e9d8d2880675"
+    },
+    {
+      "url": "models/revamp/erindale--erindale-mapped-surfaces.glb",
+      "origin": "data/landscape-layer-manifest.json",
+      "bytes": 161116,
+      "sha256": "fe6dbd5ffb32cea83e69c5e91d68c2b7674a547aaccefc9637fceabd014fc3e6"
+    },
+    {
+      "url": "models/revamp/airport-corporate--airport-corporate-mapped-surfaces.glb",
+      "origin": "data/landscape-layer-manifest.json",
+      "bytes": 56904,
+      "sha256": "ca8498924afd2ce30b4300263638974b449eacc8f7daa98f177f675e2b421061"
+    },
+    {
+      "url": "models/revamp/heartland--heartland-mapped-surfaces.glb",
+      "origin": "data/landscape-layer-manifest.json",
+      "bytes": 207412,
+      "sha256": "13ca0ccfd25fe4d0018eee53e324ad40755f23f702e03c0163b396aa224dd820"
+    },
+    {
+      "url": "models/citywide.glb",
+      "origin": "district citywide",
+      "bytes": 4919616,
+      "sha256": "39957e7a654dfd1035bce711e3192c4210894af3b278979a1f1175017b07ae90"
+    },
+    {
+      "url": "models/citywide-details.glb",
+      "origin": "district citywide",
+      "bytes": 13235232,
+      "sha256": "89196e49ac8b32bfb1c0315aeb5a250a774d2954bc1d56028a884bb5cc1fb529"
+    },
+    {
+      "url": "data/citywide-trees.json.gz",
+      "origin": "district citywide",
+      "bytes": 32,
+      "sha256": "066cb28110dc4deb719057eb6ffbe853229b450a9355f71f8315b596396f99b9"
+    },
+    {
+      "url": "models/context-parts/citywide-context-01.glb",
+      "origin": "district citywide",
+      "bytes": 2496836,
+      "sha256": "896d511c9295c77b26f832d107ee683f5b09c0a5b39e9eaa1ae48a0462a87d13"
+    },
+    {
+      "url": "models/context-parts/citywide-context-02.glb",
+      "origin": "district citywide",
+      "bytes": 2446244,
+      "sha256": "48e72ced88ea2413da0b5b86ee503cd3077b5aee498b46dc603570da427d056e"
+    },
+    {
+      "url": "models/context-parts/citywide-context-03.glb",
+      "origin": "district citywide",
+      "bytes": 2470388,
+      "sha256": "e32d9300c1ef8bc0991221c93f8006e0871bc081c0b48768d714c90f48836653"
+    },
+    {
+      "url": "models/context-parts/citywide-context-04.glb",
+      "origin": "district citywide",
+      "bytes": 2458860,
+      "sha256": "d6627634a74a20709d1db8acd307616f3a526674361506318659886a5c491ac3"
+    },
+    {
+      "url": "models/context-parts/citywide-context-05.glb",
+      "origin": "district citywide",
+      "bytes": 2458164,
+      "sha256": "5714bb0b1d79df191942de45ebf4e5d940cb3e756f2874394f0dc3e17e8b4d5f"
+    },
+    {
+      "url": "models/context-parts/citywide-context-06.glb",
+      "origin": "district citywide",
+      "bytes": 2507572,
+      "sha256": "f343e6e4c0d19094671b9d129e594ccb838ca8f9de99c2f3f5495cda3ce81a41"
+    },
+    {
+      "url": "models/context-parts/citywide-context-07.glb",
+      "origin": "district citywide",
+      "bytes": 2434584,
+      "sha256": "a7546f75d909658d6a2770beaabd2acd05fa08dc528e9f8592139a314f969cc6"
+    },
+    {
+      "url": "models/context-parts/citywide-context-08.glb",
+      "origin": "district citywide",
+      "bytes": 2427164,
+      "sha256": "ea9bc98ac3bb322563548a1d9d51ae42622911fc91e17b81c2af1ab52b354a8b"
+    },
+    {
+      "url": "models/context-parts/citywide-context-09.glb",
+      "origin": "district citywide",
+      "bytes": 2510812,
+      "sha256": "8eeca8374b90990feee8ba0180fcbb1507761938e5b6828f66bb22f9067ee974"
+    },
+    {
+      "url": "models/context-parts/citywide-context-10.glb",
+      "origin": "district citywide",
+      "bytes": 2637988,
+      "sha256": "9174b83c73692a4cd24278ef85393d27b1ffe2b70e7d3a44e0b31aa1ed4f5f28"
+    },
+    {
+      "url": "models/context-parts/citywide-context-11.glb",
+      "origin": "district citywide",
+      "bytes": 2551004,
+      "sha256": "813b0c9a14bd906e021ce2af0f390cfaf2009136b3cc7c6c11c9336e99961f7e"
+    },
+    {
+      "url": "models/context-parts/citywide-context-12.glb",
+      "origin": "district citywide",
+      "bytes": 2422728,
+      "sha256": "53b2198a87623e7bda8da226dcad386ad4511f2c4f4b39024f4a01e1ee7dcbff"
+    },
+    {
+      "url": "models/context-parts/citywide-context-13.glb",
+      "origin": "district citywide",
+      "bytes": 2340956,
+      "sha256": "5ef50fa21d1ca8b004eb048cc2bbed9ed02344c8843f9920025fe0f021d32397"
+    },
+    {
+      "url": "models/context-parts/citywide-context-14.glb",
+      "origin": "district citywide",
+      "bytes": 2353096,
+      "sha256": "c533701a08305a69ace1f28f715e25ae31edae52fd17ec666adebf774b8eaba3"
+    },
+    {
+      "url": "models/context-parts/citywide-context-15.glb",
+      "origin": "district citywide",
+      "bytes": 2364092,
+      "sha256": "ccf32269ac10c90aa681d296b66b3eff6cdf95aca2328afa06aa61bf50534f89"
+    },
+    {
+      "url": "models/context-parts/citywide-context-16.glb",
+      "origin": "district citywide",
+      "bytes": 2437504,
+      "sha256": "46a1eeaa66f2bc1df5f7035ffb420dd4dbadfb595f48fdb88f5c9e92e99d432e"
+    },
+    {
+      "url": "data/citywide-tree-adjustments-baseline.json.gz",
+      "origin": "tree adjustment citywide",
+      "bytes": 117,
+      "sha256": "4d45b663f450816df33d8d4d0ada4eccc84a2b09dc699ec5a7b0d26c14cf14d8"
+    },
+    {
+      "url": "data/citywide-tree-adjustments-future.json.gz",
+      "origin": "tree adjustment citywide",
+      "bytes": 117,
+      "sha256": "4d45b663f450816df33d8d4d0ada4eccc84a2b09dc699ec5a7b0d26c14cf14d8"
+    },
+    {
+      "url": "models/downtown.glb",
+      "origin": "district downtown",
+      "bytes": 5680912,
+      "sha256": "242a0200b348960bddc5d07e9b00d28b752ccb193ca19f30096d81d7c3b129f4"
+    },
+    {
+      "url": "models/downtown-details.glb",
+      "origin": "district downtown",
+      "bytes": 991456,
+      "sha256": "e46681fa137e9b2f7996586c708d914aecbb0868d98d35d220208436083417e3"
+    },
+    {
+      "url": "data/downtown-trees.json.gz",
+      "origin": "district downtown",
+      "bytes": 538999,
+      "sha256": "399e1d6c2515c371cef3f5d985848927b66660996b11ec0afa9a43397dac3761"
+    },
+    {
+      "url": "models/downtown-context.glb",
+      "origin": "district downtown",
+      "bytes": 2645920,
+      "sha256": "8df06ebde7725c6c28ae81996117cdbaf4d493f8fc4441d7a9ac7f2541f915c6"
+    },
+    {
+      "url": "data/downtown-tree-adjustments-baseline.json.gz",
+      "origin": "tree adjustment downtown",
+      "bytes": 3330,
+      "sha256": "b349ed93b058eaf54f7e9e30520342a99beb6918102609a34ba6f9f1a9e021e7"
+    },
+    {
+      "url": "data/downtown-tree-adjustments-future.json.gz",
+      "origin": "tree adjustment downtown",
+      "bytes": 3526,
+      "sha256": "a0f792084d4c02c03d302011b835eb2570e824ca5b74edc2d5323273e1874cc3"
+    },
+    {
+      "url": "models/port-credit.glb",
+      "origin": "district port-credit",
+      "bytes": 3092920,
+      "sha256": "053e6db4f348a933400af0c5e3e4f85be638af78b43adbca5bf73185b448c293"
+    },
+    {
+      "url": "models/port-credit-details.glb",
+      "origin": "district port-credit",
+      "bytes": 259844,
+      "sha256": "67ffe5528a4abf53e83ab92518bde73695275f428922ec15194ff05afede213f"
+    },
+    {
+      "url": "data/port-credit-trees.json.gz",
+      "origin": "district port-credit",
+      "bytes": 664063,
+      "sha256": "c1abeabf39ae4fb05242c6ca6e080c7bef04eef7f39900a232fcbeb789d3d38a"
+    },
+    {
+      "url": "models/port-credit-context.glb",
+      "origin": "district port-credit",
+      "bytes": 2601984,
+      "sha256": "4c0d6f9cdb10001d43f1711f2f3f6ebad2c6061d638aa75f5553fa81ab653122"
+    },
+    {
+      "url": "data/port-credit-tree-adjustments-baseline.json.gz",
+      "origin": "tree adjustment port-credit",
+      "bytes": 5634,
+      "sha256": "e5a13f873bd7670e7a59d39e1f180c93867bdb75d7b8c9d81edbb975946919f1"
+    },
+    {
+      "url": "data/port-credit-tree-adjustments-future.json.gz",
+      "origin": "tree adjustment port-credit",
+      "bytes": 5859,
+      "sha256": "6b59874201592a08f16ee716d328e5f99f45d3e43444ffe765b287d7179b06d9"
+    },
+    {
+      "url": "models/lakeview.glb",
+      "origin": "district lakeview",
+      "bytes": 2770028,
+      "sha256": "6524fba0e3d893634ca2def54e1fdc39638f16eb78b4c2603ff4cd2227b0cb54"
+    },
+    {
+      "url": "models/lakeview-details.glb",
+      "origin": "district lakeview",
+      "bytes": 307788,
+      "sha256": "0f1e6c12491f535c0bc524e24b03de03d48ca76dc48362eb71e0d85484aa72d3"
+    },
+    {
+      "url": "data/lakeview-trees.json.gz",
+      "origin": "district lakeview",
+      "bytes": 529940,
+      "sha256": "514039d06c8fd2c599bf9c46b6a9e2987887114f99d44c8784b836bfcdac7cbd"
+    },
+    {
+      "url": "models/lakeview-context.glb",
+      "origin": "district lakeview",
+      "bytes": 2052908,
+      "sha256": "6a1c7e2d1ece5bf644f3c3580801a134c0413412502c06f5a822ff9a99f91d7d"
+    },
+    {
+      "url": "data/lakeview-tree-adjustments-baseline.json.gz",
+      "origin": "tree adjustment lakeview",
+      "bytes": 3351,
+      "sha256": "3cb41f063312627d3947f09d790d41dbd9bfd82a420bfcea9dfdf4184ced4661"
+    },
+    {
+      "url": "data/lakeview-tree-adjustments-future.json.gz",
+      "origin": "tree adjustment lakeview",
+      "bytes": 3421,
+      "sha256": "fffa7cab26247bc2185e198ec0b203e16fe386f3958f3fdb6bc5f32ef61f0fdd"
+    },
+    {
+      "url": "models/clarkson.glb",
+      "origin": "district clarkson",
+      "bytes": 2174832,
+      "sha256": "113ff92946b13456e4ed584d781e144c1aad5325064b05c7334e43bc619838d6"
+    },
+    {
+      "url": "models/clarkson-details.glb",
+      "origin": "district clarkson",
+      "bytes": 616036,
+      "sha256": "5bfe132341191de5904a9b23ad8637f4c727e055e5f1a017b72aaa8a95135a5e"
+    },
+    {
+      "url": "data/clarkson-trees.json.gz",
+      "origin": "district clarkson",
+      "bytes": 1045174,
+      "sha256": "3ec52634ba66d653c3196037dbe6063d28c9c4254e637340eceda29d882f7d0f"
+    },
+    {
+      "url": "models/clarkson-context.glb",
+      "origin": "district clarkson",
+      "bytes": 3926244,
+      "sha256": "4b7f6fbbe55de7e790b9c9c08feeba23e3b9f874ceff579091805375c829f67a"
+    },
+    {
+      "url": "data/clarkson-tree-adjustments-baseline.json.gz",
+      "origin": "tree adjustment clarkson",
+      "bytes": 3592,
+      "sha256": "04a40cb18182e496eb73cc145380ac8d9b94e967ebe360d5f4c41cba378c559c"
+    },
+    {
+      "url": "data/clarkson-tree-adjustments-future.json.gz",
+      "origin": "tree adjustment clarkson",
+      "bytes": 3657,
+      "sha256": "345192d2d9551faf3be59b3fe25d9c5af3eb955dbb2436b66308447fdd0bde7f"
+    },
+    {
+      "url": "models/cooksville.glb",
+      "origin": "district cooksville",
+      "bytes": 2298012,
+      "sha256": "18bafa55cab7e8271068522e84be8ac8d98d05574d30fc497996cd14422ff372"
+    },
+    {
+      "url": "models/cooksville-details.glb",
+      "origin": "district cooksville",
+      "bytes": 739780,
+      "sha256": "41d5be1160fc4b75962271c14a8fd08a4917858fa42a6328e8685bc7cbbd3779"
+    },
+    {
+      "url": "data/cooksville-trees.json.gz",
+      "origin": "district cooksville",
+      "bytes": 644412,
+      "sha256": "0b7fe217ce13e90a64cb992818b9637f6d0e3eae16b37921cbf23e0f3cff4794"
+    },
+    {
+      "url": "models/cooksville-context.glb",
+      "origin": "district cooksville",
+      "bytes": 3184228,
+      "sha256": "84d9fc344e4265df53f4ed2203fbfc15e1a7f5355cf59b4438bb453168708e48"
+    },
+    {
+      "url": "data/cooksville-tree-adjustments-baseline.json.gz",
+      "origin": "tree adjustment cooksville",
+      "bytes": 2341,
+      "sha256": "65afd592bed71e0d930ce51aae970578cbea0b0176d20095d30c9a6bcf14b1c1"
+    },
+    {
+      "url": "data/cooksville-tree-adjustments-future.json.gz",
+      "origin": "tree adjustment cooksville",
+      "bytes": 2417,
+      "sha256": "7361a9bbb45eaa3532855464f6303ba88dd5325543984254ec73951ada57fe10"
+    },
+    {
+      "url": "models/uptown.glb",
+      "origin": "district uptown",
+      "bytes": 3715800,
+      "sha256": "8a7e8c8710c780bd50aa2aaebb64541495594e09472365108a7c5196135afb8c"
+    },
+    {
+      "url": "models/uptown-details.glb",
+      "origin": "district uptown",
+      "bytes": 1318576,
+      "sha256": "8e4932926eee896e97011ad26ffff6bb50448a0f19480f6c90bbff4c9e9fde06"
+    },
+    {
+      "url": "data/uptown-trees.json.gz",
+      "origin": "district uptown",
+      "bytes": 798084,
+      "sha256": "13119fe5ea722d29df90d4b051e8e57465705ea399ff2b820084af9ebbfc0925"
+    },
+    {
+      "url": "models/uptown-context.glb",
+      "origin": "district uptown",
+      "bytes": 3407444,
+      "sha256": "98f717d609eb3da4f42c617e7c90760a259e5f270a3ebbc33bfae534756d6ef0"
+    },
+    {
+      "url": "data/uptown-tree-adjustments-baseline.json.gz",
+      "origin": "tree adjustment uptown",
+      "bytes": 2706,
+      "sha256": "9601a17a027a404cbbce8f37bf9ade2a1431a0f763d78bcd069536bab362ddbf"
+    },
+    {
+      "url": "data/uptown-tree-adjustments-future.json.gz",
+      "origin": "tree adjustment uptown",
+      "bytes": 2715,
+      "sha256": "abaea21ceea719cbad86e17e66102d655d759c5d043b6e2c21827bed7d88fcc0"
+    },
+    {
+      "url": "models/erin-mills.glb",
+      "origin": "district erin-mills",
+      "bytes": 6230184,
+      "sha256": "7c2ac36ab7b7ef26724b4bd33e092f85a51fdda9a94a6339132ce9849e17e58f"
+    },
+    {
+      "url": "models/erin-mills-details.glb",
+      "origin": "district erin-mills",
+      "bytes": 1346284,
+      "sha256": "d08d13e9e3f5301e4d8d0415cf91e3a3c1fbebec2ee7ae75f68aad6f14a73b35"
+    },
+    {
+      "url": "data/erin-mills-trees.json.gz",
+      "origin": "district erin-mills",
+      "bytes": 1628631,
+      "sha256": "d4ab3c446c145c08a976ebb269e0992e4ce087d4ba2aca091e3f7bc6a7c6f251"
+    },
+    {
+      "url": "models/erin-mills-context.glb",
+      "origin": "district erin-mills",
+      "bytes": 5513364,
+      "sha256": "59e9dcc38760113121dec03c2903d7fbba499f71818fc2b6e125a1c36313d1ea"
+    },
+    {
+      "url": "data/erin-mills-tree-adjustments-baseline.json.gz",
+      "origin": "tree adjustment erin-mills",
+      "bytes": 6345,
+      "sha256": "93a4439e8178a5db364cd3eaeba25094e1b42b4efc5b40d47cb53abf6cf5144b"
+    },
+    {
+      "url": "data/erin-mills-tree-adjustments-future.json.gz",
+      "origin": "tree adjustment erin-mills",
+      "bytes": 6508,
+      "sha256": "ece3b04b3fcb198ffade3302ad018262f62cb45c3dda668f46d2436594a9b37a"
+    },
+    {
+      "url": "models/streetsville.glb",
+      "origin": "district streetsville",
+      "bytes": 3769944,
+      "sha256": "2b60549a136ae71719faf3b71c0217a3cc8bf795ddd4b298279878fbdbc6b310"
+    },
+    {
+      "url": "models/streetsville-details.glb",
+      "origin": "district streetsville",
+      "bytes": 758152,
+      "sha256": "2311fd07bac95505748fe367df8e71958a62f39f4a853bc1cae31683dc7f3eb6"
+    },
+    {
+      "url": "data/streetsville-trees.json.gz",
+      "origin": "district streetsville",
+      "bytes": 1056436,
+      "sha256": "d24b16561defd693076bb74ff4b5f22310565b017445b22c4319776eb8e880a2"
+    },
+    {
+      "url": "models/streetsville-context.glb",
+      "origin": "district streetsville",
+      "bytes": 3480028,
+      "sha256": "ff5435f1ab281a65c5f7432e5e32e22fa6bf3f2980a1299402a5d609bde6e7bd"
+    },
+    {
+      "url": "data/streetsville-tree-adjustments-baseline.json.gz",
+      "origin": "tree adjustment streetsville",
+      "bytes": 1733,
+      "sha256": "a6da75572229558cb671d4816cd5016d134fa1020a9f6772e63efa865385d33d"
+    },
+    {
+      "url": "data/streetsville-tree-adjustments-future.json.gz",
+      "origin": "tree adjustment streetsville",
+      "bytes": 1854,
+      "sha256": "d3939fc35e603207f50387e5b8a680c13aa543ccd6b9c7cbe993a442f9f61eb7"
+    },
+    {
+      "url": "models/meadowvale.glb",
+      "origin": "district meadowvale",
+      "bytes": 6019000,
+      "sha256": "2cfd204ca030a1990027cc105c19cc4eb2dc43e0df8c8f9eccb5158145f59985"
+    },
+    {
+      "url": "models/meadowvale-details.glb",
+      "origin": "district meadowvale",
+      "bytes": 1896952,
+      "sha256": "cb33d7987f11c3c9240127f1f37c6dd08f13cfa92a067f299f3bebce6d4459be"
+    },
+    {
+      "url": "data/meadowvale-trees.json.gz",
+      "origin": "district meadowvale",
+      "bytes": 1797229,
+      "sha256": "056e2b39490233b1ac2f9405cf5581543669a085473ff761d920c39056506cd3"
+    },
+    {
+      "url": "models/meadowvale-context.glb",
+      "origin": "district meadowvale",
+      "bytes": 6244484,
+      "sha256": "c3d135b8edc2b442aa0e3f0ab00eecd7433f62335b3ec78fc62c01ce9e4e887e"
+    },
+    {
+      "url": "data/meadowvale-tree-adjustments-baseline.json.gz",
+      "origin": "tree adjustment meadowvale",
+      "bytes": 3794,
+      "sha256": "bd44425d61d15e9bcf9c7a1c88c3012e38ee10988c21ff8e5c82f23c19f69b2e"
+    },
+    {
+      "url": "data/meadowvale-tree-adjustments-future.json.gz",
+      "origin": "tree adjustment meadowvale",
+      "bytes": 3923,
+      "sha256": "25faed94cea29dbb1afec31bf805fa4ba8729ef46b6399d693bd3deb3aa457b0"
+    },
+    {
+      "url": "models/malton.glb",
+      "origin": "district malton",
+      "bytes": 1676476,
+      "sha256": "80800f23f38304567796ec185e9f1abb70a0e501512c837cb6a3fef546efac13"
+    },
+    {
+      "url": "models/malton-details.glb",
+      "origin": "district malton",
+      "bytes": 690516,
+      "sha256": "6bdfc104f91682aa9db2e65e80efa55b15837079f7416ea93f407901b55c2c72"
+    },
+    {
+      "url": "data/malton-trees.json.gz",
+      "origin": "district malton",
+      "bytes": 397785,
+      "sha256": "70812728978dde4ed1f28a648bd9c5d8e9b26dae2a26d0d68602052a1e1bbf8f"
+    },
+    {
+      "url": "models/malton-context.glb",
+      "origin": "district malton",
+      "bytes": 2119628,
+      "sha256": "98f28b3f95c9c89b96f410782c6bf65d4c22d00d52f92d36360bc0f30d773943"
+    },
+    {
+      "url": "data/malton-tree-adjustments-baseline.json.gz",
+      "origin": "tree adjustment malton",
+      "bytes": 1001,
+      "sha256": "be86be133fdfd20abda324027568cd150f616228e929ce7958a4a4bdc3dbb238"
+    },
+    {
+      "url": "data/malton-tree-adjustments-future.json.gz",
+      "origin": "tree adjustment malton",
+      "bytes": 1032,
+      "sha256": "7e1f55765fdc0504e2d03bf955fd5f5d336bf841345cfe90d052117c3ea76ea4"
+    },
+    {
+      "url": "models/dixie-applewood.glb",
+      "origin": "district dixie-applewood",
+      "bytes": 3531336,
+      "sha256": "5f7b90c4270afabc7d1ef76434fcf84804b03487803915875b6fcc85782a4d05"
+    },
+    {
+      "url": "models/dixie-applewood-details.glb",
+      "origin": "district dixie-applewood",
+      "bytes": 1192540,
+      "sha256": "5b0af7825c7e3490ad1daff863cb1a9c8dd76beb313682bbd2e2924d31ed36e9"
+    },
+    {
+      "url": "data/dixie-applewood-trees.json.gz",
+      "origin": "district dixie-applewood",
+      "bytes": 923841,
+      "sha256": "1f814fd742b61961db65e809574d36e691ac710df46c36189a6e7e08a2931c05"
+    },
+    {
+      "url": "models/dixie-applewood-context.glb",
+      "origin": "district dixie-applewood",
+      "bytes": 4164180,
+      "sha256": "59df4f6fe74b025e2e913904b00fd3bd51d7544c4d7a9a84add47488edfa7c30"
+    },
+    {
+      "url": "data/dixie-applewood-tree-adjustments-baseline.json.gz",
+      "origin": "tree adjustment dixie-applewood",
+      "bytes": 1920,
+      "sha256": "105d8c40db90d824fdf34c79368f1e70553c451c8083608db76f364dbd9df08a"
+    },
+    {
+      "url": "data/dixie-applewood-tree-adjustments-future.json.gz",
+      "origin": "tree adjustment dixie-applewood",
+      "bytes": 2030,
+      "sha256": "2ee092e9884a0074b1d2b8fc9504d336ecceb98b6557fa15feb6f41ebb9bbeee"
+    },
+    {
+      "url": "models/erindale.glb",
+      "origin": "district erindale",
+      "bytes": 3797568,
+      "sha256": "2f8092049b47ba75be05412195413210cd826e3d0976fd05b1d0bc0cada60886"
+    },
+    {
+      "url": "models/erindale-details.glb",
+      "origin": "district erindale",
+      "bytes": 1003024,
+      "sha256": "b46ebe48b43ab055a2e8c015ba0b2218e66bfc639140296f32af83682960d36d"
+    },
+    {
+      "url": "data/erindale-trees.json.gz",
+      "origin": "district erindale",
+      "bytes": 1949237,
+      "sha256": "a5c0ee5f9ff20f2c6274100b72de3e9dc7cfb3b59fffd1cb55ecba47b890930d"
+    },
+    {
+      "url": "models/erindale-context.glb",
+      "origin": "district erindale",
+      "bytes": 5501000,
+      "sha256": "d5ce94ea3905dc22ba167e8731d1fd36796eb19dcecf703e4e49dac9c77bd95b"
+    },
+    {
+      "url": "data/erindale-tree-adjustments-baseline.json.gz",
+      "origin": "tree adjustment erindale",
+      "bytes": 4071,
+      "sha256": "691e140009507c5e88b0cc3f463b2cae3ef8b343d2978b2d8280e8d8b6eaf6db"
+    },
+    {
+      "url": "data/erindale-tree-adjustments-future.json.gz",
+      "origin": "tree adjustment erindale",
+      "bytes": 4140,
+      "sha256": "e66b1cdd87de626772cb2f13fed0f8f4e20b1407080896b89dbe7566eae1fdbf"
+    },
+    {
+      "url": "models/airport-corporate.glb",
+      "origin": "district airport-corporate",
+      "bytes": 2082164,
+      "sha256": "58d5917cec0ef52c4d60b0621568f8fd28a42de27c9367aa60c8081784649c8b"
+    },
+    {
+      "url": "models/airport-corporate-details.glb",
+      "origin": "district airport-corporate",
+      "bytes": 1910232,
+      "sha256": "4b23a56aad3f416e5d98db59b41dbf81b7a54403840bde3e80e2f6f3edc74566"
+    },
+    {
+      "url": "data/airport-corporate-trees.json.gz",
+      "origin": "district airport-corporate",
+      "bytes": 609579,
+      "sha256": "bb1686b6eaf40435b11dc11942ca92c97f12dcf99cac74a531bcc6d8f52f80dd"
+    },
+    {
+      "url": "models/airport-corporate-context.glb",
+      "origin": "district airport-corporate",
+      "bytes": 3580656,
+      "sha256": "7bbab6b2d132f40b6458cd67a757dedcf20c934caf947bca9d7c88fc7145f084"
+    },
+    {
+      "url": "data/airport-corporate-tree-adjustments-baseline.json.gz",
+      "origin": "tree adjustment airport-corporate",
+      "bytes": 809,
+      "sha256": "7676837215e25a62d96790c83fdc2469d1914e2cea7003e305afb2c6f5f43e53"
+    },
+    {
+      "url": "data/airport-corporate-tree-adjustments-future.json.gz",
+      "origin": "tree adjustment airport-corporate",
+      "bytes": 816,
+      "sha256": "8ac976e9f0f092da9f75b2bf031bedc26855bac555cccb038ea0f19a46609fa8"
+    },
+    {
+      "url": "models/heartland.glb",
+      "origin": "district heartland",
+      "bytes": 3900552,
+      "sha256": "e2a357b989c200ba917bb9f233c5e325aa2e764b9126527ca2f9655c63f15b4d"
+    },
+    {
+      "url": "models/heartland-details.glb",
+      "origin": "district heartland",
+      "bytes": 1587316,
+      "sha256": "819a8b0783141b5dc55497d19d94415df0c5b376673b734ac92700df15a43ca8"
+    },
+    {
+      "url": "data/heartland-trees.json.gz",
+      "origin": "district heartland",
+      "bytes": 968962,
+      "sha256": "fc669f304834b787db008e19008a68b7765cfdf0d0ab32eb0843b4d85999192a"
+    },
+    {
+      "url": "models/heartland-context.glb",
+      "origin": "district heartland",
+      "bytes": 3792976,
+      "sha256": "d586a3e2eae0c10086ec33c200a845c51325316df59daa81df866e97768461da"
+    },
+    {
+      "url": "data/heartland-tree-adjustments-baseline.json.gz",
+      "origin": "tree adjustment heartland",
+      "bytes": 1897,
+      "sha256": "b367b4a9d5dc573fa4c7f6b23307f25bb9682fe13f8ae765871a19271a79b4cf"
+    },
+    {
+      "url": "data/heartland-tree-adjustments-future.json.gz",
+      "origin": "tree adjustment heartland",
+      "bytes": 1987,
+      "sha256": "5a130922df54cd605a73378e06ac5fa457b01604e54ff544af486ebd7b9eb046"
+    },
+    {
+      "url": "models/exchange-textured-phase-aware.glb",
+      "origin": "fixed application dependency",
+      "bytes": 11256292,
+      "sha256": "52c8aa4a1077fdf815aa09061abfa3acce931d764a6d618984faf8bcd1f331ac"
+    },
+    {
+      "url": "models/mcity-m4-plan-derived.glb",
+      "origin": "fixed application dependency",
+      "bytes": 9384,
+      "sha256": "4a2a1a170015c70731584f96a6e1d77124f70bc699515312e5d2e3d83dab5c57"
+    },
+    {
+      "url": "models/mcity-m3-upper-envelope.glb",
+      "origin": "fixed application dependency",
+      "bytes": 5060,
+      "sha256": "dc378b8747e4c119f8bee2bb6388217db0303cdf0c1310484217c33b7bc283c0"
+    },
+    {
+      "url": "models/pearson-airfield-context.glb",
+      "origin": "fixed application dependency",
+      "bytes": 246492,
+      "sha256": "ff75844db136f5c2d41df1c2c98f2cd78d9dbcb2e67759b56b29227bd3861a8f"
+    },
+    {
+      "url": "vendor/three.module.js",
+      "origin": "fixed application dependency",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    {
+      "url": "vendor/three.core.js",
+      "origin": "fixed application dependency",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+    },
+    {
+      "url": "vendor/meshopt_decoder.mjs",
+      "origin": "fixed application dependency",
+      "bytes": 29059,
+      "sha256": "cb08bf53ad8ad9693d8bb759b2dbade350eb38bcce63d005385e225b564c5f6a"
+    },
+    {
+      "url": "vendor/addons/controls/OrbitControls.js",
+      "origin": "fixed application dependency",
+      "bytes": 40755,
+      "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b"
+    },
+    {
+      "url": "vendor/addons/loaders/GLTFLoader.js",
+      "origin": "fixed application dependency",
+      "bytes": 117570,
+      "sha256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16"
+    },
+    {
+      "url": "data/districts.json",
+      "origin": "declared initial application/gallery data",
+      "bytes": 12431,
+      "sha256": "84643973050f6b1c743f9cebb918195d6ffc3d8378bbe171428211233c523acf"
+    },
+    {
+      "url": "data/projects.json",
+      "origin": "declared initial application/gallery data",
+      "bytes": 617724,
+      "sha256": "ce984e0b3b68d3e41f7cc6be4609210f35ddf1434bbb08556a1fe462eed18223"
+    },
+    {
+      "url": "data/groups.json",
+      "origin": "declared initial application/gallery data",
+      "bytes": 629884,
+      "sha256": "d517c83fd18ebef58820e5e383dd38f74b2cf0d25676d57ab089c7e5019f32d3"
+    },
+    {
+      "url": "data/overrides.json",
+      "origin": "declared initial application/gallery data",
+      "bytes": 928218,
+      "sha256": "7a93fdd3ae9d46477ab9c448cf5645627ec14a134b01981a2245b9bb079a78b6"
+    },
+    {
+      "url": "data/stats.json",
+      "origin": "declared initial application/gallery data",
+      "bytes": 727,
+      "sha256": "cf73aef59392a5f0ce5d8939a4db83d1ad661c8478cebca6631546f9b3776b4d"
+    },
+    {
+      "url": "data/transit.json",
+      "origin": "declared initial application/gallery data",
+      "bytes": 2811050,
+      "sha256": "00faf110158eda2af0161538c4023ea381a19b5115a51b7e8cb80116a0eac370"
+    },
+    {
+      "url": "data/transit-research.json",
+      "origin": "declared initial application/gallery data",
+      "bytes": 4245,
+      "sha256": "93cc03a86adbe2b7ad86651f868f9e9508138e2be913752293a3544e96a67f57"
+    },
+    {
+      "url": "data/refinement-models.json",
+      "origin": "declared initial application/gallery data",
+      "bytes": 651680,
+      "sha256": "f7fbc0010b64dfd0e76ac72a3463dec472970193470ac33ea048c8ae6ce5ef38"
+    },
+    {
+      "url": "data/context-assets.json",
+      "origin": "declared initial application/gallery data",
+      "bytes": 854,
+      "sha256": "7cb3ce35040639991f5861f58986170676837c0af65c69a779479a48f84914f4"
+    },
+    {
+      "url": "data/transit-layer-manifest.json",
+      "origin": "declared initial application/gallery data",
+      "bytes": 266522,
+      "sha256": "c39eb069d34b4e5ea217c97fd08baaadae9d44bd727d166463b27a1fd3bfc0e3"
+    },
+    {
+      "url": "data/landscape-layer-manifest.json",
+      "origin": "declared initial application/gallery data",
+      "bytes": 24968,
+      "sha256": "6d397cfdd2ee23d4ceccb7fcfafa1ab949ed6132fda7b82d9200a284b2cfd4b2"
+    },
+    {
+      "url": "data/picture-assets.json",
+      "origin": "declared initial application/gallery data",
+      "bytes": 24813,
+      "sha256": "eae08d97124307f6f619df45227d4d0017d4c51f767c83acd049fa5625334e72"
+    }
+  ],
+  "errors": [],
+  "geometryComparison": "Exact per-node triangle positions, winding and vertex colours, with cyclic triangle-start normalization. Guide extras and KHR_materials_unlit are independently inspected after Meshopt decoding."
+}

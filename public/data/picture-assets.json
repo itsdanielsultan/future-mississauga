@@ -1,271 +1,604 @@
 {
-  "edition": "Transit Revamp",
+  "edition": "Transit Depth 2026-09-21",
   "originalPixels": true,
+  "displayScale": 0.5,
+  "displayPolicy": "All model pictures displayed on the website use PNGs at 50% of each original dimension. Download Image links retain the unmodified 3840px original.",
+  "finalRenderLockAcknowledged": true,
   "hosting": "Self-contained static files; relative URLs work on a GitHub project path or custom domain.",
   "images": {
     "citywide-future.png": {
       "url": "gallery/originals/citywide-future.png",
-      "sha256": "acacfcd6a102a6fd0257adfa11dd6b95cb2f75a816a6760da3c9614232994df2",
-      "bytes": 13823019,
+      "sha256": "61834647a27f4f8da05ee107ee072cc6b1919687ed819ab1f671655343c4585d",
+      "bytes": 13818255,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/61834647a27f4f8d/citywide-future.png",
+        "sha256": "74a59f87b28b7e3cb8dd57fc19042155d079a44a57b0bc89b4c7406694952d0a",
+        "bytes": 2686570,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "61834647a27f4f8da05ee107ee072cc6b1919687ed819ab1f671655343c4585d"
+      }
     },
     "downtown-future.png": {
       "url": "gallery/originals/downtown-future.png",
-      "sha256": "d6efc96576a9b1f5a4e508f1fcaa5dd3108fef3094b0a4caca5fc294e4fccc9c",
-      "bytes": 15528460,
+      "sha256": "e16d9350c55994d33bcae45056defd218aeebd77082a8a6d7706d2a35b591800",
+      "bytes": 15583638,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/e16d9350c55994d3/downtown-future.png",
+        "sha256": "80970ee16643374c131c1252ed716d807a23007eb92b3709fd32a724e4884c6e",
+        "bytes": 3575954,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "e16d9350c55994d33bcae45056defd218aeebd77082a8a6d7706d2a35b591800"
+      }
     },
     "port-credit-future.png": {
       "url": "gallery/originals/port-credit-future.png",
-      "sha256": "88196b4051bae3c48a43297753077d605103d2a0424104ba440cf7eacd638196",
-      "bytes": 15774286,
+      "sha256": "a5b73f54d0854bec7853f60326ec3f2efe43b2687dbc29b79df07cb227dbeea6",
+      "bytes": 15796411,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/a5b73f54d0854bec/port-credit-future.png",
+        "sha256": "721bc6d1d3529a22512e74a2697dbf0adeaa4d4514c286d03fb2f590fd2712af",
+        "bytes": 3735231,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "a5b73f54d0854bec7853f60326ec3f2efe43b2687dbc29b79df07cb227dbeea6"
+      }
     },
     "lakeview-future.png": {
       "url": "gallery/originals/lakeview-future.png",
-      "sha256": "72844f58f9c0bc643c82b4529f338398d20ba8e9d4a24e1bb6f38db73c137fbc",
-      "bytes": 13637341,
+      "sha256": "420a2dbc3b022b03ff416f125a7a6d71dd37fcfbdf3eaf952e87c1506002d774",
+      "bytes": 13655178,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/420a2dbc3b022b03/lakeview-future.png",
+        "sha256": "5aaa6c858bea5016bc99abed7c7d13b6e66f6c8458cb4be1060b32a8ec122dd9",
+        "bytes": 2775803,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "420a2dbc3b022b03ff416f125a7a6d71dd37fcfbdf3eaf952e87c1506002d774"
+      }
     },
     "clarkson-future.png": {
       "url": "gallery/originals/clarkson-future.png",
-      "sha256": "480e0da765ab0fd403e30362a3b6e6f6ba4d7eaa5fade3499c34630db8089308",
-      "bytes": 15208854,
+      "sha256": "533ceb5357ca1dcb57b0fc0db6b7334f93d6bd0224bccf14db1a22c27d4e2090",
+      "bytes": 15224193,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/533ceb5357ca1dcb/clarkson-future.png",
+        "sha256": "4c531f34e93998ad35bbdfbb4a6d664bd97b7e76038b3a58a58e92e7129f28a2",
+        "bytes": 3489241,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "533ceb5357ca1dcb57b0fc0db6b7334f93d6bd0224bccf14db1a22c27d4e2090"
+      }
     },
     "cooksville-future.png": {
       "url": "gallery/originals/cooksville-future.png",
-      "sha256": "e297af529410220fc24d6c2e98970e36e2ef9c63efe665cf5e3f9d92715a7a13",
-      "bytes": 15794737,
+      "sha256": "0f80e034f24c38b3f271212aaae552548ab3bfe91d8f80b2d806aac719cd80bd",
+      "bytes": 15834506,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/0f80e034f24c38b3/cooksville-future.png",
+        "sha256": "bca28d69b26ae997254bed361541afd56de4b71c99e4299a6e36afa9e7752a4d",
+        "bytes": 3771844,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "0f80e034f24c38b3f271212aaae552548ab3bfe91d8f80b2d806aac719cd80bd"
+      }
     },
     "uptown-future.png": {
       "url": "gallery/originals/uptown-future.png",
-      "sha256": "9c8a3da6cd7fe0df2cdb8572d9f0a44b2903d133514f298867bd41b07c941c21",
-      "bytes": 15929070,
+      "sha256": "4e6699670d68d1bacd80da88eed5400b22272c5c307184d8f27d97a1231430a7",
+      "bytes": 15990232,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/4e6699670d68d1ba/uptown-future.png",
+        "sha256": "a5cef0f9966a4bc863a3789c18115ecb63feeba462faede52c664d27d65a2e23",
+        "bytes": 3718358,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "4e6699670d68d1bacd80da88eed5400b22272c5c307184d8f27d97a1231430a7"
+      }
     },
     "erin-mills-future.png": {
       "url": "gallery/originals/erin-mills-future.png",
-      "sha256": "35b0d66b1ae223011e57e46aeff267a46620647ac2787d433929da2d57095d66",
-      "bytes": 18023305,
+      "sha256": "6dde1b1976371c30587d36463aa296fdf3639a484b9160371a4b3050331bfe83",
+      "bytes": 18039059,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/6dde1b1976371c30/erin-mills-future.png",
+        "sha256": "639e0ca130c8e41eeb115fd4652af7f05b43af3cdc72b38490fd936cd47c6feb",
+        "bytes": 4448789,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "6dde1b1976371c30587d36463aa296fdf3639a484b9160371a4b3050331bfe83"
+      }
     },
     "streetsville-future.png": {
       "url": "gallery/originals/streetsville-future.png",
-      "sha256": "15260fcc79b156eaa1a8a87b99cb17a72316599f4762741eba7cb7243deb46c7",
-      "bytes": 17100293,
+      "sha256": "aa48b43c4fb79cfc5dd9d4f40df1ee525b8659e9a6b0efc7943c569ae05a9960",
+      "bytes": 17121464,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/aa48b43c4fb79cfc/streetsville-future.png",
+        "sha256": "bcb4fb192054eddc2b03e5a9b6027d637a4b0d43bffb9d11588f7d3ed0fc58e0",
+        "bytes": 4132979,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "aa48b43c4fb79cfc5dd9d4f40df1ee525b8659e9a6b0efc7943c569ae05a9960"
+      }
     },
     "meadowvale-future.png": {
       "url": "gallery/originals/meadowvale-future.png",
-      "sha256": "caa6f3d5810155f075bc36b6ae718e89d6c03796ae0f26995b8b6dd3a11d680a",
-      "bytes": 16562874,
+      "sha256": "b7b84e2d0ceb9777c3dfcd806fcf733c687ebd14dc491e1aea5cc1711d640cc0",
+      "bytes": 16574676,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/b7b84e2d0ceb9777/meadowvale-future.png",
+        "sha256": "a8543f83add2e5714cd58cec280fe674c7a6a3d5e8376bfe98f014913b796085",
+        "bytes": 3828109,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "b7b84e2d0ceb9777c3dfcd806fcf733c687ebd14dc491e1aea5cc1711d640cc0"
+      }
     },
     "malton-future.png": {
       "url": "gallery/originals/malton-future.png",
-      "sha256": "d8b1b7322397f5c7dc1db293b7c8bfc85b4b773789c8a789ba59bf296fd0062f",
-      "bytes": 14665767,
+      "sha256": "cab65388d7b141af74a5936db1bc99c15ca7b6128fc20e68ac94f578e1fcd8fe",
+      "bytes": 14683776,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/cab65388d7b141af/malton-future.png",
+        "sha256": "a608556d47bb031e361bfce9915edeef0575dd0a8588fbb3b2453c9cb0b431e4",
+        "bytes": 3252585,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "cab65388d7b141af74a5936db1bc99c15ca7b6128fc20e68ac94f578e1fcd8fe"
+      }
     },
     "dixie-applewood-future.png": {
       "url": "gallery/originals/dixie-applewood-future.png",
-      "sha256": "4a046f6009290b7072a2149e3dc38c95f97e35f05318b86f15ea5ef6c4728405",
-      "bytes": 16386334,
+      "sha256": "177da4016b694758320f8fa3fa321e21b38f8f123031a69e3aca0048ce7e57e9",
+      "bytes": 16401356,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/177da4016b694758/dixie-applewood-future.png",
+        "sha256": "ad462cdf2d8a6e6702722a275afa88d8f4724568c7d8e1c4c76ead2c3e64f490",
+        "bytes": 3805737,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "177da4016b694758320f8fa3fa321e21b38f8f123031a69e3aca0048ce7e57e9"
+      }
     },
     "erindale-future.png": {
       "url": "gallery/originals/erindale-future.png",
-      "sha256": "830492c85e7bfeb4b00dbcd4470ee93cda4f40132226c9aa456422147ceeab9f",
-      "bytes": 18804864,
+      "sha256": "75ac2b4714df7db36bb0a1fb52813bc3d10fcc4061ff25d5a20b038cd9d6919f",
+      "bytes": 18824638,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/75ac2b4714df7db3/erindale-future.png",
+        "sha256": "88c524a9ba904a79e2aa82bbbea357300d06e0e877acebcc4b47cad2b4c88f7e",
+        "bytes": 4653528,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "75ac2b4714df7db36bb0a1fb52813bc3d10fcc4061ff25d5a20b038cd9d6919f"
+      }
     },
     "airport-corporate-future.png": {
       "url": "gallery/originals/airport-corporate-future.png",
-      "sha256": "2a7678dbc9d2842503920d4f809ac1fdb3c7a5d6fd84c319a2188e643ef915f7",
-      "bytes": 12683802,
+      "sha256": "113885ed0295a571526663c6fd04ed6f2863496a32109f0d40e2934f18fc1392",
+      "bytes": 12695576,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/113885ed0295a571/airport-corporate-future.png",
+        "sha256": "d7287214a8e4ea4d001cccf8112c6c89ec630816502e8b18a608ac9dca9187fc",
+        "bytes": 2362571,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "113885ed0295a571526663c6fd04ed6f2863496a32109f0d40e2934f18fc1392"
+      }
     },
     "heartland-future.png": {
       "url": "gallery/originals/heartland-future.png",
-      "sha256": "f3d07f9c81656fd3989954c3c7bb901568bb33e3739b242209e08fec248cc284",
-      "bytes": 14622393,
+      "sha256": "3c99b7de150f15534db9f10f615e4cac5786cc86c2dab17fc219f2a89dd3d05b",
+      "bytes": 14654800,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/3c99b7de150f1553/heartland-future.png",
+        "sha256": "6c3fedb9d31eb04c91e5026f2e3deb9cf10ab7cd5ee5ef52e9dc596c1a908ed6",
+        "bytes": 3141151,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "3c99b7de150f15534db9f10f615e4cac5786cc86c2dab17fc219f2a89dd3d05b"
+      }
     },
     "downtown-existing.png": {
       "url": "gallery/originals/downtown-existing.png",
-      "sha256": "e171d7c6b3e86966cd662ca0d2aea53634b09f2f5d7c81c4e6695e91c92e726a",
-      "bytes": 15484964,
+      "sha256": "8957aeec063d1f3a36ca523c3f8293148c2c580cba83ef290ece061b3d931c5c",
+      "bytes": 15514524,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/8957aeec063d1f3a/downtown-existing.png",
+        "sha256": "bdb2e62015259e59d2855adbc486dd3620b57002080c19d1917b8bd6b3d06e27",
+        "bytes": 3562621,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "8957aeec063d1f3a36ca523c3f8293148c2c580cba83ef290ece061b3d931c5c"
+      }
     },
     "port-credit-existing.png": {
       "url": "gallery/originals/port-credit-existing.png",
-      "sha256": "0c54e46e84c675084eeb1d535171c1f9fbf2b0cd04ff897c2b19bc4cd52a621b",
-      "bytes": 15684244,
+      "sha256": "a683bbffd25ca8b6527dcaa2411c14e7039e1f4dc412f836f386606d7326b04d",
+      "bytes": 15705054,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/a683bbffd25ca8b6/port-credit-existing.png",
+        "sha256": "7293d4216f226caeada7e47ca3c2ee7f9bd46fa13c8e61a4023cc01e2da5a01f",
+        "bytes": 3698241,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "a683bbffd25ca8b6527dcaa2411c14e7039e1f4dc412f836f386606d7326b04d"
+      }
     },
     "lakeview-existing.png": {
       "url": "gallery/originals/lakeview-existing.png",
-      "sha256": "1f44ebb88b3b23c06823b3cb94981e0993f6d4bf6356f87a9be575884ec88371",
-      "bytes": 13596797,
+      "sha256": "14daa6999e01dd22b88c6358324adb573b65bb4aa4a34fc7c2e56d53d9ed4829",
+      "bytes": 13614690,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/14daa6999e01dd22/lakeview-existing.png",
+        "sha256": "e4d2c1b298111bb3274df3a3ec8e53f5b374e3dc395f11fad0a493707efb08cd",
+        "bytes": 2749886,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "14daa6999e01dd22b88c6358324adb573b65bb4aa4a34fc7c2e56d53d9ed4829"
+      }
     },
     "clarkson-existing.png": {
       "url": "gallery/originals/clarkson-existing.png",
-      "sha256": "88050df6d74fa4105071bd29ba51b6566cfe0c46f8ac154fba89e9b21dbcaf04",
-      "bytes": 15214871,
+      "sha256": "a5bd37f817ee5559223a2b300e392f3dd8758858e556455669c8eb052d930f5b",
+      "bytes": 15229881,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/a5bd37f817ee5559/clarkson-existing.png",
+        "sha256": "1bf688fc620d714f282e0fb3bc460509a90acc9c2f112a10b254b1743d011300",
+        "bytes": 3488452,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "a5bd37f817ee5559223a2b300e392f3dd8758858e556455669c8eb052d930f5b"
+      }
     },
     "downtown-skyline-existing.png": {
       "url": "gallery/originals/downtown-skyline-existing.png",
-      "sha256": "79af9a584ec516cad9b7eee943d93a61c7721b66b87209a8f755e85bc3691dda",
-      "bytes": 9153944,
+      "sha256": "8577a172f1ad2af09fbaf0d9736d065a6f0e059d73023deada03a844060ddb76",
+      "bytes": 9164378,
       "width": 3840,
       "height": 1400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/8577a172f1ad2af0/downtown-skyline-existing.png",
+        "sha256": "f11a01521cf3aae2a4f8b2cb6be5f6fa8740dfcb0c8e61cee51834989a3c8b23",
+        "bytes": 2098282,
+        "width": 1920,
+        "height": 700,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "8577a172f1ad2af09fbaf0d9736d065a6f0e059d73023deada03a844060ddb76"
+      }
     },
     "downtown-skyline-construction.png": {
       "url": "gallery/originals/downtown-skyline-construction.png",
-      "sha256": "7fd03ca2b6ce9d6c151a1137abe74c0eb3e1e0011d14e0953d25e4c818fb052f",
-      "bytes": 9237137,
+      "sha256": "ee142451af7d34a391de7f36f08d453461218f71e57e51429ced15ab255b4904",
+      "bytes": 9255824,
       "width": 3840,
       "height": 1400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/ee142451af7d34a3/downtown-skyline-construction.png",
+        "sha256": "1e8eadd7f63b282e0d084c4a5312d9b877deb092ded3dcfd2bb21c89377d379e",
+        "bytes": 2120523,
+        "width": 1920,
+        "height": 700,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "ee142451af7d34a391de7f36f08d453461218f71e57e51429ced15ab255b4904"
+      }
     },
     "downtown-skyline-future.png": {
       "url": "gallery/originals/downtown-skyline-future.png",
-      "sha256": "dd77ac613b46f83e3a96ba8e9a20c501820acd47286b07df1a550d865db2d0f8",
-      "bytes": 9156505,
+      "sha256": "49d7cd8834b168f22fc70f2097dabddde6c41fc891f769d88c5e2485f53aa5f4",
+      "bytes": 9165693,
       "width": 3840,
       "height": 1400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/49d7cd8834b168f2/downtown-skyline-future.png",
+        "sha256": "d2570c9dc1a71f3973a3a0258334e2bb109087baf1f5c9c8f448d787fdc44758",
+        "bytes": 2090153,
+        "width": 1920,
+        "height": 700,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "49d7cd8834b168f22fc70f2097dabddde6c41fc891f769d88c5e2485f53aa5f4"
+      }
     },
     "port-credit-skyline-future.png": {
       "url": "gallery/originals/port-credit-skyline-future.png",
-      "sha256": "02f9e89820bc4fbdb05eb98a685c8f1417159dda4cff95ebebfc1014597af2af",
-      "bytes": 9557072,
+      "sha256": "ff4a2437eda55517e70273366908e921038aeddcc8caf32dd0c3d13101e280ed",
+      "bytes": 9561099,
       "width": 3840,
       "height": 1400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/ff4a2437eda55517/port-credit-skyline-future.png",
+        "sha256": "5b27cbaddb2591b9d9838a96aa843940dd7e04337c5eb72fe92c3e0fd3271113",
+        "bytes": 2257246,
+        "width": 1920,
+        "height": 700,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "ff4a2437eda55517e70273366908e921038aeddcc8caf32dd0c3d13101e280ed"
+      }
     },
     "lakeview-skyline-future.png": {
       "url": "gallery/originals/lakeview-skyline-future.png",
-      "sha256": "afcb6542fab900bf26679a1540c542988e84c6851518033a8c69c640d509495a",
-      "bytes": 8302947,
+      "sha256": "fd28d441aeea763fd8c297d016803b2ebf88b4faeab5be9ba611d5697511b118",
+      "bytes": 8309121,
       "width": 3840,
       "height": 1400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/fd28d441aeea763f/lakeview-skyline-future.png",
+        "sha256": "df93d7a682fa2788cdd11539fc357fe6f412e1c4e8bbb3af080cabb8399007a2",
+        "bytes": 1761530,
+        "width": 1920,
+        "height": 700,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "fd28d441aeea763fd8c297d016803b2ebf88b4faeab5be9ba611d5697511b118"
+      }
     },
     "clarkson-skyline-future.png": {
       "url": "gallery/originals/clarkson-skyline-future.png",
-      "sha256": "83877a79d59c92129bb15a2ebbc80a30c35717f9f39a3a8096fb272ad882fa60",
-      "bytes": 9944073,
+      "sha256": "eeb2bb09d88f603176bbbb5a05c81bd6b1484cb7c6bd41072a15370c03e7be36",
+      "bytes": 9951371,
       "width": 3840,
       "height": 1400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/eeb2bb09d88f6031/clarkson-skyline-future.png",
+        "sha256": "a973743fa83c90aa7a41fba38ea6d49382a9f3bf0bb5723b707e5d6c5e848019",
+        "bytes": 2359875,
+        "width": 1920,
+        "height": 700,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "eeb2bb09d88f603176bbbb5a05c81bd6b1484cb7c6bd41072a15370c03e7be36"
+      }
     },
     "downtown-portrait-future.png": {
       "url": "gallery/originals/downtown-portrait-future.png",
-      "sha256": "a256c59dc59453c1a72d30a1435e595e507dc790dc125569db0360c0e8200131",
-      "bytes": 15917308,
+      "sha256": "53798549377ee44cb03d2f6bad5102175d2a86aba5e5c4a656c1bc2ff8312282",
+      "bytes": 15929469,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/53798549377ee44c/downtown-portrait-future.png",
+        "sha256": "365165804799ae8f24ef7587041a2b82f197a137e5f17a9e578f0cde8e703da2",
+        "bytes": 3699976,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "53798549377ee44cb03d2f6bad5102175d2a86aba5e5c4a656c1bc2ff8312282"
+      }
     },
     "port-credit-portrait-future.png": {
       "url": "gallery/originals/port-credit-portrait-future.png",
-      "sha256": "9815f4a1c7538a0f7cd21f5a69bae14ce0e2184d016b36cf22be64a9920da59b",
-      "bytes": 16395340,
+      "sha256": "26a276f36e971e062a66123c863936fb169bc6cad91e7b1c42d7f12beeb1194b",
+      "bytes": 16414883,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/26a276f36e971e06/port-credit-portrait-future.png",
+        "sha256": "ab834c2ab2c4eb8d011ad868969753cbc9b334e10792035f800731e6180c01e1",
+        "bytes": 3893599,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "26a276f36e971e062a66123c863936fb169bc6cad91e7b1c42d7f12beeb1194b"
+      }
     },
     "lakeview-portrait-future.png": {
       "url": "gallery/originals/lakeview-portrait-future.png",
-      "sha256": "7c638719f65fba702107c14afa3992aade29081a00a2f7564865c397124ffd4b",
-      "bytes": 13693219,
+      "sha256": "c853f602e4ce86ce6e0645a713c273a27e82b774a210c3610da51fde39b69c9c",
+      "bytes": 13703475,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/c853f602e4ce86ce/lakeview-portrait-future.png",
+        "sha256": "98bfdae65613f05bd2ea3a91a2dcb3f81311d546361f2fd5466b9a4f5707f476",
+        "bytes": 2793439,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "c853f602e4ce86ce6e0645a713c273a27e82b774a210c3610da51fde39b69c9c"
+      }
     },
     "clarkson-portrait-future.png": {
       "url": "gallery/originals/clarkson-portrait-future.png",
-      "sha256": "027ceb5d47fdb7e09e3cfb2c47e86e4adc682451c3b3919f3026642c1923d67d",
-      "bytes": 15993388,
+      "sha256": "9d7c306cb697ae1da1f02fa1d90b2701adfb41eb123a3c7db2cc29f3d408a9fc",
+      "bytes": 16020810,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/9d7c306cb697ae1d/clarkson-portrait-future.png",
+        "sha256": "eae058d017bf393e42b6cef66fb6518dfde4a141c1524d3e3948ac9a344d8fe6",
+        "bytes": 3769090,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "9d7c306cb697ae1da1f02fa1d90b2701adfb41eb123a3c7db2cc29f3d408a9fc"
+      }
     },
     "cooksville-portrait-future.png": {
       "url": "gallery/originals/cooksville-portrait-future.png",
-      "sha256": "457339e54faa388324d390c77216ae208e44ddf90780feffda47bfb86edcf90d",
-      "bytes": 14814695,
+      "sha256": "72e2fe7d43a294c7c0fcf99a0948643a94a8617de21b04dbc4ff547dc4d70e45",
+      "bytes": 14851674,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/72e2fe7d43a294c7/cooksville-portrait-future.png",
+        "sha256": "31bd5c6d52edbb3cba4bb01c684331844ec6b6bfc3d01fb32efdd9f292e007f1",
+        "bytes": 3415932,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "72e2fe7d43a294c7c0fcf99a0948643a94a8617de21b04dbc4ff547dc4d70e45"
+      }
     },
     "uptown-portrait-future.png": {
       "url": "gallery/originals/uptown-portrait-future.png",
-      "sha256": "2fd9d56cb28f355fe7676487065d7ba1017cc4e05f7b63c06c8ef5f83bbc18f5",
-      "bytes": 15630511,
+      "sha256": "1202fcaa2170e0954fd8deee1f44570b22d875e063de1307d8c9fac8b6a1ff66",
+      "bytes": 15658640,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/1202fcaa2170e095/uptown-portrait-future.png",
+        "sha256": "d4c8c0025b0b9366f1dabbaa34d6d3a2d1a3e77ce7581d613f30f90093640c87",
+        "bytes": 3672332,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "1202fcaa2170e0954fd8deee1f44570b22d875e063de1307d8c9fac8b6a1ff66"
+      }
     },
     "downtown-landmark-future.png": {
       "url": "gallery/originals/downtown-landmark-future.png",
-      "sha256": "909515e2597e8eedbf7edc6f56f57a6d92e95c86dffb33d3a935a9d29e44da23",
-      "bytes": 12337575,
+      "sha256": "5439247b023d156c0f2679e175a553a5355f3bf4232fa20040ec0dbfcf4e26a4",
+      "bytes": 12387342,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/5439247b023d156c/downtown-landmark-future.png",
+        "sha256": "0ccffdbeb8c0c79c15fa4334bf162c4d164719d9905e1b016d2822613a97d4f3",
+        "bytes": 2460974,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "5439247b023d156c0f2679e175a553a5355f3bf4232fa20040ec0dbfcf4e26a4"
+      }
     },
     "downtown-junction-future.png": {
       "url": "gallery/originals/downtown-junction-future.png",
-      "sha256": "b3b1aa6623d08dee221fb839fd24cc84ff30cd7ebf54e5d1509b43736816f168",
-      "bytes": 11907503,
+      "sha256": "25825e0dc1673a30af058d388c04db4a8bdc726d5a75605bf304c19b4e8d8f38",
+      "bytes": 12051913,
       "width": 3840,
       "height": 2400,
-      "format": "image/png"
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/25825e0dc1673a30/downtown-junction-future.png",
+        "sha256": "6c7d61428b988e24e04a37a535efdfd834ffcf25963bb640790ed2bde292b7bd",
+        "bytes": 2389089,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "25825e0dc1673a30af058d388c04db4a8bdc726d5a75605bf304c19b4e8d8f38"
+      }
     }
   }
 }
