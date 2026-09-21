@@ -1,0 +1,154 @@
+{
+  "decisions": {
+    "date": "2026-09-21",
+    "decisions": [
+      {
+        "meshId": "73-4291",
+        "projectId": "city-group-107",
+        "status": "Older component superseded by June 2026 phase 2 site layout",
+        "displayStatus": "Proposed",
+        "statusDate": "2026-06",
+        "excludeSuperseded": true,
+        "retainByDefault": false,
+        "includeInVerifiedScenario": false,
+        "evidenceNote": "Spatially registered June 2026 A103 site plan places proposed B5 on the old component footprint. This source component is not the retained B3 tower. Exclude the conflicting old form; B4/B5/B6 are supplied as separate plan-derived models. Existing apartments A/B remain unchanged.",
+        "sources": [
+          "https://www.mississauga.ca/wp-content/uploads/2026/06/11112228/Site-Plan-Phase-2-OZ-OPA-26-9-W3-June-2026.pdf"
+        ]
+      },
+      {
+        "meshId": "73-4293",
+        "projectId": "city-group-107",
+        "status": "Older component superseded by June 2026 phase 2 site layout",
+        "displayStatus": "Proposed",
+        "statusDate": "2026-06",
+        "excludeSuperseded": true,
+        "retainByDefault": false,
+        "includeInVerifiedScenario": false,
+        "evidenceNote": "Spatially registered June 2026 A103 site plan places proposed B5 on the old component footprint. This source component is not the retained B3 tower. Exclude the conflicting old form; B4/B5/B6 are supplied as separate plan-derived models. Existing apartments A/B remain unchanged.",
+        "sources": [
+          "https://www.mississauga.ca/wp-content/uploads/2026/06/11112228/Site-Plan-Phase-2-OZ-OPA-26-9-W3-June-2026.pdf"
+        ]
+      },
+      {
+        "meshId": "73-4292",
+        "projectId": "city-group-107",
+        "status": "Separate B3 apartment retained with unresolved latest geometric height",
+        "displayStatus": "Uncertain",
+        "statusDate": "2026-06",
+        "excludeSuperseded": false,
+        "retainByDefault": true,
+        "includeInVerifiedScenario": false,
+        "uncertain": true,
+        "geometryCaveat": "The source envelope is 52.1 m. June 2026 A103 identifies B3 as 25 storeys under a separate application; a current dimensioned B3 elevation was not available in the phase 2 plan set. Retained in violet as a dated uncertain envelope; do not equate 52.1 m with the latest 25-storey form.",
+        "evidenceNote": "Exact site-plan registration places the source component at B3. A103 labels B3 as 25 storeys, subject to separate A98/25 W3 and site-plan approval; B4/B5/B6 are distinct 20-storey proposals.",
+        "sources": [
+          "https://www.mississauga.ca/wp-content/uploads/2026/06/11112228/Site-Plan-Phase-2-OZ-OPA-26-9-W3-June-2026.pdf"
+        ]
+      }
+    ],
+    "source": "https://www.mississauga.ca/wp-content/uploads/2026/06/11112228/Site-Plan-Phase-2-OZ-OPA-26-9-W3-June-2026.pdf",
+    "geometryShapeChanges": false,
+    "canonicalPersistence": "refinement-models.json projectUpdates[chelsea-2026].overrides"
+  },
+  "geometryAudit": {
+    "date": "2026-09-21",
+    "removedIds": [
+      "73-4291",
+      "73-4293"
+    ],
+    "uncertainId": "73-4292",
+    "files": [
+      {
+        "file": "outputs/models/reconciled/tile-73.glb",
+        "beforeSHA256": "a4098467f0aed441d618848b0119673fb8eab3c33bd84a5e3509e6a02fb266fe",
+        "afterSHA256": "1787396c8d95ae900c1ff767869a26bd4c2cf4d4268715b4663319e29a690ca3",
+        "trianglesBefore": 227006,
+        "trianglesAfter": 226910,
+        "removedTriangles": 96,
+        "retainedPositionsAndIndicesExact": true
+      },
+      {
+        "file": "outputs/models/reconciled/districts/airport-corporate.glb",
+        "beforeSHA256": "714c0f4aee79cbdb156899fd293d54b9cdb9c2e93d5855b5c0072b087aa98a36",
+        "afterSHA256": "0faa18162555094cb3dcad2bbb26643fdf7940d25729ee4e6913f50b7866733d",
+        "trianglesBefore": 426590,
+        "trianglesAfter": 426494,
+        "removedTriangles": 96,
+        "retainedPositionsAndIndicesExact": true
+      },
+      {
+        "file": "outputs/models/reconciled/districts/citywide.glb",
+        "beforeSHA256": "3f4b72e574f709495c0ce143e433520f9ce53e353d91bcf3cf7e81f816e82679",
+        "afterSHA256": "d6e2d27de5e2cf9ca4517e4ababc112edc5370f6239f492089e96940f623bc5c",
+        "trianglesBefore": 438820,
+        "trianglesAfter": 438724,
+        "removedTriangles": 96,
+        "retainedPositionsAndIndicesExact": true
+      },
+      {
+        "file": "outputs/models/reconciled/districts/dixie-applewood.glb",
+        "beforeSHA256": "e27ddd9b32fe488b1837951adc891e29866325204ac1a8169816e777211411e6",
+        "afterSHA256": "90a2e9f91e6d9412d36da8e653fec28e989506e7f5837d3b3d116d62a0e9ec5c",
+        "trianglesBefore": 647295,
+        "trianglesAfter": 647199,
+        "removedTriangles": 96,
+        "retainedPositionsAndIndicesExact": true
+      },
+      {
+        "file": "work/render-extents/airport-corporate.glb",
+        "beforeSHA256": "98096f0c6b86434e92a2907c4537d8d2e7ba304e6d7d47e73aad8c1d8bdab796",
+        "afterSHA256": "70e6f2d1937d7b80746fded797a0636a52d314133d2c6a2f3ca1c58f071ec200",
+        "trianglesBefore": 1831970,
+        "trianglesAfter": 1831874,
+        "removedTriangles": 96,
+        "retainedPositionsAndIndicesExact": true
+      },
+      {
+        "file": "work/render-extents/citywide.glb",
+        "beforeSHA256": "194b9878d7efe38e9eafa8baa3e8890d655efb9ee4b3f6df829a83452b038f70",
+        "afterSHA256": "f68e0c2b8cd7c7012a9ecf390561714a865319445f4eb03f6f187d368b2dee4f",
+        "trianglesBefore": 8838902,
+        "trianglesAfter": 8838806,
+        "removedTriangles": 96,
+        "retainedPositionsAndIndicesExact": true
+      },
+      {
+        "file": "work/render-extents/dixie-applewood.glb",
+        "beforeSHA256": "0891ab23ed2b862d22a3b1300268bf0bda09e92b70013b391d77000b55e1d02d",
+        "afterSHA256": "42602d11ac896bc4d216d78f33ce5768067a3db68befd2c3fe7db213148b5e2c",
+        "trianglesBefore": 2434914,
+        "trianglesAfter": 2434818,
+        "removedTriangles": 96,
+        "retainedPositionsAndIndicesExact": true
+      },
+      {
+        "file": "outputs/mississauga-future/public/models/airport-corporate.glb",
+        "beforeSHA256": "4864f1720c55605bcda6e5270cfccef688e8a18e77fb356d4cdfd85f9169db9d",
+        "afterSHA256": "58d5917cec0ef52c4d60b0621568f8fd28a42de27c9367aa60c8081784649c8b",
+        "trianglesBefore": 426350,
+        "trianglesAfter": 426254,
+        "removedTriangles": 96,
+        "retainedPositionsAndIndicesExact": true
+      },
+      {
+        "file": "outputs/mississauga-future/public/models/citywide.glb",
+        "beforeSHA256": "5dd51a2742332f3fdf77590f501e6b194663eca32a283ccbac052ab7ea3292a2",
+        "afterSHA256": "3a72afc784cc8521dbb94e57ac921371921a721f15edf6d33a5e08ea825e7622",
+        "trianglesBefore": 438820,
+        "trianglesAfter": 438724,
+        "removedTriangles": 96,
+        "retainedPositionsAndIndicesExact": true
+      },
+      {
+        "file": "outputs/mississauga-future/public/models/dixie-applewood.glb",
+        "beforeSHA256": "aba8953de500ad3d7f6c919f35a1c3ecf9f06fafbf0172dd0270e50bc86cbb4d",
+        "afterSHA256": "5f7b90c4270afabc7d1ef76434fcf84804b03487803915875b6fcc85782a4d05",
+        "trianglesBefore": 646627,
+        "trianglesAfter": 646531,
+        "removedTriangles": 96,
+        "retainedPositionsAndIndicesExact": true
+      }
+    ]
+  }
+}

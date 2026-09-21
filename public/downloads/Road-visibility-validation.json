@@ -1,0 +1,152 @@
+{
+  "downtown": {
+    "before": {
+      "file": "work/render-context/downtown-context.glb",
+      "roadSamplePoints": 25000,
+      "occludedPoints": 2017,
+      "occludedPercent": 8.068,
+      "competingSurfaces": {
+        "terrain": {
+          "horizontalOverlaps": 24926,
+          "pointsOccludedByMoreThan2cm": 2010,
+          "maxCoverAboveRoadM": 6.934
+        },
+        "Park": {
+          "horizontalOverlaps": 74,
+          "pointsOccludedByMoreThan2cm": 7,
+          "maxCoverAboveRoadM": 1.003
+        },
+        "WoodedArea": {
+          "horizontalOverlaps": 0,
+          "pointsOccludedByMoreThan2cm": 0,
+          "maxCoverAboveRoadM": null
+        }
+      },
+      "test": "Seeded road triangle interior centroids; exact projected triangle containment and barycentric height interpolation."
+    },
+    "after": {
+      "file": "work/refinement/context/render/downtown-context.glb",
+      "roadSamplePoints": 25000,
+      "occludedPoints": 0,
+      "occludedPercent": 0.0,
+      "competingSurfaces": {
+        "terrain": {
+          "horizontalOverlaps": 0,
+          "pointsOccludedByMoreThan2cm": 0,
+          "maxCoverAboveRoadM": null
+        },
+        "Park": {
+          "horizontalOverlaps": 6,
+          "pointsOccludedByMoreThan2cm": 0,
+          "maxCoverAboveRoadM": -0.149
+        },
+        "WoodedArea": {
+          "horizontalOverlaps": 0,
+          "pointsOccludedByMoreThan2cm": 0,
+          "maxCoverAboveRoadM": null
+        }
+      },
+      "test": "Seeded road triangle interior centroids; exact projected triangle containment and barycentric height interpolation."
+    }
+  },
+  "uptown": {
+    "before": {
+      "file": "work/render-context/uptown-context.glb",
+      "roadSamplePoints": 25000,
+      "occludedPoints": 2462,
+      "occludedPercent": 9.848,
+      "competingSurfaces": {
+        "terrain": {
+          "horizontalOverlaps": 24972,
+          "pointsOccludedByMoreThan2cm": 2462,
+          "maxCoverAboveRoadM": 8.17
+        },
+        "Park": {
+          "horizontalOverlaps": 14,
+          "pointsOccludedByMoreThan2cm": 0,
+          "maxCoverAboveRoadM": -0.02
+        },
+        "WoodedArea": {
+          "horizontalOverlaps": 0,
+          "pointsOccludedByMoreThan2cm": 0,
+          "maxCoverAboveRoadM": null
+        }
+      },
+      "test": "Seeded road triangle interior centroids; exact projected triangle containment and barycentric height interpolation."
+    },
+    "after": {
+      "file": "work/refinement/context/render/uptown-context.glb",
+      "roadSamplePoints": 25000,
+      "occludedPoints": 0,
+      "occludedPercent": 0.0,
+      "competingSurfaces": {
+        "terrain": {
+          "horizontalOverlaps": 0,
+          "pointsOccludedByMoreThan2cm": 0,
+          "maxCoverAboveRoadM": null
+        },
+        "Park": {
+          "horizontalOverlaps": 0,
+          "pointsOccludedByMoreThan2cm": 0,
+          "maxCoverAboveRoadM": null
+        },
+        "WoodedArea": {
+          "horizontalOverlaps": 0,
+          "pointsOccludedByMoreThan2cm": 0,
+          "maxCoverAboveRoadM": null
+        }
+      },
+      "test": "Seeded road triangle interior centroids; exact projected triangle containment and barycentric height interpolation."
+    }
+  },
+  "port-credit": {
+    "before": {
+      "file": "work/render-context/port-credit-context.glb",
+      "roadSamplePoints": 25000,
+      "occludedPoints": 1394,
+      "occludedPercent": 5.576,
+      "competingSurfaces": {
+        "terrain": {
+          "horizontalOverlaps": 24849,
+          "pointsOccludedByMoreThan2cm": 1358,
+          "maxCoverAboveRoadM": 4.803
+        },
+        "Park": {
+          "horizontalOverlaps": 151,
+          "pointsOccludedByMoreThan2cm": 36,
+          "maxCoverAboveRoadM": 1.638
+        },
+        "WoodedArea": {
+          "horizontalOverlaps": 0,
+          "pointsOccludedByMoreThan2cm": 0,
+          "maxCoverAboveRoadM": null
+        }
+      },
+      "test": "Seeded road triangle interior centroids; exact projected triangle containment and barycentric height interpolation."
+    },
+    "after": {
+      "file": "work/refinement/context/render/port-credit-context.glb",
+      "roadSamplePoints": 25000,
+      "occludedPoints": 0,
+      "occludedPercent": 0.0,
+      "competingSurfaces": {
+        "terrain": {
+          "horizontalOverlaps": 0,
+          "pointsOccludedByMoreThan2cm": 0,
+          "maxCoverAboveRoadM": null
+        },
+        "Park": {
+          "horizontalOverlaps": 13,
+          "pointsOccludedByMoreThan2cm": 0,
+          "maxCoverAboveRoadM": -0.12
+        },
+        "WoodedArea": {
+          "horizontalOverlaps": 0,
+          "pointsOccludedByMoreThan2cm": 0,
+          "maxCoverAboveRoadM": null
+        }
+      },
+      "test": "Seeded road triangle interior centroids; exact projected triangle containment and barycentric height interpolation."
+    }
+  }
+}

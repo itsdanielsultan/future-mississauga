@@ -1,0 +1,804 @@
+{
+  "asOf": "2026-09-20",
+  "assets": [
+    {
+      "projectId": "lakeview-aura",
+      "status": "Uncertain",
+      "sourceStatus": "Proposed",
+      "modes": [
+        "future"
+      ],
+      "includedByDefault": true,
+      "replacesSourceIds": [],
+      "modelFidelity": "ten approximate source-plan townhome envelopes; no exact metric heights",
+      "warning": "Approximate marketing-plan-derived townhome envelopes, not surveyed architectural models. Seven June footprints and three additional highlighted blocks in the currently linked image are registered through two City street junctions and four common roof centroids. The image scale bar conflicts with City junction spacing by about 25%; City coordinates control the model scale. Estimated placement \u00b110 m and roof-outline tolerance \u00b13 m are interpretive, not statistical confidence bounds. All ten envelopes use an estimated 13 m maximum with \u00b13.5 m uncertainty, derived from about 6.2 m registered bay width and roughly 2.1:1 height-to-bay proportions in the official illustrative facade. No published dimensional height was found. Roofs, balconies, basements and facade articulation are omitted; grey marketing roofs are retained from the June version, not independently confirmed current building drawings.",
+      "sources": [
+        {
+          "url": "https://caivan.com/aura/",
+          "publisher": "Caivan",
+          "claim": "Live Aura project page links both current site-plan image and the downloadable June site plan; project offered for sale, no completion date established."
+        },
+        {
+          "url": "https://caivan.com/wp-content/uploads/2026/02/Caivan-Aura-Site-Plan-260615.pdf",
+          "publisher": "Caivan",
+          "claim": "June 2026 single-page site plan; seven highlighted rectangular roofs, named Aerodrome Avenue, Marina Vista Street and Jim Tovey Boulevard. Approximate marketing drawing."
+        },
+        {
+          "url": "https://caivan.com/wp-content/uploads/2026/02/Aura-Site-plan-260806.jpg",
+          "publisher": "Caivan",
+          "claim": "Current linked image highlights blocks 13\u201315 beside Ogden Park. Filename suggests August 6, 2026; image itself has no visible issue date. Other roofs remain shown in grey."
+        },
+        {
+          "url": "https://caivan.com/wp-content/uploads/2026/01/Aura_The-Echo-Main-Residence.pdf",
+          "publisher": "Caivan",
+          "claim": "February 2026 main/lower residence floor plan and illustrative facade. Main residence contains a basement; visible building has three levels above grade. Facade proportions used only as a rough height estimate."
+        },
+        {
+          "url": "https://caivan.com/wp-content/uploads/2026/01/Aura_The-Halo-Upper-Residence.pdf",
+          "publisher": "Caivan",
+          "claim": "February 2026 upper residence plan has entrance, main and upper levels. Confirms two-storey dwelling marketing is not total building height."
+        },
+        {
+          "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/StreetCentreline/FeatureServer/0",
+          "publisher": "City of Mississauga",
+          "claim": "Exact public junction coordinates for Jim Tovey Boulevard with Aerodrome Avenue (node 2500174) and Marina Vista Street (2500172); street mapping is not a georeferenced Aura building plan."
+        }
+      ],
+      "components": [
+        {
+          "name": "aura-june-footprint-1",
+          "sourceVersion": "June 2026",
+          "sourceRectangle": [
+            188.57810974121094,
+            309.72210693359375,
+            395.1921081542969,
+            374.12213134765625
+          ],
+          "heightM": 13,
+          "heightUncertaintyM": 3.5,
+          "heightBasis": "estimate from registered bay width and official illustrative facade proportion; not a published height",
+          "groundModelY": 11.150577545166016,
+          "groundSource": "Mixed-date Ontario DTM",
+          "lat": 43.57462400078318,
+          "lon": -79.55333594561584,
+          "footprintEPSG26917": [
+            [
+              616788.2154077007,
+              4825633.138461843
+            ],
+            [
+              616822.7945032466,
+              4825668.92024486
+            ],
+            [
+              616833.9474150413,
+              4825658.142201676
+            ],
+            [
+              616799.3683194955,
+              4825622.360418659
+            ]
+          ],
+          "planAreaM2": 771.7660549213488,
+          "triangles": 12
+        },
+        {
+          "name": "aura-june-footprint-2",
+          "sourceVersion": "June 2026",
+          "sourceRectangle": [
+            230.09750366210938,
+            445.76531982421875,
+            289.4674987792969,
+            653.1103515625
+          ],
+          "heightM": 13,
+          "heightUncertaintyM": 3.5,
+          "heightBasis": "estimate from registered bay width and official illustrative facade proportion; not a published height",
+          "groundModelY": 10.714405059814453,
+          "groundSource": "Mixed-date Ontario DTM",
+          "lat": 43.574256551808546,
+          "lon": -79.55296621045048,
+          "footprintEPSG26917": [
+            [
+              616818.7243367295,
+              4825617.560556486
+            ],
+            [
+              616828.6605499071,
+              4825627.842358781
+            ],
+            [
+              616864.5689345868,
+              4825593.140916873
+            ],
+            [
+              616854.6327214092,
+              4825582.859114578
+            ]
+          ],
+          "planAreaM2": 714.0038363729622,
+          "triangles": 12
+        },
+        {
+          "name": "aura-june-footprint-3",
+          "sourceVersion": "June 2026",
+          "sourceRectangle": [
+            324.58319091796875,
+            446.4728088378906,
+            458.3581848144531,
+            505.6078186035156
+          ],
+          "heightM": 13,
+          "heightUncertaintyM": 3.5,
+          "heightBasis": "estimate from registered bay width and official illustrative facade proportion; not a published height",
+          "groundModelY": 10.499805450439453,
+          "groundSource": "Mixed-date Ontario DTM",
+          "lat": 43.57457094432976,
+          "lon": -79.5528431541632,
+          "footprintEPSG26917": [
+            [
+              616834.6600664041,
+              4825633.805351395
+            ],
+            [
+              616857.0487638357,
+              4825656.972744899
+            ],
+            [
+              616867.2898709455,
+              4825647.075859071
+            ],
+            [
+              616844.9011735138,
+              4825623.908465567
+            ]
+          ],
+          "planAreaM2": 458.83814064617826,
+          "triangles": 12
+        },
+        {
+          "name": "aura-june-footprint-4",
+          "sourceVersion": "June 2026",
+          "sourceRectangle": [
+            324.58319091796875,
+            592.3633422851562,
+            458.3581848144531,
+            651.498291015625
+          ],
+          "heightM": 13,
+          "heightUncertaintyM": 3.5,
+          "heightBasis": "estimate from registered bay width and official illustrative facade proportion; not a published height",
+          "groundModelY": 10.218708038330078,
+          "groundSource": "Mixed-date Ontario DTM",
+          "lat": 43.574347204524045,
+          "lon": -79.55253561262374,
+          "footprintEPSG26917": [
+            [
+              616859.9256507889,
+              4825609.388986899
+            ],
+            [
+              616882.3143482206,
+              4825632.556380402
+            ],
+            [
+              616892.5554447601,
+              4825622.659504789
+            ],
+            [
+              616870.1667473286,
+              4825599.492111285
+            ]
+          ],
+          "planAreaM2": 458.83766706821876,
+          "triangles": 12
+        },
+        {
+          "name": "aura-june-footprint-5",
+          "sourceVersion": "June 2026",
+          "sourceRectangle": [
+            230.09828186035156,
+            712.1951904296875,
+            288.7602844238281,
+            918.76318359375
+          ],
+          "heightM": 13,
+          "heightUncertaintyM": 3.5,
+          "heightBasis": "estimate from registered bay width and official illustrative facade proportion; not a published height",
+          "groundModelY": 10.34323501586914,
+          "groundSource": "Mixed-date Ontario DTM",
+          "lat": 43.57384800556518,
+          "lon": -79.55240613612737,
+          "footprintEPSG26917": [
+            [
+              616864.8652700727,
+              4825572.970760164
+            ],
+            [
+              616874.6829930109,
+              4825583.1299510375
+            ],
+            [
+              616910.4568087559,
+              4825548.55855497
+            ],
+            [
+              616900.6390858177,
+              4825538.399364096
+            ]
+          ],
+          "planAreaM2": 702.8454106089863,
+          "triangles": 12
+        },
+        {
+          "name": "aura-june-footprint-6",
+          "sourceVersion": "June 2026",
+          "sourceRectangle": [
+            324.58319091796875,
+            714.2921142578125,
+            458.3581848144531,
+            773.4270629882812
+          ],
+          "heightM": 13,
+          "heightUncertaintyM": 3.5,
+          "heightBasis": "estimate from registered bay width and official illustrative facade proportion; not a published height",
+          "groundModelY": 10.442283630371094,
+          "groundSource": "Mixed-date Ontario DTM",
+          "lat": 43.574160212162006,
+          "lon": -79.5522785848766,
+          "footprintEPSG26917": [
+            [
+              616881.041494322,
+              4825588.982883303
+            ],
+            [
+              616903.4301917535,
+              4825612.150276807
+            ],
+            [
+              616913.6712882931,
+              4825602.253401194
+            ],
+            [
+              616891.2825908615,
+              4825579.08600769
+            ]
+          ],
+          "planAreaM2": 458.8376670662942,
+          "triangles": 12
+        },
+        {
+          "name": "aura-june-footprint-7",
+          "sourceVersion": "June 2026",
+          "sourceRectangle": [
+            324.58319091796875,
+            857.8164672851562,
+            458.3581848144531,
+            916.951416015625
+          ],
+          "heightM": 13,
+          "heightUncertaintyM": 3.5,
+          "heightBasis": "estimate from registered bay width and official illustrative facade proportion; not a published height",
+          "groundModelY": 10.323844909667969,
+          "groundSource": "Mixed-date Ontario DTM",
+          "lat": 43.573940099672605,
+          "lon": -79.55197603534755,
+          "footprintEPSG26917": [
+            [
+              616905.8972993356,
+              4825564.962524787
+            ],
+            [
+              616928.2859967671,
+              4825588.12991829
+            ],
+            [
+              616938.5270933066,
+              4825578.233042677
+            ],
+            [
+              616916.1383958751,
+              4825555.065649173
+            ]
+          ],
+          "planAreaM2": 458.8376670662942,
+          "triangles": 12
+        },
+        {
+          "name": "aura-block-13",
+          "sourceVersion": "Current linked image; date inferred from filename, not confirmed issue stamp",
+          "sourceRectangle": [
+            862,
+            152,
+            967,
+            516
+          ],
+          "heightM": 13,
+          "heightUncertaintyM": 3.5,
+          "heightBasis": "estimate from registered bay width and official illustrative facade proportion; not a published height",
+          "groundModelY": 10.92922592163086,
+          "groundSource": "Mixed-date Ontario DTM",
+          "lat": 43.574241661984054,
+          "lon": -79.55355955992083,
+          "footprintEPSG26917": [
+            [
+              616770.071973796,
+              4825615.580856884
+            ],
+            [
+              616780.485602271,
+              4825626.245702991
+            ],
+            [
+              616817.4570687772,
+              4825590.145124278
+            ],
+            [
+              616807.043440302,
+              4825579.480278171
+            ]
+          ],
+          "planAreaM2": 770.2330151065365,
+          "triangles": 12
+        },
+        {
+          "name": "aura-block-14",
+          "sourceVersion": "Current linked image; date inferred from filename, not confirmed issue stamp",
+          "sourceRectangle": [
+            862,
+            555,
+            967,
+            818
+          ],
+          "heightM": 13,
+          "heightUncertaintyM": 3.5,
+          "heightBasis": "estimate from registered bay width and official illustrative facade proportion; not a published height",
+          "groundModelY": 10.407096862792969,
+          "groundSource": "Mixed-date Ontario DTM",
+          "lat": 43.57392136582114,
+          "lon": -79.55312382494051,
+          "footprintEPSG26917": [
+            [
+              616811.0046688563,
+              4825575.612359023
+            ],
+            [
+              616821.4182973313,
+              4825586.27720513
+            ],
+            [
+              616848.1311975816,
+              4825560.193545235
+            ],
+            [
+              616837.7175691065,
+              4825549.528699128
+            ]
+          ],
+          "planAreaM2": 556.5145136655113,
+          "triangles": 12
+        },
+        {
+          "name": "aura-block-15",
+          "sourceVersion": "Current linked image; date inferred from filename, not confirmed issue stamp",
+          "sourceRectangle": [
+            862,
+            854,
+            967,
+            1220
+          ],
+          "heightM": 13,
+          "heightUncertaintyM": 3.5,
+          "heightBasis": "estimate from registered bay width and official illustrative facade proportion; not a published height",
+          "groundModelY": 10.292926788330078,
+          "groundSource": "Mixed-date Ontario DTM",
+          "lat": 43.57360288534125,
+          "lon": -79.55269056679546,
+          "footprintEPSG26917": [
+            [
+              616841.374087772,
+              4825545.958312222
+            ],
+            [
+              616851.787716247,
+              4825556.62315833
+            ],
+            [
+              616888.962322679,
+              4825520.324224788
+            ],
+            [
+              616878.548694204,
+              4825509.65937868
+            ]
+          ],
+          "planAreaM2": 774.465064661382,
+          "triangles": 12
+        }
+      ],
+      "geometryDate": "June 2026 plus current linked August-filename image",
+      "registration": {
+        "method": "Two City street junctions anchor June PDF; four shared roof centroids transfer the current image into that plan",
+        "junePDFControls": [
+          [
+            740.0,
+            253.0
+          ],
+          [
+            740.0,
+            979.0
+          ]
+        ],
+        "worldControlsEPSG26917": [
+          [
+            616870.678607956,
+            4825738.12774692
+          ],
+          [
+            616996.408582756,
+            4825616.62376517
+          ]
+        ],
+        "coefficients": [
+          0.16736085556380195,
+          0.1731817945128179,
+          616703.0165836348,
+          4825652.315523196
+        ],
+        "currentImageNormalizationPixels": [
+          1632,
+          1514
+        ],
+        "currentImageCommonPoints": [
+          [
+            1218.0,
+            208.0
+          ],
+          [
+            1390.0,
+            438.0
+          ],
+          [
+            1390.0,
+            1131.0
+          ],
+          [
+            1154.5,
+            569.5
+          ]
+        ],
+        "juneCommonPoints": [
+          [
+            291.885,
+            341.922
+          ],
+          [
+            391.471,
+            476.04
+          ],
+          [
+            391.471,
+            887.384
+          ],
+          [
+            259.782,
+            549.438
+          ]
+        ],
+        "commonFeatureResidualM": [
+          0.5456836329852761,
+          0.6521678248918809,
+          0.6177090715236097,
+          1.4757937559303878
+        ],
+        "estimatedPositionToleranceM": 10,
+        "estimatedOutlineToleranceM": 3,
+        "scaleConflict": "Printed 100 m scale bar is approximately 25% larger than City-junction-derived metric scale; not used."
+      },
+      "coverageComparison": {
+        "comparedSourceIds": [
+          "103-1077",
+          "103-1078",
+          "103-1079",
+          "103-1080",
+          "103-1081",
+          "103-1082",
+          "103-1083",
+          "103-1084",
+          "103-1085",
+          "103-1086",
+          "103-1087",
+          "103-1088",
+          "103-1089",
+          "103-1090",
+          "103-1091",
+          "103-1092",
+          "103-1093",
+          "103-1094",
+          "103-1095",
+          "103-1096",
+          "103-1097",
+          "103-1098",
+          "103-1099",
+          "103-1100",
+          "103-1101",
+          "103-1102"
+        ],
+        "overlaps": [],
+        "method": "Compare registered Aura polygons against conservative axis-aligned plan bounds of all 26 old Lakeview municipal components. No overlap even against these larger bounds.",
+        "minimumDistanceM": 68.10530594158041
+      },
+      "completionDate": null,
+      "targetCompletionDate": null,
+      "completionEvidence": "Not published in reviewed official pages; no physical construction progress inferred from marketing.",
+      "assetId": "aura-townhome-envelopes",
+      "id": "aura-townhome-envelopes",
+      "file": "outputs/models/supplemental/refinement-lakeview/aura-townhome-envelopes.glb",
+      "bytes": 37788,
+      "sha256": "d8f22813da8f7ffc9f899a522de899b042579a2f953754e95fc89dac45f1ebbe",
+      "bounds": [
+        [
+          1770.0719737960026,
+          10.218708038330078,
+          1331.0797551395372
+        ],
+        [
+          1938.5270933066495,
+          24.150577545166016,
+          1490.3406213195994
+        ]
+      ],
+      "triangleCount": 120,
+      "coordinateSystem": "EPSG:26917; X=E\u2212615000, Y=elevation\u221270, Z=4827000\u2212N; metres, glTF Y-up"
+    },
+    {
+      "projectId": null,
+      "preserveMaterials": true,
+      "status": "Existing",
+      "modes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "includedByDefault": true,
+      "replacesSourceIds": [],
+      "modelFidelity": "mapped 2024 City dock outlines plus current OSM sand-beach footprint; illustrative deck elevation",
+      "components": [
+        {
+          "name": "city-2024-dock-1",
+          "source": "City 2024 DockWharfPier linework",
+          "sourceFeatureIDs": [
+            69001,
+            69002,
+            69052,
+            69053,
+            69054,
+            69055,
+            69056,
+            69155
+          ],
+          "areaM2": 89.15998311146278,
+          "groundModelY": 5.7,
+          "triangleCount": 56
+        },
+        {
+          "name": "city-2024-dock-2",
+          "source": "City 2024 DockWharfPier linework",
+          "sourceFeatureIDs": [
+            69003,
+            69024,
+            69044,
+            69045,
+            69046,
+            69047,
+            69153
+          ],
+          "areaM2": 86.71766784938623,
+          "groundModelY": 5.7,
+          "triangleCount": 48
+        },
+        {
+          "name": "city-2024-dock-3",
+          "source": "City 2024 DockWharfPier linework",
+          "sourceFeatureIDs": [
+            69004,
+            69023,
+            69041,
+            69042,
+            69043,
+            69152
+          ],
+          "areaM2": 90.04824947700664,
+          "groundModelY": 5.7,
+          "triangleCount": 40
+        },
+        {
+          "name": "city-2024-dock-4",
+          "source": "City 2024 DockWharfPier linework",
+          "sourceFeatureIDs": [
+            69005,
+            69036,
+            69037,
+            69038,
+            69039,
+            69040
+          ],
+          "areaM2": 40.310014183416754,
+          "groundModelY": 5.7,
+          "triangleCount": 36
+        },
+        {
+          "name": "city-2024-dock-5",
+          "source": "City 2024 DockWharfPier linework",
+          "sourceFeatureIDs": [
+            69006,
+            69067,
+            69068,
+            69069,
+            69070
+          ],
+          "areaM2": 29.997121761520756,
+          "groundModelY": 5.7,
+          "triangleCount": 52
+        },
+        {
+          "name": "city-2024-dock-6",
+          "source": "City 2024 DockWharfPier linework",
+          "sourceFeatureIDs": [
+            69019
+          ],
+          "areaM2": 32.53324075419412,
+          "groundModelY": 5.7,
+          "triangleCount": 20
+        },
+        {
+          "name": "city-2024-dock-7",
+          "source": "City 2024 DockWharfPier linework",
+          "sourceFeatureIDs": [
+            69020
+          ],
+          "areaM2": 33.11993528270079,
+          "groundModelY": 5.7,
+          "triangleCount": 28
+        },
+        {
+          "name": "city-2024-dock-8",
+          "source": "City 2024 DockWharfPier linework",
+          "sourceFeatureIDs": [
+            69021
+          ],
+          "areaM2": 33.45833898886685,
+          "groundModelY": 5.7,
+          "triangleCount": 24
+        },
+        {
+          "name": "city-2024-dock-9",
+          "source": "City 2024 DockWharfPier linework",
+          "sourceFeatureIDs": [
+            69022
+          ],
+          "areaM2": 32.25410268589808,
+          "groundModelY": 5.7,
+          "triangleCount": 20
+        },
+        {
+          "name": "city-2024-dock-10",
+          "source": "City 2024 DockWharfPier linework",
+          "sourceFeatureIDs": [
+            69025,
+            69027,
+            69048,
+            69049,
+            69050,
+            69051,
+            69154
+          ],
+          "areaM2": 92.2310763012741,
+          "groundModelY": 5.7,
+          "triangleCount": 56
+        },
+        {
+          "name": "city-2024-dock-11",
+          "source": "City 2024 DockWharfPier linework",
+          "sourceFeatureIDs": [
+            69026,
+            69028,
+            69033,
+            69034,
+            69147,
+            69148
+          ],
+          "areaM2": 3470.672037950979,
+          "groundModelY": 5.781511688232422,
+          "triangleCount": 488
+        },
+        {
+          "name": "city-2024-dock-12",
+          "source": "City 2024 DockWharfPier linework",
+          "sourceFeatureIDs": [
+            69057,
+            69058,
+            69059,
+            69060,
+            69061,
+            69062,
+            69063,
+            69064,
+            69065,
+            69066,
+            69071,
+            69072,
+            69073,
+            69074,
+            69075,
+            69076
+          ],
+          "areaM2": 88.78082808980665,
+          "groundModelY": 5.7,
+          "triangleCount": 96
+        },
+        {
+          "name": "city-2024-dock-13",
+          "source": "City 2024 DockWharfPier linework",
+          "sourceFeatureIDs": [
+            69149,
+            69150,
+            69151
+          ],
+          "areaM2": 1818.3049941381455,
+          "groundModelY": 5.7,
+          "triangleCount": 284
+        },
+        {
+          "name": "osm-beach-469978967",
+          "source": "https://www.openstreetmap.org/way/469978967",
+          "areaM2": 6272.670488162085,
+          "triangleCount": 1666
+        }
+      ],
+      "warning": "Existing mapped context only. The proposed cultural pier renovation, future marina, new boardwalk and new park furniture are not reconstructed. Flat dock heights/thickness and small DTM surface offsets are display approximations. These meshes do not change base terrain or shoreline topology.",
+      "sources": [
+        {
+          "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Planimetric_Lines/FeatureServer/0",
+          "publisher": "City of Mississauga",
+          "claim": "2024 DockWharfPier outlines; 13 closed polygons extracted without adding closure lines. Beach and shoreline linework were checked but not arbitrarily filled."
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/469978967",
+          "publisher": "OpenStreetMap contributors, ODbL",
+          "claim": "Complete mapped sand-beach polygon near Lakefront Promenade."
+        },
+        {
+          "url": "https://www.openstreetmap.org/copyright",
+          "publisher": "OpenStreetMap",
+          "claim": "Attribution and ODbL terms."
+        }
+      ],
+      "attribution": "City of Mississauga geographic data, used under the City of Mississauga Terms of Use. \u00a9 OpenStreetMap contributors, ODbL. Mixed-date Ontario DTM terrain.",
+      "assetId": "lakeview-mapped-waterfront",
+      "id": "lakeview-mapped-waterfront",
+      "file": "outputs/models/supplemental/refinement-lakeview/lakeview-mapped-waterfront.glb",
+      "bytes": 77572,
+      "sha256": "888093e65327b15d77da7071425713c4c85b54294c28feb40b75fdb4ea6cc130",
+      "bounds": [
+        [
+          1089.3337189309532,
+          5.1,
+          1788.7773779695854
+        ],
+        [
+          2829.9033203510335,
+          6.560000610351563,
+          2577.019607259892
+        ]
+      ],
+      "triangleCount": 2914,
+      "coordinateSystem": "EPSG:26917; X=E\u2212615000, Y=elevation\u221270, Z=4827000\u2212N; metres, glTF Y-up"
+    }
+  ],
+  "notModelled": [
+    "Pier House: official page supports three-storey types and widths, but no recoverable georeferenced site-plan footprint. Sales gallery address is not a building locator.",
+    "Proposed Cultural Pier upgrades, transient marina, boardwalk and park furniture: source concepts are not actual built features.",
+    "Current Aura exact height, roofs, balconies, basements and detailed facade geometry remain unavailable."
+  ]
+}

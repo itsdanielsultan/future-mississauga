@@ -1,0 +1,151 @@
+[
+  {
+    "projectId": "mcity-3",
+    "sourceIds": [
+      "63-6249"
+    ],
+    "assetFile": "outputs/models/supplemental/mcity-m3-upper-envelope.glb",
+    "asOf": "2026-07-15",
+    "status": "Architecturally topped out; phased occupancy, commissioning and final finishes underway",
+    "renderAction": "full-structural-envelope",
+    "clippingTopModelY": null,
+    "architecturalHeightM": 260.29,
+    "crownModelled": true,
+    "caveats": [
+      "Upper contour is schematic. The stepped crown silhouette is photo-derived and approximate, anchored to the verified 260.29 m maximum. Mechanical cavities and complete facade detail are not modelled.",
+      "Physical structural top-out does not establish completed cladding or occupancy."
+    ],
+    "sources": [
+      "https://www.mcitycondos.com/construction.php",
+      "https://urbantoronto.ca/news/2026/07/crown-materializing-crane-dematerialzing-m3-canadas-tallest-building-outside-toronto.61378",
+      "https://www.linkedin.com/pulse/walters-group-may-frameworks-walters-group-2-gdn3e"
+    ],
+    "crownAssetFile": "outputs/models/supplemental/refinement-downtown/mcity-m3-crown-silhouette.glb"
+  },
+  {
+    "projectId": "mcity-4",
+    "sourceIds": [],
+    "assetFile": "outputs/models/supplemental/mcity-m4-plan-derived.glb",
+    "asOf": "Spring 2026 (seasonal developer update, exact day unstated)",
+    "status": "Under construction: concrete slab through level 41; glazing through level 26",
+    "renderAction": "clip-supplemental-envelope",
+    "recordedConcreteFloor": 41,
+    "recordedGlazingFloor": 26,
+    "clippingTopModelY": 208.54,
+    "clippingHeightAboveDatumM": 123.65,
+    "groundModelY": 84.89,
+    "verticalUncertaintyM": 2,
+    "heightBasis": "Level 41 on CORE A.401 issued March 25, 2020. Low-resolution printed label interpreted as 123.650 m; scale cross-check from roof 215.650 m at pixel 20 to datum 0 at875 and L41 at385 yields 123.59 m. Clip is approximate, not a measured 2026 survey.",
+    "caveats": [
+      "2020 drawing floor elevations are assumed to correspond to the current developer floor numbering; exact latest issued-for-construction schedule is unavailable.",
+      "Clipped solid is an envelope representation, not reconstructed concrete slabs or real facade progress.",
+      "Existing supplement carries separate \u00b110 m plan-location and \u00b12 m ground-datum uncertainties."
+    ],
+    "sources": [
+      "https://www.mcitycondos.com/construction.php",
+      "https://urbantoronto.ca/forum/attachments/1590440424001-png.247625/",
+      "https://urbantoronto.ca/forum/attachments/1590440570442-png.247627/"
+    ]
+  },
+  {
+    "projectId": "mcity-5",
+    "sourceIds": [],
+    "assetFile": "outputs/models/supplemental/refinement-downtown/mcity-m5-developer-proxy.glb",
+    "asOf": "Spring 2026 (seasonal developer update, exact day unstated)",
+    "status": "Under construction: concrete slab through level 27, windows through level 11",
+    "renderAction": "hide-full-proxy-in-recorded-progress",
+    "recordedConcreteFloor": 27,
+    "recordedGlazingFloor": 11,
+    "clippingTopModelY": null,
+    "caveats": [
+      "No verified floor-elevation schedule or accurately georegistered structural model recovered. Do not convert 27 of 36 floors into a percentage of a guessed height.",
+      "Official M5 interactive amenity viewer contains a coarse projection box extending 117.87 model units above its zero. This is not verified architectural height and is not used."
+    ],
+    "sources": [
+      "https://www.mcitycondos.com/construction.php",
+      "https://mcitycondos.com/assets/m5-3d-amenities/"
+    ]
+  },
+  {
+    "projectId": "voya",
+    "sourceIds": [],
+    "assetFile": "outputs/models/supplemental/refinement-downtown/voya-towers-plan-derived.glb",
+    "asOf": "2026-08-09",
+    "status": "Both towers structurally topped; taller roof work incomplete and shorter occupancy not yet confirmed",
+    "renderAction": "include-labelled-schematic-structural-envelopes",
+    "clippingTopModelY": null,
+    "caveats": [
+      "Plan-derived schematic of two structurally topped Voya towers. Curved balcony outline and recessed wall outline are traced from the developer presentation; scale is estimated from printed suite areas, with \u00b15% dimensional uncertainty. Taller maximum 142.25 m comes from a published observer of engineering drawings, not a drawing recovered by this project. Shorter maximum is UNKNOWN: the displayed approximately 124 m envelope subtracts six reported 10-foot upper floors from the taller maximum, assuming equal roof allowance; allow \u00b16 m and do not treat it as a verified height. Location uses the developer community diagram and adjacent mapped Avia controls; allow \u00b18 m taller and \u00b115 m shorter placement uncertainty. Identical generic published tower plate applied to both; detailed floor-by-floor changes and mechanical roof cavities are omitted. Horizontal slab bands are illustrative and their elevations are not construction measurements. Shared stepped podium geometry is not reconstructed because its complete dimensioned plans were not recovered. Both towers were physically topped by July 2026; this model does not establish occupancy or complete cladding."
+    ],
+    "sources": [
+      "https://urbantoronto.ca/forum/threads/toronto-voya-142-25m-44s-amacon-turner-fleischer.32225/page-10",
+      "https://urbantoronto.ca/forum/attachments/1785965443342-jpeg.755864/",
+      "https://www.mississauga.ca/apps/#/property-preview/compliance-report-coa-text/66203/329571"
+    ],
+    "photographDate": "2026-07-26"
+  },
+  {
+    "projectId": "exchange-district",
+    "phaseId": "EX1",
+    "sourceIds": [
+      "63-6155",
+      "63-6156"
+    ],
+    "asOf": "2025-11 (photograph described in 2026-02-13 report)",
+    "status": "Topped out; magenta mechanical crown complete; hoist still attached",
+    "renderAction": "full-structural-envelope-with-spatial-phase-selection",
+    "requiresSpatialPhaseSelection": true,
+    "clippingTopModelY": null,
+    "caveats": [
+      "Native combined meshes cross phase boundaries; never enable both source IDs wholesale as completed.",
+      "Topped out does not establish occupancy or completed cladding."
+    ],
+    "sources": [
+      "https://urbantoronto.ca/news/2026/02/ex3-climbs-higher-exchange-district-mississauga-city-centre.60405"
+    ]
+  },
+  {
+    "projectId": "exchange-district",
+    "phaseId": "EX2",
+    "sourceIds": [
+      "63-6155",
+      "63-6156"
+    ],
+    "asOf": "2026-01 (photograph described in 2026-02-13 report)",
+    "status": "Topped out; yellow mechanical crown complete; upper residential glazing unfinished",
+    "renderAction": "full-structural-envelope-with-spatial-phase-selection",
+    "requiresSpatialPhaseSelection": true,
+    "clippingTopModelY": null,
+    "caveats": [
+      "Native combined meshes cross phase boundaries; retain EX3 as partial or unknown.",
+      "No completed cladding or occupancy inferred."
+    ],
+    "sources": [
+      "https://urbantoronto.ca/news/2026/02/ex3-climbs-higher-exchange-district-mississauga-city-centre.60405",
+      "https://www.skyscrapercenter.com/building/exchange-district-condos-ex2/40026"
+    ]
+  },
+  {
+    "projectId": "exchange-district",
+    "phaseId": "EX3",
+    "sourceIds": [
+      "63-6155",
+      "63-6156"
+    ],
+    "asOf": "2026-01",
+    "status": "Under construction at roughly the 46 th floor in January 2026; still growing in August 2026 photo caption",
+    "renderAction": "unknown-height-gap",
+    "recordedConcreteFloorApproximate": 46,
+    "clippingTopModelY": null,
+    "requiresSpatialPhaseSelection": true,
+    "caveats": [
+      "Full 232 m planned envelope must not appear as recorded actual progress.",
+      "No verified absolute level 46 elevation recovered; no clipping height inferred.",
+      "January floor count is older than August stage photograph."
+    ],
+    "sources": [
+      "https://urbantoronto.ca/news/2026/02/ex3-climbs-higher-exchange-district-mississauga-city-centre.60405",
+      "https://urbantoronto.ca/news/2026/08/city-future.61613"
+    ]
+  }
+]

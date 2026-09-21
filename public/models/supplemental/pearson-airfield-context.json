@@ -1,0 +1,45 @@
+{
+  "source": "OpenStreetMap API geographic extract",
+  "retrieved": "2026-09-20",
+  "licence": "ODbL",
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "surfaceCells": {
+    "runway": 1093,
+    "taxiway": 1864,
+    "apron": 1240
+  },
+  "sourceWays": {
+    "runway": 7,
+    "taxiway": 101,
+    "apron": 5
+  },
+  "scope": "Five mapped runways and retrieved apron/taxiway portions, clipped to Mississauga. Not a complete airfield survey.",
+  "width": "Mapped runway widths where tagged. Untagged taxiways use symbolic 15 m display width.",
+  "terrain": "Draped over mixed-date Ontario DTM. No operational or navigation use.",
+  "researchLog": [
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-79.66,43.63,-79.62,43.68",
+      "status": 200,
+      "operation": "public OSM geographic extract",
+      "date": "2026-09-20"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-79.62,43.63,-79.58,43.68",
+      "status": 400,
+      "operation": "public OSM geographic extract",
+      "date": "2026-09-20"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-79.66,43.68,-79.62,43.73",
+      "status": 400,
+      "operation": "public OSM geographic extract",
+      "date": "2026-09-20"
+    },
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-79.62,43.68,-79.58,43.73",
+      "status": 400,
+      "operation": "public OSM geographic extract",
+      "date": "2026-09-20"
+    }
+  ]
+}

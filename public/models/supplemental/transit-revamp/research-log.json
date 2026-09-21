@@ -1,0 +1,430 @@
+[
+  {
+    "kind": "download",
+    "queryOrUrl": "https://www.gotransit.com/en/partner-with-us/software-developers",
+    "file": "sources/go-developers.html",
+    "bytes": 475325,
+    "status": 200,
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "download",
+    "queryOrUrl": "https://assets.metrolinx.com/raw/upload/Documents/Metrolinx/Open%20Data/GO-GTFS.zip",
+    "file": "sources/GO-GTFS.zip",
+    "bytes": 22206353,
+    "status": 200,
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "download",
+    "queryOrUrl": "https://www.mississauga.ca/miway-transit/developer-download/",
+    "file": "sources/miway-developers.html",
+    "bytes": 152706,
+    "status": 200,
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "download",
+    "queryOrUrl": "https://www.miapp.ca/GTFS/google_transit.zip",
+    "file": "sources/MiWay-GTFS.zip",
+    "bytes": 8007292,
+    "status": 200,
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "download",
+    "queryOrUrl": "https://www.metrolinx.com/en/projects-and-programs/hazel-mccallion-lrt/notices",
+    "file": "sources/hml-notices.html",
+    "bytes": 706296,
+    "status": 200,
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "download",
+    "queryOrUrl": "https://www.metrolinx.com/en/discover/hazel-mccallion-line-takes-shape-over-highway-403",
+    "file": "sources/hml-flyover.html",
+    "bytes": 285341,
+    "status": 200,
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "download",
+    "queryOrUrl": "https://assets.metrolinx.com/image/upload/v1729099477/Images/Metrolinx/HML_Centre_and_Cooksville_CLC_July_2023.pdf",
+    "file": "sources/hml-clc-2023.pdf",
+    "bytes": 3443592,
+    "status": 200,
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "download",
+    "queryOrUrl": "https://assets.metrolinx.com/image/upload/v1777390899/Images/Metrolinx/HML%20Hazel%20McCallion%20Line/Rathburn_Stage_4_Notice_April_2026.pdf",
+    "file": "sources/hml-rathburn-2026.pdf",
+    "bytes": 375402,
+    "status": 200,
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "download",
+    "queryOrUrl": "https://www.mississauga.ca/wp-content/uploads/2025/10/07122748/Mississauga-TRIP-Technical-Report-20250707-FINAL-PDFUA.pdf",
+    "file": "sources/city-trip-2025.pdf",
+    "bytes": 12614941,
+    "status": 200,
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "download",
+    "queryOrUrl": "https://pub-mississauga.escribemeetings.com/filestream.ashx?DocumentId=84085",
+    "error": "403 Client Error: Forbidden for url: https://pub-mississauga.escribemeetings.com/filestream.ashx?DocumentId=84085",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "download",
+    "queryOrUrl": "https://www.mississauga.ca/miway-transit/maps/station-and-terminal-maps/",
+    "file": "sources/miway-station-maps.html",
+    "bytes": 160160,
+    "status": 200,
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/?f=pjson",
+    "resultNote": "Public City service directory inspected for transit and physical railway geometry.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/BRT_Transitway/FeatureServer?f=json",
+    "resultNote": "Service metadata inspected; archived/proposed layers are not treated as current operating geometry.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/BRT_Transitway/FeatureServer/0?f=json",
+    "resultNote": "Layer metadata inspected: BRT_Transitway",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/BRT_Transitway/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=26917&f=geojson",
+    "resultNote": "Downloaded layer for inspection; current GO GTFS and current City StreetCentreline take precedence over legacy planning layers.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Transitwayv3/FeatureServer?f=json",
+    "resultNote": "Service metadata inspected; archived/proposed layers are not treated as current operating geometry.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Transitwayv3/FeatureServer/0?f=json",
+    "resultNote": "Layer metadata inspected: NinthLine_Emerging_ProposedTransitway",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Transitwayv3/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=26917&f=geojson",
+    "resultNote": "Downloaded layer for inspection; current GO GTFS and current City StreetCentreline take precedence over legacy planning layers.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Transityway/FeatureServer?f=json",
+    "resultNote": "Service metadata inspected; archived/proposed layers are not treated as current operating geometry.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Transityway/FeatureServer/0?f=json",
+    "resultNote": "Layer metadata inspected: NinthLine_Emerging_ProposedTransitway",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Transityway/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=26917&f=geojson",
+    "resultNote": "Downloaded layer for inspection; current GO GTFS and current City StreetCentreline take precedence over legacy planning layers.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer?f=json",
+    "resultNote": "Service metadata inspected; archived/proposed layers are not treated as current operating geometry.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/0?f=json",
+    "resultNote": "Layer metadata inspected: HumberCollege",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=26917&f=geojson",
+    "resultNote": "Downloaded layer for inspection; current GO GTFS and current City StreetCentreline take precedence over legacy planning layers.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/1?f=json",
+    "resultNote": "Layer metadata inspected: SheridanOakville",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/1/query?where=1%3D1&outFields=*&outSR=26917&f=geojson",
+    "resultNote": "Downloaded layer for inspection; current GO GTFS and current City StreetCentreline take precedence over legacy planning layers.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/2?f=json",
+    "resultNote": "Layer metadata inspected: MiWay_BusinessPark",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/2/query?where=1%3D1&outFields=*&outSR=26917&f=geojson",
+    "resultNote": "Downloaded layer for inspection; current GO GTFS and current City StreetCentreline take precedence over legacy planning layers.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/3?f=json",
+    "resultNote": "Layer metadata inspected: LongBranch",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/3/query?where=1%3D1&outFields=*&outSR=26917&f=geojson",
+    "resultNote": "Downloaded layer for inspection; current GO GTFS and current City StreetCentreline take precedence over legacy planning layers.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/4?f=json",
+    "resultNote": "Layer metadata inspected: Mississauga Transitway",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/4/query?where=1%3D1&outFields=*&outSR=26917&f=geojson",
+    "resultNote": "Downloaded layer for inspection; current GO GTFS and current City StreetCentreline take precedence over legacy planning layers.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/5?f=json",
+    "resultNote": "Layer metadata inspected: UPExpressEnd",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/5/query?where=1%3D1&outFields=*&outSR=26917&f=geojson",
+    "resultNote": "Downloaded layer for inspection; current GO GTFS and current City StreetCentreline take precedence over legacy planning layers.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/6?f=json",
+    "resultNote": "Layer metadata inspected: UP_Express",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/6/query?where=1%3D1&outFields=*&outSR=26917&f=geojson",
+    "resultNote": "Downloaded layer for inspection; current GO GTFS and current City StreetCentreline take precedence over legacy planning layers.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/7?f=json",
+    "resultNote": "Layer metadata inspected: KiplingTTCconnection",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/7/query?where=1%3D1&outFields=*&outSR=26917&f=geojson",
+    "resultNote": "Downloaded layer for inspection; current GO GTFS and current City StreetCentreline take precedence over legacy planning layers.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/8?f=json",
+    "resultNote": "Layer metadata inspected: GOLine_Old",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/8/query?where=1%3D1&outFields=*&outSR=26917&f=geojson",
+    "resultNote": "Downloaded layer for inspection; current GO GTFS and current City StreetCentreline take precedence over legacy planning layers.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/9?f=json",
+    "resultNote": "Layer metadata inspected: AirportPoint",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/9/query?where=1%3D1&outFields=*&outSR=26917&f=geojson",
+    "resultNote": "Downloaded layer for inspection; current GO GTFS and current City StreetCentreline take precedence over legacy planning layers.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/10?f=json",
+    "resultNote": "Layer metadata inspected: SheridanPoint",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/10/query?where=1%3D1&outFields=*&outSR=26917&f=geojson",
+    "resultNote": "Downloaded layer for inspection; current GO GTFS and current City StreetCentreline take precedence over legacy planning layers.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/11?f=json",
+    "resultNote": "Layer metadata inspected: UTMPoint",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/11/query?where=1%3D1&outFields=*&outSR=26917&f=geojson",
+    "resultNote": "Downloaded layer for inspection; current GO GTFS and current City StreetCentreline take precedence over legacy planning layers.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/12?f=json",
+    "resultNote": "Layer metadata inspected: Kitchener_GOline",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/12/query?where=1%3D1&outFields=*&outSR=26917&f=geojson",
+    "resultNote": "Downloaded layer for inspection; current GO GTFS and current City StreetCentreline take precedence over legacy planning layers.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/13?f=json",
+    "resultNote": "Layer metadata inspected: Milton_GOline",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/13/query?where=1%3D1&outFields=*&outSR=26917&f=geojson",
+    "resultNote": "Downloaded layer for inspection; current GO GTFS and current City StreetCentreline take precedence over legacy planning layers.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/14?f=json",
+    "resultNote": "Layer metadata inspected: LakeshoreGOLINE",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/CurrentTransit_Dec17/FeatureServer/14/query?where=1%3D1&outFields=*&outSR=26917&f=geojson",
+    "resultNote": "Downloaded layer for inspection; current GO GTFS and current City StreetCentreline take precedence over legacy planning layers.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Planimetric_Lines/FeatureServer?f=json",
+    "resultNote": "Service metadata inspected; archived/proposed layers are not treated as current operating geometry.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Planimetric_Lines/FeatureServer/0?f=json",
+    "resultNote": "Layer metadata inspected: Planimetric_Lines",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/GO_Transit_Stations/FeatureServer?f=json",
+    "resultNote": "Service metadata inspected; archived/proposed layers are not treated as current operating geometry.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/GO_Transit_Stations/FeatureServer/0?f=json",
+    "resultNote": "Layer metadata inspected: GO Transit Stations",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/GO_Transit_Stations/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=26917&f=geojson",
+    "resultNote": "Downloaded layer for inspection; current GO GTFS and current City StreetCentreline take precedence over legacy planning layers.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/StreetCentreline/FeatureServer?f=json",
+    "resultNote": "Service metadata inspected; archived/proposed layers are not treated as current operating geometry.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/StreetCentreline/FeatureServer/0?f=json",
+    "resultNote": "Layer metadata inspected: StreetCentreline",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Planimetric_Lines/FeatureServer/0/query?groupByFieldsForStatistics=FtType%2CImgYr",
+    "resultNote": "Feature-type/year statistics identify 597 Railway lines with ImgYr 2024.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Planimetric_Lines/FeatureServer/0/query?where=FtType%3D%27Railway%27&outSR=26917&f=geojson",
+    "resultNote": "All 597 Railway source features downloaded; returnZ requested but layer is 2D.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/StreetCentreline/FeatureServer/0/query?where=FULLNAME%20LIKE%20%27%25TRANSIT%25%27&outSR=26917&f=geojson",
+    "resultNote": "67 mapped OPEN Mississauga Transitway segments downloaded.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://api.openstreetmap.org/api/0.6/map?bbox=-79.6484142875042,43.59338490476026,-79.6401815261734,43.60139087671259",
+    "resultNote": "Fresh public OSM API map cross-check confirms partial paired June 2026 tracks and wye source node topology.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://www.metrolinx.com/en/projects-and-programs/hazel-mccallion-lrt/notices/general-construction-update-mississauga-centre",
+    "resultNote": "July 2026 official construction notice read and retained locally.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://www.mississauga.ca/city-of-mississauga-news/news/miway-to-begin-servicing-renforth-station-tomorrow/",
+    "resultNote": "Read official source in browser/search results; supports listed claims.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://www.metrolinx.com/en/projects-and-programs/hazel-mccallion-lrt",
+    "resultNote": "Read official source in browser/search results; supports listed claims.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://assets.metrolinx.com/image/upload/v1663237688/Documents/Metrolinx/20190410_BoardMtg_LRT_Station_EN.pdf",
+    "resultNote": "Read official source in browser/search results; supports listed claims.",
+    "accessed": "2026-09-20"
+  },
+  {
+    "kind": "open/download",
+    "queryOrUrl": "https://www.metrolinx.com/en/projects-and-programs/hazel-mccallion-line-downtown-mississauga-extension",
+    "resultNote": "Read official source in browser/search results; supports listed claims.",
+    "accessed": "2026-09-20"
+  }
+]

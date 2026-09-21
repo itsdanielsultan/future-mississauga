@@ -1,0 +1,501 @@
+{
+  "reviewDate": "2026-09-20",
+  "method": "Exact source triangle-coordinate matching; no reconstructed envelopes; original face ownership moved from tile aggregate to id-bearing child node",
+  "files": [
+    {
+      "file": "outputs/models/reconciled/districts/port-credit.glb",
+      "beforeSHA256": "33cb7860820fcf0d1f976488df569294ed4338504549e07ec31d55c9cb8df0ec",
+      "afterSHA256": "119ca935d7c7bf45cfbe98639797ebfc379d8fe53e61e33e0ce28dd106b846f2",
+      "bytes": 16886248,
+      "compressed": false,
+      "changes": [
+        {
+          "id": "92-749",
+          "triangles": 28,
+          "sourceTotalTriangles": 28
+        },
+        {
+          "id": "93-317",
+          "triangles": 16,
+          "sourceTotalTriangles": 16
+        },
+        {
+          "id": "93-510",
+          "triangles": 28,
+          "sourceTotalTriangles": 28
+        },
+        {
+          "id": "93-768",
+          "triangles": 20,
+          "sourceTotalTriangles": 20
+        },
+        {
+          "id": "102-3266",
+          "triangles": 80,
+          "sourceTotalTriangles": 80
+        }
+      ],
+      "exactSourceTrianglesVerified": 172,
+      "postSaveValidation": [
+        {
+          "id": "92-749",
+          "exactSourceTriangles": 28,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "93-317",
+          "exactSourceTriangles": 16,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "93-510",
+          "exactSourceTriangles": 28,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "93-768",
+          "exactSourceTriangles": 20,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "102-3266",
+          "exactSourceTriangles": 80,
+          "remainingTrianglesInAggregate": 0
+        }
+      ]
+    },
+    {
+      "file": "outputs/models/reconciled/districts/lakeview.glb",
+      "beforeSHA256": "5ebc29ec88e025e48a86b52394ed1648c9e9c2c4b267e1d0fed68b8c737d99b9",
+      "afterSHA256": "42600ddbd98086552fc5c465878b8beafa31b738dfb0c83152b8649b349c01c7",
+      "bytes": 15044980,
+      "compressed": false,
+      "changes": [
+        {
+          "id": "102-3266",
+          "triangles": 80,
+          "sourceTotalTriangles": 80
+        }
+      ],
+      "exactSourceTrianglesVerified": 80,
+      "postSaveValidation": [
+        {
+          "id": "102-3266",
+          "exactSourceTriangles": 80,
+          "remainingTrianglesInAggregate": 0
+        }
+      ]
+    },
+    {
+      "file": "work/render-extents/citywide.glb",
+      "beforeSHA256": "f22cff5a3a3a4b361e0b9033671f4bb8c0e1edcfa53b4c011108d178232049fb",
+      "afterSHA256": "06dccb3abaa90733062fc0abef5d554135b76b807b3c4c62c3b8fcb585817d08",
+      "bytes": 642945500,
+      "compressed": false,
+      "changes": [
+        {
+          "id": "102-3266",
+          "triangles": 80,
+          "sourceTotalTriangles": 80
+        },
+        {
+          "id": "92-749",
+          "triangles": 28,
+          "sourceTotalTriangles": 28
+        },
+        {
+          "id": "93-317",
+          "triangles": 16,
+          "sourceTotalTriangles": 16
+        },
+        {
+          "id": "93-510",
+          "triangles": 28,
+          "sourceTotalTriangles": 28
+        },
+        {
+          "id": "93-768",
+          "triangles": 20,
+          "sourceTotalTriangles": 20
+        }
+      ],
+      "exactSourceTrianglesVerified": 172,
+      "postSaveValidation": [
+        {
+          "id": "102-3266",
+          "exactSourceTriangles": 80,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "92-749",
+          "exactSourceTriangles": 28,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "93-317",
+          "exactSourceTriangles": 16,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "93-510",
+          "exactSourceTriangles": 28,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "93-768",
+          "exactSourceTriangles": 20,
+          "remainingTrianglesInAggregate": 0
+        }
+      ]
+    },
+    {
+      "file": "work/render-extents/port-credit.glb",
+      "beforeSHA256": "d2fda65607dd3c3c5077ae4ac19ed8b2dc71d5b404eb2add781a7e5668798224",
+      "afterSHA256": "4aefe2834d42fe8d82cf8b921b5bdbc6bde077fa7e7c36bc63de53273f11373f",
+      "bytes": 47696112,
+      "compressed": false,
+      "changes": [
+        {
+          "id": "92-749",
+          "triangles": 28,
+          "sourceTotalTriangles": 28
+        },
+        {
+          "id": "93-317",
+          "triangles": 16,
+          "sourceTotalTriangles": 16
+        },
+        {
+          "id": "93-510",
+          "triangles": 28,
+          "sourceTotalTriangles": 28
+        },
+        {
+          "id": "93-768",
+          "triangles": 20,
+          "sourceTotalTriangles": 20
+        },
+        {
+          "id": "102-3266",
+          "triangles": 80,
+          "sourceTotalTriangles": 80
+        }
+      ],
+      "exactSourceTrianglesVerified": 172,
+      "postSaveValidation": [
+        {
+          "id": "92-749",
+          "exactSourceTriangles": 28,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "93-317",
+          "exactSourceTriangles": 16,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "93-510",
+          "exactSourceTriangles": 28,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "93-768",
+          "exactSourceTriangles": 20,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "102-3266",
+          "exactSourceTriangles": 80,
+          "remainingTrianglesInAggregate": 0
+        }
+      ]
+    },
+    {
+      "file": "work/render-extents/lakeview.glb",
+      "beforeSHA256": "d67762f201ee47e6364328bc93aeee4f406affb4f9e241e3c319fb2246dcc27e",
+      "afterSHA256": "7f048a2e3efc6a0834794f7892cf9c515e65e68ae9f308d9541a25f31a0fd3eb",
+      "bytes": 42881660,
+      "compressed": false,
+      "changes": [
+        {
+          "id": "92-749",
+          "triangles": 28,
+          "sourceTotalTriangles": 28
+        },
+        {
+          "id": "93-768",
+          "triangles": 20,
+          "sourceTotalTriangles": 20
+        },
+        {
+          "id": "102-3266",
+          "triangles": 80,
+          "sourceTotalTriangles": 80
+        }
+      ],
+      "exactSourceTrianglesVerified": 128,
+      "postSaveValidation": [
+        {
+          "id": "92-749",
+          "exactSourceTriangles": 28,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "93-768",
+          "exactSourceTriangles": 20,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "102-3266",
+          "exactSourceTriangles": 80,
+          "remainingTrianglesInAggregate": 0
+        }
+      ]
+    },
+    {
+      "file": "work/render-extents/clarkson.glb",
+      "beforeSHA256": "967dcfa5cf3425398fda0f753eae359e31e717cc0ce05a53e3bccef3dca3e8b8",
+      "afterSHA256": "58fc3dd509d2d69928cb13dfa465e95acde52b22af9e4e2b08849bafda6309d4",
+      "bytes": 59023408,
+      "compressed": false,
+      "changes": [
+        {
+          "id": "93-317",
+          "triangles": 16,
+          "sourceTotalTriangles": 16
+        },
+        {
+          "id": "93-510",
+          "triangles": 28,
+          "sourceTotalTriangles": 28
+        },
+        {
+          "id": "93-768",
+          "triangles": 20,
+          "sourceTotalTriangles": 20
+        }
+      ],
+      "exactSourceTrianglesVerified": 64,
+      "postSaveValidation": [
+        {
+          "id": "93-317",
+          "exactSourceTriangles": 16,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "93-510",
+          "exactSourceTriangles": 28,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "93-768",
+          "exactSourceTriangles": 20,
+          "remainingTrianglesInAggregate": 0
+        }
+      ]
+    },
+    {
+      "file": "work/render-extents/cooksville.glb",
+      "beforeSHA256": "1348f2a194a10c594090b052e3ef56a9a82c079f3eb71164fde2e14b3b0355a0",
+      "afterSHA256": "3e9b62d18a2e8962b5f1f9b29d3af65c56e2b9b92c5dd02b02b7b76fe409206b",
+      "bytes": 109520700,
+      "compressed": false,
+      "changes": [
+        {
+          "id": "92-749",
+          "triangles": 28,
+          "sourceTotalTriangles": 28
+        },
+        {
+          "id": "102-3266",
+          "triangles": 80,
+          "sourceTotalTriangles": 80
+        }
+      ],
+      "exactSourceTrianglesVerified": 108,
+      "postSaveValidation": [
+        {
+          "id": "92-749",
+          "exactSourceTriangles": 28,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "102-3266",
+          "exactSourceTriangles": 80,
+          "remainingTrianglesInAggregate": 0
+        }
+      ]
+    },
+    {
+      "file": "outputs/mississauga-future/public/models/port-credit.glb",
+      "beforeSHA256": "59a8d8dd64b3792c9cd034088833e20069d4b15d578dd175bed5bd8d7fee21cf",
+      "afterSHA256": "3ab460bc50444c6c2206ef793052b16a4f2043060982113a7711164dd1ac78d2",
+      "bytes": 1564028,
+      "compressed": true,
+      "changes": [
+        {
+          "id": "92-749",
+          "triangles": 28,
+          "sourceTotalTriangles": 28
+        },
+        {
+          "id": "93-317",
+          "triangles": 16,
+          "sourceTotalTriangles": 16
+        },
+        {
+          "id": "93-510",
+          "triangles": 28,
+          "sourceTotalTriangles": 28
+        },
+        {
+          "id": "93-768",
+          "triangles": 20,
+          "sourceTotalTriangles": 20
+        },
+        {
+          "id": "102-3266",
+          "triangles": 80,
+          "sourceTotalTriangles": 80
+        }
+      ],
+      "exactSourceTrianglesVerified": 172,
+      "postSaveValidation": [
+        {
+          "id": "92-749",
+          "exactSourceTriangles": 28,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "93-317",
+          "exactSourceTriangles": 16,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "93-510",
+          "exactSourceTriangles": 28,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "93-768",
+          "exactSourceTriangles": 20,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "102-3266",
+          "exactSourceTriangles": 80,
+          "remainingTrianglesInAggregate": 0
+        }
+      ]
+    },
+    {
+      "file": "outputs/mississauga-future/public/models/lakeview.glb",
+      "beforeSHA256": "0fae5bc01f4f12db2b338188cdb5ac2606126c7dfc5c1ed0abd6d157c4f116e6",
+      "afterSHA256": "a904c18c900c7d707fb1d94d485613ead6cad5a0c76e543bd4aa814850dc22e1",
+      "bytes": 1503692,
+      "compressed": true,
+      "changes": [
+        {
+          "id": "102-3266",
+          "triangles": 80,
+          "sourceTotalTriangles": 80
+        }
+      ],
+      "exactSourceTrianglesVerified": 80,
+      "postSaveValidation": [
+        {
+          "id": "102-3266",
+          "exactSourceTriangles": 80,
+          "remainingTrianglesInAggregate": 0
+        }
+      ]
+    },
+    {
+      "file": "outputs/models/reconciled/tile-92.glb",
+      "beforeSHA256": "10b5e14b9d4890d4bf73cff8278d9726bc9f318b8f40edfff4e84a97e0b1e296",
+      "afterSHA256": "497c8e10a9d50184650fcd74434142d3ea1da1c96c428c759b6cf9a312234798",
+      "bytes": 21350604,
+      "compressed": false,
+      "changes": [
+        {
+          "id": "92-749",
+          "triangles": 28,
+          "sourceTotalTriangles": 28
+        }
+      ],
+      "exactSourceTrianglesVerified": 28,
+      "postSaveValidation": [
+        {
+          "id": "92-749",
+          "exactSourceTriangles": 28,
+          "remainingTrianglesInAggregate": 0
+        }
+      ]
+    },
+    {
+      "file": "outputs/models/reconciled/tile-93.glb",
+      "beforeSHA256": "0b583f76c35852f574fd2b483f3cef73a6201df2b7423dcb6020a59e8abe9d07",
+      "afterSHA256": "0c55b37050de400b5307060d23871da0c7ec9a7ca13bfd8cd9f57228e74ceefa",
+      "bytes": 3030344,
+      "compressed": false,
+      "changes": [
+        {
+          "id": "93-317",
+          "triangles": 16,
+          "sourceTotalTriangles": 16
+        },
+        {
+          "id": "93-510",
+          "triangles": 28,
+          "sourceTotalTriangles": 28
+        },
+        {
+          "id": "93-768",
+          "triangles": 20,
+          "sourceTotalTriangles": 20
+        }
+      ],
+      "exactSourceTrianglesVerified": 64,
+      "postSaveValidation": [
+        {
+          "id": "93-317",
+          "exactSourceTriangles": 16,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "93-510",
+          "exactSourceTriangles": 28,
+          "remainingTrianglesInAggregate": 0
+        },
+        {
+          "id": "93-768",
+          "exactSourceTriangles": 20,
+          "remainingTrianglesInAggregate": 0
+        }
+      ]
+    },
+    {
+      "file": "outputs/models/reconciled/tile-102.glb",
+      "beforeSHA256": "06b7c39b195b4f79327204d82249280ca9979626c51f0450a460aeeea739679f",
+      "afterSHA256": "cd6fff0b8d34d8bec55aff0e167f906721a634222c77eb4d290a78ea6cb37dda",
+      "bytes": 21962140,
+      "compressed": false,
+      "changes": [
+        {
+          "id": "102-3266",
+          "triangles": 80,
+          "sourceTotalTriangles": 80
+        }
+      ],
+      "exactSourceTrianglesVerified": 80,
+      "postSaveValidation": [
+        {
+          "id": "102-3266",
+          "exactSourceTriangles": 80,
+          "remainingTrianglesInAggregate": 0
+        }
+      ]
+    }
+  ],
+  "validation": "Every split triangle retains exact City source vertex coordinates; zero split-record triangles remain in anonymous existing aggregates; all saved hashes match."
+}

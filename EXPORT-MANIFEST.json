@@ -1,0 +1,1630 @@
+{
+  "edition": "Transit Revamp",
+  "siteOrigin": "https://itsdanielsultan.github.io/future-mississauga/",
+  "finalRenderLockAcknowledged": true,
+  "files": [
+    {
+      "file": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "app.js",
+      "bytes": 30894,
+      "sha256": "35bfb447964be83ef7d2368c42d26177db66d8f0c23d9c33cfdd7b8d859e0b0f"
+    },
+    {
+      "file": "checkpoints/01-lighting/Checkpoint.json",
+      "bytes": 513,
+      "sha256": "2a52fa0dfeb8a4f7798dacd2c00bc537123e8b0a7748a8b46aa102f1b6d70f57"
+    },
+    {
+      "file": "checkpoints/02-landscape/Checkpoint.json",
+      "bytes": 584,
+      "sha256": "dbe675dbe4b6820314101f99a2edda2eb5340a343a7e43aec49ae19e185bacfa"
+    },
+    {
+      "file": "comparison.js",
+      "bytes": 1373,
+      "sha256": "e762d2af456fefdb5bb616f77f4d99dda8b5648c3f2f939af81e3dec498072f4"
+    },
+    {
+      "file": "data/airport-corporate-tree-adjustments-baseline.json.gz",
+      "bytes": 809,
+      "sha256": "7676837215e25a62d96790c83fdc2469d1914e2cea7003e305afb2c6f5f43e53"
+    },
+    {
+      "file": "data/airport-corporate-tree-adjustments-future.json.gz",
+      "bytes": 816,
+      "sha256": "8ac976e9f0f092da9f75b2bf031bedc26855bac555cccb038ea0f19a46609fa8"
+    },
+    {
+      "file": "data/airport-corporate-trees.json.gz",
+      "bytes": 609579,
+      "sha256": "bb1686b6eaf40435b11dc11942ca92c97f12dcf99cac74a531bcc6d8f52f80dd"
+    },
+    {
+      "file": "data/citywide-tree-adjustments-baseline.json.gz",
+      "bytes": 117,
+      "sha256": "4d45b663f450816df33d8d4d0ada4eccc84a2b09dc699ec5a7b0d26c14cf14d8"
+    },
+    {
+      "file": "data/citywide-tree-adjustments-future.json.gz",
+      "bytes": 117,
+      "sha256": "4d45b663f450816df33d8d4d0ada4eccc84a2b09dc699ec5a7b0d26c14cf14d8"
+    },
+    {
+      "file": "data/citywide-trees.json.gz",
+      "bytes": 32,
+      "sha256": "066cb28110dc4deb719057eb6ffbe853229b450a9355f71f8315b596396f99b9"
+    },
+    {
+      "file": "data/clarkson-meshes.json",
+      "bytes": 27365,
+      "sha256": "0f5dca43d39db58edd1f1c56b0b3dc429e61cf9e51ea7970dad19c269e8500de"
+    },
+    {
+      "file": "data/clarkson-tree-adjustments-baseline.json.gz",
+      "bytes": 3592,
+      "sha256": "04a40cb18182e496eb73cc145380ac8d9b94e967ebe360d5f4c41cba378c559c"
+    },
+    {
+      "file": "data/clarkson-tree-adjustments-future.json.gz",
+      "bytes": 3657,
+      "sha256": "345192d2d9551faf3be59b3fe25d9c5af3eb955dbb2436b66308447fdd0bde7f"
+    },
+    {
+      "file": "data/clarkson-trees.json.gz",
+      "bytes": 1045174,
+      "sha256": "3ec52634ba66d653c3196037dbe6063d28c9c4254e637340eceda29d882f7d0f"
+    },
+    {
+      "file": "data/context-assets.json",
+      "bytes": 854,
+      "sha256": "7cb3ce35040639991f5861f58986170676837c0af65c69a779479a48f84914f4"
+    },
+    {
+      "file": "data/cooksville-meshes.json",
+      "bytes": 54374,
+      "sha256": "44f54b8dcf447c56f02ad15163c0f565d7ee3474b38e7ec3afff6d42164e4017"
+    },
+    {
+      "file": "data/cooksville-tree-adjustments-baseline.json.gz",
+      "bytes": 2341,
+      "sha256": "65afd592bed71e0d930ce51aae970578cbea0b0176d20095d30c9a6bcf14b1c1"
+    },
+    {
+      "file": "data/cooksville-tree-adjustments-future.json.gz",
+      "bytes": 2417,
+      "sha256": "7361a9bbb45eaa3532855464f6303ba88dd5325543984254ec73951ada57fe10"
+    },
+    {
+      "file": "data/cooksville-trees.json.gz",
+      "bytes": 644412,
+      "sha256": "0b7fe217ce13e90a64cb992818b9637f6d0e3eae16b37921cbf23e0f3cff4794"
+    },
+    {
+      "file": "data/districts.json",
+      "bytes": 12431,
+      "sha256": "84643973050f6b1c743f9cebb918195d6ffc3d8378bbe171428211233c523acf"
+    },
+    {
+      "file": "data/dixie-applewood-tree-adjustments-baseline.json.gz",
+      "bytes": 1920,
+      "sha256": "105d8c40db90d824fdf34c79368f1e70553c451c8083608db76f364dbd9df08a"
+    },
+    {
+      "file": "data/dixie-applewood-tree-adjustments-future.json.gz",
+      "bytes": 2030,
+      "sha256": "2ee092e9884a0074b1d2b8fc9504d336ecceb98b6557fa15feb6f41ebb9bbeee"
+    },
+    {
+      "file": "data/dixie-applewood-trees.json.gz",
+      "bytes": 923841,
+      "sha256": "1f814fd742b61961db65e809574d36e691ac710df46c36189a6e7e08a2931c05"
+    },
+    {
+      "file": "data/downtown-meshes.json",
+      "bytes": 62789,
+      "sha256": "eec46b01d6ffae634314a6116d064478c45198df7a05a17d073c3fb322295596"
+    },
+    {
+      "file": "data/downtown-tree-adjustments-baseline.json.gz",
+      "bytes": 3330,
+      "sha256": "b349ed93b058eaf54f7e9e30520342a99beb6918102609a34ba6f9f1a9e021e7"
+    },
+    {
+      "file": "data/downtown-tree-adjustments-future.json.gz",
+      "bytes": 3526,
+      "sha256": "a0f792084d4c02c03d302011b835eb2570e824ca5b74edc2d5323273e1874cc3"
+    },
+    {
+      "file": "data/downtown-trees.json.gz",
+      "bytes": 538999,
+      "sha256": "399e1d6c2515c371cef3f5d985848927b66660996b11ec0afa9a43397dac3761"
+    },
+    {
+      "file": "data/erin-mills-meshes.json",
+      "bytes": 59269,
+      "sha256": "ffed2ec2a14519d78783bb58881bea1bc7c860c66965da778fcca62048a41207"
+    },
+    {
+      "file": "data/erin-mills-tree-adjustments-baseline.json.gz",
+      "bytes": 6345,
+      "sha256": "93a4439e8178a5db364cd3eaeba25094e1b42b4efc5b40d47cb53abf6cf5144b"
+    },
+    {
+      "file": "data/erin-mills-tree-adjustments-future.json.gz",
+      "bytes": 6508,
+      "sha256": "ece3b04b3fcb198ffade3302ad018262f62cb45c3dda668f46d2436594a9b37a"
+    },
+    {
+      "file": "data/erin-mills-trees.json.gz",
+      "bytes": 1628631,
+      "sha256": "d4ab3c446c145c08a976ebb269e0992e4ce087d4ba2aca091e3f7bc6a7c6f251"
+    },
+    {
+      "file": "data/erindale-tree-adjustments-baseline.json.gz",
+      "bytes": 4071,
+      "sha256": "691e140009507c5e88b0cc3f463b2cae3ef8b343d2978b2d8280e8d8b6eaf6db"
+    },
+    {
+      "file": "data/erindale-tree-adjustments-future.json.gz",
+      "bytes": 4140,
+      "sha256": "e66b1cdd87de626772cb2f13fed0f8f4e20b1407080896b89dbe7566eae1fdbf"
+    },
+    {
+      "file": "data/erindale-trees.json.gz",
+      "bytes": 1949237,
+      "sha256": "a5c0ee5f9ff20f2c6274100b72de3e9dc7cfb3b59fffd1cb55ecba47b890930d"
+    },
+    {
+      "file": "data/groups.json",
+      "bytes": 629884,
+      "sha256": "d517c83fd18ebef58820e5e383dd38f74b2cf0d25676d57ab089c7e5019f32d3"
+    },
+    {
+      "file": "data/heartland-tree-adjustments-baseline.json.gz",
+      "bytes": 1897,
+      "sha256": "b367b4a9d5dc573fa4c7f6b23307f25bb9682fe13f8ae765871a19271a79b4cf"
+    },
+    {
+      "file": "data/heartland-tree-adjustments-future.json.gz",
+      "bytes": 1987,
+      "sha256": "5a130922df54cd605a73378e06ac5fa457b01604e54ff544af486ebd7b9eb046"
+    },
+    {
+      "file": "data/heartland-trees.json.gz",
+      "bytes": 968962,
+      "sha256": "fc669f304834b787db008e19008a68b7765cfdf0d0ab32eb0843b4d85999192a"
+    },
+    {
+      "file": "data/lakeview-meshes.json",
+      "bytes": 47847,
+      "sha256": "312bc34a6de4f6993b185308e550f59227e978a191d217c5251a903766768044"
+    },
+    {
+      "file": "data/lakeview-tree-adjustments-baseline.json.gz",
+      "bytes": 3351,
+      "sha256": "3cb41f063312627d3947f09d790d41dbd9bfd82a420bfcea9dfdf4184ced4661"
+    },
+    {
+      "file": "data/lakeview-tree-adjustments-future.json.gz",
+      "bytes": 3421,
+      "sha256": "fffa7cab26247bc2185e198ec0b203e16fe386f3958f3fdb6bc5f32ef61f0fdd"
+    },
+    {
+      "file": "data/lakeview-trees.json.gz",
+      "bytes": 529940,
+      "sha256": "514039d06c8fd2c599bf9c46b6a9e2987887114f99d44c8784b836bfcdac7cbd"
+    },
+    {
+      "file": "data/landscape-layer-manifest.json",
+      "bytes": 24968,
+      "sha256": "6d397cfdd2ee23d4ceccb7fcfafa1ab949ed6132fda7b82d9200a284b2cfd4b2"
+    },
+    {
+      "file": "data/malton-meshes.json",
+      "bytes": 10823,
+      "sha256": "49b3459fa1ab07fbcaf03a643caeed41634d78639f626d806b22a1cd70ea266a"
+    },
+    {
+      "file": "data/malton-tree-adjustments-baseline.json.gz",
+      "bytes": 1001,
+      "sha256": "be86be133fdfd20abda324027568cd150f616228e929ce7958a4a4bdc3dbb238"
+    },
+    {
+      "file": "data/malton-tree-adjustments-future.json.gz",
+      "bytes": 1032,
+      "sha256": "7e1f55765fdc0504e2d03bf955fd5f5d336bf841345cfe90d052117c3ea76ea4"
+    },
+    {
+      "file": "data/malton-trees.json.gz",
+      "bytes": 397785,
+      "sha256": "70812728978dde4ed1f28a648bd9c5d8e9b26dae2a26d0d68602052a1e1bbf8f"
+    },
+    {
+      "file": "data/meadowvale-meshes.json",
+      "bytes": 56287,
+      "sha256": "db49a486d8e73fb896ae19d170e85fb0766aef1f7eddac6b8f8185687155ffc9"
+    },
+    {
+      "file": "data/meadowvale-tree-adjustments-baseline.json.gz",
+      "bytes": 3794,
+      "sha256": "bd44425d61d15e9bcf9c7a1c88c3012e38ee10988c21ff8e5c82f23c19f69b2e"
+    },
+    {
+      "file": "data/meadowvale-tree-adjustments-future.json.gz",
+      "bytes": 3923,
+      "sha256": "25faed94cea29dbb1afec31bf805fa4ba8729ef46b6399d693bd3deb3aa457b0"
+    },
+    {
+      "file": "data/meadowvale-trees.json.gz",
+      "bytes": 1797229,
+      "sha256": "056e2b39490233b1ac2f9405cf5581543669a085473ff761d920c39056506cd3"
+    },
+    {
+      "file": "data/overrides.json",
+      "bytes": 928218,
+      "sha256": "7a93fdd3ae9d46477ab9c448cf5645627ec14a134b01981a2245b9bb079a78b6"
+    },
+    {
+      "file": "data/picture-assets.json",
+      "bytes": 9431,
+      "sha256": "858dec38b603c0ecbfaa599cfeb63744c3de818718350e15fd904e3f10530c92"
+    },
+    {
+      "file": "data/port-credit-meshes.json",
+      "bytes": 36034,
+      "sha256": "481d90376ac128da41db0e4e6c3794a4fc003873e18869009019b7965de09081"
+    },
+    {
+      "file": "data/port-credit-tree-adjustments-baseline.json.gz",
+      "bytes": 5634,
+      "sha256": "e5a13f873bd7670e7a59d39e1f180c93867bdb75d7b8c9d81edbb975946919f1"
+    },
+    {
+      "file": "data/port-credit-tree-adjustments-future.json.gz",
+      "bytes": 5859,
+      "sha256": "6b59874201592a08f16ee716d328e5f99f45d3e43444ffe765b287d7179b06d9"
+    },
+    {
+      "file": "data/port-credit-trees.json.gz",
+      "bytes": 664063,
+      "sha256": "c1abeabf39ae4fb05242c6ca6e080c7bef04eef7f39900a232fcbeb789d3d38a"
+    },
+    {
+      "file": "data/projects.json",
+      "bytes": 617724,
+      "sha256": "ce984e0b3b68d3e41f7cc6be4609210f35ddf1434bbb08556a1fe462eed18223"
+    },
+    {
+      "file": "data/refinement-models.json",
+      "bytes": 651680,
+      "sha256": "f7fbc0010b64dfd0e76ac72a3463dec472970193470ac33ea048c8ae6ce5ef38"
+    },
+    {
+      "file": "data/stats.json",
+      "bytes": 727,
+      "sha256": "cf73aef59392a5f0ce5d8939a4db83d1ad661c8478cebca6631546f9b3776b4d"
+    },
+    {
+      "file": "data/streetsville-meshes.json",
+      "bytes": 55374,
+      "sha256": "8406ad6b18b557c18fe18c84ce783df19d95c23d642863cba75ddae10f12f450"
+    },
+    {
+      "file": "data/streetsville-tree-adjustments-baseline.json.gz",
+      "bytes": 1733,
+      "sha256": "a6da75572229558cb671d4816cd5016d134fa1020a9f6772e63efa865385d33d"
+    },
+    {
+      "file": "data/streetsville-tree-adjustments-future.json.gz",
+      "bytes": 1854,
+      "sha256": "d3939fc35e603207f50387e5b8a680c13aa543ccd6b9c7cbe993a442f9f61eb7"
+    },
+    {
+      "file": "data/streetsville-trees.json.gz",
+      "bytes": 1056436,
+      "sha256": "d24b16561defd693076bb74ff4b5f22310565b017445b22c4319776eb8e880a2"
+    },
+    {
+      "file": "data/transit-layer-manifest.json",
+      "bytes": 268764,
+      "sha256": "c7854b2dc428faccc9053ce68fc5b409ecf5170d038d6695685f29ce8535965f"
+    },
+    {
+      "file": "data/transit-research.json",
+      "bytes": 4245,
+      "sha256": "93cc03a86adbe2b7ad86651f868f9e9508138e2be913752293a3544e96a67f57"
+    },
+    {
+      "file": "data/transit.json",
+      "bytes": 2823317,
+      "sha256": "a24192858bb4b65a6bdb1de9d2855a5d56eea4d9434073a634862377490f24c8"
+    },
+    {
+      "file": "data/uptown-meshes.json",
+      "bytes": 59936,
+      "sha256": "c7e1fec1cbce6f5831d45ccef2f348dc64ce7827b06be185c930d74b8e097e57"
+    },
+    {
+      "file": "data/uptown-tree-adjustments-baseline.json.gz",
+      "bytes": 2706,
+      "sha256": "9601a17a027a404cbbce8f37bf9ade2a1431a0f763d78bcd069536bab362ddbf"
+    },
+    {
+      "file": "data/uptown-tree-adjustments-future.json.gz",
+      "bytes": 2715,
+      "sha256": "abaea21ceea719cbad86e17e66102d655d759c5d043b6e2c21827bed7d88fcc0"
+    },
+    {
+      "file": "data/uptown-trees.json.gz",
+      "bytes": 798084,
+      "sha256": "13119fe5ea722d29df90d4b051e8e57465705ea399ff2b820084af9ebbfc0925"
+    },
+    {
+      "file": "downloads/Accuracy-and-coverage-audit.md",
+      "bytes": 30175,
+      "sha256": "057df998f4716b06b22b93bc6661ca0268404c21f48da8e4508ffa0050dd514a"
+    },
+    {
+      "file": "downloads/Atlas-build-manifest.json",
+      "bytes": 15575,
+      "sha256": "686faccd595b040c79fa30e592646f02c4c839c11efbd62ab3fa2394fea80185"
+    },
+    {
+      "file": "downloads/Brightwater-surface-validation.json",
+      "bytes": 2977,
+      "sha256": "456b4432bb26b34083c01add8ad0d0fe7dafab6d31d9c9b6a3cbb05d82160b08"
+    },
+    {
+      "file": "downloads/City-of-Mississauga-Open-Data-Terms.pdf",
+      "bytes": 200246,
+      "sha256": "76e0c18b3d807639b0aa9df04df41a9bfc999bdad10762954a333bdd939cbce4"
+    },
+    {
+      "file": "downloads/Construction-evidence.json",
+      "bytes": 8076,
+      "sha256": "3a2bb8f14dde5068352a7b0455756ea949dd81759f7eb315befa329a4b0c1f4e"
+    },
+    {
+      "file": "downloads/Existing-building-replacement-validation.json",
+      "bytes": 13765,
+      "sha256": "6e27608ff468e735e1677c8a740b89428529719b9f339a46f44b7189a4ae2758"
+    },
+    {
+      "file": "downloads/Future-Mississauga-Atlas.pdf",
+      "bytes": 24601365,
+      "sha256": "20e74b268e85f7fed3ed70510769695e6c90168a456412f474e1e9bbd60267cc"
+    },
+    {
+      "file": "downloads/Lakeview-model-coverage-review.md",
+      "bytes": 7139,
+      "sha256": "a634fb78b86805a0f642a00ab0b2f30142f5af34c516ea6b1c030367558c80b1"
+    },
+    {
+      "file": "downloads/Legacy-model-winding-audit.json",
+      "bytes": 9847,
+      "sha256": "8209af4ef7cc2ec65b66cd7dc4c1a082267bd125636a127443eb802e0074805e"
+    },
+    {
+      "file": "downloads/Model-guide.md",
+      "bytes": 43632,
+      "sha256": "8ce31fa822d20c2295bcc219fa7a27c2e519030aa109e73648ba20fd10e20338"
+    },
+    {
+      "file": "downloads/Model-reference-index-summary.json",
+      "bytes": 795,
+      "sha256": "8a4014a673e2694e3626187364c0fa323dbc3e02243aca5c343675c47dfa046c"
+    },
+    {
+      "file": "downloads/Model-reference-index.csv",
+      "bytes": 163398,
+      "sha256": "179dccac733c3f77bfeb63e95ecbcbebf4d0285d28b5f0d1e7be0352ce0f354b"
+    },
+    {
+      "file": "downloads/Original-picture-upload-validation.json",
+      "bytes": 8964,
+      "sha256": "3d8f6a89b2ede882621bdf94cfa239ebf21ff64caebd88bf771061b5f82acf39"
+    },
+    {
+      "file": "downloads/Picture-index.json",
+      "bytes": 48425,
+      "sha256": "5f89939102f642454312d143d8d6b3e397f1766f73b862a238cc6491831c48e7"
+    },
+    {
+      "file": "downloads/Public-evidence-link-validation.json",
+      "bytes": 28399,
+      "sha256": "3ffa3c29740fc4c8e3ff1b0122419132b348271cd675cfd8fd64d696b602da21"
+    },
+    {
+      "file": "downloads/Refinement-notes.md",
+      "bytes": 32072,
+      "sha256": "07f1308150fb0857731db6eed75d274d1c78dad0bae53b1eb5a87757a73b5304"
+    },
+    {
+      "file": "downloads/Release-validation.json",
+      "bytes": 292,
+      "sha256": "47af5dcbc9d8d13e5c89938c75ad9f06d41156459498e270e6f65288447ca178"
+    },
+    {
+      "file": "downloads/Road-visibility-validation.json",
+      "bytes": 4849,
+      "sha256": "c71874328eb6b76ca0c029327a8ce4520c3d93ac8683baef5e024c4fde50b49f"
+    },
+    {
+      "file": "downloads/Terrain-provenance.json",
+      "bytes": 1569,
+      "sha256": "eebb9bfe446e3b786fa5c4008cbf4dbd90f480f17c53c27899cad03bfc9aedbb"
+    },
+    {
+      "file": "downloads/Visual-design-review.md",
+      "bytes": 5811,
+      "sha256": "98497c55610cbf9ad9c90b9605d7dc2806828d679c05ebb07196678f73c1960b"
+    },
+    {
+      "file": "downloads/Website-validation.json",
+      "bytes": 1750,
+      "sha256": "d86de59061843745510b6c1988739a5c3a9d73e1618992b6a0b36a75c94aa3e2"
+    },
+    {
+      "file": "downloads/development-component-register.csv",
+      "bytes": 527466,
+      "sha256": "6195ee5fbdf76fe28348cd5575d62eefe82fb858b12dfc3ce424649f5500a02e"
+    },
+    {
+      "file": "downloads/municipal-source-audit.csv",
+      "bytes": 35518,
+      "sha256": "8b8898d84588fb2e67c761acf899acfbdd45f61b33ea63cae3b3d52ac0841ee5"
+    },
+    {
+      "file": "downloads/project-register.csv",
+      "bytes": 95605,
+      "sha256": "6c11c54220f87422f3a3043675bc32b67430f974f1996d37944a94d916fc2e85"
+    },
+    {
+      "file": "downloads/refinement-models.json",
+      "bytes": 648624,
+      "sha256": "fe0cd42bb902e3ef1a65a45f96c8c3eeed81c6c85dd4fcbf921baf130eb6650c"
+    },
+    {
+      "file": "downloads/research-log.json",
+      "bytes": 546270,
+      "sha256": "b74f6d83349f89685e91033247980dd696f04ccd0e6748178ca77e05dea37cf2"
+    },
+    {
+      "file": "downloads/revamp/Absolute-model-correction.md",
+      "bytes": 2825,
+      "sha256": "7e2ffc0bd17bda606ee7492363a1b24ae92a1e46c419266d11edaedb75bfc38e"
+    },
+    {
+      "file": "downloads/revamp/Bough-Beeches-plan-model.json",
+      "bytes": 12172,
+      "sha256": "614320a7820cf4b4713f5560d1d39dd62d9d16bad42a26658ef9f1f31ac0b26e"
+    },
+    {
+      "file": "downloads/revamp/Chelsea-version-reconciliation.json",
+      "bytes": 7373,
+      "sha256": "be34f234be399ec56a6899774953a07d4d8bde31904a8d94fe75e885600cca15"
+    },
+    {
+      "file": "downloads/revamp/Duplicate-composite-repair.json",
+      "bytes": 4506,
+      "sha256": "cfc4e2ad2b59a5dd8a3f3920ce53f66d3246e9b66ea3840fd3fcd96c38acb7c8"
+    },
+    {
+      "file": "downloads/revamp/Inland-water-elevation-repair.json",
+      "bytes": 1446781,
+      "sha256": "cc690c36deb0712ee15443e324366e4f19767a14ae52063d7a96b92624136cc9"
+    },
+    {
+      "file": "downloads/revamp/Model-layer-audit.json",
+      "bytes": 541327,
+      "sha256": "2d7cf4890904356c7983f77608906ac5d8ddbad952b946b3f42a693e150ecdcb"
+    },
+    {
+      "file": "downloads/revamp/Source-elevation-repair-audit.json",
+      "bytes": 382701,
+      "sha256": "48c9b030b7cf9bfdb7d8edf126b134d044875310cdcc4c148ad1dad652bf6cbb"
+    },
+    {
+      "file": "downloads/revamp/transit-visibility/Visibility-audit.md",
+      "bytes": 3764,
+      "sha256": "8d3f7647e7119d806e5c328d8bc13cfadd5646c78d647a918f7729622f2e0cd3"
+    },
+    {
+      "file": "downloads/revamp/transit-visibility/visibility-audit.json",
+      "bytes": 115698,
+      "sha256": "67326b6847bd9a79b18c138877ff9349de689a536b30ab391c50ec3b70992a11"
+    },
+    {
+      "file": "downloads/revamp/transit-visibility/visibility-checks/downtown-junction-after.png",
+      "bytes": 2037121,
+      "sha256": "982d9b34f414b6ecdcd931153b11f757c679f65a05e7ea923b6420004bec8949"
+    },
+    {
+      "file": "downloads/revamp/transit-visibility/visibility-checks/downtown-junction-before.png",
+      "bytes": 2026508,
+      "sha256": "df1f8c815555f0900637e7109e232580bc0f6cfe0306975526a35f9231c2d7c5"
+    },
+    {
+      "file": "downloads/revamp/transit-visibility/visibility-checks/milton-crossing-after.png",
+      "bytes": 1810450,
+      "sha256": "bf567be5d6a19a28b4112bf7cf09e54dae36636277be152858d08616d7e20007"
+    },
+    {
+      "file": "downloads/revamp/transit-visibility/visibility-checks/milton-crossing-before.png",
+      "bytes": 1808597,
+      "sha256": "c1885a819db9fbd4d885ec852d8ce7d815163d23cbeb58a2fc4626c0de3bbeb5"
+    },
+    {
+      "file": "downloads/revamp/transit-visibility/visibility-checks/port-credit-go-after.png",
+      "bytes": 2010743,
+      "sha256": "2ce95cb2a5f426d70ba1be983196bcae5c7a9663424aa831a86a124e71d9f5c8"
+    },
+    {
+      "file": "downloads/revamp/transit-visibility/visibility-checks/port-credit-go-before.png",
+      "bytes": 2005293,
+      "sha256": "12604777c640a9bb813106aee28130813f8c1c010b0e31351695d87a235163f6"
+    },
+    {
+      "file": "downloads/revision-ledger.csv",
+      "bytes": 679033,
+      "sha256": "65198c11e487ab2863949d54d5b891d729a91e77234b1de1943466d2b2250bfa"
+    },
+    {
+      "file": "explore.html",
+      "bytes": 11193,
+      "sha256": "96fd4004312881450dc1b3f33f80db4df5b3cb3970200ade035bd86b4ca6294d"
+    },
+    {
+      "file": "gallery/Downtown-transformation.mp4",
+      "bytes": 1341155,
+      "sha256": "ec2ce8f342090175e1342710e3c5ce8c81be86978da21bed128e3baeb3a6aecc"
+    },
+    {
+      "file": "gallery/originals/airport-corporate-future.png",
+      "bytes": 12683802,
+      "sha256": "2a7678dbc9d2842503920d4f809ac1fdb3c7a5d6fd84c319a2188e643ef915f7"
+    },
+    {
+      "file": "gallery/originals/citywide-future.png",
+      "bytes": 13823019,
+      "sha256": "acacfcd6a102a6fd0257adfa11dd6b95cb2f75a816a6760da3c9614232994df2"
+    },
+    {
+      "file": "gallery/originals/clarkson-existing.png",
+      "bytes": 15214871,
+      "sha256": "88050df6d74fa4105071bd29ba51b6566cfe0c46f8ac154fba89e9b21dbcaf04"
+    },
+    {
+      "file": "gallery/originals/clarkson-future.png",
+      "bytes": 15208854,
+      "sha256": "480e0da765ab0fd403e30362a3b6e6f6ba4d7eaa5fade3499c34630db8089308"
+    },
+    {
+      "file": "gallery/originals/clarkson-portrait-future.png",
+      "bytes": 15993388,
+      "sha256": "027ceb5d47fdb7e09e3cfb2c47e86e4adc682451c3b3919f3026642c1923d67d"
+    },
+    {
+      "file": "gallery/originals/clarkson-skyline-future.png",
+      "bytes": 9944073,
+      "sha256": "83877a79d59c92129bb15a2ebbc80a30c35717f9f39a3a8096fb272ad882fa60"
+    },
+    {
+      "file": "gallery/originals/cooksville-future.png",
+      "bytes": 15794737,
+      "sha256": "e297af529410220fc24d6c2e98970e36e2ef9c63efe665cf5e3f9d92715a7a13"
+    },
+    {
+      "file": "gallery/originals/cooksville-portrait-future.png",
+      "bytes": 14814695,
+      "sha256": "457339e54faa388324d390c77216ae208e44ddf90780feffda47bfb86edcf90d"
+    },
+    {
+      "file": "gallery/originals/dixie-applewood-future.png",
+      "bytes": 16386334,
+      "sha256": "4a046f6009290b7072a2149e3dc38c95f97e35f05318b86f15ea5ef6c4728405"
+    },
+    {
+      "file": "gallery/originals/downtown-existing.png",
+      "bytes": 15484964,
+      "sha256": "e171d7c6b3e86966cd662ca0d2aea53634b09f2f5d7c81c4e6695e91c92e726a"
+    },
+    {
+      "file": "gallery/originals/downtown-future.png",
+      "bytes": 15528460,
+      "sha256": "d6efc96576a9b1f5a4e508f1fcaa5dd3108fef3094b0a4caca5fc294e4fccc9c"
+    },
+    {
+      "file": "gallery/originals/downtown-junction-future.png",
+      "bytes": 11907503,
+      "sha256": "b3b1aa6623d08dee221fb839fd24cc84ff30cd7ebf54e5d1509b43736816f168"
+    },
+    {
+      "file": "gallery/originals/downtown-landmark-future.png",
+      "bytes": 12337575,
+      "sha256": "909515e2597e8eedbf7edc6f56f57a6d92e95c86dffb33d3a935a9d29e44da23"
+    },
+    {
+      "file": "gallery/originals/downtown-portrait-future.png",
+      "bytes": 15917308,
+      "sha256": "a256c59dc59453c1a72d30a1435e595e507dc790dc125569db0360c0e8200131"
+    },
+    {
+      "file": "gallery/originals/downtown-skyline-construction.png",
+      "bytes": 9237137,
+      "sha256": "7fd03ca2b6ce9d6c151a1137abe74c0eb3e1e0011d14e0953d25e4c818fb052f"
+    },
+    {
+      "file": "gallery/originals/downtown-skyline-existing.png",
+      "bytes": 9153944,
+      "sha256": "79af9a584ec516cad9b7eee943d93a61c7721b66b87209a8f755e85bc3691dda"
+    },
+    {
+      "file": "gallery/originals/downtown-skyline-future.png",
+      "bytes": 9156505,
+      "sha256": "dd77ac613b46f83e3a96ba8e9a20c501820acd47286b07df1a550d865db2d0f8"
+    },
+    {
+      "file": "gallery/originals/erin-mills-future.png",
+      "bytes": 18023305,
+      "sha256": "35b0d66b1ae223011e57e46aeff267a46620647ac2787d433929da2d57095d66"
+    },
+    {
+      "file": "gallery/originals/erindale-future.png",
+      "bytes": 18804864,
+      "sha256": "830492c85e7bfeb4b00dbcd4470ee93cda4f40132226c9aa456422147ceeab9f"
+    },
+    {
+      "file": "gallery/originals/heartland-future.png",
+      "bytes": 14622393,
+      "sha256": "f3d07f9c81656fd3989954c3c7bb901568bb33e3739b242209e08fec248cc284"
+    },
+    {
+      "file": "gallery/originals/lakeview-existing.png",
+      "bytes": 13596797,
+      "sha256": "1f44ebb88b3b23c06823b3cb94981e0993f6d4bf6356f87a9be575884ec88371"
+    },
+    {
+      "file": "gallery/originals/lakeview-future.png",
+      "bytes": 13637341,
+      "sha256": "72844f58f9c0bc643c82b4529f338398d20ba8e9d4a24e1bb6f38db73c137fbc"
+    },
+    {
+      "file": "gallery/originals/lakeview-portrait-future.png",
+      "bytes": 13693219,
+      "sha256": "7c638719f65fba702107c14afa3992aade29081a00a2f7564865c397124ffd4b"
+    },
+    {
+      "file": "gallery/originals/lakeview-skyline-future.png",
+      "bytes": 8302947,
+      "sha256": "afcb6542fab900bf26679a1540c542988e84c6851518033a8c69c640d509495a"
+    },
+    {
+      "file": "gallery/originals/malton-future.png",
+      "bytes": 14665767,
+      "sha256": "d8b1b7322397f5c7dc1db293b7c8bfc85b4b773789c8a789ba59bf296fd0062f"
+    },
+    {
+      "file": "gallery/originals/meadowvale-future.png",
+      "bytes": 16562874,
+      "sha256": "caa6f3d5810155f075bc36b6ae718e89d6c03796ae0f26995b8b6dd3a11d680a"
+    },
+    {
+      "file": "gallery/originals/port-credit-existing.png",
+      "bytes": 15684244,
+      "sha256": "0c54e46e84c675084eeb1d535171c1f9fbf2b0cd04ff897c2b19bc4cd52a621b"
+    },
+    {
+      "file": "gallery/originals/port-credit-future.png",
+      "bytes": 15774286,
+      "sha256": "88196b4051bae3c48a43297753077d605103d2a0424104ba440cf7eacd638196"
+    },
+    {
+      "file": "gallery/originals/port-credit-portrait-future.png",
+      "bytes": 16395340,
+      "sha256": "9815f4a1c7538a0f7cd21f5a69bae14ce0e2184d016b36cf22be64a9920da59b"
+    },
+    {
+      "file": "gallery/originals/port-credit-skyline-future.png",
+      "bytes": 9557072,
+      "sha256": "02f9e89820bc4fbdb05eb98a685c8f1417159dda4cff95ebebfc1014597af2af"
+    },
+    {
+      "file": "gallery/originals/streetsville-future.png",
+      "bytes": 17100293,
+      "sha256": "15260fcc79b156eaa1a8a87b99cb17a72316599f4762741eba7cb7243deb46c7"
+    },
+    {
+      "file": "gallery/originals/uptown-future.png",
+      "bytes": 15929070,
+      "sha256": "9c8a3da6cd7fe0df2cdb8572d9f0a44b2903d133514f298867bd41b07c941c21"
+    },
+    {
+      "file": "gallery/originals/uptown-portrait-future.png",
+      "bytes": 15630511,
+      "sha256": "2fd9d56cb28f355fe7676487065d7ba1017cc4e05f7b63c06c8ef5f83bbc18f5"
+    },
+    {
+      "file": "gallery/share-preview.png",
+      "bytes": 1614876,
+      "sha256": "e73263fad70a9e64eee02e792df9db66d5d6854900d5c06d3e864ea1ecb41cdf"
+    },
+    {
+      "file": "gallery.css",
+      "bytes": 12005,
+      "sha256": "cefd2fdb0ad1c3b2fd1a3fe0cbc19fd62fa6c4197de1175016898273976c8409"
+    },
+    {
+      "file": "gallery.js",
+      "bytes": 6216,
+      "sha256": "75c88e9240600d4594f0b415231875cf971d3a786af7f1c270ba12ac9969b071"
+    },
+    {
+      "file": "index.html",
+      "bytes": 13813,
+      "sha256": "8c8e890c59db850cc5baae9314582820dfc19c004ebe81751bbb0d92e40e5447"
+    },
+    {
+      "file": "licenses/CREDITS.md",
+      "bytes": 3658,
+      "sha256": "693582a0679388514ce483b021739f9d012b419a32a3040b1f376e1616c39cc7"
+    },
+    {
+      "file": "licenses/meshoptimizer-1.2.0-MIT.txt",
+      "bytes": 1079,
+      "sha256": "f03037ca7bad1e3eb7f4a63fa6084a8baabd5ba30d3c239a9a7f35705d873e26"
+    },
+    {
+      "file": "licenses/three-0.186.0-MIT.txt",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "file": "models/airport-corporate-context.glb",
+      "bytes": 3580656,
+      "sha256": "7bbab6b2d132f40b6458cd67a757dedcf20c934caf947bca9d7c88fc7145f084"
+    },
+    {
+      "file": "models/airport-corporate-details.glb",
+      "bytes": 1910232,
+      "sha256": "4b23a56aad3f416e5d98db59b41dbf81b7a54403840bde3e80e2f6f3edc74566"
+    },
+    {
+      "file": "models/airport-corporate.glb",
+      "bytes": 2082164,
+      "sha256": "58d5917cec0ef52c4d60b0621568f8fd28a42de27c9367aa60c8081784649c8b"
+    },
+    {
+      "file": "models/citywide-details.glb",
+      "bytes": 13235232,
+      "sha256": "89196e49ac8b32bfb1c0315aeb5a250a774d2954bc1d56028a884bb5cc1fb529"
+    },
+    {
+      "file": "models/citywide.glb",
+      "bytes": 4919616,
+      "sha256": "39957e7a654dfd1035bce711e3192c4210894af3b278979a1f1175017b07ae90"
+    },
+    {
+      "file": "models/clarkson-context.glb",
+      "bytes": 3926244,
+      "sha256": "4b7f6fbbe55de7e790b9c9c08feeba23e3b9f874ceff579091805375c829f67a"
+    },
+    {
+      "file": "models/clarkson-details.glb",
+      "bytes": 616036,
+      "sha256": "5bfe132341191de5904a9b23ad8637f4c727e055e5f1a017b72aaa8a95135a5e"
+    },
+    {
+      "file": "models/clarkson.glb",
+      "bytes": 2174832,
+      "sha256": "113ff92946b13456e4ed584d781e144c1aad5325064b05c7334e43bc619838d6"
+    },
+    {
+      "file": "models/context-parts/citywide-context-01.glb",
+      "bytes": 2496836,
+      "sha256": "896d511c9295c77b26f832d107ee683f5b09c0a5b39e9eaa1ae48a0462a87d13"
+    },
+    {
+      "file": "models/context-parts/citywide-context-02.glb",
+      "bytes": 2446244,
+      "sha256": "48e72ced88ea2413da0b5b86ee503cd3077b5aee498b46dc603570da427d056e"
+    },
+    {
+      "file": "models/context-parts/citywide-context-03.glb",
+      "bytes": 2470388,
+      "sha256": "e32d9300c1ef8bc0991221c93f8006e0871bc081c0b48768d714c90f48836653"
+    },
+    {
+      "file": "models/context-parts/citywide-context-04.glb",
+      "bytes": 2458860,
+      "sha256": "d6627634a74a20709d1db8acd307616f3a526674361506318659886a5c491ac3"
+    },
+    {
+      "file": "models/context-parts/citywide-context-05.glb",
+      "bytes": 2458164,
+      "sha256": "5714bb0b1d79df191942de45ebf4e5d940cb3e756f2874394f0dc3e17e8b4d5f"
+    },
+    {
+      "file": "models/context-parts/citywide-context-06.glb",
+      "bytes": 2507572,
+      "sha256": "f343e6e4c0d19094671b9d129e594ccb838ca8f9de99c2f3f5495cda3ce81a41"
+    },
+    {
+      "file": "models/context-parts/citywide-context-07.glb",
+      "bytes": 2434584,
+      "sha256": "a7546f75d909658d6a2770beaabd2acd05fa08dc528e9f8592139a314f969cc6"
+    },
+    {
+      "file": "models/context-parts/citywide-context-08.glb",
+      "bytes": 2427164,
+      "sha256": "ea9bc98ac3bb322563548a1d9d51ae42622911fc91e17b81c2af1ab52b354a8b"
+    },
+    {
+      "file": "models/context-parts/citywide-context-09.glb",
+      "bytes": 2510812,
+      "sha256": "8eeca8374b90990feee8ba0180fcbb1507761938e5b6828f66bb22f9067ee974"
+    },
+    {
+      "file": "models/context-parts/citywide-context-10.glb",
+      "bytes": 2637988,
+      "sha256": "9174b83c73692a4cd24278ef85393d27b1ffe2b70e7d3a44e0b31aa1ed4f5f28"
+    },
+    {
+      "file": "models/context-parts/citywide-context-11.glb",
+      "bytes": 2551004,
+      "sha256": "813b0c9a14bd906e021ce2af0f390cfaf2009136b3cc7c6c11c9336e99961f7e"
+    },
+    {
+      "file": "models/context-parts/citywide-context-12.glb",
+      "bytes": 2422728,
+      "sha256": "53b2198a87623e7bda8da226dcad386ad4511f2c4f4b39024f4a01e1ee7dcbff"
+    },
+    {
+      "file": "models/context-parts/citywide-context-13.glb",
+      "bytes": 2340956,
+      "sha256": "5ef50fa21d1ca8b004eb048cc2bbed9ed02344c8843f9920025fe0f021d32397"
+    },
+    {
+      "file": "models/context-parts/citywide-context-14.glb",
+      "bytes": 2353096,
+      "sha256": "c533701a08305a69ace1f28f715e25ae31edae52fd17ec666adebf774b8eaba3"
+    },
+    {
+      "file": "models/context-parts/citywide-context-15.glb",
+      "bytes": 2364092,
+      "sha256": "ccf32269ac10c90aa681d296b66b3eff6cdf95aca2328afa06aa61bf50534f89"
+    },
+    {
+      "file": "models/context-parts/citywide-context-16.glb",
+      "bytes": 2437504,
+      "sha256": "46a1eeaa66f2bc1df5f7035ffb420dd4dbadfb595f48fdb88f5c9e92e99d432e"
+    },
+    {
+      "file": "models/cooksville-context.glb",
+      "bytes": 3184228,
+      "sha256": "84d9fc344e4265df53f4ed2203fbfc15e1a7f5355cf59b4438bb453168708e48"
+    },
+    {
+      "file": "models/cooksville-details.glb",
+      "bytes": 739780,
+      "sha256": "41d5be1160fc4b75962271c14a8fd08a4917858fa42a6328e8685bc7cbbd3779"
+    },
+    {
+      "file": "models/cooksville.glb",
+      "bytes": 2298012,
+      "sha256": "18bafa55cab7e8271068522e84be8ac8d98d05574d30fc497996cd14422ff372"
+    },
+    {
+      "file": "models/dixie-applewood-context.glb",
+      "bytes": 4164180,
+      "sha256": "59df4f6fe74b025e2e913904b00fd3bd51d7544c4d7a9a84add47488edfa7c30"
+    },
+    {
+      "file": "models/dixie-applewood-details.glb",
+      "bytes": 1192540,
+      "sha256": "5b0af7825c7e3490ad1daff863cb1a9c8dd76beb313682bbd2e2924d31ed36e9"
+    },
+    {
+      "file": "models/dixie-applewood.glb",
+      "bytes": 3531336,
+      "sha256": "5f7b90c4270afabc7d1ef76434fcf84804b03487803915875b6fcc85782a4d05"
+    },
+    {
+      "file": "models/downtown-context.glb",
+      "bytes": 2645920,
+      "sha256": "8df06ebde7725c6c28ae81996117cdbaf4d493f8fc4441d7a9ac7f2541f915c6"
+    },
+    {
+      "file": "models/downtown-details.glb",
+      "bytes": 991456,
+      "sha256": "e46681fa137e9b2f7996586c708d914aecbb0868d98d35d220208436083417e3"
+    },
+    {
+      "file": "models/downtown.glb",
+      "bytes": 5680912,
+      "sha256": "242a0200b348960bddc5d07e9b00d28b752ccb193ca19f30096d81d7c3b129f4"
+    },
+    {
+      "file": "models/erin-mills-context.glb",
+      "bytes": 5513364,
+      "sha256": "59e9dcc38760113121dec03c2903d7fbba499f71818fc2b6e125a1c36313d1ea"
+    },
+    {
+      "file": "models/erin-mills-details.glb",
+      "bytes": 1346284,
+      "sha256": "d08d13e9e3f5301e4d8d0415cf91e3a3c1fbebec2ee7ae75f68aad6f14a73b35"
+    },
+    {
+      "file": "models/erin-mills.glb",
+      "bytes": 6230184,
+      "sha256": "7c2ac36ab7b7ef26724b4bd33e092f85a51fdda9a94a6339132ce9849e17e58f"
+    },
+    {
+      "file": "models/erindale-context.glb",
+      "bytes": 5501000,
+      "sha256": "d5ce94ea3905dc22ba167e8731d1fd36796eb19dcecf703e4e49dac9c77bd95b"
+    },
+    {
+      "file": "models/erindale-details.glb",
+      "bytes": 1003024,
+      "sha256": "b46ebe48b43ab055a2e8c015ba0b2218e66bfc639140296f32af83682960d36d"
+    },
+    {
+      "file": "models/erindale.glb",
+      "bytes": 3797568,
+      "sha256": "2f8092049b47ba75be05412195413210cd826e3d0976fd05b1d0bc0cada60886"
+    },
+    {
+      "file": "models/exchange-textured-phase-aware.glb",
+      "bytes": 11256292,
+      "sha256": "52c8aa4a1077fdf815aa09061abfa3acce931d764a6d618984faf8bcd1f331ac"
+    },
+    {
+      "file": "models/heartland-context.glb",
+      "bytes": 3792976,
+      "sha256": "d586a3e2eae0c10086ec33c200a845c51325316df59daa81df866e97768461da"
+    },
+    {
+      "file": "models/heartland-details.glb",
+      "bytes": 1587316,
+      "sha256": "819a8b0783141b5dc55497d19d94415df0c5b376673b734ac92700df15a43ca8"
+    },
+    {
+      "file": "models/heartland.glb",
+      "bytes": 3900552,
+      "sha256": "e2a357b989c200ba917bb9f233c5e325aa2e764b9126527ca2f9655c63f15b4d"
+    },
+    {
+      "file": "models/lakeview-context.glb",
+      "bytes": 2052908,
+      "sha256": "6a1c7e2d1ece5bf644f3c3580801a134c0413412502c06f5a822ff9a99f91d7d"
+    },
+    {
+      "file": "models/lakeview-details.glb",
+      "bytes": 307788,
+      "sha256": "0f1e6c12491f535c0bc524e24b03de03d48ca76dc48362eb71e0d85484aa72d3"
+    },
+    {
+      "file": "models/lakeview.glb",
+      "bytes": 2770028,
+      "sha256": "6524fba0e3d893634ca2def54e1fdc39638f16eb78b4c2603ff4cd2227b0cb54"
+    },
+    {
+      "file": "models/malton-context.glb",
+      "bytes": 2119628,
+      "sha256": "98f28b3f95c9c89b96f410782c6bf65d4c22d00d52f92d36360bc0f30d773943"
+    },
+    {
+      "file": "models/malton-details.glb",
+      "bytes": 690516,
+      "sha256": "6bdfc104f91682aa9db2e65e80efa55b15837079f7416ea93f407901b55c2c72"
+    },
+    {
+      "file": "models/malton.glb",
+      "bytes": 1676476,
+      "sha256": "80800f23f38304567796ec185e9f1abb70a0e501512c837cb6a3fef546efac13"
+    },
+    {
+      "file": "models/mcity-m3-upper-envelope.glb",
+      "bytes": 5060,
+      "sha256": "dc378b8747e4c119f8bee2bb6388217db0303cdf0c1310484217c33b7bc283c0"
+    },
+    {
+      "file": "models/mcity-m4-plan-derived.glb",
+      "bytes": 9384,
+      "sha256": "4a2a1a170015c70731584f96a6e1d77124f70bc699515312e5d2e3d83dab5c57"
+    },
+    {
+      "file": "models/meadowvale-context.glb",
+      "bytes": 6244484,
+      "sha256": "c3d135b8edc2b442aa0e3f0ab00eecd7433f62335b3ec78fc62c01ce9e4e887e"
+    },
+    {
+      "file": "models/meadowvale-details.glb",
+      "bytes": 1896952,
+      "sha256": "cb33d7987f11c3c9240127f1f37c6dd08f13cfa92a067f299f3bebce6d4459be"
+    },
+    {
+      "file": "models/meadowvale.glb",
+      "bytes": 6019000,
+      "sha256": "2cfd204ca030a1990027cc105c19cc4eb2dc43e0df8c8f9eccb5158145f59985"
+    },
+    {
+      "file": "models/pearson-airfield-context.glb",
+      "bytes": 246492,
+      "sha256": "ff75844db136f5c2d41df1c2c98f2cd78d9dbcb2e67759b56b29227bd3861a8f"
+    },
+    {
+      "file": "models/port-credit-context.glb",
+      "bytes": 2601984,
+      "sha256": "4c0d6f9cdb10001d43f1711f2f3f6ebad2c6061d638aa75f5553fa81ab653122"
+    },
+    {
+      "file": "models/port-credit-details.glb",
+      "bytes": 259844,
+      "sha256": "67ffe5528a4abf53e83ab92518bde73695275f428922ec15194ff05afede213f"
+    },
+    {
+      "file": "models/port-credit.glb",
+      "bytes": 3092920,
+      "sha256": "053e6db4f348a933400af0c5e3e4f85be638af78b43adbca5bf73185b448c293"
+    },
+    {
+      "file": "models/refinement/128-lakeshore-current-plan.glb",
+      "bytes": 13884,
+      "sha256": "4968bd32c72d643d0d6cdf945a745bc717502599e4ddff52c86e59e0ee89b5ad"
+    },
+    {
+      "file": "models/refinement/170-lakeshore-settlement-envelope.glb",
+      "bytes": 5564,
+      "sha256": "9799bb5fe28a28dd08a5faa6572cba1841d499d0a1a07b6116274e59b86283e3"
+    },
+    {
+      "file": "models/refinement/26-park-current-plan.glb",
+      "bytes": 3444,
+      "sha256": "c245fa1beebfe015b7058a7514672d4f438071bfea3d7fdeb9f1ad2d98b6f535"
+    },
+    {
+      "file": "models/refinement/50-high-current-plan.glb",
+      "bytes": 13572,
+      "sha256": "a29d2aaab4d41e70ea9a8e5c12b107748f472ef6e59c2da6a9269c29543e760e"
+    },
+    {
+      "file": "models/refinement/70-park-settlement-envelope.glb",
+      "bytes": 10420,
+      "sha256": "782d8f11fd1783be35681983f706d6e04357651eecc06fde5e351353f6076f5e"
+    },
+    {
+      "file": "models/refinement/900-lakeshore-current-plan.glb",
+      "bytes": 79920,
+      "sha256": "374df3398a5605fd2d1b0150457e2d095696e5da86f2cdff81dc75e4cb35a739"
+    },
+    {
+      "file": "models/refinement/absolute-world-source-derived.glb",
+      "bytes": 1411960,
+      "sha256": "41445758ac502b76269f11d0dd8296a9af640f13b68f0766f0ea7bc041bab5c5"
+    },
+    {
+      "file": "models/refinement/aura-townhome-envelopes.glb",
+      "bytes": 37788,
+      "sha256": "d8f22813da8f7ffc9f899a522de899b042579a2f953754e95fc89dac45f1ebbe"
+    },
+    {
+      "file": "models/refinement/bough-beeches-2026-plan.glb",
+      "bytes": 44396,
+      "sha256": "f85cc5f9a90055e5de2b75a67cebeddf4ba1eb5aad7ec1dcfb96b19d3a3611f6"
+    },
+    {
+      "file": "models/refinement/brightwater-missing-blocks-concept.glb",
+      "bytes": 42620,
+      "sha256": "8c9f2e7653fca28b1b4207b307778af311e2174e441b594f044c8955d6db401f"
+    },
+    {
+      "file": "models/refinement/chelsea-2026-b4.glb",
+      "bytes": 33760,
+      "sha256": "cf0f3167ac72b276faab0a10c7b86286398fb4fda1bca9eaf0fe570efab8d98d"
+    },
+    {
+      "file": "models/refinement/chelsea-2026-b5.glb",
+      "bytes": 33732,
+      "sha256": "2cebb708872c0d846a9d2cf1ed00ab3dbeff90a2230f0f4600766ca49e802f1f"
+    },
+    {
+      "file": "models/refinement/chelsea-2026-b6.glb",
+      "bytes": 34792,
+      "sha256": "87b434d5e993df9578bcfaa2633dd8942738f3ca4045696fdc71e49e7b4dd64c"
+    },
+    {
+      "file": "models/refinement/clarkson-toc-current-plan.glb",
+      "bytes": 11060,
+      "sha256": "4eee723872e2223150098bab18a9b5add839546d420096465c84947099ea42ac"
+    },
+    {
+      "file": "models/refinement/cooksville-toc-2025-tower-envelopes.glb",
+      "bytes": 16484,
+      "sha256": "9509a7705840cbbb7dcb9a8b7efe4ea4dd680ae8914196ea263c410f61550a22"
+    },
+    {
+      "file": "models/refinement/dundas-55-2025-plan.glb",
+      "bytes": 10752,
+      "sha256": "3b474ec4e4b62178f3b60f16849ac5eadae34f1b3d3321ca94205984d153b453"
+    },
+    {
+      "file": "models/refinement/exchange-recorded-topped-structures.glb",
+      "bytes": 5012832,
+      "sha256": "d9bb50e7f2dc040fbdc141f5d66cbb13b07aec4ca463801fa4c7f26e1fe4ba6b"
+    },
+    {
+      "file": "models/refinement/lakeview-mapped-waterfront.glb",
+      "bytes": 77572,
+      "sha256": "888093e65327b15d77da7071425713c4c85b54294c28feb40b75fdb4ea6cc130"
+    },
+    {
+      "file": "models/refinement/mcity-m3-crown-silhouette.glb",
+      "bytes": 20252,
+      "sha256": "fba3afd818534ba6152bf436bd6d15970a57810d6dbee9bb3be01a299940bb13"
+    },
+    {
+      "file": "models/refinement/mcity-m4-recorded-level41.glb",
+      "bytes": 3716,
+      "sha256": "73f017176574c17fc72b4e1af6c93320350ed4fd8cc1978c92b7f94538c1e033"
+    },
+    {
+      "file": "models/refinement/mcity-m5-developer-proxy.glb",
+      "bytes": 9452,
+      "sha256": "2aae3db6fa73b801eab356839b37c10587316bf29ff2c2d4ab66c694dc5ed1a6"
+    },
+    {
+      "file": "models/refinement/promenade-infill-plan-derived.glb",
+      "bytes": 230376,
+      "sha256": "4c93c5ced26ad1b2aa495135dbf9dec8b1d1770f93280d4e4a2ae2b94b0b431c"
+    },
+    {
+      "file": "models/refinement/square-one-block5-t1-plan-derived.glb",
+      "bytes": 16760,
+      "sha256": "b1e0c1a79522c81f2fa82990f28132c299e4e83fe6abb314264589244cfabaf6"
+    },
+    {
+      "file": "models/refinement/voya-towers-plan-derived.glb",
+      "bytes": 401156,
+      "sha256": "f876a440f538b0d8ebcb7672267e93b7ffb3591b2d8f58a527b869d2f5b69781"
+    },
+    {
+      "file": "models/revamp/airport-corporate--airport-corporate-mapped-surfaces.glb",
+      "bytes": 56904,
+      "sha256": "ca8498924afd2ce30b4300263638974b449eacc8f7daa98f177f675e2b421061"
+    },
+    {
+      "file": "models/revamp/airport-corporate-transitway-transitway.glb",
+      "bytes": 103492,
+      "sha256": "3afb305b15b320bf94825c2914531c77bf3c5d7328e72890c57d93248a12e604"
+    },
+    {
+      "file": "models/revamp/citywide--citywide-mapped-surfaces.glb",
+      "bytes": 2434432,
+      "sha256": "d116c48257b80f6394eed32eea3bb0d92d249c38bb261189c2e8897267ebb01f"
+    },
+    {
+      "file": "models/revamp/citywide-go-go.glb",
+      "bytes": 3151696,
+      "sha256": "19bcf9ff7e9ca3532bdc16dca72212ec8c985574ddb2514aaa37a66c60c5c2bb"
+    },
+    {
+      "file": "models/revamp/citywide-hml-hml.glb",
+      "bytes": 1289472,
+      "sha256": "d7055f1852ded2a5123cb227d2c4f43d7f8a02a9ca5a1bb35944ff8fc11ef3af"
+    },
+    {
+      "file": "models/revamp/citywide-transitway-transitway.glb",
+      "bytes": 341908,
+      "sha256": "2e7680f860989b8748a57330a7ae44d315d32f87c2a10227371aa59dc9c20c62"
+    },
+    {
+      "file": "models/revamp/clarkson--clarkson-mapped-surfaces.glb",
+      "bytes": 111100,
+      "sha256": "c4987a38ca7170b96dc2cf99c9eb2291d4160b87c9dbb4091f1658063580ae25"
+    },
+    {
+      "file": "models/revamp/clarkson-go-go.glb",
+      "bytes": 533920,
+      "sha256": "34b480b8ca18d6ef72edd72c0de545a5253b63478356aec9399da6b38d55ab47"
+    },
+    {
+      "file": "models/revamp/cooksville--cooksville-mapped-surfaces.glb",
+      "bytes": 169464,
+      "sha256": "06f0a61e4c8b2f7bdf2610b5c042b70aa4a386e91fb60a75ccce3b56ba0a8e67"
+    },
+    {
+      "file": "models/revamp/cooksville-go-go.glb",
+      "bytes": 309488,
+      "sha256": "1fa865f4852c850ca3efd8cc7ec0fe4e05a511c556b6f4520e23871304c61055"
+    },
+    {
+      "file": "models/revamp/cooksville-hml-hml.glb",
+      "bytes": 406412,
+      "sha256": "558f55e808bbad73750f244da8915e370244a441598b2f79336e25e76fdd4b24"
+    },
+    {
+      "file": "models/revamp/dixie-applewood--dixie-applewood-mapped-surfaces.glb",
+      "bytes": 223096,
+      "sha256": "5530b526f18a07fbcb491433acc94859eca477fea510683c48d4e9d8d2880675"
+    },
+    {
+      "file": "models/revamp/dixie-applewood-go-go.glb",
+      "bytes": 274348,
+      "sha256": "6a134a7373a15dc861578ccd09aaec2f5d9cb5b4af81e818eaccf9706ca978d8"
+    },
+    {
+      "file": "models/revamp/dixie-applewood-transitway-transitway.glb",
+      "bytes": 53992,
+      "sha256": "d7755034855c9ab560b7d7a2920dde7244231a0e6c48ce4a8e01ca693e788922"
+    },
+    {
+      "file": "models/revamp/downtown--downtown-mapped-surfaces.glb",
+      "bytes": 654916,
+      "sha256": "65240dc686c38f56cc26545c3c34fa3e9956a66d4ed335d2d2aaad8960d8e6dd"
+    },
+    {
+      "file": "models/revamp/downtown-go-go.glb",
+      "bytes": 127900,
+      "sha256": "c52c18aa819e417df26b4a015527dba118fb9898952701649f4bdb5d989c2a74"
+    },
+    {
+      "file": "models/revamp/downtown-hml-hml.glb",
+      "bytes": 367996,
+      "sha256": "d93448dc23c2d135b7470b7cfe982ab26147331395ae42aec379753be94cbef4"
+    },
+    {
+      "file": "models/revamp/downtown-transitway-transitway.glb",
+      "bytes": 87504,
+      "sha256": "a2c312b4a711d508b82d07a863818a76ab2f715cbbd1cba706aeca4d8fa31de8"
+    },
+    {
+      "file": "models/revamp/erin-mills--erin-mills-mapped-surfaces.glb",
+      "bytes": 397740,
+      "sha256": "370558a66ea0f56dd3223a7a3eb345cab0eb4861d65062d224f12bf8863f67a6"
+    },
+    {
+      "file": "models/revamp/erin-mills-go-go.glb",
+      "bytes": 234760,
+      "sha256": "41f1aba9fd949c7009c4a956c74c2fdbaf155f56ae0e990774c6e3d1fd229b49"
+    },
+    {
+      "file": "models/revamp/erin-mills-transitway-transitway.glb",
+      "bytes": 89256,
+      "sha256": "e8bc2a285989b85d3b573a171e475c9a8a8fa497d1c36ba133135aace0b3b077"
+    },
+    {
+      "file": "models/revamp/erindale--erindale-mapped-surfaces.glb",
+      "bytes": 161116,
+      "sha256": "fe6dbd5ffb32cea83e69c5e91d68c2b7674a547aaccefc9637fceabd014fc3e6"
+    },
+    {
+      "file": "models/revamp/erindale-go-go.glb",
+      "bytes": 247348,
+      "sha256": "ed5a5b4bba8fad1671738d6075565b150b73a9d93da68fddd3df8d314b3e0f5a"
+    },
+    {
+      "file": "models/revamp/erindale-transitway-transitway.glb",
+      "bytes": 48200,
+      "sha256": "6e272c0944f8afc4932fe089e68f356d63d27c69046332a91da2d0e49cd7b57c"
+    },
+    {
+      "file": "models/revamp/heartland--heartland-mapped-surfaces.glb",
+      "bytes": 207412,
+      "sha256": "13ca0ccfd25fe4d0018eee53e324ad40755f23f702e03c0163b396aa224dd820"
+    },
+    {
+      "file": "models/revamp/heartland-hml-hml.glb",
+      "bytes": 507944,
+      "sha256": "ac5889afbabeeb42c318c01802d14d6b77059f521b976c3936910f0467a37805"
+    },
+    {
+      "file": "models/revamp/lakeview--lakeview-mapped-surfaces.glb",
+      "bytes": 58512,
+      "sha256": "db58969c64bc6d1ada9102bb1a95a185b7694d7ffc49e08bc40b10ad4d9d88a9"
+    },
+    {
+      "file": "models/revamp/lakeview-go-go.glb",
+      "bytes": 351328,
+      "sha256": "29fb908a3d23cf5c3445c47bdefd99afc5904cda5a909ad2e7c22ae44d4e2b2b"
+    },
+    {
+      "file": "models/revamp/malton--malton-mapped-surfaces.glb",
+      "bytes": 111784,
+      "sha256": "e34f2e8409655f4ea034a417fb42e21c45b8b14e6bd2884fc7778766e92355e8"
+    },
+    {
+      "file": "models/revamp/malton-go-go.glb",
+      "bytes": 430692,
+      "sha256": "d916ecc4ffa91058daccc39c5d10d3db420b3c9001a7662e416dbe702a02e011"
+    },
+    {
+      "file": "models/revamp/meadowvale--meadowvale-mapped-surfaces.glb",
+      "bytes": 282276,
+      "sha256": "e2ef0cec634f102f046033fa2d8e30367be826d4dcec2bab0133a620bcdcb71e"
+    },
+    {
+      "file": "models/revamp/meadowvale-go-go.glb",
+      "bytes": 524636,
+      "sha256": "c48332c2ab13e0320dd6cafd1f5bddfeb21d44ea6fb7e79066101d792153e247"
+    },
+    {
+      "file": "models/revamp/port-credit--port-credit-mapped-surfaces.glb",
+      "bytes": 19556,
+      "sha256": "034139afcc8a15e93c1dd12ac342933aeb4d587e676469906ccd9cf0ae30b6a6"
+    },
+    {
+      "file": "models/revamp/port-credit-go-go.glb",
+      "bytes": 365900,
+      "sha256": "d415559d4f62c963bcb15503239fae584002ae8474e7dc5e89e06fd3eca2121b"
+    },
+    {
+      "file": "models/revamp/port-credit-hml-hml.glb",
+      "bytes": 130380,
+      "sha256": "1edcd86ac34183fa6067c10885382bbbe70f6e734cdfbc4b6d4b91578a0c608a"
+    },
+    {
+      "file": "models/revamp/streetsville--streetsville-mapped-surfaces.glb",
+      "bytes": 178540,
+      "sha256": "f8dd23ff8198d08c28c3f8384ddaaf9697406a1afd0653000523a4b35f7d4ea6"
+    },
+    {
+      "file": "models/revamp/streetsville-go-go.glb",
+      "bytes": 425732,
+      "sha256": "b5075dfe3b12324fb1254c3b9934422bf92e3f2ab567ebb75377c4f149a12cac"
+    },
+    {
+      "file": "models/revamp/uptown--uptown-mapped-surfaces.glb",
+      "bytes": 264188,
+      "sha256": "035f5e3e1b4b185240c71810438dd92a5fffa7e8d070f129ce850762703839da"
+    },
+    {
+      "file": "models/revamp/uptown-hml-hml.glb",
+      "bytes": 550024,
+      "sha256": "35df5cd48e25c293f009ebe1b218265188abbe32e5f8c0deed17c0eaa23d12a0"
+    },
+    {
+      "file": "models/revamp/uptown-transitway-transitway.glb",
+      "bytes": 62216,
+      "sha256": "0209517614f1357d30b237d289381fa2503bac29d9714a8f0e74f8c6e984a02c"
+    },
+    {
+      "file": "models/streetsville-context.glb",
+      "bytes": 3480028,
+      "sha256": "ff5435f1ab281a65c5f7432e5e32e22fa6bf3f2980a1299402a5d609bde6e7bd"
+    },
+    {
+      "file": "models/streetsville-details.glb",
+      "bytes": 758152,
+      "sha256": "2311fd07bac95505748fe367df8e71958a62f39f4a853bc1cae31683dc7f3eb6"
+    },
+    {
+      "file": "models/streetsville.glb",
+      "bytes": 3769944,
+      "sha256": "2b60549a136ae71719faf3b71c0217a3cc8bf795ddd4b298279878fbdbc6b310"
+    },
+    {
+      "file": "models/supplemental/pearson-airfield-context.json",
+      "bytes": 1462,
+      "sha256": "bd63fd97620556298d08da441095c4574c09956a8ea759c0a54d998e8f8c15ad"
+    },
+    {
+      "file": "models/supplemental/refinement-lakeview/README.md",
+      "bytes": 3705,
+      "sha256": "4b7af6d46d80d5098444a7604ae1cc34881737ade5f205ce622219cfa71ebc92"
+    },
+    {
+      "file": "models/supplemental/refinement-lakeview/manifest.json",
+      "bytes": 25984,
+      "sha256": "882b9bedce7af43cb36c451de87316cba9fbd2f74f715ba4779dba295cc65451"
+    },
+    {
+      "file": "models/supplemental/revamp-landscape/READ-ME.md",
+      "bytes": 8815,
+      "sha256": "05e271e2598c1a58016c4e8793b2d37d54f883a042bbd1f15ee920b4c9374f00"
+    },
+    {
+      "file": "models/supplemental/transit-revamp/README.md",
+      "bytes": 9107,
+      "sha256": "0ecf96d15abdf1def8f46e7ccff7f0192426161c79c5e70c0e2006c79dcc0f75"
+    },
+    {
+      "file": "models/supplemental/transit-revamp/Visibility-audit.md",
+      "bytes": 3764,
+      "sha256": "8d3f7647e7119d806e5c328d8bc13cfadd5646c78d647a918f7729622f2e0cd3"
+    },
+    {
+      "file": "models/supplemental/transit-revamp/research-log.json",
+      "bytes": 21007,
+      "sha256": "1beed533eb78111ac58f57f34587e2251967d036ac9bc6324994048a7c0a9f28"
+    },
+    {
+      "file": "models/supplemental/transit-revamp/transit-layer-manifest.json",
+      "bytes": 358654,
+      "sha256": "fa8258b8226a0a9e111f76bb04742eacf441ea43c4d08275c7b9e31e2f572214"
+    },
+    {
+      "file": "models/supplemental/transit-revamp/transit-network.json",
+      "bytes": 2823317,
+      "sha256": "a24192858bb4b65a6bdb1de9d2855a5d56eea4d9434073a634862377490f24c8"
+    },
+    {
+      "file": "models/supplemental/transit-revamp/visibility-checks/downtown-junction-after.png",
+      "bytes": 2037121,
+      "sha256": "982d9b34f414b6ecdcd931153b11f757c679f65a05e7ea923b6420004bec8949"
+    },
+    {
+      "file": "models/supplemental/transit-revamp/visibility-checks/downtown-junction-before.png",
+      "bytes": 2026508,
+      "sha256": "df1f8c815555f0900637e7109e232580bc0f6cfe0306975526a35f9231c2d7c5"
+    },
+    {
+      "file": "models/supplemental/transit-revamp/visibility-checks/milton-crossing-after.png",
+      "bytes": 1810450,
+      "sha256": "bf567be5d6a19a28b4112bf7cf09e54dae36636277be152858d08616d7e20007"
+    },
+    {
+      "file": "models/supplemental/transit-revamp/visibility-checks/milton-crossing-before.png",
+      "bytes": 1808597,
+      "sha256": "c1885a819db9fbd4d885ec852d8ce7d815163d23cbeb58a2fc4626c0de3bbeb5"
+    },
+    {
+      "file": "models/supplemental/transit-revamp/visibility-checks/port-credit-go-after.png",
+      "bytes": 2010743,
+      "sha256": "2ce95cb2a5f426d70ba1be983196bcae5c7a9663424aa831a86a124e71d9f5c8"
+    },
+    {
+      "file": "models/supplemental/transit-revamp/visibility-checks/port-credit-go-before.png",
+      "bytes": 2005293,
+      "sha256": "12604777c640a9bb813106aee28130813f8c1c010b0e31351695d87a235163f6"
+    },
+    {
+      "file": "models/uptown-context.glb",
+      "bytes": 3407444,
+      "sha256": "98f717d609eb3da4f42c617e7c90760a259e5f270a3ebbc33bfae534756d6ef0"
+    },
+    {
+      "file": "models/uptown-details.glb",
+      "bytes": 1318576,
+      "sha256": "8e4932926eee896e97011ad26ffff6bb50448a0f19480f6c90bbff4c9e9fde06"
+    },
+    {
+      "file": "models/uptown.glb",
+      "bytes": 3715800,
+      "sha256": "8a7e8c8710c780bd50aa2aaebb64541495594e09472365108a7c5196135afb8c"
+    },
+    {
+      "file": "renders/revamp/source-elevation-repair-qa.png",
+      "bytes": 761397,
+      "sha256": "86615e81e09d824e7282ed7a81c3e0d7f4356101d204796c6872177cf529e283"
+    },
+    {
+      "file": "research/City-of-Mississauga-Open-Data-Terms.pdf",
+      "bytes": 200246,
+      "sha256": "76e0c18b3d807639b0aa9df04df41a9bfc999bdad10762954a333bdd939cbce4"
+    },
+    {
+      "file": "robots.txt",
+      "bytes": 98,
+      "sha256": "e355868145a6cf23b52b533fc9e49ebc5a186671e0d94ac2f1df6ee6a5330b08"
+    },
+    {
+      "file": "sitemap.xml",
+      "bytes": 271,
+      "sha256": "f2d5e185d3259f8d8864daa0597560054f7ebff3aa83c4c50fee1bbb9e03a3e6"
+    },
+    {
+      "file": "style.css",
+      "bytes": 14692,
+      "sha256": "a4cd1c9fffc0a325dcc59ac513612e2d6de44101e5dad8e9b81b326cded89c61"
+    },
+    {
+      "file": "vendor/addons/controls/OrbitControls.js",
+      "bytes": 40755,
+      "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b"
+    },
+    {
+      "file": "vendor/addons/loaders/GLTFLoader.js",
+      "bytes": 117570,
+      "sha256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16"
+    },
+    {
+      "file": "vendor/addons/utils/BufferGeometryUtils.js",
+      "bytes": 37712,
+      "sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797"
+    },
+    {
+      "file": "vendor/addons/utils/SkeletonUtils.js",
+      "bytes": 11535,
+      "sha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f"
+    },
+    {
+      "file": "vendor/fonts/SOURCES.json",
+      "bytes": 4266,
+      "sha256": "b5a2270f9aab35b309ca99e2552d2c75c331dcef9640ad7d3bb945cf8e77f4e7"
+    },
+    {
+      "file": "vendor/fonts/dm-sans-OFL.txt",
+      "bytes": 4482,
+      "sha256": "9af36190332437f5ecd09974de43c1f7c77a310a996cdd8ceb25628b458840e1"
+    },
+    {
+      "file": "vendor/fonts/dm-sans-latin-400-800.woff2",
+      "bytes": 36980,
+      "sha256": "468d56b6b25b05b70190b6c233d773f6f1770e8579827ce022a57f03fa8002fb"
+    },
+    {
+      "file": "vendor/fonts/dm-sans-latin-ext-400-800.woff2",
+      "bytes": 18192,
+      "sha256": "219b02c7d8884817d3d6ad4c8771f2c000ce4c5669a67ef4e2e5617ffa25c4cc"
+    },
+    {
+      "file": "vendor/fonts/fonts.css",
+      "bytes": 2795,
+      "sha256": "7b9dd43b78d06ae1b721dc44077269563ee0b605e389e1a35757b12b9d7a22b9"
+    },
+    {
+      "file": "vendor/fonts/manrope-OFL.txt",
+      "bytes": 4387,
+      "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b"
+    },
+    {
+      "file": "vendor/fonts/manrope-cyrillic-400-800.woff2",
+      "bytes": 14544,
+      "sha256": "95a493061fe0a8d0d027c2892747134ba747141112d3be4d5022e70ab7d3a1a6"
+    },
+    {
+      "file": "vendor/fonts/manrope-cyrillic-ext-400-800.woff2",
+      "bytes": 2592,
+      "sha256": "e8c0b39992f06b3dc9a9834494088014859f363bf6ca8792b6bb07e17c7965f3"
+    },
+    {
+      "file": "vendor/fonts/manrope-greek-400-800.woff2",
+      "bytes": 9360,
+      "sha256": "40af11327fe5308166c6cb5787808b042db6da889abf602f0a4876c49675d87e"
+    },
+    {
+      "file": "vendor/fonts/manrope-latin-400-800.woff2",
+      "bytes": 24576,
+      "sha256": "e310b55a7fd9677f5e3555e6c6c4d064fa1f1d24393f0ddbe217cea12a8c432f"
+    },
+    {
+      "file": "vendor/fonts/manrope-latin-ext-400-800.woff2",
+      "bytes": 15240,
+      "sha256": "ce093b341d9c10658ee1eaa85c5f8042ff3307bc6ccfc5f405616eb437f0009e"
+    },
+    {
+      "file": "vendor/fonts/manrope-vietnamese-400-800.woff2",
+      "bytes": 8492,
+      "sha256": "bab757f8a0a1bc04055ee98cb5777f3254aab11f6d222366e1f40a36f390506a"
+    },
+    {
+      "file": "vendor/meshopt_decoder.mjs",
+      "bytes": 29059,
+      "sha256": "cb08bf53ad8ad9693d8bb759b2dbade350eb38bcce63d005385e225b564c5f6a"
+    },
+    {
+      "file": "vendor/three.core.js",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+    },
+    {
+      "file": "vendor/three.module.js",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    }
+  ],
+  "publishedBytes": 760586649,
+  "originalPNGCount": 33,
+  "originalPNGsByteIdentical": true,
+  "hostMediaReferencesRewritten": 79,
+  "privateCorrespondenceIncluded": false,
+  "rawSourceArchivesIncluded": false,
+  "sceneFilesIncluded": false,
+  "originalBackupModified": false
+}

@@ -1,0 +1,15 @@
+* text=auto
+*.png -text
+*.glb -text
+*.gz -text
+*.pdf -text
+*.mp4 -text
+*.woff2 -text
+*.js text eol=lf
+*.mjs text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.yml text eol=lf
+# The export manifest verifies exact published bytes, including CSV line endings.
+/public/** -text
