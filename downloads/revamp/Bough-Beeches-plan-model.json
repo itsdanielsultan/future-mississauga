@@ -1,0 +1,278 @@
+{
+  "assets": [
+    {
+      "id": "bough-beeches-2026-plan",
+      "assetId": "bough-beeches-2026-plan",
+      "projectId": "bough-beeches-1315",
+      "name": "1315 Bough Beeches \u2014 March 2026 plan envelope",
+      "file": "outputs/models/supplemental/revamp/bough-beeches-2026-plan.glb",
+      "status": "Proposed",
+      "sourceStatus": "Proposed",
+      "modes": [
+        "future"
+      ],
+      "includedByDefault": true,
+      "preserveMaterials": true,
+      "replacesSourceIds": [],
+      "replacementModes": [
+        "future"
+      ],
+      "modelFidelity": "dimensioned plan-derived envelope; schematic materials and screen thickness",
+      "geometryDate": "2026-03-13",
+      "heightM": 52.0,
+      "storeys": 13,
+      "lat": 43.627571340666,
+      "lon": -79.60654200750976,
+      "centreModelXZ": [
+        -2583.7405365577843,
+        -4452.649160990776
+      ],
+      "bounds": [
+        [
+          -2603.9345180818345,
+          79.4,
+          -4483.381853355095
+        ],
+        [
+          -2567.4294422068633,
+          131.4,
+          -4424.354142007418
+        ]
+      ],
+      "sha256": "f85cc5f9a90055e5de2b75a67cebeddf4ba1eb5aad7ec1dcfb96b19d3a3611f6",
+      "bytes": 44396,
+      "components": 28,
+      "triangles": 1328,
+      "sourceUrls": [
+        "https://www.mississauga.ca/wp-content/uploads/2026/04/29140524/Site-Plan-OZ-OPA-26-5-W3-April-2026.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2026/04/29140528/Survey-OZ-OPA-26-5-W3-April-2026.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2026/04/29140529/Typical-Tower-Plan-OZ-OPA-26-5-W3-April-2026.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2026/04/29140521/Roof-Plan-OZ-OPA-26-5-W3-April-2026.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2026/04/29140551/North-West-Elevations-OZ-OPA-26-5-W3-April-2026.pdf"
+      ],
+      "sources": [
+        {
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/04/29140524/Site-Plan-OZ-OPA-26-5-W3-April-2026.pdf",
+          "title": "Arcadis A100 site plan, 1315 Bough Beeches",
+          "publisher": "City of Mississauga / Arcadis",
+          "claims": [
+            "13-storey proposal",
+            "47.8 \u00d7 18.1 m typical floorplate",
+            "proposed location southeast of existing 20-storey building"
+          ],
+          "accessed": "2026-09-20"
+        },
+        {
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/04/29140528/Survey-OZ-OPA-26-5-W3-April-2026.pdf",
+          "title": "R-PE survey A002, surveyed June 24, 2025",
+          "publisher": "City of Mississauga / R-PE Surveying",
+          "claims": [
+            "ORP A/B UTM 17 NAD83(CSRS) coordinates",
+            "existing building footprint used for registration"
+          ],
+          "accessed": "2026-09-20"
+        },
+        {
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/04/29140529/Typical-Tower-Plan-OZ-OPA-26-5-W3-April-2026.pdf",
+          "title": "Arcadis A103 typical tower floor",
+          "publisher": "City of Mississauga / Arcadis",
+          "claims": [
+            "47.8 \u00d7 18.1 m main floorplate"
+          ],
+          "accessed": "2026-09-20"
+        },
+        {
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/04/29140521/Roof-Plan-OZ-OPA-26-5-W3-April-2026.pdf",
+          "title": "Arcadis A105 roof plan",
+          "publisher": "City of Mississauga / Arcadis",
+          "claims": [
+            "podium, mechanical roof and surrounding screen outlines",
+            "284.5 m\u00b2 green roof and open-to-below portions"
+          ],
+          "accessed": "2026-09-20"
+        },
+        {
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/04/29140551/North-West-Elevations-OZ-OPA-26-5-W3-April-2026.pdf",
+          "title": "Arcadis A201 north and west elevations",
+          "publisher": "City of Mississauga / Arcadis",
+          "claims": [
+            "grade 149.40 m, top of residential portion 194.40 m, roof 201.40 m",
+            "52.0 m building height",
+            "floor levels and podium parapet 158.25 m"
+          ],
+          "accessed": "2026-09-20"
+        }
+      ],
+      "caveat": "March 2026 proposal envelope, not an approved or built outcome. Exact written heights and main floorplate dimensions; podium and rooftop screen traced from published plan vectors. Registration uses survey controls and existing-tower corners (allow \u00b11 m position, not a statistical confidence interval). Screen thickness, floor bands and materials are illustrative. Individual balconies, window divisions, recessed entries and equipment are omitted. Datum treated as local NAD83 UTM17; no sub-metre geodetic claim.",
+      "modelCaveat": "March 2026 proposal envelope, not an approved or built outcome. Exact written heights and main floorplate dimensions; podium and rooftop screen traced from published plan vectors. Registration uses survey controls and existing-tower corners (allow \u00b11 m position, not a statistical confidence interval). Screen thickness, floor bands and materials are illustrative. Individual balconies, window divisions, recessed entries and equipment are omitted. Datum treated as local NAD83 UTM17; no sub-metre geodetic claim.",
+      "registration": {
+        "surveyORPB": [
+          612247.59,
+          4831412.2
+        ],
+        "surveyORPA": [
+          612343.27,
+          4831538.01
+        ],
+        "surveyPDFControlB": [
+          805.0,
+          451.5
+        ],
+        "surveyPDFControlA": [
+          1703.0,
+          448.0
+        ],
+        "roofPDFExistingCorners": [
+          [
+            1195.8,
+            155.7
+          ],
+          [
+            590.04,
+            924.78
+          ]
+        ],
+        "surveyPDFExistingCorners": [
+          [
+            1464.33,
+            768.0
+          ],
+          [
+            1217.33,
+            1072.0
+          ]
+        ],
+        "roofToSurveyCornerResidualM": [
+          0.06531405696881179,
+          0.06531405784763189
+        ],
+        "surveyToCityExistingVertexDistanceM": [
+          0.5169424645614062,
+          0.8294897305077887
+        ],
+        "existingSourceId": "73-2781",
+        "planScaleMetresPerPDFPoint": 0.07055555555555557,
+        "positionAllowanceM": 1
+      },
+      "geometryQA": {
+        "mainFloorplateAreaM2": 865.1800000033289,
+        "greenRoofVectorAreaM2": 284.55947510550413,
+        "printedGreenRoofAreaM2": 284.5,
+        "floorplateDimensionsM": [
+          47.8,
+          18.1
+        ],
+        "groundAbsoluteM": 149.4,
+        "mainRoofAbsoluteM": 194.4,
+        "highestRoofAbsoluteM": 201.4,
+        "allComponentsWatertight": true,
+        "allVolumesPositive": true,
+        "allTopCapsUpward": true,
+        "noExistingGeometryChanged": true
+      }
+    }
+  ],
+  "projectUpdates": [
+    {
+      "projectId": "bough-beeches-1315",
+      "lat": 43.627571340666,
+      "lon": -79.60654200750976,
+      "heightM": [
+        52.0
+      ],
+      "storeys": [
+        13
+      ],
+      "geometryCoverage": "plan-derived model",
+      "modelCaveat": "March 2026 proposal envelope, not an approved or built outcome. Exact written heights and main floorplate dimensions; podium and rooftop screen traced from published plan vectors. Registration uses survey controls and existing-tower corners (allow \u00b11 m position, not a statistical confidence interval). Screen thickness, floor bands and materials are illustrative. Individual balconies, window divisions, recessed entries and equipment are omitted. Datum treated as local NAD83 UTM17; no sub-metre geodetic claim.",
+      "geometrySources": [
+        "https://www.mississauga.ca/wp-content/uploads/2026/04/29140524/Site-Plan-OZ-OPA-26-5-W3-April-2026.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2026/04/29140528/Survey-OZ-OPA-26-5-W3-April-2026.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2026/04/29140529/Typical-Tower-Plan-OZ-OPA-26-5-W3-April-2026.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2026/04/29140521/Roof-Plan-OZ-OPA-26-5-W3-April-2026.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2026/04/29140551/North-West-Elevations-OZ-OPA-26-5-W3-April-2026.pdf"
+      ],
+      "sources": [
+        {
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/04/29140524/Site-Plan-OZ-OPA-26-5-W3-April-2026.pdf",
+          "title": "Arcadis A100 site plan, 1315 Bough Beeches",
+          "publisher": "City of Mississauga / Arcadis",
+          "claims": [
+            "13-storey proposal",
+            "47.8 \u00d7 18.1 m typical floorplate",
+            "proposed location southeast of existing 20-storey building"
+          ],
+          "accessed": "2026-09-20"
+        },
+        {
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/04/29140528/Survey-OZ-OPA-26-5-W3-April-2026.pdf",
+          "title": "R-PE survey A002, surveyed June 24, 2025",
+          "publisher": "City of Mississauga / R-PE Surveying",
+          "claims": [
+            "ORP A/B UTM 17 NAD83(CSRS) coordinates",
+            "existing building footprint used for registration"
+          ],
+          "accessed": "2026-09-20"
+        },
+        {
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/04/29140529/Typical-Tower-Plan-OZ-OPA-26-5-W3-April-2026.pdf",
+          "title": "Arcadis A103 typical tower floor",
+          "publisher": "City of Mississauga / Arcadis",
+          "claims": [
+            "47.8 \u00d7 18.1 m main floorplate"
+          ],
+          "accessed": "2026-09-20"
+        },
+        {
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/04/29140521/Roof-Plan-OZ-OPA-26-5-W3-April-2026.pdf",
+          "title": "Arcadis A105 roof plan",
+          "publisher": "City of Mississauga / Arcadis",
+          "claims": [
+            "podium, mechanical roof and surrounding screen outlines",
+            "284.5 m\u00b2 green roof and open-to-below portions"
+          ],
+          "accessed": "2026-09-20"
+        },
+        {
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/04/29140551/North-West-Elevations-OZ-OPA-26-5-W3-April-2026.pdf",
+          "title": "Arcadis A201 north and west elevations",
+          "publisher": "City of Mississauga / Arcadis",
+          "claims": [
+            "grade 149.40 m, top of residential portion 194.40 m, roof 201.40 m",
+            "52.0 m building height",
+            "floor levels and podium parapet 158.25 m"
+          ],
+          "accessed": "2026-09-20"
+        }
+      ]
+    }
+  ],
+  "constructionEvidence": [],
+  "researchLog": [
+    {
+      "kind": "primary PDF review",
+      "queryOrUrl": "https://www.mississauga.ca/wp-content/uploads/2026/04/29140524/Site-Plan-OZ-OPA-26-5-W3-April-2026.pdf",
+      "resultNote": "13-storey proposal; 47.8 \u00d7 18.1 m typical floorplate; proposed location southeast of existing 20-storey building"
+    },
+    {
+      "kind": "primary PDF review",
+      "queryOrUrl": "https://www.mississauga.ca/wp-content/uploads/2026/04/29140528/Survey-OZ-OPA-26-5-W3-April-2026.pdf",
+      "resultNote": "ORP A/B UTM 17 NAD83(CSRS) coordinates; existing building footprint used for registration"
+    },
+    {
+      "kind": "primary PDF review",
+      "queryOrUrl": "https://www.mississauga.ca/wp-content/uploads/2026/04/29140529/Typical-Tower-Plan-OZ-OPA-26-5-W3-April-2026.pdf",
+      "resultNote": "47.8 \u00d7 18.1 m main floorplate"
+    },
+    {
+      "kind": "primary PDF review",
+      "queryOrUrl": "https://www.mississauga.ca/wp-content/uploads/2026/04/29140521/Roof-Plan-OZ-OPA-26-5-W3-April-2026.pdf",
+      "resultNote": "podium, mechanical roof and surrounding screen outlines; 284.5 m\u00b2 green roof and open-to-below portions"
+    },
+    {
+      "kind": "primary PDF review",
+      "queryOrUrl": "https://www.mississauga.ca/wp-content/uploads/2026/04/29140551/North-West-Elevations-OZ-OPA-26-5-W3-April-2026.pdf",
+      "resultNote": "grade 149.40 m, top of residential portion 194.40 m, roof 201.40 m; 52.0 m building height; floor levels and podium parapet 158.25 m"
+    }
+  ]
+}

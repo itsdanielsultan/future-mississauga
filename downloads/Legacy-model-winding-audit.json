@@ -1,0 +1,327 @@
+{
+  "date": "2026-09-20",
+  "action": "Reverse triangle winding by swapping indices 1 and 2 in every triangle; no vertex, transform, material, metadata or shape changes. No normals/tangents were stored; importers recompute normals from corrected indices.",
+  "m4Cause": "The original builder swaps extrusion Y/Z without reversing faces. This axis permutation has determinant -1, inverting the two closed shells.",
+  "m3Cause": "The manually constructed open-bottom envelope had consistent inward-facing triangles, confirmed by its downward-facing top section cap. Consistency alone did not establish outward orientation.",
+  "m3BoundaryExplanation": "Exactly four boundary edges remain at model Y=191.88999938964844, the lower connection ring to the unchanged municipal capture. The source builder deliberately adds side panels and a top section cap only. No bottom cap is introduced. The open lower ring is separate from the architectural crown omission: the legacy supplement still ends at an approximate floor-74 section cap.",
+  "signedVolumeCaveat": "M3 is open, so signed volume is only an orientation diagnostic, not a valid enclosed physical volume. M4 shells are closed.",
+  "records": [
+    {
+      "files": [
+        "outputs/models/supplemental/mcity-m3-upper-envelope.glb",
+        "work/research/supplemental/mcity-m3-upper-envelope.glb"
+      ],
+      "beforeFileSHA256": "7328f8f80e94810019eb028c18f1ae428fc9f283a7c0a51a4d964b9956cfe992",
+      "afterFileSHA256": "dc378b8747e4c119f8bee2bb6388217db0303cdf0c1310484217c33b7bc283c0",
+      "fileSizeUnchanged": 5060,
+      "changedByteCount": 52,
+      "onlyTriangleIndexBytesChanged": true,
+      "rawPositionBufferSHA256": [
+        "bbe04c869052835701c6a98b35b2bc81cb9bfcdb606f1c197ef085153a5778f4"
+      ],
+      "metadataAndNonIndexBuffersByteIdentical": true,
+      "before": [
+        {
+          "node": "mcity-3-plan-derived-upper-envelope",
+          "vertices": 16,
+          "triangles": 26,
+          "vertexArraySHA256": "bbe04c869052835701c6a98b35b2bc81cb9bfcdb606f1c197ef085153a5778f4",
+          "bounds": [
+            [
+              -5733.10791015625,
+              191.88999938964844,
+              468.72589111328125
+            ],
+            [
+              -5681.88916015625,
+              322.9056091308594,
+              520.9412231445312
+            ]
+          ],
+          "windingConsistent": true,
+          "watertight": false,
+          "signedVolumeDiagnosticM3": -149003.44060231,
+          "boundaryEdges": 4,
+          "boundaryBounds": [
+            [
+              -5731.9306640625,
+              191.88999938964844,
+              472.0948791503906
+            ],
+            [
+              -5681.88916015625,
+              191.88999938964844,
+              520.9412231445312
+            ]
+          ],
+          "topCapNormalsY": [
+            -1.0,
+            -1.0
+          ],
+          "bottomCapNormalsY": []
+        }
+      ],
+      "after": [
+        {
+          "node": "mcity-3-plan-derived-upper-envelope",
+          "vertices": 16,
+          "triangles": 26,
+          "vertexArraySHA256": "bbe04c869052835701c6a98b35b2bc81cb9bfcdb606f1c197ef085153a5778f4",
+          "bounds": [
+            [
+              -5733.10791015625,
+              191.88999938964844,
+              468.72589111328125
+            ],
+            [
+              -5681.88916015625,
+              322.9056091308594,
+              520.9412231445312
+            ]
+          ],
+          "windingConsistent": true,
+          "watertight": false,
+          "signedVolumeDiagnosticM3": 149003.44060231,
+          "boundaryEdges": 4,
+          "boundaryBounds": [
+            [
+              -5731.9306640625,
+              191.88999938964844,
+              472.0948791503906
+            ],
+            [
+              -5681.88916015625,
+              191.88999938964844,
+              520.9412231445312
+            ]
+          ],
+          "topCapNormalsY": [
+            1.0,
+            1.0
+          ],
+          "bottomCapNormalsY": []
+        }
+      ]
+    },
+    {
+      "files": [
+        "outputs/models/supplemental/mcity-m4-plan-derived.glb",
+        "work/research/supplemental/mcity-m4-plan-derived.glb"
+      ],
+      "beforeFileSHA256": "a47940ce0268a218fce40ed049a1e5b4d1861974088b4386cac990fa7603375b",
+      "afterFileSHA256": "4a2a1a170015c70731584f96a6e1d77124f70bc699515312e5d2e3d83dab5c57",
+      "fileSizeUnchanged": 9384,
+      "changedByteCount": 200,
+      "onlyTriangleIndexBytesChanged": true,
+      "rawPositionBufferSHA256": [
+        "777a59179bd634525421c97444c4230eabacba7a83f3bdad172353640b436a52",
+        "dc4436d418b181005b1a9749953438e9bf0e5a82bb5db3a4d5764469e2aff4ae"
+      ],
+      "metadataAndNonIndexBuffersByteIdentical": true,
+      "before": [
+        {
+          "node": "mcity-4-schematic-tower",
+          "vertices": 16,
+          "triangles": 28,
+          "vertexArraySHA256": "dc4436d418b181005b1a9749953438e9bf0e5a82bb5db3a4d5764469e2aff4ae",
+          "bounds": [
+            [
+              -5771.14501953125,
+              112.83999633789062,
+              534.1165771484375
+            ],
+            [
+              -5734.73828125,
+              300.5400085449219,
+              583.6495361328125
+            ]
+          ],
+          "windingConsistent": true,
+          "watertight": true,
+          "signedVolumeDiagnosticM3": -173808.93974115947,
+          "boundaryEdges": 0,
+          "boundaryBounds": null,
+          "topCapNormalsY": [
+            -0.9999999999999999,
+            -1.0,
+            -0.9999999999999999,
+            -1.0,
+            -1.0,
+            -0.9999999999999999
+          ],
+          "bottomCapNormalsY": [
+            0.9999999999999999,
+            1.0,
+            0.9999999999999999,
+            1.0,
+            1.0,
+            0.9999999999999999
+          ]
+        },
+        {
+          "node": "mcity-4-schematic-podium",
+          "vertices": 38,
+          "triangles": 72,
+          "vertexArraySHA256": "777a59179bd634525421c97444c4230eabacba7a83f3bdad172353640b436a52",
+          "bounds": [
+            [
+              -5780.3623046875,
+              84.88999938964844,
+              527.6968383789062
+            ],
+            [
+              -5696.4619140625,
+              112.83999633789062,
+              609.328369140625
+            ]
+          ],
+          "windingConsistent": true,
+          "watertight": true,
+          "signedVolumeDiagnosticM3": -108383.55519541602,
+          "boundaryEdges": 0,
+          "boundaryBounds": null,
+          "topCapNormalsY": [
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0,
+            -0.9999999999999999,
+            -1.0,
+            -1.0,
+            -1.0,
+            -0.9999999999999999,
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0
+          ],
+          "bottomCapNormalsY": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.9999999999999999,
+            1.0,
+            1.0,
+            1.0,
+            0.9999999999999999,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "after": [
+        {
+          "node": "mcity-4-schematic-tower",
+          "vertices": 16,
+          "triangles": 28,
+          "vertexArraySHA256": "dc4436d418b181005b1a9749953438e9bf0e5a82bb5db3a4d5764469e2aff4ae",
+          "bounds": [
+            [
+              -5771.14501953125,
+              112.83999633789062,
+              534.1165771484375
+            ],
+            [
+              -5734.73828125,
+              300.5400085449219,
+              583.6495361328125
+            ]
+          ],
+          "windingConsistent": true,
+          "watertight": true,
+          "signedVolumeDiagnosticM3": 173808.93974115947,
+          "boundaryEdges": 0,
+          "boundaryBounds": null,
+          "topCapNormalsY": [
+            0.9999999999999999,
+            1.0,
+            0.9999999999999999,
+            1.0,
+            1.0,
+            0.9999999999999999
+          ],
+          "bottomCapNormalsY": [
+            -0.9999999999999999,
+            -1.0,
+            -0.9999999999999999,
+            -1.0,
+            -1.0,
+            -0.9999999999999999
+          ]
+        },
+        {
+          "node": "mcity-4-schematic-podium",
+          "vertices": 38,
+          "triangles": 72,
+          "vertexArraySHA256": "777a59179bd634525421c97444c4230eabacba7a83f3bdad172353640b436a52",
+          "bounds": [
+            [
+              -5780.3623046875,
+              84.88999938964844,
+              527.6968383789062
+            ],
+            [
+              -5696.4619140625,
+              112.83999633789062,
+              609.328369140625
+            ]
+          ],
+          "windingConsistent": true,
+          "watertight": true,
+          "signedVolumeDiagnosticM3": 108383.55519541602,
+          "boundaryEdges": 0,
+          "boundaryBounds": null,
+          "topCapNormalsY": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.9999999999999999,
+            1.0,
+            1.0,
+            1.0,
+            0.9999999999999999,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "bottomCapNormalsY": [
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0,
+            -0.9999999999999999,
+            -1.0,
+            -1.0,
+            -1.0,
+            -0.9999999999999999,
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0
+          ]
+        }
+      ]
+    }
+  ]
+}

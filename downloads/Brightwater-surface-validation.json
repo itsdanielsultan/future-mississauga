@@ -1,0 +1,88 @@
+{
+  "reviewDate": "2026-09-20",
+  "assetId": "wf-brightwater-missing-blocks-concept",
+  "assetsUnchangedCount": 18,
+  "newPartCount": 38,
+  "newTriangleCount": 740,
+  "bounds": [
+    [
+      -1355.01025390625,
+      8.042598724365234,
+      4590.119140625
+    ],
+    [
+      -668.606689453125,
+      119.5426025390625,
+      5050.7177734375
+    ]
+  ],
+  "assetSHA256": "8c9f2e7653fca28b1b4207b307778af311e2174e441b594f044c8955d6db401f",
+  "audits": [
+    {
+      "block": "P",
+      "sourceParts": [
+        "P-west-podium-six",
+        "P-east-podium-six",
+        "P-south-podium-six"
+      ],
+      "oldSumFootprintAreaM2": 8519.449906647209,
+      "unionFootprintAreaM2": 7325.139263435589,
+      "removedOverlappingCapAreaM2": 1194.3106432116201,
+      "exteriorSymmetricDifferenceM2": 0.0,
+      "boundaryHausdorffDistanceM": 0.0,
+      "bottomASLUnchanged": 78.04259872436523,
+      "topASLUnchanged": 99.54259872436523,
+      "newTriangles": 56,
+      "watertight": true,
+      "positiveVolume": true,
+      "exportedFootprintSymmetricDifferenceM2": 0.04390939195554592,
+      "exportedBoundaryHausdorffM": 0.00023283011923879126
+    },
+    {
+      "block": "Q",
+      "sourceParts": [
+        "Q-west-podium-six",
+        "Q-east-podium-six",
+        "Q-south-podium-six"
+      ],
+      "oldSumFootprintAreaM2": 5288.920244059563,
+      "unionFootprintAreaM2": 4983.824085256761,
+      "removedOverlappingCapAreaM2": 305.09615880280217,
+      "exteriorSymmetricDifferenceM2": 0.0,
+      "boundaryHausdorffDistanceM": 0.0,
+      "bottomASLUnchanged": 79.28256225585938,
+      "topASLUnchanged": 100.78256225585938,
+      "newTriangles": 56,
+      "watertight": true,
+      "positiveVolume": true,
+      "exportedFootprintSymmetricDifferenceM2": 0.023296890334738023,
+      "exportedBoundaryHausdorffM": 0.00021161482782132407
+    }
+  ],
+  "files": [
+    {
+      "path": "outputs/models/supplemental/refinement-waterfront/brightwater-missing-blocks-concept.glb",
+      "sha256": "8c9f2e7653fca28b1b4207b307778af311e2174e441b594f044c8955d6db401f"
+    },
+    {
+      "path": "outputs/models/supplemental/refinement-waterfront/brightwater-missing-blocks-concept.json",
+      "sha256": "7d0d6fa16c70c65f1563529b94a1609b6c7caedf20a5a767d8a2e46761afcf18"
+    },
+    {
+      "path": "outputs/models/supplemental/refinement-waterfront/manifest.json",
+      "sha256": "621b194066aaa1d9a271fb36a22e481d3d424752a6847906ce09330f8225468a"
+    },
+    {
+      "path": "outputs/research/refinement-models.json",
+      "sha256": "0512ba7c8fe545fdf4e4dd95cfd76b9522ca7b8f2335513aec1aad2bc933b3db"
+    },
+    {
+      "path": "outputs/mississauga-future/public/data/refinement-models.json",
+      "sha256": "0512ba7c8fe545fdf4e4dd95cfd76b9522ca7b8f2335513aec1aad2bc933b3db"
+    },
+    {
+      "path": "outputs/mississauga-future/public/models/refinement/brightwater-missing-blocks-concept.glb",
+      "sha256": "8c9f2e7653fca28b1b4207b307778af311e2174e441b594f044c8955d6db401f"
+    }
+  ]
+}

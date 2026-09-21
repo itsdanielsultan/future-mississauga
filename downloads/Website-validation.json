@@ -1,0 +1,45 @@
+{
+  "edition": "2026-09-20 refinement",
+  "checks": [
+    {
+      "check": "Image comparison pointer drag",
+      "result": "passed",
+      "evidence": "Local preview: direct handle drag changed aria-valuenow from50 to80 and visibly moved divider; Port Credit selection changed both image layers."
+    },
+    {
+      "check": "Image comparison keyboard",
+      "result": "passed",
+      "evidence": "ArrowRight changed80 to81."
+    },
+    {
+      "check": "3D comparison pointer and keyboard",
+      "result": "passed",
+      "evidence": "Local preview: pointer changed50 to74; ArrowLeft changed74 to73 with matching scissored scene."
+    },
+    {
+      "check": "Native menus",
+      "result": "passed",
+      "evidence": "Actual select elements with appearance:auto; district/scenario/researchscope/register/pictureview/comparisonplace. Picture view changed Wide aerial to Skyline panorama with3840x1400original PNG link."
+    },
+    {
+      "check": "Phone layout",
+      "result": "passed visually",
+      "evidence": "390x844viewport: singlecolumn, native place menu and visible44CSSpixel comparison target. Pointer check performed at normal viewport."
+    },
+    {
+      "check": "3D initial load",
+      "result": "passed",
+      "evidence": "Latest Downtown model finished loading; no captured browser console errors."
+    },
+    {
+      "check": "Image storage tests",
+      "result": "4 passed",
+      "evidence": "Authorization/origin, checksum, idempotency/exact original bytes, disabled ingestion."
+    },
+    {
+      "check": "All original PNG uploads",
+      "result": "passed",
+      "evidence": "31 of 31 final originals uploaded. All returned checksums match local master files and website URLs. Total 383614553 bytes."
+    }
+  ]
+}

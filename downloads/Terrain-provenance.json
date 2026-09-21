@@ -1,0 +1,18 @@
+{
+  "title": "Ontario bare-earth terrain context for Future Mississauga",
+  "source": "https://ws.geoservices.lrc.gov.on.ca/arcgis5/rest/services/Elevation/Ontario_DTM_LidarDerived/ImageServer",
+  "catalogue": "https://data.ontario.ca/en/dataset/ontario-digital-terrain-model-lidar-derived",
+  "license": "https://www.ontario.ca/page/open-government-licence-ontario",
+  "attribution": "Contains information licensed under the Open Government Licence \u2013 Ontario.",
+  "retrieved": "2026-09-20",
+  "sourceVintages": "The default service mosaic combines acquisition projects. A test point returned 2015 primary data and 2023 overview records; the rendering is not a September 2026 terrain survey.",
+  "exportResolutionM": 10,
+  "resampling": "Bilinear",
+  "horizontalCRS": "EPSG:26917",
+  "verticalReference": "CGVD2013, service VCS EPSG:6647",
+  "modelOrigin": "X=E-615000;Y=DTM-70;Z=4827000-N",
+  "transformCaveat": "The City building vertical datum is not independently certified against this service. Building geometry is unchanged. A spatial sample of City building bases minus DTM gave a median +0.20 m, p10 -0.46 m and p90 +0.41 m; no alignment shift was applied.",
+  "nodata": "Service NoData/outside valid -20..300 local metre range uses documented building-base interpolation.",
+  "sha256": "7fa37ed8e4a13ecef587323f9406fa83be580fb45f318b975073a81925ab7e36",
+  "presentation": "Terrain polygons are subdivided for display. Parks, woodland and shore boundaries remain from City planimetric data. The current Jim Tovey reclamation outline remains unverified."
+}

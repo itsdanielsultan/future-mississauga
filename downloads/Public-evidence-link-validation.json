@@ -1,0 +1,815 @@
+{
+  "reviewDate": "2026-09-21",
+  "linkedEvidenceFiles": 45,
+  "copiedOrValidated": [
+    {
+      "source": "research/Model-guide.md",
+      "public": "downloads/Model-guide.md",
+      "bytes": 43632,
+      "sha256": "8ce31fa822d20c2295bcc219fa7a27c2e519030aa109e73648ba20fd10e20338",
+      "sourceBytesUnchanged": false
+    },
+    {
+      "source": "research/Refinement-notes.md",
+      "public": "downloads/Refinement-notes.md",
+      "bytes": 32072,
+      "sha256": "07f1308150fb0857731db6eed75d274d1c78dad0bae53b1eb5a87757a73b5304",
+      "sourceBytesUnchanged": false
+    },
+    {
+      "source": "research/Accuracy-and-coverage-audit.md",
+      "public": "downloads/Accuracy-and-coverage-audit.md",
+      "bytes": 30175,
+      "sha256": "057df998f4716b06b22b93bc6661ca0268404c21f48da8e4508ffa0050dd514a",
+      "sourceBytesUnchanged": false
+    },
+    {
+      "source": "research/Visual-design-review.md",
+      "public": "downloads/Visual-design-review.md",
+      "bytes": 5811,
+      "sha256": "98497c55610cbf9ad9c90b9605d7dc2806828d679c05ebb07196678f73c1960b",
+      "sourceBytesUnchanged": false
+    },
+    {
+      "source": "research/Lakeview-model-coverage-review.md",
+      "public": "downloads/Lakeview-model-coverage-review.md",
+      "bytes": 7139,
+      "sha256": "a634fb78b86805a0f642a00ab0b2f30142f5af34c516ea6b1c030367558c80b1",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "licenses/CREDITS.md",
+      "public": "licenses/CREDITS.md",
+      "bytes": 3658,
+      "sha256": "693582a0679388514ce483b021739f9d012b419a32a3040b1f376e1616c39cc7",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/revamp/Inland-water-elevation-repair.json",
+      "public": "downloads/revamp/Inland-water-elevation-repair.json",
+      "bytes": 1446781,
+      "sha256": "cc690c36deb0712ee15443e324366e4f19767a14ae52063d7a96b92624136cc9",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "models/supplemental/transit-revamp/transit-layer-manifest.json",
+      "public": "models/supplemental/transit-revamp/transit-layer-manifest.json",
+      "bytes": 358654,
+      "sha256": "fa8258b8226a0a9e111f76bb04742eacf441ea43c4d08275c7b9e31e2f572214",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "models/supplemental/transit-revamp/transit-network.json",
+      "public": "models/supplemental/transit-revamp/transit-network.json",
+      "bytes": 2823317,
+      "sha256": "a24192858bb4b65a6bdb1de9d2855a5d56eea4d9434073a634862377490f24c8",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/revamp/transit-visibility/Visibility-audit.md",
+      "public": "downloads/revamp/transit-visibility/Visibility-audit.md",
+      "bytes": 3764,
+      "sha256": "8d3f7647e7119d806e5c328d8bc13cfadd5646c78d647a918f7729622f2e0cd3",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "models/supplemental/pearson-airfield-context.json",
+      "public": "models/supplemental/pearson-airfield-context.json",
+      "bytes": 1462,
+      "sha256": "bd63fd97620556298d08da441095c4574c09956a8ea759c0a54d998e8f8c15ad",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "checkpoints/01-lighting/Checkpoint.json",
+      "public": "checkpoints/01-lighting/Checkpoint.json",
+      "bytes": 513,
+      "sha256": "2a52fa0dfeb8a4f7798dacd2c00bc537123e8b0a7748a8b46aa102f1b6d70f57",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "checkpoints/02-landscape/Checkpoint.json",
+      "public": "checkpoints/02-landscape/Checkpoint.json",
+      "bytes": 584,
+      "sha256": "dbe675dbe4b6820314101f99a2edda2eb5340a343a7e43aec49ae19e185bacfa",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "models/supplemental/revamp-landscape/READ-ME.md",
+      "public": "models/supplemental/revamp-landscape/READ-ME.md",
+      "bytes": 8815,
+      "sha256": "05e271e2598c1a58016c4e8793b2d37d54f883a042bbd1f15ee920b4c9374f00",
+      "sourceBytesUnchanged": false
+    },
+    {
+      "source": "research/revamp/Absolute-model-correction.md",
+      "public": "downloads/revamp/Absolute-model-correction.md",
+      "bytes": 2825,
+      "sha256": "7e2ffc0bd17bda606ee7492363a1b24ae92a1e46c419266d11edaedb75bfc38e",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/revamp/Bough-Beeches-plan-model.json",
+      "public": "downloads/revamp/Bough-Beeches-plan-model.json",
+      "bytes": 12172,
+      "sha256": "614320a7820cf4b4713f5560d1d39dd62d9d16bad42a26658ef9f1f31ac0b26e",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "models/supplemental/refinement-lakeview/README.md",
+      "public": "models/supplemental/refinement-lakeview/README.md",
+      "bytes": 3705,
+      "sha256": "4b7af6d46d80d5098444a7604ae1cc34881737ade5f205ce622219cfa71ebc92",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/Brightwater-surface-validation.json",
+      "public": "downloads/Brightwater-surface-validation.json",
+      "bytes": 2977,
+      "sha256": "456b4432bb26b34083c01add8ad0d0fe7dafab6d31d9c9b6a3cbb05d82160b08",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/Existing-building-replacement-validation.json",
+      "public": "downloads/Existing-building-replacement-validation.json",
+      "bytes": 13765,
+      "sha256": "6e27608ff468e735e1677c8a740b89428529719b9f339a46f44b7189a4ae2758",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/revamp/transit-visibility/visibility-audit.json",
+      "public": "downloads/revamp/transit-visibility/visibility-audit.json",
+      "bytes": 115698,
+      "sha256": "67326b6847bd9a79b18c138877ff9349de689a536b30ab391c50ec3b70992a11",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "models/supplemental/transit-revamp/research-log.json",
+      "public": "models/supplemental/transit-revamp/research-log.json",
+      "bytes": 21007,
+      "sha256": "1beed533eb78111ac58f57f34587e2251967d036ac9bc6324994048a7c0a9f28",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "models/supplemental/transit-revamp/README.md",
+      "public": "models/supplemental/transit-revamp/README.md",
+      "bytes": 9107,
+      "sha256": "0ecf96d15abdf1def8f46e7ccff7f0192426161c79c5e70c0e2006c79dcc0f75",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/revamp/Duplicate-composite-repair.json",
+      "public": "downloads/revamp/Duplicate-composite-repair.json",
+      "bytes": 4506,
+      "sha256": "cfc4e2ad2b59a5dd8a3f3920ce53f66d3246e9b66ea3840fd3fcd96c38acb7c8",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/revamp/Source-elevation-repair-audit.json",
+      "public": "downloads/revamp/Source-elevation-repair-audit.json",
+      "bytes": 382701,
+      "sha256": "48c9b030b7cf9bfdb7d8edf126b134d044875310cdcc4c148ad1dad652bf6cbb",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "renders/revamp/source-elevation-repair-qa.png",
+      "public": "renders/revamp/source-elevation-repair-qa.png",
+      "bytes": 761397,
+      "sha256": "86615e81e09d824e7282ed7a81c3e0d7f4356101d204796c6872177cf529e283",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/revamp/Chelsea-version-reconciliation.json",
+      "public": "downloads/revamp/Chelsea-version-reconciliation.json",
+      "bytes": 7373,
+      "sha256": "be34f234be399ec56a6899774953a07d4d8bde31904a8d94fe75e885600cca15",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/revamp/Model-layer-audit.json",
+      "public": "downloads/revamp/Model-layer-audit.json",
+      "bytes": 541327,
+      "sha256": "2d7cf4890904356c7983f77608906ac5d8ddbad952b946b3f42a693e150ecdcb",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/project-register.csv",
+      "public": "downloads/project-register.csv",
+      "bytes": 95605,
+      "sha256": "6c11c54220f87422f3a3043675bc32b67430f974f1996d37944a94d916fc2e85",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/City-of-Mississauga-Open-Data-Terms.pdf",
+      "public": "research/City-of-Mississauga-Open-Data-Terms.pdf",
+      "bytes": 200246,
+      "sha256": "76e0c18b3d807639b0aa9df04df41a9bfc999bdad10762954a333bdd939cbce4",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "licenses/three-0.186.0-MIT.txt",
+      "public": "licenses/three-0.186.0-MIT.txt",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "licenses/meshoptimizer-1.2.0-MIT.txt",
+      "public": "licenses/meshoptimizer-1.2.0-MIT.txt",
+      "bytes": 1079,
+      "sha256": "f03037ca7bad1e3eb7f4a63fa6084a8baabd5ba30d3c239a9a7f35705d873e26",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/revamp/transit-visibility/visibility-checks/downtown-junction-before.png",
+      "public": "downloads/revamp/transit-visibility/visibility-checks/downtown-junction-before.png",
+      "bytes": 2026508,
+      "sha256": "df1f8c815555f0900637e7109e232580bc0f6cfe0306975526a35f9231c2d7c5",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/revamp/transit-visibility/visibility-checks/downtown-junction-after.png",
+      "public": "downloads/revamp/transit-visibility/visibility-checks/downtown-junction-after.png",
+      "bytes": 2037121,
+      "sha256": "982d9b34f414b6ecdcd931153b11f757c679f65a05e7ea923b6420004bec8949",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/revamp/transit-visibility/visibility-checks/port-credit-go-before.png",
+      "public": "downloads/revamp/transit-visibility/visibility-checks/port-credit-go-before.png",
+      "bytes": 2005293,
+      "sha256": "12604777c640a9bb813106aee28130813f8c1c010b0e31351695d87a235163f6",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/revamp/transit-visibility/visibility-checks/port-credit-go-after.png",
+      "public": "downloads/revamp/transit-visibility/visibility-checks/port-credit-go-after.png",
+      "bytes": 2010743,
+      "sha256": "2ce95cb2a5f426d70ba1be983196bcae5c7a9663424aa831a86a124e71d9f5c8",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/revamp/transit-visibility/visibility-checks/milton-crossing-before.png",
+      "public": "downloads/revamp/transit-visibility/visibility-checks/milton-crossing-before.png",
+      "bytes": 1808597,
+      "sha256": "c1885a819db9fbd4d885ec852d8ce7d815163d23cbeb58a2fc4626c0de3bbeb5",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/revamp/transit-visibility/visibility-checks/milton-crossing-after.png",
+      "public": "downloads/revamp/transit-visibility/visibility-checks/milton-crossing-after.png",
+      "bytes": 1810450,
+      "sha256": "bf567be5d6a19a28b4112bf7cf09e54dae36636277be152858d08616d7e20007",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "models/supplemental/refinement-lakeview/manifest.json",
+      "public": "models/supplemental/refinement-lakeview/manifest.json",
+      "bytes": 25984,
+      "sha256": "882b9bedce7af43cb36c451de87316cba9fbd2f74f715ba4779dba295cc65451",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "models/supplemental/transit-revamp/Visibility-audit.md",
+      "public": "models/supplemental/transit-revamp/Visibility-audit.md",
+      "bytes": 3764,
+      "sha256": "8d3f7647e7119d806e5c328d8bc13cfadd5646c78d647a918f7729622f2e0cd3",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "models/supplemental/transit-revamp/visibility-checks/downtown-junction-before.png",
+      "public": "models/supplemental/transit-revamp/visibility-checks/downtown-junction-before.png",
+      "bytes": 2026508,
+      "sha256": "df1f8c815555f0900637e7109e232580bc0f6cfe0306975526a35f9231c2d7c5",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "models/supplemental/transit-revamp/visibility-checks/downtown-junction-after.png",
+      "public": "models/supplemental/transit-revamp/visibility-checks/downtown-junction-after.png",
+      "bytes": 2037121,
+      "sha256": "982d9b34f414b6ecdcd931153b11f757c679f65a05e7ea923b6420004bec8949",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "models/supplemental/transit-revamp/visibility-checks/port-credit-go-before.png",
+      "public": "models/supplemental/transit-revamp/visibility-checks/port-credit-go-before.png",
+      "bytes": 2005293,
+      "sha256": "12604777c640a9bb813106aee28130813f8c1c010b0e31351695d87a235163f6",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "models/supplemental/transit-revamp/visibility-checks/port-credit-go-after.png",
+      "public": "models/supplemental/transit-revamp/visibility-checks/port-credit-go-after.png",
+      "bytes": 2010743,
+      "sha256": "2ce95cb2a5f426d70ba1be983196bcae5c7a9663424aa831a86a124e71d9f5c8",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "models/supplemental/transit-revamp/visibility-checks/milton-crossing-before.png",
+      "public": "models/supplemental/transit-revamp/visibility-checks/milton-crossing-before.png",
+      "bytes": 1808597,
+      "sha256": "c1885a819db9fbd4d885ec852d8ce7d815163d23cbeb58a2fc4626c0de3bbeb5",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "models/supplemental/transit-revamp/visibility-checks/milton-crossing-after.png",
+      "public": "models/supplemental/transit-revamp/visibility-checks/milton-crossing-after.png",
+      "bytes": 1810450,
+      "sha256": "bf567be5d6a19a28b4112bf7cf09e54dae36636277be152858d08616d7e20007",
+      "sourceBytesUnchanged": true
+    }
+  ],
+  "markdownLinkChecks": 73,
+  "localLinks": [
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "../data/refinement-models.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "../data/stats.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "Refinement-notes.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "../data/stats.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "../data/projects.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "../data/overrides.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "revamp/Duplicate-composite-repair.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "revamp/Source-elevation-repair-audit.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "../renders/revamp/source-elevation-repair-qa.png",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "revamp/Chelsea-version-reconciliation.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "../models/supplemental/transit-revamp/transit-layer-manifest.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "revamp/Model-layer-audit.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "revamp/transit-visibility/Visibility-audit.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "../models/supplemental/transit-revamp/transit-layer-manifest.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "revamp/Inland-water-elevation-repair.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "../models/supplemental/transit-revamp/transit-layer-manifest.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "../models/supplemental/transit-revamp/transit-network.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "revamp/transit-visibility/Visibility-audit.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "../models/supplemental/transit-revamp/transit-layer-manifest.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "../models/supplemental/pearson-airfield-context.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "../checkpoints/01-lighting/Checkpoint.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "../checkpoints/02-landscape/Checkpoint.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "../models/supplemental/revamp-landscape/READ-ME.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "../data/refinement-models.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "../models/supplemental/transit-revamp/transit-layer-manifest.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "Refinement-notes.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "revamp/Absolute-model-correction.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "revamp/Bough-Beeches-plan-model.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "../models/supplemental/refinement-lakeview/README.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "Brightwater-surface-validation.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "Existing-building-replacement-validation.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "../licenses/CREDITS.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "../data/refinement-models.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "revamp/Absolute-model-correction.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "revamp/Bough-Beeches-plan-model.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "../models/supplemental/refinement-lakeview/README.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "Brightwater-surface-validation.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "Existing-building-replacement-validation.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "../models/supplemental/transit-revamp/transit-layer-manifest.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "../models/supplemental/transit-revamp/transit-network.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "revamp/transit-visibility/Visibility-audit.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "../models/supplemental/transit-revamp/transit-layer-manifest.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "revamp/transit-visibility/visibility-audit.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "../checkpoints/01-lighting/Checkpoint.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "../checkpoints/02-landscape/Checkpoint.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "../models/supplemental/revamp-landscape/READ-ME.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "../models/supplemental/transit-revamp/research-log.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "../models/supplemental/transit-revamp/README.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Visual-design-review.md",
+      "target": "revamp/Source-elevation-repair-audit.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Visual-design-review.md",
+      "target": "../renders/revamp/source-elevation-repair-qa.png",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Visual-design-review.md",
+      "target": "Model-guide.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Visual-design-review.md",
+      "target": "project-register.csv",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Visual-design-review.md",
+      "target": "../data/refinement-models.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Visual-design-review.md",
+      "target": "Accuracy-and-coverage-audit.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
+      "target": "visibility-checks/downtown-junction-before.png",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
+      "target": "visibility-checks/downtown-junction-after.png",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
+      "target": "visibility-checks/port-credit-go-before.png",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
+      "target": "visibility-checks/port-credit-go-after.png",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
+      "target": "visibility-checks/milton-crossing-before.png",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
+      "target": "visibility-checks/milton-crossing-after.png",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "licenses/CREDITS.md",
+      "target": "../research/City-of-Mississauga-Open-Data-Terms.pdf",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "licenses/CREDITS.md",
+      "target": "three-0.186.0-MIT.txt",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "licenses/CREDITS.md",
+      "target": "meshoptimizer-1.2.0-MIT.txt",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "models/supplemental/refinement-lakeview/README.md",
+      "target": "manifest.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "models/supplemental/revamp-landscape/READ-ME.md",
+      "target": "../../../data/landscape-layer-manifest.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "models/supplemental/revamp-landscape/READ-ME.md",
+      "target": "../../../research/City-of-Mississauga-Open-Data-Terms.pdf",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "models/supplemental/transit-revamp/README.md",
+      "target": "Visibility-audit.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "models/supplemental/transit-revamp/Visibility-audit.md",
+      "target": "visibility-checks/downtown-junction-before.png",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "models/supplemental/transit-revamp/Visibility-audit.md",
+      "target": "visibility-checks/downtown-junction-after.png",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "models/supplemental/transit-revamp/Visibility-audit.md",
+      "target": "visibility-checks/port-credit-go-before.png",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "models/supplemental/transit-revamp/Visibility-audit.md",
+      "target": "visibility-checks/port-credit-go-after.png",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "models/supplemental/transit-revamp/Visibility-audit.md",
+      "target": "visibility-checks/milton-crossing-before.png",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "models/supplemental/transit-revamp/Visibility-audit.md",
+      "target": "visibility-checks/milton-crossing-after.png",
+      "exists": true,
+      "insidePublic": true
+    }
+  ],
+  "brokenLocalLinks": [],
+  "unresolvedCopies": [],
+  "portablePathSanitization": [],
+  "publicMachinePathOrPrivateFileFindings": [],
+  "rewrittenDataLinks": [
+    {
+      "file": "downloads/Model-guide.md",
+      "old": "refinement-models.json",
+      "new": "../data/refinement-models.json"
+    },
+    {
+      "file": "downloads/Refinement-notes.md",
+      "old": "refinement-models.json",
+      "new": "../data/refinement-models.json"
+    },
+    {
+      "file": "downloads/Accuracy-and-coverage-audit.md",
+      "old": "refinement-models.json",
+      "new": "../data/refinement-models.json"
+    },
+    {
+      "file": "downloads/Accuracy-and-coverage-audit.md",
+      "old": "stats.json",
+      "new": "../data/stats.json"
+    },
+    {
+      "file": "downloads/Accuracy-and-coverage-audit.md",
+      "old": "stats.json",
+      "new": "../data/stats.json"
+    },
+    {
+      "file": "downloads/Accuracy-and-coverage-audit.md",
+      "old": "projects.json",
+      "new": "../data/projects.json"
+    },
+    {
+      "file": "downloads/Accuracy-and-coverage-audit.md",
+      "old": "overrides.json",
+      "new": "../data/overrides.json"
+    },
+    {
+      "file": "downloads/Visual-design-review.md",
+      "old": "refinement-models.json",
+      "new": "../data/refinement-models.json"
+    },
+    {
+      "file": "models/supplemental/revamp-landscape/READ-ME.md",
+      "old": "../../../research/landscape-layer-manifest.json",
+      "new": "../../../data/landscape-layer-manifest.json"
+    }
+  ],
+  "geometryCopied": false,
+  "canonicalEvidenceModified": false
+}

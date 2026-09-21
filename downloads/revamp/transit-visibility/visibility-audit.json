@@ -1,0 +1,3474 @@
+{
+  "reviewed": "2026-09-21",
+  "scope": "Source transit geometry and actual context surfaces, with matching context-only Blender test views. Final browser and composed-scene overlay QA is a separate integration check.",
+  "before": {
+    "method": "Every original route vertex plus samples at maximum 3 m centre-line spacing, against the highest actual overlapping render and interactive ground/road/park/wooded/landscape/bridge/station-display triangle. Source triangle coordinates are unchanged. Below-surface or within 5 cm counts as an occlusion/contact risk; a separate count identifies strictly below-surface samples. This measures context occlusion, not tree crowns or building masks.",
+    "routes": [
+      {
+        "routeId": "go-MI-0",
+        "system": "GO",
+        "samples": 10642,
+        "occludedSamples": 1101,
+        "strictlyBelowSurfaceSamples": 1041,
+        "minClearanceM": -3.777,
+        "runs": [
+          {
+            "fromM": 3549.99,
+            "toM": 3558.0,
+            "lengthM": 8.01,
+            "worstBurialM": 0.173,
+            "midpoint": [
+              -2054.868879053331,
+              49.9620304559398,
+              -584.7102186667448
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 3651.0,
+            "toM": 3666.38,
+            "lengthM": 15.38,
+            "worstBurialM": 0.149,
+            "midpoint": [
+              -2143.1809,
+              49.7784,
+              -530.8103
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 3678.0,
+            "toM": 3742.14,
+            "lengthM": 64.14,
+            "worstBurialM": 2.694,
+            "midpoint": [
+              -2190.912090854901,
+              50.87214430139069,
+              -509.7638889598156
+            ],
+            "source": "work/refinement/context/render/lakeview-context.glb"
+          },
+          {
+            "fromM": 3747.0,
+            "toM": 3747.0,
+            "lengthM": 0.0,
+            "worstBurialM": 1.025,
+            "midpoint": [
+              -2224.297783838078,
+              52.13208608006616,
+              -496.4010809676596
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 3762.0,
+            "toM": 3762.0,
+            "lengthM": 0.0,
+            "worstBurialM": 1.149,
+            "midpoint": [
+              -2238.5480688519883,
+              52.379510648956426,
+              -491.7181996956337
+            ],
+            "source": "work/refinement/context/render/dixie-applewood-context.glb"
+          },
+          {
+            "fromM": 3765.75,
+            "toM": 3768.0,
+            "lengthM": 2.25,
+            "worstBurialM": 3.777,
+            "midpoint": [
+              -2242.1122,
+              52.2579,
+              -490.547
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 3773.62,
+            "toM": 3780.0,
+            "lengthM": 6.38,
+            "worstBurialM": 1.503,
+            "midpoint": [
+              -2249.9483269601005,
+              51.96924912995403,
+              -487.9719862650111
+            ],
+            "source": "outputs/models/context/lakeview-details.glb"
+          },
+          {
+            "fromM": 3786.0,
+            "toM": 3805.1,
+            "lengthM": 19.1,
+            "worstBurialM": 1.906,
+            "midpoint": [
+              -2269.8987246782945,
+              51.234255428968574,
+              -481.41594852372145
+            ],
+            "source": "work/refinement/context/render/cooksville-context.glb"
+          },
+          {
+            "fromM": 3820.84,
+            "toM": 3825.0,
+            "lengthM": 4.16,
+            "worstBurialM": 0.042,
+            "midpoint": [
+              -2295.549266368238,
+              50.289278043357065,
+              -472.98684946250324
+            ],
+            "source": "work/refinement/context/render/dixie-applewood-context.glb"
+          },
+          {
+            "fromM": 3938.89,
+            "toM": 3972.0,
+            "lengthM": 33.11,
+            "worstBurialM": 0.411,
+            "midpoint": [
+              -2421.5453,
+              50.0696,
+              -431.5829
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 3999.0,
+            "toM": 3999.0,
+            "lengthM": 0.0,
+            "worstBurialM": 0.217,
+            "midpoint": [
+              -2463.7028099488157,
+              50.17853797995041,
+              -417.7293994646822
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 4092.0,
+            "toM": 4112.0,
+            "lengthM": 20.0,
+            "worstBurialM": 0.027,
+            "midpoint": [
+              -2560.472699281057,
+              50.40630673552389,
+              -385.4903002881164
+            ],
+            "source": "work/refinement/context/render/dixie-applewood-context.glb"
+          },
+          {
+            "fromM": 5739.0,
+            "toM": 5751.0,
+            "lengthM": 12.0,
+            "worstBurialM": 0.137,
+            "midpoint": [
+              -3894.0828293285795,
+              61.22366456155865,
+              489.9624128435879
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 5755.71,
+            "toM": 6003.0,
+            "lengthM": 247.29,
+            "worstBurialM": 1.477,
+            "midpoint": [
+              -3980.6246619401613,
+              62.79017839763168,
+              593.5747248918254
+            ],
+            "source": "work/refinement/context/render/erindale-context.glb"
+          },
+          {
+            "fromM": 6990.0,
+            "toM": 7104.0,
+            "lengthM": 114.0,
+            "worstBurialM": 0.7,
+            "midpoint": [
+              -4734.781086962272,
+              73.3204771367618,
+              1484.1255421843491
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 7218.0,
+            "toM": 7254.0,
+            "lengthM": 36.0,
+            "worstBurialM": 0.593,
+            "midpoint": [
+              -4861.3429,
+              74.7348,
+              1622.8715
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 7350.0,
+            "toM": 7356.0,
+            "lengthM": 6.0,
+            "worstBurialM": 0.099,
+            "midpoint": [
+              -4948.9107,
+              75.3654,
+              1701.1482
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 7494.0,
+            "toM": 7518.27,
+            "lengthM": 24.27,
+            "worstBurialM": 0.823,
+            "midpoint": [
+              -5070.442109343258,
+              76.14194821603603,
+              1794.905167095926
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 7928.49,
+            "toM": 7953.0,
+            "lengthM": 24.51,
+            "worstBurialM": 1.235,
+            "midpoint": [
+              -5446.125945773691,
+              76.7560073947445,
+              2013.9428781486795
+            ],
+            "source": "work/refinement/context/render/cooksville-context.glb"
+          },
+          {
+            "fromM": 7976.39,
+            "toM": 7977.0,
+            "lengthM": 0.61,
+            "worstBurialM": 0.093,
+            "midpoint": [
+              -5477.0463,
+              76.819,
+              2031.1686
+            ],
+            "source": "work/refinement/context/render/erindale-context.glb"
+          },
+          {
+            "fromM": 10217.96,
+            "toM": 10221.0,
+            "lengthM": 3.04,
+            "worstBurialM": 1.781,
+            "midpoint": [
+              -7567.520682568495,
+              79.02854510791227,
+              2332.6392238213402
+            ],
+            "source": "outputs/models/context/citywide-details.glb"
+          },
+          {
+            "fromM": 11117.2,
+            "toM": 11140.6,
+            "lengthM": 23.4,
+            "worstBurialM": 0.574,
+            "midpoint": [
+              -8383.07362242149,
+              78.45860895939794,
+              1961.798813258927
+            ],
+            "source": "outputs/models/context/erin-mills-context.glb"
+          },
+          {
+            "fromM": 11163.0,
+            "toM": 11274.3,
+            "lengthM": 111.3,
+            "worstBurialM": 0.522,
+            "midpoint": [
+              -8458.1089,
+              78.6339,
+              1908.1341
+            ],
+            "source": "work/refinement/context/render/erindale-context.glb"
+          },
+          {
+            "fromM": 11625.0,
+            "toM": 11739.0,
+            "lengthM": 114.0,
+            "worstBurialM": 2.003,
+            "midpoint": [
+              -8834.458204618315,
+              78.67029497374442,
+              1638.881374950059
+            ],
+            "source": "work/refinement/context/render/meadowvale-context.glb"
+          },
+          {
+            "fromM": 11784.0,
+            "toM": 11910.0,
+            "lengthM": 126.0,
+            "worstBurialM": 2.38,
+            "midpoint": [
+              -8968.326902990815,
+              79.2990575838616,
+              1542.4232410521124
+            ],
+            "source": "work/refinement/context/render/streetsville-context.glb"
+          },
+          {
+            "fromM": 11922.0,
+            "toM": 11922.0,
+            "lengthM": 0.0,
+            "worstBurialM": 0.008,
+            "midpoint": [
+              -9029.176281856566,
+              79.86787638643004,
+              1498.5785938128854
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 12024.0,
+            "toM": 12048.0,
+            "lengthM": 24.0,
+            "worstBurialM": 0.619,
+            "midpoint": [
+              -9121.89900062804,
+              80.63584727239011,
+              1432.2592809145856
+            ],
+            "source": "outputs/models/context/streetsville-context.glb"
+          },
+          {
+            "fromM": 12060.0,
+            "toM": 12285.0,
+            "lengthM": 225.0,
+            "worstBurialM": 0.437,
+            "midpoint": [
+              -9232.126959575906,
+              81.49178653985189,
+              1354.3182964087323
+            ],
+            "source": "outputs/models/context/erin-mills-context.glb"
+          },
+          {
+            "fromM": 12631.2,
+            "toM": 12703.0,
+            "lengthM": 71.8,
+            "worstBurialM": 0.547,
+            "midpoint": [
+              -9698.34466178122,
+              81.7572724144884,
+              1297.3351196737126
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 13065.48,
+            "toM": 13073.2,
+            "lengthM": 7.71,
+            "worstBurialM": 0.136,
+            "midpoint": [
+              -10067.790958048066,
+              81.69041037792377,
+              1455.7821191633961
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 13080.0,
+            "toM": 13191.0,
+            "lengthM": 111.0,
+            "worstBurialM": 0.858,
+            "midpoint": [
+              -10129.2665,
+              82.0175,
+              1482.1897
+            ],
+            "source": "work/refinement/context/render/erin-mills-context.glb"
+          },
+          {
+            "fromM": 13272.82,
+            "toM": 13284.0,
+            "lengthM": 11.18,
+            "worstBurialM": 0.173,
+            "midpoint": [
+              -10263.038009665268,
+              83.18873626697706,
+              1532.5104169223946
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 13293.0,
+            "toM": 13335.0,
+            "lengthM": 42.0,
+            "worstBurialM": 0.549,
+            "midpoint": [
+              -10298.131255871069,
+              83.45775520923101,
+              1540.2898761620909
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 13344.0,
+            "toM": 13344.2,
+            "lengthM": 0.2,
+            "worstBurialM": -0.047,
+            "midpoint": [
+              -10327.625294065418,
+              83.9769736668264,
+              1545.776378777879
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 14713.71,
+            "toM": 14718.0,
+            "lengthM": 4.29,
+            "worstBurialM": 0.164,
+            "midpoint": [
+              -11432.542900036602,
+              91.49806226889513,
+              794.3139148555524
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 14724.0,
+            "toM": 14775.75,
+            "lengthM": 51.75,
+            "worstBurialM": 0.291,
+            "midpoint": [
+              -11458.487898388,
+              91.89671272834326,
+              769.3568104469564
+            ],
+            "source": "work/refinement/context/render/meadowvale-context.glb"
+          },
+          {
+            "fromM": 17052.0,
+            "toM": 17055.0,
+            "lengthM": 3.0,
+            "worstBurialM": 0.914,
+            "midpoint": [
+              -13267.3038,
+              104.1213,
+              -524.7258
+            ],
+            "source": "outputs/models/context/meadowvale-context.glb"
+          },
+          {
+            "fromM": 17061.97,
+            "toM": 17064.0,
+            "lengthM": 2.03,
+            "worstBurialM": 3.572,
+            "midpoint": [
+              -13274.7809,
+              104.169,
+              -527.5014
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 17076.0,
+            "toM": 17085.89,
+            "lengthM": 9.89,
+            "worstBurialM": 0.832,
+            "midpoint": [
+              -13290.749712663814,
+              104.34109628360221,
+              -533.4293721434422
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 19692.0,
+            "toM": 19710.0,
+            "lengthM": 18.0,
+            "worstBurialM": 0.244,
+            "midpoint": [
+              -15786.731535116114,
+              127.93125145898667,
+              -1047.635794598473
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 19731.0,
+            "toM": 19735.45,
+            "lengthM": 4.45,
+            "worstBurialM": 0.107,
+            "midpoint": [
+              -15818.702107847459,
+              128.34720265149153,
+              -1039.4576237010078
+            ],
+            "source": "work/refinement/context/render/meadowvale-context.glb"
+          },
+          {
+            "fromM": 19740.0,
+            "toM": 19759.2,
+            "lengthM": 19.2,
+            "worstBurialM": 0.274,
+            "midpoint": [
+              -15833.234187517133,
+              128.5115651728652,
+              -1035.740277809907
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 19812.0,
+            "toM": 19839.0,
+            "lengthM": 27.0,
+            "worstBurialM": 0.078,
+            "midpoint": [
+              -15906.220609472592,
+              129.05150483737054,
+              -1018.4798047873786
+            ],
+            "source": "work/refinement/context/render/meadowvale-context.glb"
+          },
+          {
+            "fromM": 19854.0,
+            "toM": 19866.0,
+            "lengthM": 12.0,
+            "worstBurialM": 0.215,
+            "midpoint": [
+              -15941.258993066029,
+              129.50818746088456,
+              -1010.2147170609419
+            ],
+            "source": "work/refinement/context/render/meadowvale-context.glb"
+          },
+          {
+            "fromM": 19901.9,
+            "toM": 19929.0,
+            "lengthM": 27.1,
+            "worstBurialM": 0.461,
+            "midpoint": [
+              -15993.816540209766,
+              129.8249944925269,
+              -997.8169657232735
+            ],
+            "source": "outputs/models/context/meadowvale-context.glb"
+          },
+          {
+            "fromM": 19992.0,
+            "toM": 20016.0,
+            "lengthM": 24.0,
+            "worstBurialM": 0.669,
+            "midpoint": [
+              -16081.412485321205,
+              130.88089474027012,
+              -977.1541875977406
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 20036.67,
+            "toM": 20044.6,
+            "lengthM": 7.93,
+            "worstBurialM": 0.006,
+            "midpoint": [
+              -16116.450849269322,
+              131.12964934506513,
+              -968.8890165871649
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 20058.0,
+            "toM": 20424.0,
+            "lengthM": 366.0,
+            "worstBurialM": 1.507,
+            "midpoint": [
+              -16311.34997462394,
+              133.4804151725068,
+              -919.783320018458
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 20439.0,
+            "toM": 20448.86,
+            "lengthM": 9.86,
+            "worstBurialM": 0.043,
+            "midpoint": [
+              -16500.544585805066,
+              135.44887285487977,
+              -853.0011201239106
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 20454.0,
+            "toM": 20475.0,
+            "lengthM": 21.0,
+            "worstBurialM": 0.261,
+            "midpoint": [
+              -16519.6195,
+              135.6774,
+              -842.5545
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 20484.0,
+            "toM": 20508.42,
+            "lengthM": 24.42,
+            "worstBurialM": 0.349,
+            "midpoint": [
+              -16547.906980765973,
+              135.84890892124662,
+              -827.0626632790991
+            ],
+            "source": "work/refinement/context/render/meadowvale-context.glb"
+          },
+          {
+            "fromM": 20531.15,
+            "toM": 20532.0,
+            "lengthM": 0.85,
+            "worstBurialM": -0.035,
+            "midpoint": [
+              -16577.948,
+              136.0956,
+              -808.891
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 20599.96,
+            "toM": 20607.61,
+            "lengthM": 7.65,
+            "worstBurialM": 0.906,
+            "midpoint": [
+              -16638.079317131003,
+              136.7051267170626,
+              -767.7677965354111
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 21144.0,
+            "toM": 21153.0,
+            "lengthM": 9.0,
+            "worstBurialM": 0.042,
+            "midpoint": [
+              -16998.1939,
+              138.9734,
+              -360.8108
+            ],
+            "source": "work/refinement/context/render/meadowvale-context.glb"
+          },
+          {
+            "fromM": 21378.0,
+            "toM": 21378.27,
+            "lengthM": 0.27,
+            "worstBurialM": 0.006,
+            "midpoint": [
+              -17138.691548740593,
+              138.2035559691944,
+              -181.16963952569714
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 21447.0,
+            "toM": 21480.0,
+            "lengthM": 33.0,
+            "worstBurialM": 0.125,
+            "midpoint": [
+              -17190.891409872616,
+              137.85167987459255,
+              -115.35798024237266
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 21483.0,
+            "toM": 21492.0,
+            "lengthM": 9.0,
+            "worstBurialM": 0.009,
+            "midpoint": [
+              -17207.66996331858,
+              137.84833638681778,
+              -94.20425375661493
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 23016.0,
+            "toM": 23040.0,
+            "lengthM": 24.0,
+            "worstBurialM": 1.305,
+            "midpoint": [
+              -18154.393527455766,
+              136.9077766429639,
+              1119.1498496412455
+            ],
+            "source": "work/refinement/context/render/meadowvale-context.glb"
+          },
+          {
+            "fromM": 23076.0,
+            "toM": 23076.0,
+            "lengthM": 0.0,
+            "worstBurialM": 2.754,
+            "midpoint": [
+              -18183.906368216754,
+              136.63828172533604,
+              1157.004733476326
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          }
+        ]
+      },
+      {
+        "routeId": "go-LW-0",
+        "system": "GO",
+        "samples": 5992,
+        "occludedSamples": 134,
+        "strictlyBelowSurfaceSamples": 112,
+        "minClearanceM": -0.48,
+        "runs": [
+          {
+            "fromM": 372.0,
+            "toM": 414.0,
+            "lengthM": 42.0,
+            "worstBurialM": 0.139,
+            "midpoint": [
+              1883.5449,
+              19.685,
+              -119.0527
+            ],
+            "source": "work/refinement/context/render/lakeview-context.glb"
+          },
+          {
+            "fromM": 441.0,
+            "toM": 444.0,
+            "lengthM": 3.0,
+            "worstBurialM": 0.088,
+            "midpoint": [
+              1850.7203033514352,
+              19.740334857230664,
+              -82.29494643865928
+            ],
+            "source": "work/refinement/context/render/lakeview-context.glb"
+          },
+          {
+            "fromM": 492.21,
+            "toM": 495.0,
+            "lengthM": 2.79,
+            "worstBurialM": -0.044,
+            "midpoint": [
+              1816.6105,
+              19.6885,
+              -44.098
+            ],
+            "source": "work/refinement/context/render/dixie-applewood-context.glb"
+          },
+          {
+            "fromM": 515.4,
+            "toM": 537.0,
+            "lengthM": 21.6,
+            "worstBurialM": 0.133,
+            "midpoint": [
+              1794.7700285561393,
+              19.722484773333758,
+              -19.640603012155935
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 7332.0,
+            "toM": 7350.0,
+            "lengthM": 18.0,
+            "worstBurialM": 0.206,
+            "midpoint": [
+              -2351.211570686452,
+              20.09165769310709,
+              5389.98524941821
+            ],
+            "source": "work/refinement/context/render/port-credit-context.glb"
+          },
+          {
+            "fromM": 8059.92,
+            "toM": 8082.0,
+            "lengthM": 22.08,
+            "worstBurialM": 0.196,
+            "midpoint": [
+              -2791.975731591934,
+              24.018816876001804,
+              5970.646800778627
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 8088.0,
+            "toM": 8091.87,
+            "lengthM": 3.87,
+            "worstBurialM": -0.044,
+            "midpoint": [
+              -2804.677441611066,
+              24.110195204582332,
+              5987.370034992784
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 8097.0,
+            "toM": 8097.0,
+            "lengthM": 0.0,
+            "worstBurialM": -0.04,
+            "midpoint": [
+              -2808.3065298893566,
+              24.119624569252238,
+              5992.148080437145
+            ],
+            "source": "work/refinement/context/render/port-credit-context.glb"
+          },
+          {
+            "fromM": 8103.0,
+            "toM": 8151.0,
+            "lengthM": 48.0,
+            "worstBurialM": 0.301,
+            "midpoint": [
+              -2826.4518344825856,
+              24.23822403337367,
+              6016.038411560875
+            ],
+            "source": "work/refinement/context/render/erindale-context.glb"
+          },
+          {
+            "fromM": 8157.0,
+            "toM": 8160.0,
+            "lengthM": 3.0,
+            "worstBurialM": 0.077,
+            "midpoint": [
+              -2844.5971797968673,
+              24.29228182863401,
+              6039.928711755898
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 8179.74,
+            "toM": 8202.0,
+            "lengthM": 22.26,
+            "worstBurialM": 0.209,
+            "midpoint": [
+              -2864.557034517413,
+              24.453444624342332,
+              6066.208061053568
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 8250.0,
+            "toM": 8313.0,
+            "lengthM": 63.0,
+            "worstBurialM": 0.48,
+            "midpoint": [
+              -2918.9930376310317,
+              24.69212916484165,
+              6137.878986573265
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 8343.0,
+            "toM": 8358.0,
+            "lengthM": 15.0,
+            "worstBurialM": 0.239,
+            "midpoint": [
+              -2960.7273053455947,
+              25.074622894326133,
+              6192.826697155453
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          }
+        ]
+      },
+      {
+        "routeId": "go-KI-0",
+        "system": "GO",
+        "samples": 2227,
+        "occludedSamples": 134,
+        "strictlyBelowSurfaceSamples": 130,
+        "minClearanceM": -6.985,
+        "runs": [
+          {
+            "fromM": 3.0,
+            "toM": 12.0,
+            "lengthM": 9.0,
+            "worstBurialM": 2.431,
+            "midpoint": [
+              -3240.3791,
+              95.8368,
+              -13084.8296
+            ],
+            "source": "outputs/models/context/malton-context.glb"
+          },
+          {
+            "fromM": 18.0,
+            "toM": 96.0,
+            "lengthM": 78.0,
+            "worstBurialM": 6.985,
+            "midpoint": [
+              -3289.473333049769,
+              95.32156442895831,
+              -13082.305774294966
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 4374.0,
+            "toM": 4424.09,
+            "lengthM": 50.09,
+            "worstBurialM": 1.785,
+            "midpoint": [
+              -7625.941211994936,
+              105.37464166862698,
+              -12889.198858934778
+            ],
+            "source": "work/refinement/context/render/airport-corporate-context.glb"
+          },
+          {
+            "fromM": 4572.0,
+            "toM": 4644.0,
+            "lengthM": 72.0,
+            "worstBurialM": 0.587,
+            "midpoint": [
+              -7834.2442,
+              107.1961,
+              -12880.5859
+            ],
+            "source": "work/refinement/context/render/airport-corporate-context.glb"
+          },
+          {
+            "fromM": 4770.0,
+            "toM": 4842.0,
+            "lengthM": 72.0,
+            "worstBurialM": 1.255,
+            "midpoint": [
+              -8032.5247,
+              108.5382,
+              -12870.6573
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          }
+        ]
+      },
+      {
+        "routeId": "transitway-1090150-dedicated-busway-0-0",
+        "system": "Transitway",
+        "samples": 811,
+        "occludedSamples": 1,
+        "strictlyBelowSurfaceSamples": 1,
+        "minClearanceM": -4.7,
+        "runs": [
+          {
+            "fromM": 1071.0,
+            "toM": 1071.0,
+            "lengthM": 0.0,
+            "worstBurialM": 4.7,
+            "midpoint": [
+              -10265.8743388163,
+              98.1842861565736,
+              4353.624049020133
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          }
+        ]
+      },
+      {
+        "routeId": "transitway-1090150-dedicated-busway-1-0",
+        "system": "Transitway",
+        "samples": 3250,
+        "occludedSamples": 45,
+        "strictlyBelowSurfaceSamples": 41,
+        "minClearanceM": -6.528,
+        "runs": [
+          {
+            "fromM": 3.0,
+            "toM": 4.93,
+            "lengthM": 1.93,
+            "worstBurialM": 0.59,
+            "midpoint": [
+              -5365.476627399473,
+              87.11828932663964,
+              -1207.0828015491807
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 1173.0,
+            "toM": 1176.07,
+            "lengthM": 3.07,
+            "worstBurialM": 0.331,
+            "midpoint": [
+              -4965.1843955969425,
+              79.55995274533095,
+              -2173.345751781161
+            ],
+            "source": "work/refinement/context/render/cooksville-context.glb"
+          },
+          {
+            "fromM": 2049.0,
+            "toM": 2049.0,
+            "lengthM": 0.0,
+            "worstBurialM": 0.257,
+            "midpoint": [
+              -4492.590552475688,
+              82.96222854073339,
+              -2894.0029836270874
+            ],
+            "source": "work/refinement/context/render/uptown-context.glb"
+          },
+          {
+            "fromM": 2310.0,
+            "toM": 2310.0,
+            "lengthM": 0.0,
+            "worstBurialM": 0.399,
+            "midpoint": [
+              -4397.302853933492,
+              77.47787514826156,
+              -3133.0626449193564
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 4341.0,
+            "toM": 4341.0,
+            "lengthM": 0.0,
+            "worstBurialM": 1.475,
+            "midpoint": [
+              -3195.5026273135427,
+              80.79841794488524,
+              -4767.142917879931
+            ],
+            "source": "outputs/models/context/citywide-details.glb"
+          },
+          {
+            "fromM": 4985.83,
+            "toM": 5019.0,
+            "lengthM": 33.17,
+            "worstBurialM": 6.528,
+            "midpoint": [
+              -2758.2652480152688,
+              83.2496745446208,
+              -5260.461904328028
+            ],
+            "source": "outputs/models/supplemental/refinement-transit/source-derived-bridge-decks.glb"
+          },
+          {
+            "fromM": 5412.0,
+            "toM": 5415.0,
+            "lengthM": 3.0,
+            "worstBurialM": 0.031,
+            "midpoint": [
+              -2721.5129,
+              80.8165,
+              -5558.276
+            ],
+            "source": "work/refinement/context/render/uptown-context.glb"
+          },
+          {
+            "fromM": 5444.98,
+            "toM": 5454.0,
+            "lengthM": 9.02,
+            "worstBurialM": 1.248,
+            "midpoint": [
+              -2749.187047424407,
+              82.76010298979776,
+              -5576.7397830019545
+            ],
+            "source": "work/refinement/context/render/uptown-context.glb"
+          },
+          {
+            "fromM": 5754.0,
+            "toM": 5760.0,
+            "lengthM": 6.0,
+            "worstBurialM": -0.016,
+            "midpoint": [
+              -2990.2739,
+              83.9136,
+              -5768.8111
+            ],
+            "source": "outputs/models/context/dixie-applewood-context.glb"
+          },
+          {
+            "fromM": 6066.0,
+            "toM": 6067.17,
+            "lengthM": 1.17,
+            "worstBurialM": 0.077,
+            "midpoint": [
+              -3208.5973097831165,
+              90.79085765744144,
+              -5984.394420611144
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 6513.0,
+            "toM": 6519.9,
+            "lengthM": 6.9,
+            "worstBurialM": 0.86,
+            "midpoint": [
+              -2986.228090338071,
+              83.4590165245902,
+              -6355.91652209867
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          }
+        ]
+      },
+      {
+        "routeId": "transitway-1090150-dedicated-busway-1-1",
+        "system": "Transitway",
+        "samples": 1052,
+        "occludedSamples": 26,
+        "strictlyBelowSurfaceSamples": 19,
+        "minClearanceM": -1.077,
+        "runs": [
+          {
+            "fromM": 207.0,
+            "toM": 207.0,
+            "lengthM": 0.0,
+            "worstBurialM": 0.034,
+            "midpoint": [
+              -2638.268789384494,
+              81.5920859991682,
+              -6817.619948517551
+            ],
+            "source": "work/refinement/context/render/airport-corporate-context.glb"
+          },
+          {
+            "fromM": 219.0,
+            "toM": 222.0,
+            "lengthM": 3.0,
+            "worstBurialM": 0.178,
+            "midpoint": [
+              -2630.9108049171105,
+              81.29296364207337,
+              -6827.097979928009
+            ],
+            "source": "work/refinement/context/render/airport-corporate-context.glb"
+          },
+          {
+            "fromM": 1233.0,
+            "toM": 1233.0,
+            "lengthM": 0.0,
+            "worstBurialM": -0.009,
+            "midpoint": [
+              -2009.9726521210794,
+              84.266694316787,
+              -7627.432889264495
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 1245.0,
+            "toM": 1245.0,
+            "lengthM": 0.0,
+            "worstBurialM": 1.077,
+            "midpoint": [
+              -2002.659597991873,
+              83.66457587776597,
+              -7636.947049201112
+            ],
+            "source": "outputs/models/context/airport-corporate-details.glb"
+          },
+          {
+            "fromM": 1395.0,
+            "toM": 1413.0,
+            "lengthM": 18.0,
+            "worstBurialM": 0.046,
+            "midpoint": [
+              -1906.3096,
+              81.4302,
+              -7762.2848
+            ],
+            "source": "work/refinement/context/render/dixie-applewood-context.glb"
+          },
+          {
+            "fromM": 1425.0,
+            "toM": 1446.0,
+            "lengthM": 21.0,
+            "worstBurialM": 0.231,
+            "midpoint": [
+              -1887.0316,
+              81.756,
+              -7787.3606
+            ],
+            "source": "work/refinement/context/render/dixie-applewood-context.glb"
+          }
+        ]
+      },
+      {
+        "routeId": "transitway-1090150-on-road-connection-0-0",
+        "system": "Transitway",
+        "samples": 3529,
+        "occludedSamples": 11,
+        "strictlyBelowSurfaceSamples": 11,
+        "minClearanceM": -1.686,
+        "runs": [
+          {
+            "fromM": 1750.96,
+            "toM": 1750.96,
+            "lengthM": 0.0,
+            "worstBurialM": 0.358,
+            "midpoint": [
+              -8831.7853,
+              71.1259,
+              3043.547
+            ],
+            "source": "work/refinement/context/render/erindale-context.glb"
+          },
+          {
+            "fromM": 2889.0,
+            "toM": 2895.0,
+            "lengthM": 6.0,
+            "worstBurialM": 0.703,
+            "midpoint": [
+              -8121.405457930004,
+              70.15758849632888,
+              2156.9216176546274
+            ],
+            "source": "outputs/models/context/erindale-context.glb"
+          },
+          {
+            "fromM": 6046.51,
+            "toM": 6046.51,
+            "lengthM": 0.0,
+            "worstBurialM": 0.194,
+            "midpoint": [
+              -6318.6183,
+              92.5653,
+              -365.4775
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 6059.62,
+            "toM": 6060.0,
+            "lengthM": 0.38,
+            "worstBurialM": 1.686,
+            "midpoint": [
+              -6310.7134,
+              92.5858,
+              -375.937
+            ],
+            "source": "work/refinement/context/render/uptown-context.glb"
+          },
+          {
+            "fromM": 6072.0,
+            "toM": 6073.15,
+            "lengthM": 1.15,
+            "worstBurialM": 1.277,
+            "midpoint": [
+              -6303.262306737539,
+              92.79489932332604,
+              -385.817884349205
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 7494.0,
+            "toM": 7494.0,
+            "lengthM": 0.0,
+            "worstBurialM": 0.518,
+            "midpoint": [
+              -5382.441837623751,
+              86.41079030980639,
+              -1193.3806398573897
+            ],
+            "source": "work/refinement/context/render/downtown-context.glb"
+          }
+        ]
+      },
+      {
+        "routeId": "transitway-1090151-dedicated-busway-0-0",
+        "system": "Transitway",
+        "samples": 1054,
+        "occludedSamples": 30,
+        "strictlyBelowSurfaceSamples": 18,
+        "minClearanceM": -1.159,
+        "runs": [
+          {
+            "fromM": 456.0,
+            "toM": 456.0,
+            "lengthM": 0.0,
+            "worstBurialM": -0.029,
+            "midpoint": [
+              -1668.6798329450337,
+              85.20152015431415,
+              -8071.313360059445
+            ],
+            "source": "outputs/models/context/airport-corporate-context.glb"
+          },
+          {
+            "fromM": 801.0,
+            "toM": 822.0,
+            "lengthM": 21.0,
+            "worstBurialM": 0.193,
+            "midpoint": [
+              -1884.4757099623025,
+              81.8276859599787,
+              -7790.692814241002
+            ],
+            "source": "work/refinement/context/render/dixie-applewood-context.glb"
+          },
+          {
+            "fromM": 837.0,
+            "toM": 861.0,
+            "lengthM": 24.0,
+            "worstBurialM": 0.052,
+            "midpoint": [
+              -1908.2463141777228,
+              81.40715625506168,
+              -7759.774237701444
+            ],
+            "source": "work/refinement/context/render/dixie-applewood-context.glb"
+          },
+          {
+            "fromM": 1002.9,
+            "toM": 1005.0,
+            "lengthM": 2.1,
+            "worstBurialM": 1.159,
+            "midpoint": [
+              -2002.0401,
+              83.583,
+              -7637.7542
+            ],
+            "source": "outputs/models/context/dixie-applewood-details.glb"
+          },
+          {
+            "fromM": 1014.0,
+            "toM": 1014.0,
+            "lengthM": 0.0,
+            "worstBurialM": 0.015,
+            "midpoint": [
+              -2008.8023490504434,
+              84.24005905114493,
+              -7628.955723298812
+            ],
+            "source": "work/refinement/context/render/dixie-applewood-context.glb"
+          },
+          {
+            "fromM": 1794.0,
+            "toM": 1794.0,
+            "lengthM": 0.0,
+            "worstBurialM": 0.12,
+            "midpoint": [
+              -2479.645881556819,
+              78.60815718997614,
+              -7008.012546678217
+            ],
+            "source": "outputs/models/context/airport-corporate-context.glb"
+          },
+          {
+            "fromM": 2028.0,
+            "toM": 2028.0,
+            "lengthM": 0.0,
+            "worstBurialM": 0.065,
+            "midpoint": [
+              -2629.7193047249366,
+              81.14084931906956,
+              -6828.603986828779
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 2037.0,
+            "toM": 2037.0,
+            "lengthM": 0.0,
+            "worstBurialM": -0.008,
+            "midpoint": [
+              -2635.283568726119,
+              81.57756825404783,
+              -6821.53016423254
+            ],
+            "source": "work/refinement/context/render/airport-corporate-context.glb"
+          }
+        ]
+      },
+      {
+        "routeId": "transitway-1090151-dedicated-busway-0-1",
+        "system": "Transitway",
+        "samples": 3250,
+        "occludedSamples": 51,
+        "strictlyBelowSurfaceSamples": 44,
+        "minClearanceM": -6.424,
+        "runs": [
+          {
+            "fromM": 267.0,
+            "toM": 273.0,
+            "lengthM": 6.0,
+            "worstBurialM": 0.526,
+            "midpoint": [
+              -2983.8548,
+              83.7708,
+              -6359.008
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 720.0,
+            "toM": 723.0,
+            "lengthM": 3.0,
+            "worstBurialM": 0.153,
+            "midpoint": [
+              -3208.9967,
+              90.8842,
+              -5985.4905
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 1026.0,
+            "toM": 1032.0,
+            "lengthM": 6.0,
+            "worstBurialM": -0.016,
+            "midpoint": [
+              -2992.22677313387,
+              84.02111602415218,
+              -5770.397382352725
+            ],
+            "source": "outputs/models/context/dixie-applewood-context.glb"
+          },
+          {
+            "fromM": 1101.0,
+            "toM": 1101.0,
+            "lengthM": 0.0,
+            "worstBurialM": 0.165,
+            "midpoint": [
+              -2936.5257711750373,
+              85.97309365180534,
+              -5724.776425660109
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 1335.0,
+            "toM": 1344.0,
+            "lengthM": 9.0,
+            "worstBurialM": 1.76,
+            "midpoint": [
+              -2750.689753126229,
+              82.90460678590486,
+              -5577.742375135997
+            ],
+            "source": "work/refinement/context/render/uptown-context.glb"
+          },
+          {
+            "fromM": 1371.0,
+            "toM": 1377.0,
+            "lengthM": 6.0,
+            "worstBurialM": 0.026,
+            "midpoint": [
+              -2721.5129,
+              80.8165,
+              -5558.276
+            ],
+            "source": "work/refinement/context/render/uptown-context.glb"
+          },
+          {
+            "fromM": 1770.0,
+            "toM": 1803.0,
+            "lengthM": 33.0,
+            "worstBurialM": 6.424,
+            "midpoint": [
+              -2756.8616,
+              83.1149,
+              -5261.3935
+            ],
+            "source": "outputs/models/supplemental/refinement-transit/source-derived-bridge-decks.glb"
+          },
+          {
+            "fromM": 4461.0,
+            "toM": 4461.0,
+            "lengthM": 0.0,
+            "worstBurialM": 1.568,
+            "midpoint": [
+              -4387.788209955557,
+              78.47117538042967,
+              -3146.915397462082
+            ],
+            "source": "work/refinement/context/render/heartland-context.glb"
+          },
+          {
+            "fromM": 4464.0,
+            "toM": 4464.0,
+            "lengthM": 0.0,
+            "worstBurialM": 0.068,
+            "midpoint": [
+              -4389.511258828769,
+              78.4231263606214,
+              -3144.4595671380325
+            ],
+            "source": "work/refinement/context/render/dixie-applewood-context.glb"
+          },
+          {
+            "fromM": 5611.74,
+            "toM": 5616.0,
+            "lengthM": 4.26,
+            "worstBurialM": 0.331,
+            "midpoint": [
+              -4965.9050252596935,
+              79.65544204007175,
+              -2172.394056253417
+            ],
+            "source": "work/refinement/context/render/cooksville-context.glb"
+          },
+          {
+            "fromM": 6621.0,
+            "toM": 6621.0,
+            "lengthM": 0.0,
+            "worstBurialM": -0.001,
+            "midpoint": [
+              -5439.194037685428,
+              89.99772384018716,
+              -1317.6868474134376
+            ],
+            "source": "work/refinement/context/render/dixie-applewood-context.glb"
+          },
+          {
+            "fromM": 6630.0,
+            "toM": 6630.0,
+            "lengthM": 0.0,
+            "worstBurialM": 0.146,
+            "midpoint": [
+              -5435.5841087040235,
+              89.42252201831062,
+              -1309.4427891811367
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 6699.0,
+            "toM": 6699.0,
+            "lengthM": 0.0,
+            "worstBurialM": 0.089,
+            "midpoint": [
+              -5394.30584456644,
+              85.58085645343115,
+              -1254.7812200119715
+            ],
+            "source": "outputs/models/context/uptown-context.glb"
+          },
+          {
+            "fromM": 6782.87,
+            "toM": 6786.0,
+            "lengthM": 3.13,
+            "worstBurialM": 0.59,
+            "midpoint": [
+              -5364.066863295191,
+              86.97378264658207,
+              -1208.2120117568784
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          }
+        ]
+      },
+      {
+        "routeId": "transitway-1090151-dedicated-busway-1-0",
+        "system": "Transitway",
+        "samples": 807,
+        "occludedSamples": 1,
+        "strictlyBelowSurfaceSamples": 1,
+        "minClearanceM": -4.695,
+        "runs": [
+          {
+            "fromM": 666.0,
+            "toM": 666.0,
+            "lengthM": 0.0,
+            "worstBurialM": 4.695,
+            "midpoint": [
+              -10265.63811627606,
+              98.19745798452104,
+              4353.331804464063
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          }
+        ]
+      },
+      {
+        "routeId": "transitway-1090151-on-road-connection-0-0",
+        "system": "Transitway",
+        "samples": 1154,
+        "occludedSamples": 8,
+        "strictlyBelowSurfaceSamples": 8,
+        "minClearanceM": -1.686,
+        "runs": [
+          {
+            "fromM": 12.0,
+            "toM": 12.0,
+            "lengthM": 0.0,
+            "worstBurialM": 0.965,
+            "midpoint": [
+              -5377.16642149526,
+              86.95538607451327,
+              -1197.6835595373107
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 15.0,
+            "toM": 18.0,
+            "lengthM": 3.0,
+            "worstBurialM": 0.498,
+            "midpoint": [
+              -5379.491178784156,
+              86.71537444808716,
+              -1195.7873782307147
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 1439.66,
+            "toM": 1440.0,
+            "lengthM": 0.34,
+            "worstBurialM": 0.65,
+            "midpoint": [
+              -6302.5717,
+              92.8139,
+              -386.7337
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 1452.0,
+            "toM": 1453.18,
+            "lengthM": 1.18,
+            "worstBurialM": 1.686,
+            "midpoint": [
+              -6310.001021193081,
+              92.6061166816879,
+              -376.8816819502489
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 1466.29,
+            "toM": 1466.29,
+            "lengthM": 0.0,
+            "worstBurialM": 0.194,
+            "midpoint": [
+              -6318.6183,
+              92.5653,
+              -365.4775
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          }
+        ]
+      },
+      {
+        "routeId": "transitway-1090151-on-road-connection-1-0",
+        "system": "Transitway",
+        "samples": 237,
+        "occludedSamples": 0,
+        "strictlyBelowSurfaceSamples": 0,
+        "minClearanceM": 0.065,
+        "runs": []
+      },
+      {
+        "routeId": "transitway-1090151-on-road-connection-2-0",
+        "system": "Transitway",
+        "samples": 2288,
+        "occludedSamples": 2,
+        "strictlyBelowSurfaceSamples": 1,
+        "minClearanceM": -0.388,
+        "runs": [
+          {
+            "fromM": 3.0,
+            "toM": 3.0,
+            "lengthM": 0.0,
+            "worstBurialM": 0.388,
+            "midpoint": [
+              -6858.364971568106,
+              100.02389834449222,
+              246.6119604608789
+            ],
+            "source": "work/refinement/context/render/uptown-context.glb"
+          },
+          {
+            "fromM": 3444.0,
+            "toM": 3444.0,
+            "lengthM": 0.0,
+            "worstBurialM": -0.042,
+            "midpoint": [
+              -8859.855568385068,
+              73.3457195300791,
+              3032.7692669372636
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          }
+        ]
+      },
+      {
+        "routeId": "hml-main-a-0",
+        "system": "HML",
+        "samples": 9939,
+        "occludedSamples": 241,
+        "strictlyBelowSurfaceSamples": 221,
+        "minClearanceM": -4.101,
+        "runs": [
+          {
+            "fromM": 3652.44,
+            "toM": 3720.0,
+            "lengthM": 67.56,
+            "worstBurialM": 0.346,
+            "midpoint": [
+              -8583.6444,
+              121.955,
+              -4326.1796
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 6905.54,
+            "toM": 6906.0,
+            "lengthM": 0.46,
+            "worstBurialM": -0.022,
+            "midpoint": [
+              -6281.4761,
+              98.151,
+              -2074.3287
+            ],
+            "source": "work/refinement/context/render/cooksville-context.glb"
+          },
+          {
+            "fromM": 7548.0,
+            "toM": 7662.0,
+            "lengthM": 114.0,
+            "worstBurialM": 0.562,
+            "midpoint": [
+              -5780.464747923881,
+              95.43167281672248,
+              -1587.1589856358917
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 10412.96,
+            "toM": 10419.0,
+            "lengthM": 6.04,
+            "worstBurialM": 1.304,
+            "midpoint": [
+              -3773.0265,
+              52.3453,
+              346.2385
+            ],
+            "source": "work/refinement/context/render/uptown-context.glb"
+          },
+          {
+            "fromM": 12967.1,
+            "toM": 12967.1,
+            "lengthM": 0.0,
+            "worstBurialM": 0.921,
+            "midpoint": [
+              -1945.4586,
+              29.5491,
+              2122.2707
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 12981.92,
+            "toM": 12987.0,
+            "lengthM": 5.08,
+            "worstBurialM": 2.562,
+            "midpoint": [
+              -1932.8458206359285,
+              30.159043086051994,
+              2133.521331606554
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 13005.0,
+            "toM": 13005.63,
+            "lengthM": 0.63,
+            "worstBurialM": 1.318,
+            "midpoint": [
+              -1917.1744069695865,
+              29.325807188665085,
+              2147.500129609233
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 14623.91,
+            "toM": 14772.22,
+            "lengthM": 148.31,
+            "worstBurialM": 4.101,
+            "midpoint": [
+              -707.3111,
+              10.9365,
+              3326.7974
+            ],
+            "source": "outputs/models/context/port-credit-context.glb"
+          }
+        ]
+      },
+      {
+        "routeId": "hml-main-b-0",
+        "system": "HML",
+        "samples": 12451,
+        "occludedSamples": 537,
+        "strictlyBelowSurfaceSamples": 358,
+        "minClearanceM": -4.16,
+        "runs": [
+          {
+            "fromM": 675.0,
+            "toM": 714.0,
+            "lengthM": 39.0,
+            "worstBurialM": 3.571,
+            "midpoint": [
+              -10707.5223,
+              133.2049,
+              -6433.1197
+            ],
+            "source": "outputs/models/supplemental/refinement-transit/hml-mapped-platforms-and-schematic-canopies.glb"
+          },
+          {
+            "fromM": 2181.0,
+            "toM": 2227.28,
+            "lengthM": 46.28,
+            "worstBurialM": 3.567,
+            "midpoint": [
+              -9636.4571,
+              130.416,
+              -5368.7268
+            ],
+            "source": "outputs/models/supplemental/refinement-transit/hml-mapped-platforms-and-schematic-canopies.glb"
+          },
+          {
+            "fromM": 3094.92,
+            "toM": 3135.06,
+            "lengthM": 40.14,
+            "worstBurialM": -0.021,
+            "midpoint": [
+              -9002.2166,
+              126.9742,
+              -4714.1706
+            ],
+            "source": "work/refinement/context/render/meadowvale-context.glb"
+          },
+          {
+            "fromM": 3407.37,
+            "toM": 3415.37,
+            "lengthM": 8.0,
+            "worstBurialM": -0.037,
+            "midpoint": [
+              -8791.819627779689,
+              128.85657311048809,
+              -4506.247472469219
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 3426.0,
+            "toM": 3435.53,
+            "lengthM": 9.53,
+            "worstBurialM": -0.038,
+            "midpoint": [
+              -8776.9624,
+              128.2229,
+              -4492.1902
+            ],
+            "source": "work/refinement/context/render/airport-corporate-context.glb"
+          },
+          {
+            "fromM": 3645.0,
+            "toM": 3645.0,
+            "lengthM": 0.0,
+            "worstBurialM": -0.044,
+            "midpoint": [
+              -8617.232691229863,
+              122.45178493944296,
+              -4350.456149704306
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 4595.25,
+            "toM": 4623.0,
+            "lengthM": 27.75,
+            "worstBurialM": -0.002,
+            "midpoint": [
+              -7929.930866314928,
+              116.49005978094708,
+              -3676.011714456095
+            ],
+            "source": "work/refinement/context/render/uptown-context.glb"
+          },
+          {
+            "fromM": 4635.0,
+            "toM": 4641.0,
+            "lengthM": 6.0,
+            "worstBurialM": -0.026,
+            "midpoint": [
+              -7909.1815,
+              116.7174,
+              -3655.3908
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 5139.0,
+            "toM": 5215.28,
+            "lengthM": 76.28,
+            "worstBurialM": 0.163,
+            "midpoint": [
+              -7523.9414,
+              113.5456,
+              -3276.9501
+            ],
+            "source": "work/refinement/context/render/heartland-context.glb"
+          },
+          {
+            "fromM": 5225.28,
+            "toM": 5229.28,
+            "lengthM": 4.0,
+            "worstBurialM": -0.001,
+            "midpoint": [
+              -7488.2857,
+              112.7262,
+              -3241.8977
+            ],
+            "source": "work/refinement/context/render/airport-corporate-context.glb"
+          },
+          {
+            "fromM": 5238.0,
+            "toM": 5244.0,
+            "lengthM": 6.0,
+            "worstBurialM": -0.002,
+            "midpoint": [
+              -7478.501338116797,
+              112.54899015424914,
+              -3232.2788713809855
+            ],
+            "source": "work/refinement/context/render/airport-corporate-context.glb"
+          },
+          {
+            "fromM": 5253.0,
+            "toM": 5259.28,
+            "lengthM": 6.28,
+            "worstBurialM": 0.001,
+            "midpoint": [
+              -7467.804629351123,
+              112.29467843307764,
+              -3221.7631487941903
+            ],
+            "source": "work/refinement/context/render/airport-corporate-context.glb"
+          },
+          {
+            "fromM": 5267.28,
+            "toM": 5275.28,
+            "lengthM": 8.0,
+            "worstBurialM": 0.007,
+            "midpoint": [
+              -7457.107906618487,
+              112.1572044529057,
+              -3211.247440414935
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 6681.4,
+            "toM": 6699.4,
+            "lengthM": 18.0,
+            "worstBurialM": -0.018,
+            "midpoint": [
+              -6442.95097579402,
+              101.54081615430361,
+              -2218.837327187926
+            ],
+            "source": "outputs/models/context/uptown-context.glb"
+          },
+          {
+            "fromM": 7554.0,
+            "toM": 7629.0,
+            "lengthM": 75.0,
+            "worstBurialM": 0.453,
+            "midpoint": [
+              -5792.522,
+              95.4915,
+              -1596.3155
+            ],
+            "source": "outputs/models/context/downtown-context.glb"
+          },
+          {
+            "fromM": 8575.25,
+            "toM": 8589.25,
+            "lengthM": 14.0,
+            "worstBurialM": 0.011,
+            "midpoint": [
+              -5098.247894446067,
+              79.17471830080723,
+              -920.217385230809
+            ],
+            "source": "work/refinement/context/render/cooksville-context.glb"
+          },
+          {
+            "fromM": 10415.3,
+            "toM": 10419.28,
+            "lengthM": 3.98,
+            "worstBurialM": 0.895,
+            "midpoint": [
+              -3777.6268,
+              52.3495,
+              351.8481
+            ],
+            "source": "work/refinement/context/render/uptown-context.glb"
+          },
+          {
+            "fromM": 10478.83,
+            "toM": 10500.0,
+            "lengthM": 21.17,
+            "worstBurialM": 0.048,
+            "midpoint": [
+              -3727.3286,
+              51.849,
+              402.7024
+            ],
+            "source": "work/refinement/context/render/cooksville-context.glb"
+          },
+          {
+            "fromM": 10649.15,
+            "toM": 10650.0,
+            "lengthM": 0.85,
+            "worstBurialM": -0.046,
+            "midpoint": [
+              -3612.4251,
+              49.1422,
+              514.3707
+            ],
+            "source": "work/refinement/context/render/erindale-context.glb"
+          },
+          {
+            "fromM": 12096.0,
+            "toM": 12096.0,
+            "lengthM": 0.0,
+            "worstBurialM": -0.047,
+            "midpoint": [
+              -2557.982060413445,
+              35.778288466909885,
+              1504.840372732617
+            ],
+            "source": "work/refinement/context/render/cooksville-context.glb"
+          },
+          {
+            "fromM": 12183.0,
+            "toM": 12192.0,
+            "lengthM": 9.0,
+            "worstBurialM": -0.04,
+            "midpoint": [
+              -2489.5754,
+              35.0334,
+              1565.1766
+            ],
+            "source": "outputs/models/context/cooksville-context.glb"
+          },
+          {
+            "fromM": 12874.79,
+            "toM": 12888.79,
+            "lengthM": 14.0,
+            "worstBurialM": -0.036,
+            "midpoint": [
+              -2007.1166014417229,
+              29.030489789700113,
+              2062.696927872488
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 12934.79,
+            "toM": 12934.79,
+            "lengthM": 0.0,
+            "worstBurialM": -0.045,
+            "midpoint": [
+              -1971.8677,
+              27.5809,
+              2101.9902
+            ],
+            "source": "work/refinement/context/render/port-credit-context.glb"
+          },
+          {
+            "fromM": 12969.0,
+            "toM": 12969.0,
+            "lengthM": 0.0,
+            "worstBurialM": 0.829,
+            "midpoint": [
+              -1947.9985726179932,
+              29.601846925186486,
+              2126.4371220125063
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          },
+          {
+            "fromM": 12983.32,
+            "toM": 12987.32,
+            "lengthM": 4.0,
+            "worstBurialM": 2.588,
+            "midpoint": [
+              -1935.8215,
+              30.1638,
+              2137.2991
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 13005.0,
+            "toM": 13008.0,
+            "lengthM": 3.0,
+            "worstBurialM": 1.977,
+            "midpoint": [
+              -1920.8964,
+              29.3682,
+              2150.6123
+            ],
+            "source": "outputs/models/context/citywide-context.glb"
+          },
+          {
+            "fromM": 13811.13,
+            "toM": 13813.13,
+            "lengthM": 2.0,
+            "worstBurialM": -0.047,
+            "midpoint": [
+              -1330.6537141972167,
+              20.86374240642167,
+              2700.3772656840893
+            ],
+            "source": "work/refinement/context/render/port-credit-context.glb"
+          },
+          {
+            "fromM": 14615.72,
+            "toM": 14773.21,
+            "lengthM": 157.49,
+            "worstBurialM": 4.16,
+            "midpoint": [
+              -714.180655466128,
+              11.231911758051488,
+              3327.1127157991764
+            ],
+            "source": "outputs/models/context/port-credit-context.glb"
+          }
+        ]
+      },
+      {
+        "routeId": "hml-city-centre-a-0",
+        "system": "HML",
+        "samples": 445,
+        "occludedSamples": 0,
+        "strictlyBelowSurfaceSamples": 0,
+        "minClearanceM": 0.143,
+        "runs": []
+      },
+      {
+        "routeId": "hml-city-centre-b-0",
+        "system": "HML",
+        "samples": 556,
+        "occludedSamples": 0,
+        "strictlyBelowSurfaceSamples": 0,
+        "minClearanceM": 0.249,
+        "runs": []
+      },
+      {
+        "routeId": "hml-wye-south-a-0",
+        "system": "HML",
+        "samples": 19,
+        "occludedSamples": 0,
+        "strictlyBelowSurfaceSamples": 0,
+        "minClearanceM": 3.578,
+        "runs": []
+      },
+      {
+        "routeId": "hml-wye-south-b-0",
+        "system": "HML",
+        "samples": 31,
+        "occludedSamples": 0,
+        "strictlyBelowSurfaceSamples": 0,
+        "minClearanceM": 3.561,
+        "runs": []
+      },
+      {
+        "routeId": "hml-depot-1173099569-0",
+        "system": "HML",
+        "samples": 231,
+        "occludedSamples": 0,
+        "strictlyBelowSurfaceSamples": 0,
+        "minClearanceM": 0.124,
+        "runs": []
+      },
+      {
+        "routeId": "hml-depot-1173099570-0",
+        "system": "HML",
+        "samples": 236,
+        "occludedSamples": 0,
+        "strictlyBelowSurfaceSamples": 0,
+        "minClearanceM": 0.126,
+        "runs": []
+      },
+      {
+        "routeId": "hml-depot-1300452970-0",
+        "system": "HML",
+        "samples": 28,
+        "occludedSamples": 1,
+        "strictlyBelowSurfaceSamples": 0,
+        "minClearanceM": 0.041,
+        "runs": [
+          {
+            "fromM": 15.0,
+            "toM": 15.0,
+            "lengthM": 0.0,
+            "worstBurialM": -0.041,
+            "midpoint": [
+              -11107.64837163141,
+              135.01911461415173,
+              -6837.780773305204
+            ],
+            "source": "work/refinement/context/render/citywide-context.glb"
+          }
+        ]
+      },
+      {
+        "routeId": "hml-depot-1300452972-0",
+        "system": "HML",
+        "samples": 36,
+        "occludedSamples": 0,
+        "strictlyBelowSurfaceSamples": 0,
+        "minClearanceM": 0.075,
+        "runs": []
+      }
+    ],
+    "contextSourceFiles": 77,
+    "triangleCandidates": 854834,
+    "unlitColourIssue": "Transitway formerly used a lighter hue for mixed traffic; HML physically coloured bed did not provide a separate continuous service guide.",
+    "totalSamples": 60265,
+    "occludedSamples": 2323
+  },
+  "after": {
+    "method": "Direct check of delivered guide-strip geometry at all guide vertices plus at most 1 m spacing along the centre and both edges; compared with highest actual context triangle across both render and interactive source surfaces. This is stricter than the requested 3 m route sample spacing.",
+    "sourceFiles": 77,
+    "sourceTriangleCandidates": 854834,
+    "horizontalReroutes": 0,
+    "physicalMeshChecks": 810,
+    "physicalMeshesUnchangedAgainstOriginalSources": true,
+    "citywideFramingExpandedFromOriginalFullCitySource": true,
+    "routes": [
+      {
+        "routeId": "go-MI-0",
+        "system": "GO",
+        "guideColour": "#25825e",
+        "horizontalHausdorffM": 6.929896236015375e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 101160,
+        "finiteContextSamples": 101146,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 0.19248
+      },
+      {
+        "routeId": "go-LW-0",
+        "system": "GO",
+        "guideColour": "#25825e",
+        "horizontalHausdorffM": 6.877443855973229e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 57057,
+        "finiteContextSamples": 57051,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 0.62932
+      },
+      {
+        "routeId": "go-KI-0",
+        "system": "GO",
+        "guideColour": "#25825e",
+        "horizontalHausdorffM": 5.179731642323131e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 21213,
+        "finiteContextSamples": 21207,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 0.59142
+      },
+      {
+        "routeId": "transitway-1090150-dedicated-busway-0-0",
+        "system": "Transitway",
+        "guideColour": "#1175b6",
+        "horizontalHausdorffM": 6.923758632512641e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 7644,
+        "finiteContextSamples": 7642,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 0.58027
+      },
+      {
+        "routeId": "transitway-1090150-dedicated-busway-1-0",
+        "system": "Transitway",
+        "guideColour": "#1175b6",
+        "horizontalHausdorffM": 6.822366563173084e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 30111,
+        "finiteContextSamples": 30097,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 0.37039
+      },
+      {
+        "routeId": "transitway-1090150-dedicated-busway-1-1",
+        "system": "Transitway",
+        "guideColour": "#1175b6",
+        "horizontalHausdorffM": 6.741422527106273e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 9888,
+        "finiteContextSamples": 9878,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 0.41969
+      },
+      {
+        "routeId": "transitway-1090150-on-road-connection-0-0",
+        "system": "Transitway",
+        "guideColour": "#1175b6",
+        "horizontalHausdorffM": 6.751048585123497e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 33123,
+        "finiteContextSamples": 33042,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 0.22417
+      },
+      {
+        "routeId": "transitway-1090151-dedicated-busway-0-0",
+        "system": "Transitway",
+        "guideColour": "#1175b6",
+        "horizontalHausdorffM": 6.963896164022944e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 9906,
+        "finiteContextSamples": 9894,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 0.44271
+      },
+      {
+        "routeId": "transitway-1090151-dedicated-busway-0-1",
+        "system": "Transitway",
+        "guideColour": "#1175b6",
+        "horizontalHausdorffM": 6.966269300554996e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 30111,
+        "finiteContextSamples": 30098,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 0.40976
+      },
+      {
+        "routeId": "transitway-1090151-dedicated-busway-1-0",
+        "system": "Transitway",
+        "guideColour": "#1175b6",
+        "horizontalHausdorffM": 7.027404553195377e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 7611,
+        "finiteContextSamples": 7610,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 0.61512
+      },
+      {
+        "routeId": "transitway-1090151-on-road-connection-0-0",
+        "system": "Transitway",
+        "guideColour": "#1175b6",
+        "horizontalHausdorffM": 6.845602243171952e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 10830,
+        "finiteContextSamples": 10799,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 0.31137
+      },
+      {
+        "routeId": "transitway-1090151-on-road-connection-1-0",
+        "system": "Transitway",
+        "guideColour": "#1175b6",
+        "horizontalHausdorffM": 6.359548032831971e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 2112,
+        "finiteContextSamples": 2093,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 0.56492
+      },
+      {
+        "routeId": "transitway-1090151-on-road-connection-2-0",
+        "system": "Transitway",
+        "guideColour": "#1175b6",
+        "horizontalHausdorffM": 6.963567449607171e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 21555,
+        "finiteContextSamples": 21525,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 0.22066
+      },
+      {
+        "routeId": "hml-main-a-0",
+        "system": "HML",
+        "guideColour": "#d6ac39",
+        "horizontalHausdorffM": 7.007546960825502e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 74133,
+        "finiteContextSamples": 73728,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 0.58246
+      },
+      {
+        "routeId": "hml-main-b-0",
+        "system": "HML",
+        "guideColour": "#d6ac39",
+        "horizontalHausdorffM": 6.9155391375088534e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 81672,
+        "finiteContextSamples": 81344,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 0.45407
+      },
+      {
+        "routeId": "hml-city-centre-a-0",
+        "system": "HML",
+        "guideColour": "#d6ac39",
+        "horizontalHausdorffM": 6.862612057893991e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 3291,
+        "finiteContextSamples": 3286,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 0.74401
+      },
+      {
+        "routeId": "hml-city-centre-b-0",
+        "system": "HML",
+        "guideColour": "#d6ac39",
+        "horizontalHausdorffM": 6.094939385393473e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 3606,
+        "finiteContextSamples": 3589,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 0.73928
+      },
+      {
+        "routeId": "hml-wye-south-a-0",
+        "system": "HML",
+        "guideColour": "#d6ac39",
+        "horizontalHausdorffM": 5.171771713438104e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 135,
+        "finiteContextSamples": 135,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 3.53739
+      },
+      {
+        "routeId": "hml-wye-south-b-0",
+        "system": "HML",
+        "guideColour": "#d6ac39",
+        "horizontalHausdorffM": 3.7049040073065134e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 174,
+        "finiteContextSamples": 174,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 3.51525
+      },
+      {
+        "routeId": "hml-depot-1173099569-0",
+        "system": "HML",
+        "guideColour": "#d6ac39",
+        "horizontalHausdorffM": 6.004754203684427e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 1689,
+        "finiteContextSamples": 1687,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 0.72769
+      },
+      {
+        "routeId": "hml-depot-1173099570-0",
+        "system": "HML",
+        "guideColour": "#d6ac39",
+        "horizontalHausdorffM": 6.396365242219662e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 1716,
+        "finiteContextSamples": 1710,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 0.72922
+      },
+      {
+        "routeId": "hml-depot-1300452970-0",
+        "system": "HML",
+        "guideColour": "#d6ac39",
+        "horizontalHausdorffM": 5.595268633057557e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 198,
+        "finiteContextSamples": 198,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 0.67372
+      },
+      {
+        "routeId": "hml-depot-1300452972-0",
+        "system": "HML",
+        "guideColour": "#d6ac39",
+        "horizontalHausdorffM": 5.222558089294743e-06,
+        "physicalPointsByteEquivalentInJSON": true,
+        "oneMetreSamplesIncludingBothEdges": 246,
+        "finiteContextSamples": 246,
+        "remainingOccludedOrContactSamples": 0,
+        "minimumClearanceM": 0.71683
+      }
+    ],
+    "files": [
+      {
+        "file": "outputs/models/supplemental/transit-revamp/go-citywide.glb",
+        "guideMeshes": 3,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "c732b48a4b391f30439cffc397f2ea685e9360b8961730d1a267a02de303b722"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/transitway-citywide.glb",
+        "guideMeshes": 10,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "6f2a021f90be4ade53d8662db07f1582df8b3d7be0cf7b80f7cd8c726aeb8587"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/hml-citywide.glb",
+        "guideMeshes": 10,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "0469c521cf69075bfb67df36aa85cbc75a5a661dbca5e230c9d1e1a79cdcfedf"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/citywide/go.glb",
+        "guideMeshes": 3,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "c732b48a4b391f30439cffc397f2ea685e9360b8961730d1a267a02de303b722"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/citywide/transitway.glb",
+        "guideMeshes": 10,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "6f2a021f90be4ade53d8662db07f1582df8b3d7be0cf7b80f7cd8c726aeb8587"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/citywide/hml.glb",
+        "guideMeshes": 10,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "0469c521cf69075bfb67df36aa85cbc75a5a661dbca5e230c9d1e1a79cdcfedf"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/downtown/go.glb",
+        "guideMeshes": 1,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "ce2589036dddaf60ae6880cb5859b33b91fac91c1710a2ced0ef542b650e714f"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/downtown/transitway.glb",
+        "guideMeshes": 6,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "a485047a067750365b6705c182b862c3e8b4d1a41856d79b397901f23767d0a4"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/downtown/hml.glb",
+        "guideMeshes": 6,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "3232d3abb64fc409e0e8b7fa6ead9627b968c6bc9ee826ce0ba96a4c88cda68c"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/port-credit/go.glb",
+        "guideMeshes": 1,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "f932399cf2853c696e30980646a416545f14239093995c58dff9400945b7bec5"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/port-credit/hml.glb",
+        "guideMeshes": 2,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "531f20ded3082a4955ef0ca1563608325c2c6d958347f2d0ff6f9bd72b776c87"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/lakeview/go.glb",
+        "guideMeshes": 1,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "fa80fa48ee814c9679c271eb84da2aacba66230d882fde9608bf166e12ad6fab"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/clarkson/go.glb",
+        "guideMeshes": 1,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "202802fec2285e23264dc9f31b0fb93d49a2502c4bd0217cfe52c545c01cadc6"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/cooksville/go.glb",
+        "guideMeshes": 1,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "c6a351563e13aec60f5b240806b204de84dd97237c9545b12edf02b3023852c2"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/cooksville/hml.glb",
+        "guideMeshes": 2,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "6ff40638797e265e610944709e607f8911d7bc89eb295a498b1db4ce18098ebf"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/uptown/transitway.glb",
+        "guideMeshes": 4,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "8056ce32d99a204e154919a3e4011b1365047eb7a7e612cc6a2f1f12b0d470ce"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/uptown/hml.glb",
+        "guideMeshes": 6,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "56d65a0c49398240b01686b23ebdd6848ef4fc743fbb88f324d4f3a97887dbef"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/erin-mills/go.glb",
+        "guideMeshes": 1,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "31b7b176fed7bbee9167b53754e909ced7031b755470267a06bf281484255941"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/erin-mills/transitway.glb",
+        "guideMeshes": 4,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "683d72872d8a39e1d8dc9b4e10efaa703f9d907b9259bd65300be27f98159a76"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/streetsville/go.glb",
+        "guideMeshes": 1,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "1712a2e4c24ae5de0a64ac6246f57671a98e6bc92a3eeee08c887738075416c7"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/meadowvale/go.glb",
+        "guideMeshes": 1,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "cf09f37e58692474fb7787837c7a235011230fa13732ff251accfdd2e5debcc4"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/malton/go.glb",
+        "guideMeshes": 1,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "c2d7d73d54408e31ef2cfa50979096aa7a609a00cb45a0f405f7a12df218d597"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/dixie-applewood/go.glb",
+        "guideMeshes": 1,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "caedb866fe0ed2f429b2726159bb1a44972b97df0e120c3f4455f818e16848f4"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/dixie-applewood/transitway.glb",
+        "guideMeshes": 2,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "91e55e2a2bd0c4fbba6b470b1f32d35a187c61e9fd052f402fa44a1f9617d0ec"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/erindale/go.glb",
+        "guideMeshes": 1,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "41cb7257511f61604b8077aff1bf09ed0bba6f751b9afa5b953651997ed29778"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/erindale/transitway.glb",
+        "guideMeshes": 2,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "1bd13a1b1d70b07830746a850e20e58489bbe7442b11b5a41d8d6616c94d7f1b"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/airport-corporate/transitway.glb",
+        "guideMeshes": 4,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "63ad18f9d3c5cd9e7a503823d06543c31a53f9be06f4d87d6dbd9064cc7a24ec"
+      },
+      {
+        "file": "outputs/models/supplemental/transit-revamp/districts/heartland/hml.glb",
+        "guideMeshes": 2,
+        "allGuidesUnlitUniformSystemColour": true,
+        "sha256": "56fab6c41eaf4e0808e5a305384242bf8b09b40bf7c8511b1f69de2d205904e8"
+      }
+    ],
+    "remainingOccludedOrContactSamples": 0,
+    "sampledGuidePoints": 509181,
+    "failures": [],
+    "caveat": "This geometric test covers context surfaces. Buildings and symbolic tree crowns remain ordinary scene geometry; the dedicated cartographic render pass and browser depth override retain guide legibility across them without changing engineering positions."
+  },
+  "guideProfiles": [
+    {
+      "routeId": "go-MI-0",
+      "system": "GO",
+      "samplesAtMost3m": 10642,
+      "maxGuideLiftAbovePhysicalPointsM": 7.735,
+      "medianGuideLiftM": 0.22,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#25825e"
+    },
+    {
+      "routeId": "go-LW-0",
+      "system": "GO",
+      "samplesAtMost3m": 5992,
+      "maxGuideLiftAbovePhysicalPointsM": 1.272,
+      "medianGuideLiftM": 0.22,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#25825e"
+    },
+    {
+      "routeId": "go-KI-0",
+      "system": "GO",
+      "samplesAtMost3m": 2227,
+      "maxGuideLiftAbovePhysicalPointsM": 7.779,
+      "medianGuideLiftM": 0.22,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#25825e"
+    },
+    {
+      "routeId": "transitway-1090150-dedicated-busway-0-0",
+      "system": "Transitway",
+      "samplesAtMost3m": 811,
+      "maxGuideLiftAbovePhysicalPointsM": 5.471,
+      "medianGuideLiftM": 0.506,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#1175b6"
+    },
+    {
+      "routeId": "transitway-1090150-dedicated-busway-1-0",
+      "system": "Transitway",
+      "samplesAtMost3m": 3250,
+      "maxGuideLiftAbovePhysicalPointsM": 7.343,
+      "medianGuideLiftM": 0.528,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#1175b6"
+    },
+    {
+      "routeId": "transitway-1090150-dedicated-busway-1-1",
+      "system": "Transitway",
+      "samplesAtMost3m": 1052,
+      "maxGuideLiftAbovePhysicalPointsM": 1.827,
+      "medianGuideLiftM": 0.528,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#1175b6"
+    },
+    {
+      "routeId": "transitway-1090150-on-road-connection-0-0",
+      "system": "Transitway",
+      "samplesAtMost3m": 3529,
+      "maxGuideLiftAbovePhysicalPointsM": 2.92,
+      "medianGuideLiftM": 0.492,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#1175b6"
+    },
+    {
+      "routeId": "transitway-1090151-dedicated-busway-0-0",
+      "system": "Transitway",
+      "samplesAtMost3m": 1054,
+      "maxGuideLiftAbovePhysicalPointsM": 1.909,
+      "medianGuideLiftM": 0.526,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#1175b6"
+    },
+    {
+      "routeId": "transitway-1090151-dedicated-busway-0-1",
+      "system": "Transitway",
+      "samplesAtMost3m": 3250,
+      "maxGuideLiftAbovePhysicalPointsM": 7.343,
+      "medianGuideLiftM": 0.53,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#1175b6"
+    },
+    {
+      "routeId": "transitway-1090151-dedicated-busway-1-0",
+      "system": "Transitway",
+      "samplesAtMost3m": 807,
+      "maxGuideLiftAbovePhysicalPointsM": 5.463,
+      "medianGuideLiftM": 0.505,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#1175b6"
+    },
+    {
+      "routeId": "transitway-1090151-on-road-connection-0-0",
+      "system": "Transitway",
+      "samplesAtMost3m": 1154,
+      "maxGuideLiftAbovePhysicalPointsM": 2.436,
+      "medianGuideLiftM": 0.482,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#1175b6"
+    },
+    {
+      "routeId": "transitway-1090151-on-road-connection-1-0",
+      "system": "Transitway",
+      "samplesAtMost3m": 237,
+      "maxGuideLiftAbovePhysicalPointsM": 1.657,
+      "medianGuideLiftM": 0.531,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#1175b6"
+    },
+    {
+      "routeId": "transitway-1090151-on-road-connection-2-0",
+      "system": "Transitway",
+      "samplesAtMost3m": 2288,
+      "maxGuideLiftAbovePhysicalPointsM": 1.138,
+      "medianGuideLiftM": 0.493,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#1175b6"
+    },
+    {
+      "routeId": "hml-main-a-0",
+      "system": "HML",
+      "samplesAtMost3m": 9939,
+      "maxGuideLiftAbovePhysicalPointsM": 4.869,
+      "medianGuideLiftM": 0.6,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#d6ac39"
+    },
+    {
+      "routeId": "hml-main-b-0",
+      "system": "HML",
+      "samplesAtMost3m": 12451,
+      "maxGuideLiftAbovePhysicalPointsM": 4.934,
+      "medianGuideLiftM": 0.571,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#d6ac39"
+    },
+    {
+      "routeId": "hml-city-centre-a-0",
+      "system": "HML",
+      "samplesAtMost3m": 445,
+      "maxGuideLiftAbovePhysicalPointsM": 0.661,
+      "medianGuideLiftM": 0.22,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#d6ac39"
+    },
+    {
+      "routeId": "hml-city-centre-b-0",
+      "system": "HML",
+      "samplesAtMost3m": 556,
+      "maxGuideLiftAbovePhysicalPointsM": 0.59,
+      "medianGuideLiftM": 0.22,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#d6ac39"
+    },
+    {
+      "routeId": "hml-wye-south-a-0",
+      "system": "HML",
+      "samplesAtMost3m": 19,
+      "maxGuideLiftAbovePhysicalPointsM": 0.22,
+      "medianGuideLiftM": 0.22,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#d6ac39"
+    },
+    {
+      "routeId": "hml-wye-south-b-0",
+      "system": "HML",
+      "samplesAtMost3m": 31,
+      "maxGuideLiftAbovePhysicalPointsM": 0.22,
+      "medianGuideLiftM": 0.22,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#d6ac39"
+    },
+    {
+      "routeId": "hml-depot-1173099569-0",
+      "system": "HML",
+      "samplesAtMost3m": 231,
+      "maxGuideLiftAbovePhysicalPointsM": 0.674,
+      "medianGuideLiftM": 0.604,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#d6ac39"
+    },
+    {
+      "routeId": "hml-depot-1173099570-0",
+      "system": "HML",
+      "samplesAtMost3m": 236,
+      "maxGuideLiftAbovePhysicalPointsM": 0.647,
+      "medianGuideLiftM": 0.604,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#d6ac39"
+    },
+    {
+      "routeId": "hml-depot-1300452970-0",
+      "system": "HML",
+      "samplesAtMost3m": 28,
+      "maxGuideLiftAbovePhysicalPointsM": 0.712,
+      "medianGuideLiftM": 0.57,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#d6ac39"
+    },
+    {
+      "routeId": "hml-depot-1300452972-0",
+      "system": "HML",
+      "samplesAtMost3m": 36,
+      "maxGuideLiftAbovePhysicalPointsM": 0.68,
+      "medianGuideLiftM": 0.59,
+      "unchangedHorizontalPath": true,
+      "semanticColour": "#d6ac39"
+    }
+  ],
+  "rawAssetBytes": 41219856,
+  "rawAssetCount": 28,
+  "sourceFiles": [
+    {
+      "file": "work/refinement/context/render/uptown-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 35249,
+      "bytes": 43855116,
+      "sha256": "6697ad8cda41581f2b5a3f8b764762d12cc6dda9544cb6aeae2e11b0ac232c36"
+    },
+    {
+      "file": "work/refinement/context/render/cooksville-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 26169,
+      "bytes": 38374456,
+      "sha256": "8c0e6f02e1c2889a02450d9c34f76a28486c9a79720a1d886362a3d3090453e4"
+    },
+    {
+      "file": "work/refinement/context/render/lakeview-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 11857,
+      "bytes": 22333644,
+      "sha256": "6156d0471f43a832bfbb2b38fafcd79da0793c08139b10a890ca8ac04b4e2e75"
+    },
+    {
+      "file": "work/refinement/context/render/streetsville-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 13238,
+      "bytes": 47850744,
+      "sha256": "52d674d400151c6288b3e7c72354863697a24a0dad40b7f8c645d8243d41dfc0"
+    },
+    {
+      "file": "work/refinement/context/render/erin-mills-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 19434,
+      "bytes": 63677944,
+      "sha256": "ac822a8b299419381eb315bf8cf7daa16aafd1c2c8780ba91f6a050d16b07915"
+    },
+    {
+      "file": "work/refinement/context/render/heartland-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 30002,
+      "bytes": 51821880,
+      "sha256": "267c8a1be11a4f4e8f3951187e24b6a1f65eec9134ea6c8656d61c7ce81be2a9"
+    },
+    {
+      "file": "work/refinement/context/render/dixie-applewood-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 28014,
+      "bytes": 42037636,
+      "sha256": "c810ef7f580ad4f4c792b83956be22a89df56bb10d2defd79efe698c5b584f78"
+    },
+    {
+      "file": "work/refinement/context/render/erindale-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 25953,
+      "bytes": 70161952,
+      "sha256": "94364257d125907efd5beb1ea8e7bce5b2cc28e93f8e804198b8e79219998611"
+    },
+    {
+      "file": "work/refinement/context/render/downtown-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 29950,
+      "bytes": 36107020,
+      "sha256": "641d569036d255233f7da8b4106da7af9fed7e189b7969540ff7c1902c96ae7b"
+    },
+    {
+      "file": "work/refinement/context/render/citywide-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 87413,
+      "bytes": 194486760,
+      "sha256": "78a47e4deaf43a672cacab24ea8f819e3aeb90695426751e1df5583e0eaa95ce"
+    },
+    {
+      "file": "work/refinement/context/render/clarkson-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 5260,
+      "bytes": 36513696,
+      "sha256": "36062e4d23c4e7c52600dc2d76efc9641ca5931b5ef52bce407a5584987b1653"
+    },
+    {
+      "file": "work/refinement/context/render/malton-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 2582,
+      "bytes": 14806648,
+      "sha256": "ef83719131b29ddacb567270695cf5704c64b8f7f4ade8c8d9dd8b0136013ae8"
+    },
+    {
+      "file": "work/refinement/context/render/port-credit-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 12701,
+      "bytes": 28867844,
+      "sha256": "1d5df0be2deefc2c550e10712faac08e186138e8550ed38a6c0a2e1fccb06774"
+    },
+    {
+      "file": "work/refinement/context/render/meadowvale-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 18728,
+      "bytes": 63329400,
+      "sha256": "a6f05f81c1aad42d2485ccb109bdebd460d5e79dedfa963da5df01e83a5284ed"
+    },
+    {
+      "file": "work/refinement/context/render/airport-corporate-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 25315,
+      "bytes": 48929792,
+      "sha256": "6976423048f0628f854f4d9c5153042f1c44f3b0cae2edeecee9a470e2991add"
+    },
+    {
+      "file": "outputs/models/context/uptown-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 13215,
+      "bytes": 16147624,
+      "sha256": "c4f25e06618bb2009ac9c6d8178735b649db55a8d56d21bf5d2ba3b460a592ed"
+    },
+    {
+      "file": "outputs/models/context/cooksville-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 11363,
+      "bytes": 14381520,
+      "sha256": "679881afa04960e8144abb8b5faa1d55c53320f33f3650dfda4d868dcb162ac6"
+    },
+    {
+      "file": "outputs/models/context/lakeview-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 3470,
+      "bytes": 8333952,
+      "sha256": "56c9eeb648154017e447d23b0cbad5583eef96b9ca19a68a2efb1cfbc2ebf839"
+    },
+    {
+      "file": "outputs/models/context/streetsville-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 3466,
+      "bytes": 16253908,
+      "sha256": "952e3112a46b76f3fd0d8d566baafc57a7f66f730fabd211fccc4262bcb073f2"
+    },
+    {
+      "file": "outputs/models/context/erin-mills-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 9136,
+      "bytes": 26868240,
+      "sha256": "9470e38d46d0711deb7e0a3b41da7dd0bebfaed55319eb9f10d842f1c8145c22"
+    },
+    {
+      "file": "outputs/models/context/heartland-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 9935,
+      "bytes": 18115052,
+      "sha256": "65773cf276a925d50c30e43e797d0859ba4c55718c595d190d544f36842ba957"
+    },
+    {
+      "file": "outputs/models/context/dixie-applewood-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 6164,
+      "bytes": 19013660,
+      "sha256": "e056b121a83dd68c098c8bcb86fe11ee08fe551b0b970a7211d02c85bd9a8fb0"
+    },
+    {
+      "file": "outputs/models/context/erindale-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 5667,
+      "bytes": 26074488,
+      "sha256": "6a1bb64fefdcd51e99c35027b30a370c49cb8cbd450d398c9c3f99b2c12c019e"
+    },
+    {
+      "file": "outputs/models/context/downtown-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 13957,
+      "bytes": 12227908,
+      "sha256": "85280df0316c8eacc62e289dce158718fa32442d2c02555733f5185e6a7f05ca"
+    },
+    {
+      "file": "outputs/models/context/citywide-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 86041,
+      "bytes": 192399840,
+      "sha256": "caf7d1fc0739cd2f904ffdf71dd584e3379c0afb902fccfb57f4d6603c16dbcc"
+    },
+    {
+      "file": "outputs/models/context/clarkson-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 3350,
+      "bytes": 17925724,
+      "sha256": "e4f3571a01e5ce1f94664b53d82fe1f986a15c9863e5f8d26ef771eb053dfe99"
+    },
+    {
+      "file": "outputs/models/context/malton-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 2629,
+      "bytes": 10404244,
+      "sha256": "3148ab4d2b9249f19c408cde8c83ffcc2784af59fe0a237d39192c0cf2f70f02"
+    },
+    {
+      "file": "outputs/models/context/port-credit-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 5321,
+      "bytes": 10953260,
+      "sha256": "e4ccb59dcffe8f7e3c12f4f7c7fd252b978e5ffc9d27d751643ec8746b6e3de9"
+    },
+    {
+      "file": "outputs/models/context/meadowvale-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 4239,
+      "bytes": 29947128,
+      "sha256": "299ce088d412bf4c8b3a7933234428d96c68c909671e18b78950b3b20fbd24dc"
+    },
+    {
+      "file": "outputs/models/context/airport-corporate-context.glb",
+      "role": "Ground, road, park, water and wooded-area display surfaces",
+      "trianglesNearRoutes": 6481,
+      "bytes": 17295324,
+      "sha256": "3cd5c5acc5e37fa5049a88654fc1b1ee1c61ac600ffcfec4c5f2b2c385652c08"
+    },
+    {
+      "file": "outputs/models/supplemental/revamp-landscape/meadowvale-mapped-surfaces.glb",
+      "role": "Mapped landscape display surface",
+      "trianglesNearRoutes": 0,
+      "bytes": 723860,
+      "sha256": "384fe89895e19d38e6b59c11f7c9ae9a63cad32a8fc1c9c311cf58d40f859bd9"
+    },
+    {
+      "file": "outputs/models/supplemental/revamp-landscape/citywide-mapped-surfaces.glb",
+      "role": "Mapped landscape display surface",
+      "trianglesNearRoutes": 10,
+      "bytes": 5705744,
+      "sha256": "cbaa4201acd32bf917a4d99bd4e113f5eb7343f96945f502c61c72824ceb011f"
+    },
+    {
+      "file": "outputs/models/supplemental/revamp-landscape/dixie-applewood-mapped-surfaces.glb",
+      "role": "Mapped landscape display surface",
+      "trianglesNearRoutes": 0,
+      "bytes": 531072,
+      "sha256": "be576da4fa9d6606ffba7d6629549798ca516a9554a20aab7c841f70a6f3a175"
+    },
+    {
+      "file": "outputs/models/supplemental/revamp-landscape/downtown-mapped-surfaces.glb",
+      "role": "Mapped landscape display surface",
+      "trianglesNearRoutes": 10,
+      "bytes": 1168272,
+      "sha256": "0e9667f8fa3d20f15b374ba429797aba541149b92f3e9e2e99dc511f6fd77a5b"
+    },
+    {
+      "file": "outputs/models/supplemental/revamp-landscape/erin-mills-mapped-surfaces.glb",
+      "role": "Mapped landscape display surface",
+      "trianglesNearRoutes": 0,
+      "bytes": 1116136,
+      "sha256": "eafbfceec0d4931ad919348a7a6d39e45bca0b0baaff1fbb11f0a85117a14ef0"
+    },
+    {
+      "file": "outputs/models/supplemental/revamp-landscape/airport-corporate-mapped-surfaces.glb",
+      "role": "Mapped landscape display surface",
+      "trianglesNearRoutes": 0,
+      "bytes": 149564,
+      "sha256": "7ee3980fdb0f1a61d7c633c9611be7da12c9ad7bba9ba73210dcfaa6271d75a5"
+    },
+    {
+      "file": "outputs/models/supplemental/revamp-landscape/cooksville-mapped-surfaces.glb",
+      "role": "Mapped landscape display surface",
+      "trianglesNearRoutes": 0,
+      "bytes": 323564,
+      "sha256": "3d60e29e7b6cb1374d9afe0b78d4cb51de54d14dc8c8280187d7e25d08f20817"
+    },
+    {
+      "file": "outputs/models/supplemental/revamp-landscape/streetsville-mapped-surfaces.glb",
+      "role": "Mapped landscape display surface",
+      "trianglesNearRoutes": 0,
+      "bytes": 478288,
+      "sha256": "7c5d9af87f92e80b443aa792cdaa77f615097bbeef0d5da590439050ff15dee8"
+    },
+    {
+      "file": "outputs/models/supplemental/revamp-landscape/clarkson-mapped-surfaces.glb",
+      "role": "Mapped landscape display surface",
+      "trianglesNearRoutes": 0,
+      "bytes": 286760,
+      "sha256": "eda44713f6ee463e34b9582265add46a52a1e5e9ef52fcc52b55649154f4405c"
+    },
+    {
+      "file": "outputs/models/supplemental/revamp-landscape/malton-mapped-surfaces.glb",
+      "role": "Mapped landscape display surface",
+      "trianglesNearRoutes": 0,
+      "bytes": 285560,
+      "sha256": "ebd4a8de5d7e9b2c8b9fbabdd5aeda24be88cf9f70f94a5c13b197ba8b4b8d54"
+    },
+    {
+      "file": "outputs/models/supplemental/revamp-landscape/uptown-mapped-surfaces.glb",
+      "role": "Mapped landscape display surface",
+      "trianglesNearRoutes": 0,
+      "bytes": 552264,
+      "sha256": "3b3cce05f4994037c47c6a04ecf4e0845ce7bfc9280b7ca269a093714e0f5e35"
+    },
+    {
+      "file": "outputs/models/supplemental/revamp-landscape/heartland-mapped-surfaces.glb",
+      "role": "Mapped landscape display surface",
+      "trianglesNearRoutes": 0,
+      "bytes": 520376,
+      "sha256": "598e9fd9f80ff2f41be59107329595ce7d9a22d9684f2f30832b8595ed86aab9"
+    },
+    {
+      "file": "outputs/models/supplemental/revamp-landscape/port-credit-mapped-surfaces.glb",
+      "role": "Mapped landscape display surface",
+      "trianglesNearRoutes": 0,
+      "bytes": 36636,
+      "sha256": "ab6e8bd466baf22a918b4bb65e877aa3e42d25bfe8a8efb728308923439e6be5"
+    },
+    {
+      "file": "outputs/models/supplemental/revamp-landscape/lakeview-mapped-surfaces.glb",
+      "role": "Mapped landscape display surface",
+      "trianglesNearRoutes": 0,
+      "bytes": 123168,
+      "sha256": "3e92beb8f05d85c23eb4ff81988fd357281c26648d09b08563316d16f73218be"
+    },
+    {
+      "file": "outputs/models/supplemental/revamp-landscape/erindale-mapped-surfaces.glb",
+      "role": "Mapped landscape display surface",
+      "trianglesNearRoutes": 0,
+      "bytes": 391736,
+      "sha256": "ccf4f24936ea280973c42dfb409bd78cb16c3ce85520fc75ec539a211bd5e6cb"
+    },
+    {
+      "file": "outputs/models/supplemental/refinement-transit/source-derived-bridge-decks.glb",
+      "role": "Separately reconstructed existing bridge spans",
+      "trianglesNearRoutes": 33,
+      "bytes": 35540,
+      "sha256": "f41f2e531afaa73ad8560d03d714f965496ff45b78421e1ee0dfc069792eb4b7"
+    },
+    {
+      "file": "outputs/models/supplemental/refinement-transit/hml-mapped-platforms-and-schematic-canopies.glb",
+      "role": "Mapped station footprint and schematic canopy display",
+      "trianglesNearRoutes": 118,
+      "bytes": 10472,
+      "sha256": "820f1b3de9f9890ba7b0f2cb47d54ca0eaf6444bb46293083f1db3c41dc574a1"
+    },
+    {
+      "file": "work/refinement/context/render/malton-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 54,
+      "bytes": 4827780,
+      "sha256": "6e10136301ff6c926cf22ed638efdb767e9fe72e2963c990e798871a968ee64a"
+    },
+    {
+      "file": "work/refinement/context/render/clarkson-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 15,
+      "bytes": 5251736,
+      "sha256": "78b607ada239e4bf8e560c775cb209d71a91391a6d0bebacaa1117c3551ddd5e"
+    },
+    {
+      "file": "work/refinement/context/render/citywide-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 28671,
+      "bytes": 53543344,
+      "sha256": "01a59aefcc06d353fdbc54ba82bac7b32305825e3652812afec30e672fd05b53"
+    },
+    {
+      "file": "work/refinement/context/render/airport-corporate-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 5730,
+      "bytes": 20118308,
+      "sha256": "f25f00c91d01c418697b6379b07941dcb55bebfe0c9246032c7489e72938d16d"
+    },
+    {
+      "file": "work/refinement/context/render/meadowvale-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 7567,
+      "bytes": 17551964,
+      "sha256": "8ecd1aa398475de5dfb5c92933e57b0ab90742bb62c8acf56fe4a7c09305d9fe"
+    },
+    {
+      "file": "work/refinement/context/render/port-credit-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 46,
+      "bytes": 3159268,
+      "sha256": "af60135407d25314a5a5c2a2b37e49c5d9068d5fc64a8e8cdb83048849943607"
+    },
+    {
+      "file": "work/refinement/context/render/cooksville-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 3739,
+      "bytes": 8343348,
+      "sha256": "44a1aaf14be1291a543c724525a84a42841acbd7a23341886aab2d24f542d74e"
+    },
+    {
+      "file": "work/refinement/context/render/uptown-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 13886,
+      "bytes": 16268300,
+      "sha256": "c9b1075a5eb93356b09ae0b8aaaf82ef01d498ec1003e63030499a9b513dff48"
+    },
+    {
+      "file": "work/refinement/context/render/dixie-applewood-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 6730,
+      "bytes": 12750376,
+      "sha256": "3abc78c4c97653c428682f0deeed114be4465bc888cceb575cd2c11f09d2d5ad"
+    },
+    {
+      "file": "work/refinement/context/render/erindale-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 18669,
+      "bytes": 13453572,
+      "sha256": "3dff77acabf732965c03571c973ab8823b7f800a69d89c2c6f3fe99fd4427433"
+    },
+    {
+      "file": "work/refinement/context/render/heartland-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 11164,
+      "bytes": 19174656,
+      "sha256": "ae2ef44d7295a0224344c5370da6fa894761769ca2052eae2458cce0f7d50e9e"
+    },
+    {
+      "file": "work/refinement/context/render/downtown-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 17278,
+      "bytes": 9662140,
+      "sha256": "c365fb8cc4f0b903fa028a2c9dc30ddf325c58cac6c1b3d6d93273da0934e615"
+    },
+    {
+      "file": "work/refinement/context/render/erin-mills-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 21123,
+      "bytes": 13972156,
+      "sha256": "41ce8665181048a57a7db35564241d4ba37f9ad847954d487eb5bd5e74d05db0"
+    },
+    {
+      "file": "work/refinement/context/render/streetsville-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 14344,
+      "bytes": 11517960,
+      "sha256": "402fa82d6f88554c83fb0da174d7f697ef52a335774a43479e713fad74e9e740"
+    },
+    {
+      "file": "work/refinement/context/render/lakeview-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 166,
+      "bytes": 3723400,
+      "sha256": "62254755d850fddd3e541352d6b6e55bdae8729900ff969c1ea84d3e5a218e0b"
+    },
+    {
+      "file": "outputs/models/context/malton-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 54,
+      "bytes": 4827780,
+      "sha256": "6e10136301ff6c926cf22ed638efdb767e9fe72e2963c990e798871a968ee64a"
+    },
+    {
+      "file": "outputs/models/context/clarkson-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 15,
+      "bytes": 5251736,
+      "sha256": "78b607ada239e4bf8e560c775cb209d71a91391a6d0bebacaa1117c3551ddd5e"
+    },
+    {
+      "file": "outputs/models/context/citywide-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 28671,
+      "bytes": 53543344,
+      "sha256": "01a59aefcc06d353fdbc54ba82bac7b32305825e3652812afec30e672fd05b53"
+    },
+    {
+      "file": "outputs/models/context/airport-corporate-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 5730,
+      "bytes": 20118308,
+      "sha256": "f25f00c91d01c418697b6379b07941dcb55bebfe0c9246032c7489e72938d16d"
+    },
+    {
+      "file": "outputs/models/context/meadowvale-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 7567,
+      "bytes": 17551964,
+      "sha256": "8ecd1aa398475de5dfb5c92933e57b0ab90742bb62c8acf56fe4a7c09305d9fe"
+    },
+    {
+      "file": "outputs/models/context/port-credit-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 46,
+      "bytes": 3159268,
+      "sha256": "af60135407d25314a5a5c2a2b37e49c5d9068d5fc64a8e8cdb83048849943607"
+    },
+    {
+      "file": "outputs/models/context/cooksville-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 3739,
+      "bytes": 8343348,
+      "sha256": "44a1aaf14be1291a543c724525a84a42841acbd7a23341886aab2d24f542d74e"
+    },
+    {
+      "file": "outputs/models/context/uptown-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 13886,
+      "bytes": 16268300,
+      "sha256": "c9b1075a5eb93356b09ae0b8aaaf82ef01d498ec1003e63030499a9b513dff48"
+    },
+    {
+      "file": "outputs/models/context/dixie-applewood-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 6730,
+      "bytes": 12750376,
+      "sha256": "3abc78c4c97653c428682f0deeed114be4465bc888cceb575cd2c11f09d2d5ad"
+    },
+    {
+      "file": "outputs/models/context/erindale-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 18669,
+      "bytes": 13453572,
+      "sha256": "3dff77acabf732965c03571c973ab8823b7f800a69d89c2c6f3fe99fd4427433"
+    },
+    {
+      "file": "outputs/models/context/heartland-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 11164,
+      "bytes": 19174656,
+      "sha256": "ae2ef44d7295a0224344c5370da6fa894761769ca2052eae2458cce0f7d50e9e"
+    },
+    {
+      "file": "outputs/models/context/downtown-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 17278,
+      "bytes": 9662140,
+      "sha256": "c365fb8cc4f0b903fa028a2c9dc30ddf325c58cac6c1b3d6d93273da0934e615"
+    },
+    {
+      "file": "outputs/models/context/erin-mills-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 21123,
+      "bytes": 13972156,
+      "sha256": "41ce8665181048a57a7db35564241d4ba37f9ad847954d487eb5bd5e74d05db0"
+    },
+    {
+      "file": "outputs/models/context/streetsville-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 14344,
+      "bytes": 11517960,
+      "sha256": "402fa82d6f88554c83fb0da174d7f697ef52a335774a43479e713fad74e9e740"
+    },
+    {
+      "file": "outputs/models/context/lakeview-details.glb",
+      "role": "Visible street/bridge detail; LRT and symbolic vehicles excluded",
+      "trianglesNearRoutes": 166,
+      "bytes": 3723400,
+      "sha256": "62254755d850fddd3e541352d6b6e55bdae8729900ff969c1ea84d3e5a218e0b"
+    }
+  ],
+  "visualChecks": [
+    {
+      "view": "downtown-junction",
+      "before": "visibility-checks/downtown-junction-before.png",
+      "after": "visibility-checks/downtown-junction-after.png",
+      "inspected": true,
+      "camera": "visibility-checks/downtown-junction-after-camera.json"
+    },
+    {
+      "view": "port-credit-go",
+      "before": "visibility-checks/port-credit-go-before.png",
+      "after": "visibility-checks/port-credit-go-after.png",
+      "inspected": true,
+      "camera": "visibility-checks/port-credit-go-after-camera.json"
+    },
+    {
+      "view": "milton-crossing",
+      "before": "visibility-checks/milton-crossing-before.png",
+      "after": "visibility-checks/milton-crossing-after.png",
+      "inspected": true,
+      "camera": "visibility-checks/milton-crossing-after-camera.json"
+    }
+  ],
+  "limitations": [
+    "The before check samples centres at no more than 3 m; the stricter after check samples actual strip centres and both edges at no more than 1 m. Counts are not identical observation sets.",
+    "A clearance below 0.05 m is classified as surface occlusion/contact risk. Negative clearance is separately reported for the before state.",
+    "At municipal model edges, a small number of guide samples have no overlapping context triangle; these are excluded from the minimum-clearance claim and counted per route.",
+    "Physical meshes and original route physicalPoints remain unchanged. Only the cartographic guide display elevations and widths changed; no geographic reroute occurred.",
+    "An 8% cartographic display slope cap and up to 7.779 m guide lift are visualization choices, not new railway engineering or a measured deck height.",
+    "Building and symbolic tree-crown occlusion is handled by the explicit cartographic overlay pass or browser depth override, not by raising tracks above buildings.",
+    "The source-derived HML second-track gaps and switch connections remain disclosed schematic inferences. This correction does not establish surveyed turnout geometry."
+  ]
+}
