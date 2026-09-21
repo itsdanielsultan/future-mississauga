@@ -1,4 +1,6 @@
-# Transit visibility correction
+# Historical transit visibility correction
+
+**Superseded display method.** This audit records the earlier always-visible route display. The current Transit Depth edition restores physical occlusion and route-specific display heights. Read the [current correction and source review](../../transit-depth/Transit-depth-review.md).
 
 Reviewed September 21, 2026. GO is consistently green (`#25825e`), the Transitway blue (`#1175b6`), and the Hazel McCallion Line gold (`#d6ac39`). The coloured strips are continuous cartographic guides, 3 m wide, separate from the restrained grey physical railway and guideway display.
 
