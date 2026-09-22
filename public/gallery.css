@@ -19,3 +19,20 @@ header,.intro,.pictures,.transformation,.panorama-section,.film-section,.evidenc
 @media(max-width:600px){:root{--page-gutter:22px}}
 
 .brand-logo{object-fit:contain;flex:0 0 auto}#imageDialog #fullImage{height:auto}
+
+/* Keep the picture viewer steady when the selected image changes aspect ratio. */
+#imageDialog{width:min(94vw,1500px);height:min(94vh,1100px);height:min(94dvh,1100px);max-height:none;overflow:hidden}
+#imageDialog[open]{display:grid;grid-template-rows:minmax(0,1fr) clamp(220px,30dvh,290px)}
+#imageDialog>#fullImage{width:100%;height:100%;min-height:0;max-height:none;object-fit:contain;object-position:center}
+#imageDetails{min-width:0;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;overflow-wrap:anywhere}
+#imageDetails:focus-visible{outline:3px solid #528cad;outline-offset:-3px}
+#imageDetails .picture-view-label select{max-width:100%}
+@media(min-width:851px) and (min-height:650px){
+ #imageDialog[open]{grid-template-rows:minmax(0,1fr) 300px}
+}
+@media(max-width:600px){
+ #imageDialog{height:min(94vh,calc(58.75vw + 360px));height:min(94dvh,calc(58.75vw + 360px))}
+ #imageDialog[open]{grid-template-rows:minmax(0,1fr) min(60%,360px)}
+ #imageDetails{padding:20px}
+ #imageDetails .colour-key{justify-content:flex-start;padding:17px 0}
+}

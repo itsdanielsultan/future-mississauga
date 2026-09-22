@@ -1,0 +1,4236 @@
+{
+  "edition": "Road Crossings 2026-09-21",
+  "checkedAt": "2026-09-22T03:54:48.962085+00:00",
+  "method": "Zstandard 1.5.7 level 19, 2 workers; streaming; no dependency added",
+  "scope": "Only 15 current outputs/scenes/*.blend files and three current 05-road-crossings-after/*.blend files. No .blend1, earlier checkpoint, original edition or backup was changed.",
+  "all18Passed": true,
+  "beforeBytes": 3824644909,
+  "afterBytes": 2221711216,
+  "savedBytes": 1602933693,
+  "decodedByteIdentityAllFiles": true,
+  "blenderReadOnlyInventoryMatchAllFiles": true,
+  "all15CurrentScenesAndJunctionDepthAuditPassed": true,
+  "editableSceneGeometryUnchanged": true,
+  "all33OriginalPNGMastersVerifiedUnchanged": true,
+  "inputLockSHA256VerifiedUnchanged": "7936355e396af245054b761af217035031d4808a14685b63ecbe88cc6318b6ee",
+  "formerSuccessfulTestDuplicateRemoved": true,
+  "freeDiskBytesBeforeObserved": 4772237312,
+  "freeDiskBytesAfterObserved": 6181638144,
+  "freeDiskObservationCaveat": "Other concurrent workspace operations can affect disk free space; byte savings are the exact before/after file-size difference.",
+  "currentSceneAudit": "../transit-depth/Editable-scene-QA.json",
+  "checkpointSceneManifest": "../../checkpoints/05-road-crossings-after/Scene-files.json",
+  "files": [
+    {
+      "file": "outputs/scenes/airport-corporate.blend",
+      "beforeSHA256": "7baa489c6f0f350e114b640aee5a991ab95375542f28d7f385835d6e0dd800b7",
+      "afterSHA256": "305d1eaf69d07604cbac3d075ca7e55ddc0bedcb66edc9e7c76c6de397440ff9",
+      "beforeBytes": 197074155,
+      "afterBytes": 119846738,
+      "savedBytes": 77227417,
+      "decodedBytes": 552313968,
+      "decodedSHA256": "917f8f32d9e8b3d945c9c1f2d2f94de1db2cc348e92713eb4cfb12e1871a8dab",
+      "decodedByteIdentity": true,
+      "blenderInventoryPassed": true,
+      "blenderInventorySHA256": "e30f589751d9ebb6a1d676fbd18a4cb11cd3c441ac40ba60f01de8c50f4658aa",
+      "compressionSeconds": 36.60434887500014,
+      "totalSeconds": 40.07740620902041,
+      "atomicReplacement": true,
+      "blenderInventory": {
+        "blenderVersion": "5.0.0",
+        "inventorySHA256": "e30f589751d9ebb6a1d676fbd18a4cb11cd3c441ac40ba60f01de8c50f4658aa",
+        "objectCount": 677,
+        "meshCount": 674,
+        "meshVertices": 9365708,
+        "meshPolygons": 6272822,
+        "materialCount": 323,
+        "sceneSettings": [
+          {
+            "name": "Scene",
+            "objects": 677,
+            "resolution": [
+              3840,
+              2400,
+              100
+            ]
+          }
+        ],
+        "libraries": [],
+        "cameras": [
+          {
+            "scene": "Scene",
+            "name": "Camera",
+            "active": true,
+            "type": "ORTHO",
+            "matrix": [
+              [
+                0.8178063035011292,
+                -0.25097912549972534,
+                0.5178825855255127,
+                36.36669921875
+              ],
+              [
+                0.575493574142456,
+                0.35665449500083923,
+                -0.7359379529953003,
+                3241.9921875
+              ],
+              [
+                -8.90864839675487e-08,
+                0.8998928070068359,
+                0.4361111521720886,
+                3185.10009765625
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "scale": 4940.0,
+            "lens": 50.0,
+            "clip": [
+              0.10000000149011612,
+              150000.0
+            ]
+          }
+        ]
+      },
+      "packedImages": [
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "packedFiles": []
+        }
+      ]
+    },
+    {
+      "file": "outputs/scenes/citywide.blend",
+      "beforeSHA256": "c07be99a18e45d67a2837b43d1b8c1af7d568cd957a456a5582dc86196bb6e51",
+      "afterSHA256": "066bbc7d7218412161745282b3bca575ceb1d3cfed8b38ec543c6972c20c5ac0",
+      "beforeBytes": 781683510,
+      "afterBytes": 451136939,
+      "savedBytes": 330546571,
+      "decodedBytes": 2331804674,
+      "decodedSHA256": "2e971511a7176be7ba11a51fa91f3e054c58e588314f08973c29f9dc17687a93",
+      "decodedByteIdentity": true,
+      "blenderInventoryPassed": true,
+      "blenderInventorySHA256": "492eb93f946c79eda42c0a4eec4ac632df3e7319197ba48c607b0c823b67ceee",
+      "compressionSeconds": 145.4162990829791,
+      "totalSeconds": 156.6363927499915,
+      "atomicReplacement": true,
+      "blenderInventory": {
+        "blenderVersion": "5.0.0",
+        "inventorySHA256": "492eb93f946c79eda42c0a4eec4ac632df3e7319197ba48c607b0c823b67ceee",
+        "objectCount": 2945,
+        "meshCount": 2930,
+        "meshVertices": 39611077,
+        "meshPolygons": 26628646,
+        "materialCount": 1302,
+        "sceneSettings": [
+          {
+            "name": "Scene",
+            "objects": 2945,
+            "resolution": [
+              3840,
+              2400,
+              100
+            ]
+          }
+        ],
+        "libraries": [],
+        "cameras": [
+          {
+            "scene": "Scene",
+            "name": "Camera",
+            "active": true,
+            "type": "ORTHO",
+            "matrix": [
+              [
+                0.6534123420715332,
+                -0.5883411169052124,
+                0.4763476252555847,
+                6879.857421875
+              ],
+              [
+                0.7570021748542786,
+                0.5078312158584595,
+                -0.4111631512641907,
+                -8454.865234375
+              ],
+              [
+                6.28381968681424e-09,
+                0.6292552947998047,
+                0.7771986722946167,
+                19130.17578125
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "scale": 28578.783203125,
+            "lens": 50.0,
+            "clip": [
+              0.10000000149011612,
+              150000.0
+            ]
+          }
+        ]
+      },
+      "packedImages": [
+        {
+          "name": "Image_0",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 6852,
+              "sha256": "698826fb5c9795517b98e9513a6c04d586dd1d1fb1777d15babc81eddc7c0cca"
+            }
+          ]
+        },
+        {
+          "name": "Image_0.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 6852,
+              "sha256": "698826fb5c9795517b98e9513a6c04d586dd1d1fb1777d15babc81eddc7c0cca"
+            }
+          ]
+        },
+        {
+          "name": "Image_1",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 132072,
+              "sha256": "c6890c2390b91b1b9cf68836945c14c5e3a02c004f9e5f177664498f4be0ac7c"
+            }
+          ]
+        },
+        {
+          "name": "Image_1.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46540,
+              "sha256": "549c03d2ac2315c86d5204222fdb8c340c207b3deb56241dc1431a8c37ed2840"
+            }
+          ]
+        },
+        {
+          "name": "Image_10",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_10.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3580,
+              "sha256": "bac6afeb5c7268b2a7237b5c922dc7a47a88a1f6adbdda478a77c7ca64dac8ec"
+            }
+          ]
+        },
+        {
+          "name": "Image_11",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46432,
+              "sha256": "2b96b748342253ea2a2a148ac74256ae714054e95c77f85f504776b718884bb2"
+            }
+          ]
+        },
+        {
+          "name": "Image_11.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 24192,
+              "sha256": "56e25c3027dea6eaf6a6c4baa392b41e341359222e2dd2b61bb0302aad3d9e0b"
+            }
+          ]
+        },
+        {
+          "name": "Image_12",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 412,
+              "sha256": "1707f9a1e13a057628659c09467a6cfa6638b2e09ba1512ca6d45d2a3277f0f2"
+            }
+          ]
+        },
+        {
+          "name": "Image_12.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_13",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3580,
+              "sha256": "bac6afeb5c7268b2a7237b5c922dc7a47a88a1f6adbdda478a77c7ca64dac8ec"
+            }
+          ]
+        },
+        {
+          "name": "Image_13.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_14",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 24192,
+              "sha256": "56e25c3027dea6eaf6a6c4baa392b41e341359222e2dd2b61bb0302aad3d9e0b"
+            }
+          ]
+        },
+        {
+          "name": "Image_15",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_16",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "4afec2c34459704c4d207eee6cf20019b81881922d63a254b9101af2f3addb9a"
+            }
+          ]
+        },
+        {
+          "name": "Image_17",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_2",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 85484,
+              "sha256": "ff217c7c3d21812358c03841354668ca95b31f690097d6559706ca77380981da"
+            }
+          ]
+        },
+        {
+          "name": "Image_2.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 238204,
+              "sha256": "0d7e22aafc7de8479c965628804fc8ceca2ea20f86bac934c936628911f971e5"
+            }
+          ]
+        },
+        {
+          "name": "Image_3",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46540,
+              "sha256": "549c03d2ac2315c86d5204222fdb8c340c207b3deb56241dc1431a8c37ed2840"
+            }
+          ]
+        },
+        {
+          "name": "Image_3.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 1200,
+              "sha256": "35969839624f5588b860296726641c3d3d0e9dadaf3fff584dfb2d0a7de01efe"
+            }
+          ]
+        },
+        {
+          "name": "Image_4",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 238204,
+              "sha256": "0d7e22aafc7de8479c965628804fc8ceca2ea20f86bac934c936628911f971e5"
+            }
+          ]
+        },
+        {
+          "name": "Image_4.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 26168,
+              "sha256": "2d7bd7f8506db8a6403cb7371deb4b5d4f5d63d4846025276c2c818881fa5405"
+            }
+          ]
+        },
+        {
+          "name": "Image_5",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 1200,
+              "sha256": "35969839624f5588b860296726641c3d3d0e9dadaf3fff584dfb2d0a7de01efe"
+            }
+          ]
+        },
+        {
+          "name": "Image_5.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3392,
+              "sha256": "2c20341db865833526b9213c6a3ecabb8e3508a60f57f85ebf4a22489a0d2369"
+            }
+          ]
+        },
+        {
+          "name": "Image_6",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 8728,
+              "sha256": "453f7eb03eeabda8715bc43ec364a9f1edd1a371571a60948dbfa586ebdaf4f5"
+            }
+          ]
+        },
+        {
+          "name": "Image_6.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_7",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 26168,
+              "sha256": "2d7bd7f8506db8a6403cb7371deb4b5d4f5d63d4846025276c2c818881fa5405"
+            }
+          ]
+        },
+        {
+          "name": "Image_7.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_8",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3392,
+              "sha256": "2c20341db865833526b9213c6a3ecabb8e3508a60f57f85ebf4a22489a0d2369"
+            }
+          ]
+        },
+        {
+          "name": "Image_8.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46432,
+              "sha256": "2b96b748342253ea2a2a148ac74256ae714054e95c77f85f504776b718884bb2"
+            }
+          ]
+        },
+        {
+          "name": "Image_9",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_9.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 412,
+              "sha256": "1707f9a1e13a057628659c09467a6cfa6638b2e09ba1512ca6d45d2a3277f0f2"
+            }
+          ]
+        },
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "packedFiles": []
+        }
+      ]
+    },
+    {
+      "file": "outputs/scenes/clarkson.blend",
+      "beforeSHA256": "520706b7abe36fc6aa88bfddf3e51970df9f97d882ecb52f65ac52ad3fd6ed4e",
+      "afterSHA256": "5ed0be0233b99447ad13043faeefa28fe1057574dc7eb223309ad58eb2bd34f5",
+      "beforeBytes": 121602660,
+      "afterBytes": 72850519,
+      "savedBytes": 48752141,
+      "decodedBytes": 384663316,
+      "decodedSHA256": "a871da444e7fa6f9443c5e03bbcf93549218ed4defee97b3a73fecd39622391a",
+      "decodedByteIdentity": true,
+      "blenderInventoryPassed": true,
+      "blenderInventorySHA256": "ebf74dbb957c7a180537fa0844be73d3cd50b99f437d2a32f5b8e6a72a4acde3",
+      "compressionSeconds": 21.620268167025642,
+      "totalSeconds": 23.7941875840188,
+      "atomicReplacement": true,
+      "blenderInventory": {
+        "blenderVersion": "5.0.0",
+        "inventorySHA256": "ebf74dbb957c7a180537fa0844be73d3cd50b99f437d2a32f5b8e6a72a4acde3",
+        "objectCount": 582,
+        "meshCount": 574,
+        "meshVertices": 5737536,
+        "meshPolygons": 4506782,
+        "materialCount": 352,
+        "sceneSettings": [
+          {
+            "name": "Scene",
+            "objects": 582,
+            "resolution": [
+              3840,
+              2400,
+              100
+            ]
+          }
+        ],
+        "libraries": [],
+        "cameras": [
+          {
+            "scene": "Scene",
+            "name": "Camera",
+            "active": true,
+            "type": "ORTHO",
+            "matrix": [
+              [
+                0.8178063035011292,
+                -0.25097912549972534,
+                0.5178825855255127,
+                -2565.0
+              ],
+              [
+                0.575493574142456,
+                0.35665449500083923,
+                -0.7359379529953003,
+                -11155.0
+              ],
+              [
+                -8.90864839675487e-08,
+                0.8998928070068359,
+                0.4361111521720886,
+                1950.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "scale": 2100.0,
+            "lens": 50.0,
+            "clip": [
+              0.10000000149011612,
+              150000.0
+            ]
+          }
+        ]
+      },
+      "packedImages": [
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "packedFiles": []
+        }
+      ]
+    },
+    {
+      "file": "outputs/scenes/cooksville.blend",
+      "beforeSHA256": "9b60d154a751ad9e8f11fdeb12075acff1815e7ff50a58f0ed8f3042c50dbf87",
+      "afterSHA256": "c4ba3ce3aa6ca5e8399ae6adc4b4234369fc18b222f8c3fb927041768d7f7de2",
+      "beforeBytes": 169658248,
+      "afterBytes": 102352936,
+      "savedBytes": 67305312,
+      "decodedBytes": 503129037,
+      "decodedSHA256": "23dc5ecb97446ea1211a0394bfe33cd35967c21930a5c688644dfe5da6ba3522",
+      "decodedByteIdentity": true,
+      "blenderInventoryPassed": true,
+      "blenderInventorySHA256": "d46dfadd78a2e5c9e12ee7d68d23978aef7111b3f31c8067cd8e51d32674f905",
+      "compressionSeconds": 29.94283329101745,
+      "totalSeconds": 32.752238625020254,
+      "atomicReplacement": true,
+      "blenderInventory": {
+        "blenderVersion": "5.0.0",
+        "inventorySHA256": "d46dfadd78a2e5c9e12ee7d68d23978aef7111b3f31c8067cd8e51d32674f905",
+        "objectCount": 1285,
+        "meshCount": 1283,
+        "meshVertices": 8316483,
+        "meshPolygons": 5667886,
+        "materialCount": 420,
+        "sceneSettings": [
+          {
+            "name": "Scene",
+            "objects": 1285,
+            "resolution": [
+              3840,
+              2400,
+              100
+            ]
+          }
+        ],
+        "libraries": [],
+        "cameras": [
+          {
+            "scene": "Scene",
+            "name": "Camera",
+            "active": true,
+            "type": "ORTHO",
+            "matrix": [
+              [
+                0.8203981518745422,
+                -0.3926626443862915,
+                0.41564756631851196,
+                -1155.0
+              ],
+              [
+                0.5717926621437073,
+                0.5633854866027832,
+                -0.5963639616966248,
+                -4300.0
+              ],
+              [
+                2.113767116895815e-08,
+                0.7269201278686523,
+                0.6867220401763916,
+                3930.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "scale": 2900.0,
+            "lens": 50.0,
+            "clip": [
+              0.10000000149011612,
+              150000.0
+            ]
+          }
+        ]
+      },
+      "packedImages": [
+        {
+          "name": "Image_0",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 6852,
+              "sha256": "698826fb5c9795517b98e9513a6c04d586dd1d1fb1777d15babc81eddc7c0cca"
+            }
+          ]
+        },
+        {
+          "name": "Image_0.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 6852,
+              "sha256": "698826fb5c9795517b98e9513a6c04d586dd1d1fb1777d15babc81eddc7c0cca"
+            }
+          ]
+        },
+        {
+          "name": "Image_1",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 132072,
+              "sha256": "c6890c2390b91b1b9cf68836945c14c5e3a02c004f9e5f177664498f4be0ac7c"
+            }
+          ]
+        },
+        {
+          "name": "Image_1.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46540,
+              "sha256": "549c03d2ac2315c86d5204222fdb8c340c207b3deb56241dc1431a8c37ed2840"
+            }
+          ]
+        },
+        {
+          "name": "Image_10",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_10.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3580,
+              "sha256": "bac6afeb5c7268b2a7237b5c922dc7a47a88a1f6adbdda478a77c7ca64dac8ec"
+            }
+          ]
+        },
+        {
+          "name": "Image_11",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46432,
+              "sha256": "2b96b748342253ea2a2a148ac74256ae714054e95c77f85f504776b718884bb2"
+            }
+          ]
+        },
+        {
+          "name": "Image_11.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 24192,
+              "sha256": "56e25c3027dea6eaf6a6c4baa392b41e341359222e2dd2b61bb0302aad3d9e0b"
+            }
+          ]
+        },
+        {
+          "name": "Image_12",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 412,
+              "sha256": "1707f9a1e13a057628659c09467a6cfa6638b2e09ba1512ca6d45d2a3277f0f2"
+            }
+          ]
+        },
+        {
+          "name": "Image_12.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_13",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3580,
+              "sha256": "bac6afeb5c7268b2a7237b5c922dc7a47a88a1f6adbdda478a77c7ca64dac8ec"
+            }
+          ]
+        },
+        {
+          "name": "Image_13.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_14",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 24192,
+              "sha256": "56e25c3027dea6eaf6a6c4baa392b41e341359222e2dd2b61bb0302aad3d9e0b"
+            }
+          ]
+        },
+        {
+          "name": "Image_15",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_16",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "4afec2c34459704c4d207eee6cf20019b81881922d63a254b9101af2f3addb9a"
+            }
+          ]
+        },
+        {
+          "name": "Image_17",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_2",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 85484,
+              "sha256": "ff217c7c3d21812358c03841354668ca95b31f690097d6559706ca77380981da"
+            }
+          ]
+        },
+        {
+          "name": "Image_2.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 238204,
+              "sha256": "0d7e22aafc7de8479c965628804fc8ceca2ea20f86bac934c936628911f971e5"
+            }
+          ]
+        },
+        {
+          "name": "Image_3",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46540,
+              "sha256": "549c03d2ac2315c86d5204222fdb8c340c207b3deb56241dc1431a8c37ed2840"
+            }
+          ]
+        },
+        {
+          "name": "Image_3.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 1200,
+              "sha256": "35969839624f5588b860296726641c3d3d0e9dadaf3fff584dfb2d0a7de01efe"
+            }
+          ]
+        },
+        {
+          "name": "Image_4",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 238204,
+              "sha256": "0d7e22aafc7de8479c965628804fc8ceca2ea20f86bac934c936628911f971e5"
+            }
+          ]
+        },
+        {
+          "name": "Image_4.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 26168,
+              "sha256": "2d7bd7f8506db8a6403cb7371deb4b5d4f5d63d4846025276c2c818881fa5405"
+            }
+          ]
+        },
+        {
+          "name": "Image_5",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 1200,
+              "sha256": "35969839624f5588b860296726641c3d3d0e9dadaf3fff584dfb2d0a7de01efe"
+            }
+          ]
+        },
+        {
+          "name": "Image_5.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3392,
+              "sha256": "2c20341db865833526b9213c6a3ecabb8e3508a60f57f85ebf4a22489a0d2369"
+            }
+          ]
+        },
+        {
+          "name": "Image_6",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 8728,
+              "sha256": "453f7eb03eeabda8715bc43ec364a9f1edd1a371571a60948dbfa586ebdaf4f5"
+            }
+          ]
+        },
+        {
+          "name": "Image_6.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_7",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 26168,
+              "sha256": "2d7bd7f8506db8a6403cb7371deb4b5d4f5d63d4846025276c2c818881fa5405"
+            }
+          ]
+        },
+        {
+          "name": "Image_7.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_8",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3392,
+              "sha256": "2c20341db865833526b9213c6a3ecabb8e3508a60f57f85ebf4a22489a0d2369"
+            }
+          ]
+        },
+        {
+          "name": "Image_8.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46432,
+              "sha256": "2b96b748342253ea2a2a148ac74256ae714054e95c77f85f504776b718884bb2"
+            }
+          ]
+        },
+        {
+          "name": "Image_9",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_9.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 412,
+              "sha256": "1707f9a1e13a057628659c09467a6cfa6638b2e09ba1512ca6d45d2a3277f0f2"
+            }
+          ]
+        },
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "packedFiles": []
+        }
+      ]
+    },
+    {
+      "file": "outputs/scenes/dixie-applewood.blend",
+      "beforeSHA256": "39898c888984d6e0a3f5956be8f1ad48434c966490c4dd8bb2bb9ab3450546f7",
+      "afterSHA256": "618168fdca210c3588cb689a5932e57c2d95f9b386c63d12375e0349d235af29",
+      "beforeBytes": 181395636,
+      "afterBytes": 105843387,
+      "savedBytes": 75552249,
+      "decodedBytes": 561772830,
+      "decodedSHA256": "b145ea5e6e3977d246ee79d8becb870247ac807a94e81c2a3cb2c4ed4847b8c6",
+      "decodedByteIdentity": true,
+      "blenderInventoryPassed": true,
+      "blenderInventorySHA256": "adf418f59171a1ffa48c417543a24a7ea6db7249a636bc7121ea1a4957a92f2e",
+      "compressionSeconds": 31.667237417015713,
+      "totalSeconds": 34.657991833024425,
+      "atomicReplacement": true,
+      "blenderInventory": {
+        "blenderVersion": "5.0.0",
+        "inventorySHA256": "adf418f59171a1ffa48c417543a24a7ea6db7249a636bc7121ea1a4957a92f2e",
+        "objectCount": 1254,
+        "meshCount": 1251,
+        "meshVertices": 9375465,
+        "meshPolygons": 6427395,
+        "materialCount": 383,
+        "sceneSettings": [
+          {
+            "name": "Scene",
+            "objects": 1254,
+            "resolution": [
+              3840,
+              2400,
+              100
+            ]
+          }
+        ],
+        "libraries": [],
+        "cameras": [
+          {
+            "scene": "Scene",
+            "name": "Camera",
+            "active": true,
+            "type": "ORTHO",
+            "matrix": [
+              [
+                0.8178063035011292,
+                -0.2509792745113373,
+                0.5178824663162231,
+                1161.9202880859375
+              ],
+              [
+                0.575493574142456,
+                0.3566545248031616,
+                -0.7359380125999451,
+                -321.326416015625
+              ],
+              [
+                8.554389552273278e-08,
+                0.8998927474021912,
+                0.4361112713813782,
+                2209.889892578125
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "scale": 3380.0,
+            "lens": 50.0,
+            "clip": [
+              0.10000000149011612,
+              150000.0
+            ]
+          }
+        ]
+      },
+      "packedImages": [
+        {
+          "name": "Image_0",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 6852,
+              "sha256": "698826fb5c9795517b98e9513a6c04d586dd1d1fb1777d15babc81eddc7c0cca"
+            }
+          ]
+        },
+        {
+          "name": "Image_1",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46540,
+              "sha256": "549c03d2ac2315c86d5204222fdb8c340c207b3deb56241dc1431a8c37ed2840"
+            }
+          ]
+        },
+        {
+          "name": "Image_10",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3580,
+              "sha256": "bac6afeb5c7268b2a7237b5c922dc7a47a88a1f6adbdda478a77c7ca64dac8ec"
+            }
+          ]
+        },
+        {
+          "name": "Image_11",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 24192,
+              "sha256": "56e25c3027dea6eaf6a6c4baa392b41e341359222e2dd2b61bb0302aad3d9e0b"
+            }
+          ]
+        },
+        {
+          "name": "Image_12",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_13",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_2",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 238204,
+              "sha256": "0d7e22aafc7de8479c965628804fc8ceca2ea20f86bac934c936628911f971e5"
+            }
+          ]
+        },
+        {
+          "name": "Image_3",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 1200,
+              "sha256": "35969839624f5588b860296726641c3d3d0e9dadaf3fff584dfb2d0a7de01efe"
+            }
+          ]
+        },
+        {
+          "name": "Image_4",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 26168,
+              "sha256": "2d7bd7f8506db8a6403cb7371deb4b5d4f5d63d4846025276c2c818881fa5405"
+            }
+          ]
+        },
+        {
+          "name": "Image_5",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3392,
+              "sha256": "2c20341db865833526b9213c6a3ecabb8e3508a60f57f85ebf4a22489a0d2369"
+            }
+          ]
+        },
+        {
+          "name": "Image_6",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_7",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_8",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46432,
+              "sha256": "2b96b748342253ea2a2a148ac74256ae714054e95c77f85f504776b718884bb2"
+            }
+          ]
+        },
+        {
+          "name": "Image_9",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 412,
+              "sha256": "1707f9a1e13a057628659c09467a6cfa6638b2e09ba1512ca6d45d2a3277f0f2"
+            }
+          ]
+        },
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "packedFiles": []
+        }
+      ]
+    },
+    {
+      "file": "outputs/scenes/downtown.blend",
+      "beforeSHA256": "84646190601723ad2edd219c275db0bc50e9be943c5f188697c020b83307b1db",
+      "afterSHA256": "9caee868cc7c12a688c084a34dc4208e11bed70891c880d79eb43d28abf39ffb",
+      "beforeBytes": 181424756,
+      "afterBytes": 106906625,
+      "savedBytes": 74518131,
+      "decodedBytes": 542727783,
+      "decodedSHA256": "5de9637639b391bf2f1ce50bb3474d0c6712d81a0e50e7167b164ab50b7ba9c0",
+      "decodedByteIdentity": true,
+      "blenderInventoryPassed": true,
+      "blenderInventorySHA256": "5df152a6241243625f891c03db3b7616e05947905b75ca4f2fa19d14a08bb019",
+      "compressionSeconds": 31.993948167015333,
+      "totalSeconds": 34.979748334008036,
+      "atomicReplacement": true,
+      "blenderInventory": {
+        "blenderVersion": "5.0.0",
+        "inventorySHA256": "5df152a6241243625f891c03db3b7616e05947905b75ca4f2fa19d14a08bb019",
+        "objectCount": 1384,
+        "meshCount": 1382,
+        "meshVertices": 9187687,
+        "meshPolygons": 5984864,
+        "materialCount": 679,
+        "sceneSettings": [
+          {
+            "name": "Scene",
+            "objects": 1384,
+            "resolution": [
+              3840,
+              2400,
+              100
+            ]
+          }
+        ],
+        "libraries": [],
+        "cameras": [
+          {
+            "scene": "Scene",
+            "name": "Camera",
+            "active": true,
+            "type": "ORTHO",
+            "matrix": [
+              [
+                0.816967785358429,
+                -0.2235354483127594,
+                0.5315971374511719,
+                -2760.0
+              ],
+              [
+                0.5766832828521729,
+                0.3166751265525818,
+                -0.7530957460403442,
+                -3370.0
+              ],
+              [
+                3.787719915493426e-09,
+                0.921818196773529,
+                0.38762253522872925,
+                1925.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "scale": 2350.0,
+            "lens": 50.0,
+            "clip": [
+              0.10000000149011612,
+              150000.0
+            ]
+          }
+        ]
+      },
+      "packedImages": [
+        {
+          "name": "Image_0",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 6852,
+              "sha256": "698826fb5c9795517b98e9513a6c04d586dd1d1fb1777d15babc81eddc7c0cca"
+            }
+          ]
+        },
+        {
+          "name": "Image_0.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 6852,
+              "sha256": "698826fb5c9795517b98e9513a6c04d586dd1d1fb1777d15babc81eddc7c0cca"
+            }
+          ]
+        },
+        {
+          "name": "Image_1",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 132072,
+              "sha256": "c6890c2390b91b1b9cf68836945c14c5e3a02c004f9e5f177664498f4be0ac7c"
+            }
+          ]
+        },
+        {
+          "name": "Image_1.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46540,
+              "sha256": "549c03d2ac2315c86d5204222fdb8c340c207b3deb56241dc1431a8c37ed2840"
+            }
+          ]
+        },
+        {
+          "name": "Image_10",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_10.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3580,
+              "sha256": "bac6afeb5c7268b2a7237b5c922dc7a47a88a1f6adbdda478a77c7ca64dac8ec"
+            }
+          ]
+        },
+        {
+          "name": "Image_11",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46432,
+              "sha256": "2b96b748342253ea2a2a148ac74256ae714054e95c77f85f504776b718884bb2"
+            }
+          ]
+        },
+        {
+          "name": "Image_11.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 24192,
+              "sha256": "56e25c3027dea6eaf6a6c4baa392b41e341359222e2dd2b61bb0302aad3d9e0b"
+            }
+          ]
+        },
+        {
+          "name": "Image_12",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 412,
+              "sha256": "1707f9a1e13a057628659c09467a6cfa6638b2e09ba1512ca6d45d2a3277f0f2"
+            }
+          ]
+        },
+        {
+          "name": "Image_12.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_13",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3580,
+              "sha256": "bac6afeb5c7268b2a7237b5c922dc7a47a88a1f6adbdda478a77c7ca64dac8ec"
+            }
+          ]
+        },
+        {
+          "name": "Image_13.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_14",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 24192,
+              "sha256": "56e25c3027dea6eaf6a6c4baa392b41e341359222e2dd2b61bb0302aad3d9e0b"
+            }
+          ]
+        },
+        {
+          "name": "Image_15",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_16",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "4afec2c34459704c4d207eee6cf20019b81881922d63a254b9101af2f3addb9a"
+            }
+          ]
+        },
+        {
+          "name": "Image_17",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_2",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 85484,
+              "sha256": "ff217c7c3d21812358c03841354668ca95b31f690097d6559706ca77380981da"
+            }
+          ]
+        },
+        {
+          "name": "Image_2.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 238204,
+              "sha256": "0d7e22aafc7de8479c965628804fc8ceca2ea20f86bac934c936628911f971e5"
+            }
+          ]
+        },
+        {
+          "name": "Image_3",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46540,
+              "sha256": "549c03d2ac2315c86d5204222fdb8c340c207b3deb56241dc1431a8c37ed2840"
+            }
+          ]
+        },
+        {
+          "name": "Image_3.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 1200,
+              "sha256": "35969839624f5588b860296726641c3d3d0e9dadaf3fff584dfb2d0a7de01efe"
+            }
+          ]
+        },
+        {
+          "name": "Image_4",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 238204,
+              "sha256": "0d7e22aafc7de8479c965628804fc8ceca2ea20f86bac934c936628911f971e5"
+            }
+          ]
+        },
+        {
+          "name": "Image_4.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 26168,
+              "sha256": "2d7bd7f8506db8a6403cb7371deb4b5d4f5d63d4846025276c2c818881fa5405"
+            }
+          ]
+        },
+        {
+          "name": "Image_5",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 1200,
+              "sha256": "35969839624f5588b860296726641c3d3d0e9dadaf3fff584dfb2d0a7de01efe"
+            }
+          ]
+        },
+        {
+          "name": "Image_5.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3392,
+              "sha256": "2c20341db865833526b9213c6a3ecabb8e3508a60f57f85ebf4a22489a0d2369"
+            }
+          ]
+        },
+        {
+          "name": "Image_6",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 8728,
+              "sha256": "453f7eb03eeabda8715bc43ec364a9f1edd1a371571a60948dbfa586ebdaf4f5"
+            }
+          ]
+        },
+        {
+          "name": "Image_6.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_7",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 26168,
+              "sha256": "2d7bd7f8506db8a6403cb7371deb4b5d4f5d63d4846025276c2c818881fa5405"
+            }
+          ]
+        },
+        {
+          "name": "Image_7.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_8",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3392,
+              "sha256": "2c20341db865833526b9213c6a3ecabb8e3508a60f57f85ebf4a22489a0d2369"
+            }
+          ]
+        },
+        {
+          "name": "Image_8.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46432,
+              "sha256": "2b96b748342253ea2a2a148ac74256ae714054e95c77f85f504776b718884bb2"
+            }
+          ]
+        },
+        {
+          "name": "Image_9",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_9.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 412,
+              "sha256": "1707f9a1e13a057628659c09467a6cfa6638b2e09ba1512ca6d45d2a3277f0f2"
+            }
+          ]
+        },
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "packedFiles": []
+        }
+      ]
+    },
+    {
+      "file": "outputs/scenes/erin-mills.blend",
+      "beforeSHA256": "6dd7996d1c1db23328305b30605bccddac5661d24a95bfdba8ee3edd957d4cef",
+      "afterSHA256": "8e296ac199675ee2b5031b58841133e5e1b6e80db2b7fcdc3877461dc26df5cc",
+      "beforeBytes": 260640015,
+      "afterBytes": 148255200,
+      "savedBytes": 112384815,
+      "decodedBytes": 777158523,
+      "decodedSHA256": "e115542cba35d10181e13d7705243a42eb4b6833e274e9b2e98b4b94a1f03556",
+      "decodedByteIdentity": true,
+      "blenderInventoryPassed": true,
+      "blenderInventorySHA256": "c5b3c34bd922375e8b3ad71c934bdfe660ed0b5f91c69b789753b056a128ac1c",
+      "compressionSeconds": 44.45231270798831,
+      "totalSeconds": 48.255470042000525,
+      "atomicReplacement": true,
+      "blenderInventory": {
+        "blenderVersion": "5.0.0",
+        "inventorySHA256": "c5b3c34bd922375e8b3ad71c934bdfe660ed0b5f91c69b789753b056a128ac1c",
+        "objectCount": 626,
+        "meshCount": 618,
+        "meshVertices": 13615784,
+        "meshPolygons": 8869330,
+        "materialCount": 409,
+        "sceneSettings": [
+          {
+            "name": "Scene",
+            "objects": 626,
+            "resolution": [
+              3840,
+              2400,
+              100
+            ]
+          }
+        ],
+        "libraries": [],
+        "cameras": [
+          {
+            "scene": "Scene",
+            "name": "Camera",
+            "active": true,
+            "type": "ORTHO",
+            "matrix": [
+              [
+                0.8178063035011292,
+                -0.2509792745113373,
+                0.5178824663162231,
+                -8333.3486328125
+              ],
+              [
+                0.575493574142456,
+                0.3566545248031616,
+                -0.7359380125999451,
+                -7363.15771484375
+              ],
+              [
+                8.554389552273278e-08,
+                0.8998927474021912,
+                0.4361112713813782,
+                2251.969970703125
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "scale": 3380.0,
+            "lens": 50.0,
+            "clip": [
+              0.10000000149011612,
+              150000.0
+            ]
+          }
+        ]
+      },
+      "packedImages": [
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "packedFiles": []
+        }
+      ]
+    },
+    {
+      "file": "outputs/scenes/erindale.blend",
+      "beforeSHA256": "75bcdb8fbf8a949365f73246e3936afa247c6c585ecef91670c1631a65860d08",
+      "afterSHA256": "dcfcc60e43286ff949d8f318ac455109b5f5c191c14d6912d0827cb92de278d0",
+      "beforeBytes": 250420856,
+      "afterBytes": 148104015,
+      "savedBytes": 102316841,
+      "decodedBytes": 758050471,
+      "decodedSHA256": "83669782c53036d8de0da2d50080e3bda8170b3aab96bdc74c3ceb0db25a172e",
+      "decodedByteIdentity": true,
+      "blenderInventoryPassed": true,
+      "blenderInventorySHA256": "417f5130c47742baf22efd22fddd3604bee4dab1251c04b3a038986e6ba03205",
+      "compressionSeconds": 43.56831412500469,
+      "totalSeconds": 47.31752562499605,
+      "atomicReplacement": true,
+      "blenderInventory": {
+        "blenderVersion": "5.0.0",
+        "inventorySHA256": "417f5130c47742baf22efd22fddd3604bee4dab1251c04b3a038986e6ba03205",
+        "objectCount": 856,
+        "meshCount": 851,
+        "meshVertices": 12449866,
+        "meshPolygons": 8772380,
+        "materialCount": 382,
+        "sceneSettings": [
+          {
+            "name": "Scene",
+            "objects": 856,
+            "resolution": [
+              3840,
+              2400,
+              100
+            ]
+          }
+        ],
+        "libraries": [],
+        "cameras": [
+          {
+            "scene": "Scene",
+            "name": "Camera",
+            "active": true,
+            "type": "ORTHO",
+            "matrix": [
+              [
+                0.8178063035011292,
+                -0.2509792745113373,
+                0.5178824663162231,
+                -4861.84765625
+              ],
+              [
+                0.575493574142456,
+                0.3566545248031616,
+                -0.7359380125999451,
+                -7949.49609375
+              ],
+              [
+                8.554389552273278e-08,
+                0.8998927474021912,
+                0.4361112713813782,
+                2135.800048828125
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "scale": 3250.0,
+            "lens": 50.0,
+            "clip": [
+              0.10000000149011612,
+              150000.0
+            ]
+          }
+        ]
+      },
+      "packedImages": [
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "packedFiles": []
+        }
+      ]
+    },
+    {
+      "file": "outputs/scenes/heartland.blend",
+      "beforeSHA256": "ecb17543e89d51ebf5d0de1c7142e5740e500a9382a50538e5c28b404d0f187e",
+      "afterSHA256": "c86d5a1c6e680cda37d0f8e8f5be544493ab23d13848f5ce5fc4c82fcc5696f1",
+      "beforeBytes": 242925754,
+      "afterBytes": 137838281,
+      "savedBytes": 105087473,
+      "decodedBytes": 739919503,
+      "decodedSHA256": "8acd11f93c7b97a0c25d5503aa6aa1ec4d773740851e28a754d729395fbf44b0",
+      "decodedByteIdentity": true,
+      "blenderInventoryPassed": true,
+      "blenderInventorySHA256": "b7a7fb7f55f76489ed8e926d0bfec537b0e76fa5436b464b0d9e46ee93459c8d",
+      "compressionSeconds": 43.95756412501214,
+      "totalSeconds": 49.782180667010834,
+      "atomicReplacement": true,
+      "blenderInventory": {
+        "blenderVersion": "5.0.0",
+        "inventorySHA256": "b7a7fb7f55f76489ed8e926d0bfec537b0e76fa5436b464b0d9e46ee93459c8d",
+        "objectCount": 1067,
+        "meshCount": 1062,
+        "meshVertices": 12831001,
+        "meshPolygons": 8385830,
+        "materialCount": 392,
+        "sceneSettings": [
+          {
+            "name": "Scene",
+            "objects": 1067,
+            "resolution": [
+              3840,
+              2400,
+              100
+            ]
+          }
+        ],
+        "libraries": [],
+        "cameras": [
+          {
+            "scene": "Scene",
+            "name": "Camera",
+            "active": true,
+            "type": "ORTHO",
+            "matrix": [
+              [
+                0.8178063631057739,
+                -0.2509792447090149,
+                0.5178824067115784,
+                -6177.1767578125
+              ],
+              [
+                0.5754935145378113,
+                0.3566545248031616,
+                -0.7359380125999451,
+                88.200927734375
+              ],
+              [
+                7.44755865866864e-08,
+                0.8998927474021912,
+                0.4361112713813782,
+                2332.18994140625
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "scale": 3510.0,
+            "lens": 50.0,
+            "clip": [
+              0.10000000149011612,
+              150000.0
+            ]
+          }
+        ]
+      },
+      "packedImages": [
+        {
+          "name": "Image_0",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 6852,
+              "sha256": "698826fb5c9795517b98e9513a6c04d586dd1d1fb1777d15babc81eddc7c0cca"
+            }
+          ]
+        },
+        {
+          "name": "Image_0.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 6852,
+              "sha256": "698826fb5c9795517b98e9513a6c04d586dd1d1fb1777d15babc81eddc7c0cca"
+            }
+          ]
+        },
+        {
+          "name": "Image_1",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 132072,
+              "sha256": "c6890c2390b91b1b9cf68836945c14c5e3a02c004f9e5f177664498f4be0ac7c"
+            }
+          ]
+        },
+        {
+          "name": "Image_1.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46540,
+              "sha256": "549c03d2ac2315c86d5204222fdb8c340c207b3deb56241dc1431a8c37ed2840"
+            }
+          ]
+        },
+        {
+          "name": "Image_10",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_10.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3580,
+              "sha256": "bac6afeb5c7268b2a7237b5c922dc7a47a88a1f6adbdda478a77c7ca64dac8ec"
+            }
+          ]
+        },
+        {
+          "name": "Image_11",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46432,
+              "sha256": "2b96b748342253ea2a2a148ac74256ae714054e95c77f85f504776b718884bb2"
+            }
+          ]
+        },
+        {
+          "name": "Image_11.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 24192,
+              "sha256": "56e25c3027dea6eaf6a6c4baa392b41e341359222e2dd2b61bb0302aad3d9e0b"
+            }
+          ]
+        },
+        {
+          "name": "Image_12",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 412,
+              "sha256": "1707f9a1e13a057628659c09467a6cfa6638b2e09ba1512ca6d45d2a3277f0f2"
+            }
+          ]
+        },
+        {
+          "name": "Image_12.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_13",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3580,
+              "sha256": "bac6afeb5c7268b2a7237b5c922dc7a47a88a1f6adbdda478a77c7ca64dac8ec"
+            }
+          ]
+        },
+        {
+          "name": "Image_13.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_14",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 24192,
+              "sha256": "56e25c3027dea6eaf6a6c4baa392b41e341359222e2dd2b61bb0302aad3d9e0b"
+            }
+          ]
+        },
+        {
+          "name": "Image_15",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_16",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "4afec2c34459704c4d207eee6cf20019b81881922d63a254b9101af2f3addb9a"
+            }
+          ]
+        },
+        {
+          "name": "Image_17",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_2",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 85484,
+              "sha256": "ff217c7c3d21812358c03841354668ca95b31f690097d6559706ca77380981da"
+            }
+          ]
+        },
+        {
+          "name": "Image_2.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 238204,
+              "sha256": "0d7e22aafc7de8479c965628804fc8ceca2ea20f86bac934c936628911f971e5"
+            }
+          ]
+        },
+        {
+          "name": "Image_3",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46540,
+              "sha256": "549c03d2ac2315c86d5204222fdb8c340c207b3deb56241dc1431a8c37ed2840"
+            }
+          ]
+        },
+        {
+          "name": "Image_3.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 1200,
+              "sha256": "35969839624f5588b860296726641c3d3d0e9dadaf3fff584dfb2d0a7de01efe"
+            }
+          ]
+        },
+        {
+          "name": "Image_4",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 238204,
+              "sha256": "0d7e22aafc7de8479c965628804fc8ceca2ea20f86bac934c936628911f971e5"
+            }
+          ]
+        },
+        {
+          "name": "Image_4.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 26168,
+              "sha256": "2d7bd7f8506db8a6403cb7371deb4b5d4f5d63d4846025276c2c818881fa5405"
+            }
+          ]
+        },
+        {
+          "name": "Image_5",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 1200,
+              "sha256": "35969839624f5588b860296726641c3d3d0e9dadaf3fff584dfb2d0a7de01efe"
+            }
+          ]
+        },
+        {
+          "name": "Image_5.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3392,
+              "sha256": "2c20341db865833526b9213c6a3ecabb8e3508a60f57f85ebf4a22489a0d2369"
+            }
+          ]
+        },
+        {
+          "name": "Image_6",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 8728,
+              "sha256": "453f7eb03eeabda8715bc43ec364a9f1edd1a371571a60948dbfa586ebdaf4f5"
+            }
+          ]
+        },
+        {
+          "name": "Image_6.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_7",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 26168,
+              "sha256": "2d7bd7f8506db8a6403cb7371deb4b5d4f5d63d4846025276c2c818881fa5405"
+            }
+          ]
+        },
+        {
+          "name": "Image_7.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_8",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3392,
+              "sha256": "2c20341db865833526b9213c6a3ecabb8e3508a60f57f85ebf4a22489a0d2369"
+            }
+          ]
+        },
+        {
+          "name": "Image_8.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46432,
+              "sha256": "2b96b748342253ea2a2a148ac74256ae714054e95c77f85f504776b718884bb2"
+            }
+          ]
+        },
+        {
+          "name": "Image_9",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_9.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 412,
+              "sha256": "1707f9a1e13a057628659c09467a6cfa6638b2e09ba1512ca6d45d2a3277f0f2"
+            }
+          ]
+        },
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "packedFiles": []
+        }
+      ]
+    },
+    {
+      "file": "outputs/scenes/lakeview.blend",
+      "beforeSHA256": "d269f2549d82efc1df1fc4602caec5df5934de72e0e3338a5ce55037aa77b00e",
+      "afterSHA256": "388ab038fed0199be192f51487e50f501bce9865dcdf167ed9478b148f2ca5b0",
+      "beforeBytes": 78826864,
+      "afterBytes": 46296455,
+      "savedBytes": 32530409,
+      "decodedBytes": 254248262,
+      "decodedSHA256": "633c72e953de7e75bdb3e1dc70949fa1fc3f53db821ed187baf0fab06c3e4ff7",
+      "decodedByteIdentity": true,
+      "blenderInventoryPassed": true,
+      "blenderInventorySHA256": "6ce6378b9659f1a658fbdb76c483d45fdc7c6c26f511f1a66f64ea0b16c4e14f",
+      "compressionSeconds": 13.26554079199559,
+      "totalSeconds": 14.871932582987938,
+      "atomicReplacement": true,
+      "blenderInventory": {
+        "blenderVersion": "5.0.0",
+        "inventorySHA256": "6ce6378b9659f1a658fbdb76c483d45fdc7c6c26f511f1a66f64ea0b16c4e14f",
+        "objectCount": 783,
+        "meshCount": 775,
+        "meshVertices": 3914487,
+        "meshPolygons": 2872112,
+        "materialCount": 326,
+        "sceneSettings": [
+          {
+            "name": "Scene",
+            "objects": 783,
+            "resolution": [
+              3840,
+              2400,
+              100
+            ]
+          }
+        ],
+        "libraries": [],
+        "cameras": [
+          {
+            "scene": "Scene",
+            "name": "Camera",
+            "active": true,
+            "type": "ORTHO",
+            "matrix": [
+              [
+                0.9486832618713379,
+                -0.14453370869159698,
+                0.2812650501728058,
+                2650.0
+              ],
+              [
+                0.3162277936935425,
+                0.4336009621620178,
+                -0.843795120716095,
+                -5580.0
+              ],
+              [
+                3.869120490662681e-08,
+                0.8894381523132324,
+                0.45705556869506836,
+                2060.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "scale": 2800.0,
+            "lens": 50.0,
+            "clip": [
+              0.10000000149011612,
+              150000.0
+            ]
+          }
+        ]
+      },
+      "packedImages": [
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "packedFiles": []
+        }
+      ]
+    },
+    {
+      "file": "outputs/scenes/malton.blend",
+      "beforeSHA256": "bb20f1881fdd3d982f876858d5314a05253c6ba5e1317b1dcdf0d7511c1d5a73",
+      "afterSHA256": "ff39af32d07a2de07f810ab1c6b032e0c264602d586d66fd78053c49a4aa873e",
+      "beforeBytes": 54479457,
+      "afterBytes": 31966345,
+      "savedBytes": 22513112,
+      "decodedBytes": 176043533,
+      "decodedSHA256": "2f6efb514dcc0ef5a206b45961bba67b8246253b2a5ba7455a7842e08d545b97",
+      "decodedByteIdentity": true,
+      "blenderInventoryPassed": true,
+      "blenderInventorySHA256": "9a71930e289b7ba9289d5d2d49fab1d116b8adba5d7ecae9c82a078a9364b5cb",
+      "compressionSeconds": 11.371542333014077,
+      "totalSeconds": 12.654059583001072,
+      "atomicReplacement": true,
+      "blenderInventory": {
+        "blenderVersion": "5.0.0",
+        "inventorySHA256": "9a71930e289b7ba9289d5d2d49fab1d116b8adba5d7ecae9c82a078a9364b5cb",
+        "objectCount": 358,
+        "meshCount": 356,
+        "meshVertices": 2772912,
+        "meshPolygons": 1966500,
+        "materialCount": 307,
+        "sceneSettings": [
+          {
+            "name": "Scene",
+            "objects": 358,
+            "resolution": [
+              3840,
+              2400,
+              100
+            ]
+          }
+        ],
+        "libraries": [],
+        "cameras": [
+          {
+            "scene": "Scene",
+            "name": "Camera",
+            "active": true,
+            "type": "ORTHO",
+            "matrix": [
+              [
+                -0.9486833214759827,
+                -0.14157834649085999,
+                0.28276416659355164,
+                -4550.0
+              ],
+              [
+                0.3162277638912201,
+                -0.42473503947257996,
+                0.8482924699783325,
+                17500.0
+              ],
+              [
+                -1.1646816844290697e-08,
+                0.8941788077354431,
+                0.4477100372314453,
+                2045.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "scale": 2400.0,
+            "lens": 50.0,
+            "clip": [
+              0.10000000149011612,
+              150000.0
+            ]
+          }
+        ]
+      },
+      "packedImages": [
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "packedFiles": []
+        }
+      ]
+    },
+    {
+      "file": "outputs/scenes/meadowvale.blend",
+      "beforeSHA256": "a26b5e3c5455633b8951f02e7745388c333e9a8e377f441f725c4eb71376d79f",
+      "afterSHA256": "c67432117078d6ffbc8c5e22fbf7ffa6d5a26486f340a25cdc27af65a02e45ae",
+      "beforeBytes": 265412998,
+      "afterBytes": 149827788,
+      "savedBytes": 115585210,
+      "decodedBytes": 785496862,
+      "decodedSHA256": "0a3e97274e13b655ca92791a17eb81d333620635f022cab814643e77a70ac8f7",
+      "decodedByteIdentity": true,
+      "blenderInventoryPassed": true,
+      "blenderInventorySHA256": "3d3dd9078e113ede4c4dcd1ae6216d6722bc099d2a34b627d4a84acedc6370d1",
+      "compressionSeconds": 48.791339541989146,
+      "totalSeconds": 53.072730582993245,
+      "atomicReplacement": true,
+      "blenderInventory": {
+        "blenderVersion": "5.0.0",
+        "inventorySHA256": "3d3dd9078e113ede4c4dcd1ae6216d6722bc099d2a34b627d4a84acedc6370d1",
+        "objectCount": 598,
+        "meshCount": 590,
+        "meshVertices": 13804103,
+        "meshPolygons": 8971607,
+        "materialCount": 356,
+        "sceneSettings": [
+          {
+            "name": "Scene",
+            "objects": 598,
+            "resolution": [
+              3840,
+              2400,
+              100
+            ]
+          }
+        ],
+        "libraries": [],
+        "cameras": [
+          {
+            "scene": "Scene",
+            "name": "Camera",
+            "active": true,
+            "type": "ORTHO",
+            "matrix": [
+              [
+                0.8178063631057739,
+                -0.2509792447090149,
+                0.5178824067115784,
+                -10717.779296875
+              ],
+              [
+                0.5754935145378113,
+                0.356654554605484,
+                -0.7359380125999451,
+                -4035.8330078125
+              ],
+              [
+                5.537074798667163e-08,
+                0.8998927474021912,
+                0.4361112713813782,
+                2746.139892578125
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "scale": 3680.0,
+            "lens": 50.0,
+            "clip": [
+              0.10000000149011612,
+              150000.0
+            ]
+          }
+        ]
+      },
+      "packedImages": [
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "packedFiles": []
+        }
+      ]
+    },
+    {
+      "file": "outputs/scenes/port-credit.blend",
+      "beforeSHA256": "7a1e819803936b298d7e3b3b7f640423919bd91b0ba223abf59754ce93ff4ae6",
+      "afterSHA256": "d49025eea023db526ace0ebdcf921996381f6977e7f02f33e1e59116b3fab4af",
+      "beforeBytes": 94478117,
+      "afterBytes": 56356542,
+      "savedBytes": 38121575,
+      "decodedBytes": 305691301,
+      "decodedSHA256": "3dc5ca47ae36c2ae106eee053e4db46e8bdd7b5c4171ec2b3fdad790c43b5785",
+      "decodedByteIdentity": true,
+      "blenderInventoryPassed": true,
+      "blenderInventorySHA256": "87b4bbf3406bf47a3344c2a7a30108ea6d00dd36bbcaea5cb11715fcb6604d96",
+      "compressionSeconds": 18.319838291005,
+      "totalSeconds": 20.159015791025013,
+      "atomicReplacement": true,
+      "blenderInventory": {
+        "blenderVersion": "5.0.0",
+        "inventorySHA256": "87b4bbf3406bf47a3344c2a7a30108ea6d00dd36bbcaea5cb11715fcb6604d96",
+        "objectCount": 842,
+        "meshCount": 834,
+        "meshVertices": 4563998,
+        "meshPolygons": 3524743,
+        "materialCount": 317,
+        "sceneSettings": [
+          {
+            "name": "Scene",
+            "objects": 842,
+            "resolution": [
+              3840,
+              2400,
+              100
+            ]
+          }
+        ],
+        "libraries": [],
+        "cameras": [
+          {
+            "scene": "Scene",
+            "name": "Camera",
+            "active": true,
+            "type": "ORTHO",
+            "matrix": [
+              [
+                0.22819118201732635,
+                -0.5152567625045776,
+                0.8260987997055054,
+                1750.0
+              ],
+              [
+                0.973616361618042,
+                0.12076320499181747,
+                -0.19361679255962372,
+                -4850.0
+              ],
+              [
+                2.5438353645768075e-08,
+                0.8484849333763123,
+                0.5292195081710815,
+                2140.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "scale": 2250.0,
+            "lens": 50.0,
+            "clip": [
+              0.10000000149011612,
+              150000.0
+            ]
+          }
+        ]
+      },
+      "packedImages": [
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "packedFiles": []
+        }
+      ]
+    },
+    {
+      "file": "outputs/scenes/streetsville.blend",
+      "beforeSHA256": "11a3e0a2b9085faa98ed8eb0fb92300169b8ad61a4b599324e7a24b30ffe4dd0",
+      "afterSHA256": "d33083ab11c15c3586a2b91328a3f11afb66dedef36bd04f56b5bff0cec35c89",
+      "beforeBytes": 201244769,
+      "afterBytes": 113557055,
+      "savedBytes": 87687714,
+      "decodedBytes": 600667636,
+      "decodedSHA256": "94c2d00208f4a293e0bd401ee2394959e278bc36374aaba1fd26edeb05d1dbd1",
+      "decodedByteIdentity": true,
+      "blenderInventoryPassed": true,
+      "blenderInventorySHA256": "6ad13b95efc0a01231c1fc60e897ce903e0b879a913961cd461f75cac1ac81e6",
+      "compressionSeconds": 36.9459238339914,
+      "totalSeconds": 40.13116187500418,
+      "atomicReplacement": true,
+      "blenderInventory": {
+        "blenderVersion": "5.0.0",
+        "inventorySHA256": "6ad13b95efc0a01231c1fc60e897ce903e0b879a913961cd461f75cac1ac81e6",
+        "objectCount": 466,
+        "meshCount": 458,
+        "meshVertices": 10532908,
+        "meshPolygons": 6860552,
+        "materialCount": 311,
+        "sceneSettings": [
+          {
+            "name": "Scene",
+            "objects": 466,
+            "resolution": [
+              3840,
+              2400,
+              100
+            ]
+          }
+        ],
+        "libraries": [],
+        "cameras": [
+          {
+            "scene": "Scene",
+            "name": "Camera",
+            "active": true,
+            "type": "ORTHO",
+            "matrix": [
+              [
+                0.8178063035011292,
+                -0.2509792447090149,
+                0.5178825259208679,
+                -9016.361328125
+              ],
+              [
+                0.575493574142456,
+                0.356654554605484,
+                -0.7359379529953003,
+                -3692.0205078125
+              ],
+              [
+                -1.076092637219972e-08,
+                0.8998927474021912,
+                0.4361112713813782,
+                1843.52490234375
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "scale": 2730.0,
+            "lens": 50.0,
+            "clip": [
+              0.10000000149011612,
+              150000.0
+            ]
+          }
+        ]
+      },
+      "packedImages": [
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "packedFiles": []
+        }
+      ]
+    },
+    {
+      "file": "outputs/scenes/uptown.blend",
+      "beforeSHA256": "a67d03082b320d3aae37f25c29d103d72a6f557d38a6bda86bad389ffa4ad350",
+      "afterSHA256": "d08830c20a12256f03fca7301f50b8c681cdecff3be4461c6c0b8221069314c7",
+      "beforeBytes": 209301454,
+      "afterBytes": 119111202,
+      "savedBytes": 90190252,
+      "decodedBytes": 644820403,
+      "decodedSHA256": "5f45e2462ace208e3a0fa9201d56129c0c4fd14f34edc121065abb551726e510",
+      "decodedByteIdentity": true,
+      "blenderInventoryPassed": true,
+      "blenderInventorySHA256": "3d7ffaeb472e574c10e4d2ea12fd1361570c7e7e3c435a0d96d7c0958fddebac",
+      "compressionSeconds": 39.53143783300766,
+      "totalSeconds": 42.93502054200508,
+      "atomicReplacement": true,
+      "blenderInventory": {
+        "blenderVersion": "5.0.0",
+        "inventorySHA256": "3d7ffaeb472e574c10e4d2ea12fd1361570c7e7e3c435a0d96d7c0958fddebac",
+        "objectCount": 1100,
+        "meshCount": 1098,
+        "meshVertices": 11303756,
+        "meshPolygons": 7225210,
+        "materialCount": 437,
+        "sceneSettings": [
+          {
+            "name": "Scene",
+            "objects": 1100,
+            "resolution": [
+              3840,
+              2400,
+              100
+            ]
+          }
+        ],
+        "libraries": [],
+        "cameras": [
+          {
+            "scene": "Scene",
+            "name": "Camera",
+            "active": true,
+            "type": "ORTHO",
+            "matrix": [
+              [
+                0.8178063035011292,
+                -0.25097912549972534,
+                0.5178825855255127,
+                -4158.24365234375
+              ],
+              [
+                0.575493574142456,
+                0.35665449500083923,
+                -0.7359379529953003,
+                -1118.239990234375
+              ],
+              [
+                -8.90864839675487e-08,
+                0.8998928070068359,
+                0.4361111521720886,
+                2005.18994140625
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "scale": 2576.0,
+            "lens": 50.0,
+            "clip": [
+              0.10000000149011612,
+              150000.0
+            ]
+          }
+        ]
+      },
+      "packedImages": [
+        {
+          "name": "Image_0",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 6852,
+              "sha256": "698826fb5c9795517b98e9513a6c04d586dd1d1fb1777d15babc81eddc7c0cca"
+            }
+          ]
+        },
+        {
+          "name": "Image_0.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 6852,
+              "sha256": "698826fb5c9795517b98e9513a6c04d586dd1d1fb1777d15babc81eddc7c0cca"
+            }
+          ]
+        },
+        {
+          "name": "Image_1",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 132072,
+              "sha256": "c6890c2390b91b1b9cf68836945c14c5e3a02c004f9e5f177664498f4be0ac7c"
+            }
+          ]
+        },
+        {
+          "name": "Image_1.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46540,
+              "sha256": "549c03d2ac2315c86d5204222fdb8c340c207b3deb56241dc1431a8c37ed2840"
+            }
+          ]
+        },
+        {
+          "name": "Image_10",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_10.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3580,
+              "sha256": "bac6afeb5c7268b2a7237b5c922dc7a47a88a1f6adbdda478a77c7ca64dac8ec"
+            }
+          ]
+        },
+        {
+          "name": "Image_11",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46432,
+              "sha256": "2b96b748342253ea2a2a148ac74256ae714054e95c77f85f504776b718884bb2"
+            }
+          ]
+        },
+        {
+          "name": "Image_11.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 24192,
+              "sha256": "56e25c3027dea6eaf6a6c4baa392b41e341359222e2dd2b61bb0302aad3d9e0b"
+            }
+          ]
+        },
+        {
+          "name": "Image_12",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 412,
+              "sha256": "1707f9a1e13a057628659c09467a6cfa6638b2e09ba1512ca6d45d2a3277f0f2"
+            }
+          ]
+        },
+        {
+          "name": "Image_12.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_13",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3580,
+              "sha256": "bac6afeb5c7268b2a7237b5c922dc7a47a88a1f6adbdda478a77c7ca64dac8ec"
+            }
+          ]
+        },
+        {
+          "name": "Image_13.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_14",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 24192,
+              "sha256": "56e25c3027dea6eaf6a6c4baa392b41e341359222e2dd2b61bb0302aad3d9e0b"
+            }
+          ]
+        },
+        {
+          "name": "Image_15",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_16",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "4afec2c34459704c4d207eee6cf20019b81881922d63a254b9101af2f3addb9a"
+            }
+          ]
+        },
+        {
+          "name": "Image_17",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_2",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 85484,
+              "sha256": "ff217c7c3d21812358c03841354668ca95b31f690097d6559706ca77380981da"
+            }
+          ]
+        },
+        {
+          "name": "Image_2.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 238204,
+              "sha256": "0d7e22aafc7de8479c965628804fc8ceca2ea20f86bac934c936628911f971e5"
+            }
+          ]
+        },
+        {
+          "name": "Image_3",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46540,
+              "sha256": "549c03d2ac2315c86d5204222fdb8c340c207b3deb56241dc1431a8c37ed2840"
+            }
+          ]
+        },
+        {
+          "name": "Image_3.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 1200,
+              "sha256": "35969839624f5588b860296726641c3d3d0e9dadaf3fff584dfb2d0a7de01efe"
+            }
+          ]
+        },
+        {
+          "name": "Image_4",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 238204,
+              "sha256": "0d7e22aafc7de8479c965628804fc8ceca2ea20f86bac934c936628911f971e5"
+            }
+          ]
+        },
+        {
+          "name": "Image_4.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 26168,
+              "sha256": "2d7bd7f8506db8a6403cb7371deb4b5d4f5d63d4846025276c2c818881fa5405"
+            }
+          ]
+        },
+        {
+          "name": "Image_5",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 1200,
+              "sha256": "35969839624f5588b860296726641c3d3d0e9dadaf3fff584dfb2d0a7de01efe"
+            }
+          ]
+        },
+        {
+          "name": "Image_5.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3392,
+              "sha256": "2c20341db865833526b9213c6a3ecabb8e3508a60f57f85ebf4a22489a0d2369"
+            }
+          ]
+        },
+        {
+          "name": "Image_6",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 8728,
+              "sha256": "453f7eb03eeabda8715bc43ec364a9f1edd1a371571a60948dbfa586ebdaf4f5"
+            }
+          ]
+        },
+        {
+          "name": "Image_6.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_7",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 26168,
+              "sha256": "2d7bd7f8506db8a6403cb7371deb4b5d4f5d63d4846025276c2c818881fa5405"
+            }
+          ]
+        },
+        {
+          "name": "Image_7.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_8",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3392,
+              "sha256": "2c20341db865833526b9213c6a3ecabb8e3508a60f57f85ebf4a22489a0d2369"
+            }
+          ]
+        },
+        {
+          "name": "Image_8.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46432,
+              "sha256": "2b96b748342253ea2a2a148ac74256ae714054e95c77f85f504776b718884bb2"
+            }
+          ]
+        },
+        {
+          "name": "Image_9",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_9.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 412,
+              "sha256": "1707f9a1e13a057628659c09467a6cfa6638b2e09ba1512ca6d45d2a3277f0f2"
+            }
+          ]
+        },
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "packedFiles": []
+        }
+      ]
+    },
+    {
+      "file": "outputs/checkpoints/05-road-crossings-after/downtown-aerial-after.blend",
+      "beforeSHA256": "1ae090821e98d0acf7267383550c2d00f9d7a98fa7710e628531a02e4cebc19b",
+      "afterSHA256": "2810abd0b2282c05e740ee60266c42d75d8250bbf238b0d954392b505707e0db",
+      "beforeBytes": 181429035,
+      "afterBytes": 106906070,
+      "savedBytes": 74522965,
+      "decodedBytes": 542727783,
+      "decodedSHA256": "e8673bda42822676f38078c92f8f4b10aa8ad6151ddfce783b562b778765ccdf",
+      "decodedByteIdentity": true,
+      "blenderInventoryPassed": true,
+      "blenderInventorySHA256": "5df152a6241243625f891c03db3b7616e05947905b75ca4f2fa19d14a08bb019",
+      "compressionSeconds": 33.77898283302784,
+      "totalSeconds": 36.8905157080153,
+      "atomicReplacement": true,
+      "blenderInventory": {
+        "blenderVersion": "5.0.0",
+        "inventorySHA256": "5df152a6241243625f891c03db3b7616e05947905b75ca4f2fa19d14a08bb019",
+        "objectCount": 1384,
+        "meshCount": 1382,
+        "meshVertices": 9187687,
+        "meshPolygons": 5984864,
+        "materialCount": 679,
+        "sceneSettings": [
+          {
+            "name": "Scene",
+            "objects": 1384,
+            "resolution": [
+              3840,
+              2400,
+              100
+            ]
+          }
+        ],
+        "libraries": [],
+        "cameras": [
+          {
+            "scene": "Scene",
+            "name": "Camera",
+            "active": true,
+            "type": "ORTHO",
+            "matrix": [
+              [
+                0.816967785358429,
+                -0.2235354483127594,
+                0.5315971374511719,
+                -2760.0
+              ],
+              [
+                0.5766832828521729,
+                0.3166751265525818,
+                -0.7530957460403442,
+                -3370.0
+              ],
+              [
+                3.787719915493426e-09,
+                0.921818196773529,
+                0.38762253522872925,
+                1925.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "scale": 2350.0,
+            "lens": 50.0,
+            "clip": [
+              0.10000000149011612,
+              150000.0
+            ]
+          }
+        ]
+      },
+      "packedImages": [
+        {
+          "name": "Image_0",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 6852,
+              "sha256": "698826fb5c9795517b98e9513a6c04d586dd1d1fb1777d15babc81eddc7c0cca"
+            }
+          ]
+        },
+        {
+          "name": "Image_0.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 6852,
+              "sha256": "698826fb5c9795517b98e9513a6c04d586dd1d1fb1777d15babc81eddc7c0cca"
+            }
+          ]
+        },
+        {
+          "name": "Image_1",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 132072,
+              "sha256": "c6890c2390b91b1b9cf68836945c14c5e3a02c004f9e5f177664498f4be0ac7c"
+            }
+          ]
+        },
+        {
+          "name": "Image_1.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46540,
+              "sha256": "549c03d2ac2315c86d5204222fdb8c340c207b3deb56241dc1431a8c37ed2840"
+            }
+          ]
+        },
+        {
+          "name": "Image_10",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_10.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3580,
+              "sha256": "bac6afeb5c7268b2a7237b5c922dc7a47a88a1f6adbdda478a77c7ca64dac8ec"
+            }
+          ]
+        },
+        {
+          "name": "Image_11",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46432,
+              "sha256": "2b96b748342253ea2a2a148ac74256ae714054e95c77f85f504776b718884bb2"
+            }
+          ]
+        },
+        {
+          "name": "Image_11.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 24192,
+              "sha256": "56e25c3027dea6eaf6a6c4baa392b41e341359222e2dd2b61bb0302aad3d9e0b"
+            }
+          ]
+        },
+        {
+          "name": "Image_12",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 412,
+              "sha256": "1707f9a1e13a057628659c09467a6cfa6638b2e09ba1512ca6d45d2a3277f0f2"
+            }
+          ]
+        },
+        {
+          "name": "Image_12.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_13",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3580,
+              "sha256": "bac6afeb5c7268b2a7237b5c922dc7a47a88a1f6adbdda478a77c7ca64dac8ec"
+            }
+          ]
+        },
+        {
+          "name": "Image_13.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_14",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 24192,
+              "sha256": "56e25c3027dea6eaf6a6c4baa392b41e341359222e2dd2b61bb0302aad3d9e0b"
+            }
+          ]
+        },
+        {
+          "name": "Image_15",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_16",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "4afec2c34459704c4d207eee6cf20019b81881922d63a254b9101af2f3addb9a"
+            }
+          ]
+        },
+        {
+          "name": "Image_17",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_2",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 85484,
+              "sha256": "ff217c7c3d21812358c03841354668ca95b31f690097d6559706ca77380981da"
+            }
+          ]
+        },
+        {
+          "name": "Image_2.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 238204,
+              "sha256": "0d7e22aafc7de8479c965628804fc8ceca2ea20f86bac934c936628911f971e5"
+            }
+          ]
+        },
+        {
+          "name": "Image_3",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46540,
+              "sha256": "549c03d2ac2315c86d5204222fdb8c340c207b3deb56241dc1431a8c37ed2840"
+            }
+          ]
+        },
+        {
+          "name": "Image_3.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 1200,
+              "sha256": "35969839624f5588b860296726641c3d3d0e9dadaf3fff584dfb2d0a7de01efe"
+            }
+          ]
+        },
+        {
+          "name": "Image_4",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 238204,
+              "sha256": "0d7e22aafc7de8479c965628804fc8ceca2ea20f86bac934c936628911f971e5"
+            }
+          ]
+        },
+        {
+          "name": "Image_4.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 26168,
+              "sha256": "2d7bd7f8506db8a6403cb7371deb4b5d4f5d63d4846025276c2c818881fa5405"
+            }
+          ]
+        },
+        {
+          "name": "Image_5",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 1200,
+              "sha256": "35969839624f5588b860296726641c3d3d0e9dadaf3fff584dfb2d0a7de01efe"
+            }
+          ]
+        },
+        {
+          "name": "Image_5.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3392,
+              "sha256": "2c20341db865833526b9213c6a3ecabb8e3508a60f57f85ebf4a22489a0d2369"
+            }
+          ]
+        },
+        {
+          "name": "Image_6",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 8728,
+              "sha256": "453f7eb03eeabda8715bc43ec364a9f1edd1a371571a60948dbfa586ebdaf4f5"
+            }
+          ]
+        },
+        {
+          "name": "Image_6.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_7",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 26168,
+              "sha256": "2d7bd7f8506db8a6403cb7371deb4b5d4f5d63d4846025276c2c818881fa5405"
+            }
+          ]
+        },
+        {
+          "name": "Image_7.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_8",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3392,
+              "sha256": "2c20341db865833526b9213c6a3ecabb8e3508a60f57f85ebf4a22489a0d2369"
+            }
+          ]
+        },
+        {
+          "name": "Image_8.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46432,
+              "sha256": "2b96b748342253ea2a2a148ac74256ae714054e95c77f85f504776b718884bb2"
+            }
+          ]
+        },
+        {
+          "name": "Image_9",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_9.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 412,
+              "sha256": "1707f9a1e13a057628659c09467a6cfa6638b2e09ba1512ca6d45d2a3277f0f2"
+            }
+          ]
+        },
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "packedFiles": []
+        }
+      ]
+    },
+    {
+      "file": "outputs/checkpoints/05-road-crossings-after/downtown-landmark-after.blend",
+      "beforeSHA256": "ec8686f52b7f20d793d31d61f32a053a5ee0437a9e54085aeab2c2a090440db5",
+      "afterSHA256": "3c1d0daa471a249442ee27710a1ca18b919e47f2d030884e1dbac453b5a4e10e",
+      "beforeBytes": 181432432,
+      "afterBytes": 107069578,
+      "savedBytes": 74362854,
+      "decodedBytes": 542727083,
+      "decodedSHA256": "5dffca527e1ceff75c7e2b94db86272feef110d9dcb83de43bc0f0ce7df8ce74",
+      "decodedByteIdentity": true,
+      "blenderInventoryPassed": true,
+      "blenderInventorySHA256": "d5d57f7d537a69101e6d8e65ccd7a29b7d6b3fd543c16439aa796c12858b2b76",
+      "compressionSeconds": 33.75229620799655,
+      "totalSeconds": 36.79075504199136,
+      "atomicReplacement": true,
+      "blenderInventory": {
+        "blenderVersion": "5.0.0",
+        "inventorySHA256": "d5d57f7d537a69101e6d8e65ccd7a29b7d6b3fd543c16439aa796c12858b2b76",
+        "objectCount": 1384,
+        "meshCount": 1382,
+        "meshVertices": 9187687,
+        "meshPolygons": 5984864,
+        "materialCount": 679,
+        "sceneSettings": [
+          {
+            "name": "Scene",
+            "objects": 1384,
+            "resolution": [
+              3840,
+              2400,
+              100
+            ]
+          }
+        ],
+        "libraries": [],
+        "cameras": [
+          {
+            "scene": "Scene",
+            "name": "Camera",
+            "active": true,
+            "type": "PERSP",
+            "matrix": [
+              [
+                -0.5070201754570007,
+                -0.2809431552886963,
+                0.814862847328186,
+                -4007.0
+              ],
+              [
+                0.8619341850280762,
+                -0.16526074707508087,
+                0.4793311655521393,
+                1263.0
+              ],
+              [
+                4.277236698158049e-08,
+                0.9453887343406677,
+                0.32594501972198486,
+                490.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "scale": 2350.0,
+            "lens": 55.0,
+            "clip": [
+              0.10000000149011612,
+              150000.0
+            ]
+          }
+        ]
+      },
+      "packedImages": [
+        {
+          "name": "Image_0",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 6852,
+              "sha256": "698826fb5c9795517b98e9513a6c04d586dd1d1fb1777d15babc81eddc7c0cca"
+            }
+          ]
+        },
+        {
+          "name": "Image_0.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 6852,
+              "sha256": "698826fb5c9795517b98e9513a6c04d586dd1d1fb1777d15babc81eddc7c0cca"
+            }
+          ]
+        },
+        {
+          "name": "Image_1",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 132072,
+              "sha256": "c6890c2390b91b1b9cf68836945c14c5e3a02c004f9e5f177664498f4be0ac7c"
+            }
+          ]
+        },
+        {
+          "name": "Image_1.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46540,
+              "sha256": "549c03d2ac2315c86d5204222fdb8c340c207b3deb56241dc1431a8c37ed2840"
+            }
+          ]
+        },
+        {
+          "name": "Image_10",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_10.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3580,
+              "sha256": "bac6afeb5c7268b2a7237b5c922dc7a47a88a1f6adbdda478a77c7ca64dac8ec"
+            }
+          ]
+        },
+        {
+          "name": "Image_11",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46432,
+              "sha256": "2b96b748342253ea2a2a148ac74256ae714054e95c77f85f504776b718884bb2"
+            }
+          ]
+        },
+        {
+          "name": "Image_11.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 24192,
+              "sha256": "56e25c3027dea6eaf6a6c4baa392b41e341359222e2dd2b61bb0302aad3d9e0b"
+            }
+          ]
+        },
+        {
+          "name": "Image_12",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 412,
+              "sha256": "1707f9a1e13a057628659c09467a6cfa6638b2e09ba1512ca6d45d2a3277f0f2"
+            }
+          ]
+        },
+        {
+          "name": "Image_12.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_13",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3580,
+              "sha256": "bac6afeb5c7268b2a7237b5c922dc7a47a88a1f6adbdda478a77c7ca64dac8ec"
+            }
+          ]
+        },
+        {
+          "name": "Image_13.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_14",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 24192,
+              "sha256": "56e25c3027dea6eaf6a6c4baa392b41e341359222e2dd2b61bb0302aad3d9e0b"
+            }
+          ]
+        },
+        {
+          "name": "Image_15",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_16",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "4afec2c34459704c4d207eee6cf20019b81881922d63a254b9101af2f3addb9a"
+            }
+          ]
+        },
+        {
+          "name": "Image_17",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_2",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 85484,
+              "sha256": "ff217c7c3d21812358c03841354668ca95b31f690097d6559706ca77380981da"
+            }
+          ]
+        },
+        {
+          "name": "Image_2.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 238204,
+              "sha256": "0d7e22aafc7de8479c965628804fc8ceca2ea20f86bac934c936628911f971e5"
+            }
+          ]
+        },
+        {
+          "name": "Image_3",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46540,
+              "sha256": "549c03d2ac2315c86d5204222fdb8c340c207b3deb56241dc1431a8c37ed2840"
+            }
+          ]
+        },
+        {
+          "name": "Image_3.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 1200,
+              "sha256": "35969839624f5588b860296726641c3d3d0e9dadaf3fff584dfb2d0a7de01efe"
+            }
+          ]
+        },
+        {
+          "name": "Image_4",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 238204,
+              "sha256": "0d7e22aafc7de8479c965628804fc8ceca2ea20f86bac934c936628911f971e5"
+            }
+          ]
+        },
+        {
+          "name": "Image_4.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 26168,
+              "sha256": "2d7bd7f8506db8a6403cb7371deb4b5d4f5d63d4846025276c2c818881fa5405"
+            }
+          ]
+        },
+        {
+          "name": "Image_5",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 1200,
+              "sha256": "35969839624f5588b860296726641c3d3d0e9dadaf3fff584dfb2d0a7de01efe"
+            }
+          ]
+        },
+        {
+          "name": "Image_5.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3392,
+              "sha256": "2c20341db865833526b9213c6a3ecabb8e3508a60f57f85ebf4a22489a0d2369"
+            }
+          ]
+        },
+        {
+          "name": "Image_6",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 8728,
+              "sha256": "453f7eb03eeabda8715bc43ec364a9f1edd1a371571a60948dbfa586ebdaf4f5"
+            }
+          ]
+        },
+        {
+          "name": "Image_6.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_7",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 26168,
+              "sha256": "2d7bd7f8506db8a6403cb7371deb4b5d4f5d63d4846025276c2c818881fa5405"
+            }
+          ]
+        },
+        {
+          "name": "Image_7.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_8",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3392,
+              "sha256": "2c20341db865833526b9213c6a3ecabb8e3508a60f57f85ebf4a22489a0d2369"
+            }
+          ]
+        },
+        {
+          "name": "Image_8.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46432,
+              "sha256": "2b96b748342253ea2a2a148ac74256ae714054e95c77f85f504776b718884bb2"
+            }
+          ]
+        },
+        {
+          "name": "Image_9",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_9.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 412,
+              "sha256": "1707f9a1e13a057628659c09467a6cfa6638b2e09ba1512ca6d45d2a3277f0f2"
+            }
+          ]
+        },
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "packedFiles": []
+        }
+      ]
+    },
+    {
+      "file": "outputs/checkpoints/05-road-crossings-after/downtown-junction-after.blend",
+      "beforeSHA256": "710b9d8e57e2c7501314b14a50ba9c11ee25aa63bf14df83f6b7208d1462d1d7",
+      "afterSHA256": "0ee76dc0663a4f3865899d5e8d2d47f622aebad56a7630c370139490ebcec692",
+      "beforeBytes": 171214193,
+      "afterBytes": 97485541,
+      "savedBytes": 73728652,
+      "decodedBytes": 542727083,
+      "decodedSHA256": "31d518c7c64db502e373a6a56f084ae6d6a050b55e7efbc4336276e22f08922d",
+      "decodedByteIdentity": true,
+      "blenderInventoryPassed": true,
+      "blenderInventorySHA256": "9603d0f4b7f4896be2d2dfd4372cbfd0e3e7938b059ed2e3df1a6ac7321d28be",
+      "compressionSeconds": 32.3527151249873,
+      "totalSeconds": 35.3627663749794,
+      "atomicReplacement": true,
+      "blenderInventory": {
+        "blenderVersion": "5.0.0",
+        "inventorySHA256": "9603d0f4b7f4896be2d2dfd4372cbfd0e3e7938b059ed2e3df1a6ac7321d28be",
+        "objectCount": 1384,
+        "meshCount": 1382,
+        "meshVertices": 9187687,
+        "meshPolygons": 5984864,
+        "materialCount": 679,
+        "sceneSettings": [
+          {
+            "name": "Scene",
+            "objects": 1384,
+            "resolution": [
+              3840,
+              2400,
+              100
+            ]
+          }
+        ],
+        "libraries": [],
+        "cameras": [
+          {
+            "scene": "Scene",
+            "name": "Camera",
+            "active": true,
+            "type": "PERSP",
+            "matrix": [
+              [
+                0.8253072500228882,
+                -0.35943475365638733,
+                0.4355165362358093,
+                -4936.0
+              ],
+              [
+                0.5646839737892151,
+                0.525327742099762,
+                -0.636523962020874,
+                350.0
+              ],
+              [
+                -7.533493828759674e-08,
+                0.7712570428848267,
+                0.6365238428115845,
+                1050.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "scale": 2350.0,
+            "lens": 55.0,
+            "clip": [
+              0.10000000149011612,
+              150000.0
+            ]
+          }
+        ]
+      },
+      "packedImages": [
+        {
+          "name": "Image_0",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 6852,
+              "sha256": "698826fb5c9795517b98e9513a6c04d586dd1d1fb1777d15babc81eddc7c0cca"
+            }
+          ]
+        },
+        {
+          "name": "Image_0.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 6852,
+              "sha256": "698826fb5c9795517b98e9513a6c04d586dd1d1fb1777d15babc81eddc7c0cca"
+            }
+          ]
+        },
+        {
+          "name": "Image_1",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 132072,
+              "sha256": "c6890c2390b91b1b9cf68836945c14c5e3a02c004f9e5f177664498f4be0ac7c"
+            }
+          ]
+        },
+        {
+          "name": "Image_1.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46540,
+              "sha256": "549c03d2ac2315c86d5204222fdb8c340c207b3deb56241dc1431a8c37ed2840"
+            }
+          ]
+        },
+        {
+          "name": "Image_10",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_10.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3580,
+              "sha256": "bac6afeb5c7268b2a7237b5c922dc7a47a88a1f6adbdda478a77c7ca64dac8ec"
+            }
+          ]
+        },
+        {
+          "name": "Image_11",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46432,
+              "sha256": "2b96b748342253ea2a2a148ac74256ae714054e95c77f85f504776b718884bb2"
+            }
+          ]
+        },
+        {
+          "name": "Image_11.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 24192,
+              "sha256": "56e25c3027dea6eaf6a6c4baa392b41e341359222e2dd2b61bb0302aad3d9e0b"
+            }
+          ]
+        },
+        {
+          "name": "Image_12",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 412,
+              "sha256": "1707f9a1e13a057628659c09467a6cfa6638b2e09ba1512ca6d45d2a3277f0f2"
+            }
+          ]
+        },
+        {
+          "name": "Image_12.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_13",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3580,
+              "sha256": "bac6afeb5c7268b2a7237b5c922dc7a47a88a1f6adbdda478a77c7ca64dac8ec"
+            }
+          ]
+        },
+        {
+          "name": "Image_13.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_14",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 24192,
+              "sha256": "56e25c3027dea6eaf6a6c4baa392b41e341359222e2dd2b61bb0302aad3d9e0b"
+            }
+          ]
+        },
+        {
+          "name": "Image_15",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_16",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "4afec2c34459704c4d207eee6cf20019b81881922d63a254b9101af2f3addb9a"
+            }
+          ]
+        },
+        {
+          "name": "Image_17",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_2",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 85484,
+              "sha256": "ff217c7c3d21812358c03841354668ca95b31f690097d6559706ca77380981da"
+            }
+          ]
+        },
+        {
+          "name": "Image_2.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 238204,
+              "sha256": "0d7e22aafc7de8479c965628804fc8ceca2ea20f86bac934c936628911f971e5"
+            }
+          ]
+        },
+        {
+          "name": "Image_3",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46540,
+              "sha256": "549c03d2ac2315c86d5204222fdb8c340c207b3deb56241dc1431a8c37ed2840"
+            }
+          ]
+        },
+        {
+          "name": "Image_3.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 1200,
+              "sha256": "35969839624f5588b860296726641c3d3d0e9dadaf3fff584dfb2d0a7de01efe"
+            }
+          ]
+        },
+        {
+          "name": "Image_4",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 238204,
+              "sha256": "0d7e22aafc7de8479c965628804fc8ceca2ea20f86bac934c936628911f971e5"
+            }
+          ]
+        },
+        {
+          "name": "Image_4.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 26168,
+              "sha256": "2d7bd7f8506db8a6403cb7371deb4b5d4f5d63d4846025276c2c818881fa5405"
+            }
+          ]
+        },
+        {
+          "name": "Image_5",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 1200,
+              "sha256": "35969839624f5588b860296726641c3d3d0e9dadaf3fff584dfb2d0a7de01efe"
+            }
+          ]
+        },
+        {
+          "name": "Image_5.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3392,
+              "sha256": "2c20341db865833526b9213c6a3ecabb8e3508a60f57f85ebf4a22489a0d2369"
+            }
+          ]
+        },
+        {
+          "name": "Image_6",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 8728,
+              "sha256": "453f7eb03eeabda8715bc43ec364a9f1edd1a371571a60948dbfa586ebdaf4f5"
+            }
+          ]
+        },
+        {
+          "name": "Image_6.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_7",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 26168,
+              "sha256": "2d7bd7f8506db8a6403cb7371deb4b5d4f5d63d4846025276c2c818881fa5405"
+            }
+          ]
+        },
+        {
+          "name": "Image_7.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 736,
+              "sha256": "cf671f179308db41aa92a4d1d17ee2ccdacf397b7c172a04c132e2d3248bc28f"
+            }
+          ]
+        },
+        {
+          "name": "Image_8",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 3392,
+              "sha256": "2c20341db865833526b9213c6a3ecabb8e3508a60f57f85ebf4a22489a0d2369"
+            }
+          ]
+        },
+        {
+          "name": "Image_8.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 46432,
+              "sha256": "2b96b748342253ea2a2a148ac74256ae714054e95c77f85f504776b718884bb2"
+            }
+          ]
+        },
+        {
+          "name": "Image_9",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 364,
+              "sha256": "b0f71cc5297e17947fcd3446e660b5e4d0c233bd3f3f682d8fa4d76ce8c4589f"
+            }
+          ]
+        },
+        {
+          "name": "Image_9.001",
+          "source": "FILE",
+          "packedFiles": [
+            {
+              "size": 412,
+              "sha256": "1707f9a1e13a057628659c09467a6cfa6638b2e09ba1512ca6d45d2a3277f0f2"
+            }
+          ]
+        },
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "packedFiles": []
+        }
+      ]
+    }
+  ]
+}

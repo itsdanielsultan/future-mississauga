@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-09-22T01:48:25.960801+00:00",
+  "status": "PASS",
+  "scope": "Dense check of the two explicit same-road composites, before mesh generation. Native planes blend first; only the broad approach subsequently fades toward ground. Baseline zero isolates erroneous ground sinks inside measured cores. Off-footprint samples are not claimed as road.",
+  "profiles": [
+    {
+      "profile": "crossing-13-part0",
+      "sampleSpacingM": 0.5,
+      "samples": 21567,
+      "maximumOutsideNativePlaneEnvelopeM": 0.0,
+      "gradientComponentP50P90P99Max": [
+        0.03624981147765993,
+        0.04749908026610683,
+        0.10833425585329907,
+        0.14262111296503122
+      ]
+    },
+    {
+      "profile": "crossing-83-part2",
+      "sampleSpacingM": 0.5,
+      "samples": 7852,
+      "maximumOutsideNativePlaneEnvelopeM": 0.0,
+      "gradientComponentP50P90P99Max": [
+        0.03658753945266824,
+        0.06997128316868384,
+        0.06997128316868384,
+        0.06997128316868384
+      ]
+    }
+  ],
+  "failedPoint26917": [
+    612070.458828,
+    4839010.918668
+  ],
+  "correctedFieldASL": 167.08651905716033,
+  "nearbyGridSpacingM": 0.1,
+  "nearbyMaximumAdjacentHeightDifferenceM": 0.004513629621129667,
+  "allNativeCoreSamplesWithinTheirNativePlaneEnvelope": true,
+  "sourceScript": "work/road-crossings/check_composite_fields.py",
+  "sourceScriptSHA256": "0e727db1962ae9d591df11ddb12dce9c8ed395dafbca741addacb3f1aaed8e1d",
+  "fieldScriptSHA256": "ae63ea447d7101e21fca935b1f99f1050133b460c75a8b69e9daeeab20f8e1f7",
+  "acceptedContextTimestamp": "2026-09-22T01:48:35.343072+00:00",
+  "interpretation": "Mathematical display-surface continuity and native-plane envelope check, not a surveyed road-gradient or engineering accuracy certificate."
+}

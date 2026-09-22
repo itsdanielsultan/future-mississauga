@@ -43,7 +43,7 @@
       "bounds": [
         [
           -10952.6337890625,
-          57.9718017578125,
+          65.64209747314453,
           -8435.44140625
         ],
         [
@@ -52,8 +52,8 @@
           5176.00439453125
         ]
       ],
-      "bytes": 888992,
-      "sha256": "b3df210f3f8352b638b80cf083ca4f6af94d14388c5a2ca057a174b106cbe0e5",
+      "bytes": 889648,
+      "sha256": "c0c6e57adc7d1c0b069f4d5a93226c578f2cf53bb92d4b7230a01208c68f3e25",
       "nodes": 10,
       "triangles": 34844,
       "containsCartographicGuides": false,
@@ -127,7 +127,7 @@
       "bounds": [
         [
           -10952.6337890625,
-          57.9718017578125,
+          65.64209747314453,
           -8435.44140625
         ],
         [
@@ -136,8 +136,8 @@
           5176.00439453125
         ]
       ],
-      "bytes": 888992,
-      "sha256": "b3df210f3f8352b638b80cf083ca4f6af94d14388c5a2ca057a174b106cbe0e5",
+      "bytes": 889648,
+      "sha256": "c0c6e57adc7d1c0b069f4d5a93226c578f2cf53bb92d4b7230a01208c68f3e25",
       "nodes": 10,
       "triangles": 34844,
       "geometryScope": "Complete municipal transit coverage, including the western Milton corridor beyond the original building-envelope window.",
@@ -594,7 +594,7 @@
       "bounds": [
         [
           -10952.6337890625,
-          57.9718017578125,
+          67.11900329589844,
           2238.50439453125
         ],
         [
@@ -603,8 +603,8 @@
           5176.00439453125
         ]
       ],
-      "bytes": 235852,
-      "sha256": "67aa0e0bb5214be9cae31fd2b1c647b4bf9a88f7701e53101cbdba29a6421620",
+      "bytes": 236180,
+      "sha256": "4dd37f9b3e793d78585998ac85761ce8ddd988e4701681ab0aa3b33c230445df",
       "nodes": 4,
       "triangles": 8153,
       "containsCartographicGuides": false,
@@ -832,7 +832,7 @@
       "bounds": [
         [
           -9736.84765625,
-          57.9718017578125,
+          67.11900329589844,
           2074.496337890625
         ],
         [
@@ -841,8 +841,8 @@
           3931.68115234375
         ]
       ],
-      "bytes": 134356,
-      "sha256": "078e7ab1cab3404df0e7e86a75b7349d721ccb1470eed3e1e3f2c0a7ef50f3de",
+      "bytes": 134684,
+      "sha256": "bb17de36e28127b0f569b5b86a4a4cb2ce9f1dc7bb7fa7004319e52beaaa96a0",
       "nodes": 2,
       "triangles": 4649,
       "containsCartographicGuides": false,
@@ -866,7 +866,7 @@
       "bounds": [
         [
           -3369.121826171875,
-          72.20539855957031,
+          76.62572479248047,
           -8435.44140625
         ],
         [
@@ -875,8 +875,8 @@
           -4571.99267578125
         ]
       ],
-      "bytes": 271308,
-      "sha256": "e4de154e63f75a87c1c99897f91aa97b68d99cf31d0283c3b99d25004eaf7e6f",
+      "bytes": 271636,
+      "sha256": "678f7e8e4209b00228d843366496f75c52771c1b372760d9f3b8240838d3ab23",
       "nodes": 4,
       "triangles": 9420,
       "containsCartographicGuides": false,
@@ -9682,6 +9682,7 @@
       "sourceSegmentKind": "dedicated-busway",
       "widthM": 3.0,
       "caveat": "Thin source-aligned service marking with normal building, terrain and bridge occlusion. Heights follow the previously disclosed physical display profile, with minor local support clearance. Widths and elevations remain illustrative, not surveyed engineering.",
+      "roadCrossingSupport": "Associated mapped roadway only; profile height repair preserves ordinary depth occlusion, semantic colour and horizontal source alignment.",
       "bounds": [
         [
           -5458.9853515625,
@@ -9760,10 +9761,11 @@
       "sourceSegmentKind": "on-road-connection",
       "widthM": 3.0,
       "caveat": "Thin source-aligned service marking with normal building, terrain and bridge occlusion. Heights follow the previously disclosed physical display profile, with minor local support clearance. Widths and elevations remain illustrative, not surveyed engineering.",
+      "roadCrossingSupport": "Associated mapped roadway only; profile height repair preserves ordinary depth occlusion, semantic colour and horizontal source alignment.",
       "bounds": [
         [
           -9998.779296875,
-          57.9718017578125,
+          67.49369812011719,
           -1206.3780517578125
         ],
         [
@@ -9838,6 +9840,7 @@
       "sourceSegmentKind": "dedicated-busway",
       "widthM": 3.0,
       "caveat": "Thin source-aligned service marking with normal building, terrain and bridge occlusion. Heights follow the previously disclosed physical display profile, with minor local support clearance. Widths and elevations remain illustrative, not surveyed engineering.",
+      "roadCrossingSupport": "Associated mapped roadway only; profile height repair preserves ordinary depth occlusion, semantic colour and horizontal source alignment.",
       "bounds": [
         [
           -5458.9853515625,
@@ -9994,10 +9997,11 @@
       "sourceSegmentKind": "on-road-connection",
       "widthM": 3.0,
       "caveat": "Thin source-aligned service marking with normal building, terrain and bridge occlusion. Heights follow the previously disclosed physical display profile, with minor local support clearance. Widths and elevations remain illustrative, not surveyed engineering.",
+      "roadCrossingSupport": "Associated mapped roadway only; profile height repair preserves ordinary depth occlusion, semantic colour and horizontal source alignment.",
       "bounds": [
         [
           -9998.779296875,
-          58.11190414428711,
+          67.11900329589844,
           243.31341552734375
         ],
         [
@@ -11223,7 +11227,12 @@
     "scope": "Historical first district colour repair, before the separate continuous service-guide edition. Its hashes describe that prior state only."
   },
   "geometryReviewed": "2026-09-21",
-  "rawAssetBytes": 41217592,
+  "rawAssetBytes": 41219888,
   "rawAssetCount": 28,
-  "edition": "Transit Depth 2026-09-21"
+  "edition": "Road Crossings 2026-09-21",
+  "roadCrossingElevationRepair": {
+    "method": "Existing Transitway service routes only, associated by actual mapped pavement footprint and parallel route direction. Dedicated-busway segments match only mapped MISSISSAUGA TRANSITWAY profiles; highway association is limited to on-road-connection segments. The 8% continuity envelope is a display constraint. Road at a different level is not used as generic support. GO and HML source profiles are unchanged.",
+    "horizontalReroutes": 0,
+    "profiles": "outputs/research/road-crossings/Road-crossing-profiles.json"
+  }
 }

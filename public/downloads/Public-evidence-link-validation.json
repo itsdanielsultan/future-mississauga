@@ -1,26 +1,26 @@
 {
   "reviewDate": "2026-09-21",
-  "linkedEvidenceFiles": 39,
+  "linkedEvidenceFiles": 61,
   "copiedOrValidated": [
     {
       "source": "research/Model-guide.md",
       "public": "downloads/Model-guide.md",
-      "bytes": 45341,
-      "sha256": "f94b0f8ed2e3e9efd3fc334d12f534cc8b1dc647e684adc6701151e8f9ff8ac8",
+      "bytes": 47151,
+      "sha256": "abf19408d17f0588366e6bcda99221d7356aed0eb47c457c0b4165e9535aa90a",
       "sourceBytesUnchanged": false
     },
     {
       "source": "research/Refinement-notes.md",
       "public": "downloads/Refinement-notes.md",
-      "bytes": 33390,
-      "sha256": "ada6b283a2b2e67cae5b78bffb0e415c3ccf7e699c371c776065a94f2d9db677",
+      "bytes": 34651,
+      "sha256": "b7d080d6997298cf570c7813c8cde7b51f57d8513cde5df68d7dae0c9f319159",
       "sourceBytesUnchanged": false
     },
     {
       "source": "research/Accuracy-and-coverage-audit.md",
       "public": "downloads/Accuracy-and-coverage-audit.md",
-      "bytes": 30621,
-      "sha256": "63a6b1fa2c4587301a906259edeae7d05857ef42a7e167d6bdeb0aef927d185c",
+      "bytes": 31571,
+      "sha256": "16db9d658c66a43cca29b7516eb337bf759270324dc90181bc63aa38d01c1832",
       "sourceBytesUnchanged": false
     },
     {
@@ -33,8 +33,8 @@
     {
       "source": "research/Lakeview-model-coverage-review.md",
       "public": "downloads/Lakeview-model-coverage-review.md",
-      "bytes": 7139,
-      "sha256": "a634fb78b86805a0f642a00ab0b2f30142f5af34c516ea6b1c030367558c80b1",
+      "bytes": 7868,
+      "sha256": "6faa55e7a621d2ffd7f9c72ca8edf8ab3d77479bd034f2fc3e7945b31cdd8ffb",
       "sourceBytesUnchanged": true
     },
     {
@@ -52,17 +52,31 @@
       "sourceBytesUnchanged": true
     },
     {
+      "source": "research/road-crossings/Road-crossings-review.md",
+      "public": "downloads/road-crossings/Road-crossings-review.md",
+      "bytes": 6464,
+      "sha256": "9b2fdebdf05a6e5b94eedb94690e9c1e052c0c6e28831266e3d150e5a082b441",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/road-crossings/Road-and-bridge-elevation-sources.md",
+      "public": "downloads/road-crossings/Road-and-bridge-elevation-sources.md",
+      "bytes": 17374,
+      "sha256": "2934ee2ebcfb06eb6f0292363da6cba92cf7723700b62adeb6f5eb1ec82cdecf",
+      "sourceBytesUnchanged": true
+    },
+    {
       "source": "models/supplemental/transit-revamp/transit-layer-manifest.json",
       "public": "models/supplemental/transit-revamp/transit-layer-manifest.json",
-      "bytes": 358697,
-      "sha256": "17a7384352a8d566b8c97d3518bbb32a71fa9b8b3346a919704875fee9f6c25f",
+      "bytes": 359961,
+      "sha256": "28e6e7d6f175473bb7eaed341ac0d9e938e2e70e126b0e4e1d4e5c2a845249f9",
       "sourceBytesUnchanged": true
     },
     {
       "source": "models/supplemental/transit-revamp/transit-network.json",
       "public": "models/supplemental/transit-revamp/transit-network.json",
-      "bytes": 2811050,
-      "sha256": "00faf110158eda2af0161538c4023ea381a19b5115a51b7e8cb80116a0eac370",
+      "bytes": 2812696,
+      "sha256": "edfbcd199693be6f2e5cbf1185635a71703540506779e4803c7e34f3a814a717",
       "sourceBytesUnchanged": true
     },
     {
@@ -150,10 +164,59 @@
       "sourceBytesUnchanged": true
     },
     {
+      "source": "research/Model-reference-index.csv",
+      "public": "downloads/Model-reference-index.csv",
+      "bytes": 197741,
+      "sha256": "35d43234f10215e51a2b40ac842f7ff0ab26fd8ed463045280740cc114f7bbf5",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/Model-reference-index-summary.json",
+      "public": "downloads/Model-reference-index-summary.json",
+      "bytes": 937,
+      "sha256": "0d25e5ffec26cd4ad4369a4aaec081cf6165f435e27df59c7cae37e2446a19ab",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/road-crossings/Aerial-shadow-and-runway-review.md",
+      "public": "downloads/road-crossings/Aerial-shadow-and-runway-review.md",
+      "bytes": 3298,
+      "sha256": "f62219c7fea5d98064a606839ee2dcaba2a12e4ece16d1f016e5968a7e92a1ff",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/road-crossings/Transit-road-association-audit.json",
+      "public": "downloads/road-crossings/Transit-road-association-audit.json",
+      "bytes": 14744,
+      "sha256": "5eacd9a0a0b1009ecfb4dbe9df01529b2134e35996e8098125a22943c3c1f68d",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/road-crossings/Dependent-layer-QA.json",
+      "public": "downloads/road-crossings/Dependent-layer-QA.json",
+      "bytes": 8957,
+      "sha256": "a76612a502cf22f991d02de4cfbd81b9be647b0a69ac9b1dc9d6c7395c2000db",
+      "sourceBytesUnchanged": true
+    },
+    {
       "source": "research/revamp/transit-visibility/visibility-audit.json",
       "public": "downloads/revamp/transit-visibility/visibility-audit.json",
       "bytes": 115698,
       "sha256": "67326b6847bd9a79b18c138877ff9349de689a536b30ab391c50ec3b70992a11",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/road-crossings/Independent-context-QA.json",
+      "public": "downloads/road-crossings/Independent-context-QA.json",
+      "bytes": 304724,
+      "sha256": "1b4f0916d96b5fa1514a9dfbbf6ae6a399138bd178c42c927c5a6034f693dd42",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/road-crossings/Original-footprint-coverage-QA.json",
+      "public": "downloads/road-crossings/Original-footprint-coverage-QA.json",
+      "bytes": 2936,
+      "sha256": "098148bd2cca2e5cf9bf4f0f4e2e400369cc2b4e729a357b431ac8548d3fa1b8",
       "sourceBytesUnchanged": true
     },
     {
@@ -234,6 +297,69 @@
       "sourceBytesUnchanged": true
     },
     {
+      "source": "research/road-crossings/Road-crossing-coverage.json",
+      "public": "downloads/road-crossings/Road-crossing-coverage.json",
+      "bytes": 88539,
+      "sha256": "2fb71b9fc33e671b212fcaa41ae64aec2769b5e081806e93d1381c3d2abb8523",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/road-crossings/Road-crossing-profiles.json",
+      "public": "downloads/road-crossings/Road-crossing-profiles.json",
+      "bytes": 910556,
+      "sha256": "71a4f9f7c49dfe1be5721836146f8b30a5353302045c233fc9f39d24e803d29a",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/road-crossings/Context-road-correction-summary.json",
+      "public": "downloads/road-crossings/Context-road-correction-summary.json",
+      "bytes": 49702,
+      "sha256": "c5e7ea44b6be033a2e6157dc7c36b0c5cdccafa9af586d465cecec6abeb1b9ce",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/road-crossings/Composite-field-continuity-QA.json",
+      "public": "downloads/road-crossings/Composite-field-continuity-QA.json",
+      "bytes": 1765,
+      "sha256": "7f13986a350c818687f96ead8f5378e847bddaa65dc44a903d36b7fd6f122365",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/road-crossings/Source-coverage-inventory.json",
+      "public": "downloads/road-crossings/Source-coverage-inventory.json",
+      "bytes": 135121,
+      "sha256": "ee8c7ec798cf73074a3cb66afb5a1229605373f258eb2b696fd7e9bdbd46d1ec",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/road-crossings/QEW-bridge-registration.json",
+      "public": "downloads/road-crossings/QEW-bridge-registration.json",
+      "bytes": 16742,
+      "sha256": "9692fd656424180ef3b566a868cba1ddc4980ab6a1b5881725e2d1a29fb03910",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/road-crossings/Nonfit-source-review.json",
+      "public": "downloads/road-crossings/Nonfit-source-review.json",
+      "bytes": 39700,
+      "sha256": "93a0edf339540578fff498eea364efc3492841d6ed07cfc412da522a1e3c612d",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/road-crossings/Residual-source-review.json",
+      "public": "downloads/road-crossings/Residual-source-review.json",
+      "bytes": 4875,
+      "sha256": "b273c5ecb249f98bdcc8104bc8714c6bfebed2f7680504a099929ea51e2bcb00",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/road-crossings/Final-grade-source-evidence.json",
+      "public": "downloads/road-crossings/Final-grade-source-evidence.json",
+      "bytes": 28931,
+      "sha256": "cabe042aa33c0f6e2f1f01f277f71131a14f0105d82c7748cf2da39b7c7be34c",
+      "sourceBytesUnchanged": true
+    },
+    {
       "source": "research/transit-depth/HML-alignment-and-stage-review.json",
       "public": "downloads/transit-depth/HML-alignment-and-stage-review.json",
       "bytes": 7542,
@@ -245,6 +371,34 @@
       "public": "models/supplemental/refinement-lakeview/manifest.json",
       "bytes": 25984,
       "sha256": "882b9bedce7af43cb36c451de87316cba9fbd2f74f715ba4779dba295cc65451",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/road-crossings/Airport-runway-overlap-repair.json",
+      "public": "downloads/road-crossings/Airport-runway-overlap-repair.json",
+      "bytes": 8180,
+      "sha256": "e1309db2fc13f6553c3ea18058d416c131fee2527dec2a24bbef51581056badd",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/road-crossings/Airfield-render-amendment-QA.json",
+      "public": "downloads/road-crossings/Airfield-render-amendment-QA.json",
+      "bytes": 329,
+      "sha256": "4d76cdea5f1c7b588feab28bba49cb4d0b709890505f61168f4cca0c3a6cf000",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/road-crossings/Public-asset-validation.json",
+      "public": "downloads/road-crossings/Public-asset-validation.json",
+      "bytes": 86978,
+      "sha256": "d6ccc7e3168e3043076714382ec59c260fea6e7efccc9b55f34026a4698c1a5c",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/road-crossings/Public-dependent-freeze.json",
+      "public": "downloads/road-crossings/Public-dependent-freeze.json",
+      "bytes": 2690,
+      "sha256": "b8b74cea8e1d4e6087986ec54c78451b107e3c1052a3a2b51730236a37379e13",
       "sourceBytesUnchanged": true
     },
     {
@@ -276,7 +430,7 @@
       "sourceBytesUnchanged": true
     }
   ],
-  "markdownLinkChecks": 85,
+  "markdownLinkChecks": 117,
   "localLinks": [
     {
       "document": "downloads/Accuracy-and-coverage-audit.md",
@@ -364,13 +518,55 @@
     },
     {
       "document": "downloads/Accuracy-and-coverage-audit.md",
-      "target": "transit-depth/Public-transit-guide-and-reference-audit.json",
+      "target": "road-crossings/Transit-road-association-audit.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "road-crossings/Dependent-layer-QA.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "road-crossings/Road-crossings-review.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "road-crossings/Independent-context-QA.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "road-crossings/Original-footprint-coverage-QA.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Lakeview-model-coverage-review.md",
+      "target": "../models/supplemental/refinement-lakeview/README.md",
       "exists": true,
       "insidePublic": true
     },
     {
       "document": "downloads/Model-guide.md",
       "target": "revamp/Inland-water-elevation-repair.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "road-crossings/Road-crossings-review.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "road-crossings/Road-and-bridge-elevation-sources.md",
       "exists": true,
       "insidePublic": true
     },
@@ -483,6 +679,24 @@
       "insidePublic": true
     },
     {
+      "document": "downloads/Model-guide.md",
+      "target": "Model-reference-index.csv",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "Model-reference-index-summary.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "road-crossings/Aerial-shadow-and-runway-review.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
       "document": "downloads/Refinement-notes.md",
       "target": "../data/refinement-models.json",
       "exists": true,
@@ -544,13 +758,37 @@
     },
     {
       "document": "downloads/Refinement-notes.md",
-      "target": "transit-depth/Public-transit-guide-and-reference-audit.json",
+      "target": "road-crossings/Transit-road-association-audit.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "road-crossings/Dependent-layer-QA.json",
       "exists": true,
       "insidePublic": true
     },
     {
       "document": "downloads/Refinement-notes.md",
       "target": "revamp/transit-visibility/visibility-audit.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "road-crossings/Road-crossings-review.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "road-crossings/Independent-context-QA.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "road-crossings/Original-footprint-coverage-QA.json",
       "exists": true,
       "insidePublic": true
     },
@@ -581,6 +819,12 @@
     {
       "document": "downloads/Refinement-notes.md",
       "target": "../models/supplemental/transit-revamp/README.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "road-crossings/Aerial-shadow-and-runway-review.md",
       "exists": true,
       "insidePublic": true
     },
@@ -659,6 +903,108 @@
     {
       "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
       "target": "visibility-checks/milton-crossing-after.png",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/road-crossings/Aerial-shadow-and-runway-review.md",
+      "target": "Airport-runway-overlap-repair.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/road-crossings/Aerial-shadow-and-runway-review.md",
+      "target": "Airfield-render-amendment-QA.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/road-crossings/Aerial-shadow-and-runway-review.md",
+      "target": "Public-asset-validation.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/road-crossings/Aerial-shadow-and-runway-review.md",
+      "target": "Public-dependent-freeze.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/road-crossings/Road-and-bridge-elevation-sources.md",
+      "target": "Source-coverage-inventory.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/road-crossings/Road-and-bridge-elevation-sources.md",
+      "target": "QEW-bridge-registration.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/road-crossings/Road-and-bridge-elevation-sources.md",
+      "target": "Nonfit-source-review.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/road-crossings/Road-and-bridge-elevation-sources.md",
+      "target": "Residual-source-review.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/road-crossings/Road-and-bridge-elevation-sources.md",
+      "target": "Final-grade-source-evidence.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/road-crossings/Road-crossings-review.md",
+      "target": "Road-crossing-coverage.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/road-crossings/Road-crossings-review.md",
+      "target": "Road-crossing-profiles.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/road-crossings/Road-crossings-review.md",
+      "target": "Road-and-bridge-elevation-sources.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/road-crossings/Road-crossings-review.md",
+      "target": "Dependent-layer-QA.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/road-crossings/Road-crossings-review.md",
+      "target": "Context-road-correction-summary.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/road-crossings/Road-crossings-review.md",
+      "target": "Independent-context-QA.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/road-crossings/Road-crossings-review.md",
+      "target": "Original-footprint-coverage-QA.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/road-crossings/Road-crossings-review.md",
+      "target": "Composite-field-continuity-QA.json",
       "exists": true,
       "insidePublic": true
     },

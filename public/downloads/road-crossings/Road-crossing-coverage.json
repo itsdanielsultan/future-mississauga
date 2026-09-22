@@ -1,0 +1,3232 @@
+{
+  "checkedAt": "2026-09-22T01:36:50.760270+00:00",
+  "screenedRoadPolygons": 12836,
+  "screenedWaterPolygons": 1158,
+  "mappedBridgeEdgeFeatures": 8391,
+  "finiteSpatialNameGroups": 111,
+  "diagnosticCandidateRows": 112,
+  "profileStripRecords": 107,
+  "countPolicy": "Profile/strip records and spatial/name groups are not distinct bridge counts; divided carriageways, revisions and lower/upper road labels may describe the same crossing.",
+  "sourceCoverageLimit": "Finite mapped-road/near-water/bridge-edge screen, not certification of every road elevation in Mississauga. Literal water intersections alone miss crossings because City water polygons are cut around bridge footprints.",
+  "nativeRasters": 162,
+  "nativeAcquisitionYears": "Primary source acquisitions 2015,2018,2023 as recorded per patch; overview dates are excluded from acquisition claims.",
+  "classifications": {
+    "Associated profile repair": 100,
+    "external_context_deck_incomplete_city_footprint": 2,
+    "rail_structure_not_road_deck": 4,
+    "No material model road sag": 1,
+    "no_coherent_paved_depression": 2,
+    "no_rendered_paved_road_at_peak": 1,
+    "nearby_structure_wrong_road": 1
+  },
+  "groups": [
+    {
+      "coverageGroupIndex": 0,
+      "street": "401 HWY",
+      "streetFIDs": [
+        3493,
+        17634,
+        18163,
+        19652,
+        19653
+      ],
+      "position26917": [
+        607897.054908841,
+        4832566.843227916
+      ],
+      "mappedBridgeFIDs": [
+        11277,
+        11349,
+        11418,
+        11490,
+        11492,
+        11494,
+        11622,
+        11649,
+        11804,
+        11870
+      ],
+      "nearestDiagnosticCandidate": "crossing-64",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-64-part3",
+        "crossing-64-part5",
+        "crossing-64-part8"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 1,
+      "street": "403 HWY",
+      "streetFIDs": [
+        4673,
+        14420,
+        14422,
+        19148,
+        19149,
+        19158,
+        19180
+      ],
+      "position26917": [
+        603077.6264724727,
+        4820298.906477011
+      ],
+      "mappedBridgeFIDs": [
+        15402,
+        15403,
+        15404,
+        15415,
+        15416,
+        15418,
+        15429,
+        15430,
+        15432,
+        15433,
+        15446,
+        15458,
+        15459,
+        15499,
+        15511,
+        15513,
+        15517,
+        15531,
+        15534,
+        15599,
+        15601,
+        15603,
+        15605,
+        15608,
+        15610,
+        15613,
+        15621,
+        15623,
+        15624
+      ],
+      "nearestDiagnosticCandidate": "crossing-65",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-65-part0"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 2,
+      "street": "409 HWY",
+      "streetFIDs": [
+        4089,
+        4117,
+        4118,
+        4119,
+        4120,
+        4125,
+        4129,
+        16142
+      ],
+      "position26917": [
+        612141.992646374,
+        4839292.372379839
+      ],
+      "mappedBridgeFIDs": [
+        12048,
+        12065,
+        12066,
+        12102,
+        12152,
+        12160,
+        12166,
+        12168,
+        12171,
+        12174,
+        12176,
+        12197,
+        12199,
+        12205,
+        12223,
+        12257,
+        12260,
+        12267
+      ],
+      "nearestDiagnosticCandidate": "crossing-66",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "alternative-66-part0",
+        "alternative-66-part2"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 3,
+      "street": "NINTH LINE",
+      "streetFIDs": [
+        10295
+      ],
+      "position26917": [
+        602860.8241106325,
+        4820092.085043804
+      ],
+      "mappedBridgeFIDs": [
+        15510,
+        15539
+      ],
+      "nearestDiagnosticCandidate": "crossing-67",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "external_context_deck_incomplete_city_footprint",
+      "profileIds": [],
+      "decisionNote": "Ninth Line above 403. City Bridges records here capture only one parallel outer edge; the opposite lateral boundary must come from the actual paved-road polygon. Do not use the .31m original envelope. The diagnostic location lies outside the source municipal land boundary. City pavement/centreline coverage is incomplete there. Retain any correction to actual existing mapped context; do not fabricate a full deck footprint or treat this as a confirmed missing in-city crossing."
+    },
+    {
+      "coverageGroupIndex": 4,
+      "street": "403 HWY",
+      "streetFIDs": [
+        19150
+      ],
+      "position26917": [
+        602967.3741498495,
+        4820238.101786984
+      ],
+      "mappedBridgeFIDs": [
+        15339,
+        15343,
+        15540,
+        15598
+      ],
+      "nearestDiagnosticCandidate": "crossing-68",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "external_context_deck_incomplete_city_footprint",
+      "profileIds": [],
+      "decisionNote": "Upper mapped roadway in the 403 interchange, distinct from the lower diagnostic 403 centreline. Native elevated strip and mapped road markings confirm a roadway; no local centreline with matching direction was found. Assign by actual source paved footprint and edge family. The diagnostic location lies outside the source municipal land boundary. City pavement/centreline coverage is incomplete there. Retain any correction to actual existing mapped context; do not fabricate a full deck footprint or treat this as a confirmed missing in-city crossing."
+    },
+    {
+      "coverageGroupIndex": 5,
+      "street": "LAKESHORE RD W",
+      "streetFIDs": [
+        144,
+        179
+      ],
+      "position26917": [
+        610862.4355226475,
+        4818618.093595543
+      ],
+      "mappedBridgeFIDs": [
+        7407,
+        7439,
+        7440,
+        7905,
+        7906,
+        7909
+      ],
+      "nearestDiagnosticCandidate": "crossing-69",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-69"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 6,
+      "street": "DERRY RD E",
+      "streetFIDs": [
+        10879
+      ],
+      "position26917": [
+        609453.5259435637,
+        4840003.752973548
+      ],
+      "mappedBridgeFIDs": [
+        12597,
+        14361,
+        14388
+      ],
+      "nearestDiagnosticCandidate": "crossing-70",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "rail_structure_not_road_deck",
+      "profileIds": [],
+      "decisionNote": "Airport/Derry road is beneath a transverse railway structure. Official City Railway features are within 20\u201332 m and follow the elevated structure. Preserve the ground-supported road; do not substitute rail first returns."
+    },
+    {
+      "coverageGroupIndex": 7,
+      "street": "427 HWY",
+      "streetFIDs": [
+        10485
+      ],
+      "position26917": [
+        611160.2904210361,
+        4841518.075294553
+      ],
+      "mappedBridgeFIDs": [
+        12142,
+        12158,
+        12162,
+        12216
+      ],
+      "nearestDiagnosticCandidate": "crossing-71",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "alternative-71-part0",
+        "alternative-71-part1"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 8,
+      "street": "RATHBURN RD W",
+      "streetFIDs": [
+        12837,
+        12838
+      ],
+      "position26917": [
+        609607.4519138439,
+        4828197.5049509695
+      ],
+      "mappedBridgeFIDs": [
+        9351,
+        9367
+      ],
+      "nearestDiagnosticCandidate": "crossing-72",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-78"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 9,
+      "street": "DERRY RD W",
+      "streetFIDs": [
+        17753,
+        19608
+      ],
+      "position26917": [
+        600453.1321761224,
+        4828541.623820261
+      ],
+      "mappedBridgeFIDs": [
+        14677,
+        14679
+      ],
+      "nearestDiagnosticCandidate": "crossing-73",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "alternative-75-part0",
+        "alternative-75-part1",
+        "alternative-75-part2",
+        "alternative-75-part3",
+        "alternative-75-part8"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 10,
+      "street": "HURONTARIO ST",
+      "streetFIDs": [
+        14221,
+        19720,
+        19721
+      ],
+      "position26917": [
+        613072.3836436252,
+        4824847.179250351
+      ],
+      "mappedBridgeFIDs": [
+        7794,
+        7818,
+        7863
+      ],
+      "nearestDiagnosticCandidate": "crossing-74",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-76"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 11,
+      "street": "401 HWY",
+      "streetFIDs": [
+        12327,
+        12328,
+        19449
+      ],
+      "position26917": [
+        600448.8299101656,
+        4828540.724575701
+      ],
+      "mappedBridgeFIDs": [
+        14202,
+        14676,
+        14677,
+        14679,
+        14680
+      ],
+      "nearestDiagnosticCandidate": "crossing-75",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "alternative-75-part0",
+        "alternative-75-part1",
+        "alternative-75-part2",
+        "alternative-75-part3",
+        "alternative-75-part8"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 12,
+      "street": "QUEEN ELIZABETH WAY",
+      "streetFIDs": [
+        7612,
+        7613,
+        7614,
+        10896,
+        19465,
+        19685
+      ],
+      "position26917": [
+        613069.9489364618,
+        4824843.963673268
+      ],
+      "mappedBridgeFIDs": [
+        7659,
+        7705,
+        7718,
+        7794,
+        7818,
+        7863
+      ],
+      "nearestDiagnosticCandidate": "crossing-76",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-76"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 13,
+      "street": "MISSISSAUGA TRANSITWAY",
+      "streetFIDs": [
+        17692,
+        17693,
+        18343
+      ],
+      "position26917": [
+        610605.3020459071,
+        4830132.568090518
+      ],
+      "mappedBridgeFIDs": [
+        9018,
+        9139,
+        9167
+      ],
+      "nearestDiagnosticCandidate": "crossing-77",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-82"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 14,
+      "street": "HURONTARIO ST",
+      "streetFIDs": [
+        12876,
+        12877,
+        12878,
+        12879
+      ],
+      "position26917": [
+        609614.7648133446,
+        4828198.743538661
+      ],
+      "mappedBridgeFIDs": [
+        9104,
+        9148,
+        9192,
+        9367,
+        9368
+      ],
+      "nearestDiagnosticCandidate": "crossing-78",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-78"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 15,
+      "street": "CENTRAL PKY E",
+      "streetFIDs": [
+        8218,
+        8222,
+        17681
+      ],
+      "position26917": [
+        610033.4561179238,
+        4829221.58818492
+      ],
+      "mappedBridgeFIDs": [
+        9087,
+        9116,
+        9150,
+        9184
+      ],
+      "nearestDiagnosticCandidate": "crossing-79",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-81"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 16,
+      "street": "DERRY RD W",
+      "streetFIDs": [
+        3044,
+        12302,
+        12303
+      ],
+      "position26917": [
+        601544.0301850684,
+        4830294.9710038
+      ],
+      "mappedBridgeFIDs": [
+        14658,
+        14662,
+        14663,
+        14664,
+        14669,
+        14670
+      ],
+      "nearestDiagnosticCandidate": "crossing-80",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-80"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 17,
+      "street": "403 HWY",
+      "streetFIDs": [
+        12827,
+        12828,
+        12829,
+        12831,
+        12832
+      ],
+      "position26917": [
+        610035.1321760216,
+        4829223.803920855
+      ],
+      "mappedBridgeFIDs": [
+        9063,
+        9087,
+        9116,
+        9164,
+        9184
+      ],
+      "nearestDiagnosticCandidate": "crossing-81",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-81"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 18,
+      "street": "403 HWY",
+      "streetFIDs": [
+        17686,
+        17687,
+        17694,
+        17695
+      ],
+      "position26917": [
+        610604.998509248,
+        4830141.353068123
+      ],
+      "mappedBridgeFIDs": [
+        9018,
+        9020,
+        9024,
+        9139,
+        9167,
+        9169
+      ],
+      "nearestDiagnosticCandidate": "crossing-82",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-82"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 19,
+      "street": "409 HWY",
+      "streetFIDs": [
+        4127,
+        4130
+      ],
+      "position26917": [
+        612052.8409251738,
+        4839139.8620403
+      ],
+      "mappedBridgeFIDs": [
+        12396,
+        12397,
+        12701,
+        12737,
+        12738
+      ],
+      "nearestDiagnosticCandidate": "crossing-83",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-13-part0",
+        "crossing-83-part0",
+        "crossing-83-part2",
+        "crossing-83-part4",
+        "crossing-83-part5"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 20,
+      "street": "RATHBURN RD E",
+      "streetFIDs": [
+        17677
+      ],
+      "position26917": [
+        609643.772740684,
+        4828208.00329337
+      ],
+      "mappedBridgeFIDs": [
+        9118,
+        9148
+      ],
+      "nearestDiagnosticCandidate": "crossing-84",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-78"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 21,
+      "street": "DIXIE RD",
+      "streetFIDs": [
+        11224,
+        17735
+      ],
+      "position26917": [
+        606475.7194166299,
+        4837005.7270781025
+      ],
+      "mappedBridgeFIDs": [
+        14511,
+        14514,
+        14515,
+        14516,
+        14519,
+        14520
+      ],
+      "nearestDiagnosticCandidate": "crossing-85",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-85"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 22,
+      "street": "DIXIE RD",
+      "streetFIDs": [
+        3820,
+        3838
+      ],
+      "position26917": [
+        607927.4320297978,
+        4835583.022455967
+      ],
+      "mappedBridgeFIDs": [
+        13373,
+        13379,
+        13383,
+        13401,
+        13402,
+        13403
+      ],
+      "nearestDiagnosticCandidate": "crossing-86",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-86"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 23,
+      "street": "LAKESHORE RD E",
+      "streetFIDs": [
+        1294,
+        19358
+      ],
+      "position26917": [
+        615521.8925461983,
+        4824764.715671077
+      ],
+      "mappedBridgeFIDs": [
+        7665,
+        7671,
+        7673,
+        7675
+      ],
+      "nearestDiagnosticCandidate": "crossing-87",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-87"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 24,
+      "street": "VELEBIT CRT",
+      "streetFIDs": [
+        6908
+      ],
+      "position26917": [
+        603371.730050679,
+        4828542.76549113
+      ],
+      "mappedBridgeFIDs": [
+        14005
+      ],
+      "nearestDiagnosticCandidate": "crossing-88",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-41"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 25,
+      "street": "DERRY RD W",
+      "streetFIDs": [
+        11258,
+        12281,
+        12282
+      ],
+      "position26917": [
+        598405.181310519,
+        4825880.167669168
+      ],
+      "mappedBridgeFIDs": [
+        14747,
+        14752,
+        14757
+      ],
+      "nearestDiagnosticCandidate": "crossing-89",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "grade-89"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 26,
+      "street": "DERRY RD E",
+      "streetFIDs": [
+        3904,
+        12360
+      ],
+      "position26917": [
+        608015.9846742122,
+        4838140.708578628
+      ],
+      "mappedBridgeFIDs": [
+        13333,
+        13334,
+        13339,
+        13342,
+        14503,
+        14504,
+        14505,
+        14507
+      ],
+      "nearestDiagnosticCandidate": "crossing-90",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-90"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 27,
+      "street": "INVERHOUSE DR",
+      "streetFIDs": [
+        138,
+        140
+      ],
+      "position26917": [
+        611164.2037724775,
+        4818469.090664841
+      ],
+      "mappedBridgeFIDs": [
+        7393,
+        7406,
+        7409,
+        7410
+      ],
+      "nearestDiagnosticCandidate": "crossing-91",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-91"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 28,
+      "street": "MCLAUGHLIN RD",
+      "streetFIDs": [
+        3361,
+        19264
+      ],
+      "position26917": [
+        604285.0725494212,
+        4831526.804209705
+      ],
+      "mappedBridgeFIDs": [
+        13704,
+        13706,
+        13709,
+        13758,
+        13760,
+        13761
+      ],
+      "nearestDiagnosticCandidate": "crossing-92",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-92"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 29,
+      "street": "NINTH LINE",
+      "streetFIDs": [
+        13097,
+        13098
+      ],
+      "position26917": [
+        599933.9066308958,
+        4823383.744456721
+      ],
+      "mappedBridgeFIDs": [
+        15196,
+        15203,
+        15242,
+        15254,
+        15256
+      ],
+      "nearestDiagnosticCandidate": "crossing-93",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-93"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 30,
+      "street": "THOMAS ST",
+      "streetFIDs": [
+        5741,
+        18914
+      ],
+      "position26917": [
+        603812.6466361713,
+        4825807.182253681
+      ],
+      "mappedBridgeFIDs": [
+        12012,
+        12017,
+        12018,
+        12024,
+        12025
+      ],
+      "nearestDiagnosticCandidate": "crossing-94",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-94"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 31,
+      "street": "BRAMALEA RD",
+      "streetFIDs": [
+        4032,
+        10277
+      ],
+      "position26917": [
+        606891.0170821071,
+        4838547.7462594835
+      ],
+      "mappedBridgeFIDs": [
+        14493,
+        14496,
+        14497,
+        14510,
+        14512,
+        14513
+      ],
+      "nearestDiagnosticCandidate": "crossing-95",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-95"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 32,
+      "street": "COURTNEYPARK DR E",
+      "streetFIDs": [
+        3853,
+        3879
+      ],
+      "position26917": [
+        609728.6578591419,
+        4836302.1434976095
+      ],
+      "mappedBridgeFIDs": [
+        13340,
+        13346,
+        13347,
+        13352,
+        13353,
+        13354
+      ],
+      "nearestDiagnosticCandidate": "crossing-96",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-96"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 33,
+      "street": "DOUG LEAVENS BLVD",
+      "streetFIDs": [
+        10981,
+        13103
+      ],
+      "position26917": [
+        599213.0951932535,
+        4824865.398196133
+      ],
+      "mappedBridgeFIDs": [
+        15194,
+        15195,
+        15201,
+        15202,
+        15244,
+        15258,
+        15259,
+        15261
+      ],
+      "nearestDiagnosticCandidate": "crossing-97",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-97"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 34,
+      "street": "CAMILLA RD",
+      "streetFIDs": [
+        1577,
+        1683
+      ],
+      "position26917": [
+        613167.825358951,
+        4825484.582278003
+      ],
+      "mappedBridgeFIDs": [
+        8302,
+        8312,
+        8314,
+        8328
+      ],
+      "nearestDiagnosticCandidate": "crossing-98",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-98"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 35,
+      "street": "SOUTHDOWN RD",
+      "streetFIDs": [
+        183,
+        13028
+      ],
+      "position26917": [
+        610583.7192977675,
+        4818653.895540611
+      ],
+      "mappedBridgeFIDs": [
+        7907,
+        7908,
+        7914,
+        8022,
+        8033,
+        8054
+      ],
+      "nearestDiagnosticCandidate": "crossing-99",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-99"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 36,
+      "street": "TRUSCOTT DR",
+      "streetFIDs": [
+        13894,
+        13897
+      ],
+      "position26917": [
+        609564.0027161147,
+        4818864.151152029
+      ],
+      "mappedBridgeFIDs": [
+        8034,
+        8056
+      ],
+      "nearestDiagnosticCandidate": "crossing-100",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-100"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 37,
+      "street": "CENTURY AVE",
+      "streetFIDs": [
+        6898,
+        12956
+      ],
+      "position26917": [
+        600804.2143121008,
+        4828392.476736457
+      ],
+      "mappedBridgeFIDs": [
+        14072,
+        14073,
+        14092
+      ],
+      "nearestDiagnosticCandidate": "crossing-101",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-101"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 38,
+      "street": "OSPREY BLVD",
+      "streetFIDs": [
+        997,
+        13278
+      ],
+      "position26917": [
+        600192.7694175963,
+        4824068.52156587
+      ],
+      "mappedBridgeFIDs": [
+        15198,
+        15204
+      ],
+      "nearestDiagnosticCandidate": "crossing-102",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-102"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 39,
+      "street": "ARGENTIA RD",
+      "streetFIDs": [
+        6888,
+        7052
+      ],
+      "position26917": [
+        601313.4604447596,
+        4827866.82834139
+      ],
+      "mappedBridgeFIDs": [
+        14077,
+        14100,
+        14104,
+        14169
+      ],
+      "nearestDiagnosticCandidate": "crossing-103",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-103"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 40,
+      "street": "BURNHAMTHORPE RD E",
+      "streetFIDs": [
+        8380,
+        15805,
+        15806
+      ],
+      "position26917": [
+        612302.817222497,
+        4830326.34328144
+      ],
+      "mappedBridgeFIDs": [
+        8510,
+        8521,
+        8991,
+        8996
+      ],
+      "nearestDiagnosticCandidate": "crossing-104",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-104"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 41,
+      "street": "BLOOR ST",
+      "streetFIDs": [
+        2964,
+        2982
+      ],
+      "position26917": [
+        613080.9489796518,
+        4829802.520309974
+      ],
+      "mappedBridgeFIDs": [
+        8507,
+        8514
+      ],
+      "nearestDiagnosticCandidate": "crossing-105",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-105"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 42,
+      "street": "ERIN MILLS PKY",
+      "streetFIDs": [
+        9310,
+        17075
+      ],
+      "position26917": [
+        607420.7509992527,
+        4821596.345259675
+      ],
+      "mappedBridgeFIDs": [
+        8877,
+        8890
+      ],
+      "nearestDiagnosticCandidate": "crossing-106",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "No material model road sag",
+      "profileIds": [],
+      "decisionNote": "Native plane is only 0.1 to 0.4 m above the coarse DTM, so no bridge lift is warranted."
+    },
+    {
+      "coverageGroupIndex": 43,
+      "street": "DERRY RD E",
+      "streetFIDs": [
+        11277,
+        18841
+      ],
+      "position26917": [
+        610115.3446127558,
+        4840811.594619077
+      ],
+      "mappedBridgeFIDs": [
+        12355,
+        12497
+      ],
+      "nearestDiagnosticCandidate": "crossing-107",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "no_coherent_paved_depression",
+      "profileIds": [],
+      "decisionNote": "Derry Road East watercourse: native paved road body is continuous and closely matches DTM. Sparse high edge returns do not demonstrate a deck sag; preserve source road. Culvert versus filled crossing construction is not proven by the 2D map alone. Follow-up comparison to the model 10 m DTM found no supported difference above 1 m in the sampled clear-pavement subset; this is separate from canopy returns."
+    },
+    {
+      "coverageGroupIndex": 44,
+      "street": "DERRY RD E",
+      "streetFIDs": [
+        18841
+      ],
+      "position26917": [
+        610023.5432061842,
+        4840693.686795877
+      ],
+      "mappedBridgeFIDs": [
+        12306,
+        12308
+      ],
+      "nearestDiagnosticCandidate": "crossing-108",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "no_coherent_paved_depression",
+      "profileIds": [],
+      "decisionNote": "Second Derry Road East watercourse: native road-body DSM\u2013DTM median difference about 0.02 m and 90th percentile within 30 m about 0.10 m. No coherent elevated deck deficit is demonstrated; preserve road. Follow-up comparison to the model 10 m DTM found no supported difference above 1 m in the sampled clear-pavement subset; this is separate from canopy returns."
+    },
+    {
+      "coverageGroupIndex": 45,
+      "street": "KING ST E",
+      "streetFIDs": [
+        1964,
+        1992
+      ],
+      "position26917": [
+        612107.1741713182,
+        4826251.402217398
+      ],
+      "mappedBridgeFIDs": [
+        8343,
+        8347
+      ],
+      "nearestDiagnosticCandidate": "crossing-109",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-109"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 46,
+      "street": "AIRPORT RD",
+      "streetFIDs": [
+        19366
+      ],
+      "position26917": [
+        609260.7769516107,
+        4840003.597041239
+      ],
+      "mappedBridgeFIDs": [
+        14372,
+        14464
+      ],
+      "nearestDiagnosticCandidate": "crossing-110",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "rail_structure_not_road_deck",
+      "profileIds": [],
+      "decisionNote": "Airport Road beneath transverse railway, paired with diagnostic 70 farther east. Railway source features are25\u201336 m away and align with the elevated transverse structure. Road native DSM/DTM median difference about 0.01 m; no road lift supported."
+    },
+    {
+      "coverageGroupIndex": 47,
+      "street": "409 HWY",
+      "streetFIDs": [
+        4089
+      ],
+      "position26917": [
+        612132.5038171802,
+        4839120.889316971
+      ],
+      "mappedBridgeFIDs": [
+        12219
+      ],
+      "nearestDiagnosticCandidate": "crossing-111",
+      "distanceToDiagnosticM": 0.0,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-111-part1",
+        "crossing-111-part2"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 48,
+      "street": "BURNHAMTHORPE RD W",
+      "streetFIDs": [
+        9848,
+        15822
+      ],
+      "position26917": [
+        607167.5768777604,
+        4823949.342972022
+      ],
+      "mappedBridgeFIDs": [
+        8845,
+        8851,
+        8852,
+        8853,
+        8861,
+        8862,
+        9506,
+        9507,
+        9511,
+        9512,
+        9546,
+        9547,
+        9548,
+        9549,
+        9552,
+        9553,
+        9554,
+        9555,
+        9558,
+        9559,
+        9560,
+        9561,
+        9575,
+        9616,
+        9620,
+        9629,
+        9631,
+        9642,
+        9643,
+        9644,
+        9651,
+        9652
+      ],
+      "nearestDiagnosticCandidate": "crossing-02",
+      "distanceToDiagnosticM": 19.13,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-02"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 49,
+      "street": "403 HWY",
+      "streetFIDs": [
+        12476,
+        12477,
+        14188,
+        14189,
+        14190,
+        14191
+      ],
+      "position26917": [
+        606278.9038333598,
+        4824057.915597092
+      ],
+      "mappedBridgeFIDs": [
+        9525,
+        9532,
+        9550,
+        9563,
+        9601,
+        9618,
+        9657,
+        9663,
+        9673,
+        9676,
+        9677,
+        9713
+      ],
+      "nearestDiagnosticCandidate": "crossing-00",
+      "distanceToDiagnosticM": 1.32,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-00"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 50,
+      "street": "BURNHAMTHORPE RD W",
+      "streetFIDs": [
+        9922,
+        9927
+      ],
+      "position26917": [
+        607007.6296277883,
+        4823244.960316975
+      ],
+      "mappedBridgeFIDs": [
+        8743,
+        8766,
+        8791,
+        8792,
+        8793,
+        8801,
+        8802,
+        8809,
+        8811,
+        8813,
+        8814,
+        8815,
+        8846,
+        8855,
+        8863,
+        8864,
+        8867,
+        8868
+      ],
+      "nearestDiagnosticCandidate": "crossing-01",
+      "distanceToDiagnosticM": 18.89,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-01"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 51,
+      "street": "EGLINTON AVE W",
+      "streetFIDs": [
+        9881,
+        13550,
+        15650,
+        15651
+      ],
+      "position26917": [
+        605504.0444971935,
+        4824987.697038915
+      ],
+      "mappedBridgeFIDs": [
+        9583,
+        9585,
+        9587,
+        9588,
+        9627,
+        9638,
+        9641,
+        9667,
+        9668,
+        9671,
+        9672,
+        9674,
+        9675,
+        9678,
+        9679,
+        9682,
+        9683,
+        9707,
+        9708,
+        11950,
+        11959,
+        11962,
+        11965,
+        11966,
+        11993
+      ],
+      "nearestDiagnosticCandidate": "crossing-05",
+      "distanceToDiagnosticM": 9.4,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-05"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 52,
+      "street": "QUEEN ELIZABETH WAY",
+      "streetFIDs": [
+        7481,
+        7482,
+        19471,
+        19684
+      ],
+      "position26917": [
+        612285.1015799842,
+        4823657.352007398
+      ],
+      "mappedBridgeFIDs": [
+        7677,
+        7678,
+        7681,
+        7683,
+        7684,
+        7687,
+        7688,
+        7691,
+        7706,
+        7708,
+        7770,
+        7777,
+        7778,
+        7856,
+        7858,
+        7859,
+        7867
+      ],
+      "nearestDiagnosticCandidate": "crossing-07",
+      "distanceToDiagnosticM": 56.16,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "qew-credit-new",
+        "qew-credit-historic"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 53,
+      "street": "QUEENSWAY E",
+      "streetFIDs": [
+        18256
+      ],
+      "position26917": [
+        615620.47704307,
+        4829509.0842655925
+      ],
+      "mappedBridgeFIDs": [
+        8094,
+        8095,
+        8096,
+        8124,
+        8129,
+        8148,
+        8161,
+        8162,
+        8163,
+        8164
+      ],
+      "nearestDiagnosticCandidate": "crossing-03",
+      "distanceToDiagnosticM": 5.84,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-03"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 54,
+      "street": "401 HWY",
+      "streetFIDs": [
+        3695,
+        3697,
+        3699,
+        3722,
+        3725,
+        17645,
+        17647,
+        19718
+      ],
+      "position26917": [
+        610965.6415984359,
+        4834424.953916153
+      ],
+      "mappedBridgeFIDs": [
+        11015,
+        11060,
+        11061,
+        11062,
+        11063,
+        11064,
+        11065,
+        11066,
+        11067,
+        11068,
+        11069,
+        11070,
+        11071,
+        11072,
+        11073,
+        11074,
+        11075,
+        11076,
+        11077,
+        11078,
+        11079
+      ],
+      "nearestDiagnosticCandidate": "crossing-04",
+      "distanceToDiagnosticM": 2.72,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-04"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 55,
+      "street": "MATHESON BLVD E",
+      "streetFIDs": [
+        3698,
+        14245,
+        14246
+      ],
+      "position26917": [
+        611527.135311301,
+        4834115.115113282
+      ],
+      "mappedBridgeFIDs": [
+        10909,
+        10914,
+        10924,
+        10925,
+        10926,
+        10929,
+        10931,
+        10932,
+        10933,
+        10934
+      ],
+      "nearestDiagnosticCandidate": "crossing-06",
+      "distanceToDiagnosticM": 7.71,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-06"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 56,
+      "street": "401 HWY",
+      "streetFIDs": [
+        18799,
+        19430,
+        19643,
+        19644,
+        19645
+      ],
+      "position26917": [
+        603562.4367771876,
+        4830107.512610198
+      ],
+      "mappedBridgeFIDs": [
+        13859,
+        13860,
+        13863,
+        13864,
+        13865,
+        13867,
+        13868,
+        13871,
+        13873,
+        13952,
+        13957,
+        13959
+      ],
+      "nearestDiagnosticCandidate": "crossing-08",
+      "distanceToDiagnosticM": 22.84,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "grade-transfer-08"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 57,
+      "street": "MISSISSAUGA TRANSITWAY",
+      "streetFIDs": [
+        18376,
+        19084
+      ],
+      "position26917": [
+        612197.975127236,
+        4833558.90585293
+      ],
+      "mappedBridgeFIDs": [
+        10943,
+        10948,
+        10949,
+        10994,
+        11005,
+        11006
+      ],
+      "nearestDiagnosticCandidate": "crossing-11",
+      "distanceToDiagnosticM": 5.67,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-11"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 58,
+      "street": "ERIN MILLS PKY",
+      "streetFIDs": [
+        6857,
+        6877,
+        6879
+      ],
+      "position26917": [
+        601722.5722496064,
+        4827560.295422789
+      ],
+      "mappedBridgeFIDs": [
+        14101,
+        14105,
+        14135,
+        14139,
+        14174,
+        14175,
+        14236,
+        14237
+      ],
+      "nearestDiagnosticCandidate": "crossing-09",
+      "distanceToDiagnosticM": 10.63,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-09"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 59,
+      "street": "MAVIS RD",
+      "streetFIDs": [
+        12685,
+        12686,
+        14982
+      ],
+      "position26917": [
+        603629.8223735959,
+        4831193.859339375
+      ],
+      "mappedBridgeFIDs": [
+        13746,
+        13748,
+        13759,
+        13762,
+        13763,
+        13779,
+        13816,
+        13826
+      ],
+      "nearestDiagnosticCandidate": "crossing-10",
+      "distanceToDiagnosticM": 7.42,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-10"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 60,
+      "street": "409 HWY",
+      "streetFIDs": [
+        4135,
+        4138,
+        4141,
+        16142
+      ],
+      "position26917": [
+        611937.4382809359,
+        4839657.677262618
+      ],
+      "mappedBridgeFIDs": [
+        12076,
+        12077,
+        12081,
+        12082,
+        12091,
+        12110,
+        12111,
+        12116,
+        12118,
+        12122,
+        12128,
+        12179,
+        12180,
+        12182,
+        12185,
+        12218,
+        12220,
+        12242
+      ],
+      "nearestDiagnosticCandidate": "crossing-13",
+      "distanceToDiagnosticM": 19.74,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-13-part0",
+        "crossing-13-part1",
+        "crossing-13-part2"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 61,
+      "street": "GOREWAY DR",
+      "streetFIDs": [
+        4136,
+        4137,
+        4139,
+        4140
+      ],
+      "position26917": [
+        611938.7077064838,
+        4839653.882140491
+      ],
+      "mappedBridgeFIDs": [
+        12081,
+        12111,
+        12112,
+        12118,
+        12123,
+        12179,
+        12180,
+        12182,
+        12185,
+        12186,
+        12220,
+        12221,
+        12242
+      ],
+      "nearestDiagnosticCandidate": "crossing-13",
+      "distanceToDiagnosticM": 20.84,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-13-part0",
+        "crossing-13-part1",
+        "crossing-13-part2"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 62,
+      "street": "PAISLEY BLVD E",
+      "streetFIDs": [
+        1868,
+        1888,
+        1892
+      ],
+      "position26917": [
+        612438.1918328975,
+        4825946.005489846
+      ],
+      "mappedBridgeFIDs": [
+        8313,
+        8318,
+        8322,
+        8325,
+        8341
+      ],
+      "nearestDiagnosticCandidate": "crossing-26",
+      "distanceToDiagnosticM": 3.49,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-26"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 63,
+      "street": "WISEMAN CRT",
+      "streetFIDs": [
+        187,
+        13900
+      ],
+      "position26917": [
+        610031.9712883334,
+        4818672.136096021
+      ],
+      "mappedBridgeFIDs": [
+        8035,
+        8037
+      ],
+      "nearestDiagnosticCandidate": "crossing-19",
+      "distanceToDiagnosticM": 4.28,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-19"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 64,
+      "street": "DUNDAS ST W",
+      "streetFIDs": [
+        9452,
+        11462
+      ],
+      "position26917": [
+        608421.306499595,
+        4822007.968003427
+      ],
+      "mappedBridgeFIDs": [
+        8396,
+        8398,
+        8402,
+        8404,
+        8754,
+        8755,
+        8758,
+        8760,
+        8761,
+        8780,
+        8790,
+        8827,
+        8831,
+        8838,
+        8850
+      ],
+      "nearestDiagnosticCandidate": "crossing-42",
+      "distanceToDiagnosticM": 12.22,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-42"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 65,
+      "street": "EGLINTON AVE E",
+      "streetFIDs": [
+        8677,
+        19086
+      ],
+      "position26917": [
+        612210.0757798756,
+        4833545.155005284
+      ],
+      "mappedBridgeFIDs": [
+        8953,
+        8972,
+        8973,
+        10943,
+        10948,
+        10949,
+        10994,
+        11005,
+        11006
+      ],
+      "nearestDiagnosticCandidate": "crossing-12",
+      "distanceToDiagnosticM": 0.13,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-11"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 66,
+      "street": "COURTNEYPARK DR E",
+      "streetFIDs": [
+        3882,
+        12603,
+        12604
+      ],
+      "position26917": [
+        609044.6228261242,
+        4836442.493174739
+      ],
+      "mappedBridgeFIDs": [
+        13337,
+        13341,
+        13343,
+        13344,
+        13345,
+        13362,
+        13363,
+        13364,
+        13366,
+        13375
+      ],
+      "nearestDiagnosticCandidate": "crossing-16",
+      "distanceToDiagnosticM": 6.89,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-16"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 67,
+      "street": "MEADOW WOOD RD",
+      "streetFIDs": [
+        251,
+        272
+      ],
+      "position26917": [
+        611892.6003903429,
+        4819046.889385337
+      ],
+      "mappedBridgeFIDs": [
+        7401,
+        7405,
+        7427,
+        7428,
+        7434,
+        7435
+      ],
+      "nearestDiagnosticCandidate": "crossing-43",
+      "distanceToDiagnosticM": 12.76,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-43"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 68,
+      "street": "401 HWY",
+      "streetFIDs": [
+        14336,
+        14338,
+        14339,
+        14340,
+        14341,
+        14342,
+        14343,
+        19432,
+        19440,
+        19443,
+        19444,
+        19445,
+        19494,
+        19496,
+        19648
+      ],
+      "position26917": [
+        604252.2671232391,
+        4830522.595922296
+      ],
+      "mappedBridgeFIDs": [
+        13713,
+        13714,
+        13750,
+        13751,
+        13752,
+        13754,
+        13756,
+        13766,
+        13773,
+        13815,
+        13820,
+        13821,
+        13822,
+        13823,
+        13824
+      ],
+      "nearestDiagnosticCandidate": "crossing-59",
+      "distanceToDiagnosticM": 40.58,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "alternative-59-part6",
+        "alternative-59-part7"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 69,
+      "street": "MAVIS RD",
+      "streetFIDs": [
+        3183,
+        3191,
+        19429,
+        19437,
+        19438,
+        19439,
+        19446,
+        19447
+      ],
+      "position26917": [
+        604259.4895290718,
+        4830523.6160561275
+      ],
+      "mappedBridgeFIDs": [
+        13750,
+        13752,
+        13754,
+        13756,
+        13773,
+        13815,
+        13820,
+        13821,
+        13822,
+        13823,
+        13824
+      ],
+      "nearestDiagnosticCandidate": "crossing-59",
+      "distanceToDiagnosticM": 43.75,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "alternative-59-part6",
+        "alternative-59-part7"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 70,
+      "street": "QUEEN ELIZABETH WAY",
+      "streetFIDs": [
+        19686,
+        19687,
+        19688,
+        19690
+      ],
+      "position26917": [
+        616269.2544561396,
+        4828987.895062557
+      ],
+      "mappedBridgeFIDs": [
+        7460,
+        7482,
+        7483,
+        7484,
+        7487,
+        7488,
+        7497,
+        7504,
+        7506,
+        7516,
+        7524,
+        7531,
+        7532,
+        7533,
+        7534,
+        8093,
+        8128,
+        8166,
+        8168
+      ],
+      "nearestDiagnosticCandidate": "crossing-18",
+      "distanceToDiagnosticM": 6.12,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-18"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 71,
+      "street": "403 HWY",
+      "streetFIDs": [
+        8328,
+        8332,
+        8397,
+        8399,
+        8400,
+        12969,
+        17686
+      ],
+      "position26917": [
+        610294.7787383097,
+        4830372.319958412
+      ],
+      "mappedBridgeFIDs": [
+        9048,
+        9054,
+        9055,
+        9060,
+        9074,
+        9081,
+        9084,
+        9108,
+        9155,
+        9170,
+        9199,
+        9200,
+        9201
+      ],
+      "nearestDiagnosticCandidate": "crossing-27",
+      "distanceToDiagnosticM": 68.7,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-27"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 72,
+      "street": "MISSISSAUGA RD",
+      "streetFIDs": [
+        10960,
+        10961
+      ],
+      "position26917": [
+        606759.8145717556,
+        4823276.987615349
+      ],
+      "mappedBridgeFIDs": [
+        8782,
+        8786,
+        8794,
+        8795,
+        8803
+      ],
+      "nearestDiagnosticCandidate": "crossing-28",
+      "distanceToDiagnosticM": 3.9,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-28"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 73,
+      "street": "BRITANNIA RD W",
+      "streetFIDs": [
+        14365
+      ],
+      "position26917": [
+        600053.2436927739,
+        4823046.1008447455
+      ],
+      "mappedBridgeFIDs": [
+        15189,
+        15190,
+        15191,
+        15224,
+        15226,
+        15246,
+        15247,
+        15248,
+        15255,
+        15282,
+        15283,
+        15284,
+        15285
+      ],
+      "nearestDiagnosticCandidate": "crossing-21",
+      "distanceToDiagnosticM": 6.02,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-21"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 74,
+      "street": "403 HWY",
+      "streetFIDs": [
+        9765,
+        9776,
+        9778,
+        10872
+      ],
+      "position26917": [
+        605930.1127953334,
+        4823739.526270918
+      ],
+      "mappedBridgeFIDs": [
+        9577,
+        9610,
+        9611,
+        9622,
+        9698
+      ],
+      "nearestDiagnosticCandidate": "crossing-22",
+      "distanceToDiagnosticM": 3.12,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-22"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 75,
+      "street": "BRITANNIA RD W",
+      "streetFIDs": [
+        7008,
+        12897,
+        18913
+      ],
+      "position26917": [
+        603516.5967215033,
+        4827394.707057528
+      ],
+      "mappedBridgeFIDs": [
+        11968,
+        11973,
+        11981,
+        11984,
+        11987,
+        11988,
+        14010,
+        14011,
+        14056,
+        14064,
+        14066
+      ],
+      "nearestDiagnosticCandidate": "crossing-24",
+      "distanceToDiagnosticM": 32.26,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-24"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 76,
+      "street": "DERRY RD W",
+      "streetFIDs": [
+        3364,
+        12366,
+        12367
+      ],
+      "position26917": [
+        601897.9964086377,
+        4831793.565748173
+      ],
+      "mappedBridgeFIDs": [
+        14594,
+        14595,
+        14599,
+        14601,
+        14602,
+        14605,
+        14614,
+        14618,
+        14619,
+        14620,
+        14622,
+        14625,
+        14636,
+        14639,
+        14646
+      ],
+      "nearestDiagnosticCandidate": "crossing-23",
+      "distanceToDiagnosticM": 14.72,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-23"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 77,
+      "street": "BLOOR ST",
+      "streetFIDs": [
+        3345
+      ],
+      "position26917": [
+        614416.1566827563,
+        4831526.726040373
+      ],
+      "mappedBridgeFIDs": [
+        8475,
+        8478,
+        8480,
+        8485,
+        8490,
+        8492,
+        8498
+      ],
+      "nearestDiagnosticCandidate": "crossing-25",
+      "distanceToDiagnosticM": 0.89,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-25"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 78,
+      "street": "407 HWY",
+      "streetFIDs": [
+        14371
+      ],
+      "position26917": [
+        600043.4560760548,
+        4823056.11096757
+      ],
+      "mappedBridgeFIDs": [
+        15189,
+        15190,
+        15191,
+        15224,
+        15226,
+        15246,
+        15247,
+        15248,
+        15255
+      ],
+      "nearestDiagnosticCandidate": "crossing-30",
+      "distanceToDiagnosticM": 3.88,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-21"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 79,
+      "street": "BRISTOL RD W",
+      "streetFIDs": [
+        14584
+      ],
+      "position26917": [
+        604303.8366108837,
+        4826356.661304389
+      ],
+      "mappedBridgeFIDs": [
+        11969,
+        11976,
+        11982,
+        11983
+      ],
+      "nearestDiagnosticCandidate": "crossing-35",
+      "distanceToDiagnosticM": 10.23,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-35"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 80,
+      "street": "DUNDAS ST E",
+      "streetFIDs": [
+        3322
+      ],
+      "position26917": [
+        615867.0222151729,
+        4831461.855551851
+      ],
+      "mappedBridgeFIDs": [
+        8130,
+        8131,
+        8144,
+        8486,
+        8494,
+        8499
+      ],
+      "nearestDiagnosticCandidate": "crossing-32",
+      "distanceToDiagnosticM": 12.05,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-32"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 81,
+      "street": "BRITANNIA RD E",
+      "streetFIDs": [
+        3824,
+        10257
+      ],
+      "position26917": [
+        609833.3366716629,
+        4835467.884294739
+      ],
+      "mappedBridgeFIDs": [
+        11013,
+        11016,
+        11017,
+        13374,
+        13378,
+        13380,
+        13381
+      ],
+      "nearestDiagnosticCandidate": "crossing-29",
+      "distanceToDiagnosticM": 2.04,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-29"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 82,
+      "street": "MAIN ST",
+      "streetFIDs": [
+        19504
+      ],
+      "position26917": [
+        604275.3909734628,
+        4826351.191114768
+      ],
+      "mappedBridgeFIDs": [
+        11974,
+        11982,
+        11983,
+        11989,
+        11991
+      ],
+      "nearestDiagnosticCandidate": "crossing-35",
+      "distanceToDiagnosticM": 18.87,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-35"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 83,
+      "street": "LAKESHORE RD E",
+      "streetFIDs": [
+        17449
+      ],
+      "position26917": [
+        617342.7725730565,
+        4827242.1369165275
+      ],
+      "mappedBridgeFIDs": [
+        7276,
+        7278,
+        7279,
+        7296,
+        7297,
+        7466,
+        7485,
+        7486,
+        7496,
+        7511
+      ],
+      "nearestDiagnosticCandidate": "crossing-31",
+      "distanceToDiagnosticM": 7.87,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-31"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 84,
+      "street": "407 HWY",
+      "streetFIDs": [
+        14345,
+        14346
+      ],
+      "position26917": [
+        600957.8497659069,
+        4821778.390160575
+      ],
+      "mappedBridgeFIDs": [
+        15295,
+        15296,
+        15297,
+        15298,
+        15306,
+        15307,
+        15308,
+        15312,
+        15313,
+        15314,
+        15315,
+        15316,
+        15318,
+        15319,
+        15321,
+        15322,
+        15324,
+        15325,
+        15327
+      ],
+      "nearestDiagnosticCandidate": "crossing-33",
+      "distanceToDiagnosticM": 28.53,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-33"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 85,
+      "street": "DERRY RD W",
+      "streetFIDs": [
+        11082,
+        14617
+      ],
+      "position26917": [
+        603969.2869601907,
+        4832883.459986833
+      ],
+      "mappedBridgeFIDs": [
+        13606,
+        13619,
+        13620,
+        14588,
+        14589,
+        14590
+      ],
+      "nearestDiagnosticCandidate": "crossing-61",
+      "distanceToDiagnosticM": 10.99,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-61"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 86,
+      "street": "BURNHAMTHORPE RD E",
+      "streetFIDs": [
+        11518
+      ],
+      "position26917": [
+        614068.1704542808,
+        4832635.980285926
+      ],
+      "mappedBridgeFIDs": [
+        8473,
+        8481,
+        8495,
+        8496,
+        8908,
+        8911,
+        8917,
+        8919
+      ],
+      "nearestDiagnosticCandidate": "crossing-37",
+      "distanceToDiagnosticM": 12.89,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-37"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 87,
+      "street": "ZAHAVY WAY",
+      "streetFIDs": [
+        4142
+      ],
+      "position26917": [
+        611738.039865306,
+        4839773.81910449
+      ],
+      "mappedBridgeFIDs": [
+        12131,
+        12246
+      ],
+      "nearestDiagnosticCandidate": "crossing-20",
+      "distanceToDiagnosticM": 13.09,
+      "classification": "rail_structure_not_road_deck",
+      "profileIds": [],
+      "decisionNote": "The source Railway features pass within 3 m of this peak and align with the long elevated strip. Preserve Zahavy road beneath/adjacent to the rail structure; railway first returns are not road elevation."
+    },
+    {
+      "coverageGroupIndex": 88,
+      "street": "CENTRAL PKY E",
+      "streetFIDs": [
+        2389,
+        13318
+      ],
+      "position26917": [
+        611091.6736923495,
+        4827533.038735841
+      ],
+      "mappedBridgeFIDs": [
+        8552,
+        8553,
+        8574,
+        8575,
+        8623,
+        8625,
+        8626,
+        8638,
+        8640
+      ],
+      "nearestDiagnosticCandidate": "crossing-39",
+      "distanceToDiagnosticM": 22.69,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-39"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 89,
+      "street": "MISSISSAUGA VALLEY BLVD",
+      "streetFIDs": [
+        8044,
+        8050
+      ],
+      "position26917": [
+        610765.5172176217,
+        4827962.584226214
+      ],
+      "mappedBridgeFIDs": [
+        8526,
+        8549,
+        8559,
+        8560,
+        8582,
+        8594
+      ],
+      "nearestDiagnosticCandidate": "crossing-38",
+      "distanceToDiagnosticM": 1.72,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-38"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 90,
+      "street": "BURNHAMTHORPE RD W",
+      "streetFIDs": [
+        9662,
+        9671
+      ],
+      "position26917": [
+        606812.5390334798,
+        4822626.109205164
+      ],
+      "mappedBridgeFIDs": [
+        8762,
+        8763,
+        8764,
+        8765,
+        8770,
+        8779,
+        8783,
+        8797,
+        8799,
+        8810,
+        8812,
+        8869,
+        8871,
+        8872
+      ],
+      "nearestDiagnosticCandidate": "crossing-50",
+      "distanceToDiagnosticM": 14.57,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-50"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 91,
+      "street": "BROMSGROVE RD",
+      "streetFIDs": [
+        13902,
+        18169
+      ],
+      "position26917": [
+        610135.7202851735,
+        4818666.558999099
+      ],
+      "mappedBridgeFIDs": [
+        8039,
+        8044
+      ],
+      "nearestDiagnosticCandidate": "crossing-55",
+      "distanceToDiagnosticM": 41.52,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-55"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 92,
+      "street": "CREDITVIEW RD",
+      "streetFIDs": [
+        6913,
+        7064
+      ],
+      "position26917": [
+        603392.4658352995,
+        4828536.107521145
+      ],
+      "mappedBridgeFIDs": [
+        13869,
+        13870,
+        13886,
+        13979,
+        14005,
+        14055,
+        14063,
+        14065
+      ],
+      "nearestDiagnosticCandidate": "crossing-88",
+      "distanceToDiagnosticM": 21.78,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-41"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 93,
+      "street": "BROOKHURST RD",
+      "streetFIDs": [
+        189,
+        13898
+      ],
+      "position26917": [
+        609836.9571259618,
+        4818686.207087697
+      ],
+      "mappedBridgeFIDs": [
+        8052,
+        8053
+      ],
+      "nearestDiagnosticCandidate": "crossing-49",
+      "distanceToDiagnosticM": 3.74,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-49"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 94,
+      "street": "THE COLLEGEWAY",
+      "streetFIDs": [
+        9390,
+        17182
+      ],
+      "position26917": [
+        608012.1468037838,
+        4822130.832285852
+      ],
+      "mappedBridgeFIDs": [
+        8768,
+        8808,
+        8837,
+        8840,
+        8841
+      ],
+      "nearestDiagnosticCandidate": "crossing-40",
+      "distanceToDiagnosticM": 10.58,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-40"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 95,
+      "street": "LAKESHORE RD E",
+      "streetFIDs": [
+        13972,
+        13973
+      ],
+      "position26917": [
+        614164.3568767037,
+        4822944.463804305
+      ],
+      "mappedBridgeFIDs": [
+        7748,
+        7812,
+        7862
+      ],
+      "nearestDiagnosticCandidate": "crossing-45",
+      "distanceToDiagnosticM": 0.47,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-45"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 96,
+      "street": "QUEENSWAY E",
+      "streetFIDs": [
+        1784,
+        1820
+      ],
+      "position26917": [
+        612610.8728537812,
+        4825752.935605045
+      ],
+      "mappedBridgeFIDs": [
+        8292,
+        8293,
+        8295,
+        8298,
+        8315,
+        8316
+      ],
+      "nearestDiagnosticCandidate": "crossing-48",
+      "distanceToDiagnosticM": 9.28,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-48"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 97,
+      "street": "LAKESHORE RD W",
+      "streetFIDs": [
+        815
+      ],
+      "position26917": [
+        614161.6637040443,
+        4822941.013225293
+      ],
+      "mappedBridgeFIDs": [
+        7748,
+        7836,
+        7862
+      ],
+      "nearestDiagnosticCandidate": "crossing-46",
+      "distanceToDiagnosticM": 2.09,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-45"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 98,
+      "street": "SOUTHDOWN RD",
+      "streetFIDs": [
+        14187
+      ],
+      "position26917": [
+        610479.4118896239,
+        4818729.933752305
+      ],
+      "mappedBridgeFIDs": [
+        7996,
+        7997,
+        8002
+      ],
+      "nearestDiagnosticCandidate": "crossing-58",
+      "distanceToDiagnosticM": 96.78,
+      "classification": "no_rendered_paved_road_at_peak",
+      "profileIds": [],
+      "decisionNote": "No actual RoadPaved samples occur within 30 m of the diagnostic industrial access peak. Railway features and separate Southdown crossings occur nearby. This cannot justify adding or raising an unmapped paved road; Southdown candidate 99 remains independently reviewed."
+    },
+    {
+      "coverageGroupIndex": 99,
+      "street": "DREW RD",
+      "streetFIDs": [
+        12362,
+        18423
+      ],
+      "position26917": [
+        608438.924582919,
+        4840244.792659886
+      ],
+      "mappedBridgeFIDs": [
+        14422,
+        14443,
+        14458,
+        14468,
+        14475
+      ],
+      "nearestDiagnosticCandidate": "crossing-60",
+      "distanceToDiagnosticM": 41.39,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-60"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 100,
+      "street": "OLD DERRY RD",
+      "streetFIDs": [
+        11212,
+        18397
+      ],
+      "position26917": [
+        602202.2854143872,
+        4830685.721418941
+      ],
+      "mappedBridgeFIDs": [
+        13960,
+        13964,
+        14628
+      ],
+      "nearestDiagnosticCandidate": "crossing-53",
+      "distanceToDiagnosticM": 4.04,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-53"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 101,
+      "street": "FINANCIAL DR",
+      "streetFIDs": [
+        3101,
+        9991
+      ],
+      "position26917": [
+        600549.3247563979,
+        4830305.935911902
+      ],
+      "mappedBridgeFIDs": [
+        14657,
+        14660,
+        14661,
+        14667,
+        14671
+      ],
+      "nearestDiagnosticCandidate": "crossing-52",
+      "distanceToDiagnosticM": 1.38,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-52"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 102,
+      "street": "401 HWY",
+      "streetFIDs": [
+        19566,
+        19641,
+        19642
+      ],
+      "position26917": [
+        602541.692623211,
+        4829540.874525117
+      ],
+      "mappedBridgeFIDs": [
+        13866,
+        13872,
+        13883,
+        13977
+      ],
+      "nearestDiagnosticCandidate": "crossing-34",
+      "distanceToDiagnosticM": 44.22,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-34-part0",
+        "crossing-34-part1",
+        "crossing-34-part2",
+        "crossing-34-part3"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 103,
+      "street": "MISSISSAUGA VALLEY BLVD",
+      "streetFIDs": [
+        2307,
+        15639,
+        15640
+      ],
+      "position26917": [
+        611482.528541439,
+        4827204.927677221
+      ],
+      "mappedBridgeFIDs": [
+        8558,
+        8599,
+        8602,
+        8603,
+        8604
+      ],
+      "nearestDiagnosticCandidate": "crossing-57",
+      "distanceToDiagnosticM": 3.31,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-57"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 104,
+      "street": "OLD DERRY RD",
+      "streetFIDs": [
+        3096,
+        10014
+      ],
+      "position26917": [
+        601891.9345216834,
+        4830280.159144299
+      ],
+      "mappedBridgeFIDs": [
+        13923,
+        13958,
+        13963,
+        14641
+      ],
+      "nearestDiagnosticCandidate": "crossing-62",
+      "distanceToDiagnosticM": 5.39,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-62"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 105,
+      "street": "KIRWIN AVE",
+      "streetFIDs": [
+        2106,
+        2163
+      ],
+      "position26917": [
+        611818.3781002202,
+        4826731.677659258
+      ],
+      "mappedBridgeFIDs": [
+        8556,
+        8577,
+        8581,
+        8592,
+        8596,
+        8613,
+        8617
+      ],
+      "nearestDiagnosticCandidate": "crossing-63",
+      "distanceToDiagnosticM": 42.12,
+      "classification": "nearby_structure_wrong_road",
+      "profileIds": [],
+      "decisionNote": "The named residential access stops beside Kirwin Avenue. Nearby bridge edges align with Kirwin, not the access. The local mapped pavement DSM/DTM median difference is about 0.02 m; no raised access road is justified."
+    },
+    {
+      "coverageGroupIndex": 106,
+      "street": "TANNERY ST",
+      "streetFIDs": [
+        10974,
+        10975
+      ],
+      "position26917": [
+        603560.9414297909,
+        4825994.588471838
+      ],
+      "mappedBridgeFIDs": [
+        12013,
+        12014,
+        12016,
+        12019,
+        12022
+      ],
+      "nearestDiagnosticCandidate": "crossing-56",
+      "distanceToDiagnosticM": 3.78,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-56"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 107,
+      "street": "SCARBORO ST",
+      "streetFIDs": [
+        10428,
+        10673
+      ],
+      "position26917": [
+        608930.6182349178,
+        4839994.509329656
+      ],
+      "mappedBridgeFIDs": [
+        14442,
+        14447,
+        14449
+      ],
+      "nearestDiagnosticCandidate": "crossing-47",
+      "distanceToDiagnosticM": 27.55,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-47"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 108,
+      "street": "DIXIE RD",
+      "streetFIDs": [
+        2937,
+        2963
+      ],
+      "position26917": [
+        613990.9556786168,
+        4829709.075644186
+      ],
+      "mappedBridgeFIDs": [
+        8477,
+        8482,
+        8484,
+        8508,
+        8515,
+        8524
+      ],
+      "nearestDiagnosticCandidate": "crossing-54",
+      "distanceToDiagnosticM": 12.86,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "crossing-54"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 109,
+      "street": "ATWATER AVE",
+      "streetFIDs": [
+        1397
+      ],
+      "position26917": [
+        614807.4418389868,
+        4825026.227165827
+      ],
+      "mappedBridgeFIDs": [
+        7664,
+        7669
+      ],
+      "nearestDiagnosticCandidate": "crossing-51",
+      "distanceToDiagnosticM": 29.15,
+      "classification": "Associated profile repair",
+      "profileIds": [
+        "grade-51"
+      ],
+      "decisionNote": "One or more source-matched road strips corrected. This group may identify the lower road; its upper counterpart is recorded separately, and lower-road protection applies."
+    },
+    {
+      "coverageGroupIndex": 110,
+      "street": "GOREWAY DR",
+      "streetFIDs": [
+        4140,
+        4144
+      ],
+      "position26917": [
+        611741.0436400811,
+        4839776.460569443
+      ],
+      "mappedBridgeFIDs": [
+        12045,
+        12131,
+        12286
+      ],
+      "nearestDiagnosticCandidate": "crossing-20",
+      "distanceToDiagnosticM": 15.21,
+      "classification": "rail_structure_not_road_deck",
+      "profileIds": [],
+      "decisionNote": "The source Railway features pass within 3 m of this peak and align with the long elevated strip. Preserve Zahavy road beneath/adjacent to the rail structure; railway first returns are not road elevation."
+    }
+  ],
+  "inputHashes": {
+    "work/road-crossings/crossing-profiles.json": "71a4f9f7c49dfe1be5721836146f8b30a5353302045c233fc9f39d24e803d29a",
+    "work/road-crossings/research/native-patches-manifest.json": "1a52734c462d9771756cec0bd5d0beeef99e84a17fecdb51fb723715815d7b3c",
+    "work/road-crossings/research/native-extra-patches-manifest.json": "7d8eb621bac1c6a76005ad3d2670a02399debd53dfa19aa85fb32c6f7165d91e",
+    "work/road-crossings/research/native-tail-patches-manifest.json": "aa6efe16f22d8cf91f1de91cff59d894b60d4a6896e1ea1ad5853181a5d8fcda",
+    "work/road-crossings/research/source-evidence-lock.json": "41c93fc35b2ffe69b058219517781d9fb9e581f0a361a6565dae5fd3a4482bd7",
+    "work/road-crossings/research/nonfit-classification-findings.json": "a398d8c67aa33abc3b401ae26b382f209f9778421dbfc8a78354f2c3355e3d30"
+  }
+}

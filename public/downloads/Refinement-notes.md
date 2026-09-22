@@ -1,4 +1,4 @@
-# Future Mississauga: Transit Depth refinement notes
+# Future Mississauga: Road Crossings refinement notes
 
 Model review date: **20 September 2026**. These notes describe the source-derived additions and presentation changes. The picture index and atlas build manifest record which final images were packaged.
 
@@ -75,7 +75,7 @@ The final Brightwater P/Q podium check removes overlapping cap regions while pre
 
 ## Roads, bridges and transit
 
-Road footprints are now cut out of competing terrain and green surfaces. This fixes the independently triangulated terrain covering parts of highways and ramps. Tests at 25,000 road triangle centroids in each of Downtown, Uptown and Port Credit found zero covered points after the change, versus 8.068%, 9.848% and 5.576% before. This validates visibility, not surveyed road elevations.
+The earlier road-visibility repair cut road footprints out of competing terrain and green surfaces. This fixes the independently triangulated terrain covering parts of highways and ramps. Tests at 25,000 road triangle centroids in each of Downtown, Uptown and Port Credit found zero covered points after the change, versus 8.068%, 9.848% and 5.576% before. This validates visibility, not surveyed road elevations.
 
 Existing street context still includes source-derived bridge spans, mapped lane paint and accepted shelter footprints. Their mixed-date surface fits and limits remain documented. The preceding at-grade-only HML rail supplement is now historical: the current rebuild includes the City Centre flyover network with explicit inferred counterpart and vertical-profile labels.
 
@@ -87,15 +87,19 @@ The **HML core network appears in construction and future modes**. Its north, so
 
 The coloured routes use a consistent system colour: GO stays green, the Transitway blue and HML gold. The dedicated busway and its current street/highway connection use the same blue, with segment labels preserving their meaning. Thin unlit guide strips are separate from grey physical tracks, but both now occupy the same three-dimensional scene. Buildings, ground, station roofs and bridges naturally hide sections behind or beneath them. Their widths and elevations remain illustrative.
 
-The Transit Depth correction removes the always-visible foreground overlay and the old rule that lifted a lower route above every overlapping surface. Guide heights now follow each route’s existing physical display profile with minor local support clearance; an overhead bridge or roof does not raise the route onto it. All 28 canonical assets retain their horizontal coordinates, faces and colours, and all 810 checked physical mesh positions/faces are unchanged. The earlier 509,181-sample visibility audit documents the superseded display method, not this edition’s current clearance rule. See the [current geometry proof](transit-depth/Geometry-depth-correction.json), [source and alignment review](transit-depth/Transit-depth-review.md) and [website transfer audit](transit-depth/Public-transit-guide-and-reference-audit.json).
+The earlier Transit Depth correction removed the always-visible foreground overlay and the rule that lifted a lower route above every overlapping surface. Its 28-asset and 810-mesh checks document that historical repair. The Road Crossings edition subsequently transfers only supported road-associated Transitway portions onto the repaired road profiles; GO and HML files remain byte-identical to the prior edition. Horizontal alignment, system colours and normal scene depth remain unchanged. An overhead bridge does not lift a lower route onto it. The earlier 509,181-sample visibility audit describes a superseded display method. See the [historical Transit Depth geometry proof](transit-depth/Geometry-depth-correction.json), [source and alignment review](transit-depth/Transit-depth-review.md), and the current [road-associated transit audit](road-crossings/Transit-road-association-audit.json) and [dependent-layer checks](road-crossings/Dependent-layer-QA.json).
 
 The source review supports the real off-road Highway 403 flyover and the approach beneath the GO railway at Port Credit. It does not support snapping those alignments onto traffic lanes. The 2024 pavement data also omit portions of newer reserved track space. No horizontal reroute is claimed. Exact engineering profiles, inferred counterpart tracks and switch geometry retain their stated uncertainty. A route disappearing behind a physical obstruction is expected occlusion; the underlying route remains connected. Composed pictures use full municipal transit assets, while district windows clip and identify continuations at their boundaries.
 
 The station layer has nine GO, 12 Transitway and 16 HML locators inside Mississauga. City Centre and North Service are approximate corridor locators with explicit uncertainty; none of these points is a newly verified station footprint. The two earlier mapped HML platform polygons at Derry and Courtneypark and the separately labelled future LRVs may be retained, with their original schematic canopy/vehicle limits. The previous disconnected rail ribbons and broad duplicate gold alignment are replaced, not stacked with the rebuilt tracks. The downtown HML extension remains a separate planning/design project; an invented loop or extension to Brightwater or Lakeview is not drawn. [Metrolinx downtown extension](https://www.metrolinx.com/en/projects-and-programs/hazel-mccallion-line-downtown-mississauga-extension).
 
-The preceding district colour-repair record is retained as historical validation. The current separate service-guide edition supersedes those file hashes. Its physical mesh positions, faces and transforms were preserved in 810 checks; guide display elevations changed while every horizontal route stayed unchanged. [Current visibility audit](revamp/transit-visibility/visibility-audit.json).
+Earlier colour and always-visible service-guide checks remain as [historical visibility validation](revamp/transit-visibility/visibility-audit.json). Their file hashes and clearance method do not describe the current Road Crossings geometry.
 
 The terrain remains a mixed-date public Ontario DTM. Tree inventory points are real municipal locations; crown sizes are illustrative. Additional woodland canopy instances depict coverage inside actual City wooded polygons and are not individually surveyed trees.
+
+## Road Crossings revision
+
+The [road-crossing review](road-crossings/Road-crossings-review.md) documents 107 profile or strip records, not 107 distinct bridges. Historical native surface data support bounded deck and approach reconstructions; six newer-road records use explicit grade estimates. Original terrain and water meshes are preserved, with separate bounded ground and river underlays beneath corrected crossings. The [independent geometry checks](road-crossings/Independent-context-QA.json) and [original-footprint coverage checks](road-crossings/Original-footprint-coverage-QA.json) test the disclosed reconstruction, not current engineering accuracy. Road triangulation is locally refined, separate upper decks protect lower roads, and associated paint and sidewalks follow their matched road surfaces.
 
 ## Pictures and exploration
 
@@ -197,3 +201,6 @@ Building, landscape, physical rail and MiWay data: City of Mississauga, under it
 The gallery displays lossless PNG previews at half each original dimension: 1920×1200 or 1920×700. Download links retain the native 3840-pixel PNG masters. The same three-building mark appears in the gallery, explorer, favicons, sharing graphic and saved viewer pictures. Comparison dividers can be dragged directly and adjusted with arrow keys; option menus use native browser controls.
 
 The 3D viewer has explicit Orbit/Pan modes, pointer-centred zoom, zoom buttons and keyboard controls. Ground-plane panning avoids unintentionally lifting the camera target into the sky. Transit uses normal depth testing, and model selection respects foreground geometry. Superseded district loads and their graphics resources are cleaned up. Model URLs include current asset hashes to prevent stale geometry being mixed with revised data.
+
+
+The small inherited black notch at the airport runway intersection is also resolved. Overlapping faces were reconciled within the existing runway footprint, without refitting heights or changing taxiways and aprons. Airport Corporate, Malton and Citywide were rerendered and visually checked; the other thirty picture pixel hashes stayed unchanged. [Runway diagnosis and repair](road-crossings/Aerial-shadow-and-runway-review.md).

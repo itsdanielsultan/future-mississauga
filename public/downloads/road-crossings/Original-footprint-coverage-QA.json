@@ -1,0 +1,80 @@
+{
+  "checkedAt": "2026-09-22T01:49:49.924818+00:00",
+  "sourceProfileSHA256": "71a4f9f7c49dfe1be5721836146f8b30a5353302045c233fc9f39d24e803d29a",
+  "preOwnershipProfileSHA256": "00e183aef2e3159c12e3fedee73ea67eca615931cbf8ddc83b1dac3af5142aa4",
+  "contextSHA256": "f438886f920f6dd3e896d3274860b8265a8821ec2797b03e0b9d895b20e5ef4c",
+  "originalRecords": 107,
+  "currentRecords": 107,
+  "originalCoreUnionAreaM2": 156869.55491820263,
+  "effectiveCoreUnionAreaM2": 156869.5549182021,
+  "missingOriginalCoreAreaM2": 1.0250573900978666e-09,
+  "addedCoreAreaM2": 5.214457854223198e-10,
+  "sourcePlanePreservedAllRecords": true,
+  "ownershipChecks": [
+    {
+      "retiredBroadProfile": "crossing-13-part0",
+      "originalFootprintPreservedInRecord": true,
+      "removedDuplicateAreaM2": 1141.0067282984546,
+      "preferredOwners": [
+        "crossing-83-part4",
+        "crossing-83-part5"
+      ],
+      "removedRegionSamples": 119,
+      "ownerChecks": [
+        {
+          "owner": "crossing-83-part5",
+          "samples": 54,
+          "covered": 54,
+          "intendedLayerResidualM": {
+            "n": 20,
+            "min": 0.1540633983662616,
+            "p50": 0.17848311641477466,
+            "p90": 0.19826039656867778,
+            "max": 0.20320396144073527
+          },
+          "nativePlaneOnly": "No original broad-fit plane is substituted for the documented stronger owner."
+        },
+        {
+          "owner": "crossing-83-part4",
+          "samples": 65,
+          "covered": 65,
+          "intendedLayerResidualM": {
+            "n": 44,
+            "min": -5.24964615067347e-06,
+            "p50": -5.107462683895392e-07,
+            "p90": 2.1779059991899884e-06,
+            "max": 4.780158150197167e-06
+          },
+          "nativePlaneOnly": "No original broad-fit plane is substituted for the documented stronger owner."
+        }
+      ]
+    },
+    {
+      "retiredBroadProfile": "crossing-83-part2",
+      "originalFootprintPreservedInRecord": true,
+      "removedDuplicateAreaM2": 233.72327568082036,
+      "preferredOwners": [
+        "crossing-111-part1"
+      ],
+      "removedRegionSamples": 26,
+      "ownerChecks": [
+        {
+          "owner": "crossing-111-part1",
+          "samples": 26,
+          "covered": 26,
+          "intendedLayerResidualM": {
+            "n": 26,
+            "min": -1.1484231038139114e-05,
+            "p50": -7.082762465415726e-08,
+            "p90": 5.675420801765085e-06,
+            "max": 9.108305007998752e-06
+          },
+          "nativePlaneOnly": "No original broad-fit plane is substituted for the documented stronger owner."
+        }
+      ]
+    }
+  ],
+  "issues": [],
+  "scope": "Complements all 107 current core checks: exact union conservation plus 3 m samples within retired duplicate-fit portions, queried at documented stronger-owner road height. It never treats deleting a fit as proof that mapped roadway disappeared.",
+  "status": "PASS"
+}

@@ -1,20 +1,24 @@
 {
   "file": "research/Model-reference-index.csv",
-  "files": 152,
-  "canonicalAssetsIndexed": 18,
-  "bytes": 3286477600,
+  "files": 201,
+  "canonicalAssetsIndexed": 24,
+  "transitAssetsIndexed": 28,
+  "landscapeAssetsIndexed": 15,
+  "bytes": 3258303848,
   "packages": {
     "Scenery context": 30,
     "Original City district extract": 15,
     "Reviewed district window": 15,
     "Reviewed City conversion": 30,
-    "Detailed or plan-derived supplement": 32,
+    "Detailed or plan-derived supplement": 38,
+    "Mapped landscape display": 15,
+    "Rebuilt transit network": 28,
     "Original City conversion": 30
   },
   "allSHA256Present": true,
   "privatePathsExcluded": true,
-  "asOf": "2026-09-20",
-  "edition": "Final locked refinement after Brightwater cap repair",
-  "csvSHA256": "179dccac733c3f77bfeb63e95ecbcbebf4d0285d28b5f0d1e7be0352ce0f354b",
-  "verification": "Each CSV file path, byte count and SHA-256 was independently rechecked against the delivered GLB after final corrections. All canonical refinement model files are included."
+  "asOf": "2026-09-21",
+  "edition": "Road Crossings",
+  "csvSHA256": "35d43234f10215e51a2b40ac842f7ff0ab26fd8ed463045280740cc114f7bbf5",
+  "verification": "Every actual GLB under revised outputs/models is listed once with a current checksum; canonical building, transit and landscape metadata are matched by exact file path. Historical supplements are identified separately."
 }

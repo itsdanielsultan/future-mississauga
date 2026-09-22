@@ -1,0 +1,832 @@
+{
+  "checkedUTC": "2026-09-22T00:03:33.326638+00:00",
+  "readOnly": true,
+  "modelFilesModified": 0,
+  "finiteSubsetCount": 24,
+  "classificationCounts": {
+    "lower_road_already_linked": 6,
+    "no_coherent_paved_depression": 3,
+    "rail_structure_not_road_deck": 3,
+    "small_coarse_terrain_grade_dip": 2,
+    "no_rendered_paved_road_at_peak": 1,
+    "actual_upper_deck_for_corrected_extractor": 4,
+    "nearby_structure_wrong_road": 2,
+    "external_context_deck_incomplete_city_footprint": 2,
+    "lower_road_linked_to_alternative": 1
+  },
+  "inputCandidateFileSHA256": "efb79f765e9bf77ed0492336b544215119b152682afac0589512764b5029dd6d",
+  "inputIndexPolicy": "candidateIndex refers to zero-based original112-row native-crossing-profile-candidates input. Do not confuse with111 spatial coverage group indices.",
+  "method": [
+    "Visually inspected all24 native-source plan/terrain panels, then enlarged key suspected true-deck cases.",
+    "Compared original City RoadPaved, Bridges and StreetCentreline footprints; computed .5m native DSM/DTM point samples inside pavement.",
+    "Read5 bounded City line queries to distinguish mapped Railway structures from road decks.",
+    "Alternative windows are extraction aids only; final geometry must retain actual source road footprints and exclude unrelated lower roads."
+  ],
+  "limits": [
+    "No model or height was altered. Actual upper-deck cases still require safe source-footprint extraction, segmented fitting where needed and approach/topology QA.",
+    "No coherent paved depression means these native inputs do not establish a required lift. It is not a certified construction-type or as-built statement.",
+    "Source roadway/river geometry vintages differ; 2015 DSM may predate later lane widening.",
+    "Cases outside the finite original coverage screen were not added."
+  ],
+  "coarseTerrainFollowupNote": "A native DSM/native DTM match does not prove that the inherited 10 m model terrain follows a small road correctly. Five earlier no-lift candidates were separately checked against the coarse model source; two modest grade dips were identified and handed to implementation.",
+  "findings": [
+    {
+      "candidateIndex": 14,
+      "street": "GOREWAY DR",
+      "streetFID": 4140,
+      "xy26917": [
+        611917.355830814,
+        4839652.58842184
+      ],
+      "initialDecision": "No source bridge edge aligned with road",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-014.png",
+      "pavementWithin30mSamples": 323,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        0.011862182617187503,
+        7.9571380615234375,
+        10.862490844726562
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "lower_road_already_linked",
+      "finding": "The named Goreway segment passes below the elevated 409 structure. The source edges are transverse to this centreline. Preserve Goreway; upper 409 is separately reviewed by candidate 13.",
+      "linkedCandidateIndices": [
+        13
+      ],
+      "municipalBoundaryRelation": {
+        "inside": true,
+        "distanceToBoundaryM": 37.05580849917189,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      }
+    },
+    {
+      "candidateIndex": 17,
+      "street": "WILLOW LANE",
+      "streetFID": 3311,
+      "xy26917": [
+        602402.164206542,
+        4831059.8033262575
+      ],
+      "initialDecision": "No mapped span at diagnostic peak",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-017.png",
+      "pavementWithin30mSamples": 44,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        0.00602874755859375,
+        0.04431915283203125,
+        8.690345764160158
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "no_coherent_paved_depression",
+      "finding": "The nearby small Willow Lane crossing is about 31 m from the diagnostic peak, just beyond the former 30 m selection threshold. Native imagery/elevation shows a ground-supported paved body with canopy around it. A raised-road deficit is not established; do not lift the vegetation peak. Follow-up comparison to the model 10 m DTM found no supported difference above 1 m in the sampled clear-pavement subset; this is separate from canopy returns.",
+      "linkedCandidateIndices": [],
+      "municipalBoundaryRelation": {
+        "inside": true,
+        "distanceToBoundaryM": 1154.7640861664072,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      },
+      "coarseTerrainFollowup": {
+        "candidateIndex": 17,
+        "street": "WILLOW LANE",
+        "sampleCount": 107,
+        "clearPavementSampleCount": 102,
+        "nativeDSMminusCoarseDTM_clearP10P50P90Max": [
+          0.0644256591796875,
+          0.14510345458984375,
+          0.2615875244140625,
+          0.3465728759765625
+        ],
+        "nativeDSMminusNativeDTM_allP10P50P90": [
+          0.0010986328125000013,
+          0.043060302734375,
+          0.07967224121093751
+        ],
+        "clearFractionAbove1m": 0.0,
+        "clearFractionAbove2m": 0.0,
+        "maximumClearPoint26917": [
+          602425.6147873597,
+          4831042.294012452
+        ],
+        "nativeSampleFiles": [
+          "patch-05-dsm"
+        ],
+        "samplingCaveat": "Clear subset usesnativeDSM/DTMagreementwithin.8m. Doesnotexclude an elevated deck whereDSM-DTMislarger. Differenceisagainstmodel 10 mDTM,notexactroadtriangles."
+      }
+    },
+    {
+      "candidateIndex": 20,
+      "street": "ZAHAVY WAY",
+      "streetFID": 4142,
+      "xy26917": [
+        611726.0605550347,
+        4839779.092904441
+      ],
+      "initialDecision": "No source bridge edge aligned with road",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-020.png",
+      "pavementWithin30mSamples": 316,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        0.00045013427734375,
+        0.01822662353515625,
+        1.4455947875976562
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "rail_structure_not_road_deck",
+      "finding": "The source Railway features pass within 3 m of this peak and align with the long elevated strip. Preserve Zahavy road beneath/adjacent to the rail structure; railway first returns are not road elevation.",
+      "linkedCandidateIndices": [],
+      "municipalBoundaryRelation": {
+        "inside": true,
+        "distanceToBoundaryM": 161.19387149165382,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      }
+    },
+    {
+      "candidateIndex": 51,
+      "street": "ATWATER AVE",
+      "streetFID": 1397,
+      "xy26917": [
+        614822.3817007315,
+        4825051.26317011
+      ],
+      "initialDecision": "Source road footprint lacks a usable interior",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-051.png",
+      "pavementWithin30mSamples": 141,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        0.0020294189453125,
+        0.05023193359375,
+        7.622169494628906
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "small_coarse_terrain_grade_dip",
+      "finding": "Native paved DSM and native DTM agree closely, but comparison against the model 10 m DTM reveals a modest local dip. Correct actual source road grade from native surface/terrain evidence where supported; this does not establish an aerial bridge needing added structural thickness. Maximum clear native-pavement difference is 1.47 m. Preserve the mapped water and footprint.",
+      "linkedCandidateIndices": [],
+      "municipalBoundaryRelation": {
+        "inside": true,
+        "distanceToBoundaryM": 1166.4311361228442,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      },
+      "coarseTerrainFollowup": {
+        "candidateIndex": 51,
+        "street": "ATWATER AVE",
+        "sampleCount": 301,
+        "clearPavementSampleCount": 214,
+        "nativeDSMminusCoarseDTM_clearP10P50P90Max": [
+          0.019542694091796875,
+          0.08498382568359375,
+          0.9283714294433597,
+          1.4652862548828125
+        ],
+        "nativeDSMminusNativeDTM_allP10P50P90": [
+          0.00794219970703125,
+          0.07108306884765625,
+          1.9853897094726562
+        ],
+        "clearFractionAbove1m": 0.0794392523364486,
+        "clearFractionAbove2m": 0.0,
+        "maximumClearPoint26917": [
+          614808.5843115308,
+          4825029.06528392
+        ],
+        "nativeSampleFiles": [
+          "patch-43-dsm"
+        ],
+        "samplingCaveat": "Clear subset usesnativeDSM/DTMagreementwithin.8m. Doesnotexclude an elevated deck whereDSM-DTMislarger. Differenceisagainstmodel 10 mDTM,notexactroadtriangles."
+      }
+    },
+    {
+      "candidateIndex": 58,
+      "street": "UNNAMED UCOM",
+      "streetFID": 18168,
+      "xy26917": [
+        610389.2178286749,
+        4818694.844089795
+      ],
+      "initialDecision": "Source road footprint lacks a usable interior",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-058.png",
+      "pavementWithin30mSamples": 0,
+      "nearbyPavementDSMminusDTM_P10P50P90": null,
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "no_rendered_paved_road_at_peak",
+      "finding": "No actual RoadPaved samples occur within 30 m of the diagnostic industrial access peak. Railway features and separate Southdown crossings occur nearby. This cannot justify adding or raising an unmapped paved road; Southdown candidate 99 remains independently reviewed.",
+      "linkedCandidateIndices": [
+        99
+      ],
+      "municipalBoundaryRelation": {
+        "inside": true,
+        "distanceToBoundaryM": 1951.8935084815714,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      }
+    },
+    {
+      "candidateIndex": 59,
+      "street": "401 HWY",
+      "streetFID": 19496,
+      "xy26917": [
+        604243.067946018,
+        4830483.06922819
+      ],
+      "initialDecision": "No source bridge edge aligned with road",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-059.png",
+      "pavementWithin30mSamples": 223,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        0.00027770996093750004,
+        0.0242462158203125,
+        0.09669799804687516
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "actual_upper_deck_for_corrected_extractor",
+      "finding": "Mavis Road above 401; use source Mavis road family, not the diagnostic lower 401 centreline.",
+      "linkedCandidateIndices": [],
+      "municipalBoundaryRelation": {
+        "inside": true,
+        "distanceToBoundaryM": 2963.5994478974967,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      }
+    },
+    {
+      "candidateIndex": 63,
+      "street": "UNNAMED URES",
+      "streetFID": 13726,
+      "xy26917": [
+        611776.3110671741,
+        4826729.618700963
+      ],
+      "initialDecision": "No source bridge edge aligned with road",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-063.png",
+      "pavementWithin30mSamples": 106,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        0.0013580322265625,
+        0.019657135009765625,
+        0.053619384765625
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "nearby_structure_wrong_road",
+      "finding": "The named residential access stops beside Kirwin Avenue. Nearby bridge edges align with Kirwin, not the access. The local mapped pavement DSM/DTM median difference is about 0.02 m; no raised access road is justified.",
+      "linkedCandidateIndices": [],
+      "municipalBoundaryRelation": {
+        "inside": true,
+        "distanceToBoundaryM": 4475.311992312785,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      }
+    },
+    {
+      "candidateIndex": 66,
+      "street": "409 HWY",
+      "streetFID": 4129,
+      "xy26917": [
+        612141.992646374,
+        4839292.372379839
+      ],
+      "initialDecision": "No source bridge edge aligned with road",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-066.png",
+      "pavementWithin30mSamples": 312,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        0.03704071044921875,
+        0.10562896728515625,
+        8.96742401123047
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "actual_upper_deck_for_corrected_extractor",
+      "finding": "Curved 409 interchange flyover. Follow the two curved source chains; this local axis is an inspection reference, not a constant-width design. The nearest diagnostic centreline is a different ramp. This is a boundary-crossing context location; its peak is slightly outside the City land polygon. Keep exact source footprints and current context scope.",
+      "linkedCandidateIndices": [],
+      "municipalBoundaryRelation": {
+        "inside": false,
+        "distanceToBoundaryM": 23.523763458063648,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      }
+    },
+    {
+      "candidateIndex": 67,
+      "street": "NINTH LINE",
+      "streetFID": 10295,
+      "xy26917": [
+        602860.8241106325,
+        4820092.085043804
+      ],
+      "initialDecision": "Source road footprint lacks a usable interior",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-067.png",
+      "pavementWithin30mSamples": 119,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        0.008816528320312501,
+        0.032989501953125,
+        8.17255859375
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "external_context_deck_incomplete_city_footprint",
+      "finding": "Ninth Line above 403. City Bridges records here capture only one parallel outer edge; the opposite lateral boundary must come from the actual paved-road polygon. Do not use the .31m original envelope. The diagnostic location lies outside the source municipal land boundary. City pavement/centreline coverage is incomplete there. Retain any correction to actual existing mapped context; do not fabricate a full deck footprint or treat this as a confirmed missing in-city crossing.",
+      "linkedCandidateIndices": [],
+      "municipalBoundaryRelation": {
+        "inside": false,
+        "distanceToBoundaryM": 263.3505547268033,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      }
+    },
+    {
+      "candidateIndex": 68,
+      "street": "403 HWY",
+      "streetFID": 19150,
+      "xy26917": [
+        602967.3741498495,
+        4820238.101786984
+      ],
+      "initialDecision": "No mapped span at diagnostic peak",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-068.png",
+      "pavementWithin30mSamples": 262,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        0.00583343505859375,
+        0.03810882568359375,
+        8.015922546386719
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "external_context_deck_incomplete_city_footprint",
+      "finding": "Upper mapped roadway in the 403 interchange, distinct from the lower diagnostic 403 centreline. Native elevated strip and mapped road markings confirm a roadway; no local centreline with matching direction was found. Assign by actual source paved footprint and edge family. The diagnostic location lies outside the source municipal land boundary. City pavement/centreline coverage is incomplete there. Retain any correction to actual existing mapped context; do not fabricate a full deck footprint or treat this as a confirmed missing in-city crossing.",
+      "linkedCandidateIndices": [],
+      "municipalBoundaryRelation": {
+        "inside": false,
+        "distanceToBoundaryM": 84.54909053175977,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      }
+    },
+    {
+      "candidateIndex": 70,
+      "street": "DERRY RD E",
+      "streetFID": 10879,
+      "xy26917": [
+        609453.5259435637,
+        4840003.752973548
+      ],
+      "initialDecision": "No source bridge edge aligned with road",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-070.png",
+      "pavementWithin30mSamples": 198,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        -0.010147094726562495,
+        0.01810455322265625,
+        0.6126312255859375
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "rail_structure_not_road_deck",
+      "finding": "Airport/Derry road is beneath a transverse railway structure. Official City Railway features are within 20\u201332 m and follow the elevated structure. Preserve the ground-supported road; do not substitute rail first returns.",
+      "linkedCandidateIndices": [],
+      "municipalBoundaryRelation": {
+        "inside": true,
+        "distanceToBoundaryM": 2104.9597069868573,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      }
+    },
+    {
+      "candidateIndex": 71,
+      "street": "427 HWY",
+      "streetFID": 10485,
+      "xy26917": [
+        611160.2904210361,
+        4841518.075294553
+      ],
+      "initialDecision": "No source bridge edge aligned with road",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-071.png",
+      "pavementWithin30mSamples": 581,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        0.050811767578125,
+        5.878631591796875,
+        6.6297149658203125
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "actual_upper_deck_for_corrected_extractor",
+      "finding": "Derry Road East over 427. Preserve the diagnostic 427 road below. This is a boundary-crossing context location; its peak is slightly outside the City land polygon. Keep exact source footprints and current context scope.",
+      "linkedCandidateIndices": [],
+      "municipalBoundaryRelation": {
+        "inside": false,
+        "distanceToBoundaryM": 22.61288308680481,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      }
+    },
+    {
+      "candidateIndex": 72,
+      "street": "RATHBURN RD W",
+      "streetFID": 12837,
+      "xy26917": [
+        609607.4519138439,
+        4828197.5049509695
+      ],
+      "initialDecision": "No mapped span at diagnostic peak",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-072.png",
+      "pavementWithin30mSamples": 302,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        0.0068145751953125,
+        3.0811920166015625,
+        5.297943115234375
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "lower_road_already_linked",
+      "finding": "This diagnostic Rathburn segment is underneath the Hurontario structure and its native first returns. Upper structure is candidate 78. Preserve the lower road.",
+      "linkedCandidateIndices": [
+        78
+      ],
+      "municipalBoundaryRelation": {
+        "inside": true,
+        "distanceToBoundaryM": 5657.8828251410005,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      }
+    },
+    {
+      "candidateIndex": 73,
+      "street": "DERRY RD W",
+      "streetFID": 19608,
+      "xy26917": [
+        600453.1321761224,
+        4828541.623820261
+      ],
+      "initialDecision": "No source bridge edge aligned with road",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-073.png",
+      "pavementWithin30mSamples": 406,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        0.00861358642578125,
+        2.0425567626953125,
+        5.548988342285156
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "lower_road_linked_to_alternative",
+      "finding": "Derry Road West passes beneath 401. Preserve Derry; upper 401 is actionable alternative candidate 75.",
+      "linkedCandidateIndices": [
+        75
+      ],
+      "municipalBoundaryRelation": {
+        "inside": true,
+        "distanceToBoundaryM": 1352.6166548015788,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      }
+    },
+    {
+      "candidateIndex": 74,
+      "street": "HURONTARIO ST",
+      "streetFID": 19720,
+      "xy26917": [
+        613072.3836436252,
+        4824847.179250351
+      ],
+      "initialDecision": "No source bridge edge aligned with road",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-074.png",
+      "pavementWithin30mSamples": 386,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        0.013092041015625,
+        2.868450164794922,
+        4.970882415771484
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "lower_road_already_linked",
+      "finding": "Hurontario passes beneath the QEW source bridge. Candidate76 independently fits the upper QEW. Preserve Hurontario below.",
+      "linkedCandidateIndices": [
+        76
+      ],
+      "municipalBoundaryRelation": {
+        "inside": true,
+        "distanceToBoundaryM": 2190.4204437387875,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      }
+    },
+    {
+      "candidateIndex": 75,
+      "street": "401 HWY",
+      "streetFID": 12327,
+      "xy26917": [
+        600448.8299101656,
+        4828540.724575701
+      ],
+      "initialDecision": "Source road footprint lacks a usable interior",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-075.png",
+      "pavementWithin30mSamples": 400,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        0.009928894042968756,
+        1.9758071899414062,
+        5.559564208984376
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "actual_upper_deck_for_corrected_extractor",
+      "finding": "401 over Derry. Opposite outer edge is around 65 m from the candidate, beyond the former \u00b165 m cutoff on some segments. Include both mapped outer chains and split individual paved components/approaches.",
+      "linkedCandidateIndices": [],
+      "municipalBoundaryRelation": {
+        "inside": true,
+        "distanceToBoundaryM": 1351.7364568505784,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      }
+    },
+    {
+      "candidateIndex": 77,
+      "street": "MISSISSAUGA TRANSITWAY",
+      "streetFID": 17692,
+      "xy26917": [
+        610605.3020459071,
+        4830132.568090518
+      ],
+      "initialDecision": "No mapped span at diagnostic peak",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-077.png",
+      "pavementWithin30mSamples": 336,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        0.00469207763671875,
+        0.10759735107421875,
+        3.7707443237304688
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "lower_road_already_linked",
+      "finding": "The Mississauga Transitway candidate is beneath the403 structure at this crossing; upper 403 is candidate 82. Do not raise the transitway to the highway first returns.",
+      "linkedCandidateIndices": [
+        82
+      ],
+      "municipalBoundaryRelation": {
+        "inside": true,
+        "distanceToBoundaryM": 3648.1885348087467,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      }
+    },
+    {
+      "candidateIndex": 79,
+      "street": "CENTRAL PKY E",
+      "streetFID": 8218,
+      "xy26917": [
+        610033.4561179238,
+        4829221.58818492
+      ],
+      "initialDecision": "No source bridge edge aligned with road",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-079.png",
+      "pavementWithin30mSamples": 389,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        0.06378479003906251,
+        1.38067626953125,
+        4.7821105957031245
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "lower_road_already_linked",
+      "finding": "Central Parkway passes beneath 403. Source bridge edges and coherent upper-road returns belong to403, candidate 81. Preserve Central Parkway below.",
+      "linkedCandidateIndices": [
+        81
+      ],
+      "municipalBoundaryRelation": {
+        "inside": true,
+        "distanceToBoundaryM": 4721.970135550704,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      }
+    },
+    {
+      "candidateIndex": 84,
+      "street": "RATHBURN RD E",
+      "streetFID": 17677,
+      "xy26917": [
+        609643.772740684,
+        4828208.00329337
+      ],
+      "initialDecision": "No mapped span at diagnostic peak",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-084.png",
+      "pavementWithin30mSamples": 359,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        0.0006927490234375002,
+        0.032745361328125,
+        5.13157958984375
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "lower_road_already_linked",
+      "finding": "Second Rathburn diagnostic point at the same Hurontario crossing as 72. Upper structure is candidate 78, with transverse source edges. Preserve the lower road.",
+      "linkedCandidateIndices": [
+        78
+      ],
+      "municipalBoundaryRelation": {
+        "inside": true,
+        "distanceToBoundaryM": 5622.713764213126,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      }
+    },
+    {
+      "candidateIndex": 88,
+      "street": "VELEBIT CRT",
+      "streetFID": 6908,
+      "xy26917": [
+        603371.730050679,
+        4828542.76549113
+      ],
+      "initialDecision": "No source bridge edge aligned with road",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-088.png",
+      "pavementWithin30mSamples": 239,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        0.000518798828125,
+        0.0557708740234375,
+        0.10311279296875002
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "nearby_structure_wrong_road",
+      "finding": "Velebit Court ends beside Creditview Road. The mapped long bridge edge belongs to Creditview; its crossing is already candidate 41. Velebit pavement has native DSM/DTM median difference about 0.06 m and no separate deck is established.",
+      "linkedCandidateIndices": [
+        41
+      ],
+      "municipalBoundaryRelation": {
+        "inside": true,
+        "distanceToBoundaryM": 3461.6270562666023,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      }
+    },
+    {
+      "candidateIndex": 89,
+      "street": "DERRY RD W",
+      "streetFID": 11258,
+      "xy26917": [
+        598405.181310519,
+        4825880.167669168
+      ],
+      "initialDecision": "Source road footprint lacks a usable interior",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-089.png",
+      "pavementWithin30mSamples": 228,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        0.0009002685546875,
+        0.0256195068359375,
+        2.8353912353515627
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "small_coarse_terrain_grade_dip",
+      "finding": "Native paved DSM and native DTM agree closely, but comparison against the model 10 m DTM reveals a modest local dip. Correct actual source road grade from native surface/terrain evidence where supported; this does not establish an aerial bridge needing added structural thickness. Maximum clear native-pavement difference is 1.66 m. Preserve the mapped water and footprint.",
+      "linkedCandidateIndices": [],
+      "municipalBoundaryRelation": {
+        "inside": true,
+        "distanceToBoundaryM": 1112.9146878640345,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      },
+      "coarseTerrainFollowup": {
+        "candidateIndex": 89,
+        "street": "DERRY RD W",
+        "sampleCount": 216,
+        "clearPavementSampleCount": 144,
+        "nativeDSMminusCoarseDTM_clearP10P50P90Max": [
+          -0.0138641357421875,
+          0.10289764404296875,
+          1.2181579589843752,
+          1.66363525390625
+        ],
+        "nativeDSMminusNativeDTM_allP10P50P90": [
+          0.0015716552734375,
+          0.02024078369140625,
+          2.7924957275390625
+        ],
+        "clearFractionAbove1m": 0.1597222222222222,
+        "clearFractionAbove2m": 0.0,
+        "maximumClearPoint26917": [
+          598392.393409545,
+          4825882.635042574
+        ],
+        "nativeSampleFiles": [
+          "extra-00-dsm"
+        ],
+        "samplingCaveat": "Clear subset usesnativeDSM/DTMagreementwithin.8m. Doesnotexclude an elevated deck whereDSM-DTMislarger. Differenceisagainstmodel 10 mDTM,notexactroadtriangles."
+      }
+    },
+    {
+      "candidateIndex": 107,
+      "street": "DERRY RD E",
+      "streetFID": 18841,
+      "xy26917": [
+        610115.3446127558,
+        4840811.594619077
+      ],
+      "initialDecision": "Source road footprint lacks a usable interior",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-107.png",
+      "pavementWithin30mSamples": 289,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        -0.0051116943359375,
+        0.032501220703125,
+        0.9004486083984372
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "no_coherent_paved_depression",
+      "finding": "Derry Road East watercourse: native paved road body is continuous and closely matches DTM. Sparse high edge returns do not demonstrate a deck sag; preserve source road. Culvert versus filled crossing construction is not proven by the 2D map alone. Follow-up comparison to the model 10 m DTM found no supported difference above 1 m in the sampled clear-pavement subset; this is separate from canopy returns.",
+      "linkedCandidateIndices": [],
+      "municipalBoundaryRelation": {
+        "inside": true,
+        "distanceToBoundaryM": 1217.899687050109,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      },
+      "coarseTerrainFollowup": {
+        "candidateIndex": 107,
+        "street": "DERRY RD E",
+        "sampleCount": 57,
+        "clearPavementSampleCount": 57,
+        "nativeDSMminusCoarseDTM_clearP10P50P90Max": [
+          0.0564910888671875,
+          0.18878173828125,
+          0.51123046875,
+          0.729736328125
+        ],
+        "nativeDSMminusNativeDTM_allP10P50P90": [
+          -0.0276885986328125,
+          0.03399658203125,
+          0.14036560058593747
+        ],
+        "clearFractionAbove1m": 0.0,
+        "clearFractionAbove2m": 0.0,
+        "maximumClearPoint26917": [
+          610107.5094231223,
+          4840823.568259029
+        ],
+        "nativeSampleFiles": [
+          "extra-21-dsm"
+        ],
+        "samplingCaveat": "Clear subset usesnativeDSM/DTMagreementwithin.8m. Doesnotexclude an elevated deck whereDSM-DTMislarger. Differenceisagainstmodel 10 mDTM,notexactroadtriangles."
+      }
+    },
+    {
+      "candidateIndex": 108,
+      "street": "DERRY RD E",
+      "streetFID": 18841,
+      "xy26917": [
+        610023.5432061842,
+        4840693.686795877
+      ],
+      "initialDecision": "Source road footprint lacks a usable interior",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-108.png",
+      "pavementWithin30mSamples": 291,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        -0.027069091796875,
+        0.0167694091796875,
+        0.0963287353515625
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "no_coherent_paved_depression",
+      "finding": "Second Derry Road East watercourse: native road-body DSM\u2013DTM median difference about 0.02 m and 90th percentile within 30 m about 0.10 m. No coherent elevated deck deficit is demonstrated; preserve road. Follow-up comparison to the model 10 m DTM found no supported difference above 1 m in the sampled clear-pavement subset; this is separate from canopy returns.",
+      "linkedCandidateIndices": [],
+      "municipalBoundaryRelation": {
+        "inside": true,
+        "distanceToBoundaryM": 1349.4099600445472,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      },
+      "coarseTerrainFollowup": {
+        "candidateIndex": 108,
+        "street": "DERRY RD E",
+        "sampleCount": 131,
+        "clearPavementSampleCount": 130,
+        "nativeDSMminusCoarseDTM_clearP10P50P90Max": [
+          0.04787445068359375,
+          0.10208892822265625,
+          0.14938659667968762,
+          0.54742431640625
+        ],
+        "nativeDSMminusNativeDTM_allP10P50P90": [
+          -0.05987548828125,
+          0.0139923095703125,
+          0.0679931640625
+        ],
+        "clearFractionAbove1m": 0.0,
+        "clearFractionAbove2m": 0.0,
+        "maximumClearPoint26917": [
+          610012.7226475949,
+          4840705.78960058
+        ],
+        "nativeSampleFiles": [
+          "extra-21-dsm"
+        ],
+        "samplingCaveat": "Clear subset usesnativeDSM/DTMagreementwithin.8m. Doesnotexclude an elevated deck whereDSM-DTMislarger. Differenceisagainstmodel 10 mDTM,notexactroadtriangles."
+      }
+    },
+    {
+      "candidateIndex": 110,
+      "street": "AIRPORT RD",
+      "streetFID": 19366,
+      "xy26917": [
+        609260.7769516107,
+        4840003.597041239
+      ],
+      "initialDecision": "No source bridge edge aligned with road",
+      "inspectionImage": "work/road-crossings/research/nonfits/nonfit-110.png",
+      "pavementWithin30mSamples": 314,
+      "nearbyPavementDSMminusDTM_P10P50P90": [
+        -0.01600189208984375,
+        0.0116424560546875,
+        0.06059417724609374
+      ],
+      "sourceDateLimit": "Native primary acquisitions vary; see each raster manifest. Source map reviewed September 21,2026 is not a new elevation survey.",
+      "classification": "rail_structure_not_road_deck",
+      "finding": "Airport Road beneath transverse railway, paired with diagnostic 70 farther east. Railway source features are25\u201336 m away and align with the elevated transverse structure. Road native DSM/DTM median difference about 0.01 m; no road lift supported.",
+      "linkedCandidateIndices": [],
+      "municipalBoundaryRelation": {
+        "inside": true,
+        "distanceToBoundaryM": 1962.3638747856025,
+        "source": "work/research/BDRYCITY_3857v2-geo.json",
+        "note": "Municipal-boundary geometry vintage2017; classification concerns model city-land boundary, not legal property survey."
+      }
+    }
+  ],
+  "implementationBoundary": "This independent source review does not mark any geometry repair complete. The corrected context audit determines final changed surfaces."
+}

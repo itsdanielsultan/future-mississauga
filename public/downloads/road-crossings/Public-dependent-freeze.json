@@ -1,0 +1,58 @@
+{
+  "edition": "Road Crossings 2026-09-21",
+  "frozenAt": "2026-09-22T01:57:26.767403+00:00",
+  "contextReportCheckedAt": "2026-09-22T01:48:35.343072+00:00",
+  "publicNonContextAssets": 80,
+  "allExactDecodedChecksPassed": true,
+  "normalAndUnlitMaterialBehaviorPreserved": true,
+  "treesUnchangedSinceSevenApprovedReductions": true,
+  "canonicalSourcesUnchangedByTransfer": true,
+  "contextGLBsExcludedFromTransfer": true,
+  "packagedDetailsByteIdenticalToInteractive": true,
+  "manifestFiles": [
+    {
+      "file": "outputs/mississauga-future/public/data/refinement-models.json",
+      "sha256": "4e3733475858f8385be06e0619777078b0a4f7c900c486e2661e97a0dd5d95ae",
+      "assets": 24
+    },
+    {
+      "file": "outputs/mississauga-future/public/data/landscape-layer-manifest.json",
+      "sha256": "b046558db0ab560129f61d9ed660461dc05c563bcb1d4ee430d23c8f4a46e7f9",
+      "assets": 15
+    },
+    {
+      "file": "outputs/mississauga-future/public/data/transit-layer-manifest.json",
+      "sha256": "37f0fecd3b1aa172576ff38a47b0b96ce9b679782d29668aa03fd6fa1ec6dae6",
+      "assets": 25
+    },
+    {
+      "file": "outputs/mississauga-future/public/data/detail-assets-manifest.json",
+      "sha256": "7908d154e09ce81b2c8252cfdae9caf1821984fe83070b78b2a5e0465e01bf09",
+      "assets": 15
+    }
+  ],
+  "validation": "Public-asset-validation.json",
+  "treeValidation": "Tree-public-QA.json",
+  "treeRecheck": "Tree-deck-clearance-recheck.json",
+  "publicBytes": 92376896,
+  "trianglesVerified": 5373233,
+  "originalManifestTransferFreeze": {
+    "frozenAt": "2026-09-22T01:57:26.767403+00:00",
+    "publicNonContextAssets": 79,
+    "publicBytes": 92123608,
+    "trianglesVerified": 5349516
+  },
+  "lastRevalidatedAt": "2026-09-22T03:33:03.670Z",
+  "validationSHA256": "d6ccc7e3168e3043076714382ec59c260fea6e7efccc9b55f34026a4698c1a5c",
+  "airportAmendment": {
+    "id": "pearson-runway-overlap",
+    "source": "outputs/models/supplemental/pearson-airfield-context.glb",
+    "sourceSHA256": "61c48b212be958c7aade272a18e2c1ab2f0adce5dbddb7b7669ee07215e512a8",
+    "public": "outputs/mississauga-future/public/models/pearson-airfield-context.glb",
+    "publicSHA256": "8c0dda7dbfd75e9627e3ccc1a820b8c76af04dd490539ce0dda036170ae7c7dd",
+    "publicBytes": 253288,
+    "repair": "Airport-runway-overlap-repair.json",
+    "renderAmendment": "Airfield-render-amendment-QA.json",
+    "scope": "Adds the conditional airport supplement to the original79 checked public non-context files. The other79 source/public identities and all four original manifest hashes remain unchanged. Airport source topology changed only through the documented runway amendment; this validation does not modify it."
+  }
+}

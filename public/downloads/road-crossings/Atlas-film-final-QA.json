@@ -1,0 +1,53 @@
+{
+  "edition": "Road Crossings 2026-09-21",
+  "checkedAt": "2026-09-22T03:25:28.260354+00:00",
+  "status": "Finalized locally; ready for publication",
+  "atlas": {
+    "file": "Future-Mississauga-Atlas.pdf",
+    "bytes": 24402843,
+    "sha256": "d172eac5c3918eec8599e8f5735678b8098fe530bea05f4172107e8209f7c224",
+    "pages": 35,
+    "allPagesAndCaptionStripsVisuallyReviewed": true,
+    "font": "Bricolage Grotesque",
+    "visibleTextSpansChecked": 704,
+    "allTextInsidePageBounds": true,
+    "externalLinkAnnotations": 97,
+    "distinctExternalLinks": 54,
+    "roadElevationLimitationsVisibleOnPage": 34
+  },
+  "film": {
+    "file": "renders/Downtown-transformation.mp4",
+    "bytes": 1330682,
+    "sha256": "1764d691cc17ca41a351683e8099a38b26d7d088915729030dec16de71a71fa1",
+    "width": 1920,
+    "height": 850,
+    "durationSeconds": 15.0,
+    "frameCount": 450,
+    "visualCheckpointsSeconds": [
+      0,
+      4,
+      6,
+      9,
+      12,
+      14.9
+    ],
+    "fullDecodePassed": true,
+    "visualReviewPassed": true
+  },
+  "sourceEvidence": {
+    "verifiedLockedInputs": 249,
+    "passedImages": 33,
+    "inputLockedAt": "2026-09-22T01:55:14.325187+00:00",
+    "inputLockSHA256": "7936355e396af245054b761af217035031d4808a14685b63ecbe88cc6318b6ee",
+    "all33OriginalPNGBytesAndPixelsUnchanged": true
+  },
+  "publicCopiesByteIdentical": true,
+  "evidence": [
+    "../Atlas-build-manifest.json",
+    "../depth/Atlas-final-QA.json",
+    "../depth/Atlas-font-QA.json",
+    "../depth/Atlas-render-source-audit.json",
+    "../depth/Film-build-manifest.json"
+  ],
+  "limitations": "All current media reflect the dated model scenario and its explicit reconstruction limits. The evidence-link availability check retains its own recorded time; access-restricted pages are not asserted to have passed."
+}
