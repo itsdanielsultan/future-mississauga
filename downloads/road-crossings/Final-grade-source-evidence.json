@@ -1,0 +1,1104 @@
+{
+  "sourceOnly": true,
+  "geometryRepairCompletionNotClaimed": true,
+  "localGradePatches": [
+    {
+      "candidateIndex": 51,
+      "street": "ATWATER AVE",
+      "origin26917": [
+        614822.3817007315,
+        4825051.26317011
+      ],
+      "axis26917": [
+        0.5972492645108021,
+        0.8020556813845944
+      ],
+      "normal26917": [
+        -0.8020556813845944,
+        0.5972492645108021
+      ],
+      "sourceEdgeFIDs": [
+        7635,
+        7638,
+        7664,
+        7668,
+        7669,
+        7670
+      ],
+      "sourceRoadPavedFIDs": [
+        35109
+      ],
+      "sourceImageryYear": 2024,
+      "sourceFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              614791.972455371,
+              4825023.11702526
+            ],
+            [
+              614792.627555258,
+              4825023.28762522
+            ],
+            [
+              614793.271555149,
+              4825023.49662516
+            ],
+            [
+              614793.902055047,
+              4825023.7432251
+            ],
+            [
+              614794.516854947,
+              4825024.02662504
+            ],
+            [
+              614795.113954849,
+              4825024.34582497
+            ],
+            [
+              614795.691054755,
+              4825024.69982489
+            ],
+            [
+              614796.246254668,
+              4825025.0871248
+            ],
+            [
+              614799.269854235,
+              4825028.93712405
+            ],
+            [
+              614799.30795423,
+              4825028.98562404
+            ],
+            [
+              614808.003052987,
+              4825040.34472181
+            ],
+            [
+              614809.1317338361,
+              4825041.895672117
+            ],
+            [
+              614816.580530552,
+              4825036.348939561
+            ],
+            [
+              614816.562851382,
+              4825036.32592231
+            ],
+            [
+              614801.3847125344,
+              4825015.823215434
+            ],
+            [
+              614791.6730523146,
+              4825023.054985071
+            ],
+            [
+              614791.972455371,
+              4825023.11702526
+            ]
+          ]
+        ]
+      },
+      "footprintAreaM2": 245.99604578641078,
+      "extentMethod": "Intersect exact City RoadPaved polygons belonging to the named street with longitudinal end planes at the mapped bridge-edge chain endpoints. The \u00b155m cross-axis search window selects only actual source paved polygons; it does not invent width. No aerial-deck structural claim.",
+      "longitudinalBoundsM": [
+        -40.96525275354357,
+        -15.42678796839742
+      ],
+      "nativeDSMFiles": [
+        "patch-43-dsm"
+      ],
+      "planeAlongCrossInterceptASL": [
+        -0.015316617144857743,
+        0.0024227383300603595,
+        85.23101199712627
+      ],
+      "residualP50P90M": [
+        0.025956943520824893,
+        0.057456889695700404
+      ],
+      "slope": 0.015507044263111324,
+      "planeMinusCurrentCoarseDTM_P10P50P90Max": [
+        0.06344111901074855,
+        0.7801598812658312,
+        1.556527994808668,
+        2.067512502259987
+      ],
+      "caveat": "Proposed local road-grade source evidence only. Plane fit must pass continuity and should not lower valid roadway or replace an unrelated intersection. Native samples are authoritative raster values, not an as-built engineering survey."
+    },
+    {
+      "candidateIndex": 89,
+      "street": "DERRY RD W",
+      "origin26917": [
+        598405.181310519,
+        4825880.167669168
+      ],
+      "axis26917": [
+        -0.6656360655516671,
+        -0.7462765092356162
+      ],
+      "normal26917": [
+        0.7462765092356162,
+        -0.6656360655516671
+      ],
+      "sourceEdgeFIDs": [
+        14747,
+        14752,
+        14757,
+        14801
+      ],
+      "sourceRoadPavedFIDs": [
+        45680,
+        45818
+      ],
+      "sourceImageryYear": 2024,
+      "sourceFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              598386.910960356,
+              4825882.73388325
+            ],
+            [
+              598405.704957571,
+              4825903.69107909
+            ],
+            [
+              598405.9129263927,
+              4825903.887904727
+            ],
+            [
+              598416.1798798225,
+              4825894.730368074
+            ],
+            [
+              598397.1641525733,
+              4825873.384991278
+            ],
+            [
+              598386.8179669427,
+              4825882.613198533
+            ],
+            [
+              598386.910960356,
+              4825882.73388325
+            ]
+          ]
+        ]
+      },
+      "footprintAreaM2": 395.29943835536113,
+      "extentMethod": "Intersect exact City RoadPaved polygons belonging to the named street with longitudinal end planes at the mapped bridge-edge chain endpoints. The \u00b155m cross-axis search window selects only actual source paved polygons; it does not invent width. No aerial-deck structural claim.",
+      "longitudinalBoundsM": [
+        -18.188844502792143,
+        10.398262650167464
+      ],
+      "nativeDSMFiles": [
+        "extra-00-dsm"
+      ],
+      "planeAlongCrossInterceptASL": [
+        0.006755928755530439,
+        0.0018729352131265542,
+        200.31768809255948
+      ],
+      "residualP50P90M": [
+        0.02484444593304147,
+        0.05335736056292717
+      ],
+      "slope": 0.007010738881342856,
+      "planeMinusCurrentCoarseDTM_P10P50P90Max": [
+        1.311313110281435,
+        2.226457071308772,
+        2.7737061660767437,
+        3.0509482747914944
+      ],
+      "caveat": "Proposed local road-grade source evidence only. Plane fit must pass continuity and should not lower valid roadway or replace an unrelated intersection. Native samples are authoritative raster values, not an as-built engineering survey."
+    }
+  ],
+  "estimated401GradeTransfer": {
+    "candidateIndex": 8,
+    "id": "crossing-08",
+    "classification": "estimated_adjacent_original_carriageway_grade_transfer",
+    "modelFilesModified": 0,
+    "origin26917": [
+      603543.1898592085,
+      4830095.22131393
+    ],
+    "axis26917": [
+      0.8581632900219145,
+      0.5133768281279977
+    ],
+    "normal26917": [
+      -0.5133768281279977,
+      0.8581632900219145
+    ],
+    "sourceRoadPavedFIDs": [
+      44033
+    ],
+    "sourceEdgeFIDs": [
+      13858,
+      13859,
+      13862,
+      13863,
+      13864,
+      13865,
+      13867,
+      13868,
+      13952,
+      13953,
+      13957,
+      13959
+    ],
+    "targetExactSourceFootprint": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            603561.030356567,
+            4830114.92170944
+          ],
+          [
+            603594.1744981266,
+            4830135.430706182
+          ],
+          [
+            603601.1815302739,
+            4830123.717715974
+          ],
+          [
+            603597.089850401,
+            4830121.35970741
+          ],
+          [
+            603564.039655736,
+            4830102.70361152
+          ],
+          [
+            603561.2959221015,
+            4830101.054704383
+          ],
+          [
+            603555.1804679837,
+            4830111.27732827
+          ],
+          [
+            603561.030356567,
+            4830114.92170944
+          ]
+        ]
+      ]
+    },
+    "targetAreaM2": 585.5681898848596,
+    "targetAlongBoundsM": [
+      18.5326859898003,
+      64.39571572936894
+    ],
+    "targetAcrossBoundsM": [
+      -8.79716417888447,
+      15.81294767194667
+    ],
+    "targetMaximumWidthM": 24.61011185083114,
+    "nativeSupportSourceRoadPavedFIDs": [
+      44033,
+      44032
+    ],
+    "nativeSupportAlongBoundsM": [
+      0.0,
+      89.5
+    ],
+    "nativeSupportAcrossBoundsM": [
+      30.0,
+      59.5
+    ],
+    "nativeSupportHull": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            603527.7885543647,
+            4830120.966212631
+          ],
+          [
+            603527.2751775365,
+            4830121.824375921
+          ],
+          [
+            603526.5051122943,
+            4830123.1116208555
+          ],
+          [
+            603526.2484238803,
+            4830123.5407025
+          ],
+          [
+            603514.9541336615,
+            4830142.420294881
+          ],
+          [
+            603513.4140031771,
+            4830144.994784751
+          ],
+          [
+            603512.6439379349,
+            4830146.2820296865
+          ],
+          [
+            603514.3602645149,
+            4830147.308783343
+          ],
+          [
+            603514.78934616,
+            4830147.565471757
+          ],
+          [
+            603530.2362853803,
+            4830156.8062546635
+          ],
+          [
+            603550.8322043408,
+            4830169.127298539
+          ],
+          [
+            603561.1301638212,
+            4830175.287820476
+          ],
+          [
+            603563.7046536913,
+            4830176.82795096
+          ],
+          [
+            603581.5536895507,
+            4830186.923094291
+          ],
+          [
+            603589.96292922,
+            4830191.371092514
+          ],
+          [
+            603590.2196176341,
+            4830190.942010869
+          ],
+          [
+            603601.5139078529,
+            4830172.062418489
+          ],
+          [
+            603604.5941688217,
+            4830166.913438749
+          ],
+          [
+            603602.8778422417,
+            4830165.886685092
+          ],
+          [
+            603600.3033523716,
+            4830164.346554607
+          ],
+          [
+            603595.1543726315,
+            4830161.266293638
+          ],
+          [
+            603553.9625347104,
+            4830136.624205888
+          ],
+          [
+            603538.51559549,
+            4830127.383422982
+          ],
+          [
+            603528.2176360097,
+            4830121.222901044
+          ],
+          [
+            603527.7885543647,
+            4830120.966212631
+          ]
+        ]
+      ]
+    },
+    "nativeSupportSampleCount": 6929,
+    "nativeDSMPatchFiles": [
+      "patch-09-dsm"
+    ],
+    "nativePrimaryYear": 2015,
+    "targetPavedImageryYear": 2024,
+    "planeAlongCrossInterceptASL": [
+      0.010170514302602265,
+      -0.0032354570631658425,
+      168.03526690164594
+    ],
+    "fitResidualP50P90P95M": [
+      0.035268262917725224,
+      0.09038926699909097,
+      0.12440818512824876
+    ],
+    "slope": 0.01067274770558299,
+    "maximumHorizontalTransferDistanceToSampleSupportM": 35.317014017231415,
+    "estimatedTargetHeightRangeASL": [
+      168.19909002059094,
+      168.7074074200587
+    ],
+    "method": "Fit coherent original-carriageway pavement from the already-downloaded 2015 native DSM inside actual mapped road footprints, across 30\u201359.5 m from the 2024 outer-lane diagnostic axis. Apply only a disclosed adjacent-carriageway grade envelope to the exact 2024 target footprint. This is an estimated shared roadway grade, not a measured current outer-lane height or current crossfall/crown.",
+    "uncertainty": [
+      "Vertical transfer/crossfall of the widened lane is not verified by a current bridge survey.",
+      "Small residual measures the original pavement fit only; it is not an accuracy bound for the new lane.",
+      "Target maximum width and horizontal transfer distance are stated explicitly. No extension beyond exact mapped target footprint.",
+      "Approach continuity must be checked; never extend this plane to lower roads, water or adjacent forest."
+    ],
+    "sourceDateEvidence": "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/highway-401-expansion-project/",
+    "rejectedInput": "The direct widened-footprint fit used 2015 vegetation/old-ground returns and is not a deck-height estimate."
+  },
+  "final409Component": {
+    "readOnly": true,
+    "modelFilesModified": 0,
+    "id": "crossing-83-part11",
+    "sourceRoadPavedFID": 43042,
+    "sourceImageryYear": 2024,
+    "insideMunicipalBoundary": true,
+    "sourceFootprint": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            612016.890692697,
+            4838837.00416213
+          ],
+          [
+            612022.446192053,
+            4838850.07225969
+          ],
+          [
+            612026.667691591,
+            4838860.98615767
+          ],
+          [
+            612028.645691378,
+            4838866.2284567
+          ],
+          [
+            612034.964890717,
+            4838883.77595345
+          ],
+          [
+            612044.237989736,
+            4838909.24664873
+          ],
+          [
+            612052.385888878,
+            4838931.65814459
+          ],
+          [
+            612058.855488189,
+            4838949.27704133
+          ],
+          [
+            612060.006888063,
+            4838952.22934078
+          ],
+          [
+            612061.231187923,
+            4838955.15274023
+          ],
+          [
+            612062.52768777,
+            4838958.04513969
+          ],
+          [
+            612063.895487603,
+            4838960.90483915
+          ],
+          [
+            612065.333887421,
+            4838963.73003862
+          ],
+          [
+            612068.132187061,
+            4838968.89123764
+          ],
+          [
+            612069.647086863,
+            4838971.51893714
+          ],
+          [
+            612071.23068665,
+            4838974.10583665
+          ],
+          [
+            612071.9372857475,
+            4838975.19457776
+          ],
+          [
+            612069.7713177433,
+            4838960.880238951
+          ],
+          [
+            612068.815986688,
+            4838958.89973938
+          ],
+          [
+            612067.244386878,
+            4838955.60644
+          ],
+          [
+            612065.512487086,
+            4838951.80384072
+          ],
+          [
+            612063.853487281,
+            4838947.96864143
+          ],
+          [
+            612062.267887462,
+            4838944.10234215
+          ],
+          [
+            612060.756387626,
+            4838940.20624287
+          ],
+          [
+            612045.901389198,
+            4838899.48535041
+          ],
+          [
+            612033.97929045,
+            4838866.41215653
+          ],
+          [
+            612032.449690608,
+            4838862.12295732
+          ],
+          [
+            612030.392290829,
+            4838856.56045835
+          ],
+          [
+            612028.26129106,
+            4838851.02555938
+          ],
+          [
+            612026.057191306,
+            4838845.5193604
+          ],
+          [
+            612023.780291567,
+            4838840.04276142
+          ],
+          [
+            612021.431091841,
+            4838834.59686244
+          ],
+          [
+            612009.446793262,
+            4838807.82566745
+          ],
+          [
+            612002.1726752376,
+            4838792.049684788
+          ],
+          [
+            611997.0468181414,
+            4838792.825301644
+          ],
+          [
+            611998.884394835,
+            4838796.84596965
+          ],
+          [
+            612005.914394008,
+            4838812.82886666
+          ],
+          [
+            612012.270693244,
+            4838826.65766407
+          ],
+          [
+            612016.890692697,
+            4838837.00416213
+          ]
+        ]
+      ]
+    },
+    "footprintAreaM2": 959.1231366540986,
+    "origin26917": [
+      612052.8409251738,
+      4839139.8620403
+    ],
+    "axis26917": [
+      -0.14961150214539565,
+      -0.9887448601261087
+    ],
+    "normal26917": [
+      0.9887448601261087,
+      -0.14961150214539565
+    ],
+    "nativeValidSampleCount": 3198,
+    "allSampleCount": 3198,
+    "nativeSourceFiles": [
+      "tail-83-part11-dsm"
+    ],
+    "nativePrimaryRasters": [
+      {
+        "OBJECTID": 65748,
+        "Category": 1,
+        "Project": "GTA 2014-18",
+        "TileName": "1km176110483902015LGTA2015_DSM",
+        "Resolution_m": 0.5,
+        "VerticalAccuracy": 10,
+        "AcqMethod": "Linear Mode Lidar",
+        "HorizontalAccuracy_m": 0.37,
+        "VerticalAccuracyClass": 10,
+        "StartYear": 2015,
+        "EndYear": 2015,
+        "Year": null
+      },
+      {
+        "OBJECTID": 231985,
+        "Category": 1,
+        "Project": "GTA 2023",
+        "TileName": "1km176110483802023LGTA2023_DSM",
+        "Resolution_m": 0.5,
+        "VerticalAccuracy": null,
+        "AcqMethod": "Linear Mode Lidar",
+        "HorizontalAccuracy_m": 0.3,
+        "VerticalAccuracyClass": 5,
+        "StartYear": 2023,
+        "EndYear": 2023,
+        "Year": "2023"
+      },
+      {
+        "OBJECTID": 232042,
+        "Category": 1,
+        "Project": "GTA 2023",
+        "TileName": "1km176120483902023LGTA2023_DSM",
+        "Resolution_m": 0.5,
+        "VerticalAccuracy": null,
+        "AcqMethod": "Linear Mode Lidar",
+        "HorizontalAccuracy_m": 0.3,
+        "VerticalAccuracyClass": 5,
+        "StartYear": 2023,
+        "EndYear": 2023,
+        "Year": "2023"
+      },
+      {
+        "OBJECTID": 65803,
+        "Category": 1,
+        "Project": "GTA 2014-18",
+        "TileName": "1km176120483902015LGTA2015_DSM",
+        "Resolution_m": 0.5,
+        "VerticalAccuracy": 10,
+        "AcqMethod": "Linear Mode Lidar",
+        "HorizontalAccuracy_m": 0.37,
+        "VerticalAccuracyClass": 10,
+        "StartYear": 2015,
+        "EndYear": 2015,
+        "Year": null
+      },
+      {
+        "OBJECTID": 231986,
+        "Category": 1,
+        "Project": "GTA 2023",
+        "TileName": "1km176110483902023LGTA2023_DSM",
+        "Resolution_m": 0.5,
+        "VerticalAccuracy": null,
+        "AcqMethod": "Linear Mode Lidar",
+        "HorizontalAccuracy_m": 0.3,
+        "VerticalAccuracyClass": 5,
+        "StartYear": 2023,
+        "EndYear": 2023,
+        "Year": "2023"
+      },
+      {
+        "OBJECTID": 232041,
+        "Category": 1,
+        "Project": "GTA 2023",
+        "TileName": "1km176120483802023LGTA2023_DSM",
+        "Resolution_m": 0.5,
+        "VerticalAccuracy": null,
+        "AcqMethod": "Linear Mode Lidar",
+        "HorizontalAccuracy_m": 0.3,
+        "VerticalAccuracyClass": 5,
+        "StartYear": 2023,
+        "EndYear": 2023,
+        "Year": "2023"
+      },
+      {
+        "OBJECTID": 65747,
+        "Category": 1,
+        "Project": "GTA 2014-18",
+        "TileName": "1km176110483802015LGTA2015_DSM",
+        "Resolution_m": 0.5,
+        "VerticalAccuracy": 10,
+        "AcqMethod": "Linear Mode Lidar",
+        "HorizontalAccuracy_m": 0.37,
+        "VerticalAccuracyClass": 10,
+        "StartYear": 2015,
+        "EndYear": 2015,
+        "Year": null
+      },
+      {
+        "OBJECTID": 65802,
+        "Category": 1,
+        "Project": "GTA 2014-18",
+        "TileName": "1km176120483802015LGTA2015_DSM",
+        "Resolution_m": 0.5,
+        "VerticalAccuracy": 10,
+        "AcqMethod": "Linear Mode Lidar",
+        "HorizontalAccuracy_m": 0.37,
+        "VerticalAccuracyClass": 10,
+        "StartYear": 2015,
+        "EndYear": 2015,
+        "Year": null
+      }
+    ],
+    "planeAlongCrossInterceptASL": [
+      0.03332823082651896,
+      0.09880624882470578,
+      151.62926668021385
+    ],
+    "planeResidualP50P90P95M": [
+      0.2433256351680626,
+      2.9709273217590977,
+      3.3595397880239197
+    ],
+    "planeSlope": 0.10427581587710259,
+    "nativeDSMASL_P10P50P90": [
+      161.3300018310547,
+      162.8199920654297,
+      164.54000854492188
+    ],
+    "nativeDSMminusNativeDTM_P10P50P90": [
+      0.0095062255859375,
+      0.0253448486328125,
+      4.001943969726564
+    ],
+    "nativeDSMminusModelCoarseDTM_P10P50P90": [
+      -0.1940460205078125,
+      -0.05478668212890625,
+      3.8094467163085945
+    ],
+    "longitudinalBins": [
+      {
+        "alongMidM": 165.0,
+        "count": 54,
+        "nativeDSMP10P50P90": [
+          160.41300201416016,
+          160.51500701904297,
+          164.55699920654297
+        ],
+        "nativeDTMP10P50P90": [
+          160.38070068359374,
+          160.42750549316406,
+          160.5058792114258
+        ],
+        "DSMMInusModelCoarseDTM_P50": 0.5328216552734375
+      },
+      {
+        "alongMidM": 175.0,
+        "count": 173,
+        "nativeDSMP10P50P90": [
+          160.5919952392578,
+          164.5800018310547,
+          164.72000122070312
+        ],
+        "nativeDTMP10P50P90": [
+          160.4417938232422,
+          160.56332397460938,
+          160.69506225585937
+        ],
+        "DSMMInusModelCoarseDTM_P50": 3.90240478515625
+      },
+      {
+        "alongMidM": 185.0,
+        "count": 182,
+        "nativeDSMP10P50P90": [
+          160.7100067138672,
+          160.93498992919922,
+          164.83799743652344
+        ],
+        "nativeDTMP10P50P90": [
+          160.6535385131836,
+          160.78800201416016,
+          160.9008010864258
+        ],
+        "DSMMInusModelCoarseDTM_P50": 0.09654998779296875
+      },
+      {
+        "alongMidM": 195.0,
+        "count": 169,
+        "nativeDSMP10P50P90": [
+          160.96800231933594,
+          165.0900115966797,
+          165.2100067138672
+        ],
+        "nativeDTMP10P50P90": [
+          160.8982666015625,
+          161.00799560546875,
+          161.11746826171876
+        ],
+        "DSMMInusModelCoarseDTM_P50": 3.9488067626953125
+      },
+      {
+        "alongMidM": 205.0,
+        "count": 168,
+        "nativeDSMP10P50P90": [
+          161.1999969482422,
+          161.31499481201172,
+          165.24000549316406
+        ],
+        "nativeDTMP10P50P90": [
+          161.14599609375,
+          161.25466918945312,
+          161.36950225830077
+        ],
+        "DSMMInusModelCoarseDTM_P50": 0.00473785400390625
+      },
+      {
+        "alongMidM": 215.0,
+        "count": 169,
+        "nativeDSMP10P50P90": [
+          161.44000244140625,
+          161.5500030517578,
+          161.65200805664062
+        ],
+        "nativeDTMP10P50P90": [
+          161.4169921875,
+          161.52398681640625,
+          161.6300048828125
+        ],
+        "DSMMInusModelCoarseDTM_P50": -0.0238494873046875
+      },
+      {
+        "alongMidM": 225.0,
+        "count": 170,
+        "nativeDSMP10P50P90": [
+          161.6999969482422,
+          161.80500030517578,
+          161.91000366210938
+        ],
+        "nativeDTMP10P50P90": [
+          161.67361145019532,
+          161.77333068847656,
+          161.8824035644531
+        ],
+        "DSMMInusModelCoarseDTM_P50": -0.08809661865234375
+      },
+      {
+        "alongMidM": 235.0,
+        "count": 167,
+        "nativeDSMP10P50P90": [
+          161.9600067138672,
+          162.0500030517578,
+          162.14000549316407
+        ],
+        "nativeDTMP10P50P90": [
+          161.92720947265624,
+          162.0279998779297,
+          162.1199981689453
+        ],
+        "DSMMInusModelCoarseDTM_P50": -0.0382232666015625
+      },
+      {
+        "alongMidM": 245.0,
+        "count": 168,
+        "nativeDSMP10P50P90": [
+          162.18699951171874,
+          162.2750015258789,
+          162.36000061035156
+        ],
+        "nativeDTMP10P50P90": [
+          162.15701293945312,
+          162.2423324584961,
+          162.32860260009767
+        ],
+        "DSMMInusModelCoarseDTM_P50": -0.02756500244140625
+      },
+      {
+        "alongMidM": 255.0,
+        "count": 169,
+        "nativeDSMP10P50P90": [
+          162.38800048828125,
+          162.489990234375,
+          162.57200622558594
+        ],
+        "nativeDTMP10P50P90": [
+          162.3698760986328,
+          162.46267700195312,
+          162.55113830566407
+        ],
+        "DSMMInusModelCoarseDTM_P50": -0.0700225830078125
+      },
+      {
+        "alongMidM": 265.0,
+        "count": 169,
+        "nativeDSMP10P50P90": [
+          162.6300048828125,
+          162.71998596191406,
+          162.8000030517578
+        ],
+        "nativeDTMP10P50P90": [
+          162.6072021484375,
+          162.69898986816406,
+          162.7760009765625
+        ],
+        "DSMMInusModelCoarseDTM_P50": -0.0143280029296875
+      },
+      {
+        "alongMidM": 275.0,
+        "count": 172,
+        "nativeDSMP10P50P90": [
+          162.83100128173828,
+          162.91000366210938,
+          162.97000122070312
+        ],
+        "nativeDTMP10P50P90": [
+          162.81209716796874,
+          162.8828582763672,
+          162.95066833496094
+        ],
+        "DSMMInusModelCoarseDTM_P50": 0.01816558837890625
+      },
+      {
+        "alongMidM": 285.0,
+        "count": 174,
+        "nativeDSMP10P50P90": [
+          162.989990234375,
+          163.02999877929688,
+          163.0800018310547
+        ],
+        "nativeDTMP10P50P90": [
+          162.96353454589843,
+          163.0006561279297,
+          163.0504623413086
+        ],
+        "DSMMInusModelCoarseDTM_P50": -0.0286407470703125
+      },
+      {
+        "alongMidM": 295.0,
+        "count": 176,
+        "nativeDSMP10P50P90": [
+          163.0800018310547,
+          163.12001037597656,
+          163.1800079345703
+        ],
+        "nativeDTMP10P50P90": [
+          163.05266571044922,
+          163.10216522216797,
+          163.15516662597656
+        ],
+        "DSMMInusModelCoarseDTM_P50": -0.09821319580078125
+      },
+      {
+        "alongMidM": 305.0,
+        "count": 178,
+        "nativeDSMP10P50P90": [
+          163.1199951171875,
+          163.1699981689453,
+          163.22000122070312
+        ],
+        "nativeDTMP10P50P90": [
+          163.09435119628907,
+          163.14266967773438,
+          163.20110015869142
+        ],
+        "DSMMInusModelCoarseDTM_P50": -0.19408416748046875
+      },
+      {
+        "alongMidM": 315.0,
+        "count": 179,
+        "nativeDSMP10P50P90": [
+          163.11000061035156,
+          163.15000915527344,
+          163.20001220703125
+        ],
+        "nativeDTMP10P50P90": [
+          163.0895965576172,
+          163.13299560546875,
+          163.17730102539062
+        ],
+        "DSMMInusModelCoarseDTM_P50": -0.141387939453125
+      },
+      {
+        "alongMidM": 325.0,
+        "count": 182,
+        "nativeDSMP10P50P90": [
+          163.02999877929688,
+          163.0900115966797,
+          163.14999389648438
+        ],
+        "nativeDTMP10P50P90": [
+          163.00401306152344,
+          163.06500244140625,
+          163.12399291992188
+        ],
+        "DSMMInusModelCoarseDTM_P50": -0.1827239990234375
+      },
+      {
+        "alongMidM": 335.0,
+        "count": 185,
+        "nativeDSMP10P50P90": [
+          162.8239990234375,
+          162.95999145507812,
+          163.86000061035156
+        ],
+        "nativeDTMP10P50P90": [
+          162.80320434570314,
+          162.8866729736328,
+          162.9893341064453
+        ],
+        "DSMMInusModelCoarseDTM_P50": -0.1360626220703125
+      },
+      {
+        "alongMidM": 345.0,
+        "count": 174,
+        "nativeDSMP10P50P90": [
+          162.54000854492188,
+          162.67499542236328,
+          162.79000854492188
+        ],
+        "nativeDTMP10P50P90": [
+          162.52710418701173,
+          162.64932250976562,
+          162.7638961791992
+        ],
+        "DSMMInusModelCoarseDTM_P50": -0.143280029296875
+      },
+      {
+        "alongMidM": 355.0,
+        "count": 20,
+        "nativeDSMP10P50P90": [
+          162.4590072631836,
+          162.4850082397461,
+          162.5110092163086
+        ],
+        "nativeDTMP10P50P90": [
+          162.43370819091797,
+          162.4666519165039,
+          162.51919860839843
+        ],
+        "DSMMInusModelCoarseDTM_P50": -0.2372894287109375
+      }
+    ],
+    "method": "0.5m native primary raster sampled inside the exact City 43042 pavement component, with 0.4 m border inset. Full source polygon covered. This source-only report does not approve a plane or mutate models.",
+    "classification": "ground_supported_curved_grade_with_discrete_elevated_first_returns",
+    "classificationEvidence": {
+      "clearGroundSamples": 2790,
+      "totalSamples": 3198,
+      "clearFraction": 0.8724202626641651,
+      "clearNativeDSMminusModelCoarseDTM_P10P50P90Max": [
+        -0.19856414794921876,
+        -0.0740966796875,
+        0.03109130859374999,
+        0.6399383544921875
+      ],
+      "higherReturnInterpretation": "Two isolated narrow rectangular patches around 4 m above the smooth roadway, plus one small 1 m patch, are consistent with vehicle-scale first returns. This is an inference from geometry/elevation, not a verified vehicle identity.",
+      "decision": "Retain the curved road profile; do not lift or flatten the whole component as an aerial deck. The coarse model follows the low native road mode.",
+      "nativeCoverageLimitResolved": "The initial peak-centred windows missed much of this 183 m component. The bounded tail export now covers its entire source footprint; no new screening group was introduced."
+    }
+  }
+}

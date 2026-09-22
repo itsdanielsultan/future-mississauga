@@ -1,17 +1,17 @@
 {
-  "edition": "Transit Depth 2026-09-21",
+  "edition": "Road Crossings 2026-09-21",
   "researchReviewed": "2026-09-20",
-  "builtAt": "2026-09-21T21:28:31.028450+00:00",
+  "builtAt": "2026-09-22T03:22:29.877150+00:00",
   "file": "renders/Downtown-transformation.mp4",
-  "bytes": 1331067,
-  "sha256": "e710c9b2d5fe629870534137a69f4d50972c9e073e997fd371f9db8b0c46d0f7",
+  "bytes": 1330682,
+  "sha256": "1764d691cc17ca41a351683e8099a38b26d7d088915729030dec16de71a71fa1",
   "width": 1920,
   "height": 850,
   "durationSeconds": 15.0,
   "frameRate": "30/1",
   "frameCount": 450,
-  "inputLockedAt": "2026-09-21T19:58:07.864526+00:00",
-  "inputLockSHA256": "5db5703db70aa583c899e7b5756edce589e2ae3300d544b885b8e31d2d1e38c1",
+  "inputLockedAt": "2026-09-22T01:55:14.325187+00:00",
+  "inputLockSHA256": "7936355e396af245054b761af217035031d4808a14685b63ecbe88cc6318b6ee",
   "sourceImages": [
     {
       "file": "renders/downtown-skyline-existing.png",
@@ -19,8 +19,8 @@
         3840,
         1400
       ],
-      "sha256": "8577a172f1ad2af09fbaf0d9736d065a6f0e059d73023deada03a844060ddb76",
-      "pixelSHA256": "fa482eb74cfc11f3387e59fcf908901176206e6eecd9662e3e193b2831b2b898"
+      "sha256": "a08b7593b5157a4ee3f2ff0b400dbee1ccdbe3f38bcbd5b86382b2cb7d175cff",
+      "pixelSHA256": "44527649ef9af767f5818afd0dfdac59181828182d0afd7a64b5e34993f2b806"
     },
     {
       "file": "renders/downtown-skyline-construction.png",
@@ -28,8 +28,8 @@
         3840,
         1400
       ],
-      "sha256": "ee142451af7d34a391de7f36f08d453461218f71e57e51429ced15ab255b4904",
-      "pixelSHA256": "51c55728f88d2ee990dc6b7d984e96064b2e1ca0eb0a08f9ead4eba510c12b19"
+      "sha256": "b6ceaf2d4867bc003321eaa4b78a4375bfb1fe6f90bf36400c2e7de5bb232f78",
+      "pixelSHA256": "ba981a0b899ff7f8aaf02500e6dfb142ab9bef82fd32088e0ab10b4dfd722072"
     },
     {
       "file": "renders/downtown-skyline-future.png",
@@ -37,8 +37,8 @@
         3840,
         1400
       ],
-      "sha256": "49d7cd8834b168f22fc70f2097dabddde6c41fc891f769d88c5e2485f53aa5f4",
-      "pixelSHA256": "c405cfb4536e3adca3f06a6045fa5525680b83827e588725d1598951368ee5f4"
+      "sha256": "41c568c38b0998d366042e4ee33f17db0a73dbf7bd53771b227d2b7602af3160",
+      "pixelSHA256": "3e7050213da7f71b1c36962f5d8eadf3ad346109ff3e8d68894d379616e8389d"
     }
   ],
   "originalPNGMastersUnchanged": true,
@@ -46,26 +46,16 @@
   "method": "Labelled fixed-camera wipe between three native model renderings; no invented intermediate buildings or generated imagery.",
   "transitVisibility": "Normal scene depth; terrain, buildings and bridges may obscure routes. Mapped route profiles retain their documented schematic limits.",
   "manualVisualReviewPending": false,
-  "manualVisualReviewAt": "2026-09-21T21:34:40.753004+00:00",
-  "visualReview": {
-    "timestampsSeconds": [
-      1,
-      5.5,
-      7.5,
-      9.5,
-      13
-    ],
-    "stages": [
-      "existing",
-      "transition to construction",
-      "construction",
-      "transition to future",
-      "future"
-    ],
-    "all450FramesDecoded": true,
-    "labelsAndAttributionInsideFrame": true,
-    "fixedCameraCompositionPreserved": true,
-    "noGeometrySynthesizedBetweenStates": true
-  },
-  "landscapingLimit": "Construction tree crowns use future-envelope clearances; the landscaping is illustrative and not a dated construction survey."
+  "visualReviewPassed": true,
+  "visualReviewCompletedAt": "2026-09-22T03:24:13.151122+00:00",
+  "visualCheckpointsSeconds": [
+    0,
+    4,
+    6,
+    9,
+    12,
+    14.9
+  ],
+  "visualReviewNotes": "Six current frames inspected, covering baseline, both wipe transitions and final future state. Fixed-camera alignment, labels and source-credit footer remain clear. Complete 450-frame file decoded with FFmpeg without errors.",
+  "fullDecodePassed": true
 }

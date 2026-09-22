@@ -1,0 +1,2923 @@
+{
+  "checkedAt": "2026-09-22T03:54:01.558132+00:00",
+  "edition": "Road Crossings 2026-09-21",
+  "blenderVersion": "5.0.0",
+  "readOnly": true,
+  "scope": "All 15 current saved future aerial scenes, opened with automatic script execution disabled. The 33 PNG viewpoints are separate render outputs; no claim of 33 saved scenes. No scene saved by this audit.",
+  "scenes": [
+    {
+      "file": "outputs/scenes/airport-corporate.blend",
+      "sha256": "305d1eaf69d07604cbac3d075ca7e55ddc0bedcb66edc9e7c76c6de397440ff9",
+      "bytes": 119846738,
+      "guideMeshes": 23,
+      "sameSceneDepth": true,
+      "badMetadata": [],
+      "overlayScenes": [],
+      "externalSceneRenderLayers": [],
+      "readOnlyHashUnchanged": true,
+      "images": [
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 0,
+          "fileExists": false,
+          "requiredExternalFile": false
+        }
+      ],
+      "packedImageCount": 0,
+      "requiredUnpackedImageCount": 0,
+      "externalDatablocks": [],
+      "missingRequiredFiles": [],
+      "libraries": [],
+      "cameras": [
+        {
+          "name": "Camera",
+          "active": true,
+          "type": "ORTHO",
+          "location": [
+            36.36669921875,
+            3241.9921875,
+            3185.10009765625
+          ],
+          "matrixWorld": [
+            [
+              0.8178063035011292,
+              -0.25097912549972534,
+              0.5178825855255127,
+              36.36669921875
+            ],
+            [
+              0.575493574142456,
+              0.35665449500083923,
+              -0.7359379529953003,
+              3241.9921875
+            ],
+            [
+              -8.90864839675487e-08,
+              0.8998928070068359,
+              0.4361111521720886,
+              3185.10009765625
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "lensMM": 50.0,
+          "orthographicScale": 4940.0,
+          "clipStart": 0.10000000149011612,
+          "clipEnd": 150000.0,
+          "finite": true
+        }
+      ],
+      "objectCount": 677,
+      "meshObjectCount": 674,
+      "sceneCount": 1,
+      "resolution": [
+        3840,
+        2400
+      ],
+      "blenderFileVersion": [
+        5,
+        0,
+        118
+      ],
+      "scenario": "future (saved aerial scene by renderer contract)",
+      "depthPassed": true,
+      "passed": true
+    },
+    {
+      "file": "outputs/scenes/citywide.blend",
+      "sha256": "066bbc7d7218412161745282b3bca575ceb1d3cfed8b38ec543c6972c20c5ac0",
+      "bytes": 451136939,
+      "guideMeshes": 23,
+      "sameSceneDepth": true,
+      "badMetadata": [],
+      "overlayScenes": [],
+      "externalSceneRenderLayers": [],
+      "readOnlyHashUnchanged": true,
+      "images": [
+        {
+          "name": "Image_0",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_0.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_1",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_1.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_10",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_10.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_11",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_11.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_12",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_12.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_13",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_13.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_14",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_15",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_16",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_17",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_2",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_2.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_3",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_3.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_4",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_4.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_5",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_5.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_6",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_6.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_7",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_7.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_8",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_8.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_9",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_9.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 0,
+          "fileExists": false,
+          "requiredExternalFile": false
+        }
+      ],
+      "packedImageCount": 32,
+      "requiredUnpackedImageCount": 0,
+      "externalDatablocks": [],
+      "missingRequiredFiles": [],
+      "libraries": [],
+      "cameras": [
+        {
+          "name": "Camera",
+          "active": true,
+          "type": "ORTHO",
+          "location": [
+            6879.857421875,
+            -8454.865234375,
+            19130.17578125
+          ],
+          "matrixWorld": [
+            [
+              0.6534123420715332,
+              -0.5883411169052124,
+              0.4763476252555847,
+              6879.857421875
+            ],
+            [
+              0.7570021748542786,
+              0.5078312158584595,
+              -0.4111631512641907,
+              -8454.865234375
+            ],
+            [
+              6.28381968681424e-09,
+              0.6292552947998047,
+              0.7771986722946167,
+              19130.17578125
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "lensMM": 50.0,
+          "orthographicScale": 28578.783203125,
+          "clipStart": 0.10000000149011612,
+          "clipEnd": 150000.0,
+          "finite": true
+        }
+      ],
+      "objectCount": 2945,
+      "meshObjectCount": 2930,
+      "sceneCount": 1,
+      "resolution": [
+        3840,
+        2400
+      ],
+      "blenderFileVersion": [
+        5,
+        0,
+        118
+      ],
+      "scenario": "future (saved aerial scene by renderer contract)",
+      "depthPassed": true,
+      "passed": true
+    },
+    {
+      "file": "outputs/scenes/clarkson.blend",
+      "sha256": "5ed0be0233b99447ad13043faeefa28fe1057574dc7eb223309ad58eb2bd34f5",
+      "bytes": 72850519,
+      "guideMeshes": 23,
+      "sameSceneDepth": true,
+      "badMetadata": [],
+      "overlayScenes": [],
+      "externalSceneRenderLayers": [],
+      "readOnlyHashUnchanged": true,
+      "images": [
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 0,
+          "fileExists": false,
+          "requiredExternalFile": false
+        }
+      ],
+      "packedImageCount": 0,
+      "requiredUnpackedImageCount": 0,
+      "externalDatablocks": [],
+      "missingRequiredFiles": [],
+      "libraries": [],
+      "cameras": [
+        {
+          "name": "Camera",
+          "active": true,
+          "type": "ORTHO",
+          "location": [
+            -2565.0,
+            -11155.0,
+            1950.0
+          ],
+          "matrixWorld": [
+            [
+              0.8178063035011292,
+              -0.25097912549972534,
+              0.5178825855255127,
+              -2565.0
+            ],
+            [
+              0.575493574142456,
+              0.35665449500083923,
+              -0.7359379529953003,
+              -11155.0
+            ],
+            [
+              -8.90864839675487e-08,
+              0.8998928070068359,
+              0.4361111521720886,
+              1950.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "lensMM": 50.0,
+          "orthographicScale": 2100.0,
+          "clipStart": 0.10000000149011612,
+          "clipEnd": 150000.0,
+          "finite": true
+        }
+      ],
+      "objectCount": 582,
+      "meshObjectCount": 574,
+      "sceneCount": 1,
+      "resolution": [
+        3840,
+        2400
+      ],
+      "blenderFileVersion": [
+        5,
+        0,
+        118
+      ],
+      "scenario": "future (saved aerial scene by renderer contract)",
+      "depthPassed": true,
+      "passed": true
+    },
+    {
+      "file": "outputs/scenes/cooksville.blend",
+      "sha256": "c4ba3ce3aa6ca5e8399ae6adc4b4234369fc18b222f8c3fb927041768d7f7de2",
+      "bytes": 102352936,
+      "guideMeshes": 23,
+      "sameSceneDepth": true,
+      "badMetadata": [],
+      "overlayScenes": [],
+      "externalSceneRenderLayers": [],
+      "readOnlyHashUnchanged": true,
+      "images": [
+        {
+          "name": "Image_0",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_0.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_1",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_1.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_10",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_10.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_11",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_11.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_12",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_12.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_13",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_13.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_14",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_15",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_16",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_17",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_2",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_2.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_3",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_3.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_4",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_4.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_5",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_5.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_6",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_6.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_7",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_7.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_8",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_8.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_9",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_9.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 0,
+          "fileExists": false,
+          "requiredExternalFile": false
+        }
+      ],
+      "packedImageCount": 32,
+      "requiredUnpackedImageCount": 0,
+      "externalDatablocks": [],
+      "missingRequiredFiles": [],
+      "libraries": [],
+      "cameras": [
+        {
+          "name": "Camera",
+          "active": true,
+          "type": "ORTHO",
+          "location": [
+            -1155.0,
+            -4300.0,
+            3930.0
+          ],
+          "matrixWorld": [
+            [
+              0.8203981518745422,
+              -0.3926626443862915,
+              0.41564756631851196,
+              -1155.0
+            ],
+            [
+              0.5717926621437073,
+              0.5633854866027832,
+              -0.5963639616966248,
+              -4300.0
+            ],
+            [
+              2.113767116895815e-08,
+              0.7269201278686523,
+              0.6867220401763916,
+              3930.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "lensMM": 50.0,
+          "orthographicScale": 2900.0,
+          "clipStart": 0.10000000149011612,
+          "clipEnd": 150000.0,
+          "finite": true
+        }
+      ],
+      "objectCount": 1285,
+      "meshObjectCount": 1283,
+      "sceneCount": 1,
+      "resolution": [
+        3840,
+        2400
+      ],
+      "blenderFileVersion": [
+        5,
+        0,
+        118
+      ],
+      "scenario": "future (saved aerial scene by renderer contract)",
+      "depthPassed": true,
+      "passed": true
+    },
+    {
+      "file": "outputs/scenes/dixie-applewood.blend",
+      "sha256": "618168fdca210c3588cb689a5932e57c2d95f9b386c63d12375e0349d235af29",
+      "bytes": 105843387,
+      "guideMeshes": 23,
+      "sameSceneDepth": true,
+      "badMetadata": [],
+      "overlayScenes": [],
+      "externalSceneRenderLayers": [],
+      "readOnlyHashUnchanged": true,
+      "images": [
+        {
+          "name": "Image_0",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_1",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_10",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_11",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_12",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_13",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_2",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_3",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_4",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_5",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_6",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_7",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_8",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_9",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 0,
+          "fileExists": false,
+          "requiredExternalFile": false
+        }
+      ],
+      "packedImageCount": 14,
+      "requiredUnpackedImageCount": 0,
+      "externalDatablocks": [],
+      "missingRequiredFiles": [],
+      "libraries": [],
+      "cameras": [
+        {
+          "name": "Camera",
+          "active": true,
+          "type": "ORTHO",
+          "location": [
+            1161.9202880859375,
+            -321.326416015625,
+            2209.889892578125
+          ],
+          "matrixWorld": [
+            [
+              0.8178063035011292,
+              -0.2509792745113373,
+              0.5178824663162231,
+              1161.9202880859375
+            ],
+            [
+              0.575493574142456,
+              0.3566545248031616,
+              -0.7359380125999451,
+              -321.326416015625
+            ],
+            [
+              8.554389552273278e-08,
+              0.8998927474021912,
+              0.4361112713813782,
+              2209.889892578125
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "lensMM": 50.0,
+          "orthographicScale": 3380.0,
+          "clipStart": 0.10000000149011612,
+          "clipEnd": 150000.0,
+          "finite": true
+        }
+      ],
+      "objectCount": 1254,
+      "meshObjectCount": 1251,
+      "sceneCount": 1,
+      "resolution": [
+        3840,
+        2400
+      ],
+      "blenderFileVersion": [
+        5,
+        0,
+        118
+      ],
+      "scenario": "future (saved aerial scene by renderer contract)",
+      "depthPassed": true,
+      "passed": true
+    },
+    {
+      "file": "outputs/scenes/downtown.blend",
+      "sha256": "9caee868cc7c12a688c084a34dc4208e11bed70891c880d79eb43d28abf39ffb",
+      "bytes": 106906625,
+      "guideMeshes": 23,
+      "sameSceneDepth": true,
+      "badMetadata": [],
+      "overlayScenes": [],
+      "externalSceneRenderLayers": [],
+      "readOnlyHashUnchanged": true,
+      "images": [
+        {
+          "name": "Image_0",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_0.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_1",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_1.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_10",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_10.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_11",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_11.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_12",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_12.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_13",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_13.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_14",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_15",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_16",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_17",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_2",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_2.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_3",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_3.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_4",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_4.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_5",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_5.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_6",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_6.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_7",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_7.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_8",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_8.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_9",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_9.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 0,
+          "fileExists": false,
+          "requiredExternalFile": false
+        }
+      ],
+      "packedImageCount": 32,
+      "requiredUnpackedImageCount": 0,
+      "externalDatablocks": [],
+      "missingRequiredFiles": [],
+      "libraries": [],
+      "cameras": [
+        {
+          "name": "Camera",
+          "active": true,
+          "type": "ORTHO",
+          "location": [
+            -2760.0,
+            -3370.0,
+            1925.0
+          ],
+          "matrixWorld": [
+            [
+              0.816967785358429,
+              -0.2235354483127594,
+              0.5315971374511719,
+              -2760.0
+            ],
+            [
+              0.5766832828521729,
+              0.3166751265525818,
+              -0.7530957460403442,
+              -3370.0
+            ],
+            [
+              3.787719915493426e-09,
+              0.921818196773529,
+              0.38762253522872925,
+              1925.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "lensMM": 50.0,
+          "orthographicScale": 2350.0,
+          "clipStart": 0.10000000149011612,
+          "clipEnd": 150000.0,
+          "finite": true
+        }
+      ],
+      "objectCount": 1384,
+      "meshObjectCount": 1382,
+      "sceneCount": 1,
+      "resolution": [
+        3840,
+        2400
+      ],
+      "blenderFileVersion": [
+        5,
+        0,
+        118
+      ],
+      "scenario": "future (saved aerial scene by renderer contract)",
+      "depthPassed": true,
+      "passed": true
+    },
+    {
+      "file": "outputs/scenes/erin-mills.blend",
+      "sha256": "8e296ac199675ee2b5031b58841133e5e1b6e80db2b7fcdc3877461dc26df5cc",
+      "bytes": 148255200,
+      "guideMeshes": 23,
+      "sameSceneDepth": true,
+      "badMetadata": [],
+      "overlayScenes": [],
+      "externalSceneRenderLayers": [],
+      "readOnlyHashUnchanged": true,
+      "images": [
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 0,
+          "fileExists": false,
+          "requiredExternalFile": false
+        }
+      ],
+      "packedImageCount": 0,
+      "requiredUnpackedImageCount": 0,
+      "externalDatablocks": [],
+      "missingRequiredFiles": [],
+      "libraries": [],
+      "cameras": [
+        {
+          "name": "Camera",
+          "active": true,
+          "type": "ORTHO",
+          "location": [
+            -8333.3486328125,
+            -7363.15771484375,
+            2251.969970703125
+          ],
+          "matrixWorld": [
+            [
+              0.8178063035011292,
+              -0.2509792745113373,
+              0.5178824663162231,
+              -8333.3486328125
+            ],
+            [
+              0.575493574142456,
+              0.3566545248031616,
+              -0.7359380125999451,
+              -7363.15771484375
+            ],
+            [
+              8.554389552273278e-08,
+              0.8998927474021912,
+              0.4361112713813782,
+              2251.969970703125
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "lensMM": 50.0,
+          "orthographicScale": 3380.0,
+          "clipStart": 0.10000000149011612,
+          "clipEnd": 150000.0,
+          "finite": true
+        }
+      ],
+      "objectCount": 626,
+      "meshObjectCount": 618,
+      "sceneCount": 1,
+      "resolution": [
+        3840,
+        2400
+      ],
+      "blenderFileVersion": [
+        5,
+        0,
+        118
+      ],
+      "scenario": "future (saved aerial scene by renderer contract)",
+      "depthPassed": true,
+      "passed": true
+    },
+    {
+      "file": "outputs/scenes/erindale.blend",
+      "sha256": "dcfcc60e43286ff949d8f318ac455109b5f5c191c14d6912d0827cb92de278d0",
+      "bytes": 148104015,
+      "guideMeshes": 23,
+      "sameSceneDepth": true,
+      "badMetadata": [],
+      "overlayScenes": [],
+      "externalSceneRenderLayers": [],
+      "readOnlyHashUnchanged": true,
+      "images": [
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 0,
+          "fileExists": false,
+          "requiredExternalFile": false
+        }
+      ],
+      "packedImageCount": 0,
+      "requiredUnpackedImageCount": 0,
+      "externalDatablocks": [],
+      "missingRequiredFiles": [],
+      "libraries": [],
+      "cameras": [
+        {
+          "name": "Camera",
+          "active": true,
+          "type": "ORTHO",
+          "location": [
+            -4861.84765625,
+            -7949.49609375,
+            2135.800048828125
+          ],
+          "matrixWorld": [
+            [
+              0.8178063035011292,
+              -0.2509792745113373,
+              0.5178824663162231,
+              -4861.84765625
+            ],
+            [
+              0.575493574142456,
+              0.3566545248031616,
+              -0.7359380125999451,
+              -7949.49609375
+            ],
+            [
+              8.554389552273278e-08,
+              0.8998927474021912,
+              0.4361112713813782,
+              2135.800048828125
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "lensMM": 50.0,
+          "orthographicScale": 3250.0,
+          "clipStart": 0.10000000149011612,
+          "clipEnd": 150000.0,
+          "finite": true
+        }
+      ],
+      "objectCount": 856,
+      "meshObjectCount": 851,
+      "sceneCount": 1,
+      "resolution": [
+        3840,
+        2400
+      ],
+      "blenderFileVersion": [
+        5,
+        0,
+        118
+      ],
+      "scenario": "future (saved aerial scene by renderer contract)",
+      "depthPassed": true,
+      "passed": true
+    },
+    {
+      "file": "outputs/scenes/heartland.blend",
+      "sha256": "c86d5a1c6e680cda37d0f8e8f5be544493ab23d13848f5ce5fc4c82fcc5696f1",
+      "bytes": 137838281,
+      "guideMeshes": 23,
+      "sameSceneDepth": true,
+      "badMetadata": [],
+      "overlayScenes": [],
+      "externalSceneRenderLayers": [],
+      "readOnlyHashUnchanged": true,
+      "images": [
+        {
+          "name": "Image_0",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_0.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_1",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_1.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_10",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_10.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_11",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_11.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_12",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_12.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_13",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_13.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_14",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_15",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_16",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_17",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_2",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_2.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_3",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_3.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_4",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_4.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_5",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_5.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_6",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_6.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_7",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_7.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_8",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_8.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_9",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_9.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 0,
+          "fileExists": false,
+          "requiredExternalFile": false
+        }
+      ],
+      "packedImageCount": 32,
+      "requiredUnpackedImageCount": 0,
+      "externalDatablocks": [],
+      "missingRequiredFiles": [],
+      "libraries": [],
+      "cameras": [
+        {
+          "name": "Camera",
+          "active": true,
+          "type": "ORTHO",
+          "location": [
+            -6177.1767578125,
+            88.200927734375,
+            2332.18994140625
+          ],
+          "matrixWorld": [
+            [
+              0.8178063631057739,
+              -0.2509792447090149,
+              0.5178824067115784,
+              -6177.1767578125
+            ],
+            [
+              0.5754935145378113,
+              0.3566545248031616,
+              -0.7359380125999451,
+              88.200927734375
+            ],
+            [
+              7.44755865866864e-08,
+              0.8998927474021912,
+              0.4361112713813782,
+              2332.18994140625
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "lensMM": 50.0,
+          "orthographicScale": 3510.0,
+          "clipStart": 0.10000000149011612,
+          "clipEnd": 150000.0,
+          "finite": true
+        }
+      ],
+      "objectCount": 1067,
+      "meshObjectCount": 1062,
+      "sceneCount": 1,
+      "resolution": [
+        3840,
+        2400
+      ],
+      "blenderFileVersion": [
+        5,
+        0,
+        118
+      ],
+      "scenario": "future (saved aerial scene by renderer contract)",
+      "depthPassed": true,
+      "passed": true
+    },
+    {
+      "file": "outputs/scenes/lakeview.blend",
+      "sha256": "388ab038fed0199be192f51487e50f501bce9865dcdf167ed9478b148f2ca5b0",
+      "bytes": 46296455,
+      "guideMeshes": 23,
+      "sameSceneDepth": true,
+      "badMetadata": [],
+      "overlayScenes": [],
+      "externalSceneRenderLayers": [],
+      "readOnlyHashUnchanged": true,
+      "images": [
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 0,
+          "fileExists": false,
+          "requiredExternalFile": false
+        }
+      ],
+      "packedImageCount": 0,
+      "requiredUnpackedImageCount": 0,
+      "externalDatablocks": [],
+      "missingRequiredFiles": [],
+      "libraries": [],
+      "cameras": [
+        {
+          "name": "Camera",
+          "active": true,
+          "type": "ORTHO",
+          "location": [
+            2650.0,
+            -5580.0,
+            2060.0
+          ],
+          "matrixWorld": [
+            [
+              0.9486832618713379,
+              -0.14453370869159698,
+              0.2812650501728058,
+              2650.0
+            ],
+            [
+              0.3162277936935425,
+              0.4336009621620178,
+              -0.843795120716095,
+              -5580.0
+            ],
+            [
+              3.869120490662681e-08,
+              0.8894381523132324,
+              0.45705556869506836,
+              2060.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "lensMM": 50.0,
+          "orthographicScale": 2800.0,
+          "clipStart": 0.10000000149011612,
+          "clipEnd": 150000.0,
+          "finite": true
+        }
+      ],
+      "objectCount": 783,
+      "meshObjectCount": 775,
+      "sceneCount": 1,
+      "resolution": [
+        3840,
+        2400
+      ],
+      "blenderFileVersion": [
+        5,
+        0,
+        118
+      ],
+      "scenario": "future (saved aerial scene by renderer contract)",
+      "depthPassed": true,
+      "passed": true
+    },
+    {
+      "file": "outputs/scenes/malton.blend",
+      "sha256": "ff39af32d07a2de07f810ab1c6b032e0c264602d586d66fd78053c49a4aa873e",
+      "bytes": 31966345,
+      "guideMeshes": 23,
+      "sameSceneDepth": true,
+      "badMetadata": [],
+      "overlayScenes": [],
+      "externalSceneRenderLayers": [],
+      "readOnlyHashUnchanged": true,
+      "images": [
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 0,
+          "fileExists": false,
+          "requiredExternalFile": false
+        }
+      ],
+      "packedImageCount": 0,
+      "requiredUnpackedImageCount": 0,
+      "externalDatablocks": [],
+      "missingRequiredFiles": [],
+      "libraries": [],
+      "cameras": [
+        {
+          "name": "Camera",
+          "active": true,
+          "type": "ORTHO",
+          "location": [
+            -4550.0,
+            17500.0,
+            2045.0
+          ],
+          "matrixWorld": [
+            [
+              -0.9486833214759827,
+              -0.14157834649085999,
+              0.28276416659355164,
+              -4550.0
+            ],
+            [
+              0.3162277638912201,
+              -0.42473503947257996,
+              0.8482924699783325,
+              17500.0
+            ],
+            [
+              -1.1646816844290697e-08,
+              0.8941788077354431,
+              0.4477100372314453,
+              2045.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "lensMM": 50.0,
+          "orthographicScale": 2400.0,
+          "clipStart": 0.10000000149011612,
+          "clipEnd": 150000.0,
+          "finite": true
+        }
+      ],
+      "objectCount": 358,
+      "meshObjectCount": 356,
+      "sceneCount": 1,
+      "resolution": [
+        3840,
+        2400
+      ],
+      "blenderFileVersion": [
+        5,
+        0,
+        118
+      ],
+      "scenario": "future (saved aerial scene by renderer contract)",
+      "depthPassed": true,
+      "passed": true
+    },
+    {
+      "file": "outputs/scenes/meadowvale.blend",
+      "sha256": "c67432117078d6ffbc8c5e22fbf7ffa6d5a26486f340a25cdc27af65a02e45ae",
+      "bytes": 149827788,
+      "guideMeshes": 23,
+      "sameSceneDepth": true,
+      "badMetadata": [],
+      "overlayScenes": [],
+      "externalSceneRenderLayers": [],
+      "readOnlyHashUnchanged": true,
+      "images": [
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 0,
+          "fileExists": false,
+          "requiredExternalFile": false
+        }
+      ],
+      "packedImageCount": 0,
+      "requiredUnpackedImageCount": 0,
+      "externalDatablocks": [],
+      "missingRequiredFiles": [],
+      "libraries": [],
+      "cameras": [
+        {
+          "name": "Camera",
+          "active": true,
+          "type": "ORTHO",
+          "location": [
+            -10717.779296875,
+            -4035.8330078125,
+            2746.139892578125
+          ],
+          "matrixWorld": [
+            [
+              0.8178063631057739,
+              -0.2509792447090149,
+              0.5178824067115784,
+              -10717.779296875
+            ],
+            [
+              0.5754935145378113,
+              0.356654554605484,
+              -0.7359380125999451,
+              -4035.8330078125
+            ],
+            [
+              5.537074798667163e-08,
+              0.8998927474021912,
+              0.4361112713813782,
+              2746.139892578125
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "lensMM": 50.0,
+          "orthographicScale": 3680.0,
+          "clipStart": 0.10000000149011612,
+          "clipEnd": 150000.0,
+          "finite": true
+        }
+      ],
+      "objectCount": 598,
+      "meshObjectCount": 590,
+      "sceneCount": 1,
+      "resolution": [
+        3840,
+        2400
+      ],
+      "blenderFileVersion": [
+        5,
+        0,
+        118
+      ],
+      "scenario": "future (saved aerial scene by renderer contract)",
+      "depthPassed": true,
+      "passed": true
+    },
+    {
+      "file": "outputs/scenes/port-credit.blend",
+      "sha256": "d49025eea023db526ace0ebdcf921996381f6977e7f02f33e1e59116b3fab4af",
+      "bytes": 56356542,
+      "guideMeshes": 23,
+      "sameSceneDepth": true,
+      "badMetadata": [],
+      "overlayScenes": [],
+      "externalSceneRenderLayers": [],
+      "readOnlyHashUnchanged": true,
+      "images": [
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 0,
+          "fileExists": false,
+          "requiredExternalFile": false
+        }
+      ],
+      "packedImageCount": 0,
+      "requiredUnpackedImageCount": 0,
+      "externalDatablocks": [],
+      "missingRequiredFiles": [],
+      "libraries": [],
+      "cameras": [
+        {
+          "name": "Camera",
+          "active": true,
+          "type": "ORTHO",
+          "location": [
+            1750.0,
+            -4850.0,
+            2140.0
+          ],
+          "matrixWorld": [
+            [
+              0.22819118201732635,
+              -0.5152567625045776,
+              0.8260987997055054,
+              1750.0
+            ],
+            [
+              0.973616361618042,
+              0.12076320499181747,
+              -0.19361679255962372,
+              -4850.0
+            ],
+            [
+              2.5438353645768075e-08,
+              0.8484849333763123,
+              0.5292195081710815,
+              2140.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "lensMM": 50.0,
+          "orthographicScale": 2250.0,
+          "clipStart": 0.10000000149011612,
+          "clipEnd": 150000.0,
+          "finite": true
+        }
+      ],
+      "objectCount": 842,
+      "meshObjectCount": 834,
+      "sceneCount": 1,
+      "resolution": [
+        3840,
+        2400
+      ],
+      "blenderFileVersion": [
+        5,
+        0,
+        118
+      ],
+      "scenario": "future (saved aerial scene by renderer contract)",
+      "depthPassed": true,
+      "passed": true
+    },
+    {
+      "file": "outputs/scenes/streetsville.blend",
+      "sha256": "d33083ab11c15c3586a2b91328a3f11afb66dedef36bd04f56b5bff0cec35c89",
+      "bytes": 113557055,
+      "guideMeshes": 23,
+      "sameSceneDepth": true,
+      "badMetadata": [],
+      "overlayScenes": [],
+      "externalSceneRenderLayers": [],
+      "readOnlyHashUnchanged": true,
+      "images": [
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 0,
+          "fileExists": false,
+          "requiredExternalFile": false
+        }
+      ],
+      "packedImageCount": 0,
+      "requiredUnpackedImageCount": 0,
+      "externalDatablocks": [],
+      "missingRequiredFiles": [],
+      "libraries": [],
+      "cameras": [
+        {
+          "name": "Camera",
+          "active": true,
+          "type": "ORTHO",
+          "location": [
+            -9016.361328125,
+            -3692.0205078125,
+            1843.52490234375
+          ],
+          "matrixWorld": [
+            [
+              0.8178063035011292,
+              -0.2509792447090149,
+              0.5178825259208679,
+              -9016.361328125
+            ],
+            [
+              0.575493574142456,
+              0.356654554605484,
+              -0.7359379529953003,
+              -3692.0205078125
+            ],
+            [
+              -1.076092637219972e-08,
+              0.8998927474021912,
+              0.4361112713813782,
+              1843.52490234375
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "lensMM": 50.0,
+          "orthographicScale": 2730.0,
+          "clipStart": 0.10000000149011612,
+          "clipEnd": 150000.0,
+          "finite": true
+        }
+      ],
+      "objectCount": 466,
+      "meshObjectCount": 458,
+      "sceneCount": 1,
+      "resolution": [
+        3840,
+        2400
+      ],
+      "blenderFileVersion": [
+        5,
+        0,
+        118
+      ],
+      "scenario": "future (saved aerial scene by renderer contract)",
+      "depthPassed": true,
+      "passed": true
+    },
+    {
+      "file": "outputs/scenes/uptown.blend",
+      "sha256": "d08830c20a12256f03fca7301f50b8c681cdecff3be4461c6c0b8221069314c7",
+      "bytes": 119111202,
+      "guideMeshes": 23,
+      "sameSceneDepth": true,
+      "badMetadata": [],
+      "overlayScenes": [],
+      "externalSceneRenderLayers": [],
+      "readOnlyHashUnchanged": true,
+      "images": [
+        {
+          "name": "Image_0",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_0.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_1",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_1.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_10",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_10.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_11",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_11.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_12",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_12.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_13",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_13.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_14",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_15",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_16",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_17",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_2",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_2.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_3",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_3.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_4",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_4.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_5",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_5.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_6",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_6.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_7",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_7.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_8",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_8.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_9",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Image_9.001",
+          "source": "FILE",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 1,
+          "fileExists": false,
+          "requiredExternalFile": false
+        },
+        {
+          "name": "Render Result",
+          "source": "VIEWER",
+          "filepath": "",
+          "resolvedPath": "",
+          "packedFiles": 0,
+          "fileExists": false,
+          "requiredExternalFile": false
+        }
+      ],
+      "packedImageCount": 32,
+      "requiredUnpackedImageCount": 0,
+      "externalDatablocks": [],
+      "missingRequiredFiles": [],
+      "libraries": [],
+      "cameras": [
+        {
+          "name": "Camera",
+          "active": true,
+          "type": "ORTHO",
+          "location": [
+            -4158.24365234375,
+            -1118.239990234375,
+            2005.18994140625
+          ],
+          "matrixWorld": [
+            [
+              0.8178063035011292,
+              -0.25097912549972534,
+              0.5178825855255127,
+              -4158.24365234375
+            ],
+            [
+              0.575493574142456,
+              0.35665449500083923,
+              -0.7359379529953003,
+              -1118.239990234375
+            ],
+            [
+              -8.90864839675487e-08,
+              0.8998928070068359,
+              0.4361111521720886,
+              2005.18994140625
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "lensMM": 50.0,
+          "orthographicScale": 2576.0,
+          "clipStart": 0.10000000149011612,
+          "clipEnd": 150000.0,
+          "finite": true
+        }
+      ],
+      "objectCount": 1100,
+      "meshObjectCount": 1098,
+      "sceneCount": 1,
+      "resolution": [
+        3840,
+        2400
+      ],
+      "blenderFileVersion": [
+        5,
+        0,
+        118
+      ],
+      "scenario": "future (saved aerial scene by renderer contract)",
+      "depthPassed": true,
+      "passed": true
+    }
+  ],
+  "all15ScenesPassed": true,
+  "junctionScene": {
+    "file": "outputs/checkpoints/05-road-crossings-after/downtown-junction-after.blend",
+    "sha256": "0ee76dc0663a4f3865899d5e8d2d47f622aebad56a7630c370139490ebcec692",
+    "bytes": 97485541,
+    "readOnlyHashUnchanged": true
+  },
+  "junctionForegroundBuildingRayExamples": [
+    {
+      "guide": "service-guide-transitway-1090150-dedicated-busway-1-0",
+      "targetBlenderXYZ": [
+        -5446.4521484375,
+        1458.792724609375,
+        87.35247802734375
+      ],
+      "foregroundBuilding": "72-6172",
+      "status": "Proposed",
+      "buildingDistanceM": 1299.004125763271,
+      "guideDistanceM": 1554.5651773486372
+    },
+    {
+      "guide": "service-guide-transitway-1090150-dedicated-busway-1-0",
+      "targetBlenderXYZ": [
+        -4922.39501953125,
+        2227.494873046875,
+        75.44729614257812
+      ],
+      "foregroundBuilding": "existing-72",
+      "status": "Existing",
+      "buildingDistanceM": 2094.4110321724797,
+      "guideDistanceM": 2115.401890419289
+    },
+    {
+      "guide": "service-guide-transitway-1090150-on-road-connection-0-0",
+      "targetBlenderXYZ": [
+        -5947.90625,
+        532.3684692382812,
+        92.99605560302734
+      ],
+      "foregroundBuilding": "sq1-t1-tower",
+      "status": "Proposed",
+      "buildingDistanceM": 1289.640799826884,
+      "guideDistanceM": 1404.6597703047169
+    },
+    {
+      "guide": "service-guide-transitway-1090151-dedicated-busway-0-1",
+      "targetBlenderXYZ": [
+        -5454.94140625,
+        1438.0714111328125,
+        87.18115997314453
+      ],
+      "foregroundBuilding": "72-6172",
+      "status": "Proposed",
+      "buildingDistanceM": 1310.0011032915202,
+      "guideDistanceM": 1542.796061538919
+    },
+    {
+      "guide": "service-guide-transitway-1090151-on-road-connection-0-0",
+      "targetBlenderXYZ": [
+        -5936.48486328125,
+        528.816162109375,
+        92.93171691894531
+      ],
+      "foregroundBuilding": "sq1-t1-tower",
+      "status": "Proposed",
+      "buildingDistanceM": 1293.2535717256883,
+      "guideDistanceM": 1396.0390066911186
+    }
+  ],
+  "buildingOcclusionSamples": 5,
+  "rayScope": "Perspective rays to sampled real Transitway mesh vertices; only nearer render-visible objects carrying building status are reported. This is a representative depth check, not complete visibility proof.",
+  "renderPipeline": "One main scene; ordinary opaque surface depth. No foreground guide compositing.",
+  "limits": "Packed sources make these specific saved scenes self-contained. External source data and build tools are needed to regenerate scenes or change source geometry. Survey accuracy is not asserted."
+}

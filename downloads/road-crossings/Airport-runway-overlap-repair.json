@@ -1,0 +1,166 @@
+{
+  "checkedAt": "2026-09-22T03:00:10.183568+00:00",
+  "scope": "Only overlapping projected triangles inside existing OSM-runway primitive; no new footprint, source-height refit, airport feature or road-crossing change.",
+  "source": "outputs/models/supplemental/pearson-airfield-context.glb",
+  "beforeSHA256": "fab5d2a6779d9623aa375f8faef0938315ed37d6901ae65b5b09f81e10f83ade",
+  "candidateSHA256": "61c48b212be958c7aade272a18e2c1ab2f0adce5dbddb7b7669ee07215e512a8",
+  "primitive": {
+    "node": "OSM-runway",
+    "meshIndex": 0,
+    "primitiveIndex": 0
+  },
+  "trianglesBefore": 5597,
+  "trianglesAfter": 5941,
+  "originalVerticesPreserved": 7783,
+  "unchangedTrianglesExact": 5471,
+  "changedOriginalTriangles": 126,
+  "overlapPairsResolved": 243,
+  "minimumResolvedOverlapAreaM2": 0.01,
+  "originalProjectedUnionAreaM2": 891207.7025193243,
+  "repairedProjectedUnionAreaM2": 891207.689807743,
+  "projectedSymmetricDifferenceM2": 0.02188624587646163,
+  "maximumBoundaryVertexDistanceOutsideOtherCoveredFootprintM": 0.00017552321125486253,
+  "maximumSourcePlaneDeviationM": 2.119156567914615e-05,
+  "maximumResidualOverlapTriangleAreaM2": 0.008087599608636253,
+  "totalResidualOverlapAreaM2": 0.26411259274028703,
+  "taxiwayAndApronAccessorsAndBytesUnchanged": true,
+  "attributes": "Original runway colours preserved; new cut vertices share the same original uniform colour. Original supplied mesh has no normal accessor. All new nondegenerate runway triangles face upward.",
+  "method": "Where two existing source planes cross, split along their intersection and retain the higher original plane. Exactly coplanar overlap has one deterministic owner. Retessellate only cut source triangles. Keep untouched triangles exact; append new vertices on existing planes, subject only to float32 representation.",
+  "limits": "The original draped terrain/display elevations and mapped/symbolic airport widths remain illustrative. Geometric union is verified within float32 submillimetre tolerance, not falsely claimed byte-identical topology.",
+  "affectedDistricts": [
+    "airport-corporate",
+    "malton",
+    "citywide"
+  ],
+  "affectedRenders": [
+    "airport-corporate-future.png",
+    "malton-future.png",
+    "citywide-future.png"
+  ],
+  "otherRendersDoNotImportAirportSupplement": 30,
+  "canonicalSHA256": "61c48b212be958c7aade272a18e2c1ab2f0adce5dbddb7b7669ee07215e512a8",
+  "publicSHA256": "8c0dda7dbfd75e9627e3ccc1a820b8c76af04dd490539ce0dda036170ae7c7dd",
+  "publicBytes": 253288,
+  "readbackQA": {
+    "checkedAt": "2026-09-22T03:01:25.835658+00:00",
+    "readBackFromSerializedGLB": true,
+    "sourceSHA256": "fab5d2a6779d9623aa375f8faef0938315ed37d6901ae65b5b09f81e10f83ade",
+    "candidateSHA256": "61c48b212be958c7aade272a18e2c1ab2f0adce5dbddb7b7669ee07215e512a8",
+    "unchangedPrimitives": [
+      {
+        "node": "OSM-apron",
+        "verticesFacesColoursTransformsExact": true
+      },
+      {
+        "node": "OSM-taxiway",
+        "verticesFacesColoursTransformsExact": true
+      }
+    ],
+    "runwayColoursExact": true,
+    "cutTrianglesFaceUp": true,
+    "upperSourceSurfaceSamples": 81,
+    "maximumAbsoluteSurfaceDeviationM": 4.297913449136104e-06,
+    "previousBlackPixelLocations": [
+      {
+        "localXZ": [
+          -5444.157,
+          -11393.353
+        ],
+        "oldCoverage": 2,
+        "newCoverage": 1,
+        "heightDifferenceM": 0.0
+      },
+      {
+        "localXZ": [
+          -5442.053,
+          -11394.833
+        ],
+        "oldCoverage": 2,
+        "newCoverage": 1,
+        "heightDifferenceM": 0.0
+      },
+      {
+        "localXZ": [
+          -5451.354,
+          -11399.11
+        ],
+        "oldCoverage": 2,
+        "newCoverage": 1,
+        "heightDifferenceM": 0.0
+      }
+    ],
+    "passed": true
+  },
+  "publicReadback": {
+    "checkedAt": "2026-09-22T03:03:12.126Z",
+    "passed": true,
+    "source": "outputs/models/supplemental/pearson-airfield-context.glb",
+    "public": "outputs/mississauga-future/public/models/pearson-airfield-context.glb",
+    "beforeSourceSHA256": "fab5d2a6779d9623aa375f8faef0938315ed37d6901ae65b5b09f81e10f83ade",
+    "sourceSHA256": "61c48b212be958c7aade272a18e2c1ab2f0adce5dbddb7b7669ee07215e512a8",
+    "previousPublicSHA256": "ff75844db136f5c2d41df1c2c98f2cd78d9dbcb2e67759b56b29227bd3861a8f",
+    "publicSHA256": "8c0dda7dbfd75e9627e3ccc1a820b8c76af04dd490539ce0dda036170ae7c7dd",
+    "sourceBytes": 1000736,
+    "publicBytes": 253288,
+    "decodedPositionsColoursTransformsExtrasExact": true,
+    "decodedTriangleIndicesExactModuloWindingPreservingCyclicRotation": true,
+    "primitiveCount": 3,
+    "canonicalAndPublicPromoted": true,
+    "originalRenderInputLockNotModified": true,
+    "affectedDistricts": [
+      "airport-corporate",
+      "malton",
+      "citywide"
+    ]
+  },
+  "oldInputLockSHA256": "2524b0c218feb7be518653c0f2e16bfd3c6ef1be55b8a28a0bdf15662f07a171",
+  "oldInputLockUntouched": true,
+  "affectedSceneFiles": [
+    "outputs/scenes/airport-corporate.blend",
+    "outputs/scenes/malton.blend",
+    "outputs/scenes/citywide.blend"
+  ],
+  "targetedRerendersRequired": false,
+  "visualAcceptance": "All three dependent views were rerendered after the scoped amendment and passed native-image visual review. The prior tiny black runway-intersection notch disappeared; the other 30 picture pixel hashes remained unchanged.",
+  "diagnosis": "Airport and Meadowvale highway wedges are cast shadows on lower terrain/road surfaces, not failed raised-road profiles. The tiny airport notch is inherited multiply covered runway geometry, now reconciled.",
+  "finalRenderAmendment": "Airfield-render-amendment-QA.json",
+  "finalVisualReview": {
+    "checkedAt": "2026-09-22T03:32:57.275446+00:00",
+    "source": "work/road-crossings/visual-aerial-QA.json",
+    "reports": [
+      {
+        "district": "airport-corporate",
+        "file": "outputs/renders/airport-corporate-future.png",
+        "sha256": "4f032f4b1a427716242cc3d9cdbcd786904a54bc46123bfbe2d038d83b1d1900",
+        "result": "PASS",
+        "findings": [
+          "Native-resolution inspection confirms the prior tiny black runway-intersection notch near pixels 2080\u20132084, 25\u201328 has disappeared. The crossing runways now form a continuous gray surface at that location.",
+          "Highway 401 dark wedges remain the independently raycast-confirmed shadows on lower ground beneath the supported roadway; no renewed pavement or water defect is visible.",
+          "The broader airport, creek and road context has no new visible tears, detached water surfaces or clipping regression. Runway repair remains limited to the documented supplemental airfield asset."
+        ]
+      },
+      {
+        "district": "malton",
+        "file": "outputs/renders/malton-future.png",
+        "sha256": "c406c895e37c9647a15d9ed836a55f59e0632044ab4d4948b52ddc2b473eb8f0",
+        "result": "PASS",
+        "findings": [
+          "Native-resolution reinspection after the airfield supplement repair shows continuous Airport Road, Derry Road, the rail corridor and visible creek crossings.",
+          "No new black surface tears, floating water, conspicuous road-to-water sag or clipped focal geometry is visible.",
+          "Mapped vegetation and status colours remain consistent. The sharp lower-right municipal coverage edge remains the documented source extent."
+        ]
+      },
+      {
+        "district": "citywide",
+        "file": "outputs/renders/citywide-future.png",
+        "sha256": "89668ed74c3462f8bce3381251b0e093855fbe5b87e2ded629f19884620fd487",
+        "result": "PASS",
+        "findings": [
+          "Native-resolution reinspection confirms the complete municipal extent stays within the frame and the airport runway layout remains coherent after the scoped repair.",
+          "No new large surface tears, detached water surfaces or obvious highway discontinuities are visible at this overview scale. Individual crossing heights remain covered by separate numerical geometry QA.",
+          "Existing buildings, future status colours and mapped green and water corridors remain consistent; external territory remains neutral source-limited context."
+        ]
+      }
+    ]
+  }
+}

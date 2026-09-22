@@ -1,0 +1,4562 @@
+{
+  "checkedUTC": "2026-09-21T23:39:07Z",
+  "finiteInventoryLocked": true,
+  "groups": 111,
+  "coarseScreenThresholdM": 1,
+  "nativeSourceCoverageAtAllScreeningPeaks": true,
+  "nativeWindows": 81,
+  "nativeRasterFiles": 162,
+  "nativeRasterBytes": 669001164,
+  "furtherPatchExpansionPlanned": false,
+  "sourceCounts": {
+    "roadPaved": 12836,
+    "waterPolygons": 1158,
+    "bridgeEdgeFeatures": 8391,
+    "streetSegments": 19880
+  },
+  "literalRoadWaterOverlapAbove2m2": 0,
+  "scope": "Mapped City Bridges edges overlapping paved road and within80m of mapped water. Includes ground-supported culvert and stacked-road cases requiring classification. Not a certified complete bridge inventory.",
+  "exclusions": [
+    "Ordinary road gradients without mapped bridge and water adjacency are outside this bounded screen.",
+    "No invented bridge at pond edges or trail crossings.",
+    "Not all >1m DSM-DTM differences are road errors; canopy, vehicles, medians and overlapping roads may explain some."
+  ],
+  "inventory": [
+    {
+      "coverageGroupIndex": 0,
+      "street": "401 HWY",
+      "streetFIDs": [
+        3493,
+        17634,
+        18163,
+        19652,
+        19653
+      ],
+      "xy26917": [
+        607897.054908841,
+        4832566.843227916
+      ],
+      "bounds26917": [
+        607839.234737871,
+        4832498.902243312,
+        607902.054908841,
+        4832571.843227916
+      ],
+      "mappedBridgeFIDs": [
+        11277,
+        11349,
+        11418,
+        11490,
+        11492,
+        11494,
+        11622,
+        11649,
+        11804,
+        11870
+      ],
+      "waterSourceTypesWithin80m": [
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-13-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 1,
+      "street": "403 HWY",
+      "streetFIDs": [
+        4673,
+        14420,
+        14422,
+        19148,
+        19149,
+        19158,
+        19180
+      ],
+      "xy26917": [
+        603077.6264724727,
+        4820298.906477011
+      ],
+      "bounds26917": [
+        603068.890298958,
+        4820147.107400135,
+        603125.8127890676,
+        4820450.654830293
+      ],
+      "mappedBridgeFIDs": [
+        15402,
+        15403,
+        15404,
+        15415,
+        15416,
+        15418,
+        15429,
+        15430,
+        15432,
+        15433,
+        15446,
+        15458,
+        15459,
+        15499,
+        15511,
+        15513,
+        15517,
+        15531,
+        15534,
+        15599,
+        15601,
+        15603,
+        15605,
+        15608,
+        15610,
+        15613,
+        15621,
+        15623,
+        15624
+      ],
+      "waterSourceTypesWithin80m": [
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-07-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 2,
+      "street": "409 HWY",
+      "streetFIDs": [
+        4089,
+        4117,
+        4118,
+        4119,
+        4120,
+        4125,
+        4129,
+        16142
+      ],
+      "xy26917": [
+        612141.992646374,
+        4839292.372379839
+      ],
+      "bounds26917": [
+        612099.4060402218,
+        4839123.500472549,
+        612272.5364781189,
+        4839333.035285139
+      ],
+      "mappedBridgeFIDs": [
+        12048,
+        12065,
+        12066,
+        12102,
+        12152,
+        12160,
+        12166,
+        12168,
+        12171,
+        12174,
+        12176,
+        12197,
+        12199,
+        12205,
+        12223,
+        12257,
+        12260,
+        12267
+      ],
+      "waterSourceTypesWithin80m": [
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-26-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 3,
+      "street": "NINTH LINE",
+      "streetFIDs": [
+        10295
+      ],
+      "xy26917": [
+        602860.8241106325,
+        4820092.085043804
+      ],
+      "bounds26917": [
+        602842.2051307743,
+        4820087.085043804,
+        602874.0446775801,
+        4820109.073200577
+      ],
+      "mappedBridgeFIDs": [
+        15510,
+        15539
+      ],
+      "waterSourceTypesWithin80m": [
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-07-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 4,
+      "street": "403 HWY",
+      "streetFIDs": [
+        19150
+      ],
+      "xy26917": [
+        602967.3741498495,
+        4820238.101786984
+      ],
+      "bounds26917": [
+        602947.2486905024,
+        4820225.88616724,
+        602975.308114888,
+        4820256.369566589
+      ],
+      "mappedBridgeFIDs": [
+        15339,
+        15343,
+        15540,
+        15598
+      ],
+      "waterSourceTypesWithin80m": [
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-07-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 5,
+      "street": "LAKESHORE RD W",
+      "streetFIDs": [
+        144,
+        179
+      ],
+      "xy26917": [
+        610862.4355226475,
+        4818618.093595543
+      ],
+      "bounds26917": [
+        610821.6301938095,
+        4818593.492684928,
+        610867.4355226475,
+        4818623.828973977
+      ],
+      "mappedBridgeFIDs": [
+        7407,
+        7439,
+        7440,
+        7905,
+        7906,
+        7909
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-23-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 6,
+      "street": "DERRY RD E",
+      "streetFIDs": [
+        10879
+      ],
+      "xy26917": [
+        609453.5259435637,
+        4840003.752973548
+      ],
+      "bounds26917": [
+        609440.591672437,
+        4839988.34142386,
+        609473.8529548825,
+        4840017.281566985
+      ],
+      "mappedBridgeFIDs": [
+        12597,
+        14361,
+        14388
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-16-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 7,
+      "street": "427 HWY",
+      "streetFIDs": [
+        10485
+      ],
+      "xy26917": [
+        611160.2904210361,
+        4841518.075294553
+      ],
+      "bounds26917": [
+        611148.54941155,
+        4841499.70631509,
+        611196.0671678518,
+        4841543.87908196
+      ],
+      "mappedBridgeFIDs": [
+        12142,
+        12158,
+        12162,
+        12216
+      ],
+      "waterSourceTypesWithin80m": [
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-24-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 8,
+      "street": "RATHBURN RD W",
+      "streetFIDs": [
+        12837,
+        12838
+      ],
+      "xy26917": [
+        609607.4519138439,
+        4828197.5049509695
+      ],
+      "bounds26917": [
+        609602.4519138439,
+        4828178.327214135,
+        609628.9255170313,
+        4828202.5049509695
+      ],
+      "mappedBridgeFIDs": [
+        9351,
+        9367
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-18-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 9,
+      "street": "DERRY RD W",
+      "streetFIDs": [
+        17753,
+        19608
+      ],
+      "xy26917": [
+        600453.1321761224,
+        4828541.623820261
+      ],
+      "bounds26917": [
+        600448.1321761224,
+        4828536.623820261,
+        600465.4358023424,
+        4828556.323295446
+      ],
+      "mappedBridgeFIDs": [
+        14677,
+        14679
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-04-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 10,
+      "street": "HURONTARIO ST",
+      "streetFIDs": [
+        14221,
+        19720,
+        19721
+      ],
+      "xy26917": [
+        613072.3836436252,
+        4824847.179250351
+      ],
+      "bounds26917": [
+        613038.8679871438,
+        4824842.179250351,
+        613077.3836436252,
+        4824879.571201973
+      ],
+      "mappedBridgeFIDs": [
+        7794,
+        7818,
+        7863
+      ],
+      "waterSourceTypesWithin80m": [
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-28-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 11,
+      "street": "401 HWY",
+      "streetFIDs": [
+        12327,
+        12328,
+        19449
+      ],
+      "xy26917": [
+        600448.8299101656,
+        4828540.724575701
+      ],
+      "bounds26917": [
+        600429.2863282023,
+        4828535.724575701,
+        600486.7544998422,
+        4828555.388954598
+      ],
+      "mappedBridgeFIDs": [
+        14202,
+        14676,
+        14677,
+        14679,
+        14680
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-04-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 12,
+      "street": "QUEEN ELIZABETH WAY",
+      "streetFIDs": [
+        7612,
+        7613,
+        7614,
+        10896,
+        19465,
+        19685
+      ],
+      "xy26917": [
+        613069.9489364618,
+        4824843.963673268
+      ],
+      "bounds26917": [
+        613042.6234345627,
+        4824829.517795476,
+        613077.1838368307,
+        4824868.271581708
+      ],
+      "mappedBridgeFIDs": [
+        7659,
+        7705,
+        7718,
+        7794,
+        7818,
+        7863
+      ],
+      "waterSourceTypesWithin80m": [
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-28-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 13,
+      "street": "MISSISSAUGA TRANSITWAY",
+      "streetFIDs": [
+        17692,
+        17693,
+        18343
+      ],
+      "xy26917": [
+        610605.3020459071,
+        4830132.568090518
+      ],
+      "bounds26917": [
+        610597.4809706805,
+        4830124.732330555,
+        610627.917717665,
+        4830157.639347593
+      ],
+      "mappedBridgeFIDs": [
+        9018,
+        9139,
+        9167
+      ],
+      "waterSourceTypesWithin80m": [
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-22-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 14,
+      "street": "HURONTARIO ST",
+      "streetFIDs": [
+        12876,
+        12877,
+        12878,
+        12879
+      ],
+      "xy26917": [
+        609614.7648133446,
+        4828198.743538661
+      ],
+      "bounds26917": [
+        609593.4899542084,
+        4828183.661838709,
+        609654.4254879879,
+        4828223.4021281
+      ],
+      "mappedBridgeFIDs": [
+        9104,
+        9148,
+        9192,
+        9367,
+        9368
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-18-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 15,
+      "street": "CENTRAL PKY E",
+      "streetFIDs": [
+        8218,
+        8222,
+        17681
+      ],
+      "xy26917": [
+        610033.4561179238,
+        4829221.58818492
+      ],
+      "bounds26917": [
+        609993.5663491876,
+        4829214.175040185,
+        610043.322296874,
+        4829255.186401232
+      ],
+      "mappedBridgeFIDs": [
+        9087,
+        9116,
+        9150,
+        9184
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-20-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 16,
+      "street": "DERRY RD W",
+      "streetFIDs": [
+        3044,
+        12302,
+        12303
+      ],
+      "xy26917": [
+        601544.0301850684,
+        4830294.9710038
+      ],
+      "bounds26917": [
+        601514.109380418,
+        4830277.2953768335,
+        601550.4447220752,
+        4830321.481667072
+      ],
+      "mappedBridgeFIDs": [
+        14658,
+        14662,
+        14663,
+        14664,
+        14669,
+        14670
+      ],
+      "waterSourceTypesWithin80m": [
+        "River",
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-06-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 17,
+      "street": "403 HWY",
+      "streetFIDs": [
+        12827,
+        12828,
+        12829,
+        12831,
+        12832
+      ],
+      "xy26917": [
+        610035.1321760216,
+        4829223.803920855
+      ],
+      "bounds26917": [
+        610000.8195964554,
+        4829214.116880325,
+        610042.4180222375,
+        4829261.280597775
+      ],
+      "mappedBridgeFIDs": [
+        9063,
+        9087,
+        9116,
+        9164,
+        9184
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-20-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 18,
+      "street": "403 HWY",
+      "streetFIDs": [
+        17686,
+        17687,
+        17694,
+        17695
+      ],
+      "xy26917": [
+        610604.998509248,
+        4830141.353068123
+      ],
+      "bounds26917": [
+        610594.5211760122,
+        4830129.141830867,
+        610625.0682491127,
+        4830160.634497143
+      ],
+      "mappedBridgeFIDs": [
+        9018,
+        9020,
+        9024,
+        9139,
+        9167,
+        9169
+      ],
+      "waterSourceTypesWithin80m": [
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-22-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 19,
+      "street": "409 HWY",
+      "streetFIDs": [
+        4127,
+        4130
+      ],
+      "xy26917": [
+        612052.8409251738,
+        4839139.8620403
+      ],
+      "bounds26917": [
+        612035.6093075211,
+        4839134.8620403,
+        612057.8409251738,
+        4839159.798468159
+      ],
+      "mappedBridgeFIDs": [
+        12396,
+        12397,
+        12701,
+        12737,
+        12738
+      ],
+      "waterSourceTypesWithin80m": [
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-26-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 20,
+      "street": "RATHBURN RD E",
+      "streetFIDs": [
+        17677
+      ],
+      "xy26917": [
+        609643.772740684,
+        4828208.00329337
+      ],
+      "bounds26917": [
+        609635.4780727227,
+        4828200.405301653,
+        609651.3920499174,
+        4828221.909844238
+      ],
+      "mappedBridgeFIDs": [
+        9118,
+        9148
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-18-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 21,
+      "street": "DIXIE RD",
+      "streetFIDs": [
+        11224,
+        17735
+      ],
+      "xy26917": [
+        606475.7194166299,
+        4837005.7270781025
+      ],
+      "bounds26917": [
+        606470.7194166299,
+        4836994.993019464,
+        606508.4373811663,
+        4837027.479439137
+      ],
+      "mappedBridgeFIDs": [
+        14511,
+        14514,
+        14515,
+        14516,
+        14519,
+        14520
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-10-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 22,
+      "street": "DIXIE RD",
+      "streetFIDs": [
+        3820,
+        3838
+      ],
+      "xy26917": [
+        607927.4320297978,
+        4835583.022455967
+      ],
+      "bounds26917": [
+        607913.4266994217,
+        4835570.056769687,
+        607941.5971414673,
+        4835617.130786759
+      ],
+      "mappedBridgeFIDs": [
+        13373,
+        13379,
+        13383,
+        13401,
+        13402,
+        13403
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-14-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 23,
+      "street": "LAKESHORE RD E",
+      "streetFIDs": [
+        1294,
+        19358
+      ],
+      "xy26917": [
+        615521.8925461983,
+        4824764.715671077
+      ],
+      "bounds26917": [
+        615516.8925461983,
+        4824742.10866126,
+        615537.0009456656,
+        4824773.366395325
+      ],
+      "mappedBridgeFIDs": [
+        7665,
+        7671,
+        7673,
+        7675
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-31-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 24,
+      "street": "VELEBIT CRT",
+      "streetFIDs": [
+        6908
+      ],
+      "xy26917": [
+        603371.730050679,
+        4828542.76549113
+      ],
+      "bounds26917": [
+        603353.9722603218,
+        4828525.067507621,
+        603379.5651152028,
+        4828550.587265243
+      ],
+      "mappedBridgeFIDs": [
+        14005
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-07-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 25,
+      "street": "DERRY RD W",
+      "streetFIDs": [
+        11258,
+        12281,
+        12282
+      ],
+      "xy26917": [
+        598405.181310519,
+        4825880.167669168
+      ],
+      "bounds26917": [
+        598389.7719599061,
+        4825869.761645697,
+        598419.9946912734,
+        4825897.555015158
+      ],
+      "mappedBridgeFIDs": [
+        14747,
+        14752,
+        14757
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-00-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 26,
+      "street": "DERRY RD E",
+      "streetFIDs": [
+        3904,
+        12360
+      ],
+      "xy26917": [
+        608015.9846742122,
+        4838140.708578628
+      ],
+      "bounds26917": [
+        608004.5657213845,
+        4838108.112923581,
+        608050.0956282212,
+        4838151.88495467
+      ],
+      "mappedBridgeFIDs": [
+        13333,
+        13334,
+        13339,
+        13342,
+        14503,
+        14504,
+        14505,
+        14507
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-15-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 27,
+      "street": "INVERHOUSE DR",
+      "streetFIDs": [
+        138,
+        140
+      ],
+      "xy26917": [
+        611164.2037724775,
+        4818469.090664841
+      ],
+      "bounds26917": [
+        611159.2037724775,
+        4818452.078657146,
+        611182.5595803569,
+        4818474.090664841
+      ],
+      "mappedBridgeFIDs": [
+        7393,
+        7406,
+        7409,
+        7410
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-23-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 28,
+      "street": "MCLAUGHLIN RD",
+      "streetFIDs": [
+        3361,
+        19264
+      ],
+      "xy26917": [
+        604285.0725494212,
+        4831526.804209705
+      ],
+      "bounds26917": [
+        604267.6512790902,
+        4831521.804209705,
+        604298.5521300142,
+        4831556.358273782
+      ],
+      "mappedBridgeFIDs": [
+        13704,
+        13706,
+        13709,
+        13758,
+        13760,
+        13761
+      ],
+      "waterSourceTypesWithin80m": [
+        "River",
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-09-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 29,
+      "street": "NINTH LINE",
+      "streetFIDs": [
+        13097,
+        13098
+      ],
+      "xy26917": [
+        599933.9066308958,
+        4823383.744456721
+      ],
+      "bounds26917": [
+        599917.0199870559,
+        4823361.060752818,
+        599946.4542235956,
+        4823394.656296011
+      ],
+      "mappedBridgeFIDs": [
+        15196,
+        15203,
+        15242,
+        15254,
+        15256
+      ],
+      "waterSourceTypesWithin80m": [
+        "River",
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-02-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 30,
+      "street": "THOMAS ST",
+      "streetFIDs": [
+        5741,
+        18914
+      ],
+      "xy26917": [
+        603812.6466361713,
+        4825807.182253681
+      ],
+      "bounds26917": [
+        603789.9492266389,
+        4825792.111558761,
+        603817.6466361713,
+        4825822.389565793
+      ],
+      "mappedBridgeFIDs": [
+        12012,
+        12017,
+        12018,
+        12024,
+        12025
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-08-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 31,
+      "street": "BRAMALEA RD",
+      "streetFIDs": [
+        4032,
+        10277
+      ],
+      "xy26917": [
+        606891.0170821071,
+        4838547.7462594835
+      ],
+      "bounds26917": [
+        606883.6964825741,
+        4838529.674193215,
+        606910.7438561292,
+        4838557.774469486
+      ],
+      "mappedBridgeFIDs": [
+        14493,
+        14496,
+        14497,
+        14510,
+        14512,
+        14513
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-11-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 32,
+      "street": "COURTNEYPARK DR E",
+      "streetFIDs": [
+        3853,
+        3879
+      ],
+      "xy26917": [
+        609728.6578591419,
+        4836302.1434976095
+      ],
+      "bounds26917": [
+        609697.000823859,
+        4836272.422047695,
+        609757.8215933971,
+        4836341.0489436155
+      ],
+      "mappedBridgeFIDs": [
+        13340,
+        13346,
+        13347,
+        13352,
+        13353,
+        13354
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-19-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 33,
+      "street": "DOUG LEAVENS BLVD",
+      "streetFIDs": [
+        10981,
+        13103
+      ],
+      "xy26917": [
+        599213.0951932535,
+        4824865.398196133
+      ],
+      "bounds26917": [
+        599208.0951932535,
+        4824848.490578697,
+        599227.1755333908,
+        4824876.534040934
+      ],
+      "mappedBridgeFIDs": [
+        15194,
+        15195,
+        15201,
+        15202,
+        15244,
+        15258,
+        15259,
+        15261
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-01-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 34,
+      "street": "CAMILLA RD",
+      "streetFIDs": [
+        1577,
+        1683
+      ],
+      "xy26917": [
+        613167.825358951,
+        4825484.582278003
+      ],
+      "bounds26917": [
+        613160.5586241886,
+        4825476.064121034,
+        613185.3628749503,
+        4825495.600027652
+      ],
+      "mappedBridgeFIDs": [
+        8302,
+        8312,
+        8314,
+        8328
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-30-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 35,
+      "street": "SOUTHDOWN RD",
+      "streetFIDs": [
+        183,
+        13028
+      ],
+      "xy26917": [
+        610583.7192977675,
+        4818653.895540611
+      ],
+      "bounds26917": [
+        610552.0268195207,
+        4818631.658093581,
+        610588.7192977675,
+        4818668.670040076
+      ],
+      "mappedBridgeFIDs": [
+        7907,
+        7908,
+        7914,
+        8022,
+        8033,
+        8054
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-27-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 36,
+      "street": "TRUSCOTT DR",
+      "streetFIDs": [
+        13894,
+        13897
+      ],
+      "xy26917": [
+        609564.0027161147,
+        4818864.151152029
+      ],
+      "bounds26917": [
+        609558.500177514,
+        4818848.621909855,
+        609575.333230705,
+        4818869.151152029
+      ],
+      "mappedBridgeFIDs": [
+        8034,
+        8056
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-17-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 37,
+      "street": "CENTURY AVE",
+      "streetFIDs": [
+        6898,
+        12956
+      ],
+      "xy26917": [
+        600804.2143121008,
+        4828392.476736457
+      ],
+      "bounds26917": [
+        600796.0637728814,
+        4828387.476736457,
+        600815.4309110636,
+        4828408.254176088
+      ],
+      "mappedBridgeFIDs": [
+        14072,
+        14073,
+        14092
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-04-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 38,
+      "street": "OSPREY BLVD",
+      "streetFIDs": [
+        997,
+        13278
+      ],
+      "xy26917": [
+        600192.7694175963,
+        4824068.52156587
+      ],
+      "bounds26917": [
+        600187.3522616009,
+        4824063.52156587,
+        600201.197188647,
+        4824083.733790094
+      ],
+      "mappedBridgeFIDs": [
+        15198,
+        15204
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-03-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 39,
+      "street": "ARGENTIA RD",
+      "streetFIDs": [
+        6888,
+        7052
+      ],
+      "xy26917": [
+        601313.4604447596,
+        4827866.82834139
+      ],
+      "bounds26917": [
+        601298.8414469685,
+        4827861.82834139,
+        601320.1581574104,
+        4827882.794109187
+      ],
+      "mappedBridgeFIDs": [
+        14077,
+        14100,
+        14104,
+        14169
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-05-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 40,
+      "street": "BURNHAMTHORPE RD E",
+      "streetFIDs": [
+        8380,
+        15805,
+        15806
+      ],
+      "xy26917": [
+        612302.817222497,
+        4830326.34328144
+      ],
+      "bounds26917": [
+        612293.4279518941,
+        4830307.188192869,
+        612314.9695964695,
+        4830331.34328144
+      ],
+      "mappedBridgeFIDs": [
+        8510,
+        8521,
+        8991,
+        8996
+      ],
+      "waterSourceTypesWithin80m": [
+        "River",
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-27-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 41,
+      "street": "BLOOR ST",
+      "streetFIDs": [
+        2964,
+        2982
+      ],
+      "xy26917": [
+        613080.9489796518,
+        4829802.520309974
+      ],
+      "bounds26917": [
+        613075.9489796518,
+        4829797.520309974,
+        613100.2540893921,
+        4829810.883009329
+      ],
+      "mappedBridgeFIDs": [
+        8507,
+        8514
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-29-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 42,
+      "street": "ERIN MILLS PKY",
+      "streetFIDs": [
+        9310,
+        17075
+      ],
+      "xy26917": [
+        607420.7509992527,
+        4821596.345259675
+      ],
+      "bounds26917": [
+        607410.8852506258,
+        4821591.345259675,
+        607425.7509992527,
+        4821605.66205867
+      ],
+      "mappedBridgeFIDs": [
+        8877,
+        8890
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-12-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 43,
+      "street": "DERRY RD E",
+      "streetFIDs": [
+        11277,
+        18841
+      ],
+      "xy26917": [
+        610115.3446127558,
+        4840811.594619077
+      ],
+      "bounds26917": [
+        610110.3446127558,
+        4840806.594619077,
+        610123.5753087774,
+        4840820.368514241
+      ],
+      "mappedBridgeFIDs": [
+        12355,
+        12497
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-21-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 44,
+      "street": "DERRY RD E",
+      "streetFIDs": [
+        18841
+      ],
+      "xy26917": [
+        610023.5432061842,
+        4840693.686795877
+      ],
+      "bounds26917": [
+        610012.771183665,
+        4840681.276867361,
+        610028.5432061842,
+        4840698.686795877
+      ],
+      "mappedBridgeFIDs": [
+        12306,
+        12308
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-21-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 45,
+      "street": "KING ST E",
+      "streetFIDs": [
+        1964,
+        1992
+      ],
+      "xy26917": [
+        612107.1741713182,
+        4826251.402217398
+      ],
+      "bounds26917": [
+        612102.1741713182,
+        4826234.109003776,
+        612117.0573058659,
+        4826256.402217398
+      ],
+      "mappedBridgeFIDs": [
+        8343,
+        8347
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-25-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 46,
+      "street": "AIRPORT RD",
+      "streetFIDs": [
+        19366
+      ],
+      "xy26917": [
+        609260.7769516107,
+        4840003.597041239
+      ],
+      "bounds26917": [
+        609255.7769516107,
+        4839998.597041239,
+        609280.6644635571,
+        4840009.217487926
+      ],
+      "mappedBridgeFIDs": [
+        14372,
+        14464
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-16-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 47,
+      "street": "409 HWY",
+      "streetFIDs": [
+        4089
+      ],
+      "xy26917": [
+        612132.5038171802,
+        4839120.889316971
+      ],
+      "bounds26917": [
+        612127.5038171802,
+        4839115.889316971,
+        612137.5038171802,
+        4839125.889316971
+      ],
+      "mappedBridgeFIDs": [
+        12219
+      ],
+      "waterSourceTypesWithin80m": [
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "extra-26-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 48,
+      "street": "BURNHAMTHORPE RD W",
+      "streetFIDs": [
+        9848,
+        15822
+      ],
+      "xy26917": [
+        607167.5768777604,
+        4823949.342972022
+      ],
+      "bounds26917": [
+        607129.1912186379,
+        4823887.76434775,
+        607296.0264643343,
+        4824094.936551162
+      ],
+      "mappedBridgeFIDs": [
+        8845,
+        8851,
+        8852,
+        8853,
+        8861,
+        8862,
+        9506,
+        9507,
+        9511,
+        9512,
+        9546,
+        9547,
+        9548,
+        9549,
+        9552,
+        9553,
+        9554,
+        9555,
+        9558,
+        9559,
+        9560,
+        9561,
+        9575,
+        9616,
+        9620,
+        9629,
+        9631,
+        9642,
+        9643,
+        9644,
+        9651,
+        9652
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-16-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 49,
+      "street": "403 HWY",
+      "streetFIDs": [
+        12476,
+        12477,
+        14188,
+        14189,
+        14190,
+        14191
+      ],
+      "xy26917": [
+        606278.9038333598,
+        4824057.915597092
+      ],
+      "bounds26917": [
+        606201.3165739222,
+        4823994.346347745,
+        606363.5180134778,
+        4824172.356534218
+      ],
+      "mappedBridgeFIDs": [
+        9525,
+        9532,
+        9550,
+        9563,
+        9601,
+        9618,
+        9657,
+        9663,
+        9673,
+        9676,
+        9677,
+        9713
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-16-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 50,
+      "street": "BURNHAMTHORPE RD W",
+      "streetFIDs": [
+        9922,
+        9927
+      ],
+      "xy26917": [
+        607007.6296277883,
+        4823244.960316975
+      ],
+      "bounds26917": [
+        606981.3200053368,
+        4823154.591063605,
+        607055.9629718869,
+        4823301.198875215
+      ],
+      "mappedBridgeFIDs": [
+        8743,
+        8766,
+        8791,
+        8792,
+        8793,
+        8801,
+        8802,
+        8809,
+        8811,
+        8813,
+        8814,
+        8815,
+        8846,
+        8855,
+        8863,
+        8864,
+        8867,
+        8868
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-19-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 51,
+      "street": "EGLINTON AVE W",
+      "streetFIDs": [
+        9881,
+        13550,
+        15650,
+        15651
+      ],
+      "xy26917": [
+        605504.0444971935,
+        4824987.697038915
+      ],
+      "bounds26917": [
+        605453.8420871177,
+        4824939.070142696,
+        605572.2911284481,
+        4825071.8294175565
+      ],
+      "mappedBridgeFIDs": [
+        9583,
+        9585,
+        9587,
+        9588,
+        9627,
+        9638,
+        9641,
+        9667,
+        9668,
+        9671,
+        9672,
+        9674,
+        9675,
+        9678,
+        9679,
+        9682,
+        9683,
+        9707,
+        9708,
+        11950,
+        11959,
+        11962,
+        11965,
+        11966,
+        11993
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-15-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 52,
+      "street": "QUEEN ELIZABETH WAY",
+      "streetFIDs": [
+        7481,
+        7482,
+        19471,
+        19684
+      ],
+      "xy26917": [
+        612285.1015799842,
+        4823657.352007398
+      ],
+      "bounds26917": [
+        612165.307805847,
+        4823433.955281751,
+        612305.7240213148,
+        4823681.728382666
+      ],
+      "mappedBridgeFIDs": [
+        7677,
+        7678,
+        7681,
+        7683,
+        7684,
+        7687,
+        7688,
+        7691,
+        7706,
+        7708,
+        7770,
+        7777,
+        7778,
+        7856,
+        7858,
+        7859,
+        7867
+      ],
+      "waterSourceTypesWithin80m": [
+        "River",
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-37-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 53,
+      "street": "QUEENSWAY E",
+      "streetFIDs": [
+        18256
+      ],
+      "xy26917": [
+        615620.47704307,
+        4829509.0842655925
+      ],
+      "bounds26917": [
+        615576.3623702714,
+        4829466.941659856,
+        615653.0816066528,
+        4829560.602497234
+      ],
+      "mappedBridgeFIDs": [
+        8094,
+        8095,
+        8096,
+        8124,
+        8129,
+        8148,
+        8161,
+        8162,
+        8163,
+        8164
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-44-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 54,
+      "street": "401 HWY",
+      "streetFIDs": [
+        3695,
+        3697,
+        3699,
+        3722,
+        3725,
+        17645,
+        17647,
+        19718
+      ],
+      "xy26917": [
+        610965.6415984359,
+        4834424.953916153
+      ],
+      "bounds26917": [
+        610914.3360560522,
+        4834342.097263034,
+        611078.7633465031,
+        4834462.467636007
+      ],
+      "mappedBridgeFIDs": [
+        11015,
+        11060,
+        11061,
+        11062,
+        11063,
+        11064,
+        11065,
+        11066,
+        11067,
+        11068,
+        11069,
+        11070,
+        11071,
+        11072,
+        11073,
+        11074,
+        11075,
+        11076,
+        11077,
+        11078,
+        11079
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-30-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 55,
+      "street": "MATHESON BLVD E",
+      "streetFIDs": [
+        3698,
+        14245,
+        14246
+      ],
+      "xy26917": [
+        611527.135311301,
+        4834115.115113282
+      ],
+      "bounds26917": [
+        611452.0569220635,
+        4834059.4250289,
+        611556.6283834263,
+        4834134.517222585
+      ],
+      "mappedBridgeFIDs": [
+        10909,
+        10914,
+        10924,
+        10925,
+        10926,
+        10929,
+        10931,
+        10932,
+        10933,
+        10934
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-32-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 56,
+      "street": "401 HWY",
+      "streetFIDs": [
+        18799,
+        19430,
+        19643,
+        19644,
+        19645
+      ],
+      "xy26917": [
+        603562.4367771876,
+        4830107.512610198
+      ],
+      "bounds26917": [
+        603534.4282095601,
+        4830098.1564897755,
+        603605.6107848603,
+        4830193.748470312
+      ],
+      "mappedBridgeFIDs": [
+        13859,
+        13860,
+        13863,
+        13864,
+        13865,
+        13867,
+        13868,
+        13871,
+        13873,
+        13952,
+        13957,
+        13959
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-09-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 57,
+      "street": "MISSISSAUGA TRANSITWAY",
+      "streetFIDs": [
+        18376,
+        19084
+      ],
+      "xy26917": [
+        612197.975127236,
+        4833558.90585293
+      ],
+      "bounds26917": [
+        612174.3159299055,
+        4833530.00429094,
+        612216.8598252491,
+        4833581.69158278
+      ],
+      "mappedBridgeFIDs": [
+        10943,
+        10948,
+        10949,
+        10994,
+        11005,
+        11006
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-36-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 58,
+      "street": "ERIN MILLS PKY",
+      "streetFIDs": [
+        6857,
+        6877,
+        6879
+      ],
+      "xy26917": [
+        601722.5722496064,
+        4827560.295422789
+      ],
+      "bounds26917": [
+        601704.0439164327,
+        4827486.589207072,
+        601748.2537858761,
+        4827593.069122106
+      ],
+      "mappedBridgeFIDs": [
+        14101,
+        14105,
+        14135,
+        14139,
+        14174,
+        14175,
+        14236,
+        14237
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-03-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 59,
+      "street": "MAVIS RD",
+      "streetFIDs": [
+        12685,
+        12686,
+        14982
+      ],
+      "xy26917": [
+        603629.8223735959,
+        4831193.859339375
+      ],
+      "bounds26917": [
+        603605.9082657727,
+        4831163.730377788,
+        603668.778981437,
+        4831235.884361307
+      ],
+      "mappedBridgeFIDs": [
+        13746,
+        13748,
+        13759,
+        13762,
+        13763,
+        13779,
+        13816,
+        13826
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-11-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 60,
+      "street": "409 HWY",
+      "streetFIDs": [
+        4135,
+        4138,
+        4141,
+        16142
+      ],
+      "xy26917": [
+        611937.4382809359,
+        4839657.677262618
+      ],
+      "bounds26917": [
+        611903.0392959815,
+        4839609.835930836,
+        611947.6216090658,
+        4839696.15868802
+      ],
+      "mappedBridgeFIDs": [
+        12076,
+        12077,
+        12081,
+        12082,
+        12091,
+        12110,
+        12111,
+        12116,
+        12118,
+        12122,
+        12128,
+        12179,
+        12180,
+        12182,
+        12185,
+        12218,
+        12220,
+        12242
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-34-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 61,
+      "street": "GOREWAY DR",
+      "streetFIDs": [
+        4136,
+        4137,
+        4139,
+        4140
+      ],
+      "xy26917": [
+        611938.7077064838,
+        4839653.882140491
+      ],
+      "bounds26917": [
+        611888.055678858,
+        4839638.88402116,
+        611986.468219361,
+        4839682.189321914
+      ],
+      "mappedBridgeFIDs": [
+        12081,
+        12111,
+        12112,
+        12118,
+        12123,
+        12179,
+        12180,
+        12182,
+        12185,
+        12186,
+        12220,
+        12221,
+        12242
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-34-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 62,
+      "street": "PAISLEY BLVD E",
+      "streetFIDs": [
+        1868,
+        1888,
+        1892
+      ],
+      "xy26917": [
+        612438.1918328975,
+        4825946.005489846
+      ],
+      "bounds26917": [
+        612414.3722965969,
+        4825929.076775512,
+        612443.1918328975,
+        4825951.005489846
+      ],
+      "mappedBridgeFIDs": [
+        8313,
+        8318,
+        8322,
+        8325,
+        8341
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-38-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 63,
+      "street": "WISEMAN CRT",
+      "streetFIDs": [
+        187,
+        13900
+      ],
+      "xy26917": [
+        610031.9712883334,
+        4818672.136096021
+      ],
+      "bounds26917": [
+        610026.9712883334,
+        4818667.136096021,
+        610037.2492515184,
+        4818682.117052523
+      ],
+      "mappedBridgeFIDs": [
+        8035,
+        8037
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-27-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 64,
+      "street": "DUNDAS ST W",
+      "streetFIDs": [
+        9452,
+        11462
+      ],
+      "xy26917": [
+        608421.306499595,
+        4822007.968003427
+      ],
+      "bounds26917": [
+        608390.2875321467,
+        4821993.982030883,
+        608437.5046400377,
+        4822041.344511795
+      ],
+      "mappedBridgeFIDs": [
+        8396,
+        8398,
+        8402,
+        8404,
+        8754,
+        8755,
+        8758,
+        8760,
+        8761,
+        8780,
+        8790,
+        8827,
+        8831,
+        8838,
+        8850
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-21-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 65,
+      "street": "EGLINTON AVE E",
+      "streetFIDs": [
+        8677,
+        19086
+      ],
+      "xy26917": [
+        612210.0757798756,
+        4833545.155005284
+      ],
+      "bounds26917": [
+        612188.5043075788,
+        4833517.578830003,
+        612234.41131328,
+        4833577.036339609
+      ],
+      "mappedBridgeFIDs": [
+        8953,
+        8972,
+        8973,
+        10943,
+        10948,
+        10949,
+        10994,
+        11005,
+        11006
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-36-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 66,
+      "street": "COURTNEYPARK DR E",
+      "streetFIDs": [
+        3882,
+        12603,
+        12604
+      ],
+      "xy26917": [
+        609044.6228261242,
+        4836442.493174739
+      ],
+      "bounds26917": [
+        608993.376752879,
+        4836392.8141578995,
+        609095.4485174428,
+        4836485.041408613
+      ],
+      "mappedBridgeFIDs": [
+        13337,
+        13341,
+        13343,
+        13344,
+        13345,
+        13362,
+        13363,
+        13364,
+        13366,
+        13375
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-25-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 67,
+      "street": "MEADOW WOOD RD",
+      "streetFIDs": [
+        251,
+        272
+      ],
+      "xy26917": [
+        611892.6003903429,
+        4819046.889385337
+      ],
+      "bounds26917": [
+        611887.6003903429,
+        4819038.573492261,
+        611918.1736475095,
+        4819051.889385337
+      ],
+      "mappedBridgeFIDs": [
+        7401,
+        7405,
+        7427,
+        7428,
+        7434,
+        7435
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-35-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 68,
+      "street": "401 HWY",
+      "streetFIDs": [
+        14336,
+        14338,
+        14339,
+        14340,
+        14341,
+        14342,
+        14343,
+        19432,
+        19440,
+        19443,
+        19444,
+        19445,
+        19494,
+        19496,
+        19648
+      ],
+      "xy26917": [
+        604252.2671232391,
+        4830522.595922296
+      ],
+      "bounds26917": [
+        604194.6655205264,
+        4830489.764422011,
+        604301.332011143,
+        4830596.068479227
+      ],
+      "mappedBridgeFIDs": [
+        13713,
+        13714,
+        13750,
+        13751,
+        13752,
+        13754,
+        13756,
+        13766,
+        13773,
+        13815,
+        13820,
+        13821,
+        13822,
+        13823,
+        13824
+      ],
+      "waterSourceTypesWithin80m": [
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-13-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 69,
+      "street": "MAVIS RD",
+      "streetFIDs": [
+        3183,
+        3191,
+        19429,
+        19437,
+        19438,
+        19439,
+        19446,
+        19447
+      ],
+      "xy26917": [
+        604259.4895290718,
+        4830523.6160561275
+      ],
+      "bounds26917": [
+        604201.9855160014,
+        4830517.194747808,
+        604284.1223676765,
+        4830590.377641476
+      ],
+      "mappedBridgeFIDs": [
+        13750,
+        13752,
+        13754,
+        13756,
+        13773,
+        13815,
+        13820,
+        13821,
+        13822,
+        13823,
+        13824
+      ],
+      "waterSourceTypesWithin80m": [
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-13-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 70,
+      "street": "QUEEN ELIZABETH WAY",
+      "streetFIDs": [
+        19686,
+        19687,
+        19688,
+        19690
+      ],
+      "xy26917": [
+        616269.2544561396,
+        4828987.895062557
+      ],
+      "bounds26917": [
+        616194.5047360994,
+        4828959.103694927,
+        616297.6572727944,
+        4829049.933777505
+      ],
+      "mappedBridgeFIDs": [
+        7460,
+        7482,
+        7483,
+        7484,
+        7487,
+        7488,
+        7497,
+        7504,
+        7506,
+        7516,
+        7524,
+        7531,
+        7532,
+        7533,
+        7534,
+        8093,
+        8128,
+        8166,
+        8168
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-46-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 71,
+      "street": "403 HWY",
+      "streetFIDs": [
+        8328,
+        8332,
+        8397,
+        8399,
+        8400,
+        12969,
+        17686
+      ],
+      "xy26917": [
+        610294.7787383097,
+        4830372.319958412
+      ],
+      "bounds26917": [
+        610267.0384975398,
+        4830316.06935228,
+        610385.4369424483,
+        4830387.177293426
+      ],
+      "mappedBridgeFIDs": [
+        9048,
+        9054,
+        9055,
+        9060,
+        9074,
+        9081,
+        9084,
+        9108,
+        9155,
+        9170,
+        9199,
+        9200,
+        9201
+      ],
+      "waterSourceTypesWithin80m": [
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-28-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 72,
+      "street": "MISSISSAUGA RD",
+      "streetFIDs": [
+        10960,
+        10961
+      ],
+      "xy26917": [
+        606759.8145717556,
+        4823276.987615349
+      ],
+      "bounds26917": [
+        606754.2605211816,
+        4823258.463146343,
+        606772.4025701081,
+        4823285.457964733
+      ],
+      "mappedBridgeFIDs": [
+        8782,
+        8786,
+        8794,
+        8795,
+        8803
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-19-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 73,
+      "street": "BRITANNIA RD W",
+      "streetFIDs": [
+        14365
+      ],
+      "xy26917": [
+        600053.2436927739,
+        4823046.1008447455
+      ],
+      "bounds26917": [
+        600037.060180698,
+        4823016.402278015,
+        600082.7831306772,
+        4823061.198427476
+      ],
+      "mappedBridgeFIDs": [
+        15189,
+        15190,
+        15191,
+        15224,
+        15226,
+        15246,
+        15247,
+        15248,
+        15255,
+        15282,
+        15283,
+        15284,
+        15285
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-00-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 74,
+      "street": "403 HWY",
+      "streetFIDs": [
+        9765,
+        9776,
+        9778,
+        10872
+      ],
+      "xy26917": [
+        605930.1127953334,
+        4823739.526270918
+      ],
+      "bounds26917": [
+        605887.9907711126,
+        4823724.1344786715,
+        605946.6723849062,
+        4823782.573311308
+      ],
+      "mappedBridgeFIDs": [
+        9577,
+        9610,
+        9611,
+        9622,
+        9698
+      ],
+      "waterSourceTypesWithin80m": [
+        "River",
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-16-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 75,
+      "street": "BRITANNIA RD W",
+      "streetFIDs": [
+        7008,
+        12897,
+        18913
+      ],
+      "xy26917": [
+        603516.5967215033,
+        4827394.707057528
+      ],
+      "bounds26917": [
+        603483.3453769136,
+        4827354.021690441,
+        603566.1555791057,
+        4827458.007983669
+      ],
+      "mappedBridgeFIDs": [
+        11968,
+        11973,
+        11981,
+        11984,
+        11987,
+        11988,
+        14010,
+        14011,
+        14056,
+        14064,
+        14066
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-08-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 76,
+      "street": "DERRY RD W",
+      "streetFIDs": [
+        3364,
+        12366,
+        12367
+      ],
+      "xy26917": [
+        601897.9964086377,
+        4831793.565748173
+      ],
+      "bounds26917": [
+        601868.4412439388,
+        4831747.702278455,
+        601957.815084864,
+        4831826.243773134
+      ],
+      "mappedBridgeFIDs": [
+        14594,
+        14595,
+        14599,
+        14601,
+        14602,
+        14605,
+        14614,
+        14618,
+        14619,
+        14620,
+        14622,
+        14625,
+        14636,
+        14639,
+        14646
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-04-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 77,
+      "street": "BLOOR ST",
+      "streetFIDs": [
+        3345
+      ],
+      "xy26917": [
+        614416.1566827563,
+        4831526.726040373
+      ],
+      "bounds26917": [
+        614379.1121963541,
+        4831493.108908007,
+        614451.1399742406,
+        4831566.902059676
+      ],
+      "mappedBridgeFIDs": [
+        8475,
+        8478,
+        8480,
+        8485,
+        8490,
+        8492,
+        8498
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-42-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 78,
+      "street": "407 HWY",
+      "streetFIDs": [
+        14371
+      ],
+      "xy26917": [
+        600043.4560760548,
+        4823056.11096757
+      ],
+      "bounds26917": [
+        600022.6802382456,
+        4823033.666294507,
+        600064.2869936745,
+        4823077.764630093
+      ],
+      "mappedBridgeFIDs": [
+        15189,
+        15190,
+        15191,
+        15224,
+        15226,
+        15246,
+        15247,
+        15248,
+        15255
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-00-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 79,
+      "street": "BRISTOL RD W",
+      "streetFIDs": [
+        14584
+      ],
+      "xy26917": [
+        604303.8366108837,
+        4826356.661304389
+      ],
+      "bounds26917": [
+        604297.5275598865,
+        4826344.248714861,
+        604313.5958100399,
+        4826361.661304389
+      ],
+      "mappedBridgeFIDs": [
+        11969,
+        11976,
+        11982,
+        11983
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-14-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 80,
+      "street": "DUNDAS ST E",
+      "streetFIDs": [
+        3322
+      ],
+      "xy26917": [
+        615867.0222151729,
+        4831461.855551851
+      ],
+      "bounds26917": [
+        615846.2837547344,
+        4831425.755595798,
+        615908.1547492663,
+        4831476.0297410395
+      ],
+      "mappedBridgeFIDs": [
+        8130,
+        8131,
+        8144,
+        8486,
+        8494,
+        8499
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-45-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 81,
+      "street": "BRITANNIA RD E",
+      "streetFIDs": [
+        3824,
+        10257
+      ],
+      "xy26917": [
+        609833.3366716629,
+        4835467.884294739
+      ],
+      "bounds26917": [
+        609817.378973688,
+        4835453.73575614,
+        609845.8673901772,
+        4835487.467154787
+      ],
+      "mappedBridgeFIDs": [
+        11013,
+        11016,
+        11017,
+        13374,
+        13378,
+        13380,
+        13381
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-26-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 82,
+      "street": "MAIN ST",
+      "streetFIDs": [
+        19504
+      ],
+      "xy26917": [
+        604275.3909734628,
+        4826351.191114768
+      ],
+      "bounds26917": [
+        604254.5390954271,
+        4826346.191114768,
+        604298.9491654842,
+        4826364.368294932
+      ],
+      "mappedBridgeFIDs": [
+        11974,
+        11982,
+        11983,
+        11989,
+        11991
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-14-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 83,
+      "street": "LAKESHORE RD E",
+      "streetFIDs": [
+        17449
+      ],
+      "xy26917": [
+        617342.7725730565,
+        4827242.1369165275
+      ],
+      "bounds26917": [
+        617316.0175610589,
+        4827203.518297917,
+        617360.7741445488,
+        4827261.298195753
+      ],
+      "mappedBridgeFIDs": [
+        7276,
+        7278,
+        7279,
+        7296,
+        7297,
+        7466,
+        7485,
+        7486,
+        7496,
+        7511
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-47-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 84,
+      "street": "407 HWY",
+      "streetFIDs": [
+        14345,
+        14346
+      ],
+      "xy26917": [
+        600957.8497659069,
+        4821778.390160575
+      ],
+      "bounds26917": [
+        600924.8735821877,
+        4821757.832739206,
+        600996.6542828331,
+        4821832.52322884
+      ],
+      "mappedBridgeFIDs": [
+        15295,
+        15296,
+        15297,
+        15298,
+        15306,
+        15307,
+        15308,
+        15312,
+        15313,
+        15314,
+        15315,
+        15316,
+        15318,
+        15319,
+        15321,
+        15322,
+        15324,
+        15325,
+        15327
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-02-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 85,
+      "street": "DERRY RD W",
+      "streetFIDs": [
+        11082,
+        14617
+      ],
+      "xy26917": [
+        603969.2869601907,
+        4832883.459986833
+      ],
+      "bounds26917": [
+        603934.8552637934,
+        4832871.856004013,
+        603986.1276195755,
+        4832903.020939542
+      ],
+      "mappedBridgeFIDs": [
+        13606,
+        13619,
+        13620,
+        14588,
+        14589,
+        14590
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-12-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 86,
+      "street": "BURNHAMTHORPE RD E",
+      "streetFIDs": [
+        11518
+      ],
+      "xy26917": [
+        614068.1704542808,
+        4832635.980285926
+      ],
+      "bounds26917": [
+        614047.9205903211,
+        4832601.499198463,
+        614095.1285785922,
+        4832663.204527317
+      ],
+      "mappedBridgeFIDs": [
+        8473,
+        8481,
+        8495,
+        8496,
+        8908,
+        8911,
+        8917,
+        8919
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-40-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 87,
+      "street": "ZAHAVY WAY",
+      "streetFIDs": [
+        4142
+      ],
+      "xy26917": [
+        611738.039865306,
+        4839773.81910449
+      ],
+      "bounds26917": [
+        611701.7228049464,
+        4839757.3623740245,
+        611743.039865306,
+        4839787.799897605
+      ],
+      "mappedBridgeFIDs": [
+        12131,
+        12246
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-34-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 88,
+      "street": "CENTRAL PKY E",
+      "streetFIDs": [
+        2389,
+        13318
+      ],
+      "xy26917": [
+        611091.6736923495,
+        4827533.038735841
+      ],
+      "bounds26917": [
+        611062.5449353305,
+        4827515.880251702,
+        611106.6059269592,
+        4827561.29882034
+      ],
+      "mappedBridgeFIDs": [
+        8552,
+        8553,
+        8574,
+        8575,
+        8623,
+        8625,
+        8626,
+        8638,
+        8640
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-31-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 89,
+      "street": "MISSISSAUGA VALLEY BLVD",
+      "streetFIDs": [
+        8044,
+        8050
+      ],
+      "xy26917": [
+        610765.5172176217,
+        4827962.584226214
+      ],
+      "bounds26917": [
+        610746.2693838817,
+        4827935.386405477,
+        610777.9369281913,
+        4827983.095649764
+      ],
+      "mappedBridgeFIDs": [
+        8526,
+        8549,
+        8559,
+        8560,
+        8582,
+        8594
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-29-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 90,
+      "street": "BURNHAMTHORPE RD W",
+      "streetFIDs": [
+        9662,
+        9671
+      ],
+      "xy26917": [
+        606812.5390334798,
+        4822626.109205164
+      ],
+      "bounds26917": [
+        606787.3569683429,
+        4822614.302516277,
+        606831.834448514,
+        4822655.767216613
+      ],
+      "mappedBridgeFIDs": [
+        8762,
+        8763,
+        8764,
+        8765,
+        8770,
+        8779,
+        8783,
+        8797,
+        8799,
+        8810,
+        8812,
+        8869,
+        8871,
+        8872
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-18-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 91,
+      "street": "BROMSGROVE RD",
+      "streetFIDs": [
+        13902,
+        18169
+      ],
+      "xy26917": [
+        610135.7202851735,
+        4818666.558999099
+      ],
+      "bounds26917": [
+        610126.9190413505,
+        4818661.558999099,
+        610140.7202851735,
+        4818681.539666487
+      ],
+      "mappedBridgeFIDs": [
+        8039,
+        8044
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-27-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 92,
+      "street": "CREDITVIEW RD",
+      "streetFIDs": [
+        6913,
+        7064
+      ],
+      "xy26917": [
+        603392.4658352995,
+        4828536.107521145
+      ],
+      "bounds26917": [
+        603384.0538044716,
+        4828409.7092953725,
+        603533.59713153,
+        4828544.535622462
+      ],
+      "mappedBridgeFIDs": [
+        13869,
+        13870,
+        13886,
+        13979,
+        14005,
+        14055,
+        14063,
+        14065
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-07-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 93,
+      "street": "BROOKHURST RD",
+      "streetFIDs": [
+        189,
+        13898
+      ],
+      "xy26917": [
+        609836.9571259618,
+        4818686.207087697
+      ],
+      "bounds26917": [
+        609831.9571259618,
+        4818680.91742644,
+        609847.9501299127,
+        4818691.207087697
+      ],
+      "mappedBridgeFIDs": [
+        8052,
+        8053
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-27-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 94,
+      "street": "THE COLLEGEWAY",
+      "streetFIDs": [
+        9390,
+        17182
+      ],
+      "xy26917": [
+        608012.1468037838,
+        4822130.832285852
+      ],
+      "bounds26917": [
+        607988.9991039142,
+        4822117.168687467,
+        608031.2911886442,
+        4822163.101405036
+      ],
+      "mappedBridgeFIDs": [
+        8768,
+        8808,
+        8837,
+        8840,
+        8841
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-20-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 95,
+      "street": "LAKESHORE RD E",
+      "streetFIDs": [
+        13972,
+        13973
+      ],
+      "xy26917": [
+        614164.3568767037,
+        4822944.463804305
+      ],
+      "bounds26917": [
+        614154.627007148,
+        4822939.463804305,
+        614185.4021711354,
+        4822970.382754414
+      ],
+      "mappedBridgeFIDs": [
+        7748,
+        7812,
+        7862
+      ],
+      "waterSourceTypesWithin80m": [
+        "River",
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-41-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 96,
+      "street": "QUEENSWAY E",
+      "streetFIDs": [
+        1784,
+        1820
+      ],
+      "xy26917": [
+        612610.8728537812,
+        4825752.935605045
+      ],
+      "bounds26917": [
+        612592.4633448637,
+        4825731.567995017,
+        612637.3950950762,
+        4825764.828485731
+      ],
+      "mappedBridgeFIDs": [
+        8292,
+        8293,
+        8295,
+        8298,
+        8315,
+        8316
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-38-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 97,
+      "street": "LAKESHORE RD W",
+      "streetFIDs": [
+        815
+      ],
+      "xy26917": [
+        614161.6637040443,
+        4822941.013225293
+      ],
+      "bounds26917": [
+        614139.497463196,
+        4822923.7710060375,
+        614167.2319490863,
+        4822946.013225293
+      ],
+      "mappedBridgeFIDs": [
+        7748,
+        7836,
+        7862
+      ],
+      "waterSourceTypesWithin80m": [
+        "River",
+        "Shoreline"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-41-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 98,
+      "street": "SOUTHDOWN RD",
+      "streetFIDs": [
+        14187
+      ],
+      "xy26917": [
+        610479.4118896239,
+        4818729.933752305
+      ],
+      "bounds26917": [
+        610463.608157703,
+        4818724.933752305,
+        610484.4118896239,
+        4818742.45804422
+      ],
+      "mappedBridgeFIDs": [
+        7996,
+        7997,
+        8002
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-27-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 99,
+      "street": "DREW RD",
+      "streetFIDs": [
+        12362,
+        18423
+      ],
+      "xy26917": [
+        608438.924582919,
+        4840244.792659886
+      ],
+      "bounds26917": [
+        608414.7617553837,
+        4840213.765834246,
+        608450.4659586546,
+        4840281.07079971
+      ],
+      "mappedBridgeFIDs": [
+        14422,
+        14443,
+        14458,
+        14468,
+        14475
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-22-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 100,
+      "street": "OLD DERRY RD",
+      "streetFIDs": [
+        11212,
+        18397
+      ],
+      "xy26917": [
+        602202.2854143872,
+        4830685.721418941
+      ],
+      "bounds26917": [
+        602191.254854669,
+        4830669.315381852,
+        602213.2955526672,
+        4830698.37019179
+      ],
+      "mappedBridgeFIDs": [
+        13960,
+        13964,
+        14628
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-05-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 101,
+      "street": "FINANCIAL DR",
+      "streetFIDs": [
+        3101,
+        9991
+      ],
+      "xy26917": [
+        600549.3247563979,
+        4830305.935911902
+      ],
+      "bounds26917": [
+        600531.9033117015,
+        4830291.221439082,
+        600563.2746880832,
+        4830323.587168858
+      ],
+      "mappedBridgeFIDs": [
+        14657,
+        14660,
+        14661,
+        14667,
+        14671
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Higher: coherent >3m separation supported by >=10 coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-01-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 102,
+      "street": "401 HWY",
+      "streetFIDs": [
+        19566,
+        19641,
+        19642
+      ],
+      "xy26917": [
+        602541.692623211,
+        4829540.874525117
+      ],
+      "bounds26917": [
+        602536.692623211,
+        4829535.874525117,
+        602602.1038768168,
+        4829643.0489063505
+      ],
+      "mappedBridgeFIDs": [
+        13866,
+        13872,
+        13883,
+        13977
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-06-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 103,
+      "street": "MISSISSAUGA VALLEY BLVD",
+      "streetFIDs": [
+        2307,
+        15639,
+        15640
+      ],
+      "xy26917": [
+        611482.528541439,
+        4827204.927677221
+      ],
+      "bounds26917": [
+        611468.8365771669,
+        4827199.927677221,
+        611496.3502671543,
+        4827217.502601809
+      ],
+      "mappedBridgeFIDs": [
+        8558,
+        8599,
+        8602,
+        8603,
+        8604
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-31-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 104,
+      "street": "OLD DERRY RD",
+      "streetFIDs": [
+        3096,
+        10014
+      ],
+      "xy26917": [
+        601891.9345216834,
+        4830280.159144299
+      ],
+      "bounds26917": [
+        601882.2087746648,
+        4830275.159144299,
+        601902.3442542388,
+        4830292.313676828
+      ],
+      "mappedBridgeFIDs": [
+        13923,
+        13958,
+        13963,
+        14641
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-05-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 105,
+      "street": "KIRWIN AVE",
+      "streetFIDs": [
+        2106,
+        2163
+      ],
+      "xy26917": [
+        611818.3781002202,
+        4826731.677659258
+      ],
+      "bounds26917": [
+        611797.7680241464,
+        4826709.0957821915,
+        611825.4574998067,
+        4826736.677659258
+      ],
+      "mappedBridgeFIDs": [
+        8556,
+        8577,
+        8581,
+        8592,
+        8596,
+        8613,
+        8617
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-33-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 106,
+      "street": "TANNERY ST",
+      "streetFIDs": [
+        10974,
+        10975
+      ],
+      "xy26917": [
+        603560.9414297909,
+        4825994.588471838
+      ],
+      "bounds26917": [
+        603549.1560004943,
+        4825984.363774912,
+        603576.0826582887,
+        4826002.165957762
+      ],
+      "mappedBridgeFIDs": [
+        12013,
+        12014,
+        12016,
+        12019,
+        12022
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-10-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 107,
+      "street": "SCARBORO ST",
+      "streetFIDs": [
+        10428,
+        10673
+      ],
+      "xy26917": [
+        608930.6182349178,
+        4839994.509329656
+      ],
+      "bounds26917": [
+        608919.622244341,
+        4839989.290019368,
+        608935.6182349178,
+        4839999.509329656
+      ],
+      "mappedBridgeFIDs": [
+        14442,
+        14447,
+        14449
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-24-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 108,
+      "street": "DIXIE RD",
+      "streetFIDs": [
+        2937,
+        2963
+      ],
+      "xy26917": [
+        613990.9556786168,
+        4829709.075644186
+      ],
+      "bounds26917": [
+        613968.5755467355,
+        4829704.075644186,
+        614005.5565714182,
+        4829750.988224131
+      ],
+      "mappedBridgeFIDs": [
+        8477,
+        8482,
+        8484,
+        8508,
+        8515,
+        8524
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-39-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 109,
+      "street": "ATWATER AVE",
+      "streetFIDs": [
+        1397
+      ],
+      "xy26917": [
+        614807.4418389868,
+        4825026.227165827
+      ],
+      "bounds26917": [
+        614795.9655885185,
+        4825012.912729858,
+        614812.4418389868,
+        4825031.227165827
+      ],
+      "mappedBridgeFIDs": [
+        7664,
+        7669
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-43-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    },
+    {
+      "coverageGroupIndex": 110,
+      "street": "GOREWAY DR",
+      "streetFIDs": [
+        4140,
+        4144
+      ],
+      "xy26917": [
+        611741.0436400811,
+        4839776.460569443
+      ],
+      "bounds26917": [
+        611719.1017713055,
+        4839771.460569443,
+        611746.0436400811,
+        4839800.3221340645
+      ],
+      "mappedBridgeFIDs": [
+        12045,
+        12131,
+        12286
+      ],
+      "waterSourceTypesWithin80m": [
+        "River"
+      ],
+      "sourceRelation": "Mapped bridge-edge/paved-road overlap near water; actual road/water polygons do not overlap.",
+      "screenPriority": "Review: low separation or sparse/ambiguous coarse samples",
+      "nativeDSMpatchIds": [
+        "patch-34-dsm"
+      ],
+      "repairDecision": "Pending correction agent native-pavement and crossing-order classification; this inventory does not authorize raising every road.",
+      "classificationLimits": [
+        "Closest street can be the lower route at stacked crossings.",
+        "Nearby Shoreline can be a pond beside an interchange, not water directly under this road."
+      ]
+    }
+  ],
+  "finalTailCoverage": "A final 1.58 MB paired native export completes the already-listed crossing-83-part11 footprint beyond its original peak-centred patch. No additional screening groups."
+}

@@ -1,0 +1,665 @@
+{
+  "method": "Exact City lines and MTO FIDR 2019 borehole-table coordinates, NAD83 MTM10 EPSG32190 transformed to EPSG26917. Local axes only for inspection, not model alteration. Four parallel chains registered against borehole plan and inspected visually; north/new versus south/historic is corroborated by MTO primary text. Edge geometry is City 2024 mapping, not construction survey.",
+  "origin26917": [
+    612187.080683588,
+    4823433.462838968
+  ],
+  "alongUnitVector": [
+    0.45369595320929373,
+    0.891156541827254
+  ],
+  "acrossUnitVector": [
+    -0.891156541827254,
+    0.45369595320929373
+  ],
+  "boreholeCoordinates26917": {
+    "CRB-1": [
+      612170.0573539126,
+      4823423.655527992
+    ],
+    "CRB-2": [
+      612187.080683588,
+      4823433.462838968
+    ],
+    "CRB-2A": [
+      612166.5993642046,
+      4823443.4934632005
+    ],
+    "CRB-2B": [
+      612177.3844425894,
+      4823438.787979224
+    ],
+    "CRB-3A": [
+      612202.0065890729,
+      4823509.63340866
+    ],
+    "CRB-3C": [
+      612195.0600182731,
+      4823512.208113914
+    ],
+    "CRB-4": [
+      612257.4137084996,
+      4823620.1349753365
+    ],
+    "CRB-5": [
+      612269.7217788209,
+      4823614.1569541935
+    ],
+    "CRB-5A": [
+      612266.0868138314,
+      4823616.091399654
+    ],
+    "CRB-6": [
+      612283.7940660152,
+      4823682.212012316
+    ],
+    "CRB-7": [
+      612305.5154722278,
+      4823675.503830634
+    ],
+    "CRB-8": [
+      612307.7196306911,
+      4823697.443972752
+    ]
+  },
+  "edges": [
+    {
+      "FID": 7677,
+      "ImgYr": 2024,
+      "lengthM": 74.62860543507466,
+      "bounds26917": [
+        612270.371962743,
+        4823593.48734128,
+        612304.20035847,
+        4823660.00852869
+      ],
+      "meanAlongM": 223.114458763653,
+      "meanAcrossM": -1.6042632219666662,
+      "registeredGroup": "new-south-edge"
+    },
+    {
+      "FID": 7678,
+      "ImgYr": 2024,
+      "lengthM": 175.4265610933738,
+      "bounds26917": [
+        612190.781772801,
+        4823437.15507089,
+        612270.371962743,
+        4823593.48734128
+      ],
+      "meanAlongM": 94.67287655534528,
+      "meanAcrossM": -1.588501050760844,
+      "registeredGroup": "new-south-edge"
+    },
+    {
+      "FID": 7679,
+      "ImgYr": 2024,
+      "lengthM": 0.47692125270547403,
+      "bounds26917": [
+        612198.296471736,
+        4823447.36916889,
+        612198.51287171,
+        4823447.79416881
+      ],
+      "meanAlongM": 17.719735203114784,
+      "meanAcrossM": -3.685790124644584,
+      "registeredGroup": "historic-north-edge"
+    },
+    {
+      "FID": 7680,
+      "ImgYr": 2024,
+      "lengthM": 4.473239472236677,
+      "bounds26917": [
+        612196.266671992,
+        4823443.38296965,
+        612198.296471736,
+        4823447.36916889
+      ],
+      "meanAlongM": 15.244654847708649,
+      "meanAcrossM": -3.6856039420092825,
+      "registeredGroup": "historic-north-edge"
+    },
+    {
+      "FID": 7681,
+      "ImgYr": 2024,
+      "lengthM": 10.085696335998096,
+      "bounds26917": [
+        612190.814372682,
+        4823432.67547168,
+        612195.390872105,
+        4823441.66306997
+      ],
+      "meanAlongM": 4.383454512509574,
+      "meanAcrossM": -3.684799664388615,
+      "registeredGroup": "historic-north-edge"
+    },
+    {
+      "FID": 7682,
+      "ImgYr": 2024,
+      "lengthM": 1.9300467229920013,
+      "bounds26917": [
+        612195.390872105,
+        4823441.66306997,
+        612196.266671992,
+        4823443.38296965
+      ],
+      "meanAlongM": 12.04301176027123,
+      "meanAcrossM": -3.6853488766998774,
+      "registeredGroup": "historic-north-edge"
+    },
+    {
+      "FID": 7683,
+      "ImgYr": 2024,
+      "lengthM": 11.862985822091872,
+      "bounds26917": [
+        612207.769270539,
+        4823465.97236537,
+        612213.14846986,
+        4823476.54566337
+      ],
+      "meanAlongM": 44.19464256927311,
+      "meanAcrossM": -3.686358839949144,
+      "registeredGroup": "historic-north-edge"
+    },
+    {
+      "FID": 7684,
+      "ImgYr": 2024,
+      "lengthM": 71.68664694474093,
+      "bounds26917": [
+        612213.14846986,
+        4823476.54566337,
+        612245.633365756,
+        4823540.44955127
+      ],
+      "meanAlongM": 86.06370672614139,
+      "meanAcrossM": -3.662071260127222,
+      "registeredGroup": "historic-north-edge"
+    },
+    {
+      "FID": 7685,
+      "ImgYr": 2024,
+      "lengthM": 3.9198579861189886,
+      "bounds26917": [
+        612282.298761126,
+        4823612.54943762,
+        612284.091660897,
+        4823616.03523696
+      ],
+      "meanAlongM": 204.75416252141417,
+      "meanAcrossM": -3.611478268605758,
+      "registeredGroup": "historic-north-edge"
+    },
+    {
+      "FID": 7686,
+      "ImgYr": 2024,
+      "lengthM": 23.623144758460615,
+      "bounds26917": [
+        612249.418965279,
+        4823547.89644986,
+        612260.123763927,
+        4823568.95494587
+      ],
+      "meanAlongM": 142.07245723770407,
+      "meanAcrossM": -3.627849824331541,
+      "registeredGroup": "historic-north-edge"
+    },
+    {
+      "FID": 7687,
+      "ImgYr": 2024,
+      "lengthM": 9.61385323550003,
+      "bounds26917": [
+        612277.930861677,
+        4823603.98513924,
+        612282.298761126,
+        4823612.54943762
+      ],
+      "meanAlongM": 197.33372947821394,
+      "meanAcrossM": -3.5971102772794907,
+      "registeredGroup": "historic-north-edge"
+    },
+    {
+      "FID": 7688,
+      "ImgYr": 2024,
+      "lengthM": 19.45162784940055,
+      "bounds26917": [
+        612198.942871655,
+        4823448.63856865,
+        612207.769270539,
+        4823465.97236537
+      ],
+      "meanAlongM": 28.631591403490077,
+      "meanAcrossM": -3.68661419297608,
+      "registeredGroup": "historic-north-edge"
+    },
+    {
+      "FID": 7690,
+      "ImgYr": 2024,
+      "lengthM": 0.9316152826810358,
+      "bounds26917": [
+        612190.391672736,
+        4823431.84527183,
+        612190.814372682,
+        4823432.67547168
+      ],
+      "meanAlongM": 0.5264844818905041,
+      "meanAcrossM": -3.6845100585573354,
+      "registeredGroup": "historic-north-edge"
+    },
+    {
+      "FID": 7691,
+      "ImgYr": 2024,
+      "lengthM": 55.8051500853472,
+      "bounds26917": [
+        612284.091660897,
+        4823616.03523696,
+        612309.61665766,
+        4823665.66072755
+      ],
+      "meanAlongM": 234.6164088084828,
+      "meanAcrossM": -3.735550715615048,
+      "registeredGroup": "historic-north-edge"
+    },
+    {
+      "FID": 7706,
+      "ImgYr": 2024,
+      "lengthM": 11.925614512739939,
+      "bounds26917": [
+        612272.526762361,
+        4823593.35424125,
+        612277.930861677,
+        4823603.98513924
+      ],
+      "meanAlongM": 189.15724535893776,
+      "meanAcrossM": -3.5989205377625524,
+      "registeredGroup": "historic-north-edge"
+    },
+    {
+      "FID": 7708,
+      "ImgYr": 2024,
+      "lengthM": 27.37078707694748,
+      "bounds26917": [
+        612260.123763927,
+        4823568.95494587,
+        612272.526762361,
+        4823593.35424125
+      ],
+      "meanAlongM": 167.5694183366203,
+      "meanAcrossM": -3.612174095059025,
+      "registeredGroup": "historic-north-edge"
+    },
+    {
+      "FID": 7709,
+      "ImgYr": 2024,
+      "lengthM": 3.055206897109879,
+      "bounds26917": [
+        612245.633365756,
+        4823540.44955127,
+        612247.017865582,
+        4823543.17305075
+      ],
+      "meanAlongM": 123.43462667888537,
+      "meanAcrossM": -3.6392500291904213,
+      "registeredGroup": "historic-north-edge"
+    },
+    {
+      "FID": 7717,
+      "ImgYr": 2024,
+      "lengthM": 0.9475816808445168,
+      "bounds26917": [
+        612198.51287171,
+        4823447.79416881,
+        612198.942871655,
+        4823448.63856865
+      ],
+      "meanAlongM": 18.431986667093184,
+      "meanAcrossM": -3.6858511157217686,
+      "registeredGroup": "historic-north-edge"
+    },
+    {
+      "FID": 7719,
+      "ImgYr": 2024,
+      "lengthM": 5.298658217985625,
+      "bounds26917": [
+        612247.017865582,
+        4823543.17305075,
+        612249.418965279,
+        4823547.89644986
+      ],
+      "meanAlongM": 127.87933349150946,
+      "meanAcrossM": -3.6365616708908277,
+      "registeredGroup": "historic-north-edge"
+    },
+    {
+      "FID": 7751,
+      "ImgYr": 2024,
+      "lengthM": 7.578011395264784,
+      "bounds26917": [
+        612293.934658026,
+        4823570.80434469,
+        612297.382957586,
+        4823577.55234342
+      ],
+      "meanAlongM": 174.66099845937023,
+      "meanAcrossM": -32.91805048444269,
+      "registeredGroup": "historic-south-edge"
+    },
+    {
+      "FID": 7752,
+      "ImgYr": 2024,
+      "lengthM": 13.959187756437927,
+      "bounds26917": [
+        612281.568159589,
+        4823546.60384928,
+        612287.920058785,
+        4823559.03414692
+      ],
+      "meanAlongM": 150.6745229882116,
+      "meanAcrossM": -32.88199423117937,
+      "registeredGroup": "historic-south-edge"
+    },
+    {
+      "FID": 7753,
+      "ImgYr": 2024,
+      "lengthM": 13.217902995085764,
+      "bounds26917": [
+        612287.920058785,
+        4823559.03414692,
+        612293.934658026,
+        4823570.80434469
+      ],
+      "meanAlongM": 164.2630530366898,
+      "meanAcrossM": -32.902403805249335,
+      "registeredGroup": "historic-south-edge"
+    },
+    {
+      "FID": 7754,
+      "ImgYr": 2024,
+      "lengthM": 32.08273395178738,
+      "bounds26917": [
+        612218.018567633,
+        4823422.21747283,
+        612232.609565787,
+        4823450.79026742
+      ],
+      "meanAlongM": 20.05636600909699,
+      "meanAcrossM": -32.69222595595801,
+      "registeredGroup": "historic-south-edge"
+    },
+    {
+      "FID": 7755,
+      "ImgYr": 2024,
+      "lengthM": 25.92127443070695,
+      "bounds26917": [
+        612297.382957586,
+        4823577.55234342,
+        612309.154656102,
+        4823600.64643904
+      ],
+      "meanAlongM": 193.769045936641,
+      "meanAcrossM": -32.93803023657867,
+      "registeredGroup": "historic-south-edge"
+    },
+    {
+      "FID": 7756,
+      "ImgYr": 2024,
+      "lengthM": 1.5610131957810869,
+      "bounds26917": [
+        612309.154656102,
+        4823600.64643904,
+        612309.858756011,
+        4823602.03963878
+      ],
+      "meanAlongM": 205.1517293828431,
+      "meanAcrossM": -32.93418347506332,
+      "registeredGroup": "historic-south-edge"
+    },
+    {
+      "FID": 7757,
+      "ImgYr": 2024,
+      "lengthM": 0.5575623944998259,
+      "bounds26917": [
+        612278.598759966,
+        4823540.79275038,
+        612278.852459933,
+        4823541.28925028
+      ],
+      "meanAlongM": 137.44791447751504,
+      "meanAcrossM": -32.86219918881518,
+      "registeredGroup": "historic-south-edge"
+    },
+    {
+      "FID": 7758,
+      "ImgYr": 2024,
+      "lengthM": 1.7891916484864752,
+      "bounds26917": [
+        612277.78456007,
+        4823539.19955068,
+        612278.598759966,
+        4823540.79275038
+      ],
+      "meanAlongM": 136.27453881992773,
+      "meanAcrossM": -32.860410340296504,
+      "registeredGroup": "historic-south-edge"
+    },
+    {
+      "FID": 7759,
+      "ImgYr": 2024,
+      "lengthM": 0.5284016938942889,
+      "bounds26917": [
+        612232.609565787,
+        4823450.79026742,
+        612232.849865755,
+        4823451.26086733
+      ],
+      "meanAlongM": 36.36192148142756,
+      "meanAcrossM": -32.71229485239692,
+      "registeredGroup": "historic-south-edge"
+    },
+    {
+      "FID": 7760,
+      "ImgYr": 2024,
+      "lengthM": 98.75393066738084,
+      "bounds26917": [
+        612232.849865755,
+        4823451.26086733,
+        612277.78456007,
+        4823539.19955068
+      ],
+      "meanAlongM": 71.1508231411207,
+      "meanAcrossM": -32.76334921745709,
+      "registeredGroup": "historic-south-edge"
+    },
+    {
+      "FID": 7761,
+      "ImgYr": 2024,
+      "lengthM": 4.477941822975938,
+      "bounds26917": [
+        612279.530559849,
+        4823542.61635003,
+        612281.568159589,
+        4823546.60384928
+      ],
+      "meanAlongM": 140.92252733126185,
+      "meanAcrossM": -32.86735953521507,
+      "registeredGroup": "historic-south-edge"
+    },
+    {
+      "FID": 7762,
+      "ImgYr": 2024,
+      "lengthM": 0.15920942334445107,
+      "bounds26917": [
+        612309.858756011,
+        4823602.03963878,
+        612309.930556004,
+        4823602.18173875
+      ],
+      "meanAlongM": 206.01183689579796,
+      "meanAcrossM": -32.93162797914946,
+      "registeredGroup": "historic-south-edge"
+    },
+    {
+      "FID": 7763,
+      "ImgYr": 2024,
+      "lengthM": 1.4903064255390794,
+      "bounds26917": [
+        612278.852459933,
+        4823541.28925028,
+        612279.530559849,
+        4823542.61635003
+      ],
+      "meanAlongM": 138.47184777428367,
+      "meanAcrossM": -32.86370907888288,
+      "registeredGroup": "historic-south-edge"
+    },
+    {
+      "FID": 7766,
+      "ImgYr": 2024,
+      "lengthM": 4.741975724666944,
+      "bounds26917": [
+        612215.861967907,
+        4823417.99427364,
+        612218.018567633,
+        4823422.21747283
+      ],
+      "meanAlongM": 1.6440251157480308,
+      "meanAcrossM": -32.66956508033039,
+      "registeredGroup": "historic-south-edge"
+    },
+    {
+      "FID": 7767,
+      "ImgYr": 2024,
+      "lengthM": 49.771572070377836,
+      "bounds26917": [
+        612309.930556004,
+        4823602.18173875,
+        612332.381153173,
+        4823646.60223034
+      ],
+      "meanAlongM": 223.23095516975414,
+      "meanAcrossM": -32.880968801497346,
+      "registeredGroup": "historic-south-edge"
+    },
+    {
+      "FID": 7770,
+      "ImgYr": 2024,
+      "lengthM": 5.728319105275285,
+      "bounds26917": [
+        612166.740477326,
+        4823448.94846941,
+        612169.331776998,
+        4823454.05716844
+      ],
+      "meanAlongM": 7.436007971568427,
+      "meanAcrossM": 25.156346947557157,
+      "registeredGroup": "new-north-outer"
+    },
+    {
+      "FID": 7777,
+      "ImgYr": 2024,
+      "lengthM": 7.364669117758806,
+      "bounds26917": [
+        612243.780267603,
+        4823600.73934068,
+        612247.12526718,
+        4823607.30053943
+      ],
+      "meanAlongM": 178.47625459054234,
+      "meanAcrossM": 25.362402212604472,
+      "registeredGroup": "new-north-outer"
+    },
+    {
+      "FID": 7778,
+      "ImgYr": 2024,
+      "lengthM": 83.82286302689207,
+      "bounds26917": [
+        612205.722872415,
+        4823526.05395482,
+        612243.780267603,
+        4823600.73934068
+      ],
+      "meanAlongM": 135.06927991944605,
+      "meanAcrossM": 25.381174176624626,
+      "registeredGroup": "new-north-outer"
+    },
+    {
+      "FID": 7856,
+      "ImgYr": 2024,
+      "lengthM": 5.446390595298235,
+      "bounds26917": [
+        612169.629676961,
+        4823454.64436833,
+        612172.093376651,
+        4823459.50166741
+      ],
+      "meanAlongM": 13.681799585590841,
+      "meanAcrossM": 25.165650291525125,
+      "registeredGroup": "new-north-outer"
+    },
+    {
+      "FID": 7857,
+      "ImgYr": 2024,
+      "lengthM": 0.6584436944999653,
+      "bounds26917": [
+        612169.331776998,
+        4823454.05716844,
+        612169.629676961,
+        4823454.64436833
+      ],
+      "meanAlongM": 10.629385854983232,
+      "meanAcrossM": 25.16108551487747,
+      "registeredGroup": "new-north-outer"
+    },
+    {
+      "FID": 7858,
+      "ImgYr": 2024,
+      "lengthM": 17.42945237170286,
+      "bounds26917": [
+        612172.093376651,
+        4823459.50166741,
+        612179.97777566,
+        4823475.04586447
+      ],
+      "meanAlongM": 25.119708211404774,
+      "meanAcrossM": 25.18280048511108,
+      "registeredGroup": "new-north-outer"
+    },
+    {
+      "FID": 7859,
+      "ImgYr": 2024,
+      "lengthM": 83.09227266406347,
+      "bounds26917": [
+        612247.12526718,
+        4823607.30053943,
+        612284.945262393,
+        4823681.28682542
+      ],
+      "meanAlongM": 225.39221592440788,
+      "meanAcrossM": 25.298834441864297,
+      "registeredGroup": "new-north-outer"
+    },
+    {
+      "FID": 7867,
+      "ImgYr": 2024,
+      "lengthM": 57.13702217075094,
+      "bounds26917": [
+        612179.97777566,
+        4823475.04586447,
+        612205.722872415,
+        4823526.05395482
+      ],
+      "meanAlongM": 70.36930520073555,
+      "meanAcrossM": 25.32904670468263,
+      "registeredGroup": "new-north-outer"
+    }
+  ],
+  "sourceURL": "https://foundation.mto.gov.on.ca/Data?path=foundations%2F30M12%2F30M12-426%2F&name=1662333%20FIDR%20Credit%20River%20Bridge%202019March01.pdf&handler=GetDocument",
+  "sourcePDFPages": [
+    31,
+    48,
+    64
+  ],
+  "sourceDate": "2019-03-01",
+  "designDate": "2018-04-23",
+  "reviewDate": "2026-09-21",
+  "verticalLimit": "Report says Geodetic datum only; no verified CGVD2013 conversion or as-built survey. Design grade is corroboration, not direct model height."
+}

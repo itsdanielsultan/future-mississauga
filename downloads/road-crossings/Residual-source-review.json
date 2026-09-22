@@ -1,0 +1,128 @@
+{
+  "checkedUTC": "2026-09-22T00:13:23.635951+00:00",
+  "readOnly": true,
+  "modelFilesModified": 0,
+  "finiteSubsetCount": 2,
+  "sourceReviewOnly": true,
+  "findings": [
+    {
+      "candidateIndex": 8,
+      "id": "crossing-08",
+      "street": "401 HWY",
+      "streetFID": 19644,
+      "classification": "newer_paved_footprint_postdates_available_elevation",
+      "finding": "The current source paved lane lies partly over canopy and old ground in the 2015 DSM. It cannot be fitted as an existing deck from those returns. The adjacent original carriageway has coherent paved returns. Current grade requires an explicitly disclosed source-constrained adjacent-carriageway/approach envelope, or newer authoritative deck measurements. Do not use the failed 163.9 m plane as a current roadway height.",
+      "sourceRoadPavedFID": 44033,
+      "roadImageryYear": 2024,
+      "nativeDSMPrimaryYear": 2015,
+      "nativeSourcePatch": "patch-09-dsm",
+      "sourceEdgeFIDs": [
+        13858,
+        13859,
+        13862,
+        13863,
+        13864,
+        13865,
+        13867,
+        13868,
+        13952,
+        13953,
+        13957,
+        13959
+      ],
+      "sourceDateEvidence": [
+        {
+          "url": "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/highway-401-expansion-project/",
+          "publisher": "Infrastructure Ontario",
+          "claims": [
+            "Project extends from Credit River in Mississauga to Regional Road 25 in Milton.",
+            "Construction began 2019-11-29 and ended 2023-10-12.",
+            "Core-collector widening includes the Credit River\u2013Winston Churchill section."
+          ],
+          "reviewed": "2026-09-21"
+        },
+        {
+          "url": "https://www.ontario.ca/page/published-plans-and-annual-reports-2023-2024-ministry-transportation",
+          "publisher": "Ontario Ministry of Transportation",
+          "claims": [
+            "New widening lanes opened in early December 2022."
+          ],
+          "reviewed": "2026-09-21",
+          "accessNote": "Search-indexed primary passage; IO project status separately opened and read."
+        }
+      ],
+      "inferenceLimit": "Source-vintage difference and native surface pattern support a post-scan lane footprint. Exact as-built lane/deck elevation is not established by the project dates.",
+      "inspectionImage": "work/road-crossings/research/residual-two/nonfit-008.png"
+    },
+    {
+      "candidateIndex": 19,
+      "id": "crossing-19",
+      "street": "WISEMAN CRT",
+      "streetFID": 13900,
+      "classification": "coherent_low_pavement_mode_beneath_canopy",
+      "finding": "19 of 32 source-pavement samples form a near-flat 103.65\u2013103.82 m low mode. The 13 remaining returns are approximately 110\u2013118 m and correspond to canopy in the native plan. A low-mode plane recovers a coherent surface; the unconstrained fit tilted toward vegetation. This source surface stands materially above the model 10 m DTM.",
+      "sourceRoadPavedFID": 36155,
+      "roadImageryYear": 2024,
+      "nativeDSMPrimaryYear": 2015,
+      "sourceEdgeFIDs": [
+        7929,
+        7934,
+        7935,
+        7961,
+        8035,
+        8037,
+        8040,
+        8050,
+        8051,
+        8057
+      ],
+      "origin26917": [
+        610028.1680622451,
+        4818674.0911670355
+      ],
+      "axis26917": [
+        -0.3923478164243165,
+        -0.919816933387873
+      ],
+      "normal26917": [
+        0.919816933387873,
+        -0.3923478164243165
+      ],
+      "planeAlongCrossInterceptASL": [
+        0.005639896898686453,
+        -0.004590877459672888,
+        103.73513666331911
+      ],
+      "planeHeightAtOriginASL": 103.73513666331911,
+      "fitNativeGroundSampleCount": 19,
+      "allNativeSampleCount": 32,
+      "nativeGroundSampleRangeASL": [
+        103.64999389648438,
+        103.81999969482422
+      ],
+      "groundModeThresholdASL": 105,
+      "thresholdExplanation": "Separates the visible low paved cluster from a distinct canopy cluster; not a citywide threshold.",
+      "groundSampleAlongBoundsM": [
+        -12.28507114038919,
+        8.195111824835688
+      ],
+      "groundSampleAcrossBoundsM": [
+        -2.642786309780737,
+        2.876115290546501
+      ],
+      "residualP50P90M": [
+        0.018778661082507142,
+        0.04196274406849625
+      ],
+      "slope": 0.007272179376056785,
+      "planeAboveModelCoarseDTM_P10P50P90MaxM": [
+        0.6972969942077356,
+        1.9058723810495763,
+        3.0634544995642474,
+        3.4737380006249197
+      ],
+      "applicationLimit": "Use only actual mapped road/bridge span and test approaches. Do not apply this low-mode selection to stacked roads. Exact road-triangle heights and display offsets still require implementation QA.",
+      "inspectionImage": "work/road-crossings/research/residual-two/nonfit-019.png"
+    }
+  ]
+}
