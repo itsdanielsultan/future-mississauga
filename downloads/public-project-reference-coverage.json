@@ -1,0 +1,1491 @@
+{
+  "checkedAt": "2026-09-26T17:00:55.566084+00:00",
+  "projectCount": 108,
+  "originalDossiersChecked": 107,
+  "originalAuditUniqueRequests": 127,
+  "originalAuditRetrieved": 123,
+  "additionalManualChecksCountedSeparately": true,
+  "scope": "Reference availability and project identity audit; not a claim that every City component or building was independently researched.",
+  "directExternalModelDownloadsFoundInOriginalInspectedPages": 0,
+  "limitations": [
+    "Automatic link discovery includes navigation and unrelated article links; matching text alone is not a project drawing verification.",
+    "No exterior model absence is inferred from a limited page check. No licence or permission is inferred from public visibility.",
+    "Current detailed project/version findings are documented separately and govern over old catalogue descriptions."
+  ],
+  "projects": [
+    {
+      "projectId": "mcity-1-2",
+      "name": "M City M1 and M2",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/",
+        "https://www.mcitycondos.com/construction.php"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "CTBUH architectural heights differ from UrbanToronto's 197.81 m and 60 storeys. The City's 61-storey figure is a marketing count. Preserve the distinction.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "mcity-3",
+      "name": "M City M3",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/",
+        "https://www.mcitycondos.com/construction.php"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Municipal lower capture remains unchanged. Upper contour interpolated from published plans; crown now represented by a photo-derived stepped silhouette anchored to 260.29 m. Intermediate crown dimensions approximate and mechanical cavities omitted.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "mcity-4",
+      "name": "M City M4",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/",
+        "https://www.mcitycondos.com/construction.php"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The recorded-construction asset uses the sourced level-41 elevation, with an approximate vertical cut and explicit date. Completion is a forecast, distinct from phased occupancy.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "mcity-5",
+      "name": "M City M5",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/",
+        "https://www.mcitycondos.com/construction.php"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Native developer interaction proxy georegistered to community diagram; exact architectural height unknown. Native 117.87-unit extent is not a verified building height. Future-only; actual floor 27 progress not inferred from this envelope.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "mcity-6",
+      "name": "M City M6",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.hariripontarini.com/projects/m-city-block-2-3",
+        "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The June 2026 City register describes 58 storeys. The architect page describes an earlier 55-storey version. Municipal SP 22-145 geometry has a 186.85 m tower height attribute; retain its exact surfaces. CTBUH explicitly estimates 194 m and that estimate is not a replacement height.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "mcity-7-8",
+      "name": "M City M7 and M8",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.hariripontarini.com/projects/m-city-block-2-3",
+        "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Municipal SP 24-30 geometry attributes are 163.16 and 146.91 m. CTBUH's 175 and 159 m were not accepted as verified measurements. Assign individual tower names only after checking their positions against a site plan.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "square-one-masterplan",
+      "name": "Square One District master plan",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.oxfordproperties.com/news/square-one-district-rich-living-with-a-european-touch",
+        "https://www.hariripontarini.com/projects/square-one-district"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Oxford's 2025 account gives 48 buildings, including 41 residential buildings; the original architect's plan has 37 towers. These are different program definitions or versions. Do not invent towers from these totals or duplicate the separately listed phases.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "square-one-phase1",
+      "name": "Square One District Phase 1: STAK 36 and Dialogue",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://publications.oxfordproperties.com/sq1-district-retail/about-sq1-district-retail",
+        "https://www.rentdialogue.com/suites"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The current Daniels fact sheet lists STAK36 at 48 storeys; older Oxford retail material says 44. Dialogue is marketed at 37, while some architectural records count 36. Municipal mesh 63-6238 is the dated 2024 capture of both towers. Remove overlapping proposal components 63-6225, 63-6226 and 63-6227 from the reviewed future. Final roof geometry remains unverified.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "square-one-phase2",
+      "name": "Square One District: 4250 Living Arts Drive and 320 Rathburn Road West",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://publications.oxfordproperties.com/sq1-district-retail/about-sq1-district-retail"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "SP 19-144 is described as two towers of 41 and 31 storeys in the June 2026 City register. Earlier marketing and UrbanToronto describe other versions. Four retained municipal components form two remaining tower and podium pairs. Components 63-6225, 63-6226 and 63-6227 actually overlap the completed first-phase towers and are excluded as duplicates. Current storeys do not establish precise architectural heights.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "square-one-block5-t1",
+      "name": "Square One District Block 5 Tower 1",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://cdn.skyrisecities.com/sites/default/files/images/articles/2026/04/60745/60745-196039.jpg",
+        "https://cdn.skyrisecities.com/sites/default/files/images/articles/2026/04/60745/60745-196038.jpg"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Schematic reconstruction of the submitted T 1 building from a published architects–Alliance roof/site plan. Adjacent Block 5 towers are conceptual and are not included. Roof-zone heights follow printed labels; horizontal outlines are digitised from a raster. Three public intersection controls establish location; estimated ±5 m placement and ±1 m plan-contour uncertainty. Facades and entrances are not reconstructed.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "square-one-block22",
+      "name": "Square One District Block 22 /97–101 City Centre",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/wp-content/uploads/2025/01/15082458/MOPA177-jan-2025.pdf"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The City's 2024 appendix uses 65 and 45 storeys, while the 2020 submission shown by UrbanToronto uses 65 and 55. Municipal meshes carry 205.25 and 175.25 m, but the height convention remains uncertain. An old proposal is not necessarily cancelled.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "square-one-office",
+      "name": "Offices at Square One District /Block 14",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://livesquareonedistrict.com/the-offices/",
+        "https://www.investmississauga.ca/downtown/commercial-opportunities/offices-sq1-district/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Square One Block 14, SP 20-99, may correspond to this project. Its 73.1 m mesh requires a spatial and drawing match. Current web sources did not establish the final architectural height.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "exchange-district",
+      "name": "Exchange District: EX1, EX2, EX3 and EXS",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.arcadis.com/en-us/projects/north-america/canada/exchange-district",
+        "https://rentexs.com/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The four towers have different completion states. CVU/CTBUH calls the tallest tower EX4 and the shortest EX3; current marketing uses EX3 and EXS. These are aliases, not extra towers. Source full geometry is a supplied design and is not as-built proof. Native material nodes cross phases; EXS requires triangle-level spatial classification. EX3 now follows the architect’s 66-storey description. The former 72-storey/232 m form is historical; current metre height is unverified. Its future blue crown is a retained design interpretation, not proof of completion.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "exchange-south",
+      "name": "Exchange District South /The Southlands",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/wp-content/uploads/2025/01/15082458/MOPA177-jan-2025.pdf"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Municipal SP 22-60 meshes carry 232, 185.05, 185.05 and 125.45 m and appear to reflect the earlier 70-storey tallest tower. The newer 72-storey variant lacks a verified updated height here. March 2026 permit and construction dates are projections, not proof of groundbreaking.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "180-burnhamthorpe",
+      "name": "180 Burnhamthorpe Road West",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/wp-content/uploads/2025/01/15082458/MOPA177-jan-2025.pdf"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The City active-application register as of June 30, 2026 describes two towers of 40 and 60 storeys with an eight-storey podium. A published 2023 revision gives 71 and 46 storeys, with heights of 230.15 m and 155.40 m. Municipal mesh attributes of 135.995 m and 195.595 m do not match that revision. The current register may retain older wording; no dated approved elevation resolves the conflict. Retain the source meshes with a version warning and remove the preliminary definitive supersession claim.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "4310-sherwoodtowne",
+      "name": "4310 Sherwoodtowne Boulevard",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/wp-content/uploads/2025/01/15082458/MOPA177-jan-2025.pdf"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The published 70- and 60-storey scheme has a tallest tower of 226.1 m. Municipal SP 24-41 meshes instead carry 165.25 and 141.35 m. This major discrepancy is unresolved and could represent a newer design or model error. Do not assert that either version is definitive.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "avia",
+      "name": "Parkside Village Avia 1 and 2",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.lifeatparkside.com/post/voya-takes-shape-as-construction-reaches-new-heights"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Some developer portfolio pages still say under construction. The newer November 2025 construction update says Avia is complete. Use the documented addresses; UrbanToronto's intersection prose is inconsistent.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "voya",
+      "name": "Voya at Parkside Village",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.lifeatparkside.com/post/introducing-voya-at-parkside-village",
+        "https://www.lifeatparkside.com/post/voya-takes-shape-as-construction-reaches-new-heights"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Plan-derived schematic of two structurally topped Voya towers. Curved balcony outline and recessed wall outline are traced from the developer presentation; scale is estimated from printed suite areas, with ±5% dimensional uncertainty. Taller maximum 142.25 m comes from a published observer of engineering drawings, not a drawing recovered by this project. Shorter maximum is UNKNOWN: the displayed approximately 124 m envelope subtracts six reported 10-foot upper floors from the taller maximum, assuming equal roof allowance; allow ±6 m and do not treat it as a verified height. Location uses the developer community diagram and adjacent mapped Avia controls; allow ±8 m taller and ±15 m shorter placement uncertainty. Identical generic published tower plate applied to both; detailed floor-by-floor changes and mechanical roof cavities are omitted. Horizontal slab bands are illustrative and their elevations are not construction measurements. Shared stepped podium geometry is not reconstructed because its complete dimensioned plans were not recovered. Both towers were physically topped by July 2026; this model does not establish occupancy or complete cladding.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "parkside-block11",
+      "name": "Parkside Village Block 11 future phase",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://pub-mississauga.escribemeetings.com/filestream.ashx?DocumentId=34"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Retain the older approval as uncertain rather than cancelled. Confirm the precise block and any subsequent name or design change before placing geometry.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "edge-oro",
+      "name": "Edge Towers and Oro",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.solmar.ca/oro-at-edge-towers/",
+        "https://www.solmar.ca/news"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The developer's construction confirmation supersedes the municipal Proposed label for 16 Elm, SP 20-103. Counts of 35 and 40 storeys are secondary crosschecks; 50 is primary. CTBUH's approximate 170 m was not used as a verified architectural height.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "artform",
+      "name": "Artform",
+      "district": "Cooksville",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.emblemdevcorp.com/projects/artform"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Place in the Cooksville section of the atlas. No exact architectural height was verified.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "keystone",
+      "name": "Keystone by Kaneff",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.newswire.ca/news-releases/kaneff-group-of-companies-breaks-ground-on-keystone-condos-an-architectural-masterpiece-in-the-heart-of-city-centre-mississauga-offering-buyers-an-unparalleled-investment-opportunity-812164919.html"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Retain unchanged completed municipal mesh 72-6175; assign to Keystone dossier. No duplicate supplemental tower mesh needed. 81.42 m and 71.90 m are derived from captured vertices above the shared lowest source vertex, not verified architectural height dimensions. Do not replace separate dossier architectural height unknown values with these.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "living-arts-precinct",
+      "name": "Living Arts Centre precinct vision",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/city-of-mississauga-news/news/mississauga-unveils-once-in-a-generation-vision-to-transform-the-downtown-core/",
+        "https://www.mississauga.ca/city-of-mississauga-news/news/council-recap-june-24-2026/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "This is not construction approval or final geometry. Show only in an optional vision layer. The illustrated 20-storey rental and 9-storey office buildings are not binding approvals.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "325-burnhamthorpe",
+      "name": "325 Burnhamthorpe Road West /YMCA lands",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/publication/opa-21-21-w4-325-burnhamthorpe-road-west/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The 2021 letter has 4,277 units, while later records have 3,523. Tower names and heights vary by version. Municipal SP 22-139 geometry attributes are 200.15, 182.45, 176.25, 191 and 161.2 m; these are not independently confirmed architectural heights. No official cancellation was found.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "3600-hurontario",
+      "name": "3600 Hurontario Street /Enfield Place II",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://urbantoronto.ca/database/projects/3600-hurontario-street.49725"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Municipal data has both 3600 Hurontario, SP 25-3, and Enfield Place II, SP 25-21, on adjacent portions of the site. They may be phases or versions; do not infer two confirmed towers until their plans are reconciled. The 2024 City record references the older SP 09-27.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "3680-hurontario-concept",
+      "name": "3680 Hurontario Street concept",
+      "district": "Downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://listingsprod.blob.core.windows.net/ourlistings-can/ac3f6f95-f9bf-44b1-b448-0ef7f23482b8/a1b2b9b0-741d-4d9c-a8c4-15814b7a6b5f"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "No formal application was verified. Site clearance alone does not establish tower construction. Keep it off the default model and label any optional display as a concept.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "brightwater-master",
+      "name": "Brightwater / Port Credit West Village",
+      "district": "Port Credit",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://experiencebrightwater.ca/",
+        "https://pub-mississauga.escribemeetings.com/Meeting.aspx?Agenda=Merged&Id=3a029998-7e38-412d-ae02-2a20023eeedf&lang=English"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Only the adopted CURRENT right-hand plan was traced; superseded P/Q/U layouts on the comparison left are excluded. Concept-visible podium wings, open courtyards, curved O2 outline and Campus terraces are simplified. Windows, balconies, doors, roof equipment, cladding, landscaping and parcel grading are not invented. Terrace bands are reduced to the labelled principal podium steps because the source raster cannot support precise intermediate contours. The concept was adopted in 2024. November 2025 committee approval supports implementing those permissions; detailed 2025/2026 zoning PDFs returned access errors, so their precise plan contours were not independently compared.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "brightwater-one-two",
+      "name": "Brightwater I & II",
+      "district": "Port Credit",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://experiencebrightwater.ca/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Municipal award report identifies Brightwater I at 215 Lakeshore West. Source footprints align with C1 and H1 on the current adopted masterplan.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "brightwater-mason",
+      "name": "The Mason at Brightwater",
+      "district": "Port Credit",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://experiencebrightwater.ca/",
+        "https://renx.ca/index.php/brightwater-community-is-progressing-in-all-facets"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Source footprint matches G1. Nine-storey-scale body is already represented: captured ground 81.82, main roof 115.12 and upper roof 120.62 m ASL. Retain this geometry without stretching.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "brightwater-bridge-house",
+      "name": "Bridge House at Brightwater",
+      "district": "Port Credit",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://renx.ca/index.php/brightwater-community-is-progressing-in-all-facets",
+        "https://experiencebrightwater.ca/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Construction commencement was not confirmed. No official cancellation was found. Latest explicit reviewed forecast is 2030 occupancy in the year-end 2025 planning table. Source geometry remains a phase-matching issue; a financial unit count is not an exact footprint or facade source.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "lakeview-master",
+      "name": "Lakeview Village",
+      "district": "Lakeview",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/projects-and-strategies/city-projects/lakeview-waterfront-area-redevelopment/lakeview-village/",
+        "https://www.sasaki.com/projects/lakeview-village-master-plan/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The 2019 concept, 2022 massing, 2023 maximum permission and current 12,000-home projection represent different stages. September 2026 reporting identifies townhome revisions to apartment blocks 4, 8 and 9. The 26 municipal source components belong to four site-plan files and do not cover all current phases; named-phase matching remains unresolved. Do not fill missing parcels with historical towers. A current developer marketing count differs from the City overview and earlier reporting. No new complete dimensioned masterplan was recovered in this bounded update, so this count change does not justify invented footprints or tower removals.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "lakeview-harbourwalk",
+      "name": "Harbourwalk",
+      "district": "Lakeview",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.tridel.com/lakeviewvillagecondos/news/",
+        "https://www.tridel.com/all-communities/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Urban Toronto counts one connected building. Preserve its terraces rather than drawing two generic rectangular towers. Overall height in metres was not verified. The developer’s August 2026 update reports Level 8 forming. This is dated stage evidence, not a measured absolute height or proof every wing has eight complete floors. No new clipping elevation is inferred.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "lakeview-aquanova",
+      "name": "Aquanova",
+      "district": "Lakeview",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://greenparkgroup.ca/new-homes/mississauga/aquanova/",
+        "https://greenparkgroup.ca/blog/live-easy-is-back/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The developer refers to 42 floors of suites; Urban Toronto counts 43 storeys overall. Treat 43 as a secondary-source overall count until an architectural section resolves the convention.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "lakeview-birch",
+      "name": "Birch Condos & Towns",
+      "district": "Lakeview",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://staging.branthaven.com/stg/pier-house/",
+        "https://www.branthaven.com/communities/pier-house/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The developer staging page is launch material, not current construction evidence. No storey-to-metre conversion has been invented.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "lakeview-innovation",
+      "name": "Lakeview Innovation District",
+      "district": "Lakeview",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.ideamississauga.ca/discover/lakeview-innovation-district/",
+        "https://www.mississauga.ca/projects-and-strategies/city-projects/lakeview-waterfront-area-redevelopment/lakeview-village/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The district can be represented as a planning area. Specific office building geometry has not been verified.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "rangeview",
+      "name": "Rangeview Estates",
+      "district": "Lakeview",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/rangeview-estates-opa-24-11-w1/",
+        "https://bousfields.ca/project/rangeview-development-master-plan/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "25 storeys is a maximum, not a complete tower schedule. Use MOPA 204 and the latest plan rather than the earlier 3,700-home assumption. Master plan endorsement does not establish that every building is approved for construction.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "clarkson-toc",
+      "name": "Clarkson GO Transit-Oriented Community",
+      "district": "Clarkson",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.infrastructureontario.ca/clarkson-toc",
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/guide-to-city-planning-and-development/guiding-city-growth/transit-oriented-communities/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Podiums and seven tower footprints follow the official site-plan graphic. Raster tracing differs by up to approximately 4% from published footprint areas. Balconies, cladding, windows, railings, small facade recesses and rooftop equipment are omitted. No completion year or construction start is inferred. Existing GO buildings are retained. The official downloadable architectural set and native 3D model are listed as available upon request; no request was sent.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "clarkson-royal-windsor",
+      "name": "2077–2105 Royal Windsor Drive",
+      "district": "Clarkson",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/2077-to-2105-royal-windsor-drive-oz-opa-22-31-w2/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The stated metric heights are the architectural building-height dimensions, excluding additional mechanical penthouse height. The City overview still describes the older 29/27/25/23-storey proposal.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "port-credit-88-park",
+      "name": "88 Park / Port Credit mobility hub",
+      "district": "Port Credit",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://edenshaw.com/communities/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The earlier 42/40-storey design is superseded. The City report gives 131.5 m and 104.7 m. The downloaded City mesh tops out below those dimensions and needs replacement or clarification before claiming current geometry.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "port-credit-42-46-park",
+      "name": "42–46 Park / Park and Elizabeth",
+      "district": "Port Credit",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://edenshaw.com/communities/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The main building height is 95 m; the 101 m secondary-source figure includes a six-metre mechanical penthouse. Do not add 30 and 31 as separate towers. The City mesh marked 113.35 m is inconsistent with the adopted design.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "port-credit-70-park",
+      "name": "70 Park infill",
+      "district": "Port Credit",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/publication/oz-opa-23-1-w1-23-25-29-and-31-helene-street-north-53-queen-street-east-and-70-park-street-east/",
+        "https://data.mississauga.ca/pages/mississauga-3d"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "This is the maximum permitted settlement zoning envelope, not an architectural design or a verified finished facade. Contours follow the actual settlement diagram rather than stretching a superseded City model. The height-zone surfaces are independently extruded; coincident hidden surfaces remain. Cladding, railings, detailed balconies, structural openings and landscaping are not inferred. Building base is the median sampled Ontario DTM grade, not a legally calculated or approved established grade. Relative maximum heights are taken verbatim from the governing diagram. The July 10, 2025 order labels the 33-storey height 105.7 m; a later City surrounding-development report lists 107.7 m. This model uses the governing order and preserves that discrepancy explicitly. The order permits rooftop appurtenances up to 7.5 m above the height limit, but no footprint is delineated, so they are omitted. A maximum projection permission does not establish a constructed rooftop form. The existing 28-storey apartment 92-2023 is retained. The settlement replaces the obsolete 38-storey source geometry. The podium courtyard curve is sampled from the zoning diagram; it is a simplified maximum buildable perimeter.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "port-credit-the-ann",
+      "name": "The Ann / 10 West",
+      "district": "Port Credit",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/17-and-19-ann-street-84-and-90-high-street-and-91-park-street-east-oz-opa-22-3-w1/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The earlier 25-storey, 91.6 m description is obsolete. The latest north elevation labels 82,600 mm from established grade. City geometry at 77.1 m appears to omit the mechanical roof and should be described as a simplified source massing.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "port-credit-42-port",
+      "name": "42 Port / 99 Lakeshore",
+      "district": "Port Credit",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/42-port-street-east-and-99-lakeshore-road-east-oz-opa-22-30-w1/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The City summarizes ten storeys; original drawings label eleven levels including a mezzanine. The roof datum is 35.95 m; it is not a verified height to the top of the mechanical enclosure.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "port-credit-one-port",
+      "name": "One Port / Marina lands redevelopment",
+      "district": "Port Credit",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/projects-and-strategies/city-projects/inspiration-port-credit/",
+        "https://www.mississauga.ca/projects-and-strategies/environmental-assessments/1-port-street-east-proposed-marina/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The 77 m maximum belongs to a concept, not final building designs. Historical renderings must remain labelled conceptual. The marina environmental approval is a separate process.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "port-credit-marina",
+      "name": "1 Port Street proposed marina",
+      "district": "Port Credit",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/projects-and-strategies/environmental-assessments/1-port-street-east-proposed-marina/",
+        "https://www.mississauga.ca/projects-and-strategies/city-projects/inspiration-port-credit/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Environmental assessment approval on June 5,2026 does not establish construction or funding. Use approved shoreline geometry only.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "lakeshore-west-900",
+      "name": "900 Lakeshore Road West",
+      "district": "Port Credit / Lorne Park",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/900-lakeshore-road-west-oz-opa-25-8-w2/",
+        "https://www.mississauga.ca/publication/oz-opa-25-8-w2-900-lakeshore-road-west-2/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Current 2026 floor outlines were extracted from actual PDF vector room fills; drafting gaps were closed by 0.1524 m and internal rooms filled to create exterior massing. Curves were sampled; outline simplification tolerance 0.046 m. All nine upper levels, major fourth/seventh-floor terraces, balcony recesses and mechanical enclosure follow source geometry. Balcony guardrails, glazed facades, small balcony slabs and interior rooms are omitted. Ground-floor west/east bodies follow the latest publicly linked original ground drawing, dated October 3, 2024, cross-checked against the March 2026 site-plan entrance arrangement. This lower-level revision remains less certain. Eight entrance-column centres come from that ground drawing; 0.6 m diameters are illustrative. No structural engineering accuracy is claimed. Stair roof footprints come from the current roof drawing; their 118.2 m top is transcribed from the corresponding section silhouette approximately 0.5 m below the labelled main mechanical roof, with ±0.3 m uncertainty. The sloped site retains source floor/roof ASL levels. Ground levels are simplified at 86.0 m west and 85.4 m east; no broad regrading of the natural ravine is implied.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "lakeview-caven",
+      "name": "579–619 Lakeshore / Caven",
+      "district": "Lakeview",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/579-to-619-lakeshore-road-east-1022-and-1028-caven-street-oz-opa-22-26-w1/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Use the architectural site plan for footprint validation. No independently verified overall metric heights are asserted.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "lakeview-dxe",
+      "name": "Lakeview DXE Club",
+      "district": "Lakeview",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://canada.constructconnect.com/dcn/news/projects/2026/07/pcl-construction-tops-off-lakeview-dxe-club-condo-development?lang=es%2Ffeed",
+        "https://obd.hcraontario.ca/profile/B60843"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The builder licence cancellation in August 2026 is not evidence that the project was cancelled. Early 2027 occupancy remains a forecast.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "port-credit-tanu",
+      "name": "TANU",
+      "district": "Port Credit",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://edenshaw.com/communities/tanu/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Include as existing context, rather than a future addition.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "port-credit-westport",
+      "name": "Westport",
+      "district": "Port Credit",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://edenshaw.com/communities/westport/",
+        "https://edenshaw.com/news/edenshaw-developments-and-langara-construction-a-partnership-shaping-mississaugas-skyline/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Include as existing context, rather than a future addition.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "port-credit-128-lakeshore",
+      "name": "128 Lakeshore Road East",
+      "district": "Port Credit",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.omb.gov.on.ca/e-decisions/OLT-22-004078-NOV-03-2023.PDF"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The revised scheme has eight residential storeys plus a ninth-level mechanical and indoor amenity enclosure. It replaces the old 11-storey source proposal, not a completed building. ASL levels are taken directly from section AA: residential ground 79.19, retail ground 78.38, main roof 105.19 and mechanical/amenity roof 109.69 m. Northern facade recess, rooftop setback, front terraces and rear ground-level open parking are simplified from current plans. Terrace slabs on levels 3–8 follow the plan footprints. Their 0.18 m thickness is only a display convention; railings, columns, facade glazing, Juliette guards and small entrance canopies are omitted. The municipal summary still describes the older 11-storey application; the actual dated October 2025 drawing set governs this geometry. The two ground cores are simplified outer envelopes. Interior ramps and parking structures are omitted.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "lakeview-jim-tovey",
+      "name": "Jim Tovey Lakeview Conservation Area",
+      "district": "Lakeview",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://cvc.ca/park-advisories/",
+        "https://cvc.ca/documents/plan/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Include the open park in the baseline inventory. Its completed reclamation outline is not fully verified in current terrain geometry: the City municipal boundary is older and the park layer has no matching polygon. Do not invent land from the published area. Access is via Marie Curtis Park; do not depict an unbuilt western through-connection as open.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "port-credit-170-lakeshore",
+      "name": "170 Lakeshore Road East",
+      "district": "Port Credit",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.omb.gov.on.ca/e-decisions/OLT-22-004584-FEB-24-2025.PDF"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "This is the maximum permitted settlement zoning envelope, not an architectural design or a verified finished facade. Contours follow the actual settlement diagram rather than stretching a superseded City model. The height-zone surfaces are independently extruded; coincident hidden surfaces remain. Cladding, railings, detailed balconies, structural openings and landscaping are not inferred. Building base is the median sampled Ontario DTM grade, not a legally calculated or approved established grade. Relative maximum heights are taken verbatim from the governing diagram. February 2025 approval is in principle, with the final order withheld pending conditions and draft zoning schedules subject to City technical review. No later complete architectural set was publicly recovered. The settlement specifies a 12-storey slab, replacing the former 15-storey/17-with-rooftop tower. The slab has a 42 m maximum and the delineated mechanical/amenity area a 48 m maximum. The rooftop mechanical/amenity footprint extends to the western boundary in the source diagram; its permitted envelope is modelled above the 42 m slab, with that overhang retained. Thin same-height stepback lines on the 42 m area are retained only as the overall maximum envelope because the zoning graphic does not assign separate floor elevations to them.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "port-credit-26-park",
+      "name": "26 Park Street East",
+      "district": "Port Credit",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/12-and-26-park-street-east-oz-opa-26-13-w1/",
+        "https://data.mississauga.ca/pages/mississauga-3d"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Three podium/shaft extents and mechanical enclosure follow the site-plan outline and labelled level elevations. Minor podium recesses, balcony projections, cladding, windows and ground-level openings are omitted. Aerial massing is more complete than the prior absent building, but this is not a fabrication-ready architectural model.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "port-credit-50-high",
+      "name": "50 High Street East",
+      "district": "Port Credit",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/50-high-street-east-oz-25-19-w1/",
+        "https://www.mississauga.ca/services-and-programs/building-and-renovating/incentives-for-building-affordable-rental-housing/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The open ground floor, six plan-visible support columns, second-floor notch and upper-front terraces are retained as simplified geometry. The mechanical enclosure follows the roof plan, using the labelled maximum 40.80 m. Minor equipment, arched facade frames, raised parapets and articulation within the enclosure are omitted. Terrace slab thickness is a 0.18 m display convention; footprints and deck elevations come from the source. The existing house 92-749 must be hidden only in the illustrated future scenario. It remains in the existing-source scenario. The file was published under the November 2025 resubmission, but its drawing export stamp is December 12, 2025.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "lakeview-aura",
+      "name": "Aura Towns at Lakeview Village",
+      "district": "Lakeview",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://caivan.com/aura/",
+        "https://mylakeviewvillage.com/project"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Approximate marketing-plan-derived townhome envelopes, not surveyed architectural models. Seven June footprints and three additional highlighted blocks in the currently linked image are registered through two City street junctions and four common roof centroids. The image scale bar conflicts with City junction spacing by about 25%; City coordinates control the model scale. Estimated placement ±10 m and roof-outline tolerance ±3 m are interpretive, not statistical confidence bounds. All ten envelopes use an estimated 13 m maximum with ±3.5 m uncertainty, derived from about 6.2 m registered bay width and roughly 2.1:1 height-to-bay proportions in the official illustrative facade. No published dimensional height was found. Roofs, balconies, basements and facade articulation are omitted; grey marketing roofs are retained from the June version, not independently confirmed current building drawings.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "lakeview-pier-house",
+      "name": "Pier House Towns at Lakeview Village",
+      "district": "Lakeview",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.branthaven.com/communities/pier-house/",
+        "https://mylakeviewvillage.com/project"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "No public current georeferenced site plan or metric building height was recovered. Do not equate Pier House with the older Birch condominium/townhouse proposal without a parcel and application-file match.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "lakeview-deco-opus",
+      "name": "DECO / OPUS Lakeview Village",
+      "district": "Lakeview",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://opushomes.com/communities/lakeview-village/",
+        "https://mylakeviewvillage.com/project"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The OPUS page repeats historical community-wide unit figures. Those figures are not the current City projection or a unit count for this phase. No verified tower count, height, footprint or phase schedule is assigned.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "ninth-6344",
+      "name": "6344 Ninth Line",
+      "district": "Lisgar / Ninth Line",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/6344-ninth-line-oz-26-11-w10/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "chelsea-2026",
+      "name": "Chelsea on the Green — 2026 expansion",
+      "district": "Applewood / Rathwood",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/4100-ponytrail-drive-and-1850-rathburn-road-east-oz-opa-26-9-w3/",
+        "https://chrisfonseca.ca/2026/05/28/4100-ponytrail-dr-community-meeting-notice/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "June 2026 unapproved expansion, separate from earlier B3. Dimensioned main envelope and five-storey podium, with height through mechanical penthouse. Survey control registration; allow ±1 m placement. Small partial level-17/18 terrace cuts, balcony projections, entrance recesses and facade divisions are omitted. Floor bands and materials are schematic. B6 mechanical silhouette is traced from A-B6-304, approximately ±0.3 m; B4/B5 MPH follow the rectangular plan envelope. Datum treated as local UTM17 NAD83; no sub-metre geodetic claim. The old components 73-4291 and 73-4293 conflict with the June 2026 B5 layout and are excluded. Separate B3 (73-4292) remains a violet, height-uncertain municipal envelope: the current site plan labels 25 storeys, while the old mesh records 52.1 m.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "promenade-infill",
+      "name": "2233–2235 Hurontario Street",
+      "district": "Cooksville",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/2233-and-2235-hurontario-street-oz-26-8-w7/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Plan-derived model of the May 2026 rezoning submission, not approval or as-built work. Envelopes and datum heights follow BDP Quadrangle plans. Digitised georegistration to two existing City buildings has estimated ±3 m placement uncertainty. Balcony curves and slab thickness are simplified from published typical floor plans; no surveyed facade or material claim.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "ninth-6578",
+      "name": "6578 Ninth Line",
+      "district": "Lisgar / Ninth Line",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/6578-ninth-line-oz-26-6-w10/",
+        "https://civic-lens.ca/ontario/peel/mississauga/applications/oz-26-6-w-10"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ. Boundary and low-rise subdivision amendments only; no tower massing inferred.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "bough-beeches-1315",
+      "name": "1315 Bough Beeches Boulevard",
+      "district": "Applewood / Rathwood",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/1315-bough-beeches-boulevard-oz-opa-26-5-w3/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "March 2026 proposal envelope, not an approved or built outcome. Exact written heights and main floorplate dimensions; podium and rooftop screen traced from published plan vectors. Registration uses survey controls and existing-tower corners (allow ±1 m position, not a statistical confidence interval). Screen thickness, floor bands and materials are illustrative. Individual balconies, window divisions, recessed entries and equipment are omitted. Datum treated as local NAD83 UTM17; no sub-metre geodetic claim.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "fowler-1970",
+      "name": "1970–1980 Fowler Drive",
+      "district": "Sheridan / Clarkson",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/1970-and-1980-fowler-drive-oz-opa-25-23-w8/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "tenth-distribution",
+      "name": "Tenth Line distribution centres",
+      "district": "Meadowvale / Lisgar",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/0-tenth-line-west-oz-25-22-w9/",
+        "https://www.datacenterdynamics.com/en/news/prologis-files-to-develop-data-center-outside-toronto-canada/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ. Separate warehouse application from the paused data centre. Do not automatically apply the digital-infrastructure moratorium to distribution centres.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "tenth-data",
+      "name": "Tenth Line data centre",
+      "district": "Meadowvale / Lisgar",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/0-tenth-line-west-oz-25-21-w9/",
+        "https://www.datacenterdynamics.com/en/news/prologis-files-to-develop-data-center-outside-toronto-canada/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ. Temporarily paused proposal; do not depict as approved or under construction. Retain only with that status visible.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "hurontario-7140",
+      "name": "7140 Hurontario industrial development",
+      "district": "Gateway",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/7140-hurontario-street-21t-m-25-2-w5-and-oz-opa-25-9-w5/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ. City URL names 2025 file numbers but page title names 2015 file numbers; project identity requires caution.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "dundas-55",
+      "name": "51–55 Dundas West / Agnes Street",
+      "district": "Cooksville",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/51-55-dundas-street-west-and-60-66-70-and-78-agnes-street-oz-opa-25-18-w7/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "July 2025 proposal, under review. Main dimensions and layered envelopes follow A110 and the planning schedule; balconies, facade divisions, ground recesses and exact parapets are omitted. Position is registered through four surveyed existing houses to unmodified City geometry (centroid fit residuals 0.14–0.25 m; allow ±1 m overall position). Plan outlines are traced, approximately ±0.25 m. Overall 110.445 m dimension is corroborated as 110.4 m in the planning schedule. The elevation absolute-level tags disagree by about 1.8 m with that dimension; this envelope follows the overall dimension, not those tags. A110 labels the western upper terrace as the 33-storey roof whereas the schedule labels 32: the drawn one-floor setback is shown, with its precise transition elevation unresolved. Existing heritage corner is retained; no existing meshes are altered by this asset.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "emtc-northwest",
+      "name": "Erin Mills Town Centre — northwest phase",
+      "district": "Erin Mills",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/5100-erin-mills-parkway-oz-opa-24-15-w9/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "2026 vector-plan footprints replace all 17 older City source components. Published proposed ground-floor levels are used where provided. Revised metric roofs are not published: heights use the older elevations and documented 2.95 m typical floor interval, with retained podium and 5 m mechanical allowances explicitly estimated. Allow about ±5 m vertically and ±2 m placement. These are schematic envelopes without facade detail, not verified construction geometry.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "tannery-51",
+      "name": "51–57 Tannery Street / 208 Emby Drive",
+      "district": "Streetsville",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/51-and-57-tannery-street-and-208-emby-drive-oz-opa-24-7-w11/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ. Storeys array gives the documented range, not an inferred tower-by-tower distribution.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "thomas-64",
+      "name": "64–66 Thomas / Joymar / Tannery",
+      "district": "Streetsville",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/64-66-thomas-street-95-joymar-drive-and-65-tannery-street/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "rutledge-150",
+      "name": "150 Rutledge Road",
+      "district": "Streetsville",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/150-rutledge-road-oz-opa-24-12-w11/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "dundas-3033",
+      "name": "3033 Dundas Street West",
+      "district": "Erin Mills",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/3033-dundas-street-west-oz-opa-25-11-w8/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "streetsville-centre",
+      "name": "Streetsville Centre plaza redevelopment",
+      "district": "Streetsville",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/120-128-142-154-158-queen-street-south-and-169-crumbie-street-oz-opa-24-8-w11-and-21t-m-24-4-w11/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "erin-centre-2555",
+      "name": "2555 Erin Centre Boulevard",
+      "district": "Erin Mills",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/2555-erin-centre-boulevard-oz-opa-25-6-w11/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "fieldgate-3403",
+      "name": "Forest Glen plaza / 3403–3445 Fieldgate",
+      "district": "Applewood / Rathwood",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/3403-to-3445-fieldgate-drive-oz-opa-25-1-w3/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "dundas-1000",
+      "name": "1000–1024 Dundas Street East",
+      "district": "Dixie / Dundas",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/1000-and-1024-dundas-street-east-oz-opa-22-18-w1/",
+        "https://insolvencyinsider.ca/p/morrison-financial-wins-receiver-appointment-over-mississauga-dundas-street-redevelopment-lands"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ. Receivership alone is not a basis to delete a proposal; record remains conditional.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "dundas-mattawa",
+      "name": "Dundas & Mattawa",
+      "district": "Dixie / Dundas",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/1580-to-1650-dundas-street-east-oz-opa-22-22-w1-and-tm-22004/",
+        "https://www.hazelview.com/private-real-estate-investing/development-management/developments/1580-1650-dundas-street-east"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "dundas-1995",
+      "name": "1995 Dundas Street East",
+      "district": "Dixie / Dundas",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/1995-dundas-street-east-oz-opa-25-5-w3-and-21t-m-25-1-w3/",
+        "https://landealgroup.com/1995-dundas/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "bloor-1785",
+      "name": "1785 Bloor Street infill",
+      "district": "Applewood / Rathwood",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/1785-bloor-street-oz-opa-22-14-w3/",
+        "https://sajeckiplanning.squarespace.com/projects/1785-bloor-street-mississauga"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ. Sajecki Planning reports OPA and zoning approval in April 2024; the municipal active page still says under review. This does not establish a construction start.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "connecting-cooksville",
+      "name": "Connecting Cooksville",
+      "district": "Cooksville",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/25-and-33-hillcrest-avenue-and-3146-3154-and-3168-hurontario-street-oz-opa-22-19-w7/",
+        "https://tasimpact.ca/project/connecting-cooksville/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "hurontario-3085",
+      "name": "3085 Hurontario Street",
+      "district": "Cooksville",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/3085-hurontario-street-oz-opa-21-11-w7/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "erin-mills-4099",
+      "name": "4099 Erin Mills Parkway",
+      "district": "Erin Mills",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/4099-erin-mills-parkway-oz-opa-22-25-w8/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "dundas-1225",
+      "name": "1225 Dundas Street East",
+      "district": "Dixie / Dundas",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/1225-dundas-street-east-oz-opa-22-20-w3/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ. Old 18-storey snapshot geometry is excluded as superseded until replaced from current 16-storey drawings.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "hurontario-3115",
+      "name": "3115 Hurontario / Dam residential tower",
+      "district": "Cooksville",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/3115-hurontario-street-oz-opa-22-24-w7/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ. Floor-count convention excludes the mechanical penthouse from occupied-storey total; 133 m City massing is not proof of full latest architectural fidelity.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "beverley-5",
+      "name": "5–9 Beverley Street",
+      "district": "Malton",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/5-7-and-9-beverley-street-oz-opa-22-27-w5/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "hurontario-6333",
+      "name": "6333 Hurontario self-storage / commercial",
+      "district": "Gateway / Heartland",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/6333-hurontario-street-oz-21-1-w5/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "goreway-7170",
+      "name": "7170 Goreway Drive",
+      "district": "Malton",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/7170-goreway-drive-oz-18-13-w5/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "ninth-5034",
+      "name": "5034–5080 Ninth Line",
+      "district": "Churchill Meadows / Ninth Line",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/5034-5054-5080-ninth-line-oz-opa-21-15-and-21t-m21004-w10/",
+        "https://www.mississauga.ca/services-and-programs/building-and-renovating/incentives-for-building-affordable-rental-housing/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "cooksville-toc",
+      "name": "Cooksville GO transit-oriented community",
+      "district": "Cooksville",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/publication/toc-cooksville-3210-hurontario-street/",
+        "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/cooksville-go-transit-oriented-community/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Storeys and footprint arrangement are the current proposal. No current metre elevations or native DWG have been received. Vertical estimates use older phase-specific 3 m residential spacing and published maximums. Allow roughly ±5 m; this is an illustrative allowance, not survey confidence. Podiums, rooftop plant and facades are omitted. This is a future proposal, not approval or construction.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "john-69",
+      "name": "69–117 John Street",
+      "district": "Cooksville",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/wp-content/uploads/2025/09/19121446/Shadow-Study-Report-OZ-OPA-24-16-W7-October-2025.pdf"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Existing City mesh matches old 63/93/96 m heights; latest revised massing requires comparison. Do not label snapshot as current. Live landing page returned 404 although indexed; PDF accessible.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "glen-erin-6719",
+      "name": "6719–6749 Glen Erin Drive",
+      "district": "Meadowvale",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/building-and-renovating/incentives-for-building-affordable-rental-housing/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Funding wait-list dates are expectations, not confirmed groundbreaking or occupancy.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "winston-6020",
+      "name": "6020 Winston Churchill Boulevard",
+      "district": "Meadowvale",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://skyrisecities.com/forum/threads/toronto-6020-winston-churchill-boulevard-16-59m-4s-2421845-ontario-inc-john-willmott-architect.33768/",
+        "https://mpulse.ca/local-developer-builds-affordable-low-rise-housing-in-meadowvale/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "14.6 m City massing and 16.59 m UT overall height use different conventions; do not force an unsupported geometric correction.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "brandon-3233",
+      "name": "3233 Brandon Gate Drive",
+      "district": "Malton",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/wp-content/uploads/2025/10/09161455/REVISED-HOZNOTICE-H-OZ-25-1-3233-Brandon-Gate-Dr.pdf"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Do not retain the superseded mixed-use building as a future tower.85 affordable rental units mentioned in funding material are not 85 separate townhouse buildings.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "watergarden",
+      "name": "Pinnacle Uptown / Watergarden / Gemma",
+      "district": "Uptown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www7.mississauga.ca/documents/Business/Planning_Justification_Report_-_June_2018_0_and_5044_Hurontario_St.pdf"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Gemma tower and podium remain source massing, with approximate facade detail. The separate SP 22 99 south scheme at 10/30 Watergarden Drive and 220 Little Creek Road appears only as an uncertain future proposal; its completion is not established.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "mississauga-hospital",
+      "name": "Peter Gilgan Mississauga Hospital / Shah Family Hospital",
+      "district": "Cooksville / Queensway",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.thp.ca/newsroom/Pages/2026/THP-marks-major-milestone-laying-the-foundation-at-Mississauga%E2%80%99s-future-hospital.aspx"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Hospital tower retained as future construction; completed garage belongs in existing context. City massing height 129.775 m is source geometry, not an independently verified maximum.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "agnes-65",
+      "name": "65–73 Agnes Street",
+      "district": "Cooksville",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/building-and-renovating/incentives-for-building-affordable-rental-housing/",
+        "https://www.intentionalcapital.com/projects/six-five-agnes"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "The older City mesh is based on a 29-storey proposal, with a 90.3 m field matching the old level-29 elevation. Exclude that superseded geometry until the 24-storey plan is reconstructed; expected construction dates do not prove work has begun.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "orchard-189",
+      "name": "The Orchard District / 189 Dundas Street West",
+      "district": "Cooksville",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.omb.gov.on.ca/e-decisions/OLT-22-004125-JAN-19-2024.PDF"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "City snapshot names the site 149 Dundas West (SP 22-162) and retains the former 32-storey tower. Even the June 2026 pipeline description repeats 18/20/32 storeys and 966 homes. The later binding order controls; exclude superseded snapshot geometry.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "tomken-4094",
+      "name": "4094 Tomken / 924 Rathburn",
+      "district": "Rathwood",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.kindredworks.ca/projects/4094-tomken-road",
+        "https://chrisfonseca.ca/4094tomken/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Use the source massing conditionally. Do not call it under construction based on the developer timeline; detailed site-plan revisions and a one-unit count discrepancy remain.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "st-luke-westminster",
+      "name": "St Luke’s seniors housing / 4150 Westminster Place",
+      "district": "Rathwood",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.mississauga.ca/services-and-programs/building-and-renovating/incentives-for-building-affordable-rental-housing/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Expected dates are not a confirmed start. Preserve the existing residence and add only the proposed infill geometry.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "lolita-596",
+      "name": "596 Lolita Gardens",
+      "district": "Mississauga Valley",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://ca.linkedin.com/company/park-property-management-inc/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Do not treat topping out as occupancy. City massing is the proposal source, with final architectural detail unverified.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "agnes-45",
+      "name": "45 Agnes Street / 3051 Cook Street",
+      "district": "Cooksville",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.flickr.com/photos/drum118/55303100913"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Old age is not cancellation. Storey-count differences in photo captions are not sufficient to revise geometry. Site-plan identity SP 21-102 links the City model to the site.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "kirwin-3016",
+      "name": "3016–3034 Kirwin Avenue / Little John Lane",
+      "district": "Cooksville",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://peelregion.ca/sites/default/files/2024-10/kirwin-ave-EA-appendix-K-contact-list-project-notifications.pdf"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Address changes do not imply a new project. Exact OZ 21-5 identity matches the City mesh; detailed architectural currency remains unverified.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "argyle-2570",
+      "name": "2570–2590 Argyle Road",
+      "district": "Cooksville / Erindale",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D112&outFields=*&outSR=4326&f=pjson"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "No floor count is inferred from the mesh height. Existing apartment buildings must remain in the base model.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "courtney-630",
+      "name": "630–670 Courtney Valley Road",
+      "district": "East Credit",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www7.mississauga.ca/documents/agendas/committees/pdc/2015/10-05-2015_PDC_Agenda.pdf"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Age alone is not cancellation. The 2013 application description may not capture subsequent detailed changes; retain only as source massing with unverified delivery.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "absolute-world",
+      "name": "Absolute World / Marilyn Monroe Towers",
+      "district": "downtown",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://www.i-mad.com/projects/absolute-towers",
+        "https://archdwg.ca/absolute-world/"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "This is a source-derived architectural visualization, not a certified as-built model. Exact intermediate south floor rotations are not available in the primary drawings: smooth bounded1–8-degree increments interpolate the verified floor 1/24/40 anchors and209-degree total. South plan scaled by the City captured maximum silhouette diameter; north fits the documented elliptical plate to captured roof samples. These are measured source fits, not dimensioned construction drawings. Tower centres retain City captured polygon centroids. Estimated model-registration tolerance±2m, plan scale/profile tolerance±2m; these are modelling allowances, not surveyed confidence intervals. Nominal architectural heights follow current CTBUH; City captured height extents differ by3.66m/4.21m. Ground datum is retained from City and its absolute vertical accuracy is unverified. Typical floor elevations and roof-zone subdivisions are inferred from published highest-occupied/top heights; they are not a complete elevation schedule. Balcony slab thickness0.20m, guard height1m and glazing setbacks are illustrative, as are material appearance and mullion detail. South mechanical roof uses the unchanged City plan outline, with its vertical placement reconstructed; north exact roof machinery is omitted.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "brightwater-credit-river-way",
+      "name": "Credit River Way",
+      "district": "Port Credit",
+      "referenceCheckScope": "One or two previously cited public pages or files checked for accessible references and direct model links; not a complete new approval audit.",
+      "checkedReferenceUrls": [
+        "https://peelregion.ca/business/housing-development/credit-river-way"
+      ],
+      "referenceResult": "No direct exterior 3D download found in inspected page(s); existing City source geometry or documented supplement remains baseline",
+      "currentModelLimit": "Retain City 2024 LiDAR component 93-765, matched to masterplan D1. The informal name “The Kee” was not supported by the reviewed primary sources and must not be used. Captured roof 108.79 m ASL is source geometry, not a new survey.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "perla-towers",
+      "name": "Perla Towers at Pinnacle Uptown",
+      "district": "uptown",
+      "referenceCheckScope": "Focused manual source comparison: City 2017 plans, 2024 mapped footprint and current occupied-project evidence.",
+      "checkedReferenceUrls": [
+        "https://www7.mississauga.ca/documents/committees/pdc/2017/2017_06_26_PDC_Agenda.pdf",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Building_Footprints_2024/FeatureServer/0",
+        "https://pinnacleinternational.ca/past-projects/",
+        "https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Mississauga",
+        "https://www.delsuites.com/suites/perla_towers/detail.php"
+      ],
+      "referenceResult": "Perla pair missing from seven inspected municipal scene leaves; approximate plan-derived envelopes added with unverified metre heights disclosed.",
+      "currentModelLimit": "The City confirms 15 and 34 storeys. The 111.9 m tall envelope is an unverified published catalogue value; the 53 m shorter envelope and 12 m podium are illustrative estimates. Allow roughly ±5 m, not survey confidence. Plan registration relates older source contours to the 2024 mapped podium. Exact current balconies, roof plant and facade details are not reconstructed. The Ontario 2023 DSM catalog record returned NoData here; no LiDAR-derived building height is claimed. The seven native municipal scene leaves inspected around this site did not contain these two towers. No existing source IDs are suppressed.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false
+    }
+  ],
+  "outreachSummary": {
+    "asOf": "2026-09-26T17:00:55.520650+00:00",
+    "verifiedSentAttempts": 77,
+    "distinctRecipientAddresses": 72,
+    "knownFailedOriginalAddresses": 3,
+    "knownFailuresRerouted": 3,
+    "namedProjectCoverage": 108,
+    "requestRouteCounts": {
+      "identified-professional-project-team-request": 98,
+      "municipal-project-team-model-request": 1,
+      "municipal-reference-holder-referral": 9
+    },
+    "permissionOrModelReceiptClaimed": false,
+    "scopeNote": "Only aggregate outreach information is public. Individual email addresses, message identifiers and private correspondence are excluded. SENT proves submission to the mail service, not recipient delivery."
+  }
+}

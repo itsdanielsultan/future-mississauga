@@ -1,5 +1,9 @@
 # Accuracy and coverage audit
 
+**Community Revision, 26 September 2026:** this document preserves the earlier Road Crossings methods and audit record. Its dated counts and project descriptions below are historical, not a fresh certification of the current edition. Current revisions are recorded in the [community review](Community-reference-and-coverage-review.md), [refinement notes](Refinement-notes.md), [project register](../data/projects.json) and [model manifest](../data/refinement-models.json). The [picture index](Picture-index.json) and [release validation](Release-validation.json) identify the corresponding exported media.
+
+## Historical baseline record
+
 Research date: 20 September 2026; geometry and version review updated 21 September 2026. Road Crossings edition. Current building additions, replacement controls and totals are in [refinement-models.json](../data/refinement-models.json), [stats.json](../data/stats.json) and the [refinement notes](Refinement-notes.md). This review compares the three research dossiers, component overrides, the downtown geometry audit, the complete municipal-group audit and the exported research register. It does not certify a survey, construction drawing or completed architectural model.
 
 ## Assessment

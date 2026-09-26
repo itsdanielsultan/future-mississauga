@@ -1,607 +1,303 @@
 {
-  "edition": "Road Crossings 2026-09-21",
-  "builtAt": "2026-09-22T03:24:18.871042+00:00",
-  "reviewDate": "2026-09-20",
+  "edition": "Community Revision 2026-09-26",
+  "checkedAt": "2026-09-26T18:17:44.835087+00:00",
   "file": "Future-Mississauga-Atlas.pdf",
-  "bytes": 24402843,
-  "sha256": "d172eac5c3918eec8599e8f5735678b8098fe530bea05f4172107e8209f7c224",
+  "sha256": "1aead73f139db7766567c4e350f52a49ad2aeb075eb2f1197b3c66a991d50ae1",
+  "bytes": 23465223,
   "pageCount": 35,
   "sourceImageCount": 33,
   "sourceImageDimensions": [
     [
       3840,
-      2400
+      1400
     ],
     [
       3840,
-      1400
+      2400
     ]
   ],
-  "pdfImageMaxLongEdge": 2200,
-  "pdfJPEGQuality": 84,
-  "pdfOnlyCompression": true,
-  "originalPNGMastersUnchanged": true,
-  "originalPNGProof": "Decoded RGB pixel hashes match the current final render source audit; publication metadata may be added separately without changing pixels.",
-  "externalLinks": 97,
-  "distinctExternalLinks": 54,
-  "researchRecords": 107,
-  "municipalGroups": 181,
-  "researchOperations": 1556,
-  "linkedProjectSourceURLs": 376,
-  "refinementAssets": 24,
-  "modelManifestSHA256": "b059f609930ca3d15477bf207bb6d1e2c9eaf632212fe2fec83d39d14b683824",
-  "inputLockedAt": "2026-09-22T01:55:14.325187+00:00",
-  "inputLockSHA256": "7936355e396af245054b761af217035031d4808a14685b63ecbe88cc6318b6ee",
-  "validation": {
-    "allPagesRenderedBy": "Poppler pdftoppm",
-    "all35PagesVisuallyReviewedAsContactSheets": true,
-    "allCaptionStripsVisuallyReviewed": true,
-    "fullPageChecks": [
+  "researchRecords": 108,
+  "refinementAssets": 26,
+  "inputLockSHA256": "0220a2410ef9ef379676caf3e88ed26f559dce3df08112f94dd131e17386a2a4",
+  "inputLockedAt": "2026-09-26T17:12:34.811838+00:00",
+  "externalLinks": 100,
+  "distinctExternalLinks": 56,
+  "typography": {
+    "visibleFonts": [
+      "BricolageGrotesqueAtlas-"
+    ],
+    "allVisibleTextBricolage": true
+  },
+  "verification": {
+    "currentPDFMatchesCompletedPipeline": true,
+    "current33ImageSourceAuditVerified": true,
+    "atlasSourceAuditSHA256": "10ecc9ba13965b7118f6a3badc4c403d93bfee321052584d7135ad457e9b4087",
+    "pageCountReadDirectlyFromPDF": true,
+    "manualLayoutReviewClaimedByThisReport": true
+  },
+  "limitations": "File, font and source-image verification do not certify every planning claim or replace a manual review of the finished pages.",
+  "generatedBuildManifest": {
+    "file": "Future-Mississauga-Atlas.pdf",
+    "pageCount": 35,
+    "pageSize": [
+      1200,
+      969
+    ],
+    "links": 100,
+    "pages": [
+      {
+        "key": "citywide",
+        "title": "Future Mississauga"
+      },
+      {
+        "key": "downtown",
+        "title": "Downtown"
+      },
+      {
+        "key": "downtown-perspective",
+        "title": "Downtown / perspective"
+      },
+      {
+        "key": "downtown-compare",
+        "title": "Downtown / comparison"
+      },
+      {
+        "key": "downtown-landmark",
+        "title": "Absolute World"
+      },
+      {
+        "key": "downtown-junction",
+        "title": "A connected junction"
+      },
+      {
+        "key": "downtown-skyline-existing",
+        "title": "Downtown skyline / existing"
+      },
+      {
+        "key": "downtown-skyline-construction",
+        "title": "Downtown skyline / construction"
+      },
+      {
+        "key": "downtown-skyline-future",
+        "title": "Downtown skyline / future"
+      },
+      {
+        "key": "port-credit",
+        "title": "Port Credit"
+      },
+      {
+        "key": "port-credit-perspective",
+        "title": "Port Credit / perspective"
+      },
+      {
+        "key": "port-credit-compare",
+        "title": "Port Credit / comparison"
+      },
+      {
+        "key": "port-credit-skyline-future",
+        "title": "Port Credit / waterfront skyline"
+      },
+      {
+        "key": "lakeview",
+        "title": "Lakeview"
+      },
+      {
+        "key": "lakeview-perspective",
+        "title": "Lakeview / perspective"
+      },
+      {
+        "key": "lakeview-compare",
+        "title": "Lakeview / comparison"
+      },
+      {
+        "key": "lakeview-skyline-future",
+        "title": "Lakeview / waterfront skyline"
+      },
+      {
+        "key": "clarkson",
+        "title": "Clarkson"
+      },
+      {
+        "key": "clarkson-perspective",
+        "title": "Clarkson / perspective"
+      },
+      {
+        "key": "clarkson-compare",
+        "title": "Clarkson / comparison"
+      },
+      {
+        "key": "clarkson-skyline-future",
+        "title": "Clarkson / waterfront skyline"
+      },
+      {
+        "key": "cooksville",
+        "title": "Cooksville"
+      },
+      {
+        "key": "cooksville-perspective",
+        "title": "Cooksville / perspective"
+      },
+      {
+        "key": "uptown",
+        "title": "Uptown & Hurontario"
+      },
+      {
+        "key": "uptown-perspective",
+        "title": "Uptown & Hurontario / perspective"
+      },
+      {
+        "key": "erin-mills",
+        "title": "Erin Mills"
+      },
+      {
+        "key": "streetsville",
+        "title": "Streetsville"
+      },
+      {
+        "key": "meadowvale",
+        "title": "Meadowvale & Lisgar"
+      },
+      {
+        "key": "malton",
+        "title": "Malton"
+      },
+      {
+        "key": "dixie-applewood",
+        "title": "Dixie & Applewood"
+      },
+      {
+        "key": "erindale",
+        "title": "Erindale & Sheridan"
+      },
+      {
+        "key": "airport-corporate",
+        "title": "Airport & Corporate"
+      },
+      {
+        "key": "heartland",
+        "title": "Heartland & Gateway"
+      },
+      {
+        "key": "reading-the-model",
+        "title": "Reading the model"
+      },
+      {
+        "key": "coverage-and-sources",
+        "title": "Coverage and sources"
+      }
+    ],
+    "test": false,
+    "jpegQuality": 82,
+    "refinementAssets": 26,
+    "researchRecords": 108,
+    "researchOperations": 1556,
+    "municipalGroups": 181,
+    "edition": "Community Revision 2026-09-26",
+    "typography": {
+      "family": "Bricolage Grotesque",
+      "scope": "All PDF text",
+      "instances": [
+        {
+          "role": "Body",
+          "file": "fonts/bricolage-grotesque/BricolageGrotesque-TextRegular.ttf",
+          "postScriptName": "BricolageGrotesqueAtlas-TextRegular",
+          "axes": {
+            "wght": 400,
+            "opsz": 14,
+            "wdth": 100
+          },
+          "bytes": 91140,
+          "sha256": "459062161e7b895f1c5fe78344a8bf1f8d3d5395e304e2fc67f3920c921c7703"
+        },
+        {
+          "role": "BodyBold",
+          "file": "fonts/bricolage-grotesque/BricolageGrotesque-TextSemiBold.ttf",
+          "postScriptName": "BricolageGrotesqueAtlas-TextSemiBold",
+          "axes": {
+            "wght": 600,
+            "opsz": 14,
+            "wdth": 100
+          },
+          "bytes": 91236,
+          "sha256": "76902f8c3ce2cb8b9cd12770996257e5ae80c036f9cf1f8170b707842d7f2162"
+        },
+        {
+          "role": "Display",
+          "file": "fonts/bricolage-grotesque/BricolageGrotesque-DisplaySemiBold.ttf",
+          "postScriptName": "BricolageGrotesqueAtlas-DisplaySemiBold",
+          "axes": {
+            "wght": 600,
+            "opsz": 48,
+            "wdth": 100
+          },
+          "bytes": 91252,
+          "sha256": "7a1134e51e9a90e76999946f102bb1a4179f9209404e58c875321b322553eaef"
+        }
+      ],
+      "provenance": "licenses/BricolageGrotesque-Atlas-provenance.json",
+      "license": "licenses/BricolageGrotesque-OFL.txt"
+    }
+  },
+  "generatedBuildManifestSHA256": "65e283648af63421df3293c4684516ea6c6e324a89a232a959ed4f897048da38",
+  "manualVisualReview": {
+    "checkedAt": "2026-09-26T18:17:11.218575+00:00",
+    "result": "PASS",
+    "pagesReviewed": [
+      1,
+      2,
+      3,
+      4,
       5,
       6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
       32,
+      33,
       34,
       35
     ],
-    "allTextInsidePageBounds": true,
-    "missingGlyphMarkers": false,
-    "intermediateLabelsPresent": false,
-    "malformedLinkSyntax": [],
-    "all33CurrentRenderSourcesVerified": true,
-    "unchangedLockedInputs": 249,
-    "allVisibleTextBricolage": true,
-    "evidenceURLCheck": {
-      "checkedAt": "2026-09-21T21:31:36.241083+00:00",
-      "distinctURLs": 54,
-      "successes": 50,
-      "definitelyMissing": [],
-      "accessLimitedOrUnverified": [
-        {
-          "url": "https://urbantoronto.ca/",
-          "status": 403,
-          "error": "HTTP Error 403: Forbidden"
-        },
-        {
-          "url": "https://urbantoronto.ca/news/2024/12/mississaugas-high-point-passes-exchange-district-condos.57488",
-          "status": 403,
-          "error": "HTTP Error 403: Forbidden"
-        },
-        {
-          "url": "https://www.i-mad.com/projects/absolute-towers",
-          "status": 429,
-          "error": "HTTP Error 429: Too Many Requests"
-        },
-        {
-          "url": "https://www.mississauga.ca/wp-content/uploads/2026/01/22112618/OZ-25-17-W1-Notice-of-Passing-public-notice.pdf",
-          "status": 403,
-          "error": "HTTP Error 403: Forbidden"
-        }
-      ],
-      "note": "403 responses denote access restrictions, not proof of a missing page. URL availability does not validate every model claim."
-    }
-  },
-  "pages": [
-    {
-      "key": "citywide",
-      "title": "Future Mississauga"
-    },
-    {
-      "key": "downtown",
-      "title": "Downtown"
-    },
-    {
-      "key": "downtown-perspective",
-      "title": "Downtown / perspective"
-    },
-    {
-      "key": "downtown-compare",
-      "title": "Downtown / comparison"
-    },
-    {
-      "key": "downtown-landmark",
-      "title": "Absolute World"
-    },
-    {
-      "key": "downtown-junction",
-      "title": "A connected junction"
-    },
-    {
-      "key": "downtown-skyline-existing",
-      "title": "Downtown skyline / existing"
-    },
-    {
-      "key": "downtown-skyline-construction",
-      "title": "Downtown skyline / construction"
-    },
-    {
-      "key": "downtown-skyline-future",
-      "title": "Downtown skyline / future"
-    },
-    {
-      "key": "port-credit",
-      "title": "Port Credit"
-    },
-    {
-      "key": "port-credit-perspective",
-      "title": "Port Credit / perspective"
-    },
-    {
-      "key": "port-credit-compare",
-      "title": "Port Credit / comparison"
-    },
-    {
-      "key": "port-credit-skyline-future",
-      "title": "Port Credit / waterfront skyline"
-    },
-    {
-      "key": "lakeview",
-      "title": "Lakeview"
-    },
-    {
-      "key": "lakeview-perspective",
-      "title": "Lakeview / perspective"
-    },
-    {
-      "key": "lakeview-compare",
-      "title": "Lakeview / comparison"
-    },
-    {
-      "key": "lakeview-skyline-future",
-      "title": "Lakeview / waterfront skyline"
-    },
-    {
-      "key": "clarkson",
-      "title": "Clarkson"
-    },
-    {
-      "key": "clarkson-perspective",
-      "title": "Clarkson / perspective"
-    },
-    {
-      "key": "clarkson-compare",
-      "title": "Clarkson / comparison"
-    },
-    {
-      "key": "clarkson-skyline-future",
-      "title": "Clarkson / waterfront skyline"
-    },
-    {
-      "key": "cooksville",
-      "title": "Cooksville"
-    },
-    {
-      "key": "cooksville-perspective",
-      "title": "Cooksville / perspective"
-    },
-    {
-      "key": "uptown",
-      "title": "Uptown & Hurontario"
-    },
-    {
-      "key": "uptown-perspective",
-      "title": "Uptown & Hurontario / perspective"
-    },
-    {
-      "key": "erin-mills",
-      "title": "Erin Mills"
-    },
-    {
-      "key": "streetsville",
-      "title": "Streetsville"
-    },
-    {
-      "key": "meadowvale",
-      "title": "Meadowvale & Lisgar"
-    },
-    {
-      "key": "malton",
-      "title": "Malton"
-    },
-    {
-      "key": "dixie-applewood",
-      "title": "Dixie & Applewood"
-    },
-    {
-      "key": "erindale",
-      "title": "Erindale & Sheridan"
-    },
-    {
-      "key": "airport-corporate",
-      "title": "Airport & Corporate"
-    },
-    {
-      "key": "heartland",
-      "title": "Heartland & Gateway"
-    },
-    {
-      "key": "reading-the-model",
-      "title": "Reading the model"
-    },
-    {
-      "key": "coverage-and-sources",
-      "title": "Coverage and sources"
-    }
-  ],
-  "sourceImages": [
-    {
-      "file": "renders/downtown-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 15584400,
-      "sha256": "591ee7eb58bfd53e87e3adbdf6ecf620e86f96c638826012c21f216a2d9f161c",
-      "pixelSHA256": "b7fef8bdc6f52a7ee8de01c86681467f8df3035ec6246c40c6839ef54840bdc3"
-    },
-    {
-      "file": "renders/cooksville-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 15833725,
-      "sha256": "2e4eabc11dd378734a18277661d74328fefa99c321429f8eccb8b2b9678eca7e",
-      "pixelSHA256": "100bcc9c65cdc6f10b43f20a0179d7a3f12afe16b3f761bde75aec2dbfa8c923"
-    },
-    {
-      "file": "renders/uptown-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 15990124,
-      "sha256": "c08ae61905c73e4d5c2d267b88468175c5a686768a2ad82ca7f6ef37c0b26010",
-      "pixelSHA256": "7d10d9b7175a19e7b37fe2de2b6e4c34837970db3e39a6b53a0a7ddf817b1993"
-    },
-    {
-      "file": "renders/dixie-applewood-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 16398756,
-      "sha256": "b1ae08aca34def8c2d890c6955f71aa0aafc521e913aacc5bfd5783163395c5d",
-      "pixelSHA256": "057dd569baba18e56e3c4c11ce6dad3893eee755a9343d97cbfb7d24953760a3"
-    },
-    {
-      "file": "renders/erindale-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 18820446,
-      "sha256": "5e3343d5d7d31d84b32e0bb5f909abb29756d8f8f8876e58a951b01376a13676",
-      "pixelSHA256": "c235951079ddbb52872b304502cb733f919492dda64012fad28afa2a3aa5e206"
-    },
-    {
-      "file": "renders/heartland-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 14656165,
-      "sha256": "5972ef3732a2a3a532d56e48fd12b1d0722e94b659d92989ad7885d92f72acc8",
-      "pixelSHA256": "ec22fa31cce5772f70cb5cb356dcd09e4944a359e7ef012a891408e762f8f74f"
-    },
-    {
-      "file": "renders/citywide-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 13816332,
-      "sha256": "89668ed74c3462f8bce3381251b0e093855fbe5b87e2ded629f19884620fd487",
-      "pixelSHA256": "91ed0187cde591052167b7ddc1cf85c1d9580eee3c5a6bf6649652e20cc262fa"
-    },
-    {
-      "file": "renders/port-credit-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 15799394,
-      "sha256": "3cc91a9e9ed2306a948e97856e8ced6480da596e9d86e6ee2f869762c8a62460",
-      "pixelSHA256": "8e76924edf527941707dc8ce730ce21fd40f18fefdf28568c3cdb391994a2a39"
-    },
-    {
-      "file": "renders/lakeview-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 13654284,
-      "sha256": "31a4bd6330d10dd0c61ee6d59889f199e81e9ae14079bf5253e5e0a069a2969b",
-      "pixelSHA256": "536b9cbba0417a531b0a9326b19aa6a32251b48893568149db825a733c578b17"
-    },
-    {
-      "file": "renders/clarkson-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 15224670,
-      "sha256": "93f8ff7fcc4e7e5222575269bccb9dde27965fcf5410580f79509a0a35041545",
-      "pixelSHA256": "cef901396226fc0b1d7473f412c2956e36317b5ca27128a9de4168e2ff8aea93"
-    },
-    {
-      "file": "renders/downtown-existing.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 15515375,
-      "sha256": "4d7e2efc03085648c7fe14fc8ff39e9f0cdceff0b56c79debd88134c534bfe9a",
-      "pixelSHA256": "9501c541d0f56ea6fcc963d663f2d9e510afef00b2e0d4bf1698c313d366cfb9"
-    },
-    {
-      "file": "renders/port-credit-existing.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 15710467,
-      "sha256": "a59addbd92511a26d38b3eb762f6fbd1571a1defb1522eabc1a91fa9bf1c0d1f",
-      "pixelSHA256": "4abdf7ada722b99e7f646caee692b999d14f86da44c8bc65fdcb8065f076b4bd"
-    },
-    {
-      "file": "renders/lakeview-existing.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 13612724,
-      "sha256": "9bbfc2a935979e2771b1a98415dd09939b564fa442d1c7c9ed8d920eeff30349",
-      "pixelSHA256": "5afc113748ecad7c8855010d878401a27c52b5f575a99373b0fd3cbdbde0181b"
-    },
-    {
-      "file": "renders/clarkson-existing.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 15230814,
-      "sha256": "554192497afd2050682f433c5e721fc64c0f1ed251c0e444de537c9598bb45d3",
-      "pixelSHA256": "1388a65b5177b9e4c65fc7c4d51d18cc91a70bde5f1a122b61f533a1cf6d030d"
-    },
-    {
-      "file": "renders/downtown-skyline-existing.png",
-      "dimensions": [
-        3840,
-        1400
-      ],
-      "bytes": 9165389,
-      "sha256": "a08b7593b5157a4ee3f2ff0b400dbee1ccdbe3f38bcbd5b86382b2cb7d175cff",
-      "pixelSHA256": "44527649ef9af767f5818afd0dfdac59181828182d0afd7a64b5e34993f2b806"
-    },
-    {
-      "file": "renders/downtown-skyline-construction.png",
-      "dimensions": [
-        3840,
-        1400
-      ],
-      "bytes": 9258116,
-      "sha256": "b6ceaf2d4867bc003321eaa4b78a4375bfb1fe6f90bf36400c2e7de5bb232f78",
-      "pixelSHA256": "ba981a0b899ff7f8aaf02500e6dfb142ab9bef82fd32088e0ab10b4dfd722072"
-    },
-    {
-      "file": "renders/downtown-skyline-future.png",
-      "dimensions": [
-        3840,
-        1400
-      ],
-      "bytes": 9168338,
-      "sha256": "41c568c38b0998d366042e4ee33f17db0a73dbf7bd53771b227d2b7602af3160",
-      "pixelSHA256": "3e7050213da7f71b1c36962f5d8eadf3ad346109ff3e8d68894d379616e8389d"
-    },
-    {
-      "file": "renders/port-credit-skyline-future.png",
-      "dimensions": [
-        3840,
-        1400
-      ],
-      "bytes": 9566302,
-      "sha256": "cfbb644f6cda77be2a6a2494491239e855194cf3b44893a11a24e81eb7179ca2",
-      "pixelSHA256": "5722d06f184c733c7c35be1b4224b2b3bea0ccf8291e06e6f5fa01a8924b7b4d"
-    },
-    {
-      "file": "renders/lakeview-skyline-future.png",
-      "dimensions": [
-        3840,
-        1400
-      ],
-      "bytes": 8309317,
-      "sha256": "fb2bf0e214b685d281ab33a7a753827068e3253d17fbee0640469f048590de47",
-      "pixelSHA256": "b67e9c771db5c8b9758275479827e4779870b0c0bb7ee4044abff7c8faadd9e4"
-    },
-    {
-      "file": "renders/clarkson-skyline-future.png",
-      "dimensions": [
-        3840,
-        1400
-      ],
-      "bytes": 9950912,
-      "sha256": "5887550a169343d58c0d8cc961a75500bd165271dc6e932f98b412f1a7b15005",
-      "pixelSHA256": "d2e8e1957f6c02d4718154bf71fc5b521bac796722ea8e83a0b0a333a08d2112"
-    },
-    {
-      "file": "renders/downtown-portrait-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 15930116,
-      "sha256": "dbb5bd8a8bd423d2a17e8678c45d12b716e594b29cb4c0a4f411228a8123b2a4",
-      "pixelSHA256": "ae207dfccb84872a91705961f9812e3f3df4fa9149b45f49d82f4b76c38db946"
-    },
-    {
-      "file": "renders/port-credit-portrait-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 16416064,
-      "sha256": "2f5ed9e4980ec41847105b7fa207aa3c396fd31e9de4794bd3e5979ad042063a",
-      "pixelSHA256": "1ec283fc6ff482faa325a213092661edca93f5c43ad8e4d48a12111fd40d0275"
-    },
-    {
-      "file": "renders/lakeview-portrait-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 13703077,
-      "sha256": "b988cd66bae675829aec7e286ac0f87d2275f5265d4e5bb37cbe9ce2333ab0b8",
-      "pixelSHA256": "7bcbd00bf67c32b2bde1694b626f93ab06ef2cd46fb15f4d480fe8f83ca2de38"
-    },
-    {
-      "file": "renders/clarkson-portrait-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 16019605,
-      "sha256": "90313222b37adbde6b424ae691c450cbe2ea65ae90905865c5595a08cb4f3e94",
-      "pixelSHA256": "248c1f11b681285f92e01025b53247d9617b9c7e22f124c3a2862ddae124f128"
-    },
-    {
-      "file": "renders/cooksville-portrait-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 14850457,
-      "sha256": "5170c8114bffc29556e082b32484d9f140cc02bae3eb5031d6675bad731a8e6b",
-      "pixelSHA256": "0529b387668dc4ba5772f49f53b52135a79084e247481a86eb297068a8026a1f"
-    },
-    {
-      "file": "renders/uptown-portrait-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 15655527,
-      "sha256": "19a5e4495a648122450a46829a2c484e451ecb81b4f407c11c85582d06c8f835",
-      "pixelSHA256": "9a6cb71b66486a7253b9dceb1341bab768df9ca8daceec931ea72a51b144e365"
-    },
-    {
-      "file": "renders/malton-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 14684858,
-      "sha256": "c406c895e37c9647a15d9ed836a55f59e0632044ab4d4948b52ddc2b473eb8f0",
-      "pixelSHA256": "e08541b2071610e0b1fcbf24df85c0413e48d25b56f3334a02ba57938b953cde"
-    },
-    {
-      "file": "renders/airport-corporate-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 12694196,
-      "sha256": "4f032f4b1a427716242cc3d9cdbcd786904a54bc46123bfbe2d038d83b1d1900",
-      "pixelSHA256": "726c3ecc42213f33ca0cb5f6fb622aa913c37220f26a472f26e981dfdb39d67f"
-    },
-    {
-      "file": "renders/meadowvale-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 16575463,
-      "sha256": "28fa6b072c62a9b6ed77dc622ebf4f84de327aebfbf5b519d3bd90dde4df59ca",
-      "pixelSHA256": "f3704c614f0d8ac1ea44e8338268b5058142220032676f09b79bdc137a60b0e6"
-    },
-    {
-      "file": "renders/streetsville-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 17119393,
-      "sha256": "49731cb54c91c3ba4904bed7421026d57b45bce9f9894bc6aa13cd6d05392a55",
-      "pixelSHA256": "39088ba76beccb01d7494b2e71b242121a235d60a1f347c402b29df48345a588"
-    },
-    {
-      "file": "renders/erin-mills-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 18038875,
-      "sha256": "0abc19334c68963b4b43a5b3983cb6a95f1bb1b678e2f4e267d1ccf76b5dcf6b",
-      "pixelSHA256": "6ec7350e486a8647611e7e5fd9af07cfd729422c37b6df3b33a52a8e7235f57a"
-    },
-    {
-      "file": "renders/downtown-landmark-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 12388165,
-      "sha256": "de8a67fecc62b0d10480e797dc02b6d889f4c01c415e52f0b3f4616bcddb6c71",
-      "pixelSHA256": "091daa04c7d44fe27944194461a847b1b0b4bd33850dd192db07a6a721f19eaa"
-    },
-    {
-      "file": "renders/downtown-junction-future.png",
-      "dimensions": [
-        3840,
-        2400
-      ],
-      "bytes": 12056731,
-      "sha256": "93e35f9e73a0bffda0fae28d35728441dc97fb27af4587b63114d118eb06cadd",
-      "pixelSHA256": "09057279b1e4504e5242920d6979545093f955678629f4a54bd5ee358f1b3a37"
-    }
-  ],
-  "limitations": "Source and construction observations have different dates. M City reconstructions, Absolute interpolation, selected concept models and transit profiles retain their cited uncertainty; no common completion year or current aerial survey is claimed. Inland water levels are terrain-derived display estimates. Transit routes obey scene depth: buildings, bridges and terrain intentionally occlude segments behind them; continuity in route data does not imply that every segment is visible. Construction tree crowns use future-envelope clearances; the landscaping is not a dated construction survey. Supported road and bridge profiles use dated native elevations. Newer QEW and Highway 401 heights are estimated; no as-built survey is claimed.",
-  "transitDepthEvidence": "research/transit-depth/Geometry-depth-correction.json",
-  "transitDepthEvidenceScope": "Historical evidence of the retained scene-depth method, not current render verification.",
-  "roadCrossingEvidence": "research/road-crossings/Road-and-bridge-elevation-sources.md",
-  "currentRenderSourceAudit": "research/depth/Atlas-render-source-audit.json",
-  "typography": {
-    "family": "Bricolage Grotesque",
-    "scope": "All PDF text",
-    "instances": [
-      {
-        "role": "Body",
-        "file": "fonts/bricolage-grotesque/BricolageGrotesque-TextRegular.ttf",
-        "postScriptName": "BricolageGrotesqueAtlas-TextRegular",
-        "axes": {
-          "wght": 400,
-          "opsz": 14,
-          "wdth": 100
-        },
-        "bytes": 91140,
-        "sha256": "459062161e7b895f1c5fe78344a8bf1f8d3d5395e304e2fc67f3920c921c7703"
-      },
-      {
-        "role": "BodyBold",
-        "file": "fonts/bricolage-grotesque/BricolageGrotesque-TextSemiBold.ttf",
-        "postScriptName": "BricolageGrotesqueAtlas-TextSemiBold",
-        "axes": {
-          "wght": 600,
-          "opsz": 14,
-          "wdth": 100
-        },
-        "bytes": 91236,
-        "sha256": "76902f8c3ce2cb8b9cd12770996257e5ae80c036f9cf1f8170b707842d7f2162"
-      },
-      {
-        "role": "Display",
-        "file": "fonts/bricolage-grotesque/BricolageGrotesque-DisplaySemiBold.ttf",
-        "postScriptName": "BricolageGrotesqueAtlas-DisplaySemiBold",
-        "axes": {
-          "wght": 600,
-          "opsz": 48,
-          "wdth": 100
-        },
-        "bytes": 91252,
-        "sha256": "7a1134e51e9a90e76999946f102bb1a4179f9209404e58c875321b322553eaef"
-      }
+    "fullPagesReviewed": [
+      1,
+      5,
+      6,
+      9,
+      22,
+      24,
+      26,
+      34,
+      35
     ],
-    "provenance": "licenses/BricolageGrotesque-Atlas-provenance.json",
-    "license": "licenses/BricolageGrotesque-OFL.txt"
-  },
-  "fontCredit": "Bricolage Grotesque, Copyright 2022 The Bricolage Grotesque Project Authors. Embedded static instances from the official Google Fonts variable font, licensed under SIL Open Font License 1.1."
+    "findings": [
+      "All 35 rendered pages have present, legible images and consistent headings, captions, source links and page footers.",
+      "No clipped or overlapping text, missing images, black glyph boxes, or blank unintended pages observed.",
+      "Bricolage Grotesque is used by all visible PDF text; technical checks found no text outside page bounds or missing-glyph markers.",
+      "Cooksville seven-tower concept, revised Erin Mills settlement, completed Gemma/Perla context, Absolute World and transit scene-depth captions match the visible current figures.",
+      "Source geometry gaps, estimated dimensions and mixed capture dates remain stated; visual review does not certify every source building or claim photographic realism."
+    ],
+    "scope": "Complete 35-page Poppler contact-sheet review, every lower-caption strip and nine representative full-page renders at 1400-pixel longest edge. PDF and image masters were not edited.",
+    "reportSHA256": "bd8b9311c9615c626858d4322410632fdab8faa4579e0262188e6fe0cd097f10"
+  }
 }

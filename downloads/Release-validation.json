@@ -1,12 +1,54 @@
 {
-  "edition": "2026-09-20 refinement",
-  "originalPNGs": 31,
-  "PNGbytes": 383614553,
-  "pixelMetadataChecks": 31,
-  "editableBlenderScenes": 15,
-  "GLBfiles": 152,
-  "refinementAssets": 18,
-  "webUsesOriginalPNG": true,
-  "assetFileHashesMatch": true,
-  "noJPEGOrWebPGalleryCopies": true
+  "edition": "Community Revision 2026-09-26",
+  "checkedAt": "2026-09-26T18:17:44.847139+00:00",
+  "inputLockSHA256": "0220a2410ef9ef379676caf3e88ed26f559dce3df08112f94dd131e17386a2a4",
+  "verifiedLockedInputs": 254,
+  "kind": "Current local file and source-manifest validation",
+  "originalPNGs": 33,
+  "portraitPNGs": 33,
+  "PNGbytes": 469801634,
+  "portraitPNGbytes": 76147503,
+  "editableBlenderSceneFilesPresent": 15,
+  "GLBfiles": 204,
+  "refinementAssets": 26,
+  "refinementAssetsWithFiniteOrderedBounds": 26,
+  "projectRecords": 108,
+  "webUsesHalfSizeDisplayPNG": true,
+  "displayPNGs": 33,
+  "downloadsUseOriginalPNG": true,
+  "atlas": {
+    "file": "Future-Mississauga-Atlas.pdf",
+    "pageCount": 35,
+    "sha256": "1aead73f139db7766567c4e350f52a49ad2aeb075eb2f1197b3c66a991d50ae1"
+  },
+  "film": {
+    "file": "../gallery/Downtown-transformation.mp4",
+    "durationSeconds": 5.7,
+    "sha256": "b0112251ea724840d08714947957da472c9597f3524113ad8065eb22aa537d76"
+  },
+  "current33WideFileAndDecodedRGBHashesVerified": true,
+  "current33PortraitFileHashesVerified": true,
+  "PNGMetadataPrivacy": {
+    "wideMastersChecked": 33,
+    "portraitMastersChecked": 33,
+    "wideDisplayPreviewsChecked": 33,
+    "privateLocalPathTextMetadataFound": false,
+    "method": "Decoded PNG text and string EXIF values inspected; original image pixels are not changed by this audit."
+  },
+  "comparisonCamerasVerified": true,
+  "modelIndexSHA256": "a51f345060c1da099c47cdc2a62fe16206d614215645425c07b9b08224c3a8eb",
+  "publicProjectRegisterSHA256": "c268a9683efa1a9be917a5f62f09b7b07fcef26b54573328436df18e4a81d8f6",
+  "publicModelManifestSHA256": "e5520fd0857a800581b871dde9edb6e7dcfe58d0432209032bc9ea9458116516",
+  "sourceProofs": {
+    "landscapeCompletionSHA256": "bfa2ebb30f73e932e520a206f089d63b29b7a8f9f8aaa222c41b3a874f6b064c",
+    "landscapeVerificationSHA256": "10ecc9ba13965b7118f6a3badc4c403d93bfee321052584d7135ad457e9b4087",
+    "portraitFinalQASHA256": "e9ae3768a9f2ce8d27b449ae2261c7d5141e39388a49c97c3e3f318efc71506e"
+  },
+  "liveDeploymentVerified": false,
+  "manualMediaReviewClaimedByThisReport": false,
+  "limits": [
+    "Local validation does not claim every project is modelled, approved, complete or fully accurate.",
+    "Scene-file presence is not a new audit of every Blender dependency.",
+    "Final public deployment and manual media review have separate evidence."
+  ]
 }
