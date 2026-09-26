@@ -195,25 +195,28 @@ export async function validate(site = join(ROOT, 'public')) {
   const social = JSON.parse(await readFile(join(site, 'data/social-pictures.json'), 'utf8'));
   assert.equal(social.nativePortraitRendering, true);
   assert.equal(social.ratio, '4:5');
-  assert.equal(social.images.length, 33, 'Expected all 33 native portrait records.');
-  assert.deepEqual(social.images.map(x => x.file).sort(), entries.map(([name]) => name).sort(), 'Portrait and wide view inventories differ.');
+  const expectedPortraits = ["downtown-landmark-future.png", "downtown-existing.png", "downtown-future.png", "downtown-skyline-existing.png", "downtown-skyline-construction.png", "downtown-skyline-future.png", "downtown-portrait-future.png", "downtown-junction-future.png", "cooksville-portrait-future.png", "cooksville-future.png", "uptown-portrait-future.png", "uptown-future.png", "port-credit-existing.png", "port-credit-future.png", "port-credit-portrait-future.png", "port-credit-skyline-future.png", "lakeview-existing.png", "lakeview-future.png", "lakeview-portrait-future.png", "clarkson-existing.png", "clarkson-future.png", "clarkson-portrait-future.png", "erin-mills-future.png", "streetsville-future.png"];
+  assert.equal(social.images.length, 24, 'Expected the 24 curated native portrait records.');
+  assert.deepEqual(social.images.map(x => x.file), expectedPortraits, 'Portrait inventory or curated order differs.');
+  assert(social.images.every(x => entries.some(([name]) => name === x.file)), 'Portrait is not part of the sourced wide-view inventory.');
   const socialPage = await readFile(join(site, 'social.html'), 'utf8');
-  const portraitPrefix = 'https://github.com/itsdanielsultan/future-mississauga/releases/download/community-images-2026-09-26/';
+  const portraitPrefix = 'https://github.com/itsdanielsultan/future-mississauga/releases/download/soft-grey-images-2026-09-26/';
   for (const picture of social.images) {
     assert.equal(picture.width, 1080);
     assert.equal(picture.height, 1350);
     assert.match(picture.sha256, /^[a-f0-9]{64}$/);
     assert.equal(picture.url, portraitPrefix + picture.file, 'Unexpected portrait download host/tag.');
-    assert.equal(picture.preview, 'gallery/social/previews/' + picture.file);
-    assert(names.has(picture.preview), 'Missing portrait preview: ' + picture.file);
-    const header = await readFile(join(site, picture.preview));
+    const previewPath = 'gallery/social/previews/' + picture.file;
+    assert.equal(picture.preview, previewPath + '?edition=' + picture.sha256.slice(0, 16));
+    assert(names.has(previewPath), 'Missing portrait preview: ' + picture.file);
+    const header = await readFile(join(site, previewPath));
     assert.equal(header.subarray(0, 8).toString('hex'), '89504e470d0a1a0a');
     assert.equal(header.readUInt32BE(16), 540);
     assert.equal(header.readUInt32BE(20), 675);
     assert.equal(socialPage.split('href="' + picture.url + '"').length - 1, 2, 'Portrait card download links differ from the source register.');
     assert(socialPage.includes('src="' + picture.preview + '"'), 'Portrait card preview differs from the source register.');
   }
-  const portraitGallery = {nativePortraitRecords: 33, localHalfSizePreviews: 33, dimensionsVerified: true, remoteDownloadSHA256Recorded: 33, remoteDownloadBytesVerifiedByThisStaticCheck: false};
+  const portraitGallery = {nativePortraitRecords: 24, localHalfSizePreviews: 24, dimensionsVerified: true, remoteDownloadSHA256Recorded: 24, remoteDownloadBytesVerifiedByThisStaticCheck: false};
   const documentLinks = await validateDocumentLinks(site);
   const report = {files: files.length, publishedBytes: bytes, originalPNGs: entries.length, halfSizeDisplayPNGs: entries.length, portraitGallery, modelDownloads, refinementBounds, ...documentLinks, districtMetadata, PNGchecksumsVerified: true, noHostedRuntime: true, noPrivateArtifacts: true};
   console.log(JSON.stringify(report, null, 2));

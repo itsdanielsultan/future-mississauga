@@ -16,7 +16,7 @@ export function createExistingStyleIndex(data){
 
 export function applyExistingStyle(THREE,object,index){
  const geometry=object.geometry,position=geometry.getAttribute('position'),triangles=geometry.index;
- const small=new THREE.Color(0xc8cac3),major=new THREE.Color(0x747d81);
+ const small=new THREE.Color(0xc8cac3),major=new THREE.Color(0x7e878b);
  const pale=[small.r,small.g,small.b].map(x=>Math.round(x*255)),dark=[major.r,major.g,major.b].map(x=>Math.round(x*255));
  const colors=new Uint8Array(position.count*3),d=object.userData;
  let uniform=null;

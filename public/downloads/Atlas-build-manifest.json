@@ -1,9 +1,9 @@
 {
-  "edition": "Community Revision 2026-09-26",
-  "checkedAt": "2026-09-26T18:17:44.835087+00:00",
+  "edition": "Soft Grey Revision 2026-09-26",
+  "checkedAt": "2026-09-26T21:27:16.047750+00:00",
   "file": "Future-Mississauga-Atlas.pdf",
-  "sha256": "1aead73f139db7766567c4e350f52a49ad2aeb075eb2f1197b3c66a991d50ae1",
-  "bytes": 23465223,
+  "sha256": "a67ae0370bbd0acdf7f88fb5c9931d937d32864dea7a204de9da2b90479fa65c",
+  "bytes": 24909977,
   "pageCount": 35,
   "sourceImageCount": 33,
   "sourceImageDimensions": [
@@ -18,8 +18,8 @@
   ],
   "researchRecords": 108,
   "refinementAssets": 26,
-  "inputLockSHA256": "0220a2410ef9ef379676caf3e88ed26f559dce3df08112f94dd131e17386a2a4",
-  "inputLockedAt": "2026-09-26T17:12:34.811838+00:00",
+  "inputLockSHA256": "e2353bd4631bbda770003f21ee4db3a71fb9a3366ba002c5056ecee3e18048f7",
+  "inputLockedAt": "2026-09-26T18:47:00.729483+00:00",
   "externalLinks": 100,
   "distinctExternalLinks": 56,
   "typography": {
@@ -31,7 +31,7 @@
   "verification": {
     "currentPDFMatchesCompletedPipeline": true,
     "current33ImageSourceAuditVerified": true,
-    "atlasSourceAuditSHA256": "10ecc9ba13965b7118f6a3badc4c403d93bfee321052584d7135ad457e9b4087",
+    "atlasSourceAuditSHA256": "92444e3615e0640118a7a0df5cb685f5d2f309681e4c3ba729b5f68693d20634",
     "pageCountReadDirectlyFromPDF": true,
     "manualLayoutReviewClaimedByThisReport": true
   },
@@ -187,12 +187,12 @@
       }
     ],
     "test": false,
-    "jpegQuality": 82,
+    "jpegQuality": 84,
     "refinementAssets": 26,
     "researchRecords": 108,
     "researchOperations": 1556,
     "municipalGroups": 181,
-    "edition": "Community Revision 2026-09-26",
+    "edition": "Soft Grey Revision 2026-09-26",
     "typography": {
       "family": "Bricolage Grotesque",
       "scope": "All PDF text",
@@ -238,9 +238,9 @@
       "license": "licenses/BricolageGrotesque-OFL.txt"
     }
   },
-  "generatedBuildManifestSHA256": "65e283648af63421df3293c4684516ea6c6e324a89a232a959ed4f897048da38",
+  "generatedBuildManifestSHA256": "833cc5ed46e127a550ce159f6b4b7c3458a423b03d2ec13b59c58944c9a19ab9",
   "manualVisualReview": {
-    "checkedAt": "2026-09-26T18:17:11.218575+00:00",
+    "checkedAt": "2026-09-26T21:16:59.550171+00:00",
     "result": "PASS",
     "pagesReviewed": [
       1,
@@ -291,13 +291,13 @@
       35
     ],
     "findings": [
-      "All 35 rendered pages have present, legible images and consistent headings, captions, source links and page footers.",
-      "No clipped or overlapping text, missing images, black glyph boxes, or blank unintended pages observed.",
-      "Bricolage Grotesque is used by all visible PDF text; technical checks found no text outside page bounds or missing-glyph markers.",
-      "Cooksville seven-tower concept, revised Erin Mills settlement, completed Gemma/Perla context, Absolute World and transit scene-depth captions match the visible current figures.",
-      "Source geometry gaps, estimated dimensions and mixed capture dates remain stated; visual review does not certify every source building or claim photographic realism."
+      "All 35 pages show the fresh softer-grey images with consistent Bricolage Grotesque titles, body copy and footers. The page-34 existing-building swatch preserves the major-building versus pale low-rise distinction.",
+      "All seven page sheets and seven caption strips were inspected. Nine representative full pages were opened at their original Poppler raster size; no cropped heading, missing image, footer collision or missing glyph was observed.",
+      "The first page explicitly preserves the dated research basis and states that this palette edition adds no new building research. Model-limit text remains visible for approximate or incomplete forms.",
+      "One page-34 legend collision was found and repaired by shortening only the existing-city description. The revised full page and final contact sheet were visually rechecked. Raster comparison proves that the other 34 pages are pixel-identical to the reviewed pre-fix PDF.",
+      "The research page retains source-count qualifications; proposed scenarios are not presented as guaranteed completion."
     ],
-    "scope": "Complete 35-page Poppler contact-sheet review, every lower-caption strip and nine representative full-page renders at 1400-pixel longest edge. PDF and image masters were not edited.",
-    "reportSHA256": "bd8b9311c9615c626858d4322410632fdab8faa4579e0262188e6fe0cd097f10"
+    "scope": "Complete 35-page Poppler contact-sheet and caption-strip review, with nine representative 1400-pixel-longest-edge full pages. Final atlas-only repair was rechecked visually and by exact per-page pixel comparison; this is layout/presentation QA, not a new source research certification.",
+    "reportSHA256": "a099acedf39911c8b66814991f581a703d763ae547528495d23c0103acc559bf"
   }
 }

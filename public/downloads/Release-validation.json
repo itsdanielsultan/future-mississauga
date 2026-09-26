@@ -1,13 +1,14 @@
 {
-  "edition": "Community Revision 2026-09-26",
-  "checkedAt": "2026-09-26T18:17:44.847139+00:00",
-  "inputLockSHA256": "0220a2410ef9ef379676caf3e88ed26f559dce3df08112f94dd131e17386a2a4",
+  "edition": "Soft Grey Revision 2026-09-26",
+  "presentationAmendment": "Softer existing-building grey and separately curated portrait presentation. No new building research or status claims.",
+  "checkedAt": "2026-09-26T21:27:16.063695+00:00",
+  "inputLockSHA256": "e2353bd4631bbda770003f21ee4db3a71fb9a3366ba002c5056ecee3e18048f7",
   "verifiedLockedInputs": 254,
   "kind": "Current local file and source-manifest validation",
   "originalPNGs": 33,
-  "portraitPNGs": 33,
-  "PNGbytes": 469801634,
-  "portraitPNGbytes": 76147503,
+  "portraitPNGs": 24,
+  "PNGbytes": 469123854,
+  "portraitPNGbytes": 52362993,
   "editableBlenderSceneFilesPresent": 15,
   "GLBfiles": 204,
   "refinementAssets": 26,
@@ -19,18 +20,18 @@
   "atlas": {
     "file": "Future-Mississauga-Atlas.pdf",
     "pageCount": 35,
-    "sha256": "1aead73f139db7766567c4e350f52a49ad2aeb075eb2f1197b3c66a991d50ae1"
+    "sha256": "a67ae0370bbd0acdf7f88fb5c9931d937d32864dea7a204de9da2b90479fa65c"
   },
   "film": {
     "file": "../gallery/Downtown-transformation.mp4",
     "durationSeconds": 5.7,
-    "sha256": "b0112251ea724840d08714947957da472c9597f3524113ad8065eb22aa537d76"
+    "sha256": "f94906d9e45189a0097ef2550916e0924058f10cfbb4879452aef880c324f0bc"
   },
   "current33WideFileAndDecodedRGBHashesVerified": true,
-  "current33PortraitFileHashesVerified": true,
+  "current24PortraitFileHashesVerified": true,
   "PNGMetadataPrivacy": {
     "wideMastersChecked": 33,
-    "portraitMastersChecked": 33,
+    "portraitMastersChecked": 24,
     "wideDisplayPreviewsChecked": 33,
     "privateLocalPathTextMetadataFound": false,
     "method": "Decoded PNG text and string EXIF values inspected; original image pixels are not changed by this audit."
@@ -40,9 +41,9 @@
   "publicProjectRegisterSHA256": "c268a9683efa1a9be917a5f62f09b7b07fcef26b54573328436df18e4a81d8f6",
   "publicModelManifestSHA256": "e5520fd0857a800581b871dde9edb6e7dcfe58d0432209032bc9ea9458116516",
   "sourceProofs": {
-    "landscapeCompletionSHA256": "bfa2ebb30f73e932e520a206f089d63b29b7a8f9f8aaa222c41b3a874f6b064c",
-    "landscapeVerificationSHA256": "10ecc9ba13965b7118f6a3badc4c403d93bfee321052584d7135ad457e9b4087",
-    "portraitFinalQASHA256": "e9ae3768a9f2ce8d27b449ae2261c7d5141e39388a49c97c3e3f318efc71506e"
+    "landscapeCompletionSHA256": "1909372aef91b55df4af14ea50a04dd1861adbb0ee3c875bc370fdc603ed9edd",
+    "landscapeVerificationSHA256": "92444e3615e0640118a7a0df5cb685f5d2f309681e4c3ba729b5f68693d20634",
+    "portraitFinalQASHA256": "1ee7d035be74aafae92c19f4ca3f58148a0896ec201f10242741a57c250a1e38"
   },
   "liveDeploymentVerified": false,
   "manualMediaReviewClaimedByThisReport": false,
