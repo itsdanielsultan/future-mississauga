@@ -1,434 +1,8 @@
 {
   "asOf": "2026-09-20",
-  "edition": "Transit Revamp 2026-09-20",
+  "edition": "Community Revision 2026-09-26",
   "coordinateSystem": "x=UTM17N easting\u2212615000; y=elevationASL\u221270; z=4827000\u2212northing; metres, glTF Y up",
   "assets": [
-    {
-      "assetId": "cooksville-toc-2025-tower-envelopes",
-      "projectId": "cooksville-toc",
-      "file": "outputs/models/supplemental/refinement-downtown/cooksville-toc-2025-tower-envelopes.glb",
-      "status": "Uncertain",
-      "sourceStatus": "Proposed",
-      "modes": [
-        "future"
-      ],
-      "includedByDefault": true,
-      "replacesSourceIds": [],
-      "modelFidelity": "dated 2025 plan-derived approximate tower envelopes; podiums and facades omitted",
-      "geometryDate": "2025-09-25",
-      "constructionEvidence": {
-        "date": "2026-09-20",
-        "stage": "Proposal under public engagement; no construction start established",
-        "actualHeightM": null
-      },
-      "registration": {
-        "method": "Similarity fit to exact City 115 Hillcrest footprint centroid and 2 public StreetInt controls; raster landmark picks approximate",
-        "controlMeshIds": [
-          "63-1560"
-        ],
-        "sourcePixels": [
-          [
-            958.0,
-            347.0
-          ],
-          [
-            1582.0,
-            275.0
-          ],
-          [
-            1575.0,
-            511.0
-          ]
-        ],
-        "worldControls": [
-          [
-            -3902.2513192968936,
-            747.6425657303573
-          ],
-          [
-            -3695.996476903325,
-            428.02965218760073
-          ],
-          [
-            -3596.654659951804,
-            521.4755327459425
-          ]
-        ],
-        "mPerPixel": 0.5989282110574212,
-        "sourceURLs": [
-          "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=John+Street+and+Hurontario+Street%2C+Mississauga%2C+Ontario&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1",
-          "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=Hillcrest+Avenue+and+Hurontario+Street%2C+Mississauga%2C+Ontario&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1"
-        ],
-        "coefficients": [
-          0.3782941075525397,
-          -0.4643366991650244,
-          -4425.892062961573,
-          1059.7620146236688
-        ],
-        "residualM": [
-          1.4512401554607666,
-          3.9241484031024876,
-          3.8609382364087885
-        ],
-        "estimatedPositionToleranceM": 8
-      },
-      "sources": [
-        {
-          "url": "https://www.infrastructureontario.ca/48f8a0/contentassets/e44b38c8189641c2aa193899c6727b3d/2025-09-25_cooksville-toc_planning-justification-report.pdf",
-          "publisher": "Infrastructure Ontario / Arup",
-          "claim": "2025 PJR figure18 primary orthogonal site plan; figures22/23 orthogonal elevations; eight tower positions and shapes."
-        },
-        {
-          "url": "https://www.infrastructureontario.ca/4ab5dd/globalassets/2025-10-30_cooksville_virtual-open-house_final_aoda.pdf",
-          "publisher": "Infrastructure Ontario",
-          "claim": "October 2025 published 8-tower concept; rounded east maximum 149 m and west 134 m differ from detailed UT reporting, so height uncertainty retained."
-        },
-        {
-          "url": "https://urbantoronto.ca/news/2025/10/3000-units-planned-8-towers-cooksville-go-and-lrt.59635",
-          "publisher": "UrbanToronto",
-          "claim": "East 49/40-storey maxima 151.5/124.5 m and west 44/28-storey maxima 133.5/85.5 m."
-        },
-        {
-          "url": "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/cooksville-go-transit-oriented-community/",
-          "publisher": "Infrastructure Ontario",
-          "claim": "Current proposal now approximately 3,170 homes, engagement September 22, 2026; drawings and DWG available upon request only."
-        }
-      ],
-      "components": [
-        {
-          "name": "E1",
-          "storeys": 42,
-          "heightM": 130.45,
-          "heightSource": "Scaled official orthogonal elevation; estimate",
-          "heightUncertaintyM": 3,
-          "planPixels": [
-            [
-              1308,
-              209
-            ],
-            [
-              1358,
-              209
-            ],
-            [
-              1371,
-              238
-            ],
-            [
-              1368,
-              246
-            ],
-            [
-              1308,
-              246
-            ]
-          ],
-          "planAreaM2": 764.2423117619364,
-          "centreModelXZ": [
-            -3814.1832798542127,
-            525.3026917193181
-          ],
-          "lat": 43.58294705098323,
-          "lon": -79.62281243534042,
-          "groundModelY": 58.38694763183594,
-          "groundSource": "Ontario DTM",
-          "triangles": 16
-        },
-        {
-          "name": "E2",
-          "storeys": 49,
-          "heightM": 151.5,
-          "heightSource": "Published maximum",
-          "heightUncertaintyM": 3,
-          "planPixels": [
-            [
-              1399,
-              134
-            ],
-            [
-              1443,
-              134
-            ],
-            [
-              1448,
-              141
-            ],
-            [
-              1426,
-              191
-            ],
-            [
-              1399,
-              191
-            ]
-          ],
-          "planAreaM2": 798.3202369519901,
-          "centreModelXZ": [
-            -3814.870900631758,
-            461.2763716325887
-          ],
-          "lat": 43.58352349053719,
-          "lon": -79.6228078095692,
-          "groundModelY": 57.54042053222656,
-          "groundSource": "Ontario DTM",
-          "triangles": 16
-        },
-        {
-          "name": "E3",
-          "storeys": 40,
-          "heightM": 124.5,
-          "heightSource": "Published maximum",
-          "heightUncertaintyM": 3,
-          "planPixels": [
-            [
-              1466,
-              188
-            ],
-            [
-              1483,
-              188
-            ],
-            [
-              1505,
-              237
-            ],
-            [
-              1500,
-              246
-            ],
-            [
-              1454,
-              246
-            ],
-            [
-              1449,
-              237
-            ]
-          ],
-          "planAreaM2": 806.2119669959882,
-          "centreModelXZ": [
-            -3764.4411128618135,
-            458.2463791990936
-          ],
-          "lat": 43.58354323965347,
-          "lon": -79.62218271775863,
-          "groundModelY": 55.91681671142578,
-          "groundSource": "Ontario DTM",
-          "triangles": 20
-        },
-        {
-          "name": "E4",
-          "storeys": 46,
-          "heightM": 142.58,
-          "heightSource": "Scaled official orthogonal elevation; estimate",
-          "heightUncertaintyM": 3,
-          "planPixels": [
-            [
-              1511,
-              134
-            ],
-            [
-              1558,
-              134
-            ],
-            [
-              1558,
-              191
-            ],
-            [
-              1536,
-              191
-            ]
-          ],
-          "planAreaM2": 705.4130514338669,
-          "centreModelXZ": [
-            -3769.4645116016723,
-            404.8564342760364
-          ],
-          "lat": 43.58402458224041,
-          "lon": -79.62223395999304,
-          "groundModelY": 55.349090576171875,
-          "groundSource": "Ontario DTM",
-          "triangles": 12
-        },
-        {
-          "name": "W1",
-          "storeys": 44,
-          "heightM": 133.5,
-          "heightSource": "Published maximum",
-          "heightUncertaintyM": 3,
-          "planPixels": [
-            [
-              1040,
-              299
-            ],
-            [
-              1075,
-              299
-            ],
-            [
-              1075,
-              355
-            ],
-            [
-              1040,
-              355
-            ]
-          ],
-          "planAreaM2": 703.0814039208661,
-          "centreModelXZ": [
-            -3874.0079435977996,
-            692.428128426336
-          ],
-          "lat": 43.581451583030336,
-          "lon": -79.62358751454148,
-          "groundModelY": 58.32804870605469,
-          "groundSource": "Ontario DTM",
-          "triangles": 12
-        },
-        {
-          "name": "W2",
-          "storeys": 38,
-          "heightM": 115.28,
-          "heightSource": "Scaled official orthogonal elevation; estimate",
-          "heightUncertaintyM": 3,
-          "planPixels": [
-            [
-              1117,
-              300
-            ],
-            [
-              1151,
-              300
-            ],
-            [
-              1151,
-              364
-            ],
-            [
-              1117,
-              364
-            ]
-          ],
-          "planAreaM2": 780.563844352962,
-          "centreModelXZ": [
-            -3842.746760874206,
-            658.7978414779743
-          ],
-          "lat": 43.581749646488404,
-          "lon": -79.6231935221122,
-          "groundModelY": 57.237762451171875,
-          "groundSource": "Ontario DTM",
-          "triangles": 12
-        },
-        {
-          "name": "W3",
-          "storeys": 32,
-          "heightM": 96.82,
-          "heightSource": "Scaled official orthogonal elevation; estimate",
-          "heightUncertaintyM": 3,
-          "planPixels": [
-            [
-              1117,
-              407
-            ],
-            [
-              1151,
-              407
-            ],
-            [
-              1151,
-              470
-            ],
-            [
-              1117,
-              470
-            ]
-          ],
-          "planAreaM2": 768.3675342849485,
-          "centreModelXZ": [
-            -3793.2949024131303,
-            699.08616393232
-          ],
-          "lat": 43.581379611263294,
-          "lon": -79.62258944946576,
-          "groundModelY": 56.846527099609375,
-          "groundSource": "Ontario DTM",
-          "triangles": 12
-        },
-        {
-          "name": "W4",
-          "storeys": 28,
-          "heightM": 85.5,
-          "heightSource": "Published maximum",
-          "heightUncertaintyM": 3,
-          "planPixels": [
-            [
-              1040,
-              407
-            ],
-            [
-              1075,
-              407
-            ],
-            [
-              1075,
-              470
-            ],
-            [
-              1040,
-              470
-            ]
-          ],
-          "planAreaM2": 790.9665794109742,
-          "centreModelXZ": [
-            -3822.2344016408997,
-            734.6079214184442
-          ],
-          "lat": 43.58106417735117,
-          "lon": -79.62295508234995,
-          "groundModelY": 57.13092041015625,
-          "groundSource": "Ontario DTM",
-          "triangles": 12
-        }
-      ],
-      "bounds": [
-        [
-          -3893.6295180565894,
-          55.349090576171875,
-          387.0168477366012
-        ],
-        [
-          -3744.2240736381677,
-          209.04042053222656,
-          754.6500780417372
-        ]
-      ],
-      "bytes": 16484,
-      "warning": "Dated September\u2013October 2025 Cooksville TOC tower-envelope study. The current September 2026 IO page increases the homes total to approximately 3,170; a matching revised architectural set is not publicly provided. Towers use digitised primary site-plan outlines. Four maximum heights follow published project reports; four intermediate heights are measured from official orthogonal elevations, with estimated \u00b13 m uncertainty. Exact podiums, rooftop plant and facades are omitted; this is not the latest confirmed architectural design or current construction.",
-      "uncertainties": [
-        "Current 2026 revision detail unavailable; reflects 2025 public concept.",
-        "Estimated \u00b18 m placement and \u00b12 m digitised contours; four intermediate heights have \u00b13 m interpretation uncertainty.",
-        "Podium, rooftop plant and facade details omitted; simple envelopes extend to reported maximum.",
-        "No measured current construction height established."
-      ],
-      "sha256": "9509a7705840cbbb7dcb9a8b7efe4ea4dd680ae8914196ea263c410f61550a22",
-      "metadata": "outputs/models/supplemental/refinement-downtown/cooksville-toc-2025-tower-envelopes.json",
-      "id": "cooksville-toc-2025-tower-envelopes",
-      "coordinateSystem": {
-        "horizontal": "EPSG:26917 NAD83 / UTM zone 17N",
-        "axis": "Y-up, metres",
-        "transform": {
-          "x": "easting - 615000",
-          "y": "elevation ASL - 70",
-          "z": "4827000 - northing"
-        }
-      },
-      "url": "models/refinement/cooksville-toc-2025-tower-envelopes.glb",
-      "replacementModes": [
-        "future"
-      ]
-    },
     {
       "projectId": "promenade-infill",
       "assetId": "promenade-infill-plan-derived",
@@ -451,9 +25,9 @@
       ],
       "towerRoofDimensionsM": [
         34.1,
-        22.0
+        22
       ],
-      "clearTowerGapM": 25.0,
+      "clearTowerGapM": 25,
       "podiumHeightsM": [
         22.32,
         27.89
@@ -1200,7 +774,9 @@
       "url": "models/refinement/promenade-infill-plan-derived.glb",
       "replacementModes": [
         "future"
-      ]
+      ],
+      "downloadSHA256": "4c93c5ced26ad1b2aa495135dbf9dec8b1d1770f93280d4e4a2ae2b94b0b431c",
+      "downloadBytes": 230376
     },
     {
       "assetId": "square-one-block5-t1-plan-derived",
@@ -1226,16 +802,16 @@
         "method": "Least-squares similarity from 3 exact-match StreetInt address records to digitised centreline intersections in published 1280\u00d7805 plan",
         "sourcePixels": [
           [
-            49.0,
-            35.0
+            49,
+            35
           ],
           [
-            46.0,
-            763.0
+            46,
+            763
           ],
           [
-            1250.0,
-            42.0
+            1250,
+            42
           ]
         ],
         "worldControls": [
@@ -1322,7 +898,7 @@
             ]
           ],
           "bottomHeightM": 0,
-          "topHeightM": 8.0,
+          "topHeightM": 8,
           "planAreaM2": 2385.9437212374046
         },
         {
@@ -1369,7 +945,7 @@
               405
             ]
           ],
-          "bottomHeightM": 8.0,
+          "bottomHeightM": 8,
           "topHeightM": 16.1,
           "planAreaM2": 587.9144634419986
         },
@@ -1393,7 +969,7 @@
               281
             ]
           ],
-          "bottomHeightM": 8.0,
+          "bottomHeightM": 8,
           "topHeightM": 25.7,
           "planAreaM2": 232.75206030694576
         },
@@ -1417,7 +993,7 @@
               281
             ]
           ],
-          "bottomHeightM": 8.0,
+          "bottomHeightM": 8,
           "topHeightM": 12.5,
           "planAreaM2": 54.07371098040498
         },
@@ -1441,7 +1017,7 @@
               381
             ]
           ],
-          "bottomHeightM": 8.0,
+          "bottomHeightM": 8,
           "topHeightM": 156.25,
           "planAreaM2": 732.7379676329617
         },
@@ -1528,7 +1104,9 @@
       "url": "models/refinement/square-one-block5-t1-plan-derived.glb",
       "replacementModes": [
         "future"
-      ]
+      ],
+      "downloadSHA256": "b1e0c1a79522c81f2fa82990f28132c299e4e83fe6abb314264589244cfabaf6",
+      "downloadBytes": 16760
     },
     {
       "assetId": "mcity-m3-crown-silhouette",
@@ -1704,7 +1282,7 @@
           "name": "strip-6",
           "planFraction": [
             0.85,
-            1.0
+            1
           ],
           "topHeightM": 260.29,
           "heightBasis": "Verified architectural maximum",
@@ -1787,7 +1365,9 @@
         "construction"
       ],
       "sha256": "fba3afd818534ba6152bf436bd6d15970a57810d6dbee9bb3be01a299940bb13",
-      "recordedProgress": true
+      "recordedProgress": true,
+      "downloadSHA256": "fba3afd818534ba6152bf436bd6d15970a57810d6dbee9bb3be01a299940bb13",
+      "downloadBytes": 20252
     },
     {
       "assetId": "mcity-m5-developer-proxy",
@@ -1816,7 +1396,7 @@
           "nativeBounds": [
             [
               -46.79711725322265,
-              0.0,
+              0,
               106.81791693115235
             ],
             [
@@ -1867,16 +1447,16 @@
         "method": "Similarity fit between 3 developer community-diagram podium centroids and unchanged municipal M1/M2/M3 footprint centroids; native dimensions retain scale 1.",
         "sourcePixels": [
           [
-            1598.0,
-            280.0
+            1598,
+            280
           ],
           [
-            1630.0,
-            599.0
+            1630,
+            599
           ],
           [
-            1117.0,
-            319.0
+            1117,
+            319
           ]
         ],
         "municipalControls": [
@@ -1965,7 +1545,9 @@
       "replacementModes": [
         "future"
       ],
-      "sha256": "2aae3db6fa73b801eab356839b37c10587316bf29ff2c2d4ab66c694dc5ed1a6"
+      "sha256": "2aae3db6fa73b801eab356839b37c10587316bf29ff2c2d4ab66c694dc5ed1a6",
+      "downloadSHA256": "2aae3db6fa73b801eab356839b37c10587316bf29ff2c2d4ab66c694dc5ed1a6",
+      "downloadBytes": 9452
     },
     {
       "assetId": "voya-towers-plan-derived",
@@ -2029,20 +1611,20 @@
         ],
         "sourcePoints": [
           [
-            38.0,
-            205.0
+            38,
+            205
           ],
           [
-            420.0,
-            205.0
+            420,
+            205
           ],
           [
-            445.0,
-            685.0
+            445,
+            685
           ],
           [
-            67.0,
-            685.0
+            67,
+            685
           ]
         ],
         "worldPoints": [
@@ -2467,7 +2049,7 @@
         {
           "name": "taller-body",
           "role": "recessed wall outline; schematic full structural envelope",
-          "bottomHeightM": 0.0,
+          "bottomHeightM": 0,
           "modelTopHeightM": 142.03,
           "areaM2": 798.2085774932272
         },
@@ -2782,7 +2364,7 @@
         {
           "name": "shorter-body",
           "role": "recessed wall outline; schematic full structural envelope",
-          "bottomHeightM": 0.0,
+          "bottomHeightM": 0,
           "modelTopHeightM": 123.742,
           "areaM2": 798.2085774932267
         },
@@ -3074,7 +2656,9 @@
         "construction"
       ],
       "sha256": "f876a440f538b0d8ebcb7672267e93b7ffb3591b2d8f58a527b869d2f5b69781",
-      "recordedProgress": true
+      "recordedProgress": true,
+      "downloadSHA256": "f876a440f538b0d8ebcb7672267e93b7ffb3591b2d8f58a527b869d2f5b69781",
+      "downloadBytes": 401156
     },
     {
       "id": "wf-26park-current-plan",
@@ -3118,70 +2702,70 @@
         "tracedExistingFootprints": [
           [
             [
-              185.0,
-              845.0
+              185,
+              845
             ],
             [
-              458.0,
-              845.0
+              458,
+              845
             ],
             [
-              458.0,
-              676.0
+              458,
+              676
             ],
             [
-              562.0,
-              676.0
+              562,
+              676
             ],
             [
-              562.0,
-              948.0
+              562,
+              948
             ],
             [
-              185.0,
-              948.0
+              185,
+              948
             ],
             [
-              185.0,
-              845.0
+              185,
+              845
             ]
           ],
           [
             [
-              680.0,
-              827.0
+              680,
+              827
             ],
             [
-              852.0,
-              827.0
+              852,
+              827
             ],
             [
-              852.0,
-              619.0
+              852,
+              619
             ],
             [
-              952.0,
-              619.0
+              952,
+              619
             ],
             [
-              952.0,
-              684.0
+              952,
+              684
             ],
             [
-              963.0,
-              684.0
+              963,
+              684
             ],
             [
-              963.0,
-              941.0
+              963,
+              941
             ],
             [
-              679.0,
-              941.0
+              679,
+              941
             ],
             [
-              680.0,
-              827.0
+              680,
+              827
             ]
           ]
         ],
@@ -3423,7 +3007,9 @@
       "replacementModes": [
         "future"
       ],
-      "bytes": 3444
+      "bytes": 3444,
+      "downloadSHA256": "c245fa1beebfe015b7058a7514672d4f438071bfea3d7fdeb9f1ad2d98b6f535",
+      "downloadBytes": 3444
     },
     {
       "id": "wf-clarkson-toc-current-plan",
@@ -4224,7 +3810,9 @@
       "replacementModes": [
         "future"
       ],
-      "bytes": 11060
+      "bytes": 11060,
+      "downloadSHA256": "4eee723872e2223150098bab18a9b5add839546d420096465c84947099ea42ac",
+      "downloadBytes": 11060
     },
     {
       "id": "wf-50high-current-plan",
@@ -4806,7 +4394,9 @@
       "replacementModes": [
         "future"
       ],
-      "bytes": 13572
+      "bytes": 13572,
+      "downloadSHA256": "a29d2aaab4d41e70ea9a8e5c12b107748f472ef6e59c2da6a9269c29543e760e",
+      "downloadBytes": 13572
     },
     {
       "id": "wf-128-current-plan",
@@ -5412,7 +5002,9 @@
       "replacementModes": [
         "future"
       ],
-      "bytes": 13884
+      "bytes": 13884,
+      "downloadSHA256": "4968bd32c72d643d0d6cdf945a745bc717502599e4ddff52c86e59e0ee89b5ad",
+      "downloadBytes": 13884
     },
     {
       "id": "wf-900-lakeshore-current-plan",
@@ -5519,74 +5111,74 @@
         "surveyExistingFootprints": [
           [
             [
-              845.0,
-              341.0
+              845,
+              341
             ],
             [
-              896.0,
-              390.0
+              896,
+              390
             ],
             [
-              847.0,
-              441.0
+              847,
+              441
             ],
             [
-              796.0,
-              392.0
+              796,
+              392
             ],
             [
-              845.0,
-              341.0
+              845,
+              341
             ]
           ],
           [
             [
-              544.0,
-              362.0
+              544,
+              362
             ],
             [
-              554.0,
-              374.0
+              554,
+              374
             ],
             [
-              567.0,
-              380.0
+              567,
+              380
             ],
             [
-              573.0,
-              390.0
+              573,
+              390
             ],
             [
-              568.0,
-              410.0
+              568,
+              410
             ],
             [
-              579.0,
-              420.0
+              579,
+              420
             ],
             [
-              544.0,
-              446.0
+              544,
+              446
             ],
             [
-              517.0,
-              420.0
+              517,
+              420
             ],
             [
-              519.0,
-              402.0
+              519,
+              402
             ],
             [
-              532.0,
-              392.0
+              532,
+              392
             ],
             [
-              536.0,
-              378.0
+              536,
+              378
             ],
             [
-              544.0,
-              362.0
+              544,
+              362
             ]
           ]
         ]
@@ -5895,7 +5487,7 @@
             ]
           ],
           "areaM2": 755.2901023199977,
-          "bottomASL": 86.0,
+          "bottomASL": 86,
           "topASL": 91.2,
           "sourceDate": "2024-10-03 retained original ground plan; March 2026 site plan cross-check"
         },
@@ -10146,7 +9738,9 @@
       "replacementModes": [
         "future"
       ],
-      "bytes": 79920
+      "bytes": 79920,
+      "downloadSHA256": "374df3398a5605fd2d1b0150457e2d095696e5da86f2cdff81dc75e4cb35a739",
+      "downloadBytes": 79920
     },
     {
       "id": "wf-brightwater-missing-blocks-concept",
@@ -10751,7 +10345,7 @@
           ],
           "areaM2": 1715.3254845598676,
           "sourceHeightM": null,
-          "illustrativeHeightM": 28.0,
+          "illustrativeHeightM": 28,
           "baseASLApproximate": 82.54766082763672,
           "bottomASLApproximate": 104.04766082763672,
           "topASLApproximate": 110.54766082763672,
@@ -11437,7 +11031,7 @@
           ],
           "areaM2": 788.9397661357032,
           "sourceHeightM": null,
-          "illustrativeHeightM": 40.0,
+          "illustrativeHeightM": 40,
           "baseASLApproximate": 79.73575592041016,
           "bottomASLApproximate": 101.23575592041016,
           "topASLApproximate": 119.73575592041016,
@@ -11537,7 +11131,7 @@
           ],
           "areaM2": 719.1172223731703,
           "sourceHeightM": null,
-          "illustrativeHeightM": 93.0,
+          "illustrativeHeightM": 93,
           "baseASLApproximate": 78.04259872436523,
           "bottomASLApproximate": 99.54259872436523,
           "topASLApproximate": 171.04259872436523,
@@ -11637,7 +11231,7 @@
           ],
           "areaM2": 851.065336570086,
           "sourceHeightM": null,
-          "illustrativeHeightM": 93.0,
+          "illustrativeHeightM": 93,
           "baseASLApproximate": 79.28256225585938,
           "bottomASLApproximate": 100.78256225585938,
           "topASLApproximate": 172.28256225585938,
@@ -11687,7 +11281,7 @@
           ],
           "areaM2": 660.8401386028688,
           "sourceHeightM": null,
-          "illustrativeHeightM": 93.0,
+          "illustrativeHeightM": 93,
           "baseASLApproximate": 79.28256225585938,
           "bottomASLApproximate": 100.78256225585938,
           "topASLApproximate": 172.28256225585938,
@@ -11835,7 +11429,7 @@
           ],
           "areaM2": 2971.031704667169,
           "sourceHeightM": null,
-          "illustrativeHeightM": 9.0,
+          "illustrativeHeightM": 9,
           "baseASLApproximate": 78.61788940429688,
           "bottomASLApproximate": 78.61788940429688,
           "topASLApproximate": 87.61788940429688,
@@ -11917,7 +11511,7 @@
           ],
           "areaM2": 1785.6978121315422,
           "sourceHeightM": null,
-          "illustrativeHeightM": 28.0,
+          "illustrativeHeightM": 28,
           "baseASLApproximate": 78.61788940429688,
           "bottomASLApproximate": 87.61788940429688,
           "topASLApproximate": 106.61788940429688,
@@ -12057,7 +11651,7 @@
           ],
           "areaM2": 2002.3126329381348,
           "sourceHeightM": null,
-          "illustrativeHeightM": 9.0,
+          "illustrativeHeightM": 9,
           "baseASLApproximate": 78.61788940429688,
           "bottomASLApproximate": 78.61788940429688,
           "topASLApproximate": 87.61788940429688,
@@ -12107,7 +11701,7 @@
           ],
           "areaM2": 600.9137034051073,
           "sourceHeightM": null,
-          "illustrativeHeightM": 62.0,
+          "illustrativeHeightM": 62,
           "baseASLApproximate": 78.61788940429688,
           "bottomASLApproximate": 87.61788940429688,
           "topASLApproximate": 140.61788940429688,
@@ -12263,7 +11857,7 @@
           ],
           "areaM2": 1141.3511878032746,
           "sourceHeightM": null,
-          "illustrativeHeightM": 40.0,
+          "illustrativeHeightM": 40,
           "baseASLApproximate": 78.61788940429688,
           "bottomASLApproximate": 97.11788940429688,
           "topASLApproximate": 118.61788940429688,
@@ -12453,7 +12047,7 @@
           ],
           "areaM2": 1077.5762659414752,
           "sourceHeightM": null,
-          "illustrativeHeightM": 31.0,
+          "illustrativeHeightM": 31,
           "baseASLApproximate": 78.61788940429688,
           "bottomASLApproximate": 100.11788940429688,
           "topASLApproximate": 109.61788940429688,
@@ -12983,8 +12577,8 @@
             "oldSumFootprintAreaM2": 8519.449906647209,
             "unionFootprintAreaM2": 7325.139263435589,
             "removedOverlappingCapAreaM2": 1194.3106432116201,
-            "exteriorSymmetricDifferenceM2": 0.0,
-            "boundaryHausdorffDistanceM": 0.0,
+            "exteriorSymmetricDifferenceM2": 0,
+            "boundaryHausdorffDistanceM": 0,
             "bottomASLUnchanged": 78.04259872436523,
             "topASLUnchanged": 99.54259872436523,
             "newTriangles": 56,
@@ -13003,8 +12597,8 @@
             "oldSumFootprintAreaM2": 5288.920244059563,
             "unionFootprintAreaM2": 4983.824085256761,
             "removedOverlappingCapAreaM2": 305.09615880280217,
-            "exteriorSymmetricDifferenceM2": 0.0,
-            "boundaryHausdorffDistanceM": 0.0,
+            "exteriorSymmetricDifferenceM2": 0,
+            "boundaryHausdorffDistanceM": 0,
             "bottomASLUnchanged": 79.28256225585938,
             "topASLUnchanged": 100.78256225585938,
             "newTriangles": 56,
@@ -13027,7 +12621,9 @@
       ],
       "replacementModes": [
         "future"
-      ]
+      ],
+      "downloadSHA256": "8c9f2e7653fca28b1b4207b307778af311e2174e441b594f044c8955d6db401f",
+      "downloadBytes": 42620
     },
     {
       "id": "wf-70-settlement-envelope",
@@ -13525,7 +13121,9 @@
       "replacementModes": [
         "future"
       ],
-      "bytes": 10420
+      "bytes": 10420,
+      "downloadSHA256": "782d8f11fd1783be35681983f706d6e04357651eecc06fde5e351353f6076f5e",
+      "downloadBytes": 10420
     },
     {
       "id": "wf-170-settlement-envelope",
@@ -13844,7 +13442,9 @@
       "replacementModes": [
         "future"
       ],
-      "bytes": 5564
+      "bytes": 5564,
+      "downloadSHA256": "9799bb5fe28a28dd08a5faa6572cba1841d499d0a1a07b6116274e59b86283e3",
+      "downloadBytes": 5564
     },
     {
       "id": "exchange-recorded-topped-structures",
@@ -13962,7 +13562,9 @@
       "caveats": [
         "EX1/EX2 topping out is not completion of enclosure or occupancy.",
         "Shared podium triangles crossing the selected tower footprints are omitted. EX3 has no verified height cut and is omitted from recorded progress."
-      ]
+      ],
+      "downloadSHA256": "d9bb50e7f2dc040fbdc141f5d66cbb13b07aec4ca463801fa4c7f26e1fe4ba6b",
+      "downloadBytes": 5012832
     },
     {
       "id": "mcity-m4-recorded-level41",
@@ -14011,7 +13613,9 @@
         "2020 drawing floor elevations are assumed to correspond to the current developer floor numbering; exact latest issued-for-construction schedule is unavailable.",
         "Clipped solid is an envelope representation, not reconstructed concrete slabs or real facade progress.",
         "Existing supplement carries separate \u00b110 m plan-location and \u00b12 m ground-datum uncertainties."
-      ]
+      ],
+      "downloadSHA256": "73f017176574c17fc72b4e1af6c93320350ed4fd8cc1978c92b7f94538c1e033",
+      "downloadBytes": 3716
     },
     {
       "projectId": "lakeview-aura",
@@ -14433,12 +14037,12 @@
         "method": "Two City street junctions anchor June PDF; four shared roof centroids transfer the current image into that plan",
         "junePDFControls": [
           [
-            740.0,
-            253.0
+            740,
+            253
           ],
           [
-            740.0,
-            979.0
+            740,
+            979
           ]
         ],
         "worldControlsEPSG26917": [
@@ -14463,16 +14067,16 @@
         ],
         "currentImageCommonPoints": [
           [
-            1218.0,
-            208.0
+            1218,
+            208
           ],
           [
-            1390.0,
-            438.0
+            1390,
+            438
           ],
           [
-            1390.0,
-            1131.0
+            1390,
+            1131
           ],
           [
             1154.5,
@@ -14565,7 +14169,9 @@
       "url": "models/refinement/aura-townhome-envelopes.glb",
       "replacementModes": [
         "future"
-      ]
+      ],
+      "downloadSHA256": "d8f22813da8f7ffc9f899a522de899b042579a2f953754e95fc89dac45f1ebbe",
+      "downloadBytes": 37788
     },
     {
       "projectId": null,
@@ -14815,7 +14421,9 @@
         "existing",
         "construction",
         "future"
-      ]
+      ],
+      "downloadSHA256": "888093e65327b15d77da7071425713c4c85b54294c28feb40b75fdb4ea6cc130",
+      "downloadBytes": 77572
     },
     {
       "id": "absolute-world-source-derived",
@@ -14843,8 +14451,8 @@
         "future"
       ],
       "preserveMaterials": true,
-      "modelFidelity": "source-derived distinct56/50-floor tower forms; interpolated south rotation and illustrative facade detail",
-      "geometryDate": "2012 completed architecture;2026-09-20 source review",
+      "modelFidelity": "MAD published curved south floorplate and municipal north ellipse; distinct 56/50-floor forms; intermediate south rotation and facade detail approximate",
+      "geometryDate": "2012 completed architecture; source and vector-path review 2026-09-26",
       "bounds": [
         [
           -4904.47119140625,
@@ -14852,15 +14460,15 @@
           -809.0693359375
         ],
         [
-          -4810.79052734375,
+          -4810.7646484375,
           247.97999572753906,
-          -717.63427734375
+          -717.6856689453125
         ]
       ],
-      "sha256": "41445758ac502b76269f11d0dd8296a9af640f13b68f0766f0ea7bc041bab5c5",
-      "bytes": 1411960,
+      "sha256": "2dc125cd855c2c8b8cbfe7b6aa586f98e4f915cc5ad8c6a9c09596b347564aae",
+      "bytes": 3666556,
       "components": 319,
-      "triangles": 118976,
+      "triangles": 278400,
       "towers": [
         {
           "name": "60 Absolute / south",
@@ -14991,10 +14599,10 @@
             165.0,
             168.0
           ],
-          "outerFootprintMaximumDiameterM": 43.898633707020124,
-          "registrationReference": "City source 72-5342/72-2536 roof and silhouette polygons",
-          "footprintMethod": "MAD Figure3 vector outer boundary fitted to City maximum silhouette diameter",
-          "scaleMPerPDFPoint": 0.24726930703871405,
+          "outerFootprintMaximumDiameterM": 43.89863370702011,
+          "registrationReference": "City source72-5342/72-2536 roof and silhouette polygons",
+          "footprintMethod": "First connected closed outer contour from MAD Figure 3, including all four cubic Bezier segments; source-derived maximum diameter retained. Uniform perimeter samples register its principal axis to the municipal roof.",
+          "scaleMPerPDFPoint": 0.24678004725018454,
           "northEllipseMaxRadialFitResidualM": null
         },
         {
@@ -15115,8 +14723,8 @@
             157.9
           ],
           "outerFootprintMaximumDiameterM": 46.305151426615815,
-          "registrationReference": "City source 72-5342/72-2536 roof and silhouette polygons",
-          "footprintMethod": "Ellipse fitted to City captured north roof samples, consistent with primary architectural description; rotated4 degrees per storey",
+          "registrationReference": "City source72-5342/72-2536 roof and silhouette polygons",
+          "footprintMethod": "Ellipse fitted to City captured north roof samples, consistent with primary architectural description; rotated4 degrees perstorey",
           "scaleMPerPDFPoint": null,
           "northEllipseMaxRadialFitResidualM": 1.2512738939361552
         }
@@ -15125,60 +14733,74 @@
         {
           "url": "https://www.i-mad.com/projects/absolute-towers",
           "publisher": "MAD Architects",
-          "claim": "Architect-designed twisting floorplates, continuous balconies, completed 2012 project."
+          "claim": "Architect-designed twisting floorplates, continuous balconies, completed 2012 project.",
+          "accessed": "2026-09-26"
         },
         {
           "url": "https://misfitsarchitecture.com/wp-content/uploads/2021/10/5-case-study-absolute-world-towers-mississauga.pdf",
           "publisher": "CTBUH; authored by MAD Architects and Dominus Construction Group; archived copy",
-          "claim": "Figure3 vector south floorplate and floor 1/24/40 rotations -10/42/159 degrees; south total 209, north 4 degrees per storey/200 total; different facade transparency."
+          "claim": "MAD/Dominus author-supplied curved ground-floor plan and rotation anchors \u221210\u00b0/42\u00b0/159\u00b0 at floors 1/24/40; 209\u00b0 variable south twist and 200\u00b0 north twist at 4\u00b0 per storey.",
+          "accessed": "2026-09-26"
         },
         {
           "url": "https://www.skyscrapercenter.com/building/absolute-world-building-d/2939",
           "publisher": "Council on Vertical Urbanism / CTBUH",
-          "claim": "60 Absolute:175.6m architectural height,165m occupied,56 floors,2012 completion."
+          "claim": "60 Absolute:175.6 m architectural height,165 m occupied,56 floors,2012 completion.",
+          "accessed": "2026-09-26"
         },
         {
           "url": "https://www.skyscrapercenter.com/building/wd/3918",
           "publisher": "Council on Vertical Urbanism / CTBUH",
-          "claim": "50 Absolute:157.9m architectural height,151.1m occupied,50 floors,2012 completion."
+          "claim": "50 Absolute:157.9 m architectural height,151.1 m occupied,50 floors,2012 completion.",
+          "accessed": "2026-09-26"
         },
         {
           "url": "https://archdwg.ca/absolute-world/",
           "publisher": "Arch.DWG construction-document author",
-          "claim": "56/50 floors and completion of both towers2012."
+          "claim": "56/50 floors and completion of both towers 2012.",
+          "accessed": "2026-09-26"
         }
       ],
       "caveats": [
-        "This is a source-derived architectural visualization, not a certified as-built model.",
-        "Exact intermediate south floor rotations are not available in the primary drawings: smooth bounded1\u20138-degree increments interpolate the verified floor 1/24/40 anchors and209-degree total.",
-        "South plan scaled by the City captured maximum silhouette diameter; north fits the documented elliptical plate to captured roof samples. These are measured source fits, not dimensioned construction drawings.",
-        "Tower centres retain City captured polygon centroids. Estimated model-registration tolerance\u00b12m, plan scale/profile tolerance\u00b12m; these are modelling allowances, not surveyed confidence intervals.",
-        "Nominal architectural heights follow current CTBUH; City captured height extents differ by3.66m/4.21m. Ground datum is retained from City and its absolute vertical accuracy is unverified.",
-        "Typical floor elevations and roof-zone subdivisions are inferred from published highest-occupied/top heights; they are not a complete elevation schedule.",
-        "Balcony slab thickness0.20m, guard height1m and glazing setbacks are illustrative, as are material appearance and mullion detail.",
-        "South mechanical roof uses the unchanged City plan outline, with its vertical placement reconstructed; north exact roof machinery is omitted."
+        "This source-derived architectural visualization is not a certified as-built model.",
+        "The MAD publication supplies the south floorplate and floor 1/24/40 rotation anchors. Intermediate rotations use smooth 1\u20138\u00b0 increments constrained to those anchors and the published 209\u00b0 total. The north uses the published 4\u00b0 per storey and 200\u00b0 total.",
+        "South dimensions are fitted to the City captured maximum silhouette diameter. The north ellipse fits captured roof points. Complete dimensioned construction floor plans were not recovered.",
+        "City-derived centres and base elevations are retained. Approximate plan/profile and registration allowances are \u00b12 m, not surveyed confidence intervals. Absolute vertical accuracy remains unverified.",
+        "Architectural heights are 175.6 m and 157.9 m. Typical floor elevations and roof-zone subdivisions remain inferred from published occupied and maximum heights.",
+        "Slab thickness of 0.20 m, guard height of 1 m, glazing setbacks and material finishes are illustrative. North rooftop machinery is omitted; the south cap retains its City-source plan outline."
       ],
-      "qaImage": "outputs/renders/revamp/absolute-corrected-closeup.png",
+      "qaImage": "work/community/absolute/absolute-after.png",
       "validation": {
-        "meshComponents": 319,
-        "allClosedAndOutward": true,
-        "triangleCount": 118976,
-        "sourceOriginalFilesUntouched": true,
-        "sharedPodiumTrianglesRetained": 216,
-        "allRetainedBasePositionAndTriangleValuesExact": true
+        "components": 319,
+        "triangles": 278400,
+        "allClosedOutward": true,
+        "northAndSouthRoofVertexAndIndexEquality": true,
+        "mappedCentresBaseElevationsHeightsAndRotationAnchorsUnchanged": true,
+        "sharedPodiumAndBaseFilesNotModified": true
       },
       "publicGeometryValidation": "All six nearby district public bases decoded and compared to corrected reviewed triangles; zero conflicting Absolute triangles remain.",
       "url": "models/refinement/absolute-world-source-derived.glb",
       "uncertainties": [
-        "This is a source-derived architectural visualization, not a certified as-built model.",
-        "Exact intermediate south floor rotations are not available in the primary drawings: smooth bounded1\u20138-degree increments interpolate the verified floor 1/24/40 anchors and209-degree total.",
-        "South plan scaled by the City captured maximum silhouette diameter; north fits the documented elliptical plate to captured roof samples. These are measured source fits, not dimensioned construction drawings.",
-        "Tower centres retain City captured polygon centroids. Estimated model-registration tolerance\u00b12m, plan scale/profile tolerance\u00b12m; these are modelling allowances, not surveyed confidence intervals.",
-        "Nominal architectural heights follow current CTBUH; City captured height extents differ by3.66m/4.21m. Ground datum is retained from City and its absolute vertical accuracy is unverified.",
-        "Typical floor elevations and roof-zone subdivisions are inferred from published highest-occupied/top heights; they are not a complete elevation schedule.",
-        "Balcony slab thickness0.20m, guard height1m and glazing setbacks are illustrative, as are material appearance and mullion detail.",
-        "South mechanical roof uses the unchanged City plan outline, with its vertical placement reconstructed; north exact roof machinery is omitted."
-      ]
+        "This source-derived architectural visualization is not a certified as-built model.",
+        "The MAD publication supplies the south floorplate and floor 1/24/40 rotation anchors. Intermediate rotations use smooth 1\u20138\u00b0 increments constrained to those anchors and the published 209\u00b0 total. The north uses the published 4\u00b0 per storey and 200\u00b0 total.",
+        "South dimensions are fitted to the City captured maximum silhouette diameter. The north ellipse fits captured roof points. Complete dimensioned construction floor plans were not recovered.",
+        "City-derived centres and base elevations are retained. Approximate plan/profile and registration allowances are \u00b12 m, not surveyed confidence intervals. Absolute vertical accuracy remains unverified.",
+        "Architectural heights are 175.6 m and 157.9 m. Typical floor elevations and roof-zone subdivisions remain inferred from published occupied and maximum heights.",
+        "Slab thickness of 0.20 m, guard height of 1 m, glazing setbacks and material finishes are illustrative. North rooftop machinery is omitted; the south cap retains its City-source plan outline."
+      ],
+      "downloadSHA256": "2dc125cd855c2c8b8cbfe7b6aa586f98e4f915cc5ad8c6a9c09596b347564aae",
+      "downloadBytes": 3666556,
+      "curveRepair": {
+        "publication": "CTBUH Journal 2012 Issue IV, MAD/Dominus case study, Figure 3 ground-floor outline",
+        "pdfPageIndex": 4,
+        "drawingPathIndex": 910,
+        "connectedOuterPathItems": 18,
+        "straightSegments": 14,
+        "cubicBezierSegments": 4,
+        "curveSegmentsPerCubic": 64,
+        "measuredChordApproximationErrorM": 0.0019235943712766108,
+        "formerDefect": "Only straight-line endpoints were retained and convex-hulled, omitting four curved balcony segments."
+      }
     },
     {
       "id": "bough-beeches-2026-plan",
@@ -15199,7 +14821,7 @@
       ],
       "modelFidelity": "dimensioned plan-derived envelope; schematic materials and screen thickness",
       "geometryDate": "2026-03-13",
-      "heightM": 52.0,
+      "heightM": 52,
       "storeys": 13,
       "lat": 43.627571340666,
       "lon": -79.60654200750976,
@@ -15295,12 +14917,12 @@
           4831538.01
         ],
         "surveyPDFControlB": [
-          805.0,
+          805,
           451.5
         ],
         "surveyPDFControlA": [
-          1703.0,
-          448.0
+          1703,
+          448
         ],
         "roofPDFExistingCorners": [
           [
@@ -15315,11 +14937,11 @@
         "surveyPDFExistingCorners": [
           [
             1464.33,
-            768.0
+            768
           ],
           [
             1217.33,
-            1072.0
+            1072
           ]
         ],
         "roofToSurveyCornerResidualM": [
@@ -15356,7 +14978,9 @@
         "finding": "Inspected source-derived silhouette, top caps, podium steps and placement with unmodified municipal context. No geometry correction required. Neutral isolated QA view, not a finished city render."
       },
       "url": "models/refinement/bough-beeches-2026-plan.glb",
-      "uncertainties": []
+      "uncertainties": [],
+      "downloadSHA256": "f85cc5f9a90055e5de2b75a67cebeddf4ba1eb5aad7ec1dcfb96b19d3a3611f6",
+      "downloadBytes": 44396
     },
     {
       "id": "chelsea-2026-b4",
@@ -15504,7 +15128,9 @@
         "finding": "Inspected source-derived silhouette, top caps, podium steps and placement with unmodified municipal context. No geometry correction required. Neutral isolated QA view, not a finished city render."
       },
       "url": "models/refinement/chelsea-2026-b4.glb",
-      "uncertainties": []
+      "uncertainties": [],
+      "downloadSHA256": "cf0f3167ac72b276faab0a10c7b86286398fb4fda1bca9eaf0fe570efab8d98d",
+      "downloadBytes": 33760
     },
     {
       "id": "chelsea-2026-b5",
@@ -15652,7 +15278,9 @@
         "finding": "Inspected source-derived silhouette, top caps, podium steps and placement with unmodified municipal context. No geometry correction required. Neutral isolated QA view, not a finished city render."
       },
       "url": "models/refinement/chelsea-2026-b5.glb",
-      "uncertainties": []
+      "uncertainties": [],
+      "downloadSHA256": "2cebb708872c0d846a9d2cf1ed00ab3dbeff90a2230f0f4600766ca49e802f1f",
+      "downloadBytes": 33732
     },
     {
       "id": "chelsea-2026-b6",
@@ -15800,7 +15428,9 @@
         "finding": "Inspected source-derived silhouette, top caps, podium steps and placement with unmodified municipal context. No geometry correction required. Neutral isolated QA view, not a finished city render."
       },
       "url": "models/refinement/chelsea-2026-b6.glb",
-      "uncertainties": []
+      "uncertainties": [],
+      "downloadSHA256": "87b434d5e993df9578bcfaa2633dd8942738f3ca4045696fdc71e49e7b4dd64c",
+      "downloadBytes": 34792
     },
     {
       "id": "dundas-55-2025-plan",
@@ -15942,15 +15572,15 @@
             "sourceId": "63-2471",
             "surveyPDFOutline": [
               [
-                973.0,
+                973,
                 383.5
               ],
               [
-                1079.0,
+                1079,
                 383.5
               ],
               [
-                1079.0,
+                1079,
                 616.5
               ],
               [
@@ -15959,18 +15589,18 @@
               ],
               [
                 1101.5,
-                655.0
+                655
               ],
               [
-                1022.0,
-                655.0
+                1022,
+                655
               ],
               [
-                1022.0,
+                1022,
                 619.5
               ],
               [
-                973.0,
+                973,
                 619.5
               ]
             ],
@@ -15997,14 +15627,14 @@
               ],
               [
                 1608.5,
-                419.0
+                419
               ],
               [
-                1543.0,
-                419.0
+                1543,
+                419
               ],
               [
-                1543.0,
+                1543,
                 443.5
               ],
               [
@@ -16026,24 +15656,24 @@
             "sourceId": "63-4493",
             "surveyPDFOutline": [
               [
-                1351.0,
+                1351,
                 323.5
               ],
               [
-                1435.0,
+                1435,
                 323.5
               ],
               [
-                1435.0,
-                434.0
+                1435,
+                434
               ],
               [
-                1351.0,
-                434.0
+                1351,
+                434
               ]
             ],
             "surveyPDFCentroid": [
-              1393.0,
+              1393,
               378.75
             ],
             "cityModelCentroidXZ": [
@@ -16056,19 +15686,19 @@
             "sourceId": "63-4771",
             "surveyPDFOutline": [
               [
-                1211.0,
-                431.0
+                1211,
+                431
               ],
               [
                 1283.5,
-                431.0
+                431
               ],
               [
                 1283.5,
                 542.5
               ],
               [
-                1211.0,
+                1211,
                 542.5
               ]
             ],
@@ -16096,12 +15726,12 @@
       },
       "geometryChecks": {
         "seventeenStoreyPlateM": [
-          23.0,
-          48.0
+          23,
+          48
         ],
         "upperPlateM": [
-          19.0,
-          42.0
+          19,
+          42
         ],
         "tracedSeventeenPlateM": [
           23.002875000000003,
@@ -16119,7 +15749,1766 @@
         "finding": "Inspected source-derived silhouette, top caps, podium steps and placement with unmodified municipal context. No geometry correction required. Neutral isolated QA view, not a finished city render."
       },
       "url": "models/refinement/dundas-55-2025-plan.glb",
-      "uncertainties": []
+      "uncertainties": [],
+      "downloadSHA256": "3b474ec4e4b62178f3b60f16849ac5eadae34f1b3d3321ca94205984d153b453",
+      "downloadBytes": 10752
+    },
+    {
+      "id": "cooksville-toc-sep2026-envelopes",
+      "assetId": "cooksville-toc-sep2026-envelopes",
+      "projectId": "cooksville-toc",
+      "status": "Uncertain",
+      "sourceStatus": "Proposed",
+      "modes": [
+        "future"
+      ],
+      "includedByDefault": true,
+      "uncertainGeometry": true,
+      "replacesAssets": [
+        "cooksville-toc-2025-tower-envelopes"
+      ],
+      "replacesSourceIds": [],
+      "modelFidelity": "September 2026 primary-plan tower outlines, seven approximate vertical envelopes; podiums and facades omitted",
+      "geometryDate": "2026-09-22",
+      "registration": {
+        "coefficients": [
+          0.3820721627735137,
+          -0.4383740144639166,
+          -4589.074435355452,
+          1035.8870245873402
+        ],
+        "sourcePixels": [
+          [
+            1151.0,
+            566.0
+          ],
+          [
+            1800.0,
+            467.0
+          ],
+          [
+            1784.0,
+            708.0
+          ]
+        ],
+        "worldControls": [
+          [
+            -3902.2513192968936,
+            747.6425657303573
+          ],
+          [
+            -3695.996476903325,
+            428.02965218760073
+          ],
+          [
+            -3596.654659951804,
+            521.4755327459425
+          ]
+        ],
+        "residualM": [
+          1.0640195375110708,
+          2.857871979986019,
+          2.8921259315001366
+        ],
+        "method": "Three inherited source/geocoder controls identify the current official context plan. Revised plans are registered through common parcel corners.",
+        "estimatedPositionToleranceM": 8,
+        "estimatedContourToleranceM": 3
+      },
+      "components": [
+        {
+          "name": "E1",
+          "storeys": 45,
+          "heightM": 139.5,
+          "heightUncertaintyM": 5,
+          "heightAccuracyNote": "Illustrative allowance, not survey accuracy or statistical confidence.",
+          "planPixels": [
+            [
+              745,
+              483
+            ],
+            [
+              884,
+              483
+            ],
+            [
+              884,
+              579
+            ],
+            [
+              745,
+              579
+            ]
+          ],
+          "contextPixels": [
+            [
+              1510.1587228797782,
+              386.5981524611193
+            ],
+            [
+              1570.6870193795985,
+              386.5024018847711
+            ],
+            [
+              1570.4090169560513,
+              429.91630742301857
+            ],
+            [
+              1509.880720456231,
+              430.0120579993668
+            ]
+          ],
+          "footprintModelXZ": [
+            [
+              -3842.6102418947735,
+              521.5810749958949
+            ],
+            [
+              -3819.526039306632,
+              495.01045904081434
+            ],
+            [
+              -3800.600728239494,
+              511.71957286269856
+            ],
+            [
+              -3823.6849308276355,
+              538.2901888177793
+            ],
+            [
+              -3842.6102418947735,
+              521.5810749958949
+            ]
+          ],
+          "areaM2": 888.5737407280534,
+          "centreModelXZ": [
+            -3821.605485067134,
+            516.6503239292967
+          ],
+          "lat": 43.58302604312371,
+          "lon": -79.62290256765544,
+          "groundModelY": 58.46073913574219
+        },
+        {
+          "name": "E2",
+          "storeys": 47,
+          "heightM": 145.5,
+          "heightUncertaintyM": 5,
+          "heightAccuracyNote": "Illustrative allowance, not survey accuracy or statistical confidence.",
+          "planPixels": [
+            [
+              1006,
+              483
+            ],
+            [
+              1144,
+              483
+            ],
+            [
+              1144,
+              578
+            ],
+            [
+              1006,
+              578
+            ]
+          ],
+          "contextPixels": [
+            [
+              1623.8125745808795,
+              386.4183618105661
+            ],
+            [
+              1683.9054157101975,
+              386.32330008728513
+            ],
+            [
+              1683.630309145229,
+              429.28497744284255
+            ],
+            [
+              1623.537468015911,
+              429.38003916612354
+            ]
+          ],
+          "footprintModelXZ": [
+            [
+              -3799.2650845170397,
+              471.68948676369325
+            ],
+            [
+              -3776.3469553288123,
+              445.31002631908075
+            ],
+            [
+              -3757.618782918624,
+              461.84508687198706
+            ],
+            [
+              -3780.536912106851,
+              488.22454731659957
+            ],
+            [
+              -3799.2650845170397,
+              471.68948676369325
+            ]
+          ],
+          "areaM2": 872.9917371811115,
+          "centreModelXZ": [
+            -3778.441933717832,
+            466.7672868178402
+          ],
+          "lat": 43.583468627843835,
+          "lon": -79.62235783869885,
+          "groundModelY": 56.474945068359375
+        },
+        {
+          "name": "E3",
+          "storeys": 49,
+          "heightM": 151.5,
+          "heightUncertaintyM": 5,
+          "heightAccuracyNote": "Illustrative allowance, not survey accuracy or statistical confidence.",
+          "planPixels": [
+            [
+              1230,
+              344
+            ],
+            [
+              1324,
+              344
+            ],
+            [
+              1308,
+              484
+            ],
+            [
+              1230,
+              484
+            ]
+          ],
+          "contextPixels": [
+            [
+              1721.7571019158233,
+              323.40434132958046
+            ],
+            [
+              1762.68990674304,
+              323.3395891412586
+            ],
+            [
+              1755.3172006139966,
+              386.66255636694564
+            ],
+            [
+              1721.351681714817,
+              386.7162869061914
+            ]
+          ],
+          "footprintModelXZ": [
+            [
+              -3789.4669162521095,
+              404.67724803087833
+            ],
+            [
+              -3773.8560166601287,
+              386.70863004686703
+            ],
+            [
+              -3748.913779085854,
+              414.134575871273
+            ],
+            [
+              -3761.8675042792,
+              429.044705687793
+            ],
+            [
+              -3789.4669162521095,
+              404.67724803087833
+            ]
+          ],
+          "areaM2": 801.7406953211837,
+          "centreModelXZ": [
+            -3768.933353678216,
+            408.2397906574097
+          ],
+          "lat": 43.58399404747608,
+          "lon": -79.62222807733454,
+          "groundModelY": 55.379302978515625
+        },
+        {
+          "name": "W1",
+          "storeys": 36,
+          "heightM": 109.5,
+          "heightUncertaintyM": 5,
+          "heightAccuracyNote": "Illustrative allowance, not survey accuracy or statistical confidence.",
+          "planPixels": [
+            [
+              938,
+              277
+            ],
+            [
+              1020,
+              277
+            ],
+            [
+              1020,
+              422
+            ],
+            [
+              938,
+              422
+            ]
+          ],
+          "contextPixels": [
+            [
+              1222.0937862451788,
+              495.62527858992985
+            ],
+            [
+              1259.5655321227366,
+              495.2565113712317
+            ],
+            [
+              1259.381580652794,
+              562.0435255171894
+            ],
+            [
+              1221.909834775236,
+              562.4122927358876
+            ]
+          ],
+          "footprintModelXZ": [
+            [
+              -3904.87717628742,
+              689.5174875757134
+            ],
+            [
+              -3890.721923263145,
+              672.9499522175886
+            ],
+            [
+              -3861.5145144938897,
+              698.5480507018652
+            ],
+            [
+              -3875.669767518164,
+              715.11558605999
+            ],
+            [
+              -3904.87717628742,
+              689.5174875757134
+            ]
+          ],
+          "areaM2": 846.2423384890817,
+          "centreModelXZ": [
+            -3883.195845390654,
+            694.0327691387894
+          ],
+          "lat": 43.58143850864441,
+          "lon": -79.62370161314936,
+          "groundModelY": 58.51347351074219
+        },
+        {
+          "name": "W2",
+          "storeys": 32,
+          "heightM": 97.5,
+          "heightUncertaintyM": 5,
+          "heightAccuracyNote": "Illustrative allowance, not survey accuracy or statistical confidence.",
+          "planPixels": [
+            [
+              1115,
+              278
+            ],
+            [
+              1197,
+              278
+            ],
+            [
+              1197,
+              423
+            ],
+            [
+              1115,
+              423
+            ]
+          ],
+          "contextPixels": [
+            [
+              1302.9766520085923,
+              495.2898811544445
+            ],
+            [
+              1340.4483978861501,
+              494.92111393574635
+            ],
+            [
+              1340.2644464162076,
+              561.7081280817041
+            ],
+            [
+              1302.7927005386496,
+              562.0768953004023
+            ]
+          ],
+          "footprintModelXZ": [
+            [
+              -3874.1211143541072,
+              653.9323949860951
+            ],
+            [
+              -3859.9658613298325,
+              637.3648596279704
+            ],
+            [
+              -3830.758452560577,
+              662.962958112247
+            ],
+            [
+              -3844.9137055848514,
+              679.5304934703718
+            ],
+            [
+              -3874.1211143541072,
+              653.9323949860951
+            ]
+          ],
+          "areaM2": 846.2423384890792,
+          "centreModelXZ": [
+            -3852.4397834573415,
+            658.447676549171
+          ],
+          "lat": 43.58175424415115,
+          "lon": -79.6233134750353,
+          "groundModelY": 57.710914611816406
+        },
+        {
+          "name": "W3",
+          "storeys": 34,
+          "heightM": 103.5,
+          "heightUncertaintyM": 5,
+          "heightAccuracyNote": "Illustrative allowance, not survey accuracy or statistical confidence.",
+          "planPixels": [
+            [
+              1115,
+              518
+            ],
+            [
+              1197,
+              518
+            ],
+            [
+              1197,
+              663
+            ],
+            [
+              1115,
+              663
+            ]
+          ],
+          "contextPixels": [
+            [
+              1302.6721806100666,
+              605.8339045684436
+            ],
+            [
+              1340.1439264876244,
+              605.4651373497454
+            ],
+            [
+              1339.9599750176817,
+              672.2521514957032
+            ],
+            [
+              1302.4882291401238,
+              672.6209187144013
+            ]
+          ],
+          "footprintModelXZ": [
+            [
+              -3825.7778170808565,
+              696.3016614428288
+            ],
+            [
+              -3811.6225640565817,
+              679.7341260847041
+            ],
+            [
+              -3782.4151552873263,
+              705.3322245689808
+            ],
+            [
+              -3796.570408311601,
+              721.8997599271055
+            ],
+            [
+              -3825.7778170808565,
+              696.3016614428288
+            ]
+          ],
+          "areaM2": 846.2423384890805,
+          "centreModelXZ": [
+            -3804.0964861840916,
+            700.8169430059048
+          ],
+          "lat": 43.581365643191134,
+          "lon": -79.62272355545299,
+          "groundModelY": 56.869606018066406
+        },
+        {
+          "name": "W4",
+          "storeys": 38,
+          "heightM": 115.5,
+          "heightUncertaintyM": 5,
+          "heightAccuracyNote": "Illustrative allowance, not survey accuracy or statistical confidence.",
+          "planPixels": [
+            [
+              937,
+              518
+            ],
+            [
+              1019,
+              518
+            ],
+            [
+              1019,
+              663
+            ],
+            [
+              937,
+              663
+            ]
+          ],
+          "contextPixels": [
+            [
+              1221.331073705124,
+              606.634399262691
+            ],
+            [
+              1258.8028195826819,
+              606.2656320439927
+            ],
+            [
+              1258.6188681127392,
+              673.0526461899506
+            ],
+            [
+              1221.1471222351813,
+              673.4214134086487
+            ]
+          ],
+          "footprintModelXZ": [
+            [
+              -3856.505073645745,
+              732.265335756807
+            ],
+            [
+              -3842.349820621471,
+              715.6978003986821
+            ],
+            [
+              -3813.142411852215,
+              741.2958988829588
+            ],
+            [
+              -3827.2976648764898,
+              757.8634342410836
+            ],
+            [
+              -3856.505073645745,
+              732.265335756807
+            ]
+          ],
+          "areaM2": 846.2423384890817,
+          "centreModelXZ": [
+            -3834.82374274898,
+            736.7806173198829
+          ],
+          "lat": 43.58104649754916,
+          "lon": -79.62311141504644,
+          "groundModelY": 57.38024139404297
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.infrastructureontario.ca/4a7380/contentassets/48d409806ba14ffaa6f9874dcf14617e/cooksville_voh-presentation_sept-4-2026.pdf",
+          "publisher": "Infrastructure Ontario",
+          "claim": "September 22 revised seven-tower proposal: plans on pages 25 and 28; labelled storeys on pages 24 and 27."
+        },
+        {
+          "url": "https://www.infrastructureontario.ca/48f8a0/contentassets/e44b38c8189641c2aa193899c6727b3d/2025-09-25_cooksville-toc_planning-justification-report.pdf",
+          "publisher": "Infrastructure Ontario / Arup",
+          "claim": "Older dimensional and elevation context only; its eight-tower layout is superseded."
+        }
+      ],
+      "caveats": [
+        "Storeys and footprint arrangement are the current proposal. No current metre elevations or native DWG have been received.",
+        "Vertical estimates use older phase-specific 3 m residential spacing and published maximums. Allow roughly \u00b15 m; this is an illustrative allowance, not survey confidence.",
+        "Podiums, rooftop plant and facades are omitted. This is a future proposal, not approval or construction."
+      ],
+      "file": "outputs/models/supplemental/community-revision/cooksville-toc-sep2026-envelopes.glb",
+      "bytes": 6016,
+      "sha256": "8b789047ed040b51b3b47a48148840ddbe7be556630cd7251832b349b05f39fc",
+      "bounds": [
+        [
+          -3904.87717628742,
+          55.379302978515625,
+          386.70863004686703
+        ],
+        [
+          -3748.913779085854,
+          206.87930297851562,
+          757.8634342410836
+        ]
+      ],
+      "triangleCount": 84,
+      "geometryQA": {
+        "closedPositiveVolumes": true,
+        "meshCount": 7,
+        "nonFiniteVertices": 0
+      },
+      "retainByDefault": true,
+      "modelCaveat": "Storeys and footprint arrangement are the current proposal. No current metre elevations or native DWG have been received. Vertical estimates use older phase-specific 3 m residential spacing and published maximums. Allow roughly \u00b15 m; this is an illustrative allowance, not survey confidence. Podiums, rooftop plant and facades are omitted. This is a future proposal, not approval or construction.",
+      "publicModelFileDownloadPermission": "No separate permission established for redistribution of original design files. This locally generated study remains attributed and approximate; public viewer geometry is served.",
+      "url": "models/refinement/cooksville-toc-sep2026-envelopes.glb",
+      "replacementModes": [
+        "future"
+      ],
+      "downloadSHA256": "8b789047ed040b51b3b47a48148840ddbe7be556630cd7251832b349b05f39fc",
+      "downloadBytes": 6016,
+      "uncertainties": [
+        "Storeys and footprint arrangement are the current proposal. No current metre elevations or native DWG have been received.",
+        "Vertical estimates use older phase-specific 3 m residential spacing and published maximums. Allow roughly \u00b15 m; this is an illustrative allowance, not survey confidence.",
+        "Podiums, rooftop plant and facades are omitted. This is a future proposal, not approval or construction."
+      ]
+    },
+    {
+      "id": "perla-towers-source-envelope",
+      "assetId": "perla-towers-source-envelope",
+      "projectId": "perla-towers",
+      "status": "Existing",
+      "sourceStatus": "Existing",
+      "modes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "uncertainGeometry": true,
+      "includedByDefault": true,
+      "replacesSourceIds": [],
+      "modelFidelity": "Existing Perla pair: mapped 2024 podium and traced 2017 tower plates; approximate vertical envelopes",
+      "geometryDate": "2026-09-26",
+      "registration": {
+        "coefficients": [
+          0.09320042314707519,
+          -0.11362378623988993,
+          -6644.4476586076535,
+          -2126.5148710481403
+        ],
+        "sourcePixels": [
+          [
+            75.0,
+            597.0
+          ],
+          [
+            595.0,
+            597.0
+          ],
+          [
+            594.0,
+            237.0
+          ],
+          [
+            57.0,
+            237.0
+          ]
+        ],
+        "worldControls": [
+          [
+            -6566.1249000000535,
+            -2079.117999999784
+          ],
+          [
+            -6521.792299999972,
+            -2136.2551999995485
+          ],
+          [
+            -6563.319699999993,
+            -2172.2355000004172
+          ],
+          [
+            -6613.911500000046,
+            -2113.089499999769
+          ]
+        ],
+        "residualM": [
+          3.510352003880364,
+          2.3132622402081564,
+          1.204291163344945,
+          2.7728106787514464
+        ],
+        "method": "City 2017 published tower plates registered against City 2024 mapped podium corners",
+        "positionAllowanceM": 5,
+        "contourAllowanceM": 2
+      },
+      "components": [
+        {
+          "name": "Mapped shared podium",
+          "storeys": 3,
+          "heightM": 12,
+          "heightUncertaintyM": 5,
+          "heightAccuracyNote": "Illustrative allowance, not survey accuracy or statistical confidence.",
+          "areaM2": 3457.869301121612,
+          "centreModelXZ": [
+            -6566.075287634792,
+            -2122.638256258665
+          ],
+          "footprintModelXZ": [
+            [
+              -6612.163199999952,
+              -2109.177299999632
+            ],
+            [
+              -6611.095600000001,
+              -2110.55700000003
+            ],
+            [
+              -6613.911500000046,
+              -2113.089499999769
+            ],
+            [
+              -6599.160599999945,
+              -2132.2040999997407
+            ],
+            [
+              -6588.103600000031,
+              -2123.6710000000894
+            ],
+            [
+              -6587.480499999947,
+              -2124.457999999635
+            ],
+            [
+              -6565.0474000000395,
+              -2107.0257000001147
+            ],
+            [
+              -6550.658799999976,
+              -2125.6253000004217
+            ],
+            [
+              -6573.082000000053,
+              -2142.654099999927
+            ],
+            [
+              -6572.062099999981,
+              -2144.0432000001892
+            ],
+            [
+              -6579.0317000000505,
+              -2149.4496999997646
+            ],
+            [
+              -6575.680599999963,
+              -2153.7116000000387
+            ],
+            [
+              -6576.939699999988,
+              -2154.740799999796
+            ],
+            [
+              -6563.319699999993,
+              -2172.2355000004172
+            ],
+            [
+              -6526.868099999963,
+              -2143.42129999958
+            ],
+            [
+              -6529.46669999999,
+              -2140.150799999945
+            ],
+            [
+              -6527.754599999986,
+              -2138.790400000289
+            ],
+            [
+              -6526.7341000000015,
+              -2140.079199999571
+            ],
+            [
+              -6521.792299999972,
+              -2136.2551999995485
+            ],
+            [
+              -6541.089400000055,
+              -2111.3176999995485
+            ],
+            [
+              -6542.602100000018,
+              -2112.488199999556
+            ],
+            [
+              -6550.426800000016,
+              -2102.3762999996543
+            ],
+            [
+              -6548.988499999978,
+              -2101.2632999997586
+            ],
+            [
+              -6566.1249000000535,
+              -2079.117999999784
+            ],
+            [
+              -6569.40399999998,
+              -2081.655299999751
+            ],
+            [
+              -6568.266399999964,
+              -2083.125400000252
+            ],
+            [
+              -6570.339000000036,
+              -2084.7291999999434
+            ],
+            [
+              -6572.250800000038,
+              -2082.258600000292
+            ],
+            [
+              -6575.708899999969,
+              -2084.9345000004396
+            ],
+            [
+              -6578.671800000011,
+              -2081.037200000137
+            ],
+            [
+              -6613.056100000045,
+              -2108.0235000001267
+            ],
+            [
+              -6612.163199999952,
+              -2109.177299999632
+            ]
+          ],
+          "groundModelY": 98.5453872680664
+        },
+        {
+          "name": "65 Watergarden",
+          "storeys": 15,
+          "heightM": 53,
+          "heightUncertaintyM": 5,
+          "heightAccuracyNote": "Illustrative allowance, not survey accuracy or statistical confidence.",
+          "areaM2": 737.1380071706054,
+          "centreModelXZ": [
+            -6582.9773182991075,
+            -2104.809921752562
+          ],
+          "footprintModelXZ": [
+            [
+              -6601.23579765959,
+              -2110.8376199887016
+            ],
+            [
+              -6592.381757460618,
+              -2121.6318796814912
+            ],
+            [
+              -6586.065997971228,
+              -2120.062714694166
+            ],
+            [
+              -6580.175393871387,
+              -2117.5117823568676
+            ],
+            [
+              -6574.937192733577,
+              -2114.16548351589
+            ],
+            [
+              -6570.456101951719,
+              -2108.9692737612054
+            ],
+            [
+              -6567.195533063089,
+              -2103.443699618577
+            ],
+            [
+              -6564.657553618084,
+              -2098.890976433605
+            ],
+            [
+              -6573.511593817057,
+              -2088.0967167408153
+            ],
+            [
+              -6578.597915020901,
+              -2088.8475012829094
+            ],
+            [
+              -6584.829390479461,
+              -2091.678034889649
+            ],
+            [
+              -6590.294839189752,
+              -2095.2107345769214
+            ],
+            [
+              -6594.807860305478,
+              -2099.6728479172048
+            ],
+            [
+              -6598.368453826642,
+              -2105.0643749105006
+            ],
+            [
+              -6601.23579765959,
+              -2110.8376199887016
+            ]
+          ],
+          "groundModelY": 98.5453872680664
+        },
+        {
+          "name": "35 Watergarden",
+          "storeys": 34,
+          "heightM": 111.9,
+          "heightUncertaintyM": 5,
+          "heightAccuracyNote": "Illustrative allowance, not survey accuracy or statistical confidence.",
+          "areaM2": 737.1380071705952,
+          "centreModelXZ": [
+            -6551.00957315966,
+            -2143.782880432844
+          ],
+          "footprintModelXZ": [
+            [
+              -6569.268052520143,
+              -2149.810578668984
+            ],
+            [
+              -6560.414012321171,
+              -2160.6048383617735
+            ],
+            [
+              -6554.098252831781,
+              -2159.0356733744484
+            ],
+            [
+              -6548.207648731941,
+              -2156.48474103715
+            ],
+            [
+              -6542.9694475941305,
+              -2153.138442196172
+            ],
+            [
+              -6538.488356812271,
+              -2147.9422324414877
+            ],
+            [
+              -6535.227787923643,
+              -2142.416658298859
+            ],
+            [
+              -6532.689808478638,
+              -2137.8639351138872
+            ],
+            [
+              -6541.54384867761,
+              -2127.0696754210976
+            ],
+            [
+              -6546.630169881454,
+              -2127.8204599631918
+            ],
+            [
+              -6552.861645340015,
+              -2130.6509935699314
+            ],
+            [
+              -6558.327094050304,
+              -2134.1836932572032
+            ],
+            [
+              -6562.840115166032,
+              -2138.645806597487
+            ],
+            [
+              -6566.400708687195,
+              -2144.037333590783
+            ],
+            [
+              -6569.268052520143,
+              -2149.810578668984
+            ]
+          ],
+          "groundModelY": 98.5453872680664
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www7.mississauga.ca/documents/committees/pdc/2017/2017_06_26_PDC_Agenda.pdf",
+          "publisher": "City of Mississauga",
+          "claim": "OZ 16/010 W5 report, pages 40\u201363: 15 and 34 storeys; page 44 tower contours and podium."
+        },
+        {
+          "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Building_Footprints_2024/FeatureServer/0",
+          "publisher": "City of Mississauga",
+          "claim": "OBJECTID 131852 is the current combined mapped footprint."
+        },
+        {
+          "url": "https://pinnacleinternational.ca/past-projects/",
+          "publisher": "Pinnacle International",
+          "claim": "Completed-project portfolio lists Perla at 35 and 65 Watergarden Drive."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Mississauga",
+          "publisher": "Wikipedia catalogue (secondary, unverified height)",
+          "claim": "Catalogue reports 111.9 m for Perla Tower II. This is not an independently verified as-built height."
+        }
+      ],
+      "caveats": [
+        "The City confirms 15 and 34 storeys. The 111.9 m tall envelope is an unverified published catalogue value; the 53 m shorter envelope and 12 m podium are illustrative estimates. Allow roughly \u00b15 m, not survey confidence.",
+        "Plan registration relates older source contours to the 2024 mapped podium. Exact current balconies, roof plant and facade details are not reconstructed.",
+        "The Ontario 2023 DSM catalog record returned NoData here; no LiDAR-derived building height is claimed.",
+        "The seven native municipal scene leaves inspected around this site did not contain these two towers. No existing source IDs are suppressed."
+      ],
+      "file": "outputs/models/supplemental/community-revision/perla-towers-source-envelope.glb",
+      "bytes": 7108,
+      "sha256": "379db83d72717600e4f24c6d5ba0558d9186979a0a079e73698eb7a3b3dc0994",
+      "bounds": [
+        [
+          -6613.911500000046,
+          98.5453872680664,
+          -2172.2355000004172
+        ],
+        [
+          -6521.792299999972,
+          210.4453872680664,
+          -2079.117999999784
+        ]
+      ],
+      "triangleCount": 248,
+      "geometryQA": {
+        "closedPositiveVolumes": true,
+        "meshCount": 3,
+        "nonFiniteVertices": 0
+      },
+      "uncertaintyType": "Vertical height and historical plan registration; existence and occupied status are corroborated",
+      "retainByDefault": true,
+      "modelCaveat": "The City confirms 15 and 34 storeys. The 111.9 m tall envelope is an unverified published catalogue value; the 53 m shorter envelope and 12 m podium are illustrative estimates. Allow roughly \u00b15 m, not survey confidence. Plan registration relates older source contours to the 2024 mapped podium. Exact current balconies, roof plant and facade details are not reconstructed. The Ontario 2023 DSM catalog record returned NoData here; no LiDAR-derived building height is claimed. The seven native municipal scene leaves inspected around this site did not contain these two towers. No existing source IDs are suppressed.",
+      "publicModelFileDownloadPermission": "No separate permission established for redistribution of original design files. This locally generated study remains attributed and approximate; public viewer geometry is served.",
+      "url": "models/refinement/perla-towers-source-envelope.glb",
+      "replacementModes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "downloadSHA256": "379db83d72717600e4f24c6d5ba0558d9186979a0a079e73698eb7a3b3dc0994",
+      "downloadBytes": 7108,
+      "uncertainties": [
+        "The City confirms 15 and 34 storeys. The 111.9 m tall envelope is an unverified published catalogue value; the 53 m shorter envelope and 12 m podium are illustrative estimates. Allow roughly \u00b15 m, not survey confidence.",
+        "Plan registration relates older source contours to the 2024 mapped podium. Exact current balconies, roof plant and facade details are not reconstructed.",
+        "The Ontario 2023 DSM catalog record returned NoData here; no LiDAR-derived building height is claimed.",
+        "The seven native municipal scene leaves inspected around this site did not contain these two towers. No existing source IDs are suppressed."
+      ]
+    },
+    {
+      "assetId": "emtc-northwest-2026-settlement",
+      "projectId": "emtc-northwest",
+      "file": "outputs/models/supplemental/community-revision/emtc-northwest-2026-settlement.glb",
+      "sha256": "85863c257078ad51429b777ba1da04b1b3f4fbfeec1c2fb799f296b58ec5e810",
+      "bytes": 19636,
+      "status": "Proposed",
+      "sourceStatus": "June 2026 settlement accepted by Council; zoning appeal and subdivision review still listed by City",
+      "modes": [
+        "future"
+      ],
+      "includedByDefault": true,
+      "replacesSourceIds": [
+        "12-17032",
+        "12-17033",
+        "12-17034",
+        "12-17035",
+        "12-17036",
+        "12-17037",
+        "12-17038",
+        "12-17039",
+        "12-17040",
+        "12-17041",
+        "12-17042",
+        "12-17043",
+        "12-17044",
+        "12-17045",
+        "12-17046",
+        "12-17047",
+        "12-17048"
+      ],
+      "geometryDate": "2026-06-03",
+      "sourcePublishedDate": "2026-08",
+      "reviewedDate": "2026-09-26",
+      "modelFidelity": "Published 2026 vector-plan footprints, nine tower/podium envelopes with C/D shoulders and mechanical roof footprints; heights estimated from previous elevation intervals. No facade reconstruction.",
+      "components": [
+        {
+          "name": "A",
+          "node": "EMTC2026-A",
+          "storeys": 25,
+          "podiumStoreys": 6,
+          "shoulderStoreys": null,
+          "estimatedMainRoofHeightM": 80.28,
+          "estimatedMechanicalHeightM": 5,
+          "heightM": 85.28,
+          "heightIsEstimate": true,
+          "heightBasis": "Old 30-storey roof height 95.03 m minus 5 floors at the documented 2.95 m typical interval; old 5 m mechanical height retained as an explicit estimate. New elevations not supplied.",
+          "podiumHeightM": 21.53,
+          "podiumHeightIsEstimate": true,
+          "proposedFinishedFloorASL": 176.45,
+          "baseModelY": 105.5730972290039,
+          "floorModelY": 106.44999999999999,
+          "floorBasis": "July 24 2026 proposed grading plan FFE",
+          "planDrawingPathIndices": {
+            "tower": 20,
+            "podium": 21,
+            "mechanical": 12,
+            "shoulder": null
+          },
+          "centreModelXZ": [
+            -11215.30472770776,
+            3590.583266555121
+          ],
+          "bounds": [
+            [
+              -11243.197265625,
+              105.5730972290039,
+              3563.68994140625
+            ],
+            [
+              -11186.3095703125,
+              191.72999572753906,
+              3618.4912109375
+            ]
+          ],
+          "triangles": 88,
+          "watertight": true,
+          "estimatedVerticalUncertaintyM": 5,
+          "estimatedHorizontalUncertaintyM": 2,
+          "footprintM2": 1286.3845840074491
+        },
+        {
+          "name": "B",
+          "node": "EMTC2026-B",
+          "storeys": 25,
+          "podiumStoreys": 6,
+          "shoulderStoreys": null,
+          "estimatedMainRoofHeightM": 79.85,
+          "estimatedMechanicalHeightM": 5,
+          "heightM": 84.85,
+          "heightIsEstimate": true,
+          "heightBasis": "Old 25-storey roof height 79.85 m minus 0 floors at the documented 2.95 m typical interval; old 5 m mechanical height retained as an explicit estimate. New elevations not supplied.",
+          "podiumHeightM": 18.7,
+          "podiumHeightIsEstimate": true,
+          "proposedFinishedFloorASL": 176.85,
+          "baseModelY": 105.58429718017578,
+          "floorModelY": 106.85,
+          "floorBasis": "July 24 2026 proposed grading plan FFE",
+          "planDrawingPathIndices": {
+            "tower": 22,
+            "podium": 23,
+            "mechanical": 11,
+            "shoulder": null
+          },
+          "centreModelXZ": [
+            -11267.258791749206,
+            3542.8211552469484
+          ],
+          "bounds": [
+            [
+              -11296.25390625,
+              105.58429718017578,
+              3514.91259765625
+            ],
+            [
+              -11239.3662109375,
+              191.6999969482422,
+              3569.716552734375
+            ]
+          ],
+          "triangles": 64,
+          "watertight": true,
+          "estimatedVerticalUncertaintyM": 5,
+          "estimatedHorizontalUncertaintyM": 2,
+          "footprintM2": 1287.2059971090443
+        },
+        {
+          "name": "C",
+          "node": "EMTC2026-C",
+          "storeys": 20,
+          "podiumStoreys": 4,
+          "shoulderStoreys": 17,
+          "estimatedMainRoofHeightM": 64.99,
+          "estimatedMechanicalHeightM": 5,
+          "heightM": 69.99,
+          "heightIsEstimate": true,
+          "heightBasis": "Old 20-storey roof height 64.99 m minus 0 floors at the documented 2.95 m typical interval; old 5 m mechanical height retained as an explicit estimate. New elevations not supplied.",
+          "podiumHeightM": 15.64,
+          "podiumHeightIsEstimate": true,
+          "proposedFinishedFloorASL": 177.45,
+          "baseModelY": 106.09709930419922,
+          "floorModelY": 107.44999999999999,
+          "floorBasis": "July 24 2026 proposed grading plan FFE",
+          "planDrawingPathIndices": {
+            "tower": 27,
+            "podium": 28,
+            "mechanical": 26,
+            "shoulder": 29
+          },
+          "centreModelXZ": [
+            -11286.638492287339,
+            3482.9720425097735
+          ],
+          "bounds": [
+            [
+              -11326.5791015625,
+              106.09709930419922,
+              3468.50390625
+            ],
+            [
+              -11259.599609375,
+              177.44000244140625,
+              3498.997314453125
+            ]
+          ],
+          "triangles": 62,
+          "watertight": true,
+          "estimatedVerticalUncertaintyM": 5,
+          "estimatedHorizontalUncertaintyM": 2,
+          "footprintM2": 1481.8292019972569
+        },
+        {
+          "name": "D",
+          "node": "EMTC2026-D",
+          "storeys": 20,
+          "podiumStoreys": 4,
+          "shoulderStoreys": 17,
+          "estimatedMainRoofHeightM": 64.94,
+          "estimatedMechanicalHeightM": 5,
+          "heightM": 69.94,
+          "heightIsEstimate": true,
+          "heightBasis": "Old 20-storey roof height 64.94 m minus 0 floors at the documented 2.95 m typical interval; old 5 m mechanical height retained as an explicit estimate. New elevations not supplied.",
+          "podiumHeightM": 15.59,
+          "podiumHeightIsEstimate": true,
+          "proposedFinishedFloorASL": 177.45,
+          "baseModelY": 106.05850219726562,
+          "floorModelY": 107.44999999999999,
+          "floorBasis": "July 24 2026 proposed grading plan FFE",
+          "planDrawingPathIndices": {
+            "tower": 13,
+            "podium": 17,
+            "mechanical": 7,
+            "shoulder": 24
+          },
+          "centreModelXZ": [
+            -11296.475199460836,
+            3400.848316561069
+          ],
+          "bounds": [
+            [
+              -11336.3896484375,
+              106.05850219726562,
+              3386.472900390625
+            ],
+            [
+              -11269.4677734375,
+              177.38999938964844,
+              3416.7314453125
+            ]
+          ],
+          "triangles": 64,
+          "watertight": true,
+          "estimatedVerticalUncertaintyM": 5,
+          "estimatedHorizontalUncertaintyM": 2,
+          "footprintM2": 1481.8292976595008
+        },
+        {
+          "name": "E",
+          "node": "EMTC2026-E",
+          "storeys": 23,
+          "podiumStoreys": 6,
+          "shoulderStoreys": null,
+          "estimatedMainRoofHeightM": 73.38,
+          "estimatedMechanicalHeightM": 5,
+          "heightM": 78.38,
+          "heightIsEstimate": true,
+          "heightBasis": "Old 25-storey roof height 79.28 m minus 2 floors at the documented 2.95 m typical interval; old 5 m mechanical height retained as an explicit estimate. New elevations not supplied.",
+          "podiumHeightM": 18.13,
+          "podiumHeightIsEstimate": true,
+          "proposedFinishedFloorASL": 176.75,
+          "baseModelY": 104.89219665527344,
+          "floorModelY": 106.75,
+          "floorBasis": "July 24 2026 proposed grading plan FFE",
+          "planDrawingPathIndices": {
+            "tower": 14,
+            "podium": 18,
+            "mechanical": 8,
+            "shoulder": null
+          },
+          "centreModelXZ": [
+            -11279.860882762816,
+            3341.2395792115008
+          ],
+          "bounds": [
+            [
+              -11305.8271484375,
+              104.89219665527344,
+              3311.589599609375
+            ],
+            [
+              -11252.96484375,
+              185.1300048828125,
+              3369.718017578125
+            ]
+          ],
+          "triangles": 52,
+          "watertight": true,
+          "estimatedVerticalUncertaintyM": 5,
+          "estimatedHorizontalUncertaintyM": 2,
+          "footprintM2": 1287.1727423215195
+        },
+        {
+          "name": "F1",
+          "node": "EMTC2026-F1",
+          "storeys": 23,
+          "podiumStoreys": 6,
+          "shoulderStoreys": null,
+          "estimatedMainRoofHeightM": 74.3,
+          "estimatedMechanicalHeightM": 5,
+          "heightM": 79.3,
+          "heightIsEstimate": true,
+          "heightBasis": "Old 27-storey roof height 86.10 m minus 4 floors at the documented 2.95 m typical interval; old 5 m mechanical height retained as an explicit estimate. New elevations not supplied.",
+          "podiumHeightM": 21.45,
+          "podiumHeightIsEstimate": true,
+          "proposedFinishedFloorASL": null,
+          "baseModelY": 105.24250030517578,
+          "floorModelY": 105.24250030517578,
+          "floorBasis": "2026 grading plan says FFE VARIES; old City model base used as an estimate",
+          "planDrawingPathIndices": {
+            "tower": 15,
+            "podium": 19,
+            "mechanical": 9,
+            "shoulder": null
+          },
+          "centreModelXZ": [
+            -11236.060580789737,
+            3285.982323882451
+          ],
+          "bounds": [
+            [
+              -11261.09765625,
+              105.24250030517578,
+              3257.504638671875
+            ],
+            [
+              -11210.09375,
+              184.54249572753906,
+              3313.2880859375
+            ]
+          ],
+          "triangles": 100,
+          "watertight": true,
+          "estimatedVerticalUncertaintyM": 5,
+          "estimatedHorizontalUncertaintyM": 2,
+          "footprintM2": 1217.8288353879725
+        },
+        {
+          "name": "F2",
+          "node": "EMTC2026-F2",
+          "storeys": 23,
+          "podiumStoreys": 6,
+          "shoulderStoreys": null,
+          "estimatedMainRoofHeightM": 74.3,
+          "estimatedMechanicalHeightM": 5,
+          "heightM": 79.3,
+          "heightIsEstimate": true,
+          "heightBasis": "Old 30-storey roof height 94.95 m minus 7 floors at the documented 2.95 m typical interval; old 5 m mechanical height retained as an explicit estimate. New elevations not supplied.",
+          "podiumHeightM": 21.45,
+          "podiumHeightIsEstimate": true,
+          "proposedFinishedFloorASL": null,
+          "baseModelY": 104.44719696044922,
+          "floorModelY": 104.44719696044922,
+          "floorBasis": "2026 grading plan says FFE VARIES; old City model base used as an estimate",
+          "planDrawingPathIndices": {
+            "tower": 16,
+            "podium": 19,
+            "mechanical": 10,
+            "shoulder": null
+          },
+          "centreModelXZ": [
+            -11192.26028548176,
+            3230.725076961915
+          ],
+          "bounds": [
+            [
+              -11218.2265625,
+              104.44719696044922,
+              3203.419677734375
+            ],
+            [
+              -11167.22265625,
+              183.7471923828125,
+              3259.203125
+            ]
+          ],
+          "triangles": 54,
+          "watertight": true,
+          "estimatedVerticalUncertaintyM": 5,
+          "estimatedHorizontalUncertaintyM": 2,
+          "footprintM2": 1218.4514154289177
+        },
+        {
+          "name": "G",
+          "node": "EMTC2026-G",
+          "storeys": 35,
+          "podiumStoreys": 6,
+          "shoulderStoreys": null,
+          "estimatedMainRoofHeightM": 108.45,
+          "estimatedMechanicalHeightM": 5,
+          "heightM": 113.45,
+          "heightIsEstimate": true,
+          "heightBasis": "Old 44-storey roof height 135.00 m minus 9 floors at the documented 2.95 m typical interval; old 5 m mechanical height retained as an explicit estimate. New elevations not supplied.",
+          "podiumHeightM": 19.65,
+          "podiumHeightIsEstimate": true,
+          "proposedFinishedFloorASL": 177.05,
+          "baseModelY": 106.25279998779297,
+          "floorModelY": 107.05000000000001,
+          "floorBasis": "July 24 2026 proposed grading plan FFE",
+          "planDrawingPathIndices": {
+            "tower": 31,
+            "podium": 32,
+            "mechanical": 30,
+            "shoulder": null
+          },
+          "centreModelXZ": [
+            -11220.35227584327,
+            3481.2155814423118
+          ],
+          "bounds": [
+            [
+              -11235.95703125,
+              106.25279998779297,
+              3457.6728515625
+            ],
+            [
+              -11203.3251953125,
+              220.5,
+              3516.354248046875
+            ]
+          ],
+          "triangles": 48,
+          "watertight": true,
+          "estimatedVerticalUncertaintyM": 5,
+          "estimatedHorizontalUncertaintyM": 2,
+          "footprintM2": 1454.656544180906
+        },
+        {
+          "name": "H",
+          "node": "EMTC2026-H",
+          "storeys": 37,
+          "podiumStoreys": 6,
+          "shoulderStoreys": null,
+          "estimatedMainRoofHeightM": 115.81,
+          "estimatedMechanicalHeightM": 5,
+          "heightM": 120.81,
+          "heightIsEstimate": true,
+          "heightBasis": "Old 39-storey roof height 121.71 m minus 2 floors at the documented 2.95 m typical interval; old 5 m mechanical height retained as an explicit estimate. New elevations not supplied.",
+          "podiumHeightM": 19.65,
+          "podiumHeightIsEstimate": true,
+          "proposedFinishedFloorASL": 177.05,
+          "baseModelY": 105.89099884033203,
+          "floorModelY": 107.05000000000001,
+          "floorBasis": "July 24 2026 proposed grading plan FFE",
+          "planDrawingPathIndices": {
+            "tower": 34,
+            "podium": 35,
+            "mechanical": 33,
+            "shoulder": null
+          },
+          "centreModelXZ": [
+            -11232.00424448466,
+            3384.053864464222
+          ],
+          "bounds": [
+            [
+              -11248.837890625,
+              105.89099884033203,
+              3348.968505859375
+            ],
+            [
+              -11216.5263671875,
+              227.86000061035156,
+              3407.56298828125
+            ]
+          ],
+          "triangles": 50,
+          "watertight": true,
+          "estimatedVerticalUncertaintyM": 5,
+          "estimatedHorizontalUncertaintyM": 2,
+          "footprintM2": 1454.656118626747
+        }
+      ],
+      "componentCount": 9,
+      "registration": {
+        "oldControlPoints": [
+          [
+            "A",
+            304,
+            17032,
+            [
+              618.929931640625,
+              1763.4600219726562
+            ],
+            [
+              -11211.09033203125,
+              3594.434326171875
+            ]
+          ],
+          [
+            "B",
+            362,
+            17047,
+            [
+              647.64013671875,
+              1374.9600219726562
+            ],
+            [
+              -11261.74072265625,
+              3547.9459228515625
+            ]
+          ],
+          [
+            "D",
+            327,
+            17040,
+            [
+              1118.699951171875,
+              559.3500061035156
+            ],
+            [
+              -11322.693359375,
+              3393.8526611328125
+            ]
+          ],
+          [
+            "E",
+            328,
+            17042,
+            [
+              1551.06005859375,
+              559.3500061035156
+            ],
+            [
+              -11275.2548828125,
+              3334.3133544921875
+            ]
+          ],
+          [
+            "F1",
+            331,
+            17046,
+            [
+              1937.6399536132812,
+              559.3500061035156
+            ],
+            [
+              -11232.7724609375,
+              3281.2159423828125
+            ]
+          ],
+          [
+            "F2",
+            332,
+            17045,
+            [
+              2324.10009765625,
+              559.3500061035156
+            ],
+            [
+              -11190.44140625,
+              3227.8814697265625
+            ]
+          ],
+          [
+            "G",
+            363,
+            17034,
+            [
+              1081.4400634765625,
+              1258.3500366210938
+            ],
+            [
+              -11230.28271484375,
+              3475.34033203125
+            ]
+          ],
+          [
+            "H",
+            334,
+            17038,
+            [
+              1428.5100708007812,
+              906.9299926757812
+            ],
+            [
+              -11240.70166015625,
+              3389.302734375
+            ]
+          ]
+        ],
+        "oldPageToGLBxzAffine": [
+          [
+            0.109749547302125,
+            -0.13765885888335214
+          ],
+          [
+            0.1381880265039938,
+            0.10940006549177961
+          ],
+          [
+            -11522.783456958341,
+            3486.6679686246625
+          ]
+        ],
+        "controlResidualM": [
+          0.08895090596031915,
+          0.03993305074867175,
+          0.020081685351674868,
+          0.030786121093440567,
+          0.10703232593449377,
+          0.05155801913219736,
+          0.1430871476137318,
+          0.06779852301296975
+        ],
+        "maxControlResidualM": 0.1430871476137318,
+        "newPageToOldPageSimilarity": {
+          "matrix": [
+            [
+              0.9985395704012613,
+              -0.0028089077396745163
+            ],
+            [
+              0.0028089077396745163,
+              0.9985395704012613
+            ]
+          ],
+          "translation": [
+            27.779939625200768,
+            84.12286313471708
+          ],
+          "source": "Corresponding ends of the 15 x 15 m NW daylight triangle bevel in both site plans"
+        },
+        "propertyBoundaryCrossCheckM": {
+          "median": 0.08215467993154368,
+          "p90": 2.050706519424832,
+          "p99": 3.237179060393611,
+          "max": 25.833252750473832
+        },
+        "nominalScaleMperPDFpoint": 0.1763889
+      },
+      "sources": [
+        {
+          "url": "https://www.mississauga.ca/wp-content/uploads/2025/01/02103938/oz-opa-24-15-w9-building-elevations-december-2024.pdf",
+          "title": "Building elevations",
+          "publisher": "City of Mississauga / applicant submission",
+          "sha256": "f56d5d676160af2c4f02aed1c5d4b159980b9d88e368367b9e379de1ac700366"
+        },
+        {
+          "url": "https://www.mississauga.ca/wp-content/uploads/2025/01/02103955/oz-opa-24-15-w9-development-master-plan-december-2024.pdf",
+          "title": "Development master plan",
+          "publisher": "City of Mississauga / applicant submission",
+          "sha256": "24c5e4742eec52300f356f2adb0dbe900c2bd0a9d86a3d4d870fadbb4c9d8c0a"
+        },
+        {
+          "url": "https://www.mississauga.ca/wp-content/uploads/2025/01/08114537/oz-opa-24-15-w9-A100-Site-Plan-december-2024.pdf",
+          "title": "Site Plan",
+          "publisher": "City of Mississauga / applicant submission",
+          "sha256": "049a04a1b4307d9e647312f006ddf8b47e05b52f88182ac3a2b266f7d6f64543"
+        },
+        {
+          "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/25141740/Cover-Letter-21T-M-26-3-W9-August-2026.pdf",
+          "title": "Cover Letter \u2013 August 2026",
+          "publisher": "City of Mississauga / applicant submission",
+          "sha256": "d8f31fa801f0f8663a9cc7a3a57ec935498b11068e26409ee7ae1d06bbded282"
+        },
+        {
+          "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/25141742/Draft-Plan-of-Subdivision-21T-M-26-3-W9-August-2026.pdf",
+          "title": "Draft Plan of Subdivision \u2013 August 2026",
+          "publisher": "City of Mississauga / applicant submission",
+          "sha256": "56f2e1f123c9adc7832d5ee5e6498e674c3288d84a000a794ee1ef0e17ce3755"
+        },
+        {
+          "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/25141752/Phasing-Concept-Plan-21T-M-26-3-W9-August-2026.pdf",
+          "title": "Phasing Concept Plan \u2013 August 2026",
+          "publisher": "City of Mississauga / applicant submission",
+          "sha256": "064c8cc7eab8edd9f615f6c5714bb602fd6b4dc2ee8fc5a4fc5063b83fadc0a5"
+        },
+        {
+          "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/25141804/Site-Plan-21T-M-26-3-W9-August-2026.pdf",
+          "title": "Site Plan \u2013 August 2026",
+          "publisher": "City of Mississauga / applicant submission",
+          "sha256": "1a7e711437084f740644d7e89fb640372e4ed385ddf3f6f0d03237203c4cec39"
+        },
+        {
+          "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/25141749/Grading-Plan-Phase-1-4-21T-M-26-3-W9-August-2026.pdf",
+          "title": "Grading plan 1",
+          "publisher": "City of Mississauga / applicant submission",
+          "sha256": "9cf010550936b68b00608cdb76ba037d798b789a464e65553cd1d37237a57a94"
+        },
+        {
+          "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/25141750/Grading-Plan-Phase-5-21T-M-26-3-W9-August-2026.pdf",
+          "title": "Grading plan 5",
+          "publisher": "City of Mississauga / applicant submission",
+          "sha256": "6fb10b026607ef6cf635e7e7a9e69e34bd0269ad76959908040174125eddddcb"
+        }
+      ],
+      "constructionEvidence": {
+        "date": "2026-09-26",
+        "stage": "Planned subdivision; no start or current built height established",
+        "actualHeightM": null
+      },
+      "limitations": [
+        "New metric elevation drawings were not supplied in the August subdivision set. All roof, podium and mechanical heights are source-based estimates, not approved 2026 metric dimensions.",
+        "Two unchanged daylight-triangle corners transfer the revised plan to the old plan; eight City tower controls register the old plan at maximum residual 0.1431 m. Allow 2 m placement tolerance because the plan is conceptual and control definition is not a survey.",
+        "Proposed first-floor elevations A\u2013E/G/H are from the July 24 2026 grading sheet. F1/F2 remain unspecified (FFE VARIES); old source base levels are estimates.",
+        "No construction schedule or completion date is verified. Future site-plan submissions may refine the forms.",
+        "The 2024 City component set is replaced only in the future scenario; retain the source data as provenance.",
+        "Private outdoor amenities, entrances, balconies, windows, streets and final park landscaping are omitted because new detailed drawings are not supplied."
+      ],
+      "id": "emtc-northwest-2026-settlement",
+      "url": "models/refinement/emtc-northwest-2026-settlement.glb",
+      "replacementModes": [
+        "future"
+      ],
+      "downloadSHA256": "85863c257078ad51429b777ba1da04b1b3f4fbfeec1c2fb799f296b58ec5e810",
+      "downloadBytes": 19636,
+      "uncertainties": [
+        "New metric elevation drawings were not supplied in the August subdivision set. All roof, podium and mechanical heights are source-based estimates, not approved 2026 metric dimensions.",
+        "Two unchanged daylight-triangle corners transfer the revised plan to the old plan; eight City tower controls register the old plan at maximum residual 0.1431 m. Allow 2 m placement tolerance because the plan is conceptual and control definition is not a survey.",
+        "Proposed first-floor elevations A\u2013E/G/H are from the July 24 2026 grading sheet. F1/F2 remain unspecified (FFE VARIES); old source base levels are estimates.",
+        "No construction schedule or completion date is verified. Future site-plan submissions may refine the forms.",
+        "The 2024 City component set is replaced only in the future scenario; retain the source data as provenance.",
+        "Private outdoor amenities, entrances, balconies, windows, streets and final park landscaping are omitted because new detailed drawings are not supplied."
+      ],
+      "uncertainGeometry": true,
+      "bounds": [
+        [
+          -11336.3896484375,
+          104.44719696044922,
+          3203.419677734375
+        ],
+        [
+          -11167.22265625,
+          227.86000061035156,
+          3618.4912109375
+        ]
+      ]
     }
   ],
   "projectUpdates": [
@@ -16270,12 +17659,12 @@
       "planRegistrationCheck": {
         "sourceTowerCentrePixels": [
           [
-            635.0,
-            557.0
+            635,
+            557
           ],
           [
-            1290.0,
-            557.0
+            1290,
+            557
           ]
         ],
         "worldTowerCentresXZ": [
@@ -17090,7 +18479,7 @@
       "lat": 43.627571340666,
       "lon": -79.60654200750976,
       "heightM": [
-        52.0
+        52
       ],
       "storeys": [
         13
@@ -17197,7 +18586,7 @@
         }
       ],
       "geometryCoverage": "plan-derived models",
-      "modelCaveat": "June 2026 unapproved expansion, separate from earlier B3. Dimensioned main envelope and five-storey podium, with height through mechanical penthouse. Survey control registration; allow \u00b11 m placement. Small partial level-17/18 terrace cuts, balcony projections, entrance recesses and facade divisions are omitted. Floor bands and materials are schematic. B6 mechanical silhouette is traced from A-B6-304, approximately \u00b10.3 m; B4/B5 MPH follow the rectangular plan envelope. Datum treated as local UTM17 NAD83; no sub-metre geodetic claim.",
+      "modelCaveat": "June 2026 unapproved expansion, separate from earlier B3. Dimensioned main envelope and five-storey podium, with height through mechanical penthouse. Survey control registration; allow \u00b11 m placement. Small partial level-17/18 terrace cuts, balcony projections, entrance recesses and facade divisions are omitted. Floor bands and materials are schematic. B6 mechanical silhouette is traced from A-B6-304, approximately \u00b10.3 m; B4/B5 MPH follow the rectangular plan envelope. Datum treated as local UTM17 NAD83; no sub-metre geodetic claim. The old components 73-4291 and 73-4293 conflict with the June 2026 B5 layout and are excluded. Separate B3 (73-4292) remains a violet, height-uncertain municipal envelope: the current site plan labels 25 storeys, while the old mesh records 52.1 m.",
       "geometrySources": [
         "https://www.mississauga.ca/wp-content/uploads/2026/06/11112231/Survey-OZ-OPA-26-9-W3-June-2026.pdf",
         "https://www.mississauga.ca/wp-content/uploads/2026/06/11112325/Floor-Plan-Roof-MPH-OZ-OPA-26-9-W3-June-2026.pdf",
@@ -17256,6 +18645,52 @@
           "title": "Chelsea section3",
           "publisher": "City of Mississauga / 4 Architecture or IBW Surveyors",
           "accessed": "2026-09-20"
+        }
+      ],
+      "overrides": [
+        {
+          "meshId": "73-4291",
+          "projectId": "city-group-107",
+          "status": "Older component superseded by June 2026 phase 2 site layout",
+          "displayStatus": "Proposed",
+          "statusDate": "2026-06",
+          "excludeSuperseded": true,
+          "retainByDefault": false,
+          "includeInVerifiedScenario": false,
+          "evidenceNote": "Spatially registered June 2026 A103 site plan places proposed B5 on the old component footprint. This source component is not the retained B3 tower. Exclude the conflicting old form; B4/B5/B6 are supplied as separate plan-derived models. Existing apartments A/B remain unchanged.",
+          "sources": [
+            "https://www.mississauga.ca/wp-content/uploads/2026/06/11112228/Site-Plan-Phase-2-OZ-OPA-26-9-W3-June-2026.pdf"
+          ]
+        },
+        {
+          "meshId": "73-4293",
+          "projectId": "city-group-107",
+          "status": "Older component superseded by June 2026 phase 2 site layout",
+          "displayStatus": "Proposed",
+          "statusDate": "2026-06",
+          "excludeSuperseded": true,
+          "retainByDefault": false,
+          "includeInVerifiedScenario": false,
+          "evidenceNote": "Spatially registered June 2026 A103 site plan places proposed B5 on the old component footprint. This source component is not the retained B3 tower. Exclude the conflicting old form; B4/B5/B6 are supplied as separate plan-derived models. Existing apartments A/B remain unchanged.",
+          "sources": [
+            "https://www.mississauga.ca/wp-content/uploads/2026/06/11112228/Site-Plan-Phase-2-OZ-OPA-26-9-W3-June-2026.pdf"
+          ]
+        },
+        {
+          "meshId": "73-4292",
+          "projectId": "city-group-107",
+          "status": "Separate B3 apartment retained with unresolved latest geometric height",
+          "displayStatus": "Uncertain",
+          "statusDate": "2026-06",
+          "excludeSuperseded": false,
+          "retainByDefault": true,
+          "includeInVerifiedScenario": false,
+          "uncertain": true,
+          "geometryCaveat": "The source envelope is 52.1 m. June 2026 A103 identifies B3 as 25 storeys under a separate application; a current dimensioned B3 elevation was not available in the phase 2 plan set. Retained in violet as a dated uncertain envelope; do not equate 52.1 m with the latest 25-storey form.",
+          "evidenceNote": "Exact site-plan registration places the source component at B3. A103 labels B3 as 25 storeys, subject to separate A98/25 W3 and site-plan approval; B4/B5/B6 are distinct 20-storey proposals.",
+          "sources": [
+            "https://www.mississauga.ca/wp-content/uploads/2026/06/11112228/Site-Plan-Phase-2-OZ-OPA-26-9-W3-June-2026.pdf"
+          ]
         }
       ]
     },
@@ -17324,6 +18759,30 @@
         "https://www.mississauga.ca/wp-content/uploads/2025/10/03105351/Planning-Rationale-Report-and-Urban-Design-Block-Context-Plan-OZ-OPA-25-18-W7-August-2025.pdf",
         "https://pub-mississauga.escribemeetings.com/filestream.ashx?DocumentId=82547"
       ]
+    },
+    {
+      "projectId": "source-composite-repair",
+      "overrides": [
+        {
+          "meshId": "63-6149",
+          "status": "duplicate-existing-composite",
+          "sourceStatus": "Existing",
+          "excludeDuplicate": true,
+          "includeInSourceArchive": true,
+          "includeInReviewedFuture": false,
+          "includeInDatedCaptureBaseline": false,
+          "modifyVertices": false,
+          "duplicateReplacedBy": [
+            "63-728",
+            "63-4256",
+            "63-4592",
+            "63-5782"
+          ],
+          "evidenceNote": "Unnamed duplicate composite overlaps complete named existing buildings 63-728, 63-4256, 63-4592 and 63-5782. Exact source triangles suppressed after native-render proof removed protruding black interior faces; retained positions are unchanged. Original source archive preserved.",
+          "evidenceReport": "research/revamp/Duplicate-composite-repair.json"
+        }
+      ],
+      "modelCaveat": "Coordinate-preserving duplicate source removal; see geometry repair audit."
     }
   ],
   "researchLog": [
@@ -19008,5 +20467,13 @@
         "https://urbantoronto.ca/news/2026/08/city-future.61613"
       ]
     }
-  ]
+  ],
+  "retiredAssets": [
+    {
+      "id": "cooksville-toc-2025-tower-envelopes",
+      "supersededBy": "cooksville-toc-sep2026-envelopes",
+      "reason": "New September 22 2026 seven-tower plan replaces the 2025 eight-tower scheme."
+    }
+  ],
+  "communityRevisionDate": "2026-09-26"
 }

@@ -1,3 +1,25 @@
+# Community revision — 26 September 2026
+
+- Absolute World: rebuilt the missing curved sections of the south floorplate from the architectural publication; retained mapped centres, distinct heights and rotation anchors.
+- Exchange District EX3: removed the superseded six-floor upper black module and lowered the unchanged blue crown onto the final white module. This is a source-derived interpretation of the revised 66-storey design; its exact current metre height is unverified. The future crown does not assert present construction completion.
+- Existing major buildings: darker grey, with pale smaller context; styling changes do not change source geometry.
+- Uptown: added both existing Perla envelopes, restored Gemma and Canopy Phase 1 to the web viewer, and kept the separate south Watergarden scheme in the uncertain future layer. Exact occupancy dates and Perla heights remain qualified.
+- Cooksville GO: replaced the superseded eight-tower study with the September 2026 seven-tower concept; traced outlines and published storeys, with estimated vertical dimensions.
+- Erin Mills Town Centre: replaced the older 17 source components with nine revised settlement envelopes, 20–37 storeys. Footprints follow the 2026 plan; vertical dimensions remain estimates.
+- New independent subway exploration: historical alternatives, current proposal context, explanatory diagrams and two generic 3D spatial illustrations.
+- Public 3D download controls removed. The interactive viewer necessarily transfers display geometry to the browser; editable scenes remain local.
+- Added native 4:5 portrait renders, with separate full-resolution PNG downloads.
+
+The public reference audit inspects the sources for the inherited 107 project dossiers. This revision adds Perla as a separate 108th dossier. It does not certify every building as an individually measured architectural model. Requests for better exterior models and permissions are in progress.
+
+Render boundary checks keep transit inside each view’s mapped ground. Routes retain their source coordinates and elevations within the scene; their off-scene tails are clipped at the ground boundary. The Erin Mills supplement now has explicit spatial bounds, preventing it from loading into unrelated districts.
+
+The [community reference review](Community-reference-and-coverage-review.md) records the public-reference check and its limits. A [public project coverage register](public-project-reference-coverage.json) tracks all 108 named dossiers without publishing private correspondence.
+
+The historical Road Crossings record below documents the earlier edition. Its dated 2025 Cooksville concept and January 2026 EX3 status have been superseded by the community corrections above and the current project register.
+
+---
+
 # Future Mississauga: Road Crossings refinement notes
 
 Model review date: **20 September 2026**. These notes describe the source-derived additions and presentation changes. The picture index and atlas build manifest record which final images were packaged.
@@ -109,7 +131,7 @@ The revision checkpoints separate lighting and landscape changes. The [lighting 
 
 The Downtown landscape overlay uses City-mapped sidewalk, playground, sport and field outlines plus the registered 2023 Celebration Square amenities plan. The lawn and central paving are distinguished; ambiguous broad enclosures, invented trail widths and unbuilt refurbishment designs are omitted. Original inventory-tree coordinates remain intact. Conflicting crowns may be reduced or suppressed for display, with separate baseline/future decisions; suppression does not establish that a tree was removed. This detailed audit covers the compact Downtown window, not every tree or landscape surface citywide. Small terrain-clearance lifts are display adjustments, not kerb heights. [Landscape source and limits](../models/supplemental/revamp-landscape/READ-ME.md).
 
-The website retains original PNG downloads, direct district/model links, native selection controls, comparison handles and recorded-construction mode. A downloaded building GLB is only one part of that layered assembly; it does not contain the landscape, transit, camera or lighting by itself.
+The website retains original PNG downloads, interactive district links, native selection controls, comparison handles and recorded-construction mode. Public 3D-model download controls are removed. The browser receives the geometry required for its interactive display; the full editable scenes remain local.
 
 ## Scope and evidence
 

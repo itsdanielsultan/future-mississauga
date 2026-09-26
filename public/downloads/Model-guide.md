@@ -1,5 +1,9 @@
 # Future Mississauga: Road Crossings model guide
 
+**Community Revision, 26 September 2026:** this document preserves the earlier Road Crossings methods and audit record. Its dated counts and project descriptions below are historical, not a fresh certification of the current edition. Current revisions are recorded in the [community review](Community-reference-and-coverage-review.md), [refinement notes](Refinement-notes.md), [project register](../data/projects.json) and [model manifest](../data/refinement-models.json). The [picture index](Picture-index.json) and [release validation](Release-validation.json) identify the corresponding exported media.
+
+## Historical baseline record
+
 Prepared for Daniel Sultan. Research reviewed on **September 20, 2026**. This is the separate Road Crossings edition (21 September 2026), with crossing-source verification completed September 21; the preceding complete edition and original source archive remain preserved.
 
 This package provides a City-derived three-dimensional context model and a separately researched record of development proposals. Its strongest feature is traceability: a source mesh, planning decision and current project record can be checked independently. It is a visualization of available evidence, not a promise that every proposal will be built or a complete architectural reconstruction of the future city.
@@ -28,7 +32,7 @@ The City describes its existing-building product as LOD2, with roof information 
 | Geometry overrides | Decisions about identified source components | Exclude demonstrated superseded geometry; flag unresolved mismatches; update stale construction status. |
 | Context and transit layers | Roads, parks, water and transit display | Use for orientation. Some vertical placement is inferred for presentation. |
 
-The untouched municipal source archive is provenance-only and is not the recommended current city model. The main reviewed-model archive and interactive downloads use the repaired/reconciled geometry. The full source archive intentionally preserves geometry that the current research identifies as outdated. A standalone source GLB is therefore not equivalent to a completely reconciled future scenario. The project record can remain in the inventory even when its obsolete mesh is excluded. Where a current footprint is unavailable, a labelled project entry records the proposal without claiming an exact building shape.
+The untouched municipal source archive is provenance-only and is not the recommended current city model. The local reviewed-model archive and the interactive viewer use the repaired/reconciled geometry. Public 3D-model download controls have been removed. The full source archive intentionally preserves geometry that the current research identifies as outdated. A standalone source GLB is therefore not equivalent to a completely reconciled future scenario. The project record can remain in the inventory even when its obsolete mesh is excluded. Where a current footprint is unavailable, a labelled project entry records the proposal without claiming an exact building shape.
 
 ## Pictures, comparisons and editable scenes
 
@@ -38,7 +42,7 @@ The aerial pairs use the same camera, framing and context. The Downtown panorama
 
 The Blender scene files preserve the assembled presentation views with camera, lighting, materials, building geometry and context. The retained original scene set was opened without saving and checked for recoverability; all hashes matched and no required external assets were missing. Textures are packed. They are broader scene assemblies than the standalone reviewed building GLBs. A picture made from a scene can include a supplemental asset or expanded context that is deliberately supplied as a separate file in the model exports.
 
-The distribution archives are `Future-Mississauga-Pictures.zip`, `Future-Mississauga-Reviewed-Models.zip`, `Future-Mississauga-Editable-Scenes.zip` and `Future-Mississauga-Public-Research.zip`. The original municipal conversion remains separately available in `models/`; it must not be mistaken for the reviewed model export. The public research collection excludes the private correspondence review. Preserve the included metadata and licence notices when sharing any archive.
+The creator retains the editable scenes and reviewed models locally. This website offers pictures, the atlas and public research files; it no longer offers 3D-model download controls or scene archives. The interactive viewer still receives geometry to display the city. The public research collection excludes private correspondence. Preserve source credits and licence notices when sharing pictures or research.
 
 **Violet geometry marks unresolved source versions or explicitly uncertain new reconstructions. It is visible by default in the illustrated future scenario.** Each asset retains its reason: an unresolved current design, a phase mismatch, approximate marketing-plan registration or an unverified developer proxy. These are different limitations and must be read from the record. Visibility does not mean verification. Demonstrably superseded geometry is excluded from the reviewed scenario and remains in the original archive. A violet envelope must not silently become an approved current design.
 
@@ -150,7 +154,7 @@ The revision checkpoints separate lighting and landscape changes. The [lighting 
 
 The Downtown landscape overlay uses City-mapped sidewalk, playground, sport and field outlines plus the registered 2023 Celebration Square amenities plan. The lawn and central paving are distinguished; ambiguous broad enclosures, invented trail widths and unbuilt refurbishment designs are omitted. Original inventory-tree coordinates remain intact. Conflicting crowns may be reduced or suppressed for display, with separate baseline/future decisions; suppression does not establish that a tree was removed. The expanded crown-conflict audit covers all fifteen district windows using their mapped inventory and illustrative woodland records; it does not establish current tree removal or exact crown dimensions. Detailed sidewalk coverage remains concentrated in Downtown. Small terrain-clearance lifts are display adjustments, not kerb heights. [Landscape source and limits](../models/supplemental/revamp-landscape/READ-ME.md).
 
-The website retains original PNG downloads, direct district/model links, native selection controls, comparison handles and recorded-construction mode. A downloaded building GLB is only one part of that layered assembly; it does not contain the landscape, transit, camera or lighting by itself.
+The website retains original PNG downloads, interactive district links, native selection controls, comparison handles and recorded-construction mode. Public 3D-model download controls are removed. The browser receives the geometry required for its interactive display; the full editable scenes remain local.
 
 Recorded-construction views use the future envelope’s conservative tree-crown clearances. This can reduce crowns beside an unbuilt future envelope, so the landscaping is not a dated construction survey. Tree positions remain mapped, and crown suppression does not establish actual removal. Building progress is separately controlled by the cited construction evidence.
 

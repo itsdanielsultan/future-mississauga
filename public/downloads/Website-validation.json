@@ -1,45 +1,67 @@
 {
-  "edition": "2026-09-20 refinement",
-  "checks": [
+  "edition": "Community Revision 2026-09-26",
+  "checkedAt": "2026-09-26T18:17:44.847086+00:00",
+  "kind": "Current static-source checks and explicitly dated local interaction evidence",
+  "staticChecks": [
     {
-      "check": "Image comparison pointer drag",
-      "result": "passed",
-      "evidence": "Local preview: direct handle drag changed aria-valuenow from50 to80 and visibly moved divider; Port Credit selection changed both image layers."
+      "page": "index.html",
+      "title": "Future Mississauga",
+      "no3DModelDownloadLinks": true,
+      "sha256": "71fb871fba4a30c0be73b349b8962e331bb6dda6e346dffc1e1090d833d95960"
     },
     {
-      "check": "Image comparison keyboard",
-      "result": "passed",
-      "evidence": "ArrowRight changed80 to81."
+      "page": "explore.html",
+      "title": "Future Mississauga",
+      "no3DModelDownloadLinks": true,
+      "sha256": "994c17a0a31ff529fa9f5e74ebb9ec855d4747dfaab43452247f8ccc637d817e"
     },
     {
-      "check": "3D comparison pointer and keyboard",
-      "result": "passed",
-      "evidence": "Local preview: pointer changed50 to74; ArrowLeft changed74 to73 with matching scissored scene."
+      "page": "subway.html",
+      "title": "Future Mississauga",
+      "no3DModelDownloadLinks": true,
+      "sha256": "6a584eb1b4023ec9d0bfbd34fadf3bf2db45bf9bf9779b86db1a837abb594209"
     },
     {
-      "check": "Native menus",
-      "result": "passed",
-      "evidence": "Actual select elements with appearance:auto; district/scenario/researchscope/register/pictureview/comparisonplace. Picture view changed Wide aerial to Skyline panorama with3840x1400original PNG link."
-    },
-    {
-      "check": "Phone layout",
-      "result": "passed visually",
-      "evidence": "390x844viewport: singlecolumn, native place menu and visible44CSSpixel comparison target. Pointer check performed at normal viewport."
-    },
-    {
-      "check": "3D initial load",
-      "result": "passed",
-      "evidence": "Latest Downtown model finished loading; no captured browser console errors."
-    },
-    {
-      "check": "Image storage tests",
-      "result": "4 passed",
-      "evidence": "Authorization/origin, checksum, idempotency/exact original bytes, disabled ingestion."
-    },
-    {
-      "check": "All original PNG uploads",
-      "result": "passed",
-      "evidence": "31 of 31 final originals uploaded. All returned checksums match local master files and website URLs. Total 383614553 bytes."
+      "page": "social.html",
+      "title": "Future Mississauga",
+      "no3DModelDownloadLinks": true,
+      "sha256": "82315925566c8becc75977e6a2646e55652fd95a4f6c5739cac72c56865e3eb9"
     }
-  ]
+  ],
+  "currentAppSHA256": "28c0689174e633c70f5fc0f735126b221927e7c66a1652a62fbcc271b93d32bd",
+  "threeDDownloadControlsRemoved": true,
+  "datedLocalEvidence": [
+    {
+      "test": "All-15-public-load-verification.json",
+      "checkedAt": "2026-09-26T16:48:57.361Z",
+      "sha256": "c781d8e6b7221eb700e6e8ca56b0d4bcfbab2c893ae715519e521437d903a414",
+      "scope": "Earlier local-preview smoke test for 15 district loads; not a current production test."
+    },
+    {
+      "test": "Gemma-browser-verification.json",
+      "checkedAt": "2026-09-26T16:39:48.657Z",
+      "sha256": "8f0fb46519fe1842a36fa4398a41854d31c540dfb7193d4fbc3a118a3e50c804",
+      "scope": "Local Gemma/Canopy and separate south Watergarden scenario visibility."
+    },
+    {
+      "test": "EMTC-boundary-browser-recheck.json",
+      "checkedAt": "2026-09-26T17:05:53.127Z",
+      "sha256": "07aa9356f2498a807912ad2131acdd67b452d7935c7e56cf723c7fc2fe69ad2b",
+      "scope": "Local Downtown/Port Credit exclusion and Erin Mills inclusion after geographic bounds correction."
+    },
+    {
+      "test": "Picture-controls-QA.json",
+      "checkedAt": "2026-09-26",
+      "sha256": "b0f5b2e4d5a1c78a4c1e36956cf8e26b63392010c69d7432467881f64adf1e9d",
+      "scope": "Local CUA interaction check: comparison drag, native selections and consistent dialog dimensions; images were awaiting final replacement."
+    },
+    {
+      "test": "social/Social-gallery-CUA-QA.json",
+      "checkedAt": "2026-09-26T17:52:07.242Z",
+      "sha256": "0cff6c038953ebb935bb47f45583a20a17c9b82ae294cf06c3ad06ebd53f79b2",
+      "scope": "Local CUA Chrome portrait gallery at 390×844 and 1280×900: native filter counts 4/8/33, all 33 half-size previews loaded, full-size target verification, nav/footer fit and zero console errors. Download hosting changes after this test require separate verification."
+    }
+  ],
+  "liveDeploymentVerified": false,
+  "limitations": "This report does not assert a new production browser session, successful hosting upload, or fresh interaction testing after every subsequent asset change. Final publication verification is separate."
 }

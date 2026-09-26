@@ -41,6 +41,15 @@ export function validateDistrictMetadata(districts) {
   }
   return {publicDistricts:districts.length,flatBoundsVerified:true,centersAndRadiiVerified:true,citywideFitCameras:cameras};
 }
+export function validateRefinementBounds(manifest) {
+  assert(Array.isArray(manifest.assets), 'Refinement manifest must provide an assets array.');
+  for (const [index, asset] of manifest.assets.entries()) {
+    const label = asset?.id || `asset ${index}`, bounds = asset?.bounds;
+    assert(Array.isArray(bounds) && bounds.length === 2 && bounds.every(row => Array.isArray(row) && row.length === 3 && row.every(value => typeof value === 'number' && Number.isFinite(value))), label + ': refinement bounds must be finite 2x3 [minXYZ,maxXYZ] coordinates. Missing bounds would load the asset in every district.');
+    assert(bounds[0].every((value, axis) => value <= bounds[1][axis] && Number.isFinite(bounds[1][axis] - value)), label + ': refinement bounds must be ordered with finite extents on every axis.');
+  }
+  return {assets: manifest.assets.length, finiteOrderedBoundsVerified: true};
+}
 async function walk(folder) {
   const result = [];
   for (const entry of await readdir(folder, {withFileTypes: true})) {
@@ -116,7 +125,7 @@ export async function validate(site = join(ROOT, 'public')) {
   const files = await walk(site);
   let bytes = 0;
   const names = new Set(files.map(p => relative(site, p).split(sep).join('/')));
-  for (const required of ['index.html', 'explore.html', 'app.js', 'gallery.js', 'data/picture-assets.json', 'data/districts.json', 'downloads/Future-Mississauga-Atlas.pdf', 'downloads/project-register.csv', 'licenses/CREDITS.md']) assert(names.has(required), 'Missing public dependency: ' + required);
+  for (const required of ['index.html', 'explore.html', 'social.html', 'social.css', 'social.js', 'subway.html', 'app.js', 'gallery.js', 'data/picture-assets.json', 'data/social-pictures.json', 'data/districts.json', 'downloads/Future-Mississauga-Atlas.pdf', 'downloads/project-register.csv', 'licenses/CREDITS.md']) assert(names.has(required), 'Missing public dependency: ' + required);
   const districtMetadata = validateDistrictMetadata(JSON.parse(await readFile(join(site,'data/districts.json'),'utf8')));
   for (const file of files) {
     const name = relative(site, file).split(sep).join('/');
@@ -142,10 +151,11 @@ export async function validate(site = join(ROOT, 'public')) {
     }
   }
   assert(bytes < 1_000_000_000, 'Published output exceeds conservative 1 GB limit.');
-  let modelDownloads = 0;
+  let modelDownloads = 0, refinementBounds = null;
   for (const manifestName of ['refinement-models', 'transit-layer-manifest', 'landscape-layer-manifest']) {
     if (!names.has('data/' + manifestName + '.json')) continue;
     const manifest = JSON.parse(await readFile(join(site, 'data', manifestName + '.json'), 'utf8'));
+    if (manifestName === 'refinement-models') refinementBounds = validateRefinementBounds(manifest);
     for (const asset of manifest.assets || []) {
       if (!asset.url) continue;
       assert(asset.url.startsWith('models/') && !asset.url.includes('..'), 'Nonlocal model URL in ' + manifestName);
@@ -182,8 +192,30 @@ export async function validate(site = join(ROOT, 'public')) {
     assert.equal(displayHeader.readUInt32BE(16), preview.width);
     assert.equal(displayHeader.readUInt32BE(20), preview.height);
   }
+  const social = JSON.parse(await readFile(join(site, 'data/social-pictures.json'), 'utf8'));
+  assert.equal(social.nativePortraitRendering, true);
+  assert.equal(social.ratio, '4:5');
+  assert.equal(social.images.length, 33, 'Expected all 33 native portrait records.');
+  assert.deepEqual(social.images.map(x => x.file).sort(), entries.map(([name]) => name).sort(), 'Portrait and wide view inventories differ.');
+  const socialPage = await readFile(join(site, 'social.html'), 'utf8');
+  const portraitPrefix = 'https://github.com/itsdanielsultan/future-mississauga/releases/download/community-images-2026-09-26/';
+  for (const picture of social.images) {
+    assert.equal(picture.width, 1080);
+    assert.equal(picture.height, 1350);
+    assert.match(picture.sha256, /^[a-f0-9]{64}$/);
+    assert.equal(picture.url, portraitPrefix + picture.file, 'Unexpected portrait download host/tag.');
+    assert.equal(picture.preview, 'gallery/social/previews/' + picture.file);
+    assert(names.has(picture.preview), 'Missing portrait preview: ' + picture.file);
+    const header = await readFile(join(site, picture.preview));
+    assert.equal(header.subarray(0, 8).toString('hex'), '89504e470d0a1a0a');
+    assert.equal(header.readUInt32BE(16), 540);
+    assert.equal(header.readUInt32BE(20), 675);
+    assert.equal(socialPage.split('href="' + picture.url + '"').length - 1, 2, 'Portrait card download links differ from the source register.');
+    assert(socialPage.includes('src="' + picture.preview + '"'), 'Portrait card preview differs from the source register.');
+  }
+  const portraitGallery = {nativePortraitRecords: 33, localHalfSizePreviews: 33, dimensionsVerified: true, remoteDownloadSHA256Recorded: 33, remoteDownloadBytesVerifiedByThisStaticCheck: false};
   const documentLinks = await validateDocumentLinks(site);
-  const report = {files: files.length, publishedBytes: bytes, originalPNGs: entries.length, halfSizeDisplayPNGs: entries.length, modelDownloads, ...documentLinks, districtMetadata, PNGchecksumsVerified: true, noHostedRuntime: true, noPrivateArtifacts: true};
+  const report = {files: files.length, publishedBytes: bytes, originalPNGs: entries.length, halfSizeDisplayPNGs: entries.length, portraitGallery, modelDownloads, refinementBounds, ...documentLinks, districtMetadata, PNGchecksumsVerified: true, noHostedRuntime: true, noPrivateArtifacts: true};
   console.log(JSON.stringify(report, null, 2));
   return report;
 }

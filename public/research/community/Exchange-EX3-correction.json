@@ -1,0 +1,266 @@
+{
+  "reviewed": "2026-09-26",
+  "projectId": "exchange-district",
+  "phaseId": "EX3 (marketing name, blue crown)",
+  "sourceFile": "work/community/exchange/exchange-before.glb",
+  "candidateFile": "work/community/exchange/exchange-66-storey-candidate.glb",
+  "sourceSHA256": "52c8aa4a1077fdf815aa09061abfa3acce931d764a6d618984faf8bcd1f331ac",
+  "candidateSHA256": "2ebd17feb79c742925cc7b27eb0a91840a9b0027ddcdf5a5bf427c1d85c411ce",
+  "sourceBytes": 11256292,
+  "candidateBytes": 13805756,
+  "publishedStoreys": 66,
+  "verifiedRevisedHeightM": null,
+  "oldCrownBaseModelY": 307.0010070800781,
+  "lastWhiteModuleTopModelY": 288.0464172363281,
+  "derivedReductionM": 18.95458984375,
+  "oldMaxModelY": 314.3439025878906,
+  "derivedNewMaxModelY": 295.3893127441406,
+  "changedMeshes": [
+    {
+      "meshIndex": 17,
+      "operation": "remove obsolete upper module; clip crossing facade strips at original white-module roof",
+      "trianglesBefore": 2656,
+      "trianglesAfter": 2544,
+      "removedWholeTriangles": 132,
+      "removedObsoleteModuleCoplanarBaseTriangles": 0,
+      "clippedOriginalTriangles": 40,
+      "originalWholeBelowTrianglesRetained": 2484,
+      "newVertices": 140,
+      "retainedOriginalAttributeRowsUnchanged": true
+    },
+    {
+      "meshIndex": 19,
+      "operation": "remove obsolete upper module triangles",
+      "trianglesBefore": 2520,
+      "trianglesAfter": 2376,
+      "removedWholeTriangles": 144,
+      "removedObsoleteModuleCoplanarBaseTriangles": 0,
+      "clippedOriginalTriangles": 0,
+      "originalWholeBelowTrianglesRetained": 2376,
+      "newVertices": 0,
+      "retainedOriginalAttributeRowsUnchanged": true
+    },
+    {
+      "meshIndex": 20,
+      "operation": "remove obsolete upper module triangles",
+      "trianglesBefore": 408,
+      "trianglesAfter": 384,
+      "removedWholeTriangles": 24,
+      "removedObsoleteModuleCoplanarBaseTriangles": 0,
+      "clippedOriginalTriangles": 0,
+      "originalWholeBelowTrianglesRetained": 384,
+      "newVertices": 0,
+      "retainedOriginalAttributeRowsUnchanged": true
+    },
+    {
+      "meshIndex": 21,
+      "operation": "remove obsolete upper module triangles",
+      "trianglesBefore": 20851,
+      "trianglesAfter": 18243,
+      "removedWholeTriangles": 2608,
+      "removedObsoleteModuleCoplanarBaseTriangles": 42,
+      "clippedOriginalTriangles": 0,
+      "originalWholeBelowTrianglesRetained": 18243,
+      "newVertices": 0,
+      "retainedOriginalAttributeRowsUnchanged": true
+    },
+    {
+      "meshIndex": 22,
+      "operation": "translate original crown vertically only",
+      "trianglesBefore": 12,
+      "trianglesAfter": 12,
+      "deltaY": -18.95458984375,
+      "preservedXZUVNormalsIndices": true
+    }
+  ],
+  "unchangedMeshCount": 19,
+  "encodedTextureBytesPreserved": true,
+  "originalBinaryBufferPrefixPreserved": true,
+  "sources": [
+    {
+      "url": "https://www.arcadis.com/en/projects/north-america/canada/exchange-district",
+      "claim": "Architect: tallest tower 66 storeys; blocks alternate every six floors."
+    },
+    {
+      "url": "https://urbantoronto.ca/forum/threads/toronto-exchange-district-condos-232m-72s-camrost-felcorp-arcadis.29739/page-77",
+      "claim": "Aug 28 observer reports topped at 66 with mechanical roof forming; secondary corroboration only."
+    },
+    {
+      "url": "https://urbantoronto.ca/forum/attachments/20260905_155540-copy-jpg.762969/",
+      "claim": "Sep 5 construction photograph; qualitative form, not metre dimensions."
+    }
+  ],
+  "limitations": [
+    "Published 66-storey count is verified; revised metre height and roof drawing were not recovered.",
+    "One native six-floor module is omitted, leaving all lower module levels and dimensions unchanged. This assumes lower floors of the current revision match the older source model.",
+    "Original planned blue crown dimensions and orientation are retained, translated to the last white module. This is a disclosed architectural interpretation, not a reconstruction of as-built roof geometry.",
+    "The obsolete black module has 42 obsolete coplanar bottom triangles are removed; the original white roof remains. Forty crossing facade triangles are clipped at the existing module boundary with interpolated UVs/normals; all wholly retained triangles and their original vertex arrays are unchanged.",
+    "Actual-progress mode remains independent; a future blue crown is not asserted constructed."
+  ],
+  "result": "PASS",
+  "stage": "Accepted source/module-derived future interpretation",
+  "file": "outputs/models/supplemental/exchange-textured-phase-aware.glb",
+  "url": "models/exchange-textured-phase-aware.glb",
+  "sha256": "2ebd17feb79c742925cc7b27eb0a91840a9b0027ddcdf5a5bf427c1d85c411ce",
+  "bytes": 13805756,
+  "copies": [
+    "work/research/supplemental/exchange-textured-phase-aware.glb",
+    "outputs/models/supplemental/exchange-textured-phase-aware.glb",
+    "outputs/mississauga-future/public/models/exchange-textured-phase-aware.glb"
+  ],
+  "modelFidelity": "Native City textured design, with documented EX3 66-storey upper-module interpretation; revised metre height unverified.",
+  "visualQA": {
+    "matchedNativeViews": [
+      "exchange-before.png",
+      "exchange-after.png"
+    ],
+    "sameCamera": true,
+    "allOtherTowersPodiumAndTexturesUnchanged": true,
+    "obsoleteUpperBlackModuleAbsent": true,
+    "nativeCrownAtFinalWhiteModuleRoof": true,
+    "futureCrownConstructionNotAsserted": true
+  },
+  "invariantQA": {
+    "result": "PASS",
+    "checkedAt": "2026-09-26",
+    "beforeTriangles": 97896,
+    "afterTriangles": 95008,
+    "retainedOtherMeshes": 19,
+    "allRetainedWholeTrianglePositionNormalUVAndWindingExact": true,
+    "textureEncodedBytesExact": true,
+    "whiteTerminalModuleAndRoofExact": true,
+    "crownTranslationOnly": true,
+    "cameraBeforeAfterEqual": true,
+    "meshChecks": [
+      {
+        "mesh": 0,
+        "exactlyUnchanged": true,
+        "triangles": 5428
+      },
+      {
+        "mesh": 1,
+        "exactlyUnchanged": true,
+        "triangles": 412
+      },
+      {
+        "mesh": 2,
+        "exactlyUnchanged": true,
+        "triangles": 2
+      },
+      {
+        "mesh": 3,
+        "exactlyUnchanged": true,
+        "triangles": 12
+      },
+      {
+        "mesh": 4,
+        "exactlyUnchanged": true,
+        "triangles": 1488
+      },
+      {
+        "mesh": 5,
+        "exactlyUnchanged": true,
+        "triangles": 1678
+      },
+      {
+        "mesh": 6,
+        "exactlyUnchanged": true,
+        "triangles": 12
+      },
+      {
+        "mesh": 7,
+        "exactlyUnchanged": true,
+        "triangles": 8
+      },
+      {
+        "mesh": 8,
+        "exactlyUnchanged": true,
+        "triangles": 12
+      },
+      {
+        "mesh": 9,
+        "exactlyUnchanged": true,
+        "triangles": 16
+      },
+      {
+        "mesh": 10,
+        "exactlyUnchanged": true,
+        "triangles": 226
+      },
+      {
+        "mesh": 11,
+        "exactlyUnchanged": true,
+        "triangles": 3612
+      },
+      {
+        "mesh": 12,
+        "exactlyUnchanged": true,
+        "triangles": 1500
+      },
+      {
+        "mesh": 13,
+        "exactlyUnchanged": true,
+        "triangles": 3204
+      },
+      {
+        "mesh": 14,
+        "exactlyUnchanged": true,
+        "triangles": 13110
+      },
+      {
+        "mesh": 15,
+        "exactlyUnchanged": true,
+        "triangles": 1895
+      },
+      {
+        "mesh": 16,
+        "exactlyUnchanged": true,
+        "triangles": 15006
+      },
+      {
+        "mesh": 17,
+        "wholeRetainedTrianglesVerified": 2484,
+        "triangles": 2544,
+        "maxModelY": 288.0464172363281,
+        "degenerateTriangles": 0
+      },
+      {
+        "mesh": 18,
+        "exactlyUnchanged": true,
+        "triangles": 12
+      },
+      {
+        "mesh": 19,
+        "wholeRetainedTrianglesVerified": 2376,
+        "triangles": 2376,
+        "maxModelY": 286.3929138183594,
+        "degenerateTriangles": 0
+      },
+      {
+        "mesh": 20,
+        "wholeRetainedTrianglesVerified": 384,
+        "triangles": 384,
+        "maxModelY": 288.0464172363281,
+        "degenerateTriangles": 0
+      },
+      {
+        "mesh": 21,
+        "wholeRetainedTrianglesVerified": 18243,
+        "triangles": 18243,
+        "maxModelY": 269.0918884277344,
+        "degenerateTriangles": 0
+      },
+      {
+        "mesh": 22,
+        "crownPureYTranslation": true,
+        "triangles": 12
+      },
+      {
+        "mesh": 23,
+        "exactlyUnchanged": true,
+        "triangles": 23816
+      }
+    ],
+    "candidateSHA256": "2ebd17feb79c742925cc7b27eb0a91840a9b0027ddcdf5a5bf427c1d85c411ce"
+  }
+}
