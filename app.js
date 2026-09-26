@@ -1,5 +1,5 @@
 import {bindComparison} from './comparison.js';
-import {createExistingStyleIndex,applyExistingStyle} from './existing-materials.js?v=20260926-community';
+import {createExistingStyleIndex,applyExistingStyle} from './existing-materials.js?v=20260926-soft-grey';
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
