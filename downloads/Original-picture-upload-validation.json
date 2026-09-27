@@ -1,28 +1,41 @@
 {
-  "edition": "Soft Grey Revision 2026-09-26",
-  "presentationAmendment": "Softer existing-building grey and separately curated portrait presentation. No new building research or status claims.",
-  "checkedAt": "2026-09-26T21:27:16.063695+00:00",
-  "inputLockSHA256": "e2353bd4631bbda770003f21ee4db3a71fb9a3366ba002c5056ecee3e18048f7",
-  "verifiedLockedInputs": 254,
+  "edition": "Voya and Harbourwalk revision · 27 September 2026",
+  "checkedAt": "2026-09-27T16:28:57.933020+00:00",
+  "validationInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+  "inputLockScope": "The validation input lock identifies this composed release. Every image retains its actual render-time input lock. Unaffected accepted images have not been relabelled as new renders.",
+  "activeLockedInputs": 258,
   "kind": "Static export picture-source verification",
-  "historicalFilename": "Original-picture-upload-validation.json retained for existing links; no hosted-upload assertion is retained.",
+  "historicalFilename": "Original-picture-upload-validation.json retained for existing links; this report does not assert website upload or deployment.",
   "uploadOrDeploymentClaimed": false,
   "originalMasterFilesVerified": 33,
   "halfSizeDisplayFilesVerified": 33,
   "staticExportSelfContainedOriginalCopiesVerified": false,
-  "exportResponsibility": "The static exporter copies each verified original to the declared gallery/originals path and validates the self-contained site. This source report does not substitute for that final exported-site check.",
+  "exportResponsibility": "The static exporter copies verified masters to gallery/originals and validates final exported bytes. This report verifies the source files and mappings before that separate export.",
+  "renderProvenance": {
+    "wide": {
+      "currentRevisionNativeRenders": 10,
+      "byteIdenticalPredecessorRenders": 23
+    },
+    "portrait": {
+      "currentRevisionNativeRenders": 5,
+      "byteIdenticalPredecessorRenders": 19
+    },
+    "scope": "The validation input lock identifies this composed release. Every image retains its actual render-time input lock. Unaffected accepted images have not been relabelled as new renders."
+  },
   "images": [
     {
       "file": "airport-corporate-future.png",
-      "originalSHA256": "1ed1533ae1c7c18ec3ca4dd4ca2eee36f538cdd1e111a8d6a2df336d62205bae",
-      "originalBytes": 12863730,
+      "originalSHA256": "303d79ae8e5181658d2baa24b3c3a61868ebb3a08bf09a8e4daa36bfad962098",
+      "originalBytes": 12884146,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/1ed1533ae1c7c18e/airport-corporate-future.png",
-      "displaySHA256": "75af054711f924e55391cbcc5e7dd0432afa36c5faeff909d9f9ba5d8c8af9d7",
-      "displayBytes": 2440354,
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/303d79ae8e518165/airport-corporate-future.png",
+      "displaySHA256": "31222e60fbbae309b0d09c70f538dbd231970ae84d4b21fb5c16e71060fd8193",
+      "displayBytes": 2442356,
       "displayDimensions": [
         1920,
         1200
@@ -32,15 +45,17 @@
     },
     {
       "file": "citywide-future.png",
-      "originalSHA256": "ce4aa925f1956ad9e5a0d1477eb4b25016972190be8985b375ed30321533ac3e",
-      "originalBytes": 13904481,
+      "originalSHA256": "461c193a9f2ae253663a93047d6c869d1b6ad04b59a4ad52b5056f379d0c61e2",
+      "originalBytes": 13811945,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/ce4aa925f1956ad9/citywide-future.png",
-      "displaySHA256": "de23b08e0a216d7f4e8c50fdb23ff7918c86faa27e9b75a4d43c1d368154b637",
-      "displayBytes": 2736860,
+      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "retainedByteIdenticalFromPredecessor": false,
+      "displayFile": "gallery/previews/461c193a9f2ae253/citywide-future.png",
+      "displaySHA256": "254201ea47a7ee9c29e79fb58194ec80dd7f85fbe38a0b290993b3fb0f23c64e",
+      "displayBytes": 2645661,
       "displayDimensions": [
         1920,
         1200
@@ -50,15 +65,17 @@
     },
     {
       "file": "clarkson-existing.png",
-      "originalSHA256": "4120a1e5e91123a529de80b60d01c4c17367c92421dc9a37f6a65d55ba20c308",
-      "originalBytes": 15291370,
+      "originalSHA256": "d65a0afe1a9b7db4801eb22c51756459e3a09aad92aaa86de3f0f520bc126341",
+      "originalBytes": 15305884,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/4120a1e5e91123a5/clarkson-existing.png",
-      "displaySHA256": "a7195dfe1f9295834c4b55c9b8f7a485392ab5dbf26895b9e3f12693ec22d218",
-      "displayBytes": 3512456,
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/d65a0afe1a9b7db4/clarkson-existing.png",
+      "displaySHA256": "4419ad3bc91eb885a6525f7177dde8670266d7e1a753f7def241cbef89782a3b",
+      "displayBytes": 3511752,
       "displayDimensions": [
         1920,
         1200
@@ -68,15 +85,17 @@
     },
     {
       "file": "clarkson-future.png",
-      "originalSHA256": "a3b6a1718d948c7b1b8f11369b3195112a0d4e4d7319f702b0d68dd1130f85f5",
-      "originalBytes": 15279588,
+      "originalSHA256": "207c272aa005d390de061182e43a313a60cbc11ea5674ce8505a271cc9232dd4",
+      "originalBytes": 15294966,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/a3b6a1718d948c7b/clarkson-future.png",
-      "displaySHA256": "fade93c850b1838d2e99574cb754e4c1423c27b307aee8301a978242290f8d0b",
-      "displayBytes": 3515085,
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/207c272aa005d390/clarkson-future.png",
+      "displaySHA256": "10e20a180c3f0440e0542e2bebaeb4922ccd1d3d1511ee648ad55effa2e4e200",
+      "displayBytes": 3513602,
       "displayDimensions": [
         1920,
         1200
@@ -86,15 +105,17 @@
     },
     {
       "file": "clarkson-portrait-future.png",
-      "originalSHA256": "785c6942bc34f169c033fd8492595baa794d27f6689f888f076168da45a554e5",
-      "originalBytes": 16074006,
+      "originalSHA256": "f6ea578118e92b6b36b2792925a8e7cbae6bd2bdd73574c3b64e139d7c2cea53",
+      "originalBytes": 16096331,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/785c6942bc34f169/clarkson-portrait-future.png",
-      "displaySHA256": "e839398a138358cf8b5fba46a3bc8fdb11b49d57685acddc5080056341e93c00",
-      "displayBytes": 3799696,
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/f6ea578118e92b6b/clarkson-portrait-future.png",
+      "displaySHA256": "31d549b8f6459509087c634b41f5b07f65eec4b6115a14e18fb568dd1bb9345b",
+      "displayBytes": 3798951,
       "displayDimensions": [
         1920,
         1200
@@ -104,15 +125,17 @@
     },
     {
       "file": "clarkson-skyline-future.png",
-      "originalSHA256": "74f8a7e7f400ff97b9a1c11719f20a66393993c7917932697150329387fc222c",
-      "originalBytes": 9985024,
+      "originalSHA256": "5c663d80738facde452b0802887ef6165355b9a98de0b7c94739cbf585066bfa",
+      "originalBytes": 9994628,
       "originalDimensions": [
         3840,
         1400
       ],
-      "displayFile": "gallery/previews/74f8a7e7f400ff97/clarkson-skyline-future.png",
-      "displaySHA256": "b2dea8eb4fb70a5ec51c7c9cdae6b395c5e9451f0cde4899d0ae9bf3624e9539",
-      "displayBytes": 2385234,
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/5c663d80738facde/clarkson-skyline-future.png",
+      "displaySHA256": "533c8734ddca1d45215f6af15f9c2c0e8b08cda87dce8668f7ba050de3ba8bb6",
+      "displayBytes": 2384506,
       "displayDimensions": [
         1920,
         700
@@ -122,15 +145,17 @@
     },
     {
       "file": "cooksville-future.png",
-      "originalSHA256": "62ed5aa9e6217168d296404d319062b1a93b0f0e2423b1f01c15ede18366cf71",
-      "originalBytes": 15871933,
+      "originalSHA256": "5d15f46b1631341d5209f9cd9966f49a53842d4d6ec303547b19dff56fba698d",
+      "originalBytes": 15895864,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/62ed5aa9e6217168/cooksville-future.png",
-      "displaySHA256": "e26b8cd0a2da1e6184eb2c5d67b70a36cb7d9fa55f3ad3547adb727c37b22548",
-      "displayBytes": 3793473,
+      "actualRenderInputLockSHA256": "0020782cf42c1dcbde35150de5046a34a9b5b65296f2d08044001123a4f3553f",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/5d15f46b1631341d/cooksville-future.png",
+      "displaySHA256": "c361d04162d962d043cec3e477fb16e2316d7f9b406dd5d3cd3306da4ee9e873",
+      "displayBytes": 3794917,
       "displayDimensions": [
         1920,
         1200
@@ -140,15 +165,17 @@
     },
     {
       "file": "cooksville-portrait-future.png",
-      "originalSHA256": "e549a5ebbf24ad54f0e920af3f7d3e363c01b98287bb2c8360a48f4cd81d76a9",
-      "originalBytes": 14931294,
+      "originalSHA256": "cbda16a7613b88a931cadfc4aa8c012aecc0611afe8e6c448cb475f252085425",
+      "originalBytes": 14956017,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/e549a5ebbf24ad54/cooksville-portrait-future.png",
-      "displaySHA256": "c503430e6f6edbf19a24a1298f4cfbf253f1b5d5b2c0815f58dd9a85ac38e483",
-      "displayBytes": 3458484,
+      "actualRenderInputLockSHA256": "0020782cf42c1dcbde35150de5046a34a9b5b65296f2d08044001123a4f3553f",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/cbda16a7613b88a9/cooksville-portrait-future.png",
+      "displaySHA256": "d455e4ef2207e695806e54f97be23a043588e88daf66f1cd29604207b1b25055",
+      "displayBytes": 3459584,
       "displayDimensions": [
         1920,
         1200
@@ -158,15 +185,17 @@
     },
     {
       "file": "dixie-applewood-future.png",
-      "originalSHA256": "b88d5af93b7606778a2b4b4774cca4c837cfa8d0aca4e2eb9711e900a8bb73a9",
-      "originalBytes": 16488391,
+      "originalSHA256": "91af398ec7ff7eda9c8f169aff66d54274c40e73d43ab2e7828566e4bbf4c1e2",
+      "originalBytes": 16505596,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/b88d5af93b760677/dixie-applewood-future.png",
-      "displaySHA256": "9c57a6ddba37205b2f47e4d0772852f289033830041500a5985f963c37d08ed9",
-      "displayBytes": 3848290,
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/91af398ec7ff7eda/dixie-applewood-future.png",
+      "displaySHA256": "2f0f6deeee0c103597e0331664f6b9f6d0e857d53c988ea8377cc365995fb45c",
+      "displayBytes": 3850182,
       "displayDimensions": [
         1920,
         1200
@@ -176,15 +205,17 @@
     },
     {
       "file": "downtown-existing.png",
-      "originalSHA256": "1358e6f5af75450e81eb2186090bd1c4693e3113852acc9796de38d2781360c5",
-      "originalBytes": 15578685,
+      "originalSHA256": "7898cfb063f36ce3a8df5971f5bedbd93111f3b25ace6b39e9687f4dd3c39aba",
+      "originalBytes": 15608331,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/1358e6f5af75450e/downtown-existing.png",
-      "displaySHA256": "91ed67dd0852c3f75071a4417696cddcd14a288593af167143d3c6915c17809d",
-      "displayBytes": 3600486,
+      "actualRenderInputLockSHA256": "0020782cf42c1dcbde35150de5046a34a9b5b65296f2d08044001123a4f3553f",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/7898cfb063f36ce3/downtown-existing.png",
+      "displaySHA256": "f15ca15e49c75e0ace7b5d6584ada7810550839d96526c88d3b0e8b984e8feca",
+      "displayBytes": 3602689,
       "displayDimensions": [
         1920,
         1200
@@ -194,15 +225,17 @@
     },
     {
       "file": "downtown-future.png",
-      "originalSHA256": "9bcbc18bffd1ef7273e71ff2b5e0c181a6fe8ab107c3fc2b29316a0182565302",
-      "originalBytes": 15626087,
+      "originalSHA256": "509eb9046f114237498f5d984f11303c290088abd17f778f2bac76b2ff80ac08",
+      "originalBytes": 15669221,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/9bcbc18bffd1ef72/downtown-future.png",
-      "displaySHA256": "0b230b6e88deab85bb865e24db600259aaf83556c8938d116138df67858381d4",
-      "displayBytes": 3603484,
+      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "retainedByteIdenticalFromPredecessor": false,
+      "displayFile": "gallery/previews/509eb9046f114237/downtown-future.png",
+      "displaySHA256": "937f6abe334691a1b460f21b3d95d8c487c69d571ecbeb2da1be3f0d2b7e3261",
+      "displayBytes": 3607234,
       "displayDimensions": [
         1920,
         1200
@@ -212,15 +245,17 @@
     },
     {
       "file": "downtown-junction-future.png",
-      "originalSHA256": "d3b90eb320cdc8910be4bf026e6720f075b3a35b9f942b320f985815cd02632d",
-      "originalBytes": 12080669,
+      "originalSHA256": "7c695a333d7627aa3a2a8e8ac39caa28177b18473f2f1d45b82102c0767219de",
+      "originalBytes": 12128053,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/d3b90eb320cdc891/downtown-junction-future.png",
-      "displaySHA256": "0ffce11189156a7d541f04853b7f0492c8c4da9bb0325d6aa808c9d6fbc65a67",
-      "displayBytes": 2404414,
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/7c695a333d7627aa/downtown-junction-future.png",
+      "displaySHA256": "021e43e42ac5a6ae9aab6fa2e64824722b9d9330f32716db1edda54e2e5089d1",
+      "displayBytes": 2409174,
       "displayDimensions": [
         1920,
         1200
@@ -230,15 +265,17 @@
     },
     {
       "file": "downtown-landmark-future.png",
-      "originalSHA256": "cccfd9bea8bb814a22423a18bf960f83c80f17269a67e74646acae4d3d7d9c98",
-      "originalBytes": 12475651,
+      "originalSHA256": "7c387c56493f50c33d9a303d3f39f71b88e7285826a524b94fb62fc745465b7d",
+      "originalBytes": 12533183,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/cccfd9bea8bb814a/downtown-landmark-future.png",
-      "displaySHA256": "51fa5964968a0876a400594f12380696ded9df30cb17d1552741e02b47d590c0",
-      "displayBytes": 2502680,
+      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "retainedByteIdenticalFromPredecessor": false,
+      "displayFile": "gallery/previews/7c387c56493f50c3/downtown-landmark-future.png",
+      "displaySHA256": "392a47c0fc815d38df6fba7889b9d785f0fe63784de52f5289c279838e4dd98c",
+      "displayBytes": 2504033,
       "displayDimensions": [
         1920,
         1200
@@ -248,15 +285,17 @@
     },
     {
       "file": "downtown-portrait-future.png",
-      "originalSHA256": "40478094d22940861e331e8ece80a1cbc869d05ea3e2dd3fc346393d19667df3",
-      "originalBytes": 15976450,
+      "originalSHA256": "ce878ac078b6480bd4fb1fa46d26aa83263cf2d499aaf9fd05d6caadf34d86ac",
+      "originalBytes": 16015991,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/40478094d2294086/downtown-portrait-future.png",
-      "displaySHA256": "c51c2b1a2df27c01046bc13d055e0cbc29befa7f0a7ed076d1d7730e7df434e6",
-      "displayBytes": 3733151,
+      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "retainedByteIdenticalFromPredecessor": false,
+      "displayFile": "gallery/previews/ce878ac078b6480b/downtown-portrait-future.png",
+      "displaySHA256": "78a2ad8dffa2e87f8265e9100d08946e7b6b2bda01f9fd2588b33b43b6c47949",
+      "displayBytes": 3738650,
       "displayDimensions": [
         1920,
         1200
@@ -266,15 +305,17 @@
     },
     {
       "file": "downtown-skyline-construction.png",
-      "originalSHA256": "424bbdf2a998892063a89d97dd69233e97940d0ef09f6f53ee8875fa82b0cd16",
-      "originalBytes": 9298616,
+      "originalSHA256": "4ce3e8179460ef56bbbeb33b32f852096bf426b7a5456b5662af427a36599673",
+      "originalBytes": 9323101,
       "originalDimensions": [
         3840,
         1400
       ],
-      "displayFile": "gallery/previews/424bbdf2a9988920/downtown-skyline-construction.png",
-      "displaySHA256": "757a052a644ebaf98ec7f1fdadd036ca30749a7d2a1b71c985184643f7f538e4",
-      "displayBytes": 2151082,
+      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "retainedByteIdenticalFromPredecessor": false,
+      "displayFile": "gallery/previews/4ce3e8179460ef56/downtown-skyline-construction.png",
+      "displaySHA256": "99f325406341f7f7500c6356a156cb991bf5c42dfee26f15e7ddb1a6957e6a8c",
+      "displayBytes": 2154175,
       "displayDimensions": [
         1920,
         700
@@ -284,15 +325,17 @@
     },
     {
       "file": "downtown-skyline-existing.png",
-      "originalSHA256": "a21fdf8a6930060cacf4c1f5c702f159e72dcfdab1eacde9bef3ccf7eab37c8e",
-      "originalBytes": 9208138,
+      "originalSHA256": "dae84f55501d2e4311cc692c26fb8f55a4f4a925c8d37e39c509dae68e252b6a",
+      "originalBytes": 9232538,
       "originalDimensions": [
         3840,
         1400
       ],
-      "displayFile": "gallery/previews/a21fdf8a6930060c/downtown-skyline-existing.png",
-      "displaySHA256": "b191d1ec652cc295e104e4a36f26e0274c1d588752c6eac4a73d183f784f94d2",
-      "displayBytes": 2129532,
+      "actualRenderInputLockSHA256": "0020782cf42c1dcbde35150de5046a34a9b5b65296f2d08044001123a4f3553f",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/dae84f55501d2e43/downtown-skyline-existing.png",
+      "displaySHA256": "90229836aa17fb20ab83b63d865628bd4f7a90f307dba3a2e6c16e957ee87156",
+      "displayBytes": 2132641,
       "displayDimensions": [
         1920,
         700
@@ -302,15 +345,17 @@
     },
     {
       "file": "downtown-skyline-future.png",
-      "originalSHA256": "4b0383b49f9bd815a02afd333d60fbc90a50d75ecd416dcfc2ba37f5f82efeeb",
-      "originalBytes": 9205880,
+      "originalSHA256": "deaf0acf07378069b8cbde6e45a47ecae26ba713dec4db4813899ba6b92323ec",
+      "originalBytes": 9233305,
       "originalDimensions": [
         3840,
         1400
       ],
-      "displayFile": "gallery/previews/4b0383b49f9bd815/downtown-skyline-future.png",
-      "displaySHA256": "391dc5e3a067158f20954c9c05e240b0f9598c45c3ae710898b8d10002112782",
-      "displayBytes": 2116338,
+      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "retainedByteIdenticalFromPredecessor": false,
+      "displayFile": "gallery/previews/deaf0acf07378069/downtown-skyline-future.png",
+      "displaySHA256": "08c5d1f7054e34318c68328999a009e6c06bee7fd118625bf26a30e59680d416",
+      "displayBytes": 2119463,
       "displayDimensions": [
         1920,
         700
@@ -320,15 +365,17 @@
     },
     {
       "file": "erin-mills-future.png",
-      "originalSHA256": "40be811a0675d22c53d35a101e000ae7afd92cbad05038f9b88f2b4ec0404e38",
-      "originalBytes": 18065220,
+      "originalSHA256": "f44dd58f92d3ec115e44706a4fcd330a6cee25d1b29cfca766c170766282d56f",
+      "originalBytes": 18080749,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/40be811a0675d22c/erin-mills-future.png",
-      "displaySHA256": "75fd1b6372940e219b13831d4bc8548cc2ee82da7c414ee5a26ada0a3c258383",
-      "displayBytes": 4463385,
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/f44dd58f92d3ec11/erin-mills-future.png",
+      "displaySHA256": "78bc29e282c17e2fa18a4dab47801da0b39d563d78ddffdefd2019f65366d964",
+      "displayBytes": 4461595,
       "displayDimensions": [
         1920,
         1200
@@ -338,15 +385,17 @@
     },
     {
       "file": "erindale-future.png",
-      "originalSHA256": "c2510157a07e6421435d5f34de6216974988067c8839e996d0ba3a9992c02a1a",
-      "originalBytes": 18848446,
+      "originalSHA256": "ca6f739991bb405be1d25e0e3d6ff7279ce4046577ab917864d0f5a8679761ff",
+      "originalBytes": 18866138,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/c2510157a07e6421/erindale-future.png",
-      "displaySHA256": "01e5721e021d316ba9425ffd222aa30f5bcb45ab877f2903bf1d4a77e3f632bd",
-      "displayBytes": 4663591,
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/ca6f739991bb405b/erindale-future.png",
+      "displaySHA256": "b5472aa32b3290fed826a218fd7f9e45821313559a5a85450080edb1ed6479c2",
+      "displayBytes": 4663859,
       "displayDimensions": [
         1920,
         1200
@@ -356,15 +405,17 @@
     },
     {
       "file": "heartland-future.png",
-      "originalSHA256": "7a67587701e60efb39b158c13e2322627bce7355dd24efa781ce7df40b6271e0",
-      "originalBytes": 14853537,
+      "originalSHA256": "a0d8ee9ad6c36840ad6fd5acdc8f0f90d9148fc799eaeda21c036a11e2b4de94",
+      "originalBytes": 14873633,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/7a67587701e60efb/heartland-future.png",
-      "displaySHA256": "d1743a41c4b7a6108314e3c0b37ad498ccb235471c3dde98e843e458413102f1",
-      "displayBytes": 3229649,
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/a0d8ee9ad6c36840/heartland-future.png",
+      "displaySHA256": "6d96523112684ebebdc0993a9b65555134e8d8fdc3de3560f8ba0df7421cfeb7",
+      "displayBytes": 3227176,
       "displayDimensions": [
         1920,
         1200
@@ -374,15 +425,17 @@
     },
     {
       "file": "lakeview-existing.png",
-      "originalSHA256": "79121485f7bf6ab495ba4adea49d2f88cdc983a352ae00d3ea34d2b516e94f98",
-      "originalBytes": 13630400,
+      "originalSHA256": "091042fe0cb0ba6af334ca5eceed8c58a8b53bccf11771899475bfc0dbed4cae",
+      "originalBytes": 13615888,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/79121485f7bf6ab4/lakeview-existing.png",
-      "displaySHA256": "d951ac21efa0cadb53cb574ddddd0745893dfebfd021bffa8aef0f059466da42",
-      "displayBytes": 2765099,
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/091042fe0cb0ba6a/lakeview-existing.png",
+      "displaySHA256": "77bf4072d4eb404c0483113ac37e7d6efb048e4c72f9b9129b0fba2d9e69c270",
+      "displayBytes": 2775244,
       "displayDimensions": [
         1920,
         1200
@@ -392,15 +445,17 @@
     },
     {
       "file": "lakeview-future.png",
-      "originalSHA256": "ad4f80b30da85324547dda1b839bf9c9263188eafb039e3b21e33f10dcd11099",
-      "originalBytes": 13672471,
+      "originalSHA256": "f3971e27cdd2430a2b4d3fd69ab1ee46440611bd0df9f395ec0d918da41c66b6",
+      "originalBytes": 13694438,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/ad4f80b30da85324/lakeview-future.png",
-      "displaySHA256": "593a23c5f47bef374be601160e5bbd58db70989a5668e0e4feccafd2dda95f15",
-      "displayBytes": 2789381,
+      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "retainedByteIdenticalFromPredecessor": false,
+      "displayFile": "gallery/previews/f3971e27cdd2430a/lakeview-future.png",
+      "displaySHA256": "011eb1b1aa3a52ef74cb78d7f4bfcc6f367be084e71793b3f630f5e4d3a31d46",
+      "displayBytes": 2812991,
       "displayDimensions": [
         1920,
         1200
@@ -410,15 +465,17 @@
     },
     {
       "file": "lakeview-portrait-future.png",
-      "originalSHA256": "74c209f542df154cf691cf960a6c6efdf1d11afb9afc861909de214e3c98b8f8",
-      "originalBytes": 13718963,
+      "originalSHA256": "7daca129435e7ed704f2b1c17051ed2801c770bf83c3cc2319e98afca6f7755c",
+      "originalBytes": 13759587,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/74c209f542df154c/lakeview-portrait-future.png",
-      "displaySHA256": "37f76f4b43a921d839d09e24adcabbf55977bbd6baf1b3e2cf49ff073523bf8d",
-      "displayBytes": 2807015,
+      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "retainedByteIdenticalFromPredecessor": false,
+      "displayFile": "gallery/previews/7daca129435e7ed7/lakeview-portrait-future.png",
+      "displaySHA256": "6be70b5ca92d5877d73e436a37b05dc73dc390772350799fb6e24326242414c7",
+      "displayBytes": 2809408,
       "displayDimensions": [
         1920,
         1200
@@ -428,15 +485,17 @@
     },
     {
       "file": "lakeview-skyline-future.png",
-      "originalSHA256": "a8b0f1582ef42e84439c953fb4ecda39f204daddcca5b6d658c76e98659e88c9",
-      "originalBytes": 8314364,
+      "originalSHA256": "93f9bd8f18c294a73260da00d533e5d12a2b415ac1fe154fd957e1123d2b6e4e",
+      "originalBytes": 8336289,
       "originalDimensions": [
         3840,
         1400
       ],
-      "displayFile": "gallery/previews/a8b0f1582ef42e84/lakeview-skyline-future.png",
-      "displaySHA256": "8c547e4506d43bcfdb09518d0285920df07708ac876e9a7554e68aa19c6d4f8c",
-      "displayBytes": 1770135,
+      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "retainedByteIdenticalFromPredecessor": false,
+      "displayFile": "gallery/previews/93f9bd8f18c294a7/lakeview-skyline-future.png",
+      "displaySHA256": "8fe7d740c20c799ed268cd2fd4f7a517257066723457040cf630961441269558",
+      "displayBytes": 1772753,
       "displayDimensions": [
         1920,
         700
@@ -446,15 +505,17 @@
     },
     {
       "file": "malton-future.png",
-      "originalSHA256": "02b92ba2c89c7c4b9505ee785752cf98162de4ac9f070c1f252e2b5a21aa3318",
-      "originalBytes": 14773271,
+      "originalSHA256": "abcadba3abe4c8388f448be8e6d35f65b4cabe054a630ecc4b1fb927b41c870f",
+      "originalBytes": 14789140,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/02b92ba2c89c7c4b/malton-future.png",
-      "displaySHA256": "72d85fa7c1d0eaf5b2813e400a1232e570d050fc520a70aabd792a9ec81915e2",
-      "displayBytes": 3280733,
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/abcadba3abe4c838/malton-future.png",
+      "displaySHA256": "c0295e15e57516cbc1fbfb74c384524106ff3cb45c2244d7440618417855baad",
+      "displayBytes": 3281539,
       "displayDimensions": [
         1920,
         1200
@@ -464,15 +525,17 @@
     },
     {
       "file": "meadowvale-future.png",
-      "originalSHA256": "dc7ab9c7f7d0d3ce0935ea6b4b1958491527031611e0f3d4f9b155c976e56186",
-      "originalBytes": 16731504,
+      "originalSHA256": "850104a2cd8c8693a693d5048fb836899ddd45d8192b79b3b1e28251b3cfd993",
+      "originalBytes": 16747923,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/dc7ab9c7f7d0d3ce/meadowvale-future.png",
-      "displaySHA256": "a9916678f0d078dcb44c0cb81c8c8e876e3f3529a3c1eeddd925b4cd656fd09a",
-      "displayBytes": 3904919,
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/850104a2cd8c8693/meadowvale-future.png",
+      "displaySHA256": "81530139b71c6787549da3689ce43e8bc6aeadd9999b6a1d46805f9aaa97140e",
+      "displayBytes": 3903340,
       "displayDimensions": [
         1920,
         1200
@@ -482,15 +545,17 @@
     },
     {
       "file": "port-credit-existing.png",
-      "originalSHA256": "dfda5e1985d470754b755b31eeb89db121289afca02589f66287e319edef244a",
-      "originalBytes": 15744843,
+      "originalSHA256": "9abb1a251a7227a6c2e109c1267ba412b09aa7d4b2d17cdff941918642e29ecc",
+      "originalBytes": 15800389,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/dfda5e1985d47075/port-credit-existing.png",
-      "displaySHA256": "8ffc1a527a8f15b28c9f14d73b8b3cc50a08763b613e3a1cde9e4f57513ba815",
-      "displayBytes": 3716285,
+      "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/9abb1a251a7227a6/port-credit-existing.png",
+      "displaySHA256": "3d3cadfddb9962a2909777b6b0f343d828c1a83dffd8a89206da480440af6b45",
+      "displayBytes": 3725414,
       "displayDimensions": [
         1920,
         1200
@@ -500,15 +565,17 @@
     },
     {
       "file": "port-credit-future.png",
-      "originalSHA256": "29ec73e694cc68acda80e1d99cd681e5d1cc102b370759174fd69f662a6fb401",
-      "originalBytes": 15823814,
+      "originalSHA256": "13dbb8d71f3d5edf08dbed338e77bf08fcafcadd1a24b633aa0a30a6472ebf78",
+      "originalBytes": 15883660,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/29ec73e694cc68ac/port-credit-future.png",
-      "displaySHA256": "87518b6f5dbbfbd78d3f84b6cd4476b268bbcda3ef6c09e4c92482c451e1105f",
-      "displayBytes": 3750385,
+      "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/13dbb8d71f3d5edf/port-credit-future.png",
+      "displaySHA256": "7224d55eec49bb7b839508839c5114db170dd9c6db91af38d8fb049d61ec1ca3",
+      "displayBytes": 3760312,
       "displayDimensions": [
         1920,
         1200
@@ -518,15 +585,17 @@
     },
     {
       "file": "port-credit-portrait-future.png",
-      "originalSHA256": "c2518ef164dc4b7e68f9534ab12cdf9acd7f7ceda148591d92cf2df46d724c4d",
-      "originalBytes": 16451924,
+      "originalSHA256": "e3eab360e21c2a243d6cb92174570941593b01f06a58f6204fe9d0506144a7cf",
+      "originalBytes": 16492013,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/c2518ef164dc4b7e/port-credit-portrait-future.png",
-      "displaySHA256": "c6f24a94708c31929d94b913d27ebda95b5406fb0718db0639c550b55ec6f0a0",
-      "displayBytes": 3910437,
+      "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/e3eab360e21c2a24/port-credit-portrait-future.png",
+      "displaySHA256": "d78aa0e9217bf7aca8ed463aa4ede04d4dc65bbf5721dd54773cb37834fdf420",
+      "displayBytes": 3914710,
       "displayDimensions": [
         1920,
         1200
@@ -536,15 +605,17 @@
     },
     {
       "file": "port-credit-skyline-future.png",
-      "originalSHA256": "95eb5ab87dbca5980b9a53161589a21b173196aa903c55bb6915f66556d15d4a",
-      "originalBytes": 9576564,
+      "originalSHA256": "044bf0117cb5491ec67393d4c6cefc469ed493d6dfe97281294061926f0c9810",
+      "originalBytes": 9601728,
       "originalDimensions": [
         3840,
         1400
       ],
-      "displayFile": "gallery/previews/95eb5ab87dbca598/port-credit-skyline-future.png",
-      "displaySHA256": "7acc60446ce25b057b7606230f7942d243804ea6ff6b8a9fba62626d0966a01a",
-      "displayBytes": 2265767,
+      "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/044bf0117cb5491e/port-credit-skyline-future.png",
+      "displaySHA256": "55cd26e8bf9395216556d36e9a57abfdc527c6d7f36fbb7ea1715c7e972b94e5",
+      "displayBytes": 2269060,
       "displayDimensions": [
         1920,
         700
@@ -554,15 +625,17 @@
     },
     {
       "file": "streetsville-future.png",
-      "originalSHA256": "d22de4fc2e3c3bd1f9b6fc4f993eb5ee5ea8df39d17d48939f65624d3b758799",
-      "originalBytes": 17110527,
+      "originalSHA256": "2e294647c99531dca51f09436676f782c84e5b5fdcd4bd28bb6e75746b44e89f",
+      "originalBytes": 17121043,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/d22de4fc2e3c3bd1/streetsville-future.png",
-      "displaySHA256": "f1bf9e741dbbcac4ab9b900e486b0659654e924ad25fe337632f69ffcaf70543",
-      "displayBytes": 4129378,
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/2e294647c99531dc/streetsville-future.png",
+      "displaySHA256": "d7cb2e4f1d41627736f65a989c7bda5080a1e1e3f2b7677b18ae04661a53697b",
+      "displayBytes": 4126683,
       "displayDimensions": [
         1920,
         1200
@@ -572,15 +645,17 @@
     },
     {
       "file": "uptown-future.png",
-      "originalSHA256": "f382df6fd240d07b179a3b354b743033bdfd671bcd5456b406517b4a8ced2b90",
-      "originalBytes": 15999435,
+      "originalSHA256": "77b5d570bf596ad7cb5df249e7f166898090b38c0f5762c6900491e5f0ab7ea3",
+      "originalBytes": 16017691,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/f382df6fd240d07b/uptown-future.png",
-      "displaySHA256": "7b6a0f391c873d4b988978deeee1ebd1b1afc6e68ee5b8f9345b5371001132ee",
-      "displayBytes": 3732393,
+      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "retainedByteIdenticalFromPredecessor": false,
+      "displayFile": "gallery/previews/77b5d570bf596ad7/uptown-future.png",
+      "displaySHA256": "a9f6eb037d0e91a17ebcef33da2694ae28adfa42965c0fe6e8d8a46265866b1b",
+      "displayBytes": 3730034,
       "displayDimensions": [
         1920,
         1200
@@ -590,21 +665,457 @@
     },
     {
       "file": "uptown-portrait-future.png",
-      "originalSHA256": "65364918b2a80d8cdedade59d5e93724db34e8e782c049eaaf19fcd1a4770b5b",
-      "originalBytes": 15668578,
+      "originalSHA256": "9af834990efcdb04793b44aee6e4e72f3622bb7b2c941abced07889ecdd5c0e6",
+      "originalBytes": 15688111,
       "originalDimensions": [
         3840,
         2400
       ],
-      "displayFile": "gallery/previews/65364918b2a80d8c/uptown-portrait-future.png",
-      "displaySHA256": "fab94ceb42b81efbd6d8769b6c351ac4cf579c5356b5fdcd18221605820a5866",
-      "displayBytes": 3685510,
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "retainedByteIdenticalFromPredecessor": true,
+      "displayFile": "gallery/previews/9af834990efcdb04/uptown-portrait-future.png",
+      "displaySHA256": "264f6eab339c0be3a1f17376c8c464b0dd75af328829f6d12dfb73db08b786c9",
+      "displayBytes": 3684838,
       "displayDimensions": [
         1920,
         1200
       ],
       "staticExportPath": "gallery/originals/uptown-portrait-future.png",
       "selfContainedOriginalCurrentlyPresent": false
+    }
+  ],
+  "portraitImages": [
+    {
+      "file": "downtown-landmark-future.png",
+      "sha256": "5e1177f20ce1dfdfa4691db0771b3a2b4cf3b22a0b251462317065b1f564d3d1",
+      "bytes": 14626906,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "4371a6f41715178e993e97a00f9880a6def59ce168b542f7bf0026e3e08a8778",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/downtown-landmark-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-downtown-landmark-future.png",
+      "displaySHA256": "ee089ea6cc932245c79b56a3874e6fcb955c485408b8291a6c942057cd20e551",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "downtown-existing.png",
+      "sha256": "c0d5950868b96e87034eee79bbfbd7fba7dde0003b5d962d2317f24d59df2736",
+      "bytes": 16093347,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "4371a6f41715178e993e97a00f9880a6def59ce168b542f7bf0026e3e08a8778",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/downtown-existing.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-downtown-existing.png",
+      "displaySHA256": "4a65c7bb89b4626cf1dc44901e8da70b49a4758a4aea8cbb7a6810b180e3a4aa",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "downtown-future.png",
+      "sha256": "d8d1f70a3b5432c39b4638de52e4cb3604e1ff90431cb5fd442b8a86e4df24df",
+      "bytes": 16186303,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "retainedByteIdenticalFromPredecessor": false,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/downtown-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-downtown-future.png",
+      "displaySHA256": "c1b289d3d0c80c3b4c19e73088b8c041617cd4dc07d029c3bce1a0e69bf77739",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "downtown-skyline-existing.png",
+      "sha256": "b2faaea08240be8676ecd3a8ea96c25140bb1dfaaa904c7425c11299fcee2c28",
+      "bytes": 17462504,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "4371a6f41715178e993e97a00f9880a6def59ce168b542f7bf0026e3e08a8778",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/downtown-skyline-existing.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-downtown-skyline-existing.png",
+      "displaySHA256": "4f8a02185e036fa51e7978bb9818b0a14604b0209dd47d9b6d52dfabcaa8477f",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "downtown-skyline-construction.png",
+      "sha256": "98ca5262ef84bd0cf70481b2570fae7c08ee2a4cd082be2baa46c244ee9c8682",
+      "bytes": 17542959,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "retainedByteIdenticalFromPredecessor": false,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/downtown-skyline-construction.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-downtown-skyline-construction.png",
+      "displaySHA256": "dcb7fa6e60d0b9bfbec4a72fa7368ca316cc50f38b3d315c4cc042014a6a9e19",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "downtown-skyline-future.png",
+      "sha256": "8c57e615a1512f45083bd978dfb92b28a68a78e56620512f5bdd8b9df0b79749",
+      "bytes": 17440421,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "retainedByteIdenticalFromPredecessor": false,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/downtown-skyline-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-downtown-skyline-future.png",
+      "displaySHA256": "1c89c847ea63014ed3f0a0dcc73892e615f0f9069a5d560b92c2b862bdc9d3f6",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "downtown-portrait-future.png",
+      "sha256": "fa2c84e7d717aa9cc4e85863ce6234ca25f776df651b4df32c08b9df22438bcd",
+      "bytes": 14785071,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "4371a6f41715178e993e97a00f9880a6def59ce168b542f7bf0026e3e08a8778",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/downtown-portrait-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-downtown-portrait-future.png",
+      "displaySHA256": "102bd5e7f55cc1d55ce29b60aada139224e38404f7591895d8d91726d3f864b9",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "downtown-junction-future.png",
+      "sha256": "30b27c388d5ed7468bf1fce491734ed7c5fdd3c2d00311f3f3a45f592707aeb5",
+      "bytes": 14440837,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "4371a6f41715178e993e97a00f9880a6def59ce168b542f7bf0026e3e08a8778",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/downtown-junction-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-downtown-junction-future.png",
+      "displaySHA256": "bc36897235de05662a62ddca5f23d3297d3ed2bdd7f1af0b4b100c00d3681c4b",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "cooksville-portrait-future.png",
+      "sha256": "9543438a8039fc4ee243638efcf60cfdfdd6318b56454ba149a5df752614a669",
+      "bytes": 16499498,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "0020782cf42c1dcbde35150de5046a34a9b5b65296f2d08044001123a4f3553f",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/cooksville-portrait-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-cooksville-portrait-future.png",
+      "displaySHA256": "85090805b03731155a54e3d35d2f3ee7e58587dcf36ced4be98756c4ccf612d3",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "cooksville-future.png",
+      "sha256": "4da1d96d7743a49846f06d706e1d46aac146a0d962531d609a5e8148fd1d9e74",
+      "bytes": 15657749,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "0020782cf42c1dcbde35150de5046a34a9b5b65296f2d08044001123a4f3553f",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/cooksville-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-cooksville-future.png",
+      "displaySHA256": "fccb952b3b079158f2428a34f9b67ea323a4eb9c957466e37d4a63d396f34061",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "uptown-portrait-future.png",
+      "sha256": "f78e4197f256abea056444faf5144fdad488af6fe968e3d5634d7c4d3e7238a3",
+      "bytes": 17581091,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "4371a6f41715178e993e97a00f9880a6def59ce168b542f7bf0026e3e08a8778",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/uptown-portrait-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-uptown-portrait-future.png",
+      "displaySHA256": "ae2a7f1dd811aea8a3dec8d16ff30e46b85abb4637a56395f31379d1224980cc",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "uptown-future.png",
+      "sha256": "2b27cfb71567c650f58c2d34a3a325a5ac171815d29e2ad4b43b7451d8c5fcec",
+      "bytes": 16190959,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "4371a6f41715178e993e97a00f9880a6def59ce168b542f7bf0026e3e08a8778",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/uptown-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-uptown-future.png",
+      "displaySHA256": "0c7b8b71d732f98b92765790ca494c1f92d68718e6a2fd3a0db5a6a17b4b0d6b",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "port-credit-existing.png",
+      "sha256": "7e5cd499fb3a0d187c8c9e1f0f639ce092e9b6647aefc7a7fe607e5f9a5d3a44",
+      "bytes": 16346444,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/port-credit-existing.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-port-credit-existing.png",
+      "displaySHA256": "a58d6a87129532f635f5c771e17b62e822124126b1e67d129e7898ccc31b8058",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "port-credit-future.png",
+      "sha256": "493e3f7e8a79b66d4b0448ef8c05a0a8371b638ffd5ff4fa1cfe7954d6759f04",
+      "bytes": 16454366,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/port-credit-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-port-credit-future.png",
+      "displaySHA256": "22e58f2f5e98277dcad38c06ac648ff80dbc6c55c0395be0de7ea04ff70cda57",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "port-credit-portrait-future.png",
+      "sha256": "d953bf308080193d529b83e7c5c3f9889d62c76bdf12ae84d84d4c391cb13e5f",
+      "bytes": 15390369,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/port-credit-portrait-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-port-credit-portrait-future.png",
+      "displaySHA256": "ed9cfdd9e1795448ad16ee93b4d0b1b669b0a7bcf19a407cd934a945e20ef770",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "port-credit-skyline-future.png",
+      "sha256": "a782309e784dedcfa44b3908e867262e5d0712390c4aae8568a7fa8ff62e16bb",
+      "bytes": 16808424,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/port-credit-skyline-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-port-credit-skyline-future.png",
+      "displaySHA256": "e49c126f1bee9a64f6d8af4c8fada5a2f4f86deed40c193184b9c5a58f9faaaa",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "lakeview-existing.png",
+      "sha256": "21d9561f6450ab1a40fbe3888092ab1593d65241dab87667afe99430df49ec79",
+      "bytes": 11934912,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/lakeview-existing.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-lakeview-existing.png",
+      "displaySHA256": "b23edb880419e93b9e717b288f7ddbb0117bb5f26c37e255c8bd13b44f170e7a",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "lakeview-future.png",
+      "sha256": "ec8cfc3a863f733960cf7ff8ff1deffb18643e5e3b09373f0989eeec6b98fec6",
+      "bytes": 12218178,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "retainedByteIdenticalFromPredecessor": false,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/lakeview-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-lakeview-future.png",
+      "displaySHA256": "678a613b3bdebff0040bb3e38a711bd84334369292f29d5275a9c165abb2711d",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "lakeview-portrait-future.png",
+      "sha256": "26f9be3e40a6bbe15b5032eebbc633250056c27ce265b8720adb0dad1a45d7bf",
+      "bytes": 13094175,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "retainedByteIdenticalFromPredecessor": false,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/lakeview-portrait-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-lakeview-portrait-future.png",
+      "displaySHA256": "37ec4be7b38d31e2ddd86b4db2469ca0e30e02d48810fbbd0cc3fb2966c8888c",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "clarkson-existing.png",
+      "sha256": "93459682296df8a4b34fcfb6a4163c4f654cb840fbfbd28a2d6f8551be8d6e82",
+      "bytes": 14935818,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/clarkson-existing.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-clarkson-existing.png",
+      "displaySHA256": "92fe21fdfd02deb863e6a96a97e4546e62ff533140a0261efd279c6c68bcff5c",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "clarkson-future.png",
+      "sha256": "f42535f6af8ecadd47bf82015d4e4407c70a07a1c63fdfaa334f58501ec74f9f",
+      "bytes": 15062862,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/clarkson-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-clarkson-future.png",
+      "displaySHA256": "373f4e6ee26ec7e93f1bac54400ab809a8cc2cdbd5f4acf72187e463de68e8cf",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "clarkson-portrait-future.png",
+      "sha256": "069bba331f87e1a7732805ed4699d2fb77cc01d661c6738dc9cc8ba03b945546",
+      "bytes": 15247067,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/clarkson-portrait-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-clarkson-portrait-future.png",
+      "displaySHA256": "8e9629a735332cf98a2c4e28cfa9fa86644a4fb381da0014ad0f5259cfb0699d",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "erin-mills-future.png",
+      "sha256": "1a080fb8ef7bc666d35a547e2f243f71a5b049a8535702ddb48292e2da9f82a1",
+      "bytes": 17546641,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "4371a6f41715178e993e97a00f9880a6def59ce168b542f7bf0026e3e08a8778",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/erin-mills-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-erin-mills-future.png",
+      "displaySHA256": "4ac7ffd8692d2ab1bb75e6652d61ab64a7d2bf3cc16a9b53946721c53d83c994",
+      "displayResolution": [
+        1620,
+        2025
+      ]
+    },
+    {
+      "file": "streetsville-future.png",
+      "sha256": "9d58e7b6bb0fdba39d6b574075436567de0cd4a21538464e072db51a8f2c7889",
+      "bytes": 17343310,
+      "resolution": [
+        3240,
+        4050
+      ],
+      "actualRenderInputLockSHA256": "4371a6f41715178e993e97a00f9880a6def59ce168b542f7bf0026e3e08a8778",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/streetsville-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-streetsville-future.png",
+      "displaySHA256": "f4a0660542334418252cbff29d6e1c49c9c61a1a73dd3ffab5cac336d69a7bd1",
+      "displayResolution": [
+        1620,
+        2025
+      ]
     }
   ]
 }

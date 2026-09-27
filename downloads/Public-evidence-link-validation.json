@@ -1,437 +1,753 @@
 {
   "reviewDate": "2026-09-21",
-  "linkedEvidenceFiles": 61,
+  "linkedEvidenceFiles": 65,
   "copiedOrValidated": [
     {
       "source": "research/Model-guide.md",
       "public": "downloads/Model-guide.md",
-      "bytes": 47151,
-      "sha256": "abf19408d17f0588366e6bcda99221d7356aed0eb47c457c0b4165e9535aa90a",
-      "sourceBytesUnchanged": false
+      "bytes": 50903,
+      "sha256": "c68301751c0039a17f90a2675484ec2bf098130d96dc5a26730dc77d037f1550",
+      "sourceBytesUnchanged": false,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/Refinement-notes.md",
       "public": "downloads/Refinement-notes.md",
-      "bytes": 34651,
-      "sha256": "b7d080d6997298cf570c7813c8cde7b51f57d8513cde5df68d7dae0c9f319159",
-      "sourceBytesUnchanged": false
+      "bytes": 38680,
+      "sha256": "4ee4d165d7097fd0e5f9918ee51fd3f8fe42639e4febfb073c11559f98a9b4ab",
+      "sourceBytesUnchanged": false,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/Accuracy-and-coverage-audit.md",
       "public": "downloads/Accuracy-and-coverage-audit.md",
-      "bytes": 31571,
-      "sha256": "16db9d658c66a43cca29b7516eb337bf759270324dc90181bc63aa38d01c1832",
-      "sourceBytesUnchanged": false
+      "bytes": 32209,
+      "sha256": "30fe62c9b286f31182653558e9e97ff9e30a01b542a48edbaf77764d824f67d6",
+      "sourceBytesUnchanged": false,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/Visual-design-review.md",
       "public": "downloads/Visual-design-review.md",
       "bytes": 5811,
       "sha256": "98497c55610cbf9ad9c90b9605d7dc2806828d679c05ebb07196678f73c1960b",
-      "sourceBytesUnchanged": false
+      "sourceBytesUnchanged": false,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/Lakeview-model-coverage-review.md",
       "public": "downloads/Lakeview-model-coverage-review.md",
-      "bytes": 7868,
-      "sha256": "6faa55e7a621d2ffd7f9c72ca8edf8ab3d77479bd034f2fc3e7945b31cdd8ffb",
-      "sourceBytesUnchanged": true
+      "bytes": 9199,
+      "sha256": "4ad4589bcc9675f82de5f6532c8ba49a8ec58a3c966f6da1c10e457744f37e5c",
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "licenses/CREDITS.md",
       "public": "licenses/CREDITS.md",
-      "bytes": 3658,
-      "sha256": "693582a0679388514ce483b021739f9d012b419a32a3040b1f376e1616c39cc7",
-      "sourceBytesUnchanged": true
+      "bytes": 4875,
+      "sha256": "9af669997ebdd55801251fc8adba87d5575ffd6f1966e580522fde22c1bcb527",
+      "sourceBytesUnchanged": false,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/revamp/Inland-water-elevation-repair.json",
       "public": "downloads/revamp/Inland-water-elevation-repair.json",
       "bytes": 1446781,
       "sha256": "cc690c36deb0712ee15443e324366e4f19767a14ae52063d7a96b92624136cc9",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/road-crossings/Road-crossings-review.md",
       "public": "downloads/road-crossings/Road-crossings-review.md",
-      "bytes": 6464,
-      "sha256": "9b2fdebdf05a6e5b94eedb94690e9c1e052c0c6e28831266e3d150e5a082b441",
-      "sourceBytesUnchanged": true
+      "bytes": 6468,
+      "sha256": "c11e9d6b1643c41edd80a9755c150c368790cb128b6f3222a999bf604ce9b8f1",
+      "sourceBytesUnchanged": false,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/road-crossings/Road-and-bridge-elevation-sources.md",
       "public": "downloads/road-crossings/Road-and-bridge-elevation-sources.md",
       "bytes": 17374,
       "sha256": "2934ee2ebcfb06eb6f0292363da6cba92cf7723700b62adeb6f5eb1ec82cdecf",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "models/supplemental/transit-revamp/transit-layer-manifest.json",
       "public": "models/supplemental/transit-revamp/transit-layer-manifest.json",
       "bytes": 359961,
       "sha256": "28e6e7d6f175473bb7eaed341ac0d9e938e2e70e126b0e4e1d4e5c2a845249f9",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "models/supplemental/transit-revamp/transit-network.json",
       "public": "models/supplemental/transit-revamp/transit-network.json",
       "bytes": 2812696,
       "sha256": "edfbcd199693be6f2e5cbf1185635a71703540506779e4803c7e34f3a814a717",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/transit-depth/Geometry-depth-correction.json",
       "public": "downloads/transit-depth/Geometry-depth-correction.json",
       "bytes": 275735,
       "sha256": "9899315fc4a31d0182b19ab322ef4955d3c942c5439eb0b3b2a5db0c59dc2c77",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/transit-depth/Transit-depth-review.md",
       "public": "downloads/transit-depth/Transit-depth-review.md",
       "bytes": 2467,
       "sha256": "2c9077d2d1a3f69da0ef44f7799f3dc52875144845c5d497e5491bd553c1d211",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/transit-depth/Public-transit-guide-and-reference-audit.json",
       "public": "downloads/transit-depth/Public-transit-guide-and-reference-audit.json",
       "bytes": 84822,
       "sha256": "e60f2efc77cce11f3cefd8de458ace1725039d2bce4d360a1eaaab9a582cd22e",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "models/supplemental/pearson-airfield-context.json",
       "public": "models/supplemental/pearson-airfield-context.json",
       "bytes": 1462,
       "sha256": "bd63fd97620556298d08da441095c4574c09956a8ea759c0a54d998e8f8c15ad",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "checkpoints/01-lighting/Checkpoint.json",
       "public": "checkpoints/01-lighting/Checkpoint.json",
       "bytes": 513,
       "sha256": "2a52fa0dfeb8a4f7798dacd2c00bc537123e8b0a7748a8b46aa102f1b6d70f57",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "checkpoints/02-landscape/Checkpoint.json",
       "public": "checkpoints/02-landscape/Checkpoint.json",
       "bytes": 584,
       "sha256": "dbe675dbe4b6820314101f99a2edda2eb5340a343a7e43aec49ae19e185bacfa",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "models/supplemental/revamp-landscape/READ-ME.md",
       "public": "models/supplemental/revamp-landscape/READ-ME.md",
       "bytes": 8815,
       "sha256": "05e271e2598c1a58016c4e8793b2d37d54f883a042bbd1f15ee920b4c9374f00",
-      "sourceBytesUnchanged": false
+      "sourceBytesUnchanged": false,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/revamp/Absolute-model-correction.md",
       "public": "downloads/revamp/Absolute-model-correction.md",
       "bytes": 2825,
       "sha256": "7e2ffc0bd17bda606ee7492363a1b24ae92a1e46c419266d11edaedb75bfc38e",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/revamp/Bough-Beeches-plan-model.json",
       "public": "downloads/revamp/Bough-Beeches-plan-model.json",
       "bytes": 12172,
       "sha256": "614320a7820cf4b4713f5560d1d39dd62d9d16bad42a26658ef9f1f31ac0b26e",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "models/supplemental/refinement-lakeview/README.md",
       "public": "models/supplemental/refinement-lakeview/README.md",
       "bytes": 3705,
       "sha256": "4b7af6d46d80d5098444a7604ae1cc34881737ade5f205ce622219cfa71ebc92",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/Brightwater-surface-validation.json",
       "public": "downloads/Brightwater-surface-validation.json",
       "bytes": 2977,
       "sha256": "456b4432bb26b34083c01add8ad0d0fe7dafab6d31d9c9b6a3cbb05d82160b08",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/Existing-building-replacement-validation.json",
       "public": "downloads/Existing-building-replacement-validation.json",
       "bytes": 13765,
       "sha256": "6e27608ff468e735e1677c8a740b89428529719b9f339a46f44b7189a4ae2758",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/Model-reference-index.csv",
       "public": "downloads/Model-reference-index.csv",
-      "bytes": 197741,
-      "sha256": "35d43234f10215e51a2b40ac842f7ff0ab26fd8ed463045280740cc114f7bbf5",
-      "sourceBytesUnchanged": true
+      "bytes": 185342,
+      "sha256": "5f07be9c6c0932fb5012fa9977aa2d0515b5e1ec0c803300cc7616e45a30ae35",
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/Model-reference-index-summary.json",
       "public": "downloads/Model-reference-index-summary.json",
-      "bytes": 937,
-      "sha256": "0d25e5ffec26cd4ad4369a4aaec081cf6165f435e27df59c7cae37e2446a19ab",
-      "sourceBytesUnchanged": true
+      "bytes": 1056,
+      "sha256": "99f302a088d1cb546dd90b6cc589f285a77fb2496c22473e93c839266629cdb8",
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/road-crossings/Aerial-shadow-and-runway-review.md",
       "public": "downloads/road-crossings/Aerial-shadow-and-runway-review.md",
       "bytes": 3298,
       "sha256": "f62219c7fea5d98064a606839ee2dcaba2a12e4ece16d1f016e5968a7e92a1ff",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/road-crossings/Transit-road-association-audit.json",
       "public": "downloads/road-crossings/Transit-road-association-audit.json",
       "bytes": 14744,
       "sha256": "5eacd9a0a0b1009ecfb4dbe9df01529b2134e35996e8098125a22943c3c1f68d",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/road-crossings/Dependent-layer-QA.json",
       "public": "downloads/road-crossings/Dependent-layer-QA.json",
       "bytes": 8957,
       "sha256": "a76612a502cf22f991d02de4cfbd81b9be647b0a69ac9b1dc9d6c7395c2000db",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/revamp/transit-visibility/visibility-audit.json",
       "public": "downloads/revamp/transit-visibility/visibility-audit.json",
       "bytes": 115698,
       "sha256": "67326b6847bd9a79b18c138877ff9349de689a536b30ab391c50ec3b70992a11",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/road-crossings/Independent-context-QA.json",
       "public": "downloads/road-crossings/Independent-context-QA.json",
       "bytes": 304724,
       "sha256": "1b4f0916d96b5fa1514a9dfbbf6ae6a399138bd178c42c927c5a6034f693dd42",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/road-crossings/Original-footprint-coverage-QA.json",
       "public": "downloads/road-crossings/Original-footprint-coverage-QA.json",
       "bytes": 2936,
       "sha256": "098148bd2cca2e5cf9bf4f0f4e2e400369cc2b4e729a357b431ac8548d3fa1b8",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "models/supplemental/transit-revamp/research-log.json",
       "public": "models/supplemental/transit-revamp/research-log.json",
       "bytes": 21007,
       "sha256": "1beed533eb78111ac58f57f34587e2251967d036ac9bc6324994048a7c0a9f28",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "models/supplemental/transit-revamp/README.md",
       "public": "models/supplemental/transit-revamp/README.md",
       "bytes": 9861,
       "sha256": "50e60de4fb83d377563f0f160247c9db3cd001adb4762f725e38308b217b4fba",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/revamp/Duplicate-composite-repair.json",
       "public": "downloads/revamp/Duplicate-composite-repair.json",
       "bytes": 4506,
       "sha256": "cfc4e2ad2b59a5dd8a3f3920ce53f66d3246e9b66ea3840fd3fcd96c38acb7c8",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/revamp/Source-elevation-repair-audit.json",
       "public": "downloads/revamp/Source-elevation-repair-audit.json",
       "bytes": 382701,
       "sha256": "48c9b030b7cf9bfdb7d8edf126b134d044875310cdcc4c148ad1dad652bf6cbb",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "renders/revamp/source-elevation-repair-qa.png",
       "public": "renders/revamp/source-elevation-repair-qa.png",
       "bytes": 761397,
       "sha256": "86615e81e09d824e7282ed7a81c3e0d7f4356101d204796c6872177cf529e283",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/revamp/Chelsea-version-reconciliation.json",
       "public": "downloads/revamp/Chelsea-version-reconciliation.json",
       "bytes": 7373,
       "sha256": "be34f234be399ec56a6899774953a07d4d8bde31904a8d94fe75e885600cca15",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/revamp/Model-layer-audit.json",
       "public": "downloads/revamp/Model-layer-audit.json",
       "bytes": 541327,
       "sha256": "2d7cf4890904356c7983f77608906ac5d8ddbad952b946b3f42a693e150ecdcb",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/project-register.csv",
       "public": "downloads/project-register.csv",
-      "bytes": 95605,
-      "sha256": "6c11c54220f87422f3a3043675bc32b67430f974f1996d37944a94d916fc2e85",
-      "sourceBytesUnchanged": true
+      "bytes": 103056,
+      "sha256": "78149c53c5b87e02bca7e1b12e9d979c29269927abe849859726d8ad9df125f8",
+      "sourceBytesUnchanged": true,
+      "rechecked": "2026-09-27",
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/City-of-Mississauga-Open-Data-Terms.pdf",
       "public": "research/City-of-Mississauga-Open-Data-Terms.pdf",
       "bytes": 200246,
       "sha256": "76e0c18b3d807639b0aa9df04df41a9bfc999bdad10762954a333bdd939cbce4",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "licenses/three-0.186.0-MIT.txt",
       "public": "licenses/three-0.186.0-MIT.txt",
       "bytes": 1081,
       "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "licenses/meshoptimizer-1.2.0-MIT.txt",
       "public": "licenses/meshoptimizer-1.2.0-MIT.txt",
       "bytes": 1079,
       "sha256": "f03037ca7bad1e3eb7f4a63fa6084a8baabd5ba30d3c239a9a7f35705d873e26",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/road-crossings/Road-crossing-coverage.json",
       "public": "downloads/road-crossings/Road-crossing-coverage.json",
       "bytes": 88539,
       "sha256": "2fb71b9fc33e671b212fcaa41ae64aec2769b5e081806e93d1381c3d2abb8523",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/road-crossings/Road-crossing-profiles.json",
       "public": "downloads/road-crossings/Road-crossing-profiles.json",
       "bytes": 910556,
       "sha256": "71a4f9f7c49dfe1be5721836146f8b30a5353302045c233fc9f39d24e803d29a",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/road-crossings/Context-road-correction-summary.json",
       "public": "downloads/road-crossings/Context-road-correction-summary.json",
       "bytes": 49702,
       "sha256": "c5e7ea44b6be033a2e6157dc7c36b0c5cdccafa9af586d465cecec6abeb1b9ce",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/road-crossings/Composite-field-continuity-QA.json",
       "public": "downloads/road-crossings/Composite-field-continuity-QA.json",
       "bytes": 1765,
       "sha256": "7f13986a350c818687f96ead8f5378e847bddaa65dc44a903d36b7fd6f122365",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/road-crossings/Source-coverage-inventory.json",
       "public": "downloads/road-crossings/Source-coverage-inventory.json",
       "bytes": 135121,
       "sha256": "ee8c7ec798cf73074a3cb66afb5a1229605373f258eb2b696fd7e9bdbd46d1ec",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/road-crossings/QEW-bridge-registration.json",
       "public": "downloads/road-crossings/QEW-bridge-registration.json",
       "bytes": 16742,
       "sha256": "9692fd656424180ef3b566a868cba1ddc4980ab6a1b5881725e2d1a29fb03910",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/road-crossings/Nonfit-source-review.json",
       "public": "downloads/road-crossings/Nonfit-source-review.json",
       "bytes": 39700,
       "sha256": "93a0edf339540578fff498eea364efc3492841d6ed07cfc412da522a1e3c612d",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/road-crossings/Residual-source-review.json",
       "public": "downloads/road-crossings/Residual-source-review.json",
       "bytes": 4875,
       "sha256": "b273c5ecb249f98bdcc8104bc8714c6bfebed2f7680504a099929ea51e2bcb00",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/road-crossings/Final-grade-source-evidence.json",
       "public": "downloads/road-crossings/Final-grade-source-evidence.json",
       "bytes": 28931,
       "sha256": "cabe042aa33c0f6e2f1f01f277f71131a14f0105d82c7748cf2da39b7c7be34c",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/transit-depth/HML-alignment-and-stage-review.json",
       "public": "downloads/transit-depth/HML-alignment-and-stage-review.json",
       "bytes": 7542,
       "sha256": "55f6dd1b0fa54e0a230b624c5c73dbace5bec908a4569eba420f9c595ba39ab7",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "models/supplemental/refinement-lakeview/manifest.json",
       "public": "models/supplemental/refinement-lakeview/manifest.json",
       "bytes": 25984,
       "sha256": "882b9bedce7af43cb36c451de87316cba9fbd2f74f715ba4779dba295cc65451",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/road-crossings/Airport-runway-overlap-repair.json",
       "public": "downloads/road-crossings/Airport-runway-overlap-repair.json",
       "bytes": 8180,
       "sha256": "e1309db2fc13f6553c3ea18058d416c131fee2527dec2a24bbef51581056badd",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/road-crossings/Airfield-render-amendment-QA.json",
       "public": "downloads/road-crossings/Airfield-render-amendment-QA.json",
       "bytes": 329,
       "sha256": "4d76cdea5f1c7b588feab28bba49cb4d0b709890505f61168f4cca0c3a6cf000",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/road-crossings/Public-asset-validation.json",
       "public": "downloads/road-crossings/Public-asset-validation.json",
       "bytes": 86978,
       "sha256": "d6ccc7e3168e3043076714382ec59c260fea6e7efccc9b55f34026a4698c1a5c",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/road-crossings/Public-dependent-freeze.json",
       "public": "downloads/road-crossings/Public-dependent-freeze.json",
       "bytes": 2690,
       "sha256": "b8b74cea8e1d4e6087986ec54c78451b107e3c1052a3a2b51730236a37379e13",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/transit-depth/Transit-depth-review.md",
       "public": "research/transit-depth/Transit-depth-review.md",
       "bytes": 2467,
       "sha256": "2c9077d2d1a3f69da0ef44f7799f3dc52875144845c5d497e5491bd553c1d211",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/transit-depth/Geometry-depth-correction.json",
       "public": "research/transit-depth/Geometry-depth-correction.json",
       "bytes": 275735,
       "sha256": "9899315fc4a31d0182b19ab322ef4955d3c942c5439eb0b3b2a5db0c59dc2c77",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/transit-depth/Public-transit-guide-and-reference-audit.json",
       "public": "research/transit-depth/Public-transit-guide-and-reference-audit.json",
       "bytes": 84822,
       "sha256": "e60f2efc77cce11f3cefd8de458ace1725039d2bce4d360a1eaaab9a582cd22e",
-      "sourceBytesUnchanged": true
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
     },
     {
       "source": "research/transit-depth/HML-alignment-and-stage-review.json",
       "public": "research/transit-depth/HML-alignment-and-stage-review.json",
       "bytes": 7542,
       "sha256": "55f6dd1b0fa54e0a230b624c5c73dbace5bec908a4569eba420f9c595ba39ab7",
+      "sourceBytesUnchanged": true,
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00"
+    },
+    {
+      "source": "research/Picture-index.json",
+      "public": "downloads/Picture-index.json",
+      "bytes": 113434,
+      "sha256": "dbc4ebf31e2ba870c0428c970773b7fd3553a5dbe5cdf6ca9d8076cc4078db70",
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/Release-validation.json",
+      "public": "downloads/Release-validation.json",
+      "bytes": 4204,
+      "sha256": "85b8476df2826be3764b6a59fb268204ca90d1a34281784c94daaf9644595ec5",
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/Original-picture-upload-validation.json",
+      "public": "downloads/Original-picture-upload-validation.json",
+      "bytes": 48704,
+      "sha256": "0a376797a49dbdfc52107635f926704754d406f86ad89dda73b6c0221efc50b6",
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00",
+      "sourceBytesUnchanged": true
+    },
+    {
+      "source": "research/refinement-models.json",
+      "public": "downloads/refinement-models.json",
+      "bytes": 957157,
+      "sha256": "225d7fdc1bd30c7d8af97e611055b24754ecffd83276ad64f3ac5f7548d02b5d",
+      "recheckedAt": "2026-09-27T16:28:57.933020+00:00",
       "sourceBytesUnchanged": true
     }
   ],
-  "markdownLinkChecks": 117,
+  "markdownLinkChecks": 130,
   "localLinks": [
+    {
+      "document": "downloads/Visual-design-review.md",
+      "target": "revamp/Source-elevation-repair-audit.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Visual-design-review.md",
+      "target": "../renders/revamp/source-elevation-repair-qa.png",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Visual-design-review.md",
+      "target": "Model-guide.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Visual-design-review.md",
+      "target": "project-register.csv",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Visual-design-review.md",
+      "target": "../data/refinement-models.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Visual-design-review.md",
+      "target": "Accuracy-and-coverage-audit.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "Community-reference-and-coverage-review.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "public-project-reference-coverage.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "../data/refinement-models.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "revamp/Absolute-model-correction.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "revamp/Bough-Beeches-plan-model.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "../models/supplemental/refinement-lakeview/README.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "Brightwater-surface-validation.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "Existing-building-replacement-validation.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "../models/supplemental/transit-revamp/transit-layer-manifest.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "../models/supplemental/transit-revamp/transit-network.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "transit-depth/Geometry-depth-correction.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "transit-depth/Transit-depth-review.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "road-crossings/Transit-road-association-audit.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "road-crossings/Dependent-layer-QA.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "revamp/transit-visibility/visibility-audit.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "road-crossings/Road-crossings-review.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "road-crossings/Independent-context-QA.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "road-crossings/Original-footprint-coverage-QA.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "../checkpoints/01-lighting/Checkpoint.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "../checkpoints/02-landscape/Checkpoint.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "../models/supplemental/revamp-landscape/READ-ME.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "../models/supplemental/transit-revamp/research-log.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "../models/supplemental/transit-revamp/README.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Refinement-notes.md",
+      "target": "road-crossings/Aerial-shadow-and-runway-review.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Community-reference-and-coverage-review.md",
+      "target": "public-project-reference-coverage.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "Community-reference-and-coverage-review.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "Refinement-notes.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "../data/projects.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "../data/refinement-models.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "Picture-index.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Accuracy-and-coverage-audit.md",
+      "target": "Release-validation.json",
+      "exists": true,
+      "insidePublic": true
+    },
     {
       "document": "downloads/Accuracy-and-coverage-audit.md",
       "target": "../data/refinement-models.json",
@@ -547,8 +863,38 @@
       "insidePublic": true
     },
     {
-      "document": "downloads/Lakeview-model-coverage-review.md",
-      "target": "../models/supplemental/refinement-lakeview/README.md",
+      "document": "downloads/Model-guide.md",
+      "target": "Community-reference-and-coverage-review.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "Refinement-notes.md",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "../data/projects.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "../data/refinement-models.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "Picture-index.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/Model-guide.md",
+      "target": "Release-validation.json",
       "exists": true,
       "insidePublic": true
     },
@@ -697,240 +1043,6 @@
       "insidePublic": true
     },
     {
-      "document": "downloads/Refinement-notes.md",
-      "target": "../data/refinement-models.json",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Refinement-notes.md",
-      "target": "revamp/Absolute-model-correction.md",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Refinement-notes.md",
-      "target": "revamp/Bough-Beeches-plan-model.json",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Refinement-notes.md",
-      "target": "../models/supplemental/refinement-lakeview/README.md",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Refinement-notes.md",
-      "target": "Brightwater-surface-validation.json",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Refinement-notes.md",
-      "target": "Existing-building-replacement-validation.json",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Refinement-notes.md",
-      "target": "../models/supplemental/transit-revamp/transit-layer-manifest.json",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Refinement-notes.md",
-      "target": "../models/supplemental/transit-revamp/transit-network.json",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Refinement-notes.md",
-      "target": "transit-depth/Geometry-depth-correction.json",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Refinement-notes.md",
-      "target": "transit-depth/Transit-depth-review.md",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Refinement-notes.md",
-      "target": "road-crossings/Transit-road-association-audit.json",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Refinement-notes.md",
-      "target": "road-crossings/Dependent-layer-QA.json",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Refinement-notes.md",
-      "target": "revamp/transit-visibility/visibility-audit.json",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Refinement-notes.md",
-      "target": "road-crossings/Road-crossings-review.md",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Refinement-notes.md",
-      "target": "road-crossings/Independent-context-QA.json",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Refinement-notes.md",
-      "target": "road-crossings/Original-footprint-coverage-QA.json",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Refinement-notes.md",
-      "target": "../checkpoints/01-lighting/Checkpoint.json",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Refinement-notes.md",
-      "target": "../checkpoints/02-landscape/Checkpoint.json",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Refinement-notes.md",
-      "target": "../models/supplemental/revamp-landscape/READ-ME.md",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Refinement-notes.md",
-      "target": "../models/supplemental/transit-revamp/research-log.json",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Refinement-notes.md",
-      "target": "../models/supplemental/transit-revamp/README.md",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Refinement-notes.md",
-      "target": "road-crossings/Aerial-shadow-and-runway-review.md",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Visual-design-review.md",
-      "target": "revamp/Source-elevation-repair-audit.json",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Visual-design-review.md",
-      "target": "../renders/revamp/source-elevation-repair-qa.png",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Visual-design-review.md",
-      "target": "Model-guide.md",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Visual-design-review.md",
-      "target": "project-register.csv",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Visual-design-review.md",
-      "target": "../data/refinement-models.json",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/Visual-design-review.md",
-      "target": "Accuracy-and-coverage-audit.md",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
-      "target": "../../transit-depth/Transit-depth-review.md",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
-      "target": "visibility-checks/downtown-junction-before.png",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
-      "target": "visibility-checks/downtown-junction-after.png",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
-      "target": "visibility-checks/port-credit-go-before.png",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
-      "target": "visibility-checks/port-credit-go-after.png",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
-      "target": "visibility-checks/milton-crossing-before.png",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
-      "target": "visibility-checks/milton-crossing-after.png",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/road-crossings/Aerial-shadow-and-runway-review.md",
-      "target": "Airport-runway-overlap-repair.json",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/road-crossings/Aerial-shadow-and-runway-review.md",
-      "target": "Airfield-render-amendment-QA.json",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/road-crossings/Aerial-shadow-and-runway-review.md",
-      "target": "Public-asset-validation.json",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
-      "document": "downloads/road-crossings/Aerial-shadow-and-runway-review.md",
-      "target": "Public-dependent-freeze.json",
-      "exists": true,
-      "insidePublic": true
-    },
-    {
       "document": "downloads/road-crossings/Road-and-bridge-elevation-sources.md",
       "target": "Source-coverage-inventory.json",
       "exists": true,
@@ -957,6 +1069,30 @@
     {
       "document": "downloads/road-crossings/Road-and-bridge-elevation-sources.md",
       "target": "Final-grade-source-evidence.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/road-crossings/Aerial-shadow-and-runway-review.md",
+      "target": "Airport-runway-overlap-repair.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/road-crossings/Aerial-shadow-and-runway-review.md",
+      "target": "Airfield-render-amendment-QA.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/road-crossings/Aerial-shadow-and-runway-review.md",
+      "target": "Public-asset-validation.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/road-crossings/Aerial-shadow-and-runway-review.md",
+      "target": "Public-dependent-freeze.json",
       "exists": true,
       "insidePublic": true
     },
@@ -1027,38 +1163,44 @@
       "insidePublic": true
     },
     {
-      "document": "licenses/CREDITS.md",
-      "target": "../research/City-of-Mississauga-Open-Data-Terms.pdf",
+      "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
+      "target": "../../transit-depth/Transit-depth-review.md",
       "exists": true,
       "insidePublic": true
     },
     {
-      "document": "licenses/CREDITS.md",
-      "target": "three-0.186.0-MIT.txt",
+      "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
+      "target": "visibility-checks/downtown-junction-before.png",
       "exists": true,
       "insidePublic": true
     },
     {
-      "document": "licenses/CREDITS.md",
-      "target": "meshoptimizer-1.2.0-MIT.txt",
+      "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
+      "target": "visibility-checks/downtown-junction-after.png",
       "exists": true,
       "insidePublic": true
     },
     {
-      "document": "models/supplemental/refinement-lakeview/README.md",
-      "target": "manifest.json",
+      "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
+      "target": "visibility-checks/port-credit-go-before.png",
       "exists": true,
       "insidePublic": true
     },
     {
-      "document": "models/supplemental/revamp-landscape/READ-ME.md",
-      "target": "../../../data/landscape-layer-manifest.json",
+      "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
+      "target": "visibility-checks/port-credit-go-after.png",
       "exists": true,
       "insidePublic": true
     },
     {
-      "document": "models/supplemental/revamp-landscape/READ-ME.md",
-      "target": "../../../research/City-of-Mississauga-Open-Data-Terms.pdf",
+      "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
+      "target": "visibility-checks/milton-crossing-before.png",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "downloads/revamp/transit-visibility/Visibility-audit.md",
+      "target": "visibility-checks/milton-crossing-after.png",
       "exists": true,
       "insidePublic": true
     },
@@ -1117,6 +1259,24 @@
       "insidePublic": true
     },
     {
+      "document": "models/supplemental/revamp-landscape/READ-ME.md",
+      "target": "../../../data/landscape-layer-manifest.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "models/supplemental/revamp-landscape/READ-ME.md",
+      "target": "../../../research/City-of-Mississauga-Open-Data-Terms.pdf",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "models/supplemental/refinement-lakeview/README.md",
+      "target": "manifest.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
       "document": "research/transit-depth/Transit-depth-review.md",
       "target": "Geometry-depth-correction.json",
       "exists": true,
@@ -1131,6 +1291,18 @@
     {
       "document": "research/transit-depth/Transit-depth-review.md",
       "target": "Public-transit-guide-and-reference-audit.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "research/community/Exchange-EX3-correction.md",
+      "target": "Exchange-EX3-correction.json",
+      "exists": true,
+      "insidePublic": true
+    },
+    {
+      "document": "research/community/Exchange-EX3-correction.md",
+      "target": "Exchange-EX3-invariant-QA.json",
       "exists": true,
       "insidePublic": true
     }
@@ -1187,5 +1359,7 @@
     }
   ],
   "geometryCopied": false,
-  "canonicalEvidenceModified": false
+  "canonicalEvidenceModified": true,
+  "recheckedAt": "2026-09-27T16:28:57.933020+00:00",
+  "reviewScope": "Current local evidence-file hashes and Markdown links; earlier rewrite/copy history retained. No new web-source fact check, network availability, or live deployment is claimed."
 }
