@@ -1,0 +1,21 @@
+{
+  "edition": "Visual Polish 2026-09-26",
+  "status": "Independent illustrative geographic sketch, not a selected transit alignment.",
+  "coordinateSystem": "EPSG:26917 converted to atlas metres: x=easting-615000; z=4827000-northing; y is an illustrative label plane, not tunnel elevation.",
+  "connection": {
+    "name": "Illustrative City Centre connection",
+    "basis": "Author-selected waypoints through the broad Kipling, Sherway, Dundas, Cooksville and City Centre study areas. Inspired by historical TTC D3 discussion and the 24 September 2026 campaign announcement. Not traced as an approved route from either source.",
+    "points": [[-5753,110,-778],[-5540,105,-920],[-5140,95,-835],[-4910,90,-610],[-4630,82,-330],[-4350,74,-50],[-4050,70,250],[-3885,69,524],[-3700,64,725],[-3400,61,780],[-3247,60,588],[-2880,61,265],[-2490,60,-80],[-2010,59,-505],[-1513,59,-963],[-1140,59,-1450],[-765,58,-1970],[-392,57,-2482],[20,53,-2700],[480,50,-2820],[970,50,-2860],[1410,50,-2858],[1790,56,-3350],[2150,65,-3970],[2480,75,-4540],[2800,83,-5110],[3144,85,-5676]],
+    "display": "Purple dashed cartographic overlay, projected over the city for legibility. It is not physical rails, a road, a tunnel, or an elevated guideway. Display y values carry no engineering meaning."
+  },
+  "areas": [
+    {"name":"City Centre","anchor":[-5753,110,-778],"offset":[-122,-43],"basis":"City Centre area; existing transit locator provides geographic context, not a subway site."},
+    {"name":"Cooksville","anchor":[-3885,69,524],"offset":[12,-43],"basis":"GO area geographic locator from the city atlas; potential interchange remains unresolved."},
+    {"name":"Dundas / Dixie","anchor":[-392,57,-2482],"offset":[12,-43],"basis":"Approximate study area, not a proposed station or exact street-centreline survey."},
+    {"name":"Sherway","anchor":[1410,50,-2858],"offset":[12,20],"basis":"Approximate mall-area geographic anchor, not a proposed station."},
+    {"name":"Kipling","anchor":[3144,85,-5676],"offset":[-89,-43],"basis":"Approximate existing Line 2 terminal area. Exact tie-in and new infrastructure are unresolved."}
+  ],
+  "sourceIds": ["rtes-map","campaign-2026","toronto-2024","dundas-decision","dundas-current","hml"],
+  "buildingContext": "Reuses atlas citywide GLB, current context parts, Exchange/M City and applicable refinement assets, with source supersession and scenario visibility applied. The overview omits low-rise context for clarity. No new buildings are fabricated for this concept.",
+  "limits": ["No selected alignment, station sites, depth, structure dimensions, funding or opening date.","Toronto end extends beyond detailed Mississauga model coverage.","Potential intermediate stops and transfer walking distances are unresolved.","Dundas BRT is a separate project and not replaced by this illustration.","Historical D3 was screened out and is not represented as approved."]
+}

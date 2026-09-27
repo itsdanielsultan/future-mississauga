@@ -10,7 +10,7 @@
       "url": "https://www.bonniecrombie.ca/news/mississauga-moves-2",
       "type": "Candidate proposal, not government project approval",
       "supports": [
-        "Proposed Kipling–Sherway–Mississauga connection",
+        "Proposed Kipling\u2013Sherway\u2013Mississauga connection",
         "Business case proposed for routes, stations, ridership, costs and construction options",
         "Elevated construction proposed for examination"
       ]
@@ -65,7 +65,7 @@
       "id": "dundas-options",
       "title": "Dundas Connects Phase 2 panels, transit alternatives, PDF page 3",
       "publisher": "City of Mississauga",
-      "date": "2016–2018 consultation period",
+      "date": "2016\u20132018 consultation period",
       "url": "https://www.mississauga.ca/wp-content/uploads/2021/03/01140306/Dundas_Connects_PIC_2_FINAL_Panels-Part-2-compressed.pdf#page=3",
       "type": "Historical alternatives, not final project choice",
       "supports": [
@@ -139,5 +139,13 @@
     "sourceMasterSHA256": "591ee7eb58bfd53e87e3adbdf6ecf620e86f96c638826012c21f216a2d9f161c",
     "status": "Existing Future Mississauga retained-development model illustration; mixed source dates, approximate forms and coverage limits remain. Not a subway station site plan."
   },
-  "attributionFinding": "Verified 2026-09-24 campaign proposal is Bonnie Crombie’s. No matching Carolyn Parrish subway announcement was established in this bounded review."
+  "attributionFinding": "Verified 2026-09-24 campaign proposal is Bonnie Crombie\u2019s. No matching Carolyn Parrish subway announcement was established in this bounded review.",
+  "interactiveMap": {
+    "file": "data/subway-map.json",
+    "viewer": "subway.js",
+    "basis": "Author-selected geographic sketch inspired by the historical broad corridor and current public discussion; not an official route trace.",
+    "geometryStatus": "Illustrative cartographic overlay; no selected station sites, tunnels, viaducts, depths or dimensions.",
+    "cityContext": "Current atlas municipal context, building models and applicable refinement assets; low-rise context omitted in this citywide view.",
+    "coverageLimit": "Eastern Toronto end is outside detailed Mississauga model coverage."
+  }
 }
