@@ -76,3 +76,168 @@ html.disclosure-transition{scroll-behavior:auto;overflow-anchor:none}
 .history-comparison>a{display:block;width:fit-content;color:var(--ink);font-size:12px;margin-top:14px}
 @media(max-width:850px){.feature-heading,.interactive-heading{gap:30px}.feature-heading>p,.interactive-heading>p{font-size:14px}.historic-map-figure figcaption{gap:18px}.historic-feature{margin-bottom:42px}}
 @media(max-width:600px){.historic-feature{margin-top:12px;margin-bottom:35px}.feature-heading,.interactive-heading{grid-template-columns:1fr;gap:16px;margin-bottom:18px}.feature-heading h2 br{display:none}.feature-heading h2{font-size:34px}.feature-heading>p,.interactive-heading>p{font-size:13px;line-height:1.75}.historic-map-figure figcaption{display:block;font-size:11px;margin-top:12px}.historic-map-figure figcaption strong{font-size:12px}.historic-map-figure figcaption>a{display:inline-block;margin-top:10px}.interactive-heading h2{font-size:29px}.history-comparison{padding:6px 0 2px}.history-comparison h3{font-size:24px}.history-comparison p:not(.eyebrow){font-size:13px}}
+
+
+/* A shared reading grid connects the introduction, maps and supporting text. */
+.subway-intro,
+.feature-heading,
+.interactive-heading {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(32px, 4.4vw, 64px);
+  align-items: start;
+}
+.subway-intro { padding: 56px 0 64px; }
+.subway-intro h1 { font-size: clamp(46px, 4.8vw, 68px); line-height: 1.07; }
+.eyebrow { font-size: 11px; line-height: 1.55; letter-spacing: .11em; margin-bottom: 14px; }
+.intro-copy { max-width: 60ch; padding: 0; }
+.intro-copy p { font-size: 23px; line-height: 1.45; margin: 0 0 18px; text-wrap: pretty; }
+.intro-copy .intro-context { font-size: 16px; line-height: 1.7; color: #536569; margin-bottom: 20px; }
+.concept-note { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline; font-size: 13px; }
+.concept-tag { display: inline; font-size: inherit; color: var(--ink); font-weight: 600; padding: 0; border: 0; border-radius: 0; }
+.concept-status { font-size: inherit; color: #536569; margin: 0; }
+.historic-feature { margin: 0 0 64px; }
+.feature-heading,
+.interactive-heading { margin-bottom: 28px; }
+.feature-heading h2,
+.interactive-heading h2 { max-width: 24ch; font-size: clamp(30px, 2.8vw, 40px); line-height: 1.14; letter-spacing: -.035em; text-wrap: balance; }
+.feature-heading > p,
+.interactive-heading > p { max-width: 62ch; margin: 0; font-size: 16px; line-height: 1.7; color: #536569; text-wrap: pretty; }
+.historic-map-figure figcaption { gap: 24px; margin-top: 18px; font-size: 14px; line-height: 1.65; }
+.historic-map-figure figcaption strong { font-size: 15px; }
+.historic-map-figure figcaption div > span { max-width: 75ch; color: #536569; margin-top: 5px; }
+.historic-map-figure figcaption > a { font-size: 14px; }
+.map-caption { padding: 22px 24px; align-items: start; gap: 32px; font-size: 14px; }
+.map-caption p { max-width: 84ch; line-height: 1.7; color: #536569; }
+.map-caption p a { font-size: inherit; white-space: normal; }
+.map-caption > a { flex-shrink: 0; font-size: 14px; margin-top: 2px; }
+.connection-strip { grid-template-columns: 240px minmax(0, 1fr); gap: 40px; padding: 40px 0 32px; }
+.connection-strip h2 { font-size: 25px; line-height: 1.2; letter-spacing: -.035em; }
+.areas-note { max-width: 25ch; margin: 8px 0 0; font-size: 13px; line-height: 1.6; color: #536569; }
+.connection-strip strong { font-size: 15px; }
+.connection-strip span { font-size: 12px; line-height: 1.6; }
+.independence { max-width: 94ch; margin: 0 0 48px; font-size: 14px; line-height: 1.7; color: #536569; }
+
+/* Supporting sections read as one document, without boxes inside boxes. */
+.subway-details { gap: 0; margin-bottom: 72px; border-top: 1px solid var(--line); }
+.subway-details > details { border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; overflow: visible; }
+.disclosure-transition .subway-details > details { overflow: hidden; }
+.subway-details summary { padding: 27px 0; gap: 24px; font-family: "Bricolage Grotesque", sans-serif; font-size: 23px; line-height: 1.3; font-weight: 500; letter-spacing: -.02em; }
+.subway-details summary > span { gap: 24px; align-items: baseline; }
+.subway-details summary small { min-width: 22px; font: 13px/1.5 "DM Sans", sans-serif; letter-spacing: 0; color: #536569; }
+.subway-details summary svg { flex: 0 0 20px; width: 20px; height: 20px; }
+.details-content { padding: 0 0 40px 46px; font-size: 16px; line-height: 1.75; color: #536569; }
+.details-content h3 { font-size: 27px; line-height: 1.22; letter-spacing: -.035em; text-wrap: balance; }
+.history-note { max-width: 73ch; margin: 0 0 30px; font-size: 16px; line-height: 1.75; }
+.details-content a { color: var(--ink); }
+.history-visuals { display: block; }
+.details-content .source-figure { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; gap: 40px; margin: 0; border: 0; border-radius: 0; background: transparent; }
+.source-figure > a { aspect-ratio: 4/3; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #eef1e9; }
+.details-content .source-figure figcaption { padding: 0; margin: 0; font-size: 16px; line-height: 1.75; }
+.source-figure figcaption .eyebrow { font-size: 11px; letter-spacing: .11em; margin-bottom: 12px; }
+.source-figure figcaption h3 { max-width: 26ch; font-size: 27px; line-height: 1.22; }
+.source-figure figcaption p:not(.eyebrow) { max-width: 60ch; margin: 16px 0; }
+.source-figure figcaption > a { font-size: 14px; }
+.history-comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; margin-top: 34px; padding: 32px 0 0; border-top: 1px solid var(--line); }
+.history-comparison h3 { max-width: 25ch; font-size: 27px; }
+.history-comparison p:not(.eyebrow) { max-width: 60ch; font-size: 16px; line-height: 1.75; margin: 0 0 16px; }
+.history-comparison-copy > a { display: block; width: fit-content; font-size: 14px; margin-top: 12px; }
+.history-followup { margin: 32px 0 0; max-width: 85ch; }
+.details-content .network-figure { margin: 0 0 36px; }
+.details-content .network-figure figcaption { font-size: 14px; line-height: 1.7; max-width: 90ch; margin-top: 14px; }
+.case-grid { gap: 36px; margin: 0; }
+.case-grid article { display: flex; flex-direction: column; }
+.case-grid h3 { font-size: 26px; line-height: 1.22; min-height: 0; text-wrap: balance; }
+.case-grid p { flex-grow: 1; font-size: 16px; line-height: 1.75; margin: 16px 0; }
+.case-grid a { width: fit-content; font-size: 14px; }
+.study-question { display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; max-width: none; padding: 32px 0 0; margin: 36px 0 0; border: 0; border-top: 1px solid var(--line); border-radius: 0; background: transparent; color: #536569; font-size: 16px; line-height: 1.75; }
+.study-question h3 { max-width: 23ch; }
+.study-question p { max-width: 65ch; margin: 0 0 16px; }
+.study-question a { font-size: 14px; }
+.source-intro { margin-bottom: 30px; }
+.source-intro > p:first-child { max-width: 72ch; margin: 0 0 10px; }
+.source-date { font-size: 13px; margin: 0; }
+.source-group { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 40px; margin: 0; padding: 30px 0; border-top: 1px solid var(--line); }
+.source-group > h3 { font-size: 23px; line-height: 1.25; letter-spacing: -.025em; text-wrap: pretty; }
+.source-group .subway-sources { margin: 0; gap: 28px 36px; }
+.subway-sources li { min-width: 0; scroll-margin-top: 32px; }
+.subway-sources a { font-size: 15px; font-weight: 500; line-height: 1.55; text-wrap: pretty; }
+.subway-sources span { font-size: 14px; line-height: 1.7; margin-top: 8px; }
+#sources .history-note { margin: 8px 0 12px; font-size: 14px; max-width: 85ch; }
+.source-download { font-size: 14px; margin-top: 0; }
+
+@media (max-width: 1050px) {
+  .subway-intro { padding: 44px 0 48px; }
+  .intro-copy p { font-size: 21px; }
+  .map-caption { display: block; }
+  .map-caption > a { display: inline-block; margin-top: 14px; }
+  .connection-strip { grid-template-columns: 1fr; gap: 28px; }
+  .areas-note { max-width: none; }
+  .source-group { grid-template-columns: 1fr; gap: 22px; }
+  .case-grid { gap: 24px; }
+  .case-grid h3 { font-size: 23px; }
+  .historic-map-figure figcaption { display: block; }
+  .historic-map-figure figcaption > a { display: inline-block; margin-top: 12px; }
+}
+@media (max-width: 760px) {
+  .subway-intro, .feature-heading, .interactive-heading { grid-template-columns: 1fr; gap: 22px; }
+  .subway-intro { padding: 36px 0 44px; }
+  .subway-intro h1 { font-size: clamp(44px, 7vw, 56px); }
+  .intro-copy { max-width: 65ch; margin-top: 0; }
+  .intro-copy p { font-size: 21px; }
+  .intro-copy .intro-context, .feature-heading > p, .interactive-heading > p { font-size: 16px; }
+  .historic-feature { margin-bottom: 44px; }
+  .feature-heading, .interactive-heading { margin-bottom: 22px; gap: 18px; }
+  .feature-heading h2, .interactive-heading h2 { font-size: 32px; }
+  .details-content { padding-left: 0; }
+  .details-content .source-figure { grid-template-columns: 1fr; gap: 24px; }
+  .history-comparison { grid-template-columns: 1fr; gap: 20px; }
+  .case-grid { grid-template-columns: 1fr; gap: 30px; }
+  .case-grid h3 { min-height: 0; font-size: 26px; text-wrap: pretty; }
+  .case-grid p { margin: 12px 0; }
+  .study-question { grid-template-columns: 1fr; gap: 18px; }
+  .study-question h3 { max-width: none; }
+}
+@media (max-width: 600px) {
+  .subway-main { padding: 0 20px; }
+  .eyebrow { font-size: 10px; margin-bottom: 12px; }
+  .subway-intro h1 { font-size: 46px; }
+  .intro-copy p { font-size: 20px; margin-bottom: 16px; }
+  .intro-copy .intro-context { margin-bottom: 16px; }
+  .concept-note { font-size: 13px; }
+  .concept-status { font-size: inherit; margin: 0; }
+  .feature-heading h2, .interactive-heading h2 { font-size: 30px; text-wrap: pretty; }
+  .historic-map-figure figcaption { font-size: 13px; line-height: 1.65; margin-top: 16px; }
+  .historic-map-figure figcaption strong { font-size: 14px; }
+  .map-caption { padding: 18px 16px; }
+  .map-caption p { font-size: 14px; }
+  .connection-strip { padding: 30px 0; gap: 24px; }
+  .connection-strip h2 { font-size: 25px; }
+  .connection-strip ol { grid-template-columns: 1fr; gap: 18px; }
+  .connection-strip li { padding: 0 0 0 22px; line-height: 1.6; }
+  .connection-strip li::before { width: 1px; height: auto; left: 3px; top: 9px; bottom: -27px; right: auto; }
+  .connection-strip li:last-child::before { display: none; }
+  .connection-strip li::after { top: 8px; left: 0; }
+  .connection-strip strong { display: inline-block; min-width: 94px; font-size: 14px; }
+  .connection-strip span { display: inline; font-size: 13px; margin: 0; }
+  .independence { font-size: 14px; margin-bottom: 32px; }
+  .subway-details { margin-bottom: 44px; }
+  .subway-details summary { padding: 23px 0; font-size: 21px; gap: 14px; }
+  .subway-details summary > span { gap: 13px; }
+  .subway-details summary small { min-width: 18px; font-size: 12px; }
+  .details-content { padding: 0 0 30px; }
+  .history-note { font-size: 16px; margin-bottom: 26px; }
+  .details-content h3, .source-figure figcaption h3, .history-comparison h3 { font-size: 25px; }
+  .details-content .source-figure figcaption { padding: 0; font-size: 16px; }
+  .history-comparison { margin-top: 28px; padding-top: 28px; }
+  .history-comparison p:not(.eyebrow) { font-size: 16px; }
+  .history-followup { margin: 30px 0 0; }
+  .details-content .network-figure { margin-bottom: 28px; }
+  .details-content .network-figure figcaption { font-size: 13px; }
+  .study-question { padding: 28px 0 0; margin-top: 30px; font-size: 16px; }
+  .source-group { gap: 22px; padding: 28px 0; }
+  .source-group > h3 { font-size: 23px; }
+  .source-group .subway-sources { grid-template-columns: 1fr; gap: 24px; }
+  .subway-sources a { font-size: 16px; }
+  .subway-sources span { font-size: 14px; }
+}
