@@ -54,3 +54,25 @@ html.disclosure-transition{scroll-behavior:auto;overflow-anchor:none}
 .details-content .source-figure>a img{position:absolute;inset:12px;width:calc(100% - 24px);height:calc(100% - 24px)}
 .source-figure-wide>a{aspect-ratio:16/5}
 @media(max-width:600px){.details-content .source-figure>a img{inset:8px;width:calc(100% - 16px);height:calc(100% - 16px)}}
+
+/* The original City Centre study is the first visual, outside the questions. */
+.historic-feature{margin:6px 0 54px}
+.feature-heading,.interactive-heading{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:25px}
+.feature-heading h2{font-size:clamp(34px,3.8vw,54px)}
+.feature-heading>p,.interactive-heading>p{max-width:56ch;margin:0 0 3px;font-size:15px;line-height:1.75;color:var(--muted)}
+.feature-heading strong{font-weight:600;color:var(--ink)}
+.historic-map-figure{margin:0}
+.historic-map-link{display:block;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:8px;cursor:zoom-in}
+.historic-map-link img{display:block;width:100%;height:auto;aspect-ratio:2401/1805;object-fit:contain}
+.historic-map-figure figcaption{display:flex;justify-content:space-between;align-items:start;gap:30px;margin-top:16px;font-size:12px;line-height:1.65}
+.historic-map-figure figcaption strong{display:block;font-size:14px;font-weight:600}
+.historic-map-figure figcaption div>span{display:block;margin-top:3px;color:var(--muted)}
+.historic-map-figure figcaption>a{flex-shrink:0;margin-top:2px}
+.interactive-heading{margin-bottom:24px}
+.interactive-heading h2{font-size:clamp(29px,3vw,42px)}
+.history-comparison{padding:18px 8px 0 6px}
+.history-comparison h3{font-size:27px;line-height:1.15;letter-spacing:-.035em}
+.history-comparison p:not(.eyebrow){max-width:52ch;font-size:14px;line-height:1.8;margin:16px 0}
+.history-comparison>a{display:block;width:fit-content;color:var(--ink);font-size:12px;margin-top:14px}
+@media(max-width:850px){.feature-heading,.interactive-heading{gap:30px}.feature-heading>p,.interactive-heading>p{font-size:14px}.historic-map-figure figcaption{gap:18px}.historic-feature{margin-bottom:42px}}
+@media(max-width:600px){.historic-feature{margin-top:12px;margin-bottom:35px}.feature-heading,.interactive-heading{grid-template-columns:1fr;gap:16px;margin-bottom:18px}.feature-heading h2 br{display:none}.feature-heading h2{font-size:34px}.feature-heading>p,.interactive-heading>p{font-size:13px;line-height:1.75}.historic-map-figure figcaption{display:block;font-size:11px;margin-top:12px}.historic-map-figure figcaption strong{font-size:12px}.historic-map-figure figcaption>a{display:inline-block;margin-top:10px}.interactive-heading h2{font-size:29px}.history-comparison{padding:6px 0 2px}.history-comparison h3{font-size:24px}.history-comparison p:not(.eyebrow){font-size:13px}}

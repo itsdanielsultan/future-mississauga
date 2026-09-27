@@ -1,0 +1,86 @@
+{
+  "edition": "2026-09-27 subway Toronto context",
+  "sourceEdition": "Toronto native massing 2025",
+  "buildingCount": 20679,
+  "countMeaning": "Native municipal massing records/components, not a count of separately verified 2026 occupied buildings.",
+  "coordinates": "Original 3D geodatabase EPSG:3857 horizontal metres; transformed to EPSG:26917. Display x=E-615000, y=absolute height-70, z=4827000-N.",
+  "sourceDate": "2025-12-05T13:38:35",
+  "reviewedAt": "2026-09-27T03:36:45.042914+00:00",
+  "coverage": {
+    "description": "Sherway and Kipling corridor in western Toronto, continuing the existing Mississauga model",
+    "boundsEPSG26917": [
+      614400.0,
+      4828600.0,
+      620400.0,
+      4835100.0
+    ],
+    "extentPolicy": "Toronto addition excludes the Mississauga city polygon; buildings are retained as complete source components by their envelope centres. Water is subtracted from terrain; no open-lake surface is added.",
+    "independentAudit": {
+      "allNativeRecordsScanned": 415656,
+      "allNativeTilesScanned": 164,
+      "corridorRecordsOmittedByLayerExtent": 0
+    }
+  },
+  "spatialCoverageValidation": "City source GDB spatial filters returned0 for some tiles despite coordinates in the query. All native records in intersecting tile extents were therefore read and explicitly tested against corridor land coverage.",
+  "heightMethod": "Municipal source buildings use zero-based relative 3D forms. Each intact native form is registered on median Ontario DTM grade sampled at its source base. Native relative heights are preserved. Small footprint-edge skirts close terrain gaps; they are display foundations, not surveyed structures.",
+  "roadMethod": "Source bridge height; 90 m blend only on mapped road polygons sharing >=5 m of boundary with bridge and <=1.5% overlap. Unrelated crossing roads are not raised merely by proximity. Highway bridge elevations are often absent from the source; those unspecified decks retain terrain-based context and are not claimed as surveyed bridge profiles. Bridge records without a valid source elevation remain terrain-based; highway deck heights are not survey-verified.",
+  "bridgeRecordsWithSourceElevation": 35,
+  "woodlandSimplificationMetres": 1.0,
+  "assets": [
+    {
+      "url": "models/subway-toronto-context.glb",
+      "kind": "ground",
+      "bytes": 13946804,
+      "sha256": "5380eba44d34e1d385e6fcc6c0daea5814877986ca2a33644af7b90aada16fe9",
+      "compression": "Lossless EXT_meshopt_compression; decoded positions/attributes checked byte-for-byte, triangle order and winding exact after cyclic index normalization"
+    },
+    {
+      "url": "models/subway-toronto-massing.glb",
+      "kind": "buildings",
+      "bytes": 12200268,
+      "sha256": "ce420b4406e500af7b4d7decedba532af4509e8eadc912b88c2052b9ed22d529",
+      "compression": "Lossless EXT_meshopt_compression; decoded positions/attributes checked byte-for-byte, triangle order and winding exact after cyclic index normalization"
+    }
+  ],
+  "sources": [
+    {
+      "name": "City of Toronto 3D Massing",
+      "url": "https://open.toronto.ca/dataset/3d-massing/",
+      "resourceURL": "https://ckan0.cf.opendata.inter.prod-toronto.ca/dataset/387b2e3b-2a76-4199-8b3b-0b7d22e2ec10/resource/ad1164e1-cd93-4314-b73c-e9ebf87a1c74/download/3dmassingmultipatch_2025_wgs84.zip",
+      "fileDate": "2025-12-05T13:38:35",
+      "scope": "2025 municipal native multipatch building geometry; catalogue filename says WGS84, actual geodatabase layers use EPSG:3857."
+    },
+    {
+      "name": "City of Toronto topographic road polygons",
+      "url": "https://open.toronto.ca/dataset/topographic-mapping-edge-of-road/",
+      "serviceURL": "https://gis.toronto.ca/arcgis/rest/services/cot_geospatial3/FeatureServer/3",
+      "scope": "Mapped road, intersection, ramp and bridge footprints. Record dates vary; bridge elevation attributes used where valid."
+    },
+    {
+      "name": "City of Toronto topographic context",
+      "url": "https://gis.toronto.ca/arcgis/rest/services/cot_geospatial3/FeatureServer",
+      "layers": [
+        9,
+        13,
+        16
+      ],
+      "scope": "Treed areas, parking and water polygons. Vegetation display outlines simplified within 1 m; streets and buildings are not simplified."
+    },
+    {
+      "name": "Ontario LiDAR-derived Digital Terrain Model",
+      "url": "https://data.ontario.ca/en/dataset/ontario-digital-terrain-model-lidar-derived",
+      "scope": "Reuses the atlas\u2019s 10 m DTM raster and vertical origin to keep ground continuous."
+    }
+  ],
+  "attribution": "Contains information licensed under the Open Government Licence \u2013 Toronto. Ontario terrain used under the Open Government Licence \u2013 Ontario.",
+  "licenceURLs": [
+    "https://open.toronto.ca/open-data-licence/",
+    "https://www.ontario.ca/page/open-government-licence-ontario"
+  ],
+  "limitations": [
+    "Toronto massing is municipal source context, not a new 2026 field survey. Missing or changed buildings may remain in the 2025 source.",
+    "The addition preserves source roof and wall geometry rather than assigning arbitrary heights or adding unverified Toronto development proposals.",
+    "Ground registration, bridge approach transitions and foundation skirts are illustrative, not engineering or survey-grade vertical control.",
+    "The purple line remains a separate author-created conceptual map overlay; Toronto context does not make it a selected or approved subway alignment."
+  ]
+}
