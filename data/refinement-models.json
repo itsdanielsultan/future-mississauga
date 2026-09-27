@@ -17509,6 +17509,295 @@
           3618.4912109375
         ]
       ]
+    },
+    {
+      "id": "port-credit-mapped-docks",
+      "assetId": "port-credit-mapped-docks",
+      "projectId": null,
+      "file": "outputs/models/supplemental/visual-polish/port-credit-mapped-docks.glb",
+      "url": "models/refinement/port-credit-mapped-docks.glb",
+      "sha256": "70d9db02ce011e03013d3c8bdc08baca8a25061ba2a47737dc1a4a113ba90fcd",
+      "bytes": 107132,
+      "downloadSHA256": "70d9db02ce011e03013d3c8bdc08baca8a25061ba2a47737dc1a4a113ba90fcd",
+      "downloadBytes": 107132,
+      "bounds": [
+        [
+          -766.1171875,
+          5.699999809265137,
+          3872.429443359375
+        ],
+        [
+          -47.512332916259766,
+          5.849999904632568,
+          4295.37939453125
+        ]
+      ],
+      "triangleCount": 4960,
+      "status": "Existing",
+      "modes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "replacementModes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "replacesSourceIds": [],
+      "includedByDefault": true,
+      "preserveMaterials": true,
+      "modelFidelity": "18 closed 2024 City dock outlines; illustrative elevation above lake display surface",
+      "coordinateSystem": "EPSG:26917; X=E\u2212615000, Y=elevation\u221270, Z=4827000\u2212N; metres, glTF Y-up",
+      "components": [
+        {
+          "name": "port-credit-city-2024-dock-01",
+          "sourceFeatureIDs": [
+            69176,
+            69177,
+            69178,
+            69179,
+            69180,
+            69380,
+            69381
+          ],
+          "sourceAreaM2": 415.9784235088663,
+          "modelFootprintAreaM2": 415.9784235088713,
+          "triangles": 152,
+          "watertight": true
+        },
+        {
+          "name": "port-credit-city-2024-dock-02",
+          "sourceFeatureIDs": [
+            69181,
+            69192,
+            69385,
+            69386
+          ],
+          "sourceAreaM2": 415.0152959004365,
+          "modelFootprintAreaM2": 415.0152959004239,
+          "triangles": 80,
+          "watertight": true
+        },
+        {
+          "name": "port-credit-city-2024-dock-03",
+          "sourceFeatureIDs": [
+            69182,
+            69203,
+            69204,
+            69249,
+            69250,
+            69393,
+            69394
+          ],
+          "sourceAreaM2": 281.66888515009936,
+          "modelFootprintAreaM2": 281.66888515010214,
+          "triangles": 300,
+          "watertight": true
+        },
+        {
+          "name": "port-credit-city-2024-dock-04",
+          "sourceFeatureIDs": [
+            69182,
+            69395,
+            69396,
+            69397
+          ],
+          "sourceAreaM2": 3.678471803201969,
+          "modelFootprintAreaM2": 3.6784718032019255,
+          "triangles": 12,
+          "watertight": true
+        },
+        {
+          "name": "port-credit-city-2024-dock-05",
+          "sourceFeatureIDs": [
+            69191,
+            69235
+          ],
+          "sourceAreaM2": 267.9778789655925,
+          "modelFootprintAreaM2": 267.97787896559544,
+          "triangles": 304,
+          "watertight": true
+        },
+        {
+          "name": "port-credit-city-2024-dock-06",
+          "sourceFeatureIDs": [
+            69193,
+            69194,
+            69195,
+            69196,
+            69197,
+            69198,
+            69199,
+            69200,
+            69218,
+            69219,
+            69238,
+            69239,
+            69240,
+            69241,
+            69242,
+            69243,
+            69244,
+            69245,
+            69246
+          ],
+          "sourceAreaM2": 623.7507619861229,
+          "modelFootprintAreaM2": 623.7507619861148,
+          "triangles": 532,
+          "watertight": true
+        },
+        {
+          "name": "port-credit-city-2024-dock-07",
+          "sourceFeatureIDs": [
+            69201,
+            69247,
+            69248
+          ],
+          "sourceAreaM2": 14.3764686376236,
+          "modelFootprintAreaM2": 14.376468637623185,
+          "triangles": 20,
+          "watertight": true
+        },
+        {
+          "name": "port-credit-city-2024-dock-08",
+          "sourceFeatureIDs": [
+            69210
+          ],
+          "sourceAreaM2": 33.3691591055292,
+          "modelFootprintAreaM2": 33.369159105529384,
+          "triangles": 60,
+          "watertight": true
+        },
+        {
+          "name": "port-credit-city-2024-dock-09",
+          "sourceFeatureIDs": [
+            69215,
+            69216,
+            69217
+          ],
+          "sourceAreaM2": 297.0315483190129,
+          "modelFootprintAreaM2": 297.0315483190077,
+          "triangles": 308,
+          "watertight": true
+        },
+        {
+          "name": "port-credit-city-2024-dock-10",
+          "sourceFeatureIDs": [
+            69220,
+            69221,
+            69222
+          ],
+          "sourceAreaM2": 260.2898140176748,
+          "modelFootprintAreaM2": 260.2898140176694,
+          "triangles": 260,
+          "watertight": true
+        },
+        {
+          "name": "port-credit-city-2024-dock-11",
+          "sourceFeatureIDs": [
+            69223,
+            69224,
+            69225
+          ],
+          "sourceAreaM2": 146.24089620728392,
+          "modelFootprintAreaM2": 146.2408962072862,
+          "triangles": 160,
+          "watertight": true
+        },
+        {
+          "name": "port-credit-city-2024-dock-12",
+          "sourceFeatureIDs": [
+            69226,
+            69227,
+            69228
+          ],
+          "sourceAreaM2": 414.25639371746587,
+          "modelFootprintAreaM2": 414.2563937174661,
+          "triangles": 408,
+          "watertight": true
+        },
+        {
+          "name": "port-credit-city-2024-dock-13",
+          "sourceFeatureIDs": [
+            69233,
+            69234,
+            69390,
+            69391,
+            69392
+          ],
+          "sourceAreaM2": 292.51008600999245,
+          "modelFootprintAreaM2": 292.5100860099883,
+          "triangles": 364,
+          "watertight": true
+        },
+        {
+          "name": "port-credit-city-2024-dock-14",
+          "sourceFeatureIDs": [
+            69253
+          ],
+          "sourceAreaM2": 152.86935493040045,
+          "modelFootprintAreaM2": 152.86935493040397,
+          "triangles": 128,
+          "watertight": true
+        },
+        {
+          "name": "port-credit-city-2024-dock-15",
+          "sourceFeatureIDs": [
+            69255
+          ],
+          "sourceAreaM2": 451.04613408034413,
+          "modelFootprintAreaM2": 451.0461340803401,
+          "triangles": 460,
+          "watertight": true
+        },
+        {
+          "name": "port-credit-city-2024-dock-16",
+          "sourceFeatureIDs": [
+            69258,
+            69398,
+            69399,
+            69400
+          ],
+          "sourceAreaM2": 1146.3885978050398,
+          "modelFootprintAreaM2": 1146.388597805055,
+          "triangles": 1036,
+          "watertight": true
+        },
+        {
+          "name": "port-credit-city-2024-dock-17",
+          "sourceFeatureIDs": [
+            69382,
+            69383,
+            69384
+          ],
+          "sourceAreaM2": 63.83137986400048,
+          "modelFootprintAreaM2": 63.83137986400038,
+          "triangles": 36,
+          "watertight": true
+        },
+        {
+          "name": "port-credit-city-2024-dock-18",
+          "sourceFeatureIDs": [
+            69387,
+            69388,
+            69389
+          ],
+          "sourceAreaM2": 257.3755934818689,
+          "modelFootprintAreaM2": 257.3755934818716,
+          "triangles": 340,
+          "watertight": true
+        }
+      ],
+      "warning": "Dock outlines come from 2024 mapping. Deck base Y5.7m and 0.15m thickness are display approximations, not a structural survey or evidence of the proposed marina redevelopment. Open linework is not arbitrarily closed. Original city building and ground meshes remain unchanged.",
+      "attribution": "City of Mississauga planimetric geographic data.",
+      "sources": [
+        {
+          "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Planimetric_Lines/FeatureServer/0",
+          "publisher": "City of Mississauga",
+          "claim": "2024 DockWharfPier edge linework; exactly closed faces polygonized without new closure lines."
+        }
+      ]
     }
   ],
   "projectUpdates": [
