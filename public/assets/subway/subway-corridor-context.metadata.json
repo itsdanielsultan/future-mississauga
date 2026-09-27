@@ -1,0 +1,69 @@
+{
+  "title": "City Centre and Cooksville: an illustrative connection",
+  "file": "assets/subway/subway-corridor-context.png",
+  "width": 2516,
+  "height": 1154,
+  "sha256": "a9d6a3dbab717c2fdc9f81f39e70f25e7fe06dd56292d1a33e8138a7998dffdf",
+  "bytes": 1903180,
+  "createdAt": "2026-09-27T02:44:50.354857+00:00",
+  "caption": "City Centre and Cooksville in the current Future Mississauga model. The purple connection is an illustrative sketch, not an approved subway alignment.",
+  "source": "Current Future Mississauga 3D subway viewer, Cooksville view, future-building scenario with connection overlay.",
+  "method": "Actual browser map/canvas capture with vector connection overlay and labels. No architecture, route or shoreline was invented or retouched for the image.",
+  "capture": {
+    "viewportCSS": [
+      2000,
+      1400
+    ],
+    "devicePixelRatio": 1.75,
+    "rawScreenshotPixels": [
+      3500,
+      2450
+    ],
+    "mapBoundsCSS": [
+      281,
+      409.390625,
+      1438,
+      660
+    ],
+    "nativeWebGLCanvasPixels": [
+      2516,
+      1155
+    ],
+    "cropPixels": [
+      492,
+      717,
+      3008,
+      1871
+    ],
+    "lowResolutionUpscaling": false,
+    "resampling": false,
+    "browserCaptureEncoding": "PNG",
+    "deliveredEncoding": "PNG",
+    "decodedCropPixelsUnchanged": true,
+    "uiControlsHiddenOnlyDuringCapture": true,
+    "edgeHandling": "Exact integer-pixel crop inside map bounds; one boundary row omitted to exclude toolbar/footer pixels."
+  },
+  "camera": {
+    "view": "cooksville",
+    "target": [
+      -3670,
+      70,
+      590
+    ],
+    "position": [
+      -1000,
+      1550,
+      2560
+    ],
+    "fovDegrees": 35
+  },
+  "water": {
+    "asset": "models/subway-coastal-water.glb",
+    "sha256": "e68bad4f2085f03da1312be289705a3dac41f494a2de1407792cdb5027c51aed",
+    "coastalDisplayDistanceM": 400,
+    "scope": "Display crop only; the lake continues beyond the scene boundary."
+  },
+  "subwayViewerSHA256": "e95d40a7b2d8e989713bbddf3eb52d974cb78b17c2a81608123cd9f6b7249080",
+  "routeDataSHA256": "c35df255c27f1cf7f9439988ad79fdd53fbc5e20915e3bea6c4f8c2edd951903",
+  "limitations": "Existing model coverage and approximate massing remain. This is a geographic illustration, not a tunnel, track, viaduct, station or engineering design. No affiliation with the City, TTC, Metrolinx or a campaign."
+}

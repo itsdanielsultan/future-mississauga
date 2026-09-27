@@ -39,14 +39,14 @@
       "sha256": "91e41c91548b537c85499f4a6af9728a043bb7080e6c589353ba4da0311277e4"
     },
     {
-      "file": "assets/subway/city-centre-network.svg",
-      "bytes": 4207,
-      "sha256": "815789004e0874408f0e9cc4a40661e910cf60071d574c44daf34f72b78e9f93"
+      "file": "assets/subway/2001-city-centre-original.png",
+      "bytes": 685757,
+      "sha256": "87f1fd05d5fa538a36209c5c493a79181f4523d9b9de20e5d32ab4f08f0e236a"
     },
     {
-      "file": "assets/subway/construction-sections.svg",
-      "bytes": 3022,
-      "sha256": "5a51c9253567c3cc6e5926f445e36f3920901efae300930840f258f575d41355"
+      "file": "assets/subway/2001-kipling-dixie-original.png",
+      "bytes": 3491150,
+      "sha256": "2e4856535ad704a3ccb679320b90dcadf3ea31bb045465c3b743794e4d0c4952"
     },
     {
       "file": "assets/subway/downtown-context.png",
@@ -54,14 +54,19 @@
       "sha256": "a01f811dabda87b4ed8a1b17237707c4af166cecb187ac37544b806736258281"
     },
     {
-      "file": "assets/subway/historic-options.svg",
-      "bytes": 3965,
-      "sha256": "29c9d9ee417197abcbc56380a47157eafe9c5e9b6ccfefe7f5bb837adbcfc94c"
+      "file": "assets/subway/dundas-subway-alternatives-original.png",
+      "bytes": 678495,
+      "sha256": "fc96d8167d9f2c4c4fe122f84cc7cca0be011f9a2f4ad94a2506d082362b0fa3"
     },
     {
-      "file": "assets/subway/station-cutaway.svg",
-      "bytes": 3125,
-      "sha256": "429397f0843e7ec1830fbae4bd1dfad46eb518d2561bc039bf1e09c86e98cc19"
+      "file": "assets/subway/subway-corridor-context.metadata.json",
+      "bytes": 2354,
+      "sha256": "beed314d7130f7a0a3b9ab4a6773543613764447f1f751ca9c71f220bcdfb637"
+    },
+    {
+      "file": "assets/subway/subway-corridor-context.png",
+      "bytes": 1903180,
+      "sha256": "a9d6a3dbab717c2fdc9f81f39e70f25e7fe06dd56292d1a33e8138a7998dffdf"
     },
     {
       "file": "checkpoints/01-lighting/Checkpoint.json",
@@ -330,8 +335,8 @@
     },
     {
       "file": "data/model-asset-versions.json",
-      "bytes": 15347,
-      "sha256": "bb847b537f3458c8cc916af08a8adcfb9beaf1ba4077342f4db35188bb64032f"
+      "bytes": 15454,
+      "sha256": "ff31a85d89d64140b1e0a100000bfa7be9a3d8ffc6cf6deba861ec64954504b7"
     },
     {
       "file": "data/overrides.json",
@@ -410,13 +415,13 @@
     },
     {
       "file": "data/subway-map.json",
-      "bytes": 2904,
-      "sha256": "c35df255c27f1cf7f9439988ad79fdd53fbc5e20915e3bea6c4f8c2edd951903"
+      "bytes": 5179,
+      "sha256": "fd78d6524c9823577c5b2a52649c983841a2ed80e3442a30e8438a52a23429a1"
     },
     {
       "file": "data/subway-sources.json",
-      "bytes": 7331,
-      "sha256": "c77cee95873663ed97be9437c61b72449a6d5ba31cddca9affca8badeb6dbd08"
+      "bytes": 16674,
+      "sha256": "2cec3972d278a0b58e63c9c8f8224230bc401ee378e82fc8e3b51ae4c5659c06"
     },
     {
       "file": "data/transit-layer-manifest.json",
@@ -1899,6 +1904,11 @@
       "sha256": "af637271fef72c40c8e90a66e143fd7edbd1323af0fa58e627885bedd34ac162"
     },
     {
+      "file": "models/subway-coastal-water.glb",
+      "bytes": 678224,
+      "sha256": "e68bad4f2085f03da1312be289705a3dac41f494a2de1407792cdb5027c51aed"
+    },
+    {
       "file": "models/supplemental/pearson-airfield-context.json",
       "bytes": 1462,
       "sha256": "bd63fd97620556298d08da441095c4574c09956a8ea759c0a54d998e8f8c15ad"
@@ -2080,23 +2090,23 @@
     },
     {
       "file": "subway-accordions.js",
-      "bytes": 4018,
-      "sha256": "fb964f8686d0e7453d4413c6bb6131ccc95c97d190b083ab96e767fe5ebf15c0"
+      "bytes": 7315,
+      "sha256": "25b54566fc3c70e65c20b1ea427bf41a4d921ed2eeadc55720e2acce5e38e9be"
     },
     {
       "file": "subway.css",
-      "bytes": 9651,
-      "sha256": "af9cc98c0b90ce809b99bf30667597a8edfac71a493dcd2f9a378e426c72aa56"
+      "bytes": 13192,
+      "sha256": "7ed6fffa7cc0585f598f179a802bf2ac879fea91c404906a78dab25d11eebdd6"
     },
     {
       "file": "subway.html",
-      "bytes": 12034,
-      "sha256": "ebc3106b68be4cbcf2045d130dd268ef1daa063a9266e3bf4f957e0f24def85c"
+      "bytes": 18893,
+      "sha256": "b9d4279cee4e91f1ff43767dfb8f89ee2fcc8e64c3e26a559347988a1711189d"
     },
     {
       "file": "subway.js",
-      "bytes": 13039,
-      "sha256": "ba040b39dcdbca55708818e7d4c4f27e5b631b3b00c86855394c8488dcbb5aeb"
+      "bytes": 13832,
+      "sha256": "e95d40a7b2d8e989713bbddf3eb52d974cb78b17c2a81608123cd9f6b7249080"
     },
     {
       "file": "vendor/addons/controls/OrbitControls.js",
@@ -2369,7 +2379,7 @@
       "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
     }
   ],
-  "publishedBytes": 933070927,
+  "publishedBytes": 940521983,
   "originalPNGCount": 33,
   "displayPNGCount": 33,
   "displayScale": 0.5,
