@@ -4,148 +4,285 @@
   "sources": [
     {
       "id": "campaign-2026",
-      "title": "Mississauga Moves 2.0 campaign announcement",
-      "publisher": "Bonnie Crombie campaign",
+      "title": "Mississauga Moves 2.0 announcement",
+      "publisher": "Bonnie Crombie mayoral campaign",
       "date": "2026-09-24",
       "url": "https://www.bonniecrombie.ca/news/mississauga-moves-2",
-      "type": "Candidate proposal, not government project approval",
-      "supports": [
-        "Proposed Kipling\u2013Sherway\u2013Mississauga connection",
-        "Business case proposed for routes, stations, ridership, costs and construction options",
-        "Elevated construction proposed for examination"
-      ]
+      "supports": "Current campaign proposal: Line 2 from Kipling through Sherway into downtown Mississauga; proposes a business case rather than selecting an alignment.",
+      "limits": "Campaign advocacy, not a City/TTC/Metrolinx decision. No verified matching Carolyn Parrish subway announcement was found in this bounded search."
+    },
+    {
+      "id": "campaign-plan",
+      "title": "Mississauga Moves 2.0 plan",
+      "publisher": "Bonnie Crombie mayoral campaign",
+      "date": "2026-09-24 announcement; PDF undated internally",
+      "url": "https://www.bonniecrombie.ca/downloads/Crombie-Mississauga-Moves-2.0-Plan.pdf",
+      "pages": [
+        2,
+        3
+      ],
+      "supports": "Business case to choose route, stations and terminus; examine Dundas alongside other options, tunnelling/elevated construction, fleet, power, signalling, Line 2 capacity and western yard.",
+      "limits": "Do not attribute authored map or named map locations to an officially selected campaign route. No detailed route map appears in the relevant plan pages."
     },
     {
       "id": "toronto-2024",
-      "title": "Toronto Council item 2024.EX12.5, recommendation 7",
-      "publisher": "City of Toronto",
+      "title": "EX12.5 Prioritization of Planned Higher-Order Transit Projects",
+      "publisher": "Toronto City Council",
       "date": "2024-03-20/21",
       "url": "https://secure.toronto.ca/council/agenda-item.do?item=2024.EX12.5",
-      "type": "Council direction for further reporting",
-      "supports": [
-        "Requested an approach and timing report about a potential Line 2 extension to Sherway; not construction approval"
-      ]
-    },
-    {
-      "id": "rtes-board",
-      "title": "Rapid Transit Expansion Study: Screening of Options",
-      "publisher": "Toronto Transit Commission",
-      "date": "2001-08-29",
-      "url": "https://cdn.ttc.ca/-/media/Project/TTC/DevProto/Documents/Home/Public-Meetings/Board/2001/August-29/Other/Rapid_Transit_Expans.pdf?hash=627DE4CE5084867CE83FE9C7EF325828&rev=57f664b695274171bb39cb60bce1bb4d",
-      "type": "Official public primary report",
-      "supports": [
-        "RTES policy context, priorities and funding caveats"
-      ]
+      "supports": "Adopted recommendation 7 requested a report by Q3 2025 on Etobicoke transit needs including timing and approach to a Line 2 extension to Sherway.",
+      "limits": "Reporting direction, not construction approval or a City Centre alignment. No later completed Sherway business case or approval established in this review."
     },
     {
       "id": "rtes-map",
-      "title": "TTC RTES Executive Summary, section 7.4.5 and exhibits ES-14 / ES-15",
-      "publisher": "Toronto Transit Commission; archival mirror hosted by Transit Toronto",
+      "title": "Rapid Transit Expansion Study: Executive Summary",
+      "publisher": "Toronto Transit Commission / City of Toronto; archival copy hosted by Transit Toronto",
       "date": "2001-08",
-      "url": "https://transittoronto.ca/archives/reports/rtes2002.pdf#page=25",
-      "type": "Archived primary document",
-      "supports": [
-        "Historical City Centre option D3 explicitly screened out",
-        "Broad historical corridor and diagram, not current approved stations"
-      ]
+      "url": "https://transittoronto.ca/archives/reports/rtes2002.pdf",
+      "pages": [
+        21,
+        24,
+        25,
+        26
+      ],
+      "supports": "ES14 shows shorter western options; ES15 shows City Centre D3 and explicitly screens it out. Narrative cites then-regional priorities and length/cost for short/medium-term staging.",
+      "limits": "Historical assumptions. Filename rtes2002.pdf is not the internal study date. D1/D2 labels and distances vary between narrative, summary table and figures; use named destinations rather than reproduce precise costs or lengths."
+    },
+    {
+      "id": "rtes-board",
+      "title": "Rapid Transit Expansion Study — Screening of Options",
+      "publisher": "Toronto Transit Commission",
+      "date": "2001-08-29",
+      "url": "https://cdn.ttc.ca/-/media/Project/TTC/DevProto/Documents/Home/Public-Meetings/Board/2001/August-29/Other/Rapid_Transit_Expans.pdf?hash=627DE4CE5084867CE83FE9C7EF325828&rev=57f664b695274171bb39cb60bce1bb4d",
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "supports": "Official dated board-report provenance for 2001 screening and executive summary.",
+      "limits": "Staff recommendations are not evidence that a Mississauga extension was funded."
     },
     {
       "id": "city-history",
-      "title": "Historical Background on Rapid Transit in Mississauga, report page 5",
+      "title": "Historical Background on Rapid Transit in Mississauga",
       "publisher": "City of Mississauga",
-      "date": "2015-02-18",
-      "url": "https://www7.mississauga.ca/documents/agendas/committees/general/2015/03_04_15_GC_Agenda.pdf#page=126",
-      "type": "Official public historical review",
-      "supports": [
-        "1993 western EA and later RTES review",
-        "No record found of a government offer of a subway extension at no cost to Mississauga"
-      ]
+      "date": "2015-02-18; General Committee agenda 2015-03-04",
+      "url": "https://www7.mississauga.ca/documents/agendas/committees/general/2015/03_04_15_GC_Agenda.pdf#page=122",
+      "pages": [
+        122,
+        123,
+        124,
+        125,
+        126
+      ],
+      "supports": "Public retrospective describes 1993 western-extension EA, later 2001 assessment, and says its records search found no government offer to extend the subway at no cost to Mississauga.",
+      "limits": "Historical cost and travel-time estimates are not current. No-record-found is narrower than proof no offer ever existed."
     },
     {
       "id": "dundas-options",
-      "title": "Dundas Connects Phase 2 panels, transit alternatives, PDF page 3",
+      "title": "Dundas Connects Phase 2 Open House Panels, Part 2",
       "publisher": "City of Mississauga",
-      "date": "2016\u20132018 consultation period",
+      "date": "2016–2018 consultation period; exact panel date not established",
       "url": "https://www.mississauga.ca/wp-content/uploads/2021/03/01140306/Dundas_Connects_PIC_2_FINAL_Panels-Part-2-compressed.pdf#page=3",
-      "type": "Historical alternatives, not final project choice",
-      "supports": [
-        "1993 EA via East Mall / West Mall / Dixie",
-        "Dundas subway alternative to Cooksville GO"
-      ]
+      "pages": [
+        3
+      ],
+      "supports": "Bottom panel compares 1993 TTC EA route via East Mall, West Mall and Dixie with a Dundas subway alternative to Cooksville GO.",
+      "limits": "Consultation alternatives, not the adopted plan. Upload directory 2021 is not study date. Original panel has schematic geography and historical LRT stop arrangement."
     },
     {
       "id": "dundas-decision",
-      "title": "Dundas Connects Master Plan",
+      "title": "Dundas Connects",
       "publisher": "City of Mississauga",
-      "date": "2018-06-18 endorsement",
+      "date": "Council endorsement June 2018",
       "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/dundas-connects/",
-      "type": "Adopted corridor planning direction",
-      "supports": [
-        "Council endorsed Master Plan in 2018",
-        "BRT recommended for Dundas corridor"
-      ]
+      "supports": "Adopted direction includes BRT, mixed-use growth, cycling and pedestrian improvements.",
+      "limits": "Two official pages disagree June18 versus June20; use month/year unless council minutes resolve exact day."
+    },
+    {
+      "id": "dundas-construction",
+      "title": "Building the Dundas Bus Rapid Transit",
+      "publisher": "City of Mississauga",
+      "date": "Undated live project page; checked 2026-09-27 UTC",
+      "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/building-the-dundas-bus-rapid-transit/",
+      "supports": "Mississauga East is the first construction segment planned; dedicated median bus lanes; construction schedule under development.",
+      "limits": "Do not carry forward an older 2024 page’s anticipated 2026 construction start as a verified current start or claim the full 48 km is funded."
+    },
+    {
+      "id": "dundas-epr",
+      "title": "Dundas Bus Rapid Transit environmental assessment",
+      "publisher": "City of Mississauga",
+      "date": "EPR notice 2022-02-22",
+      "url": "https://www.mississauga.ca/projects-and-strategies/environmental-assessments/dundas-bus-rapid-transit/",
+      "supports": "Mississauga East environmental report completed; segment Etobicoke Creek to Confederation Parkway.",
+      "limits": "Environmental-report completion is not construction completion."
     },
     {
       "id": "dundas-current",
-      "title": "Dundas BRT project",
+      "title": "Dundas BRT",
       "publisher": "Metrolinx",
-      "date": "Current page reviewed 2026-09-26",
+      "date": "Undated live project page; checked 2026-09-27 UTC",
       "url": "https://www.metrolinx.com/en/projects-and-programs/dundas-brt",
-      "type": "Separate current transit project",
-      "supports": [
-        "BRT planning remains an active separate project",
-        "Kipling and Hazel McCallion Line connections"
-      ]
+      "supports": "48 km corridor to Kipling; links to HML; initial business case supports improved bus infrastructure.",
+      "limits": "BRT forecasts do not establish demand for a subway. Funding and design differ by segment."
+    },
+    {
+      "id": "hub",
+      "title": "Downtown Mobility Hub and Transitway Connection",
+      "publisher": "City of Mississauga",
+      "date": "2026 current study; June2026 PIC",
+      "url": "https://www.mississauga.ca/projects-and-strategies/environmental-assessments/downtown-mobility-hub-and-transitway-connection/",
+      "supports": "Assessment and preliminary design underway around Rathburn, Station Gate and Centre View; links to future developments and Transitway.",
+      "limits": "Bus/transit hub project, not a subway approval."
+    },
+    {
+      "id": "hub-panels",
+      "title": "Downtown Mobility Hub & Transitway Connection PIC1 panels",
+      "publisher": "City of Mississauga",
+      "date": "2026-06-04 event; publication page dated June3",
+      "url": "https://www.mississauga.ca/wp-content/uploads/2026/06/02100032/DMHTC_PIC1_Panels.pdf",
+      "pages": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "supports": "Existing City Centre Transit Terminal at capacity; planned integration of MiWay/GO buses, LRT pedestrian connection and Transitway. Future funding/design/procurement stages shown.",
+      "limits": "No subway reference; capacity statement is about bus terminal, not proof of subway ridership."
     },
     {
       "id": "hml",
-      "title": "Hazel McCallion Line project",
+      "title": "Hazel McCallion Line",
       "publisher": "Metrolinx",
-      "date": "Current page reviewed 2026-09-26",
+      "date": "Undated live project page; checked 2026-09-27 UTC",
       "url": "https://www.metrolinx.com/en/projects-and-programs/hazel-mccallion-lrt",
-      "type": "Existing project context",
-      "supports": [
-        "18 km core light rail project and links with GO and Transitway"
-      ]
+      "supports": "18 km/19-stop core line planned to link Lakeshore West and Milton GO, Transitway, MiWay and Brampton services.",
+      "limits": "Future service; do not imply open, assume opening date, or merge separate downtown-loop status into core scope."
+    },
+    {
+      "id": "downtown-growth",
+      "title": "Mississauga Official Plan 2051, Chapter12 Downtown Core",
+      "publisher": "City of Mississauga",
+      "date": "2025-04-16 document",
+      "url": "https://www.mississauga.ca/wp-content/uploads/2026/03/20104720/MOP-2051-Chapter12-Downtown-Core-April-16-2025.pdf",
+      "pages": [
+        2,
+        5,
+        9
+      ],
+      "supports": "Highest-density mixed-use centre; growth and transit connections; need to balance housing with employment; Rathburn/StationGate terminal.",
+      "limits": "Policy direction and anticipated growth do not themselves establish subway cost-effectiveness; avoid assertion about this chapter’s current legal force without separate plan-status verification."
+    },
+    {
+      "id": "downtown-vision",
+      "title": "City unveils vision to transform downtown core",
+      "publisher": "City of Mississauga",
+      "date": "2026-03-11",
+      "url": "https://www.mississauga.ca/city-of-mississauga-news/news/mississauga-unveils-once-in-a-generation-vision-to-transform-the-downtown-core/",
+      "supports": "Council-endorsed vision for 12 acres near City Hall including housing, offices, hotel/convention and cultural uses.",
+      "limits": "Vision for further analysis, business cases and delivery strategy; not all approved/funded buildings."
+    },
+    {
+      "id": "city-priorities",
+      "title": "City outlines advocacy priorities ahead of 2026 Provincial budget",
+      "publisher": "City of Mississauga",
+      "date": "2026-02",
+      "url": "https://www.mississauga.ca/city-of-mississauga-news/news/making-more-possible-for-mississauga-city-outlines-advocacy-priorities-ahead-2026-provincial-budget/",
+      "supports": "Requests HML downtown-loop implementation/timing, all-day Milton GO and further DundasBRT east-to-Kipling/west-to-UTM studies.",
+      "limits": "Advocacy requests do not prove secured funding or announced completion dates."
     }
   ],
-  "privacy": "Only public source links and original drawings are published. Private email correspondence, personal contact details and emailed newspaper scans are excluded.",
+  "privacy": "Only public document excerpts, source links and authored city illustrations are published. Private messages, contact details and emailed newspaper scans are excluded.",
   "diagrams": [
     {
-      "file": "assets/subway/historic-options.svg",
-      "basis": "Redrawn from public TTC and City historical diagrams; endpoints and scope simplified",
-      "geometryStatus": "Schematic; not georeferenced; no approved new stations, sites, depths or dimensions"
+      "file": "assets/subway/2001-kipling-dixie-original.png",
+      "sourceURL": "https://transittoronto.ca/archives/reports/rtes2002.pdf#page=24",
+      "sourcePDFSHA256": "8e7cb994894cb537683290531eb2672289c72776e376a45c952291553da80e8f",
+      "page": 24,
+      "clipInUnrotatedPDFPoints": [
+        43,
+        34,
+        571,
+        754
+      ],
+      "clockwiseRotation": 90,
+      "width": 2401,
+      "height": 1761,
+      "bytes": 3491150,
+      "sha256": "2e4856535ad704a3ccb679320b90dcadf3ea31bb045465c3b743794e4d0c4952",
+      "treatment": "Direct PDF rendering with white-margin crop and orientation correction; source route graphics, legends, title and outcome stamps retained. No AI reconstruction.",
+      "basis": "Attributed extract from an original historical TTC or City report, rendered from the source PDF.",
+      "geometryStatus": "Original historical study illustration, not the authored route in the interactive map. Historical network and station assumptions apply."
     },
     {
-      "file": "assets/subway/city-centre-network.svg",
-      "basis": "Author-selected study areas inspired by the 2001 corridor and 2026 public discussion; no selected engineering alignment",
-      "geometryStatus": "Schematic; not georeferenced; no approved new stations, sites, depths or dimensions"
+      "file": "assets/subway/2001-city-centre-original.png",
+      "sourceURL": "https://transittoronto.ca/archives/reports/rtes2002.pdf#page=25",
+      "sourcePDFSHA256": "8e7cb994894cb537683290531eb2672289c72776e376a45c952291553da80e8f",
+      "page": 25,
+      "clipInUnrotatedPDFPoints": [
+        42,
+        47,
+        566,
+        744
+      ],
+      "clockwiseRotation": 90,
+      "width": 2401,
+      "height": 1805,
+      "bytes": 685757,
+      "sha256": "87f1fd05d5fa538a36209c5c493a79181f4523d9b9de20e5d32ab4f08f0e236a",
+      "treatment": "Direct PDF rendering with white-margin crop and orientation correction; source route graphics, legends, title and outcome stamps retained. No AI reconstruction.",
+      "basis": "Attributed extract from an original historical TTC or City report, rendered from the source PDF.",
+      "geometryStatus": "Original historical study illustration, not the authored route in the interactive map. Historical network and station assumptions apply."
     },
     {
-      "file": "assets/subway/station-cutaway.svg",
-      "basis": "Original generic station arrangement; not a representation of actual subsurface conditions",
-      "geometryStatus": "Schematic; not georeferenced; no approved new stations, sites, depths or dimensions"
-    },
-    {
-      "file": "assets/subway/construction-sections.svg",
-      "basis": "Original generic elevated and tunnel sections; no engineering or cost comparison claimed",
-      "geometryStatus": "Schematic; not georeferenced; no approved new stations, sites, depths or dimensions"
+      "file": "assets/subway/dundas-subway-alternatives-original.png",
+      "sourceURL": "https://www.mississauga.ca/wp-content/uploads/2021/03/01140306/Dundas_Connects_PIC_2_FINAL_Panels-Part-2-compressed.pdf#page=3",
+      "sourcePDFSHA256": "bf5fd27827bab8cc4a5f968831e1be35539c4555a095ec4a3e443fd295e86a2c",
+      "page": 3,
+      "clipInUnrotatedPDFPoints": [
+        0,
+        2610,
+        2592,
+        3420
+      ],
+      "clockwiseRotation": 0,
+      "width": 5184,
+      "height": 1620,
+      "bytes": 678495,
+      "sha256": "fc96d8167d9f2c4c4fe122f84cc7cca0be011f9a2f4ad94a2506d082362b0fa3",
+      "treatment": "Direct PDF rendering with white-margin crop and orientation correction; source route graphics, legends, title and outcome stamps retained. No AI reconstruction.",
+      "basis": "Attributed extract from an original historical TTC or City report, rendered from the source PDF.",
+      "geometryStatus": "Original historical study illustration, not the authored route in the interactive map. Historical network and station assumptions apply."
     }
   ],
-  "contextImage": {
-    "file": "assets/subway/downtown-context.png",
-    "copiedUnchangedFrom": "gallery/previews/591ee7eb58bfd53e/downtown-future.png",
-    "sha256": "c7554134b9de07461ac1a56109c41618fa51dc0dfc673d0077f84e415b65b1d9",
-    "sourceMasterSHA256": "591ee7eb58bfd53e87e3adbdf6ecf620e86f96c638826012c21f216a2d9f161c",
-    "status": "Existing Future Mississauga retained-development model illustration; mixed source dates, approximate forms and coverage limits remain. Not a subway station site plan."
-  },
-  "attributionFinding": "Verified 2026-09-24 campaign proposal is Bonnie Crombie\u2019s. No matching Carolyn Parrish subway announcement was established in this bounded review.",
+  "attributionFinding": "Verified 2026-09-24 campaign proposal is Bonnie Crombie’s. No matching Carolyn Parrish subway announcement was established in this bounded review.",
   "interactiveMap": {
     "file": "data/subway-map.json",
     "viewer": "subway.js",
     "basis": "Author-selected geographic sketch inspired by the historical broad corridor and current public discussion; not an official route trace.",
     "geometryStatus": "Illustrative cartographic overlay; no selected station sites, tunnels, viaducts, depths or dimensions.",
     "cityContext": "Current atlas municipal context, building models and applicable refinement assets; low-rise context omitted in this citywide view.",
-    "coverageLimit": "Eastern Toronto end is outside detailed Mississauga model coverage."
+    "coverageLimit": "Eastern Toronto end is outside detailed Mississauga model coverage.",
+    "waterDisplay": "For this page only, open Lake Ontario water is limited to 400m beyond the mapped coast. The original coastline, nearby island holes and inland water are preserved; the offshore display edge is not a real shoreline."
+  },
+  "reviewedAtUTC": "2026-09-27T02:40:49.353025+00:00",
+  "narrative": "The 2026 campaign call for a new business case is distinct from the 2001 screened-out City Centre option, the adopted 2018 Dundas BRT plan, and the author-selected purple map corridor.",
+  "socialPreviewContext": {
+    "file": "assets/subway/downtown-context.png",
+    "copiedUnchangedFrom": "gallery/previews/591ee7eb58bfd53e/downtown-future.png",
+    "sha256": "c7554134b9de07461ac1a56109c41618fa51dc0dfc673d0077f84e415b65b1d9",
+    "sourceMasterSHA256": "591ee7eb58bfd53e87e3adbdf6ecf620e86f96c638826012c21f216a2d9f161c",
+    "status": "Existing Future Mississauga retained-development model illustration; mixed source dates, approximate forms and coverage limits remain. Not a subway station site plan."
+  },
+  "contextImage": {
+    "file": "assets/subway/subway-corridor-context.png",
+    "width": 2516,
+    "height": 1154,
+    "bytes": 1903180,
+    "sha256": "a9d6a3dbab717c2fdc9f81f39e70f25e7fe06dd56292d1a33e8138a7998dffdf",
+    "basis": "Native browser rendering of the existing city model and authored SVG route overlay, using the corrected page-only coast extent.",
+    "capture": "Lossless CDP PNG capture and exact pixel crop, without resampling or JPEG compression.",
+    "status": "Illustrative city context, not an approved alignment or engineered station layout."
   }
 }

@@ -1,61 +1,106 @@
 const panels = [...document.querySelectorAll('.subway-details > details')];
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+const root = document.documentElement;
 const states = new Map();
+let active = null;
+let frame = 0;
+let generation = 0;
+let pendingResolve = null;
+let revealAnimation = null;
+let lastWidth = innerWidth;
 
-function animatePanel(panel, expanded, animate = true) {
-  const state = states.get(panel);
-  const startHeight = panel.getBoundingClientRect().height;
-  state.animation?.cancel();
-  state.resolve?.();
-  state.animation = null;
-  state.resolve = null;
-  state.expanded = expanded;
-  panel.dataset.expanded = String(expanded);
-  state.summary.setAttribute('aria-expanded', String(expanded));
-  if (!expanded && state.content.contains(document.activeElement)) {
-    state.summary.focus({ preventScroll: true });
+const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+const ease = progress => 1 - Math.pow(1 - progress, 3);
+
+function cancelTransition(resolveCancelled = true) {
+  cancelAnimationFrame(frame);
+  if (resolveCancelled) {
+    pendingResolve?.(false);
+    pendingResolve = null;
   }
-  state.content.inert = !expanded;
-  panel.open = true;
-  panel.style.height = '';
-  const style = getComputedStyle(panel);
-  const borderHeight = parseFloat(style.borderTopWidth) + parseFloat(style.borderBottomWidth);
-  const endHeight = expanded ? panel.getBoundingClientRect().height
-    : state.summary.getBoundingClientRect().height + borderHeight;
+  revealAnimation?.cancel();
+  revealAnimation = null;
+}
 
-  const finish = () => {
-    panel.open = state.expanded;
+function transition(anchor, animate = true, continuation = false) {
+  const shouldCorrectScroll = continuation ? active?.scroll !== false : true;
+  cancelTransition(!continuation);
+  const version = ++generation;
+  const startScroll = scrollY;
+  const anchorTop = anchor.getBoundingClientRect().top;
+  const start = panels.map(panel => panel.getBoundingClientRect().height);
+  const oldMinHeight = document.body.style.minHeight;
+  root.classList.add('disclosure-transition');
+  // Keep the document from clamping its scroll position while measuring the end state.
+  document.body.style.minHeight = `${root.scrollHeight}px`;
+  for (const panel of panels) {
+    panel.open = true;
     panel.style.height = '';
-    state.animation = null;
-    state.resolve?.();
-    state.resolve = null;
-  };
-  if (!animate || reduceMotion.matches || Math.abs(startHeight - endHeight) < 1) {
-    finish();
-    return Promise.resolve();
   }
-  panel.style.height = `${startHeight}px`;
-  const duration = Math.min(320, Math.max(180, Math.abs(endHeight - startHeight) * .22));
-  const animation = panel.animate({ height: [`${startHeight}px`, `${endHeight}px`] }, {
-    duration, easing: 'cubic-bezier(.22,.61,.36,1)'
+  const end = panels.map(panel => {
+    const state = states.get(panel);
+    const style = getComputedStyle(panel);
+    return state.expanded ? panel.getBoundingClientRect().height
+      : state.summary.getBoundingClientRect().height + parseFloat(style.borderTopWidth) + parseFloat(style.borderBottomWidth);
   });
-  state.animation = animation;
-  const complete = new Promise(resolve => { state.resolve = resolve; });
-  animation.onfinish = () => {
-    if (state.animation === animation) finish();
-  };
-  return complete;
+  panels.forEach((panel, index) => { panel.style.height = `${end[index]}px`; });
+  document.body.style.minHeight = oldMinHeight;
+  const endAnchorTop = anchor.getBoundingClientRect().top + scrollY;
+  const endScroll = clamp(endAnchorTop - anchorTop, 0, Math.max(0, root.scrollHeight - innerHeight));
+  panels.forEach((panel, index) => { panel.style.height = `${start[index]}px`; });
+  scrollTo({ top: startScroll, behavior: 'instant' });
+  const duration = animate && !reduceMotion.matches ? 360 : 0;
+  const begun = performance.now();
+  active = { anchor, scroll: shouldCorrectScroll };
+  const finished = pendingResolve ? Promise.resolve(false)
+    : new Promise(resolve => { pendingResolve = resolve; });
+
+  function finish() {
+    if (version !== generation) return;
+    for (const panel of panels) {
+      panel.open = states.get(panel).expanded;
+      panel.style.height = '';
+    }
+    if (active?.scroll) scrollTo({ top: endScroll, behavior: 'instant' });
+    root.classList.remove('disclosure-transition');
+    active = null;
+    pendingResolve?.(true);
+    pendingResolve = null;
+    if (animate && reduceMotion.matches) {
+      const expanded = panels.find(panel => states.get(panel).expanded);
+      if (expanded) revealAnimation = states.get(expanded).content.animate(
+        { opacity: [.55, 1] }, { duration: 120, easing: 'linear' }
+      );
+    }
+  }
+
+  function tick(now) {
+    if (version !== generation) return;
+    const progress = duration ? clamp((now - begun) / duration, 0, 1) : 1;
+    const amount = ease(progress);
+    panels.forEach((panel, index) => {
+      panel.style.height = `${start[index] + (end[index] - start[index]) * amount}px`;
+    });
+    if (active?.scroll) scrollTo({ top: startScroll + (endScroll - startScroll) * amount, behavior: 'instant' });
+    if (progress < 1) frame = requestAnimationFrame(tick);
+    else finish();
+  }
+  if (duration) frame = requestAnimationFrame(tick);
+  else finish();
+  return finished;
 }
 
 function setExpanded(panel, expanded, animate = true) {
-  if (expanded) {
-    for (const other of panels) {
-      if (other !== panel && (states.get(other).expanded || other.open)) {
-        animatePanel(other, false, animate);
-      }
-    }
+  for (const item of panels) {
+    const state = states.get(item);
+    const next = item === panel ? expanded : (expanded ? false : state.expanded);
+    state.expanded = next;
+    item.dataset.expanded = String(next);
+    state.summary.setAttribute('aria-expanded', String(next));
+    state.content.inert = !next;
+    if (!next && state.content.contains(document.activeElement)) state.summary.focus({ preventScroll: true });
   }
-  return animatePanel(panel, expanded, animate);
+  return transition(states.get(panel).summary, animate);
 }
 
 for (const panel of panels) {
@@ -66,19 +111,21 @@ for (const panel of panels) {
   summary.setAttribute('aria-expanded', String(panel.open));
   content.inert = !panel.open;
   panel.dataset.expanded = String(panel.open);
-  states.set(panel, { summary, content, expanded: panel.open, animation: null, resolve: null });
+  states.set(panel, { summary, content, expanded: panel.open });
   summary.addEventListener('click', event => {
     event.preventDefault();
     setExpanded(panel, !states.get(panel).expanded);
   });
+  for (const image of content.querySelectorAll('img[width][height]')) {
+    image.style.aspectRatio = `${image.getAttribute('width')} / ${image.getAttribute('height')}`;
+  }
 }
 
 async function revealFragment(fragment, animate) {
   const target = document.getElementById(fragment.slice(1));
   const panel = target?.closest('.subway-details > details');
   if (!panel) return false;
-  await setExpanded(panel, true, animate);
-  if (!states.get(panel).expanded) return false;
+  if (!await setExpanded(panel, true, animate) || !states.get(panel).expanded) return false;
   target.scrollIntoView({ behavior: reduceMotion.matches ? 'instant' : 'smooth', block: 'nearest' });
   return true;
 }
@@ -95,12 +142,41 @@ document.querySelectorAll('a[href^="#source-"]').forEach(link => {
 addEventListener('hashchange', () => revealFragment(location.hash, false));
 if (location.hash) revealFragment(location.hash, false);
 
-// A viewport or motion-preference change settles ongoing animation at its requested state.
-const settle = () => {
-  for (const panel of panels) {
-    const state = states.get(panel);
-    if (state.animation) animatePanel(panel, state.expanded, false);
-  }
+// A user's own scrolling always takes priority over the panel's scroll correction.
+for (const type of ['wheel', 'touchstart']) addEventListener(type, () => {
+  if (active) active.scroll = false;
+}, { passive: true });
+addEventListener('keydown', event => {
+  if (active && ['PageUp', 'PageDown', 'Home', 'End', 'ArrowUp', 'ArrowDown'].includes(event.key)) active.scroll = false;
+});
+
+// Retarget genuine content changes, but do not snap on mobile browser-bar height changes.
+let resizeFrame = 0;
+const remeasure = () => {
+  if (!active) return;
+  cancelAnimationFrame(resizeFrame);
+  resizeFrame = requestAnimationFrame(() => {
+    if (active) transition(active.anchor, true, true);
+  });
 };
-addEventListener('resize', settle);
-reduceMotion.addEventListener('change', settle);
+const sizes = new WeakMap();
+const observer = new ResizeObserver(entries => {
+  let changed = false;
+  for (const entry of entries) {
+    const previous = sizes.get(entry.target);
+    const height = entry.contentRect.height;
+    sizes.set(entry.target, height);
+    if (previous > 0 && height > 0 && Math.abs(previous - height) > 1) changed = true;
+  }
+  if (changed) remeasure();
+});
+for (const state of states.values()) observer.observe(state.content);
+addEventListener('resize', () => {
+  if (Math.abs(innerWidth - lastWidth) > 1) {
+    lastWidth = innerWidth;
+    remeasure();
+  }
+});
+reduceMotion.addEventListener('change', () => {
+  if (active) transition(active.anchor, false, true);
+});
