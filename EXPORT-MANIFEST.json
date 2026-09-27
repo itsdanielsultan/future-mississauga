@@ -60,13 +60,13 @@
     },
     {
       "file": "assets/subway/subway-corridor-context.metadata.json",
-      "bytes": 2354,
-      "sha256": "beed314d7130f7a0a3b9ab4a6773543613764447f1f751ca9c71f220bcdfb637"
+      "bytes": 712,
+      "sha256": "6cfbfdad0de80e97b5781a8d519f51efc1673578dd02529ce00d09ca92e21f5a"
     },
     {
       "file": "assets/subway/subway-corridor-context.png",
-      "bytes": 1903180,
-      "sha256": "a9d6a3dbab717c2fdc9f81f39e70f25e7fe06dd56292d1a33e8138a7998dffdf"
+      "bytes": 2786175,
+      "sha256": "577e09cf2efe31aeab07e404c063993fd68ace100b962a89b128e832c2a67f7c"
     },
     {
       "file": "checkpoints/01-lighting/Checkpoint.json",
@@ -335,8 +335,8 @@
     },
     {
       "file": "data/model-asset-versions.json",
-      "bytes": 15454,
-      "sha256": "ff31a85d89d64140b1e0a100000bfa7be9a3d8ffc6cf6deba861ec64954504b7"
+      "bytes": 15672,
+      "sha256": "3a1c253b904f7ba6cf76ac66b3f77dc4f12934b929696be685995d4824339384"
     },
     {
       "file": "data/overrides.json",
@@ -415,13 +415,18 @@
     },
     {
       "file": "data/subway-map.json",
-      "bytes": 5179,
-      "sha256": "fd78d6524c9823577c5b2a52649c983841a2ed80e3442a30e8438a52a23429a1"
+      "bytes": 5523,
+      "sha256": "6992eb3c1949f0c016c97b89d21506e2664cb606c7c8999aa8328c588e387767"
     },
     {
       "file": "data/subway-sources.json",
-      "bytes": 16674,
-      "sha256": "2cec3972d278a0b58e63c9c8f8224230bc401ee378e82fc8e3b51ae4c5659c06"
+      "bytes": 17467,
+      "sha256": "b4545f259a441ebca2a1937cb10781700bd4cc8679888492ca59eb41d62435d7"
+    },
+    {
+      "file": "data/subway-toronto-context.json",
+      "bytes": 5483,
+      "sha256": "01ecdac85d30f3d3fc7c75527aa63849ebe883d6b7d152cdd97942b9d08ad725"
     },
     {
       "file": "data/transit-layer-manifest.json",
@@ -869,6 +874,16 @@
       "sha256": "f440894e4a8bb79b283f925b6c28215ac134ebd3848b2da767ac4626bd25aa14"
     },
     {
+      "file": "gallery.css",
+      "bytes": 13422,
+      "sha256": "2cf26ce5182c1debd35a812fe4f08e2f537676163f6f6e469f91c39a9267beca"
+    },
+    {
+      "file": "gallery.js",
+      "bytes": 7338,
+      "sha256": "d05073222e8590d49a02c6507da1859c406242c2808993f3e8a50d5dec28fa93"
+    },
+    {
       "file": "gallery/Downtown-transformation.mp4",
       "bytes": 951192,
       "sha256": "faf3961dc1117e655f4817f0adbf5e0ca82b2c5ff6389304d8641f3dea0c4f6c"
@@ -1209,19 +1224,9 @@
       "sha256": "6b9b9b0ea4406efda4423d1310d1892bba28a3f7602eaf03eda4d49df0f72749"
     },
     {
-      "file": "gallery.css",
-      "bytes": 13426,
-      "sha256": "51b134d9100a92584ec85097d57d2c4a7cdc8970f01e9894bad742135f6b7ea1"
-    },
-    {
-      "file": "gallery.js",
-      "bytes": 7338,
-      "sha256": "d05073222e8590d49a02c6507da1859c406242c2808993f3e8a50d5dec28fa93"
-    },
-    {
       "file": "index.html",
-      "bytes": 17872,
-      "sha256": "9f49240fc6fb3aa8564eed9ee224d2e9dab7e5c71962d0eb400b799d23c316b0"
+      "bytes": 17864,
+      "sha256": "76e3f5659b826665c2678e6610f575dad7b305a91235b92ee23b4a743c79a75e"
     },
     {
       "file": "licenses/BricolageGrotesque-OFL.txt",
@@ -1230,8 +1235,8 @@
     },
     {
       "file": "licenses/CREDITS.md",
-      "bytes": 4007,
-      "sha256": "846c07866df929e77cc0b03889fdfec5e1454cb4efd30ab6adc0ef8a7ae580ae"
+      "bytes": 4875,
+      "sha256": "9af669997ebdd55801251fc8adba87d5575ffd6f1966e580522fde22c1bcb527"
     },
     {
       "file": "licenses/media-chrome-4.19.2-MIT.txt",
@@ -1909,6 +1914,16 @@
       "sha256": "e68bad4f2085f03da1312be289705a3dac41f494a2de1407792cdb5027c51aed"
     },
     {
+      "file": "models/subway-toronto-context.glb",
+      "bytes": 13946804,
+      "sha256": "5380eba44d34e1d385e6fcc6c0daea5814877986ca2a33644af7b90aada16fe9"
+    },
+    {
+      "file": "models/subway-toronto-massing.glb",
+      "bytes": 12200268,
+      "sha256": "ce420b4406e500af7b4d7decedba532af4509e8eadc912b88c2052b9ed22d529"
+    },
+    {
       "file": "models/supplemental/pearson-airfield-context.json",
       "bytes": 1462,
       "sha256": "bd63fd97620556298d08da441095c4574c09956a8ea759c0a54d998e8f8c15ad"
@@ -2095,18 +2110,18 @@
     },
     {
       "file": "subway.css",
-      "bytes": 13192,
-      "sha256": "7ed6fffa7cc0585f598f179a802bf2ac879fea91c404906a78dab25d11eebdd6"
+      "bytes": 15637,
+      "sha256": "9be9c04d81d77dbd0c993f447bad89ed985f8f2f1d3e531bb972ec39daa6258a"
     },
     {
       "file": "subway.html",
-      "bytes": 18893,
-      "sha256": "b9d4279cee4e91f1ff43767dfb8f89ee2fcc8e64c3e26a559347988a1711189d"
+      "bytes": 20153,
+      "sha256": "ab961cf7e96e13242b4b3ecdf88d2e232a857ef7a424f311c7a65742e97a0cd8"
     },
     {
       "file": "subway.js",
-      "bytes": 13832,
-      "sha256": "e95d40a7b2d8e989713bbddf3eb52d974cb78b17c2a81608123cd9f6b7249080"
+      "bytes": 15015,
+      "sha256": "d7174a6f5d63d1f639e79e44b852d32e415b3dc7f283577912b7e38550f9a851"
     },
     {
       "file": "vendor/addons/controls/OrbitControls.js",
@@ -2379,7 +2394,7 @@
       "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
     }
   ],
-  "publishedBytes": 940521983,
+  "publishedBytes": 967562990,
   "originalPNGCount": 33,
   "displayPNGCount": 33,
   "displayScale": 0.5,
@@ -2388,5 +2403,6 @@
   "privateCorrespondenceIncluded": false,
   "rawSourceArchivesIncluded": false,
   "sceneFilesIncluded": false,
-  "originalBackupModified": false
+  "originalBackupModified": false,
+  "publicationDomain": "futuremississauga.com"
 }

@@ -220,18 +220,19 @@
     "hml",
     "hub",
     "hub-panels",
-    "downtown-growth"
+    "downtown-growth",
+    "toronto-massing"
   ],
-  "buildingContext": "Reuses atlas citywide GLB, current context parts, Exchange/M City and applicable refinement assets, with source supersession and scenario visibility applied. The overview omits low-rise context for clarity. No new buildings are fabricated for this concept.",
+  "buildingContext": "The Mississauga atlas and reviewed refinement models continue into western Toronto using the City of Toronto\u2019s native 2025 massing and topographic mapping. The Toronto addition contains 20,679 source records/components, not a count of separately verified current occupied buildings. Source buildings retain their native relative forms and are registered to the shared Ontario terrain. Detailed provenance is in subway-toronto-context.json.",
   "limits": [
     "No selected alignment, station sites, depth, structure dimensions, funding or opening date.",
-    "Toronto end extends beyond detailed Mississauga model coverage.",
+    "Toronto context reflects municipal source dates. Coverage extends through Sherway and past Kipling; source omissions or later changes may remain.",
     "Potential intermediate stops and transfer walking distances are unresolved.",
     "Dundas BRT is a separate project and not replaced by this illustration.",
     "Historical D3 was screened out and is not represented as approved.",
     "The 2001 City Centre option was screened out on then-regional priorities and length/cost staging constraints; no current feasibility or ridership conclusion is implied."
   ],
-  "reviewedAt": "2026-09-26",
+  "reviewedAt": "2026-09-27",
   "waterDisplay": {
     "scope": "Subway viewer only",
     "coastalDisplayDistanceMetres": 400,
@@ -239,5 +240,6 @@
     "displayedOpenWaterAreaKm2": 6.173151,
     "preserves": "Mapped coastline, nearby island holes and inland water",
     "limit": "The artificial offshore edge defines the model display extent; it is not a coastline."
-  }
+  },
+  "torontoContext": "subway-toronto-context.json"
 }

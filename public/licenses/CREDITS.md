@@ -20,3 +20,12 @@ Blender was used to render the pictures and prepare editable scenes. The Blender
 Refinement scenery includes City pier and dock outlines, mapped street details and historical bus-shelter footprints. Rails and selected station platforms follow mapped footprints; trains and canopies are illustrative. Individual supplemental models retain source dates, registration assumptions and attribution in their manifests and embedded metadata.
 
 The website video controls use [Media Chrome 4.19.2](https://github.com/muxinc/media-chrome), supplied unchanged as focused ES modules under the [MIT licence](media-chrome-4.19.2-MIT.txt). They run locally on the website without a hosted player service. Bricolage Grotesque is bundled under its [SIL Open Font License](BricolageGrotesque-OFL.txt).
+
+
+## Toronto context for the subway illustration
+
+Contains information licensed under the [Open Government Licence – Toronto](https://open.toronto.ca/open-data-licence/).
+
+City of Toronto: [2025 native 3D massing](https://open.toronto.ca/dataset/3d-massing/), [topographic road polygons](https://open.toronto.ca/dataset/topographic-mapping-edge-of-road/), and [topographic treed-area, parking and water mapping](https://gis.toronto.ca/arcgis/rest/services/cot_geospatial3/FeatureServer). The addition uses native building faces with relative heights, registered to the same Ontario DTM as the Mississauga atlas. Source dates vary; this is illustrative context, not a current building or engineering survey. Woodland outlines are simplified within 1 metre for display.
+
+[Detailed Toronto context source and transformation notes](../data/subway-toronto-context.json).

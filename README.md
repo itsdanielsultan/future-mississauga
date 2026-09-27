@@ -28,6 +28,8 @@ Official guidance: [Pages limits](https://docs.github.com/en/pages/getting-start
 
 ## Model meaning
 
+The subway page features the original TTC RTES Exhibit ES-15 as historical evidence, with its screened-out status retained. Its separate illustrative 3D corridor extends into Toronto using the City’s 2025 native building massing and topographic context through Sherway to Kipling. The dataset date, source attribution, ground registration and limitations are in `public/data/subway-toronto-context.json`. This source-date context is not an approved subway alignment or a survey of every current building.
+
 The explorer combines reviewed municipal building geometry, documented replacement models, context, landscape and transit. A standalone building GLB does not contain that complete layered assembly. The current reviewed/reconciled models are the recommended building exports. Untouched municipal source snapshots are provenance material and must not be presented as the current assembled model.
 
 GO stays green, the Transitway blue and HML gold. These are unlit route guides, separate from grey physical tracks. They follow the physical display profiles and use normal scene depth, so buildings, roofs, bridges and ground hide obstructed sections. They are not surveyed engineering profiles. Incomplete second-track mapping and the HML turnout reconstruction retain explicit schematic labels. The current research and model guides explain the remaining building, landscape and transit uncertainties.
