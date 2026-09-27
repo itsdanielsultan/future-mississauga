@@ -30,3 +30,6 @@ header,.view-head,.toolbar,.layer-controls,.transit-picker,.research,.transit-se
 
 /* Source-classified existing context, Community Revision. */
 .existing{background:#7e878b}.small-context{background:#d0d1c8;border:1px solid #929b92}
+
+/* Save-image failures stay readable without altering the normal viewer layout. */
+.scene-export-status{margin:0 25px 12px;color:var(--ink);font-size:13px}.view-actions button:disabled{cursor:wait;opacity:.65}
