@@ -14,7 +14,7 @@ The public reference audit inspects the sources for the inherited 107 project do
 
 Render boundary checks keep transit inside each view’s mapped ground. Routes retain their source coordinates and elevations within the scene; their off-scene tails are clipped at the ground boundary. The Erin Mills supplement now has explicit spatial bounds, preventing it from loading into unrelated districts.
 
-The [community reference review](Community-reference-and-coverage-review.md) records the public-reference check and its limits. A [public project coverage register](public-project-reference-coverage.json) tracks all 108 named dossiers without publishing private correspondence.
+The [community reference review](Community-reference-and-coverage-review.md) records the public-reference check and its limits. A [public project coverage register](public-project-reference-coverage.json) tracks all 109 named dossiers without publishing private correspondence.
 
 The historical Road Crossings record below documents the earlier edition. Its dated 2025 Cooksville concept and January 2026 EX3 status have been superseded by the community corrections above and the current project register.
 
@@ -226,3 +226,12 @@ The 3D viewer has explicit Orbit/Pan modes, pointer-centred zoom, zoom buttons a
 
 
 The small inherited black notch at the airport runway intersection is also resolved. Overlapping faces were reconciled within the existing runway footprint, without refitting heights or changing taxiways and aprons. Airport Corporate, Malton and Citywide were rerendered and visually checked; the other thirty picture pixel hashes stayed unchanged. [Runway diagnosis and repair](road-crossings/Aerial-shadow-and-runway-review.md).
+
+
+## 27 September 2026: Alba added to existing Cooksville
+
+Alba at 1 Fairview Road East is now included as a completed 32-storey building in both present and future views. The [developer reported completion in February 2026](https://edenshaw.com/news/new-32-storey-condominium-complete-in-mississauga/), following first move-ins in December 2025; no exact construction-completion day is claimed.
+
+The exterior uses the [approved City footprint](https://www.mississauga.ca/wp-content/uploads/2021/07/08102221/OZ-20-001-W4-OPA-120-Public-Notice.pdf), the developer’s typical floorplate references and current City parcel geometry. Its curved balcony shape and podium are reconstructed separately because the current public City model tile contains no Alba. The [109.1m architectural height](https://www.skyscrapercenter.com/building/alba/49152) is retained. Floor elevations, façade details and roof-screen subdivisions remain approximate; this is a documented visualization, not a surveyed as-built model. Existing City components are preserved.
+
+Catalogue and refinement-asset totals include this addition. Earlier operation counts and aggregate outreach totals retain their original scope; no outreach was performed for this update.

@@ -1,17 +1,36 @@
 {
-  "edition": "Road Crossings 2026-09-21",
-  "researchReviewed": "2026-09-20",
-  "builtAt": "2026-09-22T03:22:29.877150+00:00",
+  "edition": "Visual Polish 2026-09-26",
+  "researchReviewed": "Base 2026-09-20; targeted community review 2026-09-26",
+  "builtAt": "2026-09-27T07:57:54.241751+00:00",
   "file": "renders/Downtown-transformation.mp4",
-  "bytes": 1330682,
-  "sha256": "1764d691cc17ca41a351683e8099a38b26d7d088915729030dec16de71a71fa1",
+  "downloadName": "Future Skyline Mississauga.mp4",
+  "title": "Future Skyline Mississauga",
+  "bytes": 948104,
+  "sha256": "8f482fee2edbffd45a9011157d0df40f76f5c80ba52f5d196e2ea67d3062a5c1",
   "width": 1920,
-  "height": 850,
-  "durationSeconds": 15.0,
+  "height": 700,
+  "durationSeconds": 5.7,
   "frameRate": "30/1",
-  "frameCount": 450,
-  "inputLockedAt": "2026-09-22T01:55:14.325187+00:00",
-  "inputLockSHA256": "7936355e396af245054b761af217035031d4808a14685b63ecbe88cc6318b6ee",
+  "frameCount": 171,
+  "onScreenText": false,
+  "audio": false,
+  "inputLockedAt": "2026-09-27T06:44:36.639230+00:00",
+  "inputLockSHA256": "0020782cf42c1dcbde35150de5046a34a9b5b65296f2d08044001123a4f3553f",
+  "nativeRenderVerification": {
+    "all33Blender52": true,
+    "all33MetalRT": true,
+    "all33Native": true,
+    "all33CamerasMatchPrevious": true,
+    "BlenderVersions": [
+      "5.2.2 LTS"
+    ],
+    "samplesMaximum": 96,
+    "allRenderPixelsAndColourPreserved": true,
+    "wholeFileHashesPreservedAfterRender": false,
+    "wholeFilesUnchanged": 16,
+    "privacyMetadataSanitizedFiles": 17,
+    "metadataTransformationProofSHA256": "d2b4172a3e08c24defc16b838ffa01d72d3ed0e9b34c5d87544ed36da327385d"
+  },
   "sourceImages": [
     {
       "file": "renders/downtown-skyline-existing.png",
@@ -19,8 +38,8 @@
         3840,
         1400
       ],
-      "sha256": "a08b7593b5157a4ee3f2ff0b400dbee1ccdbe3f38bcbd5b86382b2cb7d175cff",
-      "pixelSHA256": "44527649ef9af767f5818afd0dfdac59181828182d0afd7a64b5e34993f2b806"
+      "sha256": "dae84f55501d2e4311cc692c26fb8f55a4f4a925c8d37e39c509dae68e252b6a",
+      "pixelSHA256": "c4c42b8dc5e3fd9c8c05d92d7735c27b7f3db3360b99fdec7a4779fd4241b197"
     },
     {
       "file": "renders/downtown-skyline-construction.png",
@@ -28,8 +47,8 @@
         3840,
         1400
       ],
-      "sha256": "b6ceaf2d4867bc003321eaa4b78a4375bfb1fe6f90bf36400c2e7de5bb232f78",
-      "pixelSHA256": "ba981a0b899ff7f8aaf02500e6dfb142ab9bef82fd32088e0ab10b4dfd722072"
+      "sha256": "d008721df156b942a0a5569c490f1d33cbe6101994786a0368dc4af1f645b00b",
+      "pixelSHA256": "9a27596053d454de7c800468bc0b9b3af6a37b5db7bbe8cd2231de44f201ef6a"
     },
     {
       "file": "renders/downtown-skyline-future.png",
@@ -37,25 +56,30 @@
         3840,
         1400
       ],
-      "sha256": "41c568c38b0998d366042e4ee33f17db0a73dbf7bd53771b227d2b7602af3160",
-      "pixelSHA256": "3e7050213da7f71b1c36962f5d8eadf3ad346109ff3e8d68894d379616e8389d"
+      "sha256": "d190e15b84c1f639d19409203426a46e7d0fc615071b4af4c3563793cd4e9193",
+      "pixelSHA256": "1e5a79062143c77015571e0380c53803f071fdd2663b4c628c6e878fe6cd69da"
     }
   ],
   "originalPNGMastersUnchanged": true,
   "sourceGeometryChangedByFilm": false,
-  "method": "Labelled fixed-camera wipe between three native model renderings; no invented intermediate buildings or generated imagery.",
-  "transitVisibility": "Normal scene depth; terrain, buildings and bridges may obscure routes. Mapped route profiles retain their documented schematic limits.",
+  "method": "Trimmed 5.7-second fixed-camera dissolve between three native model renderings. No headers, footers, generated intermediate buildings or on-screen text.",
+  "transitVisibility": "Normal scene depth; terrain, buildings and bridges may obscure routes. Approximate mapped profiles are not engineering surveys.",
   "manualVisualReviewPending": false,
+  "contactSheet": "work/video/Film-contact-sheet.png",
   "visualReviewPassed": true,
-  "visualReviewCompletedAt": "2026-09-22T03:24:13.151122+00:00",
+  "visualReviewCompletedAt": "2026-09-27T08:02:15.157886+00:00",
   "visualCheckpointsSeconds": [
     0,
-    4,
-    6,
-    9,
-    12,
-    14.9
+    1.5,
+    2.1,
+    3.1,
+    3.7,
+    5.6
   ],
-  "visualReviewNotes": "Six current frames inspected, covering baseline, both wipe transitions and final future state. Fixed-camera alignment, labels and source-credit footer remain clear. Complete 450-frame file decoded with FFmpeg without errors.",
-  "fullDecodePassed": true
+  "visualReviewNotes": [
+    "Six decoded frames inspected at native 1920 by 700, including start, two fade checkpoints, construction hold and final future hold.",
+    "Static framing and existing context stay aligned through both crossfades; transparent towers at transition checkpoints are the intended dissolve. No unexpected crop, blank frame, visible header/footer/text or new block artefact was found in sampled frames.",
+    "Alba stays in existing context at the right edge. Absolute World forms and mapped road/transit context remain visible. Full video decode passed separately; no audio stream."
+  ],
+  "incrementalRevision": "Alba addition, 27 September 2026"
 }

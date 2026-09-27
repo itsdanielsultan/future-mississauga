@@ -1,13 +1,15 @@
 {
-  "edition": "Road Crossings 2026-09-21",
-  "currentPDFSHA256": "d172eac5c3918eec8599e8f5735678b8098fe530bea05f4172107e8209f7c224",
+  "edition": "Visual Polish 2026-09-26; Alba addition 2026-09-27",
+  "currentPDFSHA256": "55f5e46f4857a384d5e8d893c286c5aad4292259d62ca25e1e19c667723ef060",
   "pageCount": 35,
-  "allVisibleTextIsBricolageGrotesque": true,
-  "textSpansChecked": 704,
+  "allPDFTextFontResourcesBricolageGrotesque": true,
   "renderedTextFonts": [
-    "BricolageGrotesqueAtlas-"
+    "/AAAAAA+BricolageGrotesqueAtlas-DisplaySemiBold",
+    "/AAAAAA+BricolageGrotesqueAtlas-TextRegular",
+    "/AAAAAA+BricolageGrotesqueAtlas-TextSemiBold"
   ],
+  "allFontsEmbedded": true,
   "allPagesVisuallyReviewed": true,
-  "sourceProof": "Atlas-render-source-audit.json",
-  "scope": "Current rebuilt PDF typography and current locked source images. No unchanged-image comparison to the earlier edition is asserted."
+  "sourceProof": "Atlas-final-QA.json",
+  "scope": "Current PDF font resources, embedded font files and visual review; no fabricated count of text spans."
 }

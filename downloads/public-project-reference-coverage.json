@@ -1,6 +1,6 @@
 {
   "checkedAt": "2026-09-26T17:00:55.566084+00:00",
-  "projectCount": 108,
+  "projectCount": 109,
   "originalDossiersChecked": 107,
   "originalAuditUniqueRequests": 127,
   "originalAuditRetrieved": 123,
@@ -1471,6 +1471,30 @@
       "currentModelLimit": "The City confirms 15 and 34 storeys. The 111.9 m tall envelope is an unverified published catalogue value; the 53 m shorter envelope and 12 m podium are illustrative estimates. Allow roughly ±5 m, not survey confidence. Plan registration relates older source contours to the 2024 mapped podium. Exact current balconies, roof plant and facade details are not reconstructed. The Ontario 2023 DSM catalog record returned NoData here; no LiDAR-derived building height is claimed. The seven native municipal scene leaves inspected around this site did not contain these two towers. No existing source IDs are suppressed.",
       "externalModelReceivedInThisAudit": false,
       "newReusePermissionConfirmedInThisAudit": false
+    },
+    {
+      "projectId": "alba",
+      "name": "Alba",
+      "district": "cooksville",
+      "checkedAt": "2026-09-27",
+      "referenceCheckScope": "Focused comparison of final 2021 municipal approval, current GIS parcel, developer floor plans and completion notice, current CTBUH height record and exact-hash-verified public native Tile 72.",
+      "checkedReferenceUrls": [
+        "https://edenshaw.com/news/new-32-storey-condominium-complete-in-mississauga/",
+        "https://www.sajeckiplanning.com/projects/edenshaw-developments-ltd-1-fairview-road-east-mississauga",
+        "https://www.skyscrapercenter.com/building/alba/49152",
+        "https://www.mississauga.ca/wp-content/uploads/2021/07/08102221/OZ-20-001-W4-OPA-120-Public-Notice.pdf",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Parcel/FeatureServer/0",
+        "https://mississauga.maps.arcgis.com/home/item.html?id=310b8dfcc68d4447803726ff94e9f46c",
+        "https://www.albacondos.com/amenities",
+        "https://drive.google.com/file/d/1FHyLpf6ujyR-9kAr8bFLIVNtqIGhX1SQ/view",
+        "https://urbantoronto.ca/forum/threads/toronto-alba-109-1m-32s-edenshaw-core-architects.30920/page-8",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Property_Search/FeatureServer/0"
+      ],
+      "referenceResult": "Alba is absent from current public Tile 72. Added a separate source-derived 32-storey exterior using published plans and developer references; classified as existing.",
+      "currentModelLimit": "Independent reconstruction from approved City plans, developer floorplate references and GIS parcel registration; not a certified as-built or native architect model. The final 32-storey program and current 109.1m CTBUH architectural top are retained. Intermediate floor elevations, mechanical-screen subdivisions, balcony guards, slab thicknesses, façade joints and mullions are approximate. Plan tracing and placement carry approximately 1–2m working tolerance, not surveyed confidence. Current public Tile 72 was checked and contains no Alba; no existing municipal source IDs are suppressed.",
+      "externalModelReceivedInThisAudit": false,
+      "newReusePermissionConfirmedInThisAudit": false,
+      "outreachPerformedInThisUpdate": false
     }
   ],
   "outreachSummary": {

@@ -25,9 +25,9 @@
       ],
       "towerRoofDimensionsM": [
         34.1,
-        22
+        22.0
       ],
-      "clearTowerGapM": 25,
+      "clearTowerGapM": 25.0,
       "podiumHeightsM": [
         22.32,
         27.89
@@ -774,9 +774,7 @@
       "url": "models/refinement/promenade-infill-plan-derived.glb",
       "replacementModes": [
         "future"
-      ],
-      "downloadSHA256": "4c93c5ced26ad1b2aa495135dbf9dec8b1d1770f93280d4e4a2ae2b94b0b431c",
-      "downloadBytes": 230376
+      ]
     },
     {
       "assetId": "square-one-block5-t1-plan-derived",
@@ -802,16 +800,16 @@
         "method": "Least-squares similarity from 3 exact-match StreetInt address records to digitised centreline intersections in published 1280\u00d7805 plan",
         "sourcePixels": [
           [
-            49,
-            35
+            49.0,
+            35.0
           ],
           [
-            46,
-            763
+            46.0,
+            763.0
           ],
           [
-            1250,
-            42
+            1250.0,
+            42.0
           ]
         ],
         "worldControls": [
@@ -898,7 +896,7 @@
             ]
           ],
           "bottomHeightM": 0,
-          "topHeightM": 8,
+          "topHeightM": 8.0,
           "planAreaM2": 2385.9437212374046
         },
         {
@@ -945,7 +943,7 @@
               405
             ]
           ],
-          "bottomHeightM": 8,
+          "bottomHeightM": 8.0,
           "topHeightM": 16.1,
           "planAreaM2": 587.9144634419986
         },
@@ -969,7 +967,7 @@
               281
             ]
           ],
-          "bottomHeightM": 8,
+          "bottomHeightM": 8.0,
           "topHeightM": 25.7,
           "planAreaM2": 232.75206030694576
         },
@@ -993,7 +991,7 @@
               281
             ]
           ],
-          "bottomHeightM": 8,
+          "bottomHeightM": 8.0,
           "topHeightM": 12.5,
           "planAreaM2": 54.07371098040498
         },
@@ -1017,7 +1015,7 @@
               381
             ]
           ],
-          "bottomHeightM": 8,
+          "bottomHeightM": 8.0,
           "topHeightM": 156.25,
           "planAreaM2": 732.7379676329617
         },
@@ -1104,9 +1102,7 @@
       "url": "models/refinement/square-one-block5-t1-plan-derived.glb",
       "replacementModes": [
         "future"
-      ],
-      "downloadSHA256": "b1e0c1a79522c81f2fa82990f28132c299e4e83fe6abb314264589244cfabaf6",
-      "downloadBytes": 16760
+      ]
     },
     {
       "assetId": "mcity-m3-crown-silhouette",
@@ -1282,7 +1278,7 @@
           "name": "strip-6",
           "planFraction": [
             0.85,
-            1
+            1.0
           ],
           "topHeightM": 260.29,
           "heightBasis": "Verified architectural maximum",
@@ -1365,9 +1361,7 @@
         "construction"
       ],
       "sha256": "fba3afd818534ba6152bf436bd6d15970a57810d6dbee9bb3be01a299940bb13",
-      "recordedProgress": true,
-      "downloadSHA256": "fba3afd818534ba6152bf436bd6d15970a57810d6dbee9bb3be01a299940bb13",
-      "downloadBytes": 20252
+      "recordedProgress": true
     },
     {
       "assetId": "mcity-m5-developer-proxy",
@@ -1396,7 +1390,7 @@
           "nativeBounds": [
             [
               -46.79711725322265,
-              0,
+              0.0,
               106.81791693115235
             ],
             [
@@ -1447,16 +1441,16 @@
         "method": "Similarity fit between 3 developer community-diagram podium centroids and unchanged municipal M1/M2/M3 footprint centroids; native dimensions retain scale 1.",
         "sourcePixels": [
           [
-            1598,
-            280
+            1598.0,
+            280.0
           ],
           [
-            1630,
-            599
+            1630.0,
+            599.0
           ],
           [
-            1117,
-            319
+            1117.0,
+            319.0
           ]
         ],
         "municipalControls": [
@@ -1545,9 +1539,7 @@
       "replacementModes": [
         "future"
       ],
-      "sha256": "2aae3db6fa73b801eab356839b37c10587316bf29ff2c2d4ab66c694dc5ed1a6",
-      "downloadSHA256": "2aae3db6fa73b801eab356839b37c10587316bf29ff2c2d4ab66c694dc5ed1a6",
-      "downloadBytes": 9452
+      "sha256": "2aae3db6fa73b801eab356839b37c10587316bf29ff2c2d4ab66c694dc5ed1a6"
     },
     {
       "assetId": "voya-towers-plan-derived",
@@ -1611,20 +1603,20 @@
         ],
         "sourcePoints": [
           [
-            38,
-            205
+            38.0,
+            205.0
           ],
           [
-            420,
-            205
+            420.0,
+            205.0
           ],
           [
-            445,
-            685
+            445.0,
+            685.0
           ],
           [
-            67,
-            685
+            67.0,
+            685.0
           ]
         ],
         "worldPoints": [
@@ -2049,7 +2041,7 @@
         {
           "name": "taller-body",
           "role": "recessed wall outline; schematic full structural envelope",
-          "bottomHeightM": 0,
+          "bottomHeightM": 0.0,
           "modelTopHeightM": 142.03,
           "areaM2": 798.2085774932272
         },
@@ -2364,7 +2356,7 @@
         {
           "name": "shorter-body",
           "role": "recessed wall outline; schematic full structural envelope",
-          "bottomHeightM": 0,
+          "bottomHeightM": 0.0,
           "modelTopHeightM": 123.742,
           "areaM2": 798.2085774932267
         },
@@ -2656,9 +2648,7 @@
         "construction"
       ],
       "sha256": "f876a440f538b0d8ebcb7672267e93b7ffb3591b2d8f58a527b869d2f5b69781",
-      "recordedProgress": true,
-      "downloadSHA256": "f876a440f538b0d8ebcb7672267e93b7ffb3591b2d8f58a527b869d2f5b69781",
-      "downloadBytes": 401156
+      "recordedProgress": true
     },
     {
       "id": "wf-26park-current-plan",
@@ -2702,70 +2692,70 @@
         "tracedExistingFootprints": [
           [
             [
-              185,
-              845
+              185.0,
+              845.0
             ],
             [
-              458,
-              845
+              458.0,
+              845.0
             ],
             [
-              458,
-              676
+              458.0,
+              676.0
             ],
             [
-              562,
-              676
+              562.0,
+              676.0
             ],
             [
-              562,
-              948
+              562.0,
+              948.0
             ],
             [
-              185,
-              948
+              185.0,
+              948.0
             ],
             [
-              185,
-              845
+              185.0,
+              845.0
             ]
           ],
           [
             [
-              680,
-              827
+              680.0,
+              827.0
             ],
             [
-              852,
-              827
+              852.0,
+              827.0
             ],
             [
-              852,
-              619
+              852.0,
+              619.0
             ],
             [
-              952,
-              619
+              952.0,
+              619.0
             ],
             [
-              952,
-              684
+              952.0,
+              684.0
             ],
             [
-              963,
-              684
+              963.0,
+              684.0
             ],
             [
-              963,
-              941
+              963.0,
+              941.0
             ],
             [
-              679,
-              941
+              679.0,
+              941.0
             ],
             [
-              680,
-              827
+              680.0,
+              827.0
             ]
           ]
         ],
@@ -3007,9 +2997,7 @@
       "replacementModes": [
         "future"
       ],
-      "bytes": 3444,
-      "downloadSHA256": "c245fa1beebfe015b7058a7514672d4f438071bfea3d7fdeb9f1ad2d98b6f535",
-      "downloadBytes": 3444
+      "bytes": 3444
     },
     {
       "id": "wf-clarkson-toc-current-plan",
@@ -3810,9 +3798,7 @@
       "replacementModes": [
         "future"
       ],
-      "bytes": 11060,
-      "downloadSHA256": "4eee723872e2223150098bab18a9b5add839546d420096465c84947099ea42ac",
-      "downloadBytes": 11060
+      "bytes": 11060
     },
     {
       "id": "wf-50high-current-plan",
@@ -4394,9 +4380,7 @@
       "replacementModes": [
         "future"
       ],
-      "bytes": 13572,
-      "downloadSHA256": "a29d2aaab4d41e70ea9a8e5c12b107748f472ef6e59c2da6a9269c29543e760e",
-      "downloadBytes": 13572
+      "bytes": 13572
     },
     {
       "id": "wf-128-current-plan",
@@ -5002,9 +4986,7 @@
       "replacementModes": [
         "future"
       ],
-      "bytes": 13884,
-      "downloadSHA256": "4968bd32c72d643d0d6cdf945a745bc717502599e4ddff52c86e59e0ee89b5ad",
-      "downloadBytes": 13884
+      "bytes": 13884
     },
     {
       "id": "wf-900-lakeshore-current-plan",
@@ -5111,74 +5093,74 @@
         "surveyExistingFootprints": [
           [
             [
-              845,
-              341
+              845.0,
+              341.0
             ],
             [
-              896,
-              390
+              896.0,
+              390.0
             ],
             [
-              847,
-              441
+              847.0,
+              441.0
             ],
             [
-              796,
-              392
+              796.0,
+              392.0
             ],
             [
-              845,
-              341
+              845.0,
+              341.0
             ]
           ],
           [
             [
-              544,
-              362
+              544.0,
+              362.0
             ],
             [
-              554,
-              374
+              554.0,
+              374.0
             ],
             [
-              567,
-              380
+              567.0,
+              380.0
             ],
             [
-              573,
-              390
+              573.0,
+              390.0
             ],
             [
-              568,
-              410
+              568.0,
+              410.0
             ],
             [
-              579,
-              420
+              579.0,
+              420.0
             ],
             [
-              544,
-              446
+              544.0,
+              446.0
             ],
             [
-              517,
-              420
+              517.0,
+              420.0
             ],
             [
-              519,
-              402
+              519.0,
+              402.0
             ],
             [
-              532,
-              392
+              532.0,
+              392.0
             ],
             [
-              536,
-              378
+              536.0,
+              378.0
             ],
             [
-              544,
-              362
+              544.0,
+              362.0
             ]
           ]
         ]
@@ -5487,7 +5469,7 @@
             ]
           ],
           "areaM2": 755.2901023199977,
-          "bottomASL": 86,
+          "bottomASL": 86.0,
           "topASL": 91.2,
           "sourceDate": "2024-10-03 retained original ground plan; March 2026 site plan cross-check"
         },
@@ -9738,9 +9720,7 @@
       "replacementModes": [
         "future"
       ],
-      "bytes": 79920,
-      "downloadSHA256": "374df3398a5605fd2d1b0150457e2d095696e5da86f2cdff81dc75e4cb35a739",
-      "downloadBytes": 79920
+      "bytes": 79920
     },
     {
       "id": "wf-brightwater-missing-blocks-concept",
@@ -10345,7 +10325,7 @@
           ],
           "areaM2": 1715.3254845598676,
           "sourceHeightM": null,
-          "illustrativeHeightM": 28,
+          "illustrativeHeightM": 28.0,
           "baseASLApproximate": 82.54766082763672,
           "bottomASLApproximate": 104.04766082763672,
           "topASLApproximate": 110.54766082763672,
@@ -11031,7 +11011,7 @@
           ],
           "areaM2": 788.9397661357032,
           "sourceHeightM": null,
-          "illustrativeHeightM": 40,
+          "illustrativeHeightM": 40.0,
           "baseASLApproximate": 79.73575592041016,
           "bottomASLApproximate": 101.23575592041016,
           "topASLApproximate": 119.73575592041016,
@@ -11131,7 +11111,7 @@
           ],
           "areaM2": 719.1172223731703,
           "sourceHeightM": null,
-          "illustrativeHeightM": 93,
+          "illustrativeHeightM": 93.0,
           "baseASLApproximate": 78.04259872436523,
           "bottomASLApproximate": 99.54259872436523,
           "topASLApproximate": 171.04259872436523,
@@ -11231,7 +11211,7 @@
           ],
           "areaM2": 851.065336570086,
           "sourceHeightM": null,
-          "illustrativeHeightM": 93,
+          "illustrativeHeightM": 93.0,
           "baseASLApproximate": 79.28256225585938,
           "bottomASLApproximate": 100.78256225585938,
           "topASLApproximate": 172.28256225585938,
@@ -11281,7 +11261,7 @@
           ],
           "areaM2": 660.8401386028688,
           "sourceHeightM": null,
-          "illustrativeHeightM": 93,
+          "illustrativeHeightM": 93.0,
           "baseASLApproximate": 79.28256225585938,
           "bottomASLApproximate": 100.78256225585938,
           "topASLApproximate": 172.28256225585938,
@@ -11429,7 +11409,7 @@
           ],
           "areaM2": 2971.031704667169,
           "sourceHeightM": null,
-          "illustrativeHeightM": 9,
+          "illustrativeHeightM": 9.0,
           "baseASLApproximate": 78.61788940429688,
           "bottomASLApproximate": 78.61788940429688,
           "topASLApproximate": 87.61788940429688,
@@ -11511,7 +11491,7 @@
           ],
           "areaM2": 1785.6978121315422,
           "sourceHeightM": null,
-          "illustrativeHeightM": 28,
+          "illustrativeHeightM": 28.0,
           "baseASLApproximate": 78.61788940429688,
           "bottomASLApproximate": 87.61788940429688,
           "topASLApproximate": 106.61788940429688,
@@ -11651,7 +11631,7 @@
           ],
           "areaM2": 2002.3126329381348,
           "sourceHeightM": null,
-          "illustrativeHeightM": 9,
+          "illustrativeHeightM": 9.0,
           "baseASLApproximate": 78.61788940429688,
           "bottomASLApproximate": 78.61788940429688,
           "topASLApproximate": 87.61788940429688,
@@ -11701,7 +11681,7 @@
           ],
           "areaM2": 600.9137034051073,
           "sourceHeightM": null,
-          "illustrativeHeightM": 62,
+          "illustrativeHeightM": 62.0,
           "baseASLApproximate": 78.61788940429688,
           "bottomASLApproximate": 87.61788940429688,
           "topASLApproximate": 140.61788940429688,
@@ -11857,7 +11837,7 @@
           ],
           "areaM2": 1141.3511878032746,
           "sourceHeightM": null,
-          "illustrativeHeightM": 40,
+          "illustrativeHeightM": 40.0,
           "baseASLApproximate": 78.61788940429688,
           "bottomASLApproximate": 97.11788940429688,
           "topASLApproximate": 118.61788940429688,
@@ -12047,7 +12027,7 @@
           ],
           "areaM2": 1077.5762659414752,
           "sourceHeightM": null,
-          "illustrativeHeightM": 31,
+          "illustrativeHeightM": 31.0,
           "baseASLApproximate": 78.61788940429688,
           "bottomASLApproximate": 100.11788940429688,
           "topASLApproximate": 109.61788940429688,
@@ -12577,8 +12557,8 @@
             "oldSumFootprintAreaM2": 8519.449906647209,
             "unionFootprintAreaM2": 7325.139263435589,
             "removedOverlappingCapAreaM2": 1194.3106432116201,
-            "exteriorSymmetricDifferenceM2": 0,
-            "boundaryHausdorffDistanceM": 0,
+            "exteriorSymmetricDifferenceM2": 0.0,
+            "boundaryHausdorffDistanceM": 0.0,
             "bottomASLUnchanged": 78.04259872436523,
             "topASLUnchanged": 99.54259872436523,
             "newTriangles": 56,
@@ -12597,8 +12577,8 @@
             "oldSumFootprintAreaM2": 5288.920244059563,
             "unionFootprintAreaM2": 4983.824085256761,
             "removedOverlappingCapAreaM2": 305.09615880280217,
-            "exteriorSymmetricDifferenceM2": 0,
-            "boundaryHausdorffDistanceM": 0,
+            "exteriorSymmetricDifferenceM2": 0.0,
+            "boundaryHausdorffDistanceM": 0.0,
             "bottomASLUnchanged": 79.28256225585938,
             "topASLUnchanged": 100.78256225585938,
             "newTriangles": 56,
@@ -12621,9 +12601,7 @@
       ],
       "replacementModes": [
         "future"
-      ],
-      "downloadSHA256": "8c9f2e7653fca28b1b4207b307778af311e2174e441b594f044c8955d6db401f",
-      "downloadBytes": 42620
+      ]
     },
     {
       "id": "wf-70-settlement-envelope",
@@ -13121,9 +13099,7 @@
       "replacementModes": [
         "future"
       ],
-      "bytes": 10420,
-      "downloadSHA256": "782d8f11fd1783be35681983f706d6e04357651eecc06fde5e351353f6076f5e",
-      "downloadBytes": 10420
+      "bytes": 10420
     },
     {
       "id": "wf-170-settlement-envelope",
@@ -13442,9 +13418,7 @@
       "replacementModes": [
         "future"
       ],
-      "bytes": 5564,
-      "downloadSHA256": "9799bb5fe28a28dd08a5faa6572cba1841d499d0a1a07b6116274e59b86283e3",
-      "downloadBytes": 5564
+      "bytes": 5564
     },
     {
       "id": "exchange-recorded-topped-structures",
@@ -13562,9 +13536,7 @@
       "caveats": [
         "EX1/EX2 topping out is not completion of enclosure or occupancy.",
         "Shared podium triangles crossing the selected tower footprints are omitted. EX3 has no verified height cut and is omitted from recorded progress."
-      ],
-      "downloadSHA256": "d9bb50e7f2dc040fbdc141f5d66cbb13b07aec4ca463801fa4c7f26e1fe4ba6b",
-      "downloadBytes": 5012832
+      ]
     },
     {
       "id": "mcity-m4-recorded-level41",
@@ -13613,9 +13585,7 @@
         "2020 drawing floor elevations are assumed to correspond to the current developer floor numbering; exact latest issued-for-construction schedule is unavailable.",
         "Clipped solid is an envelope representation, not reconstructed concrete slabs or real facade progress.",
         "Existing supplement carries separate \u00b110 m plan-location and \u00b12 m ground-datum uncertainties."
-      ],
-      "downloadSHA256": "73f017176574c17fc72b4e1af6c93320350ed4fd8cc1978c92b7f94538c1e033",
-      "downloadBytes": 3716
+      ]
     },
     {
       "projectId": "lakeview-aura",
@@ -14037,12 +14007,12 @@
         "method": "Two City street junctions anchor June PDF; four shared roof centroids transfer the current image into that plan",
         "junePDFControls": [
           [
-            740,
-            253
+            740.0,
+            253.0
           ],
           [
-            740,
-            979
+            740.0,
+            979.0
           ]
         ],
         "worldControlsEPSG26917": [
@@ -14067,16 +14037,16 @@
         ],
         "currentImageCommonPoints": [
           [
-            1218,
-            208
+            1218.0,
+            208.0
           ],
           [
-            1390,
-            438
+            1390.0,
+            438.0
           ],
           [
-            1390,
-            1131
+            1390.0,
+            1131.0
           ],
           [
             1154.5,
@@ -14169,9 +14139,7 @@
       "url": "models/refinement/aura-townhome-envelopes.glb",
       "replacementModes": [
         "future"
-      ],
-      "downloadSHA256": "d8f22813da8f7ffc9f899a522de899b042579a2f953754e95fc89dac45f1ebbe",
-      "downloadBytes": 37788
+      ]
     },
     {
       "projectId": null,
@@ -14421,9 +14389,7 @@
         "existing",
         "construction",
         "future"
-      ],
-      "downloadSHA256": "888093e65327b15d77da7071425713c4c85b54294c28feb40b75fdb4ea6cc130",
-      "downloadBytes": 77572
+      ]
     },
     {
       "id": "absolute-world-source-derived",
@@ -14788,8 +14754,6 @@
         "Architectural heights are 175.6 m and 157.9 m. Typical floor elevations and roof-zone subdivisions remain inferred from published occupied and maximum heights.",
         "Slab thickness of 0.20 m, guard height of 1 m, glazing setbacks and material finishes are illustrative. North rooftop machinery is omitted; the south cap retains its City-source plan outline."
       ],
-      "downloadSHA256": "2dc125cd855c2c8b8cbfe7b6aa586f98e4f915cc5ad8c6a9c09596b347564aae",
-      "downloadBytes": 3666556,
       "curveRepair": {
         "publication": "CTBUH Journal 2012 Issue IV, MAD/Dominus case study, Figure 3 ground-floor outline",
         "pdfPageIndex": 4,
@@ -14821,7 +14785,7 @@
       ],
       "modelFidelity": "dimensioned plan-derived envelope; schematic materials and screen thickness",
       "geometryDate": "2026-03-13",
-      "heightM": 52,
+      "heightM": 52.0,
       "storeys": 13,
       "lat": 43.627571340666,
       "lon": -79.60654200750976,
@@ -14917,12 +14881,12 @@
           4831538.01
         ],
         "surveyPDFControlB": [
-          805,
+          805.0,
           451.5
         ],
         "surveyPDFControlA": [
-          1703,
-          448
+          1703.0,
+          448.0
         ],
         "roofPDFExistingCorners": [
           [
@@ -14937,11 +14901,11 @@
         "surveyPDFExistingCorners": [
           [
             1464.33,
-            768
+            768.0
           ],
           [
             1217.33,
-            1072
+            1072.0
           ]
         ],
         "roofToSurveyCornerResidualM": [
@@ -14978,9 +14942,7 @@
         "finding": "Inspected source-derived silhouette, top caps, podium steps and placement with unmodified municipal context. No geometry correction required. Neutral isolated QA view, not a finished city render."
       },
       "url": "models/refinement/bough-beeches-2026-plan.glb",
-      "uncertainties": [],
-      "downloadSHA256": "f85cc5f9a90055e5de2b75a67cebeddf4ba1eb5aad7ec1dcfb96b19d3a3611f6",
-      "downloadBytes": 44396
+      "uncertainties": []
     },
     {
       "id": "chelsea-2026-b4",
@@ -15128,9 +15090,7 @@
         "finding": "Inspected source-derived silhouette, top caps, podium steps and placement with unmodified municipal context. No geometry correction required. Neutral isolated QA view, not a finished city render."
       },
       "url": "models/refinement/chelsea-2026-b4.glb",
-      "uncertainties": [],
-      "downloadSHA256": "cf0f3167ac72b276faab0a10c7b86286398fb4fda1bca9eaf0fe570efab8d98d",
-      "downloadBytes": 33760
+      "uncertainties": []
     },
     {
       "id": "chelsea-2026-b5",
@@ -15278,9 +15238,7 @@
         "finding": "Inspected source-derived silhouette, top caps, podium steps and placement with unmodified municipal context. No geometry correction required. Neutral isolated QA view, not a finished city render."
       },
       "url": "models/refinement/chelsea-2026-b5.glb",
-      "uncertainties": [],
-      "downloadSHA256": "2cebb708872c0d846a9d2cf1ed00ab3dbeff90a2230f0f4600766ca49e802f1f",
-      "downloadBytes": 33732
+      "uncertainties": []
     },
     {
       "id": "chelsea-2026-b6",
@@ -15428,9 +15386,7 @@
         "finding": "Inspected source-derived silhouette, top caps, podium steps and placement with unmodified municipal context. No geometry correction required. Neutral isolated QA view, not a finished city render."
       },
       "url": "models/refinement/chelsea-2026-b6.glb",
-      "uncertainties": [],
-      "downloadSHA256": "87b434d5e993df9578bcfaa2633dd8942738f3ca4045696fdc71e49e7b4dd64c",
-      "downloadBytes": 34792
+      "uncertainties": []
     },
     {
       "id": "dundas-55-2025-plan",
@@ -15572,15 +15528,15 @@
             "sourceId": "63-2471",
             "surveyPDFOutline": [
               [
-                973,
+                973.0,
                 383.5
               ],
               [
-                1079,
+                1079.0,
                 383.5
               ],
               [
-                1079,
+                1079.0,
                 616.5
               ],
               [
@@ -15589,18 +15545,18 @@
               ],
               [
                 1101.5,
-                655
+                655.0
               ],
               [
-                1022,
-                655
+                1022.0,
+                655.0
               ],
               [
-                1022,
+                1022.0,
                 619.5
               ],
               [
-                973,
+                973.0,
                 619.5
               ]
             ],
@@ -15627,14 +15583,14 @@
               ],
               [
                 1608.5,
-                419
+                419.0
               ],
               [
-                1543,
-                419
+                1543.0,
+                419.0
               ],
               [
-                1543,
+                1543.0,
                 443.5
               ],
               [
@@ -15656,24 +15612,24 @@
             "sourceId": "63-4493",
             "surveyPDFOutline": [
               [
-                1351,
+                1351.0,
                 323.5
               ],
               [
-                1435,
+                1435.0,
                 323.5
               ],
               [
-                1435,
-                434
+                1435.0,
+                434.0
               ],
               [
-                1351,
-                434
+                1351.0,
+                434.0
               ]
             ],
             "surveyPDFCentroid": [
-              1393,
+              1393.0,
               378.75
             ],
             "cityModelCentroidXZ": [
@@ -15686,19 +15642,19 @@
             "sourceId": "63-4771",
             "surveyPDFOutline": [
               [
-                1211,
-                431
+                1211.0,
+                431.0
               ],
               [
                 1283.5,
-                431
+                431.0
               ],
               [
                 1283.5,
                 542.5
               ],
               [
-                1211,
+                1211.0,
                 542.5
               ]
             ],
@@ -15726,12 +15682,12 @@
       },
       "geometryChecks": {
         "seventeenStoreyPlateM": [
-          23,
-          48
+          23.0,
+          48.0
         ],
         "upperPlateM": [
-          19,
-          42
+          19.0,
+          42.0
         ],
         "tracedSeventeenPlateM": [
           23.002875000000003,
@@ -15749,9 +15705,7 @@
         "finding": "Inspected source-derived silhouette, top caps, podium steps and placement with unmodified municipal context. No geometry correction required. Neutral isolated QA view, not a finished city render."
       },
       "url": "models/refinement/dundas-55-2025-plan.glb",
-      "uncertainties": [],
-      "downloadSHA256": "3b474ec4e4b62178f3b60f16849ac5eadae34f1b3d3321ca94205984d153b453",
-      "downloadBytes": 10752
+      "uncertainties": []
     },
     {
       "id": "cooksville-toc-sep2026-envelopes",
@@ -17798,6 +17752,220 @@
           "claim": "2024 DockWharfPier edge linework; exactly closed faces polygonized without new closure lines."
         }
       ]
+    },
+    {
+      "id": "alba-existing-plan-derived",
+      "assetId": "alba-existing-plan-derived",
+      "projectId": "alba",
+      "name": "Alba Condos \u2014 1 Fairview Road East",
+      "file": "outputs/models/supplemental/alba/alba-existing-plan-derived.glb",
+      "status": "Existing",
+      "sourceStatus": "Existing",
+      "modes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "includedByDefault": true,
+      "replacesSourceIds": [],
+      "preserveMaterials": true,
+      "modelFidelity": "32-storey reconstruction from approved plans and developer references; facade details and floor elevations approximate",
+      "geometryDate": "2021 approved design; 2025 photographic cross-check; completion reported February 2026",
+      "heightM": 109.1,
+      "principalHeightM": 103.1,
+      "storeys": 32,
+      "lat": 43.588078638024335,
+      "lon": -79.62660612984607,
+      "groundModelY": 64.38623046875,
+      "bounds": [
+        [
+          -4161.313620663423,
+          62.377294921875,
+          -74.89514368796513
+        ],
+        [
+          -4100.180958907282,
+          173.48623046875,
+          -10.601737234297499
+        ]
+      ],
+      "bytes": 1056348,
+      "sha256": "6b4ba849cc9d30fb1f5389fdb0fcb025ae12d3d971d35f6451283c2d062c12e0",
+      "components": 227,
+      "triangles": 122452,
+      "registration": {
+        "method": "Similarity fit of five 2021 regulatory parcel corners to City GIS, cross-checked against the September 2026 parcel; the fit residual is not survey accuracy.",
+        "sourcePixels": [
+          [
+            307.0,
+            320.0
+          ],
+          [
+            1147.0,
+            313.0
+          ],
+          [
+            1091.0,
+            896.0
+          ],
+          [
+            375.0,
+            907.0
+          ],
+          [
+            259.0,
+            786.0
+          ]
+        ],
+        "targetGLBXZ": [
+          [
+            -4166.350399999996,
+            -35.57909999974072
+          ],
+          [
+            -4126.729599999962,
+            -87.42480000015348
+          ],
+          [
+            -4093.4954000000143,
+            -56.05779999960214
+          ],
+          [
+            -4126.946200000006,
+            -12.219800000078976
+          ],
+          [
+            -4140.423300000024,
+            -11.119699999690056
+          ]
+        ],
+        "parameters": [
+          0.04765871144962414,
+          -0.06096362995167837,
+          -4200.375351880706,
+          -32.43083773468439
+        ],
+        "residualM": [
+          0.33688778436039607,
+          0.10139773337068282,
+          0.31818338688803255,
+          0.30490274358415964,
+          0.47366969065191233
+        ],
+        "rmsResidualM": 0.32934608124674397,
+        "estimatedAbsolutePlacementUncertaintyM": 2,
+        "floorplateAreaCalibrationM2": 850,
+        "planScaleMPerPixel": 0.07738163188976899,
+        "keyplateScaleMPerPixel": 0.08636733193581812,
+        "modelCentreXZ": [
+          -4129.88659877931,
+          -39.548889040871074
+        ],
+        "coordinateSystem": "EPSG26917; x=E-615000,z=4827000-N; y=ASL-70"
+      },
+      "sources": [
+        {
+          "url": "https://www.mississauga.ca/wp-content/uploads/2021/07/08102221/OZ-20-001-W4-OPA-120-Public-Notice.pdf",
+          "title": "OPA 120 and Zoning By-law 0160-2021 approval package",
+          "publisher": "City of Mississauga",
+          "date": "2021-06-30",
+          "claim": "Final 32-storey approval with a 103.1 m maximum zoning envelope, podium and loading volumes, and 850 m\u00b2 floorplate; PDF pages 8, 58 and 59. The zoning maximum is not an independently measured as-built roof elevation.",
+          "accessed": "2026-09-27"
+        },
+        {
+          "url": "https://www.albacondos.com/amenities",
+          "title": "Alba amenities plans",
+          "publisher": "Edenshaw",
+          "claim": "Seventh-floor amenity and ground-floor podium outlines.",
+          "accessed": "2026-09-27"
+        },
+        {
+          "url": "https://drive.google.com/file/d/1FHyLpf6ujyR-9kAr8bFLIVNtqIGhX1SQ/view",
+          "title": "Alba sales floor plans",
+          "publisher": "Edenshaw, public copy linked by Cityview Realty",
+          "claim": "Typical floors 9\u201332 balcony and glazing contours and wider eighth-floor plate.",
+          "accessed": "2026-09-27"
+        },
+        {
+          "url": "https://urbantoronto.ca/forum/threads/toronto-alba-109-1m-32s-edenshaw-core-architects.30920/page-8",
+          "title": "Alba exterior photograph, 31 October 2025",
+          "publisher": "Dan416 / UrbanToronto",
+          "claim": "Photographic cross-check of tower and podium form; photograph is not redistributed in the model.",
+          "accessed": "2026-09-27"
+        },
+        {
+          "url": "https://edenshaw.com/news/new-32-storey-condominium-complete-in-mississauga/",
+          "title": "New 32-storey condominium complete in Mississauga",
+          "publisher": "Edenshaw",
+          "date": "2026-02-12",
+          "claim": "Completion reported 12 February 2026; 32 storeys and 418 homes.",
+          "accessed": "2026-09-27"
+        },
+        {
+          "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Property_Search/FeatureServer/0",
+          "title": "City GIS predevelopment parcel",
+          "publisher": "City of Mississauga",
+          "claim": "Parcel registration control for the 2021 approved plan.",
+          "accessed": "2026-09-27"
+        },
+        {
+          "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Parcel/FeatureServer/0",
+          "title": "City GIS current parcel",
+          "publisher": "City of Mississauga",
+          "date": "2026-09-01",
+          "claim": "September 2026 parcel cross-check after road widening.",
+          "accessed": "2026-09-27"
+        },
+        {
+          "url": "https://www.skyscrapercenter.com/building/alba/49152",
+          "title": "Alba building record",
+          "publisher": "Council on Vertical Urbanism / CTBUH",
+          "accessed": "2026-09-27",
+          "claim": "Completed 32-floor building; 109.1 m architectural height."
+        }
+      ],
+      "caveats": [
+        "Independent visual reconstruction, not an architect-supplied or certified as-built model.",
+        "Uses the final 32-storey approval. Superseded 34- and 36-storey versions are excluded.",
+        "The 850 m\u00b2 tower plate and asymmetric balcony outlines follow published references. Small-raster tracing and placement have approximately 1\u20132 m working uncertainty.",
+        "The approved maximum zoning envelope is 103.1 m, represented here by the principal tower envelope. The current tall-building registry reports a 109.1 m architectural top. The 6 m crown is a cross-source inference; floor elevations, crown subdivisions, slab thicknesses, railings, mullions and roof machinery remain approximate.",
+        "The foundation meets the model terrain without moving the terrain or roads. Grey finishes match the atlas existing-building palette; they are not photographic facade textures."
+      ],
+      "terrainSamplesModelY": [
+        65.14572143554688,
+        64.83145141601562,
+        64.74070739746094,
+        64.29180908203125,
+        64.38623046875,
+        62.727294921875,
+        63.203369140625,
+        63.3619384765625,
+        63.463897705078125,
+        63.30690002441406,
+        63.67558288574219,
+        63.78265380859375,
+        64.07392883300781,
+        64.50498962402344,
+        64.5328369140625,
+        65.06866455078125,
+        65.52207946777344,
+        65.14572143554688,
+        64.77786254882812
+      ],
+      "actualCompletionDate": null,
+      "statusEvidenceDate": "2026-02-12",
+      "completionNote": "Developer announced completion on 12 February 2026; occupancy began in December 2025. The exact completion day is not independently verified.",
+      "url": "models/refinement/alba-existing-plan-derived.glb",
+      "downloadSHA256": "6b4ba849cc9d30fb1f5389fdb0fcb025ae12d3d971d35f6451283c2d062c12e0",
+      "downloadBytes": 1056348,
+      "triangleCount": 122452,
+      "replacementModes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "coordinateSystem": "EPSG:26917; X=E\u2212615000, Y=elevation\u221270, Z=4827000\u2212N; metres, glTF Y-up",
+      "attribution": "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga."
     }
   ],
   "projectUpdates": [
@@ -17948,12 +18116,12 @@
       "planRegistrationCheck": {
         "sourceTowerCentrePixels": [
           [
-            635,
-            557
+            635.0,
+            557.0
           ],
           [
-            1290,
-            557
+            1290.0,
+            557.0
           ]
         ],
         "worldTowerCentresXZ": [
@@ -18768,7 +18936,7 @@
       "lat": 43.627571340666,
       "lon": -79.60654200750976,
       "heightM": [
-        52
+        52.0
       ],
       "storeys": [
         13

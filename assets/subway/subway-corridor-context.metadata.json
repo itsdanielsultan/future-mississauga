@@ -1,10 +1,12 @@
 {
-  "description": "Actual interactive city model, with municipal Toronto 2025 context and the independent connection overlay. No building/image generation.",
-  "capturedAt": "2026-09-27T03:38:04.296Z",
+  "result": "PASS",
+  "origin": "http://127.0.0.1:4190",
+  "description": "Actual interactive city model with municipal Toronto2025 context and independent connection overlay, now including completed Alba. Test-only module exposure; production source unmodified.",
+  "capturedAt": "2026-09-27T07:49:01.093Z",
   "width": 2892,
   "height": 1322,
-  "sha256": "577e09cf2efe31aeab07e404c063993fd68ace100b962a89b128e832c2a67f7c",
-  "bytes": 2786175,
+  "sha256": "b10f3704f6e42cd7e65c9e0d01ba435b618499cc366f37fde1aaeacb02cd9312",
+  "bytes": 2786402,
   "state": {
     "view": "connection",
     "torontoBuildingCount": "20679",
@@ -13,9 +15,30 @@
     "torontoContext": "loaded",
     "ready": "true",
     "overlay": "true",
-    "loadedBuildingMeshes": "1392",
+    "loadedBuildingMeshes": "1619",
     "waterContext": "coastal-400m",
     "replacedLakeMeshes": "1"
   },
-  "errors": []
+  "modes": [
+    {
+      "mode": "existing",
+      "count": 227,
+      "visible": 227,
+      "status": [
+        "Existing"
+      ],
+      "materialsPreserved": true
+    },
+    {
+      "mode": "future",
+      "count": 227,
+      "visible": 227,
+      "status": [
+        "Existing"
+      ],
+      "materialsPreserved": true
+    }
+  ],
+  "errors": [],
+  "failed": []
 }
