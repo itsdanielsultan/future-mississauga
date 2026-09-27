@@ -258,3 +258,14 @@ Voya's two upper towers have been oriented consistently with the recovered devel
 Lakeview coverage remains partial. Adding Harbourwalk does not make the older municipal components a complete or fully current masterplan. Aura remains an approximate townhome interpretation, while Pier House and other unresolved phases retain their disclosed gaps. The public project records link the sources and explain these limitations.
 
 The model viewer now searches the researched development catalogue by name or address. Selecting a model opens its evidence record and frames the building with its surroundings. Records without verified geometry remain explicitly identified and do not trigger a flight to a guessed position.
+
+
+## 27 September 2026: expanded Lakeview phases and Voya balconies
+
+The next community correction adds 19 Pier House row-building groups, 17 South Banks blocks and five more Aura plan envelopes. These 41 groups are not dwelling counts. They appear only as qualified future forms, with estimated heights and source-linked limits. The earlier Harbourwalk reconstruction remains. Aquanova is now identified and searchable through the retained City tower at 950 Aerodrome Avenue; no duplicate tower was added.
+
+Voya retains its connected curved podium and now has distinct, smoother park-facing balcony profiles for the two towers, including the lower transition variations explicitly shown in published suite plans. A full-height repeating wave is not inferred. Voya adjoins Zonta Meadows, but the commenter's intended building remains unconfirmed.
+
+Lakeview coverage remains incomplete. The Greenpark source contains three tall bodies despite a four-tower current application, and other village blocks and the Innovation District still need current architectural references. See the current [Lakeview coverage report](Lakeview-model-coverage-review.md) and project records. Older sections above record previous releases and do not override this revision.
+
+Four symbolic woodland crowns intersected Pier House. They are suppressed in the shared future landscape variant used by construction and future selections; baseline existing trees are unchanged. This is a display correction to illustrative canopy, not a claim that actual surveyed trees were removed.

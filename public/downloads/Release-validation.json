@@ -1,26 +1,26 @@
 {
-  "edition": "Voya and Harbourwalk revision · 27 September 2026",
-  "checkedAt": "2026-09-27T16:28:57.933020+00:00",
-  "validationInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+  "edition": "Visual Polish 2026-09-26; Lakeview and Zonta Meadows revision, 27 September 2026",
+  "checkedAt": "2026-09-27T23:17:25.335059+00:00",
+  "validationInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
   "inputLockScope": "The validation input lock identifies this composed release. Every image retains its actual render-time input lock. Unaffected accepted images have not been relabelled as new renders.",
-  "activeLockedInputs": 258,
+  "activeLockedInputs": 261,
   "kind": "Current local files and hash-bound source evidence; deployment checked separately",
   "originalPNGs": 33,
   "portraitPNGs": 24,
-  "PNGbytes": 469857520,
-  "portraitPNGbytes": 376890211,
+  "PNGbytes": 469991401,
+  "portraitPNGbytes": 377136550,
   "editableBlenderSceneFilesPresent": 15,
-  "GLBfiles": 207,
-  "refinementAssets": 29,
-  "refinementAssetsWithFiniteOrderedBounds": 29,
-  "projectRecords": 109,
+  "GLBfiles": 210,
+  "refinementAssets": 32,
+  "refinementAssetsWithFiniteOrderedBounds": 32,
+  "projectRecords": 111,
   "webUsesHalfSizeDisplayPNG": true,
   "displayPNGs": 33,
   "downloadsUseOriginalPNG": true,
   "renderProvenance": {
     "wide": {
-      "currentRevisionNativeRenders": 10,
-      "byteIdenticalPredecessorRenders": 23
+      "currentRevisionNativeRenders": 12,
+      "byteIdenticalPredecessorRenders": 21
     },
     "portrait": {
       "currentRevisionNativeRenders": 5,
@@ -31,12 +31,12 @@
   "atlas": {
     "file": "Future-Mississauga-Atlas.pdf",
     "pageCount": 35,
-    "sha256": "74e7f608a618b431225c6ef0ac106317d986bbe33ea37778bf92a564fab3805e"
+    "sha256": "84c659ea34616746e0219992fdb6ce193e4adc703e4805ea99ac179465b5291a"
   },
   "film": {
     "file": "../gallery/Downtown-transformation.mp4",
     "durationSeconds": 5.7,
-    "sha256": "ad8515e013ab88e0e4738155caf519b71b424a9b724da8f122382bfc3807ee30"
+    "sha256": "271891a1c5e011dfad07c141cbebfaf1d48088ccc21859b37fb7759d9188a848"
   },
   "current33WideFileAndDecodedRGBHashesVerified": true,
   "current24PortraitFileAndDecodedRGBHashesVerified": true,
@@ -50,25 +50,25 @@
   },
   "comparisonCamerasVerifiedBySourceQA": true,
   "sceneVerification": {
-    "nineCurrentScenesReopened": 9,
-    "sixByteIdenticalPredecessorSceneChecksRetained": 6
+    "currentScenesReopened": 10,
+    "byteIdenticalPredecessorSceneChecksRetained": 5
   },
-  "modelIndexSHA256": "5f07be9c6c0932fb5012fa9977aa2d0515b5e1ec0c803300cc7616e45a30ae35",
-  "publicProjectRegisterSHA256": "78149c53c5b87e02bca7e1b12e9d979c29269927abe849859726d8ad9df125f8",
-  "publicModelManifestSHA256": "225d7fdc1bd30c7d8af97e611055b24754ecffd83276ad64f3ac5f7548d02b5d",
+  "modelIndexSHA256": "7a4e219843ff7423a30e6a48d6fca8252cce8705bfc845babb1c7e51e6a878f6",
+  "publicProjectRegisterSHA256": "390bfe33bd2470d80a1d0672f95f88d2db902a89a9bbc91028c63526512b8e15",
+  "publicModelManifestSHA256": "477c0f30e2e270f00737eb57126d54ec723b3448a879a676231e737afe08bbd4",
   "sourceProofs": {
-    "Final-wide-QA.json": "46bf7950819769900cc346426a558ad6d505bff595db1a0d8c3ca75e22cddf02",
-    "Final-high-resolution-QA.json": "0bff5b9f10361ba7ef003bd9e18d22006bd25e47211766629ddc932e35beab40",
-    "Final-wide-visual-review.json": "e21a24d0a53cca832b85f31b4355461c247b159cac462433710682268df4c8fc",
-    "Final-portrait-visual-review.json": "4c561a64094a9e496839fd86c04030169bce1ac0e729bb4a25401e10538a5aa1",
-    "Final-editable-scenes-QA.json": "cffe1d9b885ededeabe2405c4c39407abb2d6fd1af84c7df79c30d60e7025bba",
-    "Final-scene-render-provenance.json": "33d4efd33af6cc1ec6979f9476f39e236fa7ffcf4e6ff7c53a1d2852f32ae461"
+    "Final-wide-QA.json": "da477a8973378e564baf4de111abde5c329324c82fbed50f80b200ef28127d2a",
+    "Final-high-resolution-QA.json": "d06598d1255c86f333493c3b45305c85227a112e38589137492de8e08306293c",
+    "Final-wide-visual-review.json": "b60cf4bc12dcb85c0c20f4022298f4ae92ee63392f671cd55ae2a43589ebd3b5",
+    "Final-portrait-visual-review.json": "bd9e917b8aba3c5dc2cc69788b5054b3fbeaaf0fbc3d09bc4622b356edbb796d",
+    "Final-editable-scenes-QA.json": "991cb0628a524c16c32da1658ed7bcb4661a704838944c7dadc6774b6beecc53",
+    "Final-scene-render-provenance.json": "0af14436f84cf63c8bec8e5eb155cc003cebe358e0108d7bd8de38f7c1995fbe"
   },
-  "sourceAuditSHA256": "4c59fa9c01df01914bae81cbe1cfc8abd1de288a90cbd47f2b6b948d58482839",
+  "sourceAuditSHA256": "bfcc576b11e59aef8a69274bf97a132694f5c0d4601fdbfa9ef6ec1759849307",
   "portraitHosting": {
-    "tag": "high-resolution-images-reddit-2026-09-27",
-    "verificationPerformedAt": "2026-09-27T16:13:17.406948+00:00",
-    "mappingSHA256": "15e36af4b7e91817f868f37cd0b8494580cd9332b0622835f6f66c968e919907",
+    "tag": "high-resolution-images-lakeview-zonta-2026-09-27",
+    "verificationPerformedAt": "2026-09-27T23:16:43.354940+00:00",
+    "mappingSHA256": "ed29cd0b809ebe74021c0a85081c79c356b9457b6e2e909f435f031e77ad3043",
     "publicHTTPAssetHashesVerified": 48,
     "scope": "Prior completed same-revision public GitHub release-asset checks, hash-bound here; this helper does not repeat network requests."
   },

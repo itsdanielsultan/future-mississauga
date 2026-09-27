@@ -1,9 +1,9 @@
 {
-  "edition": "Voya and Harbourwalk revision · 27 September 2026",
-  "checkedAt": "2026-09-27T16:28:57.933020+00:00",
-  "validationInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+  "edition": "Visual Polish 2026-09-26; Lakeview and Zonta Meadows revision, 27 September 2026",
+  "checkedAt": "2026-09-27T23:17:25.335059+00:00",
+  "validationInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
   "inputLockScope": "The validation input lock identifies this composed release. Every image retains its actual render-time input lock. Unaffected accepted images have not been relabelled as new renders.",
-  "activeLockedInputs": 258,
+  "activeLockedInputs": 261,
   "kind": "Static export picture-source verification",
   "historicalFilename": "Original-picture-upload-validation.json retained for existing links; this report does not assert website upload or deployment.",
   "uploadOrDeploymentClaimed": false,
@@ -13,8 +13,8 @@
   "exportResponsibility": "The static exporter copies verified masters to gallery/originals and validates final exported bytes. This report verifies the source files and mappings before that separate export.",
   "renderProvenance": {
     "wide": {
-      "currentRevisionNativeRenders": 10,
-      "byteIdenticalPredecessorRenders": 23
+      "currentRevisionNativeRenders": 12,
+      "byteIdenticalPredecessorRenders": 21
     },
     "portrait": {
       "currentRevisionNativeRenders": 5,
@@ -45,17 +45,17 @@
     },
     {
       "file": "citywide-future.png",
-      "originalSHA256": "461c193a9f2ae253663a93047d6c869d1b6ad04b59a4ad52b5056f379d0c61e2",
-      "originalBytes": 13811945,
+      "originalSHA256": "792b36c65627b15d2b85588eb2c23ab95c2eb9d0471979ef07b3c19e1856da98",
+      "originalBytes": 13876856,
       "originalDimensions": [
         3840,
         2400
       ],
-      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
       "retainedByteIdenticalFromPredecessor": false,
-      "displayFile": "gallery/previews/461c193a9f2ae253/citywide-future.png",
-      "displaySHA256": "254201ea47a7ee9c29e79fb58194ec80dd7f85fbe38a0b290993b3fb0f23c64e",
-      "displayBytes": 2645661,
+      "displayFile": "gallery/previews/792b36c65627b15d/citywide-future.png",
+      "displaySHA256": "e434836409aad1714302d8432086105f31320976f85d1af80581f7f97c197572",
+      "displayBytes": 2732183,
       "displayDimensions": [
         1920,
         1200
@@ -185,17 +185,17 @@
     },
     {
       "file": "dixie-applewood-future.png",
-      "originalSHA256": "91af398ec7ff7eda9c8f169aff66d54274c40e73d43ab2e7828566e4bbf4c1e2",
-      "originalBytes": 16505596,
+      "originalSHA256": "743e465be1d80d2bff69fda9a9f1918c44d2a7e33239a852518ec4a402bf8e70",
+      "originalBytes": 16506615,
       "originalDimensions": [
         3840,
         2400
       ],
-      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
-      "retainedByteIdenticalFromPredecessor": true,
-      "displayFile": "gallery/previews/91af398ec7ff7eda/dixie-applewood-future.png",
-      "displaySHA256": "2f0f6deeee0c103597e0331664f6b9f6d0e857d53c988ea8377cc365995fb45c",
-      "displayBytes": 3850182,
+      "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
+      "retainedByteIdenticalFromPredecessor": false,
+      "displayFile": "gallery/previews/743e465be1d80d2b/dixie-applewood-future.png",
+      "displaySHA256": "3b8c030a34692216d4882fbb7ade6921b4993eb354983e1de0937b7cb065d9a7",
+      "displayBytes": 3850622,
       "displayDimensions": [
         1920,
         1200
@@ -225,17 +225,17 @@
     },
     {
       "file": "downtown-future.png",
-      "originalSHA256": "509eb9046f114237498f5d984f11303c290088abd17f778f2bac76b2ff80ac08",
-      "originalBytes": 15669221,
+      "originalSHA256": "2d418eca2c25d07ed6d53be361f3a141dffacc66dd7db8067c01d5cbaf6690ac",
+      "originalBytes": 15667803,
       "originalDimensions": [
         3840,
         2400
       ],
-      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
       "retainedByteIdenticalFromPredecessor": false,
-      "displayFile": "gallery/previews/509eb9046f114237/downtown-future.png",
-      "displaySHA256": "937f6abe334691a1b460f21b3d95d8c487c69d571ecbeb2da1be3f0d2b7e3261",
-      "displayBytes": 3607234,
+      "displayFile": "gallery/previews/2d418eca2c25d07e/downtown-future.png",
+      "displaySHA256": "ae88e2a7b62b8c236a0feb087be3e3ba150525cc102ecec8e05e767727ffc647",
+      "displayBytes": 3607204,
       "displayDimensions": [
         1920,
         1200
@@ -265,17 +265,17 @@
     },
     {
       "file": "downtown-landmark-future.png",
-      "originalSHA256": "7c387c56493f50c33d9a303d3f39f71b88e7285826a524b94fb62fc745465b7d",
-      "originalBytes": 12533183,
+      "originalSHA256": "f54b1d54c43f433fc28ba78793200885fc39ba96ed64b172ed022f0cd6c5e6d4",
+      "originalBytes": 12534883,
       "originalDimensions": [
         3840,
         2400
       ],
-      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
       "retainedByteIdenticalFromPredecessor": false,
-      "displayFile": "gallery/previews/7c387c56493f50c3/downtown-landmark-future.png",
-      "displaySHA256": "392a47c0fc815d38df6fba7889b9d785f0fe63784de52f5289c279838e4dd98c",
-      "displayBytes": 2504033,
+      "displayFile": "gallery/previews/f54b1d54c43f433f/downtown-landmark-future.png",
+      "displaySHA256": "c489a475a3d501e460f6a6dfe0bdb62c01c5cb52b4543feb93b7df6d08727f8c",
+      "displayBytes": 2504084,
       "displayDimensions": [
         1920,
         1200
@@ -285,17 +285,17 @@
     },
     {
       "file": "downtown-portrait-future.png",
-      "originalSHA256": "ce878ac078b6480bd4fb1fa46d26aa83263cf2d499aaf9fd05d6caadf34d86ac",
-      "originalBytes": 16015991,
+      "originalSHA256": "e4de31c7b4891955ec2e11fb7eba51f86b1a8d86629b7a159de4db1b005a17a2",
+      "originalBytes": 16015997,
       "originalDimensions": [
         3840,
         2400
       ],
-      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
       "retainedByteIdenticalFromPredecessor": false,
-      "displayFile": "gallery/previews/ce878ac078b6480b/downtown-portrait-future.png",
-      "displaySHA256": "78a2ad8dffa2e87f8265e9100d08946e7b6b2bda01f9fd2588b33b43b6c47949",
-      "displayBytes": 3738650,
+      "displayFile": "gallery/previews/e4de31c7b4891955/downtown-portrait-future.png",
+      "displaySHA256": "0271f9560edbb27f69f518e9b25163110d5a148117d9caee56405167199a50ab",
+      "displayBytes": 3738887,
       "displayDimensions": [
         1920,
         1200
@@ -305,17 +305,17 @@
     },
     {
       "file": "downtown-skyline-construction.png",
-      "originalSHA256": "4ce3e8179460ef56bbbeb33b32f852096bf426b7a5456b5662af427a36599673",
-      "originalBytes": 9323101,
+      "originalSHA256": "6820dc696161d2ffbe6ec2e0525664951698461aa9656a7e10f02d54fe89a020",
+      "originalBytes": 9321210,
       "originalDimensions": [
         3840,
         1400
       ],
-      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
       "retainedByteIdenticalFromPredecessor": false,
-      "displayFile": "gallery/previews/4ce3e8179460ef56/downtown-skyline-construction.png",
-      "displaySHA256": "99f325406341f7f7500c6356a156cb991bf5c42dfee26f15e7ddb1a6957e6a8c",
-      "displayBytes": 2154175,
+      "displayFile": "gallery/previews/6820dc696161d2ff/downtown-skyline-construction.png",
+      "displaySHA256": "be75d4bf04aa33051a2acbb7c1dea193f7727d429b60c6027f7aaac41460e49e",
+      "displayBytes": 2153561,
       "displayDimensions": [
         1920,
         700
@@ -345,17 +345,17 @@
     },
     {
       "file": "downtown-skyline-future.png",
-      "originalSHA256": "deaf0acf07378069b8cbde6e45a47ecae26ba713dec4db4813899ba6b92323ec",
-      "originalBytes": 9233305,
+      "originalSHA256": "8bfd67ea98400debc4fa6dc59f3372a8cb277e529ff38549972887408dbacc79",
+      "originalBytes": 9231550,
       "originalDimensions": [
         3840,
         1400
       ],
-      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
       "retainedByteIdenticalFromPredecessor": false,
-      "displayFile": "gallery/previews/deaf0acf07378069/downtown-skyline-future.png",
-      "displaySHA256": "08c5d1f7054e34318c68328999a009e6c06bee7fd118625bf26a30e59680d416",
-      "displayBytes": 2119463,
+      "displayFile": "gallery/previews/8bfd67ea98400deb/downtown-skyline-future.png",
+      "displaySHA256": "8085ed5e87fc9f2a7ac33d7695e40187a2997c340881b2b1d8b0c6a79e785e92",
+      "displayBytes": 2119068,
       "displayDimensions": [
         1920,
         700
@@ -445,17 +445,17 @@
     },
     {
       "file": "lakeview-future.png",
-      "originalSHA256": "f3971e27cdd2430a2b4d3fd69ab1ee46440611bd0df9f395ec0d918da41c66b6",
-      "originalBytes": 13694438,
+      "originalSHA256": "e837979c9f1f183b217ba4428b2d671b64840da724d1fc2bb162abf7452c6c97",
+      "originalBytes": 13726700,
       "originalDimensions": [
         3840,
         2400
       ],
-      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
       "retainedByteIdenticalFromPredecessor": false,
-      "displayFile": "gallery/previews/f3971e27cdd2430a/lakeview-future.png",
-      "displaySHA256": "011eb1b1aa3a52ef74cb78d7f4bfcc6f367be084e71793b3f630f5e4d3a31d46",
-      "displayBytes": 2812991,
+      "displayFile": "gallery/previews/e837979c9f1f183b/lakeview-future.png",
+      "displaySHA256": "38a226e0c72e2d15392d3082685218fecbd396334435f31a0d0efc2ef0bbfd98",
+      "displayBytes": 2827307,
       "displayDimensions": [
         1920,
         1200
@@ -465,17 +465,17 @@
     },
     {
       "file": "lakeview-portrait-future.png",
-      "originalSHA256": "7daca129435e7ed704f2b1c17051ed2801c770bf83c3cc2319e98afca6f7755c",
-      "originalBytes": 13759587,
+      "originalSHA256": "1ffb12100055efae2d6adfd9cfff022689bb8260e2aeea867ef902833ed05262",
+      "originalBytes": 13778495,
       "originalDimensions": [
         3840,
         2400
       ],
-      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
       "retainedByteIdenticalFromPredecessor": false,
-      "displayFile": "gallery/previews/7daca129435e7ed7/lakeview-portrait-future.png",
-      "displaySHA256": "6be70b5ca92d5877d73e436a37b05dc73dc390772350799fb6e24326242414c7",
-      "displayBytes": 2809408,
+      "displayFile": "gallery/previews/1ffb12100055efae/lakeview-portrait-future.png",
+      "displaySHA256": "9add1047067383f93dc259edabc5fbf7231fbc0481510c9fd5565079a8861381",
+      "displayBytes": 2821625,
       "displayDimensions": [
         1920,
         1200
@@ -485,17 +485,17 @@
     },
     {
       "file": "lakeview-skyline-future.png",
-      "originalSHA256": "93f9bd8f18c294a73260da00d533e5d12a2b415ac1fe154fd957e1123d2b6e4e",
-      "originalBytes": 8336289,
+      "originalSHA256": "749ea5964e61912b92f6eb52e5952010258e575e98c1deb65cec0153ecb0fbb1",
+      "originalBytes": 8355418,
       "originalDimensions": [
         3840,
         1400
       ],
-      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
       "retainedByteIdenticalFromPredecessor": false,
-      "displayFile": "gallery/previews/93f9bd8f18c294a7/lakeview-skyline-future.png",
-      "displaySHA256": "8fe7d740c20c799ed268cd2fd4f7a517257066723457040cf630961441269558",
-      "displayBytes": 1772753,
+      "displayFile": "gallery/previews/749ea5964e61912b/lakeview-skyline-future.png",
+      "displaySHA256": "e95929a8bffd414dc4f830b3c3fadda2b59d9ef1043e566eaf573c133bdd6ac1",
+      "displayBytes": 1781141,
       "displayDimensions": [
         1920,
         700
@@ -565,17 +565,17 @@
     },
     {
       "file": "port-credit-future.png",
-      "originalSHA256": "13dbb8d71f3d5edf08dbed338e77bf08fcafcadd1a24b633aa0a30a6472ebf78",
-      "originalBytes": 15883660,
+      "originalSHA256": "2ff8687b36e14c10d518d2b1ff2af2d269eb5e1a4a60f5ef1618ba01176f5eea",
+      "originalBytes": 15883978,
       "originalDimensions": [
         3840,
         2400
       ],
-      "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
-      "retainedByteIdenticalFromPredecessor": true,
-      "displayFile": "gallery/previews/13dbb8d71f3d5edf/port-credit-future.png",
-      "displaySHA256": "7224d55eec49bb7b839508839c5114db170dd9c6db91af38d8fb049d61ec1ca3",
-      "displayBytes": 3760312,
+      "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
+      "retainedByteIdenticalFromPredecessor": false,
+      "displayFile": "gallery/previews/2ff8687b36e14c10/port-credit-future.png",
+      "displaySHA256": "b302b1d1e5ad104fbb4596d7d7b59ec05d7d20587ce170974d032031734ea725",
+      "displayBytes": 3760277,
       "displayDimensions": [
         1920,
         1200
@@ -645,17 +645,17 @@
     },
     {
       "file": "uptown-future.png",
-      "originalSHA256": "77b5d570bf596ad7cb5df249e7f166898090b38c0f5762c6900491e5f0ab7ea3",
-      "originalBytes": 16017691,
+      "originalSHA256": "38ea576ea04d8a45ae8310eb82bb73c2d2372efdcbb425ee9936ee66f622e1ee",
+      "originalBytes": 16018383,
       "originalDimensions": [
         3840,
         2400
       ],
-      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
       "retainedByteIdenticalFromPredecessor": false,
-      "displayFile": "gallery/previews/77b5d570bf596ad7/uptown-future.png",
-      "displaySHA256": "a9f6eb037d0e91a17ebcef33da2694ae28adfa42965c0fe6e8d8a46265866b1b",
-      "displayBytes": 3730034,
+      "displayFile": "gallery/previews/38ea576ea04d8a45/uptown-future.png",
+      "displaySHA256": "358625854434d190042ac2b2337d8cbb81c5b28da6dc7344844f41ece644089f",
+      "displayBytes": 3730796,
       "displayDimensions": [
         1920,
         1200
@@ -695,8 +695,8 @@
       ],
       "actualRenderInputLockSHA256": "4371a6f41715178e993e97a00f9880a6def59ce168b542f7bf0026e3e08a8778",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/downtown-landmark-future.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-downtown-landmark-future.png",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/downtown-landmark-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-downtown-landmark-future.png",
       "displaySHA256": "ee089ea6cc932245c79b56a3874e6fcb955c485408b8291a6c942057cd20e551",
       "displayResolution": [
         1620,
@@ -713,8 +713,8 @@
       ],
       "actualRenderInputLockSHA256": "4371a6f41715178e993e97a00f9880a6def59ce168b542f7bf0026e3e08a8778",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/downtown-existing.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-downtown-existing.png",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/downtown-existing.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-downtown-existing.png",
       "displaySHA256": "4a65c7bb89b4626cf1dc44901e8da70b49a4758a4aea8cbb7a6810b180e3a4aa",
       "displayResolution": [
         1620,
@@ -723,17 +723,17 @@
     },
     {
       "file": "downtown-future.png",
-      "sha256": "d8d1f70a3b5432c39b4638de52e4cb3604e1ff90431cb5fd442b8a86e4df24df",
-      "bytes": 16186303,
+      "sha256": "f289f23bfb21844619d48fb0b256c66f3a090655ea508c17afe9673c478a7643",
+      "bytes": 16189698,
       "resolution": [
         3240,
         4050
       ],
-      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
       "retainedByteIdenticalFromPredecessor": false,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/downtown-future.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-downtown-future.png",
-      "displaySHA256": "c1b289d3d0c80c3b4c19e73088b8c041617cd4dc07d029c3bce1a0e69bf77739",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/downtown-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-downtown-future.png",
+      "displaySHA256": "99e91d6929bb22e4d4902b3c45ba8179ba6a5dd4cb72000329b9a30cac398079",
       "displayResolution": [
         1620,
         2025
@@ -749,8 +749,8 @@
       ],
       "actualRenderInputLockSHA256": "4371a6f41715178e993e97a00f9880a6def59ce168b542f7bf0026e3e08a8778",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/downtown-skyline-existing.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-downtown-skyline-existing.png",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/downtown-skyline-existing.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-downtown-skyline-existing.png",
       "displaySHA256": "4f8a02185e036fa51e7978bb9818b0a14604b0209dd47d9b6d52dfabcaa8477f",
       "displayResolution": [
         1620,
@@ -759,17 +759,17 @@
     },
     {
       "file": "downtown-skyline-construction.png",
-      "sha256": "98ca5262ef84bd0cf70481b2570fae7c08ee2a4cd082be2baa46c244ee9c8682",
-      "bytes": 17542959,
+      "sha256": "e5414269155a73b3dfe2ed81a71fb59f59e449567d838a8feb6f438022a855c8",
+      "bytes": 17544755,
       "resolution": [
         3240,
         4050
       ],
-      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
       "retainedByteIdenticalFromPredecessor": false,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/downtown-skyline-construction.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-downtown-skyline-construction.png",
-      "displaySHA256": "dcb7fa6e60d0b9bfbec4a72fa7368ca316cc50f38b3d315c4cc042014a6a9e19",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/downtown-skyline-construction.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-downtown-skyline-construction.png",
+      "displaySHA256": "3e2f1e85bcc7b5653aea9e12e91abbdd3d92c789b8fb3f84952c433f247bba7f",
       "displayResolution": [
         1620,
         2025
@@ -777,17 +777,17 @@
     },
     {
       "file": "downtown-skyline-future.png",
-      "sha256": "8c57e615a1512f45083bd978dfb92b28a68a78e56620512f5bdd8b9df0b79749",
-      "bytes": 17440421,
+      "sha256": "cd475197021eae7cedf9e65be827bf03727307e466c8d4a7cfa42aca18679852",
+      "bytes": 17442400,
       "resolution": [
         3240,
         4050
       ],
-      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
       "retainedByteIdenticalFromPredecessor": false,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/downtown-skyline-future.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-downtown-skyline-future.png",
-      "displaySHA256": "1c89c847ea63014ed3f0a0dcc73892e615f0f9069a5d560b92c2b862bdc9d3f6",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/downtown-skyline-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-downtown-skyline-future.png",
+      "displaySHA256": "3f0829212ed581066a14984dbbc8d304607a7425f721516ee908a337a74f76c5",
       "displayResolution": [
         1620,
         2025
@@ -803,8 +803,8 @@
       ],
       "actualRenderInputLockSHA256": "4371a6f41715178e993e97a00f9880a6def59ce168b542f7bf0026e3e08a8778",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/downtown-portrait-future.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-downtown-portrait-future.png",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/downtown-portrait-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-downtown-portrait-future.png",
       "displaySHA256": "102bd5e7f55cc1d55ce29b60aada139224e38404f7591895d8d91726d3f864b9",
       "displayResolution": [
         1620,
@@ -821,8 +821,8 @@
       ],
       "actualRenderInputLockSHA256": "4371a6f41715178e993e97a00f9880a6def59ce168b542f7bf0026e3e08a8778",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/downtown-junction-future.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-downtown-junction-future.png",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/downtown-junction-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-downtown-junction-future.png",
       "displaySHA256": "bc36897235de05662a62ddca5f23d3297d3ed2bdd7f1af0b4b100c00d3681c4b",
       "displayResolution": [
         1620,
@@ -839,8 +839,8 @@
       ],
       "actualRenderInputLockSHA256": "0020782cf42c1dcbde35150de5046a34a9b5b65296f2d08044001123a4f3553f",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/cooksville-portrait-future.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-cooksville-portrait-future.png",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/cooksville-portrait-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-cooksville-portrait-future.png",
       "displaySHA256": "85090805b03731155a54e3d35d2f3ee7e58587dcf36ced4be98756c4ccf612d3",
       "displayResolution": [
         1620,
@@ -857,8 +857,8 @@
       ],
       "actualRenderInputLockSHA256": "0020782cf42c1dcbde35150de5046a34a9b5b65296f2d08044001123a4f3553f",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/cooksville-future.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-cooksville-future.png",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/cooksville-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-cooksville-future.png",
       "displaySHA256": "fccb952b3b079158f2428a34f9b67ea323a4eb9c957466e37d4a63d396f34061",
       "displayResolution": [
         1620,
@@ -875,8 +875,8 @@
       ],
       "actualRenderInputLockSHA256": "4371a6f41715178e993e97a00f9880a6def59ce168b542f7bf0026e3e08a8778",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/uptown-portrait-future.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-uptown-portrait-future.png",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/uptown-portrait-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-uptown-portrait-future.png",
       "displaySHA256": "ae2a7f1dd811aea8a3dec8d16ff30e46b85abb4637a56395f31379d1224980cc",
       "displayResolution": [
         1620,
@@ -893,8 +893,8 @@
       ],
       "actualRenderInputLockSHA256": "4371a6f41715178e993e97a00f9880a6def59ce168b542f7bf0026e3e08a8778",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/uptown-future.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-uptown-future.png",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/uptown-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-uptown-future.png",
       "displaySHA256": "0c7b8b71d732f98b92765790ca494c1f92d68718e6a2fd3a0db5a6a17b4b0d6b",
       "displayResolution": [
         1620,
@@ -911,8 +911,8 @@
       ],
       "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/port-credit-existing.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-port-credit-existing.png",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/port-credit-existing.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-port-credit-existing.png",
       "displaySHA256": "a58d6a87129532f635f5c771e17b62e822124126b1e67d129e7898ccc31b8058",
       "displayResolution": [
         1620,
@@ -929,8 +929,8 @@
       ],
       "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/port-credit-future.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-port-credit-future.png",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/port-credit-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-port-credit-future.png",
       "displaySHA256": "22e58f2f5e98277dcad38c06ac648ff80dbc6c55c0395be0de7ea04ff70cda57",
       "displayResolution": [
         1620,
@@ -947,8 +947,8 @@
       ],
       "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/port-credit-portrait-future.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-port-credit-portrait-future.png",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/port-credit-portrait-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-port-credit-portrait-future.png",
       "displaySHA256": "ed9cfdd9e1795448ad16ee93b4d0b1b669b0a7bcf19a407cd934a945e20ef770",
       "displayResolution": [
         1620,
@@ -965,8 +965,8 @@
       ],
       "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/port-credit-skyline-future.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-port-credit-skyline-future.png",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/port-credit-skyline-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-port-credit-skyline-future.png",
       "displaySHA256": "e49c126f1bee9a64f6d8af4c8fada5a2f4f86deed40c193184b9c5a58f9faaaa",
       "displayResolution": [
         1620,
@@ -983,8 +983,8 @@
       ],
       "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/lakeview-existing.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-lakeview-existing.png",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/lakeview-existing.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-lakeview-existing.png",
       "displaySHA256": "b23edb880419e93b9e717b288f7ddbb0117bb5f26c37e255c8bd13b44f170e7a",
       "displayResolution": [
         1620,
@@ -993,17 +993,17 @@
     },
     {
       "file": "lakeview-future.png",
-      "sha256": "ec8cfc3a863f733960cf7ff8ff1deffb18643e5e3b09373f0989eeec6b98fec6",
-      "bytes": 12218178,
+      "sha256": "6ed19f8020d38eab9d88ce61acb4cf12782c846badad0f5cf20f71ad131cbe4e",
+      "bytes": 12361108,
       "resolution": [
         3240,
         4050
       ],
-      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
       "retainedByteIdenticalFromPredecessor": false,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/lakeview-future.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-lakeview-future.png",
-      "displaySHA256": "678a613b3bdebff0040bb3e38a711bd84334369292f29d5275a9c165abb2711d",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/lakeview-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-lakeview-future.png",
+      "displaySHA256": "086c58b8e3b5cf20c33d6ce3db7598efc27100b9e75dad8bc1e2b66ca31ec576",
       "displayResolution": [
         1620,
         2025
@@ -1011,17 +1011,17 @@
     },
     {
       "file": "lakeview-portrait-future.png",
-      "sha256": "26f9be3e40a6bbe15b5032eebbc633250056c27ce265b8720adb0dad1a45d7bf",
-      "bytes": 13094175,
+      "sha256": "b7366aca4d5fc0ba43d168fa592b9ebe984644ecc59d88bdc7ba441b0d63aa38",
+      "bytes": 13190414,
       "resolution": [
         3240,
         4050
       ],
-      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
       "retainedByteIdenticalFromPredecessor": false,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/lakeview-portrait-future.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-lakeview-portrait-future.png",
-      "displaySHA256": "37ec4be7b38d31e2ddd86b4db2469ca0e30e02d48810fbbd0cc3fb2966c8888c",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/lakeview-portrait-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-lakeview-portrait-future.png",
+      "displaySHA256": "f986a9dc34f594c259cc76dbb08560ef3166d8b8254dd84b85442bf9cb5f72b5",
       "displayResolution": [
         1620,
         2025
@@ -1037,8 +1037,8 @@
       ],
       "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/clarkson-existing.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-clarkson-existing.png",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/clarkson-existing.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-clarkson-existing.png",
       "displaySHA256": "92fe21fdfd02deb863e6a96a97e4546e62ff533140a0261efd279c6c68bcff5c",
       "displayResolution": [
         1620,
@@ -1055,8 +1055,8 @@
       ],
       "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/clarkson-future.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-clarkson-future.png",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/clarkson-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-clarkson-future.png",
       "displaySHA256": "373f4e6ee26ec7e93f1bac54400ab809a8cc2cdbd5f4acf72187e463de68e8cf",
       "displayResolution": [
         1620,
@@ -1073,8 +1073,8 @@
       ],
       "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/clarkson-portrait-future.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-clarkson-portrait-future.png",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/clarkson-portrait-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-clarkson-portrait-future.png",
       "displaySHA256": "8e9629a735332cf98a2c4e28cfa9fa86644a4fb381da0014ad0f5259cfb0699d",
       "displayResolution": [
         1620,
@@ -1091,8 +1091,8 @@
       ],
       "actualRenderInputLockSHA256": "4371a6f41715178e993e97a00f9880a6def59ce168b542f7bf0026e3e08a8778",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/erin-mills-future.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-erin-mills-future.png",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/erin-mills-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-erin-mills-future.png",
       "displaySHA256": "4ac7ffd8692d2ab1bb75e6652d61ab64a7d2bf3cc16a9b53946721c53d83c994",
       "displayResolution": [
         1620,
@@ -1109,8 +1109,8 @@
       ],
       "actualRenderInputLockSHA256": "4371a6f41715178e993e97a00f9880a6def59ce168b542f7bf0026e3e08a8778",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/streetsville-future.png",
-      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/display-streetsville-future.png",
+      "originalURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/streetsville-future.png",
+      "displayURL": "https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-lakeview-zonta-2026-09-27/display-streetsville-future.png",
       "displaySHA256": "f4a0660542334418252cbff29d6e1c49c9c61a1a73dd3ffab5cac336d69a7bd1",
       "displayResolution": [
         1620,
