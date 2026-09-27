@@ -200,7 +200,7 @@ export async function validate(site = join(ROOT, 'public')) {
   assert.deepEqual(social.images.map(x => x.file), expectedPortraits, 'Portrait inventory or curated order differs.');
   assert(social.images.every(x => entries.some(([name]) => name === x.file)), 'Portrait is not part of the sourced wide-view inventory.');
   const socialPage = await readFile(join(site, 'social.html'), 'utf8');
-  const portraitPrefix = 'https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-alba-2026-09-27/';
+  const portraitPrefix = 'https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-reddit-2026-09-27/';
   for (const picture of social.images) {
     assert.equal(picture.width, 3240);
     assert.equal(picture.height, 4050);

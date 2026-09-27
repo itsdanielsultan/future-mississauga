@@ -1,12 +1,12 @@
 {
   "edition": "Visual Polish 2026-09-26",
   "researchReviewed": "Base 2026-09-20; targeted community review 2026-09-26",
-  "builtAt": "2026-09-27T07:57:54.241751+00:00",
+  "builtAt": "2026-09-27T16:08:56.867559+00:00",
   "file": "renders/Downtown-transformation.mp4",
   "downloadName": "Future Skyline Mississauga.mp4",
   "title": "Future Skyline Mississauga",
-  "bytes": 948104,
-  "sha256": "8f482fee2edbffd45a9011157d0df40f76f5c80ba52f5d196e2ea67d3062a5c1",
+  "bytes": 951803,
+  "sha256": "ad8515e013ab88e0e4738155caf519b71b424a9b724da8f122382bfc3807ee30",
   "width": 1920,
   "height": 700,
   "durationSeconds": 5.7,
@@ -14,8 +14,8 @@
   "frameCount": 171,
   "onScreenText": false,
   "audio": false,
-  "inputLockedAt": "2026-09-27T06:44:36.639230+00:00",
-  "inputLockSHA256": "0020782cf42c1dcbde35150de5046a34a9b5b65296f2d08044001123a4f3553f",
+  "inputLockedAt": "2026-09-27T15:22:55.596889+00:00",
+  "inputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
   "nativeRenderVerification": {
     "all33Blender52": true,
     "all33MetalRT": true,
@@ -29,7 +29,7 @@
     "wholeFileHashesPreservedAfterRender": false,
     "wholeFilesUnchanged": 16,
     "privacyMetadataSanitizedFiles": 17,
-    "metadataTransformationProofSHA256": "d2b4172a3e08c24defc16b838ffa01d72d3ed0e9b34c5d87544ed36da327385d"
+    "metadataTransformationProofSHA256": "29e0dadf086c1418ace7057527c72548e86ad5967ce4da6b7bb1045f599bfa68"
   },
   "sourceImages": [
     {
@@ -39,7 +39,12 @@
         1400
       ],
       "sha256": "dae84f55501d2e4311cc692c26fb8f55a4f4a925c8d37e39c509dae68e252b6a",
-      "pixelSHA256": "c4c42b8dc5e3fd9c8c05d92d7735c27b7f3db3360b99fdec7a4779fd4241b197"
+      "pixelSHA256": "c4c42b8dc5e3fd9c8c05d92d7735c27b7f3db3360b99fdec7a4779fd4241b197",
+      "actualRenderInputLockSHA256": "0020782cf42c1dcbde35150de5046a34a9b5b65296f2d08044001123a4f3553f",
+      "validatedAgainstInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "98db1f85e6311c266698efb351d74f13d6e18af9a53542f21139cd699d5a43fd",
+      "currentSourceAuditSHA256": "4c59fa9c01df01914bae81cbe1cfc8abd1de288a90cbd47f2b6b948d58482839"
     },
     {
       "file": "renders/downtown-skyline-construction.png",
@@ -47,8 +52,13 @@
         3840,
         1400
       ],
-      "sha256": "d008721df156b942a0a5569c490f1d33cbe6101994786a0368dc4af1f645b00b",
-      "pixelSHA256": "9a27596053d454de7c800468bc0b9b3af6a37b5db7bbe8cd2231de44f201ef6a"
+      "sha256": "4ce3e8179460ef56bbbeb33b32f852096bf426b7a5456b5662af427a36599673",
+      "pixelSHA256": "e4725d2bbfc4bd08506731e28225a65839511865acc903447462dfa92dd33b94",
+      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "validatedAgainstInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "retainedByteIdenticalFromPredecessor": false,
+      "originalRenderRecordSHA256": "b9bd70a409856ec71cb2ca1bb334737147ebbbfa186d947a1572fc029ab992aa",
+      "currentSourceAuditSHA256": "4c59fa9c01df01914bae81cbe1cfc8abd1de288a90cbd47f2b6b948d58482839"
     },
     {
       "file": "renders/downtown-skyline-future.png",
@@ -56,8 +66,13 @@
         3840,
         1400
       ],
-      "sha256": "d190e15b84c1f639d19409203426a46e7d0fc615071b4af4c3563793cd4e9193",
-      "pixelSHA256": "1e5a79062143c77015571e0380c53803f071fdd2663b4c628c6e878fe6cd69da"
+      "sha256": "deaf0acf07378069b8cbde6e45a47ecae26ba713dec4db4813899ba6b92323ec",
+      "pixelSHA256": "30db7c4f36e41b8c3929c7c77ee8c4028f8f56afa2dfcc984bfc91ec0be6760d",
+      "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "validatedAgainstInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+      "retainedByteIdenticalFromPredecessor": false,
+      "originalRenderRecordSHA256": "36b8775aebf506c2df1e04a5a39c63b914af71e723e6945fa30469066e6728d9",
+      "currentSourceAuditSHA256": "4c59fa9c01df01914bae81cbe1cfc8abd1de288a90cbd47f2b6b948d58482839"
     }
   ],
   "originalPNGMastersUnchanged": true,
@@ -66,8 +81,14 @@
   "transitVisibility": "Normal scene depth; terrain, buildings and bridges may obscure routes. Approximate mapped profiles are not engineering surveys.",
   "manualVisualReviewPending": false,
   "contactSheet": "work/video/Film-contact-sheet.png",
+  "sourceImageProvenance": {
+    "currentRevisionNativeRenders": 2,
+    "byteIdenticalPredecessorRenders": 1,
+    "inputLockScope": "The top-level input lock identifies the current validated composition. Each source image retains its actual render-time lock; older accepted native images are not claimed to have been rerendered."
+  },
+  "incrementalRevision": "Voya podium and Harbourwalk, 27 September 2026",
   "visualReviewPassed": true,
-  "visualReviewCompletedAt": "2026-09-27T08:02:15.157886+00:00",
+  "visualReviewCompletedAt": "2026-09-27T16:15:36.488136+00:00",
   "visualCheckpointsSeconds": [
     0,
     1.5,
@@ -77,9 +98,9 @@
     5.6
   ],
   "visualReviewNotes": [
-    "Six decoded frames inspected at native 1920 by 700, including start, two fade checkpoints, construction hold and final future hold.",
-    "Static framing and existing context stay aligned through both crossfades; transparent towers at transition checkpoints are the intended dissolve. No unexpected crop, blank frame, visible header/footer/text or new block artefact was found in sampled frames.",
-    "Alba stays in existing context at the right edge. Absolute World forms and mapped road/transit context remain visible. Full video decode passed separately; no audio stream."
-  ],
-  "incrementalRevision": "Alba addition, 27 September 2026"
+    "Six actual decoded checkpoints at 0, 1.5, 2.1, 3.1, 3.7 and 5.6 seconds were inspected individually at 1920 by 700 pixels. All are free of headers, footers, captions and visible black bars.",
+    "The first two checkpoints hold the grey baseline. The 2.1-second frame shows the intended dissolve toward construction; at 3.1 seconds the blue construction masses, corrected Voya podium and Exchange forms are solid and readable.",
+    "The 3.7-second checkpoint shows the intended blend into the proposal scenario, with new masses translucent during the dissolve. At 5.6 seconds the future skyline is fully resolved. Existing streets, Absolute towers and surrounding context retain the same camera registration across the six frames, with no apparent framing jump.",
+    "Review scope is these six rendered checkpoints, including both dissolves, supported by the separate complete-decode technical check; this is not a claim that every video frame was manually inspected."
+  ]
 }

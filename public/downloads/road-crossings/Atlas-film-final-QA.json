@@ -1,23 +1,23 @@
 {
-  "edition": "Visual Polish 2026-09-26; Alba addition 2026-09-27",
-  "checkedAt": "2026-09-27T08:02:20.255546+00:00",
+  "edition": "Visual Polish 2026-09-26; Voya and Harbourwalk revision 2026-09-27",
+  "checkedAt": "2026-09-27T16:28:35.654604+00:00",
   "status": "Finalized locally; publication not performed by this step",
   "atlas": {
     "file": "Future-Mississauga-Atlas.pdf",
-    "bytes": 24912613,
-    "sha256": "55f5e46f4857a384d5e8d893c286c5aad4292259d62ca25e1e19c667723ef060",
+    "bytes": 24917392,
+    "sha256": "74e7f608a618b431225c6ef0ac106317d986bbe33ea37778bf92a564fab3805e",
     "pages": 35,
     "font": "Bricolage Grotesque",
     "allPagesAndCaptionStripsVisuallyReviewed": true,
     "allTextInsidePageBounds": true,
     "externalLinkAnnotations": 100,
     "distinctExternalLinks": 56,
-    "cooksvilleCompletedAlbaCaptionAndPlanLinksVerified": true
+    "retainedCooksvilleAlbaCaptionAndPlanLinksVerified": true
   },
   "film": {
     "file": "renders/Downtown-transformation.mp4",
-    "sha256": "8f482fee2edbffd45a9011157d0df40f76f5c80ba52f5d196e2ea67d3062a5c1",
-    "bytes": 948104,
+    "sha256": "ad8515e013ab88e0e4738155caf519b71b424a9b724da8f122382bfc3807ee30",
+    "bytes": 951803,
     "width": 1920,
     "height": 700,
     "durationSeconds": 5.7,
@@ -38,9 +38,176 @@
   },
   "sourceEvidence": {
     "passedImages": 33,
-    "inputLockSHA256": "0020782cf42c1dcbde35150de5046a34a9b5b65296f2d08044001123a4f3553f",
-    "inputLockedAt": "2026-09-27T06:44:36.639230+00:00",
-    "all33ApprovedPNGBytesAndPixelsUnchangedByMediaBuild": true
+    "inputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+    "inputLockedAt": "2026-09-27T15:22:55.596889+00:00",
+    "all33ApprovedPNGBytesAndPixelsUnchangedByMediaBuild": true,
+    "sourceImageRenderLocks": [
+      {
+        "file": "renders/downtown-future.png",
+        "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+        "retainedFromPredecessor": false
+      },
+      {
+        "file": "renders/cooksville-future.png",
+        "actualRenderInputLockSHA256": "0020782cf42c1dcbde35150de5046a34a9b5b65296f2d08044001123a4f3553f",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/uptown-future.png",
+        "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+        "retainedFromPredecessor": false
+      },
+      {
+        "file": "renders/dixie-applewood-future.png",
+        "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/erindale-future.png",
+        "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/heartland-future.png",
+        "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/citywide-future.png",
+        "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+        "retainedFromPredecessor": false
+      },
+      {
+        "file": "renders/port-credit-future.png",
+        "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/lakeview-future.png",
+        "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+        "retainedFromPredecessor": false
+      },
+      {
+        "file": "renders/clarkson-future.png",
+        "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/downtown-existing.png",
+        "actualRenderInputLockSHA256": "0020782cf42c1dcbde35150de5046a34a9b5b65296f2d08044001123a4f3553f",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/port-credit-existing.png",
+        "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/lakeview-existing.png",
+        "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/clarkson-existing.png",
+        "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/downtown-skyline-existing.png",
+        "actualRenderInputLockSHA256": "0020782cf42c1dcbde35150de5046a34a9b5b65296f2d08044001123a4f3553f",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/downtown-skyline-construction.png",
+        "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+        "retainedFromPredecessor": false
+      },
+      {
+        "file": "renders/downtown-skyline-future.png",
+        "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+        "retainedFromPredecessor": false
+      },
+      {
+        "file": "renders/port-credit-skyline-future.png",
+        "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/lakeview-skyline-future.png",
+        "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+        "retainedFromPredecessor": false
+      },
+      {
+        "file": "renders/clarkson-skyline-future.png",
+        "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/downtown-portrait-future.png",
+        "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+        "retainedFromPredecessor": false
+      },
+      {
+        "file": "renders/port-credit-portrait-future.png",
+        "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/lakeview-portrait-future.png",
+        "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+        "retainedFromPredecessor": false
+      },
+      {
+        "file": "renders/clarkson-portrait-future.png",
+        "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/cooksville-portrait-future.png",
+        "actualRenderInputLockSHA256": "0020782cf42c1dcbde35150de5046a34a9b5b65296f2d08044001123a4f3553f",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/uptown-portrait-future.png",
+        "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/malton-future.png",
+        "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/airport-corporate-future.png",
+        "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/meadowvale-future.png",
+        "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/streetsville-future.png",
+        "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/erin-mills-future.png",
+        "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+        "retainedFromPredecessor": true
+      },
+      {
+        "file": "renders/downtown-landmark-future.png",
+        "actualRenderInputLockSHA256": "5ddb97abeaac39629c1f6f518177a2a52ead2f8e2fb8862dcd1cfbaf71837b4c",
+        "retainedFromPredecessor": false
+      },
+      {
+        "file": "renders/downtown-junction-future.png",
+        "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+        "retainedFromPredecessor": true
+      }
+    ]
   },
   "publicCopiesByteIdentical": true,
   "limitations": [
@@ -48,78 +215,31 @@
     "All35pages and caption strips received visual layout review. This does not imply a new independent factual audit of all buildings."
   ],
   "reviewEvidence": [
-    {
-      "file": "alba-addition-2026-09-27/media-qa/Atlas-pages-01-18.png",
-      "sha256": "14e75df9c9032a4dd502b0b82f1cf705a67c879ba73429a4bfb8d83d6f689e11"
-    },
-    {
-      "file": "alba-addition-2026-09-27/media-qa/Atlas-pages-19-35.png",
-      "sha256": "7fa032a1adc2cd7e4f3b71fed0a4cc2040f6bf69af09a1a1087903640b239ed5"
-    },
-    {
-      "file": "alba-addition-2026-09-27/media-qa/Atlas-caption-strips-01-06.png",
-      "sha256": "221bdd2f0a11d6f41722725a6cf93380c93cec3d626ec5a28d3132afcb9f0a59"
-    },
-    {
-      "file": "alba-addition-2026-09-27/media-qa/Atlas-caption-strips-07-12.png",
-      "sha256": "1cfacce6bbc495c571eb815b5ee1471b2df924d5b507c842b8b341fb5ab7ef9e"
-    },
-    {
-      "file": "alba-addition-2026-09-27/media-qa/Atlas-caption-strips-13-18.png",
-      "sha256": "0835cd81f92cf99e86a31d6d431d815dc1bf3e41434f0fbc5fb0da4b81daabc1"
-    },
-    {
-      "file": "alba-addition-2026-09-27/media-qa/Atlas-caption-strips-19-24.png",
-      "sha256": "10527b4f0cb323b3cf628e973c1d510fbdd3225c36ec2d6f7010817c7d1a2b9f"
-    },
-    {
-      "file": "alba-addition-2026-09-27/media-qa/Atlas-caption-strips-25-30.png",
-      "sha256": "0400074eeaeec2089fc816e085d49e449406481d8daab92f7fa2298bfda39984"
-    },
-    {
-      "file": "alba-addition-2026-09-27/media-qa/Atlas-caption-strips-31-33.png",
-      "sha256": "661d9486918c76994e6cba1bbbf8e66f9a3917143b02a8555cd7d4f45c5a5077"
-    },
-    {
-      "file": "alba-addition-2026-09-27/media-qa/Atlas-detail-page-22.png",
-      "sha256": "169e9631a0d1b27f50de661bc73bc7702bb3a99045204856cea0d80fe72db8ea"
-    },
-    {
-      "file": "alba-addition-2026-09-27/media-qa/Atlas-detail-page-23.png",
-      "sha256": "acc84a16b5b7214bc192648551506219e305fdb47c57fe70d70325e42b6defd9"
-    },
-    {
-      "file": "alba-addition-2026-09-27/media-qa/Atlas-detail-page-34.png",
-      "sha256": "c017c1fed518d374525bc1fc215fc4bfff06a58f5216eced77192b388ef7d118"
-    },
-    {
-      "file": "alba-addition-2026-09-27/media-qa/Atlas-detail-page-35.png",
-      "sha256": "ee44cb4ff01070d73acae73722566990bcff8da06a4b106db552f10a998fdb42"
-    },
-    {
-      "file": "alba-addition-2026-09-27/media-qa/film-checkpoint-1.png",
-      "sha256": "4722076fb2b98b5498c82377ed506c40663fdd3c24c92ca2043581b101449f66"
-    },
-    {
-      "file": "alba-addition-2026-09-27/media-qa/film-checkpoint-2.png",
-      "sha256": "cae2ff87b15165f85f2c37439162895b1a4c0721f987a681729c6f90f39df2e4"
-    },
-    {
-      "file": "alba-addition-2026-09-27/media-qa/film-checkpoint-3.png",
-      "sha256": "c8fe903c6b1c60d31d9c58a1bade46cea8c69aab11d142a55d4f47bcf939265d"
-    },
-    {
-      "file": "alba-addition-2026-09-27/media-qa/film-checkpoint-4.png",
-      "sha256": "027defdd1fac55c2859857afbabc25b1ec2945a1d31de58d6cec952a9f6e5629"
-    },
-    {
-      "file": "alba-addition-2026-09-27/media-qa/film-checkpoint-5.png",
-      "sha256": "5b122d64b051addd757aa74d907e4759b959f475578a046b46d926e45ebe90d1"
-    },
-    {
-      "file": "alba-addition-2026-09-27/media-qa/film-checkpoint-6.png",
-      "sha256": "1eebeeccf56b23dd82f68b230ec58446b578111d7977cb639953b85d87e11a50"
-    }
-  ],
-  "reviewEvidencePathBase": "Local edition workspace; referenced review images are retained separately, not served as website assets."
+    "reddit-model-audit-2026-09-27/media-qa/Atlas-pages-01-18.png",
+    "reddit-model-audit-2026-09-27/media-qa/Atlas-pages-19-35.png",
+    "reddit-model-audit-2026-09-27/media-qa/Atlas-caption-strips-01-06.png",
+    "reddit-model-audit-2026-09-27/media-qa/Atlas-caption-strips-07-12.png",
+    "reddit-model-audit-2026-09-27/media-qa/Atlas-caption-strips-13-18.png",
+    "reddit-model-audit-2026-09-27/media-qa/Atlas-caption-strips-19-24.png",
+    "reddit-model-audit-2026-09-27/media-qa/Atlas-caption-strips-25-30.png",
+    "reddit-model-audit-2026-09-27/media-qa/Atlas-caption-strips-31-33.png",
+    "reddit-model-audit-2026-09-27/media-qa/Atlas-detail-page-01.png",
+    "reddit-model-audit-2026-09-27/media-qa/Atlas-detail-page-02.png",
+    "reddit-model-audit-2026-09-27/media-qa/Atlas-detail-page-03.png",
+    "reddit-model-audit-2026-09-27/media-qa/Atlas-detail-page-05.png",
+    "reddit-model-audit-2026-09-27/media-qa/Atlas-detail-page-08.png",
+    "reddit-model-audit-2026-09-27/media-qa/Atlas-detail-page-09.png",
+    "reddit-model-audit-2026-09-27/media-qa/Atlas-detail-page-14.png",
+    "reddit-model-audit-2026-09-27/media-qa/Atlas-detail-page-15.png",
+    "reddit-model-audit-2026-09-27/media-qa/Atlas-detail-page-17.png",
+    "reddit-model-audit-2026-09-27/media-qa/Atlas-detail-page-24.png",
+    "reddit-model-audit-2026-09-27/media-qa/Atlas-detail-page-34.png",
+    "reddit-model-audit-2026-09-27/media-qa/Atlas-detail-page-35.png",
+    "reddit-model-audit-2026-09-27/media-qa/film-checkpoint-1.png",
+    "reddit-model-audit-2026-09-27/media-qa/film-checkpoint-2.png",
+    "reddit-model-audit-2026-09-27/media-qa/film-checkpoint-3.png",
+    "reddit-model-audit-2026-09-27/media-qa/film-checkpoint-4.png",
+    "reddit-model-audit-2026-09-27/media-qa/film-checkpoint-5.png",
+    "reddit-model-audit-2026-09-27/media-qa/film-checkpoint-6.png"
+  ]
 }
