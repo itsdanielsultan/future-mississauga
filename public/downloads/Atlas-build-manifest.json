@@ -1,50 +1,63 @@
 {
-  "edition": "Visual Polish 2026-09-26",
-  "builtAt": "2026-09-27T01:25:25.198517+00:00",
+  "edition": "Visual Polish 2026-09-26; Alba addition 2026-09-27",
+  "builtAt": "2026-09-27T07:58:15.732797+00:00",
   "reviewDate": "2026-09-20",
   "file": "Future-Mississauga-Atlas.pdf",
-  "bytes": 24907900,
-  "sha256": "238bff95272d33fd6dc832e1ad9a0cf44e0ddfb95feb721da10234c54a060cdf",
+  "bytes": 24912613,
+  "sha256": "55f5e46f4857a384d5e8d893c286c5aad4292259d62ca25e1e19c667723ef060",
   "pageCount": 35,
   "sourceImageCount": 33,
   "sourceImageDimensions": [
     [
       3840,
-      2400
+      1400
     ],
     [
       3840,
-      1400
+      2400
     ]
   ],
   "pdfImageMaxLongEdge": 2200,
   "pdfJPEGQuality": 84,
   "pdfOnlyCompression": true,
   "originalPNGMastersUnchanged": true,
-  "originalPNGProof": "Decoded RGB pixel hashes match the current final render source audit; publication metadata may be added separately without changing pixels.",
+  "originalPNGProof": "All 33 approved PNG byte hashes reverified against the current source gate before and after this media build; no source PNG bytes were changed by PDF or film construction.",
   "externalLinks": 100,
   "distinctExternalLinks": 56,
-  "researchRecords": 108,
+  "researchRecords": 109,
   "municipalGroups": 181,
   "researchOperations": 1556,
-  "linkedProjectSourceURLs": 376,
-  "refinementAssets": 27,
-  "modelManifestSHA256": "ba52789019f0a2ec60f3d3f99c901f96705f1d2e3d96d91f39ec0e48cc298d2b",
-  "inputLockedAt": "2026-09-27T00:47:14.871217+00:00",
-  "inputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
+  "linkedProjectSourceURLs": 406,
+  "refinementAssets": 28,
+  "modelManifestSHA256": "0575f6a88fcac0890bd1faad67db63e5759e7b226e7d7e8de5e141f698ead8ec",
+  "inputLockedAt": "2026-09-27T06:44:36.639230+00:00",
+  "inputLockSHA256": "0020782cf42c1dcbde35150de5046a34a9b5b65296f2d08044001123a4f3553f",
   "validation": {
     "allPagesRenderedBy": "Poppler pdftoppm",
     "all35PagesVisuallyReviewedAsContactSheets": true,
     "allCaptionStripsVisuallyReviewed": true,
-    "fullPageChecks": [],
+    "fullPageChecks": [
+      22,
+      23,
+      34,
+      35
+    ],
     "allTextInsidePageBounds": true,
     "missingGlyphMarkers": false,
     "intermediateLabelsPresent": false,
     "malformedLinkSyntax": [],
     "all33CurrentRenderSourcesVerified": true,
-    "unchangedLockedInputs": 256,
+    "unchangedLockedInputs": 257,
     "allVisibleTextBricolage": true,
+    "visualReviewCompletedAt": "2026-09-27T08:02:15.157886+00:00",
+    "visualReviewEvidence": "research/depth/Atlas-final-QA.json",
+    "visualReviewEvidenceSHA256": "175393ce97caa4258aed1681f55da2ab983f1dfe5d5087088904c083a3a34364",
     "evidenceURLCheck": {
+      "scope": "All current PDF annotation destinations parsed and checked. Not a new HTTP availability audit of all inherited source URLs. The Alba approved City PDF was retrieved during this update.",
+      "distinctURLs": 56,
+      "currentAnnotationProof": "research/depth/Atlas-link-QA.json"
+    },
+    "priorEvidenceURLCheck": {
       "checkedAt": "2026-09-27T01:22:57.832010+00:00",
       "distinctURLs": 56,
       "successes": 53,
@@ -66,7 +79,8 @@
           "error": "HTTP Error 403: Forbidden"
         }
       ],
-      "note": "403 responses denote access restrictions, not proof of a missing page. URL availability does not validate every model claim."
+      "note": "403 responses denote access restrictions, not proof of a missing page. URL availability does not validate every model claim.",
+      "scope": "Historical prior edition URL availability result; not rerun or claimed as current for this PDF."
     }
   },
   "pages": [
@@ -218,9 +232,9 @@
         3840,
         2400
       ],
-      "bytes": 15660123,
-      "sha256": "271911e485d79a168195c387e2ffa6ac82711a80bf553d9060d1fb5d94e5d45b",
-      "pixelSHA256": "f14d35f597b80a9586c80dce3911cd9d4de9369269e76ed687c682606b5384db"
+      "bytes": 15666007,
+      "sha256": "58891d5342922ba4e7880479547687c8b05d4490ceb777513830b04faa5206ad",
+      "pixelSHA256": "a095815ba306aae15c0628f4f2c4e75c6cf93ecb831aaf4b2e94efe72eeb304d"
     },
     {
       "file": "renders/cooksville-future.png",
@@ -228,9 +242,9 @@
         3840,
         2400
       ],
-      "bytes": 15893981,
-      "sha256": "2a40d34b5bb03e5f1d80b792afac5fec30daf4fbe20670af70db8c0719ea0da5",
-      "pixelSHA256": "c3ad73c233d30cb889b1878e4b5e75378d9931b248c8dd4114d31f3096dad7f8"
+      "bytes": 15895864,
+      "sha256": "5d15f46b1631341d5209f9cd9966f49a53842d4d6ec303547b19dff56fba698d",
+      "pixelSHA256": "36d93993103b2d8cb334d57b1c498dbe893d8b4cfafc71e0b1c2e5484df1612c"
     },
     {
       "file": "renders/uptown-future.png",
@@ -278,9 +292,9 @@
         3840,
         2400
       ],
-      "bytes": 13810829,
-      "sha256": "ba83be89d0e0b590da74b34e39098f87c7d6d320b7acaf9df55c410ca3cfbfaf",
-      "pixelSHA256": "99328d50e96c6d200a860257c28f5c9904023e867f333e321ae05063b6ac0843"
+      "bytes": 13811374,
+      "sha256": "0f6faecbcf84b2b28e1ed5cba94b039f2a93993f8c713cb667a2f0291b034067",
+      "pixelSHA256": "802957dff970315b2fa8ba30db4994757275fe165cd84c144716752e7d717530"
     },
     {
       "file": "renders/port-credit-future.png",
@@ -318,9 +332,9 @@
         3840,
         2400
       ],
-      "bytes": 15598403,
-      "sha256": "fc36b7b01a7f4886136f4394d06ce1e9f73a504530589700ccad638f41048fa9",
-      "pixelSHA256": "2593e59b569b2313fae831f09bd2b404e0dc6100ee9318d31ff3a616b3a8826e"
+      "bytes": 15608331,
+      "sha256": "7898cfb063f36ce3a8df5971f5bedbd93111f3b25ace6b39e9687f4dd3c39aba",
+      "pixelSHA256": "b843d0f53dfc3152fc4ff2c2e342863073ef43d5d68c77cac5bafbc0bec7511c"
     },
     {
       "file": "renders/port-credit-existing.png",
@@ -358,9 +372,9 @@
         3840,
         1400
       ],
-      "bytes": 9221932,
-      "sha256": "fcad6c48cab8a7c45c17adf42b59daa52c4bc3e44d97196b2b2b9a4727a8fe8e",
-      "pixelSHA256": "dfe746fbda49c9307f0051daa9cc441e27c750b95cb0c25e13104684f24bd2d2"
+      "bytes": 9232538,
+      "sha256": "dae84f55501d2e4311cc692c26fb8f55a4f4a925c8d37e39c509dae68e252b6a",
+      "pixelSHA256": "c4c42b8dc5e3fd9c8c05d92d7735c27b7f3db3360b99fdec7a4779fd4241b197"
     },
     {
       "file": "renders/downtown-skyline-construction.png",
@@ -368,9 +382,9 @@
         3840,
         1400
       ],
-      "bytes": 9313296,
-      "sha256": "af2ac7dca03419a24521a6601f6ec361dabd1d0e8d14ca83dcea6c5ba56dda85",
-      "pixelSHA256": "e20c0e812f137db8b79aab703c588e22946cc7430713fe2e509f09e838ba7d31"
+      "bytes": 9323561,
+      "sha256": "d008721df156b942a0a5569c490f1d33cbe6101994786a0368dc4af1f645b00b",
+      "pixelSHA256": "9a27596053d454de7c800468bc0b9b3af6a37b5db7bbe8cd2231de44f201ef6a"
     },
     {
       "file": "renders/downtown-skyline-future.png",
@@ -378,9 +392,9 @@
         3840,
         1400
       ],
-      "bytes": 9223351,
-      "sha256": "0ac5ef2babb9c08d425a1365075b361fa500661618a15a3517773d1c83f7a588",
-      "pixelSHA256": "090db66859a08c1e47ff19ebcc21d4e29296a3c815410a945a2d9f19c4497497"
+      "bytes": 9233896,
+      "sha256": "d190e15b84c1f639d19409203426a46e7d0fc615071b4af4c3563793cd4e9193",
+      "pixelSHA256": "1e5a79062143c77015571e0380c53803f071fdd2663b4c628c6e878fe6cd69da"
     },
     {
       "file": "renders/port-credit-skyline-future.png",
@@ -418,9 +432,9 @@
         3840,
         2400
       ],
-      "bytes": 15999147,
-      "sha256": "854263a4331d49fdd8081776a83f360d0a0bfdce8f6bb3359b316359602cf23a",
-      "pixelSHA256": "4874da56661aa0d39d70d6eb56d298d15b3e3c529da4358c494bb0e6138da44b"
+      "bytes": 16014045,
+      "sha256": "0406dba198d1d3913fbe0e83ed26d984dce78576f25cb1d3418942b839ef1c2a",
+      "pixelSHA256": "3dfbe4eb05fe22109d988eed801f2524ff98b61c6495a602fb3e52497535ec6b"
     },
     {
       "file": "renders/port-credit-portrait-future.png",
@@ -458,9 +472,9 @@
         3840,
         2400
       ],
-      "bytes": 14953652,
-      "sha256": "c41054f8f68c243a7288df6e2544dc588c0ac35f4863bd3f3298ad296c6ffdea",
-      "pixelSHA256": "ec8e12d41bde6b641f3c17e997f3387a5f70b7a4c0f9bdabef7412220376b66c"
+      "bytes": 14956017,
+      "sha256": "cbda16a7613b88a931cadfc4aa8c012aecc0611afe8e6c448cb475f252085425",
+      "pixelSHA256": "47cfc3762a8d238cf2938224e3f4f77573ca5675937a18da0fb229004c0f7881"
     },
     {
       "file": "renders/uptown-portrait-future.png",
@@ -601,11 +615,14 @@
       "5.2.2 LTS"
     ],
     "samplesMaximum": 96,
+    "allRenderPixelsAndColourPreserved": true,
     "wholeFileHashesPreservedAfterRender": false,
     "wholeFilesUnchanged": 16,
     "privacyMetadataSanitizedFiles": 17,
-    "allRenderPixelsAndColourPreserved": true,
-    "metadataTransformationProofSHA256": "6731f71d79f7871a3e9d9c1c7c6e356ab79f0999eb2054bab4f60cb871b82785"
+    "metadataTransformationProofSHA256": "d2b4172a3e08c24defc16b838ffa01d72d3ed0e9b34c5d87544ed36da327385d"
   },
-  "fontCredit": "Bricolage Grotesque, Copyright 2022 The Bricolage Grotesque Project Authors. Embedded static instances from the official Google Fonts variable font, licensed under SIL Open Font License 1.1."
+  "fontCredit": "Bricolage Grotesque, Copyright 2022 The Bricolage Grotesque Project Authors. Embedded static instances from the official Google Fonts variable font, licensed under SIL Open Font License 1.1.",
+  "validationUpdatedAt": "2026-09-27T08:06:42.895930+00:00",
+  "currentRenderSourceAuditSHA256": "04e9228d7e4e3a1851d1176b92928fdfb841224c21920b9c8adddfa97c5bb119",
+  "researchOperationsScope": "Historical recorded operations remain 1,556; this incremental work is not relabelled as newly logged operations. linkedProjectSourceURLs is recomputed from the current 109 project records."
 }

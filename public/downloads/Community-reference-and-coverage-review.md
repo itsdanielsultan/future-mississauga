@@ -23,6 +23,6 @@ The 40 MW Tenth Line data-centre record already carries the City’s September 1
 
 ## Sources and coverage
 
-The [public coverage register](public-project-reference-coverage.json) contains the 108 project records, reference links and limitations. Private correspondence and recipient details are excluded.
+The [public coverage register](public-project-reference-coverage.json) contains 109 project records, reference links and limitations, including the Alba correction added on September 27, 2026. The reference-request totals above describe the September 26 review; this addition does not claim a new outreach message was sent. Private correspondence and recipient details are excluded.
 
 Primary current pointers: [Cooksville open-house deck](https://www.infrastructureontario.ca/4a7380/contentassets/48d409806ba14ffaa6f9874dcf14617e/cooksville_voh-presentation_sept-4-2026.pdf), [Pinnacle Gemma](https://pinnacleinternational.ca/communities/gemma/), [Pinnacle completed projects](https://pinnacleinternational.ca/past-projects/), [Living Arts precinct vision](https://www.mississauga.ca/projects-and-strategies/city-projects/downtown-mississauga-vision/), [City data-centre pause](https://www.mississauga.ca/city-of-mississauga-news/news/mississauga-approves-temporary-pause-for-large-scale-data-centre-development/).
