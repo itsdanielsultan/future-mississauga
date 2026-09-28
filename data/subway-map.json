@@ -230,16 +230,610 @@
     "Potential intermediate stops and transfer walking distances are unresolved.",
     "Dundas BRT is a separate project and not replaced by this illustration.",
     "Historical D3 was screened out and is not represented as approved.",
-    "The 2001 City Centre option was screened out on then-regional priorities and length/cost staging constraints; no current feasibility or ridership conclusion is implied."
+    "The 2001 City Centre option was screened out on then-regional priorities and length/cost staging constraints; no current feasibility or ridership conclusion is implied.",
+    "Route alternatives are comparative author sketches, not engineering fallbacks; no ranking, cost or feasibility conclusion is implied."
   ],
-  "reviewedAt": "2026-09-27",
+  "reviewedAt": "2026-09-28",
   "waterDisplay": {
     "scope": "Subway viewer only",
     "coastalDisplayDistanceMetres": 400,
     "originalOpenWaterAreaKm2": 287.866675,
-    "displayedOpenWaterAreaKm2": 6.173151,
+    "displayedOpenWaterAreaKm2": 6.396392,
     "preserves": "Mapped coastline, nearby island holes and inland water",
-    "limit": "The artificial offshore edge defines the model display extent; it is not a coastline."
+    "limit": "The artificial offshore edge defines the model display extent; it is not a coastline.",
+    "lakeviewPierContext": "Compact local extension around the native mapped eastern and western piers, clipped to the original lake footprint. All original coastline and land voids are retained.",
+    "lakeviewAdditionalWaterM2": 223240.83,
+    "assetSHA256": "59b01e0f2a24a2fa1e44964a99140956790f313af7a6f78616e5b72eb61382dd"
   },
-  "torontoContext": "subway-toronto-context.json"
+  "torontoContext": "subway-toronto-context.json",
+  "routes": [
+    {
+      "name": "Illustrative City Centre connection",
+      "basis": "Author-selected waypoints through the broad Kipling, Sherway, Dundas, Cooksville and City Centre study areas. Inspired by historical TTC D3 discussion and the 24 September 2026 campaign announcement. Not traced as an approved route from either source.",
+      "points": [
+        [
+          -5753,
+          110,
+          -778
+        ],
+        [
+          -5540,
+          105,
+          -920
+        ],
+        [
+          -5140,
+          95,
+          -835
+        ],
+        [
+          -4910,
+          90,
+          -610
+        ],
+        [
+          -4630,
+          82,
+          -330
+        ],
+        [
+          -4350,
+          74,
+          -50
+        ],
+        [
+          -4050,
+          70,
+          250
+        ],
+        [
+          -3885,
+          69,
+          524
+        ],
+        [
+          -3700,
+          64,
+          725
+        ],
+        [
+          -3400,
+          61,
+          780
+        ],
+        [
+          -3247,
+          60,
+          588
+        ],
+        [
+          -2880,
+          61,
+          265
+        ],
+        [
+          -2490,
+          60,
+          -80
+        ],
+        [
+          -2010,
+          59,
+          -505
+        ],
+        [
+          -1513,
+          59,
+          -963
+        ],
+        [
+          -1140,
+          59,
+          -1450
+        ],
+        [
+          -765,
+          58,
+          -1970
+        ],
+        [
+          -392,
+          57,
+          -2482
+        ],
+        [
+          20,
+          53,
+          -2700
+        ],
+        [
+          480,
+          50,
+          -2820
+        ],
+        [
+          970,
+          50,
+          -2860
+        ],
+        [
+          1410,
+          50,
+          -2858
+        ],
+        [
+          1790,
+          56,
+          -3350
+        ],
+        [
+          2150,
+          65,
+          -3970
+        ],
+        [
+          2480,
+          75,
+          -4540
+        ],
+        [
+          2800,
+          83,
+          -5110
+        ],
+        [
+          3144,
+          85,
+          -5676
+        ]
+      ],
+      "display": "Purple dashed cartographic overlay, projected over the city for legibility. It is not physical rails, a road, a tunnel, or an elevated guideway. Display y values carry no engineering meaning.",
+      "id": "sherway-dundas",
+      "shortName": "Via Sherway + Dundas",
+      "summary": "My original sketch links Sherway and Dundas, then turns north through Cooksville to City Centre. It explores the campaign\u2019s broad destinations; the campaign has not selected this alignment.",
+      "sourceLink": "#source-campaign-plan",
+      "sourceLabel": "Read the campaign\u2019s call for a business case \u2197",
+      "areas": [
+        {
+          "name": "Kipling",
+          "anchor": [
+            3144,
+            85,
+            -5676
+          ],
+          "offset": [
+            -89,
+            -43
+          ],
+          "basis": "Approximate existing Line 2 terminal area. Exact tie-in and new infrastructure are unresolved.",
+          "caption": "Existing Line 2 terminal"
+        },
+        {
+          "name": "Sherway",
+          "anchor": [
+            1410,
+            50,
+            -2858
+          ],
+          "offset": [
+            12,
+            20
+          ],
+          "basis": "Approximate mall-area geographic anchor, not a proposed station.",
+          "caption": "Mall-area connection"
+        },
+        {
+          "name": "Dundas / Dixie",
+          "anchor": [
+            -392,
+            57,
+            -2482
+          ],
+          "offset": [
+            12,
+            -43
+          ],
+          "basis": "Approximate study area, not a proposed station or exact street-centreline survey.",
+          "caption": "Dundas corridor"
+        },
+        {
+          "name": "Cooksville",
+          "anchor": [
+            -3885,
+            69,
+            524
+          ],
+          "offset": [
+            12,
+            -43
+          ],
+          "basis": "GO area geographic locator from the city atlas; potential interchange remains unresolved.",
+          "caption": "GO + LRT connections"
+        },
+        {
+          "name": "City Centre",
+          "anchor": [
+            -5753,
+            110,
+            -778
+          ],
+          "offset": [
+            -122,
+            -43
+          ],
+          "basis": "City Centre area; existing transit locator provides geographic context, not a subway site.",
+          "caption": "Downtown destination"
+        }
+      ]
+    },
+    {
+      "id": "direct-dundas",
+      "name": "Direct Dundas exploration",
+      "shortName": "Direct via Dundas",
+      "summary": "A Dundas route skips Sherway and reaches Cooksville before turning north. The earlier consultation considered a subway to Cooksville; the City Centre leg is my addition. BRT remains the adopted Dundas plan.",
+      "sourceLink": "#source-dundas-options",
+      "sourceLabel": "See the earlier Cooksville alternative \u2197",
+      "points": [
+        [
+          -5753,
+          110,
+          -778
+        ],
+        [
+          -5540,
+          105,
+          -920
+        ],
+        [
+          -5140,
+          95,
+          -835
+        ],
+        [
+          -4910,
+          90,
+          -610
+        ],
+        [
+          -4630,
+          82,
+          -330
+        ],
+        [
+          -4350,
+          74,
+          -50
+        ],
+        [
+          -4050,
+          70,
+          250
+        ],
+        [
+          -3885,
+          69,
+          524
+        ],
+        [
+          -3700,
+          64,
+          725
+        ],
+        [
+          -3400,
+          61,
+          780
+        ],
+        [
+          -3291.48,
+          69.0,
+          818.5
+        ],
+        [
+          -1999.28,
+          70.33,
+          -798.2
+        ],
+        [
+          -1155.05,
+          71.67,
+          -1898.58
+        ],
+        [
+          -528.93,
+          73.0,
+          -2691.52
+        ],
+        [
+          696.21,
+          74.33,
+          -4340.94
+        ],
+        [
+          772.58,
+          75.67,
+          -4402.99
+        ],
+        [
+          868.7,
+          77.0,
+          -4450.9
+        ],
+        [
+          1413.14,
+          78.33,
+          -4621.63
+        ],
+        [
+          1874.18,
+          79.67,
+          -4807.01
+        ],
+        [
+          2246.17,
+          81.0,
+          -4935.76
+        ],
+        [
+          2514.12,
+          82.33,
+          -5144.1
+        ],
+        [
+          2710.02,
+          83.67,
+          -5408.28
+        ],
+        [
+          2944.41,
+          85.0,
+          -5796.15
+        ],
+        [
+          3144,
+          85,
+          -5676
+        ]
+      ],
+      "areas": [
+        {
+          "name": "Kipling",
+          "anchor": [
+            3144,
+            85,
+            -5676
+          ],
+          "offset": [
+            -89,
+            -43
+          ],
+          "basis": "Approximate existing Line 2 terminal area. Exact tie-in and new infrastructure are unresolved.",
+          "caption": "Existing Line 2 terminal"
+        },
+        {
+          "name": "Dundas / Dixie",
+          "anchor": [
+            -528.93,
+            62,
+            -2691.52
+          ],
+          "offset": [
+            12,
+            -43
+          ],
+          "basis": "Approximate study area, not a proposed station or exact street-centreline survey.",
+          "caption": "Dundas corridor"
+        },
+        {
+          "name": "Cooksville",
+          "anchor": [
+            -3885,
+            69,
+            524
+          ],
+          "offset": [
+            12,
+            -43
+          ],
+          "basis": "GO area geographic locator from the city atlas; potential interchange remains unresolved.",
+          "caption": "GO + LRT connections"
+        },
+        {
+          "name": "City Centre",
+          "anchor": [
+            -5753,
+            110,
+            -778
+          ],
+          "offset": [
+            -122,
+            -43
+          ],
+          "basis": "City Centre area; existing transit locator provides geographic context, not a subway site.",
+          "caption": "Downtown destination"
+        }
+      ],
+      "basis": "Author-created sketch along municipal Dundas street centrelines with illustrative endpoint and northward connections. It is not a trace of an engineered subway alignment.",
+      "geometryReference": {
+        "sources": [
+          "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/StreetCentreline/FeatureServer/0",
+          "https://open.toronto.ca/dataset/toronto-centreline-tcl/"
+        ],
+        "simplificationMetres": 8,
+        "endpointConnections": "Authored links from street centreline to the existing illustrative Cooksville and Kipling locators."
+      },
+      "limits": [
+        "Bypasses Sherway.",
+        "The earlier subway alternative ended at Cooksville, not City Centre.",
+        "Does not replace the adopted Dundas BRT project or establish subway feasibility."
+      ]
+    },
+    {
+      "id": "rail-corridor",
+      "name": "Milton corridor exploration",
+      "shortName": "Via the Milton corridor",
+      "summary": "A sketch along the broad Milton rail corridor reaches Cooksville, then City Centre. It is inspired by the 2001 D3 option, which was screened out. It assumes neither shared GO tracks nor available railway land.",
+      "sourceLink": "#city-centre-study",
+      "sourceLabel": "Compare with the original 2001 study \u2197",
+      "points": [
+        [
+          -5753,
+          110,
+          -778
+        ],
+        [
+          -5540,
+          105,
+          -920
+        ],
+        [
+          -5140,
+          95,
+          -835
+        ],
+        [
+          -4910,
+          90,
+          -610
+        ],
+        [
+          -4630,
+          82,
+          -330
+        ],
+        [
+          -4350,
+          74,
+          -50
+        ],
+        [
+          -4050,
+          70,
+          250
+        ],
+        [
+          -3907.1,
+          69.0,
+          505.54
+        ],
+        [
+          -3545.57,
+          70.45,
+          75.85
+        ],
+        [
+          -3385.82,
+          71.91,
+          -70.32
+        ],
+        [
+          -3303.07,
+          73.36,
+          -120.72
+        ],
+        [
+          -3157.82,
+          74.82,
+          -187.12
+        ],
+        [
+          -2212.21,
+          76.27,
+          -500.37
+        ],
+        [
+          -2115.57,
+          77.73,
+          -542.98
+        ],
+        [
+          -2011.84,
+          79.18,
+          -614.29
+        ],
+        [
+          1020.54,
+          80.64,
+          -3424.26
+        ],
+        [
+          2064.67,
+          82.09,
+          -4426.17
+        ],
+        [
+          2467.28,
+          83.55,
+          -4824.42
+        ],
+        [
+          3163.24,
+          85.0,
+          -5659.94
+        ],
+        [
+          3144,
+          85,
+          -5676
+        ]
+      ],
+      "areas": [
+        {
+          "name": "Kipling",
+          "anchor": [
+            3144,
+            85,
+            -5676
+          ],
+          "offset": [
+            -89,
+            -43
+          ],
+          "basis": "Approximate existing Line 2 terminal area. Exact tie-in and new infrastructure are unresolved.",
+          "caption": "Existing Line 2 terminal"
+        },
+        {
+          "name": "Cooksville",
+          "anchor": [
+            -3885,
+            69,
+            524
+          ],
+          "offset": [
+            12,
+            -43
+          ],
+          "basis": "GO area geographic locator from the city atlas; potential interchange remains unresolved.",
+          "caption": "GO + LRT connections"
+        },
+        {
+          "name": "City Centre",
+          "anchor": [
+            -5753,
+            110,
+            -778
+          ],
+          "offset": [
+            -122,
+            -43
+          ],
+          "basis": "City Centre area; existing transit locator provides geographic context, not a subway site.",
+          "caption": "Downtown destination"
+        }
+      ],
+      "basis": "New author illustration using existing Milton GO geographic alignment as a broad corridor reference. The City Centre approach is authored; this is not an exact trace of historical D3.",
+      "geometryReference": {
+        "source": "https://www.gotransit.com/en/partner-with-us/software-developers",
+        "sourceFeedDate": "2026-09-17",
+        "shapeId": "UNML",
+        "simplificationMetres": 8,
+        "purpose": "Broad corridor location only, not a subway shared-track design or land-availability assessment."
+      },
+      "limits": [
+        "Bypasses Sherway and most of the Dundas frontage.",
+        "Requires a separate assessment of rail operations, property, structures and City Centre access.",
+        "Historical D3 was screened out; no current feasibility conclusion is implied."
+      ]
+    }
+  ]
 }

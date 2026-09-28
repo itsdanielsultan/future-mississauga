@@ -271,11 +271,40 @@
   "interactiveMap": {
     "file": "data/subway-map.json",
     "viewer": "subway.js",
-    "basis": "Author-selected geographic sketch inspired by the historical broad corridor and current public discussion; not an official route trace.",
+    "basis": "Three author-selected corridor sketches: Sherway/Dundas, direct Dundas, and broad Milton rail corridor. Historical source figures remain separate, with their study outcomes preserved.",
     "geometryStatus": "Illustrative cartographic overlay; no selected station sites, tunnels, viaducts, depths or dimensions.",
     "cityContext": "Current atlas municipal context, building models and applicable refinement assets; low-rise context omitted in this citywide view.",
-    "coverageLimit": "Eastern Toronto end is outside detailed Mississauga model coverage.",
-    "waterDisplay": "For this page only, open Lake Ontario water is limited to 400m beyond the mapped coast. The original coastline, nearby island holes and inland water are preserved; the offshore display edge is not a real shoreline."
+    "coverageLimit": "Toronto massing covers the illustrated routes from the municipal boundary through Sherway and past Kipling; source-date omissions remain.",
+    "waterDisplay": "For this page only, open Lake Ontario water is limited to a compact 400m coastal band, plus local water around both mapped Lakeview piers. The original coastline, island holes, land and inland water are preserved; the offshore display edge is not a real shoreline.",
+    "routes": [
+      {
+        "id": "sherway-dundas",
+        "name": "Illustrative City Centre connection",
+        "basis": "Author-selected waypoints through the broad Kipling, Sherway, Dundas, Cooksville and City Centre study areas. Inspired by historical TTC D3 discussion and the 24 September 2026 campaign announcement. Not traced as an approved route from either source.",
+        "sourceLink": "#source-campaign-plan"
+      },
+      {
+        "id": "direct-dundas",
+        "name": "Direct Dundas exploration",
+        "basis": "Author-created sketch along municipal Dundas street centrelines with illustrative endpoint and northward connections. It is not a trace of an engineered subway alignment.",
+        "sourceLink": "#source-dundas-options"
+      },
+      {
+        "id": "rail-corridor",
+        "name": "Milton corridor exploration",
+        "basis": "New author illustration using existing Milton GO geographic alignment as a broad corridor reference. The City Centre approach is authored; this is not an exact trace of historical D3.",
+        "sourceLink": "#city-centre-study"
+      }
+    ],
+    "routeReferenceSources": {
+      "directDundas": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/StreetCentreline/FeatureServer/0",
+        "https://open.toronto.ca/dataset/toronto-centreline-tcl/"
+      ],
+      "railCorridor": "https://www.gotransit.com/en/partner-with-us/software-developers"
+    },
+    "routeComparisonLimits": "No route is a verified fallback. All require independent assessment of demand, engineering, costs, property, rail operations and existing transit plans.",
+    "routeReviewedAt": "2026-09-28"
   },
   "reviewedAtUTC": "2026-09-27T02:40:49.353025+00:00",
   "narrative": "The 2026 campaign call for a new business case is distinct from the 2001 screened-out City Centre option, the adopted 2018 Dundas BRT plan, and the author-selected purple map corridor.",
