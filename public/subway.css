@@ -244,3 +244,21 @@ html.disclosure-transition{scroll-behavior:auto;overflow-anchor:none}
 
 /* Transit layer controls share the model toolbar and wrap on narrow screens. */
 .map-toolbar{flex-wrap:wrap}.map-toggle{flex-wrap:wrap;gap:10px 18px}.map-toggle label{min-height:28px}.transit-key{width:18px;height:3px;flex:0 0 18px;background:currentColor}.go-key{color:#25825e}.lrt-key{color:#d6ac39}#goToggle{accent-color:#25825e}#lrtToggle{accent-color:#ad841d}
+
+
+/* Route choices use native selects and a stable, shared reading area. */
+.map-selects{display:flex;align-items:center;flex-wrap:wrap;gap:12px 22px;min-width:0}
+.map-selects label{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;min-width:0}
+.map-selects select{max-width:100%;min-width:0}
+.route-summary{padding:20px 24px 0;min-height:98px;color:var(--ink);font-size:14px;line-height:1.65}
+.route-summary p{max-width:100ch;margin:0 0 6px;text-wrap:pretty}
+.route-summary a{font-size:13px}
+.route-summary+.map-caption{padding-top:16px}
+.connection-strip #connectionAreas{grid-template-columns:repeat(var(--area-count,5),minmax(0,1fr))}
+@media(max-width:600px){
+ .map-selects{display:grid;gap:10px}
+ .map-selects label{display:grid;grid-template-columns:40px minmax(0,1fr);gap:8px}
+ .map-selects select{width:100%;min-width:0}
+ .route-summary{padding:16px 16px 0;min-height:175px;font-size:13px}
+ .route-summary a{font-size:12px}
+}

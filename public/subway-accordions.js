@@ -132,8 +132,9 @@ async function revealFragment(fragment, animate) {
 
 document.querySelectorAll('a[href^="#source-"]').forEach(link => {
   link.addEventListener('click', async event => {
-    event.preventDefault();
     const fragment = link.getAttribute('href');
+    if (!document.querySelector(fragment)?.closest('.subway-details > details')) return;
+    event.preventDefault();
     if (!await revealFragment(fragment, true)) return;
     history.pushState(null, '', fragment);
     document.querySelector(fragment)?.querySelector('a')?.focus({ preventScroll: true });
