@@ -19667,5 +19667,310 @@
         "claims": "Existing geometry retained unchanged. Current City application polygon independently contains every assigned component; exact architectural edition remains unverified."
       }
     ]
+  },
+  {
+    "id": "30-eglinton-west",
+    "name": "30 Eglinton Avenue West",
+    "aliases": [
+      "30 Eglinton Ave W",
+      "30 Eglinton Avenue West Condos",
+      "Hurontario Condos",
+      "30 Eglinton Avenue West Limited",
+      "30 Eglinton",
+      "30Eglinton",
+      "HurontarioCondos"
+    ],
+    "address": "30 Eglinton Avenue West",
+    "district": "uptown",
+    "researchArea": "Eglinton / Hurontario",
+    "lat": 43.60544292013812,
+    "lon": -79.65284014698152,
+    "status": "Zoning approved; construction timing unverified",
+    "displayStatus": "Proposed",
+    "statusDate": "2024-01-10",
+    "statusEvidenceDate": "2026-05-25",
+    "lastStatusReview": "2026-09-27",
+    "storeys": [
+      29,
+      36,
+      31
+    ],
+    "heightM": [
+      93.5,
+      113.1,
+      100
+    ],
+    "units": 1432,
+    "summary": "Approved mixed-use development at the southwest corner of Eglinton and Hurontario: three towers of 29, 36 and 31 storeys with 1,432 homes. The existing office building and Wilcox House are retained.",
+    "modelCaveat": "The towers follow approved zoning envelopes; podium outlines and ground levels are approximate. Final façades and construction timing remain unverified.",
+    "includeInModel": true,
+    "modelLayer": "proposed",
+    "geometryVerifiedCurrent": false,
+    "geometryCoverage": "Approved envelope massing; final architecture unverified",
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "completionDateNote": "No construction start, final site-plan approval or completion date was verified. A zoning approval does not guarantee delivery.",
+    "completion": {
+      "actual": null,
+      "target": null,
+      "targetIsGuaranteed": false,
+      "note": "Zoning approved; site-plan progression, removal of holding conditions and construction timing remain unverified.",
+      "reviewed": "2026-09-27",
+      "sources": [
+        "https://www.omb.gov.on.ca/e-decisions/OLT-22-004548-NOV-20-2023.PDF",
+        "https://www7.mississauga.ca/Departments/PB/OfficialDocs/OLT-22-004548-JAN-10-2024-ORD.pdf",
+        "https://www7.mississauga.ca/Departments/PB/OfficialDocs/OLT-22-004548-MAY-25-2026-ORD.pdf",
+        "https://www7.mississauga.ca/Departments/PB/ZoneBylaw/DZBR1/Part%204%20-%20RA5.pdf"
+      ]
+    },
+    "applicationIds": [
+      "OZ 21/002 W4",
+      "SP 22/15 W4",
+      "OLT-22-004548",
+      "OLT-22-004549",
+      "OLT-22-004550"
+    ],
+    "rawCityApplicationWorkflow": "Withheld",
+    "rawCityApplicationWorkflowCaveat": "City workflow label is not evidence of cancellation or a commercial hold. The application description still quotes the obsolete original design.",
+    "coordinateSource": "City parcel 5263100 and approved RA5-62 envelope schedule",
+    "modelBounds": [
+      [
+        -6373.388366100944,
+        93.81705627441406,
+        -1996.8042926358096
+      ],
+      [
+        -6189.780370501048,
+        208.54422302246093,
+        -1846.0760295791242
+      ]
+    ],
+    "assetIds": [
+      "30-eglinton-west-approved-envelope",
+      "30-eglinton-west-retained-office"
+    ],
+    "sourceMeshIds": [
+      "63-6211",
+      "63-6212",
+      "63-6213",
+      "63-6214",
+      "63-6215",
+      "63-6216",
+      "63-6217",
+      "63-6218"
+    ],
+    "retainOldSourceExclusion": true,
+    "sources": [
+      {
+        "id": "olt-settlement-2023",
+        "url": "https://www.omb.gov.on.ca/e-decisions/OLT-22-004548-NOV-20-2023.PDF",
+        "date": "2023-11-20",
+        "primary": true,
+        "finding": "Settlement development: 29/36/31 storeys, 1,432 dwellings; site-plan appeal adjourned sine die.",
+        "title": "OLT settlement decision, November 2023",
+        "publisher": "Ontario Land Tribunal",
+        "claims": "Settlement development: 29/36/31 storeys, 1,432 dwellings; site-plan appeal adjourned sine die.",
+        "accessed": "2026-09-27"
+      },
+      {
+        "id": "olt-final-2024",
+        "url": "https://www7.mississauga.ca/Departments/PB/OfficialDocs/OLT-22-004548-JAN-10-2024-ORD.pdf",
+        "date": "2024-01-10",
+        "primary": true,
+        "finding": "Final order approves OPA and zoning amendment after final-form conditions satisfied.",
+        "title": "Final official-plan and zoning approval, January 2024",
+        "publisher": "Ontario Land Tribunal",
+        "claims": "Final order approves OPA and zoning amendment after final-form conditions satisfied.",
+        "accessed": "2026-09-27"
+      },
+      {
+        "id": "olt-correction-2026",
+        "url": "https://www7.mississauga.ca/Departments/PB/OfficialDocs/OLT-22-004548-MAY-25-2026-ORD.pdf",
+        "date": "2026-05-25",
+        "primary": true,
+        "finding": "Technical correction permits interim office/commercial/retail uses before holding removal; other final-order terms unchanged.",
+        "title": "Technical correction order, May 2026",
+        "publisher": "Ontario Land Tribunal",
+        "claims": "Technical correction permits interim office/commercial/retail uses before holding removal; other final-order terms unchanged.",
+        "accessed": "2026-09-27"
+      },
+      {
+        "id": "consolidated-zoning-2026",
+        "url": "https://www7.mississauga.ca/Departments/PB/ZoneBylaw/DZBR1/Part%204%20-%20RA5.pdf",
+        "date": "2026-06-30",
+        "primary": true,
+        "finding": "Clearer consolidated RA5-62 schedule gives dimensioned buildable areas, stepped maximum heights and 855 m² tower floor-plate limit.",
+        "title": "RA5-62 zoning schedule, consolidated June 2026",
+        "publisher": "City of Mississauga",
+        "claims": "Clearer consolidated RA5-62 schedule gives dimensioned buildable areas, stepped maximum heights and 855 m² tower floor-plate limit.",
+        "accessed": "2026-09-27"
+      },
+      {
+        "id": "current-city-application",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=SiteAddress+LIKE+%27%2530+Eglinton%25%27&outFields=%2A&outSR=4326&f=pjson",
+        "primary": true,
+        "dataEditedAt": "2026-08-25T13:48:38.985Z",
+        "finding": "SP 22 15, PIN 5263100, raw workflow Withheld; description still carries superseded 45/45/37 and 1577 units.",
+        "title": "Current City application record, SP 22/15",
+        "publisher": "City of Mississauga",
+        "claims": "SP 22 15, PIN 5263100, raw workflow Withheld; description still carries superseded 45/45/37 and 1577 units.",
+        "accessed": "2026-09-27"
+      },
+      {
+        "id": "city-parcel",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Parcel/FeatureServer/0/query?where=CITY_PIN%3D5263100&outFields=%2A&outSR=26917&returnGeometry=true&f=pjson",
+        "primary": true,
+        "finding": "Current City parcel boundary, CITY_PIN5263100; GIS_AREA25636.46m²; query coordinates EPSG26917.",
+        "title": "City parcel boundary, PIN 5263100",
+        "publisher": "City of Mississauga",
+        "claims": "Current City parcel boundary, CITY_PIN5263100; GIS_AREA25636.46m²; query coordinates EPSG26917.",
+        "accessed": "2026-09-27"
+      },
+      {
+        "id": "city-issued-permit-query",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Issued_Building_Permits/FeatureServer/0/query?where=PIN+%3D+5263100&outFields=%2A&outSR=4326&f=json",
+        "primary": true,
+        "finding": "No features for exact PIN5263100 in queried issued-permit dataset; limited coverage cannot prove no permit anywhere.",
+        "title": "Issued-permit query for parcel 5263100",
+        "publisher": "City of Mississauga",
+        "claims": "No features for exact PIN5263100 in queried issued-permit dataset; limited coverage cannot prove no permit anywhere.",
+        "accessed": "2026-09-27"
+      },
+      {
+        "id": "sajecki-project",
+        "url": "https://sajeckiplanning.squarespace.com/projects/30-eglinton-avenue-west",
+        "primary": true,
+        "finding": "Consultant confirms identity/team/retention, but 28/32/34 and 1332 units predate the later settled development.",
+        "title": "30 Eglinton project overview, earlier design",
+        "publisher": "Sajecki Planning",
+        "claims": "Consultant confirms identity/team/retention, but 28/32/34 and 1332 units predate the later settled development.",
+        "accessed": "2026-09-27"
+      },
+      {
+        "id": "sajecki-settlement",
+        "url": "https://sajeckiplanning.squarespace.com/news/nru-publishing-spotlights-sajecki-planning",
+        "primary": true,
+        "finding": "Consultant reports successful OLT settlement and retained office/heritage/POPS.",
+        "title": "OLT settlement announcement",
+        "publisher": "Sajecki Planning",
+        "claims": "Consultant reports successful OLT settlement and retained office/heritage/POPS.",
+        "accessed": "2026-09-27"
+      },
+      {
+        "id": "studiotla",
+        "url": "https://studiotla.ca/Projects/MIXED-USE-HIGHRISE-RESIDENTIAL",
+        "primary": true,
+        "finding": "Original 45/45/37 description; In Progress is consultant project categorization, not proof of site construction.",
+        "title": "Original design reference, superseded",
+        "publisher": "Studio TLA",
+        "claims": "Original 45/45/37 description; In Progress is consultant project categorization, not proof of site construction.",
+        "accessed": "2026-09-27"
+      },
+      {
+        "id": "crown-acquisition",
+        "url": "https://www.crownrealtypartners.com/news/crown-plaza-partners-team-mixed-use-redevelopment-project-30-eglinton-avenue-west-mississauga",
+        "date": "2019-07-16",
+        "primary": true,
+        "finding": "Crown/Plaza acquisition and redevelopment roles; not a current construction programme.",
+        "title": "Crown and Plaza acquisition announcement",
+        "publisher": "Crown Realty Partners",
+        "claims": "Crown/Plaza acquisition and redevelopment roles; not a current construction programme.",
+        "accessed": "2026-09-27"
+      }
+    ],
+    "modelMethod": "Approved settled-development envelope reconstruction, not final architectural/BIM geometry. The November 2023 settlement describes 29, 36 and 31 storeys and 1,432 dwellings; the June 2026 consolidated RA5-62 schedule supplies dimensional and height limits. The earlier 45/45/37 City assembly remains excluded. Printed tower plates and step heights are explicit; outer podium contours and positions are independently reconstructed to City parcel 5263100. The connected A3/A4 collar is interpreted at A3 32.1 m and the connected C3/C4 collar at C3 32.5 m; these collar heights are not separately labelled in the schedule. C podium frontage is traced approximately around the bend; minor setbacks, facade, balconies, mechanical enclosures and approved grading are not reconstructed. Display foundations bridge the Ontario DTM and do not establish the legal architectural height datum. Placement ±2 m, podium outline ±1 m and grade ±1.5 m are modelling judgements, not surveyed tolerances. Zoning approval and an active application do not establish construction, final site-plan approval or a completion date. In the future view only, exact municipal office components are retained while overlapping low retail wings are removed. The existing and construction views preserve the original office and retail context. Wilcox House remains unchanged.",
+    "sourceReport": "downloads/30-Eglinton-West-review.md",
+    "position": [
+      -6281.584368300996,
+      93.81705627441406,
+      -1921.4401611074668
+    ],
+    "meshIds": [
+      "eglint30-A-foundation",
+      "eglint30-A4-29",
+      "eglint30-A4-28",
+      "eglint30-A4-26",
+      "eglint30-A3-podium",
+      "eglint30-A2-podium",
+      "eglint30-A1-podium",
+      "eglint30-B-foundation",
+      "eglint30-B-36",
+      "eglint30-B-podium",
+      "eglint30-C-foundation",
+      "eglint30-C4-31",
+      "eglint30-C4-30",
+      "eglint30-C4-28",
+      "eglint30-C3-podium",
+      "eglint30-C2-podium",
+      "eglint30-C1-podium",
+      "eglint30-retained-office-0",
+      "eglint30-retained-office-7",
+      "eglint30-retained-office-8"
+    ],
+    "retainedMeshIds": [
+      "eglint30-A-foundation",
+      "eglint30-A4-29",
+      "eglint30-A4-28",
+      "eglint30-A4-26",
+      "eglint30-A3-podium",
+      "eglint30-A2-podium",
+      "eglint30-A1-podium",
+      "eglint30-B-foundation",
+      "eglint30-B-36",
+      "eglint30-B-podium",
+      "eglint30-C-foundation",
+      "eglint30-C4-31",
+      "eglint30-C4-30",
+      "eglint30-C4-28",
+      "eglint30-C3-podium",
+      "eglint30-C2-podium",
+      "eglint30-C1-podium",
+      "eglint30-retained-office-0",
+      "eglint30-retained-office-7",
+      "eglint30-retained-office-8"
+    ],
+    "supplementalAssetIds": [
+      "30-eglinton-west-approved-envelope",
+      "30-eglinton-west-retained-office"
+    ],
+    "geometrySources": [
+      {
+        "assetId": "30-eglinton-west-approved-envelope",
+        "file": "outputs/models/supplemental/eglinton-west/30-eglinton-west-approved-envelope.glb",
+        "sha256": "8bdbe8bbf8f0535cc773a151bc79a3afbebf6ef02fef50c691e29632f78ff460",
+        "type": "approved-envelope reconstruction",
+        "replacesSourceIds": [],
+        "modes": [
+          "future"
+        ],
+        "sources": [
+          "https://www.omb.gov.on.ca/e-decisions/OLT-22-004548-NOV-20-2023.PDF",
+          "https://www7.mississauga.ca/Departments/PB/OfficialDocs/OLT-22-004548-JAN-10-2024-ORD.pdf",
+          "https://www7.mississauga.ca/Departments/PB/OfficialDocs/OLT-22-004548-MAY-25-2026-ORD.pdf",
+          "https://www7.mississauga.ca/Departments/PB/ZoneBylaw/DZBR1/Part%204%20-%20RA5.pdf"
+        ],
+        "claims": "Approved settled-development envelope reconstruction, not final architectural/BIM geometry. The November 2023 settlement describes 29, 36 and 31 storeys and 1,432 dwellings; the June 2026 consolidated RA5-62 schedule supplies dimensional and height limits. The earlier 45/45/37 City assembly remains excluded. Printed tower plates and step heights are explicit; outer podium contours and positions are independently reconstructed to City parcel 5263100. The connected A3/A4 collar is interpreted at A3 32.1 m and the connected C3/C4 collar at C3 32.5 m; these collar heights are not separately labelled in the schedule. C podium frontage is traced approximately around the bend; minor setbacks, facade, balconies, mechanical enclosures and approved grading are not reconstructed. Display foundations bridge the Ontario DTM and do not establish the legal architectural height datum. Placement ±2 m, podium outline ±1 m and grade ±1.5 m are modelling judgements, not surveyed tolerances. Zoning approval and an active application do not establish construction, final site-plan approval or a completion date."
+      },
+      {
+        "assetId": "30-eglinton-west-retained-office",
+        "file": "outputs/models/supplemental/eglinton-west/30-eglinton-west-retained-office.glb",
+        "sha256": "3f61b3e773fba6fbe76973bda1abb7ba7cf4a638a695db9c3020ede61bfb18e0",
+        "type": "exact municipal retained-office extraction",
+        "replacesSourceIds": [
+          "63-5062",
+          "63-2579"
+        ],
+        "modes": [
+          "future"
+        ],
+        "sources": [
+          "https://www.omb.gov.on.ca/e-decisions/OLT-22-004548-NOV-20-2023.PDF",
+          "https://www7.mississauga.ca/Departments/PB/OfficialDocs/OLT-22-004548-JAN-10-2024-ORD.pdf",
+          "https://www7.mississauga.ca/Departments/PB/OfficialDocs/OLT-22-004548-MAY-25-2026-ORD.pdf",
+          "https://www7.mississauga.ca/Departments/PB/ZoneBylaw/DZBR1/Part%204%20-%20RA5.pdf"
+        ],
+        "claims": "Existing 9-storey office retained exactly from three disconnected components of municipal source 63-5062 (164 original triangles, including walls to original grade). Separate low retail source components and 63-2579 are replaced in the future scenario only, following the retained-office/heritage layout of approved RA5-62. 63-1607 Wilcox heritage remains in original context unchanged. No architectural vertices, faces, coordinates, heights or base were fabricated, clipped or rescaled. Municipal source geometry is a dated massing snapshot, not a surveyed architectural as-built. Baseline/context construction modes retain all original geometry."
+      }
+    ]
   }
 ]

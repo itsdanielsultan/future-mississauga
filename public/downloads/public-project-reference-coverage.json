@@ -1576,6 +1576,26 @@
         "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0"
       ],
       "referenceResult": "Current public references and municipal geometry/parcel checks are recorded. No architect-supplied native model or new reuse permission was received."
+    },
+    {
+      "projectId": "30-eglinton-west",
+      "name": "30 Eglinton Avenue West",
+      "currentModelLimit": "The towers follow approved zoning envelopes; podium outlines and ground levels are approximate. Final façades and construction timing remain unverified.",
+      "lastTargetedReview": "2026-09-27",
+      "checkedReferenceUrls": [
+        "https://www.omb.gov.on.ca/e-decisions/OLT-22-004548-NOV-20-2023.PDF",
+        "https://www7.mississauga.ca/Departments/PB/OfficialDocs/OLT-22-004548-JAN-10-2024-ORD.pdf",
+        "https://www7.mississauga.ca/Departments/PB/OfficialDocs/OLT-22-004548-MAY-25-2026-ORD.pdf",
+        "https://www7.mississauga.ca/Departments/PB/ZoneBylaw/DZBR1/Part%204%20-%20RA5.pdf",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=SiteAddress+LIKE+%27%2530+Eglinton%25%27&outFields=%2A&outSR=4326&f=pjson",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Parcel/FeatureServer/0/query?where=CITY_PIN%3D5263100&outFields=%2A&outSR=26917&returnGeometry=true&f=pjson",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Issued_Building_Permits/FeatureServer/0/query?where=PIN+%3D+5263100&outFields=%2A&outSR=4326&f=json",
+        "https://sajeckiplanning.squarespace.com/projects/30-eglinton-avenue-west",
+        "https://sajeckiplanning.squarespace.com/news/nru-publishing-spotlights-sajecki-planning",
+        "https://studiotla.ca/Projects/MIXED-USE-HIGHRISE-RESIDENTIAL",
+        "https://www.crownrealtypartners.com/news/crown-plaza-partners-team-mixed-use-redevelopment-project-30-eglinton-avenue-west-mississauga"
+      ],
+      "referenceResult": "Approved zoning/settlement envelopes reconstructed from public primary records. Exact municipal retained-office geometry preserved. No architect-supplied native model, verified construction start or completion date recovered."
     }
   ],
   "outreachSummary": {
