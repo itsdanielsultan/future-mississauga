@@ -241,3 +241,6 @@ html.disclosure-transition{scroll-behavior:auto;overflow-anchor:none}
   .subway-sources a { font-size: 16px; }
   .subway-sources span { font-size: 14px; }
 }
+
+/* Transit layer controls share the model toolbar and wrap on narrow screens. */
+.map-toolbar{flex-wrap:wrap}.map-toggle{flex-wrap:wrap;gap:10px 18px}.map-toggle label{min-height:28px}.transit-key{width:18px;height:3px;flex:0 0 18px;background:currentColor}.go-key{color:#25825e}.lrt-key{color:#d6ac39}#goToggle{accent-color:#25825e}#lrtToggle{accent-color:#ad841d}

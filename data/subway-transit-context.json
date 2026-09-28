@@ -1,0 +1,94 @@
+{
+  "edition": "2026-09-28 subway transit context",
+  "assets": [
+    {
+      "url": "models/subway-milton-go-context.glb",
+      "bytes": 126508,
+      "sha256": "052cfa3c79dc0f6000f8879af665ff95f2595a80d3519f8b4bdea4e3f492d590",
+      "system": "GO",
+      "geometryRole": "service-guide",
+      "modes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "bounds": [
+        [
+          553.818359375,
+          43.43567657470703,
+          -8100.904296875
+        ],
+        [
+          4649.6640625,
+          53.560176849365234,
+          -2996.72314453125
+        ]
+      ],
+      "triangles": 4444
+    }
+  ],
+  "source": {
+    "name": "Metrolinx official GO GTFS",
+    "url": "https://www.gotransit.com/en/partner-with-us/software-developers",
+    "shapeId": "UNML",
+    "feedVersion": "20260917132342",
+    "sourceZipSHA256": "e2c80eeed718af9e58315c4198b1bd7e338a00171c658197f04d116421f14fc6",
+    "selectedSourceSHA256": "54381ea7a763d4ccece19d8458c2132e3ef2fe99fb26882c9e369f32277468c9",
+    "shapePointCount": 203,
+    "coordinateTransform": "EPSG:4326 to EPSG:26917; x=E\u2212615000, y=CGVD2013\u221270, z=4827000\u2212N"
+  },
+  "scope": {
+    "lengthM": 6641.10032994775,
+    "route": "Toronto boundary through Kipling GO to the northern edge of existing Toronto context; continues toward Union beyond the model extent",
+    "coverageBoundsEPSG26917": [
+      614400.0,
+      4828600.0,
+      620400.0,
+      4835100.0
+    ],
+    "endAtCoverageBoundaryM": 0.0,
+    "municipalOverlapM": 0.0,
+    "KiplingStation": {
+      "id": "KP",
+      "name": "Kipling GO",
+      "lon": "-79.536287",
+      "lat": "43.636955"
+    },
+    "KiplingDistanceFromSourceAlignmentM": 31.547043325008875
+  },
+  "geometryQA": {
+    "nativeGLBReopened": true,
+    "finiteVertices": true,
+    "sourceAlignmentMaximumErrorM": 6.256531801404342e-06,
+    "exactCanonicalSeamVertices": true,
+    "joinVertices": [
+      [
+        555.8526611328125,
+        43.7295036315918,
+        -2996.72314453125
+      ],
+      [
+        553.818359375,
+        43.72949981689453,
+        -2998.92822265625
+      ]
+    ],
+    "guideWidthM": 3,
+    "originalMunicipalSourceSHA256": "f1977862c94ba86be40782f3170821e016ee8d7315927e4700618598123d581b",
+    "originalMunicipalPublicSHA256": "fb9f7549403f54c9c8747e1f15aa14985ab59596c2cf61f0181a86aca87213e8",
+    "baseProfileMaxAbsoluteGrade": 0.035000000000001044,
+    "maxLocalSurfaceClearanceLiftM": 0.6812132907674382,
+    "maxLiftAboveDTMGuideM": 11.270002014160156,
+    "groundSourceSHA256": "cf5fe814948dc39f58a0592563f27e87fbe62c8e991b52d40a4d899694f9d0a7",
+    "higherRoofsAndBridgeSurfacesNotUsedAsSupport": true,
+    "glTFUnlit": true,
+    "semanticColour": "#25825e"
+  },
+  "limitations": "Official GO GTFS service alignment; a 3 m display marking, not surveyed rails. Ontario DTM with a 3.5% display slope constraint and minor local surface clearance; engineering grades and bridge decks are not verified. Foreground buildings and higher bridges normally occlude this line.",
+  "sourceCurrency": "Derived from the stored official GO GTFS feed version 20260917132342, obtained September 20. This is not asserted to be the latest timetable feed.",
+  "coordinateSystem": "X=E\u2212615000; Y=CGVD2013\u221270; Z=4827000\u2212N; metres; glTF Y up",
+  "attribution": {
+    "url": "downloads/Model-guide.md",
+    "text": "GO data used with Metrolinx permission and attribution retained in the Model guide."
+  }
+}
