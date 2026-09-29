@@ -195,10 +195,16 @@ bindComparison({panel:wrap,handle:$('#compareLine'),input:$('#compareRange'),ini
 for(const id of ['lrtToggle','goToggle','transitwayToggle','uncertainToggle','markersToggle'])$('#'+id).onchange=()=>{applyVisibility(mode);dirty=true;};
 $('#scenarioSelect').onchange=e=>setMode(e.target.value);$('#resetBtn').onclick=()=>{focusRequest++;reset();};$('#sourcesBtn').onclick=()=>$('#about').showModal();$('#closeAbout').onclick=()=>$('#about').close();
 function render(){if(compare){const size=renderer.getSize(new THREE.Vector2()),cut=Math.round(size.x*split);renderer.setScissorTest(true);renderer.setScissor(0,0,cut,size.y);applyVisibility('existing');renderer.render(scene,camera);renderer.setScissor(cut,0,size.x-cut,size.y);applyVisibility('future');renderer.render(scene,camera);renderer.setScissorTest(false);}else{applyVisibility(mode);renderer.render(scene,camera);}const c=controls.target.clone(),n=c.clone().add(new THREE.Vector3(0,0,-100));c.project(camera);n.project(camera);const angle=Math.atan2(n.x-c.x,n.y-c.y)*180/Math.PI;$('#northArrow').style.transform=`rotate(${angle}deg)`;}
+let exportImageURL=null;
+function clearExportImage(){
+ if(exportImageURL){URL.revokeObjectURL(exportImageURL);exportImageURL=null;}
+ const status=$('#exportStatus');status.replaceChildren();status.hidden=true;
+}
+window.addEventListener('pagehide',clearExportImage);
 $('#exportBtn').onclick=async()=>{
  if(exporting||!current||window.atlasReady!==current.id)return;
  const button=$('#exportBtn'),status=$('#exportStatus'),filename=`future-mississauga-${current.id}-${compare?'comparison':mode}.png`;
- exporting=true;button.disabled=true;button.setAttribute('aria-busy','true');status.hidden=true;
+ exporting=true;button.disabled=true;button.setAttribute('aria-busy','true');clearExportImage();
  try{
  render();const out=document.createElement('canvas');out.width=canvas.width;const ctx=out.getContext('2d'),fontSize=out.width<900?13:16,maxWidth=out.width-60;
  const captions=[`${compare?'Baseline / retained development':mode} · Research 20 September 2026 · Source dates vary`,'City of Mississauga massing data · © OpenStreetMap contributors · General representation; see atlas evidence and terms','Contains information licensed under the Open Government Licence – Ontario. Tree dimensions and woodland fill are illustrative.'];
@@ -206,9 +212,13 @@ $('#exportBtn').onclick=async()=>{
  const title=`Future Mississauga · ${current.name}`;ctx.font=`bold ${out.width<900?18:25}px sans-serif`;const splitTitle=ctx.measureText(title).width>out.width-100,titleExtra=splitTitle?26:0;out.height=canvas.height+74+titleExtra+lines.length*(fontSize+8);ctx.fillStyle='#f6f5ef';ctx.fillRect(0,0,out.width,out.height);ctx.drawImage(canvas,0,0);ctx.fillStyle='#183036';ctx.font=`bold ${out.width<900?18:25}px sans-serif`;
  const logo=document.querySelector('.site-brand img');if(logo?.complete&&logo.naturalWidth)ctx.drawImage(logo,30,canvas.height+16,26,28);ctx.fillText(splitTitle?'Future Mississauga':title,70,canvas.height+38,out.width-100);if(splitTitle){ctx.font='bold 16px sans-serif';ctx.fillText(current.name,30,canvas.height+64,out.width-60);}ctx.font=`${fontSize}px sans-serif`;lines.forEach((line,i)=>ctx.fillText(line,30,canvas.height+68+titleExtra+i*(fontSize+8)));
  const blob=await new Promise((resolve,reject)=>out.toBlob(value=>value?resolve(value):reject(new Error('PNG encoding failed')),'image/png'));
- const a=document.createElement('a'),url=URL.createObjectURL(blob);
- a.download=filename;a.href=url;a.hidden=true;document.body.append(a);
- try{a.click();}finally{a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);}
+ const download=document.createElement('a'),open=document.createElement('a');
+ exportImageURL=URL.createObjectURL(blob);
+ download.download=filename;download.href=exportImageURL;download.textContent='Download PNG';
+ open.href=exportImageURL;open.target='_blank';open.rel='noopener';open.textContent='Open image';
+ status.replaceChildren(document.createTextNode('Image ready.'),download,open);status.hidden=false;
+ // Keep a real clickable link available when an embedded browser ignores automatic saving.
+ try{download.click();}catch(error){/* The prepared image remains available through the links. */}
  }catch(error){
   status.textContent='The image could not be saved. Please try again.';status.hidden=false;
  }finally{

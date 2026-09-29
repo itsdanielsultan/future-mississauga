@@ -1116,15 +1116,18 @@
     "address": "97–101 City Centre Drive",
     "lat": 43.59144301657465,
     "lon": -79.63897742007715,
-    "status": "proposed-old-current-status-unconfirmed",
-    "statusDate": "2026-09-20",
+    "status": "Proposed; applicant on hold",
+    "statusDate": "2026-09-24",
     "storeys": [
       65,
       55
     ],
-    "heightM": [],
-    "summary": "Two-tower redevelopment south of the mall, retained because no official cancellation was found.",
-    "modelCaveat": "The City's 2024 appendix uses 65 and 45 storeys, while the 2020 submission shown by UrbanToronto uses 65 and 55. Municipal meshes carry 205.25 and 175.25 m, but the height convention remains uncertain. An old proposal is not necessarily cancelled.",
+    "heightM": [
+      205.25,
+      175.25
+    ],
+    "summary": "A two-tower proposal south of Square One, with 55- and 65-storey towers and 1,309 homes in the April 2021 drawings. The applications remain open, but the applicant has put the project on hold with no confirmed timeline.",
+    "modelCaveat": "Hariri Pontarini Architects' Block 22 drawings A100 SITE PLAN (ROOF) and A003 STATISTICS, project 1807, revision 3 dated April 23, 2021 (RE-ISSUED FOR HOZ & SPA), identify the north tower as 55 storeys / 175.25 m and the south tower as 65 storeys / 205.25 m, with 1,309 homes in total. These primary drawings resolve the 65/45-storey appendix conflict for this dated design. They were supplied by the City; no public site-plan application page was available as of September 28, 2026. The drawings are a reference for the retained municipal massing, not a newly approved design or an exact audit of every mesh surface. HOZ 19-12 W4 and SP 20-6 W4 remain open. The applicant has put the project on hold; approval is withheld pending technical responses. No resubmission or construction timeline is confirmed. This is not a cancellation.",
     "sources": [
       {
         "url": "https://urbantoronto.ca/forum/threads/toronto-97-101-city-centre-drive-m-65s-oxford-properties-hariri-pontarini.30788/",
@@ -1170,6 +1173,21 @@
           205.25
         ],
         "precision": "Source mesh geometry preserved; attribute heights are not necessarily architectural heights."
+      },
+      {
+        "title": "Block 22, project 1807: A100 SITE PLAN (ROOF) and A003 STATISTICS",
+        "author": "Hariri Pontarini Architects",
+        "date": "2021-04-23",
+        "revision": "3, RE-ISSUED FOR HOZ & SPA",
+        "accessed": "2026-09-28",
+        "accessMethod": "City-supplied reference drawings; no public download URL provided",
+        "publiclyDownloadable": false,
+        "claims": [
+          "North tower: 55 storeys, 175.25 m",
+          "South tower: 65 storeys, 205.25 m",
+          "1,309 residential units"
+        ],
+        "scope": "Confirms the dated design statistics; no mesh geometry was changed."
       }
     ],
     "includeInModel": true,
@@ -1185,14 +1203,14 @@
       "actual": null,
       "target": null,
       "targetIsGuaranteed": false,
-      "note": "No verified completion date is published in the checked sources. This remains a proposal, future phase or planning concept; no date is inferred from its age.",
-      "reviewed": "2026-09-20",
+      "note": "No construction, resubmission or completion timeline is confirmed. The open applications are on hold at the applicant’s request; the dated design is retained as a proposal.",
+      "reviewed": "2026-09-28",
       "sources": [
         "https://urbantoronto.ca/forum/threads/toronto-97-101-city-centre-drive-m-65s-oxford-properties-hariri-pontarini.30788/",
         "https://www.mississauga.ca/wp-content/uploads/2025/01/15082458/MOPA177-jan-2025.pdf"
       ]
     },
-    "lastStatusReview": "2026-09-20",
+    "lastStatusReview": "2026-09-28",
     "researchArea": "downtown",
     "district": "Downtown",
     "meshIds": [
@@ -1210,7 +1228,20 @@
       "63-6192",
       "63-6193"
     ],
-    "geometryCoverage": "Source geometry available; current detail may differ"
+    "geometryCoverage": "Retained municipal massing; dated 2021 tower statistics corroborated by primary drawings",
+    "referenceReviewDate": "2026-09-28",
+    "statusDetail": "HOZ 19-12 W4 and SP 20-6 W4 remain open. The applicant has put the project on hold; approval is withheld pending technical responses. No resubmission or construction timeline is confirmed. This is not a cancellation.",
+    "units": 1309,
+    "applicationReferences": [
+      "HOZ 19-12 W4",
+      "SP 20-6 W4"
+    ],
+    "statusEvidence": {
+      "source": "City of Mississauga status clarification",
+      "date": "2026-09-24",
+      "publicSummary": "HOZ 19-12 W4 and SP 20-6 W4 remain open. The applicant has put the project on hold; approval is withheld pending technical responses. No resubmission or construction timeline is confirmed. This is not a cancellation.",
+      "correspondencePublished": false
+    }
   },
   {
     "id": "square-one-office",
@@ -5083,8 +5114,8 @@
         "storeys": 45
       }
     ],
-    "summary": "The January 2026 provincial proposal has seven towers across three blocks and 2,434 homes.",
-    "modelCaveat": "Podiums and seven tower footprints follow the official site-plan graphic. Raster tracing differs by up to approximately 4% from published footprint areas. Balconies, cladding, windows, railings, small facade recesses and rooftop equipment are omitted. No completion year or construction start is inferred. Existing GO buildings are retained. The official downloadable architectural set and native 3D model are listed as available upon request; no request was sent.",
+    "summary": "Seven proposed towers and 2,434 homes, now shown using the supplied Zeidler design massing. The podiums, courtyard forms and tower outlines follow the native model; no construction completion date is confirmed.",
+    "modelCaveat": "A100 and native geometry use 82.75 m for A1, while A200 labels 87.75 m. Native geometry is retained. No detailed facade or construction approval is implied.",
     "sources": [
       {
         "url": "https://www.infrastructureontario.ca/clarkson-toc",
@@ -5140,36 +5171,46 @@
         "use": "Approximate base grades, 10 m bilinear export, mixed source acquisition dates",
         "license": "https://www.ontario.ca/page/open-government-licence-ontario",
         "attribution": "Contains information licensed under the Open Government Licence – Ontario."
+      },
+      {
+        "title": "Zeidler Clarkson TOC model, November 28, 2025 · IO project overview",
+        "publisher": "Zeidler Architecture Inc.; supplied by Infrastructure Ontario",
+        "received": "2026-09-28",
+        "sourceDate": "2025-11-28",
+        "url": "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/clarkson-go-transit-oriented-community/",
+        "urlPurpose": "Public project overview; not a download link for the privately supplied source model",
+        "availability": "Native model supplied directly by Infrastructure Ontario following a request; source file is not republished",
+        "use": "Exact native seven-tower and three-podium massing; geometric outlines and relative heights",
+        "localSourceSha256": "ec474fc52ab3205581d94dc5bd980391637f2845525d8ddd08763b4aa9bbd48f",
+        "attribution": "Architectural massing by Zeidler Architecture Inc., supplied by Infrastructure Ontario. Independently positioned and visualised by Future Mississauga."
+      },
+      {
+        "title": "Zeidler A100 site plan and A200–A202 elevations, November 21, 2025 · IO project overview",
+        "publisher": "Zeidler Architecture Inc.; supplied by Infrastructure Ontario",
+        "drawingDate": "2025-11-21",
+        "issue": "Issued for Step 1 Submission",
+        "received": "2026-09-28",
+        "url": "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/clarkson-go-transit-oriented-community/",
+        "urlPurpose": "Public project overview; drawings supplied directly, not a public document download",
+        "use": "Cross-check native model scope and written heights; A1 height conflict retained",
+        "copyright": "Copyright Zeidler Architecture Inc.; no blanket redistribution licence identified"
       }
     ],
     "geometrySources": [
       {
-        "url": "https://www.infrastructureontario.ca/4ae7bc/contentassets/a57a6b1574004fcfb9937d296d7a81b5/clarkson-planning-justification-report.pdf",
-        "title": "Clarkson TOC Planning Justification Report, November 2025",
-        "publisher": "Infrastructure Ontario / Fotenn / Zeidler Architects",
-        "use": "Printed page 29 Figure 12 horizontal envelopes and metric height labels; page 44 footprint statistics",
-        "localSourceSha256": "36d66219c757435e177faeb674164ceedfe119a765ab213f96a1dd3b70102ba9"
-      },
-      {
-        "url": "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/clarkson-go-transit-oriented-community/",
-        "title": "Clarkson GO — Transit-Oriented Community",
-        "publisher": "Infrastructure Ontario",
-        "accessed": "2026-09-20",
-        "use": "Current public proposal status and linked technical documents"
-      },
-      {
-        "url": "https://data.mississauga.ca/pages/mississauga-3d",
-        "title": "City 3D source tile 82",
-        "publisher": "City of Mississauga",
-        "use": "Existing station components 82-1914 and 82-4559 for georegistration"
-      },
-      {
-        "url": "https://ws.geoservices.lrc.gov.on.ca/arcgis5/rest/services/Elevation/Ontario_DTM_LidarDerived/ImageServer",
-        "title": "Ontario Digital Terrain Model, lidar-derived",
-        "publisher": "Ontario Ministry of Natural Resources",
-        "use": "Approximate base grades, 10 m bilinear export, mixed source acquisition dates",
-        "license": "https://www.ontario.ca/page/open-government-licence-ontario",
-        "attribution": "Contains information licensed under the Open Government Licence – Ontario."
+        "assetId": "wf-clarkson-toc-current-plan",
+        "file": "models/supplemental/refinement-waterfront/clarkson-toc-current-plan.glb",
+        "sha256": "31584f02778ed261306314e31291838c975e92d3dd623e5125ffe89bf17f2b15",
+        "type": "adapted source design model",
+        "sources": [
+          "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/clarkson-go-transit-oriented-community/",
+          "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/clarkson-go-transit-oriented-community/",
+          "https://www.infrastructureontario.ca/4ae7bc/contentassets/a57a6b1574004fcfb9937d296d7a81b5/clarkson-planning-justification-report.pdf",
+          "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/clarkson-go-transit-oriented-community/",
+          "https://data.mississauga.ca/pages/mississauga-3d",
+          "https://ws.geoservices.lrc.gov.on.ca/arcgis5/rest/services/Elevation/Ontario_DTM_LidarDerived/ImageServer"
+        ],
+        "claims": "A100 and native geometry use 82.75 m for A1, while A200 labels 87.75 m. Native geometry is retained. No detailed facade or construction approval is implied."
       }
     ],
     "includeInModel": true,
@@ -5188,24 +5229,39 @@
     },
     "meshIds": [],
     "retainedMeshIds": [],
-    "geometryCoverage": "Plan-derived schematic envelope",
+    "geometryCoverage": "Architect-supplied schematic massing; georegistration and base grades remain approximate.",
     "supplementalAssetIds": [
       "wf-clarkson-toc-current-plan"
     ],
     "position": [
-      -4725.041056847357,
-      30.578720092773438,
-      8258.941449248221
+      -4723.623291015625,
+      28.987873077392578,
+      8259.40673828125
     ],
     "geometryDrawingDate": "2025-11",
     "lastStatusReview": "2026-09-20",
     "modelAssets": [
       "clarkson-toc-current-plan.glb"
     ],
-    "modelQuality": "Plan-derived schematic envelope",
-    "geometryReviewDate": "2026-09-20",
-    "geometrySourceDate": "2025-11",
-    "hasSupplementalModel": true
+    "modelQuality": "Architect-supplied schematic massing; georegistration and base grades remain approximate.",
+    "geometryReviewDate": "2026-09-29",
+    "geometrySourceDate": "2025-11-28",
+    "hasSupplementalModel": true,
+    "referenceReviewDate": "2026-09-29",
+    "referenceAcquisition": {
+      "requested": true,
+      "packageReceivedDate": "2026-09-28",
+      "reviewedDate": "2026-09-29",
+      "contentsReviewed": true,
+      "nativeModelIncorporated": true,
+      "note": "Architectural documents and native geometry supplied by Infrastructure Ontario were reviewed and adapted to the above-ground atlas. Proposal status and completion uncertainty remain."
+    },
+    "modelGeometryStatus": "Architect-supplied schematic massing; georegistration and base grades remain approximate.",
+    "geometryVerifiedCurrent": true,
+    "coordinateCaveat": "Unit-scale rigid fit of seven native roof centroids to the prior station-registered Figure 12 reconstruction; preserves existing approximately 4 m horizontal uncertainty. Native file does not provide a verified geodetic reference.",
+    "referenceUpdateDocument": "downloads/Reference-update-2026-09-29.md",
+    "referenceUpdateDate": "2026-09-29",
+    "sourceCredits": "Architectural massing © Zeidler Architecture Inc.; supplied by Infrastructure Ontario. Independent city placement and visualisation by Future Mississauga."
   },
   {
     "id": "clarkson-royal-windsor",
@@ -9661,12 +9717,12 @@
     "lat": 43.57546642120867,
     "lon": -79.55105906904541,
     "status": "Current launch; construction stage unverified",
-    "statusDate": "2026-09-27",
+    "statusDate": "2026-09-29",
     "storeys": [],
     "heightM": [],
     "towers": [],
-    "summary": "Seventeen numbered townhome blocks shown in current marketing artwork. The City records an active 306-townhouse application; DECO advertises South Banks coming this fall. The future model follows the source-plan footprints and roof types with estimated heights.",
-    "modelCaveat": "Independent reconstruction of seventeen South Banks marketing-plan blocks, registered to City SP 26/2 W1 with street/address checks. The plan is artist concept reproduced by a broker, corroborated by the developer location map and official streetscape; not permit/BIM geometry. Three visible facade levels inform an estimated 9.9 m wall height, 12.9 m pitched roof maximum or 13.0 m flat-roof access/parapet maximum. The artist concept compresses road allowances; a direct street-centre fit places edge roofs beyond the legal parcel, so one whole-plan transform fits the visible landscaped site edge to the City parcel rectangle. No published metric heights were recovered: height uncertainty ±3 m, placement ±4 m and outline ±2 m are modelling judgements, not survey confidence intervals. Roof pitches, roof-access outlines, individual bays, windows, balcony/parapet dimensions and floor spacing are schematic; no dwelling count is inferred from facade bays. The City application records 306 townhouses, active with no approval date; this future-only model does not establish construction or occupancy.",
+    "summary": "Seventeen numbered townhome blocks shown in current marketing artwork. The City records an active 306-townhouse application. September 2026 launch material advertises 2029 occupancy, subject to change; construction remains unverified. The future model follows the source-plan footprints and roof types with estimated heights.",
+    "modelCaveat": "Seventeen townhome blocks are reconstructed from a parcel-registered artist concept; the cross-gables follow the original image references. Heights, roof proportions and details remain schematic, with estimated uncertainties of ±3 m in height, ±4 m in placement and ±2 m in outlines; these are modelling judgments, not certified tolerances. No native BIM model or approved metric roof drawings were supplied.",
     "sources": [
       {
         "url": "https://opushomes.com/communities/lakeview-village/",
@@ -9695,15 +9751,21 @@
         "publisher": "City of Mississauga",
         "accessed": "2026-09-27",
         "claims": "SP26/2 W1, filed 2026-01-07, 306 townhouses, active; no approval date. Parcel matches developer location map."
+      },
+      {
+        "url": "https://www.southbanks-mississauga.com/",
+        "title": "South Banks public launch information (broker reproduction)",
+        "publisher": "RE/MAX Plus City Team",
+        "accessed": "2026-09-29",
+        "claims": "Publicly repeats the September 2026 launch and advertised 2029 occupancy. Secondary corroboration of the privately reviewed builder-branded launch package; no construction or completion proof."
       }
     ],
     "geometrySources": [
       {
         "assetId": "south-banks-plan-derived",
         "file": "models/supplemental/lakeview-expansion/south-banks-plan-derived.glb",
-        "sha256": "5ec3d3f8381a0e57b8618905a3d9a70eee571859ed6e59db8d6d4419ec7a3c40",
+        "sha256": "bf3673b5ebe83ada7f6a84c4985b2b370d17597a0c6066065e8430556b647639",
         "type": "independent reference reconstruction",
-        "replacesSourceIds": [],
         "sources": [
           "https://www.decohomes.ca/southbanks/",
           "https://www.decohomes.ca/img/southbanks/community-map.png",
@@ -9711,28 +9773,41 @@
           "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0",
           "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/StreetCentreline/FeatureServer/0"
         ],
-        "claims": "Independent reconstruction of seventeen South Banks marketing-plan blocks, registered to City SP 26/2 W1 with street/address checks. The plan is artist concept reproduced by a broker, corroborated by the developer location map and official streetscape; not permit/BIM geometry. Three visible facade levels inform an estimated 9.9 m wall height, 12.9 m pitched roof maximum or 13.0 m flat-roof access/parapet maximum. The artist concept compresses road allowances; a direct street-centre fit places edge roofs beyond the legal parcel, so one whole-plan transform fits the visible landscaped site edge to the City parcel rectangle. No published metric heights were recovered: height uncertainty ±3 m, placement ±4 m and outline ±2 m are modelling judgements, not survey confidence intervals. Roof pitches, roof-access outlines, individual bays, windows, balcony/parapet dimensions and floor spacing are schematic; no dwelling count is inferred from facade bays. The City application records 306 townhouses, active with no approval date; this future-only model does not establish construction or occupancy."
+        "claims": "Seventeen townhome blocks are reconstructed from a parcel-registered artist concept; the cross-gables follow the original image references. Heights, roof proportions and details remain schematic, with estimated uncertainties of ±3 m in height, ±4 m in placement and ±2 m in outlines; these are modelling judgments, not certified tolerances. No native BIM model or approved metric roof drawings were supplied."
       }
     ],
     "includeInModel": true,
     "actualCompletionDate": null,
-    "targetCompletionDate": null,
-    "statusEvidenceDate": "2026-09-27",
-    "dateUncertainty": "No verified developer occupancy or physical construction milestone established. A broker advertises 2029, but that forecast is not adopted as a confirmed developer schedule.",
+    "targetCompletionDate": "2029",
+    "statusEvidenceDate": "2026-09-29",
+    "dateUncertainty": "The shared DECO/OPUS South Banks VIP Launch Price List advertises 2029 occupancy. This is a marketing target, subject to change, not a guaranteed completion date or evidence that construction has started. No actual occupancy or completion is verified.",
     "sourceMeshIds": [],
-    "modelGeometryStatus": "Supplemental reference model; not official BIM",
+    "modelGeometryStatus": "17 parcel-registered townhome blocks with reference-derived cross-gables; estimated heights and schematic facades",
     "coordinateProvenance": "Registered source geometry in atlas EPSG26917 coordinates; representative model centre, not a surveyed entrance.",
     "researchArea": "waterfront",
     "completion": {
       "actual": null,
-      "target": null,
+      "target": "2029",
       "targetIsGuaranteed": false,
-      "reviewed": "2026-09-27",
+      "reviewed": "2026-09-29",
       "sources": [
         "https://www.decohomes.ca/southbanks/",
-        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0"
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0",
+        "https://www.southbanks-mississauga.com/"
       ],
-      "note": "No verified developer occupancy or physical construction milestone established. A broker advertises 2029, but that forecast is not adopted as a confirmed developer schedule."
+      "note": "The shared DECO/OPUS South Banks VIP Launch Price List advertises 2029 occupancy. This is a marketing target, subject to change, not a guaranteed completion date or evidence that construction has started. No actual occupancy or completion is verified.",
+      "targetEvidenceType": "Builder-branded marketing target; privately reviewed launch package",
+      "targetPrecision": "year",
+      "referenceDocuments": [
+        {
+          "title": "South Banks VIP Sales Package - Coastal Townhomes at Lakeview Village VIP Launch Price List",
+          "page": 1,
+          "publisher": "DECO Homes / OPUS Homes; represented by Austin Birch",
+          "claim": "Advertised occupancy: 2029. Subject to change.",
+          "reviewed": "2026-09-29",
+          "access": "Shared reference document reviewed privately; original not redistributed."
+        }
+      ]
     },
     "meshIds": [
       "southbanks-block-01-foundation",
@@ -11264,25 +11339,33 @@
       "southbanks-block-17-window-1-4-1",
       "southbanks-block-17-window-1-4-2"
     ],
-    "geometryCoverage": "17 parcel-registered artist-concept townhome blocks; estimated heights and schematic facades",
+    "geometryCoverage": "17 parcel-registered townhome blocks with reference-derived cross-gables; estimated heights and schematic facades",
     "applicationNumber": "SP26/2 W1",
     "units": 306,
     "supplementalAssetIds": [
       "south-banks-plan-derived"
     ],
     "position": [
-      1993.2988635965557,
-      10.112245178222656,
-      1257.5964011614442
+      1993.2988891601562,
+      10.112245559692383,
+      1257.596435546875
     ],
-    "reviewedDate": "2026-09-27",
-    "lastStatusReview": "2026-09-27",
+    "reviewedDate": "2026-09-29",
+    "lastStatusReview": "2026-09-29",
     "aliases": [
       "Southbanks",
       "DECO South Banks",
       "OPUS South Banks",
       "Lakeview DECO OPUS"
-    ]
+    ],
+    "referenceReviewDate": "2026-09-29",
+    "modelQuality": "17 parcel-registered townhome blocks with reference-derived cross-gables; estimated heights and schematic facades",
+    "geometryReviewDate": "2026-09-29",
+    "modelAssets": [
+      "south-banks-plan-derived.glb"
+    ],
+    "referenceUpdateDocument": "downloads/Reference-update-2026-09-29.md",
+    "referenceUpdateDate": "2026-09-29"
   },
   {
     "id": "ninth-6344",
@@ -17059,8 +17142,8 @@
     ],
     "heightM": [],
     "towers": [],
-    "summary": "Seven proposed towers: three east and four west of the GO access road. November 2026 is the planned final submission date, not construction completion.",
-    "modelCaveat": "Storeys and footprint arrangement are the current proposal. No current metre elevations or native DWG have been received. Vertical estimates use older phase-specific 3 m residential spacing and published maximums. Allow roughly ±5 m; this is an illustrative allowance, not survey confidence. Podiums, rooftop plant and facades are omitted. This is a future proposal, not approval or construction.",
+    "summary": "Seven proposed towers and 3,171 homes, shown using the supplied Step 4 design model with podiums and rooftop structures. November 2026 is the planned final submission date, not construction completion.",
+    "modelCaveat": "Native proposal geometry includes seven towers, podiums, setbacks and rooftop structures. It is a design proposal, not approved or completed construction. The source design elevations are retained; underground geometry is clipped to the atlas terrain. The terrain is approximate and the vertical datum is not survey-certified. Some drawing title blocks retain older issue labels. The Step 4 cover letter, September 2026 draft PJR and September 22 public presentation support the seven-tower, 3,171-home version. Final facade finishes and construction dates remain unconfirmed. The display model is not a watertight fabrication solid. Original engineering files are retained privately.",
     "sources": [
       {
         "url": "https://www.mississauga.ca/publication/toc-cooksville-3210-hurontario-street/",
@@ -17115,15 +17198,36 @@
         "claims": [
           "Revised proposal: seven towers of 32–49 storeys and 3,171 homes; consultation continues."
         ]
+      },
+      {
+        "url": "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/cooksville-go-transit-oriented-community/",
+        "title": "Cooksville GO TOC Step 4 architectural model and technical package",
+        "publisher": "Infrastructure Ontario / Arup",
+        "date": "2026-08-17",
+        "reviewed": "2026-09-29",
+        "claim": "Native DWG supplied on request; seven proposal towers and podiums checked against the September 2026 proposal. Original package is not redistributed."
       }
     ],
-    "geometrySources": [],
+    "geometrySources": [
+      {
+        "assetId": "cooksville-toc-sep2026-envelopes",
+        "file": "models/supplemental/community-revision/cooksville-toc-sep2026-envelopes.glb",
+        "sha256": "45c2231bbf989bd7bf268dc9e8abbf26d17ad250c18e89d81d466cc9b5f880ed",
+        "type": "adapted source design model",
+        "sources": [
+          "https://www.infrastructureontario.ca/4a7380/contentassets/48d409806ba14ffaa6f9874dcf14617e/cooksville_voh-presentation_sept-4-2026.pdf",
+          "https://www.infrastructureontario.ca/48f8a0/contentassets/e44b38c8189641c2aa193899c6727b3d/2025-09-25_cooksville-toc_planning-justification-report.pdf",
+          "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/cooksville-go-transit-oriented-community/"
+        ],
+        "claims": "Native proposal geometry includes seven towers, podiums, setbacks and rooftop structures. It is a design proposal, not approved or completed construction. The source design elevations are retained; underground geometry is clipped to the atlas terrain. The terrain is approximate and the vertical datum is not survey-certified. Some drawing title blocks retain older issue labels. The Step 4 cover letter, September 2026 draft PJR and September 22 public presentation support the seven-tower, 3,171-home version. Final facade finishes and construction dates remain unconfirmed. The display model is not a watertight fabrication solid. Original engineering files are retained privately."
+      }
+    ],
     "includeInModel": true,
-    "geometryVerifiedCurrent": false,
+    "geometryVerifiedCurrent": true,
     "modelMeshIds": [],
     "independentCorroboration": true,
     "coordinateSource": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=3210+Hurontario+Street%2C+Mississauga%2C+ON%2C+Canada&f=json&maxLocations=1&outFields=Match_addr%2CAddr_type",
-    "coordinateCaveat": "Public address geocoder pin, not a surveyed site footprint.",
+    "coordinateCaveat": "Source NAD83(CSRS) / UTM 17N (EPSG:2958) transformed to atlas EPSG:26917, metres.",
     "completionDate": null,
     "targetCompletionDate": null,
     "completionDateNote": "No actual completion date or target completion date published in the sources reviewed for this proposed project.",
@@ -17138,18 +17242,37 @@
     },
     "meshIds": [],
     "position": [
-      -3818.9267958473783,
-      55.349090576171875,
-      570.8334628891691
+      -3819.25439453125,
+      54.359310150146484,
+      576.0675659179688
     ],
     "retainedMeshIds": [],
-    "geometryCoverage": "Current source-plan approximation; see project model caveat.",
+    "geometryCoverage": "Architect-supplied Step 4 design geometry; seven towers, podiums and rooftop structures",
     "supplementalAssetIds": [
-      "cooksville-toc-2025-tower-envelopes"
+      "cooksville-toc-sep2026-envelopes"
     ],
     "lastStatusReview": "2026-09-26",
     "units": 3171,
-    "supersedesGeometryAsset": "cooksville-toc-2025-tower-envelopes"
+    "supersedesGeometryAsset": "cooksville-toc-2025-tower-envelopes",
+    "referenceReviewDate": "2026-09-29",
+    "referenceAcquisition": {
+      "requested": true,
+      "packageReceivedDate": "2026-09-28",
+      "reviewedDate": "2026-09-29",
+      "contentsReviewed": true,
+      "nativeModelIncorporated": true,
+      "note": "Architectural documents and native geometry supplied by Infrastructure Ontario were reviewed and adapted to the above-ground atlas. Proposal status and completion uncertainty remain."
+    },
+    "modelQuality": "Architect-supplied Step 4 design geometry; seven towers, podiums and rooftop structures",
+    "modelGeometryStatus": "Architect-supplied Step 4 design geometry; seven towers, podiums and rooftop structures",
+    "geometryReviewDate": "2026-09-29",
+    "modelAssets": [
+      "cooksville-toc-sep2026-envelopes.glb"
+    ],
+    "geometrySourceDate": "2026-08-17",
+    "referenceUpdateDocument": "downloads/Reference-update-2026-09-29.md",
+    "referenceUpdateDate": "2026-09-29",
+    "sourceCredits": "Source design: Infrastructure Ontario / Arup; independent adaptation and visualization by Future Mississauga."
   },
   {
     "id": "john-69",
@@ -17361,7 +17484,7 @@
     "address": "6020 Winston Churchill Boulevard",
     "lat": 43.56869571241896,
     "lon": -79.74490991506043,
-    "status": "Approved; construction reported 2026",
+    "status": "Earlier scheme approved; construction unverified",
     "statusDate": "2026-09-20",
     "application": "",
     "sitePlan": "SP 24 27",
@@ -17372,16 +17495,16 @@
       16.59
     ],
     "towers": [],
-    "summary": "Four-storey 22-rental-apartment building. City lists four affordable units and an expected Spring 2026–Fall 2027 construction period.",
-    "modelCaveat": "14.6 m City massing and 16.59 m UT overall height use different conventions; do not force an unsupported geometric correction.",
+    "summary": "The current rental programme identifies 22 apartments, including four affordable units, and an expected Spring 2026 to Fall 2027 construction period. The 2023 rezoning approval described an earlier four-storey, 20-unit scheme. Later height references remain unresolved.",
+    "modelCaveat": "Retained City massing is schematic. The 2023 approval concerns a four-storey, 20-unit scheme; the later rental programme identifies 22 units. The retained 14.6 m municipal height, historical 16.59 m forum reference, current 17.75 m forum heading and 2024 application request for 17.00 m including vestibule/five storeys reflect differing versions or conventions. The 2024 notice is an application, not a decision. No unsupported height adjustment has been applied. John Willmott is no longer the project architect; earlier attribution is historical, and the current architect and construction drawings remain unverified. This does not establish cancellation.",
     "sources": [
       {
         "url": "https://www.mississauga.ca/wp-content/uploads/2023/06/OZ-22-007-OPA-158-Notice-of-Passing-Public-Notice.pdf",
-        "title": "6020 Winston Churchill approval",
+        "title": "6020 Winston Churchill historical 2023 rezoning approval",
         "publisher": "City of Mississauga",
-        "accessed": "2026-09-20",
+        "accessed": "2026-09-29",
         "claims": [
-          "4 storeys 22 rental units."
+          "Earlier four-storey, 20-unit rezoning scheme. Does not substantiate the later 22-unit programme."
         ],
         "verification": "search-index"
       },
@@ -17391,7 +17514,7 @@
         "publisher": "Skyrise Cities",
         "accessed": "2026-09-20",
         "claims": [
-          "16.59 m 4-storey scheme."
+          "Historical forum reference to 16.59 m/four storeys; not a verified current height. Later sources report different values."
         ],
         "verification": "search-index"
       },
@@ -17414,6 +17537,22 @@
           "Expected construction Spring 2026 to Fall 2027; not actual delivery."
         ],
         "verification": "read"
+      },
+      {
+        "url": "https://pub-mississauga.escribemeetings.com/filestream.ashx?DocumentId=61153",
+        "title": "A405.24 hearing notice, September 26, 2024",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-09-29",
+        "verification": "search-index; direct download returned HTTP 403",
+        "claims": "Variance application requested 17.00 m including vestibule and five storeys, compared with permitted 14.30 m/four storeys. Application notice, not decision or as-built dimensions."
+      },
+      {
+        "url": "https://urbantoronto.ca/forum/threads/6020-winston-churchill-boulevard-17-75m-4s-2421845-ontario-inc-john-willmott.33768/",
+        "title": "6020 Winston Churchill current forum heading",
+        "publisher": "UrbanToronto",
+        "accessed": "2026-09-29",
+        "verification": "public reference check",
+        "claims": "Current heading gives 17.75 m/four storeys and still names the former architect. Unresolved secondary-source version lead; not adopted as verified geometry."
       }
     ],
     "geometrySources": [],
@@ -17453,7 +17592,17 @@
     "retainedMeshIds": [
       "13-11416"
     ],
-    "geometryCoverage": "Source geometry available; current detail may differ"
+    "geometryCoverage": "Source geometry available; current detail may differ",
+    "referenceReviewDate": "2026-09-29",
+    "architectAttribution": {
+      "historical": "John Willmott Architect",
+      "current": null,
+      "currentStatus": "Not verified",
+      "reviewed": "2026-09-28",
+      "note": "Historical architect is no longer involved; current architect not identified. Retained source massing has not been revised."
+    },
+    "heightMMeaning": "16.59 m is a retained historical secondary-source reference, not a verified current design height. See model caveat for conflicting later figures.",
+    "storeysMeaning": "Four storeys reflects the earlier scheme; a 2024 variance application requested five storeys. Current approved design has not been independently resolved."
   },
   {
     "id": "brandon-3233",

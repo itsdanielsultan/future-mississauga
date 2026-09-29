@@ -5,7 +5,7 @@
   "futureSourceComponents": 765,
   "sourceTiles": 30,
   "sourceConvertedComponents": 153021,
-  "researchOperations": 1556,
+  "researchOperations": 1560,
   "operationsNotUniqueSites": true,
   "linkedProjectSourceURLs": 433,
   "loggedOperationsMentioningAccessFailures": 49,
@@ -14,11 +14,28 @@
   "retainedFutureSourceComponents": 662,
   "geometryConflictComponents": 148,
   "secondaryCorroborationRecords": 31,
-  "note": "Research operations include searches, reads, clicks and unsuccessful attempts. Source coverage is not architectural certification. Base project research counts are retained at their recorded date; road repair and repeated validation checks have not been added to those counts. Current refinementAssets counts the 34 asset records, including mapped Port Credit docks; it is not a count of newly researched buildings.",
+  "note": "Research operations include searches, reads, clicks and unsuccessful attempts. The total of 1,560 includes the 1,556 baseline logged operations plus four targeted subsequent-reference reviews added on September 28-29, 2026. Source coverage is not architectural certification. Other base city inventory and source-URL counts retain their recorded dates; road repair and repeated validation checks have not been added to those counts. Current refinementAssets counts the 34 asset records, including mapped Port Credit docks; it is not a count of newly researched buildings.",
   "refinementAssets": 34,
   "edition": "Visual Polish 2026-09-26",
   "roadCrossingEvidenceAsOf": "2026-09-21",
   "communityRevisionDate": "2026-09-26",
   "presentationRevisionDate": "2026-09-26",
-  "targetedBuildingReviewDate": "2026-09-27"
+  "targetedBuildingReviewDate": "2026-09-29",
+  "latestReferenceUpdate": {
+    "date": "2026-09-29",
+    "projects": [
+      "clarkson-toc",
+      "cooksville-toc",
+      "lakeview-deco-opus",
+      "square-one-block22",
+      "winston-6020"
+    ],
+    "nativeSourceModelsAdapted": 2,
+    "referenceRoofRefinements": 1,
+    "note": "Targeted follow-up review; base city inventory and historical research-operation counts retain their original dates.",
+    "document": "downloads/Reference-update-2026-09-29.md",
+    "data": "downloads/Reference-update-2026-09-29.json"
+  },
+  "baseResearchOperations": 1556,
+  "researchOperationsAsOf": "2026-09-29"
 }

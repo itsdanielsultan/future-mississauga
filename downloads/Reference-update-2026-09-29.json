@@ -1,0 +1,28 @@
+{
+  "reviewDate": "2026-09-29",
+  "scope": "Three geometry upgrades from newly reviewed source files; separate project-status corrections are in the catalogue.",
+  "projects": [
+    {
+      "projectId": "clarkson-toc",
+      "assetId": "wf-clarkson-toc-current-plan",
+      "modelFidelity": "Architect-supplied schematic massing; georegistration and base grades remain approximate.",
+      "sha256": "31584f02778ed261306314e31291838c975e92d3dd623e5125ffe89bf17f2b15",
+      "modelCaveat": "A100 and native geometry use 82.75 m for A1, while A200 labels 87.75 m. Native geometry is retained. No detailed facade or construction approval is implied."
+    },
+    {
+      "projectId": "cooksville-toc",
+      "assetId": "cooksville-toc-sep2026-envelopes",
+      "modelFidelity": "Architect-supplied Step 4 design geometry; seven towers, podiums and rooftop structures",
+      "sha256": "45c2231bbf989bd7bf268dc9e8abbf26d17ad250c18e89d81d466cc9b5f880ed",
+      "modelCaveat": "Native proposal geometry includes seven towers, podiums, setbacks and rooftop structures. It is a design proposal, not approved or completed construction. The source design elevations are retained; underground geometry is clipped to the atlas terrain. The terrain is approximate and the vertical datum is not survey-certified. Some drawing title blocks retain older issue labels. The Step 4 cover letter, September 2026 draft PJR and September 22 public presentation support the seven-tower, 3,171-home version. Final facade finishes and construction dates remain unconfirmed. The display model is not a watertight fabrication solid. Original engineering files are retained privately."
+    },
+    {
+      "projectId": "lakeview-deco-opus",
+      "assetId": "south-banks-plan-derived",
+      "modelFidelity": "17 parcel-registered townhome blocks with reference-derived cross-gables; estimated heights and schematic facades",
+      "sha256": "bf3673b5ebe83ada7f6a84c4985b2b370d17597a0c6066065e8430556b647639",
+      "modelCaveat": "Seventeen townhome blocks are reconstructed from a parcel-registered artist concept; the cross-gables follow the original image references. Heights, roof proportions and details remain schematic, with estimated uncertainties of ±3 m in height, ±4 m in placement and ±2 m in outlines; these are modelling judgments, not certified tolerances. No native BIM model or approved metric roof drawings were supplied."
+    }
+  ],
+  "nativeFilesPubliclyRedistributed": false
+}
