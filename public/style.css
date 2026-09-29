@@ -32,7 +32,7 @@ header,.view-head,.toolbar,.layer-controls,.transit-picker,.research,.transit-se
 .existing{background:#7e878b}.small-context{background:#d0d1c8;border:1px solid #929b92}
 
 /* Save-image failures stay readable without altering the normal viewer layout. */
-.scene-export-status{margin:0 25px 12px;color:var(--ink);font-size:13px}.view-actions button:disabled{cursor:wait;opacity:.65}
+.scene-export-status{margin:0 var(--page-gutter) 12px;color:var(--ink);font-size:13px}.scene-export-status a{display:inline-flex;align-items:center;min-height:44px;margin-left:16px;text-underline-offset:3px}.view-actions button:disabled{cursor:wait;opacity:.65}
 
 /* Search is part of the map; project details sit below it on small screens. */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

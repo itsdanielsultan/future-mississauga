@@ -1,5 +1,10 @@
 # Future Mississauga: Road Crossings model guide
 
+## 29 September 2026: supplied design models and reference corrections
+
+Cooksville now uses the supplied Arup seven-tower Step 4 model; Clarkson uses the supplied Zeidler seven-tower massing, including its native podium and courtyard shapes. South Banks has reference-based cross-gable roof details on nine blocks. These remain proposed or illustrative designs; source conflicts, approximate terrain grades and uncertain completion dates are documented in the [dated reference update](Reference-update-2026-09-29.md). This review supersedes older descriptions below that say the current IO model files were unavailable. Earlier source records remain historical context.
+
+
 **Community Revision, 26 September 2026:** this document preserves the earlier Road Crossings methods and audit record. Its dated counts and project descriptions below are historical, not a fresh certification of the current edition. Current revisions are recorded in the [community review](Community-reference-and-coverage-review.md), [refinement notes](Refinement-notes.md), [project register](../data/projects.json) and [model manifest](../data/refinement-models.json). The [picture index](Picture-index.json) and [release validation](Release-validation.json) identify the corresponding exported media.
 
 ## Historical baseline record
@@ -172,7 +177,7 @@ The supplements have different evidential strength and must retain their labels:
 
 The current [refinement manifest](../data/refinement-models.json), project inventory and [transit manifest](../models/supplemental/transit-revamp/transit-layer-manifest.json) are the authoritative current lists. They record source dates, display modes, replacement controls and specific limitations. Project records, municipal groups, source components, research operations and supplemental assets are different units. An operation is not an independent source, and an asset is not necessarily a whole building. [Refinement notes](Refinement-notes.md) explain the revisions.
 
-The added building models include dated Cooksville GO envelopes, Promenade infill, Square One Block 5 T1, Voya, current Port Credit infill and settlement envelopes, Clarkson GO, Brightwater concept blocks, and Aura townhomes. Their individual drawing, height, registration and geometry limitations remain binding. Cooksville reflects the public 2025 concept because the matching revised 2026 architecture is unavailable. Brightwater concept blocks are explicitly approximate; they are not final architecture.
+The added building models include dated Cooksville GO envelopes, Promenade infill, Square One Block 5 T1, Voya, current Port Credit infill and settlement envelopes, Clarkson GO, Brightwater concept blocks, and Aura townhomes. Their individual drawing, height, registration and geometry limitations remain binding. The dated 2025 Cooksville envelopes remain a historical archive; the current display uses the supplied 2026 Step 4 design geometry reviewed September 29. Brightwater concept blocks are explicitly approximate; they are not final architecture.
 
 **Absolute World now uses distinct completed tower forms.** The south tower at 60 Absolute is represented at the published 175.6 m architectural height and 56 floors, with a varying 209° twist; the north tower at 50 Absolute uses 157.9 m, 50 floors and a constant 4° per-storey rotation. Conflicting source tower geometry is removed while the shared municipal podium remains. Intermediate south rotations, registration, floor subdivisions and facade details remain interpreted; the nominal heights do not make the whole model a certified as-built reconstruction. [Absolute correction and primary sources](revamp/Absolute-model-correction.md).
 

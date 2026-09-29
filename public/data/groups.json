@@ -3528,18 +3528,37 @@
       "square-one-block22"
     ],
     "nearbyCandidates": [],
-    "auditStatus": "Source inventory matched; detailed geometry unverified",
+    "auditStatus": "Dated primary drawing statistics and application status reviewed",
     "caveat": "A matching application confirms pipeline identity only, not current geometric accuracy. Withheld is the raw municipal workflow status, not cancellation. An absent record does not prove cancellation or completion.",
     "completionDate": null,
     "targetCompletionDate": null,
-    "completionDateNote": "No actual or target completion date verified for this entire municipal component group.",
-    "currentStatus": "Municipal application pipeline matched; construction and completion unverified",
+    "completionDateNote": "No resubmission, construction or completion timeline confirmed; no cancellation established.",
+    "currentStatus": "Proposed; applicant on hold; applications remain open",
     "position": [
       -5134.715657745954,
       70,
       -396.76725987624377
     ],
-    "retainedComponents": 3
+    "retainedComponents": 3,
+    "evidenceNote": "Hariri Pontarini Architects' Block 22 drawings A100 SITE PLAN (ROOF) and A003 STATISTICS, project 1807, revision 3 dated April 23, 2021 (RE-ISSUED FOR HOZ & SPA), identify the north tower as 55 storeys / 175.25 m and the south tower as 65 storeys / 205.25 m, with 1,309 homes in total. These primary drawings resolve the 65/45-storey appendix conflict for this dated design. They were supplied by the City; no public site-plan application page was available as of September 28, 2026. The drawings are a reference for the retained municipal massing, not a newly approved design or an exact audit of every mesh surface. HOZ 19-12 W4 and SP 20-6 W4 remain open. The applicant has put the project on hold; approval is withheld pending technical responses. No resubmission or construction timeline is confirmed. This is not a cancellation.",
+    "referenceReviewDate": "2026-09-28",
+    "drawingReferences": [
+      {
+        "title": "Block 22, project 1807: A100 SITE PLAN (ROOF) and A003 STATISTICS",
+        "author": "Hariri Pontarini Architects",
+        "date": "2021-04-23",
+        "revision": "3, RE-ISSUED FOR HOZ & SPA",
+        "accessed": "2026-09-28",
+        "accessMethod": "City-supplied reference drawings; no public download URL provided",
+        "publiclyDownloadable": false,
+        "claims": [
+          "North tower: 55 storeys, 175.25 m",
+          "South tower: 65 storeys, 205.25 m",
+          "1,309 residential units"
+        ],
+        "scope": "Confirms the dated design statistics; no mesh geometry was changed."
+      }
+    ]
   },
   {
     "id": "city-group-44",
@@ -6212,13 +6231,15 @@
     "completionDate": null,
     "targetCompletionDate": "Fall 2027",
     "completionDateNote": "City rental-incentive programme expected construction period. This is an applicant forecast, not proof that work started or completed. ",
-    "currentStatus": "See linked detailed dossier; current completion unverified",
+    "currentStatus": "Earlier scheme approved; construction unverified",
     "position": [
       -13647.778662078199,
       70,
       2264.2027362463996
     ],
-    "retainedComponents": 1
+    "retainedComponents": 1,
+    "evidenceNote": "Retained City massing is schematic. The 2023 approval concerns a four-storey, 20-unit scheme; the later rental programme identifies 22 units. The retained 14.6 m municipal height, historical 16.59 m forum reference, current 17.75 m forum heading and 2024 application request for 17.00 m including vestibule/five storeys reflect differing versions or conventions. The 2024 notice is an application, not a decision. No unsupported height adjustment has been applied. John Willmott is no longer the project architect; earlier attribution is historical, and the current architect and construction drawings remain unverified. This does not establish cancellation.",
+    "referenceReviewDate": "2026-09-29"
   },
   {
     "id": "city-group-68",

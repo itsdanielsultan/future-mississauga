@@ -1,14 +1,14 @@
 {
-  "edition": "Visual Polish 2026-09-26; 30 Eglinton West revision, 27 September 2026",
-  "checkedAt": "2026-09-28T02:22:10.795315+00:00",
-  "validationInputLockSHA256": "7c6435a29b9c3b78bc099b9f03f77a90ce363dd8d007b1d4ee4a4f306bfd3b9b",
+  "edition": "Visual Polish 2026-09-26; IO and South Banks reference update, 29 September 2026",
+  "checkedAt": "2026-09-29T21:02:28.408580+00:00",
+  "validationInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
   "inputLockScope": "The validation input lock identifies this composed release. Every image retains its actual render-time input lock. Unaffected accepted images have not been relabelled as new renders.",
   "activeLockedInputs": 263,
   "kind": "Current local files and hash-bound source evidence; deployment checked separately",
   "originalPNGs": 33,
   "portraitPNGs": 24,
-  "PNGbytes": 469971716,
-  "portraitPNGbytes": 377110090,
+  "PNGbytes": 469990185,
+  "portraitPNGbytes": 377154968,
   "editableBlenderSceneFilesPresent": 15,
   "GLBfiles": 212,
   "refinementAssets": 34,
@@ -19,24 +19,24 @@
   "downloadsUseOriginalPNG": true,
   "renderProvenance": {
     "wide": {
-      "currentRevisionNativeRenders": 10,
-      "byteIdenticalPredecessorRenders": 23
+      "currentRevisionNativeRenders": 12,
+      "byteIdenticalPredecessorRenders": 21
     },
     "portrait": {
-      "currentRevisionNativeRenders": 4,
-      "byteIdenticalPredecessorRenders": 20
+      "currentRevisionNativeRenders": 6,
+      "byteIdenticalPredecessorRenders": 18
     },
     "scope": "The validation input lock identifies this composed release. Every image retains its actual render-time input lock. Unaffected accepted images have not been relabelled as new renders."
   },
   "atlas": {
     "file": "Future-Mississauga-Atlas.pdf",
     "pageCount": 35,
-    "sha256": "5c5f694f0a3eb13d0796e578d6563d1b4868546ac9d0f7512169d283db730ff5"
+    "sha256": "ae86623bec9bf7626cab9fec181b34552d109ffb32d0e1d792af8b0499e3f80a"
   },
   "film": {
     "file": "../gallery/Downtown-transformation.mp4",
     "durationSeconds": 5.7,
-    "sha256": "8e79f575e8199b8bcb3533005b4f670fa0290982fe8f7a70f66295352022a6e4"
+    "sha256": "bc0d7456b44dc1df3683f05293a3f98b1b675ec4b2aee4699b1ebeea2ab8f863"
   },
   "current33WideFileAndDecodedRGBHashesVerified": true,
   "current24PortraitFileAndDecodedRGBHashesVerified": true,
@@ -50,25 +50,25 @@
   },
   "comparisonCamerasVerifiedBySourceQA": true,
   "sceneVerification": {
-    "currentScenesReopened": 6,
-    "byteIdenticalPredecessorSceneChecksRetained": 9
+    "currentScenesReopened": 10,
+    "byteIdenticalPredecessorSceneChecksRetained": 5
   },
-  "modelIndexSHA256": "daa7c01e41b8ee2920e2f59f462bef64a1a443ddad7fe0b1a9025a9c2205bb3e",
-  "publicProjectRegisterSHA256": "4d37a5213f2121fb1d6771a2e55db8aad5ee31fce1143e5bc7729b25dc5d288c",
-  "publicModelManifestSHA256": "516b7fe4933f5366252a2434c5bac7467d4771c39ab5c499d7f09f17c9508918",
+  "modelIndexSHA256": "d6513fadd3aa89c61ac5a65fda59c1f2feac51e7b180111be27d2a87af3b93aa",
+  "publicProjectRegisterSHA256": "8c25155a09b05b61292f29241fc0ef60b69015370615c75b8a2840700ab548dc",
+  "publicModelManifestSHA256": "67479549ee0599150098fdbb18319c2c7ecde91711d704e9129e68bd4901f0bc",
   "sourceProofs": {
-    "Final-wide-QA.json": "ae97d38eefc704bfade288f8e5c80fa5fda3be70676b773bc5461a6cd18de34a",
-    "Final-high-resolution-QA.json": "4e8981943661130ec98da35336464a7c79ca80c5c6450f885f3176b06722ae07",
-    "Final-wide-visual-review.json": "3681e824bdd0b5d1cde7e0ff1d57f7d69ebe73fb25b0449fca83e970b46ab016",
-    "Final-portrait-visual-review.json": "02b5210a586d4b8daf589d71542d34b8c2eae521635090e10924b2a39600ee69",
-    "Final-editable-scenes-QA.json": "0d1cea69173b4a330d5774133a1327a273b50e14c0e261dda7c6ccaeb1414004",
-    "Final-scene-render-provenance.json": "25a63ecbc6c4097d10ca3aafd6d249ab6ae57e4df845b301df7c5a56f646cdf4"
+    "Final-wide-QA.json": "0ad18ffd5ce002dc935c462c0055bf59f6f74c3d5bd12f585d60d2c9a73a6079",
+    "Final-high-resolution-QA.json": "e45ed5c8d35f660186a0e5d0a5d7dbef7abebd778f9396c38bd56184791a2202",
+    "Final-wide-visual-review.json": "f5fc633b93d0fbdb975df16318a8e3dc5059faff3c8165019b0f88dc69fcdb30",
+    "Final-portrait-visual-review.json": "4426f2409e034d77fea3716ffc1980e16cfd145ecb707c8f9d67964d5aa46bc7",
+    "Final-editable-scenes-QA.json": "13273273359022ac9570f7a3038435fcd530642702b0d4e223e35f1b27072aa1",
+    "Final-scene-render-provenance.json": "f4ffcd77ca8352d837b85781c8c1978f295458ecf37e8e63eb6b451fe7a18e03"
   },
-  "sourceAuditSHA256": "b4e45aaa5c8580f45ed776a03a177b4c43a2a997437d307c0e062ac55312c253",
+  "sourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107",
   "portraitHosting": {
-    "tag": "high-resolution-images-eglinton-west-2026-09-27",
-    "verificationPerformedAt": "2026-09-28T00:39:44.810105+00:00",
-    "mappingSHA256": "2a94c4299de302c8fb03ea296b5811ddb7cd91521370930a418cfa52fd271f0c",
+    "tag": "high-resolution-images-io-update-2026-09-29",
+    "verificationPerformedAt": "2026-09-29T20:57:07.791797+00:00",
+    "mappingSHA256": "0c4237e77457557500cdab06b56533c7bc56a96846472154f96866c7a9bdc358",
     "publicHTTPAssetHashesVerified": 48,
     "scope": "Prior completed same-revision public GitHub release-asset checks, hash-bound here; this helper does not repeat network requests."
   },

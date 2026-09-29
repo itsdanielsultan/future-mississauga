@@ -1,5 +1,10 @@
 # Community revision — 26 September 2026
 
+## 29 September 2026: supplied design models and reference corrections
+
+Cooksville now uses the supplied Arup seven-tower Step 4 model; Clarkson uses the supplied Zeidler seven-tower massing, including its native podium and courtyard shapes. South Banks has reference-based cross-gable roof details on nine blocks. These remain proposed or illustrative designs; source conflicts, approximate terrain grades and uncertain completion dates are documented in the [dated reference update](Reference-update-2026-09-29.md). This review supersedes older descriptions below that say the current IO model files were unavailable. Earlier source records remain historical context.
+
+
 - Absolute World: rebuilt the missing curved sections of the south floorplate from the architectural publication; retained mapped centres, distinct heights and rotation anchors.
 - Exchange District EX3: removed the superseded six-floor upper black module and lowered the unchanged blue crown onto the final white module. This is a source-derived interpretation of the revised 66-storey design; its exact current metre height is unverified. The future crown does not assert present construction completion.
 - Existing major buildings: darker grey, with pale smaller context; styling changes do not change source geometry.
@@ -55,7 +60,7 @@ The current [refinement record](../data/refinement-models.json) is the authorita
 | Chelsea B6 — June 2026 proposal | Proposed | dimensioned plan-derived tower and podium envelope; minor terrace cuts and facade detail omitted |
 | 51–55 Dundas — July 2025 proposal envelope | Proposed | dimensioned plan-derived stepped envelope; rooftop level discrepancy and facade omissions disclosed |
 
-These are individually traced or source-derived models. A dimensioned roof, floor plate or survey control can improve one part of a model without validating its facades, construction stage or whole site. Cooksville GO retains its dated 2025 concept label because a matching architectural set for the 2026 revision is unavailable. Source-model exclusions and duplicate controls still apply.
+These are individually traced or source-derived models. A dimensioned roof, floor plate or survey control can improve one part of a model without validating its facades, construction stage or whole site. At the time of this earlier edition, Cooksville used a dated 2025 concept; that display was subsequently replaced, most recently by the supplied native Step 4 model reviewed September 29, 2026. Source-model exclusions and duplicate controls still apply.
 
 **Absolute World now uses distinct completed tower forms.** The south tower at 60 Absolute is represented at the published 175.6 m architectural height and 56 floors, with a varying 209° twist; the north tower at 50 Absolute uses 157.9 m, 50 floors and a constant 4° per-storey rotation. Conflicting source tower geometry is removed while the shared municipal podium remains. Intermediate south rotations, registration, floor subdivisions and facade details remain interpreted; the nominal heights do not make the whole model a certified as-built reconstruction. [Absolute correction and primary sources](revamp/Absolute-model-correction.md).
 

@@ -14266,12 +14266,12 @@
       "name": "Clarkson GO Transit-Oriented Community — seven proposed towers",
       "file": "outputs/models/supplemental/refinement-waterfront/clarkson-toc-current-plan.glb",
       "status": "Proposed",
-      "modelQuality": "Plan-derived schematic envelope",
+      "modelQuality": "Architect-supplied schematic massing",
       "includeInIllustratedFuture": true,
       "includeInExisting": false,
       "sourceMeshIdsToDisable": [],
-      "sourceDate": "2025-11",
-      "reviewDate": "2026-09-20",
+      "sourceDate": "2025-11-28",
+      "reviewDate": "2026-09-29",
       "lat": 43.51346677094083,
       "lon": -79.63566287639279,
       "storeys": [
@@ -14292,364 +14292,91 @@
         127.75,
         142.75
       ],
-      "heightConvention": "Metric height labels are transcribed directly from the official Figure 12 site plan. Roof shapes and any additional mechanical structure not delineated in that graphic are not invented.",
+      "heightConvention": "Seven source-model heights above its common local ground reference (82.75 native units), matching A100 plan labels. A200 separately labels A1 as 87.75 m; native A1 geometry and A100 use 82.75 m. The source discrepancy is recorded; no speculative cap or height change is added.",
       "coordinateSystem": {
         "horizontal": "EPSG:26917",
         "units": "metres",
         "transform": "x=easting-615000; y=ASL-70; z=4827000-northing",
-        "vertical": "Building heights are relative source labels. Building base elevations are approximate Ontario DTM CGVD2013 samples, not approved finished grades."
+        "vertical": "Native local ground 82.75 is removed. Prior approximate Ontario DTM CGVD2013 block grades are retained independently for A, B and C; not approved finished grades or a certified source vertical datum."
       },
       "registration": {
-        "registration": "Fixed graphic scale, rotated and translated to the three corners of City GO station component 82-1914. Independently checked against the western station component 82-4559.",
-        "sourcePixelImageWidth": 1375,
-        "sourceFigure": "Planning Justification Report, printed page 29 (PDF page index 32), Figure 12",
-        "scaleMPerDisplayPixel": 0.26881720430107525,
-        "parameters": [
-          -5003.19653,
-          8249.74396,
-          -0.814337147,
-          0.26881720430107525
+        "rotationRowMatrix": [
+          [
+            0.6864169606170468,
+            -0.7272081931450276
+          ],
+          [
+            -0.7272081931450276,
+            -0.6864169606170468
+          ]
         ],
+        "translationGLBXZ": [
+          -4822.671134837448,
+          8390.090349947972
+        ],
+        "scale": 1.0,
+        "rmseM": 1.167884756330395,
+        "maxResidualM": 1.588359555964514,
+        "perTowerResidualM": {
+          "A1": 1.4556084894018937,
+          "A2": 0.9102709530145473,
+          "A3": 0.41215391037978,
+          "B1": 1.5557877118537828,
+          "C1": 0.7420180411121674,
+          "C2": 1.588359555964514,
+          "C3": 0.9677144432140962
+        },
+        "method": "Unit-scale rigid fit of seven native roof centroids to the prior station-registered Figure 12 reconstruction; preserves existing approximately 4 m horizontal uncertainty. Native file does not provide a verified geodetic reference.",
         "referenceMeshIds": [
           "82-1914",
           "82-4559"
         ],
-        "eastTriangleRMSEPerCoordinateM": 0.186,
-        "westStationCentroidDistanceM": 2.849484462109006,
-        "podiums": {
-          "A": [
-            [
-              434,
-              524
-            ],
-            [
-              445,
-              524
-            ],
-            [
-              445,
-              513
-            ],
-            [
-              497,
-              513
-            ],
-            [
-              497,
-              506
-            ],
-            [
-              568,
-              506
-            ],
-            [
-              568,
-              544
-            ],
-            [
-              636,
-              544
-            ],
-            [
-              636,
-              505
-            ],
-            [
-              767,
-              505
-            ],
-            [
-              767,
-              817
-            ],
-            [
-              637,
-              817
-            ],
-            [
-              637,
-              704
-            ],
-            [
-              649,
-              704
-            ],
-            [
-              649,
-              632
-            ],
-            [
-              568,
-              632
-            ],
-            [
-              568,
-              630
-            ],
-            [
-              434,
-              630
-            ]
-          ],
-          "B": [
-            [
-              471,
-              998
-            ],
-            [
-              583,
-              985
-            ],
-            [
-              599,
-              1127
-            ],
-            [
-              487,
-              1141
-            ]
-          ],
-          "C": [
-            [
-              866,
-              599
-            ],
-            [
-              971,
-              599
-            ],
-            [
-              986,
-              611
-            ],
-            [
-              986,
-              688
-            ],
-            [
-              1145,
-              688
-            ],
-            [
-              1145,
-              832
-            ],
-            [
-              999,
-              832
-            ],
-            [
-              999,
-              964
-            ],
-            [
-              921,
-              964
-            ],
-            [
-              866,
-              847
-            ]
-          ]
-        },
-        "towers": {
-          "A1": [
-            [
-              446,
-              525
-            ],
-            [
-              557,
-              525
-            ],
-            [
-              557,
-              617
-            ],
-            [
-              446,
-              617
-            ]
-          ],
-          "A2": [
-            [
-              648,
-              514
-            ],
-            [
-              758,
-              514
-            ],
-            [
-              758,
-              606
-            ],
-            [
-              648,
-              606
-            ]
-          ],
-          "A3": [
-            [
-              648,
-              714
-            ],
-            [
-              758,
-              714
-            ],
-            [
-              758,
-              806
-            ],
-            [
-              648,
-              806
-            ]
-          ],
-          "B1": [
-            [
-              483,
-              1021
-            ],
-            [
-              573,
-              1008
-            ],
-            [
-              585,
-              1118
-            ],
-            [
-              496,
-              1130
-            ]
-          ],
-          "C1": [
-            [
-              878,
-              614
-            ],
-            [
-              970,
-              614
-            ],
-            [
-              970,
-              724
-            ],
-            [
-              878,
-              724
-            ]
-          ],
-          "C2": [
-            [
-              1062,
-              701
-            ],
-            [
-              1145,
-              701
-            ],
-            [
-              1145,
-              821
-            ],
-            [
-              1062,
-              821
-            ]
-          ],
-          "C3": [
-            [
-              879,
-              848
-            ],
-            [
-              882,
-              840
-            ],
-            [
-              888,
-              835
-            ],
-            [
-              988,
-              835
-            ],
-            [
-              988,
-              952
-            ],
-            [
-              931,
-              952
-            ]
-          ]
-        },
-        "towerHeightsM": {
-          "A1": 82.75,
-          "A2": 97.75,
-          "A3": 127.75,
-          "B1": 142.75,
-          "C1": 112.75,
-          "C2": 127.75,
-          "C3": 142.75
-        },
-        "towerStoreys": {
-          "A1": 25,
-          "A2": 30,
-          "A3": 40,
-          "B1": 45,
-          "C1": 35,
-          "C2": 40,
-          "C3": 45
-        },
-        "podiumHeightM": 23.25,
-        "publishedFootprintsM2": {
-          "A": 4349,
-          "B": 1194,
-          "C": 4781,
-          "A1": 747,
-          "A2": 747,
-          "A3": 747,
-          "B1": 738,
-          "C1": 747,
-          "C2": 747,
-          "C3": 735
-        },
-        "traceAreasM2": {
-          "A": 4470.24,
-          "B": 1168.92,
-          "C": 4704.63,
-          "A1": 737.95,
-          "A2": 731.3,
-          "A3": 731.3,
-          "B1": 719.48,
-          "C1": 731.3,
-          "C2": 719.74,
-          "C3": 723.13
-        }
+        "referenceBasis": "The previous footprint reconstruction was registered to City GO station components 82-1914 and 82-4559. Seven matching tower roof centroids transfer this placement to the native geometry at unit scale.",
+        "nativeGroundReference": 82.75
       },
       "uncertainty": {
         "horizontalPlacementM": 4,
-        "contourM": 1.5,
         "baseElevationM": 3,
-        "interpretation": "Working visual-model estimates, not certified survey tolerances. The small eastern-station fit residual alone does not prove absolute site registration."
+        "sourceA1HeightConflictM": 5,
+        "interpretation": "Working display uncertainty, not survey accuracy. Native outlines remove raster tracing error, while alignment to the existing city and the elevation discrepancy remain approximate."
       },
       "simplifications": [
-        "Podiums and seven tower footprints follow the official site-plan graphic. Raster tracing differs by up to approximately 4% from published footprint areas.",
-        "Balconies, cladding, windows, railings, small facade recesses and rooftop equipment are omitted.",
-        "No completion year or construction start is inferred. Existing GO buildings are retained.",
-        "The official downloadable architectural set and native 3D model are listed as available upon request; no request was sent."
+        "The seven towers and three podiums use architect-supplied native massing, including the curved C3 corner and four courtyard terrace surfaces. This is schematic architecture, without detailed cladding, balconies or windows.",
+        "Existing GO buildings, rail infrastructure, surrounding context, terrain, landscaping and people supplied in the native file are excluded to avoid duplicating the city model.",
+        "Invisible internal horizontal storey plates and exact duplicate triangles are removed. Source exterior heights and outlines are retained.",
+        "A100/native A1 height is 82.75 m; A200 labels 87.75 m. The discrepancy remains unresolved and native geometry is preserved.",
+        "No construction date, completion year or approval is inferred.",
+        "Only bottom podium vertices extend below the local DTM minimum by 0.15 m and receive bottom closure faces; source architecture and roof heights above grade stay unchanged."
       ],
       "sources": [
+        {
+          "title": "Clarkson TOC 3D Model, packaged November 28, 2025",
+          "publisher": "Zeidler Architecture Inc.; supplied by Infrastructure Ontario",
+          "received": "2026-09-28",
+          "sourceDate": "2025-11-28",
+          "url": "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/clarkson-go-transit-oriented-community/",
+          "urlPurpose": "Public project overview; not a download link for the privately supplied source model",
+          "availability": "Native model supplied directly by Infrastructure Ontario following a request; source file is not republished",
+          "use": "Exact native seven-tower and three-podium massing; geometric outlines and relative heights",
+          "localSourceSha256": "ec474fc52ab3205581d94dc5bd980391637f2845525d8ddd08763b4aa9bbd48f",
+          "attribution": "Architectural massing by Zeidler Architecture Inc., supplied by Infrastructure Ontario. Independently positioned and visualised by Future Mississauga."
+        },
+        {
+          "title": "Clarkson GO Station, A100 Site Plan and A200–A202 Cross Sections / Elevations, project 24-01-048, revision 1",
+          "publisher": "Zeidler Architecture Inc.; supplied by Infrastructure Ontario",
+          "drawingDate": "2025-11-21",
+          "issue": "Issued for Step 1 Submission",
+          "received": "2026-09-28",
+          "url": "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/clarkson-go-transit-oriented-community/",
+          "urlPurpose": "Public project overview; drawings supplied directly, not a public document download",
+          "use": "Cross-check native model scope and written heights; A1 height conflict retained",
+          "copyright": "Copyright Zeidler Architecture Inc.; no blanket redistribution licence identified"
+        },
         {
           "url": "https://www.infrastructureontario.ca/4ae7bc/contentassets/a57a6b1574004fcfb9937d296d7a81b5/clarkson-planning-justification-report.pdf",
           "title": "Clarkson TOC Planning Justification Report, November 2025",
           "publisher": "Infrastructure Ontario / Fotenn / Zeidler Architects",
-          "use": "Printed page 29 Figure 12 horizontal envelopes and metric height labels; page 44 footprint statistics",
+          "use": "Published footprint statistics and earlier site registration reference; native geometry supersedes raster-traced contours",
           "localSourceSha256": "36d66219c757435e177faeb674164ceedfe119a765ab213f96a1dd3b70102ba9"
         },
         {
@@ -14679,387 +14406,561 @@
           "id": "wf-clarkson-podium-A",
           "footprintGLBXZ": [
             [
-              -4820.678768716507,
-              8261.575194600211
+              -4801.3698077945855,
+              8281.287526954029
             ],
             [
-              -4818.649237319664,
-              8259.42466263859
+              -4817.433057375893,
+              8266.125311980146
             ],
             [
-              -4820.799769281284,
-              8257.395131241748
+              -4815.373806494043,
+              8263.94368740071
             ],
             [
-              -4811.205620859848,
-              8247.228980150454
+              -4819.797996622711,
+              8259.76766302428
             ],
             [
-              -4812.57414119906,
-              8245.937460170644
+              -4810.169264273607,
+              8249.566730565422
             ],
             [
-              -4799.474438546715,
-              8232.056753872916
+              -4812.803574177864,
+              8247.08018680141
             ],
             [
-              -4792.045328133846,
-              8239.067862334736
+              -4799.730984371503,
+              8233.230741117164
             ],
             [
-              -4779.499134044275,
-              8225.773664753811
+              -4793.444727689724,
+              8239.263673414085
             ],
             [
-              -4787.123747362745,
-              8218.578053437734
+              -4780.290436287107,
+              8225.441575487897
             ],
             [
-              -4762.953873454896,
-              8192.967172803897
+              -4787.801113019616,
+              8218.293778732232
             ],
             [
-              -4701.95696690713,
-              8250.532063332515
+              -4763.174773377186,
+              8192.203986400978
             ],
             [
-              -4725.942337960721,
-              8275.94744106075
+              -4701.515050778076,
+              8250.40503498368
             ],
             [
-              -4748.034166293726,
-              8255.098618529553
+              -4726.226061360289,
+              8276.584529936901
             ],
             [
-              -4745.820132042625,
-              8252.752583662332
+              -4748.697233942601,
+              8255.373831087725
             ],
             [
-              -4759.896341245956,
-              8239.468378155727
+              -4744.578732178899,
+              8251.010581928856
             ],
             [
-              -4774.841072440886,
-              8255.304113509474
+              -4761.877889483481,
+              8234.681784907341
             ],
             [
-              -4775.232078252089,
-              8254.935107800957
+              -4778.981586901942,
+              8252.801892086216
             ],
             [
-              -4799.955460722715,
-              8281.1324971516
+              -4776.602070615407,
+              8255.047934351058
             ]
           ],
-          "areaM2": 4470.242224534621,
-          "bottomASLApproximate": 102.74127197265625,
+          "areaM2": 4349.578613892198,
+          "bottomASLApproximate": 101.40771279106998,
           "topASLApproximate": 125.99127197265625,
           "sourceHeightM": 23.25,
           "terrainSampleMinMaxASL": [
-            101.63290405273438,
-            103.01171875
-          ]
+            101.55771279106999,
+            103.0522289801076
+          ],
+          "architecturalGroundDatumASLApproximate": 102.74127197265625,
+          "belowGradeSkirtDepthM": 1.333559181586267,
+          "geometrySource": "Architect-supplied native SketchUp geometry, November 2025"
         },
         {
           "id": "wf-clarkson-podium-B",
           "footprintGLBXZ": [
             [
-              -4721.183785853686,
-              8341.795940011421
+              -4721.368157052837,
+              8343.840303766452
             ],
             [
-              -4703.06100394957,
-              8317.501077478659
+              -4690.14473578715,
+              8367.141133090696
             ],
             [
-              -4672.347545685978,
-              8340.572436293722
+              -4671.818197013773,
+              8342.583315148157
             ],
             [
-              -4690.274824684492,
-              8365.051801680744
+              -4703.041618279461,
+              8319.282485823911
             ]
           ],
-          "areaM2": 1168.9212625737239,
-          "bottomASLApproximate": 100.64788055419922,
+          "areaM2": 1193.8026580810547,
+          "bottomASLApproximate": 100.29947875132595,
           "topASLApproximate": 123.89788055419922,
           "sourceHeightM": 23.25,
           "terrainSampleMinMaxASL": [
-            100.44603729248047,
-            100.86969757080078
-          ]
+            100.44947875132596,
+            101.0044518991657
+          ],
+          "architecturalGroundDatumASLApproximate": 100.64788055419922,
+          "belowGradeSkirtDepthM": 0.34840180287326916,
+          "geometrySource": "Architect-supplied native SketchUp geometry, November 2025"
         },
         {
           "id": "wf-clarkson-podium-C",
           "footprintGLBXZ": [
             [
-              -4726.310817756745,
-              8190.955653449606
+              -4677.255649714119,
+              8236.175360795693
             ],
             [
-              -4706.938018059614,
-              8170.427848361415
+              -4726.084746017745,
+              8190.0852311871995
             ],
             [
-              -4701.824440378516,
-              8169.709339028489
+              -4708.9106221520915,
+              8171.890512376692
             ],
             [
-              -4686.7707166471755,
-              8183.916058806385
+              -4701.234029723456,
+              8169.133295339479
             ],
             [
-              -4657.434762820091,
-              8152.831096815697
+              -4686.025107736243,
+              8183.489104450451
             ],
             [
-              -4629.28234441343,
-              8179.399507828905
+              -4655.992396617624,
+              8151.671659892868
             ],
             [
-              -4656.219761135155,
-              8207.94293204677
+              -4653.7762624941115,
+              8153.763484577629
             ],
             [
-              -4630.413377595716,
-              8232.297308808878
+              -4629.91248000799,
+              8176.288677771765
             ],
             [
-              -4644.804600227871,
-              8247.54653544582
+              -4627.448742679798,
+              8178.614216873933
             ],
             [
-              -4677.8260971674945,
-              8236.712361305688
+              -4655.006054255078,
+              8207.809158007934
+            ],
+            [
+              -4629.286679158683,
+              8232.085858200606
+            ],
+            [
+              -4643.034583600554,
+              8246.650749982586
             ]
           ],
-          "areaM2": 4704.626257370826,
-          "bottomASLApproximate": 100.57872009277344,
+          "areaM2": 4781.228745399043,
+          "bottomASLApproximate": 98.98787400584635,
           "topASLApproximate": 123.82872009277344,
           "sourceHeightM": 23.25,
           "terrainSampleMinMaxASL": [
-            99.48851776123047,
-            100.77312469482422
-          ]
+            99.13787400584636,
+            101.00986600221567
+          ],
+          "architecturalGroundDatumASLApproximate": 100.57872009277344,
+          "belowGradeSkirtDepthM": 1.5908460869270868,
+          "geometrySource": "Architect-supplied native SketchUp geometry, November 2025"
         },
         {
           "id": "wf-clarkson-tower-A1",
           "footprintGLBXZ": [
             [
-              -4818.269231559804,
-              8259.413662587247
+              -4801.69007319927,
+              8276.859860109753
             ],
             [
-              -4797.789414737123,
-              8237.712840065446
+              -4819.797996622711,
+              8259.76766302428
             ],
             [
-              -4779.803147421755,
-              8254.687102657217
+              -4799.2054878042,
+              8237.95141722993
             ],
             [
-              -4800.282964244437,
-              8276.387925179019
+              -4781.097564380759,
+              8255.043614315402
             ]
           ],
-          "areaM2": 737.9465834200474,
+          "areaM2": 747.0181274414062,
           "bottomASLApproximate": 125.99127197265625,
           "topASLApproximate": 185.49127197265625,
           "sourceHeightM": 82.75,
-          "storeys": 25
+          "storeys": 25,
+          "geometrySource": "Architect-supplied native SketchUp geometry, November 2025"
         },
         {
           "id": "wf-clarkson-tower-A2",
           "footprintGLBXZ": [
             [
-              -4783.150186961228,
-              8217.892544258839
+              -4766.1187649447675,
+              8234.804158604926
             ],
             [
-              -4762.854872992805,
-              8196.387224642638
+              -4784.226688368209,
+              8217.711961519453
             ],
             [
-              -4744.868605677439,
-              8213.361487234411
+              -4763.634179549697,
+              8195.895715725102
             ],
             [
-              -4765.163919645862,
-              8234.86680685061
+              -4745.526256126256,
+              8212.987912810575
             ]
           ],
-          "areaM2": 731.2984160018503,
+          "areaM2": 747.0181274414062,
           "bottomASLApproximate": 125.99127197265625,
           "topASLApproximate": 200.49127197265625,
           "sourceHeightM": 97.75,
-          "storeys": 30
+          "storeys": 30,
+          "geometrySource": "Architect-supplied native SketchUp geometry, November 2025"
         },
         {
           "id": "wf-clarkson-tower-A3",
           "footprintGLBXZ": [
             [
-              -4744.049605840865,
-              8254.793115110517
+              -4726.348435057874,
+              8272.343654475615
             ],
             [
-              -4723.754291872442,
-              8233.287795494318
+              -4744.456358481315,
+              8255.251457390143
             ],
             [
-              -4705.7680245570755,
-              8250.26205808609
+              -4723.863849662804,
+              8233.435211595792
             ],
             [
-              -4726.063338525499,
-              8271.767377702288
+              -4705.755926239362,
+              8250.527408681264
             ]
           ],
-          "areaM2": 731.2984160018154,
+          "areaM2": 747.0181274414062,
           "bottomASLApproximate": 125.99127197265625,
           "topASLApproximate": 230.49127197265625,
           "sourceHeightM": 127.75,
-          "storeys": 40
+          "storeys": 40,
+          "geometrySource": "Architect-supplied native SketchUp geometry, November 2025"
         },
         {
           "id": "wf-clarkson-tower-B1",
           "footprintGLBXZ": [
             [
-              -4714.473184773743,
-              8343.693470792143
+              -4714.788933150245,
+              8344.98617999464
             ],
             [
-              -4700.4094656633115,
-              8323.69967218262
+              -4700.0598352295265,
+              8325.249032670088
             ],
             [
-              -4676.6901117960115,
-              8341.648951283822
+              -4676.0172383991985,
+              8343.191100599466
             ],
             [
-              -4690.764830957786,
-              8361.262744133484
+              -4690.746314127284,
+              8362.928268871801
             ]
           ],
-          "areaM2": 719.4834662966853,
+          "areaM2": 738.8031921386719,
           "bottomASLApproximate": 123.89788055419922,
           "topASLApproximate": 243.39788055419922,
           "sourceHeightM": 142.75,
-          "storeys": 45
+          "storeys": 45,
+          "geometrySource": "Architect-supplied native SketchUp geometry, November 2025"
         },
         {
           "id": "wf-clarkson-tower-C1",
           "footprintGLBXZ": [
             [
-              -4721.164239921616,
-              8191.37716139626
+              -4699.385747242261,
+              8211.161239042256
             ],
             [
-              -4704.189977329845,
-              8173.390894080893
+              -4721.201993036611,
+              8190.568730223745
             ],
             [
-              -4682.684657713645,
-              8193.686208049316
+              -4704.109775003356,
+              8172.460784607671
             ],
             [
-              -4699.658920305417,
-              8211.672475364683
+              -4682.293529209005,
+              8193.053293426181
             ]
           ],
-          "areaM2": 731.2984160018348,
+          "areaM2": 747.01904296875,
           "bottomASLApproximate": 123.82872009277344,
           "topASLApproximate": 213.32872009277344,
           "sourceHeightM": 112.75,
-          "storeys": 35
+          "storeys": 35,
+          "geometrySource": "Architect-supplied native SketchUp geometry, November 2025"
         },
         {
           "id": "wf-clarkson-tower-C2",
           "footprintGLBXZ": [
             [
-              -4670.206961950715,
-              8171.456375086006
+              -4645.564454153603,
+              8192.870791109046
             ],
             [
-              -4654.893225047268,
-              8155.229633921056
+              -4669.428236639725,
+              8170.34559791491
             ],
             [
-              -4631.43287637505,
-              8177.369976432063
+              -4653.7762624941115,
+              8153.763484577629
             ],
             [
-              -4646.746613278497,
-              8193.596717597013
+              -4629.91248000799,
+              8176.288677771765
             ]
           ],
-          "areaM2": 719.7363857093102,
+          "areaM2": 748.2756958007812,
           "bottomASLApproximate": 123.82872009277344,
           "topASLApproximate": 228.32872009277344,
           "sourceHeightM": 127.75,
-          "storeys": 40
+          "storeys": 40,
+          "geometrySource": "Architect-supplied native SketchUp geometry, November 2025"
         },
         {
           "id": "wf-clarkson-tower-C3",
           "footprintGLBXZ": [
             [
-              -4675.232057156533,
-              8234.355326387122
+              -4675.35994089922,
+              8233.710533943076
             ],
             [
-              -4676.242571838573,
-              8232.29279483625
+              -4675.486515657807,
+              8233.589968032327
             ],
             [
-              -4676.113069241032,
-              8230.197263131347
+              -4675.603998863815,
+              8233.460526098628
             ],
             [
-              -4657.662783815193,
-              8210.646972571165
+              -4675.7117247382575,
+              8233.322836575475
             ],
             [
-              -4634.7889438597795,
-              8232.233806519398
+              -4675.809172891785,
+              8233.177726385213
             ],
             [
-              -4645.305606552508,
-              8243.377472138702
+              -4675.895783529175,
+              8233.025891784084
+            ],
+            [
+              -4675.971080646343,
+              8232.868117798867
+            ],
+            [
+              -4676.034713925899,
+              8232.705322612133
+            ],
+            [
+              -4676.08635773279,
+              8232.538317177841
+            ],
+            [
+              -4676.12568394226,
+              8232.36799873078
+            ],
+            [
+              -4676.15253699122,
+              8232.19526948514
+            ],
+            [
+              -4676.166675035745,
+              8232.021029165411
+            ],
+            [
+              -4676.168156969978,
+              8231.846229350444
+            ],
+            [
+              -4676.156891319027,
+              8231.671795691911
+            ],
+            [
+              -4676.132981362297,
+              8231.498637873097
+            ],
+            [
+              -4676.0965081865625,
+              8231.327686525074
+            ],
+            [
+              -4676.047683544694,
+              8231.159832873042
+            ],
+            [
+              -4675.986805470396,
+              8230.995970631902
+            ],
+            [
+              -4675.9141498047375,
+              8230.837014464343
+            ],
+            [
+              -4675.83008364902,
+              8230.68370896108
+            ],
+            [
+              -4675.73507759861,
+              8230.536952816417
+            ],
+            [
+              -4675.62971321204,
+              8230.397539985735
+            ],
+            [
+              -4675.514382272943,
+              8230.266107831141
+            ],
+            [
+              -4656.700968683473,
+              8210.334682344524
+            ],
+            [
+              -4633.526822263086,
+              8232.208923175036
+            ],
+            [
+              -4643.936865030802,
+              8243.237596453839
+            ],
+            [
+              -4674.449648135848,
+              8234.214990287071
+            ],
+            [
+              -4674.615366401954,
+              8234.159368518416
+            ],
+            [
+              -4674.776571837625,
+              8234.091807800383
+            ],
+            [
+              -4674.932475466874,
+              8234.01271712984
+            ],
+            [
+              -4675.082182329952,
+              8233.922437680907
+            ],
+            [
+              -4675.224920664107,
+              8233.82153006433
             ]
           ],
-          "areaM2": 723.1327321077729,
+          "areaM2": 737.1003891509026,
           "bottomASLApproximate": 123.82872009277344,
           "topASLApproximate": 243.32872009277344,
           "sourceHeightM": 142.75,
-          "storeys": 45
+          "storeys": 45,
+          "geometrySource": "Architect-supplied native SketchUp geometry, November 2025"
         }
       ],
-      "sha256": "4eee723872e2223150098bab18a9b5add839546d420096465c84947099ea42ac",
-      "triangles": 208,
+      "sha256": "31584f02778ed261306314e31291838c975e92d3dd623e5125ffe89bf17f2b15",
+      "triangles": 5381,
       "bounds": [
         [
-          -4820.799769281284,
-          30.578720092773438,
-          8152.831096815697
+          -4819.7978515625,
+          28.987873077392578,
+          8151.671875
         ],
         [
-          -4629.28234441343,
-          173.39788055419922,
-          8365.051801680744
+          -4627.44873046875,
+          173.39788818359375,
+          8367.1416015625
         ]
       ],
       "actualCompletionDate": null,
       "targetCompletionDate": null,
-      "completionNote": "Proposed TOC; no confirmed completion date or physical construction stage was verified.",
+      "completionNote": "Proposed TOC; November 2025 native massing supplied in September 2026. No confirmed construction start, completion or occupancy date.",
+      "drawingIssueDate": "2025-11-21",
+      "modelFidelity": "Architect-supplied schematic massing; georegistration and base grades remain approximate.",
+      "modelCaveat": "A100 and native geometry use 82.75 m for A1, while A200 labels 87.75 m. Native geometry is retained. No detailed facade or construction approval is implied.",
+      "sourceCredits": "Architectural massing © Zeidler Architecture Inc.; supplied by Infrastructure Ontario. Independent city placement and visualisation by Future Mississauga.",
+      "groundClearance": {
+        "A": {
+          "sampleCount": 203,
+          "sampleSpacingMaximumM": 2,
+          "minTerrainASL": 101.55771279106999,
+          "maxTerrainASL": 103.0522289801076,
+          "architecturalDatumASL": 102.74127197265625,
+          "skirtBottomASL": 101.40771279106998,
+          "skirtExtensionM": 1.333559181586267,
+          "minimumBottomBurialM": 0.15000000000000568,
+          "source": "Existing Ontario DTM 10 m raster; manual bilinear interpolation matching work/terrain.py",
+          "limitation": "DTM display estimate, not approved finished grades; 2 m perimeter samples do not improve 10 m source raster resolution."
+        },
+        "B": {
+          "sampleCount": 72,
+          "sampleSpacingMaximumM": 2,
+          "minTerrainASL": 100.44947875132596,
+          "maxTerrainASL": 101.0044518991657,
+          "architecturalDatumASL": 100.64788055419922,
+          "skirtBottomASL": 100.29947875132595,
+          "skirtExtensionM": 0.34840180287326916,
+          "minimumBottomBurialM": 0.15000000000000568,
+          "source": "Existing Ontario DTM 10 m raster; manual bilinear interpolation matching work/terrain.py",
+          "limitation": "DTM display estimate, not approved finished grades; 2 m perimeter samples do not improve 10 m source raster resolution."
+        },
+        "C": {
+          "sampleCount": 174,
+          "sampleSpacingMaximumM": 2,
+          "minTerrainASL": 99.13787400584636,
+          "maxTerrainASL": 101.00986600221567,
+          "architecturalDatumASL": 100.57872009277344,
+          "skirtBottomASL": 98.98787400584635,
+          "skirtExtensionM": 1.5908460869270868,
+          "minimumBottomBurialM": 0.15000000000000568,
+          "source": "Existing Ontario DTM 10 m raster; manual bilinear interpolation matching work/terrain.py",
+          "limitation": "DTM display estimate, not approved finished grades; 2 m perimeter samples do not improve 10 m source raster resolution."
+        }
+      },
+      "foundationTreatment": "Only bottom podium vertices extend below the local DTM minimum by 0.15 m and receive bottom closure faces; source architecture and roof heights above grade stay unchanged.",
       "url": "models/refinement/clarkson-toc-current-plan.glb",
       "modes": [
         "future"
       ],
-      "modelFidelity": "Plan-derived schematic envelope",
       "replacesSourceIds": [],
       "replacementModes": [
         "future"
       ],
-      "bytes": 11060
+      "bytes": 229588,
+      "downloadSHA256": "31584f02778ed261306314e31291838c975e92d3dd623e5125ffe89bf17f2b15",
+      "downloadBytes": 229588,
+      "triangleCount": 5381,
+      "publicModelFileDownloadPermission": "Original design files and separate model downloads are not distributed. Adapted geometry is used in the interactive planning visualization."
     },
     {
       "id": "wf-50high-current-plan",
@@ -26983,52 +26884,8 @@
         "cooksville-toc-2025-tower-envelopes"
       ],
       "replacesSourceIds": [],
-      "modelFidelity": "September 2026 primary-plan tower outlines, seven approximate vertical envelopes; podiums and facades omitted",
-      "geometryDate": "2026-09-22",
-      "registration": {
-        "coefficients": [
-          0.3820721627735137,
-          -0.4383740144639166,
-          -4589.074435355452,
-          1035.8870245873402
-        ],
-        "sourcePixels": [
-          [
-            1151.0,
-            566.0
-          ],
-          [
-            1800.0,
-            467.0
-          ],
-          [
-            1784.0,
-            708.0
-          ]
-        ],
-        "worldControls": [
-          [
-            -3902.2513192968936,
-            747.6425657303573
-          ],
-          [
-            -3695.996476903325,
-            428.02965218760073
-          ],
-          [
-            -3596.654659951804,
-            521.4755327459425
-          ]
-        ],
-        "residualM": [
-          1.0640195375110708,
-          2.857871979986019,
-          2.8921259315001366
-        ],
-        "method": "Three inherited source/geocoder controls identify the current official context plan. Revised plans are registered through common parcel corners.",
-        "estimatedPositionToleranceM": 8,
-        "estimatedContourToleranceM": 3
-      },
+      "modelFidelity": "Architect-supplied Step 4 design geometry; seven towers, podiums and rooftop structures",
+      "geometryDate": "2026-08-17",
       "components": [
         {
           "name": "E1",
@@ -27552,48 +27409,73 @@
           "url": "https://www.infrastructureontario.ca/48f8a0/contentassets/e44b38c8189641c2aa193899c6727b3d/2025-09-25_cooksville-toc_planning-justification-report.pdf",
           "publisher": "Infrastructure Ontario / Arup",
           "claim": "Older dimensional and elevation context only; its eight-tower layout is superseded."
+        },
+        {
+          "url": "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/cooksville-go-transit-oriented-community/",
+          "title": "Cooksville GO TOC Step 4 architectural model and technical package",
+          "publisher": "Infrastructure Ontario / Arup",
+          "date": "2026-08-17",
+          "reviewed": "2026-09-29",
+          "claim": "Native DWG supplied on request; seven proposal towers and podiums checked against the September 2026 proposal. Original package is not redistributed."
         }
       ],
       "caveats": [
-        "Storeys and footprint arrangement are the current proposal. No current metre elevations or native DWG have been received.",
-        "Vertical estimates use older phase-specific 3 m residential spacing and published maximums. Allow roughly ±5 m; this is an illustrative allowance, not survey confidence.",
-        "Podiums, rooftop plant and facades are omitted. This is a future proposal, not approval or construction."
+        "Native proposal geometry includes seven towers, podiums, setbacks and rooftop structures. It is a design proposal, not approved or completed construction.",
+        "The source design elevations are retained; underground geometry is clipped to the atlas terrain. The terrain is approximate and the vertical datum is not survey-certified.",
+        "Some drawing title blocks retain older issue labels. The Step 4 cover letter, September 2026 draft PJR and September 22 public presentation support the seven-tower, 3,171-home version. Final facade finishes and construction dates remain unconfirmed.",
+        "The display model is not a watertight fabrication solid. Original engineering files are retained privately."
       ],
       "file": "outputs/models/supplemental/community-revision/cooksville-toc-sep2026-envelopes.glb",
-      "bytes": 6016,
-      "sha256": "8b789047ed040b51b3b47a48148840ddbe7be556630cd7251832b349b05f39fc",
+      "bytes": 11839168,
+      "sha256": "45c2231bbf989bd7bf268dc9e8abbf26d17ad250c18e89d81d466cc9b5f880ed",
       "bounds": [
         [
-          -3904.87717628742,
-          55.379302978515625,
-          386.70863004686703
+          -3904.59814453125,
+          54.359310150146484,
+          388.92822265625
         ],
         [
-          -3748.913779085854,
-          206.87930297851562,
-          757.8634342410836
+          -3733.91064453125,
+          208.5,
+          763.2069091796875
         ]
       ],
-      "triangleCount": 84,
-      "geometryQA": {
-        "closedPositiveVolumes": true,
-        "meshCount": 7,
-        "nonFiniteVertices": 0
-      },
+      "triangleCount": 637663,
       "retainByDefault": true,
-      "modelCaveat": "Storeys and footprint arrangement are the current proposal. No current metre elevations or native DWG have been received. Vertical estimates use older phase-specific 3 m residential spacing and published maximums. Allow roughly ±5 m; this is an illustrative allowance, not survey confidence. Podiums, rooftop plant and facades are omitted. This is a future proposal, not approval or construction.",
-      "publicModelFileDownloadPermission": "No separate permission established for redistribution of original design files. This locally generated study remains attributed and approximate; public viewer geometry is served.",
+      "modelCaveat": "Native proposal geometry includes seven towers, podiums, setbacks and rooftop structures. It is a design proposal, not approved or completed construction. The source design elevations are retained; underground geometry is clipped to the atlas terrain. The terrain is approximate and the vertical datum is not survey-certified. Some drawing title blocks retain older issue labels. The Step 4 cover letter, September 2026 draft PJR and September 22 public presentation support the seven-tower, 3,171-home version. Final facade finishes and construction dates remain unconfirmed. The display model is not a watertight fabrication solid. Original engineering files are retained privately.",
+      "publicModelFileDownloadPermission": "Original design files and separate model downloads are not distributed. Adapted geometry is used in the interactive planning visualization.",
       "url": "models/refinement/cooksville-toc-sep2026-envelopes.glb",
       "replacementModes": [
         "future"
       ],
-      "downloadSHA256": "8b789047ed040b51b3b47a48148840ddbe7be556630cd7251832b349b05f39fc",
-      "downloadBytes": 6016,
+      "downloadSHA256": "45c2231bbf989bd7bf268dc9e8abbf26d17ad250c18e89d81d466cc9b5f880ed",
+      "downloadBytes": 11839168,
       "uncertainties": [
-        "Storeys and footprint arrangement are the current proposal. No current metre elevations or native DWG have been received.",
-        "Vertical estimates use older phase-specific 3 m residential spacing and published maximums. Allow roughly ±5 m; this is an illustrative allowance, not survey confidence.",
-        "Podiums, rooftop plant and facades are omitted. This is a future proposal, not approval or construction."
-      ]
+        "Native proposal geometry includes seven towers, podiums, setbacks and rooftop structures. It is a design proposal, not approved or completed construction.",
+        "The source design elevations are retained; underground geometry is clipped to the atlas terrain. The terrain is approximate and the vertical datum is not survey-certified.",
+        "Some drawing title blocks retain older issue labels. The Step 4 cover letter, September 2026 draft PJR and September 22 public presentation support the seven-tower, 3,171-home version. Final facade finishes and construction dates remain unconfirmed.",
+        "The display model is not a watertight fabrication solid. Original engineering files are retained privately."
+      ],
+      "reviewDate": "2026-09-29",
+      "registration": {
+        "horizontal": "Source NAD83(CSRS) / UTM 17N (EPSG:2958) transformed to atlas EPSG:26917, metres.",
+        "vertical": "Native design elevations minus 70 m display origin; display clipped to approximate Ontario DTM. Source vertical datum is not separately certified."
+      },
+      "sourceGeometry": {
+        "author": "Arup",
+        "provider": "Infrastructure Ontario",
+        "title": "Cooksville GO TOC Step 4 resubmission",
+        "date": "2026-08-17",
+        "sourceSHA256": "2a228591fb955c3b48a24bced40c216246a06bc5b236f5db40095b1aaa846dfe",
+        "adaptation": "Architectural layers only; underground geometry trimmed to atlas terrain. Neighbouring TAS, GO and source terrain excluded."
+      },
+      "geometryQA": {
+        "finiteVertices": true,
+        "verifiedTowerCount": 7,
+        "minimumTerrainClearanceM": 0.01,
+        "watertight": false,
+        "fabricationReady": false
+      }
     },
     {
       "id": "perla-towers-source-envelope",
@@ -49712,11 +49594,11 @@
       "assetId": "south-banks-plan-derived",
       "projectId": "lakeview-deco-opus",
       "asOf": "2026-09-27",
-      "edition": "20260927-southbanks-reference1",
+      "edition": "20260929-southbanks-crossgables",
       "file": "outputs/models/supplemental/lakeview-expansion/south-banks-plan-derived.glb",
       "url": "models/refinement/south-banks-plan-derived.glb",
-      "sha256": "5ec3d3f8381a0e57b8618905a3d9a70eee571859ed6e59db8d6d4419ec7a3c40",
-      "bytes": 1680556,
+      "sha256": "bf3673b5ebe83ada7f6a84c4985b2b370d17597a0c6066065e8430556b647639",
+      "bytes": 1837036,
       "status": "Uncertain",
       "sourceStatus": "Proposed",
       "modes": [
@@ -49729,18 +49611,18 @@
       "sourceMeshIds": [],
       "bounds": [
         [
-          1894.0130295178026,
-          10.112245178222656,
-          1159.1414432758465
+          1894.0130615234375,
+          10.112245559692383,
+          1159.1414794921875
         ],
         [
-          2092.584697675309,
+          2092.584716796875,
           24.715904235839844,
-          1356.0513590470416
+          1356.0513916015625
         ]
       ],
-      "modelFidelity": "17 parcel-registered artist-concept townhome blocks; estimated heights and schematic facades",
-      "warning": "Independent reconstruction of seventeen South Banks marketing-plan blocks, registered to City SP 26/2 W1 with street/address checks. The plan is artist concept reproduced by a broker, corroborated by the developer location map and official streetscape; not permit/BIM geometry. Three visible facade levels inform an estimated 9.9 m wall height, 12.9 m pitched roof maximum or 13.0 m flat-roof access/parapet maximum. The artist concept compresses road allowances; a direct street-centre fit places edge roofs beyond the legal parcel, so one whole-plan transform fits the visible landscaped site edge to the City parcel rectangle. No published metric heights were recovered: height uncertainty ±3 m, placement ±4 m and outline ±2 m are modelling judgements, not survey confidence intervals. Roof pitches, roof-access outlines, individual bays, windows, balcony/parapet dimensions and floor spacing are schematic; no dwelling count is inferred from facade bays. The City application records306 townhouses, active with no approval date; this future-only model does not establish construction or occupancy.",
+      "modelFidelity": "17 parcel-registered townhome blocks with reference-derived cross-gables; estimated heights and schematic facades",
+      "warning": "Independent reconstruction of seventeen South Banks marketing-plan blocks, registered to City SP 26/2 W1 with street/address checks. The plan is artist concept reproduced by a broker, corroborated by the developer location map and official streetscape; not permit/BIM geometry. Three visible facade levels inform an estimated 9.9 m wall height, 12.9 m pitched roof maximum or 13.0 m flat-roof access/parapet maximum. The artist concept compresses road allowances; a direct street-centre fit places edge roofs beyond the legal parcel, so one whole-plan transform fits the visible landscaped site edge to the City parcel rectangle. No published metric heights were recovered: height uncertainty ±3 m, placement ±4 m and outline ±2 m are modelling judgements, not survey confidence intervals. Roof pitches, roof-access outlines, individual bays, windows, balcony/parapet dimensions and floor spacing are schematic; no dwelling count is inferred from facade bays. The City application records 306 townhouses, active with no approval date; this future-only model does not establish construction or occupancy. Candidate exterior refinement: repeated cross-gables interpreted from the 11 August 2026 South Banks artist-concept plan and Elevation A. Ridge centres are approximate plan picks; gable rise of 2.25 m and bay half-width of 0.16 times block short dimension are modelling assumptions. Existing block placement, eaves, main roof maximum, facade levels, terrain foundations and eight flat-roof blocks are unchanged. This does not establish permit dimensions, exact roof pitch, construction status or completion. Gable solids intersect the retained main roof as a visual assembly, not fabrication-ready union geometry. Cross-gables follow the original August 11, 2026 artist concept and Elevation A. Gable rise and spacing are inferred proportions, not approved dimensions. September launch material advertises 2029 occupancy as a non-guaranteed target; construction is unverified.",
       "sources": [
         {
           "url": "https://www.decohomes.ca/southbanks/",
@@ -49768,8 +49650,8 @@
           "claim": "Four public junction coordinates independently establish the site orientation and expose compressed road allowances in the artwork. The final scale is controlled by the City parcel, not the road drawing."
         }
       ],
-      "triangleCount": 11496,
-      "componentCount": 763,
+      "triangleCount": 11824,
+      "componentCount": 804,
       "blockCount": 17,
       "coordinateSystem": "EPSG26917; x=E−615000, y=ASL−70, z=4827000−N; glTF Y up",
       "registration": {
@@ -65157,6 +65039,1104 @@
           ],
           "watertight": true,
           "volumeM3": 0.28257598743827356
+        },
+        {
+          "id": "southbanks-block-04-crossgable-01",
+          "kind": "roof",
+          "block": 4,
+          "triangles": 8,
+          "bounds": [
+            [
+              2055.7679243795574,
+              21.326461791992188,
+              1236.431331384927
+            ],
+            [
+              2073.7290263950126,
+              23.576461791992188,
+              1254.921241587028
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 138.14938185928744,
+          "detail": {
+            "longAxisFraction": 0.1,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-04-crossgable-02",
+          "kind": "roof",
+          "block": 4,
+          "triangles": 8,
+          "bounds": [
+            [
+              2062.8167734562885,
+              21.326461791992188,
+              1243.0910632470623
+            ],
+            [
+              2080.7778754717438,
+              23.576461791992188,
+              1261.5809734491631
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 138.14938185928744,
+          "detail": {
+            "longAxisFraction": 0.4,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-04-crossgable-03",
+          "kind": "roof",
+          "block": 4,
+          "triangles": 8,
+          "bounds": [
+            [
+              2072.215238891891,
+              21.326461791992188,
+              1251.9707057299092
+            ],
+            [
+              2090.176340907463,
+              23.576461791992188,
+              1270.4606159320101
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 138.14938186114887,
+          "detail": {
+            "longAxisFraction": 0.8,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-04-end-gable",
+          "kind": "roof",
+          "block": 4,
+          "triangles": 8,
+          "bounds": [
+            [
+              2059.99057600752,
+              21.326461791992188,
+              1240.9073806572706
+            ],
+            [
+              2088.3033056382556,
+              23.576461791992188,
+              1268.2044772803783
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 255.04501265135332,
+          "detail": {
+            "endGable": true,
+            "halfWidthShortSideFraction": 0.18,
+            "riseM": 2.25,
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-05-crossgable-01",
+          "kind": "roof",
+          "block": 5,
+          "triangles": 8,
+          "bounds": [
+            [
+              1947.8201960253064,
+              20.714431762695312,
+              1295.9799754237756
+            ],
+            [
+              1964.8602158862632,
+              22.964431762695312,
+              1313.5216851020232
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 124.34352646976913,
+          "detail": {
+            "longAxisFraction": 0.13,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-05-crossgable-02",
+          "kind": "roof",
+          "block": 5,
+          "triangles": 8,
+          "bounds": [
+            [
+              1957.962706641294,
+              20.714431762695312,
+              1305.562589602545
+            ],
+            [
+              1975.0027265022509,
+              22.964431762695312,
+              1323.1042992807925
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 124.34352646976913,
+          "detail": {
+            "longAxisFraction": 0.5,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-05-crossgable-03",
+          "kind": "roof",
+          "block": 5,
+          "triangles": 8,
+          "bounds": [
+            [
+              1967.008729623165,
+              20.714431762695312,
+              1314.1092454921454
+            ],
+            [
+              1984.0487494840054,
+              22.964431762695312,
+              1331.650955170393
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 124.34352646977034,
+          "detail": {
+            "longAxisFraction": 0.83,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-05-end-gable",
+          "kind": "roof",
+          "block": 5,
+          "triangles": 8,
+          "bounds": [
+            [
+              1950.4918398173759,
+              20.714431762695312,
+              1298.9656883161515
+            ],
+            [
+              1982.473593326169,
+              22.964431762695312,
+              1329.7012005681172
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 282.2934114487737,
+          "detail": {
+            "endGable": true,
+            "halfWidthShortSideFraction": 0.18,
+            "riseM": 2.25,
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-06-crossgable-01",
+          "kind": "roof",
+          "block": 6,
+          "triangles": 8,
+          "bounds": [
+            [
+              1985.0540304172318,
+              21.29344940185547,
+              1294.7130512529984
+            ],
+            [
+              2003.0175213558832,
+              23.54344940185547,
+              1312.1547725703567
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 128.86474226840195,
+          "detail": {
+            "longAxisFraction": 0.17,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-06-crossgable-02",
+          "kind": "roof",
+          "block": 6,
+          "triangles": 8,
+          "bounds": [
+            [
+              1993.2051421799697,
+              21.29344940185547,
+              1286.0856828549877
+            ],
+            [
+              2011.1686331187375,
+              23.54344940185547,
+              1303.527404172346
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 128.864742270113,
+          "detail": {
+            "longAxisFraction": 0.5,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-06-crossgable-03",
+          "kind": "roof",
+          "block": 6,
+          "triangles": 8,
+          "bounds": [
+            [
+              2001.356253942824,
+              21.29344940185547,
+              1277.458314456977
+            ],
+            [
+              2019.3197448814753,
+              23.54344940185547,
+              1294.9000357743353
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 128.8647422684056,
+          "detail": {
+            "longAxisFraction": 0.83,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-06-end-gable",
+          "kind": "roof",
+          "block": 6,
+          "triangles": 8,
+          "bounds": [
+            [
+              1987.3475934816524,
+              21.29344940185547,
+              1279.3830554001033
+            ],
+            [
+              2017.0261818170547,
+              23.54344940185547,
+              1310.2300316272303
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 277.1162156820028,
+          "detail": {
+            "endGable": true,
+            "halfWidthShortSideFraction": 0.18,
+            "riseM": 2.25,
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-07-crossgable-01",
+          "kind": "roof",
+          "block": 7,
+          "triangles": 8,
+          "bounds": [
+            [
+              2011.827791214455,
+              21.483978271484375,
+              1269.3571948055178
+            ],
+            [
+              2029.7661597864935,
+              23.733978271484375,
+              1286.7445144243538
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 122.58625704562535,
+          "detail": {
+            "longAxisFraction": 0.07,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-07-crossgable-02",
+          "kind": "roof",
+          "block": 7,
+          "triangles": 8,
+          "bounds": [
+            [
+              2018.0257465671748,
+              21.483978271484375,
+              1262.433997943066
+            ],
+            [
+              2036.3071753985714,
+              23.733978271484375,
+              1280.1844222927466
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 133.4666940655358,
+          "detail": {
+            "longAxisFraction": 0.33,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-07-crossgable-03",
+          "kind": "roof",
+          "block": 7,
+          "triangles": 8,
+          "bounds": [
+            [
+              2026.076227320591,
+              21.483978271484375,
+              1253.9131402662024
+            ],
+            [
+              2044.3576561519876,
+              23.733978271484375,
+              1271.663564615883
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 133.46669406554065,
+          "detail": {
+            "longAxisFraction": 0.65,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-07-crossgable-04",
+          "kind": "roof",
+          "block": 7,
+          "triangles": 8,
+          "bounds": [
+            [
+              2032.617242932669,
+              21.483978271484375,
+              1246.9899434037507
+            ],
+            [
+              2050.8986717640655,
+              23.733978271484375,
+              1264.7403677534312
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 133.4666940655346,
+          "detail": {
+            "longAxisFraction": 0.91,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-07-end-gable",
+          "kind": "roof",
+          "block": 7,
+          "triangles": 8,
+          "bounds": [
+            [
+              2016.3312225691043,
+              21.483978271484375,
+              1251.0753232184798
+            ],
+            [
+              2046.555335197132,
+              23.733978271484375,
+              1282.489685734734
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 287.2435372277784,
+          "detail": {
+            "endGable": true,
+            "halfWidthShortSideFraction": 0.18,
+            "riseM": 2.25,
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-08-crossgable-01",
+          "kind": "roof",
+          "block": 8,
+          "triangles": 8,
+          "bounds": [
+            [
+              2024.9022869813489,
+              21.62126922607422,
+              1207.2695680130273
+            ],
+            [
+              2042.8633889969205,
+              23.87126922607422,
+              1225.7594782151282
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 138.14938186114037,
+          "detail": {
+            "longAxisFraction": 0.14,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-08-crossgable-02",
+          "kind": "roof",
+          "block": 8,
+          "triangles": 8,
+          "bounds": [
+            [
+              2034.0229592329124,
+              21.62126922607422,
+              1215.886752313003
+            ],
+            [
+              2051.984061248484,
+              23.87126922607422,
+              1234.3766625151038
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 138.14938186033882,
+          "detail": {
+            "longAxisFraction": 0.43,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-08-crossgable-03",
+          "kind": "roof",
+          "block": 8,
+          "triangles": 8,
+          "bounds": [
+            [
+              2042.5146196050337,
+              21.62126922607422,
+              1223.9096480403095
+            ],
+            [
+              2060.4757216206053,
+              23.87126922607422,
+              1242.3995582424104
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 138.14938186034001,
+          "detail": {
+            "longAxisFraction": 0.7,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-08-crossgable-04",
+          "kind": "roof",
+          "block": 8,
+          "triangles": 8,
+          "bounds": [
+            [
+              2049.1192443389446,
+              21.62126922607422,
+              1230.1496780505404
+            ],
+            [
+              2067.0803463544,
+              23.87126922607422,
+              1248.6395882526413
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 138.14938186034001,
+          "detail": {
+            "longAxisFraction": 0.91,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-08-end-gable",
+          "kind": "roof",
+          "block": 8,
+          "triangles": 8,
+          "bounds": [
+            [
+              2027.0714718124364,
+              21.62126922607422,
+              1209.805507899262
+            ],
+            [
+              2063.338631824823,
+              23.87126922607422,
+              1244.6179269356653
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 341.3883763084644,
+          "detail": {
+            "endGable": true,
+            "halfWidthShortSideFraction": 0.18,
+            "riseM": 2.25,
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-11-crossgable-01",
+          "kind": "roof",
+          "block": 11,
+          "triangles": 8,
+          "bounds": [
+            [
+              1919.0190392509103,
+              20.805633544921875,
+              1268.7687272690237
+            ],
+            [
+              1936.0590591117507,
+              23.055633544921875,
+              1286.3104369472712
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 124.34352646976913,
+          "detail": {
+            "longAxisFraction": 0.13,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-11-crossgable-02",
+          "kind": "roof",
+          "block": 11,
+          "triangles": 8,
+          "bounds": [
+            [
+              1929.3879451930989,
+              20.805633544921875,
+              1278.5652390858158
+            ],
+            [
+              1946.4279650540557,
+              23.055633544921875,
+              1296.1069487640634
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 124.34352646977884,
+          "detail": {
+            "longAxisFraction": 0.5,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-11-crossgable-03",
+          "kind": "roof",
+          "block": 11,
+          "triangles": 8,
+          "bounds": [
+            [
+              1938.6358883307548,
+              20.805633544921875,
+              1287.3026685444638
+            ],
+            [
+              1955.6759081915952,
+              23.055633544921875,
+              1304.8443782227114
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 124.34352646976913,
+          "detail": {
+            "longAxisFraction": 0.83,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-11-end-gable",
+          "kind": "roof",
+          "block": 11,
+          "triangles": 8,
+          "bounds": [
+            [
+              1921.611138739041,
+              20.805633544921875,
+              1271.6792869372293
+            ],
+            [
+              1954.204771507997,
+              23.055633544921875,
+              1302.99290091265
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 288.59460365099466,
+          "detail": {
+            "endGable": true,
+            "halfWidthShortSideFraction": 0.18,
+            "riseM": 2.25,
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-13-crossgable-01",
+          "kind": "roof",
+          "block": 13,
+          "triangles": 8,
+          "bounds": [
+            [
+              1962.831567493151,
+              21.646446228027344,
+              1220.8720756899565
+            ],
+            [
+              1980.9540273782331,
+              23.896446228027344,
+              1238.4681485239416
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 131.15562617253454,
+          "detail": {
+            "longAxisFraction": 0.12,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-13-crossgable-02",
+          "kind": "roof",
+          "block": 13,
+          "triangles": 8,
+          "bounds": [
+            [
+              1969.1210055816919,
+              21.646446228027344,
+              1214.2151556303725
+            ],
+            [
+              1987.243465466774,
+              23.896446228027344,
+              1231.8112284634262
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 131.15562616721704,
+          "detail": {
+            "longAxisFraction": 0.37,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-13-crossgable-03",
+          "kind": "roof",
+          "block": 13,
+          "triangles": 8,
+          "bounds": [
+            [
+              1975.4104436702328,
+              21.646446228027344,
+              1207.558235569857
+            ],
+            [
+              1993.532903555315,
+              23.896446228027344,
+              1225.1543084038422
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 131.1556261715826,
+          "detail": {
+            "longAxisFraction": 0.62,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-13-crossgable-04",
+          "kind": "roof",
+          "block": 13,
+          "triangles": 8,
+          "bounds": [
+            [
+              1981.6998817587737,
+              21.646446228027344,
+              1200.901315510273
+            ],
+            [
+              1999.822341643856,
+              23.896446228027344,
+              1218.4973883433267
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 131.15562616381067,
+          "detail": {
+            "longAxisFraction": 0.87,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-13-end-gable",
+          "kind": "roof",
+          "block": 13,
+          "triangles": 8,
+          "bounds": [
+            [
+              1966.3627146695508,
+              21.646446228027344,
+              1203.8652240196243
+            ],
+            [
+              1996.542771990993,
+              23.896446228027344,
+              1235.2379632117227
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 284.7457673454216,
+          "detail": {
+            "endGable": true,
+            "halfWidthShortSideFraction": 0.18,
+            "riseM": 2.25,
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-14-crossgable-01",
+          "kind": "roof",
+          "block": 14,
+          "triangles": 8,
+          "bounds": [
+            [
+              1976.4127592555014,
+              21.715904235839844,
+              1161.5648457035422
+            ],
+            [
+              1994.527374963509,
+              23.965904235839844,
+              1180.2127893259749
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 140.5210017542437,
+          "detail": {
+            "longAxisFraction": 0.12,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-14-crossgable-02",
+          "kind": "roof",
+          "block": 14,
+          "triangles": 8,
+          "bounds": [
+            [
+              1985.351091487566,
+              21.715904235839844,
+              1170.0097556896508
+            ],
+            [
+              2003.465707195457,
+              23.965904235839844,
+              1188.6576993120834
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 140.5210017542437,
+          "detail": {
+            "longAxisFraction": 0.34,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-14-crossgable-03",
+          "kind": "roof",
+          "block": 14,
+          "triangles": 8,
+          "bounds": [
+            [
+              1993.883135890821,
+              21.715904235839844,
+              1178.0708061307669
+            ],
+            [
+              2011.9977515988285,
+              23.965904235839844,
+              1196.7187497531995
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 140.5210017542437,
+          "detail": {
+            "longAxisFraction": 0.55,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-14-crossgable-04",
+          "kind": "roof",
+          "block": 14,
+          "triangles": 8,
+          "bounds": [
+            [
+              2002.415180294076,
+              21.715904235839844,
+              1186.1318565728143
+            ],
+            [
+              2020.5297960020835,
+              23.965904235839844,
+              1204.7798001943156
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 140.5210017432073,
+          "detail": {
+            "longAxisFraction": 0.76,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-14-crossgable-05",
+          "kind": "roof",
+          "block": 14,
+          "triangles": 8,
+          "bounds": [
+            [
+              2009.7283612112515,
+              21.715904235839844,
+              1193.041328378953
+            ],
+            [
+              2027.8429769191425,
+              23.965904235839844,
+              1211.6892720013857
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 140.52100175425343,
+          "detail": {
+            "longAxisFraction": 0.94,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-14-end-gable",
+          "kind": "roof",
+          "block": 14,
+          "triangles": 8,
+          "bounds": [
+            [
+              1978.1657465284225,
+              21.715904235839844,
+              1163.7117214845493
+            ],
+            [
+              2023.652262673946,
+              23.965904235839844,
+              1207.2392389513552
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 444.7846962253995,
+          "detail": {
+            "endGable": true,
+            "halfWidthShortSideFraction": 0.18,
+            "riseM": 2.25,
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-16-crossgable-01",
+          "kind": "roof",
+          "block": 16,
+          "triangles": 8,
+          "bounds": [
+            [
+              1915.8991128389025,
+              21.38536834716797,
+              1229.7621914790943
+            ],
+            [
+              1933.3856969384942,
+              23.63536834716797,
+              1246.740858248435
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 122.11319457030065,
+          "detail": {
+            "longAxisFraction": 0.17,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-16-crossgable-02",
+          "kind": "roof",
+          "block": 16,
+          "triangles": 8,
+          "bounds": [
+            [
+              1924.125697858748,
+              21.38536834716797,
+              1221.0549400402233
+            ],
+            [
+              1941.6122819583397,
+              23.63536834716797,
+              1238.033606809564
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 122.11319457196926,
+          "detail": {
+            "longAxisFraction": 0.5,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-16-crossgable-03",
+          "kind": "roof",
+          "block": 16,
+          "triangles": 8,
+          "bounds": [
+            [
+              1932.3522828785935,
+              21.38536834716797,
+              1212.3476886013523
+            ],
+            [
+              1949.8388669781853,
+              23.63536834716797,
+              1229.326355370693
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 122.11319457196926,
+          "detail": {
+            "longAxisFraction": 0.83,
+            "halfWidthShortSideFraction": 0.16,
+            "riseM": 2.25,
+            "source": "August 11 artist-concept plan; elevation A",
+            "precision": "inferred approximate"
+          }
+        },
+        {
+          "id": "southbanks-block-16-end-gable",
+          "kind": "roof",
+          "block": 16,
+          "triangles": 8,
+          "bounds": [
+            [
+              1917.9814252811484,
+              21.38536834716797,
+              1214.062185387127
+            ],
+            [
+              1947.7565545360558,
+              23.63536834716797,
+              1245.0263614626601
+            ]
+          ],
+          "watertight": true,
+          "volumeM3": 272.25691790266745,
+          "detail": {
+            "endGable": true,
+            "halfWidthShortSideFraction": 0.18,
+            "riseM": 2.25,
+            "precision": "inferred approximate"
+          }
         }
       ],
       "meshIds": [
@@ -65922,13 +66902,1215 @@
         "southbanks-block-17-window-0-4-2",
         "southbanks-block-17-window-1-4-0",
         "southbanks-block-17-window-1-4-1",
-        "southbanks-block-17-window-1-4-2"
+        "southbanks-block-17-window-1-4-2",
+        "southbanks-block-04-crossgable-01",
+        "southbanks-block-04-crossgable-02",
+        "southbanks-block-04-crossgable-03",
+        "southbanks-block-04-end-gable",
+        "southbanks-block-05-crossgable-01",
+        "southbanks-block-05-crossgable-02",
+        "southbanks-block-05-crossgable-03",
+        "southbanks-block-05-end-gable",
+        "southbanks-block-06-crossgable-01",
+        "southbanks-block-06-crossgable-02",
+        "southbanks-block-06-crossgable-03",
+        "southbanks-block-06-end-gable",
+        "southbanks-block-07-crossgable-01",
+        "southbanks-block-07-crossgable-02",
+        "southbanks-block-07-crossgable-03",
+        "southbanks-block-07-crossgable-04",
+        "southbanks-block-07-end-gable",
+        "southbanks-block-08-crossgable-01",
+        "southbanks-block-08-crossgable-02",
+        "southbanks-block-08-crossgable-03",
+        "southbanks-block-08-crossgable-04",
+        "southbanks-block-08-end-gable",
+        "southbanks-block-11-crossgable-01",
+        "southbanks-block-11-crossgable-02",
+        "southbanks-block-11-crossgable-03",
+        "southbanks-block-11-end-gable",
+        "southbanks-block-13-crossgable-01",
+        "southbanks-block-13-crossgable-02",
+        "southbanks-block-13-crossgable-03",
+        "southbanks-block-13-crossgable-04",
+        "southbanks-block-13-end-gable",
+        "southbanks-block-14-crossgable-01",
+        "southbanks-block-14-crossgable-02",
+        "southbanks-block-14-crossgable-03",
+        "southbanks-block-14-crossgable-04",
+        "southbanks-block-14-crossgable-05",
+        "southbanks-block-14-end-gable",
+        "southbanks-block-16-crossgable-01",
+        "southbanks-block-16-crossgable-02",
+        "southbanks-block-16-crossgable-03",
+        "southbanks-block-16-end-gable"
       ],
       "completionDate": null,
       "targetCompletionDate": null,
       "completionEvidence": "No developer-confirmed occupancy or physical construction milestone verified. Broker advertises2029; not adopted as verified developer schedule.",
-      "downloadSHA256": "5ec3d3f8381a0e57b8618905a3d9a70eee571859ed6e59db8d6d4419ec7a3c40",
-      "downloadBytes": 1680556
+      "installed": false,
+      "sourceAssetSHA256": "5ec3d3f8381a0e57b8618905a3d9a70eee571859ed6e59db8d6d4419ec7a3c40",
+      "crossGableRefinement": {
+        "note": "Candidate exterior refinement: repeated cross-gables interpreted from the 11 August 2026 South Banks artist-concept plan and Elevation A. Ridge centres are approximate plan picks; gable rise of 2.25 m and bay half-width of 0.16 times block short dimension are modelling assumptions. Existing block placement, eaves, main roof maximum, facade levels, terrain foundations and eight flat-roof blocks are unchanged. This does not establish permit dimensions, exact roof pitch, construction status or completion. Gable solids intersect the retained main roof as a visual assembly, not fabrication-ready union geometry.",
+        "blocks": {
+          "4": [
+            0.1,
+            0.4,
+            0.8
+          ],
+          "5": [
+            0.13,
+            0.5,
+            0.83
+          ],
+          "6": [
+            0.17,
+            0.5,
+            0.83
+          ],
+          "7": [
+            0.07,
+            0.33,
+            0.65,
+            0.91
+          ],
+          "8": [
+            0.14,
+            0.43,
+            0.7,
+            0.91
+          ],
+          "11": [
+            0.13,
+            0.5,
+            0.83
+          ],
+          "13": [
+            0.12,
+            0.37,
+            0.62,
+            0.87
+          ],
+          "14": [
+            0.12,
+            0.34,
+            0.55,
+            0.76,
+            0.94
+          ],
+          "16": [
+            0.17,
+            0.5,
+            0.83
+          ]
+        },
+        "addedComponents": [
+          {
+            "id": "southbanks-block-04-crossgable-01",
+            "kind": "roof",
+            "block": 4,
+            "triangles": 8,
+            "bounds": [
+              [
+                2055.7679243795574,
+                21.326461791992188,
+                1236.431331384927
+              ],
+              [
+                2073.7290263950126,
+                23.576461791992188,
+                1254.921241587028
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 138.14938185928744,
+            "detail": {
+              "longAxisFraction": 0.1,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-04-crossgable-02",
+            "kind": "roof",
+            "block": 4,
+            "triangles": 8,
+            "bounds": [
+              [
+                2062.8167734562885,
+                21.326461791992188,
+                1243.0910632470623
+              ],
+              [
+                2080.7778754717438,
+                23.576461791992188,
+                1261.5809734491631
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 138.14938185928744,
+            "detail": {
+              "longAxisFraction": 0.4,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-04-crossgable-03",
+            "kind": "roof",
+            "block": 4,
+            "triangles": 8,
+            "bounds": [
+              [
+                2072.215238891891,
+                21.326461791992188,
+                1251.9707057299092
+              ],
+              [
+                2090.176340907463,
+                23.576461791992188,
+                1270.4606159320101
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 138.14938186114887,
+            "detail": {
+              "longAxisFraction": 0.8,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-04-end-gable",
+            "kind": "roof",
+            "block": 4,
+            "triangles": 8,
+            "bounds": [
+              [
+                2059.99057600752,
+                21.326461791992188,
+                1240.9073806572706
+              ],
+              [
+                2088.3033056382556,
+                23.576461791992188,
+                1268.2044772803783
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 255.04501265135332,
+            "detail": {
+              "endGable": true,
+              "halfWidthShortSideFraction": 0.18,
+              "riseM": 2.25,
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-05-crossgable-01",
+            "kind": "roof",
+            "block": 5,
+            "triangles": 8,
+            "bounds": [
+              [
+                1947.8201960253064,
+                20.714431762695312,
+                1295.9799754237756
+              ],
+              [
+                1964.8602158862632,
+                22.964431762695312,
+                1313.5216851020232
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 124.34352646976913,
+            "detail": {
+              "longAxisFraction": 0.13,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-05-crossgable-02",
+            "kind": "roof",
+            "block": 5,
+            "triangles": 8,
+            "bounds": [
+              [
+                1957.962706641294,
+                20.714431762695312,
+                1305.562589602545
+              ],
+              [
+                1975.0027265022509,
+                22.964431762695312,
+                1323.1042992807925
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 124.34352646976913,
+            "detail": {
+              "longAxisFraction": 0.5,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-05-crossgable-03",
+            "kind": "roof",
+            "block": 5,
+            "triangles": 8,
+            "bounds": [
+              [
+                1967.008729623165,
+                20.714431762695312,
+                1314.1092454921454
+              ],
+              [
+                1984.0487494840054,
+                22.964431762695312,
+                1331.650955170393
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 124.34352646977034,
+            "detail": {
+              "longAxisFraction": 0.83,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-05-end-gable",
+            "kind": "roof",
+            "block": 5,
+            "triangles": 8,
+            "bounds": [
+              [
+                1950.4918398173759,
+                20.714431762695312,
+                1298.9656883161515
+              ],
+              [
+                1982.473593326169,
+                22.964431762695312,
+                1329.7012005681172
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 282.2934114487737,
+            "detail": {
+              "endGable": true,
+              "halfWidthShortSideFraction": 0.18,
+              "riseM": 2.25,
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-06-crossgable-01",
+            "kind": "roof",
+            "block": 6,
+            "triangles": 8,
+            "bounds": [
+              [
+                1985.0540304172318,
+                21.29344940185547,
+                1294.7130512529984
+              ],
+              [
+                2003.0175213558832,
+                23.54344940185547,
+                1312.1547725703567
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 128.86474226840195,
+            "detail": {
+              "longAxisFraction": 0.17,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-06-crossgable-02",
+            "kind": "roof",
+            "block": 6,
+            "triangles": 8,
+            "bounds": [
+              [
+                1993.2051421799697,
+                21.29344940185547,
+                1286.0856828549877
+              ],
+              [
+                2011.1686331187375,
+                23.54344940185547,
+                1303.527404172346
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 128.864742270113,
+            "detail": {
+              "longAxisFraction": 0.5,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-06-crossgable-03",
+            "kind": "roof",
+            "block": 6,
+            "triangles": 8,
+            "bounds": [
+              [
+                2001.356253942824,
+                21.29344940185547,
+                1277.458314456977
+              ],
+              [
+                2019.3197448814753,
+                23.54344940185547,
+                1294.9000357743353
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 128.8647422684056,
+            "detail": {
+              "longAxisFraction": 0.83,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-06-end-gable",
+            "kind": "roof",
+            "block": 6,
+            "triangles": 8,
+            "bounds": [
+              [
+                1987.3475934816524,
+                21.29344940185547,
+                1279.3830554001033
+              ],
+              [
+                2017.0261818170547,
+                23.54344940185547,
+                1310.2300316272303
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 277.1162156820028,
+            "detail": {
+              "endGable": true,
+              "halfWidthShortSideFraction": 0.18,
+              "riseM": 2.25,
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-07-crossgable-01",
+            "kind": "roof",
+            "block": 7,
+            "triangles": 8,
+            "bounds": [
+              [
+                2011.827791214455,
+                21.483978271484375,
+                1269.3571948055178
+              ],
+              [
+                2029.7661597864935,
+                23.733978271484375,
+                1286.7445144243538
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 122.58625704562535,
+            "detail": {
+              "longAxisFraction": 0.07,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-07-crossgable-02",
+            "kind": "roof",
+            "block": 7,
+            "triangles": 8,
+            "bounds": [
+              [
+                2018.0257465671748,
+                21.483978271484375,
+                1262.433997943066
+              ],
+              [
+                2036.3071753985714,
+                23.733978271484375,
+                1280.1844222927466
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 133.4666940655358,
+            "detail": {
+              "longAxisFraction": 0.33,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-07-crossgable-03",
+            "kind": "roof",
+            "block": 7,
+            "triangles": 8,
+            "bounds": [
+              [
+                2026.076227320591,
+                21.483978271484375,
+                1253.9131402662024
+              ],
+              [
+                2044.3576561519876,
+                23.733978271484375,
+                1271.663564615883
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 133.46669406554065,
+            "detail": {
+              "longAxisFraction": 0.65,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-07-crossgable-04",
+            "kind": "roof",
+            "block": 7,
+            "triangles": 8,
+            "bounds": [
+              [
+                2032.617242932669,
+                21.483978271484375,
+                1246.9899434037507
+              ],
+              [
+                2050.8986717640655,
+                23.733978271484375,
+                1264.7403677534312
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 133.4666940655346,
+            "detail": {
+              "longAxisFraction": 0.91,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-07-end-gable",
+            "kind": "roof",
+            "block": 7,
+            "triangles": 8,
+            "bounds": [
+              [
+                2016.3312225691043,
+                21.483978271484375,
+                1251.0753232184798
+              ],
+              [
+                2046.555335197132,
+                23.733978271484375,
+                1282.489685734734
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 287.2435372277784,
+            "detail": {
+              "endGable": true,
+              "halfWidthShortSideFraction": 0.18,
+              "riseM": 2.25,
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-08-crossgable-01",
+            "kind": "roof",
+            "block": 8,
+            "triangles": 8,
+            "bounds": [
+              [
+                2024.9022869813489,
+                21.62126922607422,
+                1207.2695680130273
+              ],
+              [
+                2042.8633889969205,
+                23.87126922607422,
+                1225.7594782151282
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 138.14938186114037,
+            "detail": {
+              "longAxisFraction": 0.14,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-08-crossgable-02",
+            "kind": "roof",
+            "block": 8,
+            "triangles": 8,
+            "bounds": [
+              [
+                2034.0229592329124,
+                21.62126922607422,
+                1215.886752313003
+              ],
+              [
+                2051.984061248484,
+                23.87126922607422,
+                1234.3766625151038
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 138.14938186033882,
+            "detail": {
+              "longAxisFraction": 0.43,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-08-crossgable-03",
+            "kind": "roof",
+            "block": 8,
+            "triangles": 8,
+            "bounds": [
+              [
+                2042.5146196050337,
+                21.62126922607422,
+                1223.9096480403095
+              ],
+              [
+                2060.4757216206053,
+                23.87126922607422,
+                1242.3995582424104
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 138.14938186034001,
+            "detail": {
+              "longAxisFraction": 0.7,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-08-crossgable-04",
+            "kind": "roof",
+            "block": 8,
+            "triangles": 8,
+            "bounds": [
+              [
+                2049.1192443389446,
+                21.62126922607422,
+                1230.1496780505404
+              ],
+              [
+                2067.0803463544,
+                23.87126922607422,
+                1248.6395882526413
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 138.14938186034001,
+            "detail": {
+              "longAxisFraction": 0.91,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-08-end-gable",
+            "kind": "roof",
+            "block": 8,
+            "triangles": 8,
+            "bounds": [
+              [
+                2027.0714718124364,
+                21.62126922607422,
+                1209.805507899262
+              ],
+              [
+                2063.338631824823,
+                23.87126922607422,
+                1244.6179269356653
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 341.3883763084644,
+            "detail": {
+              "endGable": true,
+              "halfWidthShortSideFraction": 0.18,
+              "riseM": 2.25,
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-11-crossgable-01",
+            "kind": "roof",
+            "block": 11,
+            "triangles": 8,
+            "bounds": [
+              [
+                1919.0190392509103,
+                20.805633544921875,
+                1268.7687272690237
+              ],
+              [
+                1936.0590591117507,
+                23.055633544921875,
+                1286.3104369472712
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 124.34352646976913,
+            "detail": {
+              "longAxisFraction": 0.13,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-11-crossgable-02",
+            "kind": "roof",
+            "block": 11,
+            "triangles": 8,
+            "bounds": [
+              [
+                1929.3879451930989,
+                20.805633544921875,
+                1278.5652390858158
+              ],
+              [
+                1946.4279650540557,
+                23.055633544921875,
+                1296.1069487640634
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 124.34352646977884,
+            "detail": {
+              "longAxisFraction": 0.5,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-11-crossgable-03",
+            "kind": "roof",
+            "block": 11,
+            "triangles": 8,
+            "bounds": [
+              [
+                1938.6358883307548,
+                20.805633544921875,
+                1287.3026685444638
+              ],
+              [
+                1955.6759081915952,
+                23.055633544921875,
+                1304.8443782227114
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 124.34352646976913,
+            "detail": {
+              "longAxisFraction": 0.83,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-11-end-gable",
+            "kind": "roof",
+            "block": 11,
+            "triangles": 8,
+            "bounds": [
+              [
+                1921.611138739041,
+                20.805633544921875,
+                1271.6792869372293
+              ],
+              [
+                1954.204771507997,
+                23.055633544921875,
+                1302.99290091265
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 288.59460365099466,
+            "detail": {
+              "endGable": true,
+              "halfWidthShortSideFraction": 0.18,
+              "riseM": 2.25,
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-13-crossgable-01",
+            "kind": "roof",
+            "block": 13,
+            "triangles": 8,
+            "bounds": [
+              [
+                1962.831567493151,
+                21.646446228027344,
+                1220.8720756899565
+              ],
+              [
+                1980.9540273782331,
+                23.896446228027344,
+                1238.4681485239416
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 131.15562617253454,
+            "detail": {
+              "longAxisFraction": 0.12,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-13-crossgable-02",
+            "kind": "roof",
+            "block": 13,
+            "triangles": 8,
+            "bounds": [
+              [
+                1969.1210055816919,
+                21.646446228027344,
+                1214.2151556303725
+              ],
+              [
+                1987.243465466774,
+                23.896446228027344,
+                1231.8112284634262
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 131.15562616721704,
+            "detail": {
+              "longAxisFraction": 0.37,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-13-crossgable-03",
+            "kind": "roof",
+            "block": 13,
+            "triangles": 8,
+            "bounds": [
+              [
+                1975.4104436702328,
+                21.646446228027344,
+                1207.558235569857
+              ],
+              [
+                1993.532903555315,
+                23.896446228027344,
+                1225.1543084038422
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 131.1556261715826,
+            "detail": {
+              "longAxisFraction": 0.62,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-13-crossgable-04",
+            "kind": "roof",
+            "block": 13,
+            "triangles": 8,
+            "bounds": [
+              [
+                1981.6998817587737,
+                21.646446228027344,
+                1200.901315510273
+              ],
+              [
+                1999.822341643856,
+                23.896446228027344,
+                1218.4973883433267
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 131.15562616381067,
+            "detail": {
+              "longAxisFraction": 0.87,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-13-end-gable",
+            "kind": "roof",
+            "block": 13,
+            "triangles": 8,
+            "bounds": [
+              [
+                1966.3627146695508,
+                21.646446228027344,
+                1203.8652240196243
+              ],
+              [
+                1996.542771990993,
+                23.896446228027344,
+                1235.2379632117227
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 284.7457673454216,
+            "detail": {
+              "endGable": true,
+              "halfWidthShortSideFraction": 0.18,
+              "riseM": 2.25,
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-14-crossgable-01",
+            "kind": "roof",
+            "block": 14,
+            "triangles": 8,
+            "bounds": [
+              [
+                1976.4127592555014,
+                21.715904235839844,
+                1161.5648457035422
+              ],
+              [
+                1994.527374963509,
+                23.965904235839844,
+                1180.2127893259749
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 140.5210017542437,
+            "detail": {
+              "longAxisFraction": 0.12,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-14-crossgable-02",
+            "kind": "roof",
+            "block": 14,
+            "triangles": 8,
+            "bounds": [
+              [
+                1985.351091487566,
+                21.715904235839844,
+                1170.0097556896508
+              ],
+              [
+                2003.465707195457,
+                23.965904235839844,
+                1188.6576993120834
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 140.5210017542437,
+            "detail": {
+              "longAxisFraction": 0.34,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-14-crossgable-03",
+            "kind": "roof",
+            "block": 14,
+            "triangles": 8,
+            "bounds": [
+              [
+                1993.883135890821,
+                21.715904235839844,
+                1178.0708061307669
+              ],
+              [
+                2011.9977515988285,
+                23.965904235839844,
+                1196.7187497531995
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 140.5210017542437,
+            "detail": {
+              "longAxisFraction": 0.55,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-14-crossgable-04",
+            "kind": "roof",
+            "block": 14,
+            "triangles": 8,
+            "bounds": [
+              [
+                2002.415180294076,
+                21.715904235839844,
+                1186.1318565728143
+              ],
+              [
+                2020.5297960020835,
+                23.965904235839844,
+                1204.7798001943156
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 140.5210017432073,
+            "detail": {
+              "longAxisFraction": 0.76,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-14-crossgable-05",
+            "kind": "roof",
+            "block": 14,
+            "triangles": 8,
+            "bounds": [
+              [
+                2009.7283612112515,
+                21.715904235839844,
+                1193.041328378953
+              ],
+              [
+                2027.8429769191425,
+                23.965904235839844,
+                1211.6892720013857
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 140.52100175425343,
+            "detail": {
+              "longAxisFraction": 0.94,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-14-end-gable",
+            "kind": "roof",
+            "block": 14,
+            "triangles": 8,
+            "bounds": [
+              [
+                1978.1657465284225,
+                21.715904235839844,
+                1163.7117214845493
+              ],
+              [
+                2023.652262673946,
+                23.965904235839844,
+                1207.2392389513552
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 444.7846962253995,
+            "detail": {
+              "endGable": true,
+              "halfWidthShortSideFraction": 0.18,
+              "riseM": 2.25,
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-16-crossgable-01",
+            "kind": "roof",
+            "block": 16,
+            "triangles": 8,
+            "bounds": [
+              [
+                1915.8991128389025,
+                21.38536834716797,
+                1229.7621914790943
+              ],
+              [
+                1933.3856969384942,
+                23.63536834716797,
+                1246.740858248435
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 122.11319457030065,
+            "detail": {
+              "longAxisFraction": 0.17,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-16-crossgable-02",
+            "kind": "roof",
+            "block": 16,
+            "triangles": 8,
+            "bounds": [
+              [
+                1924.125697858748,
+                21.38536834716797,
+                1221.0549400402233
+              ],
+              [
+                1941.6122819583397,
+                23.63536834716797,
+                1238.033606809564
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 122.11319457196926,
+            "detail": {
+              "longAxisFraction": 0.5,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-16-crossgable-03",
+            "kind": "roof",
+            "block": 16,
+            "triangles": 8,
+            "bounds": [
+              [
+                1932.3522828785935,
+                21.38536834716797,
+                1212.3476886013523
+              ],
+              [
+                1949.8388669781853,
+                23.63536834716797,
+                1229.326355370693
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 122.11319457196926,
+            "detail": {
+              "longAxisFraction": 0.83,
+              "halfWidthShortSideFraction": 0.16,
+              "riseM": 2.25,
+              "source": "August 11 artist-concept plan; elevation A",
+              "precision": "inferred approximate"
+            }
+          },
+          {
+            "id": "southbanks-block-16-end-gable",
+            "kind": "roof",
+            "block": 16,
+            "triangles": 8,
+            "bounds": [
+              [
+                1917.9814252811484,
+                21.38536834716797,
+                1214.062185387127
+              ],
+              [
+                1947.7565545360558,
+                23.63536834716797,
+                1245.0263614626601
+              ]
+            ],
+            "watertight": true,
+            "volumeM3": 272.25691790266745,
+            "detail": {
+              "endGable": true,
+              "halfWidthShortSideFraction": 0.18,
+              "riseM": 2.25,
+              "precision": "inferred approximate"
+            }
+          }
+        ],
+        "assumedRiseM": 2.25
+      },
+      "reviewDate": "2026-09-29",
+      "modelCaveat": "Independent reconstruction of seventeen South Banks marketing-plan blocks, registered to City SP 26/2 W1 with street/address checks. The plan is artist concept reproduced by a broker, corroborated by the developer location map and official streetscape; not permit/BIM geometry. Three visible facade levels inform an estimated 9.9 m wall height, 12.9 m pitched roof maximum or 13.0 m flat-roof access/parapet maximum. The artist concept compresses road allowances; a direct street-centre fit places edge roofs beyond the legal parcel, so one whole-plan transform fits the visible landscaped site edge to the City parcel rectangle. No published metric heights were recovered: height uncertainty ±3 m, placement ±4 m and outline ±2 m are modelling judgements, not survey confidence intervals. Roof pitches, roof-access outlines, individual bays, windows, balcony/parapet dimensions and floor spacing are schematic; no dwelling count is inferred from facade bays. The City application records 306 townhouses, active with no approval date; this future-only model does not establish construction or occupancy. Candidate exterior refinement: repeated cross-gables interpreted from the 11 August 2026 South Banks artist-concept plan and Elevation A. Ridge centres are approximate plan picks; gable rise of 2.25 m and bay half-width of 0.16 times block short dimension are modelling assumptions. Existing block placement, eaves, main roof maximum, facade levels, terrain foundations and eight flat-roof blocks are unchanged. This does not establish permit dimensions, exact roof pitch, construction status or completion. Gable solids intersect the retained main roof as a visual assembly, not fabrication-ready union geometry. Cross-gables follow the original August 11, 2026 artist concept and Elevation A. Gable rise and spacing are inferred proportions, not approved dimensions. September launch material advertises 2029 occupancy as a non-guaranteed target; construction is unverified.",
+      "downloadSHA256": "bf3673b5ebe83ada7f6a84c4985b2b370d17597a0c6066065e8430556b647639",
+      "downloadBytes": 1837036,
+      "publicModelFileDownloadPermission": "Original design files and separate model downloads are not distributed. Adapted geometry is used in the interactive planning visualization."
     },
     {
       "id": "aura-additional-plan-envelopes",
@@ -67875,11 +70057,11 @@
   "projectUpdates": [
     {
       "projectId": "cooksville-toc",
-      "units": 3170,
-      "status": "Proposed; public engagement pending",
-      "statusDate": "2026-09-20",
+      "units": 3171,
+      "status": "Proposed; revised concept presented September 22, 2026",
+      "statusDate": "2026-09-22",
       "source": "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/cooksville-go-transit-oriented-community/",
-      "modelCaveat": "Current headline homes total changed from 3,055 to approximately 3,170; no current September 2026 full architectural drawing set is public."
+      "modelCaveat": "Native proposal geometry includes seven towers, podiums, setbacks and rooftop structures. It is a design proposal, not approved or completed construction. The source design elevations are retained; underground geometry is clipped to the atlas terrain. The terrain is approximate and the vertical datum is not survey-certified. Some drawing title blocks retain older issue labels. The Step 4 cover letter, September 2026 draft PJR and September 22 public presentation support the seven-tower, 3,171-home version. Final facade finishes and construction dates remain unconfirmed. The display model is not a watertight fabrication solid. Original engineering files are retained privately."
     },
     {
       "projectId": "promenade-infill",
@@ -68101,15 +70283,38 @@
       "modelAssets": [
         "clarkson-toc-current-plan.glb"
       ],
-      "modelQuality": "Plan-derived schematic envelope",
-      "geometryReviewDate": "2026-09-20",
-      "geometrySourceDate": "2025-11",
+      "modelQuality": "Architect-supplied schematic massing; georegistration and base grades remain approximate.",
+      "geometryReviewDate": "2026-09-29",
+      "geometrySourceDate": "2025-11-28",
       "geometrySources": [
+        {
+          "title": "Clarkson TOC 3D Model, packaged November 28, 2025",
+          "publisher": "Zeidler Architecture Inc.; supplied by Infrastructure Ontario",
+          "received": "2026-09-28",
+          "sourceDate": "2025-11-28",
+          "url": "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/clarkson-go-transit-oriented-community/",
+          "urlPurpose": "Public project overview; not a download link for the privately supplied source model",
+          "availability": "Native model supplied directly by Infrastructure Ontario following a request; source file is not republished",
+          "use": "Exact native seven-tower and three-podium massing; geometric outlines and relative heights",
+          "localSourceSha256": "ec474fc52ab3205581d94dc5bd980391637f2845525d8ddd08763b4aa9bbd48f",
+          "attribution": "Architectural massing by Zeidler Architecture Inc., supplied by Infrastructure Ontario. Independently positioned and visualised by Future Mississauga."
+        },
+        {
+          "title": "Clarkson GO Station, A100 Site Plan and A200–A202 Cross Sections / Elevations, project 24-01-048, revision 1",
+          "publisher": "Zeidler Architecture Inc.; supplied by Infrastructure Ontario",
+          "drawingDate": "2025-11-21",
+          "issue": "Issued for Step 1 Submission",
+          "received": "2026-09-28",
+          "url": "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/clarkson-go-transit-oriented-community/",
+          "urlPurpose": "Public project overview; drawings supplied directly, not a public document download",
+          "use": "Cross-check native model scope and written heights; A1 height conflict retained",
+          "copyright": "Copyright Zeidler Architecture Inc.; no blanket redistribution licence identified"
+        },
         {
           "url": "https://www.infrastructureontario.ca/4ae7bc/contentassets/a57a6b1574004fcfb9937d296d7a81b5/clarkson-planning-justification-report.pdf",
           "title": "Clarkson TOC Planning Justification Report, November 2025",
           "publisher": "Infrastructure Ontario / Fotenn / Zeidler Architects",
-          "use": "Printed page 29 Figure 12 horizontal envelopes and metric height labels; page 44 footprint statistics",
+          "use": "Published footprint statistics and earlier site registration reference; native geometry supersedes raster-traced contours",
           "localSourceSha256": "36d66219c757435e177faeb674164ceedfe119a765ab213f96a1dd3b70102ba9"
         },
         {
@@ -68134,7 +70339,7 @@
           "attribution": "Contains information licensed under the Open Government Licence – Ontario."
         }
       ],
-      "modelCaveat": "Podiums and seven tower footprints follow the official site-plan graphic. Raster tracing differs by up to approximately 4% from published footprint areas. Balconies, cladding, windows, railings, small facade recesses and rooftop equipment are omitted. No completion year or construction start is inferred. Existing GO buildings are retained. The official downloadable architectural set and native 3D model are listed as available upon request; no request was sent.",
+      "modelCaveat": "A100 and native geometry use 82.75 m for A1, while A200 labels 87.75 m. Native geometry is retained. No detailed facade or construction approval is implied.",
       "hasSupplementalModel": true,
       "projectId": "clarkson-toc"
     },
