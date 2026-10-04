@@ -1,11 +1,11 @@
 {
-  "edition": "Visual Polish 2026-09-26; IO and South Banks reference update 2026-09-29",
-  "checkedAt": "2026-09-29T20:48:23.237703+00:00",
+  "edition": "Visual Polish 2026-09-26; PMLA delivery-status review 2026-10-04",
+  "checkedAt": "2026-10-04T23:27:05.207708+00:00",
   "status": "Finalized locally; publication not performed by this step",
   "atlas": {
     "file": "Future-Mississauga-Atlas.pdf",
-    "bytes": 24929975,
-    "sha256": "ae86623bec9bf7626cab9fec181b34552d109ffb32d0e1d792af8b0499e3f80a",
+    "bytes": 24932708,
+    "sha256": "c9f219e7094e834a9c2b84ed78a80b3140b1a2e500c5e4ce14317bd183cfa6b4",
     "pages": 35,
     "font": "Bricolage Grotesque",
     "allPagesAndCaptionStripsVisuallyReviewed": true,
@@ -16,8 +16,8 @@
   },
   "film": {
     "file": "renders/Downtown-transformation.mp4",
-    "sha256": "bc0d7456b44dc1df3683f05293a3f98b1b675ec4b2aee4699b1ebeea2ab8f863",
-    "bytes": 954445,
+    "sha256": "ebbc2dafab6d00b9b9f5561df60a050acd5d1b35c8826aff94b4cb24d7e254c9",
+    "bytes": 958352,
     "width": 1920,
     "height": 700,
     "durationSeconds": 5.7,
@@ -38,23 +38,23 @@
   },
   "sourceEvidence": {
     "passedImages": 33,
-    "inputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-    "inputLockedAt": "2026-09-29T04:24:20.165839+00:00",
+    "inputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+    "inputLockedAt": "2026-10-04T23:01:19.856444+00:00",
     "all33ApprovedPNGBytesAndPixelsUnchangedByMediaBuild": true,
     "sourceImageRenderLocks": [
       {
         "file": "renders/downtown-future.png",
-        "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-        "retainedFromPredecessor": false
+        "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
+        "retainedFromPredecessor": true
       },
       {
         "file": "renders/cooksville-future.png",
         "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-        "retainedFromPredecessor": false
+        "retainedFromPredecessor": true
       },
       {
         "file": "renders/uptown-future.png",
-        "actualRenderInputLockSHA256": "7c6435a29b9c3b78bc099b9f03f77a90ce363dd8d007b1d4ee4a4f306bfd3b9b",
+        "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
         "retainedFromPredecessor": true
       },
       {
@@ -74,7 +74,7 @@
       },
       {
         "file": "renders/citywide-future.png",
-        "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+        "actualRenderInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
         "retainedFromPredecessor": false
       },
       {
@@ -85,16 +85,16 @@
       {
         "file": "renders/lakeview-future.png",
         "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-        "retainedFromPredecessor": false
+        "retainedFromPredecessor": true
       },
       {
         "file": "renders/clarkson-future.png",
         "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-        "retainedFromPredecessor": false
+        "retainedFromPredecessor": true
       },
       {
         "file": "renders/downtown-existing.png",
-        "actualRenderInputLockSHA256": "0020782cf42c1dcbde35150de5046a34a9b5b65296f2d08044001123a4f3553f",
+        "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
         "retainedFromPredecessor": true
       },
       {
@@ -114,18 +114,18 @@
       },
       {
         "file": "renders/downtown-skyline-existing.png",
-        "actualRenderInputLockSHA256": "0020782cf42c1dcbde35150de5046a34a9b5b65296f2d08044001123a4f3553f",
+        "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
         "retainedFromPredecessor": true
       },
       {
         "file": "renders/downtown-skyline-construction.png",
-        "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
+        "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
         "retainedFromPredecessor": true
       },
       {
         "file": "renders/downtown-skyline-future.png",
-        "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-        "retainedFromPredecessor": false
+        "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
+        "retainedFromPredecessor": true
       },
       {
         "file": "renders/port-credit-skyline-future.png",
@@ -135,17 +135,17 @@
       {
         "file": "renders/lakeview-skyline-future.png",
         "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-        "retainedFromPredecessor": false
+        "retainedFromPredecessor": true
       },
       {
         "file": "renders/clarkson-skyline-future.png",
         "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-        "retainedFromPredecessor": false
+        "retainedFromPredecessor": true
       },
       {
         "file": "renders/downtown-portrait-future.png",
-        "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-        "retainedFromPredecessor": false
+        "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
+        "retainedFromPredecessor": true
       },
       {
         "file": "renders/port-credit-portrait-future.png",
@@ -155,17 +155,17 @@
       {
         "file": "renders/lakeview-portrait-future.png",
         "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-        "retainedFromPredecessor": false
+        "retainedFromPredecessor": true
       },
       {
         "file": "renders/clarkson-portrait-future.png",
         "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-        "retainedFromPredecessor": false
+        "retainedFromPredecessor": true
       },
       {
         "file": "renders/cooksville-portrait-future.png",
         "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-        "retainedFromPredecessor": false
+        "retainedFromPredecessor": true
       },
       {
         "file": "renders/uptown-portrait-future.png",
@@ -179,8 +179,8 @@
       },
       {
         "file": "renders/airport-corporate-future.png",
-        "actualRenderInputLockSHA256": "7c6435a29b9c3b78bc099b9f03f77a90ce363dd8d007b1d4ee4a4f306bfd3b9b",
-        "retainedFromPredecessor": true
+        "actualRenderInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+        "retainedFromPredecessor": false
       },
       {
         "file": "renders/meadowvale-future.png",
@@ -199,7 +199,7 @@
       },
       {
         "file": "renders/downtown-landmark-future.png",
-        "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
+        "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
         "retainedFromPredecessor": true
       },
       {
@@ -215,38 +215,24 @@
     "All35pages and caption strips received visual layout review. This does not imply a new independent factual audit of all buildings."
   ],
   "reviewEvidence": [
-    "email-update-2026-09-28/media-qa/Atlas-independent-visual-review.json",
-    "email-update-2026-09-28/media-qa/Atlas-pages-01-18.png",
-    "email-update-2026-09-28/media-qa/Atlas-pages-19-35.png",
-    "email-update-2026-09-28/media-qa/Atlas-caption-strips-01-06.png",
-    "email-update-2026-09-28/media-qa/Atlas-caption-strips-07-12.png",
-    "email-update-2026-09-28/media-qa/Atlas-caption-strips-13-18.png",
-    "email-update-2026-09-28/media-qa/Atlas-caption-strips-19-24.png",
-    "email-update-2026-09-28/media-qa/Atlas-caption-strips-25-30.png",
-    "email-update-2026-09-28/media-qa/Atlas-caption-strips-31-33.png",
-    "email-update-2026-09-28/media-qa/Atlas-detail-page-34.png",
-    "email-update-2026-09-28/media-qa/Atlas-detail-page-35.png",
-    "email-update-2026-09-28/media-qa/Atlas-detail-page-01.png",
-    "email-update-2026-09-28/media-qa/Atlas-detail-page-02.png",
-    "email-update-2026-09-28/media-qa/Atlas-detail-page-03.png",
-    "email-update-2026-09-28/media-qa/Atlas-detail-page-04.png",
-    "email-update-2026-09-28/media-qa/Atlas-detail-page-09.png",
-    "email-update-2026-09-28/media-qa/Atlas-detail-page-14.png",
-    "email-update-2026-09-28/media-qa/Atlas-detail-page-15.png",
-    "email-update-2026-09-28/media-qa/Atlas-detail-page-16.png",
-    "email-update-2026-09-28/media-qa/Atlas-detail-page-17.png",
-    "email-update-2026-09-28/media-qa/Atlas-detail-page-18.png",
-    "email-update-2026-09-28/media-qa/Atlas-detail-page-19.png",
-    "email-update-2026-09-28/media-qa/Atlas-detail-page-20.png",
-    "email-update-2026-09-28/media-qa/Atlas-detail-page-21.png",
-    "email-update-2026-09-28/media-qa/Atlas-detail-page-22.png",
-    "email-update-2026-09-28/media-qa/Atlas-detail-page-23.png",
-    "email-update-2026-09-28/media-qa/film-checkpoint-1.png",
-    "email-update-2026-09-28/media-qa/film-checkpoint-2.png",
-    "email-update-2026-09-28/media-qa/film-checkpoint-3.png",
-    "email-update-2026-09-28/media-qa/film-checkpoint-4.png",
-    "email-update-2026-09-28/media-qa/film-checkpoint-5.png",
-    "email-update-2026-09-28/media-qa/film-checkpoint-6.png"
+    "pmla-status-2026-10-04/media-qa/Atlas-pages-01-18.png",
+    "pmla-status-2026-10-04/media-qa/Atlas-pages-19-35.png",
+    "pmla-status-2026-10-04/media-qa/Atlas-caption-strips-01-06.png",
+    "pmla-status-2026-10-04/media-qa/Atlas-caption-strips-07-12.png",
+    "pmla-status-2026-10-04/media-qa/Atlas-caption-strips-13-18.png",
+    "pmla-status-2026-10-04/media-qa/Atlas-caption-strips-19-24.png",
+    "pmla-status-2026-10-04/media-qa/Atlas-caption-strips-25-30.png",
+    "pmla-status-2026-10-04/media-qa/Atlas-caption-strips-31-33.png",
+    "pmla-status-2026-10-04/media-qa/Atlas-detail-page-01.png",
+    "pmla-status-2026-10-04/media-qa/Atlas-detail-page-32.png",
+    "pmla-status-2026-10-04/media-qa/Atlas-detail-page-34.png",
+    "pmla-status-2026-10-04/media-qa/Atlas-detail-page-35.png",
+    "pmla-status-2026-10-04/media-qa/film-checkpoint-1.png",
+    "pmla-status-2026-10-04/media-qa/film-checkpoint-2.png",
+    "pmla-status-2026-10-04/media-qa/film-checkpoint-3.png",
+    "pmla-status-2026-10-04/media-qa/film-checkpoint-4.png",
+    "pmla-status-2026-10-04/media-qa/film-checkpoint-5.png",
+    "pmla-status-2026-10-04/media-qa/film-checkpoint-6.png"
   ],
   "reviewEvidencePathBase": "Paths relative to the local Visual Polish edition workspace; no private machine path is published."
 }

@@ -228,7 +228,27 @@
         "source": "Official developer floor plans registered to municipal geometry",
         "modelPath": "work/research/supplemental/mcity-m3-upper-envelope.glb",
         "metadata": "work/research/supplemental/mcity-m3-upper-envelope.json",
-        "precision": "Illustrative interpolated upper envelope; solid stops at estimated floor 74, 238.02 m; crown omitted. ±15 m vertical section uncertainty. Exact maximum 260.29 m is a separate optional annotation."
+        "precision": "Original illustrative upper-envelope component stops at estimated floor 74, 238.02 m, with ±15 m join-elevation uncertainty. Current scene loads it together with the separately documented approximate crown silhouette; this component alone contains no crown.",
+        "historicalPrecision": "Illustrative interpolated upper envelope; solid stops at estimated floor 74, 238.02 m; crown omitted. ±15 m vertical section uncertainty. Exact maximum 260.29 m is a separate optional annotation.",
+        "historicalPrecisionNote": "Description of the original upper-envelope component alone, retained as source history; it predates the separate crown silhouette."
+      },
+      {
+        "source": "July 2026 construction photographs and developer plans; separate approximate crown silhouette",
+        "modelPath": "outputs/models/supplemental/refinement-downtown/mcity-m3-crown-silhouette.glb",
+        "assetId": "mcity-m3-crown-silhouette",
+        "localMetadata": "outputs/research/refinement-models.json",
+        "evidenceDate": "2026-07-15",
+        "precision": "Current scene includes a photo-and-plan-derived stepped crown silhouette anchored to the verified 260.29 m architectural maximum. Intermediate strip widths, heights and closure are schematic: ±6 m profile, ±4 m outline, ±5 m registration and ±15 m join-elevation uncertainty. Mechanical cavities, steelwork and balcony overhangs are omitted. This is an approximate visual shell, not an as-built roof or proof of final completion.",
+        "loadsWith": [
+          "outputs/models/supplemental/mcity-m3-upper-envelope.glb",
+          "municipal mesh 63-6249"
+        ],
+        "sources": [
+          "https://www.mcitycondos.com/construction.php",
+          "https://urbantoronto.ca/news/2026/07/crown-materializing-crane-dematerialzing-m3-canadas-tallest-building-outside-toronto.61378",
+          "https://www.linkedin.com/pulse/walters-group-may-frameworks-walters-group-2-gdn3e"
+        ],
+        "reviewed": "2026-10-04"
       }
     ],
     "includeInModel": true,
@@ -20121,5 +20141,181 @@
         "claims": "Existing 9-storey office retained exactly from three disconnected components of municipal source 63-5062 (164 original triangles, including walls to original grade). Separate low retail source components and 63-2579 are replaced in the future scenario only, following the retained-office/heritage layout of approved RA5-62. 63-1607 Wilcox heritage remains in original context unchanged. No architectural vertices, faces, coordinates, heights or base were fabricated, clipped or rescaled. Municipal source geometry is a dated massing snapshot, not a surveyed architectural as-built. Baseline/context construction modes retain all original geometry."
       }
     ]
+  },
+  {
+    "id": "block-nine",
+    "name": "Block Nine: North and South towers",
+    "address": "4085 and 4055 Parkside Village Drive",
+    "aliases": [
+      "Block 9",
+      "Block Nine Condominium North Tower",
+      "Block Nine North",
+      "Block Nine South",
+      "4085 Parkside Village Dr",
+      "4055 Parkside Village Dr"
+    ],
+    "lat": 43.58587848945207,
+    "lon": -79.64805211441015,
+    "position": [
+      -5857.199450000015,
+      138.6503857421875,
+      233.1970499996096
+    ],
+    "researchArea": "Downtown / Parkside Village",
+    "status": "completed",
+    "statusDate": "2026-10-03",
+    "lastStatusReview": "2026-10-03",
+    "modelLayer": "existing",
+    "storeys": [
+      25,
+      34
+    ],
+    "heightM": [
+      79.9,
+      106.5
+    ],
+    "heightNote": "Approximate secondary catalogue envelopes, not verified as-built heights",
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "completionDateNote": "Both buildings are completed. Secondary references report 2020; no exact occupancy/completion day has been verified.",
+    "completion": {
+      "actual": null,
+      "target": null,
+      "targetIsGuaranteed": false,
+      "note": "Completed; secondary sources report 2020. Exact completion date unverified."
+    },
+    "summary": "Two completed Parkside Village towers sharing a podium, added after the missing 4085 address was identified in community feedback.",
+    "includeInModel": true,
+    "geometryVerifiedCurrent": false,
+    "geometryCoverage": "reference-derived supplemental model",
+    "meshIds": [
+      "block-nine-reference-derived-shared-podium",
+      "block-nine-reference-derived-North-tower",
+      "block-nine-reference-derived-North-balcony-05",
+      "block-nine-reference-derived-North-balcony-06",
+      "block-nine-reference-derived-North-balcony-07",
+      "block-nine-reference-derived-North-balcony-08",
+      "block-nine-reference-derived-North-balcony-09",
+      "block-nine-reference-derived-North-balcony-10",
+      "block-nine-reference-derived-North-balcony-11",
+      "block-nine-reference-derived-North-balcony-12",
+      "block-nine-reference-derived-North-balcony-13",
+      "block-nine-reference-derived-North-balcony-14",
+      "block-nine-reference-derived-North-balcony-15",
+      "block-nine-reference-derived-North-balcony-16",
+      "block-nine-reference-derived-North-balcony-17",
+      "block-nine-reference-derived-North-balcony-18",
+      "block-nine-reference-derived-North-balcony-19",
+      "block-nine-reference-derived-North-balcony-20",
+      "block-nine-reference-derived-North-balcony-21",
+      "block-nine-reference-derived-North-balcony-22",
+      "block-nine-reference-derived-North-balcony-23",
+      "block-nine-reference-derived-North-balcony-24",
+      "block-nine-reference-derived-North-balcony-25",
+      "block-nine-reference-derived-North-fin-0-rear",
+      "block-nine-reference-derived-North-fin-1-rear",
+      "block-nine-reference-derived-North-fin-1-front",
+      "block-nine-reference-derived-North-fin-2-rear",
+      "block-nine-reference-derived-North-roof-enclosure",
+      "block-nine-reference-derived-South-tower",
+      "block-nine-reference-derived-South-balcony-05",
+      "block-nine-reference-derived-South-balcony-06",
+      "block-nine-reference-derived-South-balcony-07",
+      "block-nine-reference-derived-South-balcony-08",
+      "block-nine-reference-derived-South-balcony-09",
+      "block-nine-reference-derived-South-balcony-10",
+      "block-nine-reference-derived-South-balcony-11",
+      "block-nine-reference-derived-South-balcony-12",
+      "block-nine-reference-derived-South-balcony-13",
+      "block-nine-reference-derived-South-balcony-14",
+      "block-nine-reference-derived-South-balcony-15",
+      "block-nine-reference-derived-South-balcony-16",
+      "block-nine-reference-derived-South-balcony-17",
+      "block-nine-reference-derived-South-balcony-18",
+      "block-nine-reference-derived-South-balcony-19",
+      "block-nine-reference-derived-South-balcony-20",
+      "block-nine-reference-derived-South-balcony-21",
+      "block-nine-reference-derived-South-balcony-22",
+      "block-nine-reference-derived-South-balcony-23",
+      "block-nine-reference-derived-South-balcony-24",
+      "block-nine-reference-derived-South-balcony-25",
+      "block-nine-reference-derived-South-balcony-26",
+      "block-nine-reference-derived-South-balcony-27",
+      "block-nine-reference-derived-South-balcony-28",
+      "block-nine-reference-derived-South-balcony-29",
+      "block-nine-reference-derived-South-balcony-30",
+      "block-nine-reference-derived-South-balcony-31",
+      "block-nine-reference-derived-South-balcony-32",
+      "block-nine-reference-derived-South-balcony-33",
+      "block-nine-reference-derived-South-balcony-34",
+      "block-nine-reference-derived-South-fin-0-rear",
+      "block-nine-reference-derived-South-fin-1-rear",
+      "block-nine-reference-derived-South-fin-1-front",
+      "block-nine-reference-derived-South-fin-2-rear",
+      "block-nine-reference-derived-South-roof-enclosure",
+      "block-nine-reference-derived-podium-slab-1",
+      "block-nine-reference-derived-podium-slab-2",
+      "block-nine-reference-derived-podium-slab-3",
+      "block-nine-reference-derived-podium-slab-4"
+    ],
+    "geometrySources": [
+      {
+        "file": "outputs/models/supplemental/block-nine/block-nine-reference-derived.glb",
+        "source": "Current City mapped podium and original developer reference, with disclosed estimated detail"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://amacon.com/portfolio/",
+        "publisher": "Amacon",
+        "title": "Amacon portfolio: Block Nine",
+        "accessed": "2026-10-03",
+        "claim": "Developer lists Block Nine North as completed, 25 storeys, sister tower to Block Nine South."
+      },
+      {
+        "url": "https://www7.mississauga.ca/documents/pb/opendata/2020/2020_Residential_Directory_Report_Final.pdf#page=102",
+        "publisher": "City of Mississauga",
+        "title": "Residential Directory 2020, page 102",
+        "accessed": "2026-10-03",
+        "claim": "4085 Parkside Village Drive: Tower A, 25 storeys; 4055: Tower B, 34 storeys."
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Building_Footprints_2024/FeatureServer/0",
+        "publisher": "City of Mississauga",
+        "title": "2024 mapped building footprints",
+        "accessed": "2026-10-03",
+        "claim": "Mapped building outlines OBJECTID 108579 and 108556 register the shared podium."
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Address/FeatureServer/0",
+        "publisher": "City of Mississauga",
+        "title": "Municipal address points",
+        "accessed": "2026-10-03",
+        "claim": "Address IDs 441547 and 441546 identify 4085 and 4055 Parkside Village Drive."
+      },
+      {
+        "url": "https://condopundit.com/wp-content/uploads/2015/04/Block-Nine-Parkside-Village-Brochure.pdf",
+        "publisher": "Amacon original developer brochure, third-party public copy",
+        "title": "Block Nine brochure, pages 3 and 8",
+        "accessed": "2026-10-03",
+        "claim": "Original render and amenity plan show both tower positions, articulated balcony facades and shared podium; source is illustrative, not as-built survey."
+      },
+      {
+        "url": "https://skyscraperpage.com/b110806/mississauga/block-9-north-at-parkside-village",
+        "publisher": "SkyscraperPage (secondary catalogue)",
+        "title": "Block 9 North",
+        "accessed": "2026-10-03",
+        "claim": "Built 2020, 25 storeys and roof approximately 79.9 m; height retained as approximate."
+      },
+      {
+        "url": "https://skyscraperpage.com/b110807/mississauga/block-9-south-at-parkside-village",
+        "publisher": "SkyscraperPage (secondary catalogue)",
+        "title": "Block 9 South",
+        "accessed": "2026-10-03",
+        "claim": "Built 2020, 34 storeys and roof approximately 106.5 m; height retained as approximate."
+      }
+    ],
+    "modelCaveat": "Existing status and 25/34 storeys are corroborated by primary sources. Approximate 79.9/106.5 m vertical envelopes come from a secondary catalogue, not a current surveyed elevation. Tower plates are interpreted from the developer amenity illustration registered to current City mapped footprint limits. Allow about 5 m for tower position/contour interpretation; this is not a statistical accuracy claim. The 14 m podium, floor divisions, balcony projections, vertical fins and roof enclosures are simplified reference-based estimates. Exact as-built facade and slab dimensions have not been obtained. Nine selected native City LOD2 scene leaves and the inherited municipal model do not contain either tower. Existing neighbouring source geometry is retained. No downloadable architect-native model was located.",
+    "district": "Downtown"
   }
 ]

@@ -1,28 +1,28 @@
 {
   "edition": "Visual Polish 2026-09-26",
-  "researchReviewed": "Base 2026-09-20; targeted community review 2026-09-26; bounded IO and South Banks reference update 2026-09-29",
+  "researchReviewed": "Base 2026-09-20; targeted community review 2026-09-26; bounded IO and South Banks reference update 2026-09-29; PMLA delivery-status review 2026-10-04",
   "images": [
     {
       "file": "renders/downtown-future.png",
       "width": 3840,
       "height": 2400,
-      "sha256": "7a779588320d8deabad5df81024c632bb1152c8df5c173628d8325f7534cb5c2",
-      "pixelSHA256": "61ebfa7662882cd238a6e0c31a8738047f9912c68d4947a23cb9ef0fe93faa21",
+      "sha256": "b5f38ab162280e09e007360c0554dc629f5625625d71a00d2cb247047fd0a335",
+      "pixelSHA256": "d5427608f71a64460c91d3de5b020c1248a881e57ab53cbbb1b809549c31ae00",
       "pixelPreservationVerified": true,
       "wholeFileUnchanged": true,
       "nativeImageChunksPreserved": true,
-      "nativeImageChunksSHA256": "4440d2c585435f99e53bca5d262c14bc64a030b0dc4881f7b0abe7b8feea370d",
+      "nativeImageChunksSHA256": "e182c79bf2358a166a8343f1f1c244386cbb1621bf5f165524c967f625e3b369",
       "embeddedMetadata": {
-        "Date": "2026/09/29 00:28:41",
+        "Date": "2026/10/03 00:56:18",
         "Time": "00:00:00:01",
         "Frame": "001",
         "Camera": "Camera",
         "Scene": "Scene",
-        "RenderTime": "00:23.07",
+        "RenderTime": "00:23.48",
         "cycles.ViewLayer.samples": "96",
-        "cycles.ViewLayer.total_time": "00:19.74",
-        "cycles.ViewLayer.render_time": "00:19.09",
-        "cycles.ViewLayer.synchronization_time": "00:00.65",
+        "cycles.ViewLayer.total_time": "00:19.84",
+        "cycles.ViewLayer.render_time": "00:19.14",
+        "cycles.ViewLayer.synchronization_time": "00:00.69",
         "Title": "Future Mississauga",
         "Author": "Daniel Sultan",
         "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
@@ -48,11 +48,11 @@
         "samplesMaximum": 96,
         "nativeNotUpscaled": true
       },
-      "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "retainedByteIdenticalFromPredecessor": false,
-      "originalRenderRecordSHA256": "cfb390c6270028bee7e7492823c017cc9292da86adcdeadc496c4c54fe4cbde0",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "8ff665fe5cb6315fd5b4aad2ba61633bd840b5e36c48210fef2dcdf0e202a17f",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/cooksville-future.png",
@@ -101,32 +101,32 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "retainedByteIdenticalFromPredecessor": false,
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "8ce229a3b12dc55d3525f40ac9328b2cc8d73a48375118825b3605a4183c0dea",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/uptown-future.png",
       "width": 3840,
       "height": 2400,
-      "sha256": "54b5e87e473a36405cdc4bc8a7fd04f354a54c84b31e4683f09359f21c526656",
-      "pixelSHA256": "a2bd2c2c0396961d8a1769218f3e5f61096658760739231efcb58de2f7efeac9",
+      "sha256": "313d357d37233aca91d8f0021925b7887e9d8bec91c6c19a152d127a0f98f8e0",
+      "pixelSHA256": "ce11ab7cd3ba121877472c1ecc311756396fa67369a6a3c102d6965d7c26aa7f",
       "pixelPreservationVerified": true,
       "wholeFileUnchanged": true,
       "nativeImageChunksPreserved": true,
-      "nativeImageChunksSHA256": "5901d0af82b4ebbf010b4a833172e172498186d969161571e113b66d0d5f098f",
+      "nativeImageChunksSHA256": "caf356a444001468c4a8760705c6ab06c3f9391b4e88194775b4fe05601c6cb4",
       "embeddedMetadata": {
-        "Date": "2026/09/27 20:18:26",
+        "Date": "2026/10/03 00:57:06",
         "Time": "00:00:00:01",
         "Frame": "001",
         "Camera": "Camera",
         "Scene": "Scene",
-        "RenderTime": "00:19.69",
+        "RenderTime": "00:21.96",
         "cycles.ViewLayer.samples": "96",
-        "cycles.ViewLayer.total_time": "00:16.96",
-        "cycles.ViewLayer.render_time": "00:16.38",
-        "cycles.ViewLayer.synchronization_time": "00:00.58",
+        "cycles.ViewLayer.total_time": "00:18.30",
+        "cycles.ViewLayer.render_time": "00:17.63",
+        "cycles.ViewLayer.synchronization_time": "00:00.66",
         "Title": "Future Mississauga",
         "Author": "Daniel Sultan",
         "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
@@ -152,11 +152,11 @@
         "samplesMaximum": 96,
         "nativeNotUpscaled": true
       },
-      "actualRenderInputLockSHA256": "7c6435a29b9c3b78bc099b9f03f77a90ce363dd8d007b1d4ee4a4f306bfd3b9b",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalRenderRecordSHA256": "a3df6b488f32013ba4dadf4035eb0f3c1aa36c67fb7407ed34f59e9372340ec9",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "originalRenderRecordSHA256": "b32a251c76047e95be03d01c0cc18528d95c440bc07a3567cb9a8ebe30b15009",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/dixie-applewood-future.png",
@@ -205,10 +205,10 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
       "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "a33c624ee166caeda2891414787911cc4f031d00bf4de0555c450f272edb3757",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/erindale-future.png",
@@ -257,10 +257,10 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
       "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "3719ef56e295decab7e353a799d9b6eb34e23ff02d261229571f2bae777dac3a",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/heartland-future.png",
@@ -309,32 +309,32 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "7c6435a29b9c3b78bc099b9f03f77a90ce363dd8d007b1d4ee4a4f306bfd3b9b",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
       "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "d84d7fdec14419a990edd892fcb14b3b61c65cd46cdae8cd2f4d73bd9be52407",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/citywide-future.png",
       "width": 3840,
       "height": 2400,
-      "sha256": "49ee7b5a25331faa4f510e0d30c01489c0b335d98e6c482a15cea79015b3e6a0",
-      "pixelSHA256": "477b5ebc0eea60fbff5ea71dd03e6ecd14336a907847cd4644679e4aede45443",
+      "sha256": "f821e005829886c91259c64968919e1304af3fde0fabc4d5d2a2853f39aedfa8",
+      "pixelSHA256": "a35527816c8b2014e9a58172f196c9a0f0999de91e2ed204de8c561e835ac669",
       "pixelPreservationVerified": true,
       "wholeFileUnchanged": true,
       "nativeImageChunksPreserved": true,
-      "nativeImageChunksSHA256": "3e49e89a86c28dc510f4bccff3d73ed45ae68cc4b345614a05ec79818043d347",
+      "nativeImageChunksSHA256": "d37fd4be749dbedb911469cf3ee99cc73c4c0c8dc1eb089210385aacd53fa858",
       "embeddedMetadata": {
-        "Date": "2026/09/29 00:31:05",
+        "Date": "2026/10/04 19:04:32",
         "Time": "00:00:00:01",
         "Frame": "001",
         "Camera": "Camera",
         "Scene": "Scene",
-        "RenderTime": "00:15.58",
+        "RenderTime": "00:20.90",
         "cycles.ViewLayer.samples": "96",
-        "cycles.ViewLayer.total_time": "00:12.40",
-        "cycles.ViewLayer.render_time": "00:10.47",
-        "cycles.ViewLayer.synchronization_time": "00:01.93",
+        "cycles.ViewLayer.total_time": "00:14.95",
+        "cycles.ViewLayer.render_time": "00:11.60",
+        "cycles.ViewLayer.synchronization_time": "00:03.34",
         "Title": "Future Mississauga",
         "Author": "Daniel Sultan",
         "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
@@ -360,11 +360,11 @@
         "samplesMaximum": 96,
         "nativeNotUpscaled": true
       },
-      "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "actualRenderInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
       "retainedByteIdenticalFromPredecessor": false,
-      "originalRenderRecordSHA256": "5ee25eeab4d41f2e907acdef09f4c28965bc8b71c60d4d79fbc08d5128f6bdc0",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "originalRenderRecordSHA256": "deb87486b0a4b36ea891e181707ccd221e87373de736ab73d62a8238c9f7aa29",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/port-credit-future.png",
@@ -413,10 +413,10 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
       "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "a2628844c2a3bdf55981e96e1cb216323cd265ad7fce94f5308ffb976203b247",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/lakeview-future.png",
@@ -465,10 +465,10 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "retainedByteIdenticalFromPredecessor": false,
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "8d62b284ef490dda14b3fb67373f5e573e90078a9fa5198fb083e442c6e0455a",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/clarkson-future.png",
@@ -517,33 +517,33 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "retainedByteIdenticalFromPredecessor": false,
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "7675f5ff848f94476edf4f8668ee940a5876f24e1b61339a4608152c3314a8b6",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/downtown-existing.png",
       "width": 3840,
       "height": 2400,
-      "sha256": "7898cfb063f36ce3a8df5971f5bedbd93111f3b25ace6b39e9687f4dd3c39aba",
-      "pixelSHA256": "b843d0f53dfc3152fc4ff2c2e342863073ef43d5d68c77cac5bafbc0bec7511c",
+      "sha256": "e81eab1d3692af54e0e0fdb22d211c924524e4c4236311e181de3173e5bee857",
+      "pixelSHA256": "d7a906e212b3f6a2dc69dfb00c01132569170e3c5055d354bf8fdc2f23bfb97e",
       "pixelPreservationVerified": true,
       "wholeFileUnchanged": true,
       "nativeImageChunksPreserved": true,
-      "nativeImageChunksSHA256": "5644dd25c7f40d71103f4098ab428beea18ea86e1988ccbf1f8bbf803cf324d0",
+      "nativeImageChunksSHA256": "da4c16e91f2e579bbec2f8180879deda04b3514c5078ca0d80319b69f6022ca9",
       "embeddedMetadata": {
         "File": "<untitled>",
-        "Date": "2026/09/27 03:20:39",
+        "Date": "2026/10/03 00:59:57",
         "Time": "00:00:00:01",
         "Frame": "001",
         "Camera": "Camera",
         "Scene": "Scene",
-        "RenderTime": "02:13.81",
+        "RenderTime": "00:23.42",
         "cycles.ViewLayer.samples": "96",
-        "cycles.ViewLayer.total_time": "01:57.12",
-        "cycles.ViewLayer.render_time": "01:55.63",
-        "cycles.ViewLayer.synchronization_time": "00:01.49",
+        "cycles.ViewLayer.total_time": "00:20.35",
+        "cycles.ViewLayer.render_time": "00:19.60",
+        "cycles.ViewLayer.synchronization_time": "00:00.74",
         "Title": "Future Mississauga",
         "Author": "Daniel Sultan",
         "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
@@ -569,11 +569,11 @@
         "samplesMaximum": 96,
         "nativeNotUpscaled": true
       },
-      "actualRenderInputLockSHA256": "0020782cf42c1dcbde35150de5046a34a9b5b65296f2d08044001123a4f3553f",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalRenderRecordSHA256": "80f18ddd454030b41a861cab813896eb1d617f581d053bad9eb98e4897377042",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "originalRenderRecordSHA256": "68072320a0db7995d39af0bb50088c8b661e44129fc917a2cf45a3d908ebd2cd",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/port-credit-existing.png",
@@ -623,10 +623,10 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
       "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "f56ab16843c9a68b616ff595fc80c605af027c842dc54ec243323290d9ef7db9",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/lakeview-existing.png",
@@ -676,10 +676,10 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
       "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "b895283fc727d3865b83c1f168cc2bc5d762c03045978a538c37a2625a3c10bc",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/clarkson-existing.png",
@@ -729,33 +729,33 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
       "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "b6b2cd94de098d7a213dff83ca60f385073d2e41ff0f0cf1f18d23375579bbc7",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/downtown-skyline-existing.png",
       "width": 3840,
       "height": 1400,
-      "sha256": "dae84f55501d2e4311cc692c26fb8f55a4f4a925c8d37e39c509dae68e252b6a",
-      "pixelSHA256": "c4c42b8dc5e3fd9c8c05d92d7735c27b7f3db3360b99fdec7a4779fd4241b197",
+      "sha256": "789db0cb8b9ec3357a2dcd5adf62afd990ddab26e1453c952978a3eaa565ba7a",
+      "pixelSHA256": "6c54ae39b26c73163d9aeb70b767c1642b4405a696030d52ca290047b1f8d2c4",
       "pixelPreservationVerified": true,
       "wholeFileUnchanged": true,
       "nativeImageChunksPreserved": true,
-      "nativeImageChunksSHA256": "3ae8c09de6a43c42d0e63656f85174bc7bd667b580b831d6148a98a541997b5c",
+      "nativeImageChunksSHA256": "b419308e64b6bb49cc5072ce4baa51a5fefe0561879d35fbe81ec5b1424eef4f",
       "embeddedMetadata": {
         "File": "<untitled>",
-        "Date": "2026/09/27 03:32:30",
+        "Date": "2026/10/03 01:00:35",
         "Time": "00:00:00:01",
         "Frame": "001",
         "Camera": "Camera",
         "Scene": "Scene",
-        "RenderTime": "01:22.16",
+        "RenderTime": "00:14.70",
         "cycles.ViewLayer.samples": "96",
-        "cycles.ViewLayer.total_time": "01:12.74",
-        "cycles.ViewLayer.render_time": "01:11.32",
-        "cycles.ViewLayer.synchronization_time": "00:01.41",
+        "cycles.ViewLayer.total_time": "00:12.48",
+        "cycles.ViewLayer.render_time": "00:11.74",
+        "cycles.ViewLayer.synchronization_time": "00:00.73",
         "Title": "Future Mississauga",
         "Author": "Daniel Sultan",
         "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
@@ -781,34 +781,34 @@
         "samplesMaximum": 96,
         "nativeNotUpscaled": true
       },
-      "actualRenderInputLockSHA256": "0020782cf42c1dcbde35150de5046a34a9b5b65296f2d08044001123a4f3553f",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalRenderRecordSHA256": "98db1f85e6311c266698efb351d74f13d6e18af9a53542f21139cd699d5a43fd",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "originalRenderRecordSHA256": "3ec85b7ed235ca8b9dba958a8133efa3169ae3c3843d5cadb8a48d00f4d5e401",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/downtown-skyline-construction.png",
       "width": 3840,
       "height": 1400,
-      "sha256": "6820dc696161d2ffbe6ec2e0525664951698461aa9656a7e10f02d54fe89a020",
-      "pixelSHA256": "cca900c7541c0d58a58c7c8c0ec5cd3e2f23eafc6711441e11d09189e488d94c",
+      "sha256": "ae96d2d120b61a9d158af5ac517a43911a132f6d53c09d85aff78a72d7807ad0",
+      "pixelSHA256": "61fe278c98dbb7c1d1d7348f907fc6f78af95837de141c47096c4271c996beeb",
       "pixelPreservationVerified": true,
       "wholeFileUnchanged": true,
       "nativeImageChunksPreserved": true,
-      "nativeImageChunksSHA256": "5df00e9b7b9dbe92401351043bcafe773dd95f4a45dd68ab2a6dc29a44473fe0",
+      "nativeImageChunksSHA256": "9970d1052c5689dd0cede716f159aeaeff745f3a3c55def35fddb9464d405467",
       "embeddedMetadata": {
         "File": "<untitled>",
-        "Date": "2026/09/27 13:19:49",
+        "Date": "2026/10/03 01:01:12",
         "Time": "00:00:00:01",
         "Frame": "001",
         "Camera": "Camera",
         "Scene": "Scene",
-        "RenderTime": "00:12.18",
+        "RenderTime": "00:15.22",
         "cycles.ViewLayer.samples": "96",
-        "cycles.ViewLayer.total_time": "00:10.49",
-        "cycles.ViewLayer.render_time": "00:10.00",
-        "cycles.ViewLayer.synchronization_time": "00:00.49",
+        "cycles.ViewLayer.total_time": "00:12.58",
+        "cycles.ViewLayer.render_time": "00:11.98",
+        "cycles.ViewLayer.synchronization_time": "00:00.59",
         "Title": "Future Mississauga",
         "Author": "Daniel Sultan",
         "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
@@ -834,34 +834,34 @@
         "samplesMaximum": 96,
         "nativeNotUpscaled": true
       },
-      "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalRenderRecordSHA256": "f6add91f3c28221d24c48bc7403bfadd16035d2f69fe896c8a3df99bcd663604",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "originalRenderRecordSHA256": "415eb9ebca43e148aa0e93045306cd2740d923563e600a82b87125c871cb1059",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/downtown-skyline-future.png",
       "width": 3840,
       "height": 1400,
-      "sha256": "4d144d46b3ed4d951e70794e7d856b851bcc6910092c3be063bf2921d5761c10",
-      "pixelSHA256": "942ba8dbd119ca50abf90f74c9059abf40bc601e23e9cc4c4246d8cafe7bc05c",
+      "sha256": "87f119e55068c68e734cdaa9a455feb96e3b541e40e74cf49976b156ebe0175f",
+      "pixelSHA256": "f5bb80c46a1b6797987524bb71e4f28d0edf20f69a0258246e48a3cabd6e7c57",
       "pixelPreservationVerified": true,
       "wholeFileUnchanged": true,
       "nativeImageChunksPreserved": true,
-      "nativeImageChunksSHA256": "14b045d5ce000461d988529cd4577f6c4765e5227268c5aa1ee18db78d5904f3",
+      "nativeImageChunksSHA256": "1203e7d248973b721af2342e61b715bc59090ed9191631723e04d715da5d1d9f",
       "embeddedMetadata": {
         "File": "<untitled>",
-        "Date": "2026/09/29 00:33:01",
+        "Date": "2026/10/03 01:01:53",
         "Time": "00:00:00:01",
         "Frame": "001",
         "Camera": "Camera",
         "Scene": "Scene",
-        "RenderTime": "00:13.60",
+        "RenderTime": "00:17.88",
         "cycles.ViewLayer.samples": "96",
-        "cycles.ViewLayer.total_time": "00:11.55",
-        "cycles.ViewLayer.render_time": "00:10.97",
-        "cycles.ViewLayer.synchronization_time": "00:00.58",
+        "cycles.ViewLayer.total_time": "00:15.30",
+        "cycles.ViewLayer.render_time": "00:14.42",
+        "cycles.ViewLayer.synchronization_time": "00:00.87",
         "Title": "Future Mississauga",
         "Author": "Daniel Sultan",
         "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
@@ -887,11 +887,11 @@
         "samplesMaximum": 96,
         "nativeNotUpscaled": true
       },
-      "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "retainedByteIdenticalFromPredecessor": false,
-      "originalRenderRecordSHA256": "fc89bcdc41809adc1de26c39dfeb2ddf3a55413d9472bd908efd13250ed32640",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "2168d4fff2ffce7a3d5d62aaba95ba00bab52c0bccab3af0c6f1a55d7110e6d2",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/port-credit-skyline-future.png",
@@ -941,10 +941,10 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
       "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "5d39dd5711295f1a276161e3d7b7be7e19e694bdb1a882f7bfe56386d0f333b8",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/lakeview-skyline-future.png",
@@ -994,10 +994,10 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "retainedByteIdenticalFromPredecessor": false,
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "c6235cc20d8df37c5ee4a4f93884ba3f3c8ddca023f068866663b382e85d6e6f",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/clarkson-skyline-future.png",
@@ -1047,33 +1047,33 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "retainedByteIdenticalFromPredecessor": false,
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "a1ae95c40c786496e27dd85849618c6b7dbe7d470d583f37586358c9cef44497",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/downtown-portrait-future.png",
       "width": 3840,
       "height": 2400,
-      "sha256": "3309f022df3acfb3d7027a8348e7941e9e275a8034938497f45f85a542e6facd",
-      "pixelSHA256": "aad82f9d035a7765fc4a02c8d38d7dd67defdf930fdebdbc345feb9fba10211e",
+      "sha256": "594fbd5e6b819f376c15f868e1dfe5c63dc88f7e58784492570e09aa54052234",
+      "pixelSHA256": "f98b5beb3665ebbff3fdb11b706036e32335e92aba66eaacddbc56d7b0a0a18c",
       "pixelPreservationVerified": true,
       "wholeFileUnchanged": true,
       "nativeImageChunksPreserved": true,
-      "nativeImageChunksSHA256": "12dedcd7620182e412d9e567b58cbcd3bb828149ae50fd87a2945b7aececa0f5",
+      "nativeImageChunksSHA256": "0c2103a135835bfba27cb5db7983dfdaf88ae6a16e6b1749733c2106cdc3eca3",
       "embeddedMetadata": {
         "File": "<untitled>",
-        "Date": "2026/09/29 00:34:48",
+        "Date": "2026/10/03 01:02:44",
         "Time": "00:00:00:01",
         "Frame": "001",
         "Camera": "Camera",
         "Scene": "Scene",
-        "RenderTime": "00:27.18",
+        "RenderTime": "00:28.09",
         "cycles.ViewLayer.samples": "96",
-        "cycles.ViewLayer.total_time": "00:24.13",
-        "cycles.ViewLayer.render_time": "00:23.55",
-        "cycles.ViewLayer.synchronization_time": "00:00.58",
+        "cycles.ViewLayer.total_time": "00:24.03",
+        "cycles.ViewLayer.render_time": "00:23.09",
+        "cycles.ViewLayer.synchronization_time": "00:00.94",
         "Title": "Future Mississauga",
         "Author": "Daniel Sultan",
         "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
@@ -1099,11 +1099,11 @@
         "samplesMaximum": 96,
         "nativeNotUpscaled": true
       },
-      "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "retainedByteIdenticalFromPredecessor": false,
-      "originalRenderRecordSHA256": "e60c1a72424184a5d2e88b79a12b9ac0728c754a36513cbe1cf712f049b4d14b",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "f3d508f2a70d8db8c18bc5d465666ceae765c099d4fb7512ffea51a4d46e3d21",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/port-credit-portrait-future.png",
@@ -1153,10 +1153,10 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
       "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "0ffea9803028e953e4b82240e7a5b928d7bb1c99dcc4d8b6b12a72450985ecb9",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/lakeview-portrait-future.png",
@@ -1206,10 +1206,10 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "retainedByteIdenticalFromPredecessor": false,
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "8a6b8b0efbd559d1ec5acdc231d8054a7ba10c51397c67be2f809e0f58e79085",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/clarkson-portrait-future.png",
@@ -1259,10 +1259,10 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "retainedByteIdenticalFromPredecessor": false,
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "43a45eb9451417db226cd3df7eea227a87b03dd3d4af266723fed3203e416205",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/cooksville-portrait-future.png",
@@ -1312,10 +1312,10 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "retainedByteIdenticalFromPredecessor": false,
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "f316a43f7dfb2969dcecf9b361a04e05e92e4af3039446c13329df4a864ecff6",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/uptown-portrait-future.png",
@@ -1365,10 +1365,10 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "7c6435a29b9c3b78bc099b9f03f77a90ce363dd8d007b1d4ee4a4f306bfd3b9b",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
       "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "8191ccc426b1917241595132679c070111487b0133cd3f2712c6baaaf3bbb9e9",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/malton-future.png",
@@ -1417,32 +1417,32 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
       "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "c63b5565fd166297fedfc8387f0417b11f75984327eb86e3a4325543f18d2b13",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/airport-corporate-future.png",
       "width": 3840,
       "height": 2400,
-      "sha256": "243bd4e8d1b8b7455e7c1160bcc32232257ab6a1f54a8db835793404e34394a7",
-      "pixelSHA256": "8358683aa00b00566123d20d2d5d10aadf8184481a8484ed9d4d6d9837e3d75d",
+      "sha256": "c19567cbbd16aaa90664b50139b10d9fb401b8ea32d30d635b4b08c41f2102da",
+      "pixelSHA256": "4d6d3a9de91ccaeb238ce86fa94425372f441571b63390b8e3554897cc5c1989",
       "pixelPreservationVerified": true,
       "wholeFileUnchanged": true,
       "nativeImageChunksPreserved": true,
-      "nativeImageChunksSHA256": "d3955d42e166965b93e3fe6c6ad1ee050e247578fb3cfb445f4aa3450ede0b8f",
+      "nativeImageChunksSHA256": "c320556305c0663357f14990c99108bb3f4ee1ac822899d340b1a2aed64f07fd",
       "embeddedMetadata": {
-        "Date": "2026/09/27 20:24:02",
+        "Date": "2026/10/04 19:06:11",
         "Time": "00:00:00:01",
         "Frame": "001",
         "Camera": "Camera",
         "Scene": "Scene",
-        "RenderTime": "00:15.54",
+        "RenderTime": "00:15.05",
         "cycles.ViewLayer.samples": "96",
-        "cycles.ViewLayer.total_time": "00:12.70",
-        "cycles.ViewLayer.render_time": "00:12.26",
-        "cycles.ViewLayer.synchronization_time": "00:00.44",
+        "cycles.ViewLayer.total_time": "00:11.25",
+        "cycles.ViewLayer.render_time": "00:10.78",
+        "cycles.ViewLayer.synchronization_time": "00:00.47",
         "Title": "Future Mississauga",
         "Author": "Daniel Sultan",
         "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
@@ -1468,11 +1468,11 @@
         "samplesMaximum": 96,
         "nativeNotUpscaled": true
       },
-      "actualRenderInputLockSHA256": "7c6435a29b9c3b78bc099b9f03f77a90ce363dd8d007b1d4ee4a4f306bfd3b9b",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
-      "retainedByteIdenticalFromPredecessor": true,
-      "originalRenderRecordSHA256": "426248bd1a357c4ec06be5b1f6768f4a83f8db4eaa14ff4c9b72668a1894ccf6",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "actualRenderInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": false,
+      "originalRenderRecordSHA256": "c16066391cc7066576bece946bd41dad96b80cf2ecef7fee6d8527966ca5ae8c",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/meadowvale-future.png",
@@ -1521,10 +1521,10 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
       "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "5ba40ee0c239ecaa73e92098d543bffdae58166aee217987c576c149eecd16b8",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/streetsville-future.png",
@@ -1573,10 +1573,10 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
       "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "3debf7f933a5d3ca471d808f2dcefe7cdc43648909e133e3b4151507930b284c",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/erin-mills-future.png",
@@ -1625,32 +1625,32 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
       "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "924bbc09e55968e260bc418661d09ece394c9c09eb1b5453b67046278f661ff6",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/downtown-landmark-future.png",
       "width": 3840,
       "height": 2400,
-      "sha256": "f54b1d54c43f433fc28ba78793200885fc39ba96ed64b172ed022f0cd6c5e6d4",
-      "pixelSHA256": "75441a412cce57ffebb87c2345487b0b9e1f33d058c6e51486a0f12b8931039e",
+      "sha256": "900038761cfd82fdac9060c525f77fd10df89f89e4e198b605c44939be08b2d5",
+      "pixelSHA256": "0824b42bc456099c7e59829b01533739a861190329c83ab63283f64b11898002",
       "pixelPreservationVerified": true,
       "wholeFileUnchanged": true,
       "nativeImageChunksPreserved": true,
-      "nativeImageChunksSHA256": "c71ad10eced934874d22b9346a1db0c3e9efc1077212ad9e8ede54225cfe8d57",
+      "nativeImageChunksSHA256": "7a6b5b2756201f6e76a7636b3b7d7983ea8ba18b42522c15387f05765c60b157",
       "embeddedMetadata": {
-        "Date": "2026/09/27 13:22:48",
+        "Date": "2026/10/03 01:03:37",
         "Time": "00:00:00:01",
         "Frame": "001",
         "Camera": "Camera",
         "Scene": "Scene",
-        "RenderTime": "00:21.47",
+        "RenderTime": "00:30.27",
         "cycles.ViewLayer.samples": "96",
-        "cycles.ViewLayer.total_time": "00:19.03",
-        "cycles.ViewLayer.render_time": "00:18.52",
-        "cycles.ViewLayer.synchronization_time": "00:00.50",
+        "cycles.ViewLayer.total_time": "00:26.87",
+        "cycles.ViewLayer.render_time": "00:26.01",
+        "cycles.ViewLayer.synchronization_time": "00:00.85",
         "Title": "Future Mississauga",
         "Author": "Daniel Sultan",
         "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
@@ -1676,11 +1676,11 @@
         "samplesMaximum": 96,
         "nativeNotUpscaled": true
       },
-      "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
       "retainedByteIdenticalFromPredecessor": true,
-      "originalRenderRecordSHA256": "e40cc0c14271df0d3eadb84002214e769c2aab3bc1ec8a9b7b5e2de87c48e0f8",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "originalRenderRecordSHA256": "495a89aef714242595effd813c21948b7c429907ca5ad3626ce27a084ae77059",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     },
     {
       "file": "renders/downtown-junction-future.png",
@@ -1729,19 +1729,19 @@
         "nativeNotUpscaled": true
       },
       "actualRenderInputLockSHA256": "7c6435a29b9c3b78bc099b9f03f77a90ce363dd8d007b1d4ee4a4f306bfd3b9b",
-      "validatedAgainstInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
       "retainedByteIdenticalFromPredecessor": true,
       "originalRenderRecordSHA256": "b4ca1cafc47b90703c634d74c5e1b445218d7ffca377e61132ef9b9dabf629dd",
-      "currentSourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107"
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     }
   ],
   "views": 15,
   "totalOriginalPictures": 33,
-  "inputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+  "inputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
   "notes": "All 33 lossless PNG masters are native Blender 5.2 Metal RT renders. Finalization verifies already-embedded attribution and changes no PNG bytes. Website previews use separate half-dimension PNGs; downloads retain these exact masters. The Instagram portrait set is a separate native render batch.",
   "provenance": {
-    "currentRevisionNativeRenders": 12,
-    "byteIdenticalPredecessorRenders": 21,
+    "currentRevisionNativeRenders": 2,
+    "byteIdenticalPredecessorRenders": 31,
     "inputLockScope": "The top-level input lock identifies the current validated composition. Each source image retains its actual render-time lock; older accepted native images are not claimed to have been rerendered."
   }
 }
