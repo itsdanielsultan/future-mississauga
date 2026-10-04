@@ -1,0 +1,121 @@
+{
+  "date": "2026-10-03",
+  "scope": "Targeted recheck of the user-supplied original Reddit thread and current local 29 September release. Other project dates are not blanket-refreshed.",
+  "projects": [
+    {
+      "feedback": "Block Nine North, 4085 Parkside Village Drive",
+      "action": "Added reference-derived North and South towers with their connected podium",
+      "newGeometry": true,
+      "projectId": "block-nine",
+      "finding": "Named public catalogue record and both buildings were absent. Exact City address points, 2024 mapped footprints, original developer brochure and municipal storey counts support the new addition. Secondary metric heights and inferred detail remain explicitly approximate."
+    },
+    {
+      "feedback": "EX3 shorter tower and blue crown over final white section",
+      "action": "Retained existing correction; current binary geometry rechecked",
+      "newGeometry": false,
+      "projectId": "exchange-district",
+      "finding": "The current architect page still describes 66 storeys. Current phase-aware model hash matches the previously corrected form; the 72-storey historical version is not reinstated."
+    },
+    {
+      "feedback": "Four towers near Food Basics / Community Common Park",
+      "action": "Confirmed both Avia and Voya towers already included; added subsequently identified Block Nine separately",
+      "newGeometry": false,
+      "projectId": "avia",
+      "finding": "Avia municipal component 63-6237 contains both roof clusters. Current developer website says Avia completed and Voya under construction, completing Fall 2026; a forecast is not certified occupancy."
+    },
+    {
+      "feedback": "Voya connected podium and wavy massing near Zonta Meadows",
+      "action": "Retained connected podium and distinct source-traced balcony forms",
+      "newGeometry": false,
+      "projectId": "voya",
+      "finding": "Current asset has 95 components, explicit connected-podium flag and reviewed non-identical balcony profiles. No new duplicate Voya towers were added."
+    },
+    {
+      "feedback": "15, 35, 65 Watergarden Drive",
+      "action": "Confirmed Gemma and both Perla towers in current assets",
+      "newGeometry": false,
+      "projectId": "watergarden / perla-towers",
+      "finding": "Gemma source components 22-14233 through 22-14235 are Existing; Perla has a three-part supplemental model (shared podium, 34-storey and 15-storey towers). Perla heights/facades remain approximate. Pinnacle links currently lead to a location selector; no new completion date is inferred from that page."
+    }
+  ],
+  "additionalFeedback": [
+    {
+      "feedback": "Unnamed resident building offered by DM/email",
+      "action": "No invented addition",
+      "newGeometry": false,
+      "finding": "The pasted thread contains no usable address. Any newly received private identification needs a separate source and spatial check."
+    },
+    {
+      "feedback": "Downtown21 smaller blocks and walkability",
+      "action": "Historical plan remains a planning reference, not additional building approval",
+      "newGeometry": false,
+      "finding": "A broad improvement suggestion rather than a uniquely identified missing building; the source does not authorize invented future buildings on every parcel."
+    }
+  ],
+  "asset": {
+    "id": "block-nine-reference-derived",
+    "sha256": "f338d310c703599d5a23282d23f143e424dafda25dbcce6101eb4a86e9f31cd6",
+    "bytes": 93900,
+    "components": 68,
+    "projectCountAfter": 113,
+    "refinementAssetsAfter": 35
+  },
+  "sources": [
+    {
+      "url": "https://amacon.com/portfolio/",
+      "publisher": "Amacon",
+      "title": "Amacon portfolio: Block Nine",
+      "accessed": "2026-10-03",
+      "claim": "Developer lists Block Nine North as completed, 25 storeys, sister tower to Block Nine South."
+    },
+    {
+      "url": "https://www7.mississauga.ca/documents/pb/opendata/2020/2020_Residential_Directory_Report_Final.pdf#page=102",
+      "publisher": "City of Mississauga",
+      "title": "Residential Directory 2020, page 102",
+      "accessed": "2026-10-03",
+      "claim": "4085 Parkside Village Drive: Tower A, 25 storeys; 4055: Tower B, 34 storeys."
+    },
+    {
+      "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Building_Footprints_2024/FeatureServer/0",
+      "publisher": "City of Mississauga",
+      "title": "2024 mapped building footprints",
+      "accessed": "2026-10-03",
+      "claim": "Mapped building outlines OBJECTID 108579 and 108556 register the shared podium."
+    },
+    {
+      "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Address/FeatureServer/0",
+      "publisher": "City of Mississauga",
+      "title": "Municipal address points",
+      "accessed": "2026-10-03",
+      "claim": "Address IDs 441547 and 441546 identify 4085 and 4055 Parkside Village Drive."
+    },
+    {
+      "url": "https://condopundit.com/wp-content/uploads/2015/04/Block-Nine-Parkside-Village-Brochure.pdf",
+      "publisher": "Amacon original developer brochure, third-party public copy",
+      "title": "Block Nine brochure, pages 3 and 8",
+      "accessed": "2026-10-03",
+      "claim": "Original render and amenity plan show both tower positions, articulated balcony facades and shared podium; source is illustrative, not as-built survey."
+    },
+    {
+      "url": "https://skyscraperpage.com/b110806/mississauga/block-9-north-at-parkside-village",
+      "publisher": "SkyscraperPage (secondary catalogue)",
+      "title": "Block 9 North",
+      "accessed": "2026-10-03",
+      "claim": "Built 2020, 25 storeys and roof approximately 79.9 m; height retained as approximate."
+    },
+    {
+      "url": "https://skyscraperpage.com/b110807/mississauga/block-9-south-at-parkside-village",
+      "publisher": "SkyscraperPage (secondary catalogue)",
+      "title": "Block 9 South",
+      "accessed": "2026-10-03",
+      "claim": "Built 2020, 34 storeys and roof approximately 106.5 m; height retained as approximate."
+    }
+  ],
+  "caveats": [
+    "Existing status and 25/34 storeys are corroborated by primary sources. Approximate 79.9/106.5 m vertical envelopes come from a secondary catalogue, not a current surveyed elevation.",
+    "Tower plates are interpreted from the developer amenity illustration registered to current City mapped footprint limits. Allow about 5 m for tower position/contour interpretation; this is not a statistical accuracy claim.",
+    "The 14 m podium, floor divisions, balcony projections, vertical fins and roof enclosures are simplified reference-based estimates. Exact as-built facade and slab dimensions have not been obtained.",
+    "Nine selected native City LOD2 scene leaves and the inherited municipal model do not contain either tower. Existing neighbouring source geometry is retained. No downloadable architect-native model was located."
+  ],
+  "privateCorrespondencePublished": false
+}

@@ -404,19 +404,19 @@
     "completionDate": null,
     "targetCompletionDate": null,
     "completionDateNote": "No actual completion or target completion date verified for this development.",
-    "currentStatus": "Revised 17-home townhouse application under review",
+    "currentStatus": "Newer 17-townhouse application retained; former PMLA scheme not proceeding",
     "originalSourceName": "Vintages Condo",
     "displayStatus": "Proposed",
-    "statusDate": "2025-09-15",
-    "followupAsOf": "2026-09-20",
-    "followupEvidence": "The February 2025 RN Design site plan replaces the earlier continuous condominium block with three separate townhouse blocks of 3, 6 and 8 homes. The current front elevation labels a 10.69 m maximum building height. City source 23-6949 is one continuous stepped block with a 14.46 m height field and 16.8846 m terrain-inclusive extent. Its footprint was visually checked against the new plan. This is superseded geometry, not a cancelled development.",
+    "statusDate": "2026-10-04",
+    "followupAsOf": "2026-10-04",
+    "followupEvidence": "The project architect reported on October 4, 2026 that the PMLA project at 6620 Rothschild Trail is not moving forward. The old PMLA four-storey, 43-unit condominium design remains excluded. The City still lists a newer 17-townhouse application under review, with February 2025 RN Design drawings showing three blocks of 3, 6 and 8 homes. The brief PMLA reply does not independently establish that this replacement townhouse application is cancelled. Its current application identity is retained in research; the old municipal condominium mesh is not reinstated.",
     "followupSources": [
       "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/6620-rothschild-trail-oz-opa-19-10-w11/",
       "https://www.mississauga.ca/wp-content/uploads/2025/02/13110909/Site-Plan-Concept-OZ-19-10-W11-February-2025.pdf",
       "https://www.mississauga.ca/wp-content/uploads/2025/02/13110755/Block-Front-Elevation-OZ-19-10-W11-February-2025.pdf",
       "https://toronto.skyrisecities.com/forum/threads/toronto-6620-rothschild-trail-14-36m-4s-di-blasio-homes-pml-a.30915/"
     ],
-    "geometryDecision": "exclude-superseded",
+    "geometryDecision": "Retain newer application in research; exclude old PMLA condominium geometry",
     "excludeSuperseded": true,
     "retainByDefault": false,
     "includeInVerifiedScenario": false,
@@ -425,7 +425,14 @@
       70,
       -4390.434426038526
     ],
-    "retainedComponents": 0
+    "retainedComponents": 0,
+    "statusEvidence": {
+      "source": "Project architect status clarification",
+      "date": "2026-10-04",
+      "publicSummary": "The project architect reported on October 4, 2026 that the PMLA project at 6620 Rothschild Trail is not moving forward. The old PMLA four-storey, 43-unit condominium design remains excluded. The City still lists a newer 17-townhouse application under review, with February 2025 RN Design drawings showing three blocks of 3, 6 and 8 homes. The brief PMLA reply does not independently establish that this replacement townhouse application is cancelled. Its current application identity is retained in research; the old municipal condominium mesh is not reinstated.",
+      "correspondencePublished": false,
+      "formalMunicipalCancellationConfirmed": false
+    }
   },
   {
     "id": "city-group-5",
@@ -13992,26 +13999,33 @@
     "completionDate": null,
     "targetCompletionDate": null,
     "completionDateNote": "No actual completion date published in the checked exact-site evidence. Forecasts, where given, are separate from actual dates.",
-    "currentStatus": "Application retained; current construction and completion unverified",
+    "currentStatus": "Architect-reported not proceeding; municipal application Withheld",
     "originalSourceName": "7055 Tranmere Dr.",
     "displayStatus": "Proposed",
-    "statusDate": null,
-    "followupAsOf": "2026-09-20",
-    "followupEvidence": "City 2022 consent comments distinguish the existing frontage industrial building and vacant rear land. Current businesses do not establish the new warehouse complete.",
+    "statusDate": "2026-10-04",
+    "followupAsOf": "2026-10-04",
+    "followupEvidence": "The project architect reported on October 4, 2026 that the PMLA project at 7055 Tranmere Drive is not moving forward. Its depicted proposed warehouse is excluded from the illustrated future. The municipal inventory still lists SP 21-161 as Withheld; formal closure or cancellation has not been independently confirmed. The existing frontage industrial building is not the excluded proposal.",
     "followupSources": [
       "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D32&outFields=*&outSR=4326&f=pjson",
       "https://pub-mississauga.escribemeetings.com/filestream.ashx?DocumentId=22288"
     ],
-    "geometryDecision": "Retain source geometry with its stated date and accuracy limits",
-    "excludeSuperseded": false,
-    "retainByDefault": true,
-    "includeInVerifiedScenario": true,
+    "geometryDecision": "Exclude architect-reported non-proceeding proposed warehouse",
+    "excludeSuperseded": true,
+    "retainByDefault": false,
+    "includeInVerifiedScenario": false,
     "position": [
       -7511.956165001029,
       70,
       -10542.12007077597
     ],
-    "retainedComponents": 1
+    "retainedComponents": 0,
+    "statusEvidence": {
+      "source": "Project architect status clarification",
+      "date": "2026-10-04",
+      "publicSummary": "The project architect reported on October 4, 2026 that the PMLA project at 7055 Tranmere Drive is not moving forward. Its depicted proposed warehouse is excluded from the illustrated future. The municipal inventory still lists SP 21-161 as Withheld; formal closure or cancellation has not been independently confirmed. The existing frontage industrial building is not the excluded proposal.",
+      "correspondencePublished": false,
+      "formalMunicipalCancellationConfirmed": false
+    }
   },
   {
     "id": "city-group-167",

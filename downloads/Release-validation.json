@@ -1,42 +1,42 @@
 {
-  "edition": "Visual Polish 2026-09-26; IO and South Banks reference update, 29 September 2026",
-  "checkedAt": "2026-09-29T21:02:28.408580+00:00",
-  "validationInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+  "edition": "Visual Polish 2026-09-26; PMLA delivery-status review, 4 October 2026",
+  "checkedAt": "2026-10-04T23:32:23.605290+00:00",
+  "validationInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
   "inputLockScope": "The validation input lock identifies this composed release. Every image retains its actual render-time input lock. Unaffected accepted images have not been relabelled as new renders.",
-  "activeLockedInputs": 263,
+  "activeLockedInputs": 264,
   "kind": "Current local files and hash-bound source evidence; deployment checked separately",
   "originalPNGs": 33,
   "portraitPNGs": 24,
-  "PNGbytes": 469990185,
-  "portraitPNGbytes": 377154968,
+  "PNGbytes": 470034334,
+  "portraitPNGbytes": 377322340,
   "editableBlenderSceneFilesPresent": 15,
-  "GLBfiles": 212,
-  "refinementAssets": 34,
-  "refinementAssetsWithFiniteOrderedBounds": 34,
-  "projectRecords": 112,
+  "GLBfiles": 213,
+  "refinementAssets": 35,
+  "refinementAssetsWithFiniteOrderedBounds": 35,
+  "projectRecords": 113,
   "webUsesHalfSizeDisplayPNG": true,
   "displayPNGs": 33,
   "downloadsUseOriginalPNG": true,
   "renderProvenance": {
     "wide": {
-      "currentRevisionNativeRenders": 12,
-      "byteIdenticalPredecessorRenders": 21
+      "currentRevisionNativeRenders": 2,
+      "byteIdenticalPredecessorRenders": 31
     },
     "portrait": {
-      "currentRevisionNativeRenders": 6,
-      "byteIdenticalPredecessorRenders": 18
+      "currentRevisionNativeRenders": 0,
+      "byteIdenticalPredecessorRenders": 24
     },
     "scope": "The validation input lock identifies this composed release. Every image retains its actual render-time input lock. Unaffected accepted images have not been relabelled as new renders."
   },
   "atlas": {
     "file": "Future-Mississauga-Atlas.pdf",
     "pageCount": 35,
-    "sha256": "ae86623bec9bf7626cab9fec181b34552d109ffb32d0e1d792af8b0499e3f80a"
+    "sha256": "c9f219e7094e834a9c2b84ed78a80b3140b1a2e500c5e4ce14317bd183cfa6b4"
   },
   "film": {
     "file": "../gallery/Downtown-transformation.mp4",
     "durationSeconds": 5.7,
-    "sha256": "bc0d7456b44dc1df3683f05293a3f98b1b675ec4b2aee4699b1ebeea2ab8f863"
+    "sha256": "ebbc2dafab6d00b9b9f5561df60a050acd5d1b35c8826aff94b4cb24d7e254c9"
   },
   "current33WideFileAndDecodedRGBHashesVerified": true,
   "current24PortraitFileAndDecodedRGBHashesVerified": true,
@@ -50,25 +50,25 @@
   },
   "comparisonCamerasVerifiedBySourceQA": true,
   "sceneVerification": {
-    "currentScenesReopened": 10,
-    "byteIdenticalPredecessorSceneChecksRetained": 5
+    "currentScenesReopened": 3,
+    "byteIdenticalPredecessorSceneChecksRetained": 12
   },
-  "modelIndexSHA256": "d6513fadd3aa89c61ac5a65fda59c1f2feac51e7b180111be27d2a87af3b93aa",
-  "publicProjectRegisterSHA256": "8c25155a09b05b61292f29241fc0ef60b69015370615c75b8a2840700ab548dc",
-  "publicModelManifestSHA256": "67479549ee0599150098fdbb18319c2c7ecde91711d704e9129e68bd4901f0bc",
+  "modelIndexSHA256": "d2d1a4a4a9d99a4da0b0bfc9225dcf8f3e89b6583cf990bb6bd0b6f71e775ede",
+  "publicProjectRegisterSHA256": "605c4ca614d42576b16a4d5bb50bf3c0afa7661c3b735651d2171994b5043c65",
+  "publicModelManifestSHA256": "761c832aace0500127b97892299e321cb68c19753eec7d13e36c4255c86df348",
   "sourceProofs": {
-    "Final-wide-QA.json": "0ad18ffd5ce002dc935c462c0055bf59f6f74c3d5bd12f585d60d2c9a73a6079",
-    "Final-high-resolution-QA.json": "e45ed5c8d35f660186a0e5d0a5d7dbef7abebd778f9396c38bd56184791a2202",
-    "Final-wide-visual-review.json": "f5fc633b93d0fbdb975df16318a8e3dc5059faff3c8165019b0f88dc69fcdb30",
-    "Final-portrait-visual-review.json": "4426f2409e034d77fea3716ffc1980e16cfd145ecb707c8f9d67964d5aa46bc7",
-    "Final-editable-scenes-QA.json": "13273273359022ac9570f7a3038435fcd530642702b0d4e223e35f1b27072aa1",
-    "Final-scene-render-provenance.json": "f4ffcd77ca8352d837b85781c8c1978f295458ecf37e8e63eb6b451fe7a18e03"
+    "Final-wide-QA.json": "3169eb53ef5f68a7b1126b5477fcc808b869327d850f18ca8c7faa43568a9757",
+    "Final-high-resolution-QA.json": "3b87eab90586099f4d581f12c6158bf189a9efb15d0ab715ee86615f42b84599",
+    "Final-wide-visual-review.json": "43190864961bd0fc36edc54dd506f14c57090cdc6eeb1c7eb53793ddd56ef594",
+    "Final-portrait-visual-review.json": "affdf949f9101cfc0931e8fd6f78596a9b58a8da155f280292490bd1cc7dc34a",
+    "Final-editable-scenes-QA.json": "a1a63eca244602de9b9ecd434668863e2fe4d965a733633abebc18052fa1a022",
+    "Final-scene-render-provenance.json": "0d0877fa975623beca1940000e670e39d51028ab6bdd378e049e80d006c4ded3"
   },
-  "sourceAuditSHA256": "2168f9c480d2a3d4a900749d81d1394ce93cb0fd8963f4cc571b1acdc4045107",
+  "sourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14",
   "portraitHosting": {
-    "tag": "high-resolution-images-io-update-2026-09-29",
-    "verificationPerformedAt": "2026-09-29T20:57:07.791797+00:00",
-    "mappingSHA256": "0c4237e77457557500cdab06b56533c7bc56a96846472154f96866c7a9bdc358",
+    "tag": "high-resolution-images-block-nine-2026-10-03",
+    "verificationPerformedAt": "2026-10-04T23:31:27.649347+00:00",
+    "mappingSHA256": "88206a630c2595e3d61486dba81e46e5c8739edc10b5ea2f46913c941c212489",
     "publicHTTPAssetHashesVerified": 48,
     "scope": "Prior completed same-revision public GitHub release-asset checks, hash-bound here; this helper does not repeat network requests."
   },
