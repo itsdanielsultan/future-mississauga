@@ -16,7 +16,7 @@ Completed Block Nine North and South at 4085 and 4055 Parkside Village Drive hav
 
 ## New reference material
 
-[Bloom Architects](https://www.bloomarchitects.ca/) supplied a residential model and confirmed public use with credit. Its partial façade study is described as dating from 2018. The file was converted locally, its source geometry preserved, and its location checked against a historical City map and current parcel records. Current exterior references show material differences from the house that was built, so this historical design reference has not replaced the existing building in the city model.
+[Bloom Architects](https://www.bloomarchitects.ca/) supplied a partial residential façade study described as dating from 2018 and confirmed public Future Mississauga viewer use with Bloom Architects credit. The original file and a private local conversion are preserved. Historical City mapping and current parcel records corroborate the property’s identity; this does not verify the model’s position or orientation in the city scene. Current exterior references differ from the supplied design. City placement and current-building integration remain unverified, so the model remains a private historical design reference and has not replaced the existing building. The original files, private correspondence and local derivatives are not published.
 
 M3’s source record now describes the separate crown silhouette visible in the current model. It remains a photo-and-plan-derived approximation, not a completed-building survey. Newly collected Westminster drawings and other public planning PDFs provide design references; older brochures, marketing targets and archive photographs have not been promoted to current completion evidence.
 
