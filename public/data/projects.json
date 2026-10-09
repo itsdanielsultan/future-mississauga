@@ -323,7 +323,7 @@
     "heightM": [
       215.6
     ],
-    "summary": "The structural slab had reached level 41 in Spring 2026. The City forecasts completion in Q4 2028.",
+    "summary": "The structural slab had reached level 41 in Spring 2026. The City forecasts completion in Q 4 2028.",
     "modelCaveat": "The recorded-construction asset uses the sourced level-41 elevation, with an approximate vertical cut and explicit date. Completion is a forecast, distinct from phased occupancy.",
     "sources": [
       {
@@ -423,7 +423,7 @@
       36
     ],
     "heightM": [],
-    "summary": "The structural slab had reached level 27 in Spring 2026. The City forecasts completion in Q4 2027.",
+    "summary": "The structural slab had reached level 27 in Spring 2026. The City forecasts completion in Q 4 2027.",
     "modelCaveat": "Native developer interaction proxy georegistered to community diagram; exact architectural height unknown. Native 117.87-unit extent is not a verified building height. Future-only; actual floor 27 progress not inferred from this envelope.",
     "sources": [
       {
@@ -526,7 +526,7 @@
     "lat": 43.58222282652768,
     "lon": -79.64755419260095,
     "status": "proposed-preconstruction",
-    "statusDate": "2026-09-20",
+    "statusDate": "2026-10-06",
     "storeys": [
       58
     ],
@@ -607,7 +607,7 @@
         "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
       ]
     },
-    "lastStatusReview": "2026-09-20",
+    "lastStatusReview": "2026-10-08",
     "researchArea": "downtown",
     "district": "Downtown",
     "meshIds": [
@@ -623,7 +623,8 @@
       "63-6173",
       "63-6174"
     ],
-    "geometryCoverage": "Source geometry available; current detail may differ"
+    "geometryCoverage": "Source geometry available; current detail may differ",
+    "evidenceUpdateNote": "City confirms open applications and a lateSeptember resubmission; no delivery guarantee or new height change follows from this."
   },
   {
     "id": "mcity-7-8",
@@ -632,7 +633,7 @@
     "lat": 43.58169583258391,
     "lon": -79.64669661456749,
     "status": "proposed-preconstruction",
-    "statusDate": "2026-09-20",
+    "statusDate": "2026-10-06",
     "storeys": [
       50,
       45
@@ -716,7 +717,7 @@
         "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
       ]
     },
-    "lastStatusReview": "2026-09-20",
+    "lastStatusReview": "2026-10-08",
     "researchArea": "downtown",
     "district": "Downtown",
     "meshIds": [
@@ -734,7 +735,8 @@
       "63-6171",
       "63-6172"
     ],
-    "geometryCoverage": "Source geometry available; current detail may differ"
+    "geometryCoverage": "Source geometry available; current detail may differ",
+    "evidenceUpdateNote": "City confirms open applications and a lateSeptember resubmission; no delivery guarantee or new height change follows from this."
   },
   {
     "id": "square-one-masterplan",
@@ -814,7 +816,7 @@
     ],
     "heightM": [],
     "summary": "The first condominium and rental towers now form part of the existing skyline.",
-    "modelCaveat": "The current Daniels fact sheet lists STAK36 at 48 storeys; older Oxford retail material says 44. Dialogue is marketed at 37, while some architectural records count 36. Municipal mesh 63-6238 is the dated 2024 capture of both towers. Remove overlapping proposal components 63-6225, 63-6226 and 63-6227 from the reviewed future. Final roof geometry remains unverified.",
+    "modelCaveat": "The current Daniels fact sheet lists STAK 36 at 48 storeys; older Oxford retail material says 44. Dialogue is marketed at 37, while some architectural records count 36. Municipal mesh 63-6238 is the dated 2024 capture of both towers. Remove overlapping proposal components 63-6225, 63-6226 and 63-6227 from the reviewed future. Final roof geometry remains unverified.",
     "sources": [
       {
         "url": "https://publications.oxfordproperties.com/sq1-district-retail/about-sq1-district-retail",
@@ -1134,10 +1136,10 @@
     "id": "square-one-block22",
     "name": "Square One District Block 22 /97–101 City Centre",
     "address": "97–101 City Centre Drive",
-    "lat": 43.59144301657465,
-    "lon": -79.63897742007715,
-    "status": "Proposed; applicant on hold",
-    "statusDate": "2026-09-24",
+    "lat": 43.591442555921745,
+    "lon": -79.63898196943795,
+    "status": "On hold · optional dated 2021 roof/podium reference",
+    "statusDate": "2026-10-08",
     "storeys": [
       65,
       55
@@ -1146,36 +1148,29 @@
       205.25,
       175.25
     ],
-    "summary": "A two-tower proposal south of Square One, with 55- and 65-storey towers and 1,309 homes in the April 2021 drawings. The applications remain open, but the applicant has put the project on hold with no confirmed timeline.",
-    "modelCaveat": "Hariri Pontarini Architects' Block 22 drawings A100 SITE PLAN (ROOF) and A003 STATISTICS, project 1807, revision 3 dated April 23, 2021 (RE-ISSUED FOR HOZ & SPA), identify the north tower as 55 storeys / 175.25 m and the south tower as 65 storeys / 205.25 m, with 1,309 homes in total. These primary drawings resolve the 65/45-storey appendix conflict for this dated design. They were supplied by the City; no public site-plan application page was available as of September 28, 2026. The drawings are a reference for the retained municipal massing, not a newly approved design or an exact audit of every mesh surface. HOZ 19-12 W4 and SP 20-6 W4 remain open. The applicant has put the project on hold; approval is withheld pending technical responses. No resubmission or construction timeline is confirmed. This is not a cancellation.",
+    "summary": "Applications remain open but the developer has paused the project while revisions are considered. The optional 2021 roof/podium study exposes details absent from the proxy; current detailed geometry needs newer floor/section/grading evidence.",
+    "modelCaveat": "approximation of HPA A 100/A 003 revision 3, April 23 2021, not a current approved or as-built design. A 100 shows stepped podium roofs and tower terraces that the retained flat municipal proxies omit. The actual north roof contours are extracted from drawing vectors. Intermediate tower outlines are inferred by fitting the A 003 plate-area programme and A 100 setback directions; the southern intermediate profiles reuse the shared typology as a mirrored inference. Both green roof surfaces are actually source-vector-traced; the southern rooftop envelope is adjusted to contain its supplied roof outline. Ground podium coverage and enclosed volume below each roof remain approximate without floor plans. Window spacing/frames and finishes are reference approximations; no current facade schedule was supplied. Printed roof EL 335.55/365.55 and roof/height comparisons suggest an additional 7.5 m roof enclosure above the quoted 175.25/205.25 m heights, but elevations/sections and Burnside C 200 revision 5 are needed to confirm the grade, height definition and ASL interpretation. The source-based study uses those printed roof levels and an inferred EL 152.80 grade; it does not silently change the project catalogue heights. Mechanical/mezzanine and typical-floor elevations are inferred to fit the total, not measured levels. Open roof zones are retained and no exposed basements are exported. Roads are untouched. The applications remain open and applicant-paused, not officially cancelled; no start or completion timeline is confirmed.",
     "sources": [
       {
-        "url": "https://urbantoronto.ca/forum/threads/toronto-97-101-city-centre-drive-m-65s-oxford-properties-hariri-pontarini.30788/",
-        "title": "97–101 City Centre Drive",
-        "publisher": "UrbanToronto forum",
-        "accessed": "2026-09-20",
-        "claims": [
-          "Proposed 55/65-storey pair in January 2020 submission. No explicit cancellation located."
-        ]
+        "title": "A100 SITE PLAN (ROOF).pdf",
+        "date": "2021-04-23"
       },
       {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/01/15082458/MOPA177-jan-2025.pdf",
-        "title": "Official Plan Amendment 177",
-        "publisher": "City of Mississauga",
-        "accessed": "2026-09-20",
-        "claims": [
-          "In force January 9, 2025; expanded mixed-use permissions at Square One. Appendix inventories downtown applications but some designs are older."
-        ]
+        "title": "A003 STATISTICS.pdf",
+        "date": "2021-04-23"
       },
       {
-        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0",
-        "title": "Active development applications as of June 30, 2026",
-        "publisher": "City of Mississauga",
-        "accessed": "2026-09-20",
-        "claims": [
-          "SP 20-6: two mixed-use buildings of 55 and 65 storeys at 97–101 City Centre Drive.",
-          "Withheld is a workflow status, not a cancellation."
-        ]
+        "title": "HPA public 2025 portfolio, pages 140–143",
+        "url": "https://fliphtml5.com/dbzgn/hsze/HPA-_Selected_Residential_Mixed-Use_Portfolio_2025_Q2/"
+      },
+      {
+        "title": "Dated January 2020 architectural imagery",
+        "url": "https://urbantoronto.ca/forum/threads/toronto-97-101-city-centre-drive-m-65s-oxford-properties-hariri-pontarini.30788/"
+      },
+      {
+        "title": "Hariri Pontarini Architects, project 1807, A100 SITE PLAN (ROOF) and A003 STATISTICS, revision 3, 23 April 2021; City of Mississauga planning references.",
+        "publisher": "Building study source acknowledgement",
+        "accessed": "2026-10-09"
       }
     ],
     "geometrySources": [
@@ -1230,7 +1225,7 @@
         "https://www.mississauga.ca/wp-content/uploads/2025/01/15082458/MOPA177-jan-2025.pdf"
       ]
     },
-    "lastStatusReview": "2026-09-28",
+    "lastStatusReview": "2026-10-08",
     "researchArea": "downtown",
     "district": "Downtown",
     "meshIds": [
@@ -1239,16 +1234,16 @@
       "63-6193"
     ],
     "position": [
-      -5134.715657745954,
-      81.31999969482422,
-      -396.76725987624377
+      -5135.082059387891,
+      81.29868347167968,
+      -396.7100830078125
     ],
     "retainedMeshIds": [
       "63-6191",
       "63-6192",
       "63-6193"
     ],
-    "geometryCoverage": "Retained municipal massing; dated 2021 tower statistics corroborated by primary drawings",
+    "geometryCoverage": "Optional dated 2021 reference; current exact geometry and roof-height relationship unverified",
     "referenceReviewDate": "2026-09-28",
     "statusDetail": "HOZ 19-12 W4 and SP 20-6 W4 remain open. The applicant has put the project on hold; approval is withheld pending technical responses. No resubmission or construction timeline is confirmed. This is not a cancellation.",
     "units": 1309,
@@ -1261,7 +1256,10 @@
       "date": "2026-09-24",
       "publicSummary": "HOZ 19-12 W4 and SP 20-6 W4 remain open. The applicant has put the project on hold; approval is withheld pending technical responses. No resubmission or construction timeline is confirmed. This is not a cancellation.",
       "correspondencePublished": false
-    }
+    },
+    "localReview": true,
+    "localOptional": true,
+    "referenceStudy": true
   },
   {
     "id": "square-one-office",
@@ -1355,7 +1353,7 @@
       96
     ],
     "summary": "Four-tower mixed-use district with stepped, rotated volumes and illuminated crowns.",
-    "modelCaveat": "The four towers have different completion states. CVU/CTBUH calls the tallest tower EX4 and the shortest EX3; current marketing uses EX3 and EXS. These are aliases, not extra towers. Source full geometry is a supplied design and is not as-built proof. Native material nodes cross phases; EXS requires triangle-level spatial classification. EX3 now follows the architect’s 66-storey description. The former 72-storey/232 m form is historical; current metre height is unverified. Its future blue crown is a retained design interpretation, not proof of completion.",
+    "modelCaveat": "The four towers have different completion states. CVU/CTBUH calls the tallest tower EX 4 and the shortest EX 3; current marketing uses EX 3 and EXS. These are aliases, not extra towers. Source full geometry is a supplied design and is not as-built proof. Native material nodes cross phases; EXS requires triangle-level spatial classification. EX 3 now follows the architect’s 66-storey description. The former 72-storey/232 m form is historical; current metre height is unverified. Its future blue crown is a retained design interpretation, not proof of completion.",
     "sources": [
       {
         "url": "https://urbantoronto.ca/news/2024/12/mississaugas-high-point-passes-exchange-district-condos.57488",
@@ -3016,7 +3014,8 @@
       "63-6187",
       "63-6188"
     ],
-    "geometryCoverage": "Source geometry available; current detail may differ"
+    "geometryCoverage": "Source geometry available; current detail may differ",
+    "evidenceUpdateNote": "Current site-plan application confirmed. Public exterior information is being sought; no paid FOI has been initiated."
   },
   {
     "id": "3600-hurontario",
@@ -3202,7 +3201,7 @@
     "heightM": [],
     "towers": [],
     "summary": "The 72-acre waterfront community includes built residences and future blocks. The January 2026 amendment adds 898 homes to the earlier 2,995 permission; current marketing rounds the total to 4,000.",
-    "modelCaveat": "Only the adopted CURRENT right-hand plan was traced; superseded P/Q/U layouts on the comparison left are excluded. Concept-visible podium wings, open courtyards, curved O2 outline and Campus terraces are simplified. Windows, balconies, doors, roof equipment, cladding, landscaping and parcel grading are not invented. Terrace bands are reduced to the labelled principal podium steps because the source raster cannot support precise intermediate contours. The concept was adopted in 2024. November 2025 committee approval supports implementing those permissions; detailed 2025/2026 zoning PDFs returned access errors, so their precise plan contours were not independently compared.",
+    "modelCaveat": "Only the adopted CURRENT right-hand plan was traced; superseded P/Q/U layouts on the comparison left are excluded. Concept-visible podium wings, open courtyards, curved O 2 outline and Campus terraces are simplified. Windows, balconies, doors, roof equipment, cladding, landscaping and parcel grading are not invented. Terrace bands are reduced to the labelled principal podium steps because the source raster cannot support precise intermediate contours. The concept was adopted in 2024. November 2025 committee approval supports implementing those permissions; detailed 2025/2026 zoning PDFs returned access errors, so their precise plan contours were not independently compared.",
     "sources": [
       {
         "url": "https://experiencebrightwater.ca/",
@@ -3453,7 +3452,7 @@
       }
     ],
     "summary": "The first completed Brightwater condominium pair has five and fourteen storeys.",
-    "modelCaveat": "Municipal award report identifies Brightwater I at 215 Lakeshore West. Source footprints align with C1 and H1 on the current adopted masterplan.",
+    "modelCaveat": "Municipal award report identifies Brightwater I at 215 Lakeshore West. Source footprints align with C 1 and H 1 on the current adopted masterplan.",
     "sources": [
       {
         "url": "https://experiencebrightwater.ca/",
@@ -3541,7 +3540,7 @@
       }
     ],
     "summary": "Nine-storey condominium with twelve adjacent urban town residences.",
-    "modelCaveat": "Source footprint matches G1. Nine-storey-scale body is already represented: captured ground 81.82, main roof 115.12 and upper roof 120.62 m ASL. Retain this geometry without stretching.",
+    "modelCaveat": "Source footprint matches G 1. Nine-storey-scale body is already represented: captured ground 81.82, main roof 115.12 and upper roof 120.62 m ASL. Retain this geometry without stretching.",
     "sources": [
       {
         "url": "https://experiencebrightwater.ca/",
@@ -3749,7 +3748,7 @@
     "heightM": [],
     "towers": [],
     "summary": "A staged waterfront community that the City currently describes as approximately 12,000 homes, alongside parks, employment space and new streets. The model combines retained municipal massing with individually sourced current phases; it does not yet represent every planned parcel.",
-    "modelCaveat": "The current City overview projects 12,000 homes, developer marketing advertises up to 11,000, and the provincial ceiling remains 16,000. These are different quantities, not a resolved final build-out. The 2019 concept is not used to invent buildings on unverified parcels. Twenty-six retained City components are now cross-referenced to Block 1/Branthaven, Block 2, Greenpark SP24/015 and Block 15. Current additions cover Harbourwalk, Pier House/Block 4, South Banks and Aura reference envelopes. Greenpark’s fourth tall-body discrepancy, Innovation District parcel architecture, remaining village blocks and final public-space details remain unresolved. These additions do not mean the complete village is modelled.",
+    "modelCaveat": "The current City overview projects 12,000 homes, developer marketing advertises up to 11,000, and the provincial ceiling remains 16,000. These are different quantities, not a resolved final build-out. The 2019 concept is not used to invent buildings on unverified parcels. Twenty-six retained City components are now cross-referenced to Block 1/Branthaven, Block 2, Greenpark SP 24/015 and Block 15. Current additions cover Harbourwalk, Pier House/Block 4, South Banks and Aura reference envelopes. Greenpark’s fourth tall-body discrepancy, Innovation District parcel architecture, remaining village blocks and final public-space details remain unresolved. These additions do not mean the complete village is modelled.",
     "sources": [
       {
         "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/lakeview-waterfront-area-redevelopment/lakeview-village/",
@@ -4083,7 +4082,6 @@
     "geometrySources": [
       {
         "assetId": "harbourwalk-terraced-reference",
-        "file": "models/supplemental/harbourwalk/harbourwalk-terraced-reference.glb",
         "sha256": "66400f11de4bd7444dad508f3d118415d50b9fd7686e07f7c33c1c56969b1fa1",
         "type": "independent reference reconstruction",
         "sources": [
@@ -4093,7 +4091,9 @@
           "https://www.landpower.ca/static/media/Harbourwalk-Brochure.pdf"
         ],
         "claims": "Approximate independent reconstruction from Tridel site-plan/terrace artwork, registered to City SP 21/168 parcel. Two 19-storey wings and courtyard are source-supported. 61.7 m display maximum (60.8 m roof plus 0.9 m parapet) is an estimate, not a published height; height tolerance ±6 m, placement ±5 m and outline ±3 m are interpretive bounds. 5 m entrance level, 3.10 m upper floor spacing, balcony/slab/parapet thicknesses, terrace taper spacing and exterior detailing are inferred. This shows the planned finished form of a project under construction, not a measured current construction stage.",
-        "replacesSourceIds": []
+        "replacesSourceIds": [],
+        "historicalReferenceUnavailable": true,
+        "historicalReferenceNote": "This historical source file is not included in the local website preview. The original private provenance records remain unchanged."
       }
     ],
     "includeInModel": true,
@@ -4646,7 +4646,7 @@
       }
     ],
     "summary": "Greenpark tower designed by Graziani + Corazza; the current developer site advertises the third sales release.",
-    "modelCaveat": "Existing City component 103-1083 is the Greenpark tower at 950 Aerodrome Avenue: its footprint contains the official City address point and lies wholly within SP24/015. It is retained unchanged, not added again. The City application lists a 43-storey tower; Greenpark markets 42 floors of suites, so the overall/suite counts refer to different conventions. Source 143.81 m Bldg_Hght is not independently verified final height. Other Greenpark components stay in the Lakeview parent: the source has three tall bodies, while the current application describes four towers; the fourth-body discrepancy is unresolved.",
+    "modelCaveat": "Existing City component 103-1083 is the Greenpark tower at 950 Aerodrome Avenue: its footprint contains the official City address point and lies wholly within SP 24/015. It is retained unchanged, not added again. The City application lists a 43-storey tower; Greenpark markets 42 floors of suites, so the overall/suite counts refer to different conventions. Source 143.81 m Bldg_Hght is not independently verified final height. Other Greenpark components stay in the Lakeview parent: the source has three tall bodies, while the current application describes four towers; the fourth-body discrepancy is unresolved.",
     "sources": [
       {
         "url": "https://greenparkgroup.ca/new-homes/mississauga/aquanova/",
@@ -4799,7 +4799,7 @@
       }
     ],
     "summary": "Fourteen-storey condominium with six blocks of three-storey townhouses.",
-    "modelCaveat": "Eight existing City components are wholly contained within current SP22/056 Block 1, explicitly described as Branthaven in the City layer. This identifies the retained Birch-era condo and six townhome rows without constructing duplicates. Current detailed architecture and completion remain unverified; the application remains active. Pier House is separately registered at Block 4 and is not a reason to remove this older geometry without cancellation evidence.",
+    "modelCaveat": "Eight existing City components are wholly contained within current SP 22/056 Block 1, explicitly described as Branthaven in the City layer. This identifies the retained Birch-era condo and six townhome rows without constructing duplicates. Current detailed architecture and completion remain unverified; the application remains active. Pier House is separately registered at Block 4 and is not a reason to remove this older geometry without cancellation evidence.",
     "sources": [
       {
         "url": "https://staging.branthaven.com/stg/pier-house/",
@@ -5135,7 +5135,7 @@
       }
     ],
     "summary": "Seven proposed towers and 2,434 homes, now shown using the supplied Zeidler design massing. The podiums, courtyard forms and tower outlines follow the native model; no construction completion date is confirmed.",
-    "modelCaveat": "A100 and native geometry use 82.75 m for A1, while A200 labels 87.75 m. Native geometry is retained. No detailed facade or construction approval is implied.",
+    "modelCaveat": "A 100 and native geometry use 82.75 m for A 1, while A 200 labels 87.75 m. Native geometry is retained. No detailed facade or construction approval is implied.",
     "sources": [
       {
         "url": "https://www.infrastructureontario.ca/clarkson-toc",
@@ -5219,7 +5219,6 @@
     "geometrySources": [
       {
         "assetId": "wf-clarkson-toc-current-plan",
-        "file": "models/supplemental/refinement-waterfront/clarkson-toc-current-plan.glb",
         "sha256": "31584f02778ed261306314e31291838c975e92d3dd623e5125ffe89bf17f2b15",
         "type": "adapted source design model",
         "sources": [
@@ -5230,7 +5229,9 @@
           "https://data.mississauga.ca/pages/mississauga-3d",
           "https://ws.geoservices.lrc.gov.on.ca/arcgis5/rest/services/Elevation/Ontario_DTM_LidarDerived/ImageServer"
         ],
-        "claims": "A100 and native geometry use 82.75 m for A1, while A200 labels 87.75 m. Native geometry is retained. No detailed facade or construction approval is implied."
+        "claims": "A100 and native geometry use 82.75 m for A1, while A200 labels 87.75 m. Native geometry is retained. No detailed facade or construction approval is implied.",
+        "historicalReferenceUnavailable": true,
+        "historicalReferenceNote": "This historical source file is not included in the local website preview. The original private provenance records remain unchanged."
       }
     ],
     "includeInModel": true,
@@ -7754,7 +7755,7 @@
     "heightM": [],
     "towers": [],
     "summary": "Fifteen approximate townhome roof envelopes from the developer’s June plan and currently linked later image: ten retained envelopes plus five previously omitted grey contextual roofs. Three added eastern rows match the active Block 8 application.",
-    "modelCaveat": "Approximate marketing-plan-derived townhome envelopes, not surveyed architectural models. Seven June footprints and three additional highlighted blocks in the currently linked image are registered through two City street junctions and four common roof centroids. The image scale bar conflicts with City junction spacing by about 25%; City coordinates control the model scale. Estimated placement ±10 m and roof-outline tolerance ±3 m are interpretive, not statistical confidence bounds. The ten retained envelopes use an estimated 13 m maximum with ±3.5 m uncertainty, derived from about 6.2 m registered bay width and roughly 2.1:1 height-to-bay proportions in the official illustrative facade. No published dimensional height was found. Roofs, balconies, basements and facade articulation are omitted; grey marketing roofs are retained from the June version, not independently confirmed current building drawings. Five additional grey roof envelopes shown in Caivan’s June 2026 marketing plan, registered using the unchanged two-junction transform of the retained ten-envelope model. All five lie inside City parcel 33912100. Three eastern rows lie within current SP25/68 W1 (Block 8, 88 townhouses); two western contextual rows lie outside the reviewed current application polygons and have no verified active-file assignment. The grey background artwork is not a final architectural drawing or confirmed construction phase. Use as explicitly uncertain future context. The 13 m display height remains the original Aura estimate with ±3.5 m uncertainty; placement ±10 m and outline ±3 m remain interpretive bounds. No number of dwellings, exact metre height, occupancy date, detailed roofs or final facade is inferred from these envelopes. Existing ten-envelope geometry remains unchanged.",
+    "modelCaveat": "Approximate marketing-plan-derived townhome envelopes, not surveyed architectural models. Seven June footprints and three additional highlighted blocks in the currently linked image are registered through two City street junctions and four common roof centroids. The image scale bar conflicts with City junction spacing by about 25%; City coordinates control the model scale. Estimated placement ±10 m and roof-outline tolerance ±3 m are interpretive, not statistical confidence bounds. The ten retained envelopes use an estimated 13 m maximum with ±3.5 m uncertainty, derived from about 6.2 m registered bay width and roughly 2.1:1 height-to-bay proportions in the official illustrative facade. No published dimensional height was found. Roofs, balconies, basements and facade articulation are omitted; grey marketing roofs are retained from the June version, not independently confirmed current building drawings. Five additional grey roof envelopes shown in Caivan’s June 2026 marketing plan, registered using the unchanged two-junction transform of the retained ten-envelope model. All five lie inside City parcel 33912100. Three eastern rows lie within current SP 25/68 W 1 (Block 8, 88 townhouses); two western contextual rows lie outside the reviewed current application polygons and have no verified active-file assignment. The grey background artwork is not a final architectural drawing or confirmed construction phase. Use as explicitly uncertain future context. The 13 m display height remains the original Aura estimate with ±3.5 m uncertainty; placement ±10 m and outline ±3 m remain interpretive bounds. No number of dwellings, exact metre height, occupancy date, detailed roofs or final facade is inferred from these envelopes. Existing ten-envelope geometry remains unchanged.",
     "sources": [
       {
         "url": "https://caivan.com/aura/",
@@ -7822,7 +7823,6 @@
       },
       {
         "assetId": "aura-additional-plan-envelopes",
-        "file": "models/supplemental/lakeview-expansion/aura-additional-plan-envelopes.glb",
         "sha256": "83c8a8a5d6056894ce3af0210f12d9631c7f8c54c3fa3155d0e5aea73ea24f0b",
         "type": "independent reference reconstruction",
         "replacesSourceIds": [],
@@ -7836,7 +7836,9 @@
           "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0",
           "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Parcel/FeatureServer/0"
         ],
-        "claims": "Five additional grey roof envelopes shown in Caivan’s June 2026 marketing plan, registered using the unchanged two-junction transform of the retained ten-envelope model. All five lie inside City parcel 33912100. Three eastern rows lie within current SP25/68 W1 (Block 8, 88 townhouses); two western contextual rows lie outside the reviewed current application polygons and have no verified active-file assignment. The grey background artwork is not a final architectural drawing or confirmed construction phase. Use as explicitly uncertain future context. The 13 m display height remains the original Aura estimate with ±3.5 m uncertainty; placement ±10 m and outline ±3 m remain interpretive bounds. No number of dwellings, exact metre height, occupancy date, detailed roofs or final facade is inferred from these envelopes. Existing ten-envelope geometry remains unchanged."
+        "claims": "Five additional grey roof envelopes shown in Caivan’s June 2026 marketing plan, registered using the unchanged two-junction transform of the retained ten-envelope model. All five lie inside City parcel 33912100. Three eastern rows lie within current SP25/68 W1 (Block 8, 88 townhouses); two western contextual rows lie outside the reviewed current application polygons and have no verified active-file assignment. The grey background artwork is not a final architectural drawing or confirmed construction phase. Use as explicitly uncertain future context. The 13 m display height remains the original Aura estimate with ±3.5 m uncertainty; placement ±10 m and outline ±3 m remain interpretive bounds. No number of dwellings, exact metre height, occupancy date, detailed roofs or final facade is inferred from these envelopes. Existing ten-envelope geometry remains unchanged.",
+        "historicalReferenceUnavailable": true,
+        "historicalReferenceNote": "This historical source file is not included in the local website preview. The original private provenance records remain unchanged."
       }
     ],
     "includeInModel": true,
@@ -7952,7 +7954,7 @@
     "heightM": [],
     "towers": [],
     "summary": "Nineteen row-building groups traced from the current Pier House site plan. Branthaven offers three-storey townhomes, and the active City application records 164 units. The full reference-based layout appears in the future view.",
-    "modelCaveat": "Independent approximate reference reconstruction: 19 row-building envelopes traced from the publicly reproduced Pier House marketing site plan, registered to three City road junctions and contained in current SP25/48 Block4. Three storeys and pitched/gabled roof character are corroborated by the current Branthaven brochure. The 9.45m eaves/11.95m ridge are display estimates, not published architectural dimensions; ±2.5m height, ±3m placement and ±3m outline tolerances are interpretive. Bay spacing, balconies, roof pitch and facade details are illustrative; do not treat the geometry as a unit-by-unit or permit model. Plan future-release rows are retained, not asserted to be completed or all currently on sale. No completion date verified.",
+    "modelCaveat": "Independent approximate reference reconstruction: 19 row-building envelopes traced from the publicly reproduced Pier House marketing site plan, registered to three City road junctions and contained in current SP 25/48 Block 4. Three storeys and pitched/gabled roof character are corroborated by the current Branthaven brochure. The 9.45 m eaves/11.95 m ridge are display estimates, not published architectural dimensions; ±2.5 m height, ±3 m placement and ±3 m outline tolerances are interpretive. Bay spacing, balconies, roof pitch and facade details are illustrative; do not treat the geometry as a unit-by-unit or permit model. Plan future-release rows are retained, not asserted to be completed or all currently on sale. No completion date verified.",
     "sources": [
       {
         "url": "https://www.branthaven.com/communities/pier-house/",
@@ -9783,7 +9785,6 @@
     "geometrySources": [
       {
         "assetId": "south-banks-plan-derived",
-        "file": "models/supplemental/lakeview-expansion/south-banks-plan-derived.glb",
         "sha256": "bf3673b5ebe83ada7f6a84c4985b2b370d17597a0c6066065e8430556b647639",
         "type": "independent reference reconstruction",
         "sources": [
@@ -9793,7 +9794,9 @@
           "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0",
           "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/StreetCentreline/FeatureServer/0"
         ],
-        "claims": "Seventeen townhome blocks are reconstructed from a parcel-registered artist concept; the cross-gables follow the original image references. Heights, roof proportions and details remain schematic, with estimated uncertainties of ±3 m in height, ±4 m in placement and ±2 m in outlines; these are modelling judgments, not certified tolerances. No native BIM model or approved metric roof drawings were supplied."
+        "claims": "Seventeen townhome blocks are reconstructed from a parcel-registered artist concept; the cross-gables follow the original image references. Heights, roof proportions and details remain schematic, with estimated uncertainties of ±3 m in height, ±4 m in placement and ±2 m in outlines; these are modelling judgments, not certified tolerances. No native BIM model or approved metric roof drawings were supplied.",
+        "historicalReferenceUnavailable": true,
+        "historicalReferenceNote": "This historical source file is not included in the local website preview. The original private provenance records remain unchanged."
       }
     ],
     "includeInModel": true,
@@ -11527,7 +11530,7 @@
       }
     ],
     "summary": "A proposal to add three 20-storey apartments with a total of 695 units to a site with two existing and one previously approved apartment.",
-    "modelCaveat": "June 2026 unapproved expansion, separate from earlier B3. Dimensioned main envelope and five-storey podium, with height through mechanical penthouse. Survey control registration; allow ±1 m placement. Small partial level-17/18 terrace cuts, balcony projections, entrance recesses and facade divisions are omitted. Floor bands and materials are schematic. B6 mechanical silhouette is traced from A-B6-304, approximately ±0.3 m; B4/B5 MPH follow the rectangular plan envelope. Datum treated as local UTM17 NAD83; no sub-metre geodetic claim. The old components 73-4291 and 73-4293 conflict with the June 2026 B5 layout and are excluded. Separate B3 (73-4292) remains a violet, height-uncertain municipal envelope: the current site plan labels 25 storeys, while the old mesh records 52.1 m.",
+    "modelCaveat": "June 2026 unapproved expansion, separate from earlier B 3. Dimensioned main envelope and five-storey podium, with height through mechanical penthouse. Survey control registration; allow ±1 m placement. Small partial level-17/18 terrace cuts, balcony projections, entrance recesses and facade divisions are omitted. Floor bands and materials are schematic. B 6 mechanical silhouette is traced from A-B 6-304, approximately ±0.3 m; B 4/B 5 MPH follow the rectangular plan envelope. Datum treated as local UTM 17 NAD 83; no sub-metre geodetic claim. The old components 73-4291 and 73-4293 conflict with the June 2026 B 5 layout and are excluded. Separate B 3 (73-4292) remains a violet, height-uncertain municipal envelope: the current site plan labels 25 storeys, while the old mesh records 52.1 m.",
     "sources": [
       {
         "url": "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/4100-ponytrail-drive-and-1850-rathburn-road-east-oz-opa-26-9-w3/",
@@ -12268,7 +12271,7 @@
     ],
     "towers": [],
     "summary": "To permit a 13-storey rental apartment building with 144 units.",
-    "modelCaveat": "March 2026 proposal envelope, not an approved or built outcome. Exact written heights and main floorplate dimensions; podium and rooftop screen traced from published plan vectors. Registration uses survey controls and existing-tower corners (allow ±1 m position, not a statistical confidence interval). Screen thickness, floor bands and materials are illustrative. Individual balconies, window divisions, recessed entries and equipment are omitted. Datum treated as local NAD83 UTM17; no sub-metre geodetic claim.",
+    "modelCaveat": "March 2026 proposal envelope, not an approved or built outcome. Exact written heights and main floorplate dimensions; podium and rooftop screen traced from published plan vectors. Registration uses survey controls and existing-tower corners (allow ±1 m position, not a statistical confidence interval). Screen thickness, floor bands and materials are illustrative. Individual balconies, window divisions, recessed entries and equipment are omitted. Datum treated as local NAD 83 UTM 17; no sub-metre geodetic claim.",
     "sources": [
       {
         "url": "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/1315-bough-beeches-boulevard-oz-opa-26-5-w3/",
@@ -13065,7 +13068,7 @@
     "storeys": [],
     "heightM": [],
     "towers": [],
-    "summary": "Development application includes an industrial development consisting of seven new industrial buildings and a new internal private road networking including parking and loading areas, and drive-aisles.",
+    "summary": "Development application includes an industrial development consisting of seven new industrial buildings and a new internal road networking including parking and loading areas, and drive-aisles.",
     "modelCaveat": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ. City URL names 2025 file numbers but page title names 2015 file numbers; project identity requires caution.",
     "sources": [
       {
@@ -13165,7 +13168,7 @@
     ],
     "towers": [],
     "summary": "Development application includes a 34 storey apartment building containing a total of 559 units, with commercial uses on the ground floor.",
-    "modelCaveat": "July 2025 proposal, under review. Main dimensions and layered envelopes follow A110 and the planning schedule; balconies, facade divisions, ground recesses and exact parapets are omitted. Position is registered through four surveyed existing houses to unmodified City geometry (centroid fit residuals 0.14–0.25 m; allow ±1 m overall position). Plan outlines are traced, approximately ±0.25 m. Overall 110.445 m dimension is corroborated as 110.4 m in the planning schedule. The elevation absolute-level tags disagree by about 1.8 m with that dimension; this envelope follows the overall dimension, not those tags. A110 labels the western upper terrace as the 33-storey roof whereas the schedule labels 32: the drawn one-floor setback is shown, with its precise transition elevation unresolved. Existing heritage corner is retained; no existing meshes are altered by this asset.",
+    "modelCaveat": "July 2025 proposal, under review. Main dimensions and layered envelopes follow A 110 and the planning schedule; balconies, facade divisions, ground recesses and exact parapets are omitted. Position is registered through four surveyed existing houses to unmodified City geometry (centroid fit residuals 0.14–0.25 m; allow ±1 m overall position). Plan outlines are traced, approximately ±0.25 m. Overall 110.445 m dimension is corroborated as 110.4 m in the planning schedule. The elevation absolute-level tags disagree by about 1.8 m with that dimension; this envelope follows the overall dimension, not those tags. A 110 labels the western upper terrace as the 33-storey roof whereas the schedule labels 32: the drawn one-floor setback is shown, with its precise transition elevation unresolved. Existing heritage corner is retained; no existing meshes are altered by this asset.",
     "sources": [
       {
         "url": "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/51-55-dundas-street-west-and-60-66-70-and-78-agnes-street-oz-opa-25-18-w7/",
@@ -13982,16 +13985,14 @@
     "address": "3033 Dundas Street West",
     "lat": 43.522612011769,
     "lon": -79.683482618855,
-    "status": "Under review",
-    "statusDate": "2026-06-08",
+    "status": "2026 redesign; current model awaited",
+    "statusDate": "2026-10-08",
     "application": "OZ 25 11",
-    "storeys": [
-      12
-    ],
+    "storeys": [],
     "heightM": [],
     "towers": [],
-    "summary": "Development application includes a 12 storey mixed-use building with 156 residential units, a restaurant, medical office and retail space.",
-    "modelCaveat": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
+    "summary": "The architect says the 2026 rezoning design supersedes earlier drawings and has offered current SketchUp massing. It has not yet been received.",
+    "modelCaveat": "The older 2025 set cannot be presented as the latest design. This site remains an evidence/navigation record until current geometry arrives.",
     "sources": [
       {
         "url": "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/3033-dundas-street-west-oz-opa-25-11-w8/",
@@ -14072,7 +14073,8 @@
       7305.542475910857
     ],
     "retainedMeshIds": [],
-    "geometryCoverage": "Latest geometry unavailable in source model"
+    "geometryCoverage": "Current 2026 geometry awaited",
+    "lastStatusReview": "2026-10-08"
   },
   {
     "id": "streetsville-centre",
@@ -14096,7 +14098,7 @@
     ],
     "heightM": [],
     "towers": [],
-    "summary": "Development application includes 5 mixed-use buildings with 8 towers and heights ranging from 2 to 15 storeys, new public roads and public and private open space.",
+    "summary": "Development application includes 5 mixed-use buildings with 8 towers and heights ranging from 2 to 15 storeys, new public roads and public and open space.",
     "modelCaveat": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
     "sources": [
       {
@@ -16989,7 +16991,7 @@
     ],
     "heightM": [],
     "towers": [],
-    "summary": "Development application includes 6 apartment buildings with heights of 6, 8, 10, 12, 12 and 12 storeys containing 1, 246 dwelling units with commercial uses at ground level along Ninth Line, 24 three storey back-to-back townhouses and public park on public and private roads.",
+    "summary": "Development application includes 6 apartment buildings with heights of 6, 8, 10, 12, 12 and 12 storeys containing 1, 246 dwelling units with commercial uses at ground level along Ninth Line, 24 three storey back-to-back townhouses and public park on public and roads.",
     "modelCaveat": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
     "sources": [
       {
@@ -17231,7 +17233,6 @@
     "geometrySources": [
       {
         "assetId": "cooksville-toc-sep2026-envelopes",
-        "file": "models/supplemental/community-revision/cooksville-toc-sep2026-envelopes.glb",
         "sha256": "45c2231bbf989bd7bf268dc9e8abbf26d17ad250c18e89d81d466cc9b5f880ed",
         "type": "adapted source design model",
         "sources": [
@@ -17239,7 +17240,9 @@
           "https://www.infrastructureontario.ca/48f8a0/contentassets/e44b38c8189641c2aa193899c6727b3d/2025-09-25_cooksville-toc_planning-justification-report.pdf",
           "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/cooksville-go-transit-oriented-community/"
         ],
-        "claims": "Native proposal geometry includes seven towers, podiums, setbacks and rooftop structures. It is a design proposal, not approved or completed construction. The source design elevations are retained; underground geometry is clipped to the atlas terrain. The terrain is approximate and the vertical datum is not survey-certified. Some drawing title blocks retain older issue labels. The Step 4 cover letter, September 2026 draft PJR and September 22 public presentation support the seven-tower, 3,171-home version. Final facade finishes and construction dates remain unconfirmed. The display model is not a watertight fabrication solid. Original engineering files are retained privately."
+        "claims": "Native proposal geometry includes seven towers, podiums, setbacks and rooftop structures. It is a design proposal, not approved or completed construction. The source design elevations are retained; underground geometry is clipped to the atlas terrain. The terrain is approximate and the vertical datum is not survey-certified. Some drawing title blocks retain older issue labels. The Step 4 cover letter, September 2026 draft PJR and September 22 public presentation support the seven-tower, 3,171-home version. Final facade finishes and construction dates remain unconfirmed. The display model is not a watertight fabrication solid. Original engineering files are retained privately.",
+        "historicalReferenceUnavailable": true,
+        "historicalReferenceNote": "This historical source file is not included in the local website preview. The original private provenance records remain unchanged."
       }
     ],
     "includeInModel": true,
@@ -17395,52 +17398,39 @@
     "name": "6719–6749 Glen Erin Drive",
     "district": "Meadowvale",
     "address": "6719 Glen Erin Drive",
-    "lat": 43.58746933594488,
-    "lon": -79.75920513338797,
-    "status": "Approved planning framework; current delivery unverified",
-    "statusDate": "2026-09-20",
+    "lat": 43.587000332672595,
+    "lon": -79.75927398382717,
+    "status": "Revised proposal; latest approval/delivery unverified",
+    "statusDate": "2026-10-08",
     "application": "",
     "sitePlan": "SP 23 2",
     "storeys": [
-      12,
-      3
+      16,
+      3,
+      13
     ],
-    "heightM": [
-      38.5
-    ],
+    "heightM": [],
     "towers": [],
-    "summary": "Infill 12-storey building with 184 apartments and 28 townhomes; existing 13-storey apartment retained. City 2026 affordable-rental page lists 136 affordable units on a funding wait list.",
-    "modelCaveat": "Funding wait-list dates are expectations, not confirmed groundbreaking or occupancy.",
+    "summary": "The March 17, 2026 plan shows a stepped 16-storey apartment building with 263 apartments, 28 townhomes and a retained 13-storey building. The local preview tests that newer footprint.",
+    "modelCaveat": "The proposal follows the March 17, 2026 stepped 16-storey plan. The 48.15 m value is the top slab of the last residential floor, not ultimate roof height. Façades and the upper roof enclosure are inferred. The retained 13-storey apartment uses an approximate 39.12 m roof and photo-informed balconies. Current approval, delivery and as-built measurements remain unconfirmed; placement has about 3 m working uncertainty.",
     "sources": [
       {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2022/08/17092909/OZ-20-019-W9-OPA-149-Notice-of-Passing-Public-Notice.pdf",
-        "title": "Glen Erin OPA 149 notice of passing",
-        "publisher": "City of Mississauga",
-        "accessed": "2026-09-20",
-        "claims": [
-          "2022 planning approval notice."
-        ],
-        "verification": "search-index"
+        "title": "City-supplied Arcadis A-103 site plan",
+        "publisher": "City of Mississauga / Arcadis Architects",
+        "date": "2026-03-17"
       },
       {
-        "url": "https://urbantoronto.ca/database/projects/6719-glen-erin-drive.48155",
-        "title": "6719 Glen Erin database",
-        "publisher": "Urban Toronto",
-        "accessed": "2026-09-20",
-        "claims": [
-          "12 storeys 38.5 m, 212 new homes."
-        ],
-        "verification": "search-index"
+        "title": "City of Mississauga 2024 building footprints",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/BldgRoof/FeatureServer/0"
       },
       {
-        "url": "https://www.mississauga.ca/services-and-programs/building-and-renovating/incentives-for-building-affordable-rental-housing/",
-        "title": "Affordable rental funding status",
-        "publisher": "City of Mississauga",
-        "accessed": "2026-09-20",
-        "claims": [
-          "136 affordable units on wait list; expected dates do not establish start."
-        ],
-        "verification": "search-index"
+        "title": "Berkley Property Management: Rockcliffe on the Park exterior photographs",
+        "url": "https://www.berkleypm.ca/apartments/rockcliffe-on-the-park/"
+      },
+      {
+        "title": "Arcadis plan supplied by the City of Mississauga; retained-building references from City footprints and Berkley property photographs.",
+        "publisher": "Building study source acknowledgement",
+        "accessed": "2026-10-09"
       }
     ],
     "geometrySources": [],
@@ -17483,9 +17473,9 @@
       "13-11437"
     ],
     "position": [
-      -14833.299804182025,
-      126.91799926757812,
-      196.51936442684382
+      -14838.080197659012,
+      125.96221008300782,
+      248.69037088790634
     ],
     "retainedMeshIds": [
       "13-11432",
@@ -17495,7 +17485,21 @@
       "13-11436",
       "13-11437"
     ],
-    "geometryCoverage": "Source geometry available; current detail may differ"
+    "geometryCoverage": "2026 plan-traced stepped massing; inferred façade/upper enclosure",
+    "lastStatusReview": "2026-10-08",
+    "localReview": true,
+    "heightEvidence": {
+      "value": 48.15,
+      "endpoint": "top slab of last residential floor",
+      "ultimateRoofHeight": null,
+      "revision": "2026-03-17"
+    },
+    "proposedApartmentUnits": 263,
+    "retainedApartmentUnits": 179,
+    "townhomeUnits": 28,
+    "localOptional": false,
+    "residentialSlabDatumM": 48.15,
+    "referenceStudy": true
   },
   {
     "id": "winston-6020",
@@ -18176,10 +18180,10 @@
     "name": "4094 Tomken / 924 Rathburn",
     "district": "Rathwood",
     "address": "4094 Tomken / 924 Rathburn",
-    "lat": 43.61566917115522,
-    "lon": -79.61563595348863,
-    "status": "Zoning approved; preconstruction",
-    "statusDate": "2026-09-20",
+    "lat": 43.615622687015154,
+    "lon": -79.61555079693368,
+    "status": "Approved planning framework; detailed 2024 reference/current upper geometry unverified",
+    "statusDate": "2026-10-08",
     "storeys": [
       12,
       12
@@ -18190,59 +18194,125 @@
     "towers": [],
     "application": "OZ 22 28",
     "sitePlan": "",
-    "summary": "Kindred Works proposes two 12-storey rental buildings while retaining the church and existing seven-storey apartment. Developer materials state 250 homes; June 2026 municipal inventory lists 251. An August 19, 2026 councillor update says the construction start date remains to be determined.",
-    "modelCaveat": "Use the source massing conditionally. Do not call it under construction based on the developer timeline; detailed site-plan revisions and a one-unit count discrepancy remain.",
+    "summary": "The detailed source-based study follows the 2024 upper plans. The 2025 site plan changes the ground footprints, and current upper plans remain unavailable. Start date remains undetermined.",
+    "modelCaveat": "This detailed source-based study reconstructs the April 12, 2024 KPMB drawings published as the September 2024 submission. Both buildings are 12 storeys and 43.8 m from the documented established grades to mechanical top. Individual windows follow the documented repeated bay rhythm; frame depths, rail details and exact material tones remain approximate. Curved roof enclosures follow the roof plan, which takes precedence over illustrative render imagery. The March 21, 2025 site plan changes the ground outlines and Building 1 FFE from 137.40 to 137.50 m; no current upper-floor drawings or elevations were recovered. This dated model must not be asserted to reproduce the current 2025 envelope. No basements are exposed or exported. Existing church and seven-storey apartment are retained. Placement is a municipal-footprint alignment with approximately 2.5 m working uncertainty, not a legal survey. Proposed finished floors differ from current bare-earth terrain at some edges; current civil grading is unverified. A shallow foundation conceals the gap, without changing documented floors, roof datums or roads.",
     "sources": [
       {
-        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D130&outFields=*&outSR=4326&f=pjson",
-        "title": "June 30, 2026 active development inventory — SP 25 29",
-        "publisher": "City of Mississauga",
-        "accessed": "2026-09-20",
-        "claims": [
-          "Two residential apartment buildings (existing apartment building and place of worship to remain)",
-          "Raw workflow status: Withheld; not a statement of cancellation."
-        ],
-        "verification": "read"
+        "title": "Westminster United Mississauga - KPMB architectural drawings Oct 2023.pdf",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2023/11/Architectural-Drawings_Oct-2023_OZ-21-17-W3.pdf"
       },
       {
-        "url": "https://www.kindredworks.ca/projects/4094-tomken-road",
-        "title": "4094 Tomken developer project",
-        "publisher": "Kindred Works",
-        "accessed": "2026-09-20",
-        "claims": [
-          "Two 12-storey buildings; existing church and apartment retained."
-        ],
-        "verification": "search-index"
+        "title": "Westminster United Mississauga - KPMB elevations and sections Oct 2023.pdf",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2023/11/Building-Elevations-and-Sections_Oct-2023_OZ-21-17-W3.pdf"
       },
       {
-        "url": "https://chrisfonseca.ca/4094tomken/",
-        "title": "August 2026 community update",
-        "publisher": "Ward 3 councillor Chris Fonseca",
-        "accessed": "2026-09-20",
-        "claims": [
-          "Construction start date remains to be determined."
-        ],
-        "verification": "search-index"
+        "title": "Westminster United Mississauga - KPMB renders September 2024.pdf",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110605/renderings-september-2024-oz-opa-22-28-w3.pdf"
       },
       {
-        "url": "https://urbantoronto.ca/forum/threads/toronto-4094-tomken-road-43-8m-12s-kindred-works-kpmb.34940/",
-        "title": "Tomken development discussion",
-        "publisher": "UrbanToronto",
-        "accessed": "2026-09-20",
-        "claims": [
-          "12-storey buildings, 43.8 m source height."
-        ],
-        "verification": "search-index"
+        "title": "Westminster United Mississauga - KPMB building 2 south elevation September 2024.pdf",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110717/building-2-south-elevation-september-2024-oz-opa-22-28-w3.pdf"
       },
       {
-        "url": "https://www.mississauga.ca/services-and-programs/building-and-renovating/incentives-for-building-affordable-rental-housing/",
-        "title": "Affordable rental housing incentives: expected construction periods",
-        "publisher": "City of Mississauga",
-        "accessed": "2026-09-20",
-        "claims": [
-          "Expected construction 2026-11 to 2029-12; not actual delivery."
-        ],
-        "verification": "read"
+        "title": "Westminster United Mississauga - KPMB building 1 transverse section September 2024.pdf",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110709/building-1-section-transverse-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "Westminster United Mississauga - KPMB site plan March 2025.pdf",
+        "url": "https://chrisfonseca.ca/wp-content/uploads/2025/06/SP-25-29-W3-Site-Plan.pdf"
+      },
+      {
+        "title": "Building 1 North Elevation – September 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110707/building-1-north-elevation-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "Building 1 South Elevation – September 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110711/building-1-south-elevation-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "Building 2 North Elevation – September 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110712/building-2-north-elevation-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "East Full Elevation – September 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110436/east-full-elevation-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "Floor Plan Ground Level – September 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110441/floor-plan-ground-level-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "Floor Plan Level 2 – September 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110442/floor-plan-level-2-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "Floor Plan Level 3 – September 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110444/floor-plan-level-3-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "Floor Plan Level 4 – September 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110446/floor-plan-level-4-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "Floor Plan Level 5 – September 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110447/floor-plan-level-5-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "Floor Plan Level 6 – September 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110449/floor-plan-level-6-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "Floor Plan Level 7 – September 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110450/floor-plan-level-7-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "Floor Plan Level 8 – September 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110452/floor-plan-level-8-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "Floor Plan Level 9 – September 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110454/floor-plan-level-9-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "Floor Plan Level 10 – September 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110456/floor-plan-level-10-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "Floor Plan Level 11 – September 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110457/floor-plan-level-11-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "Floor Plan Level 12 – September 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110459/floor-plan-level-12-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "Floor Plan Roof Level – September 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110506/floor-plan-roof-level-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "Site Survey – September 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110644/site-survey-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "Statistics – September 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110646/statistics-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "West Full Elevation September 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110658/west-full-elevation-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "Site Plan – September 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/10/22110643/site-plan-september-2024-oz-opa-22-28-w3.pdf"
+      },
+      {
+        "title": "City OPA 190: passing notice and no OPA appeal declaration",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/01/08091741/Mississauga-Official-Plan-Amendment-190.pdf"
+      },
+      {
+        "title": "KPMB architectural references published by the City of Mississauga; dated upper design and later ground-plan limits are identified.",
+        "publisher": "Building study source acknowledgement",
+        "accessed": "2026-10-09"
       }
     ],
     "geometrySources": [],
@@ -18277,15 +18347,20 @@
       "71-6187"
     ],
     "position": [
-      -3295.356735179317,
-      64.78399658203125,
-      -3118.496854633093
+      -3288.3992986091316,
+      65.87559204101562,
+      -3113.448789021393
     ],
     "retainedMeshIds": [
       "71-6186",
       "71-6187"
     ],
-    "geometryCoverage": "Source geometry available; current detail may differ"
+    "geometryCoverage": "Optional dated 2024 architectural reference; 2025 ground study shown separately",
+    "localReview": true,
+    "localOptional": true,
+    "lastStatusReview": "2026-10-08",
+    "modelLayer": "proposed",
+    "referenceStudy": true
   },
   {
     "id": "st-luke-westminster",
@@ -18737,8 +18812,8 @@
     "address": "630–670 Courtney Valley Road",
     "lat": 43.591239543854115,
     "lon": -79.66911450367404,
-    "status": "Site-plan application retained in June 2026 pipeline",
-    "statusDate": "2026-09-20",
+    "status": "Current application unconfirmed; historical version retained",
+    "statusDate": "2026-10-08",
     "storeys": [
       24,
       19
@@ -18748,7 +18823,7 @@
     "application": "",
     "sitePlan": "SP 13 2",
     "summary": "The current municipal inventory retains an older two-tower application: 24 and 19 storeys plus 14 horizontal multiple dwellings, totalling 658 homes.",
-    "modelCaveat": "Age alone is not cancellation. The 2013 application description may not capture subsequent detailed changes; retain only as source massing with unverified delivery.",
+    "modelCaveat": "The current City clarification reports no recent activity/current application, while the June 2026 inventory retains an older entry. This conflict does not establish official cancellation. The historical geometry is uncertain.",
     "sources": [
       {
         "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D67&outFields=*&outSR=4326&f=pjson",
@@ -18835,7 +18910,9 @@
       "62-5928",
       "62-5929"
     ],
-    "geometryCoverage": "Source geometry available; current detail may differ"
+    "geometryCoverage": "Source geometry available; current detail may differ",
+    "lastStatusReview": "2026-10-08",
+    "evidenceUpdateNote": "Historical source version; not a confirmed current scheme."
   },
   {
     "id": "absolute-world",
@@ -18877,13 +18954,13 @@
     "supplementalAssetIds": [
       "absolute-world-source-derived"
     ],
-    "geometryCoverage": "source-derived distinct56/50-floor tower forms; interpolated south rotation and illustrative facade detail",
+    "geometryCoverage": "source-derived distinct 56/50-floor tower forms; interpolated south rotation and illustrative facade detail",
     "position": [
       -4857.630859375,
       72.37999725341797,
       -763.351806640625
     ],
-    "modelCaveat": "This is a source-derived architectural visualization, not a certified as-built model. Exact intermediate south floor rotations are not available in the primary drawings: smooth bounded1–8-degree increments interpolate the verified floor 1/24/40 anchors and209-degree total. South plan scaled by the City captured maximum silhouette diameter; north fits the documented elliptical plate to captured roof samples. These are measured source fits, not dimensioned construction drawings. Tower centres retain City captured polygon centroids. Estimated model-registration tolerance±2m, plan scale/profile tolerance±2m; these are modelling allowances, not surveyed confidence intervals. Nominal architectural heights follow current CTBUH; City captured height extents differ by3.66m/4.21m. Ground datum is retained from City and its absolute vertical accuracy is unverified. Typical floor elevations and roof-zone subdivisions are inferred from published highest-occupied/top heights; they are not a complete elevation schedule. Balcony slab thickness0.20m, guard height1m and glazing setbacks are illustrative, as are material appearance and mullion detail. South mechanical roof uses the unchanged City plan outline, with its vertical placement reconstructed; north exact roof machinery is omitted.",
+    "modelCaveat": "This is a source-derived architectural visualization, not a certified as-built model. Exact intermediate south floor rotations are not available in the primary drawings: smooth bounded 1–8-degree increments interpolate the verified floor 1/24/40 anchors and 209-degree total. South plan scaled by the City captured maximum silhouette diameter; north fits the documented elliptical plate to captured roof samples. These are measured source fits, not dimensioned construction drawings. Tower centres retain City captured polygon centroids. Estimated model-registration tolerance±2 m, plan scale/profile tolerance±2 m; these are modelling allowances, not surveyed confidence intervals. Nominal architectural heights follow current CTBUH; City captured height extents differ by 3.66 m/4.21 m. Ground datum is retained from City and its absolute vertical accuracy is unverified. Typical floor elevations and roof-zone subdivisions are inferred from published highest-occupied/top heights; they are not a complete elevation schedule. Balcony slab thickness 0.20 m, guard height 1 m and glazing setbacks are illustrative, as are material appearance and mullion detail. South mechanical roof uses the unchanged City plan outline, with its vertical placement reconstructed; north exact roof machinery is omitted.",
     "lastStatusReview": "2026-09-20",
     "completionDate": "2012",
     "lat": 43.59457,
@@ -18948,7 +19025,7 @@
       7
     ],
     "heightM": [],
-    "modelCaveat": "Retain City 2024 LiDAR component 93-765, matched to masterplan D1. The informal name “The Kee” was not supported by the reviewed primary sources and must not be used. Captured roof 108.79 m ASL is source geometry, not a new survey.",
+    "modelCaveat": "Retain City 2024 LiDAR component 93-765, matched to masterplan D 1. The informal name “The Kee” was not supported by the reviewed primary sources and must not be used. Captured roof 108.79 m ASL is source geometry, not a new survey.",
     "sourceMeshIds": [
       "93-765"
     ],
@@ -19063,7 +19140,7 @@
       109.1
     ],
     "summary": "Completed 32-storey condominium at Hurontario and Fairview, with 418 homes. Residents began moving in during December 2025.",
-    "modelCaveat": "Independent reconstruction from approved City plans, developer floorplate references and GIS parcel registration; not a certified as-built or native architect model. The final 32-storey program and current 109.1m CTBUH architectural top are retained. Intermediate floor elevations, mechanical-screen subdivisions, balcony guards, slab thicknesses, façade joints and mullions are approximate. Plan tracing and placement carry approximately 1–2m working tolerance, not surveyed confidence. Current public Tile 72 was checked and contains no Alba; no existing municipal source IDs are suppressed.",
+    "modelCaveat": "Independent reconstruction from approved City plans, developer floorplate references and GIS parcel registration; not a certified as-built or native architect model. The final 32-storey program and current 109.1 m CTBUH architectural top are retained. Intermediate floor elevations, mechanical-screen subdivisions, balcony guards, slab thicknesses, façade joints and mullions are approximate. Plan tracing and placement carry approximately 1–2 m working tolerance, not surveyed confidence. Current public Tile 72 was checked and contains no Alba; no existing municipal source IDs are suppressed.",
     "sources": [
       {
         "url": "https://edenshaw.com/news/new-32-storey-condominium-complete-in-mississauga/",
@@ -19186,9 +19263,10 @@
       {
         "source": "Approved City site plan, public developer floor plans and current GIS parcel; independently reconstructed exterior",
         "assetId": "alba-existing-plan-derived",
-        "file": "models/supplemental/alba/alba-existing-plan-derived.glb",
         "municipalMeshIds": [],
-        "precision": "103.1m approved principal zoning envelope and 109.1m CTBUH top; intermediate floor heights, material detail and roof subdivisions approximate."
+        "precision": "103.1m approved principal zoning envelope and 109.1m CTBUH top; intermediate floor heights, material detail and roof subdivisions approximate.",
+        "historicalReferenceUnavailable": true,
+        "historicalReferenceNote": "This historical source file is not included in the local website preview. The original private provenance records remain unchanged."
       }
     ],
     "meshIds": [
@@ -20315,7 +20393,537 @@
         "claim": "Built 2020, 34 storeys and roof approximately 106.5 m; height retained as approximate."
       }
     ],
-    "modelCaveat": "Existing status and 25/34 storeys are corroborated by primary sources. Approximate 79.9/106.5 m vertical envelopes come from a secondary catalogue, not a current surveyed elevation. Tower plates are interpreted from the developer amenity illustration registered to current City mapped footprint limits. Allow about 5 m for tower position/contour interpretation; this is not a statistical accuracy claim. The 14 m podium, floor divisions, balcony projections, vertical fins and roof enclosures are simplified reference-based estimates. Exact as-built facade and slab dimensions have not been obtained. Nine selected native City LOD2 scene leaves and the inherited municipal model do not contain either tower. Existing neighbouring source geometry is retained. No downloadable architect-native model was located.",
+    "modelCaveat": "Existing status and 25/34 storeys are corroborated by primary sources. Approximate 79.9/106.5 m vertical envelopes come from a secondary catalogue, not a current surveyed elevation. Tower plates are interpreted from the developer amenity illustration registered to current City mapped footprint limits. Allow about 5 m for tower position/contour interpretation; this is not a statistical accuracy claim. The 14 m podium, floor divisions, balcony projections, vertical fins and roof enclosures are simplified reference-based estimates. Exact as-built facade and slab dimensions have not been obtained. Nine selected native City LOD 2 scene leaves and the inherited municipal model do not contain either tower. Existing neighbouring source geometry is retained. No downloadable architect-native model was located.",
     "district": "Downtown"
+  },
+  {
+    "id": "aldo-1422-study",
+    "name": "1422 Aldo Drive · reference-finish study",
+    "address": "1422 Aldo Drive",
+    "lat": 43.536650799618755,
+    "lon": -79.62266472579823,
+    "position": [
+      -3717.066255404161,
+      29.03992450237274,
+      5666.807295131952
+    ],
+    "status": "Historical design study; current condition unverified",
+    "statusDate": "2026-10-08",
+    "storeys": [],
+    "heightM": [],
+    "summary": "Supplied historical native model and 2020 reference renders",
+    "modelCaveat": "Historical/drawn exterior study, approximately registered. Native dimensions not rescaled. Ground interpolated; current built design not verified.",
+    "geometryCoverage": "source-based exterior improvement",
+    "includeInModel": true,
+    "sources": [
+      {
+        "url": "https://data.mississauga.ca/pages/mississauga-3d",
+        "title": "City mapping context",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-08"
+      },
+      {
+        "title": "References supplied through Kalgreens Construction; original model-author credit remains to be confirmed.",
+        "publisher": "Building study source acknowledgement",
+        "accessed": "2026-10-09"
+      }
+    ],
+    "meshIds": [],
+    "modelLayer": "uncertain",
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "district": "Lorne Park · Aldo area",
+    "researchArea": "Lorne Park · Aldo area",
+    "localReview": true,
+    "localReviewView": [
+      -0.31,
+      0.95
+    ],
+    "localOptional": true,
+    "referenceStudy": true
+  },
+  {
+    "id": "daimler-1338-study",
+    "name": "1338 Daimler Road · drawing study",
+    "address": "1338 Daimler Road",
+    "lat": 43.512448457355184,
+    "lon": -79.64490313637253,
+    "position": [
+      -5470.066907407772,
+      42.1864013671875,
+      8384.24126061827
+    ],
+    "status": "Historical design study; current condition unverified",
+    "statusDate": "2026-10-08",
+    "storeys": [],
+    "heightM": [],
+    "summary": "Supplied 2023 permit drawings; reconstructed supported exterior",
+    "modelCaveat": "Historical/drawn exterior study, approximately registered. Native dimensions not rescaled. Ground interpolated; current built design not verified.",
+    "geometryCoverage": "source-based exterior improvement",
+    "includeInModel": true,
+    "sources": [
+      {
+        "url": "https://data.mississauga.ca/pages/mississauga-3d",
+        "title": "City mapping context",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-08"
+      },
+      {
+        "title": "Reference drawings supplied through C Architecture; final contributor credit remains to be confirmed.",
+        "publisher": "Building study source acknowledgement",
+        "accessed": "2026-10-09"
+      }
+    ],
+    "meshIds": [],
+    "modelLayer": "uncertain",
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "district": "Clarkson",
+    "researchArea": "Clarkson",
+    "localReview": true,
+    "localReviewView": [
+      0.14,
+      -0.99
+    ],
+    "localOptional": true,
+    "referenceStudy": true
+  },
+  {
+    "id": "hazelhurst-business-park",
+    "name": "Hazelhurst Business Park • reference shell study",
+    "address": "",
+    "lat": 43.49362972211443,
+    "lon": -79.6378276320204,
+    "position": [
+      -4863.949658738982,
+      22.227545166015624,
+      10464.907208548979
+    ],
+    "status": "Existing shell / source study",
+    "statusDate": "2026-10-08",
+    "storeys": [],
+    "heightM": [],
+    "summary": "The source-based study reconstructs exterior geometry from supplied and public references.",
+    "modelCaveat": "approximate shells for 705, 745 and 795 Hazelhurst. The September 2026 brochure advertises 36 ft CLEAR INTERNAL height for 745 and 795, not exterior roof height. The clear height of 705 is not established by this brochure. The 13.13 m roof and 14 m service top are explicit visual approximations pending elevations. 745 is 893 × 288 ft; 795 is 818 × 263 ft. The advertised 72, 787 sq ft available at 795 is a portion, not the entire shell. 705 follows the actual City 2024 mapped footprint. Office corner layout, façade divisions, doors, joints and rooftop services are estimated from supplied photographs, with grey atlas finishes. “Immediate” for 745 and “Q 3 2026” for 795 are leasing/delivery statements, not independently verified occupancy dates. The brochure photograph shows complete exterior shells but its capture date is unspecified. Placement uses City address points with approximately 6 m working uncertainty; it is not legal-survey accuracy.",
+    "geometryCoverage": "source-based exterior improvement",
+    "includeInModel": true,
+    "sources": [
+      {
+        "title": "September 2026 Hopewell / Avison Young brochure, supplied by Justin Leon",
+        "publisher": "Hopewell Development / Avison Young"
+      },
+      {
+        "title": "City of Mississauga current address points",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Address/FeatureServer/0"
+      },
+      {
+        "title": "City of Mississauga 2024 building footprints",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/BldgRoof/FeatureServer/0"
+      },
+      {
+        "title": "Hopewell project webpage",
+        "url": "https://www.hopewelldevelopment.com/property/hazelhurst-business-park/"
+      },
+      {
+        "title": "Hopewell Development brochure; City of Mississauga mapped footprints and Ontario terrain.",
+        "publisher": "Building study source acknowledgement",
+        "accessed": "2026-10-09"
+      }
+    ],
+    "meshIds": [],
+    "modelLayer": "existing",
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "district": "Clarkson",
+    "researchArea": "local source study",
+    "localReview": true,
+    "localOptional": false,
+    "referenceStudy": true
+  },
+  {
+    "id": "south-common-community-centre",
+    "name": "South Common Community Centre & Library",
+    "address": "2233 South Millway",
+    "lat": 43.54217493827125,
+    "lon": -79.68470421372824,
+    "position": [
+      -8739.3486328125,
+      84.44373321533203,
+      5134.441162109375
+    ],
+    "status": "Under construction · source-based finished-exterior study",
+    "statusDate": "2026-10-08",
+    "storeys": [
+      2
+    ],
+    "heightM": [],
+    "summary": "The source-based study follows the source-shaped library, circulation spine and pool wing. It depicts an approximate finished exterior in the future scenario, not the current construction stage.",
+    "modelCaveat": "Independent exterior study from City plans and supplied references. Scale, roof heights and map placement are approximate. The 12.8 m roof estimate is unverified; the neighbouring-footprint registration check differs by 10.4 m. The display is trimmed to approximate existing terrain and uses an illustrative footing; actual finished grading is unknown. This full-design envelope appears only in Future mode, not as recorded construction progress.",
+    "geometryCoverage": "Optional finished-exterior approximation; alignment and grade remain estimated",
+    "includeInModel": true,
+    "sources": [
+      {
+        "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/south-common-community-centre-and-library-renovation/",
+        "title": "City project/status/design references"
+      },
+      {
+        "url": "https://www.canam.com/en/case-study/a-hybrid-construction-in-mississauga/",
+        "title": "Canam structural case study"
+      },
+      {
+        "url": "https://elementfive.co/projects/south-common-community-centre-and-library/",
+        "title": "Element5 structural/project reference"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2023/05/South-Common-Community-Centre-and-Library-renovation-Virtual-Public-Info-Session_Apr.-25-2023.pdf",
+        "title": "City2023publicpresentation"
+      },
+      {
+        "title": "City of Mississauga and Perkins&Will design references; Canam and Element5 structural references.",
+        "publisher": "Building study source acknowledgement",
+        "accessed": "2026-10-09"
+      }
+    ],
+    "meshIds": [],
+    "modelLayer": "construction",
+    "actualCompletionDate": null,
+    "targetCompletionDate": "2027 (anticipated; City pages differ on season)",
+    "district": "Erin Mills",
+    "researchArea": "Erin Mills",
+    "localReview": true,
+    "completionDateNote": "Completion and reopening are not guaranteed. City sources currently differ between spring and summer 2027.",
+    "localOptional": true,
+    "referenceStudy": true
+  },
+  {
+    "id": "burnhamthorpe-community-centre",
+    "name": "Burnhamthorpe Community Centre",
+    "address": "1500 Gulleden Drive",
+    "lat": 43.62288679559548,
+    "lon": -79.59852949488992,
+    "position": [
+      -1928.5482788085938,
+      79.86699676513672,
+      -3943.25390625
+    ],
+    "status": "Completed exterior / source-based approximation",
+    "statusDate": "2026-10-08",
+    "storeys": [],
+    "heightM": [],
+    "summary": "The completed civic exterior is reconstructed from City site/roof boards, the current mapped footprint and supplied MTE exterior photographs. Small façade and roof details remain schematic.",
+    "modelCaveat": "Independent stepped civic exterior from City 2020 roof/site boards, matched to 2024 City footprint and completed-building photographs; schematic façade/PV detail.",
+    "geometryCoverage": "source-based exterior improvement",
+    "includeInModel": true,
+    "sources": [
+      {
+        "title": "Burnhamthorpe Community Centre redevelopment presentation boards,1October2020",
+        "publisher": "City of Mississauga /CS&PArchitects",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2020/10/09142726/BCC-Community-Presentation-Boards.pdf"
+      },
+      {
+        "title": "City building footprints from2024imagery",
+        "publisher": "City of Mississauga",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Building_Footprints_2024/FeatureServer/0"
+      },
+      {
+        "title": "City addresspoint1500GulledenDrive",
+        "publisher": "City of Mississauga",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Address/FeatureServer/0"
+      },
+      {
+        "title": "Ontario lidar-derived DTM",
+        "publisher": "Ontario Ministry of Natural Resources",
+        "url": "https://ws.geoservices.lrc.gov.on.ca/arcgis5/rest/services/Elevation/Ontario_DTM_LidarDerived/ImageServer"
+      },
+      {
+        "title": "City completed project overview",
+        "publisher": "City of Mississauga",
+        "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/burnhamthorpe-community-centre-renovation/"
+      },
+      {
+        "title": "Reopening celebration,19February2024",
+        "publisher": "City of Mississauga",
+        "url": "https://www.mississauga.ca/city-of-mississauga-news/news/free-family-day-fun-at-the-new-and-improved-burnhamthorpe-community-centre/"
+      },
+      {
+        "title": "City of Mississauga and CS&P Architects public drawings; MTE supplied completed-exterior reference photographs.",
+        "publisher": "Building study source acknowledgement",
+        "accessed": "2026-10-09"
+      }
+    ],
+    "meshIds": [],
+    "modelLayer": "existing",
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "district": "Dixie & Applewood",
+    "researchArea": "Dixie & Applewood",
+    "localReview": true,
+    "completionDateNote": "City project taxonomy says completed in 2024. No architectural substantial-completion certificate/date established.",
+    "officialReopeningEventDate": "2024-02-19",
+    "localOptional": false,
+    "completionYear": 2024,
+    "referenceStudy": true
+  },
+  {
+    "id": "lakeshore-857-859",
+    "name": "857–859 Lakeshore Road East",
+    "address": "857–859 Lakeshore Road East",
+    "lat": 43.57346554998597,
+    "lon": -79.56289167733972,
+    "position": [
+      1041.71909205243,
+      14.407196044921875,
+      1496.406003358774
+    ],
+    "status": "Redesign in progress; latest drawings unavailable",
+    "statusDate": "2026-10-05",
+    "lastStatusReview": "2026-10-08",
+    "storeys": [],
+    "heightM": [],
+    "historicalApplication": "SP18-110 / A131.22",
+    "summary": "The designer reports a redesign at a similar scale. Revised plans are not finalized. The local atlas records the site without inventing a new building.",
+    "geometryCoverage": "Navigation/evidence record; current redesigned geometry unavailable",
+    "modelCaveat": "Historical City records describe a four-storey scheme and a13.72m flat roof request in2022. Those dimensions are not adopted as the2026redesign. No cancellation or confirmed current completion is established.",
+    "meshIds": [],
+    "includeInModel": false,
+    "modelLayer": "uncertain",
+    "district": "Lakeview",
+    "researchArea": "Lakeview",
+    "sources": [
+      {
+        "url": "https://pub-mississauga.escribemeetings.com/filestream.ashx?DocumentId=22061",
+        "title": "City2022department comments, A131.22 (historical)",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-08"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2023/07/Lakeshore-Transit-Study_Appendix-N-%E2%80%93-Construction-Staging-and-Implementation-Report.pdf",
+        "title": "City Lakeshore study development inventory (historical)",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-08"
+      }
+    ],
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "coordinateProvenance": {
+      "method": "Exact-address ArcGIS navigation point; not survey",
+      "match": "857 Lakeshore Rd E, Mississauga, Ontario, L5E 1E2",
+      "score": 100,
+      "type": "PointAddress"
+    },
+    "evidenceUpdateNote": "Designer clarification on October5,2026 separates current redesign from historical records."
+  },
+  {
+    "id": "st-hilarys-anglican-church",
+    "name": "St Hilary’s Anglican Church · roof study",
+    "address": "2055 Hurontario Street",
+    "lat": 43.5699517288796,
+    "lon": -79.60047233850891,
+    "position": [
+      -1986.2542114257812,
+      31.559999465942383,
+      1938.443359375
+    ],
+    "status": "Existing church · optional photo-derived roof study",
+    "statusDate": "2026-10-08",
+    "storeys": [],
+    "heightM": [],
+    "summary": "Two supplied exterior photographs show a steep A-frame nave and triangular glazed front absent from the generic flat municipal source. The source-based study interprets that visible form while retaining source lower wings.",
+    "modelCaveat": "The City source presents a low flat roof where supplied photos show a steep A-frame. This separate pilot interprets the nave with an estimated 14 m ridge (working range 11.5–16.5 m) and inferred roof pitch. Native lower-wing dimensions and grade remain the starting context. Exact metric elevations and rear façade details are unresolved. This is a schematic, not a certified as-built model.",
+    "geometryCoverage": "Optional pitched-nave approximation; exact metric roof elevations unavailable",
+    "includeInModel": true,
+    "sources": [
+      {
+        "url": "https://sthilarys.com/about/history/",
+        "title": "Parish history; search cache corroborates1958firstservice, directfetch currentlyfailed"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Building_Footprints_2024/FeatureServer/0",
+        "title": "City2024mappedfootprint44690"
+      },
+      {
+        "url": "https://yuanartstudio.com/studio-specials/2026-outdoor-sketching-program/st-hilarys-church/",
+        "title": "Firsthand2026outdoorarchitecture sketching event; visual context, not measuredplans"
+      },
+      {
+        "title": "St. Hilary’s Anglican Church, Cooksville, photographic references; City of Mississauga mapped context.",
+        "publisher": "Building study source acknowledgement",
+        "accessed": "2026-10-09"
+      }
+    ],
+    "meshIds": [],
+    "modelLayer": "existing",
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "district": "Cooksville",
+    "researchArea": "Cooksville",
+    "localReview": true,
+    "localOptional": true,
+    "referenceStudy": true
+  },
+  {
+    "id": "merner-41-bay",
+    "name": "41 Bay Street",
+    "address": "",
+    "lat": 43.54768311210672,
+    "lon": -79.58574229821271,
+    "position": [
+      -754.695556640625,
+      9.521400451660156,
+      4391.48193359375
+    ],
+    "status": "Existing exterior · supplied photo-based approximation",
+    "statusDate": "2026-10-08",
+    "storeys": [],
+    "heightM": [],
+    "summary": "Independent cross-gable heritage/addition reconstruction with wrap porch; four 2017 elevations plus supplied finished exterior photograph.",
+    "modelCaveat": "Independent cross-gable heritage/addition reconstruction with wrap porch; four 2017 elevations plus supplied finished exterior photograph.",
+    "geometryCoverage": "exterior approximation; after-image corroborates visible design, not every concealed detail",
+    "includeInModel": true,
+    "sources": [
+      {
+        "title": "Merner Row Design supplied exterior elevations/photographs",
+        "publisher": "Merner Row Design / Lisa Apps"
+      },
+      {
+        "title": "City building footprints (2024 imagery)",
+        "publisher": "City of Mississauga",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Building_Footprints_2024/FeatureServer/0"
+      },
+      {
+        "title": "City address and street registration",
+        "publisher": "City of Mississauga",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Address/FeatureServer/0"
+      },
+      {
+        "title": "Ontario lidar-derived DTM context",
+        "publisher": "Ontario Ministry of Natural Resources",
+        "url": "https://ws.geoservices.lrc.gov.on.ca/arcgis5/rest/services/Elevation/Ontario_DTM_LidarDerived/ImageServer"
+      },
+      {
+        "title": "Merner Row Design drawing and photograph references; City of Mississauga mapped context.",
+        "publisher": "Building study source acknowledgement",
+        "accessed": "2026-10-09"
+      }
+    ],
+    "meshIds": [],
+    "modelLayer": "existing",
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "district": "Port Credit",
+    "researchArea": "Port Credit",
+    "localReview": true,
+    "localOptional": false,
+    "referenceStudy": true
+  },
+  {
+    "id": "merner-42-peter",
+    "name": "42 Peter Street South",
+    "address": "",
+    "lat": 43.54685188475476,
+    "lon": -79.58591371729568,
+    "position": [
+      -766.9730834960938,
+      8.934300422668457,
+      4484.0341796875
+    ],
+    "status": "Existing exterior · supplied photo-based approximation",
+    "statusDate": "2026-10-08",
+    "storeys": [],
+    "heightM": [],
+    "summary": "Independent source-photo front and dormer/porch roof study; footprint-registered main house only.",
+    "modelCaveat": "Independent source-photo front and dormer/porch roof study; footprint-registered main house only.",
+    "geometryCoverage": "exterior approximation; after-image corroborates visible design, not every concealed detail",
+    "includeInModel": true,
+    "sources": [
+      {
+        "title": "Merner Row Design supplied exterior elevations/photographs",
+        "publisher": "Merner Row Design / Lisa Apps"
+      },
+      {
+        "title": "City building footprints (2024 imagery)",
+        "publisher": "City of Mississauga",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Building_Footprints_2024/FeatureServer/0"
+      },
+      {
+        "title": "City address and street registration",
+        "publisher": "City of Mississauga",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Address/FeatureServer/0"
+      },
+      {
+        "title": "Ontario lidar-derived DTM context",
+        "publisher": "Ontario Ministry of Natural Resources",
+        "url": "https://ws.geoservices.lrc.gov.on.ca/arcgis5/rest/services/Elevation/Ontario_DTM_LidarDerived/ImageServer"
+      },
+      {
+        "title": "Merner Row Design drawing and photograph references; City of Mississauga mapped context.",
+        "publisher": "Building study source acknowledgement",
+        "accessed": "2026-10-09"
+      }
+    ],
+    "meshIds": [],
+    "modelLayer": "existing",
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "district": "Port Credit",
+    "researchArea": "Port Credit",
+    "localReview": true,
+    "localOptional": false,
+    "referenceStudy": true
+  },
+  {
+    "id": "merner-42-john",
+    "name": "42 John Street South",
+    "address": "",
+    "lat": 43.547632402881405,
+    "lon": -79.58516196013254,
+    "position": [
+      -707.7188720703125,
+      8.836400032043457,
+      4396.316162109375
+    ],
+    "status": "Dated 2025 proposed-addition study; current state unverified",
+    "statusDate": "2026-10-08",
+    "storeys": [],
+    "heightM": [],
+    "summary": "March 2025 four-elevation proposed-addition/colour-option study; scaled to existing frontage context.",
+    "modelCaveat": "March 2025 four-elevation proposed-addition/colour-option study; scaled to existing frontage context.",
+    "geometryCoverage": "Optional future-only design study; no current completed exterior confirmed",
+    "includeInModel": true,
+    "sources": [
+      {
+        "title": "Merner Row Design supplied exterior elevations/photographs",
+        "publisher": "Merner Row Design / Lisa Apps"
+      },
+      {
+        "title": "City building footprints (2024 imagery)",
+        "publisher": "City of Mississauga",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Building_Footprints_2024/FeatureServer/0"
+      },
+      {
+        "title": "City address and street registration",
+        "publisher": "City of Mississauga",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Address/FeatureServer/0"
+      },
+      {
+        "title": "Ontario lidar-derived DTM context",
+        "publisher": "Ontario Ministry of Natural Resources",
+        "url": "https://ws.geoservices.lrc.gov.on.ca/arcgis5/rest/services/Elevation/Ontario_DTM_LidarDerived/ImageServer"
+      },
+      {
+        "title": "Merner Row Design proposed-addition and colour-option references; City of Mississauga mapped context.",
+        "publisher": "Building study source acknowledgement",
+        "accessed": "2026-10-09"
+      }
+    ],
+    "meshIds": [],
+    "modelLayer": "uncertain",
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "district": "Port Credit",
+    "researchArea": "Port Credit",
+    "localReview": true,
+    "localOptional": true,
+    "referenceStudy": true
   }
 ]

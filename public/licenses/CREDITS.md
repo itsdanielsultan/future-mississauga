@@ -29,3 +29,23 @@ Contains information licensed under the [Open Government Licence – Toronto](ht
 City of Toronto: [2025 native 3D massing](https://open.toronto.ca/dataset/3d-massing/), [topographic road polygons](https://open.toronto.ca/dataset/topographic-mapping-edge-of-road/), and [topographic treed-area, parking and water mapping](https://gis.toronto.ca/arcgis/rest/services/cot_geospatial3/FeatureServer). The addition uses native building faces with relative heights, registered to the same Ontario DTM as the Mississauga atlas. Source dates vary; this is illustrative context, not a current building or engineering survey. Woodland outlines are simplified within 1 metre for display.
 
 [Detailed Toronto context source and transformation notes](../data/subway-toronto-context.json).
+
+
+## Building studies published 9 October 2026
+
+The exterior studies are independent approximations. Source suppliers have not certified the resulting geometry. Original contributed drawings, photographs and native files are retained separately and are not redistributed in this update.
+
+- References supplied through Kalgreens Construction; original model-author credit remains to be confirmed.
+- Reference drawings supplied through C Architecture; final contributor credit remains to be confirmed.
+- Arcadis plan supplied by the City of Mississauga; retained-building references from City footprints and Berkley property photographs.
+- Hopewell Development brochure; City of Mississauga mapped footprints and Ontario terrain.
+- City of Mississauga and Perkins&Will design references; Canam and Element5 structural references.
+- City of Mississauga and CS&P Architects public drawings; MTE supplied completed-exterior reference photographs.
+- KPMB architectural references published by the City of Mississauga; dated upper design and later ground-plan limits are identified.
+- Hariri Pontarini Architects, project 1807, A100 SITE PLAN (ROOF) and A003 STATISTICS, revision 3, 23 April 2021; City of Mississauga planning references.
+- St. Hilary’s Anglican Church, Cooksville, photographic references; City of Mississauga mapped context.
+- Merner Row Design drawing and photograph references; City of Mississauga mapped context.
+- Merner Row Design proposed-addition and colour-option references; City of Mississauga mapped context.
+- DECO/Opus marketing references; City of Mississauga parcel geometry and Ontario terrain.
+
+Municipal context: City of Mississauga. Terrain: Government of Ontario, Open Government Licence – Ontario. Other existing infrastructure references remain credited in the preceding sections.

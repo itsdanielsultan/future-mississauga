@@ -12635,7 +12635,6 @@
     "meshId": "13-11432",
     "projectId": "glen-erin-6719",
     "status": "Approved planning framework; current delivery unverified",
-    "excludeSuperseded": false,
     "evidenceNote": "Funding wait-list dates are expectations, not confirmed groundbreaking or occupancy.",
     "sources": [
       "https://www.mississauga.ca/wp-content/uploads/2022/08/17092909/OZ-20-019-W9-OPA-149-Notice-of-Passing-Public-Notice.pdf",
@@ -12647,7 +12646,6 @@
     "meshId": "13-11433",
     "projectId": "glen-erin-6719",
     "status": "Approved planning framework; current delivery unverified",
-    "excludeSuperseded": false,
     "evidenceNote": "Funding wait-list dates are expectations, not confirmed groundbreaking or occupancy.",
     "sources": [
       "https://www.mississauga.ca/wp-content/uploads/2022/08/17092909/OZ-20-019-W9-OPA-149-Notice-of-Passing-Public-Notice.pdf",
@@ -12967,7 +12965,9 @@
       "https://www.kindredworks.ca/projects/4094-tomken-road",
       "https://chrisfonseca.ca/4094tomken/",
       "https://urbantoronto.ca/forum/threads/toronto-4094-tomken-road-43-8m-12s-kindred-works-kpmb.34940/"
-    ]
+    ],
+    "displayStatus": "Proposed",
+    "latestStatus": "Proposed; construction start unconfirmed"
   },
   "71-6187": {
     "meshId": "71-6187",
@@ -12980,7 +12980,9 @@
       "https://www.kindredworks.ca/projects/4094-tomken-road",
       "https://chrisfonseca.ca/4094tomken/",
       "https://urbantoronto.ca/forum/threads/toronto-4094-tomken-road-43-8m-12s-kindred-works-kpmb.34940/"
-    ]
+    ],
+    "displayStatus": "Proposed",
+    "latestStatus": "Proposed; construction start unconfirmed"
   },
   "71-6188": {
     "meshId": "71-6188",
@@ -13073,7 +13075,8 @@
     "sources": [
       "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D67&outFields=*&outSR=4326&f=pjson",
       "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/LOD2_Buildings_Scene/SceneServer"
-    ]
+    ],
+    "includeInVerifiedScenario": false
   },
   "62-5926": {
     "meshId": "62-5926",
@@ -13084,7 +13087,8 @@
     "sources": [
       "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D67&outFields=*&outSR=4326&f=pjson",
       "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/LOD2_Buildings_Scene/SceneServer"
-    ]
+    ],
+    "includeInVerifiedScenario": false
   },
   "62-5927": {
     "meshId": "62-5927",
@@ -13095,7 +13099,8 @@
     "sources": [
       "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D67&outFields=*&outSR=4326&f=pjson",
       "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/LOD2_Buildings_Scene/SceneServer"
-    ]
+    ],
+    "includeInVerifiedScenario": false
   },
   "62-5928": {
     "meshId": "62-5928",
@@ -13106,7 +13111,8 @@
     "sources": [
       "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D67&outFields=*&outSR=4326&f=pjson",
       "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/LOD2_Buildings_Scene/SceneServer"
-    ]
+    ],
+    "includeInVerifiedScenario": false
   },
   "62-5929": {
     "meshId": "62-5929",
@@ -13117,7 +13123,8 @@
     "sources": [
       "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D67&outFields=*&outSR=4326&f=pjson",
       "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/LOD2_Buildings_Scene/SceneServer"
-    ]
+    ],
+    "includeInVerifiedScenario": false
   },
   "102-7101": {
     "meshId": "102-7101",

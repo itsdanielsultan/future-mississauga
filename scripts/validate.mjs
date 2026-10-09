@@ -8,8 +8,9 @@ const ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const forbidden = /(?:^|\/)(?:\.git|\.openai|node_modules|backups?|scenes|work|raw|source-archive)(?:\/|$)|correspondence|private|\.blend\d*$|(?:^|\/)\.env/i;
 const DISTRICT_IDS = ['citywide','downtown','port-credit','lakeview','clarkson','cooksville','uptown','erin-mills','streetsville','meadowvale','malton','dixie-applewood','erindale','airport-corporate','heartland'];
 export function validateDistrictMetadata(districts) {
-  assert(Array.isArray(districts) && districts.length === 15, 'Expected exactly 15 public district records.');
-  assert.deepEqual(districts.map(d => d.id).sort(), [...DISTRICT_IDS].sort(), 'Public district IDs are missing, duplicated or unexpected.');
+  const expected = [...DISTRICT_IDS, ...(Array.isArray(districts) && districts.some(d => d.id === 'lorne-park') ? ['lorne-park'] : [])];
+  assert(Array.isArray(districts) && districts.length === expected.length, 'Expected the 15 atlas districts and, when present, the Lorne Park study area.');
+  assert.deepEqual(districts.map(d => d.id).sort(), expected.sort(), 'Public district IDs are missing, duplicated or unexpected.');
   const finite = values => values.every(x => typeof x === 'number' && Number.isFinite(x));
   for (const d of districts) {
     assert(Array.isArray(d.bounds) && d.bounds.length === 4 && finite(d.bounds), d.id + ': public bounds must be flat [xmin,zmin,xmax,zmax], never nested 3D mesh bounds.');

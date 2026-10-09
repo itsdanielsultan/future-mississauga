@@ -568,5 +568,29 @@
       ]
     ],
     "publicGeometryRepair": "2026-09-26: restored exact canonical orphan meshes with identity scene nodes; prior public geometry unchanged."
+  },
+  {
+    "id": "lorne-park",
+    "name": "Lorne Park · Aldo area",
+    "lat": 43.536650799618755,
+    "lon": -79.62266472579823,
+    "radius": 450,
+    "center": [
+      -3717.066255404161,
+      29.029685974121094,
+      5666.807295131952
+    ],
+    "bounds": [
+      -4167.066255404161,
+      5216.807295131952,
+      -3267.066255404161,
+      6116.807295131952
+    ],
+    "file": "lorne-park.glb",
+    "bytes": 635248,
+    "sourceMeshes": 0,
+    "triangles": 25992,
+    "contextCaveat": "Small source crop for the Aldo study. Surrounding geometry is the historical municipal snapshot, not an as-built survey.",
+    "sha256": "7a5127a5f88a6e68b7cc8a3586bdbff2a00f67e6232661e7973a1047da15ea60"
   }
 ]
