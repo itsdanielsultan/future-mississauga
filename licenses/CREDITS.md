@@ -49,3 +49,6 @@ The exterior studies are independent approximations. Source suppliers have not c
 - DECO/Opus marketing references; City of Mississauga parcel geometry and Ontario terrain.
 
 Municipal context: City of Mississauga. Terrain: Government of Ontario, Open Government Licence – Ontario. Other existing infrastructure references remain credited in the preceding sections.
+
+
+Aldo Drive study update, 9 October 2026: the upper flat-roof finish follows project-team feedback supplied through Kalgreens. Sloped shingles are retained. The model remains a dated exterior approximation, with current built conditions and map alignment unconfirmed.
