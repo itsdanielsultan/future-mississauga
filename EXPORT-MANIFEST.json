@@ -105,8 +105,8 @@
     },
     {
       "file": "data/building-study-media.json",
-      "bytes": 14493,
-      "sha256": "6263bae9d79f7812b3b3ef76b3be66bf708354e4e82d87a40a0e7a5b5965c3a2"
+      "bytes": 14507,
+      "sha256": "45323456f01a6f7e1ff5fd3455c8804e21aa6618fe3d9f058b2ca624d618a931"
     },
     {
       "file": "data/citywide-tree-adjustments-baseline.json.gz",
@@ -346,7 +346,7 @@
     {
       "file": "data/model-asset-versions.json",
       "bytes": 18945,
-      "sha256": "97bca9d7a0facae3fd93848e9cf944ef606233858bcd51a12a28f3e8bfc6d33c"
+      "sha256": "db9b3da0d27f4761aa5e0b7b8921fd05d82a0f706c48e731f2da652a6aba7e13"
     },
     {
       "file": "data/overrides.json",
@@ -385,13 +385,13 @@
     },
     {
       "file": "data/projects.json",
-      "bytes": 908393,
-      "sha256": "78174130ff10febb9b4a61b28ffa8d91ecfeddcb1688290be3ad15ebc37dc0c1"
+      "bytes": 908674,
+      "sha256": "adab902fda07e8d6816319fd5a392694f27c587df29016f0d8027e7347488e88"
     },
     {
       "file": "data/refinement-models.json",
-      "bytes": 2166584,
-      "sha256": "801bdea00285d3c35b8cf5adf15308aeac55e872bab9c9803a522e9f1e66ec50"
+      "bytes": 2166721,
+      "sha256": "bed39a2f4f07baceba0e9434f0f826686e00ceaba2ce6ede9d3f16af54ad4602"
     },
     {
       "file": "data/social-pictures.json",
@@ -670,8 +670,8 @@
     },
     {
       "file": "downloads/project-register.csv",
-      "bytes": 129709,
-      "sha256": "9d1feca69142da65dfa64599662e1cf677a32af27dd9834b873e39c762255f4b"
+      "bytes": 129794,
+      "sha256": "86087a7178c9bac11e38b2f3c28101a0e2c9eec185af8cf5bfb626c2140ced00"
     },
     {
       "file": "downloads/public-project-reference-coverage.json",
@@ -917,6 +917,16 @@
       "file": "explore.html",
       "bytes": 15504,
       "sha256": "a630f55991c8d5a025c1332aadf4fd9f8d25ac146b7d021861ef511732613aa6"
+    },
+    {
+      "file": "gallery.css",
+      "bytes": 13422,
+      "sha256": "2cf26ce5182c1debd35a812fe4f08e2f537676163f6f6e469f91c39a9267beca"
+    },
+    {
+      "file": "gallery.js",
+      "bytes": 7338,
+      "sha256": "d05073222e8590d49a02c6507da1859c406242c2808993f3e8a50d5dec28fa93"
     },
     {
       "file": "gallery/Downtown-transformation.mp4",
@@ -1259,16 +1269,6 @@
       "sha256": "20a10c304c845e37f45156333dd3a1176e034cb8f4b78124d83bcb807b364276"
     },
     {
-      "file": "gallery.css",
-      "bytes": 13422,
-      "sha256": "2cf26ce5182c1debd35a812fe4f08e2f537676163f6f6e469f91c39a9267beca"
-    },
-    {
-      "file": "gallery.js",
-      "bytes": 7338,
-      "sha256": "d05073222e8590d49a02c6507da1859c406242c2808993f3e8a50d5dec28fa93"
-    },
-    {
       "file": "index.html",
       "bytes": 18207,
       "sha256": "07274dd9990bfb77eb194f39014a48f450be58b177ce29c59106a5aa82012875"
@@ -1280,8 +1280,8 @@
     },
     {
       "file": "licenses/CREDITS.md",
-      "bytes": 6694,
-      "sha256": "3198ee4ffdb1af96c08bced1032c78343fd9eab95661f171c5a0c9c2f6c4e0b7"
+      "bytes": 6963,
+      "sha256": "1f3990f3fc76023c1bfb52851cc63fd281b2b0f855071365dca7ad27372344ad"
     },
     {
       "file": "licenses/media-chrome-4.19.2-MIT.txt",
@@ -1320,8 +1320,8 @@
     },
     {
       "file": "models/aldo-1422-study.glb",
-      "bytes": 2848492,
-      "sha256": "b0e5b5af5619811775dbb5188b3b85f06a6bb54a104e5869e57c8d5b61e41a2d"
+      "bytes": 2888520,
+      "sha256": "41a48a198ebc9f56def5f8a964a7d91c6cb4684c62475cd8aba569cb11f109be"
     },
     {
       "file": "models/burnhamthorpe-community-centre-20261008-study.glb",
@@ -2215,8 +2215,8 @@
     },
     {
       "file": "review-renders.html",
-      "bytes": 37822,
-      "sha256": "7650cd3585d8c84e13275e55a02b5c4f2abe39183a6be9544faa8a456b223b29"
+      "bytes": 37902,
+      "sha256": "48b46598904259c8508165cf51e09529191286ef31bd6786e0e20354b5ae9d06"
     },
     {
       "file": "robots.txt",
@@ -2564,7 +2564,7 @@
       "sha256": "2d9cfb19a32fac7548704fbfca44060267c233522645aa354fb4f6069e012d97"
     }
   ],
-  "publishedBytes": 997854478,
+  "publishedBytes": 997895372,
   "originalPNGCount": 33,
   "displayPNGCount": 33,
   "displayScale": 0.5,
@@ -2660,5 +2660,13 @@
     "firstPersonOutreachStory": true,
     "projectReferencesContact": "daniel@futuremississauga.com",
     "imageOrModelFilesChanged": false
+  },
+  "aldoRoofCorrection": {
+    "date": "2026-10-09",
+    "changedModel": "models/aldo-1422-study.glb",
+    "generatedMediaFiles": 3,
+    "geometryUnchanged": true,
+    "fullResolutionLosslessPictures": true,
+    "originalSourceFilesPublished": false
   }
 }
