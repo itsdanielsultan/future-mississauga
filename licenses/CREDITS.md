@@ -35,7 +35,7 @@ City of Toronto: [2025 native 3D massing](https://open.toronto.ca/dataset/3d-mas
 
 The exterior studies are independent approximations. Source suppliers have not certified the resulting geometry. Original contributed drawings, photographs and native files are retained separately and are not redistributed in this update.
 
-- References supplied through Kalgreens Construction; original model-author credit remains to be confirmed.
+- References supplied through the Kalgreens team; original model-author credit remains to be confirmed.
 - Reference drawings supplied through C Architecture; final contributor credit remains to be confirmed.
 - Arcadis plan supplied by the City of Mississauga; retained-building references from City footprints and Berkley property photographs.
 - Hopewell Development brochure; City of Mississauga mapped footprints and Ontario terrain.
