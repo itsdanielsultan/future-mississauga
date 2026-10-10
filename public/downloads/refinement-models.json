@@ -71571,14 +71571,14 @@
       "projectId": "aldo-1422-study",
       "bounds": [
         [
-          -3731.9530982185597,
+          -3730.451709134192,
           29.03992450237274,
-          5651.987076668514
+          5650.7889331413935
         ],
         [
-          -3702.1794125897627,
+          -3700.6052529028584,
           37.03992414474487,
-          5681.627513595388
+          5680.344411888644
         ]
       ],
       "status": "Uncertain",
@@ -71647,18 +71647,55 @@
       "address": "1422 Aldo Drive",
       "url": "models/aldo-1422-study.glb",
       "bytes": 2888520,
-      "sha256": "41a48a198ebc9f56def5f8a964a7d91c6cb4684c62475cd8aba569cb11f109be",
+      "sha256": "7a5e6d178fd520086d7b3f465d5c7a938263b677bc7519e1cce1cd29f561a8ea",
       "downloadBytes": 2888520,
-      "downloadSHA256": "41a48a198ebc9f56def5f8a964a7d91c6cb4684c62475cd8aba569cb11f109be",
+      "downloadSHA256": "7a5e6d178fd520086d7b3f465d5c7a938263b677bc7519e1cce1cd29f561a8ea",
       "lat": 43.536650799618755,
       "lon": -79.62266472579823,
       "position": [
-        -3717.066255404161,
-        29.03992450237274,
-        5666.807295131952
+        -3715.511606093624,
+        29.03992462158203,
+        5666.205624592783
       ],
       "localOptional": false,
-      "finishUpdate": "Upper flat roof changed to plain black following project-team review, 9 October 2026; sloped shingles retained."
+      "finishUpdate": "Upper flat roof changed to plain black following project-team review, 9 October 2026; sloped shingles retained.",
+      "registration": {
+        "method": "Rigid native model placement fitted to City 2024 roof footprint and verified against the northeast street/driveway frontage; no resizing.",
+        "fits": [
+          {
+            "angle": -2.371557582179866,
+            "translationXZ": [
+              -3715.668687015984,
+              5665.401558169986
+            ],
+            "IoU": 0.9221732197000182,
+            "frontBearingDegrees": 45.88024033115619,
+            "frontageDirection": "Northeast toward Aldo Drive",
+            "alternativeFits": [
+              {
+                "angle": null,
+                "translationXZ": null,
+                "IoU": null
+              },
+              {
+                "angle": -2.371557582179866,
+                "translationXZ": [
+                  -3715.668687015984,
+                  5665.401558169986
+                ],
+                "IoU": 0.9221732197000182
+              }
+            ]
+          }
+        ],
+        "orientationVerification": {
+          "date": "2026-10-10",
+          "frontFacing": "Northeast toward street and driveway",
+          "rearFacing": "Southwest toward pool/patio",
+          "sources": "North-up aerial imagery, City 2024 footprint, supplied front and rear design references",
+          "sourceGeometryChanged": false
+        }
+      }
     },
     {
       "id": "daimler-1338-study",

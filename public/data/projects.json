@@ -20403,16 +20403,16 @@
     "lat": 43.536650799618755,
     "lon": -79.62266472579823,
     "position": [
-      -3717.066255404161,
-      29.03992450237274,
-      5666.807295131952
+      -3715.511606093624,
+      29.03992462158203,
+      5666.205624592783
     ],
     "status": "Historical design study; current condition unverified",
     "statusDate": "2026-10-08",
     "storeys": [],
     "heightM": [],
     "summary": "Supplied historical native model and 2020 reference renders",
-    "modelCaveat": "Historical/drawn exterior study, approximately registered. Native dimensions not rescaled. Ground interpolated; current built design not verified.",
+    "modelCaveat": "Historical/drawn exterior study, approximately registered. Entrance and garage now face northeast toward Aldo Drive, checked against aerial imagery and the City 2024 roof footprint on 10 October 2026. Native dimensions and finishes are preserved; ground and current built details remain unverified.",
     "geometryCoverage": "source-based exterior improvement",
     "includeInModel": true,
     "sources": [
@@ -20426,6 +20426,18 @@
         "title": "Kalgreens reference model, exterior renders and 9 October 2026 roof-correction feedback; original model-author credit remains unconfirmed.",
         "publisher": "Building study source acknowledgement",
         "accessed": "2026-10-09"
+      },
+      {
+        "title": "North-up aerial reference: northeast driveway and street frontage; capture date unverified",
+        "publisher": "Esri World Imagery",
+        "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=611201%2C4821250%2C611361%2C4821410&bboxSR=26917&imageSR=26917&size=1600%2C1600&format=png32&f=image",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "City 2024 building footprint used for rigid placement fit, object 26178",
+        "publisher": "City of Mississauga",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Building_Footprints_2024/FeatureServer/0/query?f=json&where=1%3D1&geometry=%7B%22x%22%3A+611281.3129077428%2C+%22y%22%3A+4821330.616274131%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+26917%7D%7D&geometryType=esriGeometryPoint&inSR=26917&spatialRel=esriSpatialRelIntersects&distance=65&units=esriSRUnit_Meter&outFields=%2A&outSR=26917&returnGeometry=true",
+        "accessed": "2026-10-10"
       }
     ],
     "meshIds": [],
@@ -20436,12 +20448,13 @@
     "researchArea": "Lorne Park · Aldo area",
     "localReview": true,
     "localReviewView": [
-      -0.31,
-      0.95
+      0.717886254725113,
+      -0.6961604163386123
     ],
     "localOptional": false,
     "referenceStudy": true,
-    "evidenceUpdateNote": "Upper flat roof corrected to plain black following project-team feedback on 9 October 2026; sloped roofs retain shingles. Historical references and approximate map alignment remain; current built exterior not verified."
+    "evidenceUpdateNote": "Upper flat roof corrected to plain black following project-team feedback on 9 October 2026; sloped roofs retain shingles. Historical references and approximate map alignment remain; current built exterior not verified.",
+    "geometryReviewDate": "2026-10-10"
   },
   {
     "id": "daimler-1338-study",
