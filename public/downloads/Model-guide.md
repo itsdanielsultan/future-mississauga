@@ -274,3 +274,10 @@ Voya retains its connected curved podium and now has distinct, smoother park-fac
 Lakeview coverage remains incomplete. The Greenpark source contains three tall bodies despite a four-tower current application, and other village blocks and the Innovation District still need current architectural references. See the current [Lakeview coverage report](Lakeview-model-coverage-review.md) and project records. Older sections above record previous releases and do not override this revision.
 
 Four symbolic woodland crowns intersected Pier House. They are suppressed in the shared future landscape variant used by construction and future selections; baseline existing trees are unchanged. This is a display correction to illustrative canopy, not a claim that actual surveyed trees were removed.
+
+
+### Building study visibility · 10 October 2026
+
+The Aldo Drive, Daimler Road, South Common and St Hilary exterior studies now appear automatically in their supported viewer scenarios. Historical designs, approximate finishes and unverified current conditions remain identified in their project records. Finished-design studies appear in the retained-development view; they do not establish recorded construction progress or current completion.
+
+“Include alternate design studies” controls the dated Block 22, Westminster and 42 John Street alternatives. Hiding a study restores the municipal source building instead of leaving an empty plot. Direct project links and ordinary district browsing use the same display rules.

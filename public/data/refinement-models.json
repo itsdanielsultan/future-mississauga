@@ -71640,7 +71640,7 @@
       "preserveSourceNormals": true,
       "localReview": true,
       "uncertainGeometry": true,
-      "includedByDefault": false,
+      "includedByDefault": true,
       "replacesSourceIds": [],
       "modelFidelity": "Historical/drawn exterior study, approximately registered. Native dimensions not rescaled. Ground interpolated; current built design not verified.",
       "name": "1422 Aldo Drive · reference-finish study",
@@ -71657,7 +71657,7 @@
         29.03992450237274,
         5666.807295131952
       ],
-      "localOptional": true,
+      "localOptional": false,
       "finishUpdate": "Upper flat roof changed to plain black following project-team review, 9 October 2026; sloped shingles retained."
     },
     {
@@ -71764,7 +71764,7 @@
       "preserveSourceNormals": true,
       "localReview": true,
       "uncertainGeometry": true,
-      "includedByDefault": false,
+      "includedByDefault": true,
       "replacesSourceIds": [],
       "modelFidelity": "Historical/drawn exterior study, approximately registered. Native dimensions not rescaled. Ground interpolated; current built design not verified.",
       "name": "1338 Daimler Road · drawing study",
@@ -71781,7 +71781,7 @@
         42.1864013671875,
         8384.24126061827
       ],
-      "localOptional": true
+      "localOptional": false
     },
     {
       "id": "glen-erin-2026-private-plan-study",
@@ -72536,8 +72536,8 @@
           ]
         ]
       ],
-      "localOptional": true,
-      "includedByDefault": false,
+      "localOptional": false,
+      "includedByDefault": true,
       "lat": 43.54217493827125,
       "lon": -79.68470421372824,
       "position": [
@@ -72981,8 +72981,8 @@
         "future"
       ],
       "modelFidelity": "Photo-derived pitched-nave pilot on mapped/native footprint; ridge, eave/pitch and glazing subdivisions inferred.",
-      "localOptional": true,
-      "includedByDefault": false,
+      "localOptional": false,
+      "includedByDefault": true,
       "uncertainGeometry": true,
       "lat": 43.5699517288796,
       "lon": -79.60047233850891,
@@ -76647,5 +76647,15 @@
     "date": "2026-10-09",
     "newBrowserAssets": 13,
     "scope": "Source-based exterior improvements and optional dated reference studies; unknown measurements and current-condition limits remain identified."
+  },
+  "buildingStudyVisibilityUpdate": {
+    "date": "2026-10-10",
+    "defaultDetailedStudyProjects": [
+      "aldo-1422-study",
+      "daimler-1338-study",
+      "south-common-community-centre",
+      "st-hilarys-anglican-church"
+    ],
+    "note": "Visible in supported scenarios with existing source-date/current-condition caveats unchanged. Dated alternate proposals remain opt-in."
   }
 }
