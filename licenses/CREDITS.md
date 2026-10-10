@@ -52,3 +52,6 @@ Municipal context: City of Mississauga. Terrain: Government of Ontario, Open Gov
 
 
 Aldo Drive study update, 9 October 2026: the upper flat-roof finish follows project-team feedback supplied through Kalgreens. Sloped shingles are retained. The model remains a dated exterior approximation, with current built conditions and map alignment unconfirmed.
+
+
+Aldo Drive orientation correction, 10 October 2026: northeast street/driveway frontage checked against Esri World Imagery and City 2024 building footprints. The contextual picture is an independent render; source aerial imagery and contributor originals are not included. Model dimensions and source materials were preserved.
