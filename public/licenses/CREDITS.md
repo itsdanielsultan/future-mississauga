@@ -55,3 +55,7 @@ Aldo Drive study update, 9 October 2026: the upper flat-roof finish follows proj
 
 
 Aldo Drive orientation correction, 10 October 2026: northeast street/driveway frontage checked against Esri World Imagery and City 2024 building footprints. The contextual picture is an independent render; source aerial imagery and contributor originals are not included. Model dimensions and source materials were preserved.
+
+## October 10, 2026 development review
+
+Independent plan-derived and permitted-height reference models use linked public City, Tribunal and project-team evidence. Original drawings, private correspondence, contributor files and proprietary vendor models are not redistributed. Ground contacts are fitted to the atlas terrain; vertical-datum and facade uncertainty remain disclosed in the project register. Older superseded height proxies are replaced only in the illustrated future.

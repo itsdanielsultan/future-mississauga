@@ -281,6 +281,58 @@
       "url": "models/revamp/heartland--heartland-mapped-surfaces.glb",
       "downloadSHA256": "13ca0ccfd25fe4d0018eee53e324ad40755f23f702e03c0163b396aa224dd820",
       "downloadBytes": 207412
+    },
+    {
+      "id": "ninth-existing-houses-context",
+      "name": "Ninth Line · existing neighbourhood context",
+      "url": "models/refinement/ninth-existing-houses-context.glb",
+      "districtId": "citywide",
+      "district": "citywide",
+      "system": "StreetContext",
+      "category": "StreetContext",
+      "status": "Existing",
+      "modes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "contextOnly": true,
+      "bounds": [
+        [
+          -16332.9296875,
+          121.94000244140625,
+          2283.385986328125
+        ],
+        [
+          -15726.4521484375,
+          136.0399932861328,
+          2834.864501953125
+        ]
+      ],
+      "sha256": "ceb566c0c59f87e59ed604ab614a3e0721df201f36618f56c0d75aceab0b618d",
+      "downloadSHA256": "ceb566c0c59f87e59ed604ab614a3e0721df201f36618f56c0d75aceab0b618d",
+      "bytes": 273968,
+      "downloadBytes": 273968,
+      "triangles": 13050,
+      "triangleCount": 13050,
+      "components": 357,
+      "sourceTile": 13,
+      "sourceDate": "2024",
+      "acquired": "2026-09-20",
+      "reviewed": "2026-10-10",
+      "sourceURLs": [
+        "https://data.mississauga.ca/pages/mississauga-3d",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/LOD2_Buildings_Scene/SceneServer/layers/0"
+      ],
+      "sourceColourRGBA": [
+        202,
+        212,
+        214,
+        255
+      ],
+      "sourceSHA256": "d07bd1aea03ac9b7d57f2b00303979feacd6e5b8940330fe6bb013415673a51d",
+      "material": "Original source vertex colour multiplied by opaque matte white PBR, metallic 0 and roughness 0.9",
+      "scopeNote": "Exact whole closed low-rise source components within 400 m of the corrected 6344 Ninth Line location; only loaded in the city overview. Existing housing is dated municipal context, not verified present-day as-built. Components near the three new proposed footprints are conservatively omitted in every scenario. Open source/boundary components are omitted, not reconstructed. No terrain, roads, elevations, scaling or guessed houses were changed."
     }
   ],
   "trees": {
