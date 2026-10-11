@@ -7529,26 +7529,66 @@
     "district": "Port Credit",
     "lat": 43.554368402601,
     "lon": -79.585210336179,
-    "status": "Under review",
-    "statusDate": "2025-12-15",
+    "status": "Zoning approved · demolition underway",
+    "statusDate": "2026-10-06",
     "storeys": 11,
-    "heightM": [],
+    "heightM": [
+      40.8
+    ],
     "towers": [
       {
         "storeys": 11,
-        "heightM": null
+        "heightM": 40.8
       }
     ],
-    "summary": "Eleven-storey, 96-home rental proposal with a November 2025 resubmission.",
-    "modelCaveat": "The open ground floor, six plan-visible support columns, second-floor notch and upper-front terraces are retained as simplified geometry. The mechanical enclosure follows the roof plan, using the labelled maximum 40.80 m. Minor equipment, arched facade frames, raised parapets and articulation within the enclosure are omitted. Terrace slab thickness is a 0.18 m display convention; footprints and deck elevations come from the source. The existing house 92-749 must be hidden only in the illustrated future scenario. It remains in the existing-source scenario. The file was published under the November 2025 resubmission, but its drawing export stamp is December 12, 2025.",
+    "summary": "Planned 11-storey building with 96 affordable rental homes, including 11 replacement rentals, about a 300 m walk from Port Credit GO. Demolition is underway. Site-plan approval and the new-building permit remain pending in the October 6 report.",
+    "modelCaveat": "The open ground floor, six plan-visible support columns, second-floor notch and upper-front terraces are retained as simplified geometry. The mechanical enclosure follows the roof plan, using the labelled maximum 40.80 m. Minor equipment, arched facade frames, raised parapets and articulation within the enclosure are omitted. Terrace slab thickness is a 0.18 m display convention; footprints and deck elevations come from the source. The older rental building 92-749 is hidden in the illustrated future and retained only as dated municipal-baseline context. Demolition is reported underway, but its extent is not mapped; no completed clearance or new-building construction is implied. The file was published under the November 2025 resubmission, but its drawing export stamp is December 12, 2025.",
     "sources": [
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/05085229/OZ-25-19-W1-Notice-of-Passing-Public-Notice.pdf",
+        "title": "City notice: zoning by-law passed January 28, 2026",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10",
+        "claims": [
+          "By-law 0010-2026 passed January 28, 2026; RA3-52 permits an 11-storey, 96-unit apartment."
+        ]
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Issued_Building_Permits/FeatureServer/0/query?where=ADDRESS+%3D+%2750+HIGH+ST+E%27&outFields=%2A&returnGeometry=false&f=json",
+        "title": "City issued demolition permit: BP 9DEMO 26-2800",
+        "publisher": "City of Mississauga open data",
+        "accessed": "2026-10-10",
+        "claims": [
+          "Demolition permit issued August 12, 2026 for the existing three-storey rental apartment building. No completion date recorded."
+        ],
+        "limitations": "Issued-permit data is not a complete pending-application register. Absence of a new-building entry does not itself prove pending status."
+      },
+      {
+        "url": "https://urbantoronto.ca/news/2026/10/demolition-advances-11-storey-affordable-rental-near-port-credit-go.61899",
+        "title": "October 6 update: demolition underway; approvals still pending",
+        "publisher": "UrbanToronto",
+        "accessed": "2026-10-10",
+        "claims": [
+          "Demolition underway; site-plan application remains under review and the new-building permit application pending. 96 affordable rentals, including 11 replacement homes; approximately 300 m walk to Port Credit GO."
+        ],
+        "limitations": "Use the formal City notice for the Council passage date, January 28, rather than the article’s January 5 approval shorthand."
+      },
+      {
+        "url": "https://www.sajeckiplanning.com/news/nru-features-sajecki-planning-work-at-50-high-street",
+        "title": "Project planner: 96-unit, 100% affordable rental proposal",
+        "publisher": "Sajecki Planning",
+        "accessed": "2026-10-10",
+        "claims": [
+          "96-unit, 100% affordable rental building proposed for Mahogany Management."
+        ]
+      },
       {
         "url": "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/50-high-street-east-oz-25-19-w1/",
         "title": "50 High Street East application",
         "publisher": "City of Mississauga",
-        "accessed": "2026-09-20",
+        "accessed": "2026-10-10",
         "claims": [
-          "Eleven-storey rental proposal with 96 homes; November 2025 resubmission, public meeting January 5,2026."
+          "11-storey, 96-home application and November 2025 resubmission. The page was last updated December 15, 2025; current zoning status comes from the later formal notice."
         ]
       },
       {
@@ -7564,8 +7604,8 @@
         "url": "https://www.mississauga.ca/services-and-programs/building-and-renovating/incentives-for-building-affordable-rental-housing/",
         "title": "Incentives for building affordable rental housing: funded projects",
         "publisher": "City of Mississauga",
-        "accessed": "2026-09-20",
-        "claims": "Mahogany Management, 50 High Street: expected construction June 2026 to January 2028; conditional funding for 85 affordable units."
+        "accessed": "2026-10-10",
+        "claims": "85 affordable units conditionally funded; expected June 2026–January 2028 construction period is a programme forecast, not verified construction progress."
       },
       {
         "url": "https://urbantoronto.ca/forum/threads/toronto-50-high-street-east-40-8m-11s-mahogany-management-chamberlain.42522/",
@@ -7576,7 +7616,7 @@
           "Corroborates 11 storeys and 96 homes; January 2026 post reports approval."
         ],
         "verification": "search-index-read",
-        "limitations": "Forum approval report needs formal municipal decision for definitive stage; City active page still says under review."
+        "limitations": "Historical forum corroboration; current zoning passage is verified by the municipal notice dated February 5, 2026."
       },
       {
         "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/15104453/Site-Plan-OZ-25-19-W1-November-2025.pdf",
@@ -7688,24 +7728,38 @@
     "includeInModel": true,
     "actualCompletionDate": null,
     "targetCompletionDate": "2028-01",
-    "statusEvidenceDate": "2026-09-20",
-    "dateUncertainty": "The City's rental incentive program lists an expected construction period of June 2026 to January 2028. This is a forecast and does not independently verify a construction start or occupancy.",
+    "statusEvidenceDate": "2026-10-10",
+    "dateUncertainty": "January 2028 is the City's incentive-programme forecast, not a confirmed opening date. Its earlier June 2026 construction-start forecast does not establish a start; demolition is now reported underway, with the site plan and new-building permit still pending.",
     "researchArea": "waterfront",
     "completion": {
       "actual": null,
       "target": "2028-01",
       "targetIsGuaranteed": false,
-      "note": "No actual or target completion date verified.",
-      "reviewed": "2026-09-20",
-      "sources": []
+      "note": "January 2028 is the City's incentive-programme forecast, not a confirmed opening date. Its earlier June 2026 construction-start forecast does not establish a start; demolition is now reported underway, with the site plan and new-building permit still pending.",
+      "reviewed": "2026-10-10",
+      "sources": [
+        "https://www.mississauga.ca/services-and-programs/building-and-renovating/incentives-for-building-affordable-rental-housing/",
+        "https://urbantoronto.ca/news/2026/10/demolition-advances-11-storey-affordable-rental-near-port-credit-go.61899"
+      ]
     },
     "corroboration": {
-      "reviewed": "2026-09-20",
-      "corroborationStatus": "additional-publisher-found; scope and version caveats apply",
+      "reviewed": "2026-10-10",
+      "corroborationStatus": "Current local report checked against municipal zoning notice, issued demolition permit, submitted plans, incentives and project planner.",
       "notes": [
-        "Forum approval report needs formal municipal decision for definitive stage; City active page still says under review."
+        "The application page was last updated December 15, 2025; its 'Under review' heading predates the January 28, 2026 passed zoning by-law.",
+        "January 5 was the committee meeting; the formal Council passage date is January 28 in the City notice.",
+        "The City incentive table lists 85 affordable units; the 96-home proposal includes 11 rental replacements. Funding is conditional.",
+        "The permit dataset confirms an issued demolition permit, not a completed demolition or a new-building permit. Pending site-plan and new-building status is attributed to the October 6 local report."
       ],
-      "appliedFieldUpdates": []
+      "appliedFieldUpdates": [
+        "status",
+        "statusDate",
+        "statusEvidenceDate",
+        "summary",
+        "approvalStages",
+        "actualConstruction",
+        "completion caveat"
+      ]
     },
     "meshIds": [],
     "coordinateProvenance": {
@@ -7733,14 +7787,48 @@
       "wf-50high-current-plan"
     ],
     "geometryDrawingDate": "2025-12-12",
-    "lastStatusReview": "2026-09-20",
+    "lastStatusReview": "2026-10-10",
     "modelAssets": [
       "50-high-current-plan.glb"
     ],
     "modelQuality": "Survey-registered plan-derived schematic envelope",
     "geometryReviewDate": "2026-09-20",
     "geometrySourceDate": "2025-12-12",
-    "hasSupplementalModel": true
+    "hasSupplementalModel": true,
+    "heightConvention": "40.80 m overall to the top mechanical enclosure in the submitted elevation. The zoning by-law uses a different height calculation: 38.0 m with an exclusion for a qualifying rooftop amenity area.",
+    "homes": 96,
+    "affordableHomes": 96,
+    "rentalReplacementHomes": 11,
+    "netNewHomes": 85,
+    "developer": "Mahogany Management",
+    "architect": "Chamberlain Architect Services",
+    "actualConstruction": {
+      "evidenceDate": "2026-10-06",
+      "stage": "Demolition underway; construction of the new building is not confirmed.",
+      "demolitionPermit": "BP 9DEMO 26-2800",
+      "demolitionPermitIssued": "2026-08-12",
+      "source": "https://urbantoronto.ca/news/2026/10/demolition-advances-11-storey-affordable-rental-near-port-credit-go.61899",
+      "permitSource": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Issued_Building_Permits/FeatureServer/0/query?where=ADDRESS+%3D+%2750+HIGH+ST+E%27&outFields=%2A&returnGeometry=false&f=json"
+    },
+    "approvalStages": {
+      "zoning": {
+        "status": "Council passed By-law 0010-2026",
+        "date": "2026-01-28",
+        "source": "https://www.mississauga.ca/wp-content/uploads/2026/02/05085229/OZ-25-19-W1-Notice-of-Passing-Public-Notice.pdf"
+      },
+      "sitePlan": {
+        "status": "Under review, reported October 6",
+        "applicationDate": "2026-01-26",
+        "evidenceDate": "2026-10-06",
+        "source": "https://urbantoronto.ca/news/2026/10/demolition-advances-11-storey-affordable-rental-near-port-credit-go.61899"
+      },
+      "newBuildingPermit": {
+        "status": "Pending, reported October 6",
+        "evidenceDate": "2026-10-06",
+        "source": "https://urbantoronto.ca/news/2026/10/demolition-advances-11-storey-affordable-rental-near-port-credit-go.61899"
+      }
+    },
+    "recordedProgressModel": "The new building appears only in the illustrated future. The municipal baseline retains the older rental building as dated source context; the extent of demolition has not been mapped."
   },
   {
     "id": "lakeview-aura",
