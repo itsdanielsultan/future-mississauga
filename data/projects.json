@@ -1611,8 +1611,29 @@
     ],
     "heightM": [],
     "summary": "Four-tower proposal on the southwest Burnhamthorpe and Kariya block.",
-    "modelCaveat": "Municipal SP 22-60 meshes carry 232, 185.05, 185.05 and 125.45 m and appear to reflect the earlier 70-storey tallest tower. The newer 72-storey variant lacks a verified updated height here. March 2026 permit and construction dates are projections, not proof of groundbreaking.",
+    "modelCaveat": "Municipal SP 22-60 meshes carry 232, 185.05, 185.05 and 125.45 m and appear to reflect the earlier 70-storey tallest tower. The newer 72-storey variant lacks a verified updated height here. March 2026 permit and construction dates are projections, not proof of groundbreaking. A separate September 29 by-law redesignates a City-owned Kariya parkland parcel. Its mapped boundary has not been added here, and it is not treated as a tower approval.",
     "sources": [
+      {
+        "url": "https://www.mississauga.ca/publication/bl-09-cit-all-wards-opa-16-notice-of-passing-of-an-official-plan-amendment-and-a-zoning-by-law-amendment/",
+        "date": "2026-10-08",
+        "title": "October 8 notice: Kariya parkland designation",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/10/08085105/BL.09-CIT-All-Wards-OPA-16-Notice-of-Passing-public-notice.pdf",
+        "datePassed": "2026-09-29",
+        "pages": [
+          1,
+          2,
+          16,
+          25,
+          43
+        ],
+        "title": "October 8 notice: Kariya parkland designation",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
       {
         "url": "https://urbantoronto.ca/database/projects/southlands.48305",
         "title": "The Southlands",
@@ -1682,7 +1703,7 @@
         "https://www.mississauga.ca/wp-content/uploads/2025/01/15082458/MOPA177-jan-2025.pdf"
       ]
     },
-    "lastStatusReview": "2026-09-20",
+    "lastStatusReview": "2026-10-10",
     "researchArea": "downtown",
     "district": "Downtown",
     "meshIds": [
@@ -1704,7 +1725,18 @@
       "63-6200",
       "63-6201"
     ],
-    "geometryCoverage": "Source geometry available; current detail may differ"
+    "geometryCoverage": "Source geometry available; current detail may differ",
+    "relatedPlanningUpdates": [
+      {
+        "name": "Kariya Park north parkland parcel",
+        "councilPassage": "2026-09-29",
+        "noticePublished": "2026-10-08",
+        "appealDeadline": "2026-10-28",
+        "change": "City parcel designated Public Open Space / CCOS; this does not approve or alter the condo towers.",
+        "source": "https://www.mississauga.ca/wp-content/uploads/2026/10/08085105/BL.09-CIT-All-Wards-OPA-16-Notice-of-Passing-public-notice.pdf"
+      }
+    ],
+    "statusEvidenceDate": "2026-10-10"
   },
   {
     "id": "180-burnhamthorpe",
@@ -4756,8 +4788,8 @@
     "district": "Lakeview",
     "lat": 43.57316062365711,
     "lon": -79.55693465832901,
-    "status": "Planned; construction not verified",
-    "statusDate": "2025-03",
+    "status": "Site plan approved · construction not verified",
+    "statusDate": "2026-09-03",
     "storeys": [
       14,
       3,
@@ -4799,8 +4831,29 @@
       }
     ],
     "summary": "Fourteen-storey condominium with six blocks of three-storey townhouses.",
-    "modelCaveat": "Eight existing City components are wholly contained within current SP 22/056 Block 1, explicitly described as Branthaven in the City layer. This identifies the retained Birch-era condo and six townhome rows without constructing duplicates. Current detailed architecture and completion remain unverified; the application remains active. Pier House is separately registered at Block 4 and is not a reason to remove this older geometry without cancellation evidence.",
+    "modelCaveat": "Eight existing City components are wholly contained within current SP 22/056 Block 1, explicitly described as Branthaven in the City layer. This identifies the retained Birch-era condo and six townhome rows without constructing duplicates. Current detailed architecture and completion remain unverified; the site plan was approved September 3, 2026; physical construction remains unverified. Pier House is separately registered at Block 4 and is not a reason to remove this older geometry without cancellation evidence.",
     "sources": [
+      {
+        "title": "City SP 22/056 — Branthaven Block 1",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=WARD+IN+%281%2C2%29&outFields=OBJECTID%2CAPP_FILE_NO%2CAPPLICATION_DATE%2CAPPROVAL_DATE%2CSITE_ADDRESS%2CDESCRIPTION%2CSIMPLE_STATUS%2CAPPLICANT%2CRES_APTS%2CTOTAL_RES_UNITS&returnGeometry=false&resultRecordCount=2000&f=json",
+        "kind": "primary",
+        "usedFor": "Approved September 3, 2026; unit counts and contemporary site addresses.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "Branthaven — Pier House",
+        "url": "https://www.branthaven.com/communities/pier-house/",
+        "kind": "primary",
+        "usedFor": "Project identity and developer reference.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "UrbanToronto — first Lakeview phases",
+        "url": "https://urbantoronto.ca/news/2025/03/cranes-mississaugas-lakeview-village-first-phases-advance.58211",
+        "kind": "secondary",
+        "usedFor": "Earlier project form/context; not current construction proof for Birch.",
+        "accessed": "2026-10-10"
+      },
       {
         "url": "https://staging.branthaven.com/stg/pier-house/",
         "title": "Birch project staging page",
@@ -4809,22 +4862,6 @@
         "claims": [
           "Birch is a proposed Lakeview phase 1 mid-rise and future townhome community; this staging page is not reliable for current sales/construction dates."
         ]
-      },
-      {
-        "url": "https://urbantoronto.ca/news/2025/03/cranes-mississaugas-lakeview-village-first-phases-advance.58211",
-        "title": "Lakeview first phases March 2025",
-        "publisher": "UrbanToronto",
-        "accessed": "2026-09-20",
-        "claims": [
-          "Birch 14-storey condominium and six 3-storey townhouse blocks; northwest of Harbourwalk; Aquanova northeast; Harbourwalk twin peaked terraced form."
-        ]
-      },
-      {
-        "url": "https://www.branthaven.com/communities/pier-house/",
-        "title": "Pier House Towns official community page",
-        "publisher": "Branthaven",
-        "accessed": "2026-09-20",
-        "claims": "Current developer sales offering for three-storey townhomes at Lakeview Village; no verified completion date for Birch is established."
       },
       {
         "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0",
@@ -4855,7 +4892,7 @@
     "includeInModel": true,
     "actualCompletionDate": null,
     "targetCompletionDate": null,
-    "statusEvidenceDate": "2025-03",
+    "statusEvidenceDate": "2026-10-10",
     "dateUncertainty": "No current verified start or completion date was found for the Birch phase. The old Branthaven staging page and conflicting broker forecasts are insufficient to date construction. The developer now markets Pier House Towns as a separate townhome offering; this does not by itself prove Birch cancellation or replacement.",
     "researchArea": "waterfront",
     "completion": {
@@ -4904,7 +4941,8 @@
       1521.9363403320312
     ],
     "coordinateProvenance": "Registered source geometry in atlas EPSG26917 coordinates; representative model centre, not a surveyed entrance.",
-    "reviewedDate": "2026-09-27"
+    "reviewedDate": "2026-09-27",
+    "lastStatusReview": "2026-10-10"
   },
   {
     "id": "lakeview-innovation",
@@ -5540,13 +5578,13 @@
     "district": "Port Credit",
     "lat": 43.55477660706096,
     "lon": -79.58666999611656,
-    "status": "Council approved; preconstruction",
-    "statusDate": "2025-12-10",
+    "status": "Approved rental proposal · demolition / early works reported",
+    "statusDate": "2026-10-09",
     "storeys": [
       30
     ],
     "heightM": [
-      95
+      106.5
     ],
     "towers": [
       {
@@ -5557,9 +5595,58 @@
         "heightConvention": "95 m main building; 101 m including mechanical penthouse per secondary cross-check"
       }
     ],
-    "summary": "Council approved the revised scheme on December 10,2025. The legal description is 30 storeys; architectural material counts an additional upper amenity level.",
-    "modelCaveat": "The main building height is 95 m; the 101 m secondary-source figure includes a six-metre mechanical penthouse. Do not add 30 and 31 as separate towers. The City mesh marked 113.35 m is inconsistent with the adopted design.",
+    "summary": "Purpose-built rental project with a 95 m main body and an approved rooftop allowance taking the maximum to 106.5 m. October reports show demolition / early works. The site-plan record is active; an unrestricted new-building permit has not been verified.",
+    "modelCaveat": "The main body follows the 2025 dimensions, with the newer approved rooftop-height allowance. The precise 2026 rooftop shape, balcony edges and placement remain approximate. The active site-plan entry lists 315 homes and older adopted material lists 378; that difference still needs confirmation. Demolition / early works do not establish a completed tower.",
     "sources": [
+      {
+        "title": "City Committee of Adjustment A-91/26 — approved rooftop variances",
+        "url": "https://www.mississauga.ca/apps/#/property-preview/compliance-report-coa-text/68535/130551",
+        "kind": "primary",
+        "usedFor": "May 14, 2026 approval of 11.5 m mechanical height and 5.3 m rooftop amenity height; this is not a building permit.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "City August 2025 north/east elevations",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/09100646/Elevations-North-and-East-OZOPA-25-10-August-2025.pdf",
+        "kind": "primary",
+        "usedFor": "95 m main height, published floor levels and established grade 81.07 m ASL.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "City August 2025 site plan",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/09100725/Site-Plan-OZOPA-25-10-August-2025.pdf",
+        "kind": "primary",
+        "usedFor": "42.27 x 18.11 m main floor envelope, property bearing and approximate footprint registration.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "City August 2025 mechanical penthouse plan",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/09100653/Floor-Plan-Level-MPH-OZOPA-25-10-August-2025.pdf",
+        "kind": "primary",
+        "usedFor": "Approximate L-shaped mechanical and rooftop amenity footprints; 2026 revised horizontal rooftop plan not recovered.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "Edenshaw — 46 Park Street",
+        "url": "https://edenshaw.com/communities/46-park-street/",
+        "kind": "primary",
+        "usedFor": "Current live developer page labels Under Construction and Purpose Built Rental; rendering provides a qualitative form check.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "City site plan application SP 25/010",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=WARD+IN+%281%2C2%29&outFields=OBJECTID%2CAPP_FILE_NO%2CAPPLICATION_DATE%2CAPPROVAL_DATE%2CSITE_ADDRESS%2CDESCRIPTION%2CSIMPLE_STATUS%2CAPPLICANT%2CRES_APTS%2CTOTAL_RES_UNITS&returnGeometry=false&resultRecordCount=2000&f=json",
+        "kind": "primary",
+        "usedFor": "Active site plan; current description 30 storeys and 315 units, conflicting with 378 in adopted/2025 documents.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "UrbanToronto — October 2026 updates",
+        "url": "https://urbantoronto.ca/forum/threads/toronto-46-park-street-106-5m-31s-edenshaw-kirkor.31374/page-2",
+        "kind": "secondary",
+        "usedFor": "October 4 demolition photo; October 9 updated renderings, height convention and purpose-built rental update.",
+        "accessed": "2026-10-10"
+      },
       {
         "url": "https://www.mississauga.ca/wp-content/uploads/2025/12/18093753/OZ-OPA-25-10-W1-Notice-of-Passing-public-notice.pdf",
         "title": "Park and Elizabeth notice of passing",
@@ -5608,22 +5695,53 @@
     ],
     "geometrySources": [
       {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/01/23103916/MOPA205-Jan-2026.pdf",
-        "title": "MOPA 205 adopted planning package",
-        "publisher": "City of Mississauga",
-        "accessed": "2026-09-20",
-        "claims": [
-          "Architectural plan describes 31 levels including upper amenity; main height 95 m above established grade."
-        ]
+        "title": "City Committee of Adjustment A-91/26 — approved rooftop variances",
+        "url": "https://www.mississauga.ca/apps/#/property-preview/compliance-report-coa-text/68535/130551",
+        "kind": "primary",
+        "usedFor": "May 14, 2026 approval of 11.5 m mechanical height and 5.3 m rooftop amenity height; this is not a building permit.",
+        "accessed": "2026-10-10"
       },
       {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/06/18125538/Planning-Rationale-OZ-OPA-25-10-W1-June-2025.pdf",
-        "title": "Park and Elizabeth planning rationale June 2025",
-        "publisher": "City of Mississauga / Sajecki",
-        "accessed": "2026-09-20",
-        "claims": [
-          "New proposal 30 residential storeys plus upper amenity; surrounding 88 Park 36/29 s tribunal approved in principle; The Ann 23 s; 128 Lakeshore 8 s."
-        ]
+        "title": "City August 2025 north/east elevations",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/09100646/Elevations-North-and-East-OZOPA-25-10-August-2025.pdf",
+        "kind": "primary",
+        "usedFor": "95 m main height, published floor levels and established grade 81.07 m ASL.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "City August 2025 site plan",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/09100725/Site-Plan-OZOPA-25-10-August-2025.pdf",
+        "kind": "primary",
+        "usedFor": "42.27 x 18.11 m main floor envelope, property bearing and approximate footprint registration.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "City August 2025 mechanical penthouse plan",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/09100653/Floor-Plan-Level-MPH-OZOPA-25-10-August-2025.pdf",
+        "kind": "primary",
+        "usedFor": "Approximate L-shaped mechanical and rooftop amenity footprints; 2026 revised horizontal rooftop plan not recovered.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "Edenshaw — 46 Park Street",
+        "url": "https://edenshaw.com/communities/46-park-street/",
+        "kind": "primary",
+        "usedFor": "Current live developer page labels Under Construction and Purpose Built Rental; rendering provides a qualitative form check.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "City site plan application SP 25/010",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=WARD+IN+%281%2C2%29&outFields=OBJECTID%2CAPP_FILE_NO%2CAPPLICATION_DATE%2CAPPROVAL_DATE%2CSITE_ADDRESS%2CDESCRIPTION%2CSIMPLE_STATUS%2CAPPLICANT%2CRES_APTS%2CTOTAL_RES_UNITS&returnGeometry=false&resultRecordCount=2000&f=json",
+        "kind": "primary",
+        "usedFor": "Active site plan; current description 30 storeys and 315 units, conflicting with 378 in adopted/2025 documents.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "UrbanToronto — October 2026 updates",
+        "url": "https://urbantoronto.ca/forum/threads/toronto-46-park-street-106-5m-31s-edenshaw-kirkor.31374/page-2",
+        "kind": "secondary",
+        "usedFor": "October 4 demolition photo; October 9 updated renderings, height convention and purpose-built rental update.",
+        "accessed": "2026-10-10"
       }
     ],
     "includeInModel": true,
@@ -5635,7 +5753,7 @@
     ],
     "actualCompletionDate": null,
     "targetCompletionDate": null,
-    "statusEvidenceDate": "2025-12-10",
+    "statusEvidenceDate": "2026-10-10",
     "dateUncertainty": "No verified completion or occupancy date was found in the reviewed sources. Planning status does not establish a construction schedule.",
     "researchArea": "waterfront",
     "completion": {
@@ -5651,15 +5769,32 @@
       "92-4849"
     ],
     "position": [
-      -843.0290094044758,
-      12.663200378417969,
-      3604.9469370106235
+      -843.6999816894531,
+      63.95615816116333,
+      3605.0999755859375
     ],
     "retainedMeshIds": [
       "92-4848",
       "92-4849"
     ],
-    "geometryCoverage": "Geometry conflict or version uncertainty; inspect evidence"
+    "geometryCoverage": "Independent approximate plan-derived massing; 2025 dimensioned main body and 2026 rooftop height limits",
+    "mainHeightM": 95,
+    "unitCountCaveat": "The active site-plan entry lists 315 homes, while adopted / 2025 material lists 378. This programme difference still needs confirmation.",
+    "actualConstruction": {
+      "evidenceDate": "2026-10",
+      "stage": "Demolition / early works reported; no completed tower claimed."
+    },
+    "recordedProgressModel": "The corrected reference envelope is future-only; a finished building is not shown as recorded construction.",
+    "lastStatusReview": "2026-10-10",
+    "hasSupplementalModel": true,
+    "supplementalAssetIds": [
+      "46-park-current-envelope-review"
+    ],
+    "modelAssets": [
+      "46-park-current-envelope-review.glb"
+    ],
+    "geometrySourceDate": null,
+    "geometryReviewDate": "2026-10-10"
   },
   {
     "id": "port-credit-70-park",
@@ -11483,56 +11618,152 @@
     "name": "6344 Ninth Line",
     "district": "Lisgar / Ninth Line",
     "address": "6344 Ninth Line",
-    "lat": 43.562928882224,
-    "lon": -79.771745819492,
-    "status": "Under review",
-    "statusDate": "2026-08-20",
+    "lat": 43.565188651775046,
+    "lon": -79.7757389657545,
+    "status": "Council passed · appeal period open",
+    "statusDate": "2026-09-29",
     "application": "OZ 26 11",
     "storeys": [
       6,
       6,
       6
     ],
-    "heightM": [],
+    "heightM": [
+      19.711,
+      19.711,
+      19.711
+    ],
     "towers": [],
-    "summary": "A proposal for three 6-storey condominium apartment buildings with a total of 141 dwelling units.",
-    "modelCaveat": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
+    "summary": "Three six-storey plan-derived buildings now sit on the exact application parcel, correcting the older address pin by about 409 m. Council passage and the October 28 appeal deadline are recorded. The posted drawing’s 153 homes differ from the application’s 141; the approved programme still needs confirmation.",
+    "modelCaveat": "The three footprints are registered to the exact application boundary. Roof and floor levels come from the posted drawings. Their grades are about 4–5 m above dated terrain, so footprint-confined display bases support the buildings; roads and terrain are unchanged. Minor contours, balconies and finishes remain simplified. The 153-versus-141 home-count and approval-version differences still need confirmation. Nearby low-rise housing in the city overview is exact, dated 2024 City geometry; it is not a new survey of current conditions.",
     "sources": [
       {
-        "url": "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/6344-ninth-line-oz-26-11-w10/",
-        "title": "6344 Ninth Line — active application",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/10/08090244/OZ-26-11-W10-Notice-of-Passing-public-notice.pdf",
         "publisher": "City of Mississauga",
-        "accessed": "2026-09-20",
+        "title": "October8,2026 Notice of Passing",
         "claims": [
-          "Under review as displayed on access date",
-          "A proposal for three 6-storey condominium apartment buildings with a total of 141 dwelling units."
+          "By-law0171-2026 passed September29,2026; three six-storey apartments; appeal deadlineOctober28,2026."
         ],
-        "verification": "read"
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/07/09102734/Overall-Elevations-Exterior-OZ-26-11-W10-June-2026.pdf",
+        "publisher": "City of Mississauga / Lemay",
+        "title": "A400 public submitted elevations",
+        "claims": [
+          "Exact FFE, roof and average-grade labels. Building lengths48.565/48.565/60.452m, width approximately21.945m."
+        ],
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/07/09102735/Overall-Plan-Typical-Floor-Roof-OZ-26-11-W10-June-2026.pdf",
+        "publisher": "City of Mississauga / Lemay",
+        "title": "A301 public submitted roof plan",
+        "claims": [
+          "Three notched roof outlines and relative site layout; internal issueJanuary16,2026."
+        ],
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/07/09102810/Grading-Plan-OZ-26-11-W10-June-2026.pdf",
+        "publisher": "City of Mississauga / Urbantech",
+        "title": "GR-1 public submitted grading plan",
+        "claims": [
+          "FFE196/196.45/196.60mASL; labels47+47+59units; grade reference and site geography."
+        ],
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Rezoning_Applications/FeatureServer/0/query?f=json&where=SITE_ADDRESS+LIKE+%27%256344%25%27&outFields=%2A&returnGeometry=true&outSR=26917&resultRecordCount=2000",
+        "publisher": "City of Mississauga Open Data",
+        "title": "Current OZ26/11 application polygon",
+        "claims": [
+          "Exact application match6344NinthLine; parcel registration; municipal record141units/Active lags new Council passing notice."
+        ],
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/6344-ninth-line-oz-26-11-w10/",
+        "publisher": "City of Mississauga",
+        "title": "Public application page",
+        "claims": [
+          "Current publicly posted three-six-storey141-unit application and source links."
+        ],
+        "accessed": "2026-10-10"
       },
       {
         "url": "https://urbantoronto.ca/forum/threads/toronto-6344-ninth-line-19-72m-6s-mattamy-homes-lemay.43437/",
-        "title": "6344 Ninth Line",
-        "publisher": "UrbanToronto forum",
-        "accessed": "2026-09-20",
+        "publisher": "UrbanToronto",
+        "title": "6344NinthLine forum",
         "claims": [
-          "July 2026 discussion confirms three six-storey buildings, 141 apartments, Mattamy and Lemay, with posted floor-plan illustrations."
+          "Independent three-building project discussion and approximately19.72m nominal roof convention."
         ],
-        "verification": "search-index-read",
-        "limitations": "Title height of 19.72 m remains an independent reported figure until primary drawing reviewed."
+        "accessed": "2026-10-10"
       }
     ],
     "geometrySources": [
       {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/07/09102734/Overall-Elevations-Exterior-OZ-26-11-W10-June-2026.pdf",
-        "title": "Overall Elevations Exterior – June 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/10/08090244/OZ-26-11-W10-Notice-of-Passing-public-notice.pdf",
+        "publisher": "City of Mississauga",
+        "title": "October8,2026 Notice of Passing",
+        "claims": [
+          "By-law0171-2026 passed September29,2026; three six-storey apartments; appeal deadlineOctober28,2026."
+        ],
+        "accessed": "2026-10-10"
       },
       {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/07/09102746/Site-Project-Statistics-OZ-26-11-W10-June-2026.pdf",
-        "title": "Site Project Statistics – June 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/07/09102734/Overall-Elevations-Exterior-OZ-26-11-W10-June-2026.pdf",
+        "publisher": "City of Mississauga / Lemay",
+        "title": "A400 public submitted elevations",
+        "claims": [
+          "Exact FFE, roof and average-grade labels. Building lengths48.565/48.565/60.452m, width approximately21.945m."
+        ],
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/07/09102735/Overall-Plan-Typical-Floor-Roof-OZ-26-11-W10-June-2026.pdf",
+        "publisher": "City of Mississauga / Lemay",
+        "title": "A301 public submitted roof plan",
+        "claims": [
+          "Three notched roof outlines and relative site layout; internal issueJanuary16,2026."
+        ],
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/07/09102810/Grading-Plan-OZ-26-11-W10-June-2026.pdf",
+        "publisher": "City of Mississauga / Urbantech",
+        "title": "GR-1 public submitted grading plan",
+        "claims": [
+          "FFE196/196.45/196.60mASL; labels47+47+59units; grade reference and site geography."
+        ],
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Rezoning_Applications/FeatureServer/0/query?f=json&where=SITE_ADDRESS+LIKE+%27%256344%25%27&outFields=%2A&returnGeometry=true&outSR=26917&resultRecordCount=2000",
+        "publisher": "City of Mississauga Open Data",
+        "title": "Current OZ26/11 application polygon",
+        "claims": [
+          "Exact application match6344NinthLine; parcel registration; municipal record141units/Active lags new Council passing notice."
+        ],
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/6344-ninth-line-oz-26-11-w10/",
+        "publisher": "City of Mississauga",
+        "title": "Public application page",
+        "claims": [
+          "Current publicly posted three-six-storey141-unit application and source links."
+        ],
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://urbantoronto.ca/forum/threads/toronto-6344-ninth-line-19-72m-6s-mattamy-homes-lemay.43437/",
+        "publisher": "UrbanToronto",
+        "title": "6344NinthLine forum",
+        "claims": [
+          "Independent three-building project discussion and approximately19.72m nominal roof convention."
+        ],
+        "accessed": "2026-10-10"
       }
     ],
     "includeInModel": true,
@@ -11564,12 +11795,33 @@
     },
     "meshIds": [],
     "position": [
-      -15805.410494011128,
-      123.0999984741211,
-      2937.044235757552
+      -16131.598362087689,
+      126,
+      2690.830135645508
     ],
     "retainedMeshIds": [],
-    "geometryCoverage": "Latest geometry unavailable in source model"
+    "geometryCoverage": "Three current public-plan envelopes; unit/approval-version confirmation pending. Roof levels primary verified, notched outlines independently traced, facade and roof equipment omitted.",
+    "approvalStages": {
+      "councilPassage": "2026-09-29",
+      "noticePublished": "2026-10-08",
+      "appealDeadline": "2026-10-28",
+      "finalInForceVerified": false,
+      "constructionPermissionVerified": false,
+      "source": "https://www.mississauga.ca/wp-content/uploads/2026/10/08090244/OZ-26-11-W10-Notice-of-Passing-public-notice.pdf"
+    },
+    "statusEvidenceDate": "2026-10-10",
+    "lastStatusReview": "2026-10-10",
+    "unitCountCaveat": "The application page describes 141 homes, while the publicly linked grading plan labels 47 + 47 + 59 = 153. Published January 2026 architecture is a qualified reference, not confirmation of the final approved unit layout.",
+    "hasSupplementalModel": true,
+    "supplementalAssetIds": [
+      "ninth-6344-three-plan-envelopes"
+    ],
+    "modelAssets": [
+      "ninth-6344-three-plan-envelopes.glb"
+    ],
+    "geometrySourceDate": null,
+    "geometryReviewDate": "2026-10-10",
+    "surroundingContextSourceDate": "2024"
   },
   {
     "id": "chelsea-2026",
@@ -12487,29 +12739,145 @@
     "name": "1970–1980 Fowler Drive",
     "district": "Sheridan / Clarkson",
     "address": "1970 Fowler Drive",
-    "lat": 43.528995585409,
-    "lon": -79.650196991698,
-    "status": "Under review",
-    "statusDate": "2026-07-27",
+    "lat": 43.52953271622367,
+    "lon": -79.64970268793166,
+    "status": "Council passed · appeal period open",
+    "statusDate": "2026-09-29",
     "application": "OZ 25 23",
     "storeys": [
       24
     ],
-    "heightM": [],
+    "heightM": [
+      78.05
+    ],
     "towers": [],
-    "summary": "To permit a 24 storey apartment building with 275 dwelling units.",
-    "modelCaveat": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ.",
+    "summary": "The proposed 24-storey infill tower is now modelled from the July 2026 plans, with the two existing apartment buildings retained. Its source roof heights distinguish the 78.05 m main level from the 87.85 m highest roof. Council passage is recorded; the appeal period remains open through October 28.",
+    "modelCaveat": "The July 2026 drawings support the main floor outlines and roof levels. Balconies, finishes, small roof equipment and the parking-ramp cover are omitted. Placement has roughly 3 m working uncertainty. The existing apartment buildings are retained. Displayed foundations follow terrain; approved grading and vertical-datum agreement remain unverified.",
     "sources": [
       {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094651/Site-Plan-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 site drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094637/Overall-Site-Plan-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 overall drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094610/Elevation-Plan-North-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 north drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094613/Established-Grade-Plan-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 grade drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094621/Floor-Plan-Level-6-to-13-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 floor6 drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094622/Floor-Plan-Level-14-to-24-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 floor14 drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094623/Floor-Plan-MPH-to-Rooftop-Amenity-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 mph drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094614/Floor-Plan-Elevator-Machine-Room-Roof-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 emr-roof drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094616/Floor-Plan-Level-1-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 floor1 drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094617/Floor-Plan-Level-2-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 floor2 drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094618/Floor-Plan-Level-3-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 floor3 drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094619/Floor-Plan-Level-4-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 floor4 drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094620/Floor-Plan-Level-5-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 floor5 drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094615/Floor-Plan-Elevator-Machine-Room-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 emr drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
         "url": "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/1970-and-1980-fowler-drive-oz-opa-25-23-w8/",
-        "title": "1970–1980 Fowler Drive — active application",
+        "title": "Current City application and July resubmission",
         "publisher": "City of Mississauga",
-        "accessed": "2026-09-20",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/BldgRoof/FeatureServer/0/query?where=1%3D1&geometry=%7B%22xmin%22%3A+608900%2C+%22ymin%22%3A+4820300%2C+%22xmax%22%3A+609350%2C+%22ymax%22%3A+4820700%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+26917%7D%7D&geometryType=esriGeometryEnvelope&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=26917&f=json",
+        "title": "City 2024 roof reference geometry, queriedOctober10",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Parcel/FeatureServer/0/query?where=1%3D1&geometry=%7B%22xmin%22%3A+608900%2C+%22ymin%22%3A+4820300%2C+%22xmax%22%3A+609350%2C+%22ymax%22%3A+4820700%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+26917%7D%7D&geometryType=esriGeometryEnvelope&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=26917&f=json",
+        "title": "City mapped property references",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/10/08092551/OZ-OPA-25-23-W8-OPA-11-Notice-of-Passing-public-notice.pdf",
+        "title": "October 8 notice: Council passage September 29; appeal deadline October 28",
+        "publisher": "City of Mississauga",
         "claims": [
-          "Under review as displayed on access date",
-          "To permit a 24 storey apartment building with 275 dwelling units."
+          "OPA11/bylaw0157;zoning0158;RA4-67/RA5-81;24storeytower;FSI4.0"
         ],
-        "verification": "read"
+        "accessed": "2026-10-10"
       },
       {
         "url": "https://urbantoronto.ca/news/2026/02/24-storey-infill-rental-tower-proposed-near-sheridan-centre-mississauga.60371",
@@ -12525,226 +12893,120 @@
     ],
     "geometrySources": [
       {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/01/15102112/Angular-Plane-Diagram-West-Elevation-OZ-OPA-25-23-W8-January-2026.pdf",
-        "title": "Angular Plane Diagram – West Elevation – January 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/01/15102135/Elevation-Plan-East-OZ-OPA-25-23-W8-January-2026.pdf",
-        "title": "Elevation Plan – East – January 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/01/15102137/Elevation-Plan-North-OZ-OPA-25-23-W8-January-2026.pdf",
-        "title": "Elevation Plan – North – January 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/01/15102138/Elevation-Plan-South-OZ-OPA-25-23-W8-January-2026.pdf",
-        "title": "Elevation Plan – South – January 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/01/15102139/Elevation-Plan-West-OZ-OPA-25-23-W8-January-2026.pdf",
-        "title": "Elevation Plan – West – January 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/01/15102248/Massing-View-Northeast-Corner-Plan-OZ-OPA-25-23-W8-January-2026.pdf",
-        "title": "Massing View Northeast Corner Plan – January 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/01/15102249/Massing-View-Northwest-Corner-Plan-OZ-OPA-25-23-W8-January-2026.pdf",
-        "title": "Massing View Northwest Corner Plan – January 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/01/15102251/Massing-View-Southeast-Corner-Plan-OZ-OPA-25-23-W8-January-2026.pdf",
-        "title": "Massing View Southeast Corner Plan – January 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/01/15102252/Massing-View-Southwest-Corner-Plan-OZ-OPA-25-23-W8-January-2026.pdf",
-        "title": "Massing View Southwest Corner Plan -January 2025",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/01/15102307/Planning-Justification-Report-OZ-OPA-25-23-W8-January-2026.pdf",
-        "title": "Planning Justification Report – January 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/01/15102314/Site-Plan-OZ-OPA-25-23-W8-January-2026.pdf",
-        "title": "Site Plan – January 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/01/15102253/Overall-Site-Plan-OZ-OPA-25-23-W8-January-2026.pdf",
-        "title": "Site Plan – Overall – January 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/01/15102316/Statistics-Plan-OZ-OPA-25-23-W8-January-2026.pdf",
-        "title": "Statistics Plan – January 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/20212425/Elevation-Plan-East-OZ-OPA-25-23-W8-April-2026.pdf",
-        "title": "Elevation Plan – East – April 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/20212426/Elevation-Plan-North-OZ-OPA-25-23-W8-April-2026.pdf",
-        "title": "Elevation Plan – North – April 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/20212427/Elevation-Plan-South-OZ-OPA-25-23-W8-April-2026.pdf",
-        "title": "Elevation Plan – South – April 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/20212428/Elevation-Plan-West-Angular-Plan-1-OZ-OPA-25-23-W8-April-2026.pdf",
-        "title": "Elevation Angular Plan – West – April 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/20212430/Elevation-Plan-West-OZ-OPA-25-23-W8-April-2026.pdf",
-        "title": "Elevation Plan – West – April 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/20212549/Massing-View-Northeast-Corner-OZ-OPA-25-23-W8-April-2026.pdf",
-        "title": "Massing View – Northeast Corner – April 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/20212551/Massing-View-Northwest-Corner-OZ-OPA-25-23-W8-April-2026.pdf",
-        "title": "Massing View – Northwest Corner – April 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/20212553/Massing-View-Southeast-Corner-OZ-OPA-25-23-W8-April-2026.pdf",
-        "title": "Massing View – Southeast Corner – April 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/20212555/Massing-View-Southwest-Corner-OZ-OPA-25-23-W8-April-2026.pdf",
-        "title": "Massing View – Southwest Corner – April 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/20212611/Site-Plan-Overall-OZ-OPA-25-23-W8-April-2026.pdf",
-        "title": "Site Plan – Overall – April 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/20212612/Site-Plan-OZ-OPA-25-23-W8-April-2026.pdf",
-        "title": "Site Plan – April 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/20212617/Statistics-Plan-OZ-OPA-25-23-W8-April-2026.pdf",
-        "title": "Statistics Plan – April 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094602/Angular-Plane-Diagram-West-Elevation-OZ-OPA-25-23-W8-July-2026.pdf",
-        "title": "Angular Plane Diagram West Elevation – July 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094609/Elevation-Plan-East-OZ-OPA-25-23-W8-July-2026.pdf",
-        "title": "Elevation Plan – East – July 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094610/Elevation-Plan-North-OZ-OPA-25-23-W8-July-2026.pdf",
-        "title": "Elevation Plan – North – July 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094611/Elevation-Plan-South-OZ-OPA-25-23-W8-July-2026.pdf",
-        "title": "Elevation Plan – South – July 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094612/Elevation-Plan-West-OZ-OPA-25-23-W8-July-2026.pdf",
-        "title": "Elevation Plan – West – July 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094631/Massing-View-Northeast-Corner-OZ-OPA-25-23-W8-July-2026.pdf",
-        "title": "Massing View Northeast Corner – July 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094632/Massing-View-Northwest-Corner-OZ-OPA-25-23-W8-July-2026.pdf",
-        "title": "Massing View Northwest Corner – July 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094633/Massing-View-Southeast-Corner-OZ-OPA-25-23-W8-July-2026.pdf",
-        "title": "Massing View Southeast Corner – July 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094635/Massing-View-Southwest-Corner-OZ-OPA-25-23-W8-July-2026.pdf",
-        "title": "Massing View Southwest Corner – July 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094651/Site-Plan-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 site drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
       },
       {
         "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094637/Overall-Site-Plan-OZ-OPA-25-23-W8-July-2026.pdf",
-        "title": "Overall Site Plan – July 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
+        "title": "CORE July2026 overall drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
       },
       {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094651/Site-Plan-OZ-OPA-25-23-W8-July-2026.pdf",
-        "title": "Site Plan – July 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094610/Elevation-Plan-North-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 north drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
       },
       {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094655/Statistics-Plan-OZ-OPA-25-23-W8-July-2026.pdf",
-        "title": "Statistics Plan – July 2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094613/Established-Grade-Plan-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 grade drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094621/Floor-Plan-Level-6-to-13-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 floor6 drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094622/Floor-Plan-Level-14-to-24-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 floor14 drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094623/Floor-Plan-MPH-to-Rooftop-Amenity-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 mph drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094614/Floor-Plan-Elevator-Machine-Room-Roof-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 emr-roof drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094616/Floor-Plan-Level-1-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 floor1 drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094617/Floor-Plan-Level-2-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 floor2 drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094618/Floor-Plan-Level-3-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 floor3 drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094619/Floor-Plan-Level-4-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 floor4 drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094620/Floor-Plan-Level-5-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 floor5 drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/27094615/Floor-Plan-Elevator-Machine-Room-OZ-OPA-25-23-W8-July-2026.pdf",
+        "title": "CORE July2026 emr drawing",
+        "publisher": "City of Mississauga /CORE Architects",
+        "drawingDate": "2026-07-10",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/1970-and-1980-fowler-drive-oz-opa-25-23-w8/",
+        "title": "Current City application and July resubmission",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/BldgRoof/FeatureServer/0/query?where=1%3D1&geometry=%7B%22xmin%22%3A+608900%2C+%22ymin%22%3A+4820300%2C+%22xmax%22%3A+609350%2C+%22ymax%22%3A+4820700%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+26917%7D%7D&geometryType=esriGeometryEnvelope&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=26917&f=json",
+        "title": "City 2024 roof reference geometry, queriedOctober10",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Parcel/FeatureServer/0/query?where=1%3D1&geometry=%7B%22xmin%22%3A+608900%2C+%22ymin%22%3A+4820300%2C+%22xmax%22%3A+609350%2C+%22ymax%22%3A+4820700%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+26917%7D%7D&geometryType=esriGeometryEnvelope&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=26917&f=json",
+        "title": "City mapped property references",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
       }
     ],
     "includeInModel": true,
@@ -12776,12 +13038,33 @@
     },
     "meshIds": [],
     "position": [
-      -5927.782111613895,
-      56.0,
-      6553.471242862754
+      -5888.807435045378,
+      53.25,
+      6493.169034123599
     ],
     "retainedMeshIds": [],
-    "geometryCoverage": "Latest geometry unavailable in source model"
+    "geometryCoverage": "Plan-derived exterior envelope",
+    "approvalStages": {
+      "councilPassage": "2026-09-29",
+      "noticePublished": "2026-10-08",
+      "appealDeadline": "2026-10-28",
+      "finalInForceVerified": false,
+      "constructionPermissionVerified": false,
+      "source": "https://www.mississauga.ca/wp-content/uploads/2026/10/08092551/OZ-OPA-25-23-W8-OPA-11-Notice-of-Passing-public-notice.pdf"
+    },
+    "statusEvidenceDate": "2026-10-10",
+    "lastStatusReview": "2026-10-10",
+    "mainHeightM": 78.05,
+    "overallHeightM": 87.85,
+    "hasSupplementalModel": true,
+    "supplementalAssetIds": [
+      "fowler-1970-july2026-plan-envelope"
+    ],
+    "modelAssets": [
+      "fowler-1970-july2026-plan-envelope.glb"
+    ],
+    "geometrySourceDate": "2026-07-10",
+    "geometryReviewDate": "2026-10-10"
   },
   {
     "id": "tenth-distribution",
@@ -16093,19 +16376,31 @@
     "address": "1225 Dundas Street East",
     "lat": 43.606434312466,
     "lon": -79.58832320738,
-    "status": "Under review",
-    "statusDate": "2026-08-13",
+    "status": "Council passed · appeal period open",
+    "statusDate": "2026-09-29",
     "application": "OZ 22 20",
     "storeys": [
       16,
       16,
       4
     ],
-    "heightM": [],
+    "heightM": [
+      51.94,
+      51.94
+    ],
     "towers": [],
-    "summary": "May 2026 plans show two 16-storey buildings with 553 apartments and 34 four-storey townhomes, 587 homes in total. These replace the older 18-storey proposal in the webpage headline and cached City model.",
-    "modelCaveat": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ. Old 18-storey snapshot geometry is excluded as superseded until replaced from current 16-storey drawings.",
+    "summary": "Two 16-storey buildings and four northern townhouse rows follow the current May plans. Council’s report describes 587 homes, but the plan’s unit schedules and visible 28-home northern rows need reconciliation. Council passed the 52 m maximum-height zoning September 29; the appeal period ends October 28.",
+    "modelCaveat": "I worked from the May 2026 floor plans and elevations. The model keeps the major steps, courtyard and townhouse rows; windows, balconies, finishes and small roof details are simplified or omitted. Placement has roughly 3 m working uncertainty. Source roof levels are retained while displayed foundations meet the atlas terrain; this is not certified survey geometry. Council material reports 553 apartments plus 34 townhomes, while the May site and ground sheets show four northern rows with 8, 6, 6 and 8 homes, alongside differing residential and parking schedules. The model follows the visible plan forms; a current approved unit schedule is still needed to reconcile those counts.",
     "sources": [
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/10/08091543/OZ-OPA-22-20-W3-Notice-of-Passing-public-notice.pdf",
+        "title": "October 8 notice: Council passage September 29; appeal deadline October 28",
+        "publisher": "City of Mississauga",
+        "claims": [
+          "OPA18/bylaw0163;zoning0164;RA4-69;two16storey+6podium+34fourstoreytowns;52.0mmax;13.3mtowns"
+        ],
+        "accessed": "2026-10-10"
+      },
       {
         "url": "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/1225-dundas-street-east-oz-opa-22-20-w3/",
         "title": "1225 Dundas Street East — active application",
@@ -16150,214 +16445,100 @@
     ],
     "geometrySources": [
       {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2022/10/W3_1225_Architectural_Drawings_July2022.pdf",
-        "title": "Architectural Drawings – July 2022",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2022/10/W3_1225_Planning_Justification_Report_July2022.pdf",
-        "title": "Planning Justification Report – July 2022",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/01/03104228/OPA-OZ-22-20-W3-Elevations-1-of-4-August-2024.pdf",
-        "title": "Elevations 1 of 4 – August 2024",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/01/03104230/OPA-OZ-22-20-W3-Elevations-2-of-4-August-2024.pdf",
-        "title": "Elevations 2 of 4 – August 2024",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/01/03104231/OPA-OZ-22-20-W3-Elevations-3-of-4-August-2024.pdf",
-        "title": "Elevations 3 of 4 – August 2024",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/01/03104232/OPA-OZ-22-20-W3-Elevations-4-of-4-August-2024.pdf",
-        "title": "Elevations 4 of 4 – August 2024",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/01/03104310/OPA-OZ-22-20-W3-Planning-Justification-Report-August-2024.pdf",
-        "title": "Planning Justification Report – August 2024",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/01/03104324/OPA-OZ-22-20-W3-Site-Plan-and-Roof-Plan-August-2024.pdf",
-        "title": "Site Plan and Roof Plan – August 2024",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/01/03104329/OPA-OZ-22-20-W3-Statistics-1-of-2-August-2024.pdf",
-        "title": "Statistics 1 of 2 – August 2024",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/01/03104331/OPA-OZ-22-20-W3-Statistics-2-of-2-August-2024.pdf",
-        "title": "Statistics 2 of 2 – August 2024",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/11/13162221/Detail-Elevation-1-Oz-Opa-22-20-W3-July-2025.pdf",
-        "title": "Detail Elevation-1 – July 2025",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/11/13162222/Detail-Elevation-2-Oz-Opa-22-20-W3-July-2025.pdf",
-        "title": "Detail Elevation-2 – July 2025",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/11/13162228/East-Elevation-Oz-Opa-22-20-W3-July-2025.pdf",
-        "title": "East Elevation – July 2025",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/11/13162229/Elevations-1-Oz-Opa-22-20-W3-July-2025.pdf",
-        "title": "Elevations 1 – July 2025",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/11/13162231/Elevations-2-Oz-Opa-22-20-W3-July-2025.pdf",
-        "title": "Elevations 2 – July 2025",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/11/13162232/Elevations-3-Oz-Opa-22-20-W3-July-2025.pdf",
-        "title": "Elevations 3 – July 2025",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/11/13162234/Elevations-4-Oz-Opa-22-20-W3-July-2025.pdf",
-        "title": "Elevations 4 – July 2025",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/11/13162314/North-Elevation-Oz-Opa-22-20-W3-July-2025.pdf",
-        "title": "North Elevation – July 2025",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/11/13162336/Site-Plan-And-Roof-Plan-Oz-Opa-22-20-W3-July-2025.pdf",
-        "title": "Site Plan And Roof Plan – July 2025",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/11/13162338/Site-Plan-Roof-Plan-Oz-Opa-22-20-W3-July-2025.pdf",
-        "title": "Site Plan Roof Plan – July 2025",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/11/13162342/South-Elevation-Oz-Opa-22-20-W3-July-2025.pdf",
-        "title": "South Elevation – July 2025",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/11/13162347/Statistics-Oz-Opa-22-20-W3-July-2025.pdf",
-        "title": "Statistics – July 2025",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/11/13162413/West-Elevation-Oz-Opa-22-20-W3-July-2025.pdf",
-        "title": "West Elevation-July 2025",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03162707/Detail-Elevation-1-OZ-OPA-22-20-May-2026.pdf",
-        "title": "Detail Elevation 1- May-2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03162706/Detail-Elevation-3-OZ-OPA-22-20-May-2026-1.pdf",
-        "title": "Detail Elevation 3 May-2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
-      },
-      {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03162703/East-Elevation-OZ-OPA-22-20-May-2026-1.pdf",
-        "title": "East Elevation May-2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03162624/Site-Plan-Roof-Plan-OZ-OPA-22-20-May-2026-1.pdf",
+        "title": "1225 Dundas current site / roof plan, May 27, 2026",
+        "publisher": "City of Mississauga / Turner Fleischer",
+        "accessed": "2026-10-10"
       },
       {
         "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03162643/North-Elevation-OZ-OPA-22-20-May-2026-1.pdf",
-        "title": "North Elevation May-2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
+        "title": "Current north elevation: 172.50 m roof and 120.56 m established grade",
+        "publisher": "City of Mississauga / Turner Fleischer",
+        "accessed": "2026-10-10"
       },
       {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03162624/Site-Plan-Roof-Plan-OZ-OPA-22-20-May-2026-1.pdf",
-        "title": "Site Plan Roof Plan May-2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/10/08091543/OZ-OPA-22-20-W3-Notice-of-Passing-public-notice.pdf",
+        "title": "September 29 zoning passage: two 16-storey buildings, maximum height 52 m",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
       },
       {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03153039/South-Elevation-OZ-OPA-22-20-May-2026.pdf",
-        "title": "South Elevation-May-2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Parcel/FeatureServer/0",
+        "title": "Mapped property boundary, CITY_PIN 1879500",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
       },
       {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03153037/Statistics-1-OZ-OPA-22-20-May-2026.pdf",
-        "title": "Statistics 1 May-2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/BldgRoof/FeatureServer/0",
+        "title": "2024 existing shopping-centre footprint, FID 68262",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
       },
       {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03153035/Statistics-3-OZ-OPA-22-20-May-2026.pdf",
-        "title": "Statistics 3 May-2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03162702/Floor-1-OZ-OPA-22-20-May-2026-1.pdf",
+        "title": "May 2026 floor1 plan",
+        "publisher": "City of Mississauga / Turner Fleischer",
+        "accessed": "2026-10-10"
       },
       {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03153036/Statistics-2-OZ-OPA-22-20-May-2026.pdf",
-        "title": "Statistics 2-May-2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03162701/Floor-2-and-Floor-3-OZ-OPA-22-20-May-2026-1.pdf",
+        "title": "May 2026 main floor 2 /townhouse floor 3 plan",
+        "publisher": "City of Mississauga / Turner Fleischer",
+        "accessed": "2026-10-10"
       },
       {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03153031/West-Elevation-OZ-OPA-22-20-May-2026.pdf",
-        "title": "West Elevation May-2026",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": false
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03162659/Floor-3-4-and-Floor-4-OZ-OPA-22-20-May-2026-1.pdf",
+        "title": "May 2026 main floors 3–4 /townhouse floor 4 plan",
+        "publisher": "City of Mississauga / Turner Fleischer",
+        "accessed": "2026-10-10"
       },
       {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03162624/Site-Plan-Roof-Plan-OZ-OPA-22-20-May-2026-1.pdf",
-        "title": "1225 Dundas — May 2026 site / roof plan",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": true
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03162658/Floor-5-6-OZ-OPA-22-20-May-2026-1.pdf",
+        "title": "May 2026 floor5 plan",
+        "publisher": "City of Mississauga / Turner Fleischer",
+        "accessed": "2026-10-10"
       },
       {
-        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03153037/Statistics-1-OZ-OPA-22-20-May-2026.pdf",
-        "title": "1225 Dundas — May 2026 statistics",
-        "publisher": "City of Mississauga / applicant",
-        "reviewed": true
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03162657/Floor-7-9-OZ-OPA-22-20-May-2026-1.pdf",
+        "title": "May 2026 floor7 plan",
+        "publisher": "City of Mississauga / Turner Fleischer",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03162656/Floor-10-OZ-OPA-22-20-May-2026-1.pdf",
+        "title": "May 2026 floor10 plan",
+        "publisher": "City of Mississauga / Turner Fleischer",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03162655/Floor-11-12-OZ-OPA-22-20-May-2026-1.pdf",
+        "title": "May 2026 floor11 plan",
+        "publisher": "City of Mississauga / Turner Fleischer",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03162654/Floor-13-OZ-OPA-22-20-May-2026-1.pdf",
+        "title": "May 2026 floor13 plan",
+        "publisher": "City of Mississauga / Turner Fleischer",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03162653/Floor-14-OZ-OPA-22-20-May-2026-1.pdf",
+        "title": "May 2026 floor14 plan",
+        "publisher": "City of Mississauga / Turner Fleischer",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03162650/Floor-15-OZ-OPA-22-20-May-2026-1.pdf",
+        "title": "May 2026 floor 15 and double-height MPH enclosure plan",
+        "publisher": "City of Mississauga / Turner Fleischer",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/03162649/Floor-16-OZ-OPA-22-20-May-2026-1.pdf",
+        "title": "May 2026 floor 16 — OPEN TO MPH BELOW confirms the double-height mechanical space plan",
+        "publisher": "City of Mississauga / Turner Fleischer",
+        "accessed": "2026-10-10"
       }
     ],
     "includeInModel": true,
@@ -16397,12 +16578,33 @@
       "71-6176"
     ],
     "position": [
-      -1074.0292212759377,
-      51.720001220703125,
-      -2129.9583426956087
+      -1075.904725334607,
+      50.56,
+      -2123.0266298511997
     ],
     "retainedMeshIds": [],
-    "geometryCoverage": "Duplicate or superseded source geometry excluded; inspect replacement evidence"
+    "geometryCoverage": "Plan-derived stepped envelope with source-backed lower floors and MPH",
+    "approvalStages": {
+      "councilPassage": "2026-09-29",
+      "noticePublished": "2026-10-08",
+      "appealDeadline": "2026-10-28",
+      "finalInForceVerified": false,
+      "constructionPermissionVerified": false,
+      "source": "https://www.mississauga.ca/wp-content/uploads/2026/10/08091543/OZ-OPA-22-20-W3-Notice-of-Passing-public-notice.pdf"
+    },
+    "statusEvidenceDate": "2026-10-10",
+    "lastStatusReview": "2026-10-10",
+    "unitCountCaveat": "Council material reports 553 apartments plus 34 townhomes, while the May site and ground sheets show four northern rows with 8, 6, 6 and 8 homes, alongside differing residential and parking schedules. The model follows the visible plan forms; a current approved unit schedule is still needed to reconcile those counts.",
+    "geometryDrawingDate": "2026-05-27",
+    "hasSupplementalModel": true,
+    "supplementalAssetIds": [
+      "dundas-1225-may2026-plan-envelope"
+    ],
+    "modelAssets": [
+      "1225-dundas-may2026-plan-envelope.glb"
+    ],
+    "geometrySourceDate": "2026-05-27",
+    "geometryReviewDate": "2026-10-10"
   },
   {
     "id": "hurontario-3115",
@@ -16411,8 +16613,8 @@
     "address": "3115 Hurontario Street",
     "lat": 43.582854803457,
     "lon": -79.619274474503,
-    "status": "Under review",
-    "statusDate": "2026-03-25",
+    "status": "Council passed · appeal period and holding conditions remain",
+    "statusDate": "2026-09-29",
     "application": "OZ 22 24",
     "storeys": [
       39
@@ -16421,9 +16623,29 @@
       133.4
     ],
     "towers": [],
-    "summary": "March 2026 drawings show 39 occupied floors plus a mechanical penthouse, 484 homes and 133.4 m total height. Urban Toronto counts 40 storeys; the City webpage 42-storey/520-home summary is stale.",
+    "summary": "The 39-storey, 484-home scheme received Council passage on September 29. The notice was published October 8, the appeal period ends October 28, and holding conditions remain. The current drawing height convention is retained.",
     "modelCaveat": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ. Floor-count convention excludes the mechanical penthouse from occupied-storey total; 133 m City massing is not proof of full latest architectural fidelity.",
     "sources": [
+      {
+        "url": "https://www.mississauga.ca/publication/oz-opa-22-24-w7-notice-of-passing-of-an-official-plan-amendment-and-a-zoning-by-law-amendment-ward-7/",
+        "date": "2026-10-08",
+        "title": "October 8 official planning passage notice",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/10/08092020/OZ-OPA-22-24-W7-OPA-17-Notice-of-Passing-public-notice.pdf",
+        "datePassed": "2026-09-29",
+        "pages": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "title": "October 8 official planning passage notice",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
       {
         "url": "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/3115-hurontario-street-oz-opa-22-24-w7/",
         "title": "3115 Hurontario / Dam residential tower — active application",
@@ -16617,7 +16839,18 @@
       "72-6115",
       "72-6118"
     ],
-    "geometryCoverage": "Source geometry available; current detail may differ"
+    "geometryCoverage": "Source geometry available; current detail may differ",
+    "approvalStages": {
+      "councilPassage": "2026-09-29",
+      "noticePublished": "2026-10-08",
+      "appealDeadline": "2026-10-28",
+      "holdingZone": "H-RA7-4",
+      "holdingRemovalVerified": false,
+      "finalInForceVerified": false,
+      "source": "https://www.mississauga.ca/wp-content/uploads/2026/10/08092020/OZ-OPA-22-24-W7-OPA-17-Notice-of-Passing-public-notice.pdf"
+    },
+    "statusEvidenceDate": "2026-10-10",
+    "lastStatusReview": "2026-10-10"
   },
   {
     "id": "beverley-5",
@@ -21027,5 +21260,1156 @@
     "localReview": true,
     "localOptional": true,
     "referenceStudy": true
+  },
+  {
+    "id": "city-group-96",
+    "name": "Above Condos / 30 Bristol Road East",
+    "address": "30 Bristol Road East",
+    "district": "Uptown",
+    "position": [
+      -7066.175133926328,
+      70,
+      -2933.0251908302307
+    ],
+    "lat": 43.614555918913304,
+    "lon": -79.66239223792643,
+    "status": "Under construction · completion unconfirmed",
+    "statusDate": "2026-10-10",
+    "statusEvidenceDate": "2026-10-10",
+    "lastStatusReview": "2026-10-10",
+    "storeys": [
+      23,
+      17
+    ],
+    "heightM": [],
+    "summary": "Two towers of 23 and 17 storeys share a five-storey podium and contain 577 homes. The developer reports construction underway; the municipal shape was already present.",
+    "modelCaveat": "Municipal massing is already in the viewer. Native vendor interactive model is a public visual reference, not a licensed downloadable asset. Developer construction25% is reported progress, not a measured built-height percentage. City field heights, not newly verified total architectural heights. Older drawings and some forum storey conventions differ; retain source extents pending current elevations.",
+    "sources": [
+      {
+        "url": "https://bazgroup.ca/portfolio/development/",
+        "publisher": "Baz / Marlin Spring",
+        "accessed": "2026-10-10",
+        "claims": [
+          "30 Bristol RoadEast;577 condominium units;409000 sq.ft.GFA;Construction25%(3of5)."
+        ],
+        "date": "Undated live portfolio"
+      },
+      {
+        "url": "https://www.linkedin.com/posts/riocan-real-estate-investment-trust_riocanliving-marlinspring-abovecondo-activity-7041802109016576000-biDa",
+        "publisher": "RioCan official company post",
+        "accessed": "2026-10-10",
+        "claims": [
+          "577 homes;23/17storey towers;shared5-storey podium;over39000 sq.ft.amenities."
+        ],
+        "date": "Launch post circa2023; platform shows3y, exactdate not extracted"
+      },
+      {
+        "url": "https://abovecondos.com/the-building/",
+        "publisher": "Above Condos official project website",
+        "accessed": "2026-10-10",
+        "claims": [
+          "Current official building imagery and vendor interactive reference."
+        ]
+      },
+      {
+        "url": "https://ca.blacklineapp.com/above-condos/app/web",
+        "publisher": "Blackline / linked official Above website",
+        "accessed": "2026-10-10",
+        "claims": [
+          "Public interactive3D building visual reference."
+        ],
+        "reusePermissionVerified": false
+      },
+      {
+        "url": "https://ca.blacklineapp.com/above-condos/app/web/floorplans",
+        "publisher": "Blackline / Above",
+        "accessed": "2026-10-10",
+        "claims": [
+          "Public floor-plan visual references."
+        ],
+        "reusePermissionVerified": false
+      }
+    ],
+    "meshIds": [
+      "33-4079",
+      "33-4080",
+      "33-4081"
+    ],
+    "retainedMeshIds": [
+      "33-4079",
+      "33-4080",
+      "33-4081"
+    ],
+    "includeInModel": true,
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "completion": {
+      "actual": null,
+      "target": null,
+      "targetIsGuaranteed": false,
+      "note": "No actual completion or opening date is independently confirmed.",
+      "reviewed": "2026-10-10",
+      "sources": []
+    },
+    "geometryCoverage": "Existing municipal project massing retained; current facade detail unverified",
+    "sharedPodiumStoreys": 5,
+    "homes": 577
+  },
+  {
+    "id": "longview-44-45",
+    "name": "44–45 Longview Place",
+    "address": "44–45 Longview Place",
+    "district": "Meadowvale",
+    "position": [
+      -10885.306602865185,
+      128.36,
+      -5301.424268807977
+    ],
+    "lat": 43.636419746470715,
+    "lon": -79.7092539524444,
+    "status": "Council passed · appeal period and holding conditions remain",
+    "statusDate": "2026-09-29",
+    "statusEvidenceDate": "2026-10-10",
+    "lastStatusReview": "2026-10-10",
+    "storeys": [],
+    "heightM": [],
+    "summary": "Added three proposed homes from the March 2026 plan and published elevations. Council passed the planning by-laws September 29; the appeal period ends October 28 and holding conditions remain. Source height and split-level storey descriptions still need reconciliation.",
+    "modelCaveat": "The current plan supports the three footprints. Older Lot 1 and 2 elevations and the January 2026 Lot 3 elevation provide the roof levels, which differ slightly from the newer summary heights. The drawings also disagree on two versus three storeys because of split levels. Roof forms are approximate; windows, doors, stairs and basements are omitted. Placement has about 3 m working uncertainty. Only displayed foundations meet the dated terrain, up to about 2.5 m below planned grades; roads, source roof levels and upper floors remain unchanged. This is not certified site grading.",
+    "sources": [
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/09120815/East-Elevation-Lot-3-OZ-OPA-21-12-W11-Feb-2026.pdf",
+        "title": "East Elevation (Lot 3) – February 2026",
+        "publisher": "City of Mississauga / Technoarch",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/09120819/North-Elevation-Lot-3-OZ-OPA-21-12-W11-Feb-2026.pdf",
+        "title": "North Elevation (Lot 3) – February 2026",
+        "publisher": "City of Mississauga / Technoarch",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/08151325/Site-Plan-OZ-OPA-21-12-W11-April-2026.pdf",
+        "title": "Site Plan – April 2026",
+        "publisher": "City of Mississauga / Technoarch",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/08151323/Site-Plan-Site-Summary-OZ-OPA-21-12-W11-April-2026.pdf",
+        "title": "Site Plan & Site Summary – April 2026",
+        "publisher": "City of Mississauga / Technoarch",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/08151321/Site-Grading-Plan-OZ-OPA-21-12-W11-April-2026.pdf",
+        "title": "April 2026 site grading and proposed house addresses",
+        "publisher": "City of Mississauga / Skira",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/10/08090813/OZ-OPA-21-12-W11-OPA-14-Notice-of-Passing-public-notice.pdf",
+        "title": "October 8 notice: three new homes; appeal period and holding conditions remain",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Parcel/FeatureServer/0/query?f=json&where=CITY_PIN%3D23357300&outFields=%2A&returnGeometry=true&outSR=26917",
+        "title": "City parcel 23357300: approximate drawing registration",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/09113445/East-Elevation-Lot-1-OZ-OPA-21-12-W11-July-2024.pdf",
+        "title": "East Elevation (Lot 1) – July 2024 (sheet dated May 13, 2024)",
+        "publisher": "City of Mississauga / Technoarch",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/09113447/East-Elevation-Lot-2-OZ-OPA-21-12-W11-July-2024.pdf",
+        "title": "East Elevation (Lot 2) – July 2024 (sheet dated May 13, 2024)",
+        "publisher": "City of Mississauga / Technoarch",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/44-45-longview-place-formerly-0-derry-road-west-oz-opa-21-12-w11/",
+        "title": "Current City application with April2026 plan and February2026 Lot3 elevations",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?f=json&where=ApplicationNumber+LIKE+%27%2521%2512%25%27&outFields=%2A&returnGeometry=true&outSR=26917",
+        "title": "Exact application locator: OZ/OPA21-12, propertypin23357300",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      }
+    ],
+    "meshIds": [],
+    "retainedMeshIds": [],
+    "includeInModel": true,
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "completion": {
+      "actual": null,
+      "target": null,
+      "targetIsGuaranteed": false,
+      "note": "No actual completion or opening date is independently confirmed.",
+      "reviewed": "2026-10-10",
+      "sources": []
+    },
+    "geometryCoverage": "Current plan footprints and source roof levels; source discrepancies qualified",
+    "coordinateSource": "City June2026 application layer exactfileOZ/OPA21-12, applicationpoint; not proposedbuildingcentroid/surveyplacement.",
+    "application": "OZ/OPA 21-12 W11",
+    "cityPin": 23357300,
+    "geometrySources": [
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/09120815/East-Elevation-Lot-3-OZ-OPA-21-12-W11-Feb-2026.pdf",
+        "title": "East Elevation (Lot 3) – February 2026",
+        "publisher": "City of Mississauga / Technoarch",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/09120819/North-Elevation-Lot-3-OZ-OPA-21-12-W11-Feb-2026.pdf",
+        "title": "North Elevation (Lot 3) – February 2026",
+        "publisher": "City of Mississauga / Technoarch",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/08151325/Site-Plan-OZ-OPA-21-12-W11-April-2026.pdf",
+        "title": "Site Plan – April 2026",
+        "publisher": "City of Mississauga / Technoarch",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/08151323/Site-Plan-Site-Summary-OZ-OPA-21-12-W11-April-2026.pdf",
+        "title": "Site Plan & Site Summary – April 2026",
+        "publisher": "City of Mississauga / Technoarch",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/08151321/Site-Grading-Plan-OZ-OPA-21-12-W11-April-2026.pdf",
+        "title": "April 2026 site grading and proposed house addresses",
+        "publisher": "City of Mississauga / Skira",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/10/08090813/OZ-OPA-21-12-W11-OPA-14-Notice-of-Passing-public-notice.pdf",
+        "title": "October 8 notice: three new homes; appeal period and holding conditions remain",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Parcel/FeatureServer/0/query?f=json&where=CITY_PIN%3D23357300&outFields=%2A&returnGeometry=true&outSR=26917",
+        "title": "City parcel 23357300: approximate drawing registration",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/09113445/East-Elevation-Lot-1-OZ-OPA-21-12-W11-July-2024.pdf",
+        "title": "East Elevation (Lot 1) – July 2024 (sheet dated May 13, 2024)",
+        "publisher": "City of Mississauga / Technoarch",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/02/09113447/East-Elevation-Lot-2-OZ-OPA-21-12-W11-July-2024.pdf",
+        "title": "East Elevation (Lot 2) – July 2024 (sheet dated May 13, 2024)",
+        "publisher": "City of Mississauga / Technoarch",
+        "accessed": "2026-10-10"
+      }
+    ],
+    "groundASLM": 196.92,
+    "groundNote": "Approximate Ontario terrain elevation for navigation only; no certified vertical datum or building height is asserted.",
+    "approvalStages": {
+      "councilPassage": "2026-09-29",
+      "noticePublished": "2026-10-08",
+      "appealDeadline": "2026-10-28",
+      "holdingZone": "H-RS-9",
+      "holdingRemovalVerified": false,
+      "finalInForceVerified": false
+    },
+    "currentReportedHeightM": [
+      11.83,
+      12.4,
+      11.88
+    ],
+    "sourceRoofAboveAverageGradeM": [
+      11.91,
+      12.5,
+      11.96
+    ],
+    "roofASLM": [
+      210.65,
+      210.86,
+      210.67
+    ],
+    "uncertainGeometry": true,
+    "storeyNote": "The plan title describes two storeys; internal labels describe three. Split-level floors and a basement make a single definitive count inappropriate without clarification.",
+    "hasSupplementalModel": true,
+    "supplementalAssetIds": [
+      "longview-three-new-homes-reference"
+    ],
+    "modelAssets": [
+      "longview-three-new-homes-reference.glb"
+    ],
+    "geometrySourceDate": "2026-03-11",
+    "geometryReviewDate": "2026-10-10"
+  },
+  {
+    "id": "village-green-725",
+    "name": "Village Green",
+    "address": "725 Village Green Boulevard; new-building addresses 1205 Cawthra Road, 738 Atwater Avenue and 1225 Yeadon Place",
+    "district": "Lakeview",
+    "position": [
+      308.3895864190204,
+      17.060600000000004,
+      1374.102597650185
+    ],
+    "lat": 43.574106,
+    "lon": -79.571579,
+    "status": "Under construction; three new-building permits issued January 31, 2025",
+    "statusDate": "2025-01-31",
+    "statusEvidenceDate": "2026-10-10",
+    "lastStatusReview": "2026-10-10",
+    "storeys": [
+      8,
+      8,
+      9
+    ],
+    "heightM": [],
+    "summary": "Three purpose-built rental buildings contain 431 homes, confirmed by current permits at 1205 Cawthra, 738 Atwater and 1225 Yeadon. A qualified 8/8/9-storey reference shows their form; metre heights remain illustrative until current elevations are available.",
+    "modelCaveat": "Current permits verify 431 homes and eight, eight and nine storeys. The reproduced plan provides an approximate layout, with about 10 m placement uncertainty. Metre heights are illustrative, using 3.1 m per storey with a ±0.35 m allowance; no measured roof height is claimed. The violet future envelope is not a survey of unfinished construction.",
+    "sources": [
+      {
+        "url": "https://www.morguard.com/news-knowledge/news/news-detail/?nid=123505",
+        "title": "Morguard: October 3, 2024 construction launch and 431 homes",
+        "publisher": "Morguard",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.bdp.com/ca/projects/village-green",
+        "title": "Project architect confirms 8/8/9 storeys and 431 rental suites",
+        "publisher": "BDP Quadrangle",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=UPPER%28SITE_ADDRESS%29+LIKE+%27%25VILLAGE+GREEN%25%27+OR+APP_FILE_NO%3D%27SP+17%2F131%27&outFields=%2A&returnGeometry=true&outSR=26917",
+        "title": "SP 17/131 approved February 10, 2023; its older unit field differs from issued permits",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Issued_Building_Permits/FeatureServer/0/query?f=json&where=1%3D1&geometry=%7B%22rings%22%3A+%5B%5B%5B615242.813200062%2C+4825636.44399946%5D%2C+%5B615314.416800062%2C+4825732.35039946%5D%2C+%5B615324.884400062%2C+4825733.22479946%5D%2C+%5B615347.558400062%2C+4825712.98919946%5D%2C+%5B615347.556800063%2C+4825712.99039946%5D%2C+%5B615317.791600062%2C+4825673.58839946%5D%2C+%5B615375.769600062%2C+4825616.39759946%5D%2C+%5B615371.091200061%2C+4825610.14039946%5D%2C+%5B615371.13720006%2C+4825610.24439946%5D%2C+%5B615348.406000062%2C+4825586.53359946%5D%2C+%5B615348.495200061%2C+4825580.85999946%5D%2C+%5B615348.451600062%2C+4825580.89399946%5D%2C+%5B615379.238000061%2C+4825549.54079946%5D%2C+%5B615358.624800062%2C+4825522.27839946%5D%2C+%5B615338.614800062%2C+4825520.59159946%5D%2C+%5B615338.60880006%2C+4825520.59399946%5D%2C+%5B615244.417600062%2C+4825614.19239946%5D%2C+%5B615242.813200062%2C+4825636.44399946%5D%5D%5D%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+26917%7D%7D&geometryType=esriGeometryPolygon&inSR=26917&outSR=26917&outFields=%2A&returnGeometry=true&spatialRel=esriSpatialRelIntersects",
+        "title": "Current issued permits at the exact site: three residential buildings with 431 homes",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://toronto.skyrisecities.com/forum/threads/toronto-725-village-green-boulevard-m-9s-morguard-corporation.40647/page-2",
+        "title": "September 2026 construction photographs",
+        "publisher": "UrbanToronto / SkyriseCities contributors",
+        "accessed": "2026-10-10"
+      }
+    ],
+    "meshIds": [],
+    "retainedMeshIds": [],
+    "includeInModel": true,
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "completion": {
+      "actual": null,
+      "target": null,
+      "targetIsGuaranteed": false,
+      "note": "No actual completion or opening date is independently confirmed.",
+      "reviewed": "2026-10-10",
+      "sources": []
+    },
+    "geometryCoverage": "Approximate form; metre heights unverified",
+    "coordinateSource": "Exact City address record and SP 17/131 site polygon. This is a project locator, not a surveyed building centroid.",
+    "completionNote": "No completion dates are recorded in the current issued-permit entries. Earlier developer forecasts are not verified completion.",
+    "currentPermits": [
+      {
+        "number": "BP 3NEW 23-10535",
+        "address": "1205 CAWTHRA RD",
+        "building": "A",
+        "storeys": 8,
+        "units": 182,
+        "issued": "2025-01-31",
+        "completed": null
+      },
+      {
+        "number": "BP 3NEW 23-10536",
+        "address": "1225 YEADON PL",
+        "building": "C",
+        "storeys": 9,
+        "units": 91,
+        "issued": "2025-01-31",
+        "completed": null
+      },
+      {
+        "number": "BP 3NEW 23-10537",
+        "address": "738 ATWATER AVE",
+        "building": "B",
+        "storeys": 8,
+        "units": 158,
+        "issued": "2025-01-31",
+        "completed": null
+      }
+    ],
+    "groundASLM": 86.2845,
+    "groundNote": "Approximate Ontario terrain elevation for navigation only; no certified vertical datum or building height is asserted.",
+    "hasSupplementalModel": true,
+    "supplementalAssetIds": [
+      "village-green-725-uncertain-reference"
+    ],
+    "modelAssets": [
+      "village-green-725-uncertain-reference.glb"
+    ],
+    "geometrySourceDate": "2022-05-25",
+    "geometryReviewDate": "2026-10-10",
+    "geometrySources": [
+      {
+        "url": "https://www.morguard.com/news-knowledge/news/news-detail/?nid=123505",
+        "title": "Morguard: October 3, 2024 construction launch and 431 homes",
+        "publisher": "Morguard",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.bdp.com/ca/projects/village-green",
+        "title": "Project architect confirms 8/8/9 storeys and 431 rental suites",
+        "publisher": "BDP Quadrangle",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=UPPER%28SITE_ADDRESS%29+LIKE+%27%25VILLAGE+GREEN%25%27+OR+APP_FILE_NO%3D%27SP+17%2F131%27&outFields=%2A&returnGeometry=true&outSR=26917",
+        "title": "SP 17/131 approved February 10, 2023; its older unit field differs from issued permits",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Issued_Building_Permits/FeatureServer/0/query?f=json&where=1%3D1&geometry=%7B%22rings%22%3A+%5B%5B%5B615242.813200062%2C+4825636.44399946%5D%2C+%5B615314.416800062%2C+4825732.35039946%5D%2C+%5B615324.884400062%2C+4825733.22479946%5D%2C+%5B615347.558400062%2C+4825712.98919946%5D%2C+%5B615347.556800063%2C+4825712.99039946%5D%2C+%5B615317.791600062%2C+4825673.58839946%5D%2C+%5B615375.769600062%2C+4825616.39759946%5D%2C+%5B615371.091200061%2C+4825610.14039946%5D%2C+%5B615371.13720006%2C+4825610.24439946%5D%2C+%5B615348.406000062%2C+4825586.53359946%5D%2C+%5B615348.495200061%2C+4825580.85999946%5D%2C+%5B615348.451600062%2C+4825580.89399946%5D%2C+%5B615379.238000061%2C+4825549.54079946%5D%2C+%5B615358.624800062%2C+4825522.27839946%5D%2C+%5B615338.614800062%2C+4825520.59159946%5D%2C+%5B615338.60880006%2C+4825520.59399946%5D%2C+%5B615244.417600062%2C+4825614.19239946%5D%2C+%5B615242.813200062%2C+4825636.44399946%5D%5D%5D%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+26917%7D%7D&geometryType=esriGeometryPolygon&inSR=26917&outSR=26917&outFields=%2A&returnGeometry=true&spatialRel=esriSpatialRelIntersects",
+        "title": "Current issued permits at the exact site: three residential buildings with 431 homes",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://toronto.skyrisecities.com/forum/threads/toronto-725-village-green-boulevard-m-9s-morguard-corporation.40647/page-2",
+        "title": "September 2026 construction photographs",
+        "publisher": "UrbanToronto / SkyriseCities contributors",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://pub-mississauga.escribemeetings.com/filestream.ashx?DocumentId=27531",
+        "title": "City May25,2022 A189.22 department comments: March2022 revised scheme and upper stepbacks",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://cdn.skyrisecities.com/forum/attachments/screenshot-2024-10-01-111617-png.600705/",
+        "title": "Proposal site plan reproduced October1,2024; source graphic date not independently recovered",
+        "publisher": "Applicant plan reproduced by UrbanToronto contributor",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Parcel/FeatureServer/0/query?f=json&where=CITY_PIN%3D18169100&outFields=%2A&returnGeometry=true&outSR=26917",
+        "title": "Live City parcel pin18169100 for neighbourhood-scale registration",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://ws.geoservices.lrc.gov.on.ca/arcgis5/rest/services/Elevation/Ontario_DTM_LidarDerived/ImageServer",
+        "title": "Ontario lidar terrain for approximate ground context",
+        "publisher": "Ontario Ministry of Natural Resources",
+        "accessed": "2026-10-10"
+      }
+    ]
+  },
+  {
+    "id": "leanne-2155",
+    "name": "2155 Leanne Boulevard",
+    "address": "2155 Leanne Boulevard",
+    "district": "Clarkson",
+    "position": [
+      -6081.3133434554975,
+      60.76699999999999,
+      6912.190956281147
+    ],
+    "lat": 43.525788888723106,
+    "lon": -79.65216838595086,
+    "status": "Council passed · appeal period and holding conditions remain",
+    "statusDate": "2026-09-29",
+    "statusEvidenceDate": "2026-10-10",
+    "lastStatusReview": "2026-10-10",
+    "storeys": [
+      10,
+      4
+    ],
+    "heightM": [
+      37.89,
+      14.02
+    ],
+    "summary": "A revised ten-storey apartment with 241 homes and eight townhouse blocks containing 142 homes. Council passed the by-laws September 29; the appeal period ends October 28 and holding conditions remain.",
+    "modelCaveat": "The current revised plan supports the apartment and eight townhouse blocks. Roof details, upper setbacks and finishes are simplified, with approximately 5 m placement uncertainty. Ground levels are estimates. The appeal period and holding conditions remain; no construction completion is claimed.",
+    "sources": [
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/10/08093057/OZ-OPA-26-7-W2-OPA-15-Notice-of-Passing-public-notice.pdf",
+        "title": "October 8 notice: Official Plan Amendment 15 and zoning by-law 0160 passed September 29; appeal period and holding provisions remain",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://pub-mississauga.escribemeetings.com/filestream.ashx?DocumentId=90869",
+        "title": "August 19 supplementary information: revised concept plan, renderings, townhouse elevations and height table",
+        "publisher": "City of Mississauga / Dunpar",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://pub-mississauga.escribemeetings.com/filestream.ashx?DocumentId=90868",
+        "title": "September 8 recommendation report: the July 22 revised proposal for 383 homes",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/city-of-mississauga-news/news/council-recap-september-16-2026/",
+        "title": "Council recap: September 16 approval, published September 23",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Parcel/FeatureServer/0",
+        "title": "City parcel 165503, property pin 32436400",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://ws.geoservices.lrc.gov.on.ca/arcgis5/rest/services/Elevation/Ontario_DTM_LidarDerived/ImageServer",
+        "title": "Ontario lidar-derived terrain for approximate ground placement",
+        "publisher": "Ontario Ministry of Natural Resources",
+        "accessed": "2026-10-10"
+      }
+    ],
+    "meshIds": [],
+    "retainedMeshIds": [],
+    "includeInModel": true,
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "completion": {
+      "actual": null,
+      "target": null,
+      "targetIsGuaranteed": false,
+      "note": "No actual completion or opening date is independently confirmed.",
+      "reviewed": "2026-10-10",
+      "sources": []
+    },
+    "geometryCoverage": "Current approved-plan massing; schematic roof envelopes",
+    "homes": 383,
+    "approvalStages": {
+      "councilPassage": "2026-09-29",
+      "noticePublished": "2026-10-08",
+      "appealDeadline": "2026-10-28",
+      "holdingZones": [
+        "H-RM10-6",
+        "H-RA3-56"
+      ],
+      "holdingRemovalVerified": false,
+      "finalInForceVerified": false
+    },
+    "hasSupplementalModel": true,
+    "supplementalAssetIds": [
+      "leanne-2155-current-plan"
+    ],
+    "modelAssets": [
+      "leanne-2155-current-plan.glb"
+    ],
+    "geometrySourceDate": "2026-07-22",
+    "geometryReviewDate": "2026-10-10",
+    "geometrySources": [
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/10/08093057/OZ-OPA-26-7-W2-OPA-15-Notice-of-Passing-public-notice.pdf",
+        "title": "October 8 notice: Official Plan Amendment 15 and zoning by-law 0160 passed September 29; appeal period and holding provisions remain",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://pub-mississauga.escribemeetings.com/filestream.ashx?DocumentId=90869",
+        "title": "August 19 supplementary information: revised concept plan, renderings, townhouse elevations and height table",
+        "publisher": "City of Mississauga / Dunpar",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://pub-mississauga.escribemeetings.com/filestream.ashx?DocumentId=90868",
+        "title": "September 8 recommendation report: the July 22 revised proposal for 383 homes",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/city-of-mississauga-news/news/council-recap-september-16-2026/",
+        "title": "Council recap: September 16 approval, published September 23",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Parcel/FeatureServer/0",
+        "title": "City parcel 165503, property pin 32436400",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://ws.geoservices.lrc.gov.on.ca/arcgis5/rest/services/Elevation/Ontario_DTM_LidarDerived/ImageServer",
+        "title": "Ontario lidar-derived terrain for approximate ground placement",
+        "publisher": "Ontario Ministry of Natural Resources",
+        "accessed": "2026-10-10"
+      }
+    ]
+  },
+  {
+    "id": "harborn-50-60",
+    "name": "50–60 Harborn Road",
+    "address": "50 and 60 Harborn Road",
+    "district": "Cooksville",
+    "position": [
+      -2166.008177530199,
+      29.06,
+      2094.5846872657876
+    ],
+    "lat": 43.568573446127004,
+    "lon": -79.60273020188406,
+    "status": "Received proposal · approval unconfirmed",
+    "statusDate": "2026-09-21",
+    "statusEvidenceDate": "2026-10-10",
+    "lastStatusReview": "2026-10-10",
+    "storeys": [
+      4,
+      4
+    ],
+    "heightM": [
+      12.24,
+      12.17
+    ],
+    "summary": "Twelve proposed townhomes in two four-storey mansard rows, seven homes and five homes. The September 21 application update is now included; no approval or construction start is claimed.",
+    "modelCaveat": "The site plan and elevation support twelve homes and the main mansard forms. Windows, dormers, porches and small roof details remain simplified, with roughly 1 m placement uncertainty. The separate statistics sheet lists thirteen homes, so the clear 7 + 5 site-plan count is used. Approval and construction are not established.",
+    "sources": [
+      {
+        "url": "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/50-and-60-harborn-road-oz-opa-26-12-w7-and-21t-m-26-2-w7/",
+        "title": "City application updated September 21, 2026: twelve townhomes for RGA Masonry",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/26170851/Site-Plan-OZ-OPA-26-12-W7-and-21T-M-26-2-W7-August-2026.pdf",
+        "title": "A100 site plan: seven homes in Building A and five in B, June 10 revision published August 2026",
+        "publisher": "DelDom / City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/26170752/Building-A-B-North-Elevation-OZ-OPA-26-12-W7-and-21T-M-26-2-W7-August-2026.pdf",
+        "title": "A201: mansard roof, floor and context-grade elevations",
+        "publisher": "DelDom / City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/26170900/Topographic-Survey-OZ-OPA-26-12-W7-and-21T-M-26-2-W7-August-2026.pdf",
+        "title": "Wahba survey, October 4, 2023: UTM zone 17 NAD83 reference",
+        "publisher": "Wahba Surveying / City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Parcel/FeatureServer/0",
+        "title": "City parcels for 50 and 60 Harborn Road, pins 10567800 and 10567700",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Building_Footprints_2024/FeatureServer/0",
+        "title": "City 2024 mapped existing house footprints for future-only replacement",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      }
+    ],
+    "meshIds": [],
+    "retainedMeshIds": [],
+    "includeInModel": true,
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "completion": {
+      "actual": null,
+      "target": null,
+      "targetIsGuaranteed": false,
+      "note": "No actual completion or opening date is independently confirmed.",
+      "reviewed": "2026-10-10",
+      "sources": []
+    },
+    "geometryCoverage": "Municipalparcel-registered architecturalplan-derived schematic envelope",
+    "homes": 12,
+    "hasSupplementalModel": true,
+    "supplementalAssetIds": [
+      "harborn-50-60-current-plan"
+    ],
+    "modelAssets": [
+      "harborn-50-60-current-plan.glb"
+    ],
+    "geometrySourceDate": "2026-06-10",
+    "geometryReviewDate": "2026-10-10",
+    "geometrySources": [
+      {
+        "url": "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/50-and-60-harborn-road-oz-opa-26-12-w7-and-21t-m-26-2-w7/",
+        "title": "City application updated September 21, 2026: twelve townhomes for RGA Masonry",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/26170851/Site-Plan-OZ-OPA-26-12-W7-and-21T-M-26-2-W7-August-2026.pdf",
+        "title": "A100 site plan: seven homes in Building A and five in B, June 10 revision published August 2026",
+        "publisher": "DelDom / City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/26170752/Building-A-B-North-Elevation-OZ-OPA-26-12-W7-and-21T-M-26-2-W7-August-2026.pdf",
+        "title": "A201: mansard roof, floor and context-grade elevations",
+        "publisher": "DelDom / City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/26170900/Topographic-Survey-OZ-OPA-26-12-W7-and-21T-M-26-2-W7-August-2026.pdf",
+        "title": "Wahba survey, October 4, 2023: UTM zone 17 NAD83 reference",
+        "publisher": "Wahba Surveying / City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Parcel/FeatureServer/0",
+        "title": "City parcels for 50 and 60 Harborn Road, pins 10567800 and 10567700",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Building_Footprints_2024/FeatureServer/0",
+        "title": "City 2024 mapped existing house footprints for future-only replacement",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-10-10"
+      }
+    ]
+  },
+  {
+    "id": "cooksville-60-dundas-east",
+    "name": "60 Dundas Street East",
+    "address": "60 Dundas Street East",
+    "district": "Cooksville",
+    "position": [
+      -3104.6883724463632,
+      39.452842712402344,
+      711.3946068392432
+    ],
+    "lat": 43.58116575006305,
+    "lon": -79.61406533392429,
+    "status": "Zoning settled · current architecture still being checked",
+    "statusDate": "2025-01-08",
+    "statusEvidenceDate": "2026-10-10",
+    "lastStatusReview": "2026-10-10",
+    "storeys": [
+      16,
+      32,
+      31
+    ],
+    "heightM": [
+      53,
+      100.2,
+      97.1
+    ],
+    "summary": "The final January 2025 Tribunal order permits 16-, 32- and 31-storey zones. A clearly labelled zoning-envelope study now shows the permitted heights and stepped base. Demolition is documented; new-building construction is not confirmed.",
+    "modelCaveat": "This shows the Tribunal’s permitted height zones, not final architectural floor plates. Placement and grade remain approximate. Windows, balconies and roof design are not invented. Site-plan and holding conditions still need checking; demolition is not permission to build the towers.",
+    "sources": [
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/01/15082139/MOPA-178-OLT-23-000393-JAN-08-2025-ORD.pdf",
+        "title": "Final Ontario Land Tribunal order, MOPA178 /RA5-64",
+        "date": "2025-01-08",
+        "publisher": "Ontario Land Tribunal /City of Mississauga",
+        "pages": [
+          7,
+          17,
+          18
+        ],
+        "claim": "Current16/31/32storey permission; zone heights53/97.1/100.2m and stepped podium maxima.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.omb.gov.on.ca/e-decisions/OLT-23-000393-AUG-28-2024.PDF",
+        "title": "Settlement/interim OLT decision",
+        "date": "2024-08-28",
+        "publisher": "Ontario Land Tribunal",
+        "claim": "1140 homes; SPA appeal adjourned sine die; remaining approvals and holding conditions matter.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2022/09/12180552/W7_60_Noise_and_Vibration_Impact_Study_February2022.pdf",
+        "title": "RWDI Figure1 georeferenced site context",
+        "date": "2022-02-28",
+        "publisher": "RWDI /City of Mississauga",
+        "claim": "Registration only: NAD83UTM17N grid and unchanged parcel/Shepard controls; old proposal heights excluded.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/05/28095905/March-2026-Statistics-Canada-Permit-Report.pdf",
+        "title": "March2026 City issued building permits",
+        "date": "2026-03",
+        "publisher": "City of Mississauga",
+        "claim": "60 DundasEast demolition of existing one-storey commercial building; does not establish new-building permit.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://urbantoronto.ca/forum/threads/60-dundas-street-east-106-97m-29s-almega-brixen-chamberlain.32741/page-3",
+        "title": "Public dated demolition photographs",
+        "date": "2026-09-27",
+        "posted": "2026-09-30",
+        "publisher": "UrbanToronto forum /TimMacDonald",
+        "claim": "Recent photographic condition reference, not official approval or exact design-height evidence.",
+        "accessed": "2026-10-10"
+      }
+    ],
+    "meshIds": [],
+    "retainedMeshIds": [],
+    "includeInModel": true,
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "completion": {
+      "actual": null,
+      "target": null,
+      "targetIsGuaranteed": false,
+      "note": "No actual completion or opening date is independently confirmed.",
+      "reviewed": "2026-10-10",
+      "sources": []
+    },
+    "geometryCoverage": "Zoning-envelope study · architectural form unverified",
+    "hasSupplementalModel": true,
+    "supplementalAssetIds": [
+      "60-dundas-olt-zoning-envelope"
+    ],
+    "modelAssets": [
+      "60-dundas-olt-zoning-envelope.glb"
+    ],
+    "geometrySourceDate": "2025-01-08",
+    "geometryReviewDate": "2026-10-10",
+    "geometrySources": [
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/01/15082139/MOPA-178-OLT-23-000393-JAN-08-2025-ORD.pdf",
+        "title": "Final Ontario Land Tribunal order, MOPA178 /RA5-64",
+        "date": "2025-01-08",
+        "publisher": "Ontario Land Tribunal /City of Mississauga",
+        "pages": [
+          7,
+          17,
+          18
+        ],
+        "claim": "Current16/31/32storey permission; zone heights53/97.1/100.2m and stepped podium maxima.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.omb.gov.on.ca/e-decisions/OLT-23-000393-AUG-28-2024.PDF",
+        "title": "Settlement/interim OLT decision",
+        "date": "2024-08-28",
+        "publisher": "Ontario Land Tribunal",
+        "claim": "1140 homes; SPA appeal adjourned sine die; remaining approvals and holding conditions matter.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2022/09/12180552/W7_60_Noise_and_Vibration_Impact_Study_February2022.pdf",
+        "title": "RWDI Figure1 georeferenced site context",
+        "date": "2022-02-28",
+        "publisher": "RWDI /City of Mississauga",
+        "claim": "Registration only: NAD83UTM17N grid and unchanged parcel/Shepard controls; old proposal heights excluded.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/05/28095905/March-2026-Statistics-Canada-Permit-Report.pdf",
+        "title": "March2026 City issued building permits",
+        "date": "2026-03",
+        "publisher": "City of Mississauga",
+        "claim": "60 DundasEast demolition of existing one-storey commercial building; does not establish new-building permit.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "url": "https://urbantoronto.ca/forum/threads/60-dundas-street-east-106-97m-29s-almega-brixen-chamberlain.32741/page-3",
+        "title": "Public dated demolition photographs",
+        "date": "2026-09-27",
+        "posted": "2026-09-30",
+        "publisher": "UrbanToronto forum /TimMacDonald",
+        "claim": "Recent photographic condition reference, not official approval or exact design-height evidence.",
+        "accessed": "2026-10-10"
+      }
+    ]
+  },
+  {
+    "id": "city-group-30",
+    "name": "Byngmount Shores",
+    "address": "970 East Avenue",
+    "district": "Lakeview",
+    "position": [
+      1009.3920593261719,
+      25.606092929840088,
+      1692.2421875
+    ],
+    "lat": 43.571707791126485,
+    "lon": -79.56333381776086,
+    "status": "Under construction · unfinished structural frame",
+    "statusDate": "2026-10",
+    "statusEvidenceDate": "2026-10-10",
+    "lastStatusReview": "2026-10-10",
+    "storeys": [
+      7
+    ],
+    "heightM": [],
+    "summary": "Peel’s seven-storey building will provide 150 affordable rental homes. October construction photographs show the unfinished U-shaped structure. The old 39.6 m municipal proxy has been replaced by a qualified seven-storey reference massing.",
+    "modelCaveat": "Peel confirms seven storeys and 150 homes. The U-shaped reference uses a provisional municipal footprint and a secondary-reported 27.5 m height; a current dimensioned elevation is still needed. It appears only as a future envelope. The real building remains unfinished in October photographs.",
+    "sources": [
+      {
+        "title": "Peel Region — Byngmount Shores",
+        "url": "https://peelregion.ca/business/housing-development/byngmount-shores",
+        "kind": "primary",
+        "usedFor": "Seven storeys, 150 affordable rentals, site-plan/permit chronology, current construction updates and public rendering.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "Peel Region — current housing projects",
+        "url": "https://peelregion.ca/business/housing-development/current-housing-projects",
+        "kind": "primary",
+        "usedFor": "Q2 2028 estimated completion; forecast, not guaranteed delivery.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "Peel Region February 18 groundbreaking announcement",
+        "url": "https://peelregion.ca/press-releases/peel-region-marks-groundbreaking-byngmount-shores",
+        "kind": "primary",
+        "usedFor": "Construction is underway; 150 homes and accessible-unit information.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "Peel Region October 2026 construction photo",
+        "url": "https://peelregion.ca/sites/default/files/styles/gallery_images_640x480/public/2026-10/byngmount-shores-october-2026-construction.jpg?itok=zY9uORlk",
+        "kind": "primary",
+        "usedFor": "U-shaped structure and upper-floor construction progress; does not establish a completed envelope.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "City site plan application SP 24/035",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=WARD+IN+%281%2C2%29&outFields=OBJECTID%2CAPP_FILE_NO%2CAPPLICATION_DATE%2CAPPROVAL_DATE%2CSITE_ADDRESS%2CDESCRIPTION%2CSIMPLE_STATUS%2CAPPLICANT%2CRES_APTS%2CTOTAL_RES_UNITS&returnGeometry=false&resultRecordCount=2000&f=json",
+        "kind": "primary",
+        "usedFor": "Approved October 7, 2025; 150 units at 970 East Avenue.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "UrbanToronto — Byngmount Shores",
+        "url": "https://urbantoronto.ca/forum/threads/toronto-byngmount-shores-27-5m-7s-peel-housing-corporation-raw-design.33792/",
+        "kind": "secondary",
+        "usedFor": "27.5 m height convention only. This dimension has not been verified against a current primary elevation.",
+        "accessed": "2026-10-10"
+      }
+    ],
+    "meshIds": [
+      "103-1073",
+      "103-1074",
+      "103-1075"
+    ],
+    "retainedMeshIds": [
+      "103-1073",
+      "103-1074",
+      "103-1075"
+    ],
+    "includeInModel": true,
+    "actualCompletionDate": null,
+    "targetCompletionDate": "2028-Q2",
+    "completion": {
+      "actual": null,
+      "target": "2028-Q2",
+      "targetIsGuaranteed": false,
+      "note": "Peel forecasts the second quarter of 2028; this is not a confirmed opening date.",
+      "reviewed": "2026-10-10",
+      "sources": []
+    },
+    "geometryCoverage": "Independent U-shaped approximate massing using municipal horizontal registration and current seven-storey evidence",
+    "homes": 150,
+    "affordableHomes": 150,
+    "illustrativeHeightM": 27.5,
+    "actualConstruction": {
+      "evidenceDate": "2026-10",
+      "stage": "Unfinished upper-floor structure shown in Peel’s October photographs."
+    },
+    "recordedProgressModel": "The corrected reference envelope is future-only; a finished building is not shown as recorded construction.",
+    "hasSupplementalModel": true,
+    "supplementalAssetIds": [
+      "byngmount-seven-storey-review"
+    ],
+    "modelAssets": [
+      "byngmount-seven-storey-review.glb"
+    ],
+    "geometrySourceDate": null,
+    "geometryReviewDate": "2026-10-10",
+    "geometrySources": [
+      {
+        "title": "Peel Region — Byngmount Shores",
+        "url": "https://peelregion.ca/business/housing-development/byngmount-shores",
+        "kind": "primary",
+        "usedFor": "Seven storeys, 150 affordable rentals, site-plan/permit chronology, current construction updates and public rendering.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "Peel Region — current housing projects",
+        "url": "https://peelregion.ca/business/housing-development/current-housing-projects",
+        "kind": "primary",
+        "usedFor": "Q2 2028 estimated completion; forecast, not guaranteed delivery.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "Peel Region February 18 groundbreaking announcement",
+        "url": "https://peelregion.ca/press-releases/peel-region-marks-groundbreaking-byngmount-shores",
+        "kind": "primary",
+        "usedFor": "Construction is underway; 150 homes and accessible-unit information.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "Peel Region October 2026 construction photo",
+        "url": "https://peelregion.ca/sites/default/files/styles/gallery_images_640x480/public/2026-10/byngmount-shores-october-2026-construction.jpg?itok=zY9uORlk",
+        "kind": "primary",
+        "usedFor": "U-shaped structure and upper-floor construction progress; does not establish a completed envelope.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "City site plan application SP 24/035",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=WARD+IN+%281%2C2%29&outFields=OBJECTID%2CAPP_FILE_NO%2CAPPLICATION_DATE%2CAPPROVAL_DATE%2CSITE_ADDRESS%2CDESCRIPTION%2CSIMPLE_STATUS%2CAPPLICANT%2CRES_APTS%2CTOTAL_RES_UNITS&returnGeometry=false&resultRecordCount=2000&f=json",
+        "kind": "primary",
+        "usedFor": "Approved October 7, 2025; 150 units at 970 East Avenue.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "UrbanToronto — Byngmount Shores",
+        "url": "https://urbantoronto.ca/forum/threads/toronto-byngmount-shores-27-5m-7s-peel-housing-corporation-raw-design.33792/",
+        "kind": "secondary",
+        "usedFor": "27.5 m height convention only. This dimension has not been verified against a current primary elevation.",
+        "accessed": "2026-10-10"
+      }
+    ]
+  },
+  {
+    "id": "city-group-14",
+    "name": "49 South Service Road",
+    "address": "49 South Service Road",
+    "district": "Port Credit",
+    "position": [
+      -1799.6149291992188,
+      76.77913665771484,
+      2120.005859375
+    ],
+    "lat": 43.56828800417698,
+    "lon": -79.59819762026265,
+    "status": "Tribunal zoning approved · site plan active",
+    "statusDate": "2024-11-14",
+    "statusEvidenceDate": "2026-10-10",
+    "lastStatusReview": "2026-10-10",
+    "storeys": [
+      29
+    ],
+    "heightM": [
+      95
+    ],
+    "summary": "The Tribunal’s November 2024 settlement permits 29 storeys and a 95 m tower. A permitted-height study now replaces the older 90.5 m proxy, with four-storey and one-storey base zones. The active site-plan entry describes 346 homes; physical construction is not confirmed.",
+    "modelCaveat": "This is a permitted-height study from the Tribunal schedule. The 95 m tower and lower base limits are verified; exact architectural outlines, finishes and ground placement remain approximate. The older municipal proxy is removed. Physical construction and completion are not established.",
+    "sources": [
+      {
+        "title": "Official OLT order OLT-23-000390, November 14, 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/11/20122457/ontario-land-tribunal-case-olt-23-000390.pdf",
+        "kind": "primary",
+        "usedFor": "Final RA5-66 schedule, page 15: tower 95 m/29 storeys, podium 16.8 m/four storeys, base 5.1 m/one storey.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "Sajecki Planning — settlement announcement",
+        "url": "https://sajeckiplanning.squarespace.com/news/nru-publishing-highlights-successful-olt-settlement-for-49-south-service-road",
+        "kind": "primary",
+        "usedFor": "Independent project-team corroboration of 29-storey settlement.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "City SP 24/032",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=WARD+IN+%281%2C2%29&outFields=OBJECTID%2CAPP_FILE_NO%2CAPPLICATION_DATE%2CAPPROVAL_DATE%2CSITE_ADDRESS%2CDESCRIPTION%2CSIMPLE_STATUS%2CAPPLICANT%2CRES_APTS%2CTOTAL_RES_UNITS&returnGeometry=false&resultRecordCount=2000&f=json",
+        "kind": "primary",
+        "usedFor": "Active 29-storey, 346-unit site plan.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "Edenshaw — coming soon",
+        "url": "https://edenshaw.com/communities/coming-soon-2/",
+        "kind": "primary",
+        "usedFor": "Current developer coming-soon description, not construction proof.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "UrbanToronto — October 9 render update",
+        "url": "https://urbantoronto.ca/forum/threads/toronto-49-south-service-road-95m-29s-edenshaw-kirkor.34563/page-3",
+        "kind": "secondary",
+        "usedFor": "Updated design images and approved-version discussion.",
+        "accessed": "2026-10-10"
+      }
+    ],
+    "meshIds": [
+      "102-7050"
+    ],
+    "retainedMeshIds": [
+      "102-7050"
+    ],
+    "includeInModel": true,
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "completion": {
+      "actual": null,
+      "target": null,
+      "targetIsGuaranteed": false,
+      "note": "No actual completion or opening date is independently confirmed.",
+      "reviewed": "2026-10-10",
+      "sources": []
+    },
+    "geometryCoverage": "Approximate zoning-envelope study traced from the official OLT RA5-66 schedule: 95 m / 29-storey tower, 16.8 m / four-storey areas, and 5.1 m / one-storey front stepback. Horizontal outlines and grade are approximate; this is not the finished architectural design.",
+    "homes": 346,
+    "hasSupplementalModel": true,
+    "supplementalAssetIds": [
+      "49-south-olt-height-envelope-review"
+    ],
+    "modelAssets": [
+      "49-south-olt-height-envelope-review.glb"
+    ],
+    "geometrySourceDate": null,
+    "geometryReviewDate": "2026-10-10",
+    "geometrySources": [
+      {
+        "title": "Official OLT order OLT-23-000390, November 14, 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/11/20122457/ontario-land-tribunal-case-olt-23-000390.pdf",
+        "kind": "primary",
+        "usedFor": "Final RA5-66 schedule, page 15: tower 95 m/29 storeys, podium 16.8 m/four storeys, base 5.1 m/one storey.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "Sajecki Planning — settlement announcement",
+        "url": "https://sajeckiplanning.squarespace.com/news/nru-publishing-highlights-successful-olt-settlement-for-49-south-service-road",
+        "kind": "primary",
+        "usedFor": "Independent project-team corroboration of 29-storey settlement.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "City SP 24/032",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=WARD+IN+%281%2C2%29&outFields=OBJECTID%2CAPP_FILE_NO%2CAPPLICATION_DATE%2CAPPROVAL_DATE%2CSITE_ADDRESS%2CDESCRIPTION%2CSIMPLE_STATUS%2CAPPLICANT%2CRES_APTS%2CTOTAL_RES_UNITS&returnGeometry=false&resultRecordCount=2000&f=json",
+        "kind": "primary",
+        "usedFor": "Active 29-storey, 346-unit site plan.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "Edenshaw — coming soon",
+        "url": "https://edenshaw.com/communities/coming-soon-2/",
+        "kind": "primary",
+        "usedFor": "Current developer coming-soon description, not construction proof.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "UrbanToronto — October 9 render update",
+        "url": "https://urbantoronto.ca/forum/threads/toronto-49-south-service-road-95m-29s-edenshaw-kirkor.34563/page-3",
+        "kind": "secondary",
+        "usedFor": "Updated design images and approved-version discussion.",
+        "accessed": "2026-10-10"
+      }
+    ]
   }
 ]

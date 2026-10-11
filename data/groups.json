@@ -1146,7 +1146,7 @@
     "sourceHeightFields": [
       90.5
     ],
-    "status": "Proposed",
+    "status": "Tribunal zoning approved · site plan active",
     "asOf": "2026-09-20",
     "inventoryAsOf": "2026-06-30",
     "inventoryMatches": [
@@ -1191,12 +1191,12 @@
     "completionDate": null,
     "targetCompletionDate": null,
     "completionDateNote": "No actual completion date published in the checked exact-site evidence. Forecasts, where given, are separate from actual dates.",
-    "currentStatus": "Application retained; current construction and completion unverified",
+    "currentStatus": "Tribunal zoning approved · site plan active",
     "originalSourceName": "49 South Service Rd.",
     "displayStatus": "Uncertain",
-    "statusDate": null,
+    "statusDate": "2024-11-14",
     "followupAsOf": "2026-09-20",
-    "followupEvidence": "Current City inventory describes 29 storeys; UrbanToronto describes 26. No construction/completion confirmation found. Source height alone cannot resolve the architectural version.",
+    "followupEvidence": "The Tribunal’s November 2024 settlement permits 29 storeys and a 95 m tower. A permitted-height study now replaces the older 90.5 m proxy, with four-storey and one-storey base zones. The active site-plan entry describes 346 homes; physical construction is not confirmed.",
     "followupSources": [
       "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D172&outFields=*&outSR=4326&f=pjson",
       "https://urbantoronto.ca/database/projects/49-south-service-road.50338"
@@ -1210,7 +1210,46 @@
       70,
       2120.122824618593
     ],
-    "retainedComponents": 1
+    "retainedComponents": 1,
+    "modelCaveat": "This is a permitted-height study from the Tribunal schedule. The 95 m tower and lower base limits are verified; exact architectural outlines, finishes and ground placement remain approximate. The older municipal proxy is removed. Physical construction and completion are not established.",
+    "statusEvidenceDate": "2026-10-10",
+    "sources": [
+      {
+        "title": "Official OLT order OLT-23-000390, November 14, 2024",
+        "url": "https://www.mississauga.ca/wp-content/uploads/2024/11/20122457/ontario-land-tribunal-case-olt-23-000390.pdf",
+        "kind": "primary",
+        "usedFor": "Final RA5-66 schedule, page 15: tower 95 m/29 storeys, podium 16.8 m/four storeys, base 5.1 m/one storey.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "Sajecki Planning — settlement announcement",
+        "url": "https://sajeckiplanning.squarespace.com/news/nru-publishing-highlights-successful-olt-settlement-for-49-south-service-road",
+        "kind": "primary",
+        "usedFor": "Independent project-team corroboration of 29-storey settlement.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "City SP 24/032",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=WARD+IN+%281%2C2%29&outFields=OBJECTID%2CAPP_FILE_NO%2CAPPLICATION_DATE%2CAPPROVAL_DATE%2CSITE_ADDRESS%2CDESCRIPTION%2CSIMPLE_STATUS%2CAPPLICANT%2CRES_APTS%2CTOTAL_RES_UNITS&returnGeometry=false&resultRecordCount=2000&f=json",
+        "kind": "primary",
+        "usedFor": "Active 29-storey, 346-unit site plan.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "Edenshaw — coming soon",
+        "url": "https://edenshaw.com/communities/coming-soon-2/",
+        "kind": "primary",
+        "usedFor": "Current developer coming-soon description, not construction proof.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "UrbanToronto — October 9 render update",
+        "url": "https://urbantoronto.ca/forum/threads/toronto-49-south-service-road-95m-29s-edenshaw-kirkor.34563/page-3",
+        "kind": "secondary",
+        "usedFor": "Updated design images and approved-version discussion.",
+        "accessed": "2026-10-10"
+      }
+    ]
   },
   {
     "id": "city-group-15",
@@ -2445,7 +2484,7 @@
       11.0,
       39.6
     ],
-    "status": "Proposed",
+    "status": "Under construction · unfinished structural frame",
     "asOf": "2026-09-20",
     "inventoryAsOf": "2026-06-30",
     "inventoryMatches": [],
@@ -2484,13 +2523,53 @@
     ],
     "publicPermitQuery": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Issued_Building_Permits/FeatureServer/0/query?f=json&geometry=%7B%22x%22%3A+-79.56345403787255%2C+%22y%22%3A+43.57171771521632%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&distance=90&units=esriSRUnit_Meter&outFields=BuildingPermitNumber%2CIssuedDate%2CBuildingPermitType%2CBuildingPermitScope%2CAddress%2CApprovedUse%2CResidentialUnits%2CNonResidentialGFA_m2&outSR=4326&returnGeometry=true",
     "followupReviewDate": "2026-09-20",
-    "currentStatus": "Under construction",
+    "currentStatus": "Under construction · unfinished structural frame",
     "evidenceNote": "Peel confirms February 17, 2026 groundbreaking and construction commenced. Seven storeys, 150 rental homes. City permit issued December 15, 2025. Target 2028 is forecast, not completion.",
     "sources": [
-      "https://peelregion.ca/press-releases/peel-region-marks-groundbreaking-byngmount-shores",
-      "https://www.mississauga.ca/wp-content/uploads/2026/03/02091702/December-2025-Statistics-Canada-Permit-Report.pdf"
+      {
+        "title": "Peel Region — Byngmount Shores",
+        "url": "https://peelregion.ca/business/housing-development/byngmount-shores",
+        "kind": "primary",
+        "usedFor": "Seven storeys, 150 affordable rentals, site-plan/permit chronology, current construction updates and public rendering.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "Peel Region — current housing projects",
+        "url": "https://peelregion.ca/business/housing-development/current-housing-projects",
+        "kind": "primary",
+        "usedFor": "Q2 2028 estimated completion; forecast, not guaranteed delivery.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "Peel Region February 18 groundbreaking announcement",
+        "url": "https://peelregion.ca/press-releases/peel-region-marks-groundbreaking-byngmount-shores",
+        "kind": "primary",
+        "usedFor": "Construction is underway; 150 homes and accessible-unit information.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "Peel Region October 2026 construction photo",
+        "url": "https://peelregion.ca/sites/default/files/styles/gallery_images_640x480/public/2026-10/byngmount-shores-october-2026-construction.jpg?itok=zY9uORlk",
+        "kind": "primary",
+        "usedFor": "U-shaped structure and upper-floor construction progress; does not establish a completed envelope.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "City site plan application SP 24/035",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=WARD+IN+%281%2C2%29&outFields=OBJECTID%2CAPP_FILE_NO%2CAPPLICATION_DATE%2CAPPROVAL_DATE%2CSITE_ADDRESS%2CDESCRIPTION%2CSIMPLE_STATUS%2CAPPLICANT%2CRES_APTS%2CTOTAL_RES_UNITS&returnGeometry=false&resultRecordCount=2000&f=json",
+        "kind": "primary",
+        "usedFor": "Approved October 7, 2025; 150 units at 970 East Avenue.",
+        "accessed": "2026-10-10"
+      },
+      {
+        "title": "UrbanToronto — Byngmount Shores",
+        "url": "https://urbantoronto.ca/forum/threads/toronto-byngmount-shores-27-5m-7s-peel-housing-corporation-raw-design.33792/",
+        "kind": "secondary",
+        "usedFor": "27.5 m height convention only. This dimension has not been verified against a current primary elevation.",
+        "accessed": "2026-10-10"
+      }
     ],
-    "statusDate": "2026-02-18",
+    "statusDate": "2026-10",
     "displayStatus": "Under Construction",
     "correctedName": "Byngmount Shores / 970 East Avenue",
     "originalSourceName": "Byngmount Shores / 970 East Avenue",
@@ -2518,7 +2597,10 @@
       70,
       1691.3078127242625
     ],
-    "retainedComponents": 3
+    "retainedComponents": 3,
+    "followupEvidence": "Peel’s seven-storey building will provide 150 affordable rental homes. October construction photographs show the unfinished U-shaped structure. The old 39.6 m municipal proxy has been replaced by a qualified seven-storey reference massing.",
+    "modelCaveat": "Peel confirms seven storeys and 150 homes. The U-shaped reference uses a provisional municipal footprint and a secondary-reported 27.5 m height; a current dimensioned elevation is still needed. It appears only as a future envelope. The real building remains unfinished in October photographs.",
+    "statusEvidenceDate": "2026-10-10"
   },
   {
     "id": "city-group-31",
@@ -8336,7 +8418,7 @@
       58.75,
       75.85
     ],
-    "status": "Proposed",
+    "status": "Under construction · completion unconfirmed",
     "asOf": "2026-09-20",
     "inventoryAsOf": "2026-06-30",
     "inventoryMatches": [
@@ -8381,12 +8463,12 @@
     "completionDate": null,
     "targetCompletionDate": null,
     "completionDateNote": "No actual completion date published in the checked exact-site evidence. Forecasts, where given, are separate from actual dates.",
-    "currentStatus": "Under construction according to current developer portfolio; completion unpublished",
+    "currentStatus": "Under construction · completion unconfirmed",
     "originalSourceName": "Sandalwood Square",
     "displayStatus": "Under Construction",
-    "statusDate": null,
+    "statusDate": "2026-10-10",
     "followupAsOf": "2026-09-20",
-    "followupEvidence": "Developer Baz portfolio explicitly lists Above Condos at 30 Bristol, 577 units, in Construction stage (25%). Older broker pages retain preconstruction and conflicting 2024/2026/2027 forecasts. Current completion date is not published; developer stage is accepted without inventing a start date.",
+    "followupEvidence": "Two towers of 23 and 17 storeys share a five-storey podium and contain 577 homes. The developer reports construction underway; the municipal shape was already present.",
     "followupSources": [
       "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D136&outFields=*&outSR=4326&f=pjson",
       "https://bazgroup.ca/portfolio/development/",
@@ -8401,7 +8483,55 @@
       70,
       -2933.0251908302307
     ],
-    "retainedComponents": 3
+    "retainedComponents": 3,
+    "modelCaveat": "Municipal massing is already in the viewer. Native vendor interactive model is a public visual reference, not a licensed downloadable asset. Developer construction25% is reported progress, not a measured built-height percentage. City field heights, not newly verified total architectural heights. Older drawings and some forum storey conventions differ; retain source extents pending current elevations.",
+    "statusEvidenceDate": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://bazgroup.ca/portfolio/development/",
+        "publisher": "Baz / Marlin Spring",
+        "accessed": "2026-10-10",
+        "claims": [
+          "30 Bristol RoadEast;577 condominium units;409000 sq.ft.GFA;Construction25%(3of5)."
+        ],
+        "date": "Undated live portfolio"
+      },
+      {
+        "url": "https://www.linkedin.com/posts/riocan-real-estate-investment-trust_riocanliving-marlinspring-abovecondo-activity-7041802109016576000-biDa",
+        "publisher": "RioCan official company post",
+        "accessed": "2026-10-10",
+        "claims": [
+          "577 homes;23/17storey towers;shared5-storey podium;over39000 sq.ft.amenities."
+        ],
+        "date": "Launch post circa2023; platform shows3y, exactdate not extracted"
+      },
+      {
+        "url": "https://abovecondos.com/the-building/",
+        "publisher": "Above Condos official project website",
+        "accessed": "2026-10-10",
+        "claims": [
+          "Current official building imagery and vendor interactive reference."
+        ]
+      },
+      {
+        "url": "https://ca.blacklineapp.com/above-condos/app/web",
+        "publisher": "Blackline / linked official Above website",
+        "accessed": "2026-10-10",
+        "claims": [
+          "Public interactive3D building visual reference."
+        ],
+        "reusePermissionVerified": false
+      },
+      {
+        "url": "https://ca.blacklineapp.com/above-condos/app/web/floorplans",
+        "publisher": "Blackline / Above",
+        "accessed": "2026-10-10",
+        "claims": [
+          "Public floor-plan visual references."
+        ],
+        "reusePermissionVerified": false
+      }
+    ]
   },
   {
     "id": "city-group-97",
