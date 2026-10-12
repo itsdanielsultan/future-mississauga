@@ -333,6 +333,98 @@
       "sourceSHA256": "d07bd1aea03ac9b7d57f2b00303979feacd6e5b8940330fe6bb013415673a51d",
       "material": "Original source vertex colour multiplied by opaque matte white PBR, metallic 0 and roughness 0.9",
       "scopeNote": "Exact whole closed low-rise source components within 400 m of the corrected 6344 Ninth Line location; only loaded in the city overview. Existing housing is dated municipal context, not verified present-day as-built. Components near the three new proposed footprints are conservatively omitted in every scenario. Open source/boundary components are omitted, not reconstructed. No terrain, roads, elevations, scaling or guessed houses were changed."
+    },
+    {
+      "id": "bell-harding-mapped-context-clarkson",
+      "name": "Harding Waterfront Estate: mapped local context",
+      "districtId": "clarkson",
+      "district": "clarkson",
+      "url": "models/reference-review/bell-harding-mapped-context.glb",
+      "system": "StreetContext",
+      "category": "StreetContext",
+      "status": "Existing",
+      "modes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "contextOnly": true,
+      "bounds": [
+        [
+          -4280.0,
+          4.615384578704834,
+          11094.0498046875
+        ],
+        [
+          -3530.0,
+          20.910009384155273,
+          11760.0
+        ]
+      ],
+      "sha256": "55315d1f0c823c6cbbb67bb14e389244a3fc77880f5ce24d09a3092d9692991e",
+      "downloadSHA256": "55315d1f0c823c6cbbb67bb14e389244a3fc77880f5ce24d09a3092d9692991e",
+      "bytes": 827212,
+      "downloadBytes": 827212,
+      "triangles": 40588,
+      "triangleCount": 40588,
+      "preserveMaterials": true,
+      "preserveSourceNormals": true,
+      "nativePreserveFinish": true,
+      "sourceURLs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/BDRYCITY_3857v2/FeatureServer/0/query",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Planimetric_Shapes/FeatureServer/0/query",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Park_Boundary/FeatureServer/1/query",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/2023_City_Owned_Tree_Inventory/FeatureServer/0",
+        "https://ws.geoservices.lrc.gov.on.ca/arcgis5/rest/services/Elevation/Ontario_DTM_LidarDerived/ImageServer"
+      ],
+      "sourceCuts": [],
+      "scopeNote": "Small source-defined Bellsite context. Existing buildings and canonicalroads/transit/terrain unchanged. Shared identicalasset; no source cuts/masks. DTM/Citydatumuncertainty, footprint-confinedsupport andsymboliccrown sizes documented."
+    },
+    {
+      "id": "bell-harding-mapped-context-citywide",
+      "name": "Harding Waterfront Estate: mapped local context",
+      "districtId": "citywide",
+      "district": "citywide",
+      "url": "models/reference-review/bell-harding-mapped-context.glb",
+      "system": "StreetContext",
+      "category": "StreetContext",
+      "status": "Existing",
+      "modes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "contextOnly": true,
+      "bounds": [
+        [
+          -4280.0,
+          4.615384578704834,
+          11094.0498046875
+        ],
+        [
+          -3530.0,
+          20.910009384155273,
+          11760.0
+        ]
+      ],
+      "sha256": "55315d1f0c823c6cbbb67bb14e389244a3fc77880f5ce24d09a3092d9692991e",
+      "downloadSHA256": "55315d1f0c823c6cbbb67bb14e389244a3fc77880f5ce24d09a3092d9692991e",
+      "bytes": 827212,
+      "downloadBytes": 827212,
+      "triangles": 40588,
+      "triangleCount": 40588,
+      "preserveMaterials": true,
+      "preserveSourceNormals": true,
+      "nativePreserveFinish": true,
+      "sourceURLs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/BDRYCITY_3857v2/FeatureServer/0/query",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Planimetric_Shapes/FeatureServer/0/query",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Park_Boundary/FeatureServer/1/query",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/2023_City_Owned_Tree_Inventory/FeatureServer/0",
+        "https://ws.geoservices.lrc.gov.on.ca/arcgis5/rest/services/Elevation/Ontario_DTM_LidarDerived/ImageServer"
+      ],
+      "sourceCuts": [],
+      "scopeNote": "Small source-defined Bellsite context. Existing buildings and canonicalroads/transit/terrain unchanged. Shared identicalasset; no source cuts/masks. DTM/Citydatumuncertainty, footprint-confinedsupport andsymboliccrown sizes documented."
     }
   ],
   "trees": {
