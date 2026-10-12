@@ -64,3 +64,7 @@ Independent plan-derived and permitted-height reference models use linked public
 ## October 12, 2026 reference studies
 
 NRC exterior reference help: Tom Arban Photography Inc. and Mark Walsh / Prelco. UTM Meeting Place reference photography: Riley Snelling. Bell Gairdner / Harding Waterfront Estate reference photography: Industryous Photography. West End Buddhist Temple reference help: Bhante Saranapala / West End Buddhist Temple. Fairwinds Park design and reference help: Earthscape Play. Base building and geographic context: City of Mississauga; terrain: Ontario. Added details and finishes are approximate. No supplied source photographs, drawings or private correspondence are reproduced.
+
+Paul Coffey Park castle, Fairwinds Park HMCS Pinnacle and Churchill Meadows log-play reference help and design: Earthscape Play. These are approximate landmark models; the whole playgrounds and engineering details are not reproduced. Generated contacts are fitted to the existing display surfaces. Original photographs and private source files are excluded.
+
+Creekside exterior reference study: public Invizij Architects exterior references and City/Indwell December13,2023 community presentation. It is an optional estimate based on the early50-home plan, not the current51-unit approved/as-built set. No source pixels or original drawings are redistributed.

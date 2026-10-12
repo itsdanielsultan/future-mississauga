@@ -22734,7 +22734,7 @@
     "district": "uptown",
     "position": [
       -6732.5,
-      96.055,
+      96.00554656982422,
       -1717.1
     ],
     "lat": 43.60356212573273,
@@ -22742,16 +22742,16 @@
     "bounds": [
       [
         -6736.78173828125,
-        96.05500030517578,
+        96.00554656982422,
         -1719.7335205078125
       ],
       [
         -6728.36865234375,
-        102.14742279052734,
+        102.31316375732422,
         -1714.4595947265625
       ]
     ],
-    "status": "Existing reference study",
+    "status": "Existing park landmark · reference study",
     "statusDate": "2026-10-12 reference review",
     "storeys": [],
     "heightM": [],
@@ -22759,10 +22759,11 @@
     "modelLayer": "existing",
     "referenceStudy": true,
     "localReview": true,
-    "summary": "The playground landmark is reconstructed from the supplied views with its documented colours, set in the mapped park.",
-    "modelCaveat": "Photo-informed playground landmark, not a full playground or an engineering model. Member dimensions and unseen surfaces are approximate; the supplied pictures remain private. Reference credit: Earthscape Play · supplied reference photographs and design acknowledgement.",
+    "summary": "HMCS Pinnacle has its photographed wooden hull and cabin, rope details, yellow portholes and red flag. Its generated contacts now follow the mapped park surface.",
+    "modelCaveat": "Photo-based interpretation; member dimensions, fine connections and hidden surfaces remain approximate. Source images remain private. The mapped ground is display geometry, not a surveyed playground level.",
     "referenceCredits": [
-      "Earthscape Play · supplied reference photographs and design acknowledgement"
+      "Reference help and design: Earthscape Play",
+      "Mapped surroundings: City of Mississauga and Ontario terrain"
     ],
     "sources": [
       {
@@ -22788,10 +22789,11 @@
     "targetCompletionDate": null,
     "completionDateNote": "City and Earthscape record 2021; the exact landmark installation date and present condition are not independently surveyed.",
     "hasDerivedModel": true,
-    "geometryCoverage": "Checked source-based exterior study; dimensions and finishes remain qualified.",
+    "geometryCoverage": "The playground landmark is added to its mapped park. It is an approximate exterior study, not a complete playground or engineering model.",
     "lastStatusReview": "2026-10-12",
     "qualityStatus": "Checked reference-based approximation",
-    "completionYear": 2021
+    "completionYear": 2021,
+    "viewerDistrict": "uptown"
   },
   {
     "id": "rise-at-stride",
@@ -23234,7 +23236,7 @@
     "lon": -79.62085243799318,
     "position": [
       -3539.728539797361,
-      22.43000030517578,
+      23.56821918882205,
       7528.621433798224
     ],
     "positionCaveat": "Official application land-polygon centroid; Y uses a nearby dated existing source base as a camera locator only, not a proposed finished-floor or design elevation.",
@@ -23249,8 +23251,8 @@
     "targetCompletionDate": "Q4 2027 (Peel current forecast)",
     "includeInModel": true,
     "proposedGeometryAvailable": false,
-    "geometryCoverage": "Site marked; measured earlier plans are being compared with current exterior references. The exact new building is still being checked.",
-    "summary": "Indwell’s four-storey Creekside project at 1639 Lakeshore Road West is under construction. The City permit and current Peel project page identify 51 homes. Indwell’s older page still advertises 50 and a 2026 opening; retain these as historical numbers, alongside Peel’s current Q4 2027 forecast.",
+    "geometryCoverage": "Optional earlier-plan exterior study. The current 51-home design still needs verified drawings.",
+    "summary": "Creekside’s current 51-home project is under construction. An optional exterior study now shows how its earlier plan could fit beside the existing buildings, with the open vehicle passage, balconies and reference-based finishes.",
     "sources": [
       {
         "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27SP+24%2F29%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
@@ -23307,14 +23309,55 @@
         "checked": "2026-10-12",
         "supports": "Secondary construction corroboration; older 50-unit descriptions do not replace the 51-unit City/Peel records.",
         "sourceType": "secondary"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=APP_FILE_NO%3D%27SP%2024%2F29%27&outFields=*&returnGeometry=true&outSR=26917&f=json",
+        "title": "City SP24/29",
+        "supports": "ApprovedMay9,2025,51 units and land polygon."
+      },
+      {
+        "url": "https://pub-mississauga.escribemeetings.com/Meeting.aspx?Agenda=Agenda&Id=cd4cbea3-5d09-47e2-9408-cd2276d0c083&lang=English",
+        "title": "City October7,2024PIL discussion",
+        "supports": "Official appendix62781 contains site plan; current direct download403. No claim it was read."
+      },
+      {
+        "url": "https://drive.google.com/file/d/10szTu2WM2yaEwuvOr-xIsKiXKDNaFkrX/view",
+        "title": "December 13, 2023 City/Indwell community presentation",
+        "supports": "Early 50-unit plan, including measured outer controls: 39.10 m frontage, 16.59 m rear leg, 25.74 m side length and 15.39 m front-wing depth. This is not the currently approved 51-unit drawing set."
       }
     ],
     "id": "clarkson-creekside-1639",
-    "modelLayer": "unmodelled",
+    "modelLayer": "uncertain",
     "meshIds": [],
     "geometrySources": [],
     "lastStatusReview": "2026-10-12",
-    "modelCaveat": "Exact current proposed exterior/footprint/dimensions not yet verified. Existing municipal roofs are context, not the new design."
+    "modelCaveat": "This optional model uses measured controls from the December 2023 50-home plan and newer exterior references. The current project has 51 homes. The 13.65 m height, grade, facade divisions and smaller details are estimates; this is not its final approved or as-built architecture. Only the planned exterior appears in the future view, with alternate studies enabled.",
+    "bounds": [
+      [
+        -3561.933134706144,
+        22.56821918882205,
+        7512.3032372774605
+      ],
+      [
+        -3517.555661630048,
+        37.21821880735232,
+        7551.588089908021
+      ]
+    ],
+    "viewerDistrict": "clarkson",
+    "referenceStudy": true,
+    "localReview": true,
+    "localOptional": true,
+    "hasDerivedModel": true,
+    "referenceCredits": [
+      "Architecture and exterior references: Invizij Architects Inc.",
+      "Early plan reference: City/Indwell December13,2023 community presentation",
+      "Existing context: City of Mississauga; ground-source comparison: Ontario DTM"
+    ],
+    "sourceVersionBoundary": "Do not call December2023 50-unitplan the currently approved51-unit drawing set. Invizij current51-unit page and2024publicrender references corroborate broad exterior continuity,not every final metric.",
+    "estimatedStudyHeightM": 13.65,
+    "studySourceUnits": 50,
+    "currentProgrammeUnits": 51
   },
   {
     "name": "1110 Lorne Park Road · six townhomes",
@@ -23369,8 +23412,12 @@
     "district": "Port Credit",
     "lat": 43.5515,
     "lon": -79.59151999999999,
-    "position": null,
-    "positionCaveat": "Official approximate span locator; no numeric proposed deck datum recovered. Do not use a water/terrain height as bridge-deck Y.",
+    "position": [
+      -1228.6107936068438,
+      5.0,
+      3975.4980560196564
+    ],
+    "positionCaveat": "Research map locator at the model’s illustrative water level. This positions the camera and a project pin; it is not a bridge-deck elevation or a new span model.",
     "status": "Under construction · public opening not verified",
     "statusDate": "2026-10-12 current City page",
     "actualCompletionDate": null,
@@ -23413,9 +23460,126 @@
     "geometrySources": [],
     "lastStatusReview": "2026-10-12",
     "modelCaveat": "Source-supported deck datum, width, abutment locations and final alignment needed. Avoid altering nearbyGOrail or draping the new road/trail into water.",
-    "includeInModel": false,
+    "includeInModel": true,
     "storeys": [],
     "heightM": [],
     "address": "Port Credit Active Transportation Bridge"
+  },
+  {
+    "id": "churchill-meadows-log-play-study",
+    "name": "Churchill Meadows · log play reference study",
+    "address": "5320 Ninth Line; Mattamy Sports Park play feature separately aerial registered",
+    "district": "citywide",
+    "position": [
+      -13540.0,
+      122.52940368652344,
+      5278.4
+    ],
+    "lat": 43.54154711297332,
+    "lon": -79.74413926344398,
+    "storeys": [],
+    "heightM": [],
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "sources": [
+      {
+        "url": "https://www.mississauga.ca/events-and-attractions/parks/mattamy-sports-park/",
+        "title": "City: Mattamy Sports Park identity and amenities"
+      },
+      {
+        "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/building-churchill-meadows-community-centre-and-park/",
+        "title": "City: Churchill Meadows Phase 1 opening and later phases"
+      },
+      {
+        "url": "https://www.mississauga.ca/city-of-mississauga-news/news/official-opening-churchill-meadows-community-centre-and-sports-park/",
+        "title": "City: October 9, 2021 official opening; this is the facility opening, not a separately confirmed landmark installation date"
+      }
+    ],
+    "geometrySources": [],
+    "includeInModel": true,
+    "modelLayer": "existing",
+    "referenceStudy": true,
+    "localReview": true,
+    "hasDerivedModel": true,
+    "viewerDistrict": "citywide",
+    "bounds": [
+      [
+        -13544.4453125,
+        122.52940368652344,
+        5274.31494140625
+      ],
+      [
+        -13535.794921875,
+        125.8948745727539,
+        5281.7451171875
+      ]
+    ],
+    "status": "Existing park landmark · reference study",
+    "statusDate": "2026-10-12 reference review",
+    "lastStatusReview": "2026-10-12",
+    "geometryCoverage": "The playground landmark is added to its mapped park. It is an approximate exterior study, not a complete playground or engineering model.",
+    "referenceCredits": [
+      "Reference help and design: Earthscape Play",
+      "Mapped surroundings: City of Mississauga and Ontario terrain"
+    ],
+    "summary": "The timber log-play landmark is shown in Mattamy Sports Park, with its supported colours and posts registered to the existing play surface.",
+    "modelCaveat": "Photo-based interpretation; member dimensions, fine connections and hidden surfaces remain approximate. Source images remain private. The mapped ground is display geometry, not a surveyed playground level. This depicts the log landmark. The community-centre building is a separate known gap; its roof footprint is verified but a reliable height has not been recovered.",
+    "completionYear": 2021
+  },
+  {
+    "id": "paul-coffey-castle-study",
+    "name": "Paul Coffey Park · castle reference study",
+    "address": "6990 Goreway Drive / 3430 Derry Road East park entrances; castle separately aerial registered",
+    "district": "malton",
+    "position": [
+      -4763.0,
+      94.33809661865234,
+      -13836.0
+    ],
+    "lat": 43.71236127026699,
+    "lon": -79.63162948143047,
+    "storeys": [],
+    "heightM": [],
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "sources": [
+      {
+        "url": "https://www.mississauga.ca/events-and-attractions/parks/paul-coffey-park/",
+        "title": "City: Paul Coffey Park identity and amenities"
+      },
+      {
+        "url": "https://web.mississauga.ca/wp-content/uploads/2019/11/28131959/2020-2023-Business-Plans-2020-Budget-1_CONSOLIDATED.pdf",
+        "title": "City 2020 budget: rebuilt castle with blue and red roofs"
+      }
+    ],
+    "geometrySources": [],
+    "includeInModel": true,
+    "modelLayer": "existing",
+    "referenceStudy": true,
+    "localReview": true,
+    "hasDerivedModel": true,
+    "viewerDistrict": "malton",
+    "bounds": [
+      [
+        -4765.68994140625,
+        94.33809661865234,
+        -13839.03125
+      ],
+      [
+        -4760.26708984375,
+        100.24140930175781,
+        -13831.2421875
+      ]
+    ],
+    "status": "Existing park landmark · reference study",
+    "statusDate": "2026-10-12 reference review",
+    "lastStatusReview": "2026-10-12",
+    "geometryCoverage": "The playground landmark is added to its mapped park. It is an approximate exterior study, not a complete playground or engineering model.",
+    "referenceCredits": [
+      "Reference help and design: Earthscape Play",
+      "Mapped surroundings: City of Mississauga and Ontario terrain"
+    ],
+    "summary": "The rebuilt wooden castle has its blue and red roofs, open decks, pickets and slide, set in Paul Coffey Park.",
+    "modelCaveat": "Photo-based interpretation; member dimensions, fine connections and hidden surfaces remain approximate. Source images remain private. The mapped ground is display geometry, not a surveyed playground level."
   }
 ]
