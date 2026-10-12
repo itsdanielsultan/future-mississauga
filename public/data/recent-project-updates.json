@@ -389,6 +389,172 @@
       "sourceURLs": [
         "https://thekingsmen.ca/news/stride-and-rise-at-stride-find-your-perfect-home-in-port-credit/"
       ]
+    },
+    {
+      "projectId": "emtc-northwest",
+      "name": "Erin Mills Town Centre — northwest phase",
+      "change": "The Tribunal approved the nine-tower, 3,162-home settlement in principle on September 24, 2026. The illustrated 20–37-storey layout is already incorporated. The Final Order remains conditional, and holding requirements, subdivision and individual site plans still matter. The settlement adds at least 2,047 m² of non-residential space and a 4,206 m² park.",
+      "status": "OLT approved in principle; final order and holding conditions remain",
+      "evidenceDate": "2026-10-12",
+      "sourceURLs": [
+        "https://www.omb.gov.on.ca/e-decisions/OLT-25-000906-SEP-24-2026.PDF",
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/5100-erin-mills-parkway-oz-opa-24-15-w9/"
+      ],
+      "geometryAction": "Existing geometry retained; status/timeline correction only"
+    },
+    {
+      "projectId": "living-arts-precinct",
+      "name": "Living Arts Centre precinct vision",
+      "change": "The City is studying a vision for 12 acres around the Living Arts Centre and Community Common. Public engagement and business-case work are planned for fall 2026 to winter 2027, with recommendations to Council in spring 2027. The Living Arts Centre remains open.",
+      "status": "council-endorsed-vision-feasibility",
+      "evidenceDate": "2026-10-12",
+      "sourceURLs": [
+        "https://www.mississauga.ca/projects-and-strategies/city-projects/downtown-mississauga-vision/",
+        "https://www.mississauga.ca/city-of-mississauga-news/news/council-recap-june-24-2026/"
+      ],
+      "geometryAction": "Existing geometry retained; status/timeline correction only"
+    },
+    {
+      "projectId": "winston-6020",
+      "name": "6020 Winston Churchill Boulevard",
+      "change": "The four-storey, 22-home building has site-plan approval and an issued new-building permit. September reporting and Peel identify construction underway. The full model is a planned envelope; its current structural stage has not been measured.",
+      "status": "Under construction · no measured structural stage",
+      "evidenceDate": "2026-10-12",
+      "sourceURLs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27SP+24%2F027%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Issued_Building_Permits/FeatureServer/0/query?where=BP_NO+%3D+%27BP+3NEW+25-6713%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
+        "https://peelregion.ca/business/housing-development/current-housing-projects",
+        "https://mpulse.ca/local-developer-builds-affordable-low-rise-housing-in-meadowvale/"
+      ],
+      "geometryAction": "Retain legacy source13-11416 only as qualified planned envelope. Do not claim it is the currently built structure or promote full mass into construction mode without structural progress evidence. No arbitrary height revision from a forum-title change."
+    },
+    {
+      "projectId": "lakeview-pier-house",
+      "name": "Pier House",
+      "change": "The Block 4 plan depicts 164 townhomes in 19 rows. The City’s Section 47 site-plan record now gives September 17, 2026 approval. Construction has not been independently verified.",
+      "status": "Site-plan approved in City Section47 record · construction unverified",
+      "evidenceDate": "2026-10-12",
+      "sourceURLs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27SP+25%2F48+W1%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json"
+      ],
+      "geometryAction": "Keep existing plan-derived19rowgroups. Approvalmetadata is not a physical redesign or constructionstart."
+    },
+    {
+      "projectId": "lakeview-dxe",
+      "name": "Lakeview DXE Club",
+      "change": "Two mid-rise buildings of eight and twelve storeys continued under a receiver. PCL reported the 397-unit development topped off in July 2026.",
+      "status": "Under construction; already topped off, not complete",
+      "evidenceDate": "2026-10-12",
+      "sourceURLs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27SP+21%2F143%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json"
+      ],
+      "geometryAction": "Keep the documented 8/12-storey built phase. The GIS record carries 478 units while the PCL construction reference reports 397; this discrepancy alone is not a physical redesign."
+    },
+    {
+      "projectId": "mississauga-road-2935-2955",
+      "name": "2935–2955 Mississauga Road",
+      "change": "The April 2026 resubmission proposes a 12-storey apartment with 196 homes and 15 stacked townhouses, 211 homes total. The City webpage still says 20 townhouses, but current architecture and servicing agree on 15. Four existing City source components already represent the site.",
+      "status": "Under review",
+      "evidenceDate": "2026-10-12",
+      "sourceURLs": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/2935-and-2955-mississauga-road-oz-opa-22-6-w8/",
+        "https://www.mississauga.ca/wp-content/uploads/2025/09/04122922/Project-Statistics-OZ-OPA-22-6-W8-May-2026.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2025/09/04122905/Functional-Servicing-Report-OZ-OPA-22-6-W8-May-2026.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2025/09/04122852/Elevations-Condo-OZ-OPA-22-6-W8-May-2026.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2025/09/04122933/Site-Section-Plan-OZ-OPA-22-6-W8-May-2026.pdf"
+      ],
+      "geometryAction": "Four municipal components already present. Current source programme: 196 apartments and 15 townhomes; no duplicate geometry."
+    },
+    {
+      "projectId": "oneida-2184-2194",
+      "name": "2184–2194 Oneida Crescent",
+      "change": "A June 2026 application proposes eight detached homes in total, including the retained house at 2184 Oneida. Four freehold lots and a four-home common-element condominium are shown; seven homes would be new.",
+      "status": "Received; public meeting stage",
+      "evidenceDate": "2026-10-12",
+      "sourceURLs": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/2184-oneida-crescent-oz-opa-26-10-w7-and-21t-m-26-1-w7/",
+        "https://www.mississauga.ca/wp-content/uploads/2026/06/10124509/Development-Concept-Plan-OZ-OPA-26-10-W7-and-21T-M-26-1-W7-June-2026.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2026/06/10124511/Draft-Plan-of-Subdivision-OZ-OPA-26-10-W7-and-21T-M-26-1-W7-June-2026.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2026/06/10124512/Draft-Zoning-By-Law-Amendment-OZ-OPA-26-10-W7-and-21T-M-26-1-W7-June-2026.pdf",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Address/FeatureServer/0"
+      ],
+      "geometryAction": "Mapped locator and retained existing context; exact new house architecture is not modelled. Concept footprints and lots do not establish roof design or actual heights."
+    },
+    {
+      "projectId": "port-credit-7-elmwood",
+      "name": "7 Elmwood Avenue North · supportive housing",
+      "change": "FSIG Elmwood GP Inc. and Indwell plan 25 supportive homes in Port Credit. The City records an active site-plan application, and Peel still identifies the project as planning. Programme construction dates are forecasts, not proof of a start.",
+      "status": "Planning · site-plan application active",
+      "evidenceDate": "2026-10-12",
+      "sourceURLs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27SP+26%2F12+W1%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
+        "https://peelregion.ca/business/housing-development/current-housing-projects",
+        "https://www.mississauga.ca/services-and-programs/building-and-renovating/incentives-for-building-affordable-rental-housing/",
+        "https://pub-mississauga.escribemeetings.com/Meeting.aspx?Agenda=Agenda&Id=5efcf992-9698-41af-a4ac-9e4711a81ba2&lang=English",
+        "https://www.linkedin.com/company/indwell"
+      ],
+      "geometryAction": "No proposed source record found in the application envelope plus 5m search halo. Existing mapped context is present. Keep a clearly labelled research locator; do not invent a proposed footprint or hide these neighboring buildings."
+    },
+    {
+      "projectId": "lakeview-1407-lakeshore-east",
+      "name": "1407 Lakeshore Road East",
+      "change": "Anthem Developments has a current 85-apartment application with retail at grade. The older approved zoning and holding-removal records describe83 apartments and nine storeys. Do not substitute brokerage listings for the older96-townhome scheme or assume the85-unit application has identical architecture.",
+      "status": "Earlier nine-storey zoning approved · current site plan active",
+      "evidenceDate": "2026-10-12",
+      "sourceURLs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27SP+25%2F55+W1%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27OZ-OPA%2F22%2F013%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27H-OZ%2F24%2F001%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
+        "https://pub-mississauga.escribemeetings.com/filestream.ashx?DocumentId=67804",
+        "https://www.mississauga.ca/services-and-programs/building-and-renovating/incentives-for-building-affordable-rental-housing/",
+        "https://www.mississauga.ca/wp-content/uploads/2022/06/06155237/W1_1407_Elevations_1_May2022.pdf",
+        "https://urbantoronto.ca/forum/threads/toronto-1407-lakeshore-road-east-30-21m-9s-skybourne-raw-design.33791/"
+      ],
+      "geometryAction": "No proposed source record found in the application envelope plus 5m search halo. Existing mapped context is present. Keep a clearly labelled research locator; do not invent a proposed footprint or hide these neighboring buildings."
+    },
+    {
+      "projectId": "clarkson-creekside-1639",
+      "name": "Creekside Apartments",
+      "change": "Indwell’s four-storey Creekside project at 1639 Lakeshore Road West is under construction. The City permit and current Peel project page identify 51 homes. Indwell’s older page still advertises 50 and a 2026 opening; retain these as historical numbers, alongside Peel’s current Q4 2027 forecast.",
+      "status": "Under construction · structural progress not independently measured",
+      "evidenceDate": "2026-10-12",
+      "sourceURLs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27SP+24%2F29%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Issued_Building_Permits/FeatureServer/0/query?where=BP_NO+%3D+%27BP+3NEW+24-4424%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
+        "https://peelregion.ca/business/housing-development/creekside-apartments",
+        "https://peelregion.ca/business/housing-development/current-housing-projects",
+        "https://indwell.ca/projects/1639-lakeshore-road-west/",
+        "https://www.mississauga.ca/wp-content/uploads/2026/04/08083022/2025-Building-Permit-Activity-Listing-Report.pdf",
+        "https://invizij.ca/project/creekside-apartments/",
+        "https://urbantoronto.ca/forum/threads/toronto-creekside-apartments-m-4s-indwell-invizij.37224/"
+      ],
+      "geometryAction": "No proposed source record found in the application envelope plus 5m search halo. Existing mapped context is present. Keep a clearly labelled research locator; do not invent a proposed footprint or hide these neighboring buildings."
+    },
+    {
+      "projectId": "lorne-1110-townhomes",
+      "name": "1110 Lorne Park Road · six townhomes",
+      "change": "The City records an approved six-townhome scheme and later removal of its holding symbol. It is an older missing named project, not a newly verified October2026 construction start. Current delivery and exact architecture remain unconfirmed.",
+      "status": "Approved earlier townhouse scheme · current construction unverified",
+      "evidenceDate": "2026-10-12",
+      "sourceURLs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27OZ-OPA+%2F+19+%2F+006%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27H-OZ%2F22%2F002%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json"
+      ],
+      "geometryAction": "No proposed source record found in the application envelope plus 5m search halo. Existing mapped context is present. Keep a clearly labelled research locator; do not invent a proposed footprint or hide these neighboring buildings."
+    },
+    {
+      "projectId": "port-credit-active-transportation-bridge",
+      "name": "Port Credit Active Transportation Bridge",
+      "change": "A walking and cycling connection from Front Street North to Port Credit Memorial Park. The City still labels it in progress and documents the girder launch. No public opening confirmation was recovered.",
+      "status": "Under construction · public opening not verified",
+      "evidenceDate": "2026-10-12",
+      "sourceURLs": [
+        "https://www.mississauga.ca/projects-and-strategies/city-projects/port-credit-active-transportation-bridge/",
+        "https://www.mississauga.ca/wp-content/uploads/2025/10/07091944/Port-Credit-Active-Transportation-Bridge-Construction-Notice.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2025/04/21153106/Canadian-Navigable-Waters-Act.pdf",
+        "https://urbantoronto.ca/forum/threads/new-pedestrian-cycling-bridge-over-credit-river-north-of-lakeshore.43473/"
+      ],
+      "geometryAction": "No named project record exists in canonical. Nearby 2024 bridge features are earlier rail and road context, and do not establish the new 2025–2026 span. Hold the new physical bridge until plan alignment and deck elevations are recovered."
     }
   ],
   "geometryAssets": [
@@ -563,5 +729,11 @@
       "material": "Original source vertex colour multiplied by opaque matte white PBR, metallic 0 and roughness 0.9",
       "scopeNote": "Exact whole closed low-rise source components within 400 m of the corrected 6344 Ninth Line location; only loaded in the city overview. Existing housing is dated municipal context, not verified present-day as-built. Components near the three new proposed footprints are conservatively omitted in every scenario. Open source/boundary components are omitted, not reconstructed. No terrain, roads, elevations, scaling or guessed houses were changed."
     }
-  ]
+  ],
+  "currentAuditCoverage": {
+    "indexPages": 72,
+    "centralPagesReopened": 30,
+    "date": "2026-10-12",
+    "snapshotLimit": "GIS last edit October1; absence of newer entries is not proof no October10–12 applications exist."
+  }
 }
