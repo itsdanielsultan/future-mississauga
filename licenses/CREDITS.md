@@ -59,3 +59,8 @@ Aldo Drive orientation correction, 10 October 2026: northeast street/driveway fr
 ## October 10, 2026 development review
 
 Independent plan-derived and permitted-height reference models use linked public City, Tribunal and project-team evidence. Original drawings, private correspondence, contributor files and proprietary vendor models are not redistributed. Ground contacts are fitted to the atlas terrain; vertical-datum and facade uncertainty remain disclosed in the project register. Older superseded height proxies are replaced only in the illustrated future.
+
+
+## October 12, 2026 reference studies
+
+NRC exterior reference help: Tom Arban Photography Inc. and Mark Walsh / Prelco. UTM Meeting Place reference photography: Riley Snelling. Bell Gairdner / Harding Waterfront Estate reference photography: Industryous Photography. West End Buddhist Temple reference help: Bhante Saranapala / West End Buddhist Temple. Fairwinds Park design and reference help: Earthscape Play. Base building and geographic context: City of Mississauga; terrain: Ontario. Added details and finishes are approximate. No supplied source photographs, drawings or private correspondence are reproduced.
