@@ -1,6 +1,6 @@
 export function bindComparison({panel,handle,input,onChange,initial=50,min=0,max=100,clickToJump=false}) {
  let value=initial,active=null;
- const set=n=>{value=Math.max(min,Math.min(max,n));input.value=String(value);handle.style.left=value+'%';handle.setAttribute('aria-valuenow',String(Math.round(value)));handle.setAttribute('aria-valuetext',Math.round(value)+' percent existing context');onChange(value);};
+ const set=n=>{value=Math.max(min,Math.min(max,n));input.value=String(value);handle.style.left=value+'%';handle.setAttribute('aria-valuenow',String(Math.round(value)));handle.setAttribute('aria-valuetext',Math.round(value)+' percent existing city');onChange(value);};
  const move=e=>{const r=panel.getBoundingClientRect();if(r.width)set((e.clientX-r.left)/r.width*100);};
  if(!handle.querySelector('svg'))handle.insertAdjacentHTML('beforeend','<svg class="compare-handle-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5m8-10 5 5-5 5M3 12h18"/></svg>');
  const target=clickToJump?panel:handle;

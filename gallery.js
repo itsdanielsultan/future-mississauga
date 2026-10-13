@@ -1,4 +1,4 @@
-import {bindComparison} from './comparison.js?v=20260926-polish1';
+import {bindComparison} from './comparison.js?v=20261013-clear-navigation1';
 const $=s=>document.querySelector(s);
 const [districts,stats,pictures]=await Promise.all(['districts','stats','picture-assets'].map(x=>fetch('data/'+x+'.json',{cache:'no-store'}).then(r=>r.json())));
 const original=name=>{const image=pictures.images[name];if(!image)throw new Error('Original picture missing: '+name);return image.url+'?edition='+image.sha256.slice(0,16);};

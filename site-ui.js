@@ -6,6 +6,15 @@ if(header){
  toggle.addEventListener('click',()=>setOpen(toggle.getAttribute('aria-expanded')!=='true'));
  header.addEventListener('keydown',e=>{if(e.key==='Escape'&&toggle.getAttribute('aria-expanded')==='true'){setOpen(false);toggle.focus();}});
  nav.addEventListener('click',e=>{if(e.target.closest('a'))setOpen(false);});
- const current=location.pathname.split('/').pop();
- if(current&&current!=='index.html')nav.querySelectorAll('a').forEach(a=>{if(a.getAttribute('href')===current)a.setAttribute('aria-current','page');});
+ const updateCurrentLink=()=>{
+  const current=location.pathname.split('/').pop(),home=!current||current==='index.html';
+  nav.querySelectorAll('a').forEach(a=>{
+   a.removeAttribute('aria-current');
+   if(home&&location.hash&&new URL(a.href).hash===location.hash)a.setAttribute('aria-current','location');
+   else if(!home&&a.getAttribute('href')===current)a.setAttribute('aria-current','page');
+   else if(current==='reference-updates.html'&&a.getAttribute('href')==='updates.html')a.setAttribute('aria-current','location');
+  });
+ };
+ updateCurrentLink();
+ window.addEventListener('hashchange',updateCurrentLink);
 }
