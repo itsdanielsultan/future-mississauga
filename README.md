@@ -4,6 +4,8 @@ An independent visual atlas by Daniel Sultan: original 4K pictures, native 4:5 p
 
 The website is entirely static. It requires no Sites or OpenAI service, account, server API, application database, or secret. Three.js, meshoptimizer and Media Chrome 4.19.2 are included locally with their upstream notices. Bricolage Grotesque, DM Sans and Manrope fonts are bundled under `public/vendor/fonts/`, including the official Google Fonts source record and SIL Open Font License notices; font rendering makes no external request. The original PNG files live at `public/gallery/originals/` and are checksum-verified against the picture index. They are not recompressed. Displayed model pictures use separate PNG previews at exactly half the width and height (1920 pixels wide), under `public/gallery/previews/`. Download Image links point to the untouched 3840-pixel masters. The picture index records both versions and their hashes.
 
+The waterfront 3D context uses bounded display water in Clarkson, Lakeview and the city overview. Lakeview keeps a 400 m coastal band with the full mapped pier and breakwater surrounded by water. These are presentation extents; mapped shoreline, source water level, terrain, roads, buildings and camera controls are retained. The public geometry record is `public/downloads/Waterfront-viewer-water-extents.json`.
+
 ## View locally
 
 With Node 22 or newer, run `npm run dev` and open the printed local URL. No dependency installation is required. Opening the HTML directly through `file://` may prevent the browser from fetching the model files.
