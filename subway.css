@@ -256,6 +256,7 @@ html.disclosure-transition{scroll-behavior:auto;overflow-anchor:none}
 .route-summary+.map-caption{padding-top:16px}
 .connection-strip #connectionAreas{grid-template-columns:repeat(var(--area-count,5),minmax(0,1fr))}
 @media(max-width:600px){
+ .connection-strip #connectionAreas{grid-template-columns:1fr}
  .map-selects{display:grid;gap:10px}
  .map-selects label{display:grid;grid-template-columns:40px minmax(0,1fr);gap:8px}
  .map-selects select{width:100%;min-width:0}
