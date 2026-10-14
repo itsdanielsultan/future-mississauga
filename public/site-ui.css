@@ -1,3 +1,5 @@
+@import url('./vendor/fonts/lato/lato.css');
+
 /* Shared navigation and controls: identical geometry on every page. */
 header.site-header *{box-sizing:border-box}
 @font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:200 800;font-display:swap;src:url('vendor/fonts/bricolage-grotesque-variable.ttf') format('truetype')}
@@ -41,3 +43,315 @@ h1,h2,h3,.section-head h2,.intro h1,.card-caption h3,.evidence h3,.transit-facts
 .skyline-film.is-theater{position:fixed!important;inset:0!important;z-index:200;margin:0!important;display:flex;flex-direction:column;justify-content:center;width:100vw!important;height:100dvh!important;max-width:none;max-height:none;background:#101d20;border:0;border-radius:0}.skyline-film.is-theater .skyline-player{flex:1;min-height:0}.film-section .skyline-film.is-theater video{height:100%;aspect-ratio:auto;object-fit:contain}.skyline-film.is-theater .film-caption{display:none}.skyline-film.is-theater media-control-bar{flex:0 0 auto;width:100%}
 
 .skyline-player:not([mediapaused]) .film-big-play{visibility:hidden}
+
+/* Shared brand palette and typography. Transit and project-status keys retain their established colours. */
+html:root {
+  --site-ink: #2e2b2a;
+  --ink: #2e2b2a;
+  --site-muted: #6b6662;
+  --muted: #6b6662;
+  --site-accent: #a83b3b;
+  --site-accent-strong: #842d32;
+  --site-accent-soft: #f2e7e4;
+  --site-accent-line: #d7b6b2;
+  --site-accent-on-dark: #e8aaa2;
+  --site-font-body: 'Lato', sans-serif;
+  --site-font-heading: 'Bricolage Grotesque', sans-serif;
+}
+
+/* Font family changes only. Existing body/control sizes and line heights remain. */
+html body,
+html button,
+html input,
+html select,
+html textarea,
+html .render-main,
+html .review-main,
+html .model-search,
+html .model-search input,
+html .research-tools input,
+html .research-tools select,
+html .district-picker select,
+html .scenario-picker select,
+html .area-label text,
+html .subway-details summary small,
+html .film-caption span:last-child,
+html header.site-header,
+html header.site-header .site-nav,
+html .site-header .site-menu-toggle {
+  font-family: var(--site-font-body);
+}
+
+html body { color: var(--site-ink); }
+
+html h1,
+html h2,
+html h3,
+html .section-head h2,
+html .intro h1,
+html .card-caption h3,
+html .evidence h3,
+html .transit-facts strong,
+html .subway-details summary,
+html .film-caption,
+html .site-header .site-brand {
+  font-family: var(--site-font-heading);
+}
+
+html h1,
+html h2,
+html h3,
+html .subway-details summary,
+html .transit-facts strong,
+html .site-header .site-brand,
+html .film-caption {
+  color: var(--site-ink);
+}
+
+html header.site-header .site-nav,
+html .site-header .site-menu-toggle { font-weight: 400; }
+
+/* Neutralize ordinary hardcoded prose ink, leaving map and status keys alone. */
+html .update-links a,
+html .update-render figcaption a,
+html .district-picker select,
+html .scenario-picker select,
+html .transit-picker select,
+html .navigation-tools button,
+html .icon-button,
+html .review-main .local-note {
+  color: var(--site-ink);
+}
+
+html .render-main details,
+html .render-pair figcaption,
+html .review-main .image-pair figcaption,
+html .review-main .limit,
+html .review-main .credits,
+html .review-footer,
+html .update-note,
+html .update-area,
+html .update-render figcaption,
+html .update-bottom p,
+html .intro-copy .intro-context,
+html .feature-heading > p,
+html .interactive-heading > p,
+html .historic-map-figure figcaption div > span,
+html .map-caption p,
+html .areas-note,
+html .independence,
+html .details-content,
+html .subway-details summary small,
+html .study-question,
+html .concept-status,
+html .navigation-tools > span,
+html .model-search input::placeholder,
+html .model-search-popup > p,
+html .model-search-popup [role=option] span,
+html .model-search-popup .search-location,
+html .scene-info span:last-child,
+html .scene-help,
+html .film-caption span:last-child {
+  color: var(--site-muted);
+}
+
+/* Existing small brand labels and deliberate reading/action links. */
+html .eyebrow,
+html .chapter-head .eyebrow,
+html .text-link,
+html .download-links a,
+html .social-grid .save,
+html .render-actions a,
+html .render-jump a,
+html .render-basis a,
+html .render-project > a,
+html .review-main .viewer-link,
+html .review-main .model-change > a,
+html .update-links a,
+html .update-render figcaption a,
+html .update-bottom a,
+html .history-comparison-copy > a,
+html .source-download,
+html .map-caption > a,
+html .subway-sources a,
+html .context-strip a,
+html .source-links a,
+html .project > a,
+html .selection > a,
+html .transit-section > p > a,
+html footer a,
+html .subway-footer a {
+  color: var(--site-accent);
+}
+
+html .text-link,
+html .download-links a,
+html .context-strip a { border-color: var(--site-accent-line); }
+
+html .text-link:hover,
+html .download-links a:hover,
+html .social-grid .save:hover,
+html .render-actions a:hover,
+html .render-jump a:hover,
+html .render-basis a:hover,
+html .render-project > a:hover,
+html .review-main .viewer-link:hover,
+html .review-main .model-change > a:hover,
+html .update-links a:hover,
+html .update-render figcaption a:hover,
+html .update-bottom a:hover,
+html .history-comparison-copy > a:hover,
+html .source-download:hover,
+html .map-caption > a:hover,
+html .subway-sources a:hover,
+html .context-strip a:hover,
+html .source-links a:hover,
+html .project > a:hover,
+html .selection > a:hover,
+html .transit-section > p > a:hover,
+html footer a:hover,
+html .subway-footer a:hover {
+  color: var(--site-accent-strong);
+}
+
+/* Shared header uses its existing geometry and 1px selected boundary. */
+html header.site-header .site-nav a { color: var(--site-ink); }
+html header.site-header .site-nav a:hover,
+html header.site-header .site-nav a[aria-current] {
+  color: var(--site-accent-strong);
+  background: var(--site-accent-soft);
+}
+html header.site-header .site-nav a[aria-current] {
+  border-color: var(--site-accent-line);
+}
+html header.site-header .site-nav .site-download {
+  color: var(--site-accent);
+  border-color: var(--site-accent-line);
+}
+html .site-header .site-menu-toggle {
+  color: var(--site-ink);
+  border-color: var(--site-accent-line);
+}
+html .site-header .site-menu-toggle:hover,
+html .site-header .site-menu-toggle[aria-expanded=true] {
+  color: var(--site-accent-strong);
+  background: var(--site-accent-soft);
+}
+
+/* Generic interaction states. Transit and building status controls keep colors. */
+html .navigation-modes button[aria-pressed=true],
+html .segmented button.active {
+  color: #fffef9;
+  background: var(--site-accent);
+  border-color: var(--site-accent);
+}
+html .navigation-modes button:not([aria-pressed=true]):hover,
+html .zoom-buttons button:hover,
+html .view-actions button:not(:last-child):hover,
+html .locate:hover,
+html .icon-button:hover,
+html .model-search .icon-button:hover,
+html .map-tools button:hover {
+  color: var(--site-accent-strong);
+  background: var(--site-accent-soft);
+}
+html .view-actions button:last-child {
+  color: #fffef9;
+  background: var(--site-accent);
+  border-color: var(--site-accent);
+}
+html .view-actions button:last-child:hover {
+  background: var(--site-accent-strong);
+  border-color: var(--site-accent-strong);
+}
+html .view-actions button:last-child:disabled {
+  color: var(--site-muted);
+  background: transparent;
+  border-color: var(--line);
+}
+html .model-search-popup [role=option][aria-selected=true],
+html .model-search-popup [role=option]:hover {
+  color: var(--site-ink);
+  background: var(--site-accent-soft);
+}
+html #compareToggle { accent-color: var(--site-accent); }
+
+/* Preserve each control's current outline width/offset, replacing color only. */
+html .site-header a:focus-visible,
+html .site-header button:focus-visible,
+html .site-skip:focus-visible,
+html a.skip:focus-visible,
+html .skip-link:focus-visible,
+html .hero > button:focus-visible,
+html .picture-card > button:focus-visible,
+html #imageDialog a:focus-visible,
+html .text-link:focus-visible,
+html .download-links a:focus-visible,
+html .social-grid .save:focus-visible,
+html .gallery-controls select:focus-visible,
+html .render-main :focus-visible,
+html .review-main :focus-visible,
+html .update-links a:focus-visible,
+html .update-bottom a:focus-visible,
+html .update-render figcaption a:focus-visible,
+html .subway-sources a:focus-visible,
+html .subway-details summary:focus-visible,
+html .source-download:focus-visible,
+html .map-tools button:focus-visible,
+html .map-selects select:focus-visible,
+html .map-caption a:focus-visible,
+html .picture-view-label select:focus-visible,
+html .compare-place select:focus-visible,
+html .icon-button:focus-visible,
+html .navigation-tools button:focus-visible,
+html .view-actions button:focus-visible,
+html .district-picker select:focus-visible,
+html .scenario-picker select:focus-visible,
+html .transit-picker select:focus-visible,
+html .research-tools input:focus-visible,
+html .research-tools select:focus-visible,
+html .project a:focus-visible,
+html .project summary:focus-visible,
+html .selection a:focus-visible,
+html .selection:focus-visible,
+html .locate:focus-visible,
+html .source-links a:focus-visible,
+html .layer-controls input:focus-visible,
+html .compare-control input:focus-visible,
+html #scene:focus-visible,
+html #imageDetails:focus-visible,
+html #compareDivider:focus-visible:after,
+html #compareLine:focus-visible:after {
+  outline-color: var(--site-accent);
+}
+html .model-search form:focus-within { outline-color: var(--site-accent); }
+
+/* Existing player: charcoal control bar, readable light-red progress on dark. */
+html .skyline-film {
+  --media-secondary-color: #2e2b2a;
+  --media-font-family: var(--site-font-body);
+  --media-range-bar-color: var(--site-accent-on-dark);
+}
+html .skyline-film media-control-bar { background: var(--site-ink); }
+html .skyline-player .film-big-play {
+  --media-primary-color: var(--site-accent);
+  --media-icon-color: var(--site-accent);
+}
+html .film-replay:hover,
+html .film-expand:hover { color: var(--site-accent-on-dark); }
+html .film-replay:focus-visible,
+html .film-expand:focus-visible { outline-color: var(--site-accent-on-dark); }
+
+/* Neutral explanatory labels; route strokes and status swatches keep their keys. */
+html .colour-key,
+html .comparison-hint,
+html .card-caption span,
+html .evidence .number,
+html .district-picker,
+html .transit-section p,
+html .map-bottom,
+html .map-help,
+html .map-loading,
+html .model-search form > svg {
+  color: var(--site-muted);
+}

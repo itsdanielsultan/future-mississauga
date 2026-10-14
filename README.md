@@ -43,3 +43,5 @@ Preserve [ATTRIBUTION.md](ATTRIBUTION.md), `public/licenses/`, all source notice
 Private correspondence, email extracts, credentials and local working files are excluded. The original reference creator's artwork and model files are not included.
 
 `EXPORT-MANIFEST.json` records the final export's file hashes, byte count and original PNG validation. It is created only after the final render lock; the prepared repository skeleton alone is not a finished publication.
+
+The shared site design uses a muted red accent with Lato body text and Bricolage Grotesque headings. Font files are served locally; Lato's original SIL Open Font License and source provenance are included in `public/vendor/fonts/lato/`. The map's transit and project-status colours remain independent of this interface palette.

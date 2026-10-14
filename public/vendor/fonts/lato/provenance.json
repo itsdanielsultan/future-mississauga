@@ -1,0 +1,72 @@
+{
+  "retrieved_at_utc": "2026-10-14T04:17:57.947886+00:00",
+  "family": "Lato",
+  "use": "Future Mississauga website body typography",
+  "distribution": "Official Google Fonts CSS API and fonts.gstatic.com",
+  "license": "SIL Open Font License 1.1",
+  "google_fonts_repository_revision": "5d3b76120a319730fda218cc7410174a462b32cb",
+  "upstream_repository_as_recorded_by_google_fonts": "https://github.com/googlefonts/LatoGFVersion",
+  "upstream_revision_as_recorded_by_google_fonts": "080cb69711ca050d91e9c866e58df7a73095c69a",
+  "processing": "Downloaded as distributed; no conversion, custom subsetting or font modification",
+  "coverage": "Google-provided Latin and Latin Extended subsets only",
+  "files": [
+    {
+      "file": "lato-latin-ext-400-normal.woff2",
+      "bytes": 2988,
+      "sha256": "b85c84c655bcbba3bd628b2c1fea0fbdb5b158a9022281a2f910e82fd6da5098",
+      "url": "https://fonts.gstatic.com/s/lato/v25/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2",
+      "subset": "latin-ext",
+      "expected_weight": 400,
+      "expected_style": "normal"
+    },
+    {
+      "file": "lato-latin-400-normal.woff2",
+      "bytes": 13980,
+      "sha256": "d4ae5188a65370ecfe28f42293bbee8297cfd5712c6aadfdb270d48f2bcd88b0",
+      "url": "https://fonts.gstatic.com/s/lato/v25/S6uyw4BMUTPHjx4wXiWtFCc.woff2",
+      "subset": "latin",
+      "expected_weight": 400,
+      "expected_style": "normal"
+    },
+    {
+      "file": "lato-latin-ext-700-normal.woff2",
+      "bytes": 3028,
+      "sha256": "78e850d569834892d3f4bdfd2084c7a7c0dc64ae4226f3231af30dae706400e2",
+      "url": "https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2",
+      "subset": "latin-ext",
+      "expected_weight": 700,
+      "expected_style": "normal"
+    },
+    {
+      "file": "lato-latin-700-normal.woff2",
+      "bytes": 14168,
+      "sha256": "7a7ce1a34f3e9944fe88fc61abbc93b6db383afa2b90815fd7ccea456fbce4e5",
+      "url": "https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2",
+      "subset": "latin",
+      "expected_weight": 700,
+      "expected_style": "normal"
+    },
+    {
+      "file": "lato-latin-ext-900-normal.woff2",
+      "bytes": 3060,
+      "sha256": "5aaafef33d89a4e866f1837d27e8cf465479efd9ef2ef53ac9bedd7c8103dc03",
+      "url": "https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh50XSwaPGQ3q5d0N7w.woff2",
+      "subset": "latin-ext",
+      "expected_weight": 900,
+      "expected_style": "normal"
+    },
+    {
+      "file": "lato-latin-900-normal.woff2",
+      "bytes": 13724,
+      "sha256": "bd9a6192274f8f2f3ce31cd3d2cae5ebe32e2fa86fc7c4f60a3c28556e496d56",
+      "url": "https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh50XSwiPGQ3q5d0.woff2",
+      "subset": "latin",
+      "expected_weight": 900,
+      "expected_style": "normal"
+    }
+  ],
+  "served_font_version": "Version 1.104; Western+Polish opensource",
+  "served_font_copyright": "Copyright (c) 2010-2011 by tyPoland Lukasz Dziedzic with Reserved Font Name \"Lato\". Licensed under the SIL Open Font License, Version 1.1.",
+  "repository_metadata_note": "The pinned google/fonts METADATA.pb is supporting family/source documentation. It is not asserted to describe the exact WOFF2 bytes served by the CSS API; the served WOFF2 version is recorded separately.",
+  "verification": "fontTools 4.65.0 TTFont with WOFF2 decoder Brotli 1.2.0: checked container magic, names, OS/2 weight class, italic flag, italic angle, outline table, cmap and SHA-256."
+}
