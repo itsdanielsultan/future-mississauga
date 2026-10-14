@@ -425,6 +425,98 @@
       ],
       "sourceCuts": [],
       "scopeNote": "Small source-defined Bellsite context. Existing buildings and canonicalroads/transit/terrain unchanged. Shared identicalasset; no source cuts/masks. DTM/Citydatumuncertainty, footprint-confinedsupport andsymboliccrown sizes documented."
+    },
+    {
+      "id": "clarkson-harding-mainland-completion",
+      "name": "Harding Waterfront Estate: source mainland connection",
+      "districtId": "clarkson",
+      "district": "clarkson",
+      "url": "models/reference-review/clarkson-harding-mainland-completion.glb",
+      "system": "StreetContext",
+      "category": "StreetContext",
+      "status": "Existing",
+      "modes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "contextOnly": true,
+      "preserveMaterials": true,
+      "preserveSourceNormals": true,
+      "nativePreserveFinish": true,
+      "sourceCuts": [],
+      "sha256": "7b343bbd468ba4dea17aed3cee564e25f22eb30749d025188ebffe4e8830a8a5",
+      "bytes": 101780,
+      "triangles": 9863,
+      "bounds": [
+        [
+          -4480,
+          9.518698692321777,
+          10611.2275390625
+        ],
+        [
+          -3330,
+          23.085407257080078,
+          11094.8525390625
+        ]
+      ],
+      "sourceURLs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/BDRYCITY_3857v2/FeatureServer/0/query",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Planimetric_Shapes/FeatureServer/0/query",
+        "https://ws.geoservices.lrc.gov.on.ca/arcgis5/rest/services/Elevation/Ontario_DTM_LidarDerived/ImageServer"
+      ],
+      "scopeNote": "Adds missing mapped mainland and creek context between Clarkson and Harding Waterfront Estate. Published source footprints, literal retained core-edge heights and unchanged native 10 m Ontario DTM are joined with source-constrained triangulation. Existing source scenery, buildings, lake footprints, cameras and controls remain unchanged. No synthetic bridge, skirts, source-height shifts or flattening.",
+      "downloadSHA256": "7b343bbd468ba4dea17aed3cee564e25f22eb30749d025188ebffe4e8830a8a5",
+      "downloadBytes": 101780,
+      "sourceDTMSHA256": "57d122fd664ca26e9289e8aa3c2191bae629631b6bb94a796c13fd82385be2f0",
+      "triangleCount": 9863
+    },
+    {
+      "id": "clarkson-existing-source-building-completion",
+      "name": "Clarkson waterfront: retained City source building context",
+      "districtId": "clarkson",
+      "district": "clarkson",
+      "url": "models/reference-review/clarkson-source-building-completion.glb",
+      "system": "StreetContext",
+      "category": "StreetContext",
+      "status": "Existing",
+      "modes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "contextOnly": true,
+      "preserveMaterials": true,
+      "preserveSourceNormals": true,
+      "nativePreserveFinish": true,
+      "sourceCuts": [],
+      "sha256": "ff73b12fbd861d00513f9139ee9193fca3d55d71ff3ef0e7b437eb78f5ddd822",
+      "downloadSHA256": "ff73b12fbd861d00513f9139ee9193fca3d55d71ff3ef0e7b437eb78f5ddd822",
+      "bytes": 40308,
+      "downloadBytes": 40308,
+      "triangles": 1229,
+      "bounds": [
+        [
+          -3838.10205078125,
+          9.53439998626709,
+          10527.4560546875
+        ],
+        [
+          -3346.700927734375,
+          103.94660186767578,
+          10957.81640625
+        ]
+      ],
+      "sourceIDs": [
+        "83-363",
+        "83-1159"
+      ],
+      "sourceURLs": [
+        "https://www.arcgis.com/sharing/rest/content/items/f48ac8b915df4fa1815e7330c849caa0/data"
+      ],
+      "scopeNote": "Exact existing City LOD2 source surfaces from published citywide.glb, only triangles absent from Clarkson. Whole connected source components touch the selected strip and have mapped footprint support. No source geometry, placement or height changes; no future/construction additions. Atlas display colours copy current Clarkson tile83 runtime classification.",
+      "sourceCaveat": "Source LiDAR buildings and Ontario DTM ground may disagree vertically. Three complete original City surface components retain native open edges; no closure is invented. Unsupported/outside source components are excluded intact.",
+      "triangleCount": 1229
     }
   ],
   "trees": {

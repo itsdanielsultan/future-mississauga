@@ -8,7 +8,7 @@
       "asset": "models/clarkson-context.glb",
       "strategy": "clip each original water triangle to current district rectangle",
       "beforeSHA256": "4a002e76e0f42aab1bebeea8e7c7c5977704a4a042f5306e62d44bc93f334265",
-      "afterSHA256": "eadb69a35d87157d785a89fc125320ea4f4d5734f2e6a2ed3c22f4e2f832464b",
+      "afterSHA256": "c00720e2ff31bb10eaa96c3b5ba9316d4f8cf6e227733cb44c994cab3638043f",
       "beforeWaterAreaM2": 226841236.20062685,
       "afterWaterAreaM2": 144790.4562101364,
       "afterWaterBoundsXYZ": [
@@ -27,7 +27,12 @@
       "afterWaterTriangles": 224,
       "nonWaterGeometryMaterialsAndTransformsUnchanged": true,
       "mappedShorelineAndSourceWaterLevelPreserved": true,
-      "nearshoreAndPierCoverageVerified": false
+      "nearshoreAndPierCoverageVerified": false,
+      "waterCropSHA256": "eadb69a35d87157d785a89fc125320ea4f4d5734f2e6a2ed3c22f4e2f832464b",
+      "afterBytes": 3996968,
+      "unreferencedSourceWaterStreamPruned": true,
+      "activeGeometryArraysMaterialsAndTransformsExactAfterPruning": true,
+      "pruningNote": "Only an unused original water position stream was removed. The visible bounded water and every active source array are identical to the previous bounded-water edition."
     },
     {
       "district": "lakeview",
