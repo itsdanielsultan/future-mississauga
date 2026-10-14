@@ -295,8 +295,8 @@
     },
     {
       "file": "data/landscape-layer-manifest.json",
-      "bytes": 58939,
-      "sha256": "0f035c19d6758ef0f05bd7baa8542428c49197640a4a9de80128c801ca94f64c"
+      "bytes": 62935,
+      "sha256": "a7c6d6f006f8f2a6754582914e122709c97b2e7b00393dddb538adf32834efbb"
     },
     {
       "file": "data/lorne-park-trees.json.gz",
@@ -345,8 +345,8 @@
     },
     {
       "file": "data/model-asset-versions.json",
-      "bytes": 21681,
-      "sha256": "c30ec74d7ad98fc62b00beb333e47ee3c4669f312ed68a60eb314867a7404204"
+      "bytes": 21960,
+      "sha256": "f6ba92005db27b771026077e8b54ad623027ef4bc86ad5610349ee1ad4c26cd9"
     },
     {
       "file": "data/overrides.json",
@@ -514,6 +514,11 @@
       "sha256": "76e0c18b3d807639b0aa9df04df41a9bfc999bdad10762954a333bdd939cbce4"
     },
     {
+      "file": "downloads/Clarkson-mainland-context-repair.json",
+      "bytes": 6782,
+      "sha256": "bd8ebbc5b12bce1bc40c068948e7550dcf2ba434083c0d3e28e60ebdb82ba6b7"
+    },
+    {
       "file": "downloads/Community-reference-and-coverage-review.md",
       "bytes": 5727,
       "sha256": "ae22732eec74b593b85c1ca4845bdf4d3533f246d15e89f7e093ac2fb7905a85"
@@ -625,8 +630,8 @@
     },
     {
       "file": "downloads/Waterfront-viewer-water-extents.json",
-      "bytes": 3524,
-      "sha256": "2b1622a7fe93590d2c45b10fe132af187b96a82772e846ee2f9ad32217c89db5"
+      "bytes": 3964,
+      "sha256": "4a9f0c2d4e7b0d7193d86a60d0c6206c626bee14a0409b6e819b6fc0964f0cc8"
     },
     {
       "file": "downloads/Website-validation.json",
@@ -1350,8 +1355,8 @@
     },
     {
       "file": "models/clarkson-context.glb",
-      "bytes": 4192252,
-      "sha256": "eadb69a35d87157d785a89fc125320ea4f4d5734f2e6a2ed3c22f4e2f832464b"
+      "bytes": 3996968,
+      "sha256": "c00720e2ff31bb10eaa96c3b5ba9316d4f8cf6e227733cb44c994cab3638043f"
     },
     {
       "file": "models/clarkson-details.glb",
@@ -1702,6 +1707,16 @@
       "file": "models/reference-review/churchill-meadows-log-play-study.glb",
       "bytes": 40460,
       "sha256": "6af952917de26b22e43c94a6988467c99969e029bc2881f2778edbbe7d982e42"
+    },
+    {
+      "file": "models/reference-review/clarkson-harding-mainland-completion.glb",
+      "bytes": 101780,
+      "sha256": "7b343bbd468ba4dea17aed3cee564e25f22eb30749d025188ebffe4e8830a8a5"
+    },
+    {
+      "file": "models/reference-review/clarkson-source-building-completion.glb",
+      "bytes": 40308,
+      "sha256": "ff73b12fbd861d00513f9139ee9193fca3d55d71ff3ef0e7b437eb78f5ddd822"
     },
     {
       "file": "models/reference-review/creekside-early-plan-exterior-study.glb",
@@ -2928,5 +2943,6 @@
     "currentLabelsAndPalettePreserved": true,
     "geometryAndPhotosChanged": false
   },
-  "waterfrontWaterExtentRepair": "2026-10-13"
+  "waterfrontWaterExtentRepair": "2026-10-13",
+  "clarksonMainlandContextRepair": "2026-10-14"
 }
