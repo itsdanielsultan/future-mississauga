@@ -394,6 +394,11 @@
       "sha256": "82e3c8428a339608c7e2180d20c008fd153c4e480e811dba1e749ce19c58bcaf"
     },
     {
+      "file": "data/reference-render-updates-2026-10-17.json",
+      "bytes": 13616,
+      "sha256": "e8c4caf3278a9e974f16e511d32ee65498a956405931d547122449e7cb8826c3"
+    },
+    {
       "file": "data/refinement-models.json",
       "bytes": 2594191,
       "sha256": "b6108a6a064950881ca66ba206c45729924a83d937cbbefd6257db66f584a1d2"
@@ -2300,8 +2305,8 @@
     },
     {
       "file": "reference-updates.html",
-      "bytes": 34349,
-      "sha256": "5fd3ecad2ececc9422e3662acf24a2b348c7021e1672c5939a5d1d9d6017a398"
+      "bytes": 66618,
+      "sha256": "decf80386073b7f24a16d9a7d2c9ec461ed5f78d321f613063f9f5811c617bbf"
     },
     {
       "file": "renders/revamp/source-elevation-repair-qa.png",
@@ -2350,8 +2355,8 @@
     },
     {
       "file": "review-renders.html",
-      "bytes": 38226,
-      "sha256": "fd1340c208e73e693954854390ab71ef2473caa13ec96e8decfd90479accb2c0"
+      "bytes": 38267,
+      "sha256": "8fd01e72568a79f71096d02c49052d8c1431f00f1fde5c6c6b68f8dea05699eb"
     },
     {
       "file": "robots.txt",
@@ -2430,8 +2435,8 @@
     },
     {
       "file": "updates.html",
-      "bytes": 24242,
-      "sha256": "1a145453eeb91b57ee7822da5df3c705455988f8c6faef31fed810d7974b530b"
+      "bytes": 24908,
+      "sha256": "55dce7abf2e813f25030af70e05d053ffb3c26efe09654ea82b1a6c1f64ade71"
     },
     {
       "file": "vendor/addons/controls/OrbitControls.js",
@@ -2729,7 +2734,7 @@
       "sha256": "2d9cfb19a32fac7548704fbfca44060267c233522645aa354fb4f6069e012d97"
     }
   ],
-  "publishedBytes": 999980394,
+  "publishedBytes": 999975274,
   "originalPNGCount": 33,
   "displayPNGCount": 33,
   "displayScale": 0.5,
@@ -2944,5 +2949,14 @@
     "geometryAndPhotosChanged": false
   },
   "waterfrontWaterExtentRepair": "2026-10-13",
-  "clarksonMainlandContextRepair": "2026-10-14"
+  "clarksonMainlandContextRepair": "2026-10-14",
+  "contributorReferenceGallery": {
+    "date": "2026-10-17",
+    "addedStudies": 12,
+    "releaseHostedOriginalPNGs": 28,
+    "publicSourceOriginalsIncluded": false,
+    "editableModelFilesPublished": false,
+    "cityViewerUnchanged": true,
+    "sherobeeOrientationCorrectedInReferenceStudy": true
+  }
 }
