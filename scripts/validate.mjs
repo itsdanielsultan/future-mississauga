@@ -7,9 +7,10 @@ import assert from 'node:assert/strict';
 const ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const forbidden = /(?:^|\/)(?:\.git|\.openai|node_modules|backups?|scenes|work|raw|source-archive)(?:\/|$)|correspondence|private|\.blend\d*$|(?:^|\/)\.env/i;
 const DISTRICT_IDS = ['citywide','downtown','port-credit','lakeview','clarkson','cooksville','uptown','erin-mills','streetsville','meadowvale','malton','dixie-applewood','erindale','airport-corporate','heartland'];
+const OPTIONAL_DISTRICT_IDS = ['lorne-park', 'churchill-meadows'];
 export function validateDistrictMetadata(districts) {
-  const expected = [...DISTRICT_IDS, ...(Array.isArray(districts) && districts.some(d => d.id === 'lorne-park') ? ['lorne-park'] : [])];
-  assert(Array.isArray(districts) && districts.length === expected.length, 'Expected the 15 atlas districts and, when present, the Lorne Park study area.');
+  const expected = [...DISTRICT_IDS, ...OPTIONAL_DISTRICT_IDS.filter(id => Array.isArray(districts) && districts.some(d => d.id === id))];
+  assert(Array.isArray(districts) && districts.length === expected.length, 'Expected the 15 atlas districts and the registered optional study areas.');
   assert.deepEqual(districts.map(d => d.id).sort(), expected.sort(), 'Public district IDs are missing, duplicated or unexpected.');
   const finite = values => values.every(x => typeof x === 'number' && Number.isFinite(x));
   for (const d of districts) {
@@ -20,6 +21,10 @@ export function validateDistrictMetadata(districts) {
     assert(typeof d.radius === 'number' && Number.isFinite(d.radius) && d.radius > 0, d.id + ': radius must be finite and positive.');
     const [x,y,z] = d.center, r = d.radius;
     assert(x >= xmin && x <= xmax && z >= zmin && z <= zmax, d.id + ': center falls outside its public rectangle.');
+    if (d.sourceCropCenter) {
+      assert(Array.isArray(d.sourceCropCenter) && d.sourceCropCenter.length === 3 && finite(d.sourceCropCenter), d.id + ': source crop centre must contain three finite coordinates.');
+      assert(d.sourceCropCenter[0] >= xmin && d.sourceCropCenter[0] <= xmax && d.sourceCropCenter[2] >= zmin && d.sourceCropCenter[2] <= zmax, d.id + ': source crop centre falls outside its source rectangle.');
+    }
     assert(finite([x+r*1.18,y+r*1.35,z+r*1.52,y+65,Math.max(12000,r*4)]), d.id + ': reset camera or shadow calculations are non-finite.');
   }
   // Reproduce the citywide fit used by app.js, for narrow and wide viewports.
@@ -168,15 +173,34 @@ export async function validate(site = join(ROOT, 'public')) {
   const pictures = JSON.parse(await readFile(join(site, 'data/picture-assets.json'), 'utf8'));
   const entries = Object.entries(pictures.images || {});
   assert.equal(entries.length, 33, 'Expected the 33 final original PNGs.');
+  const originalPrefix = 'https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/';
+  let originalIntegrity = null, localOriginals = 0, remoteOriginals = 0;
+  if (entries.some(([, image]) => image.url.startsWith('https:'))) {
+    originalIntegrity = JSON.parse(await readFile(join(site, 'data/original-image-release-integrity.json'), 'utf8'));
+    assert.equal(originalIntegrity.tag, 'citywide-accuracy-images-2026-10-17');
+    assert.equal(originalIntegrity.publicHashesVerified, 35, 'Every public original requires a separate downloaded byte check.');
+    assert.equal(originalIntegrity.unchangedOriginalBytes, true);
+    assert.equal(new Set(originalIntegrity.assets.map(asset => asset.file)).size, 35);
+    assert(originalIntegrity.assets.every(asset => asset.publicHTTPVerified && asset.url === originalPrefix + asset.file && asset.githubDigest === 'sha256:' + asset.sha256));
+  }
   for (const [name, picture] of entries) {
-    assert.equal(picture.url, 'gallery/originals/' + name);
-    const path = join(site, picture.url);
-    assert.equal((await stat(path)).size, picture.bytes, 'PNG byte count mismatch: ' + name);
-    assert.equal(await sha(path), picture.sha256, 'Original PNG checksum mismatch: ' + name);
-    const header = await readFile(path);
-    assert.equal(header.subarray(0, 8).toString('hex'), '89504e470d0a1a0a');
-    assert.equal(header.readUInt32BE(16), picture.width);
-    assert.equal(header.readUInt32BE(20), picture.height);
+    if (picture.url.startsWith('https:')) {
+      assert.equal(picture.url, originalPrefix + name, 'Unexpected original download host/tag.');
+      const proof = originalIntegrity.assets.find(asset => asset.file === name && asset.group === 'gallery');
+      assert(proof?.publicHTTPVerified, 'Missing public original byte proof: ' + name);
+      for (const key of ['bytes', 'sha256', 'width', 'height', 'url']) assert.equal(proof[key], picture[key], 'Original proof differs: ' + name + ': ' + key);
+      remoteOriginals++;
+    } else {
+      assert.equal(picture.url, 'gallery/originals/' + name);
+      const path = join(site, picture.url);
+      assert.equal((await stat(path)).size, picture.bytes, 'PNG byte count mismatch: ' + name);
+      assert.equal(await sha(path), picture.sha256, 'Original PNG checksum mismatch: ' + name);
+      const header = await readFile(path);
+      assert.equal(header.subarray(0, 8).toString('hex'), '89504e470d0a1a0a');
+      assert.equal(header.readUInt32BE(16), picture.width);
+      assert.equal(header.readUInt32BE(20), picture.height);
+      localOriginals++;
+    }
     assert.equal(picture.width, 3840, 'Expected original 4K width: ' + name);
     const preview = picture.display;
     assert(preview, 'Missing half-size display picture: ' + name);
@@ -224,7 +248,8 @@ export async function validate(site = join(ROOT, 'public')) {
   }
   const portraitGallery = {nativePortraitRecords: 24, remoteHalfSizePreviews: 24, dimensionsVerified: true, remoteDownloadSHA256Recorded: 24, remoteDownloadBytesVerifiedByThisStaticCheck: false, separatePublicHashProofRequired: true};
   const documentLinks = await validateDocumentLinks(site);
-  const report = {files: files.length, publishedBytes: bytes, originalPNGs: entries.length, halfSizeDisplayPNGs: entries.length, portraitGallery, loadedModelAssets, refinementBounds, ...documentLinks, districtMetadata, PNGchecksumsVerified: true, noHostedRuntime: true, noPrivateArtifacts: true};
+  const originalImageVerification = {localOriginals, remoteOriginals, separatePublicHashProofRequired: remoteOriginals > 0, remoteBytesFetchedByThisStaticCheck: false};
+  const report = {files: files.length, publishedBytes: bytes, originalPNGs: entries.length, originalImageVerification, halfSizeDisplayPNGs: entries.length, portraitGallery, loadedModelAssets, refinementBounds, ...documentLinks, districtMetadata, localPNGchecksumsVerified: true, noHostedRuntime: true, noPrivateArtifacts: true};
   console.log(JSON.stringify(report, null, 2));
   return report;
 }

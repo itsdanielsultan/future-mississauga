@@ -68,3 +68,19 @@ NRC exterior reference help: Tom Arban Photography Inc. and Mark Walsh / Prelco.
 Paul Coffey Park castle, Fairwinds Park HMCS Pinnacle and Churchill Meadows log-play reference help and design: Earthscape Play. These are approximate landmark models; the whole playgrounds and engineering details are not reproduced. Generated contacts are fitted to the existing display surfaces. Original photographs and private source files are excluded.
 
 Creekside exterior reference study: public Invizij Architects exterior references and City/Indwell December13,2023 community presentation. It is an optional estimate based on the early50-home plan, not the current51-unit approved/as-built set. No source pixels or original drawings are redistributed.
+
+
+## October 17, 2026 local integration review
+
+This local working copy is separate from the public release.
+
+- Fire Station 106 at 1355 Winding Trail: KMA exterior reference material; KMA / Arium design-team credit in the City 2013 award record. Base footprint and orientation: City of Mississauga. Tower height, low roof levels and fine details are estimates; source ground mismatch remains disclosed. Original PDF and interiors stay private.
+- 228 Queen Street South: City of Mississauga municipal shell and City-supplied dated exterior reference. The original building coordinates stay unchanged. A separate narrow schematic support follows the current displayed ground and is not a measured historic foundation. Original reference image stays private.
+- Gala Gateway: original artwork by Harley Valentine and Gabriel Fain. The two reviewed derived model views are included with Gabriel Fain's permission for website and atlas use. No original photograph or separate Gala Procession artwork is reproduced. Exact park position remains unconfirmed.
+- Churchill Meadows: exact bounded crop of reconciled City municipal geometry and current citywide context. Tree positions, species and diameter follow the retained City-owned maintained-tree inventory. Crowns are illustrative; ground elevations are interpolated from current displayed source surfaces. Unsupported tree positions and residual source surface seams are recorded in the local QA, not silently filled.
+
+
+Full-resolution original city-gallery PNG downloads and the two approved Gala Gateway views are now hosted on the project GitHub Release `citywide-accuracy-images-2026-10-17`. Resolution, colour depth and file bytes are unchanged. The separate public download checks are recorded in `data/original-image-release-integrity.json`. Website display previews, the atlas PDF and viewer geometry remain in the static website package.
+
+
+The Winding Trail viewer includes a small schematic entrance forecourt based on the exterior-reference setting. It retains the original City floor and footprint, fits into the displayed terrain and keeps the original ground as a fallback. This is a display correction, not surveyed site grading. Roads and neighbouring buildings are unchanged. See [the entrance-ground note](../downloads/Winding-entrance-ground-note.json). Exterior references: KMA; starting municipal geometry: City of Mississauga.

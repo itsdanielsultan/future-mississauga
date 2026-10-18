@@ -23581,5 +23581,181 @@
     ],
     "summary": "The rebuilt wooden castle has its blue and red roofs, open decks, pickets and slide, set in Paul Coffey Park.",
     "modelCaveat": "Photo-based interpretation; member dimensions, fine connections and hidden surfaces remain approximate. Source images remain private. The mapped ground is display geometry, not a surveyed playground level. Reference help and design: Earthscape Play."
+  },
+  {
+    "id": "winding-trail-1355",
+    "name": "Fire Station 106 / 1355 Winding Trail",
+    "address": "1355 Winding Trail",
+    "district": "Dixie & Applewood",
+    "viewerDistrict": "dixie-applewood",
+    "position": [
+      -2002.1361694335938,
+      70.25630187988281,
+      -3543.188232421875
+    ],
+    "bounds": [
+      [
+        -2034.271728515625,
+        70.25630187988281,
+        -3573.07861328125
+      ],
+      [
+        -1970.0006103515625,
+        82.00630187988281,
+        -3513.2978515625
+      ]
+    ],
+    "status": "Existing exterior reference study",
+    "statusDate": "2026-10-17",
+    "storeys": [],
+    "heightM": [],
+    "includeInModel": true,
+    "modelLayer": "existing",
+    "referenceStudy": true,
+    "localReview": true,
+    "localReviewView": [
+      0.7346960877537491,
+      0.6783963875488545
+    ],
+    "aliases": [
+      "Fire Station 106",
+      "Station 106",
+      "Peel Regional Paramedic Satellite Station",
+      "Winding Trail"
+    ],
+    "summary": "The shared fire and paramedic station has its offset tower, five glazed vehicle bays and lower green roofs, based on KMA exterior references and the City footprint.",
+    "modelCaveat": "Approximate exterior study, not a measured as-built model. The City footprint, orientation and source floor are retained. Tower height, lower roofs and facade details are estimated from the shared exterior references. Small entrance landings and the forecourt are fitted to the displayed ground so the doors are clear; this is a schematic display correction, not surveyed site grading. Exact site levels and hidden surfaces remain unverified. The City source calls this 1385 Winding Trail, while the official station address is 1355. Original award PDF and interior material remain private.",
+    "referenceCredits": [
+      "Exterior references: Kleinfeldt Mychajlowycz Architects (KMA)",
+      "2013 award design team: KMA / Arium Design Group Inc.",
+      "Base outline and orientation: City of Mississauga"
+    ],
+    "sources": [
+      {
+        "url": "https://www6.mississauga.ca/onlinemaps/planbldg/MUDA2013/MUDA2013_JuryReport.pdf",
+        "title": "City of Mississauga 2013 Urban Design Awards jury report",
+        "accessed": "2026-10-17",
+        "claims": [
+          "Station identity, address, design team and award; not a measured tower height"
+        ]
+      },
+      {
+        "url": "https://www7.mississauga.ca/documents/agendas/committees/general/2014/06_25_2014_GCAgenda.pdf",
+        "title": "City General Committee agenda, June 25, 2014",
+        "accessed": "2026-10-17",
+        "claims": [
+          "Former Dixie Road station vacated in February 2013 on relocation to 1355 Winding Trail"
+        ]
+      },
+      {
+        "url": "https://peelregion.ca/paramedics/paramedic-stations",
+        "title": "Peel Region paramedic stations",
+        "accessed": "2026-10-17",
+        "claims": [
+          "Shared station at 1355 Winding Trail"
+        ]
+      }
+    ],
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "completionDateNote": "In use by February 2013 according to the City relocation record; exact architectural completion date not independently confirmed.",
+    "hasDerivedModel": true,
+    "geometryCoverage": "Registered exterior study with a fitted display forecourt; actual site grading remains unverified.",
+    "lastStatusReview": "2026-10-17",
+    "qualityStatus": "Reference-derived exterior with schematic entrance-ground correction; unmeasured dimensions disclosed",
+    "displayContactNote": "downloads/Winding-entrance-ground-note.json"
+  },
+  {
+    "id": "queen-228",
+    "name": "228 Queen Street South",
+    "address": "228 Queen Street South, Streetsville",
+    "lat": 43.5804796979622,
+    "lon": -79.71256068920306,
+    "status": "Existing exterior reference study",
+    "position": [
+      -11043.517578125,
+      91.49710083007812,
+      904.8468017578125
+    ],
+    "height": 12.572898864746094,
+    "bounds": [
+      [
+        -11071.7041015625,
+        91.49710083007812,
+        900.9324951171875
+      ],
+      [
+        -11039.544921875,
+        104.13163757324219,
+        929.984130859375
+      ]
+    ],
+    "localReview": true,
+    "localOptional": false,
+    "modelFidelity": "Dated-photo frontage study on exact generalized City shell. Added openings and finish dimensions are visual estimates. The separate foundation skirt is a schematic display contact correction, not a measured historic foundation.",
+    "sourceRecordIds": [
+      "12-3433"
+    ],
+    "sourceReferences": [
+      {
+        "publisher": "City of Mississauga",
+        "title": "City municipal LOD2 building model, 2024 LiDAR",
+        "recordId": "12-3433",
+        "sourceArchive": "Tile_12.zip",
+        "sha256": "bfd3078a563e403a2654302bff2dfa7f77e8b755d1944935ffa73cfc570cbccb"
+      },
+      {
+        "publisher": "City of Mississauga",
+        "title": "Dated exterior photograph supplied by Paula Wubbenhorst",
+        "scope": "Reference for derived frontage interpretation; original retained privately"
+      }
+    ],
+    "sources": [
+      {
+        "publisher": "City of Mississauga",
+        "title": "City heritage report with historic Streetsville addresses",
+        "url": "https://www7.mississauga.ca/documents/agendas/committees/heritage/HAC_Agenda_2013_04_23%2C_Part_1.pdf"
+      },
+      {
+        "publisher": "City of Mississauga",
+        "title": "Poster locating The Shop For All Reasons at 228 Queen Street South",
+        "url": "https://www.mississauga.ca/file/COM/salmon_run_poster.pdf"
+      },
+      {
+        "publisher": "Heritage Mississauga",
+        "title": "History of the Eaton-Bentley-Ladner building",
+        "url": "https://heritagemississauga.com/the-history-of-the-eaton-bentley-ladner-building/"
+      },
+      {
+        "publisher": "City of Mississauga / ArcGIS",
+        "title": "City-owned Tile 12 metadata",
+        "url": "https://www.arcgis.com/sharing/rest/content/items/1546716965cc41b1b6855e68cf0ff4cf?f=json"
+      }
+    ],
+    "sourceDateNote": "The supplied image has an embedded June 8, 2018 timestamp. Metadata does not independently certify capture date or current conditions.",
+    "district": "Streetsville",
+    "viewerDistrict": "streetsville",
+    "referenceStudy": true,
+    "hasDerivedModel": true,
+    "localReviewView": [
+      0.7015462196157924,
+      -0.7126239553528849
+    ],
+    "includeInModel": true,
+    "modelLayer": "existing",
+    "statusDate": "2026-10-17 study review",
+    "summary": "A closer reference study of the Eaton-Bentley-Ladner building. The City shell stays at its original position; street-facing details follow a dated City-supplied photograph.",
+    "modelCaveat": "Dated-photo frontage study on exact generalized City shell. Added openings and finish dimensions are visual estimates. The separate foundation skirt is a schematic display contact correction, not a measured historic foundation. The supplied image has an embedded June 8, 2018 timestamp. Metadata does not independently certify capture date or current conditions. Current storefront and hidden elevations are not independently confirmed.",
+    "geometryCoverage": "City-shell and dated-photo frontage study with separate schematic ground support.",
+    "referenceCredits": [
+      "City of Mississauga"
+    ],
+    "actualCompletionDate": null,
+    "targetCompletionDate": null,
+    "storeys": [],
+    "heightM": [],
+    "completionDateNote": "Historic-building construction and later storefront dates are separate. No new completion or occupancy date is inferred from the 2018 reference image.",
+    "lastStatusReview": "2026-10-17 study review",
+    "qualityStatus": "Reference-derived exterior; dated photograph and schematic foundation disclosed"
   }
 ]

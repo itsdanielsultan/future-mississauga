@@ -1,5 +1,5 @@
 {
-  "edition": "Visual Polish 2026-09-26",
+  "edition": "City model and reference update 2026-10-17",
   "siteOrigin": "https://futuremississauga.com/",
   "finalRenderLockAcknowledged": true,
   "files": [
@@ -14,14 +14,24 @@
       "sha256": "69b7e2d297a684bab475321326f08f913676ce1ac3e12909f95c28a2f6060d47"
     },
     {
+      "file": "accuracy-review.html",
+      "bytes": 143208,
+      "sha256": "45b490dd6fbe65b8e8ed3e1eb5f9f72dbff602ef20959fe2b01d15da3e3603de"
+    },
+    {
       "file": "app.js",
-      "bytes": 55895,
-      "sha256": "5f522cd99c88b4c859654f77e1aae73cd6014d1bfb2d0ca85f9e96fa8245b82d"
+      "bytes": 56430,
+      "sha256": "0164af856bb5a2dffea224e3b29722802aba4d63da85137d351f8fed09b15cfd"
     },
     {
       "file": "assets/apple-touch-icon.png",
       "bytes": 732,
       "sha256": "8eee39708060fde7e21ecbd3df5abf1b4305fba0e30fd028b80dd48335d84e02"
+    },
+    {
+      "file": "assets/coverage-baseline.svg",
+      "bytes": 250344,
+      "sha256": "5e4c1068480bd39653329e15a9e3b21afcbb40fb3235929541ee4d29462bbbab"
     },
     {
       "file": "assets/favicon-32.png",
@@ -37,6 +47,11 @@
       "file": "assets/future-mississauga-mark.svg",
       "bytes": 246,
       "sha256": "6035f9a58c847684f43fe778c05903ad84d9633e7c7fbdd61ca2c6ad901b2d83"
+    },
+    {
+      "file": "assets/local-coverage-map.svg",
+      "bytes": 249837,
+      "sha256": "c4555ad5163566112bf2f44dbff293e99b7324526d705c8ba23799a5f3283a73"
     },
     {
       "file": "assets/subway/2001-city-centre-original.png",
@@ -89,6 +104,11 @@
       "sha256": "9669bb63012468a3e970d38dfa7c247a94ff7094712c9d261e96c686dfef57a8"
     },
     {
+      "file": "context-model-visibility.js",
+      "bytes": 557,
+      "sha256": "d903dccc34af07fde9031d44121a6ab40c8d692b5bce571ca400163ef5929243"
+    },
+    {
       "file": "data/airport-corporate-tree-adjustments-baseline.json.gz",
       "bytes": 809,
       "sha256": "7676837215e25a62d96790c83fdc2469d1914e2cea7003e305afb2c6f5f43e53"
@@ -107,6 +127,21 @@
       "file": "data/building-study-media.json",
       "bytes": 14528,
       "sha256": "ee26f4f49836afa0d03980d660078d6bc331ccc96164cb01a6080236821472e1"
+    },
+    {
+      "file": "data/churchill-meadows-tree-adjustments-baseline.json.gz",
+      "bytes": 3746,
+      "sha256": "145779ab5e6d9d88dbb5a4fc19b7c5ee45cbb37857def7f677862afc3f60f47f"
+    },
+    {
+      "file": "data/churchill-meadows-tree-adjustments-future.json.gz",
+      "bytes": 3746,
+      "sha256": "145779ab5e6d9d88dbb5a4fc19b7c5ee45cbb37857def7f677862afc3f60f47f"
+    },
+    {
+      "file": "data/churchill-meadows-trees.json.gz",
+      "bytes": 554244,
+      "sha256": "4e06bc83eef9ed609ca7d304c1d5885aa4f990919b5a50a42dbcb4069168f00f"
     },
     {
       "file": "data/citywide-tree-adjustments-baseline.json.gz",
@@ -145,8 +180,8 @@
     },
     {
       "file": "data/context-assets.json",
-      "bytes": 1129,
-      "sha256": "38433414542e6e9f8e178f6e7f7817c1dcab2256b20bbfa6e62674fa7ebac671"
+      "bytes": 1730,
+      "sha256": "6b04caaf394b59e31d3cd5c3ee226a63f0e71b1dfaa1bc1b637efa50f0a332f1"
     },
     {
       "file": "data/cooksville-meshes.json",
@@ -175,8 +210,8 @@
     },
     {
       "file": "data/districts.json",
-      "bytes": 15041,
-      "sha256": "8141708eab1ae70d07c3546f5efe850d26a97af9b68d05e8407db01df0a6a554"
+      "bytes": 16305,
+      "sha256": "0327dc1802b4ad92c253ecdd749f3a73f08533630a92f628f3dafd39bc613149"
     },
     {
       "file": "data/dixie-applewood-tree-adjustments-baseline.json.gz",
@@ -295,8 +330,8 @@
     },
     {
       "file": "data/landscape-layer-manifest.json",
-      "bytes": 62935,
-      "sha256": "a7c6d6f006f8f2a6754582914e122709c97b2e7b00393dddb538adf32834efbb"
+      "bytes": 64334,
+      "sha256": "f09764107cfa4944d0dd6b75822e5edc851ab034e0f2e5d82be93ad3b9730bc5"
     },
     {
       "file": "data/lorne-park-trees.json.gz",
@@ -345,8 +380,13 @@
     },
     {
       "file": "data/model-asset-versions.json",
-      "bytes": 21960,
-      "sha256": "f6ba92005db27b771026077e8b54ad623027ef4bc86ad5610349ee1ad4c26cd9"
+      "bytes": 24610,
+      "sha256": "6675619d438f73c38879537b04c7d40cb0e521125fdf8318140e1e0ccee78903"
+    },
+    {
+      "file": "data/original-image-release-integrity.json",
+      "bytes": 19248,
+      "sha256": "6e07ec3650668b6befb6fe1c6057b54300819ffa86ff1327cbf57c5665ccc5fa"
     },
     {
       "file": "data/overrides.json",
@@ -355,8 +395,8 @@
     },
     {
       "file": "data/picture-assets.json",
-      "bytes": 23137,
-      "sha256": "61254094988d2a40ab67abdc7817659ac00b906df30a05f69fe3b71a2c703e42"
+      "bytes": 26466,
+      "sha256": "adaa254cbce797fe765fd14474f940ae67accc45033632a4c79d283a6a575bdc"
     },
     {
       "file": "data/port-credit-meshes.json",
@@ -385,8 +425,8 @@
     },
     {
       "file": "data/projects.json",
-      "bytes": 1038501,
-      "sha256": "228e843683af4f2f1e97895178dd0fd749a00a07f30d3132af91c0cdd5968655"
+      "bytes": 1046278,
+      "sha256": "786a06d4c40f3edef59be12865fb46f7f085ce0e5a8bab9aae271a717d4bc0c7"
     },
     {
       "file": "data/recent-project-updates.json",
@@ -400,8 +440,8 @@
     },
     {
       "file": "data/refinement-models.json",
-      "bytes": 2594191,
-      "sha256": "b6108a6a064950881ca66ba206c45729924a83d937cbbefd6257db66f584a1d2"
+      "bytes": 2603519,
+      "sha256": "ba7d9d354d7e088777c66878ee86cc7ae2b3e376d7427d41805ab897dc622032"
     },
     {
       "file": "data/social-pictures.json",
@@ -410,8 +450,8 @@
     },
     {
       "file": "data/stats.json",
-      "bytes": 3355,
-      "sha256": "25d76e0188bb57c720bf2196a3f2de7d0764ffcb27aceae977993e87f59b633b"
+      "bytes": 4201,
+      "sha256": "ca23a02000aa2ca8e6b080312b19f48fa2616230d175a2510f576acc7470bbdf"
     },
     {
       "file": "data/streetsville-meshes.json",
@@ -455,8 +495,8 @@
     },
     {
       "file": "data/transit-layer-manifest.json",
-      "bytes": 267641,
-      "sha256": "37f0fecd3b1aa172576ff38a47b0b96ce9b679782d29668aa03fd6fa1ec6dae6"
+      "bytes": 268413,
+      "sha256": "64f906fab78145bcb8578c5ed54169be5cd9ae1ef1a60c7f74dba3a9fc315ef1"
     },
     {
       "file": "data/transit-research.json",
@@ -570,8 +610,8 @@
     },
     {
       "file": "downloads/Original-picture-upload-validation.json",
-      "bytes": 48901,
-      "sha256": "182fc32efd0b7a21936b8330bf103efb0e3ab0e7c119b8cbe37aa586ea5194b6"
+      "bytes": 49431,
+      "sha256": "10c6b662c697d28e218888d601a3e6d234ffc5ba5b51192d2f47093e7a2dfb76"
     },
     {
       "file": "downloads/Picture-index.json",
@@ -644,6 +684,11 @@
       "sha256": "05262f64599e55b01f58c2a98a3d0b17c4c4d55a1deb451f2368a1f07a7a89a7"
     },
     {
+      "file": "downloads/Winding-entrance-ground-note.json",
+      "bytes": 1604,
+      "sha256": "1e54de29655c689f93d9ac274a669bf0d724bb5c73a145f8f3160bc64dc44e54"
+    },
+    {
       "file": "downloads/depth/Atlas-final-QA.json",
       "bytes": 13776,
       "sha256": "490ecf2381a3026ae6c377d890446558235cc451b6c4a87bbec93e0354129703"
@@ -690,8 +735,8 @@
     },
     {
       "file": "downloads/project-register.csv",
-      "bytes": 349849,
-      "sha256": "11e33d1141c80bd91cff9bc7e47c6f31e1b3e25e8447d1c4462d8dfae1184805"
+      "bytes": 352972,
+      "sha256": "fc74a6585b000db15a50d5818e788a97e36ca450b6a312add61d35804f88c6f5"
     },
     {
       "file": "downloads/public-project-reference-coverage.json",
@@ -930,178 +975,13 @@
     },
     {
       "file": "explore.html",
-      "bytes": 15585,
-      "sha256": "de4866e03609d52c1896ecf0535b10d505c32e166af473e51f7664c0c259796b"
+      "bytes": 15767,
+      "sha256": "8d70c4a37513b89d9b44996583c9cd3d5dee7a743a58d42c0ec53f85bf36e942"
     },
     {
       "file": "gallery/Downtown-transformation.mp4",
       "bytes": 958352,
       "sha256": "ebbc2dafab6d00b9b9f5561df60a050acd5d1b35c8826aff94b4cb24d7e254c9"
-    },
-    {
-      "file": "gallery/originals/airport-corporate-future.png",
-      "bytes": 12883171,
-      "sha256": "c19567cbbd16aaa90664b50139b10d9fb401b8ea32d30d635b4b08c41f2102da"
-    },
-    {
-      "file": "gallery/originals/citywide-future.png",
-      "bytes": 13876183,
-      "sha256": "f821e005829886c91259c64968919e1304af3fde0fabc4d5d2a2853f39aedfa8"
-    },
-    {
-      "file": "gallery/originals/clarkson-existing.png",
-      "bytes": 15305884,
-      "sha256": "d65a0afe1a9b7db4801eb22c51756459e3a09aad92aaa86de3f0f520bc126341"
-    },
-    {
-      "file": "gallery/originals/clarkson-future.png",
-      "bytes": 15293393,
-      "sha256": "020ca39a65103c2bf4bd14e6497ae6ccd2327099ef417b3228bbeb0af66c4b75"
-    },
-    {
-      "file": "gallery/originals/clarkson-portrait-future.png",
-      "bytes": 16095967,
-      "sha256": "f7e44c8d61a50c89fbaeff16c65fed111eee138a53652915cca34b5f6808209d"
-    },
-    {
-      "file": "gallery/originals/clarkson-skyline-future.png",
-      "bytes": 9995330,
-      "sha256": "144b08eae332c07fcc07efa017f425dc3a077bfa27993149294ae04388b96f66"
-    },
-    {
-      "file": "gallery/originals/cooksville-future.png",
-      "bytes": 15900456,
-      "sha256": "1e81116bcebbb6fe74c8e40cbddd40e18faca864202d7c3ce48b97166710c433"
-    },
-    {
-      "file": "gallery/originals/cooksville-portrait-future.png",
-      "bytes": 14961752,
-      "sha256": "926f162dfd93a1a96093537669dbcf88ec29fbb3d41902894cd53f3a6f3a9deb"
-    },
-    {
-      "file": "gallery/originals/dixie-applewood-future.png",
-      "bytes": 16506615,
-      "sha256": "743e465be1d80d2bff69fda9a9f1918c44d2a7e33239a852518ec4a402bf8e70"
-    },
-    {
-      "file": "gallery/originals/downtown-existing.png",
-      "bytes": 15616354,
-      "sha256": "e81eab1d3692af54e0e0fdb22d211c924524e4c4236311e181de3173e5bee857"
-    },
-    {
-      "file": "gallery/originals/downtown-future.png",
-      "bytes": 15673333,
-      "sha256": "b5f38ab162280e09e007360c0554dc629f5625625d71a00d2cb247047fd0a335"
-    },
-    {
-      "file": "gallery/originals/downtown-junction-future.png",
-      "bytes": 12127816,
-      "sha256": "816abbfde6a2ebda23f17c8677f429bd7b3e348d823c06f535b92103ca2ed444"
-    },
-    {
-      "file": "gallery/originals/downtown-landmark-future.png",
-      "bytes": 12533476,
-      "sha256": "900038761cfd82fdac9060c525f77fd10df89f89e4e198b605c44939be08b2d5"
-    },
-    {
-      "file": "gallery/originals/downtown-portrait-future.png",
-      "bytes": 16020906,
-      "sha256": "594fbd5e6b819f376c15f868e1dfe5c63dc88f7e58784492570e09aa54052234"
-    },
-    {
-      "file": "gallery/originals/downtown-skyline-construction.png",
-      "bytes": 9332636,
-      "sha256": "ae96d2d120b61a9d158af5ac517a43911a132f6d53c09d85aff78a72d7807ad0"
-    },
-    {
-      "file": "gallery/originals/downtown-skyline-existing.png",
-      "bytes": 9243374,
-      "sha256": "789db0cb8b9ec3357a2dcd5adf62afd990ddab26e1453c952978a3eaa565ba7a"
-    },
-    {
-      "file": "gallery/originals/downtown-skyline-future.png",
-      "bytes": 9234285,
-      "sha256": "87f119e55068c68e734cdaa9a455feb96e3b541e40e74cf49976b156ebe0175f"
-    },
-    {
-      "file": "gallery/originals/erin-mills-future.png",
-      "bytes": 18080749,
-      "sha256": "f44dd58f92d3ec115e44706a4fcd330a6cee25d1b29cfca766c170766282d56f"
-    },
-    {
-      "file": "gallery/originals/erindale-future.png",
-      "bytes": 18866138,
-      "sha256": "ca6f739991bb405be1d25e0e3d6ff7279ce4046577ab917864d0f5a8679761ff"
-    },
-    {
-      "file": "gallery/originals/heartland-future.png",
-      "bytes": 14872895,
-      "sha256": "96cfc6b6dcfe3608bbd328aa5f08d6f6a0511b216845b7d89664afbf0471cdee"
-    },
-    {
-      "file": "gallery/originals/lakeview-existing.png",
-      "bytes": 13615888,
-      "sha256": "091042fe0cb0ba6af334ca5eceed8c58a8b53bccf11771899475bfc0dbed4cae"
-    },
-    {
-      "file": "gallery/originals/lakeview-future.png",
-      "bytes": 13729376,
-      "sha256": "bb98626394d61195c7fff41056124d15d4482087d2f700b0d47ac66ead8b7051"
-    },
-    {
-      "file": "gallery/originals/lakeview-portrait-future.png",
-      "bytes": 13780852,
-      "sha256": "eeab5d8f6b556c0d11226761d31d43db5153ef025451b4410e0302628cdb9c79"
-    },
-    {
-      "file": "gallery/originals/lakeview-skyline-future.png",
-      "bytes": 8356349,
-      "sha256": "5f216d05a7734a7367717f9c69c4bf44c0c88ec3131d6b8b1eaeccea88b6c82c"
-    },
-    {
-      "file": "gallery/originals/malton-future.png",
-      "bytes": 14789140,
-      "sha256": "abcadba3abe4c8388f448be8e6d35f65b4cabe054a630ecc4b1fb927b41c870f"
-    },
-    {
-      "file": "gallery/originals/meadowvale-future.png",
-      "bytes": 16747923,
-      "sha256": "850104a2cd8c8693a693d5048fb836899ddd45d8192b79b3b1e28251b3cfd993"
-    },
-    {
-      "file": "gallery/originals/port-credit-existing.png",
-      "bytes": 15800389,
-      "sha256": "9abb1a251a7227a6c2e109c1267ba412b09aa7d4b2d17cdff941918642e29ecc"
-    },
-    {
-      "file": "gallery/originals/port-credit-future.png",
-      "bytes": 15883978,
-      "sha256": "2ff8687b36e14c10d518d2b1ff2af2d269eb5e1a4a60f5ef1618ba01176f5eea"
-    },
-    {
-      "file": "gallery/originals/port-credit-portrait-future.png",
-      "bytes": 16492013,
-      "sha256": "e3eab360e21c2a243d6cb92174570941593b01f06a58f6204fe9d0506144a7cf"
-    },
-    {
-      "file": "gallery/originals/port-credit-skyline-future.png",
-      "bytes": 9601728,
-      "sha256": "044bf0117cb5491ec67393d4c6cefc469ed493d6dfe97281294061926f0c9810"
-    },
-    {
-      "file": "gallery/originals/streetsville-future.png",
-      "bytes": 17121043,
-      "sha256": "2e294647c99531dca51f09436676f782c84e5b5fdcd4bd28bb6e75746b44e89f"
-    },
-    {
-      "file": "gallery/originals/uptown-future.png",
-      "bytes": 16017184,
-      "sha256": "313d357d37233aca91d8f0021925b7887e9d8bec91c6c19a152d127a0f98f8e0"
-    },
-    {
-      "file": "gallery/originals/uptown-portrait-future.png",
-      "bytes": 15677758,
-      "sha256": "6d297f05192054bf40107d0eb1311adff46693532e06ad625ef016e496cba357"
     },
     {
       "file": "gallery/previews/020ca39a65103c2b/clarkson-future.png",
@@ -1285,8 +1165,8 @@
     },
     {
       "file": "index.html",
-      "bytes": 18258,
-      "sha256": "995a3bbd93e4ba484e566159b36a1b1be7129a53e390bc0e7043a2bb83fbd633"
+      "bytes": 18639,
+      "sha256": "628c1be84ccc129f144ade85897058d18909298ca91796c06a1edcd8144bdaf9"
     },
     {
       "file": "licenses/BricolageGrotesque-OFL.txt",
@@ -1295,8 +1175,8 @@
     },
     {
       "file": "licenses/CREDITS.md",
-      "bytes": 9051,
-      "sha256": "7f8887008dfd94c3de7e82e426ec06c37d5eb73be55ec00f203c20575d5b1197"
+      "bytes": 11448,
+      "sha256": "05d9110f7bfe228ce9d686ad4249f1a0ba903f5ec9b2468e1a34390aa78499ae"
     },
     {
       "file": "licenses/media-chrome-4.19.2-MIT.txt",
@@ -1347,6 +1227,66 @@
       "file": "models/burnhamthorpe-community-centre-20261008-study.glb",
       "bytes": 866928,
       "sha256": "b98e00d2ce4a2eb582acfa1c4d762219c1d9139333c207aed521e387d7bd8c94"
+    },
+    {
+      "file": "models/churchill-meadows-context-01.glb",
+      "bytes": 5844,
+      "sha256": "c163b1ccd20669c34efbc90757f4092f6989283c247a1a6f14af250cee7612e1"
+    },
+    {
+      "file": "models/churchill-meadows-context-02.glb",
+      "bytes": 224692,
+      "sha256": "17874f9a426be2a9190bfc36f37807c4defcae271ae7a271ace44d9bb736c2d3"
+    },
+    {
+      "file": "models/churchill-meadows-context-03.glb",
+      "bytes": 608464,
+      "sha256": "353dcc739898244804959730555df08e05686c15279d41d93efa8e747c7be17e"
+    },
+    {
+      "file": "models/churchill-meadows-context-04.glb",
+      "bytes": 549604,
+      "sha256": "1497cbc58b724dbd626a5237d37bef63475d5f405f20b7099d93dc67ed4c4e7d"
+    },
+    {
+      "file": "models/churchill-meadows-context-10.glb",
+      "bytes": 101400,
+      "sha256": "a9117a08228ebe33c7e571e28e098e61833e5796933375bc73f3f9784a9a5e5c"
+    },
+    {
+      "file": "models/churchill-meadows-context-11.glb",
+      "bytes": 29956,
+      "sha256": "3d5a8821092be321db3874665eb0f98585b9dcdcba6c78198f239b929274d145"
+    },
+    {
+      "file": "models/churchill-meadows-context-13.glb",
+      "bytes": 1015196,
+      "sha256": "5a3efea7215f19dfcc6c56f1a3a9b25a3d36b1cb713ae9e3d5b4f2571ab5b7db"
+    },
+    {
+      "file": "models/churchill-meadows-context-14.glb",
+      "bytes": 12160,
+      "sha256": "416181b12fce600ced3ddf3daa31b2c7a4cb0b1a3b90b5852ca844a653f32c2c"
+    },
+    {
+      "file": "models/churchill-meadows-context-16.glb",
+      "bytes": 19724,
+      "sha256": "56e3cd826d4ae840caf05b27ae0a0fc322ab1e19e56ec3eed2d94ba6b3b63d99"
+    },
+    {
+      "file": "models/churchill-meadows-context-17.glb",
+      "bytes": 117360,
+      "sha256": "492017419cbcbadcad68ac944c685937626c3f9d2e2cbc3e3e25a75e001f9465"
+    },
+    {
+      "file": "models/churchill-meadows-details.glb",
+      "bytes": 1617704,
+      "sha256": "e60ed1fca896f5f384a725a53298974eb8150210aaa8b65afe3438d97acaba15"
+    },
+    {
+      "file": "models/churchill-meadows.glb",
+      "bytes": 18897992,
+      "sha256": "6361ca379acd4629034d96a29bd45e4d9b8850020b553a775eb51df67dd6d597"
     },
     {
       "file": "models/citywide-details.glb",
@@ -1744,6 +1684,16 @@
       "sha256": "0701351b1fad9b5a72320801c16bc2368aa168ef21c8828e924f757cf6bf1d97"
     },
     {
+      "file": "models/reference-review/queen-228-local-foundation.glb",
+      "bytes": 8612,
+      "sha256": "0a36b85348a271f7269b9d4dafc1269c1620219b247cf7fa1e4d7633dbf5094b"
+    },
+    {
+      "file": "models/reference-review/queen-228-local.glb",
+      "bytes": 26356,
+      "sha256": "11fa13c85abf1a99a57aa69497baaa422a7f75f6a1130ed26e81664572d372cd"
+    },
+    {
       "file": "models/reference-review/utm-davis-meeting-place-canopy-study.glb",
       "bytes": 24004,
       "sha256": "47601b5c46c4a94aa20eb6873e3c60b54daacd824496cbbff5ee21e925dd8043"
@@ -1752,6 +1702,21 @@
       "file": "models/reference-review/west-end-buddhist-temple-study.glb",
       "bytes": 66924,
       "sha256": "9995d86db511a9cdd10924a0b40d39e11ac622f94450b0f000175c3403ac6ac5"
+    },
+    {
+      "file": "models/reference-review/winding-citywide-site-contact.glb",
+      "bytes": 2779908,
+      "sha256": "b48aa257226c02d97c97b79b3a901d528a6e3e735b29bb5190c0f5fe86d5db56"
+    },
+    {
+      "file": "models/reference-review/winding-dixie-site-contact.glb",
+      "bytes": 5197548,
+      "sha256": "1405023b304305fcb442940e398fa75ad8bd39e6828949c75b39344df586fff3"
+    },
+    {
+      "file": "models/reference-review/winding-trail-1355-local.glb",
+      "bytes": 105444,
+      "sha256": "22bc227aa95d418c4f0db353cb4ade1c65b29a3e31fca292f7cf3b5991e83069"
     },
     {
       "file": "models/refinement/1225-dundas-may2026-plan-envelope.glb",
@@ -2002,6 +1967,16 @@
       "file": "models/revamp/airport-corporate-transitway-transitway.glb",
       "bytes": 104556,
       "sha256": "5fd501f8135b51d481135561c6e36a68a35fb8c284f7a73c76440218df5a8787"
+    },
+    {
+      "file": "models/revamp/churchill-meadows--citywide-mapped-surfaces.glb",
+      "bytes": 318396,
+      "sha256": "d1c8aacf8515fa938965289e22e5514a65911be9e07749fb1fab05ec1cddf7e4"
+    },
+    {
+      "file": "models/revamp/churchill-meadows-transitway-transitway.glb",
+      "bytes": 6448,
+      "sha256": "4ca2b0e4a45807fd22c4fde64ac6e96dd278cbbd910f5c7e5b378c91b1613c6f"
     },
     {
       "file": "models/revamp/citywide--citywide-mapped-surfaces.glb",
@@ -2305,8 +2280,8 @@
     },
     {
       "file": "reference-updates.html",
-      "bytes": 66618,
-      "sha256": "decf80386073b7f24a16d9a7d2c9ec461ed5f78d321f613063f9f5811c617bbf"
+      "bytes": 69906,
+      "sha256": "d25859aecebd0e97528de3f0a453c94508c12c4d5a2349931160c4a88cd1fadd"
     },
     {
       "file": "renders/revamp/source-elevation-repair-qa.png",
@@ -2375,8 +2350,8 @@
     },
     {
       "file": "sitemap.xml",
-      "bytes": 554,
-      "sha256": "d0bf18001e306c800e1cc9c6cc8da68cbbe117360bbf951fb6acb3ec26b41a4f"
+      "bytes": 748,
+      "sha256": "0ff68f73a683bdf54471ff4c122fca2eb9fe014adb061f045cc7e6d0b0aec05d"
     },
     {
       "file": "social-base.css",
@@ -2420,13 +2395,13 @@
     },
     {
       "file": "subway.html",
-      "bytes": 21714,
-      "sha256": "63767f8ab9f38bd662e47791d52deab3e9c98612cd8127e8f6f0d425bb556678"
+      "bytes": 21705,
+      "sha256": "31f82c3e7efca97fbe84d38025da7c49379136f97b1253f9a35234c38a0f6f93"
     },
     {
       "file": "subway.js",
-      "bytes": 18052,
-      "sha256": "1312ff527af6727ea4a68fbb1fc41cb106aba1f28c72ce5c04030d95bef43cb7"
+      "bytes": 18122,
+      "sha256": "5c7016e235b43df784a3f63301ba2169c3217be5d28f473a411c5ef97bc1b05f"
     },
     {
       "file": "updates.css",
@@ -2435,8 +2410,8 @@
     },
     {
       "file": "updates.html",
-      "bytes": 24908,
-      "sha256": "55dce7abf2e813f25030af70e05d053ffb3c26efe09654ea82b1a6c1f64ade71"
+      "bytes": 26340,
+      "sha256": "5242b7c81ae7e57d68b49c5f11da28f7e127871d14b3e1db0b98fab8fa456400"
     },
     {
       "file": "vendor/addons/controls/OrbitControls.js",
@@ -2734,7 +2709,7 @@
       "sha256": "2d9cfb19a32fac7548704fbfca44060267c233522645aa354fb4f6069e012d97"
     }
   ],
-  "publishedBytes": 999975274,
+  "publishedBytes": 562850371,
   "originalPNGCount": 33,
   "displayPNGCount": 33,
   "displayScale": 0.5,
@@ -2958,5 +2933,11 @@
     "editableModelFilesPublished": false,
     "cityViewerUnchanged": true,
     "sherobeeOrientationCorrectedInReferenceStudy": true
-  }
+  },
+  "exportedAt": "2026-10-18T02:49:11.618688+00:00",
+  "cityModelUpdateDate": "2026-10-17",
+  "pictureRenderingDateUnchanged": true,
+  "originalPNGStorage": "GitHub Release citywide-accuracy-images-2026-10-17; independently downloaded byte proof in public/data/original-image-release-integrity.json",
+  "districtCount": 17,
+  "externalMediaIntegrityManifest": "data/original-image-release-integrity.json"
 }

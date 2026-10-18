@@ -4,10 +4,10 @@
   "displayScale": 0.5,
   "displayPolicy": "All model pictures displayed on the website use PNGs at 50% of each original dimension. Download Image links retain the unmodified 3840px original.",
   "finalRenderLockAcknowledged": true,
-  "hosting": "Self-contained static files; relative URLs work on a GitHub project path or custom domain.",
+  "hosting": "Static local previews and viewer assets; unchanged full-resolution PNG downloads are hosted on the project GitHub Release.",
   "images": {
     "citywide-future.png": {
-      "url": "gallery/originals/citywide-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/citywide-future.png",
       "sha256": "f821e005829886c91259c64968919e1304af3fde0fabc4d5d2a2853f39aedfa8",
       "bytes": 13876183,
       "width": 3840,
@@ -25,7 +25,7 @@
       }
     },
     "downtown-future.png": {
-      "url": "gallery/originals/downtown-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/downtown-future.png",
       "sha256": "b5f38ab162280e09e007360c0554dc629f5625625d71a00d2cb247047fd0a335",
       "bytes": 15673333,
       "width": 3840,
@@ -43,7 +43,7 @@
       }
     },
     "port-credit-future.png": {
-      "url": "gallery/originals/port-credit-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/port-credit-future.png",
       "sha256": "2ff8687b36e14c10d518d2b1ff2af2d269eb5e1a4a60f5ef1618ba01176f5eea",
       "bytes": 15883978,
       "width": 3840,
@@ -61,7 +61,7 @@
       }
     },
     "lakeview-future.png": {
-      "url": "gallery/originals/lakeview-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/lakeview-future.png",
       "sha256": "bb98626394d61195c7fff41056124d15d4482087d2f700b0d47ac66ead8b7051",
       "bytes": 13729376,
       "width": 3840,
@@ -79,7 +79,7 @@
       }
     },
     "clarkson-future.png": {
-      "url": "gallery/originals/clarkson-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/clarkson-future.png",
       "sha256": "020ca39a65103c2bf4bd14e6497ae6ccd2327099ef417b3228bbeb0af66c4b75",
       "bytes": 15293393,
       "width": 3840,
@@ -97,7 +97,7 @@
       }
     },
     "cooksville-future.png": {
-      "url": "gallery/originals/cooksville-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/cooksville-future.png",
       "sha256": "1e81116bcebbb6fe74c8e40cbddd40e18faca864202d7c3ce48b97166710c433",
       "bytes": 15900456,
       "width": 3840,
@@ -115,7 +115,7 @@
       }
     },
     "uptown-future.png": {
-      "url": "gallery/originals/uptown-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/uptown-future.png",
       "sha256": "313d357d37233aca91d8f0021925b7887e9d8bec91c6c19a152d127a0f98f8e0",
       "bytes": 16017184,
       "width": 3840,
@@ -133,7 +133,7 @@
       }
     },
     "erin-mills-future.png": {
-      "url": "gallery/originals/erin-mills-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/erin-mills-future.png",
       "sha256": "f44dd58f92d3ec115e44706a4fcd330a6cee25d1b29cfca766c170766282d56f",
       "bytes": 18080749,
       "width": 3840,
@@ -151,7 +151,7 @@
       }
     },
     "streetsville-future.png": {
-      "url": "gallery/originals/streetsville-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/streetsville-future.png",
       "sha256": "2e294647c99531dca51f09436676f782c84e5b5fdcd4bd28bb6e75746b44e89f",
       "bytes": 17121043,
       "width": 3840,
@@ -169,7 +169,7 @@
       }
     },
     "meadowvale-future.png": {
-      "url": "gallery/originals/meadowvale-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/meadowvale-future.png",
       "sha256": "850104a2cd8c8693a693d5048fb836899ddd45d8192b79b3b1e28251b3cfd993",
       "bytes": 16747923,
       "width": 3840,
@@ -187,7 +187,7 @@
       }
     },
     "malton-future.png": {
-      "url": "gallery/originals/malton-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/malton-future.png",
       "sha256": "abcadba3abe4c8388f448be8e6d35f65b4cabe054a630ecc4b1fb927b41c870f",
       "bytes": 14789140,
       "width": 3840,
@@ -205,7 +205,7 @@
       }
     },
     "dixie-applewood-future.png": {
-      "url": "gallery/originals/dixie-applewood-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/dixie-applewood-future.png",
       "sha256": "743e465be1d80d2bff69fda9a9f1918c44d2a7e33239a852518ec4a402bf8e70",
       "bytes": 16506615,
       "width": 3840,
@@ -223,7 +223,7 @@
       }
     },
     "erindale-future.png": {
-      "url": "gallery/originals/erindale-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/erindale-future.png",
       "sha256": "ca6f739991bb405be1d25e0e3d6ff7279ce4046577ab917864d0f5a8679761ff",
       "bytes": 18866138,
       "width": 3840,
@@ -241,7 +241,7 @@
       }
     },
     "airport-corporate-future.png": {
-      "url": "gallery/originals/airport-corporate-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/airport-corporate-future.png",
       "sha256": "c19567cbbd16aaa90664b50139b10d9fb401b8ea32d30d635b4b08c41f2102da",
       "bytes": 12883171,
       "width": 3840,
@@ -259,7 +259,7 @@
       }
     },
     "heartland-future.png": {
-      "url": "gallery/originals/heartland-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/heartland-future.png",
       "sha256": "96cfc6b6dcfe3608bbd328aa5f08d6f6a0511b216845b7d89664afbf0471cdee",
       "bytes": 14872895,
       "width": 3840,
@@ -277,7 +277,7 @@
       }
     },
     "downtown-existing.png": {
-      "url": "gallery/originals/downtown-existing.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/downtown-existing.png",
       "sha256": "e81eab1d3692af54e0e0fdb22d211c924524e4c4236311e181de3173e5bee857",
       "bytes": 15616354,
       "width": 3840,
@@ -295,7 +295,7 @@
       }
     },
     "port-credit-existing.png": {
-      "url": "gallery/originals/port-credit-existing.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/port-credit-existing.png",
       "sha256": "9abb1a251a7227a6c2e109c1267ba412b09aa7d4b2d17cdff941918642e29ecc",
       "bytes": 15800389,
       "width": 3840,
@@ -313,7 +313,7 @@
       }
     },
     "lakeview-existing.png": {
-      "url": "gallery/originals/lakeview-existing.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/lakeview-existing.png",
       "sha256": "091042fe0cb0ba6af334ca5eceed8c58a8b53bccf11771899475bfc0dbed4cae",
       "bytes": 13615888,
       "width": 3840,
@@ -331,7 +331,7 @@
       }
     },
     "clarkson-existing.png": {
-      "url": "gallery/originals/clarkson-existing.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/clarkson-existing.png",
       "sha256": "d65a0afe1a9b7db4801eb22c51756459e3a09aad92aaa86de3f0f520bc126341",
       "bytes": 15305884,
       "width": 3840,
@@ -349,7 +349,7 @@
       }
     },
     "downtown-skyline-existing.png": {
-      "url": "gallery/originals/downtown-skyline-existing.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/downtown-skyline-existing.png",
       "sha256": "789db0cb8b9ec3357a2dcd5adf62afd990ddab26e1453c952978a3eaa565ba7a",
       "bytes": 9243374,
       "width": 3840,
@@ -367,7 +367,7 @@
       }
     },
     "downtown-skyline-construction.png": {
-      "url": "gallery/originals/downtown-skyline-construction.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/downtown-skyline-construction.png",
       "sha256": "ae96d2d120b61a9d158af5ac517a43911a132f6d53c09d85aff78a72d7807ad0",
       "bytes": 9332636,
       "width": 3840,
@@ -385,7 +385,7 @@
       }
     },
     "downtown-skyline-future.png": {
-      "url": "gallery/originals/downtown-skyline-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/downtown-skyline-future.png",
       "sha256": "87f119e55068c68e734cdaa9a455feb96e3b541e40e74cf49976b156ebe0175f",
       "bytes": 9234285,
       "width": 3840,
@@ -403,7 +403,7 @@
       }
     },
     "port-credit-skyline-future.png": {
-      "url": "gallery/originals/port-credit-skyline-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/port-credit-skyline-future.png",
       "sha256": "044bf0117cb5491ec67393d4c6cefc469ed493d6dfe97281294061926f0c9810",
       "bytes": 9601728,
       "width": 3840,
@@ -421,7 +421,7 @@
       }
     },
     "lakeview-skyline-future.png": {
-      "url": "gallery/originals/lakeview-skyline-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/lakeview-skyline-future.png",
       "sha256": "5f216d05a7734a7367717f9c69c4bf44c0c88ec3131d6b8b1eaeccea88b6c82c",
       "bytes": 8356349,
       "width": 3840,
@@ -439,7 +439,7 @@
       }
     },
     "clarkson-skyline-future.png": {
-      "url": "gallery/originals/clarkson-skyline-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/clarkson-skyline-future.png",
       "sha256": "144b08eae332c07fcc07efa017f425dc3a077bfa27993149294ae04388b96f66",
       "bytes": 9995330,
       "width": 3840,
@@ -457,7 +457,7 @@
       }
     },
     "downtown-portrait-future.png": {
-      "url": "gallery/originals/downtown-portrait-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/downtown-portrait-future.png",
       "sha256": "594fbd5e6b819f376c15f868e1dfe5c63dc88f7e58784492570e09aa54052234",
       "bytes": 16020906,
       "width": 3840,
@@ -475,7 +475,7 @@
       }
     },
     "port-credit-portrait-future.png": {
-      "url": "gallery/originals/port-credit-portrait-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/port-credit-portrait-future.png",
       "sha256": "e3eab360e21c2a243d6cb92174570941593b01f06a58f6204fe9d0506144a7cf",
       "bytes": 16492013,
       "width": 3840,
@@ -493,7 +493,7 @@
       }
     },
     "lakeview-portrait-future.png": {
-      "url": "gallery/originals/lakeview-portrait-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/lakeview-portrait-future.png",
       "sha256": "eeab5d8f6b556c0d11226761d31d43db5153ef025451b4410e0302628cdb9c79",
       "bytes": 13780852,
       "width": 3840,
@@ -511,7 +511,7 @@
       }
     },
     "clarkson-portrait-future.png": {
-      "url": "gallery/originals/clarkson-portrait-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/clarkson-portrait-future.png",
       "sha256": "f7e44c8d61a50c89fbaeff16c65fed111eee138a53652915cca34b5f6808209d",
       "bytes": 16095967,
       "width": 3840,
@@ -529,7 +529,7 @@
       }
     },
     "cooksville-portrait-future.png": {
-      "url": "gallery/originals/cooksville-portrait-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/cooksville-portrait-future.png",
       "sha256": "926f162dfd93a1a96093537669dbcf88ec29fbb3d41902894cd53f3a6f3a9deb",
       "bytes": 14961752,
       "width": 3840,
@@ -547,7 +547,7 @@
       }
     },
     "uptown-portrait-future.png": {
-      "url": "gallery/originals/uptown-portrait-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/uptown-portrait-future.png",
       "sha256": "6d297f05192054bf40107d0eb1311adff46693532e06ad625ef016e496cba357",
       "bytes": 15677758,
       "width": 3840,
@@ -565,7 +565,7 @@
       }
     },
     "downtown-landmark-future.png": {
-      "url": "gallery/originals/downtown-landmark-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/downtown-landmark-future.png",
       "sha256": "900038761cfd82fdac9060c525f77fd10df89f89e4e198b605c44939be08b2d5",
       "bytes": 12533476,
       "width": 3840,
@@ -583,7 +583,7 @@
       }
     },
     "downtown-junction-future.png": {
-      "url": "gallery/originals/downtown-junction-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/downtown-junction-future.png",
       "sha256": "816abbfde6a2ebda23f17c8677f429bd7b3e348d823c06f535b92103ca2ed444",
       "bytes": 12127816,
       "width": 3840,
@@ -600,5 +600,11 @@
         "sourceSHA256": "816abbfde6a2ebda23f17c8677f429bd7b3e348d823c06f535b92103ca2ed444"
       }
     }
+  },
+  "originalDownloadHosting": {
+    "releaseTag": "citywide-accuracy-images-2026-10-17",
+    "unchangedOriginalBytes": true,
+    "integrityManifest": "data/original-image-release-integrity.json",
+    "note": "Full-resolution lossless PNG downloads are hosted on the project GitHub Release; website previews are unchanged."
   }
 }

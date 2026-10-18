@@ -1,21 +1,21 @@
 {
   "asOf": "2026-09-20",
-  "researchedRecords": 147,
+  "researchedRecords": 149,
   "municipalGroups": 181,
   "futureSourceComponents": 765,
   "sourceTiles": 30,
   "sourceConvertedComponents": 153021,
   "researchOperations": 1735,
   "operationsNotUniqueSites": true,
-  "linkedProjectSourceURLs": 562,
+  "linkedProjectSourceURLs": 627,
   "loggedOperationsMentioningAccessFailures": 49,
   "supersededComponentsExcluded": 99,
   "duplicateComponentsExcluded": 10,
   "retainedFutureSourceComponents": 660,
   "geometryConflictComponents": 152,
   "secondaryCorroborationRecords": 31,
-  "note": "Research operations include searches, page/document reviews and failed attempts. They are not a count of unique websites. The current project/source-link and refinement-asset counts reflect the October 10 review; initial City-source tile and visibility totals retain their recorded dates. Architectural forms, legal envelopes and estimates are distinguished in the individual project records.",
-  "refinementAssets": 59,
+  "note": "Research operations include searches, page/document reviews and failed attempts. They are not a count of unique websites. The current project/source-link and refinement-asset counts reflect the October 17 model update; initial City-source tile and visibility totals retain their recorded dates. Architectural forms, legal envelopes and estimates are distinguished in the individual project records.",
+  "refinementAssets": 70,
   "edition": "Visual Polish 2026-09-26",
   "roadCrossingEvidenceAsOf": "2026-09-21",
   "communityRevisionDate": "2026-09-26",
@@ -59,8 +59,8 @@
   },
   "buildingStudyUpdateDate": "2026-10-09",
   "targetedStatusReviewDate": "2026-10-10",
-  "projectRegisterCountAsOf": "2026-10-10",
-  "linkedProjectSourceURLsAsOf": "2026-10-10",
+  "projectRegisterCountAsOf": "2026-10-17",
+  "linkedProjectSourceURLsAsOf": "2026-10-17",
   "linkedProjectSourceURLsScope": "Distinct linked URLs across the current named research records, excluding private source filenames.",
   "receivedReferenceUpdate": {
     "asOf": "2026-10-12",
@@ -73,5 +73,30 @@
     "newNamedRecords": 7,
     "statusOrEvidenceUpdates": 5,
     "latestGeometryNotInvented": true
+  },
+  "referenceIntegrationUpdate": {
+    "asOf": "2026-10-17",
+    "addedProject": "winding-trail-1355",
+    "publicRelease": true,
+    "addedProjects": [
+      "winding-trail-1355",
+      "queen-228"
+    ]
+  },
+  "coverageUpdate": {
+    "asOf": "2026-10-17",
+    "district": "churchill-meadows",
+    "retainedExistingSourceComponents": 152267,
+    "previousCropCentroidReach": 125031,
+    "newlyReachedExistingSourceComponents": 5898,
+    "measure": "Geographic crop reach of source-component bounding-box centres; not unique buildings or architectural accuracy.",
+    "publicRelease": true,
+    "currentCropCentreReach": 130929
+  },
+  "historicalRecordedCounts": {
+    "2026-10-10": {
+      "linkedProjectSourceURLs": 562,
+      "note": "Previously recorded count retained as historical metadata, not reverified in this release."
+    }
   }
 }
