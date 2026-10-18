@@ -517,6 +517,30 @@
       "scopeNote": "Exact existing City LOD2 source surfaces from published citywide.glb, only triangles absent from Clarkson. Whole connected source components touch the selected strip and have mapped footprint support. No source geometry, placement or height changes; no future/construction additions. Atlas display colours copy current Clarkson tile83 runtime classification.",
       "sourceCaveat": "Source LiDAR buildings and Ontario DTM ground may disagree vertically. Three complete original City surface components retain native open edges; no closure is invented. Unsupported/outside source components are excluded intact.",
       "triangleCount": 1229
+    },
+    {
+      "district": "churchill-meadows",
+      "url": "models/revamp/churchill-meadows--citywide-mapped-surfaces.glb",
+      "category": "Landscape",
+      "bounds": [
+        [
+          -14765.982421875,
+          102.12110900878906,
+          2224
+        ],
+        [
+          -10880,
+          125.27651977539062,
+          5877.22216796875
+        ]
+      ],
+      "bytes": 318396,
+      "downloadBytes": 318396,
+      "sha256": "d1c8aacf8515fa938965289e22e5514a65911be9e07749fb1fab05ec1cddf7e4",
+      "downloadSHA256": "d1c8aacf8515fa938965289e22e5514a65911be9e07749fb1fab05ec1cddf7e4",
+      "triangleCount": 25884,
+      "featureCount": 57,
+      "geometryScope": "Exact rectangle crop of current citywide mapped landscape surfaces."
     }
   ],
   "trees": {
@@ -1340,6 +1364,24 @@
         },
         "url": "data/uptown-tree-adjustments-future.json.gz",
         "adjustmentsOnly": true
+      }
+    },
+    "churchill-meadows": {
+      "baseline": {
+        "url": "data/churchill-meadows-tree-adjustments-baseline.json.gz",
+        "sha256": "145779ab5e6d9d88dbb5a4fc19b7c5ee45cbb37857def7f677862afc3f60f47f",
+        "bytes": 3746,
+        "adjustmentsOnly": true,
+        "treeRecords": 22678,
+        "adjustmentCount": 281
+      },
+      "future": {
+        "url": "data/churchill-meadows-tree-adjustments-future.json.gz",
+        "sha256": "145779ab5e6d9d88dbb5a4fc19b7c5ee45cbb37857def7f677862afc3f60f47f",
+        "bytes": 3746,
+        "adjustmentsOnly": true,
+        "treeRecords": 22678,
+        "adjustmentCount": 281
       }
     }
   },

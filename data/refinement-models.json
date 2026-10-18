@@ -79343,6 +79343,331 @@
       "modelFidelity": "Optional early-plan exterior study. Source controls from December2023 50-home plan; current51-home architecture/height/grade not verified.",
       "replacesSourceIds": [],
       "replacementFootprintsXZ": []
+    },
+    {
+      "id": "winding-trail-1355-local-integration",
+      "assetId": "winding-trail-1355-local-integration",
+      "projectId": "winding-trail-1355",
+      "url": "models/reference-review/winding-trail-1355-local.glb",
+      "bounds": [
+        [
+          -2034.271728515625,
+          70.25630187988281,
+          -3573.07861328125
+        ],
+        [
+          -1970.0006103515625,
+          82.00630187988281,
+          -3513.2978515625
+        ]
+      ],
+      "bytes": 105444,
+      "sha256": "22bc227aa95d418c4f0db353cb4ade1c65b29a3e31fca292f7cf3b5991e83069",
+      "triangles": 4754,
+      "status": "Existing",
+      "modes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "preserveMaterials": true,
+      "preserveSourceNormals": true,
+      "localReview": true,
+      "uncertainGeometry": false,
+      "modelFidelity": "Approximate exterior study, not a measured as-built model. The City footprint, orientation and source floor are retained. Tower height, lower roofs and facade details are estimated from the shared exterior references. Small entrance landings and the forecourt are fitted to the displayed ground so the doors are clear; this is a schematic display correction, not surveyed site grading. Exact site levels and hidden surfaces remain unverified. The City source calls this 1385 Winding Trail, while the official station address is 1355. Original award PDF and interior material remain private.",
+      "replacesSourceIds": [
+        "71-3181"
+      ],
+      "replacementFootprintsXZ": [
+        [
+          [
+            -1999.5042466719246,
+            -3527.234060567124
+          ],
+          [
+            -2004.0225571842138,
+            -3531.3680937386043
+          ],
+          [
+            -1992.2924286374484,
+            -3544.1890603738207
+          ],
+          [
+            -1987.9221890114095,
+            -3540.190524880663
+          ],
+          [
+            -1984.9739725438988,
+            -3543.4130170699204
+          ],
+          [
+            -1989.2995339182924,
+            -3547.3702923241913
+          ],
+          [
+            -1981.5984585627666,
+            -3555.7876931267006
+          ],
+          [
+            -1978.761422670322,
+            -3553.1919902216214
+          ],
+          [
+            -1970.5179180501495,
+            -3562.202078576246
+          ],
+          [
+            -1982.4523228207825,
+            -3573.120997876683
+          ],
+          [
+            -1990.7263459532069,
+            -3564.077460783937
+          ],
+          [
+            -1989.5603306699973,
+            -3563.010810705976
+          ],
+          [
+            -1997.102468419472,
+            -3554.7674825335375
+          ],
+          [
+            -2003.0883086309143,
+            -3560.2442895105864
+          ],
+          [
+            -2017.714774417512,
+            -3544.2574720737985
+          ],
+          [
+            -2021.7400435888117,
+            -3547.940089825421
+          ],
+          [
+            -2024.897147509509,
+            -3544.4891627157235
+          ],
+          [
+            -2028.7383333097318,
+            -3548.0035663509098
+          ],
+          [
+            -2031.140284736768,
+            -3545.378243995094
+          ],
+          [
+            -2027.2956802064064,
+            -3541.8606658351673
+          ],
+          [
+            -2034.3141129078256,
+            -3534.189523164977
+          ],
+          [
+            -2011.9016813642002,
+            -3513.68368943243
+          ],
+          [
+            -1999.5042466719246,
+            -3527.234060567124
+          ]
+        ]
+      ],
+      "replacementModes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "forceDistricts": [
+        "dixie-applewood"
+      ],
+      "replacementMaskAllowanceM": 0.03,
+      "replacementMaskBasis": "Exact municipal outline buffered 3 cm for compressed boundary faces. Local source-cut and fallback check required.",
+      "publicAdoption": true
+    },
+    {
+      "status": "Existing",
+      "modes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "replacementModes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "preserveMaterials": true,
+      "preserveSourceNormals": true,
+      "localReview": true,
+      "localOptional": false,
+      "uncertainGeometry": false,
+      "includedByDefault": true,
+      "replacesSourceIds": [],
+      "sourceRecordIds": [
+        "12-3433"
+      ],
+      "forceDistricts": [
+        "streetsville"
+      ],
+      "credit": "City of Mississauga; exterior interpretation by Future Mississauga",
+      "modelFidelity": "Dated-photo frontage study on exact generalized City shell. Added openings and finish dimensions are visual estimates. The separate foundation skirt is a schematic display contact correction, not a measured historic foundation.",
+      "sourceVersionCaveat": "Single dated source image does not establish current storefront, exact ornament, concealed elevations or surveyed construction.",
+      "id": "queen-228-source-reference-study",
+      "assetId": "queen-228-source-reference-study",
+      "projectId": "queen-228",
+      "name": "228 Queen Street South - exterior study",
+      "sha256": "11fa13c85abf1a99a57aa69497baaa422a7f75f6a1130ed26e81664572d372cd",
+      "bytes": 26356,
+      "triangles": 905,
+      "bounds": [
+        [
+          -11071.7041015625,
+          91.49710083007812,
+          900.9324951171875
+        ],
+        [
+          -11039.544921875,
+          104.13163757324219,
+          929.984130859375
+        ]
+      ],
+      "replacementFootprintsXZ": [
+        [
+          [
+            -11047.332352870017,
+            901.0492602449763
+          ],
+          [
+            -11061.409602691812,
+            915.3344683260817
+          ],
+          [
+            -11061.113688485313,
+            915.6263539975917
+          ],
+          [
+            -11071.746510374312,
+            926.4322107073525
+          ],
+          [
+            -11068.09929888124,
+            930.0265569024363
+          ],
+          [
+            -11057.458671718205,
+            919.2286421097726
+          ],
+          [
+            -11053.741874982828,
+            922.890812382358
+          ],
+          [
+            -11039.66068913401,
+            908.6016680074878
+          ],
+          [
+            -11047.332352870017,
+            901.0492602449763
+          ]
+        ]
+      ],
+      "exactFootprintXZ": [
+        [
+          -11047.33203125,
+          901.0916748046875
+        ],
+        [
+          -11061.3671875,
+          915.3341674804688
+        ],
+        [
+          -11061.0712890625,
+          915.6260375976562
+        ],
+        [
+          -11071.7041015625,
+          926.431884765625
+        ],
+        [
+          -11068.099609375,
+          929.984130859375
+        ],
+        [
+          -11057.458984375,
+          919.1862182617188
+        ],
+        [
+          -11053.7421875,
+          922.848388671875
+        ],
+        [
+          -11039.703125,
+          908.6019897460938
+        ],
+        [
+          -11047.33203125,
+          901.0916748046875
+        ]
+      ],
+      "replacementMaskPaddingM": 0.03,
+      "originalBodyReplacementMode": "Exact original37triangles retained as fallback by source-layer-cut.js. They are hidden only when replacement actually visible.",
+      "geographicRegistration": "Original world coordinates unchanged; no rotation, scale or translation added.",
+      "url": "models/reference-review/queen-228-local.glb",
+      "publicAdoption": true
+    },
+    {
+      "status": "Existing",
+      "modes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "replacementModes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "preserveMaterials": true,
+      "preserveSourceNormals": true,
+      "localReview": true,
+      "localOptional": false,
+      "uncertainGeometry": false,
+      "includedByDefault": true,
+      "replacesSourceIds": [],
+      "sourceRecordIds": [
+        "12-3433"
+      ],
+      "forceDistricts": [
+        "streetsville"
+      ],
+      "credit": "City of Mississauga; exterior interpretation by Future Mississauga",
+      "modelFidelity": "Separate 12 cm-wide inward support skirt fitted to actual canonical terrain. This is schematic display contact geometry, not a measured historic foundation.",
+      "sourceVersionCaveat": "Single dated source image does not establish current storefront, exact ornament, concealed elevations or surveyed construction.",
+      "id": "queen-228-schematic-foundation",
+      "assetId": "queen-228-schematic-foundation",
+      "projectId": "queen-228",
+      "sha256": "0a36b85348a271f7269b9d4dafc1269c1620219b247cf7fa1e4d7633dbf5094b",
+      "bytes": 8612,
+      "triangles": 154,
+      "bounds": [
+        [
+          -11071.7001953125,
+          90.64607238769531,
+          901.0958862304688
+        ],
+        [
+          -11039.70703125,
+          91.5010986328125,
+          929.9798583984375
+        ]
+      ],
+      "replacementFootprintsXZ": [],
+      "role": "schematic-display-foundation",
+      "worldFootprintConfined": true,
+      "url": "models/reference-review/queen-228-local-foundation.glb",
+      "publicAdoption": true
     }
   ],
   "projectUpdates": [

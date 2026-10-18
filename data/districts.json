@@ -592,5 +592,50 @@
     "triangles": 25992,
     "contextCaveat": "Small source crop for the Aldo study. Surrounding geometry is the historical municipal snapshot, not an as-built survey.",
     "sha256": "7a5127a5f88a6e68b7cc8a3586bdbff2a00f67e6232661e7973a1047da15ea60"
+  },
+  {
+    "id": "churchill-meadows",
+    "name": "Churchill Meadows",
+    "lon": -79.73575309949659,
+    "lat": 43.55192105626085,
+    "radius": 2475,
+    "center": [
+      -12404.753877379306,
+      120.0322036743164,
+      4728.181446087674
+    ],
+    "bounds": [
+      -14880,
+      2116,
+      -10880,
+      6116
+    ],
+    "sourceMeshes": 35,
+    "triangles": 806428,
+    "bytes": 18897992,
+    "file": "churchill-meadows.glb",
+    "sha256": "6361ca379acd4629034d96a29bd45e4d9b8850020b553a775eb51df67dd6d597",
+    "geometryObjects": 39,
+    "geometryBounds": [
+      [
+        -14880,
+        86.69560241699219,
+        2116
+      ],
+      [
+        -10880,
+        242.0218048095703,
+        6116
+      ]
+    ],
+    "sourceGeometry": "Reconciled municipal LOD2 components, exact XZ crop; source elevations retained.",
+    "coverageMeasure": "Source-component bounding-box centre crop reach, not unique buildings or architectural accuracy.",
+    "sourceCropRadiusM": 2000,
+    "sourceCropCenter": [
+      -12880,
+      120.0322036743164,
+      4116
+    ],
+    "cameraFramingNote": "Display centre and radius frame every crop corner in the viewport. Original crop centre is sourceCropCenter. The exact 4000 m crop and all source geometry remain unchanged."
   }
 ]
