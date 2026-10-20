@@ -23423,7 +23423,7 @@
     "actualCompletionDate": null,
     "targetCompletionDate": "Fall 2026 in the revised City notice; forecast only",
     "summary": "A walking and cycling connection from Front Street North to Port Credit Memorial Park. The City still labels it in progress and documents the girder launch. No public opening confirmation was recovered.",
-    "geometryCoverage": "The project is recorded, with a link to the City’s construction update. Its new bridge needs reliable deck and alignment details before it is drawn.",
+    "geometryCoverage": "The City tender confirms a 66 m clear span. Final drawings are still needed for the deck height, width, abutment positions and alignment before the bridge is modelled.",
     "sources": [
       {
         "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/port-credit-active-transportation-bridge/",
@@ -23441,16 +23441,23 @@
       },
       {
         "url": "https://www.mississauga.ca/wp-content/uploads/2025/04/21153106/Canadian-Navigable-Waters-Act.pdf",
-        "title": "CityApril16,2025 navigationnotice",
+        "title": "City navigation notice · 16 April 2025",
         "checked": "2026-10-12",
         "supports": "April 16, 2025 notice: approximate locator 43.5515,-79.59152; single-span integral-abutment slab on steel girders; clearance greater than adjacent bridges, without a numeric deck datum.",
         "sourceType": "primary"
       },
       {
+        "url": "https://mississauga.bidsandtenders.ca/Module/Tenders/en/Tender/Detail/c80b6aab-2288-46ce-bfa2-a87d54423955",
+        "title": "City original tender PRC004744 · 66 m clear span",
+        "checked": "2026-10-20",
+        "supports": "The original City tender specifies a 66 m clear span. Published June 24, 2025 and awarded August 7, 2025. It does not confirm final deck width, height, alignment or opening. Its older completion forecasts do not replace the later City notice. The public vendor field names no awarded vendor.",
+        "sourceType": "primary"
+      },
+      {
         "url": "https://urbantoronto.ca/forum/threads/new-pedestrian-cycling-bridge-over-credit-river-north-of-lakeshore.43473/",
-        "title": "UrbanTorontoJuly2026 bridge observations",
+        "title": "UrbanToronto · July 2026 construction observations",
         "checked": "2026-10-12",
-        "supports": "July 2026 construction observations and a quoted 66 m tender span. Confirm the original tender before treating that dimension as exact.",
+        "supports": "July 2026 construction observations. The original City tender now provides primary support for the 66 m clear span.",
         "sourceType": "secondary"
       }
     ],
