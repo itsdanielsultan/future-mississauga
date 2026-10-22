@@ -1,5 +1,9 @@
 # Future Mississauga: Road Crossings model guide
 
+## 22 October 2026: Exchange construction base
+
+The dated construction view now restores 457 original low-podium triangles beneath EX2. Existing tower geometry, heights and textures are unchanged. A separate 120-triangle vertical ground fit meets the map terrain below the original base; it is about 1–1.55 m high, with no horizontal padding. This is an approximate display fit, not a surveyed foundation. Source finishes do not establish current cladding or occupancy. No new EX3 tower progress is added.
+
 ## 22 October 2026: one source surface corrected
 
 The Erin Mills and Erindale viewer assemblies now omit seven stretched source triangles from one small house. Three approximate triangles close its retained side outline. The other 51 house triangles and all unrelated geometry are preserved. A false major-building colour classification from that same corrupted source envelope was removed. Original municipal files remain preserved privately. This update does not regenerate the dated pictures, atlas or film. See the [correction record](../data/source-geometry-corrections.json).
