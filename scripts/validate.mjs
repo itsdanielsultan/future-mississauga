@@ -1,3 +1,4 @@
+import {validatePictureMedia} from './validate-picture-media.mjs';
 import {readFile, readdir, stat} from 'node:fs/promises';
 import {createReadStream} from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -170,85 +171,8 @@ export async function validate(site = join(ROOT, 'public')) {
       loadedModelAssets++;
     }
   }
-  const pictures = JSON.parse(await readFile(join(site, 'data/picture-assets.json'), 'utf8'));
-  const entries = Object.entries(pictures.images || {});
-  assert.equal(entries.length, 33, 'Expected the 33 final original PNGs.');
-  const originalPrefix = 'https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/';
-  let originalIntegrity = null, localOriginals = 0, remoteOriginals = 0;
-  if (entries.some(([, image]) => image.url.startsWith('https:'))) {
-    originalIntegrity = JSON.parse(await readFile(join(site, 'data/original-image-release-integrity.json'), 'utf8'));
-    assert.equal(originalIntegrity.tag, 'citywide-accuracy-images-2026-10-17');
-    assert.equal(originalIntegrity.publicHashesVerified, 35, 'Every public original requires a separate downloaded byte check.');
-    assert.equal(originalIntegrity.unchangedOriginalBytes, true);
-    assert.equal(new Set(originalIntegrity.assets.map(asset => asset.file)).size, 35);
-    assert(originalIntegrity.assets.every(asset => asset.publicHTTPVerified && asset.url === originalPrefix + asset.file && asset.githubDigest === 'sha256:' + asset.sha256));
-  }
-  for (const [name, picture] of entries) {
-    if (picture.url.startsWith('https:')) {
-      assert.equal(picture.url, originalPrefix + name, 'Unexpected original download host/tag.');
-      const proof = originalIntegrity.assets.find(asset => asset.file === name && asset.group === 'gallery');
-      assert(proof?.publicHTTPVerified, 'Missing public original byte proof: ' + name);
-      for (const key of ['bytes', 'sha256', 'width', 'height', 'url']) assert.equal(proof[key], picture[key], 'Original proof differs: ' + name + ': ' + key);
-      remoteOriginals++;
-    } else {
-      assert.equal(picture.url, 'gallery/originals/' + name);
-      const path = join(site, picture.url);
-      assert.equal((await stat(path)).size, picture.bytes, 'PNG byte count mismatch: ' + name);
-      assert.equal(await sha(path), picture.sha256, 'Original PNG checksum mismatch: ' + name);
-      const header = await readFile(path);
-      assert.equal(header.subarray(0, 8).toString('hex'), '89504e470d0a1a0a');
-      assert.equal(header.readUInt32BE(16), picture.width);
-      assert.equal(header.readUInt32BE(20), picture.height);
-      localOriginals++;
-    }
-    assert.equal(picture.width, 3840, 'Expected original 4K width: ' + name);
-    const preview = picture.display;
-    assert(preview, 'Missing half-size display picture: ' + name);
-    assert.equal(preview.url, `gallery/previews/${picture.sha256.slice(0,16)}/${name}`);
-    assert.equal(preview.sourceSHA256, picture.sha256, 'Display picture refers to a stale master: ' + name);
-    assert.equal(preview.scale, 0.5);
-    assert.equal(preview.width, picture.width / 2, 'Display width must be exactly half: ' + name);
-    assert.equal(preview.height, picture.height / 2, 'Display height must be exactly half: ' + name);
-    const displayPath = join(site, preview.url);
-    assert.equal((await stat(displayPath)).size, preview.bytes, 'Display PNG byte count mismatch: ' + name);
-    assert.equal(await sha(displayPath), preview.sha256, 'Display PNG checksum mismatch: ' + name);
-    const displayHeader = await readFile(displayPath);
-    assert.equal(displayHeader.subarray(0, 8).toString('hex'), '89504e470d0a1a0a');
-    assert.equal(displayHeader.readUInt32BE(16), preview.width);
-    assert.equal(displayHeader.readUInt32BE(20), preview.height);
-  }
-  const social = JSON.parse(await readFile(join(site, 'data/social-pictures.json'), 'utf8'));
-  assert.equal(social.nativePortraitRendering, true);
-  assert.equal(social.ratio, '4:5');
-  const expectedPortraits = ["downtown-landmark-future.png", "downtown-existing.png", "downtown-future.png", "downtown-skyline-existing.png", "downtown-skyline-construction.png", "downtown-skyline-future.png", "downtown-portrait-future.png", "downtown-junction-future.png", "cooksville-portrait-future.png", "cooksville-future.png", "uptown-portrait-future.png", "uptown-future.png", "port-credit-existing.png", "port-credit-future.png", "port-credit-portrait-future.png", "port-credit-skyline-future.png", "lakeview-existing.png", "lakeview-future.png", "lakeview-portrait-future.png", "clarkson-existing.png", "clarkson-future.png", "clarkson-portrait-future.png", "erin-mills-future.png", "streetsville-future.png"];
-  assert.equal(social.images.length, 24, 'Expected the 24 curated native portrait records.');
-  assert.deepEqual(social.images.map(x => x.file), expectedPortraits, 'Portrait inventory or curated order differs.');
-  assert(social.images.every(x => entries.some(([name]) => name === x.file)), 'Portrait is not part of the sourced wide-view inventory.');
-  const socialPage = await readFile(join(site, 'social.html'), 'utf8');
-  const portraitPrefix = 'https://github.com/itsdanielsultan/future-mississauga/releases/download/high-resolution-images-block-nine-2026-10-03/';
-  for (const picture of social.images) {
-    assert.equal(picture.width, 3240);
-    assert.equal(picture.height, 4050);
-    assert.match(picture.sha256, /^[a-f0-9]{64}$/);
-    assert.equal(picture.url, portraitPrefix + picture.file, 'Unexpected portrait download host/tag.');
-    const integrity = JSON.parse(await readFile(join(site, 'data/portrait-release-integrity.json'), 'utf8'));
-    assert.equal(integrity.publicHashesVerified, 48);
-    const masterProof = integrity.assets.find(x => x.file === picture.file);
-    const previewProof = integrity.assets.find(x => x.file === 'display-' + picture.file);
-    assert(masterProof?.publicHTTPVerified && previewProof?.publicHTTPVerified, 'Separate public byte verification is required.');
-    assert.equal(masterProof.sha256, picture.sha256);
-    assert.equal(masterProof.bytes, picture.bytes);
-    assert.equal(picture.preview, portraitPrefix + 'display-' + picture.file);
-    assert.equal(previewProof.sha256, picture.previewSHA256);
-    assert.equal(previewProof.bytes, picture.previewBytes);
-    assert.equal(picture.previewWidth, 1620);
-    assert.equal(picture.previewHeight, 2025);
-    assert.equal(socialPage.split('href="' + picture.url + '"').length - 1, 2, 'Portrait card download links differ from the source register.');
-    assert(socialPage.includes('src="' + picture.preview + '"'), 'Portrait card preview differs from the source register.');
-  }
-  const portraitGallery = {nativePortraitRecords: 24, remoteHalfSizePreviews: 24, dimensionsVerified: true, remoteDownloadSHA256Recorded: 24, remoteDownloadBytesVerifiedByThisStaticCheck: false, separatePublicHashProofRequired: true};
+  const {entries, originalImageVerification, portraitGallery} = await validatePictureMedia(site);
   const documentLinks = await validateDocumentLinks(site);
-  const originalImageVerification = {localOriginals, remoteOriginals, separatePublicHashProofRequired: remoteOriginals > 0, remoteBytesFetchedByThisStaticCheck: false};
   const report = {files: files.length, publishedBytes: bytes, originalPNGs: entries.length, originalImageVerification, halfSizeDisplayPNGs: entries.length, portraitGallery, loadedModelAssets, refinementBounds, ...documentLinks, districtMetadata, localPNGchecksumsVerified: true, noHostedRuntime: true, noPrivateArtifacts: true};
   console.log(JSON.stringify(report, null, 2));
   return report;

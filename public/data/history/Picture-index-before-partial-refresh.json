@@ -1,0 +1,1747 @@
+{
+  "edition": "Visual Polish 2026-09-26",
+  "researchReviewed": "Base 2026-09-20; targeted community review 2026-09-26; bounded IO and South Banks reference update 2026-09-29; PMLA delivery-status review 2026-10-04",
+  "images": [
+    {
+      "file": "renders/downtown-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "b5f38ab162280e09e007360c0554dc629f5625625d71a00d2cb247047fd0a335",
+      "pixelSHA256": "d5427608f71a64460c91d3de5b020c1248a881e57ab53cbbb1b809549c31ae00",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "e182c79bf2358a166a8343f1f1c244386cbb1621bf5f165524c967f625e3b369",
+      "embeddedMetadata": {
+        "Date": "2026/10/03 00:56:18",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:23.48",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:19.84",
+        "cycles.ViewLayer.render_time": "00:19.14",
+        "cycles.ViewLayer.synchronization_time": "00:00.69",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "8ff665fe5cb6315fd5b4aad2ba61633bd840b5e36c48210fef2dcdf0e202a17f",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/cooksville-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "1e81116bcebbb6fe74c8e40cbddd40e18faca864202d7c3ce48b97166710c433",
+      "pixelSHA256": "47a00ae534b0f8fbc55f9014bde589cafdfb237635fea89df558de235060c981",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "edde4346a9be638a6aacc1c0bdce939e11fde65fa0e4fc3073656fd1eec0eaf2",
+      "embeddedMetadata": {
+        "Date": "2026/09/29 00:29:25",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:19.87",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:16.99",
+        "cycles.ViewLayer.render_time": "00:16.46",
+        "cycles.ViewLayer.synchronization_time": "00:00.53",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "8ce229a3b12dc55d3525f40ac9328b2cc8d73a48375118825b3605a4183c0dea",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/uptown-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "313d357d37233aca91d8f0021925b7887e9d8bec91c6c19a152d127a0f98f8e0",
+      "pixelSHA256": "ce11ab7cd3ba121877472c1ecc311756396fa67369a6a3c102d6965d7c26aa7f",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "caf356a444001468c4a8760705c6ab06c3f9391b4e88194775b4fe05601c6cb4",
+      "embeddedMetadata": {
+        "Date": "2026/10/03 00:57:06",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:21.96",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:18.30",
+        "cycles.ViewLayer.render_time": "00:17.63",
+        "cycles.ViewLayer.synchronization_time": "00:00.66",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "b32a251c76047e95be03d01c0cc18528d95c440bc07a3567cb9a8ebe30b15009",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/dixie-applewood-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "743e465be1d80d2bff69fda9a9f1918c44d2a7e33239a852518ec4a402bf8e70",
+      "pixelSHA256": "de6a9f0fb8f7fcbbc56af52c6de9a74eda8d98076bd6cd38763391bf51c50f70",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "ab9f1f19976f6af87a46a4a0f6c3d567846ad86541582903b10ca615926eae6f",
+      "embeddedMetadata": {
+        "Date": "2026/09/27 13:16:08",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:17.94",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:14.75",
+        "cycles.ViewLayer.render_time": "00:14.07",
+        "cycles.ViewLayer.synchronization_time": "00:00.68",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "a33c624ee166caeda2891414787911cc4f031d00bf4de0555c450f272edb3757",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/erindale-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "ca6f739991bb405be1d25e0e3d6ff7279ce4046577ab917864d0f5a8679761ff",
+      "pixelSHA256": "00dfd3cc944b77aa66c39e04be2fe952a20c32e7c4e3051d559740a9761ee78e",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "6b6cba594d722c95f10c75d8fadde5bc655e3ff4ac5cf66c7c6084c79623e8e2",
+      "embeddedMetadata": {
+        "Date": "2026/09/26 19:38:27",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:20.19",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:17.03",
+        "cycles.ViewLayer.render_time": "00:16.46",
+        "cycles.ViewLayer.synchronization_time": "00:00.57",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "3719ef56e295decab7e353a799d9b6eb34e23ff02d261229571f2bae777dac3a",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/heartland-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "96cfc6b6dcfe3608bbd328aa5f08d6f6a0511b216845b7d89664afbf0471cdee",
+      "pixelSHA256": "64da938cfd3c7dda77d1ea37c8a2c78f2544707c279402d4f3f819ac2bf61fca",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "d4f011ebb92ae369941195d664b3bfe733f86c2d613017271479782016320d10",
+      "embeddedMetadata": {
+        "Date": "2026/09/27 20:19:12",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:17.13",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:14.44",
+        "cycles.ViewLayer.render_time": "00:13.81",
+        "cycles.ViewLayer.synchronization_time": "00:00.63",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "7c6435a29b9c3b78bc099b9f03f77a90ce363dd8d007b1d4ee4a4f306bfd3b9b",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "d84d7fdec14419a990edd892fcb14b3b61c65cd46cdae8cd2f4d73bd9be52407",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/citywide-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "f821e005829886c91259c64968919e1304af3fde0fabc4d5d2a2853f39aedfa8",
+      "pixelSHA256": "a35527816c8b2014e9a58172f196c9a0f0999de91e2ed204de8c561e835ac669",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "d37fd4be749dbedb911469cf3ee99cc73c4c0c8dc1eb089210385aacd53fa858",
+      "embeddedMetadata": {
+        "Date": "2026/10/04 19:04:32",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:20.90",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:14.95",
+        "cycles.ViewLayer.render_time": "00:11.60",
+        "cycles.ViewLayer.synchronization_time": "00:03.34",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": false,
+      "originalRenderRecordSHA256": "deb87486b0a4b36ea891e181707ccd221e87373de736ab73d62a8238c9f7aa29",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/port-credit-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "2ff8687b36e14c10d518d2b1ff2af2d269eb5e1a4a60f5ef1618ba01176f5eea",
+      "pixelSHA256": "038aad16df65c7678b738786f94ff92fcfcfc5077a0ba7ddf7e9ffa3b9870bde",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "60482b0cfd6b7c0572e98c4dc6260d3ab556bcae88d0e39872ebdfc317abbc34",
+      "embeddedMetadata": {
+        "Date": "2026/09/27 13:18:38",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:17.48",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:15.03",
+        "cycles.ViewLayer.render_time": "00:14.56",
+        "cycles.ViewLayer.synchronization_time": "00:00.46",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "f7cd4f0363b6c051f335b1cd308b21556d4af9629dfdafe933923827124b8596",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "a2628844c2a3bdf55981e96e1cb216323cd265ad7fce94f5308ffb976203b247",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/lakeview-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "bb98626394d61195c7fff41056124d15d4482087d2f700b0d47ac66ead8b7051",
+      "pixelSHA256": "477b511262117e7955a4a71394517897b8b90de26b2664cf35f2db11773fe292",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "05d00eabb766d7dac4aef0bf6454b1d349121296d29a9929bd49ffef4a28d254",
+      "embeddedMetadata": {
+        "Date": "2026/09/29 00:31:51",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:16.13",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:13.57",
+        "cycles.ViewLayer.render_time": "00:13.13",
+        "cycles.ViewLayer.synchronization_time": "00:00.43",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "8d62b284ef490dda14b3fb67373f5e573e90078a9fa5198fb083e442c6e0455a",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/clarkson-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "020ca39a65103c2bf4bd14e6497ae6ccd2327099ef417b3228bbeb0af66c4b75",
+      "pixelSHA256": "67d7f0282c8f83c67ed8d7ff3d0a1e044b60c69c6ee9bc2dcd0fb4747861112e",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "0a379af5c953d695533340ec29da6def427a052603bd952b5dffca7260295584",
+      "embeddedMetadata": {
+        "Date": "2026/09/29 00:32:24",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:16.62",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:14.21",
+        "cycles.ViewLayer.render_time": "00:13.90",
+        "cycles.ViewLayer.synchronization_time": "00:00.31",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "7675f5ff848f94476edf4f8668ee940a5876f24e1b61339a4608152c3314a8b6",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/downtown-existing.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "e81eab1d3692af54e0e0fdb22d211c924524e4c4236311e181de3173e5bee857",
+      "pixelSHA256": "d7a906e212b3f6a2dc69dfb00c01132569170e3c5055d354bf8fdc2f23bfb97e",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "da4c16e91f2e579bbec2f8180879deda04b3514c5078ca0d80319b69f6022ca9",
+      "embeddedMetadata": {
+        "File": "<untitled>",
+        "Date": "2026/10/03 00:59:57",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:23.42",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:20.35",
+        "cycles.ViewLayer.render_time": "00:19.60",
+        "cycles.ViewLayer.synchronization_time": "00:00.74",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "68072320a0db7995d39af0bb50088c8b661e44129fc917a2cf45a3d908ebd2cd",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/port-credit-existing.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "9abb1a251a7227a6c2e109c1267ba412b09aa7d4b2d17cdff941918642e29ecc",
+      "pixelSHA256": "bc7b17d37bcbeda59542925977634b82f9d626d762d2b8a340565992a288d293",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "ba72e0122d568ec95b683ceb045d64b5aa099db36f1e6a130c48463558dcb4b5",
+      "embeddedMetadata": {
+        "File": "<untitled>",
+        "Date": "2026/09/26 20:57:20",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:14.43",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:11.64",
+        "cycles.ViewLayer.render_time": "00:11.36",
+        "cycles.ViewLayer.synchronization_time": "00:00.27",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "f56ab16843c9a68b616ff595fc80c605af027c842dc54ec243323290d9ef7db9",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/lakeview-existing.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "091042fe0cb0ba6af334ca5eceed8c58a8b53bccf11771899475bfc0dbed4cae",
+      "pixelSHA256": "161dcc243273eae9e2e401117c8223b57ed7a6c4c29f49383052ee1d117e9b50",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "e911c4bd3e5b148aa0efb1de1c2d3585e33549f9a7a5e848cc1ee8695c32f047",
+      "embeddedMetadata": {
+        "File": "<untitled>",
+        "Date": "2026/09/26 19:43:32",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:15.45",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:12.30",
+        "cycles.ViewLayer.render_time": "00:12.04",
+        "cycles.ViewLayer.synchronization_time": "00:00.25",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "b895283fc727d3865b83c1f168cc2bc5d762c03045978a538c37a2625a3c10bc",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/clarkson-existing.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "d65a0afe1a9b7db4801eb22c51756459e3a09aad92aaa86de3f0f520bc126341",
+      "pixelSHA256": "a38955a9dac43370f658f28a21aead7ab19181fcc50cf5389642ff9063a5428d",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "768363bcb3d383da31e4ad0627a24d3566905e176bc04635bfb899914d4ffdef",
+      "embeddedMetadata": {
+        "File": "<untitled>",
+        "Date": "2026/09/26 19:44:00",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:15.50",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:12.32",
+        "cycles.ViewLayer.render_time": "00:12.00",
+        "cycles.ViewLayer.synchronization_time": "00:00.32",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "b6b2cd94de098d7a213dff83ca60f385073d2e41ff0f0cf1f18d23375579bbc7",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/downtown-skyline-existing.png",
+      "width": 3840,
+      "height": 1400,
+      "sha256": "789db0cb8b9ec3357a2dcd5adf62afd990ddab26e1453c952978a3eaa565ba7a",
+      "pixelSHA256": "6c54ae39b26c73163d9aeb70b767c1642b4405a696030d52ca290047b1f8d2c4",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "b419308e64b6bb49cc5072ce4baa51a5fefe0561879d35fbe81ec5b1424eef4f",
+      "embeddedMetadata": {
+        "File": "<untitled>",
+        "Date": "2026/10/03 01:00:35",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:14.70",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:12.48",
+        "cycles.ViewLayer.render_time": "00:11.74",
+        "cycles.ViewLayer.synchronization_time": "00:00.73",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "3ec85b7ed235ca8b9dba958a8133efa3169ae3c3843d5cadb8a48d00f4d5e401",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/downtown-skyline-construction.png",
+      "width": 3840,
+      "height": 1400,
+      "sha256": "ae96d2d120b61a9d158af5ac517a43911a132f6d53c09d85aff78a72d7807ad0",
+      "pixelSHA256": "61fe278c98dbb7c1d1d7348f907fc6f78af95837de141c47096c4271c996beeb",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "9970d1052c5689dd0cede716f159aeaeff745f3a3c55def35fddb9464d405467",
+      "embeddedMetadata": {
+        "File": "<untitled>",
+        "Date": "2026/10/03 01:01:12",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:15.22",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:12.58",
+        "cycles.ViewLayer.render_time": "00:11.98",
+        "cycles.ViewLayer.synchronization_time": "00:00.59",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "415eb9ebca43e148aa0e93045306cd2740d923563e600a82b87125c871cb1059",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/downtown-skyline-future.png",
+      "width": 3840,
+      "height": 1400,
+      "sha256": "87f119e55068c68e734cdaa9a455feb96e3b541e40e74cf49976b156ebe0175f",
+      "pixelSHA256": "f5bb80c46a1b6797987524bb71e4f28d0edf20f69a0258246e48a3cabd6e7c57",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "1203e7d248973b721af2342e61b715bc59090ed9191631723e04d715da5d1d9f",
+      "embeddedMetadata": {
+        "File": "<untitled>",
+        "Date": "2026/10/03 01:01:53",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:17.88",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:15.30",
+        "cycles.ViewLayer.render_time": "00:14.42",
+        "cycles.ViewLayer.synchronization_time": "00:00.87",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "2168d4fff2ffce7a3d5d62aaba95ba00bab52c0bccab3af0c6f1a55d7110e6d2",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/port-credit-skyline-future.png",
+      "width": 3840,
+      "height": 1400,
+      "sha256": "044bf0117cb5491ec67393d4c6cefc469ed493d6dfe97281294061926f0c9810",
+      "pixelSHA256": "6dcd8c8c2d8b5b1699b42e9bbc06194438509a40f305af354eac9f088b43c0f4",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "29cf2548d9f485f2d3e0819513a42078ed916b04fdc5380fbeb667c98590a918",
+      "embeddedMetadata": {
+        "File": "<untitled>",
+        "Date": "2026/09/26 20:59:39",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:12.01",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:09.64",
+        "cycles.ViewLayer.render_time": "00:09.31",
+        "cycles.ViewLayer.synchronization_time": "00:00.32",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "5d39dd5711295f1a276161e3d7b7be7e19e694bdb1a882f7bfe56386d0f333b8",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/lakeview-skyline-future.png",
+      "width": 3840,
+      "height": 1400,
+      "sha256": "5f216d05a7734a7367717f9c69c4bf44c0c88ec3131d6b8b1eaeccea88b6c82c",
+      "pixelSHA256": "552161de9cc916af633b2d51e3a554876560ac97483cc6097b9f7c319700af94",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "66458d1e7f3f8cd53385e43b28251aad12362f4ebfd6ae37e7e2ae757ed7a22b",
+      "embeddedMetadata": {
+        "File": "<untitled>",
+        "Date": "2026/09/29 00:33:33",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:10.13",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:08.52",
+        "cycles.ViewLayer.render_time": "00:08.08",
+        "cycles.ViewLayer.synchronization_time": "00:00.43",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "c6235cc20d8df37c5ee4a4f93884ba3f3c8ddca023f068866663b382e85d6e6f",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/clarkson-skyline-future.png",
+      "width": 3840,
+      "height": 1400,
+      "sha256": "144b08eae332c07fcc07efa017f425dc3a077bfa27993149294ae04388b96f66",
+      "pixelSHA256": "a1f620d65328c1f4c949eb74645b63e3adb1832b75e7a360b41e73ae3b78d92a",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "bc4081705856bc4b31e4cd4affe953c4f91a73fe83b929835bf16f34f4722864",
+      "embeddedMetadata": {
+        "File": "<untitled>",
+        "Date": "2026/09/29 00:33:59",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:10.55",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:08.98",
+        "cycles.ViewLayer.render_time": "00:08.68",
+        "cycles.ViewLayer.synchronization_time": "00:00.30",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "a1ae95c40c786496e27dd85849618c6b7dbe7d470d583f37586358c9cef44497",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/downtown-portrait-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "594fbd5e6b819f376c15f868e1dfe5c63dc88f7e58784492570e09aa54052234",
+      "pixelSHA256": "f98b5beb3665ebbff3fdb11b706036e32335e92aba66eaacddbc56d7b0a0a18c",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "0c2103a135835bfba27cb5db7983dfdaf88ae6a16e6b1749733c2106cdc3eca3",
+      "embeddedMetadata": {
+        "File": "<untitled>",
+        "Date": "2026/10/03 01:02:44",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:28.09",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:24.03",
+        "cycles.ViewLayer.render_time": "00:23.09",
+        "cycles.ViewLayer.synchronization_time": "00:00.94",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "f3d508f2a70d8db8c18bc5d465666ceae765c099d4fb7512ffea51a4d46e3d21",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/port-credit-portrait-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "e3eab360e21c2a243d6cb92174570941593b01f06a58f6204fe9d0506144a7cf",
+      "pixelSHA256": "1697e8d2aeaab400e070302574327016d634c4fda284ceeb10fb5568f5d6d48a",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "b34c4b72ffe8005c4b405dad2d17549623812cc209cf6c3e5edf56c8d34a1a3e",
+      "embeddedMetadata": {
+        "File": "<untitled>",
+        "Date": "2026/09/26 21:00:52",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:19.45",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:15.88",
+        "cycles.ViewLayer.render_time": "00:15.57",
+        "cycles.ViewLayer.synchronization_time": "00:00.31",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "03cb7ced0ade8eee3b3f40d0b5f07a8f1793feca4fc6ed4ab6e6054d7a244c2f",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "0ffea9803028e953e4b82240e7a5b928d7bb1c99dcc4d8b6b12a72450985ecb9",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/lakeview-portrait-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "eeab5d8f6b556c0d11226761d31d43db5153ef025451b4410e0302628cdb9c79",
+      "pixelSHA256": "f287aa6a55e3290319720b00a4f96b16e004ae36715b7bc7bd402a7010e901b8",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "c6305e72adb3e3b85a075733322104439a125cf52818175e35b82de63d31294e",
+      "embeddedMetadata": {
+        "File": "<untitled>",
+        "Date": "2026/09/29 00:35:36",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:24.90",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:21.07",
+        "cycles.ViewLayer.render_time": "00:20.64",
+        "cycles.ViewLayer.synchronization_time": "00:00.43",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "8a6b8b0efbd559d1ec5acdc231d8054a7ba10c51397c67be2f809e0f58e79085",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/clarkson-portrait-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "f7e44c8d61a50c89fbaeff16c65fed111eee138a53652915cca34b5f6808209d",
+      "pixelSHA256": "e022ad8c0f2dda9307e1e76f423e1f7709ca0125899794f6c42078e3d5763b52",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "b0dd45187751a67ddc16c3f97dd2528ad82c6ce0d830aae1a20a38908e00249b",
+      "embeddedMetadata": {
+        "File": "<untitled>",
+        "Date": "2026/09/29 00:36:17",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:25.70",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:22.30",
+        "cycles.ViewLayer.render_time": "00:21.97",
+        "cycles.ViewLayer.synchronization_time": "00:00.33",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "43a45eb9451417db226cd3df7eea227a87b03dd3d4af266723fed3203e416205",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/cooksville-portrait-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "926f162dfd93a1a96093537669dbcf88ec29fbb3d41902894cd53f3a6f3a9deb",
+      "pixelSHA256": "aef1b391841ec5080d60fe8a18d8d21dde168ec51c6e78523f3673ed413f8972",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "5a905ae1e34e97c303b3f2fca00d4af086303c4b470b8f08130c4b33a8bc102a",
+      "embeddedMetadata": {
+        "File": "<untitled>",
+        "Date": "2026/09/29 00:37:09",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:28.67",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:25.60",
+        "cycles.ViewLayer.render_time": "00:25.03",
+        "cycles.ViewLayer.synchronization_time": "00:00.57",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "8c11a6a368aeed9e730be03df7c679591cf10d1b1e081a58a34714f4ab368839",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "f316a43f7dfb2969dcecf9b361a04e05e92e4af3039446c13329df4a864ecff6",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/uptown-portrait-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "6d297f05192054bf40107d0eb1311adff46693532e06ad625ef016e496cba357",
+      "pixelSHA256": "a52540bc38489f3d03468ade15e185b81b19508b4eba067ff4d88d3e8821766b",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "c6b873d8e1569fe224baa07bc48690a4bcfd0172868c187d4a91f1625cc62c06",
+      "embeddedMetadata": {
+        "File": "<untitled>",
+        "Date": "2026/09/27 20:23:26",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:24.95",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:21.65",
+        "cycles.ViewLayer.render_time": "00:21.03",
+        "cycles.ViewLayer.synchronization_time": "00:00.62",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "7c6435a29b9c3b78bc099b9f03f77a90ce363dd8d007b1d4ee4a4f306bfd3b9b",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "8191ccc426b1917241595132679c070111487b0133cd3f2712c6baaaf3bbb9e9",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/malton-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "abcadba3abe4c8388f448be8e6d35f65b4cabe054a630ecc4b1fb927b41c870f",
+      "pixelSHA256": "e5b112fea7f7cead16a74040ea4b0066331c6867e111b6165aa2a24d394e91a2",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "c7768fcbab249547235ba3ea43af94207b8ba869f40cc4f9aeaee9e62ac1429c",
+      "embeddedMetadata": {
+        "Date": "2026/09/26 19:50:35",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:14.63",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:11.82",
+        "cycles.ViewLayer.render_time": "00:11.61",
+        "cycles.ViewLayer.synchronization_time": "00:00.20",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "c63b5565fd166297fedfc8387f0417b11f75984327eb86e3a4325543f18d2b13",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/airport-corporate-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "c19567cbbd16aaa90664b50139b10d9fb401b8ea32d30d635b4b08c41f2102da",
+      "pixelSHA256": "4d6d3a9de91ccaeb238ce86fa94425372f441571b63390b8e3554897cc5c1989",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "c320556305c0663357f14990c99108bb3f4ee1ac822899d340b1a2aed64f07fd",
+      "embeddedMetadata": {
+        "Date": "2026/10/04 19:06:11",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:15.05",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:11.25",
+        "cycles.ViewLayer.render_time": "00:10.78",
+        "cycles.ViewLayer.synchronization_time": "00:00.47",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": false,
+      "originalRenderRecordSHA256": "c16066391cc7066576bece946bd41dad96b80cf2ecef7fee6d8527966ca5ae8c",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/meadowvale-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "850104a2cd8c8693a693d5048fb836899ddd45d8192b79b3b1e28251b3cfd993",
+      "pixelSHA256": "bce18517ea8107d830e7c4f2ab7dfbfbd0ae4f80f6346bffd7efa22dd315845c",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "bb252fce400a3b0dffe1543f1d2fa384e4c868df7c41f455a67323a720e950bc",
+      "embeddedMetadata": {
+        "Date": "2026/09/26 19:51:47",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:18.87",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:15.68",
+        "cycles.ViewLayer.render_time": "00:15.07",
+        "cycles.ViewLayer.synchronization_time": "00:00.61",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "5ba40ee0c239ecaa73e92098d543bffdae58166aee217987c576c149eecd16b8",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/streetsville-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "2e294647c99531dca51f09436676f782c84e5b5fdcd4bd28bb6e75746b44e89f",
+      "pixelSHA256": "15d22a9a7c78e88993d15f55c143d4ebc78a45e8a07d282282b971723a1e61b5",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "66cd175127233a10cff3e50029d144e67ea4435465a9b9f4f2d26de8312ddf2f",
+      "embeddedMetadata": {
+        "Date": "2026/09/26 19:52:25",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:18.75",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:15.63",
+        "cycles.ViewLayer.render_time": "00:15.17",
+        "cycles.ViewLayer.synchronization_time": "00:00.46",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "3debf7f933a5d3ca471d808f2dcefe7cdc43648909e133e3b4151507930b284c",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/erin-mills-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "f44dd58f92d3ec115e44706a4fcd330a6cee25d1b29cfca766c170766282d56f",
+      "pixelSHA256": "e3e803b0b2ba9ab963e2ec94252606239b6da66d19529cffea4877b7adbe6632",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "b2657984809d9d5d9f6fddc1bd8a4fba2b0e21f242eb6f9d23836bf97daa5c42",
+      "embeddedMetadata": {
+        "Date": "2026/09/26 19:53:06",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:18.93",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:15.66",
+        "cycles.ViewLayer.render_time": "00:15.09",
+        "cycles.ViewLayer.synchronization_time": "00:00.56",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "09d49aee8b12ba9477aa77172363cb5c95b7e4f240945db5b814053135bf16e7",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "924bbc09e55968e260bc418661d09ece394c9c09eb1b5453b67046278f661ff6",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/downtown-landmark-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "900038761cfd82fdac9060c525f77fd10df89f89e4e198b605c44939be08b2d5",
+      "pixelSHA256": "0824b42bc456099c7e59829b01533739a861190329c83ab63283f64b11898002",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "7a6b5b2756201f6e76a7636b3b7d7983ea8ba18b42522c15387f05765c60b157",
+      "embeddedMetadata": {
+        "Date": "2026/10/03 01:03:37",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:30.27",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:26.87",
+        "cycles.ViewLayer.render_time": "00:26.01",
+        "cycles.ViewLayer.synchronization_time": "00:00.85",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "b361052f5e4348622f0ed252abdcaca9d07eebaae69f1cc85f16cb203dcca2f5",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "495a89aef714242595effd813c21948b7c429907ca5ad3626ce27a084ae77059",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "renders/downtown-junction-future.png",
+      "width": 3840,
+      "height": 2400,
+      "sha256": "816abbfde6a2ebda23f17c8677f429bd7b3e348d823c06f535b92103ca2ed444",
+      "pixelSHA256": "c613a8c0632099c3834270efb3758bf076044e6a71922d56de1a0b4e84973acf",
+      "pixelPreservationVerified": true,
+      "wholeFileUnchanged": true,
+      "nativeImageChunksPreserved": true,
+      "nativeImageChunksSHA256": "2cc1337c00e08fb34fd4b9980fd97e80458681f7d1a7b4f721e447dd8b8a60c5",
+      "embeddedMetadata": {
+        "Date": "2026/09/27 20:24:45",
+        "Time": "00:00:00:01",
+        "Frame": "001",
+        "Camera": "Camera",
+        "Scene": "Scene",
+        "RenderTime": "00:19.58",
+        "cycles.ViewLayer.samples": "96",
+        "cycles.ViewLayer.total_time": "00:16.78",
+        "cycles.ViewLayer.render_time": "00:16.24",
+        "cycles.ViewLayer.synchronization_time": "00:00.54",
+        "Title": "Future Mississauga",
+        "Author": "Daniel Sultan",
+        "Description": "Native city-model render, Visual Polish Revision 2026-09-26. Approximate source-defined geometry; source dates vary. Source credits: City of Mississauga building and map data; Ontario terrain; OpenStreetMap base and route data where used. Architectural interpretations and limitations are documented in the model guide.",
+        "Source": "City of Mississauga; Government of Ontario; OpenStreetMap contributors; documented architectural sources."
+      },
+      "credits": "City of Mississauga geometry and geographic context. © OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Contains information licensed under the Open Government Licence – Ontario.",
+      "limitations": "Architectural model representation; source dates vary. Proposed buildings are not guaranteed. Individual source versions, approximate reconstructions and uncertain maximum envelopes retain the limits documented in the model guide and project register. Recorded construction uses separately dated evidence, not a current construction survey. Tree positions and inland water levels include illustrative or terrain-derived estimates. Road/bridge and transit profiles are approximate physical profiles, not surveyed engineering alignments; foreground geometry hides obstructed sections. Coastal water and mapped docks received a presentation repair. No new development approval or completion date is implied.",
+      "nativeRenderVerification": {
+        "blenderVersion": "5.2.2 LTS",
+        "device": {
+          "backend": "METAL",
+          "sceneDevice": "GPU",
+          "metalRT": "ON",
+          "kernelOptimization": "OFF",
+          "binaryArchivesDisabled": true,
+          "activeDevices": [
+            {
+              "name": "Apple M3 Max (GPU - 40 cores)",
+              "type": "METAL"
+            }
+          ]
+        },
+        "samplesMaximum": 96,
+        "nativeNotUpscaled": true
+      },
+      "actualRenderInputLockSHA256": "7c6435a29b9c3b78bc099b9f03f77a90ce363dd8d007b1d4ee4a4f306bfd3b9b",
+      "validatedAgainstInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+      "retainedByteIdenticalFromPredecessor": true,
+      "originalRenderRecordSHA256": "b4ca1cafc47b90703c634d74c5e1b445218d7ffca377e61132ef9b9dabf629dd",
+      "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    }
+  ],
+  "views": 15,
+  "totalOriginalPictures": 33,
+  "inputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+  "notes": "All 33 lossless PNG masters are native Blender 5.2 Metal RT renders. Finalization verifies already-embedded attribution and changes no PNG bytes. Website previews use separate half-dimension PNGs; downloads retain these exact masters. The Instagram portrait set is a separate native render batch.",
+  "provenance": {
+    "currentRevisionNativeRenders": 2,
+    "byteIdenticalPredecessorRenders": 31,
+    "inputLockScope": "The top-level input lock identifies the current validated composition. Each source image retains its actual render-time lock; older accepted native images are not claimed to have been rerendered."
+  }
+}
