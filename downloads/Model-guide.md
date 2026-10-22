@@ -1,5 +1,9 @@
 # Future Mississauga: Road Crossings model guide
 
+## 22 October 2026: one source surface corrected
+
+The Erin Mills and Erindale viewer assemblies now omit seven stretched source triangles from one small house. Three approximate triangles close its retained side outline. The other 51 house triangles and all unrelated geometry are preserved. A false major-building colour classification from that same corrupted source envelope was removed. Original municipal files remain preserved privately. This update does not regenerate the dated pictures, atlas or film. See the [correction record](../data/source-geometry-corrections.json).
+
 ## 29 September 2026: supplied design models and reference corrections
 
 Cooksville now uses the supplied Arup seven-tower Step 4 model; Clarkson uses the supplied Zeidler seven-tower massing, including its native podium and courtyard shapes. South Banks has reference-based cross-gable roof details on nine blocks. These remain proposed or illustrative designs; source conflicts, approximate terrain grades and uncertain completion dates are documented in the [dated reference update](Reference-update-2026-09-29.md). This review supersedes older descriptions below that say the current IO model files were unavailable. Earlier source records remain historical context.
