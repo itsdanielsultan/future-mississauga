@@ -686,5 +686,51 @@
     "contextScope": "Bounded detailed view using retained corrected display context, not surveyed current grade. Municipal general massing does not verify current exteriors or site identity.",
     "publicAdoption": true,
     "adoptedForPublication": "2026-10-21"
+  },
+  {
+    "id": "meadowvale-village",
+    "name": "Meadowvale Village",
+    "lon": -79.72694992331161,
+    "lat": 43.62895200489432,
+    "radius": 2860,
+    "center": [
+      -11748.101276956613,
+      112.26395034790039,
+      -3739.0796109949592
+    ],
+    "bounds": [
+      -14600,
+      -6750,
+      -10000,
+      -2150
+    ],
+    "sourceMeshes": 25,
+    "triangles": 448145,
+    "bytes": 10419220,
+    "file": "meadowvale-village.glb",
+    "sha256": "d8f4067adf01e8b1be7e100c36c490a109a8d42349315be65ddbf3a66bd5bf66",
+    "geometryObjects": 32,
+    "geometryBounds": [
+      [
+        -14600.0,
+        90.19000244140625,
+        -6750.0
+      ],
+      [
+        -10000.0,
+        171.30259704589844,
+        -2150.0
+      ]
+    ],
+    "sourceGeometry": "Reconciled municipal LOD2 components, exact XZ crop; source elevations retained.",
+    "coverageMeasure": "Source component centroid crop reach, not unique buildings or architectural accuracy.",
+    "sourceCropRadiusM": 2300,
+    "contextScope": "A 4.6 km square study crop, not the neighbourhood boundary or a current exterior survey. City building positions and source elevations are retained; the surrounding landscape is a mapped display model.",
+    "sourceCropCenter": [
+      -12300.0,
+      112.26395034790039,
+      -4450.0
+    ],
+    "cameraFramingNote": "Display target and distance frame the complete study rectangle. Original source crop centre, bounds, geometry and elevations are retained separately."
   }
 ]

@@ -565,6 +565,30 @@
       "triangleCount": 14177,
       "featureCount": 57,
       "geometryScope": "Exact bounded crop of retained current citywide mapped landscape surfaces."
+    },
+    {
+      "district": "meadowvale-village",
+      "url": "models/revamp/meadowvale-village--citywide-mapped-surfaces.glb",
+      "category": "Landscape",
+      "bounds": [
+        [
+          -14109.001953125,
+          98.70822143554688,
+          -5913.595703125
+        ],
+        [
+          -10519.681640625,
+          130.05624389648438,
+          -2150
+        ]
+      ],
+      "bytes": 146964,
+      "downloadBytes": 146964,
+      "sha256": "7bbf020c575011aac28cd55aa65ce24477eaf259ad883e7187ba966e2fa3583d",
+      "downloadSHA256": "7bbf020c575011aac28cd55aa65ce24477eaf259ad883e7187ba966e2fa3583d",
+      "triangleCount": 11910,
+      "featureCount": 27,
+      "geometryScope": "Exact local crop of the current mapped landscape display surfaces."
     }
   ],
   "trees": {
@@ -1425,10 +1449,28 @@
         "treeRecords": 25369,
         "adjustmentCount": 89
       }
+    },
+    "meadowvale-village": {
+      "baseline": {
+        "url": "data/meadowvale-village-tree-adjustments-baseline.json.gz",
+        "sha256": "d628cbb634117978dafd437c4aac25ea6888ee7789f88f610967609654abd104",
+        "bytes": 1086,
+        "adjustmentsOnly": true,
+        "treeRecords": 16233,
+        "adjustmentCount": 69
+      },
+      "future": {
+        "url": "data/meadowvale-village-tree-adjustments-future.json.gz",
+        "sha256": "d628cbb634117978dafd437c4aac25ea6888ee7789f88f610967609654abd104",
+        "bytes": 1086,
+        "adjustmentsOnly": true,
+        "treeRecords": 16233,
+        "adjustmentCount": 69
+      }
     }
   },
   "treeRecipe": "Tuple index7 is horizontal crownScale; default1; zero suppresses rendered crown but retains source record, XYZ, species and inventory diameter. Preserve vertical crown height. Use baseline correction for baseline; future correction for reviewed future. Construction should use baseline until documented built envelopes justify additional conflicts.",
-  "scope": "All15 district windows have separately exported source-mapped landscape overlays and baseline/future tree correction mappings. Sidewalk coverage remains limited to the source-reviewed Downtown extent; sport/play footprints are citywide.",
+  "scope": "The viewer has 19 areas. Source-mapped landscape overlays and baseline/future tree correction mappings are listed by area below; coverage and source dates vary. Sidewalk coverage remains limited to the source-reviewed Downtown extent; sport/play footprints are citywide.",
   "locked": true,
   "treeAuditSummary": {
     "uniqueTreeRecordsAudited": 499976,
