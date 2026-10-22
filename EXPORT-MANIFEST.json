@@ -1,5 +1,5 @@
 {
-  "edition": "City model and reference update 2026-10-17",
+  "edition": "Structure coverage and viewer update 2026-10-21",
   "siteOrigin": "https://futuremississauga.com/",
   "finalRenderLockAcknowledged": true,
   "files": [
@@ -15,13 +15,13 @@
     },
     {
       "file": "accuracy-review.html",
-      "bytes": 142933,
-      "sha256": "c9ac73b974a7282f9a797e6e52c66a43cd8a47acb960385213f05174b3d380f0"
+      "bytes": 143790,
+      "sha256": "1198621834dd91c28d5653213015f3f15fe7b6c6c064cfe9b3c4711d709b9711"
     },
     {
       "file": "app.js",
-      "bytes": 56430,
-      "sha256": "0164af856bb5a2dffea224e3b29722802aba4d63da85137d351f8fed09b15cfd"
+      "bytes": 56614,
+      "sha256": "c51a01535f650a30feb260e75f21886e245151549f7bee1eb23e7210391b60e4"
     },
     {
       "file": "assets/apple-touch-icon.png",
@@ -32,6 +32,11 @@
       "file": "assets/coverage-baseline.svg",
       "bytes": 250344,
       "sha256": "5e4c1068480bd39653329e15a9e3b21afcbb40fb3235929541ee4d29462bbbab"
+    },
+    {
+      "file": "assets/coverage-before-20261021.svg",
+      "bytes": 249860,
+      "sha256": "924a7daa62bfb2d0bf15dd8e82ed9533a66eedc6f9d9b792fa783c1152882643"
     },
     {
       "file": "assets/favicon-32.png",
@@ -50,8 +55,8 @@
     },
     {
       "file": "assets/local-coverage-map.svg",
-      "bytes": 249837,
-      "sha256": "c4555ad5163566112bf2f44dbff293e99b7324526d705c8ba23799a5f3283a73"
+      "bytes": 249053,
+      "sha256": "5463025879ebc4d8a95de17e3f5448f829994f48f1b6085ce352d58d54aa11ec"
     },
     {
       "file": "assets/subway/2001-city-centre-original.png",
@@ -180,8 +185,8 @@
     },
     {
       "file": "data/context-assets.json",
-      "bytes": 1730,
-      "sha256": "6b04caaf394b59e31d3cd5c3ee226a63f0e71b1dfaa1bc1b637efa50f0a332f1"
+      "bytes": 1856,
+      "sha256": "23630ddfc5473c3582e2bdc09f30437a0987e3c6e3c0375e74bf95b733223375"
     },
     {
       "file": "data/cooksville-meshes.json",
@@ -205,13 +210,13 @@
     },
     {
       "file": "data/detail-assets-manifest.json",
-      "bytes": 62096,
-      "sha256": "7908d154e09ce81b2c8252cfdae9caf1821984fe83070b78b2a5e0465e01bf09"
+      "bytes": 116135,
+      "sha256": "bcc4feda3056bfe6363b79d32469ab9a48520eb0685312350f3c6574362fb404"
     },
     {
       "file": "data/districts.json",
-      "bytes": 16305,
-      "sha256": "0327dc1802b4ad92c253ecdd749f3a73f08533630a92f628f3dafd39bc613149"
+      "bytes": 17756,
+      "sha256": "944d9e9951c650ec016794a2b6568d7beab1ce302dd93b1232e62283b983e875"
     },
     {
       "file": "data/dixie-applewood-tree-adjustments-baseline.json.gz",
@@ -330,8 +335,23 @@
     },
     {
       "file": "data/landscape-layer-manifest.json",
-      "bytes": 64334,
-      "sha256": "f09764107cfa4944d0dd6b75822e5edc851ab034e0f2e5d82be93ad3b9730bc5"
+      "bytes": 65701,
+      "sha256": "fc4d1661b5a2f5d7ba18e4a844f6fc8f5b61106c1a7373717d43599bfad8735a"
+    },
+    {
+      "file": "data/lisgar-tree-adjustments-baseline.json.gz",
+      "bytes": 1308,
+      "sha256": "4bb7ecf976ccb0dd352954681fccee23731570cea8bafe482227eb5115115408"
+    },
+    {
+      "file": "data/lisgar-tree-adjustments-future.json.gz",
+      "bytes": 1321,
+      "sha256": "7488a4f179f8dc03bc2f514cfa5ce73e4cbfba42fbff4702eedb6345221918ab"
+    },
+    {
+      "file": "data/lisgar-trees.json.gz",
+      "bytes": 614254,
+      "sha256": "8e1f2c898c126a1f992ab7f58eb4d861637f888eaf30fffd58ef32ee8964d02b"
     },
     {
       "file": "data/lorne-park-trees.json.gz",
@@ -380,8 +400,8 @@
     },
     {
       "file": "data/model-asset-versions.json",
-      "bytes": 24610,
-      "sha256": "6675619d438f73c38879537b04c7d40cb0e521125fdf8318140e1e0ccee78903"
+      "bytes": 25621,
+      "sha256": "c363c196938193c1d115604fbfced3d47e2830dc7953b36e32ab20b8997acdb4"
     },
     {
       "file": "data/original-image-release-integrity.json",
@@ -474,6 +494,11 @@
       "sha256": "d24b16561defd693076bb74ff4b5f22310565b017445b22c4319776eb8e880a2"
     },
     {
+      "file": "data/structure-coverage-summary.json",
+      "bytes": 1943,
+      "sha256": "707c060d63fc54555de0355399b6c3ae978970fbb68b0076a43b3452df1b8a32"
+    },
+    {
       "file": "data/subway-map.json",
       "bytes": 19025,
       "sha256": "f368032a7c891b4cc0fd865053522bd7f80d233ff1255c1c79f65e6e239ded49"
@@ -495,8 +520,8 @@
     },
     {
       "file": "data/transit-layer-manifest.json",
-      "bytes": 268413,
-      "sha256": "64f906fab78145bcb8578c5ed54169be5cd9ae1ef1a60c7f74dba3a9fc315ef1"
+      "bytes": 364414,
+      "sha256": "9adb27c499d9a7e65dc313a266f27ae8dc43e01af28cd5ddb02fc6c703ae4726"
     },
     {
       "file": "data/transit-research.json",
@@ -975,8 +1000,8 @@
     },
     {
       "file": "explore.html",
-      "bytes": 15475,
-      "sha256": "3690961bb3437c535ee6e19f2517334ecd3503ae354657da0f2cd1f694df689c"
+      "bytes": 15456,
+      "sha256": "5c1445c9a928594227913c00a077cb87f737a278ad3bc18268461cf322872205"
     },
     {
       "file": "gallery.css",
@@ -1527,6 +1552,26 @@
       "file": "models/lakeview.glb",
       "bytes": 2778376,
       "sha256": "a19b24cfabeed3ae8a6ca757b3262be7375d037a7aceedc7839a9a2e6d3e8392"
+    },
+    {
+      "file": "models/lisgar-11-1049-schematic-base-contact.glb",
+      "bytes": 93108,
+      "sha256": "85123f1122d39b2fb8ce57187b005bd512854f733ecd19ecdd32c70793f85b8b"
+    },
+    {
+      "file": "models/lisgar-consistent-display-context.glb",
+      "bytes": 6202696,
+      "sha256": "85b3fbead092af7685d31d27dc2b0d8fccba7e9b6d5e3f2a480bf5b7d6afb52c"
+    },
+    {
+      "file": "models/lisgar-details.glb",
+      "bytes": 2153540,
+      "sha256": "fbd8141197383563f02c495a7cc09387053f7d81a087651b2b44020ad5839141"
+    },
+    {
+      "file": "models/lisgar.glb",
+      "bytes": 18564964,
+      "sha256": "ebaae1b61e77d010017258694bb8002c5a86ea06e7c02172f68c2f6d591cb483"
     },
     {
       "file": "models/lorne-park-context-01.glb",
@@ -2109,6 +2154,16 @@
       "sha256": "14096c8acbb21f11fd9eac43fd05e53b8ba54e88d247b15f2672472295ee42b2"
     },
     {
+      "file": "models/revamp/lisgar--citywide-mapped-surfaces.glb",
+      "bytes": 202160,
+      "sha256": "c4b40e4cba81a257d96df7006081815d5227b229bee77086e0a57e1d65d42bf7"
+    },
+    {
+      "file": "models/revamp/lisgar-go-go.glb",
+      "bytes": 277368,
+      "sha256": "a05b6bbaf1f2d8574891d1f15403a1f05a75d55039e73a154af9f1af5c18faa5"
+    },
+    {
       "file": "models/revamp/malton--malton-mapped-surfaces.glb",
       "bytes": 111784,
       "sha256": "e34f2e8409655f4ea034a417fb42e21c45b8b14e6bd2884fc7778766e92355e8"
@@ -2410,8 +2465,8 @@
     },
     {
       "file": "updates.html",
-      "bytes": 26065,
-      "sha256": "a049549dcd81aefbf2e332d27c386bb44eda6f9bfecaa0099724a5dd3ca53bb3"
+      "bytes": 26696,
+      "sha256": "bcff1b21c57547a3db3f5c4117ee889cdb27d8b7334971dff9a638e0d21c14ef"
     },
     {
       "file": "vendor/addons/controls/OrbitControls.js",
@@ -2709,7 +2764,7 @@
       "sha256": "2d9cfb19a32fac7548704fbfca44060267c233522645aa354fb4f6069e012d97"
     }
   ],
-  "publishedBytes": 562850987,
+  "publishedBytes": 591368373,
   "originalPNGCount": 33,
   "displayPNGCount": 33,
   "displayScale": 0.5,
@@ -2934,11 +2989,11 @@
     "cityViewerUnchanged": true,
     "sherobeeOrientationCorrectedInReferenceStudy": true
   },
-  "exportedAt": "2026-10-20T12:40:55.043339+00:00",
-  "cityModelUpdateDate": "2026-10-17",
+  "exportedAt": "2026-10-22T02:49:05.753077+00:00",
+  "cityModelUpdateDate": "2026-10-21",
   "pictureRenderingDateUnchanged": true,
   "originalPNGStorage": "GitHub Release citywide-accuracy-images-2026-10-17; independently downloaded byte proof in public/data/original-image-release-integrity.json",
-  "districtCount": 17,
+  "districtCount": 18,
   "externalMediaIntegrityManifest": "data/original-image-release-integrity.json",
   "publicationDomain": "futuremississauga.com",
   "bridgeTenderSourceUpdate": {
@@ -2950,5 +3005,15 @@
     "statusAndCompletionForecastChanged": false,
     "finalDesignDimensionsStillUnverified": true,
     "nativeAwardReadback": "The normal public tender page lists Brennan Paving & Construction Ltd.; the static text-reader empty-vendor placeholder was not relied upon."
+  },
+  "structureCoverageUpdate": {
+    "date": "2026-10-21",
+    "namedProjectRecords": 149,
+    "districtCount": 18,
+    "scope": "Public source-based model coverage and viewer update; individual sources retain their own dates. Original gallery and atlas are not claimed regenerated.",
+    "globalCurrentAccuracyClaimed": false,
+    "originalsOrPrivateCorrespondencePublished": false,
+    "rootFinalReviewRequired": false,
+    "finalSourceAndViewerReviewAcknowledged": true
   }
 }
