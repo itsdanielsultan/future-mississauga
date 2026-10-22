@@ -1,0 +1,49 @@
+{
+  "asOf": "2026-10-21",
+  "goal": "Useful dated reference data and checked models for every structure in Mississauga, including older houses, shops, accessory buildings and other structures.",
+  "complete": false,
+  "uniqueCurrentPhysicalStructureCount": null,
+  "uniqueCountReason": "Official footprint rows, municipal model components and project records have not been matched to every real structure. Non-building structures also need their own inventory.",
+  "officialFootprintRows": {
+    "count": 239505,
+    "captureYear": 2024,
+    "unit": "Polygon features, not necessarily unique structures",
+    "source": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Building_Footprints_2024/FeatureServer/0"
+  },
+  "retainedExistingSourceComponents": 152267,
+  "detailedViewReach": {
+    "before": 130929,
+    "current": 133850,
+    "addedComponentIds": 2921,
+    "outside": 18417,
+    "unit": "Unique source-record bounding-box centres inside detailed view rectangles",
+    "notMeasured": [
+      "Number of unique real buildings",
+      "Whole-building retention at crop boundaries",
+      "Architectural accuracy",
+      "Present-day condition",
+      "Complete structure coverage"
+    ]
+  },
+  "namedProjectRecords": 149,
+  "refinementAssetFiles": 70,
+  "refinementProjectIds": 63,
+  "statesKeptSeparate": [
+    "Useful reference received",
+    "Permitted use established",
+    "Model change applied",
+    "Geometry and viewer checked",
+    "Actually published and public view verified"
+  ],
+  "sourceDetailsToCheck": [
+    "Identity and address",
+    "Footprint and dimensions",
+    "Height and roof",
+    "Each visible facade and finish",
+    "Entrance orientation",
+    "Position and ground contact",
+    "Source date and status",
+    "Credit and private/public/print/model-transfer scope"
+  ],
+  "cityTerms": "https://mississauga.maps.arcgis.com/sharing/rest/content/items/961c790805c14d8da258ec91bf4117e3/data"
+}

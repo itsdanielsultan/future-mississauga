@@ -284,7 +284,7 @@
     },
     {
       "id": "ninth-existing-houses-context",
-      "name": "Ninth Line · existing neighbourhood context",
+      "name": "Ninth Line \u00b7 existing neighbourhood context",
       "url": "models/refinement/ninth-existing-houses-context.glb",
       "districtId": "citywide",
       "district": "citywide",
@@ -541,6 +541,30 @@
       "triangleCount": 25884,
       "featureCount": 57,
       "geometryScope": "Exact rectangle crop of current citywide mapped landscape surfaces."
+    },
+    {
+      "district": "lisgar",
+      "url": "models/revamp/lisgar--citywide-mapped-surfaces.glb",
+      "category": "Landscape",
+      "bounds": [
+        [
+          -17137.654296875,
+          120.58871459960938,
+          -963.2294311523438
+        ],
+        [
+          -13900,
+          139.83270263671875,
+          3556.22998046875
+        ]
+      ],
+      "bytes": 202160,
+      "downloadBytes": 202160,
+      "sha256": "c4b40e4cba81a257d96df7006081815d5227b229bee77086e0a57e1d65d42bf7",
+      "downloadSHA256": "c4b40e4cba81a257d96df7006081815d5227b229bee77086e0a57e1d65d42bf7",
+      "triangleCount": 14177,
+      "featureCount": 57,
+      "geometryScope": "Exact bounded crop of retained current citywide mapped landscape surfaces."
     }
   ],
   "trees": {
@@ -1382,6 +1406,24 @@
         "adjustmentsOnly": true,
         "treeRecords": 22678,
         "adjustmentCount": 281
+      }
+    },
+    "lisgar": {
+      "baseline": {
+        "url": "data/lisgar-tree-adjustments-baseline.json.gz",
+        "sha256": "4bb7ecf976ccb0dd352954681fccee23731570cea8bafe482227eb5115115408",
+        "bytes": 1308,
+        "adjustmentsOnly": true,
+        "treeRecords": 25369,
+        "adjustmentCount": 88
+      },
+      "future": {
+        "url": "data/lisgar-tree-adjustments-future.json.gz",
+        "sha256": "7488a4f179f8dc03bc2f514cfa5ce73e4cbfba42fbff4702eedb6345221918ab",
+        "bytes": 1321,
+        "adjustmentsOnly": true,
+        "treeRecords": 25369,
+        "adjustmentCount": 89
       }
     }
   },

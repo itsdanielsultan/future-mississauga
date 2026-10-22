@@ -571,7 +571,7 @@
   },
   {
     "id": "lorne-park",
-    "name": "Lorne Park · Aldo area",
+    "name": "Lorne Park \u00b7 Aldo area",
     "lat": 43.536650799618755,
     "lon": -79.62266472579823,
     "radius": 450,
@@ -637,5 +637,54 @@
       4116
     ],
     "cameraFramingNote": "Display centre and radius frame every crop corner in the viewport. Original crop centre is sourceCropCenter. The exact 4000 m crop and all source geometry remain unchanged."
+  },
+  {
+    "id": "lisgar",
+    "name": "Lisgar & Argentia",
+    "lon": -79.77382836468028,
+    "lat": 43.57904193204462,
+    "radius": 4200,
+    "center": [
+      -16000.0,
+      128.67234802246094,
+      1150.0
+    ],
+    "bounds": [
+      -18100,
+      -1500,
+      -13900,
+      3800
+    ],
+    "sourceMeshes": 66,
+    "triangles": 779673,
+    "bytes": 18564964,
+    "file": "lisgar.glb",
+    "sha256": "ebaae1b61e77d010017258694bb8002c5a86ea06e7c02172f68c2f6d591cb483",
+    "geometryObjects": 69,
+    "geometryBounds": [
+      [
+        -18100.0,
+        106.11000061035156,
+        -1500.0
+      ],
+      [
+        -13900.0,
+        171.37730407714844,
+        3800.0
+      ]
+    ],
+    "localOnly": false,
+    "sourceGeometry": "Reconciled municipal LOD2 components, exact XZ crop; source elevations retained.",
+    "coverageMeasure": "Source component centroid crop reach, not unique buildings or architectural accuracy.",
+    "sourceCropRadiusM": 2650,
+    "sourceCropCenter": [
+      -16000.0,
+      128.67234802246094,
+      1150.0
+    ],
+    "cameraFramingNote": "Display radius frames the complete study rectangle. Source centre, bounds and geometry remain unchanged.",
+    "contextScope": "Bounded detailed view using retained corrected display context, not surveyed current grade. Municipal general massing does not verify current exteriors or site identity.",
+    "publicAdoption": true,
+    "adoptedForPublication": "2026-10-21"
   }
 ]
