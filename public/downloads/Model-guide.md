@@ -1,5 +1,11 @@
 # Future Mississauga: Road Crossings model guide
 
+## 22 October 2026: Meadowvale Village study
+
+The interactive map has 19 areas, including a new 4.6 km square Meadowvale Village study. The crop retains original City-source building positions, elevations and dated status metadata; it is not the full neighbourhood boundary or a current exterior survey. Its 3,676 additional existing source-part centres bring detailed-view reach from 133,850 to 137,526; 14,741 remain outside. These are source-component measurements, not counts of unique real buildings or an accuracy score.
+
+Mapped ground, street details, landscape and the existing Hazel McCallion Line display geometry are included. No GO or Transitway geometry intersects this crop, so none was invented. Ground checks on a 25 m grid still found 37 unsupported sample points inside the City boundary; 140 unsupported tree points were omitted. Gaps between samples, boundary cuts and approximate display grades remain. A fresh review of nine source project groups found no newly verified cancellation, completion or geometry revision requiring a change; it does not certify current construction stages. The existing uncertainty rules remain. Tree-placement checks record the displayed results but do not bind every source-array version by hash. Repeating those checks requires the retained private working inputs. They are not surveyed tree positions. This addition does not change the gallery pictures, atlas PDF or film. See the [coverage figures and limits](../data/structure-coverage-summary.json).
+
 ## 22 October 2026: Exchange construction base
 
 The dated construction view now restores 457 original low-podium triangles beneath EX2. Existing tower geometry, heights and textures are unchanged. A separate 120-triangle vertical ground fit meets the map terrain below the original base; it is about 1–1.55 m high, with no horizontal padding. This is an approximate display fit, not a surveyed foundation. Source finishes do not establish current cladding or occupancy. No new EX3 tower progress is added.

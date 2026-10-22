@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-21",
+  "asOf": "2026-10-22",
   "goal": "Useful dated reference data and checked models for every structure in Mississauga, including older houses, shops, accessory buildings and other structures.",
   "complete": false,
   "uniqueCurrentPhysicalStructureCount": null,
@@ -12,10 +12,10 @@
   },
   "retainedExistingSourceComponents": 152267,
   "detailedViewReach": {
-    "before": 130929,
-    "current": 133850,
-    "addedComponentIds": 2921,
-    "outside": 18417,
+    "before": 133850,
+    "current": 137526,
+    "addedComponentIds": 3676,
+    "outside": 14741,
     "unit": "Unique source-record bounding-box centres inside detailed view rectangles",
     "notMeasured": [
       "Number of unique real buildings",
@@ -45,5 +45,51 @@
     "Source date and status",
     "Credit and private/public/print/model-transfer scope"
   ],
-  "cityTerms": "https://mississauga.maps.arcgis.com/sharing/rest/content/items/961c790805c14d8da258ec91bf4117e3/data"
+  "cityTerms": "https://mississauga.maps.arcgis.com/sharing/rest/content/items/961c790805c14d8da258ec91bf4117e3/data",
+  "areaViews": {
+    "total": 19,
+    "detailed": 18,
+    "cityOverview": 1,
+    "unit": "Viewer areas, not neighbourhood boundaries"
+  },
+  "previousDatedReach": {
+    "asOf": "2026-10-21",
+    "before": 130929,
+    "current": 133850,
+    "addedComponentIds": 2921,
+    "outside": 18417,
+    "unit": "Unique source-record bounding-box centres inside detailed view rectangles",
+    "notMeasured": [
+      "Number of unique real buildings",
+      "Whole-building retention at crop boundaries",
+      "Architectural accuracy",
+      "Present-day condition",
+      "Complete structure coverage"
+    ]
+  },
+  "latestAreaAddition": {
+    "id": "meadowvale-village",
+    "boundsXZ": [
+      -14600,
+      -6750,
+      -10000,
+      -2150
+    ],
+    "scope": "4.6 km square study crop, not the complete neighbourhood boundary or a current exterior survey.",
+    "existingSourcePartCentresInCrop": 9315,
+    "additionalExistingSourcePartCentres": 3676,
+    "sourceDate": "Retained source status snapshot: 2026-09-20. City LOD2 sources use 2024 LiDAR; source dates vary.",
+    "freshStatusScreen": {
+      "date": "2026-10-22",
+      "groups": 9,
+      "primaryDownloads": 14,
+      "finding": "No newly verified cancellation, completion or geometry revision required a change. Existing uncertainty rules remain; this is not a new approval or completion claim."
+    },
+    "displayGroundLimits": {
+      "sampleSpacingMetres": 25,
+      "unsupportedSampledCityLandPoints": 37,
+      "unsupportedTreePointsOmitted": 140,
+      "meaning": "Sample checks do not establish every point between samples or surveyed site grading."
+    }
+  }
 }

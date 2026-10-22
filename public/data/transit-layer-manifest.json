@@ -980,6 +980,43 @@
         3800
       ],
       "geometryScope": "Exact bounded crop of retained current citywide GO geometry. Source route profiles, attributes and depth-tested visibility metadata preserved. Approximate display geometry, not engineering levels."
+    },
+    {
+      "districtId": "meadowvale-village",
+      "system": "HML",
+      "url": "models/revamp/meadowvale-village-hml-hml.glb",
+      "modes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "bounds": [
+        [
+          -11041.40234375,
+          129.63160705566406,
+          -6750
+        ],
+        [
+          -10000,
+          135.0937042236328,
+          -5726.19580078125
+        ]
+      ],
+      "extentXZ": [
+        -14600,
+        -6750,
+        -10000,
+        -2150
+      ],
+      "bytes": 112056,
+      "downloadBytes": 112056,
+      "sha256": "fd4c75a4bf9539d26fbfe7609a4489d045f166b06d78e910c2c7876f812e301a",
+      "downloadSHA256": "fd4c75a4bf9539d26fbfe7609a4489d045f166b06d78e910c2c7876f812e301a",
+      "nodes": 4,
+      "triangles": 11716,
+      "containsCartographicGuides": false,
+      "containsDepthTestedServiceGuides": true,
+      "geometryScope": "Exact local crop of the existing published HML display geometry. No new route, engineering height or completion claim."
     }
   ],
   "components": [

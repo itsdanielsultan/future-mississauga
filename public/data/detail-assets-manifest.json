@@ -4222,8 +4222,238 @@
       "downloadSHA256": "fbd8141197383563f02c495a7cc09387053f7d81a087651b2b44020ad5839141",
       "downloadBytes": 2153540,
       "geometryScope": "Exact crop of retained corrected render-master details, consistent with this private study context. Source positions and metadata retained; no surveyed-current-grade claim."
+    },
+    {
+      "mode": "interactive",
+      "districtId": "meadowvale-village",
+      "extentXZ": [
+        -14600,
+        -6750,
+        -10000,
+        -2150
+      ],
+      "geometryBounds": [
+        [
+          -14600,
+          91.05035400390625,
+          -6750
+        ],
+        [
+          -10000,
+          136.78794860839844,
+          -2150
+        ]
+      ],
+      "bytes": 2012756,
+      "sha256": "987ce4aa2cea54162b65ab481cf2b9d604622d9b2f24809a8c789643d618ed71",
+      "triangles": 120470,
+      "url": "models/meadowvale-village-details.glb",
+      "portableFile": "meadowvale-village-details.glb",
+      "downloadBytes": 2012756,
+      "downloadSHA256": "987ce4aa2cea54162b65ab481cf2b9d604622d9b2f24809a8c789643d618ed71",
+      "nodes": [
+        {
+          "node": "HML-Derry-mapped-platform-schematic-canopy",
+          "triangles": 138,
+          "bounds": [
+            [
+              -10721.8447265625,
+              133.3371124267578,
+              -6448.68017578125
+            ],
+            [
+              -10690.416015625,
+              136.78794860839844,
+              -6416.75537109375
+            ]
+          ],
+          "layerCategory": "LRT",
+          "atlasStatus": "UnderConstruction"
+        },
+        {
+          "node": "HML-at-grade-way-1180117799-0",
+          "triangles": 306,
+          "bounds": [
+            [
+              -10107.16015625,
+              129.6016082763672,
+              -5841.22607421875
+            ],
+            [
+              -10000,
+              130.35797119140625,
+              -5733.09375
+            ]
+          ],
+          "layerCategory": "LRT",
+          "atlasStatus": "UnderConstruction"
+        },
+        {
+          "node": "HML-at-grade-way-1217659240-0",
+          "triangles": 2626,
+          "bounds": [
+            [
+              -11034.275390625,
+              130.1390380859375,
+              -6750
+            ],
+            [
+              -10105.1865234375,
+              135.00367736816406,
+              -5839.23974609375
+            ]
+          ],
+          "layerCategory": "LRT",
+          "atlasStatus": "UnderConstruction"
+        },
+        {
+          "node": "Mapped-city-bus-shelter-footprints-with-schematic-roofs",
+          "triangles": 2602,
+          "bounds": [
+            [
+              -14575.294921875,
+              102.27001190185547,
+              -6714.38671875
+            ],
+            [
+              -10270.0087890625,
+              135.8239288330078,
+              -2180.077880859375
+            ]
+          ],
+          "layerCategory": "StreetContext",
+          "atlasStatus": "Existing"
+        },
+        {
+          "node": "Mapped-CrosswalkLine",
+          "triangles": 3850,
+          "bounds": [
+            [
+              -14580.060546875,
+              98.44108581542969,
+              -6697.7587890625
+            ],
+            [
+              -10000,
+              133.42160034179688,
+              -2225.295166015625
+            ]
+          ],
+          "layerCategory": "StreetContext",
+          "atlasStatus": "Existing"
+        },
+        {
+          "node": "Mapped-DashWTrafficLine3m",
+          "triangles": 2566,
+          "bounds": [
+            [
+              -12299.5703125,
+              126.42153930664062,
+              -6750
+            ],
+            [
+              -10369.3779296875,
+              134.07330322265625,
+              -5313.62548828125
+            ]
+          ],
+          "layerCategory": "StreetContext",
+          "atlasStatus": "Existing"
+        },
+        {
+          "node": "Mapped-DashWTrafficLine9m",
+          "triangles": 51421,
+          "bounds": [
+            [
+              -14600,
+              91.05035400390625,
+              -6750
+            ],
+            [
+              -10000,
+              134.1617431640625,
+              -2150
+            ]
+          ],
+          "layerCategory": "StreetContext",
+          "atlasStatus": "Existing"
+        },
+        {
+          "node": "Mapped-DashYTrafficLine6m",
+          "triangles": 439,
+          "bounds": [
+            [
+              -14193.6982421875,
+              96.55315399169922,
+              -3789.8515625
+            ],
+            [
+              -10101.7099609375,
+              116.13512420654297,
+              -2150
+            ]
+          ],
+          "layerCategory": "StreetContext",
+          "atlasStatus": "Existing"
+        },
+        {
+          "node": "Mapped-SolidWTrafficLine",
+          "triangles": 27049,
+          "bounds": [
+            [
+              -14600,
+              91.5442886352539,
+              -6746.46044921875
+            ],
+            [
+              -10000,
+              134.0959014892578,
+              -2150
+            ]
+          ],
+          "layerCategory": "StreetContext",
+          "atlasStatus": "Existing"
+        },
+        {
+          "node": "Mapped-SolidYTrafficLine",
+          "triangles": 25108,
+          "bounds": [
+            [
+              -14564.83203125,
+              94.42115020751953,
+              -6750
+            ],
+            [
+              -10000,
+              134.15933227539062,
+              -2150
+            ]
+          ],
+          "layerCategory": "StreetContext",
+          "atlasStatus": "Existing"
+        },
+        {
+          "node": "Mapped-StopBar",
+          "triangles": 4365,
+          "bounds": [
+            [
+              -14574.4248046875,
+              95.10052490234375,
+              -6690.39013671875
+            ],
+            [
+              -10000,
+              133.6344451904297,
+              -2208.115234375
+            ]
+          ],
+          "layerCategory": "StreetContext",
+          "atlasStatus": "Existing"
+        }
+      ],
+      "geometryScope": "Exact 4.6 km study crop of retained street details. Source dates and heights unchanged."
     }
   ],
-  "scope": "Fifteen current interactive detail assets included beside this manifest. The working render variants are not claimed as files in this package.",
-  "localStudyAddition": "Lisgar and Argentia adds one bounded retained display-source detail asset. Existing district source/status dates remain unchanged."
+  "scope": "The viewer has 19 areas. Interactive street-detail files are listed by area below; source coverage and detail vary. Working render variants are separate files.",
+  "localStudyAddition": "Lisgar & Argentia and Meadowvale Village each add one bounded retained display-source street-detail asset. Existing district source and status dates remain unchanged."
 }

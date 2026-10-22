@@ -8,7 +8,7 @@ import assert from 'node:assert/strict';
 const ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const forbidden = /(?:^|\/)(?:\.git|\.openai|node_modules|backups?|scenes|work|raw|source-archive)(?:\/|$)|correspondence|private|\.blend\d*$|(?:^|\/)\.env/i;
 const DISTRICT_IDS = ['citywide','downtown','port-credit','lakeview','clarkson','cooksville','uptown','erin-mills','streetsville','meadowvale','malton','dixie-applewood','erindale','airport-corporate','heartland'];
-const OPTIONAL_DISTRICT_IDS = ['lorne-park', 'churchill-meadows', 'lisgar'];
+const OPTIONAL_DISTRICT_IDS = ['lorne-park', 'churchill-meadows', 'lisgar', 'meadowvale-village'];
 export function validateDistrictMetadata(districts) {
   const expected = [...DISTRICT_IDS, ...OPTIONAL_DISTRICT_IDS.filter(id => Array.isArray(districts) && districts.some(d => d.id === id))];
   assert(Array.isArray(districts) && districts.length === expected.length, 'Expected the 15 atlas districts and the registered optional study areas.');
