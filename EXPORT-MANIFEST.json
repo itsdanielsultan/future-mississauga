@@ -1,5 +1,5 @@
 {
-  "edition": "Structure coverage and viewer update 2026-10-21",
+  "edition": "Source permission cleanup 2026-10-22",
   "siteOrigin": "https://futuremississauga.com/",
   "finalRenderLockAcknowledged": true,
   "files": [
@@ -15,8 +15,8 @@
     },
     {
       "file": "accuracy-review.html",
-      "bytes": 143790,
-      "sha256": "1198621834dd91c28d5653213015f3f15fe7b6c6c064cfe9b3c4711d709b9711"
+      "bytes": 143164,
+      "sha256": "de3b8f7c99405373855dc069a7c86d1948a94e180ddaafdf20f4390562807897"
     },
     {
       "file": "app.js",
@@ -130,8 +130,8 @@
     },
     {
       "file": "data/building-study-media.json",
-      "bytes": 14528,
-      "sha256": "ee26f4f49836afa0d03980d660078d6bc331ccc96164cb01a6080236821472e1"
+      "bytes": 13334,
+      "sha256": "0064da359e870ccb9eec68d4922beced9c3ce2c5fe6bcc7ccf0686cb15b3d097"
     },
     {
       "file": "data/churchill-meadows-tree-adjustments-baseline.json.gz",
@@ -400,8 +400,8 @@
     },
     {
       "file": "data/model-asset-versions.json",
-      "bytes": 25621,
-      "sha256": "c363c196938193c1d115604fbfced3d47e2830dc7953b36e32ab20b8997acdb4"
+      "bytes": 25516,
+      "sha256": "af425eda6e9796808dbf347577984a6574892f0f01b344eb21267a35f275d6fb"
     },
     {
       "file": "data/original-image-release-integrity.json",
@@ -445,8 +445,8 @@
     },
     {
       "file": "data/projects.json",
-      "bytes": 1046927,
-      "sha256": "3afabe336524abd1b1e85b41fdf4ffe032b5592a34cbf63bc026b92eb8658272"
+      "bytes": 1045693,
+      "sha256": "c9eaad6b549507d10b6a7af2f6906aabda8e0e6f759634e1b3687ad4c493f861"
     },
     {
       "file": "data/recent-project-updates.json",
@@ -460,8 +460,8 @@
     },
     {
       "file": "data/refinement-models.json",
-      "bytes": 2603519,
-      "sha256": "ba7d9d354d7e088777c66878ee86cc7ae2b3e376d7427d41805ab897dc622032"
+      "bytes": 2600452,
+      "sha256": "b8953c1112c981a79703bde4570e4965d2aee38fd978f3bdc5d455d0dbd97d73"
     },
     {
       "file": "data/social-pictures.json",
@@ -470,8 +470,8 @@
     },
     {
       "file": "data/stats.json",
-      "bytes": 4201,
-      "sha256": "ca23a02000aa2ca8e6b080312b19f48fa2616230d175a2510f576acc7470bbdf"
+      "bytes": 4220,
+      "sha256": "50e4c4b78d12c6adc4f9da97e112688a6912a3c31bcac9afaed2180586e11e22"
     },
     {
       "file": "data/streetsville-meshes.json",
@@ -496,7 +496,7 @@
     {
       "file": "data/structure-coverage-summary.json",
       "bytes": 1943,
-      "sha256": "707c060d63fc54555de0355399b6c3ae978970fbb68b0076a43b3452df1b8a32"
+      "sha256": "e66cfc574e80fd8e88657a27861dd1a24e84c4ecd76446602d944935e5cbd2a0"
     },
     {
       "file": "data/subway-map.json",
@@ -620,8 +620,8 @@
     },
     {
       "file": "downloads/Model-guide.md",
-      "bytes": 53909,
-      "sha256": "8f9cd20a442641f3f36e3726d172dfa52f0014626c7337ff85067f67601627b8"
+      "bytes": 53895,
+      "sha256": "a7c056f3363b9e34137e5a015bc646d862a7efd81befa2df00f4c56bb11b1925"
     },
     {
       "file": "downloads/Model-reference-index-summary.json",
@@ -760,8 +760,8 @@
     },
     {
       "file": "downloads/project-register.csv",
-      "bytes": 353587,
-      "sha256": "9c74ea9c25dde63c541966c5ff77cabb86df2e26763de9a74726c4623cd0a1f3"
+      "bytes": 352874,
+      "sha256": "607be46ac99d9057ecd099995f56040298119b084bac54228cc3ed13cb57f1b8"
     },
     {
       "file": "downloads/public-project-reference-coverage.json",
@@ -1190,8 +1190,8 @@
     },
     {
       "file": "index.html",
-      "bytes": 18348,
-      "sha256": "67429fffe6e60615080b73ae3217496ac7f9adf3e9d4b78417c08ccdbb4e88d9"
+      "bytes": 18347,
+      "sha256": "3bd656a98b46e0964dd9d31950275b6d121511f32fab1d35e4233a945a6ca517"
     },
     {
       "file": "licenses/BricolageGrotesque-OFL.txt",
@@ -1200,8 +1200,8 @@
     },
     {
       "file": "licenses/CREDITS.md",
-      "bytes": 11448,
-      "sha256": "05d9110f7bfe228ce9d686ad4249f1a0ba903f5ec9b2468e1a34390aa78499ae"
+      "bytes": 11344,
+      "sha256": "04c2353527ec3dfef656270727dd0a8d992396dd027d7c3107108212f462ee34"
     },
     {
       "file": "licenses/media-chrome-4.19.2-MIT.txt",
@@ -1437,11 +1437,6 @@
       "file": "models/cooksville.glb",
       "bytes": 2306952,
       "sha256": "157d503c910330030912bbdc459d15049b03fd9dd779826fbcfd4ee887dc078c"
-    },
-    {
-      "file": "models/daimler-1338-study.glb",
-      "bytes": 173244,
-      "sha256": "7938260507effbffcfa1a78ee031167e32800ee3c1facd190dd5128338786980"
     },
     {
       "file": "models/dixie-applewood-context.glb",
@@ -2385,8 +2380,8 @@
     },
     {
       "file": "review-renders.html",
-      "bytes": 37975,
-      "sha256": "9a612050a7f29e62f761f7eed6c3e773a9ae3369534fb7f16b93c27add2f5408"
+      "bytes": 35352,
+      "sha256": "36a24a625efa52905f868f60aef2caef1798af16dbc87e9cd3cd00d363f1899f"
     },
     {
       "file": "robots.txt",
@@ -2455,8 +2450,8 @@
     },
     {
       "file": "subway.js",
-      "bytes": 18122,
-      "sha256": "5c7016e235b43df784a3f63301ba2169c3217be5d28f473a411c5ef97bc1b05f"
+      "bytes": 18139,
+      "sha256": "27ea1b6e7f9e204a8b9ae85f86351ad8743364d6da0ae8812590fe99f34e2c26"
     },
     {
       "file": "updates.css",
@@ -2466,7 +2461,7 @@
     {
       "file": "updates.html",
       "bytes": 26696,
-      "sha256": "bcff1b21c57547a3db3f5c4117ee889cdb27d8b7334971dff9a638e0d21c14ef"
+      "sha256": "af0be3d88d25dc433f52b3d49fa355ffec83178ca984a558a002bfe891efd030"
     },
     {
       "file": "vendor/addons/controls/OrbitControls.js",
@@ -2764,7 +2759,7 @@
       "sha256": "2d9cfb19a32fac7548704fbfca44060267c233522645aa354fb4f6069e012d97"
     }
   ],
-  "publishedBytes": 591368373,
+  "publishedBytes": 591185484,
   "originalPNGCount": 33,
   "displayPNGCount": 33,
   "displayScale": 0.5,
@@ -2989,7 +2984,7 @@
     "cityViewerUnchanged": true,
     "sherobeeOrientationCorrectedInReferenceStudy": true
   },
-  "exportedAt": "2026-10-22T02:49:05.753077+00:00",
+  "exportedAt": "2026-10-22T05:09:30.019415+00:00",
   "cityModelUpdateDate": "2026-10-21",
   "pictureRenderingDateUnchanged": true,
   "originalPNGStorage": "GitHub Release citywide-accuracy-images-2026-10-17; independently downloaded byte proof in public/data/original-image-release-integrity.json",
@@ -3015,5 +3010,16 @@
     "originalsOrPrivateCorrespondencePublished": false,
     "rootFinalReviewRequired": false,
     "finalSourceAndViewerReviewAcknowledged": true
+  },
+  "sourcePrivacyUpdate": {
+    "date": "2026-10-22",
+    "removedStudy": "daimler-1338-study",
+    "scope": "One supplied-reference study and its current public catalog links withdrawn pending source-use confirmation. Independent municipal geometry and all retained gallery, portrait, atlas and video files are unchanged.",
+    "newRendersPublished": false,
+    "oldImageAndDocumentDatesUnchanged": true,
+    "sourceOriginalsPublished": false,
+    "gitHistoryOrExternalReleaseAssetsErasedClaimed": false,
+    "rootFinalReviewRequired": false,
+    "exactSourceWithdrawalAndRetainedMediaReviewAcknowledged": true
   }
 }

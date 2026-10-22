@@ -278,6 +278,6 @@ Four symbolic woodland crowns intersected Pier House. They are suppressed in the
 
 ### Building study visibility · 10 October 2026
 
-The Aldo Drive, Daimler Road, South Common and St Hilary exterior studies now appear automatically in their supported viewer scenarios. Historical designs, approximate finishes and unverified current conditions remain identified in their project records. Finished-design studies appear in the retained-development view; they do not establish recorded construction progress or current completion.
+The Aldo Drive, South Common and St Hilary exterior studies now appear automatically in their supported viewer scenarios. Historical designs, approximate finishes and unverified current conditions remain identified in their project records. Finished-design studies appear in the retained-development view; they do not establish recorded construction progress or current completion.
 
 “Include alternate design studies” controls the dated Block 22, Westminster and 42 John Street alternatives. Hiding a study restores the municipal source building instead of leaving an empty plot. Direct project links and ordinary district browsing use the same display rules.

@@ -7382,9 +7382,12 @@
       "actual": "2026-05-30",
       "target": null,
       "targetIsGuaranteed": false,
-      "note": "No actual or target completion date verified.",
-      "reviewed": "2026-09-20",
-      "sources": []
+      "note": "Public access began May 30, 2026, following the May 29 ceremony. This is a verified opening milestone, not confirmation of every later amenity or landscape detail.",
+      "reviewed": "2026-10-21",
+      "sources": [
+        "https://cvc.ca/discover-the-new-jim-tovey-lakeview-conservation-area/",
+        "https://trca.ca/conservation/infrastructure-projects/jim-tovey-lakeview-conservation-area/"
+      ]
     },
     "corroboration": {
       "reviewed": "2026-09-20",
@@ -20836,52 +20839,6 @@
     "referenceStudy": true,
     "evidenceUpdateNote": "Upper flat roof corrected to plain black following project-team feedback on 9 October 2026; sloped roofs retain shingles. Historical references and approximate map alignment remain; current built exterior not verified.",
     "geometryReviewDate": "2026-10-10"
-  },
-  {
-    "id": "daimler-1338-study",
-    "name": "1338 Daimler Road · drawing study",
-    "address": "1338 Daimler Road",
-    "lat": 43.512448457355184,
-    "lon": -79.64490313637253,
-    "position": [
-      -5470.066907407772,
-      42.1864013671875,
-      8384.24126061827
-    ],
-    "status": "Historical design study; current condition unverified",
-    "statusDate": "2026-10-08",
-    "storeys": [],
-    "heightM": [],
-    "summary": "Supplied 2023 permit drawings; reconstructed supported exterior",
-    "modelCaveat": "Historical/drawn exterior study, approximately registered. Native dimensions not rescaled. Ground interpolated; current built design not verified.",
-    "geometryCoverage": "source-based exterior improvement",
-    "includeInModel": true,
-    "sources": [
-      {
-        "url": "https://data.mississauga.ca/pages/mississauga-3d",
-        "title": "City mapping context",
-        "publisher": "City of Mississauga",
-        "accessed": "2026-10-08"
-      },
-      {
-        "title": "Reference drawings supplied through C Architecture; final contributor credit remains to be confirmed.",
-        "publisher": "Building study source acknowledgement",
-        "accessed": "2026-10-09"
-      }
-    ],
-    "meshIds": [],
-    "modelLayer": "uncertain",
-    "actualCompletionDate": null,
-    "targetCompletionDate": null,
-    "district": "Clarkson",
-    "researchArea": "Clarkson",
-    "localReview": true,
-    "localReviewView": [
-      0.14,
-      -0.99
-    ],
-    "localOptional": false,
-    "referenceStudy": true
   },
   {
     "id": "hazelhurst-business-park",

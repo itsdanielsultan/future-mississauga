@@ -71776,129 +71776,6 @@
       }
     },
     {
-      "id": "daimler-1338-study",
-      "projectId": "daimler-1338-study",
-      "bounds": [
-        [
-          -5480.8527542776965,
-          42.1864013671875,
-          8373.383604075028
-        ],
-        [
-          -5459.281060537849,
-          51.45290660858154,
-          8395.098917161513
-        ]
-      ],
-      "status": "Uncertain",
-      "modes": [
-        "future"
-      ],
-      "replacementModes": [
-        "future"
-      ],
-      "replacementFootprintsXZ": [
-        [
-          [
-            -5477.718065381025,
-            8381.456723561969
-          ],
-          [
-            -5467.357072287011,
-            8389.12176056192
-          ],
-          [
-            -5463.9910751292355,
-            8384.57186440389
-          ],
-          [
-            -5462.271581244901,
-            8385.843959880109
-          ],
-          [
-            -5458.419522799133,
-            8380.637161795286
-          ],
-          [
-            -5460.066824018441,
-            8379.418560894022
-          ],
-          [
-            -5459.124836270783,
-            8378.145277455082
-          ],
-          [
-            -5467.746533437397,
-            8371.766932964047
-          ],
-          [
-            -5471.328837060803,
-            8376.609337861499
-          ],
-          [
-            -5473.140424787999,
-            8375.269146941186
-          ],
-          [
-            -5477.718065381025,
-            8381.456723561969
-          ]
-        ],
-        [
-          [
-            -5482.406177788148,
-            8390.178568172229
-          ],
-          [
-            -5474.155541991538,
-            8396.514331743556
-          ],
-          [
-            -5468.021277220089,
-            8388.52594316791
-          ],
-          [
-            -5476.272068209572,
-            8382.190060423163
-          ],
-          [
-            -5476.941191487935,
-            8383.061463968339
-          ],
-          [
-            -5481.453305623821,
-            8388.937012641458
-          ],
-          [
-            -5482.406177788148,
-            8390.178568172229
-          ]
-        ]
-      ],
-      "preserveMaterials": true,
-      "preserveSourceNormals": true,
-      "localReview": true,
-      "uncertainGeometry": true,
-      "includedByDefault": true,
-      "replacesSourceIds": [],
-      "modelFidelity": "Historical/drawn exterior study, approximately registered. Native dimensions not rescaled. Ground interpolated; current built design not verified.",
-      "name": "1338 Daimler Road · drawing study",
-      "address": "1338 Daimler Road",
-      "url": "models/daimler-1338-study.glb",
-      "bytes": 173244,
-      "sha256": "7938260507effbffcfa1a78ee031167e32800ee3c1facd190dd5128338786980",
-      "downloadBytes": 173244,
-      "downloadSHA256": "7938260507effbffcfa1a78ee031167e32800ee3c1facd190dd5128338786980",
-      "lat": 43.512448457355184,
-      "lon": -79.64490313637253,
-      "position": [
-        -5470.066907407772,
-        42.1864013671875,
-        8384.24126061827
-      ],
-      "localOptional": false
-    },
-    {
       "id": "glen-erin-2026-private-plan-study",
       "projectId": "glen-erin-6719",
       "name": "6719 Glen Erin • March 2026 stepped plan",
@@ -86159,7 +86036,6 @@
     "date": "2026-10-10",
     "defaultDetailedStudyProjects": [
       "aldo-1422-study",
-      "daimler-1338-study",
       "south-common-community-centre",
       "st-hilarys-anglican-church"
     ],
