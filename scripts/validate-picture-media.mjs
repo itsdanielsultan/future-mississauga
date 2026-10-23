@@ -1,98 +1,57 @@
-// DRAFT build-time validator only. Root copies into isolated scripts/ on apply.
+// Build-time media checks; public byte downloads are proved separately by the publisher.
 import assert from 'node:assert/strict';
 import {readFile,stat} from 'node:fs/promises';
 import {join} from 'node:path';
 import {createHash} from 'node:crypto';
-const repo='https://github.com/itsdanielsultan/future-mississauga/releases/download/';
-const retainedWide=new Set(['citywide-future.png','clarkson-future.png','clarkson-skyline-future.png','clarkson-portrait-future.png']);
-const retainedPortraits=new Set(['clarkson-future.png','clarkson-portrait-future.png']);
 const load=async(site,name)=>JSON.parse(await readFile(join(site,name),'utf8'));
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
-function sameBaselineRecord(actual,baseline,name){
-  // All previous fields, including the complete nested display record, survive.
-  for(const[k,v]of Object.entries(baseline))assert.deepEqual(actual[k],v,'Retained field changed: '+name+':'+k);
-  assert.equal(actual.renderInfo.state,'retained-earlier');
-  assert.equal(actual.renderInfo.renderDate,name==='citywide-future.png'?'2026-10-04':'2026-09-29');
-  assert.equal(actual.renderInfo.edition,'Visual Polish 2026-09-26');
-  assert(actual.renderInfo.label.startsWith('Earlier render · '));
+const repo='https://github.com/itsdanielsultan/future-mississauga/releases/download/';
+function verify(proof,row,url){
+ assert(proof?.publicHTTPVerified&&proof.published,'Missing actual public proof');
+ for(const key of ['bytes','sha256','width','height'])assert.equal(proof[key],row[key]);
+ assert.equal(proof.url,url);assert.equal(proof.githubDigest,'sha256:'+row.sha256);
 }
-function verifyProof(proof,image,url,newlyVerified){
-  assert(proof?.publicHTTPVerified,'Missing independent public byte evidence');
-  for(const k of['bytes','sha256','width','height'])assert.equal(proof[k],image[k],'Proof differs:'+k);
-  assert.equal(proof.url||proof.browser_download_url,url);
-  assert.equal(proof.githubDigest||proof.providerDigest,'sha256:'+image.sha256);
-  assert.equal(proof.newlyVerified,newlyVerified);
-  assert(proof.verificationDate,'Individual verification date is required');
+async function preview(site,row,file){
+ const p=row.display;assert.equal(p.url,`gallery/previews/${row.sha256.slice(0,16)}/${file}`);
+ assert.equal(p.sourceSHA256,row.sha256);const scale=row.presentationInfo ? .45 : .5;assert.equal(p.width,Math.round(row.width*scale));assert.equal(p.height,Math.round(row.height*scale));assert.equal(p.scale,scale);
+ const bytes=await readFile(join(site,p.url));assert.equal(bytes.length,p.bytes);assert.equal(sha(bytes),p.sha256);
+ assert.equal(bytes.subarray(0,8).toString('hex'),'89504e470d0a1a0a');assert.equal(bytes.readUInt32BE(16),p.width);assert.equal(bytes.readUInt32BE(20),p.height);
 }
-async function checkPreview(site,image,name){
-  const p=image.display;assert(p);
-  assert.equal(p.url,`gallery/previews/${image.sha256.slice(0,16)}/${name}`);
-  assert.equal(p.sourceSHA256,image.sha256);assert.equal(p.scale,.5);
-  assert.equal(p.width,image.width/2);assert.equal(p.height,image.height/2);
-  const path=join(site,p.url);assert.equal((await stat(path)).size,p.bytes);
-  const b=await readFile(path);assert.equal(sha(b),p.sha256);
-  assert.equal(b.subarray(0,8).toString('hex'),'89504e470d0a1a0a');
-  assert.equal(b.readUInt32BE(16),p.width);assert.equal(b.readUInt32BE(20),p.height);
+function presentation(row,baseline){
+ assert.deepEqual(row.nativeOriginal,baseline);assert.deepEqual(row.renderInfo,baseline.renderInfo);
+ assert.equal(row.presentationInfo.date,'2026-10-22');assert.equal(row.presentationInfo.newGeometryOrMaterials,false);
+ assert.equal(row.presentationInfo.creator,'Daniel Sultan');assert.equal(row.presentationInfo.statusKey[2].label,'Proposed / approved');
+ assert.equal(row.presentationInfo.north.worldNorthModelXYZ.join(','),'0,0,-1');
+ const v=row.presentationInfo.north.screenUnitRightDown;assert(Math.abs(Math.hypot(...v)-1)<1e-9);
 }
 export async function validatePictureMedia(site){
-  const pictures=await load(site,'data/picture-assets.json');
-  const social=await load(site,'data/social-pictures.json');
-  const previous=await load(site,'data/history/picture-assets-before-partial-refresh.json');
-  const oldSocial=await load(site,'data/history/social-pictures-before-partial-refresh.json');
-  const wi=await load(site,'data/original-image-release-integrity.json');
-  const si=await load(site,'data/portrait-release-integrity.json');
-  const oldWI=await load(site,'data/history/original-image-release-integrity-before-partial-refresh.json');
-  const oldSI=await load(site,'data/history/portrait-release-integrity-before-partial-refresh.json');
-  const entries=Object.entries(pictures.images||{});assert.equal(entries.length,33);
-  assert.deepEqual(entries.map(([n])=>n),Object.keys(previous.images));
-  assert.equal(pictures.mixedRenderDates,true);assert.equal(pictures.renderDate,null);
-  assert.equal(wi.publicHashesVerified,33);assert.equal(wi.newPublicHashesVerified,29);assert.equal(wi.retainedHistoricalPublicHashesVerified,4);
-  assert.equal(new Set(wi.assets.map(a=>a.file)).size,33);
-  let refreshedWide=0,retainedWideCount=0;
-  for(const[name,picture]of entries){
-    assert.match(picture.sha256,/^[a-f0-9]{64}$/);
-    const proof=wi.assets.find(a=>a.file===name&&a.group==='gallery');
-    if(retainedWide.has(name)){
-      const baseline=previous.images[name];sameBaselineRecord(picture,baseline,name);
-      const oldProof=oldWI.assets.find(a=>a.file===name&&a.group==='gallery');
-      for(const k of['bytes','sha256','width','height'])assert.equal(proof[k],oldProof[k]);
-      verifyProof(proof,picture,baseline.url,false);retainedWideCount++;
-    }else{
-      assert.equal(picture.width,6144);assert([2240,3840].includes(picture.height));
-      assert.equal(picture.url,repo+wi.tag+'/'+name);assert.equal(picture.renderInfo.state,'refreshed');
-      assert.equal(picture.renderInfo.edition,pictures.refreshedEdition);
-      assert.match(picture.renderInfo.renderDate,/^\d{4}-\d{2}-\d{2}$/);
-      verifyProof(proof,picture,picture.url,true);refreshedWide++;
-    }
-    await checkPreview(site,picture,name);
-  }
-  assert.equal(refreshedWide,29);assert.equal(retainedWideCount,4);
-  assert.equal(social.nativePortraitRendering,true);assert.equal(social.ratio,'4:5');assert.equal(social.images.length,24);
-  assert.deepEqual(social.images.map(i=>i.file),oldSocial.images.map(i=>i.file));
-  assert.equal(social.mixedRenderDates,true);assert.equal(social.renderDate,null);
-  assert.equal(si.publicHashesVerified,48);assert.equal(si.newPublicHashesVerified,44);assert.equal(si.retainedHistoricalPublicHashesVerified,4);
-  assert.equal(new Set(si.assets.map(a=>a.file)).size,48);
-  const page=await readFile(join(site,'social.html'),'utf8');let refreshedPortraits=0,retainedPortraitCount=0;
-  for(const image of social.images){
-    assert.equal(image.width,3240);assert.equal(image.height,4050);assert.equal(image.previewWidth,1620);assert.equal(image.previewHeight,2025);
-    const masterProof=si.assets.find(a=>a.file===image.file),previewProof=si.assets.find(a=>a.file==='display-'+image.file);
-    const keep=retainedPortraits.has(image.file);const baseline=oldSocial.images.find(i=>i.file===image.file);
-    if(keep){
-      sameBaselineRecord(image,baseline,image.file);
-      const oldMaster=oldSI.assets.find(a=>a.file===image.file),oldPreview=oldSI.assets.find(a=>a.file==='display-'+image.file);
-      assert.equal(masterProof.sha256,oldMaster.sha256);assert.equal(previewProof.sha256,oldPreview.sha256);
-      assert(page.includes(image.renderInfo.label),'Earlier portrait label is not visible');retainedPortraitCount++;
-    }else{
-      assert.equal(image.url,repo+si.tag+'/'+image.file);assert.equal(image.preview,repo+si.tag+'/display-'+image.file);
-      assert.equal(image.renderInfo.state,'refreshed');refreshedPortraits++;
-    }
-    verifyProof(masterProof,image,image.url,!keep);
-    verifyProof(previewProof,{bytes:image.previewBytes,sha256:image.previewSHA256,width:1620,height:2025},image.preview,!keep);
-    assert.equal(page.split('href="'+image.url+'"').length-1,2);
-    assert(page.includes('src="'+image.preview+'"'));
-  }
-  assert.equal(refreshedPortraits,22);assert.equal(retainedPortraitCount,2);
-  const home=await readFile(join(site,'index.html'),'utf8');assert(home.includes('51 new pictures'));
-  assert(home.includes('six earlier Citywide and Clarkson future views'));
-  return {entries,originalImageVerification:{localOriginals:0,remoteOriginals:33,newPublicHashesVerified:29,retainedHistoricalProofs:4,separatePublicHashProofRequired:true,remoteBytesFetchedByThisStaticCheck:false},portraitGallery:{nativePortraitRecords:24,newPortraitMasters:22,retainedEarlierPortraits:2,remoteHalfSizePreviews:24,dimensionsVerified:true,remoteDownloadSHA256Recorded:24,remoteDownloadBytesVerifiedByThisStaticCheck:false,separatePublicHashProofRequired:true,mixedRenderDates:true}};
+ const pictures=await load(site,'data/picture-assets.json'),social=await load(site,'data/social-pictures.json');
+ if(!pictures.presentationDerivativeCount){const native=await import('./validate-native-picture-media.mjs');return native.validatePictureMedia(site);}
+ const before=await load(site,'data/history/picture-assets-before-presentation-2026-10-22.json');
+ const oldSocial=await load(site,'data/history/social-pictures-before-presentation-2026-10-22.json');
+ const wide=await load(site,'data/presentation-wide-release-integrity.json'),portraits=await load(site,'data/presentation-portraits-release-integrity.json');
+ for(const p of[wide,portraits]){assert.equal(p.schema,'future-mississauga-presentation-public-byte-proof/v1');assert(p.checkedAt);assert.equal(p.targetCommit,'8d6d8c92cb565d4a495fdf6b1a4a1a3c24c5b2b6');assert.equal(p.publicHashesVerified,p.assets.length);}
+ assert.equal(wide.assets.length,29);assert.equal(portraits.assets.length,44);assert.equal(pictures.originalPixels,false);
+ const entries=Object.entries(pictures.images);assert.equal(entries.length,33);assert.deepEqual(Object.keys(pictures.images),Object.keys(before.images));
+ let wc=0,wr=0,pc=0,pr=0;
+ for(const[file,row]of entries){
+  if(row.presentationInfo){presentation(row,before.images[file]);assert.equal(row.url,repo+wide.tag+'/'+file);const proof=wide.assets.find(a=>a.file===file);verify(proof,row,row.url);assert.equal(proof.nativeSourceSHA256,row.nativeOriginal.sha256);wc++;}
+  else{assert.deepEqual(row,before.images[file]);assert.equal(row.renderInfo.state,'retained-earlier');wr++;}
+  await preview(site,row,file);
+ }
+ assert.equal(wc,29);assert.equal(wr,4);assert.equal(social.images.length,24);assert.equal(social.nativePortraitRendering,true);
+ assert.deepEqual(social.images.map(r=>r.file),oldSocial.images.map(r=>r.file));
+ const page=await readFile(join(site,'social.html'),'utf8');
+ for(const row of social.images){
+  const old=oldSocial.images.find(r=>r.file===row.file);assert.equal(row.width,3240);assert.equal(row.height,4050);assert.equal(row.previewWidth,1620);assert.equal(row.previewHeight,2025);
+  if(row.presentationInfo){presentation(row,old);assert.equal(row.url,repo+portraits.tag+'/'+row.file);assert.equal(row.preview,repo+portraits.tag+'/display-'+row.file);verify(portraits.assets.find(r=>r.file===row.file),row,row.url);verify(portraits.assets.find(r=>r.file==='display-'+row.file),{bytes:row.previewBytes,sha256:row.previewSHA256,width:row.previewWidth,height:row.previewHeight},row.preview);pc++;}
+  else{assert.deepEqual(row,old);pr++;}
+  assert.equal(page.split('href="'+row.url+'"').length-1,2);assert(page.includes('src="'+row.preview+'"'));
+ }
+ assert.equal(pc,22);assert.equal(pr,2);
+ const ix=await load(site,'downloads/Picture-index.json');assert.equal(ix.images.length,57);assert.equal(ix.presentationDerivativeCount,51);
+ for(const r of ix.images){const row=r.kind==='wide'?pictures.images[r.file]:social.images.find(p=>p.file===r.file);assert.equal(r.sha256,row.sha256);assert.deepEqual(r.renderInfo,row.renderInfo);if(r.presentationInfo)assert.deepEqual(r.nativeOriginal,row.nativeOriginal);}
+ const sources=await load(site,'data/presentation-sources.json');assert.equal(sources.images.length,51);assert(sources.images.every(r=>r.sourceAttribution.creditLines.length>=3));
+ const home=await readFile(join(site,'index.html'),'utf8');assert(home.includes('51 presentation copies'));assert(home.includes('six earlier Citywide and Clarkson future views'));
+ return {entries,originalImageVerification:{localOriginals:0,remoteOriginals:4,remotePresentationDerivatives:29,presentationDerivatives:29,retainedHistoricalProofs:4,separatePublicHashProofRequired:true,remoteBytesFetchedByThisStaticCheck:false},portraitGallery:{nativePortraitRecords:24,presentationDerivatives:22,retainedEarlierPortraits:2,remoteHalfSizePreviews:24,dimensionsVerified:true,remoteDownloadSHA256Recorded:24,remoteDownloadBytesVerifiedByThisStaticCheck:false,separatePublicHashProofRequired:true,mixedRenderDates:true},displayPreviewSummary:{totalWide:33,nominal45Percent:29,halfSize:4},presentation:{images:51,publicAssets:73,originalRenderDatesPreserved:true,nativeMasterURLsPreserved:true}};
 }

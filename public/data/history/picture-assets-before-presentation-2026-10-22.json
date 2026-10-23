@@ -1,0 +1,1017 @@
+{
+  "edition": "Mixed-date picture gallery, updated 2026-10-22",
+  "originalPixels": true,
+  "displayScale": 0.5,
+  "displayPolicy": "Each preview is half the original dimensions. 29 new wide masters are 6144px wide; 4 retained earlier masters remain 3840px wide. Downloads retain the exact individual master bytes.",
+  "finalRenderLockAcknowledged": true,
+  "hosting": "Static local previews and viewer assets; unchanged full-resolution PNG downloads are hosted on the project GitHub Release.",
+  "images": {
+    "citywide-future.png": {
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/citywide-future.png",
+      "sha256": "f821e005829886c91259c64968919e1304af3fde0fabc4d5d2a2853f39aedfa8",
+      "bytes": 13876183,
+      "width": 3840,
+      "height": 2400,
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/f821e005829886c9/citywide-future.png",
+        "sha256": "1139a5e9335cf36f41c685af7317d9bb159a7f3c978ba5de42b57476fe3f0238",
+        "bytes": 2733145,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "f821e005829886c91259c64968919e1304af3fde0fabc4d5d2a2853f39aedfa8"
+      },
+      "renderInfo": {
+        "state": "retained-earlier",
+        "renderDate": "2026-10-04",
+        "edition": "Visual Polish 2026-09-26",
+        "label": "Earlier render · 4 October 2026",
+        "note": "This earlier image has not been updated with the latest model changes."
+      }
+    },
+    "downtown-future.png": {
+      "bytes": 29549059,
+      "sha256": "2af02e6e13e4dbabbf2c50fc509ff458ae27601ceeb34398f2de4050bb7c33d4",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/downtown-future.png",
+      "display": {
+        "url": "gallery/previews/2af02e6e13e4dbab/downtown-future.png",
+        "bytes": 7661018,
+        "sha256": "38fed90e8d465c1cd8ad0860da337d8cae99ad435edcc0a97d3b5160f72ea373",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "2af02e6e13e4dbabbf2c50fc509ff458ae27601ceeb34398f2de4050bb7c33d4",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "f81892f17dfe42cb5138041336c00ef345b9bbec33162fd6424ddb148690404a",
+        "renderKey": "wide/downtown/future/aerial",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "port-credit-future.png": {
+      "bytes": 30178822,
+      "sha256": "c421abfdbd791a7b389fb68dccc2bb7aec387b959e1fdc38fb63376a9ac8deda",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/port-credit-future.png",
+      "display": {
+        "url": "gallery/previews/c421abfdbd791a7b/port-credit-future.png",
+        "bytes": 8008995,
+        "sha256": "dbc361d0425ee3791d5f4102e30b194448636942d887a67ecbdaee98fbd6a9ca",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "c421abfdbd791a7b389fb68dccc2bb7aec387b959e1fdc38fb63376a9ac8deda",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "9fff01cc3781c4615525daf6744467e26213be3d98b2ec5694fa800c2bbbc51e",
+        "renderKey": "wide/port-credit/future/aerial",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "lakeview-future.png": {
+      "bytes": 25463728,
+      "sha256": "3ed0a2f9ea245a0a3aa85cbd1ed84027cb626bd01424616c5d0b8b7bbd763017",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/lakeview-future.png",
+      "display": {
+        "url": "gallery/previews/3ed0a2f9ea245a0a/lakeview-future.png",
+        "bytes": 6006105,
+        "sha256": "893beaa5888570a79a20e46ccedcec7b4cb9f2a4d09fda7543fc1668e7db9b67",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "3ed0a2f9ea245a0a3aa85cbd1ed84027cb626bd01424616c5d0b8b7bbd763017",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "75adea00891655b23b609a93b16a8f6646324bce4e72712b8a0ff012d13d32f3",
+        "renderKey": "wide/lakeview/future/aerial",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "clarkson-future.png": {
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/clarkson-future.png",
+      "sha256": "020ca39a65103c2bf4bd14e6497ae6ccd2327099ef417b3228bbeb0af66c4b75",
+      "bytes": 15293393,
+      "width": 3840,
+      "height": 2400,
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/020ca39a65103c2b/clarkson-future.png",
+        "sha256": "8cc094fe703ec9c4e5da81d7b373f33c00a1bb7fe10f8a29f8623e3822a5c905",
+        "bytes": 3513701,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "020ca39a65103c2bf4bd14e6497ae6ccd2327099ef417b3228bbeb0af66c4b75"
+      },
+      "renderInfo": {
+        "state": "retained-earlier",
+        "renderDate": "2026-09-29",
+        "edition": "Visual Polish 2026-09-26",
+        "label": "Earlier render · 29 September 2026",
+        "note": "This earlier image has not been updated with the latest model changes."
+      }
+    },
+    "cooksville-future.png": {
+      "bytes": 30976433,
+      "sha256": "2de8a5831f58b61c99c7a41b99153473aae69d3e9aca5a6dc3f6c687d8d58fbd",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/cooksville-future.png",
+      "display": {
+        "url": "gallery/previews/2de8a5831f58b61c/cooksville-future.png",
+        "bytes": 8290557,
+        "sha256": "f0446be96d35c1beb57cf507c3007e6c7e98c005be348c998dbcd8394b584547",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "2de8a5831f58b61c99c7a41b99153473aae69d3e9aca5a6dc3f6c687d8d58fbd",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "70f5237cd502d566ffb8a188a53c01103cb0008866018d074c035a42e7697d4b",
+        "renderKey": "wide/cooksville/future/aerial",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "uptown-future.png": {
+      "bytes": 29069868,
+      "sha256": "49eb5b18aabdc3c2ed0fb7a98d5badd321ddc140aba7d9ce45dbbe149378d4b2",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/uptown-future.png",
+      "display": {
+        "url": "gallery/previews/49eb5b18aabdc3c2/uptown-future.png",
+        "bytes": 7659379,
+        "sha256": "d986f5f051727d71eadbd64190124633cdd5849c51c802c445b75b1cdc06182f",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "49eb5b18aabdc3c2ed0fb7a98d5badd321ddc140aba7d9ce45dbbe149378d4b2",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "d1a3f19ae0f8cf9810504411e9bf1e6c0df2db8635f96f930a7a2d84618e5589",
+        "renderKey": "wide/uptown/future/aerial",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "erin-mills-future.png": {
+      "bytes": 34909623,
+      "sha256": "b85f949baf21c78fff1f31cba3a7d0ae7196e2be4edcc9a0865dda1b6270e6df",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/erin-mills-future.png",
+      "display": {
+        "url": "gallery/previews/b85f949baf21c78f/erin-mills-future.png",
+        "bytes": 9771958,
+        "sha256": "d23d118f19eff2f0813ff8f1d384e27e8ff8cc06751ba397291b802c8815ac5d",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "b85f949baf21c78fff1f31cba3a7d0ae7196e2be4edcc9a0865dda1b6270e6df",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "86016b731451643dee6c84c42d157250c8073e25",
+        "sourceEdition": "Future Mississauga corrected-source capture 2026-10-22 / 86016b731451643dee6c84c42d157250c8073e25",
+        "sourceModelDate": "2026-10-22",
+        "sourceManifestSHA256": "9d65784d2eaa89eaadd85bb7fde5b293dc5cf282910d2cde15af9588accd7384",
+        "renderKey": "wide/erin-mills/future/aerial",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "streetsville-future.png": {
+      "bytes": 32808237,
+      "sha256": "8b3ce9134f8c3017bb4ed2641d87fe73986756005a3bbe29e2b9c2b9091d4c4a",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/streetsville-future.png",
+      "display": {
+        "url": "gallery/previews/8b3ce9134f8c3017/streetsville-future.png",
+        "bytes": 9024401,
+        "sha256": "52f3c23c1bfbf5e46cb24decf7927be115ad788ea18255b3c71f0de38120cc8e",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "8b3ce9134f8c3017bb4ed2641d87fe73986756005a3bbe29e2b9c2b9091d4c4a",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "b3cdf428dc889efd306d10381630ccbd2932a4b7c2fedfd3d28e391ae6bde46f",
+        "renderKey": "wide/streetsville/future/aerial",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "meadowvale-future.png": {
+      "bytes": 32548760,
+      "sha256": "7a6e4eff9490035956a01af8b5326abfeeefac88d97d1b3c073e082505bb4fb6",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/meadowvale-future.png",
+      "display": {
+        "url": "gallery/previews/7a6e4eff94900359/meadowvale-future.png",
+        "bytes": 8684492,
+        "sha256": "147e9414b7ad56bcf9a2201d0abeb5ce1d044ce3bba764d0c0a7de9dbded2610",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "7a6e4eff9490035956a01af8b5326abfeeefac88d97d1b3c073e082505bb4fb6",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "3149fbfa4b42d3a978af6357d563694beac75a8be5703283374ab65702ddcdca",
+        "renderKey": "wide/meadowvale/future/aerial",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "malton-future.png": {
+      "bytes": 29162849,
+      "sha256": "320d523e740c6f63e2393e54977da0ac195d5a69de27c3fc7ddd0662c7e314ec",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/malton-future.png",
+      "display": {
+        "url": "gallery/previews/320d523e740c6f63/malton-future.png",
+        "bytes": 7513771,
+        "sha256": "74a72cf20ed9dec0053addc4ce37b1432beaa228d6da193cb0acea2facbcfcfd",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "320d523e740c6f63e2393e54977da0ac195d5a69de27c3fc7ddd0662c7e314ec",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "59497ae9e45eab90d2ac462e41f911065b5161453d0b15823a194d5434828c61",
+        "renderKey": "wide/malton/future/aerial",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "dixie-applewood-future.png": {
+      "bytes": 31947653,
+      "sha256": "d7b2c0470eb17835cf8a3365ee897368fcbf52cf6c8541571ad56fffc13a0b48",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/dixie-applewood-future.png",
+      "display": {
+        "url": "gallery/previews/d7b2c0470eb17835/dixie-applewood-future.png",
+        "bytes": 8499389,
+        "sha256": "105cbbcdcf8a57c618270658e3811d5c29bebc56ec156bb8061d027ec9a1dce3",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "d7b2c0470eb17835cf8a3365ee897368fcbf52cf6c8541571ad56fffc13a0b48",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "07e400d0c6b325fb610b0351ddacfed64d999677862dafa7b82fd069c919274e",
+        "renderKey": "wide/dixie-applewood/future/aerial",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "erindale-future.png": {
+      "bytes": 36263404,
+      "sha256": "8c2db99a3636942eb86ca00e611428e87059a386423e1c3e7ff662e34a799627",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/erindale-future.png",
+      "display": {
+        "url": "gallery/previews/8c2db99a3636942e/erindale-future.png",
+        "bytes": 10269822,
+        "sha256": "39d8adf00354d05a05cf5310005f8cde9b4cbb227cabc389eb335f2253821dcb",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "8c2db99a3636942eb86ca00e611428e87059a386423e1c3e7ff662e34a799627",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "86016b731451643dee6c84c42d157250c8073e25",
+        "sourceEdition": "Future Mississauga corrected-source capture 2026-10-22 / 86016b731451643dee6c84c42d157250c8073e25",
+        "sourceModelDate": "2026-10-22",
+        "sourceManifestSHA256": "794db5d501a708980dbb59d9afa19e0f7568a46b0d2664a7f76b31589b2364dd",
+        "renderKey": "wide/erindale/future/aerial",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "airport-corporate-future.png": {
+      "bytes": 25640725,
+      "sha256": "1285149698c8eceafb6e11e3b68a5b84651893254a0017301c4bf29e9a354574",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/airport-corporate-future.png",
+      "display": {
+        "url": "gallery/previews/1285149698c8ecea/airport-corporate-future.png",
+        "bytes": 5772750,
+        "sha256": "ad633a27f78d60e0f8d8596c7cece4e4390d095630c1caecf333e6469261f88f",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "1285149698c8eceafb6e11e3b68a5b84651893254a0017301c4bf29e9a354574",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "a241d73b5ce5757d3f9e4aa5d5105d94b2fcddb54e48be6e59fbe823310c7892",
+        "renderKey": "wide/airport-corporate/future/aerial",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "heartland-future.png": {
+      "bytes": 29332573,
+      "sha256": "e7dec32efaf7095534b0dbc872418bcb138a971ec209ac5d687ce50696b99f70",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/heartland-future.png",
+      "display": {
+        "url": "gallery/previews/e7dec32efaf70955/heartland-future.png",
+        "bytes": 7429870,
+        "sha256": "e3eb07511530bf222a916893a4c41a6e2314e5856d70f9f630beac36a37595ac",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "e7dec32efaf7095534b0dbc872418bcb138a971ec209ac5d687ce50696b99f70",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "45b22aa94e22675d5be3e5759f7d113668b33855cad6aea6b9c542e61906a07f",
+        "renderKey": "wide/heartland/future/aerial",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "downtown-existing.png": {
+      "bytes": 29449138,
+      "sha256": "8d5fb56b22fbf8e9f849510ef2f887a29251acd33245aaa36219276a3ad61c12",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/downtown-existing.png",
+      "display": {
+        "url": "gallery/previews/8d5fb56b22fbf8e9/downtown-existing.png",
+        "bytes": 7615164,
+        "sha256": "4d0cb5348c8068d85364e5cda5ac92484a2cc2c3c31147e5d2cef91aed719528",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "8d5fb56b22fbf8e9f849510ef2f887a29251acd33245aaa36219276a3ad61c12",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "367eb6779e956ff19591d8cd67f8c13fe5fa4255cbf0863083e7387520b38fc5",
+        "renderKey": "wide/downtown/existing/aerial",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "port-credit-existing.png": {
+      "bytes": 30039299,
+      "sha256": "d1681fadbdfd71eb481dc5a42a8f1ec4c672f7c65664c0a4f1119ae2fc87447b",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/port-credit-existing.png",
+      "display": {
+        "url": "gallery/previews/d1681fadbdfd71eb/port-credit-existing.png",
+        "bytes": 7918718,
+        "sha256": "abe566ce413f8c977a9cf90c2158314161f6adf5f094306f048f6a66f9d0cc8d",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "d1681fadbdfd71eb481dc5a42a8f1ec4c672f7c65664c0a4f1119ae2fc87447b",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "3c23211210438d0355de88979ab7f7bc934745bbc7f28ca628c0b6b8061e8e4b",
+        "renderKey": "wide/port-credit/existing/aerial",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "lakeview-existing.png": {
+      "bytes": 24800370,
+      "sha256": "4aeaed1b29114e0d6ba5c75cf7904dd7402a423195187741f0fa8003f9ebc5e9",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/lakeview-existing.png",
+      "display": {
+        "url": "gallery/previews/4aeaed1b29114e0d/lakeview-existing.png",
+        "bytes": 5794756,
+        "sha256": "8dee5ada8a92ec92e9a8c13c1eb21c4716ef80c7d936db5b0ec999ff6ce547da",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "4aeaed1b29114e0d6ba5c75cf7904dd7402a423195187741f0fa8003f9ebc5e9",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "21e9294241ee643a5161f411059df46dd2d7bf0a99143ac3e3088e244b74e331",
+        "renderKey": "wide/lakeview/existing/aerial",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "clarkson-existing.png": {
+      "bytes": 29540349,
+      "sha256": "38cee2cf82741210c430897ba231ebb9cda7a4dc177341cb1ef8149dd5a5ed2d",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/clarkson-existing.png",
+      "display": {
+        "url": "gallery/previews/38cee2cf82741210/clarkson-existing.png",
+        "bytes": 7775023,
+        "sha256": "804327156e6d1e1191ec504ee516480421484324ad5b2335e47518b46a8f39d1",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "38cee2cf82741210c430897ba231ebb9cda7a4dc177341cb1ef8149dd5a5ed2d",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "95cf5c41be1e65aa12d8ceea5406075d6e68dbf9edadf3d44112769483f7a745",
+        "renderKey": "wide/clarkson/existing/aerial",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "downtown-skyline-existing.png": {
+      "bytes": 17200237,
+      "sha256": "6bd3665a71a0563163dd8dc6f96bae035ad72d1ed6086bbdcbbf6b8d4c4d509d",
+      "width": 6144,
+      "height": 2240,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/downtown-skyline-existing.png",
+      "display": {
+        "url": "gallery/previews/6bd3665a71a05631/downtown-skyline-existing.png",
+        "bytes": 4454479,
+        "sha256": "cc2143abfc90a2949b6a8d0eb5ce7867788965064e5b7dc57c965af7af919efb",
+        "width": 3072,
+        "height": 1120,
+        "scale": 0.5,
+        "sourceSHA256": "6bd3665a71a0563163dd8dc6f96bae035ad72d1ed6086bbdcbbf6b8d4c4d509d",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "367eb6779e956ff19591d8cd67f8c13fe5fa4255cbf0863083e7387520b38fc5",
+        "renderKey": "wide/downtown/existing/skyline",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "downtown-skyline-construction.png": {
+      "bytes": 17396613,
+      "sha256": "d0f462da8dbd41596b556ae9a6a03116bd464d346711b1f2738030667a97d27d",
+      "width": 6144,
+      "height": 2240,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/downtown-skyline-construction.png",
+      "display": {
+        "url": "gallery/previews/d0f462da8dbd4159/downtown-skyline-construction.png",
+        "bytes": 4518236,
+        "sha256": "a943bca491c461017485282f0c6e298cdd5e60085c7d165f93a6daca9b70cd66",
+        "width": 3072,
+        "height": 1120,
+        "scale": 0.5,
+        "sourceSHA256": "d0f462da8dbd41596b556ae9a6a03116bd464d346711b1f2738030667a97d27d",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "cbe1e6061396edac589cfbfbd847ac0fb2dfb912",
+        "sourceEdition": "Future Mississauga Exchange construction repair capture 2026-10-22 / cbe1e6061396edac589cfbfbd847ac0fb2dfb912",
+        "sourceModelDate": "2026-10-22",
+        "sourceManifestSHA256": "c84ff60459fec44066a10cee364e2e83312be980096309fd49c57e48d8398af3",
+        "renderKey": "wide/downtown/construction/skyline",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "downtown-skyline-future.png": {
+      "bytes": 17260300,
+      "sha256": "07b079c80dc6d09ef3bac4af7f8a3a968b9537508b56ca160c50afc32d0b2ffe",
+      "width": 6144,
+      "height": 2240,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/downtown-skyline-future.png",
+      "display": {
+        "url": "gallery/previews/07b079c80dc6d09e/downtown-skyline-future.png",
+        "bytes": 4456991,
+        "sha256": "1fb44e0c3c38a98f636bc6788750bcf717bfc1cbdd70dab5dfc6715838b4afbf",
+        "width": 3072,
+        "height": 1120,
+        "scale": 0.5,
+        "sourceSHA256": "07b079c80dc6d09ef3bac4af7f8a3a968b9537508b56ca160c50afc32d0b2ffe",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "f81892f17dfe42cb5138041336c00ef345b9bbec33162fd6424ddb148690404a",
+        "renderKey": "wide/downtown/future/skyline",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "port-credit-skyline-future.png": {
+      "bytes": 16757496,
+      "sha256": "5f79c392bc5962006e700b07a338e64dbe1316b08d544072a5a38353a902f7f1",
+      "width": 6144,
+      "height": 2240,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/port-credit-skyline-future.png",
+      "display": {
+        "url": "gallery/previews/5f79c392bc596200/port-credit-skyline-future.png",
+        "bytes": 4261871,
+        "sha256": "00a4721abc957df46c118cfed863c46cf5b6fda63f7245bb5a4594892fe4485c",
+        "width": 3072,
+        "height": 1120,
+        "scale": 0.5,
+        "sourceSHA256": "5f79c392bc5962006e700b07a338e64dbe1316b08d544072a5a38353a902f7f1",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "9fff01cc3781c4615525daf6744467e26213be3d98b2ec5694fa800c2bbbc51e",
+        "renderKey": "wide/port-credit/future/skyline",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "lakeview-skyline-future.png": {
+      "bytes": 15265322,
+      "sha256": "2e3e367b53edea47d3b7b2e7353d705d651f7b0e9c9d505773c08bafb57fc816",
+      "width": 6144,
+      "height": 2240,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/lakeview-skyline-future.png",
+      "display": {
+        "url": "gallery/previews/2e3e367b53edea47/lakeview-skyline-future.png",
+        "bytes": 3735409,
+        "sha256": "e9dddd5620a31c2c3704aecc8a5c04b1d21288bc55d3470d623df96b8e5c0db9",
+        "width": 3072,
+        "height": 1120,
+        "scale": 0.5,
+        "sourceSHA256": "2e3e367b53edea47d3b7b2e7353d705d651f7b0e9c9d505773c08bafb57fc816",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "75adea00891655b23b609a93b16a8f6646324bce4e72712b8a0ff012d13d32f3",
+        "renderKey": "wide/lakeview/future/skyline",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "clarkson-skyline-future.png": {
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/clarkson-skyline-future.png",
+      "sha256": "144b08eae332c07fcc07efa017f425dc3a077bfa27993149294ae04388b96f66",
+      "bytes": 9995330,
+      "width": 3840,
+      "height": 1400,
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/144b08eae332c07f/clarkson-skyline-future.png",
+        "sha256": "d2bb68afbee986ccf353e00a404fb284567643ced8291d064d5e6b452c3651f9",
+        "bytes": 2383987,
+        "width": 1920,
+        "height": 700,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "144b08eae332c07fcc07efa017f425dc3a077bfa27993149294ae04388b96f66"
+      },
+      "renderInfo": {
+        "state": "retained-earlier",
+        "renderDate": "2026-09-29",
+        "edition": "Visual Polish 2026-09-26",
+        "label": "Earlier render · 29 September 2026",
+        "note": "This earlier image has not been updated with the latest model changes."
+      }
+    },
+    "downtown-portrait-future.png": {
+      "bytes": 29156503,
+      "sha256": "a651c1b83849ee4ef2c269d71592005d17f8d7dba8f3a8485065b83d270e21d7",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/downtown-portrait-future.png",
+      "display": {
+        "url": "gallery/previews/a651c1b83849ee4e/downtown-portrait-future.png",
+        "bytes": 7428414,
+        "sha256": "6243c1c816bec51e41f67c7c61f69983568293ad2a741ea80852373d792ac515",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "a651c1b83849ee4ef2c269d71592005d17f8d7dba8f3a8485065b83d270e21d7",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "f81892f17dfe42cb5138041336c00ef345b9bbec33162fd6424ddb148690404a",
+        "renderKey": "wide/downtown/future/portrait",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "port-credit-portrait-future.png": {
+      "bytes": 28674275,
+      "sha256": "e608c9f31be5d111a02bc3b8219d562fe5f63885976b7b6077e550efcd932aa7",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/port-credit-portrait-future.png",
+      "display": {
+        "url": "gallery/previews/e608c9f31be5d111/port-credit-portrait-future.png",
+        "bytes": 7112396,
+        "sha256": "30304cecfe98189fc035143ca8976058c4cc85e58b3c52a1095a3cf48733adec",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "e608c9f31be5d111a02bc3b8219d562fe5f63885976b7b6077e550efcd932aa7",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "9fff01cc3781c4615525daf6744467e26213be3d98b2ec5694fa800c2bbbc51e",
+        "renderKey": "wide/port-credit/future/portrait",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "lakeview-portrait-future.png": {
+      "bytes": 28113416,
+      "sha256": "6d8299d0731273e6d590f3d0fa31e379920131af2d110a8a264d03849b32e2f0",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/lakeview-portrait-future.png",
+      "display": {
+        "url": "gallery/previews/6d8299d0731273e6/lakeview-portrait-future.png",
+        "bytes": 7081843,
+        "sha256": "ab5edf52af855326e1f48b7133515a542908120eb1491f3f9d142dffcd5d1ed5",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "6d8299d0731273e6d590f3d0fa31e379920131af2d110a8a264d03849b32e2f0",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "75adea00891655b23b609a93b16a8f6646324bce4e72712b8a0ff012d13d32f3",
+        "renderKey": "wide/lakeview/future/portrait",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "clarkson-portrait-future.png": {
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/citywide-accuracy-images-2026-10-17/clarkson-portrait-future.png",
+      "sha256": "f7e44c8d61a50c89fbaeff16c65fed111eee138a53652915cca34b5f6808209d",
+      "bytes": 16095967,
+      "width": 3840,
+      "height": 2400,
+      "format": "image/png",
+      "display": {
+        "url": "gallery/previews/f7e44c8d61a50c89/clarkson-portrait-future.png",
+        "sha256": "938e1eadf661ea6284261d731e08968560c5362c9d8e7c8ca5fc6cb81c367b67",
+        "bytes": 3798392,
+        "width": 1920,
+        "height": 1200,
+        "format": "image/png",
+        "scale": 0.5,
+        "sourceSHA256": "f7e44c8d61a50c89fbaeff16c65fed111eee138a53652915cca34b5f6808209d"
+      },
+      "renderInfo": {
+        "state": "retained-earlier",
+        "renderDate": "2026-09-29",
+        "edition": "Visual Polish 2026-09-26",
+        "label": "Earlier render · 29 September 2026",
+        "note": "This earlier image has not been updated with the latest model changes."
+      }
+    },
+    "cooksville-portrait-future.png": {
+      "bytes": 28815746,
+      "sha256": "25c3def681d4eccf209a62e505c3811031d573de62b0e61565f2723303ee34e3",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/cooksville-portrait-future.png",
+      "display": {
+        "url": "gallery/previews/25c3def681d4eccf/cooksville-portrait-future.png",
+        "bytes": 7525760,
+        "sha256": "de12df327c3c81fee6dc0055b05359c25340ac7ae04392177b1ac1e5eff088a2",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "25c3def681d4eccf209a62e505c3811031d573de62b0e61565f2723303ee34e3",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "70f5237cd502d566ffb8a188a53c01103cb0008866018d074c035a42e7697d4b",
+        "renderKey": "wide/cooksville/future/portrait",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "uptown-portrait-future.png": {
+      "bytes": 30339567,
+      "sha256": "5d545085091dafe12641f0906bf588767f72644cee705c29cbad50aeae993cea",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/uptown-portrait-future.png",
+      "display": {
+        "url": "gallery/previews/5d545085091dafe1/uptown-portrait-future.png",
+        "bytes": 8132547,
+        "sha256": "ca4a6533636804054cb8d21038a4473b1fa947829580faeae52d51d19871a0a8",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "5d545085091dafe12641f0906bf588767f72644cee705c29cbad50aeae993cea",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "d1a3f19ae0f8cf9810504411e9bf1e6c0df2db8635f96f930a7a2d84618e5589",
+        "renderKey": "wide/uptown/future/portrait",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "downtown-landmark-future.png": {
+      "bytes": 24861264,
+      "sha256": "8ddb72d04e836172a415b8f2e041b577cb7c85fd71118cd1c89ebd0cf79a30ed",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/downtown-landmark-future.png",
+      "display": {
+        "url": "gallery/previews/8ddb72d04e836172/downtown-landmark-future.png",
+        "bytes": 5816130,
+        "sha256": "f5f981b30f95e674b99cb5c4aae5ef37e0f058769d432d85530c5e29db774a28",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "8ddb72d04e836172a415b8f2e041b577cb7c85fd71118cd1c89ebd0cf79a30ed",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "f81892f17dfe42cb5138041336c00ef345b9bbec33162fd6424ddb148690404a",
+        "renderKey": "wide/downtown/future/landmark",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    },
+    "downtown-junction-future.png": {
+      "bytes": 24239791,
+      "sha256": "b540753468a587e8af27fc87e9010e3c53fc22c67d485603d40951f0ed64b160",
+      "width": 6144,
+      "height": 3840,
+      "format": "image/png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-wide-2026-10-22/downtown-junction-future.png",
+      "display": {
+        "url": "gallery/previews/b540753468a587e8/downtown-junction-future.png",
+        "bytes": 5481059,
+        "sha256": "a269a3d94714b5dee1a1d5e844ea7171e0045f781325b73197eb30ebee317742",
+        "width": 3072,
+        "height": 1920,
+        "scale": 0.5,
+        "sourceSHA256": "b540753468a587e8af27fc87e9010e3c53fc22c67d485603d40951f0ed64b160",
+        "format": "image/png"
+      },
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-22",
+        "edition": "Runtime render refresh 2026-10-22",
+        "sourceModelCommit": "d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceEdition": "Future Mississauga viewer and coverage 2026-10-21 / d93ac2f7f1e50007675150ebad58d01aa403d960",
+        "sourceModelDate": "2026-10-21",
+        "sourceManifestSHA256": "f81892f17dfe42cb5138041336c00ef345b9bbec33162fd6424ddb148690404a",
+        "renderKey": "wide/downtown/future/junction",
+        "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+        "label": "New render · 22 October 2026"
+      }
+    }
+  },
+  "originalDownloadHosting": {
+    "releaseTag": "pictures-wide-2026-10-22",
+    "retainedBaselineTag": "citywide-accuracy-images-2026-10-17",
+    "mixedEditions": true,
+    "unchangedOriginalBytes": true,
+    "integrityManifest": "data/original-image-release-integrity.json",
+    "note": "29 new masters and 4 unchanged earlier images; dates and model editions are recorded per image."
+  },
+  "mixedSourceModelCommits": true,
+  "sourceModelCommitsForNewRenders": [
+    "86016b731451643dee6c84c42d157250c8073e25",
+    "cbe1e6061396edac589cfbfbd847ac0fb2dfb912",
+    "d93ac2f7f1e50007675150ebad58d01aa403d960"
+  ],
+  "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
+  "sourceModelCommitImageCounts": {
+    "86016b731451643dee6c84c42d157250c8073e25": 2,
+    "cbe1e6061396edac589cfbfbd847ac0fb2dfb912": 1,
+    "d93ac2f7f1e50007675150ebad58d01aa403d960": 26
+  },
+  "correctedRenderKeys": [
+    "wide/downtown/construction/skyline",
+    "wide/erin-mills/future/aerial",
+    "wide/erindale/future/aerial"
+  ],
+  "repairedHouseRenderKeys": [
+    "wide/erin-mills/future/aerial",
+    "wide/erindale/future/aerial"
+  ],
+  "repairedConstructionRenderKeys": [
+    "wide/downtown/construction/skyline"
+  ],
+  "mixedRenderDates": true,
+  "renderDate": null,
+  "refreshedEdition": "Runtime render refresh 2026-10-22",
+  "newPictureCount": 29,
+  "retainedPictureCount": 4
+}

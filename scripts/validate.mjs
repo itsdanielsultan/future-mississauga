@@ -171,9 +171,9 @@ export async function validate(site = join(ROOT, 'public')) {
       loadedModelAssets++;
     }
   }
-  const {entries, originalImageVerification, portraitGallery} = await validatePictureMedia(site);
+  const {entries, originalImageVerification, portraitGallery, displayPreviewSummary} = await validatePictureMedia(site);
   const documentLinks = await validateDocumentLinks(site);
-  const report = {files: files.length, publishedBytes: bytes, originalPNGs: entries.length, originalImageVerification, halfSizeDisplayPNGs: entries.length, portraitGallery, loadedModelAssets, refinementBounds, ...documentLinks, districtMetadata, localPNGchecksumsVerified: true, noHostedRuntime: true, noPrivateArtifacts: true};
+  const report = {files: files.length, publishedBytes: bytes, originalPNGs: entries.length, originalImageVerification, halfSizeDisplayPNGs: displayPreviewSummary?.halfSize ?? entries.length, displayPreviewSummary, portraitGallery, loadedModelAssets, refinementBounds, ...documentLinks, districtMetadata, localPNGchecksumsVerified: true, noHostedRuntime: true, noPrivateArtifacts: true};
   console.log(JSON.stringify(report, null, 2));
   return report;
 }
