@@ -1,3 +1,4 @@
+import {installSocialPreview} from './social-preview.js?v=20261022-preview1';
 const retryPreview = image => {
   if (image.dataset.retried) return;
   image.dataset.retried = 'true';
@@ -21,3 +22,4 @@ document.querySelector('#areaFilter').addEventListener('change', event => {
   });
   document.querySelector('#resultCount').textContent = count + ' picture' + (count === 1 ? '' : 's');
 });
+installSocialPreview();

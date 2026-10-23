@@ -1,12 +1,11 @@
 {
-  "edition": "Visual Polish 2026-09-26",
-  "researchReviewed": "Base 2026-09-20; targeted community review 2026-09-26",
-  "builtAt": "2026-10-04T23:20:32.201489+00:00",
-  "file": "renders/Downtown-transformation.mp4",
+  "edition": "Equal-state film composition, 22 October 2026",
+  "builtAt": "2026-10-23T03:30:01.693179+00:00",
+  "file": "gallery/Downtown-transformation.mp4",
   "downloadName": "Future Skyline Mississauga.mp4",
   "title": "Future Skyline Mississauga",
-  "bytes": 958352,
-  "sha256": "ebbc2dafab6d00b9b9f5561df60a050acd5d1b35c8826aff94b4cb24d7e254c9",
+  "bytes": 951775,
+  "sha256": "0d666f25b34dca8129ea76c5091f536bc767ab5ae6335c677b3dafe4baf1aa49",
   "width": 1920,
   "height": 700,
   "durationSeconds": 5.7,
@@ -14,23 +13,43 @@
   "frameCount": 171,
   "onScreenText": false,
   "audio": false,
-  "inputLockedAt": "2026-10-04T23:01:19.856444+00:00",
-  "inputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
-  "nativeRenderVerification": {
-    "all33Blender52": true,
-    "all33MetalRT": true,
-    "all33Native": true,
-    "all33CamerasMatchPrevious": true,
-    "BlenderVersions": [
-      "5.2.2 LTS"
-    ],
-    "samplesMaximum": 96,
-    "allRenderPixelsAndColourPreserved": true,
-    "wholeFileHashesPreservedAfterRender": false,
-    "wholeFilesUnchanged": 16,
-    "privacyMetadataSanitizedFiles": 17,
-    "metadataTransformationProofSHA256": "e61bcfbd80a05dd57f319179db17b6ab8fb5c15adbc5d762adb45e4ff23c1884"
-  },
+  "pureStateHoldFrames": 39,
+  "transitionFrames": 27,
+  "timelineFrames": [
+    {
+      "kind": "hold",
+      "state": "existing",
+      "start": 0,
+      "endExclusive": 39
+    },
+    {
+      "kind": "dissolve",
+      "from": "existing",
+      "to": "construction",
+      "start": 39,
+      "endExclusive": 66
+    },
+    {
+      "kind": "hold",
+      "state": "construction",
+      "start": 66,
+      "endExclusive": 105
+    },
+    {
+      "kind": "dissolve",
+      "from": "construction",
+      "to": "future",
+      "start": 105,
+      "endExclusive": 132
+    },
+    {
+      "kind": "hold",
+      "state": "future",
+      "start": 132,
+      "endExclusive": 171
+    }
+  ],
+  "timelineNote": "Each state is allocated 39 full-state hold frames (1.3 seconds). Both transitions have 27 frames (0.9 seconds); their endpoint frames match the adjoining full-state image.",
   "sourceImages": [
     {
       "file": "renders/downtown-skyline-existing.png",
@@ -75,31 +94,51 @@
       "currentSourceAuditSHA256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
     }
   ],
-  "originalPNGMastersUnchanged": true,
-  "sourceGeometryChangedByFilm": false,
-  "method": "Trimmed 5.7-second fixed-camera dissolve between three native model renderings. No headers, footers, generated intermediate buildings or on-screen text.",
-  "transitVisibility": "Normal scene depth; terrain, buildings and bridges may obscure routes. Approximate mapped profiles are not engineering surveys.",
-  "manualVisualReviewPending": false,
-  "contactSheet": "work/video/Film-contact-sheet.png",
   "sourceImageProvenance": {
     "currentRevisionNativeRenders": 0,
     "byteIdenticalPredecessorRenders": 3,
     "inputLockScope": "The top-level input lock identifies the current validated composition. Each source image retains its actual render-time lock; older accepted native images are not claimed to have been rerendered."
   },
-  "incrementalRevision": "PMLA delivery-status review, 4 October 2026",
-  "visualReviewPassed": true,
-  "visualReviewCompletedAt": "2026-10-04T23:26:24.208976+00:00",
-  "visualCheckpointsSeconds": [
-    0,
-    1.5,
-    2.1,
-    3.1,
-    3.7,
-    5.6
-  ],
-  "visualReviewNotes": [
-    "All six newly provided film checkpoint images were freshly inspected at 1920 by 700: 0, 1.5, 2.1, 3.1, 3.7 and 5.6 seconds. Existing and construction holds, transition frames and final future hold share stable camera/ground framing.",
-    "The translucent proposal/envelope shapes at 2.1 and 3.7 seconds are intentional crossfade transitions. Stable frames are opaque, with existing grey context, coloured future additions and retained Block Nine. No stray text, header/footer, unexpected render tear or camera shift was observed in the six checkpoints.",
-    "The hash-verified film is the retained 5.7-second, 171-frame, 1920x700, 30fps version titled Future Skyline Mississauga. The current preparation script probes it and decodes the full file before writing preflight. Manual review covers these six checkpoints, not every frame individually."
-  ]
+  "predecessorManifestSHA256": "3818b161876b08b898099c3a0c7e06cb8764f7eb719662230808999e8e65a03d",
+  "predecessorFilmSHA256": "ebbc2dafab6d00b9b9f5561df60a050acd5d1b35c8826aff94b4cb24d7e254c9",
+  "originalRenderInputLockSHA256": "ecefd31c68fbcb332408145682a3ce828701016fefb4f1c65a0295e5f0d51bf2",
+  "originalPNGMastersUnchanged": true,
+  "sourceGeometryChangedByFilm": false,
+  "newNativeRenders": false,
+  "method": "Equal-duration fixed-camera dissolves between the same three published native model renders; original image dates, geometry, materials and framing retained. No headers, footers or generated intermediate buildings.",
+  "transitVisibility": "Normal scene depth; terrain, buildings and bridges may obscure routes. Approximate mapped profiles are not engineering surveys.",
+  "validation": {
+    "fullVideoDecodePassed": true,
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 700,
+          "r_frame_rate": "30/1",
+          "nb_frames": "171"
+        }
+      ],
+      "format": {
+        "duration": "5.700000",
+        "tags": {
+          "title": "Future Skyline Mississauga"
+        }
+      }
+    },
+    "checkpointFrames": [
+      19,
+      52,
+      85,
+      118,
+      151
+    ],
+    "manualVisualReviewPassed": true,
+    "manualVisualReviewNotes": [
+      "Inspected the extracted five-frame contact sheet: existing, existing/construction dissolve, construction, construction/future dissolve, and future; all retain fixed framing, text-free image and unchanged source details. Ghosted proposals occur only in transitions. This review covers checkpoints, not manual inspection of every video frame."
+    ]
+  },
+  "sourceRenderDatesNote": "These are the original dated skyline source renders used by the prior film, not the new 22 October gallery daylight or building refresh."
 }
