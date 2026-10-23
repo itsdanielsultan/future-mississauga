@@ -30,7 +30,7 @@ export async function validatePictureMedia(site){
  const before=await load(site,'data/history/picture-assets-before-presentation-2026-10-22.json');
  const oldSocial=await load(site,'data/history/social-pictures-before-presentation-2026-10-22.json');
  const wide=await load(site,'data/presentation-wide-release-integrity.json'),portraits=await load(site,'data/presentation-portraits-release-integrity.json');
- for(const p of[wide,portraits]){assert.equal(p.schema,'future-mississauga-presentation-public-byte-proof/v1');assert(p.checkedAt);assert.equal(p.targetCommit,'8d6d8c92cb565d4a495fdf6b1a4a1a3c24c5b2b6');assert.equal(p.publicHashesVerified,p.assets.length);}
+ for(const p of[wide,portraits]){assert.equal(p.schema,'future-mississauga-presentation-public-byte-proof/v1');assert(p.checkedAt);assert.equal(p.targetCommit,(await load(site,'data/presentation-refresh-revision.json')).targetCommit);assert.equal(p.publicHashesVerified,p.assets.length);}
  assert.equal(wide.assets.length,29);assert.equal(portraits.assets.length,44);assert.equal(pictures.originalPixels,false);
  const entries=Object.entries(pictures.images);assert.equal(entries.length,33);assert.deepEqual(Object.keys(pictures.images),Object.keys(before.images));
  let wc=0,wr=0,pc=0,pr=0;
@@ -52,6 +52,6 @@ export async function validatePictureMedia(site){
  const ix=await load(site,'downloads/Picture-index.json');assert.equal(ix.images.length,57);assert.equal(ix.presentationDerivativeCount,51);
  for(const r of ix.images){const row=r.kind==='wide'?pictures.images[r.file]:social.images.find(p=>p.file===r.file);assert.equal(r.sha256,row.sha256);assert.deepEqual(r.renderInfo,row.renderInfo);if(r.presentationInfo)assert.deepEqual(r.nativeOriginal,row.nativeOriginal);}
  const sources=await load(site,'data/presentation-sources.json');assert.equal(sources.images.length,51);assert(sources.images.every(r=>r.sourceAttribution.creditLines.length>=3));
- const home=await readFile(join(site,'index.html'),'utf8');assert(home.includes('51 presentation copies'));assert(home.includes('six earlier Citywide and Clarkson future views'));
+ const home=await readFile(join(site,'index.html'),'utf8');assert(home.includes('sources.html'));assert(home.includes('Six earlier Citywide and Clarkson views'));const sourcePage=await readFile(join(site,'sources.html'),'utf8');assert(sourcePage.includes('OpenStreetMap'));assert(sourcePage.includes('Open Government Licence'));assert(sourcePage.includes('licenses/CREDITS.md'));
  return {entries,originalImageVerification:{localOriginals:0,remoteOriginals:4,remotePresentationDerivatives:29,presentationDerivatives:29,retainedHistoricalProofs:4,separatePublicHashProofRequired:true,remoteBytesFetchedByThisStaticCheck:false},portraitGallery:{nativePortraitRecords:24,presentationDerivatives:22,retainedEarlierPortraits:2,remoteHalfSizePreviews:24,dimensionsVerified:true,remoteDownloadSHA256Recorded:24,remoteDownloadBytesVerifiedByThisStaticCheck:false,separatePublicHashProofRequired:true,mixedRenderDates:true},displayPreviewSummary:{totalWide:33,nominal45Percent:29,halfSize:4},presentation:{images:51,publicAssets:73,originalRenderDatesPreserved:true,nativeMasterURLsPreserved:true}};
 }

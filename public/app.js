@@ -1,7 +1,7 @@
 import {projectDetailsHTML, projectCardHTML, completionRowsHTML} from './project-cards.js?v=20261022-cards2';
 import {createDaylight} from './daylight.js?v=20261022-warm1';
 import {addArchitecturalEdges} from './building-presentation.js?v=20261022-detail1';
-import {projectNorth, presentationLayout, drawPresentationFooter} from './scene-presentation.js?v=20261022-detail1';
+import {projectNorth, presentationLayout, drawPresentationFooter} from './scene-presentation.js?v=20261023-1';
 import {adoptContextModelVisibility} from './context-model-visibility.js?v=20261017-contact1';
 import {splitSourceOverlaps} from './source-layer-cut.js?v=20261010-study-visibility1';
 import {applyModelVisibility} from './model-visibility.js?v=20261010-study-visibility1';
@@ -231,7 +231,7 @@ bindComparison({panel:wrap,handle:$('#compareLine'),input:$('#compareRange'),ini
 for(const id of ['lrtToggle','goToggle','transitwayToggle','uncertainToggle','markersToggle'])$('#'+id).onchange=()=>{applyVisibility(mode);dirty=true;};
 $('#detailToggle').onchange=e=>{architecturalEdges.forEach(layer=>layer.visible=e.target.checked);dirty=true;};
 $('#scenarioSelect').onchange=e=>setMode(e.target.value);$('#resetBtn').onclick=()=>{focusRequest++;reset();};$('#sourcesBtn').onclick=()=>$('#about').showModal();$('#closeAbout').onclick=()=>$('#about').close();
-function render(){if(current)daylight.update(controls.target,camera,current.radius);if(compare){const size=renderer.getSize(new THREE.Vector2()),cut=Math.round(size.x*split);renderer.setScissorTest(true);renderer.setScissor(0,0,cut,size.y);applyVisibility('existing');renderer.render(scene,camera);renderer.setScissor(cut,0,size.x-cut,size.y);applyVisibility('future');renderer.render(scene,camera);renderer.setScissorTest(false);}else{applyVisibility(mode);renderer.render(scene,camera);}const bearing=projectNorth(THREE,camera,controls.target,canvas.width,canvas.height);const arrow=$('#northArrow');arrow.hidden=!bearing;if(bearing){arrow.style.transform='rotate('+bearing.degrees+'deg)';arrow.parentElement.setAttribute('aria-label','North direction, '+Math.round((bearing.degrees+360)%360)+' degrees clockwise from the top of the image');}}
+function render(){if(current)daylight.update(controls.target,camera,current.radius);if(compare){const size=renderer.getSize(new THREE.Vector2()),cut=Math.round(size.x*split);renderer.setScissorTest(true);renderer.setScissor(0,0,cut,size.y);applyVisibility('existing');renderer.render(scene,camera);renderer.setScissor(cut,0,size.x-cut,size.y);applyVisibility('future');renderer.render(scene,camera);renderer.setScissorTest(false);}else{applyVisibility(mode);renderer.render(scene,camera);}const bearing=projectNorth(THREE,camera,controls.target,canvas.width,canvas.height);const arrow=$('#northArrow');arrow.hidden=!bearing;if(bearing){arrow.style.transform='rotate('+bearing.degrees+'deg)';const northLabel=arrow.parentElement.querySelector('.compass-label');if(northLabel)northLabel.style.transform='translate('+bearing.x*27+'px,'+bearing.y*27+'px)';arrow.parentElement.setAttribute('aria-label','North direction, '+Math.round((bearing.degrees+360)%360)+' degrees clockwise from the top of the image');}}
 let exportImageURL=null;
 function clearExportImage(){
  if(exportImageURL){URL.revokeObjectURL(exportImageURL);exportImageURL=null;}
@@ -244,14 +244,15 @@ $('#exportBtn').onclick=async()=>{
  const filename='future-mississauga-'+current.id+'-'+(compare?'comparison':mode)+'.png';
  exporting=true;button.disabled=true;button.setAttribute('aria-busy','true');clearExportImage();
  try{
+  await Promise.all([document.fonts.load('500 23px "Bricolage Grotesque"'),document.fonts.load('15px Lato')]);
   render();const out=document.createElement('canvas');out.width=canvas.width;const ctx=out.getContext('2d'),fontSize=out.width<900?13:16,maxWidth=out.width-60;
-  const captions=['City of Mississauga massing data · © OpenStreetMap contributors · General representation; see atlas evidence and terms','Contains information licensed under the Open Government Licence – Ontario. Tree dimensions and woodland fill are illustrative.','Source-supported geometry and reference finishes; colours and facade completeness vary by building.'];
-  ctx.font=fontSize+'px sans-serif';const lines=[];for(const text of captions){let line='';for(const word of text.split(' ')){const next=line?line+' '+word:word;if(line&&ctx.measureText(next).width>maxWidth){lines.push(line);line=word;}else line=next;}if(line)lines.push(line);}
+  const captions=['City of Mississauga · Contains information licensed under the Open Government Licence – Ontario.','© OpenStreetMap contributors · openstreetmap.org/copyright · Credits & terms: futuremississauga.com/sources.html','Source dates and model detail vary. Tree dimensions and woodland fill are illustrative.'];
+  ctx.font=fontSize+'px Lato, sans-serif';const lines=[];for(const text of captions){let line='';for(const word of text.split(' ')){const next=line?line+' '+word:word;if(line&&ctx.measureText(next).width>maxWidth){lines.push(line);line=word;}else line=next;}if(line)lines.push(line);}
   const footerHeight=presentationLayout(out.width).height;
   out.height=canvas.height+footerHeight+20+lines.length*(fontSize+8);
-  ctx.fillStyle='#f6f5ef';ctx.fillRect(0,0,out.width,out.height);ctx.drawImage(canvas,0,0);
+  ctx.fillStyle='#ffffff';ctx.fillRect(0,0,out.width,out.height);ctx.drawImage(canvas,0,0);
   drawPresentationFooter(ctx,{width:out.width,top:canvas.height,title:'Future Mississauga · '+current.name,scenario,bearing:projectNorth(THREE,camera,controls.target,canvas.width,canvas.height)});
-  ctx.fillStyle='#607276';ctx.font=fontSize+'px sans-serif';lines.forEach((line,i)=>ctx.fillText(line,30,canvas.height+footerHeight+fontSize+8+i*(fontSize+8)));
+  ctx.fillStyle='#6b6662';ctx.font=fontSize+'px Lato, sans-serif';lines.forEach((line,i)=>ctx.fillText(line,30,canvas.height+footerHeight+fontSize+8+i*(fontSize+8)));
   const blob=await new Promise((resolve,reject)=>out.toBlob(value=>value?resolve(value):reject(new Error('PNG encoding failed')),'image/png'));
   const download=document.createElement('a'),open=document.createElement('a');
   exportImageURL=URL.createObjectURL(blob);

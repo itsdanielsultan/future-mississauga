@@ -1,0 +1,86 @@
+/* Supporting pages extend the same open white/red reading system. */
+html .reading-page { margin: 0; background: #fff; color: var(--site-ink); }
+.reading-page main, .reading-page main * { box-sizing: border-box; }
+html .reading-page :is(.render-main, .review-main, .accuracy-main, .recent-updates) { max-width: 1536px; margin: 0 auto; padding: 54px var(--page-gutter) 60px; font: 400 16px/1.65 'Lato', sans-serif; }
+html .reading-page :is(.render-main, .review-main, .accuracy-main, .update-intro) h1 { max-width: 1000px; margin: 0 0 22px; font-size: clamp(42px, 4.7vw, 68px); line-height: 1.08; font-weight: 500; letter-spacing: -.04em; }
+html .reading-page :is(.render-main, .review-main, .accuracy-main, .recent-updates) h2 { font-weight: 500; letter-spacing: -.025em; }
+html .reading-page :is(.render-main, .review-main, .accuracy-main, .recent-updates) a { color: #a23b3b; }
+html .reading-page :is(.render-intro, .lede) { max-width: 74ch; font-size: 20px; line-height: 1.55; }
+html .reading-page .page-date { margin: -8px 0 22px; color: #6b6662; font-size: 14px; line-height: 1.5; }
+html .reading-page :is(.render-basis, .change-intro, .limit, .credits, .review-footer) { max-width: 85ch; line-height: 1.65; }
+html .reading-page :is(.render-pair figcaption, .image-pair figcaption, .limit, .credits, .review-footer, .note, .count, .update-note, .update-bottom p, .update-render figcaption, .state, .accuracy-main small) { color: #6b6662; }
+html .reading-page :is(.render-note, .local-note) { max-width: 90ch; padding: 18px 0; margin: 24px 0; border: 0; border-top: 1px solid #e4dedb; border-bottom: 1px solid #e4dedb; border-radius: 0; background: #fff; color: #6b6662; font-size: 15px; line-height: 1.65; }
+html .reading-page :is(.render-main details, .update-note, .approval-update) { background: transparent; }
+html .reading-page .render-main details { color: #6b6662; padding: 12px 0; }
+html .reading-page .render-main summary { color: #a23b3b; min-height: 32px; }
+html .reading-page .render-main details p { margin: 6px 0 0; }
+html .reading-page :is(.render-project, .model-change, .work, .stats) { border-color: #e4dedb; }
+html .reading-page :is(.render-project, .model-change) { scroll-margin-top: calc(var(--site-header-height) + 18px); }
+html .reading-page :is(.render-jump, .jump-list) { font: 400 15px/1.6 'Lato', sans-serif; gap: 10px 24px; }
+html .reading-page :is(.render-pair img, .image-frame, .accuracy-main figure img) { background: #f5f4f2; border-radius: 6px; }
+html .reading-page .eyebrow { color: #6b6662; font-size: 13px; font-weight: 400; text-transform: none; letter-spacing: 0; line-height: 1.5; }
+html .reading-page .latest-studies { padding-top: 12px; }
+html .reading-page .update-intro { max-width: 880px; margin-bottom: 36px; }
+html .reading-page .update-intro > p:not(.page-date):not(.update-note) { font-size: 20px; line-height: 1.55; }
+html .reading-page .approval-update { max-width: 980px; margin-top: 36px; padding-top: 28px; border-top: 1px solid #e4dedb; }
+html .reading-page .approval-update h2 { font-size: clamp(26px, 2.4vw, 34px); line-height: 1.2; margin: 0 0 16px; }
+html .reading-page .approval-update p { margin: 0 0 14px; }
+html .reading-page .approval-update .update-area { margin-bottom: 9px; }
+html .reading-page .update-list { margin: 38px 0; gap: 0; }
+html .reading-page .update-row { padding: 28px 0; gap: 48px; border-top: 1px solid #e4dedb; }
+html .reading-page .update-area { color: #6b6662; font-size: 13px; letter-spacing: 0; text-transform: none; }
+html .reading-page .update-links { gap: 10px 24px; }
+html .reading-page .update-row h2 a { color: #2e2b2a; }
+html .reading-page .update-row h2 a:hover { color: #a23b3b; }
+html .reading-page .accuracy-main :is(select, input) { min-height: 44px; background: #fff; border: 1px solid #e4dedb; border-radius: 6px; font: 400 15px/1.4 'Lato', sans-serif; }
+html .reading-page .accuracy-main .map-choice { gap: 16px; }
+html .reading-page .accuracy-main .bar { background: linear-gradient(to right, #a23b3b var(--length), #e4dedb var(--length)); }
+html .reading-page .accuracy-main .stat strong { font: 500 36px/1.2 'Bricolage Grotesque', sans-serif; }
+html .reading-page .accuracy-main th { background: #f5f4f2; color: #2e2b2a; }
+html .reading-page .accuracy-main :is(th, td) { border-color: #e4dedb; }
+html .reading-page .accuracy-main .table-scroll { max-width: 100%; border-top: 1px solid #e4dedb; overscroll-behavior-inline: contain; }
+html .reading-page .accuracy-main summary { min-height: 32px; }
+/* Route, GO and LRT colours remain tied to the map rather than the red chrome. */
+html .reading-page .subway-main { max-width: 1536px; padding: 0 var(--page-gutter); font-family: 'Lato', sans-serif; }
+html .reading-page .subway-intro { padding-top: 54px; }
+html .reading-page .subway-intro h1 { font-weight: 500; }
+html .reading-page .subway-main :is(.intro-context, .feature-heading > p, .interactive-heading > p, .historic-map-figure figcaption div > span, .map-caption p, .areas-note, .independence, .details-content, .study-question, .subway-details summary small, .map-help) { color: #6b6662; }
+html .reading-page .subway-main a { color: #a23b3b; }
+html .reading-page :is(.concept-tag, .concept-status) { padding: 0; border: 0; border-radius: 0; background: none; }
+html .reading-page .concept-tag { color: #2e2b2a; }
+html .reading-page .concept-status { color: #6b6662; }
+html .reading-page :is(.historic-map-figure, .subway-details, .map-caption, .subway-details > details) { background: #fff; }
+html .reading-page :is(.map-section, .historic-map-link, .source-figure > a, .details-content .network-figure img) { border-color: #e4dedb; border-radius: 6px; }
+html .reading-page .map-toolbar { padding: 16px 20px; }
+html .reading-page .map-selects select { min-height: 44px; background: #fff; border-color: #e4dedb; border-radius: 6px; font-size: 14px; }
+html .reading-page .map-selects label, html .reading-page .map-toggle label { font-size: 13px; }
+html .reading-page .map-toggle label { min-height: 32px; }
+html .reading-page :is(.subway-map, .map-loading) { background: #f5f4f2; color: #6b6662; }
+html .reading-page .loading-orb { background: #f7eeee; border-color: #d9b9b9; }
+html .reading-page .map-tools button { min-width: 44px; min-height: 44px; background: #fff; color: #2e2b2a; border-color: #e4dedb; box-shadow: none; }
+html .reading-page .map-tools button:hover { background: #f7eeee; color: #a23b3b; }
+html .reading-page .map-bottom { color: #4c4744; background: linear-gradient(transparent, #fffffff2); }
+html .reading-page .legend-route { border-color: #80529e; }
+html .reading-page #routeToggle { accent-color: #80529e; }
+html .reading-page .details-content .source-figure > a, html .reading-page .details-content .network-figure img { background: #f5f4f2; }
+html .reading-page .subway-details summary small { font-family: 'Lato', sans-serif; }
+@media (max-width: 760px) {
+  html .reading-page :is(.render-main, .review-main, .accuracy-main, .recent-updates) { padding: 36px 20px 44px; }
+  html .reading-page :is(.render-main, .review-main, .accuracy-main, .update-intro) h1 { font-size: clamp(38px, 10vw, 52px); }
+  html .reading-page :is(.render-intro, .lede, .update-intro > p:not(.page-date):not(.update-note)) { font-size: 18px; }
+  html .reading-page .section-head { display: block; }
+  html .reading-page .section-head .state { white-space: normal; }
+  html .reading-page .update-row { gap: 12px; padding: 24px 0; }
+  html .reading-page .approval-update { margin-top: 28px; padding-top: 24px; }
+  html .reading-page .accuracy-main .stats { gap: 24px; }
+  html .reading-page .accuracy-main .stat { grid-template-columns: 1fr; gap: 6px; }
+  html .reading-page .accuracy-main .stat span { max-width: none; }
+  html .reading-page .accuracy-main .map-choice { align-items: start; flex-direction: column; gap: 8px; }
+  html .reading-page .accuracy-main .map-choice select { width: 100%; }
+  html .reading-page .accuracy-main .controls :is(input, select) { width: 100%; min-width: 0; }
+  html .reading-page .subway-main { padding: 0 20px; }
+  html .reading-page .subway-intro { padding-top: 36px; }
+  html .reading-page .subway-intro h1 { font-size: 46px; }
+  html .reading-page .map-selects { width: 100%; }
+  html .reading-page .map-selects label { grid-template-columns: 80px minmax(0, 1fr); }
+}

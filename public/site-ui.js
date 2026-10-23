@@ -16,7 +16,7 @@ if(header){
  const updateCurrentLink=()=>{
   // Opening navigation should not change the section the reader was viewing.
   if(home&&toggle.getAttribute('aria-expanded')==='true'&&toggle.getClientRects().length)return;
-  let selected=null;
+  let selected=home?links.find(link=>link.getAttribute('href')==='./#pictures'):null;
   if(home){
    // Match the visible sticky header and the page's anchor spacing.
    const boundary=Math.max(parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop)||0,header.getBoundingClientRect().bottom+16)+1;

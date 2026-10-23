@@ -51,8 +51,8 @@
     {
       "kind": "wide",
       "file": "downtown-future.png",
-      "bytes": 25010716,
-      "sha256": "c6538fcce6a12830b9ab451935f1444cffac570e46af915e20a5610535eaa1f2",
+      "bytes": 23706639,
+      "sha256": "381df15f757681fff85810a8542d56b277f44f60584b531c79d55ec6c2dc7b64",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "b1db50832ebd51fd703f3a011a5c9e17f89c15689bf063ebff884172fd9016ef",
@@ -76,7 +76,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/downtown-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/downtown-future.png",
       "nativeOriginal": {
         "bytes": 29549059,
         "sha256": "2af02e6e13e4dbabbf2c50fc509ff458ae27601ceeb34398f2de4050bb7c33d4",
@@ -109,6 +109,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -152,15 +153,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "wide",
       "file": "port-credit-future.png",
-      "bytes": 25704953,
-      "sha256": "0ccdb526ba6172da6728d299e2cde66bb06c3001e9ff6392c81b39339834d208",
+      "bytes": 24501936,
+      "sha256": "8b465dbf98d3f447096854c5ca045930f96dc38fe4bd699806fbff575a9d2ac1",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "630f0d3742e9080d2ad19f1d3de65603a6e3b6812f9b304c1bab0104e1e28668",
@@ -184,7 +190,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/port-credit-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/port-credit-future.png",
       "nativeOriginal": {
         "bytes": 30178822,
         "sha256": "c421abfdbd791a7b389fb68dccc2bb7aec387b959e1fdc38fb63376a9ac8deda",
@@ -217,6 +223,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -260,15 +267,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "wide",
       "file": "lakeview-future.png",
-      "bytes": 20709581,
-      "sha256": "cba288ac768cc8cf4610a45df6a54d1b85337dd9a35fb82137c4d33ba5317a49",
+      "bytes": 19692807,
+      "sha256": "6de835c0563c03bf5fbd5c8aaf4a16a9d3e46dca1ee498e7dfd0159ba4d7dcaa",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "5abb55060d19a11fbcd665889879d0d902c1990ed1c4503c4bad79dcf4ad577c",
@@ -292,7 +304,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/lakeview-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/lakeview-future.png",
       "nativeOriginal": {
         "bytes": 25463728,
         "sha256": "3ed0a2f9ea245a0a3aa85cbd1ed84027cb626bd01424616c5d0b8b7bbd763017",
@@ -325,6 +337,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -368,8 +381,13 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
@@ -391,8 +409,8 @@
     {
       "kind": "wide",
       "file": "cooksville-future.png",
-      "bytes": 26384761,
-      "sha256": "2b69eab220163cd238b1314a04fd0c19092ac4e2324d00bcc40acf56199ba41f",
+      "bytes": 25052687,
+      "sha256": "a570dc9474c35905d9fd6e32a03fbcb6d3b8c606e5190dfd725f5972108d3009",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "80204053be34d2a899a9c750d38aa8ee88edd9b9534892109385636e1be3f016",
@@ -416,7 +434,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/cooksville-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/cooksville-future.png",
       "nativeOriginal": {
         "bytes": 30976433,
         "sha256": "2de8a5831f58b61c99c7a41b99153473aae69d3e9aca5a6dc3f6c687d8d58fbd",
@@ -449,6 +467,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -492,15 +511,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "wide",
       "file": "uptown-future.png",
-      "bytes": 24475952,
-      "sha256": "f505223f92a529ad7df0c4fda87052a157610544df024fcdb666e9f0e9ff50cd",
+      "bytes": 23253523,
+      "sha256": "5da20f84352c848f7366b873a3ebf3284320302bcd262ff5da5deb6f139fd790",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "bedd0d488d147aea229abfad5e73eaa6f93d8bfb9dd29458c1fdbb9f8792b6dd",
@@ -524,7 +548,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/uptown-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/uptown-future.png",
       "nativeOriginal": {
         "bytes": 29069868,
         "sha256": "49eb5b18aabdc3c2ed0fb7a98d5badd321ddc140aba7d9ce45dbbe149378d4b2",
@@ -557,6 +581,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -600,15 +625,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "wide",
       "file": "erin-mills-future.png",
-      "bytes": 30801598,
-      "sha256": "8130640c7d63ab788dea804f4929dea9f8e59e33aac41e9145b3968cef333edf",
+      "bytes": 29199953,
+      "sha256": "26563b76c8464ed6ad7c29e067ca10007e6dfed69af866b8e3b1da89a040f038",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "2ee403ca3e292d4e9e208d5126950aea308e6a699350fa3c8975ba88457e2ae9",
@@ -632,7 +662,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/erin-mills-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/erin-mills-future.png",
       "nativeOriginal": {
         "bytes": 34909623,
         "sha256": "b85f949baf21c78fff1f31cba3a7d0ae7196e2be4edcc9a0865dda1b6270e6df",
@@ -665,6 +695,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -708,15 +739,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "wide",
       "file": "streetsville-future.png",
-      "bytes": 28378773,
-      "sha256": "c4b2364d44b04adeda27709310cae78177e97a270008960f559fde0e16fbce61",
+      "bytes": 26883415,
+      "sha256": "8012322719f1f0cfbee3831550f29ae3b112f96f4217bb38ab23604931f67e10",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "8036a3d5212edee6f6eeb4cc7c4dbc619345a0235eb7bc52900ad2b1afa9489d",
@@ -740,7 +776,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/streetsville-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/streetsville-future.png",
       "nativeOriginal": {
         "bytes": 32808237,
         "sha256": "8b3ce9134f8c3017bb4ed2641d87fe73986756005a3bbe29e2b9c2b9091d4c4a",
@@ -773,6 +809,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -816,15 +853,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "wide",
       "file": "meadowvale-future.png",
-      "bytes": 28120002,
-      "sha256": "5d1ee011a1540c5ff799d3523632ad9b1be6e259df9f796a5a172aff0b31da6d",
+      "bytes": 26590500,
+      "sha256": "8858961ef3d9df251731c78c89ca18272eb2405c71d0ce090d16bb9daadcd322",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "3f029dc7eee0a7d04f6ee00a4a086febf46e2206e67a0fea1c210ba614cadbae",
@@ -848,7 +890,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/meadowvale-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/meadowvale-future.png",
       "nativeOriginal": {
         "bytes": 32548760,
         "sha256": "7a6e4eff9490035956a01af8b5326abfeeefac88d97d1b3c073e082505bb4fb6",
@@ -881,6 +923,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -924,15 +967,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "wide",
       "file": "malton-future.png",
-      "bytes": 24530690,
-      "sha256": "22c78ed1ec4e95fe16d9f9367b846b1e6c116b485045f0644f2a79077e34825c",
+      "bytes": 23112703,
+      "sha256": "94cfd4edc3476faab1dd63c32351853fc129ab0eca1dbc33e18db60e5f2c7554",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "9deab10a1a95ffcb3d4049d34382a4b6eaf074c84a321da729f341d5ae0ac4de",
@@ -956,7 +1004,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/malton-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/malton-future.png",
       "nativeOriginal": {
         "bytes": 29162849,
         "sha256": "320d523e740c6f63e2393e54977da0ac195d5a69de27c3fc7ddd0662c7e314ec",
@@ -989,6 +1037,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -1032,15 +1081,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "wide",
       "file": "dixie-applewood-future.png",
-      "bytes": 27521805,
-      "sha256": "0d02d4f423571a0dcf685eb7244a017731cc1b19450e93131caab86ba9108c27",
+      "bytes": 26289110,
+      "sha256": "1d1c3b112788b3d5c43cc72c6b9a46d2401b727490f9844df668e06056ffad4a",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "68535c7215f1696661d83e01065b2c92eff003d718fc58f763ea475b1d8c2773",
@@ -1064,7 +1118,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/dixie-applewood-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/dixie-applewood-future.png",
       "nativeOriginal": {
         "bytes": 31947653,
         "sha256": "d7b2c0470eb17835cf8a3365ee897368fcbf52cf6c8541571ad56fffc13a0b48",
@@ -1097,6 +1151,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -1140,15 +1195,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "wide",
       "file": "erindale-future.png",
-      "bytes": 32180162,
-      "sha256": "ea0d2606e62a32b24816dabe937d39134e9390bbf037c5c180582f1f43ac6171",
+      "bytes": 30616900,
+      "sha256": "0e9b6e50b01eb633c5bbbad91d9672a4324836853c788e605252e1b2f513a1a3",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "dfc8e79b36ab9f61405d9ebc785c3d712ffad08d2436a91b6a1abe856742cfc4",
@@ -1172,7 +1232,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/erindale-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/erindale-future.png",
       "nativeOriginal": {
         "bytes": 36263404,
         "sha256": "8c2db99a3636942eb86ca00e611428e87059a386423e1c3e7ff662e34a799627",
@@ -1205,6 +1265,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -1248,15 +1309,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "wide",
       "file": "airport-corporate-future.png",
-      "bytes": 20733940,
-      "sha256": "807e5a0988114b4663da8fc0d8b56452ef21fb5c5005e786efb6d391ab85c6b2",
+      "bytes": 19377897,
+      "sha256": "d8229a0e24bcdf71d8b01f4ddb8479547823db33f7b9e02c25b99fafe6089ee4",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "7139c36d894ae15f8f45a3ca6798dc5f66057a8c5a9c05167b8c6089f8a40966",
@@ -1280,7 +1346,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/airport-corporate-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/airport-corporate-future.png",
       "nativeOriginal": {
         "bytes": 25640725,
         "sha256": "1285149698c8eceafb6e11e3b68a5b84651893254a0017301c4bf29e9a354574",
@@ -1313,6 +1379,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -1356,15 +1423,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "wide",
       "file": "heartland-future.png",
-      "bytes": 24669146,
-      "sha256": "d8ac6de95188705073ea20323abd0d17200b2b6b625309dabbfceae4d8e1d0bc",
+      "bytes": 23137566,
+      "sha256": "a072fb270c916107d66ecc47aef38141fb0228b3305e81ccf506a9901cf64751",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "eb1cda71b03ac4146e2de45e6a405994ae672bd5c894a1e0a695eb490ccc8f26",
@@ -1388,7 +1460,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/heartland-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/heartland-future.png",
       "nativeOriginal": {
         "bytes": 29332573,
         "sha256": "e7dec32efaf7095534b0dbc872418bcb138a971ec209ac5d687ce50696b99f70",
@@ -1421,6 +1493,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -1464,15 +1537,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "wide",
       "file": "downtown-existing.png",
-      "bytes": 24904392,
-      "sha256": "10c0b478b9f1d619cafa8048a94ad226f8a48a0b0c66e09bea817a54d1731bd1",
+      "bytes": 23594405,
+      "sha256": "8951ddea5a1c77e8f15d7260ee0c2f1efd82e70e5d9cb287c034932a5d2f4833",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "d8b7c3f6d31bfb298f59442b3da064bd5674aad74f9752e20ff5d2b442dd223a",
@@ -1496,7 +1574,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/downtown-existing.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/downtown-existing.png",
       "nativeOriginal": {
         "bytes": 29449138,
         "sha256": "8d5fb56b22fbf8e9f849510ef2f887a29251acd33245aaa36219276a3ad61c12",
@@ -1529,6 +1607,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -1572,15 +1651,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "wide",
       "file": "port-credit-existing.png",
-      "bytes": 25565321,
-      "sha256": "98a740527c27edf574e7512e3fb1d99a8453b706769deb8be32970431d033a4a",
+      "bytes": 24348226,
+      "sha256": "3246250aab1dae08354c6bfaad0d588509927395844ce1f3c527686448b9ce69",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "6eef9067cf70582f30b02a7f1be86bc1cdd7c62425670f78a3a5746598291497",
@@ -1604,7 +1688,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/port-credit-existing.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/port-credit-existing.png",
       "nativeOriginal": {
         "bytes": 30039299,
         "sha256": "d1681fadbdfd71eb481dc5a42a8f1ec4c672f7c65664c0a4f1119ae2fc87447b",
@@ -1637,6 +1721,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -1680,15 +1765,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "wide",
       "file": "lakeview-existing.png",
-      "bytes": 19972388,
-      "sha256": "a55549bdf49cbf1084bd4eb576736eeaea8d06cc67a8725b7bbb43204ad07fc1",
+      "bytes": 18954299,
+      "sha256": "5d51a04db5722c015383179e0bb0cc125dceac6c3c1a76c5b1bf05e155fb6c0b",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "db501e78b9a6946b3b6778fb3b51a2aab7220c657eee0e982ea0a8411501703b",
@@ -1712,7 +1802,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/lakeview-existing.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/lakeview-existing.png",
       "nativeOriginal": {
         "bytes": 24800370,
         "sha256": "4aeaed1b29114e0d6ba5c75cf7904dd7402a423195187741f0fa8003f9ebc5e9",
@@ -1745,6 +1835,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -1788,15 +1879,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "wide",
       "file": "clarkson-existing.png",
-      "bytes": 24917071,
-      "sha256": "764b997da00cce0f44792eb9453f2de28ef3d760a6d5e46303a1ab653f3872db",
+      "bytes": 23728060,
+      "sha256": "adb3c7a2bf33755c0600a4efdf5d1a4d857e9b9672be40272395ba9d15168e72",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "6b4603746792e279c3226f6007f0e2695c1ad6f0165ad73997a31b97a68210a6",
@@ -1820,7 +1916,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/clarkson-existing.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/clarkson-existing.png",
       "nativeOriginal": {
         "bytes": 29540349,
         "sha256": "38cee2cf82741210c430897ba231ebb9cda7a4dc177341cb1ef8149dd5a5ed2d",
@@ -1853,6 +1949,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -1896,15 +1993,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "wide",
       "file": "downtown-skyline-existing.png",
-      "bytes": 14655869,
-      "sha256": "d95fb77a61284bd03121ed7e9fbb3d809c8b028e5a4b49b804f312dd5d3b9778",
+      "bytes": 13371608,
+      "sha256": "b405e5449db5a0a083377244ccb078dc44bc0bceeb977bb48b182eeb2bb70ed9",
       "width": 6144,
       "height": 2240,
       "renderRecordSHA256": "d34f9f0fb395a267927548f06501f72c7be54f153a1d6eb2f7b07012fa4fcd17",
@@ -1928,7 +2030,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/downtown-skyline-existing.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/downtown-skyline-existing.png",
       "nativeOriginal": {
         "bytes": 17200237,
         "sha256": "6bd3665a71a0563163dd8dc6f96bae035ad72d1ed6086bbdcbbf6b8d4c4d509d",
@@ -1961,6 +2063,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -2004,15 +2107,21 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.15,
+        "layout": "compact-panorama-v2"
       }
     },
     {
       "kind": "wide",
       "file": "downtown-skyline-construction.png",
-      "bytes": 14859972,
-      "sha256": "1a34df8e1a307008650b582baca6748380fd376ae2a07372cd51abff50ee14c9",
+      "bytes": 13572016,
+      "sha256": "8a31422435e593ad0c07d9e1d83ba3fee8f7cd0a01ba6f76c4d8b96f7ce27fad",
       "width": 6144,
       "height": 2240,
       "renderRecordSHA256": "be77fae0741a2ee6e4554f6411a56b00f22baf4ed8821d0a4bd68abec7274036",
@@ -2036,7 +2145,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/downtown-skyline-construction.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/downtown-skyline-construction.png",
       "nativeOriginal": {
         "bytes": 17396613,
         "sha256": "d0f462da8dbd41596b556ae9a6a03116bd464d346711b1f2738030667a97d27d",
@@ -2069,6 +2178,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -2112,15 +2222,21 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.15,
+        "layout": "compact-panorama-v2"
       }
     },
     {
       "kind": "wide",
       "file": "downtown-skyline-future.png",
-      "bytes": 14723173,
-      "sha256": "c03775e1c035f0ceee53698b106ce7650eea6745c87a45522b8e8b4328a51967",
+      "bytes": 13426080,
+      "sha256": "3cbf83e7fca8dded8ea6cda720ad50fec6facfba65ea54f7aa18659b594a5b3e",
       "width": 6144,
       "height": 2240,
       "renderRecordSHA256": "4be3a2cecf54a2a30d334c0e56b6e340aca3d6616022e6a752cac44ecf1d1485",
@@ -2144,7 +2260,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/downtown-skyline-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/downtown-skyline-future.png",
       "nativeOriginal": {
         "bytes": 17260300,
         "sha256": "07b079c80dc6d09ef3bac4af7f8a3a968b9537508b56ca160c50afc32d0b2ffe",
@@ -2177,6 +2293,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -2220,15 +2337,21 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.15,
+        "layout": "compact-panorama-v2"
       }
     },
     {
       "kind": "wide",
       "file": "port-credit-skyline-future.png",
-      "bytes": 14274110,
-      "sha256": "e9daffea6ec064db389bcd9a650ccb02dcb1e851e20a8954760b6338ff189cf0",
+      "bytes": 13147508,
+      "sha256": "38b5c489df21c5a23387e6acbbaa7343d980513fffd212e5605c75d79b179637",
       "width": 6144,
       "height": 2240,
       "renderRecordSHA256": "e91537c111315146a8388df2ed8ea5a27b482034664307253eae5157be976861",
@@ -2252,7 +2375,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/port-credit-skyline-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/port-credit-skyline-future.png",
       "nativeOriginal": {
         "bytes": 16757496,
         "sha256": "5f79c392bc5962006e700b07a338e64dbe1316b08d544072a5a38353a902f7f1",
@@ -2285,6 +2408,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -2328,15 +2452,21 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.15,
+        "layout": "compact-panorama-v2"
       }
     },
     {
       "kind": "wide",
       "file": "lakeview-skyline-future.png",
-      "bytes": 12580650,
-      "sha256": "3609b9de4b5e7e6d10fcad9ed908a9a10425d5ce16785af529326b48a98be3b9",
+      "bytes": 11753171,
+      "sha256": "1f153280de4167da2bbea01955e379c0a0f7cc988ff116e972b2704174bc635a",
       "width": 6144,
       "height": 2240,
       "renderRecordSHA256": "15d4d04445158e1a85286b64e74c367f9c08906a15634cbf791ee4dcd5094bc1",
@@ -2360,7 +2490,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/lakeview-skyline-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/lakeview-skyline-future.png",
       "nativeOriginal": {
         "bytes": 15265322,
         "sha256": "2e3e367b53edea47d3b7b2e7353d705d651f7b0e9c9d505773c08bafb57fc816",
@@ -2393,6 +2523,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -2436,8 +2567,14 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.15,
+        "layout": "compact-panorama-v2"
       }
     },
     {
@@ -2459,8 +2596,8 @@
     {
       "kind": "wide",
       "file": "downtown-portrait-future.png",
-      "bytes": 24653841,
-      "sha256": "c3001de90df4884d00dbed60fe8f64025b545f0f85ae6efef92919a659aa89e1",
+      "bytes": 23298484,
+      "sha256": "edc14cc668c424a397b0c6084b17ecd6bd63b871b0dfac905055e83a7e6c907a",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "d25761c086cfb6ab9aaaf8740936821f2470e452ddb0f1971bbffdd832f0daf7",
@@ -2484,7 +2621,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/downtown-portrait-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/downtown-portrait-future.png",
       "nativeOriginal": {
         "bytes": 29156503,
         "sha256": "a651c1b83849ee4ef2c269d71592005d17f8d7dba8f3a8485065b83d270e21d7",
@@ -2517,6 +2654,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -2560,15 +2698,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "wide",
       "file": "port-credit-portrait-future.png",
-      "bytes": 24153529,
-      "sha256": "fe4efa87f8f185fcfc8bfcc318b87eea08b979b135a488189d2ef0df763474d5",
+      "bytes": 22952693,
+      "sha256": "12e87e7ff74a62c45c697b90cc8ac87dc62de6716d366230a97376c6d270a50c",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "9ddd4c7560644f955380f0cd1d884d5470bd2d01057ddb4b136294a6a9691474",
@@ -2592,7 +2735,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/port-credit-portrait-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/port-credit-portrait-future.png",
       "nativeOriginal": {
         "bytes": 28674275,
         "sha256": "e608c9f31be5d111a02bc3b8219d562fe5f63885976b7b6077e550efcd932aa7",
@@ -2625,6 +2768,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -2668,15 +2812,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "wide",
       "file": "lakeview-portrait-future.png",
-      "bytes": 23611177,
-      "sha256": "f395487bfca29b731445ade6f77e0189d22d709a1c5b420d717b509b2120ade9",
+      "bytes": 22400722,
+      "sha256": "826e09793fd2d006cd78127359af16975b02446deb8e74aeec804d1debcf6981",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "291084b4e2dd6c9eec5f8b8683518527e33835cb7e78283425f257bdbedf7390",
@@ -2700,7 +2849,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/lakeview-portrait-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/lakeview-portrait-future.png",
       "nativeOriginal": {
         "bytes": 28113416,
         "sha256": "6d8299d0731273e6d590f3d0fa31e379920131af2d110a8a264d03849b32e2f0",
@@ -2733,6 +2882,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -2776,8 +2926,13 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
@@ -2799,8 +2954,8 @@
     {
       "kind": "wide",
       "file": "cooksville-portrait-future.png",
-      "bytes": 24289511,
-      "sha256": "25538288aff5778304b5e19f646e3d8ae16848f16c1eacface471cac07ffd477",
+      "bytes": 23044000,
+      "sha256": "74ffdf316d49206dbb886b3bb4b2fc646b5f76bef17a3c9109abe2b2363c2b36",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "4e302660d8d87031251fcccf64b5059e31afd9847d61bb4bf3f0bd783184ba31",
@@ -2824,7 +2979,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/cooksville-portrait-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/cooksville-portrait-future.png",
       "nativeOriginal": {
         "bytes": 28815746,
         "sha256": "25c3def681d4eccf209a62e505c3811031d573de62b0e61565f2723303ee34e3",
@@ -2857,6 +3012,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -2900,15 +3056,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "wide",
       "file": "uptown-portrait-future.png",
-      "bytes": 25876813,
-      "sha256": "0f5ac15eaacceb88ae353931e143c3d0a138001b7392b654d171b95ceffdaa24",
+      "bytes": 24599759,
+      "sha256": "f8126dc4373944bf079a64e15c9ea7d31ed38b5d30f01c4ad1e5b4acf01e5492",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "a00debb95f64634a1105d9e0e4718b3223f930a732141320db7670b249f2c5a3",
@@ -2932,7 +3093,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/uptown-portrait-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/uptown-portrait-future.png",
       "nativeOriginal": {
         "bytes": 30339567,
         "sha256": "5d545085091dafe12641f0906bf588767f72644cee705c29cbad50aeae993cea",
@@ -2965,6 +3126,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -3008,15 +3170,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "wide",
       "file": "downtown-landmark-future.png",
-      "bytes": 20292276,
-      "sha256": "44cd9c9ce7ccd20e31334cf1a04f89e7f0f3e73aef79bf291d948bd54ca76105",
+      "bytes": 19141472,
+      "sha256": "df6ed6034a053b2099b691c85bf91e3343024ddd5b9ac016f8300a4e41d9415e",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "eba8f88af103d0ceff1f112942a57c74340e47c853ad73f951c0aede7b7d1381",
@@ -3040,7 +3207,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/downtown-landmark-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/downtown-landmark-future.png",
       "nativeOriginal": {
         "bytes": 24861264,
         "sha256": "8ddb72d04e836172a415b8f2e041b577cb7c85fd71118cd1c89ebd0cf79a30ed",
@@ -3073,6 +3240,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -3116,15 +3284,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "wide",
       "file": "downtown-junction-future.png",
-      "bytes": 19524138,
-      "sha256": "ca528613c0a2df9eaf95585b4ff411e725b08c5057fa89302763b03259fdbc06",
+      "bytes": 18374647,
+      "sha256": "ce2879239b8a8b97baa95482e7fc3aa56ff15b099281f98c4e132bb280be9220",
       "width": 6144,
       "height": 3840,
       "renderRecordSHA256": "704b40d2b975f6b06df859ac613e0eb2d283937d4a49594f1da9efbbf7c53936",
@@ -3148,7 +3321,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-22/downtown-junction-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-wide-2026-10-23/downtown-junction-future.png",
       "nativeOriginal": {
         "bytes": 24239791,
         "sha256": "b540753468a587e8af27fc87e9010e3c53fc22c67d485603d40951f0ed64b160",
@@ -3181,6 +3354,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -3224,15 +3398,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.2799479166666667,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.11666666666666667
       }
     },
     {
       "kind": "portraits",
       "file": "downtown-landmark-future.png",
-      "bytes": 11904015,
-      "sha256": "fe3a71696a91f4802e09ffca2f3062d9c26dc626effa037048d885b7d9a93c10",
+      "bytes": 11522436,
+      "sha256": "7e58cda802f35be176eaf46c4bf99a5eacefb8bfb39928a9c9527d00b659deb7",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "1d97d07c2b63c0334086b8192d0169f1dbf1e3ace4e88bd000bb2af75c0be2cd",
@@ -3256,7 +3435,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/downtown-landmark-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/downtown-landmark-future.png",
       "nativeOriginal": {
         "file": "downtown-landmark-future.png",
         "district": "downtown",
@@ -3293,6 +3472,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -3336,15 +3516,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     },
     {
       "kind": "portraits",
       "file": "downtown-existing.png",
-      "bytes": 13601872,
-      "sha256": "ca2bed4687ac0779ef323b8b6b02117764f836e133d6427aeb5972e897335a4d",
+      "bytes": 12953741,
+      "sha256": "78d40e08669ab8b61f1405220effcad6686244105364c14f26915f2bd1f07229",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "3d10414c8f9940d0674c40688b9d54812314fbfc12126e84d05fc5b998a426bd",
@@ -3368,7 +3553,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/downtown-existing.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/downtown-existing.png",
       "nativeOriginal": {
         "file": "downtown-existing.png",
         "district": "downtown",
@@ -3405,6 +3590,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -3448,15 +3634,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     },
     {
       "kind": "portraits",
       "file": "downtown-future.png",
-      "bytes": 13758904,
-      "sha256": "f34aca64e53495f2094d2e2c1c83a22189c90c7c5e48256eb830ab5beccd5de5",
+      "bytes": 13107669,
+      "sha256": "98a18f9ce74c40461a0019b82ec1ccfdefa496d4e64dc1cfac02b9c77f0280c0",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "6eada7f0fcab39ca03edef77cfdbf4c3bca88bade0004e34f2fa3cca3b17ad39",
@@ -3480,7 +3671,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/downtown-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/downtown-future.png",
       "nativeOriginal": {
         "file": "downtown-future.png",
         "district": "downtown",
@@ -3517,6 +3708,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -3560,15 +3752,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     },
     {
       "kind": "portraits",
       "file": "downtown-skyline-existing.png",
-      "bytes": 13142930,
-      "sha256": "3186ddd1e3fb60842b13355a87c0731063e12dde076f30df036dbc48128784c2",
+      "bytes": 12438286,
+      "sha256": "b697e1a4f290628beaffb782684b25b0877b8ab4dbee0a0e2e23ed56a19a7611",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "3f370d689ddb204bb0d9adaa77be5df99fac2ec338e7ef7ead5247e5228384b2",
@@ -3592,7 +3789,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/downtown-skyline-existing.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/downtown-skyline-existing.png",
       "nativeOriginal": {
         "file": "downtown-skyline-existing.png",
         "district": "downtown",
@@ -3629,6 +3826,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -3672,15 +3870,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     },
     {
       "kind": "portraits",
       "file": "downtown-skyline-construction.png",
-      "bytes": 13298169,
-      "sha256": "7c5fcdd074114686a8bf237f0d5dd9ca0fab6933718c906c58bae57f68df135a",
+      "bytes": 12595462,
+      "sha256": "b789323d8fc4a4fca06b0692b2e79ea20aff2f95d6d4b7db1f950816262afd38",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "63a3bd7d56127e0690b3a51578377f4983ee4116bb89202723015d3196a316de",
@@ -3704,7 +3907,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/downtown-skyline-construction.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/downtown-skyline-construction.png",
       "nativeOriginal": {
         "file": "downtown-skyline-construction.png",
         "district": "downtown",
@@ -3741,6 +3944,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -3784,15 +3988,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     },
     {
       "kind": "portraits",
       "file": "downtown-skyline-future.png",
-      "bytes": 13221378,
-      "sha256": "29d869cfbd9623f8fcab2671a089ae7718729d5d4ef58d321f4853d09c4c5721",
+      "bytes": 12516569,
+      "sha256": "ed6a001eeb95c03e58a603b1335c8d1f5524d67c241a25da984650ca0aeeeab5",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "6ac629bee08009f42bdb6bb1902bb6d6eaaa48e1886c5c318fea590cd6f72007",
@@ -3816,7 +4025,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/downtown-skyline-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/downtown-skyline-future.png",
       "nativeOriginal": {
         "file": "downtown-skyline-future.png",
         "district": "downtown",
@@ -3853,6 +4062,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -3896,15 +4106,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     },
     {
       "kind": "portraits",
       "file": "downtown-portrait-future.png",
-      "bytes": 11788891,
-      "sha256": "87a32a7b5ea885a5d30cbc9104ce00e749151eb5c0c7ff8faf7f27475a1c5359",
+      "bytes": 11343720,
+      "sha256": "4dec88b642cff2946c9e4665c566267046b9b524265da97d28f1211e6fd9a6d2",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "27f303f329e2f219f808fe8d0180cc5fcae447c808e9bce40f9dac03bb4f4bab",
@@ -3928,7 +4143,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/downtown-portrait-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/downtown-portrait-future.png",
       "nativeOriginal": {
         "file": "downtown-portrait-future.png",
         "district": "downtown",
@@ -3965,6 +4180,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -4008,15 +4224,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     },
     {
       "kind": "portraits",
       "file": "downtown-junction-future.png",
-      "bytes": 11462684,
-      "sha256": "32c2f79109711b74b57daf9d4c235245bcdfc74999a92af281710912a792be3c",
+      "bytes": 10972223,
+      "sha256": "0bd16d02d189c2a161aac967a46b0ab480774839a18931024f9934ac1bdaf3a2",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "3573a8b46cc088f13ab5339f3248b35ee0c7d9376d3912d27d8984072c2a058b",
@@ -4040,7 +4261,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/downtown-junction-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/downtown-junction-future.png",
       "nativeOriginal": {
         "file": "downtown-junction-future.png",
         "district": "downtown",
@@ -4077,6 +4298,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -4120,15 +4342,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     },
     {
       "kind": "portraits",
       "file": "cooksville-portrait-future.png",
-      "bytes": 12476541,
-      "sha256": "7741a0391369e335248a0b049e96b7798e40e193963d9a670a7a633ff22846e2",
+      "bytes": 11927934,
+      "sha256": "fef6eb7c4bdde7a51f801c1050c9b6e3ca78c821fe5022b04d3e8f2b9e813cb2",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "57e60a0571b546b7112d099d72a46e3b7383bed01d0d6fb4cd096801a46afcb2",
@@ -4152,7 +4379,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/cooksville-portrait-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/cooksville-portrait-future.png",
       "nativeOriginal": {
         "file": "cooksville-portrait-future.png",
         "district": "cooksville",
@@ -4189,6 +4416,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -4232,15 +4460,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     },
     {
       "kind": "portraits",
       "file": "cooksville-future.png",
-      "bytes": 13271296,
-      "sha256": "462598dc24266d8ef008744b5c121793291d8e978efe6c500371e63bc72ad41b",
+      "bytes": 12694701,
+      "sha256": "4396c7a252083b39a3113b38f0a9562de7fb9226a09b3d61fcf0b5bd012685ea",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "fe6325c5e988cc6c7744f2b93193763f8faca9142190b5c3a0b177a969dc038f",
@@ -4264,7 +4497,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/cooksville-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/cooksville-future.png",
       "nativeOriginal": {
         "file": "cooksville-future.png",
         "district": "cooksville",
@@ -4301,6 +4534,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -4344,15 +4578,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     },
     {
       "kind": "portraits",
       "file": "uptown-portrait-future.png",
-      "bytes": 15163151,
-      "sha256": "46ec1ce16a4c22f9a98303309c155e17f1e96d4eb86b32b7001c61251d287c86",
+      "bytes": 14621868,
+      "sha256": "18dfbb02ecf556393c183fdf26d512549bdf98966baa475ad3c99fdfbee88358",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "7c9d82b88eda7be672174da32aa8329133fb6eaa382939974a1b447b06f5c3da",
@@ -4376,7 +4615,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/uptown-portrait-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/uptown-portrait-future.png",
       "nativeOriginal": {
         "file": "uptown-portrait-future.png",
         "district": "uptown",
@@ -4413,6 +4652,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -4456,15 +4696,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     },
     {
       "kind": "portraits",
       "file": "uptown-future.png",
-      "bytes": 13705636,
-      "sha256": "2fd2e7a3b3b40ddb2fb37ef843eb7396caed1063ba28c5542661b9e6a466fb37",
+      "bytes": 13185698,
+      "sha256": "0a01e8d4e79e53b4d0f2e0e8b4884d3cb1718e1b741bae669afefc28cdcfa4c6",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "afdc60c5714b716cae0153b8b1c21f3efb7e019ca539dbae7b61142ccd309f97",
@@ -4488,7 +4733,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/uptown-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/uptown-future.png",
       "nativeOriginal": {
         "file": "uptown-future.png",
         "district": "uptown",
@@ -4525,6 +4770,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -4568,15 +4814,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     },
     {
       "kind": "portraits",
       "file": "port-credit-existing.png",
-      "bytes": 13847399,
-      "sha256": "356ac0189a844cd515557bfbfbfc32c7ec70f8ebccdd47d02b4657d133a1fe25",
+      "bytes": 13154128,
+      "sha256": "8741445843721f2445997e064d121595a1603b478f9b25631a1bf3438ada009b",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "260e77a71e53be62b4a66bdd5ab3f0c296d11b784454f5dde85ea508679495a2",
@@ -4600,7 +4851,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/port-credit-existing.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/port-credit-existing.png",
       "nativeOriginal": {
         "file": "port-credit-existing.png",
         "district": "port-credit",
@@ -4637,6 +4888,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -4680,15 +4932,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     },
     {
       "kind": "portraits",
       "file": "port-credit-future.png",
-      "bytes": 13950572,
-      "sha256": "95261899af44215d6a92505bc8ed5c316489394a3c9a364fac7670a974b0cedc",
+      "bytes": 13256636,
+      "sha256": "b860a737d0e6807722aa3b4f4c8aa40a1321130441a9f68753b469e94fa81f6b",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "974296d9726b01bf2f024513871a60ddbc595f2f8d713015b4da8db5480cd855",
@@ -4712,7 +4969,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/port-credit-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/port-credit-future.png",
       "nativeOriginal": {
         "file": "port-credit-future.png",
         "district": "port-credit",
@@ -4749,6 +5006,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -4792,15 +5050,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     },
     {
       "kind": "portraits",
       "file": "port-credit-portrait-future.png",
-      "bytes": 12839410,
-      "sha256": "0aebc9c4fe7306046458b1ece4d53189195ad23e9010b5d2521adfb4879c334f",
+      "bytes": 12204046,
+      "sha256": "2f0d94d94d7f4e43a5c235ed23f452371f21daec3c48576018e4682091b48906",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "076b1718d7dd34d6cf762b7061c9174da759b396ac33b945bea1e31dd6579ca6",
@@ -4824,7 +5087,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/port-credit-portrait-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/port-credit-portrait-future.png",
       "nativeOriginal": {
         "file": "port-credit-portrait-future.png",
         "district": "port-credit",
@@ -4861,6 +5124,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -4904,15 +5168,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     },
     {
       "kind": "portraits",
       "file": "port-credit-skyline-future.png",
-      "bytes": 13962160,
-      "sha256": "90056d70d7ac1e2054949de1e61e1bb8907eb232661abbb3b2f550545a87227f",
+      "bytes": 13263531,
+      "sha256": "a484ebd4d6ef26bb1bccd9aa109332d199bbecf2bd92a9127503ab144af7542b",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "83eef2b38ea0a97f104d1d22eed7722d1dd6e7d92dbdef072b9db74c7b6698c7",
@@ -4936,7 +5205,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/port-credit-skyline-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/port-credit-skyline-future.png",
       "nativeOriginal": {
         "file": "port-credit-skyline-future.png",
         "district": "port-credit",
@@ -4973,6 +5242,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -5016,15 +5286,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     },
     {
       "kind": "portraits",
       "file": "lakeview-existing.png",
-      "bytes": 9416563,
-      "sha256": "92d1e22a6347f2daea45fd1d1e1ae527b58f20c1614e4058ca483fd0d812c285",
+      "bytes": 9047736,
+      "sha256": "5558959abd0b7b428e1e29abacf55159e550ec33f51f29867209a534d58743e3",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "ae82f9af9461b89cf9fb2245583a29572239fa1001645a78c2f6e3b0bf62373e",
@@ -5048,7 +5323,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/lakeview-existing.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/lakeview-existing.png",
       "nativeOriginal": {
         "file": "lakeview-existing.png",
         "district": "lakeview",
@@ -5085,6 +5360,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -5128,15 +5404,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     },
     {
       "kind": "portraits",
       "file": "lakeview-future.png",
-      "bytes": 9889764,
-      "sha256": "1131a1c0db4ce5e8025b583ac821b5f77f0557eb12d424d0ef3e232c6badf0d9",
+      "bytes": 9493547,
+      "sha256": "82d5b5677e397b8c6919b1728f9092a949ea43b2d9ee9d41857e7801fe270664",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "0a08301cd9997ff1b195b1417f03a3893cc24e75b70e6314acc3ad5a6c6b56c8",
@@ -5160,7 +5441,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/lakeview-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/lakeview-future.png",
       "nativeOriginal": {
         "file": "lakeview-future.png",
         "district": "lakeview",
@@ -5197,6 +5478,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -5240,15 +5522,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     },
     {
       "kind": "portraits",
       "file": "lakeview-portrait-future.png",
-      "bytes": 10723224,
-      "sha256": "8718800ce534f8d9705e4619eb01957fca94e313c83a9cfe7a532ceafc6e8b52",
+      "bytes": 10232030,
+      "sha256": "db0d64093e885607cdc2c6a8d914edd254165e940b87cc238ede8514e2440858",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "1038767f6cf8b136e59d28e4c003429eb5410aecf2cb2330fa7a47e9c185276e",
@@ -5272,7 +5559,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/lakeview-portrait-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/lakeview-portrait-future.png",
       "nativeOriginal": {
         "file": "lakeview-portrait-future.png",
         "district": "lakeview",
@@ -5309,6 +5596,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -5352,15 +5640,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     },
     {
       "kind": "portraits",
       "file": "clarkson-existing.png",
-      "bytes": 12603965,
-      "sha256": "d17fca0ca4c050fb0e515e2d404117fed7cacf590569ff573ce76c7202e2c78c",
+      "bytes": 12084320,
+      "sha256": "60a433429c34c2b3256c85d795cc3b5cc10a32585f04ced51c6dbd60996b855c",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "c9850f8892c5b8066e25ebdb1d24395955bd41723df25bd9652cff7c6ad8f726",
@@ -5384,7 +5677,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/clarkson-existing.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/clarkson-existing.png",
       "nativeOriginal": {
         "file": "clarkson-existing.png",
         "district": "clarkson",
@@ -5421,6 +5714,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -5464,8 +5758,13 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     },
     {
@@ -5503,8 +5802,8 @@
     {
       "kind": "portraits",
       "file": "erin-mills-future.png",
-      "bytes": 15101802,
-      "sha256": "b6fd130f4f3864c829807b5b9d27676dfa5b0734384709f37318aca309662ef6",
+      "bytes": 14406148,
+      "sha256": "a81084bee07766f3ca1b3ba794d345952d14ef378331e18f6accb4e9f7587da2",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "29e3a39a4b0f57a107a5af0f1e99dec978e6f64520176ee143837e94a510c8b7",
@@ -5528,7 +5827,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/erin-mills-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/erin-mills-future.png",
       "nativeOriginal": {
         "file": "erin-mills-future.png",
         "district": "erin-mills",
@@ -5565,6 +5864,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -5608,15 +5908,20 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     },
     {
       "kind": "portraits",
       "file": "streetsville-future.png",
-      "bytes": 14800385,
-      "sha256": "85f46c2b594044c070eaf79d1544063b53115766f7c86f5329a87da0505727f4",
+      "bytes": 14092493,
+      "sha256": "5c9e5103047cf6e51695590c5fb37a2da7100b79a269d15d9c47ef2230726269",
       "width": 3240,
       "height": 4050,
       "renderRecordSHA256": "8de429bc8fcc46863f635b89083fd437f3cfa8b9322b833ea91e5891898cf37f",
@@ -5640,7 +5945,7 @@
         "sourcePolicySHA256": "18c012ca3a4d1e9c8fb92fc508a8182ff2b9464e91aba47683a77baebafd20e6",
         "label": "New render · 22 October 2026"
       },
-      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-22/streetsville-future.png",
+      "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-presentation-portraits-2026-10-23/streetsville-future.png",
       "nativeOriginal": {
         "file": "streetsville-future.png",
         "district": "streetsville",
@@ -5677,6 +5982,7 @@
       },
       "presentationInfo": {
         "date": "2026-10-22",
+        "revision": "annotation-v1-2026-10-23",
         "type": "annotated-presentation-derivative",
         "newGeometryOrMaterials": false,
         "creator": "Daniel Sultan",
@@ -5720,13 +6026,19 @@
           ],
           "method": "Exact Blender XYZ camera rotation, equal-pixel camera right/up projection"
         },
-        "creatorWidthFraction": 0.4,
-        "sourceBodyWeight": "regular"
+        "creatorWidthFraction": null,
+        "sourceBodyWeight": "regular",
+        "typography": {
+          "creator": "Bricolage Grotesque Medium",
+          "body": "Lato Regular"
+        },
+        "plateHeightImageFraction": 0.10074074074074074
       }
     }
   ],
   "notes": "51 presentation copies add a consistent status key, calibrated north and Daniel Sultan/source credits. Building geometry and materials are unchanged; source model editions and render dates remain recorded per image. Six earlier Citywide and Clarkson future views retain their original files and dates. Native source master URLs and SHA256 values remain in nativeOriginal. Atlas, film and share thumbnail have separate dates. No private source documents, correspondence or editable models are included.",
   "presentationDate": "2026-10-22",
   "presentationDerivativeCount": 51,
-  "nativeOriginalsPreserved": true
+  "nativeOriginalsPreserved": true,
+  "presentationRevision": "annotation-v1-2026-10-23"
 }
