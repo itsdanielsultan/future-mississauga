@@ -1017,6 +1017,80 @@
       "containsCartographicGuides": false,
       "containsDepthTestedServiceGuides": true,
       "geometryScope": "Exact local crop of the existing published HML display geometry. No new route, engineering height or completion claim."
+    },
+    {
+      "districtId": "east-credit-creditview",
+      "system": "GO",
+      "url": "models/revamp/east-credit-creditview-go-go.glb",
+      "modes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "bounds": [
+        [
+          -9250,
+          75.43865966796875,
+          1338.7529296875
+        ],
+        [
+          -5950,
+          82.0296401977539,
+          2400
+        ]
+      ],
+      "extentXZ": [
+        -9250,
+        -800,
+        -5950,
+        2400
+      ],
+      "bytes": 201052,
+      "downloadBytes": 201052,
+      "sha256": "b886c006253ab2186c3acc8d0edac4236b43895b9ed7d62e4b8c3333a45836f8",
+      "downloadSHA256": "b886c006253ab2186c3acc8d0edac4236b43895b9ed7d62e4b8c3333a45836f8",
+      "nodes": 21,
+      "triangles": 17340,
+      "containsCartographicGuides": false,
+      "containsDepthTestedServiceGuides": true,
+      "geometryScope": "Exact local crop of the existing published GO display geometry. No new route, engineering height or completion claim."
+    },
+    {
+      "districtId": "east-credit-creditview",
+      "system": "Transitway",
+      "url": "models/revamp/east-credit-creditview-transitway-transitway.glb",
+      "modes": [
+        "existing",
+        "construction",
+        "future"
+      ],
+      "bounds": [
+        [
+          -8306.6875,
+          67.15489959716797,
+          -659.7068481445312
+        ],
+        [
+          -5950,
+          101.06819915771484,
+          2400
+        ]
+      ],
+      "extentXZ": [
+        -9250,
+        -800,
+        -5950,
+        2400
+      ],
+      "bytes": 87224,
+      "downloadBytes": 87224,
+      "sha256": "19f24da1e6b1683e846fb543c7b259b045c3e2072b77cb4e1a7b26e53621bc30",
+      "downloadSHA256": "19f24da1e6b1683e846fb543c7b259b045c3e2072b77cb4e1a7b26e53621bc30",
+      "nodes": 4,
+      "triangles": 8081,
+      "containsCartographicGuides": false,
+      "containsDepthTestedServiceGuides": true,
+      "geometryScope": "Exact local crop of the existing published Transitway display geometry. No new route, engineering height or completion claim."
     }
   ],
   "components": [

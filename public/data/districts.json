@@ -571,7 +571,7 @@
   },
   {
     "id": "lorne-park",
-    "name": "Lorne Park \u00b7 Aldo area",
+    "name": "Lorne Park · Aldo area",
     "lat": 43.536650799618755,
     "lon": -79.62266472579823,
     "radius": 450,
@@ -732,5 +732,51 @@
       -4450.0
     ],
     "cameraFramingNote": "Display target and distance frame the complete study rectangle. Original source crop centre, bounds, geometry and elevations are retained separately."
+  },
+  {
+    "id": "east-credit-creditview",
+    "name": "East Credit & Creditview",
+    "lon": -79.66974671445446,
+    "lat": 43.58102950344691,
+    "radius": 1980.0,
+    "center": [
+      -6723.555573975096,
+      95.87000274658203,
+      1928.9792606422488
+    ],
+    "bounds": [
+      -9250,
+      -800,
+      -5950,
+      2400
+    ],
+    "sourceMeshes": 17,
+    "triangles": 492180,
+    "bytes": 11993800,
+    "file": "east-credit-creditview.glb",
+    "sha256": "234bb693bc63618275812a485dfbac73ab9e11650321bb864000520860556a3a",
+    "geometryObjects": 23,
+    "geometryBounds": [
+      [
+        -9250.0,
+        65.66000366210938,
+        -800.0
+      ],
+      [
+        -5950.0,
+        244.8000030517578,
+        2400.0
+      ]
+    ],
+    "sourceGeometry": "Reconciled municipal LOD2 components, exact XZ crop; source elevations retained.",
+    "coverageMeasure": "Source component centroid crop reach, not unique buildings or architectural accuracy.",
+    "sourceCropCenter": [
+      -7600.0,
+      95.87000274658203,
+      800.0
+    ],
+    "sourceCropRadiusM": 1650,
+    "cameraFramingNote": "Display framing reviewed on desktop and a 390px responsive viewport. Source crop centre, bounds, geometry and elevations are unchanged. Physical phone and Safari are untested.",
+    "contextScope": "3.3 by 3.2 km study. Retained source elevations and one consistent display landscape. Not official neighbourhood boundaries or a current exterior survey."
   }
 ]

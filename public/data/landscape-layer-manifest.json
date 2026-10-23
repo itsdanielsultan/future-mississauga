@@ -589,6 +589,30 @@
       "triangleCount": 11910,
       "featureCount": 27,
       "geometryScope": "Exact local crop of the current mapped landscape display surfaces."
+    },
+    {
+      "district": "east-credit-creditview",
+      "url": "models/revamp/east-credit-creditview--citywide-mapped-surfaces.glb",
+      "category": "Landscape",
+      "bounds": [
+        [
+          -8981.7392578125,
+          76.79400634765625,
+          -800
+        ],
+        [
+          -5950,
+          108.51040649414062,
+          2221.733154296875
+        ]
+      ],
+      "bytes": 349232,
+      "downloadBytes": 349232,
+      "sha256": "a1f99579a1ddc80cb965d21d047b5dd756f9753e921333f8000cb0b9c7897b58",
+      "downloadSHA256": "a1f99579a1ddc80cb965d21d047b5dd756f9753e921333f8000cb0b9c7897b58",
+      "triangleCount": 18380,
+      "featureCount": 82,
+      "geometryScope": "Exact local crop of the current mapped landscape display surfaces."
     }
   ],
   "trees": {
@@ -1466,6 +1490,24 @@
         "adjustmentsOnly": true,
         "treeRecords": 16233,
         "adjustmentCount": 69
+      }
+    },
+    "east-credit-creditview": {
+      "baseline": {
+        "url": "data/east-credit-creditview-tree-adjustments-baseline.json.gz",
+        "sha256": "ec991c9f307e540cd8e5dd7d494701f61cfd4f20c429d3fb69e0494bf41fe4a5",
+        "bytes": 852,
+        "adjustmentsOnly": true,
+        "treeRecords": 15257,
+        "adjustmentCount": 50
+      },
+      "future": {
+        "url": "data/east-credit-creditview-tree-adjustments-future.json.gz",
+        "sha256": "ec991c9f307e540cd8e5dd7d494701f61cfd4f20c429d3fb69e0494bf41fe4a5",
+        "bytes": 852,
+        "adjustmentsOnly": true,
+        "treeRecords": 15257,
+        "adjustmentCount": 50
       }
     }
   },

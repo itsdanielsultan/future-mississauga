@@ -84,15 +84,17 @@
     ]
   },
   "coverageUpdate": {
-    "asOf": "2026-10-22",
-    "district": "meadowvale-village",
-    "viewerAreas": 19,
-    "detailedViews": 18,
+    "asOf": "2026-10-23",
+    "sourceStatusScreenAsOf": "2026-10-22",
+    "district": "east-credit-creditview",
+    "publicationState": "East Credit and Creditview coverage edition, 23 October 2026.",
+    "viewerAreas": 20,
+    "detailedViews": 19,
     "retainedExistingSourceComponents": 152267,
-    "previousCropCentroidReach": 133850,
-    "newlyReachedExistingSourceComponents": 3676,
-    "currentCropCentreReach": 137526,
-    "outsideDetailedViewRectangles": 14741,
+    "previousCropCentroidReach": 137526,
+    "newlyReachedExistingSourceComponents": 4784,
+    "currentCropCentreReach": 142310,
+    "outsideDetailedViewRectangles": 9957,
     "measure": "Distinct source-record bounding-box centres inside detailed view rectangles; not unique buildings or architectural accuracy.",
     "details": "data/structure-coverage-summary.json"
   },
@@ -111,6 +113,21 @@
         "measure": "Geographic crop reach of source-component bounding-box centres; not unique buildings or architectural accuracy.",
         "publicRelease": true,
         "currentCropCentreReach": 130929
+      }
+    },
+    "2026-10-22": {
+      "coverageUpdateBeforeEastCreditCandidate": {
+        "asOf": "2026-10-22",
+        "district": "meadowvale-village",
+        "viewerAreas": 19,
+        "detailedViews": 18,
+        "retainedExistingSourceComponents": 152267,
+        "previousCropCentroidReach": 133850,
+        "newlyReachedExistingSourceComponents": 3676,
+        "currentCropCentreReach": 137526,
+        "outsideDetailedViewRectangles": 14741,
+        "measure": "Distinct source-record bounding-box centres inside detailed view rectangles; not unique buildings or architectural accuracy.",
+        "details": "data/structure-coverage-summary.json"
       }
     }
   }

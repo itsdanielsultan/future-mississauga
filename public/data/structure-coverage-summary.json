@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-22",
+  "asOf": "2026-10-23",
   "goal": "Useful dated reference data and checked models for every structure in Mississauga, including older houses, shops, accessory buildings and other structures.",
   "complete": false,
   "uniqueCurrentPhysicalStructureCount": null,
@@ -12,10 +12,10 @@
   },
   "retainedExistingSourceComponents": 152267,
   "detailedViewReach": {
-    "before": 133850,
-    "current": 137526,
-    "addedComponentIds": 3676,
-    "outside": 14741,
+    "before": 137526,
+    "current": 142310,
+    "addedComponentIds": 4784,
+    "outside": 9957,
     "unit": "Unique source-record bounding-box centres inside detailed view rectangles",
     "notMeasured": [
       "Number of unique real buildings",
@@ -47,17 +47,18 @@
   ],
   "cityTerms": "https://mississauga.maps.arcgis.com/sharing/rest/content/items/961c790805c14d8da258ec91bf4117e3/data",
   "areaViews": {
-    "total": 19,
-    "detailed": 18,
+    "total": 20,
+    "detailed": 19,
     "cityOverview": 1,
     "unit": "Viewer areas, not neighbourhood boundaries"
   },
   "previousDatedReach": {
-    "asOf": "2026-10-21",
-    "before": 130929,
-    "current": 133850,
-    "addedComponentIds": 2921,
-    "outside": 18417,
+    "asOf": "2026-10-22",
+    "areaAddition": "meadowvale-village",
+    "before": 133850,
+    "current": 137526,
+    "addedComponentIds": 3676,
+    "outside": 14741,
     "unit": "Unique source-record bounding-box centres inside detailed view rectangles",
     "notMeasured": [
       "Number of unique real buildings",
@@ -68,28 +69,31 @@
     ]
   },
   "latestAreaAddition": {
-    "id": "meadowvale-village",
+    "id": "east-credit-creditview",
     "boundsXZ": [
-      -14600,
-      -6750,
-      -10000,
-      -2150
+      -9250,
+      -800,
+      -5950,
+      2400
     ],
-    "scope": "4.6 km square study crop, not the complete neighbourhood boundary or a current exterior survey.",
-    "existingSourcePartCentresInCrop": 9315,
-    "additionalExistingSourcePartCentres": 3676,
+    "scope": "3.3 km by 3.2 km study crop, not either neighbourhood boundary or a current exterior survey.",
+    "existingSourcePartCentresInCrop": 9908,
+    "additionalExistingSourcePartCentres": 4784,
     "sourceDate": "Retained source status snapshot: 2026-09-20. City LOD2 sources use 2024 LiDAR; source dates vary.",
     "freshStatusScreen": {
       "date": "2026-10-22",
-      "groups": 9,
-      "primaryDownloads": 14,
-      "finding": "No newly verified cancellation, completion or geometry revision required a change. Existing uncertainty rules remain; this is not a new approval or completion claim."
+      "families": 7,
+      "retainedNonExistingSourceParts": 17,
+      "boundaryOnlyPartsWithCentresOutsideCrop": 4,
+      "finding": "No newly verified cancellation, full-project completion or geometry revision requires a change. Masjid Al Farooq describes Phase 2 as newly opened while seeking setup and finishing support; its two captured parts have no confirmed full-completion date. Courtney uncertainty exclusions and partial-project/version caveats remain."
     },
     "displayGroundLimits": {
       "sampleSpacingMetres": 25,
-      "unsupportedSampledCityLandPoints": 37,
-      "unsupportedTreePointsOmitted": 140,
-      "meaning": "Sample checks do not establish every point between samples or surveyed site grading."
+      "unsupportedSampledCityLandPoints": 33,
+      "unsupportedTreePointsOmitted": 133,
+      "retainedCityTreePoints": 15257,
+      "meaning": "Sample checks do not establish every point between samples or surveyed site grading. Crowns are illustrative."
     }
-  }
+  },
+  "publicationState": "East Credit and Creditview coverage edition, 23 October 2026."
 }
