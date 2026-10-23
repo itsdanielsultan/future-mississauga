@@ -1,5 +1,17 @@
 # Future Mississauga: Road Crossings model guide
 
+## 23 October 2026: East Credit and Creditview
+
+The 3D map has 20 areas: 19 detailed views and the city overview. Its 3.3 km by 3.2 km study crop is not either neighbourhood boundary. City-source building positions and elevations are retained, with mapped surroundings and the GO and Transitway display routes that cross it. Both Voya towers and their connected podium fit within the east edge. Their existing approximate reference-derived geometry and uncertainty notes remain. No Hazel McCallion Line geometry crosses the crop.
+
+The 4,784 additional existing source-part centres bring detailed-view reach from 137,526 to 142,310; 9,957 remain outside. These are distinct source-record bounding-box midpoints, not counts of unique real buildings, full-building retention or an architectural accuracy score. The October 22 source review covers 17 retained proposed or construction parts across seven families, including four boundary-only parts with centres outside. Wolfedale and Square One office geometry is partial at the boundary. Courtney uncertainty exclusions, the 3350 Wolfedale address correction, and Square One source-version warnings remain. No newly verified cancellation, full-project completion or geometry revision required a change.
+
+Masjid Al Farooq describes Phase 2 as newly opened while seeking setup and finishing support. Neither of its two captured source parts has a confirmed exact opening or full-completion date. Only qualified evidence wording changes; their geometry, construction display status and scenario visibility remain.
+
+Ground checks on a 25 m grid found 33 unsupported sample points; 133 unsupported tree points were omitted. The 15,257 retained City tree points have illustrative crowns. Gaps between samples, boundary cuts and approximate display grades remain. The retained source status snapshot is dated September 20; City LOD2 sources use 2024 LiDAR, and source currentness varies. The City, Ontario and OSM credits and source-specific limits continue to apply. No source photographs, drawings, contributor originals or private correspondence are added.
+
+The existing gallery pictures, atlas and film are unchanged. See the [coverage figures and limits](../data/structure-coverage-summary.json). Earlier dated sections below describe their own editions.
+
 ## 22 October 2026: Meadowvale Village study
 
 The interactive map has 19 areas, including a new 4.6 km square Meadowvale Village study. The crop retains original City-source building positions, elevations and dated status metadata; it is not the full neighbourhood boundary or a current exterior survey. Its 3,676 additional existing source-part centres bring detailed-view reach from 133,850 to 137,526; 14,741 remain outside. These are source-component measurements, not counts of unique real buildings or an accuracy score.

@@ -4221,7 +4221,7 @@
       "url": "models/lisgar-details.glb",
       "downloadSHA256": "fbd8141197383563f02c495a7cc09387053f7d81a087651b2b44020ad5839141",
       "downloadBytes": 2153540,
-      "geometryScope": "Exact crop of retained corrected render-master details, consistent with this private study context. Source positions and metadata retained; no surveyed-current-grade claim."
+      "geometryScope": "Exact crop of retained corrected render-master details, consistent with this study context. Source positions and metadata retained; no surveyed-current-grade claim."
     },
     {
       "mode": "interactive",
@@ -4452,6 +4452,164 @@
         }
       ],
       "geometryScope": "Exact 4.6 km study crop of retained street details. Source dates and heights unchanged."
+    },
+    {
+      "mode": "interactive",
+      "districtId": "east-credit-creditview",
+      "extentXZ": [
+        -9250,
+        -800,
+        -5950,
+        2400
+      ],
+      "geometryBounds": [
+        [
+          -9250,
+          66.89405059814453,
+          -800
+        ],
+        [
+          -5950,
+          108.05593872070312,
+          2400
+        ]
+      ],
+      "bytes": 1582400,
+      "sha256": "aad722b183a9a391749388fdc959c53e878c5eec48301f47ca2cf14cb96b3508",
+      "triangles": 92409,
+      "url": "models/east-credit-creditview-details.glb",
+      "portableFile": "east-credit-creditview-details.glb",
+      "downloadBytes": 1582400,
+      "downloadSHA256": "aad722b183a9a391749388fdc959c53e878c5eec48301f47ca2cf14cb96b3508",
+      "nodes": [
+        {
+          "node": "Mapped-city-bus-shelter-footprints-with-schematic-roofs",
+          "triangles": 3800,
+          "bounds": [
+            [
+              -9193.3056640625,
+              72.81082916259766,
+              -784.5284423828125
+            ],
+            [
+              -5992.9384765625,
+              107.96955108642578,
+              2366.875244140625
+            ]
+          ],
+          "layerCategory": "StreetContext",
+          "atlasStatus": "Existing"
+        },
+        {
+          "node": "Mapped-CrosswalkLine",
+          "triangles": 3985,
+          "bounds": [
+            [
+              -9215.58203125,
+              71.57868957519531,
+              -800
+            ],
+            [
+              -5950,
+              107.87997436523438,
+              2362.416748046875
+            ]
+          ],
+          "layerCategory": "StreetContext",
+          "atlasStatus": "Existing"
+        },
+        {
+          "node": "Mapped-DashWTrafficLine9m",
+          "triangles": 43494,
+          "bounds": [
+            [
+              -9250,
+              66.89405059814453,
+              -800
+            ],
+            [
+              -5950,
+              108.05593872070312,
+              2400
+            ]
+          ],
+          "layerCategory": "StreetContext",
+          "atlasStatus": "Existing"
+        },
+        {
+          "node": "Mapped-DashYTrafficLine6m",
+          "triangles": 524,
+          "bounds": [
+            [
+              -8781.6318359375,
+              76.21142578125,
+              -698.4993896484375
+            ],
+            [
+              -5950,
+              105.95413208007812,
+              2343.20947265625
+            ]
+          ],
+          "layerCategory": "StreetContext",
+          "atlasStatus": "Existing"
+        },
+        {
+          "node": "Mapped-SolidWTrafficLine",
+          "triangles": 17405,
+          "bounds": [
+            [
+              -9250,
+              67.06604766845703,
+              -800
+            ],
+            [
+              -5950,
+              107.88491821289062,
+              2400
+            ]
+          ],
+          "layerCategory": "StreetContext",
+          "atlasStatus": "Existing"
+        },
+        {
+          "node": "Mapped-SolidYTrafficLine",
+          "triangles": 19365,
+          "bounds": [
+            [
+              -9250,
+              72.79328918457031,
+              -800
+            ],
+            [
+              -5950,
+              107.91085815429688,
+              2400
+            ]
+          ],
+          "layerCategory": "StreetContext",
+          "atlasStatus": "Existing"
+        },
+        {
+          "node": "Mapped-StopBar",
+          "triangles": 3836,
+          "bounds": [
+            [
+              -9216.3896484375,
+              71.89904022216797,
+              -800
+            ],
+            [
+              -5950.43408203125,
+              107.86837005615234,
+              2369.363037109375
+            ]
+          ],
+          "layerCategory": "StreetContext",
+          "atlasStatus": "Existing"
+        }
+      ],
+      "geometryScope": "Local exact crop of retained street details. Source dates and heights unchanged."
     }
   ],
   "scope": "The viewer has 19 areas. Interactive street-detail files are listed by area below; source coverage and detail vary. Working render variants are separate files.",
