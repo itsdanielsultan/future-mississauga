@@ -48,3 +48,13 @@ header,.view-head,.toolbar,.layer-controls,.transit-picker,.research,.transit-se
 @media(prefers-reduced-motion:reduce){.model-search-popup{scroll-behavior:auto}}
 
 .coverage:empty{display:none}.model-search-popup [role=option]:hover{background:#e6ece6}
+
+/* Shared creator, north and status presentation for the model frame. */
+.scene-wrap{height:clamp(300px,calc(100svh - 302px),700px);min-height:300px}
+.map-presentation{margin:0 var(--page-gutter);padding:18px 18px 14px;display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line);background:#f6f5ef;color:#203438}
+.map-creator{display:grid;gap:3px;min-width:0}.map-creator strong{font:700 20px/1.25 Manrope,sans-serif;letter-spacing:.025em}.map-creator span{font-size:11px;color:#637276}
+.map-direction-and-key{display:flex;align-items:center;gap:22px;flex-shrink:0}.map-presentation .compass{position:static;width:60px;height:60px;display:grid;place-items:center;flex-shrink:0}.map-presentation #northArrow{display:block;width:58px;height:58px;transform-origin:50% 50%;line-height:0}
+.scene-status-key{list-style:none;display:grid;grid-template-columns:repeat(2,max-content);gap:8px 20px;padding:0;margin:0;font-size:11px;line-height:1.35}.scene-status-key li{display:flex;align-items:center;gap:8px}.scene-status-key i{display:inline-block;width:23px;height:10px;border-radius:1px;flex-shrink:0}.scene-status-key .existing{background:#b8b9b6}.scene-status-key .construction{background:#85b4bf}.scene-status-key .proposed{background:#d8b7ac}.scene-status-key .uncertain{background:#b89bc3}.detail-toggle{display:flex;align-items:center;gap:8px;font-size:13px;color:#637276}.detail-toggle input{accent-color:#934544}
+@media(max-width:820px){.map-presentation{gap:12px;align-items:flex-start;padding:14px 8px;flex-wrap:wrap}.map-creator strong{font-size:17px}.map-creator span{font-size:10px}.map-direction-and-key{width:100%;gap:14px;justify-content:space-between}.scene-status-key{flex:1;font-size:10px;gap:8px 12px;grid-template-columns:repeat(2,minmax(0,1fr))}.scene-status-key li{gap:6px}.scene-status-key i{width:18px}.map-presentation .compass{width:48px;height:48px}.map-presentation #northArrow,.map-presentation #northArrow svg{width:48px;height:48px}}
+
+@media(min-width:701px){.viewer-stage>.selection{bottom:calc(var(--presentation-height,100px) + 16px);max-height:calc(100% - var(--presentation-height,100px) - 104px)}}
