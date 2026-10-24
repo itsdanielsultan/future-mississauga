@@ -1,4 +1,4 @@
-import {installSocialPreview} from './social-preview.js?v=20261022-preview1';
+import {installSocialPreview} from './social-preview.js?v=20261023-refined1';
 const retryPreview = image => {
   if (image.dataset.retried) return;
   image.dataset.retried = 'true';

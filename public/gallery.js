@@ -13,13 +13,23 @@ const dateNote=image=>[image.renderInfo?.label,image.renderInfo?.note].filter(Bo
 const dialog=$('#imageDialog');let openDistrict=null,opener=null;
 const viewFiles={aerial:'-future.png',portrait:'-portrait-future.png',skyline:'-skyline-future.png',existing:'-existing.png',existingSkyline:'-skyline-existing.png',constructionSkyline:'-skyline-construction.png',landmark:'-landmark-future.png',junction:'-junction-future.png'};
 const viewNames={aerial:'Wide aerial',portrait:'Perspective',skyline:'Skyline panorama',existing:'Existing context',existingSkyline:'Existing skyline',constructionSkyline:'Dated construction skyline',landmark:'Absolute World detail',junction:'City Centre interchange'};
-function showPicture(view){const d=openDistrict,file=d.id+viewFiles[view],info=pictures.images[file];$('#fullImage').src=info.display.url;$('#fullImage').width=info.display.width;$('#fullImage').height=info.display.height;$('#fullImage').alt=`${d.name} · ${viewNames[view]}`;$('#imageTitle').textContent=d.name;$('#imageCaption').textContent=captions[d.id]+' '+dateNote(info)+'. Full-resolution PNG: '+info.width+' × '+info.height+' ('+(info.bytes/1048576).toFixed(1)+' MB). Purple marks uncertain source versions.';$('#imageDownload').href=original(file);$('#imageDownload').download=file;$('#imageExplore').href=`explore.html?district=${d.id}`;$('#imageDetails').scrollTop=0;}
+let nativePictureRequest=0;
+function loadNativePicture(info){
+ const request=++nativePictureRequest,image=$('#fullImage'),status=$('#imageLoadStatus'),master=info.displayMaster||info.display;
+ image.width=master.width;image.height=master.height;image.src=info.display.url;image.setAttribute('aria-busy','true');
+ status.textContent='Loading full-resolution image…';status.hidden=false;
+ const native=new Image();
+ native.onload=()=>{if(request!==nativePictureRequest)return;image.src=master.url;image.setAttribute('aria-busy','false');status.hidden=true;};
+ native.onerror=()=>{if(request!==nativePictureRequest)return;image.setAttribute('aria-busy','false');status.textContent='The full-resolution preview could not load. You can still download the PNG.';};
+ native.src=master.url;
+}
+function showPicture(view){const d=openDistrict,file=d.id+viewFiles[view],info=pictures.images[file];loadNativePicture(info);$('#fullImage').alt=`${d.name} · ${viewNames[view]}`;$('#imageTitle').textContent=d.name;$('#imageCaption').textContent=captions[d.id]+' '+dateNote(info)+'. Full-resolution PNG: '+info.width+' × '+info.height+' ('+(info.bytes/1048576).toFixed(1)+' MB). Purple marks uncertain source versions.';$('#imageSourceNote').hidden=info.sourceAttribution?.openStreetMap===false;$('#imageDownload').href=original(file);$('#imageDownload').download=file;$('#imageExplore').href=`explore.html?district=${d.id}`;$('#imageDetails').scrollTop=0;}
 document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>{opener=b;openDistrict=districts.find(d=>d.id===b.dataset.open);const available=Object.keys(viewFiles).filter(v=>pictures.images[openDistrict.id+viewFiles[v]]);$('#pictureView').innerHTML=available.map(v=>`<option value="${v}">${viewNames[v]}</option>`).join('');const view=available.includes(b.dataset.view)?b.dataset.view:'aerial';$('#pictureView').value=view;showPicture(view);dialog.showModal();document.documentElement.classList.add("picture-preview-open");});
 $('#pictureView').onchange=e=>showPicture(e.target.value);$('#closeImage').onclick=()=>dialog.close();dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
 dialog.addEventListener('close',()=>{document.documentElement.classList.remove('picture-preview-open');opener?.focus();});
 bindComparison({panel:$('#pictureCompare'),clickToJump:true,handle:$('#compareDivider'),input:$('#pictureSlider'),onChange:n=>$('#beforePicture').style.clipPath=`inset(0 ${100-n}% 0 0)`});
 
-$('#comparisonDistrict').addEventListener('change',e=>{const id=e.target.value,name=districts.find(d=>d.id===id).name;$('#pictureCompare > img').src=display(id+'-future.png');$('#pictureCompare > img').alt=`${name} retained development scenario`;$('#beforePicture img').src=display(id+'-existing.png');$('#beforePicture img').alt=`${name} existing context`;});
+$('#comparisonDistrict').addEventListener('change',e=>{const id=e.target.value,name=districts.find(d=>d.id===id).name;$('#pictureCompare > img').src=display(id+'-future.png');$('#pictureCompare > img').alt=`${name} future scenario`;$('#beforePicture img').src=display(id+'-existing.png');$('#beforePicture img').alt=`${name} existing context`;});
 
 // Keep keyboard navigation inside the open picture viewer, including WebKit.
 dialog.addEventListener('keydown',event=>{

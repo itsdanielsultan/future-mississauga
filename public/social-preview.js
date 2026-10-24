@@ -20,7 +20,7 @@ export function installSocialPreview(root = document) {
       </div>
       <footer class="picture-preview__footer">
         <a class="picture-preview__download" download>Download PNG <span aria-hidden="true">↓</span></a>
-        <a href="sources.html">Sources &amp; credits</a>
+        <span class="picture-preview__source" hidden><a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · </span><a href="sources.html">Sources &amp; credits</a>
       </footer>
     </div>`;
   document.body.append(dialog);
@@ -31,6 +31,7 @@ export function installSocialPreview(root = document) {
   const status = dialog.querySelector('.picture-preview__status');
   const download = dialog.querySelector('[download]');
   let opener = null;
+  let imageRequest = 0;
   let backdropDown = false;
   const inside = event => {
     const rect = dialog.getBoundingClientRect();
@@ -49,7 +50,7 @@ export function installSocialPreview(root = document) {
   dialog.addEventListener('keydown', event => {
     if (event.key !== 'Tab') return;
     const first = dialog.querySelector('.picture-preview__close');
-    const last = dialog.querySelector('.picture-preview__footer a:last-child');
+    const last = [...dialog.querySelectorAll('.picture-preview__footer a[href]')].filter(node => node.getClientRects().length).at(-1);
     if (event.shiftKey && document.activeElement === first) {
       event.preventDefault();
       last.focus();
@@ -66,6 +67,7 @@ export function installSocialPreview(root = document) {
     backdropDown = false;
   });
   dialog.addEventListener('close', () => {
+    imageRequest++;
     document.documentElement.classList.remove('picture-preview-open');
     opener?.focus({ preventScroll: true });
   });
@@ -84,6 +86,7 @@ export function installSocialPreview(root = document) {
       const state = card.querySelector('.picture-state, .eyebrow')?.textContent?.trim();
       const date = card.querySelector('.social-note')?.textContent?.trim();
       caption.textContent = [state, date].filter(Boolean).join(' · ');
+      dialog.querySelector('.picture-preview__source').hidden = card.dataset.osm === 'false';
       download.href = card.querySelector('.save')?.href || link.href;
       download.download = new URL(download.href).pathname.split('/').pop();
       image.alt = thumb.alt;
@@ -91,7 +94,20 @@ export function installSocialPreview(root = document) {
       status.hidden = false;
       status.textContent = 'Loading picture…';
       stage.setAttribute('aria-busy', 'true');
+      image.width = Number(card.dataset.displayWidth || thumb.width);
+      image.height = Number(card.dataset.displayHeight || thumb.height);
       image.src = thumb.currentSrc || thumb.src;
+      const request = ++imageRequest, masterURL = card.dataset.displayUrl;
+      if (masterURL) {
+        const native = new Image();
+        native.onload = () => { if (request === imageRequest) image.src = masterURL; };
+        native.onerror = () => {
+          if (request !== imageRequest) return;
+          status.hidden = false;
+          status.textContent = 'Full-resolution preview unavailable. The small preview and PNG download are still available.';
+        };
+        native.src = masterURL;
+      }
       if (!dialog.open) dialog.showModal();
       document.documentElement.classList.add('picture-preview-open');
       if (image.complete) settleImage(image.naturalWidth > 0);

@@ -1,4 +1,4 @@
-// Warm daylight, with a local shadow map that follows the view rather than
+// Neutral daylight, with a local shadow map that follows the view rather than
 // spreading one district-sized map across a close-up building.
 export function daylightShadowFrame(target, viewDistance, districtRadius) {
   const limit = Math.max(120, Number(districtRadius) * 1.25 || 120);
@@ -9,21 +9,21 @@ export function daylightShadowFrame(target, viewDistance, districtRadius) {
 }
 
 export function createDaylight(THREE, scene, renderer) {
-  renderer.setClearColor('#f3f0e7');
+  renderer.setClearColor('#eef2f5');
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFShadowMap;
-  const sky = new THREE.HemisphereLight('#fff8ec', '#c9c0aa', 1.4);
-  const fill = new THREE.AmbientLight('#fff7ed', .12);
-  const sun = new THREE.DirectionalLight('#fff1d8', 2);
+  const sky = new THREE.HemisphereLight('#ffffff', '#b8c4cd', 1.5);
+  const fill = new THREE.AmbientLight('#ffffff', .15);
+  const sun = new THREE.DirectionalLight('#ffffff', 1.7);
   sun.castShadow = true;
   sun.shadow.mapSize.set(4096,4096);
   sun.shadow.bias = -.000015;
   sun.shadow.normalBias = .12;
   sun.shadow.radius = 1.25;
-  sun.shadow.intensity = .8;
+  sun.shadow.intensity = .65;
   scene.add(sky,fill,sun,sun.target);
   const previousTarget = new THREE.Vector3(Infinity,Infinity,Infinity);
   let previousExtent = 0;
