@@ -1,0 +1,13 @@
+/* Keep the creator, key and direction in distinct, aligned columns. */
+html .map-presentation{display:grid;grid-template-columns:minmax(180px,1fr) auto;align-items:center;padding:22px 0 18px;gap:18px 40px}
+html .map-direction-and-key{display:flex;flex-direction:row-reverse;align-items:center;gap:32px;width:auto}
+html .scene-status-key{grid-template-columns:repeat(2,max-content);font-size:12px;gap:10px 30px}
+html .scene-status-key i{width:14px;height:10px}
+html .map-presentation .compass{width:52px;min-height:52px;flex:0 0 52px}
+html .map-attribution{grid-column:1/-1;margin:0;padding-top:12px;border-top:1px solid #e9ebeb;font-size:11px;line-height:1.6;color:#657074}
+html .map-creator strong{line-height:1.2}
+html .map-creator span{display:block;margin-top:6px}
+@media(min-width:1450px){html .scene-status-key{grid-template-columns:repeat(4,max-content)}}
+@media(max-width:850px){html .map-presentation{grid-template-columns:1fr;gap:18px;padding:20px 0 16px}html .map-direction-and-key{justify-content:space-between;gap:18px}html .scene-status-key{flex:1;grid-template-columns:repeat(2,minmax(0,1fr));font-size:11px;gap:10px 16px}html .scene-status-key li{gap:7px}html .map-attribution{padding-top:14px;font-size:10px}}
+
+@media(max-width:600px){html .view-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}html .view-actions button{min-height:44px;white-space:nowrap;font-size:12px;padding:8px 12px}}

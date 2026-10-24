@@ -40,3 +40,5 @@ html.picture-preview-open { overflow: hidden; }
   .picture-preview__stage { padding: 8px; }
   .picture-preview .picture-preview__download { padding: 10px 14px; }
 }
+
+.picture-preview__status{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);margin:0;padding:10px 14px;background:#fffffff2;border-radius:4px;font-size:12px}
