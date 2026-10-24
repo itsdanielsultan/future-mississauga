@@ -16,17 +16,34 @@ html body { background: #fff; }
 .social-grid .image-link { display: block; overflow: hidden; background: #fff; aspect-ratio: 4 / 5; border-radius: 6px; }
 .social-grid .image-link img { display: block; width: 100%; height: 100%; aspect-ratio: 4 / 5; object-fit: contain; transform: none; transition: none; }
 .social-grid .image-link:hover img { transform: none; }
-.social-grid .card-text { padding: 18px 0 0; }
+.social-grid .card-text { display: grid; grid-template-columns: minmax(0, 1fr) 56px; align-items: center; gap: 16px; padding: 18px 0 0; }
+.social-grid .card-copy { min-width: 0; }
 .social-grid .card-text h2 { margin: 0 0 6px; font-size: 25px; font-weight: 500; line-height: 1.2; letter-spacing: -.025em; }
 .social-grid .card-text p { margin: 0; font-size: 15px; line-height: 1.5; }
 .social-grid .card-text .picture-detail { color: #2e2b2a; }
 .social-grid .card-text .social-note { margin-top: 2px; font-size: 14px; }
-.picture-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 24px; margin-top: 12px; }
-.social-grid .save, .picture-open { display: inline-flex; align-items: center; min-height: 44px; padding: 0; border: 0; border-radius: 0; background: none; font: 400 15px/1.4 var(--site-font-body, 'Lato', sans-serif); color: #a23b3b; text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; cursor: pointer; }
-.picture-open { font-weight: 700; }
-.picture-open[hidden] { display: none; }
+html .social-page .social-grid .save {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  min-height: 56px;
+  padding: 0;
+  border: 1px solid #ded6d2;
+  border-radius: 12px;
+  background: #fff;
+  color: #a23b3b;
+  text-decoration: none;
+  cursor: pointer;
+}
+html .social-page .social-grid .save svg { display: block; flex: none; width: 30px; height: 30px; }
+html .social-page .social-grid .save:hover { color: #842d32; border-color: #bb8987; background: #f8eeee; }
+html .social-page .social-grid .save:focus-visible { outline: 3px solid #a23b3b; outline-offset: 4px; background: #f8eeee; }
 .social-page a, .picture-preview a { color: #a23b3b; }
-.social-page a:hover, .picture-open:hover, .picture-preview a:hover { color: #842d32; }
+.social-page a:hover, .picture-preview a:hover { color: #842d32; }
 .social-page :focus-visible { outline: 2px solid #a23b3b; outline-offset: 4px; }
 .social-context { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; margin-top: 52px; padding: 30px 0 40px; border-top: 1px solid #e4dedb; }
 .social-context h2 { margin: 0; font-size: 25px; font-weight: 500; line-height: 1.2; letter-spacing: -.025em; }

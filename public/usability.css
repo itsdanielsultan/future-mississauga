@@ -59,3 +59,12 @@ html .skyline-player .film-big-play{--media-icon-color:#a23b3b;--media-primary-c
  html dialog.media-preview>.media-preview__shell{height:auto;max-height:calc(100dvh - 20px)}
  html .media-preview__stage{height:min(65dvh,calc((100vw - 36px)/var(--media-aspect,1.6)));min-height:100px}
 }
+
+.file-action-pair{display:inline-flex;align-items:center;gap:7px;vertical-align:middle;white-space:nowrap}
+html a.file-download{display:inline-flex;align-items:center;justify-content:center;width:44px;min-width:44px;height:44px;padding:8px;border:0;border-radius:6px;color:#a23b3b;text-decoration:none;background:transparent}
+html a.file-download svg{width:25px;height:25px}
+html a.file-download:hover{background:#f7eeee}
+html a.file-download:focus-visible{outline:3px solid #a23b3b;outline-offset:3px}
+
+#studyNotice[hidden]{display:none!important}
+#studyNotice{background:#f7eeee;color:#6b6662;border-left:3px solid #a23b3b}

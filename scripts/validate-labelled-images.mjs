@@ -9,7 +9,7 @@ export async function validateLabelledImages(root,{structureOnly=false}={}){
  const raw=await readFile(join(root,'data/labelled-image-assets.json'));
  const manifest=JSON.parse(raw),wide=(await load(root,'data/picture-assets.json')).images,portrait=(await load(root,'data/social-pictures.json')).images;
  const districts=await load(root,'data/districts.json');
- assert.equal(manifest.schema,'future-mississauga-labelled-images/v1');assert.equal(manifest.targetCommit,'cc052d4adb233814b79fa321eaadb2edb00d31b4');assert(!manifest.stagingOnly);
+ assert.equal(manifest.schema,'future-mississauga-labelled-images/v1');assert.equal(manifest.targetCommit,'c585aa0023aa53b8d1da1fe033073c00580a055f');assert(!manifest.stagingOnly);
  assert.equal(manifest.imageCount,57);assert.equal(manifest.images.length,57);assert.equal(new Set(manifest.images.map(r=>r.kind+'/'+r.file)).size,57);
  const assets=new Map();let cleared=0;
  function asset(a,tag){
@@ -20,7 +20,7 @@ export async function validateLabelledImages(root,{structureOnly=false}={}){
  for(const r of manifest.images){
   assert(['wide','portraits'].includes(r.kind));const original=r.kind==='wide'?wide[r.file]:portrait.find(p=>p.file===r.file);assert(original);
   const preview=r.kind==='wide'?original.display.url:original.preview;
-  assert.deepEqual(r.aliases,[preview,original.displayMaster.url,original.url]);assert.deepEqual(r.renderInfo,original.renderInfo);assert.deepEqual(r.sourceAttribution,original.sourceAttribution);
+  assert.deepEqual(r.aliases.slice(0,3),[preview,original.displayMaster.url,original.url]);assert.equal(r.aliases.length,4);assert(r.aliases[3].startsWith('https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-labelled-'));assert.deepEqual(r.renderInfo,original.renderInfo);assert.deepEqual(r.sourceAttribution,original.sourceAttribution);
   const district=r.renderInfo.renderKey.split('/')[1];assert.equal(r.title,districts.find(d=>d.id===district).name);assert.equal(r.area,r.title);
   for(const a of [r.displayMaster,r.download]){
    asset(a,manifest.releaseTags[r.kind]);assert.equal(a.format,'image/png');assert.equal(a.width,original.displayMaster.width);assert.equal(a.height,original.displayMaster.height);assert.equal(a.sourceSHA256,original.displayMaster.nativeSourceSHA256);assert.notEqual(a.sha256,original.displayMaster.sha256);

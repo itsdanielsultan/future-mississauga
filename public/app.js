@@ -1,3 +1,4 @@
+import {withPNGMetadata} from './png-metadata.js?v=20261023-cardfooter1';
 import {createVisibleAttribution, exportCreditLines} from './source-attribution.js?v=20261023-refined1';
 import {projectDetailsHTML, projectCardHTML, completionRowsHTML} from './project-cards.js?v=20261022-cards2';
 import {createDaylight} from './daylight.js?v=20261023-usability1';
@@ -8,7 +9,7 @@ import {addArchitecturalEdges} from './building-presentation.js?v=20261022-detai
 import {projectNorth, presentationLayout, drawPresentationFooter} from './scene-presentation.js?v=20261023-usability1';
 import {adoptContextModelVisibility} from './context-model-visibility.js?v=20261017-contact1';
 import {splitSourceOverlaps} from './source-layer-cut.js?v=20261010-study-visibility1';
-import {applyModelVisibility} from './model-visibility.js?v=20261010-study-visibility1';
+import {applyModelVisibility} from './model-visibility.js?v=20261023-study-focus1';
 import {createSearchIndex,searchProjects,normalizeSearch} from './viewer-search.js?v=20260927-model-search1';
 import {bindComparison} from './comparison.js?v=20261023-usability1';
 import {createExistingStyleIndex,applyExistingStyle} from './existing-materials.js?v=20260926-soft-grey';
@@ -38,7 +39,11 @@ const projectById=new Map(projects.map(p=>[p.id,p])),groupByMesh=new Map();group
 const notes={citywide:'Explore development across Mississauga.',downtown:'From parking lots to a connected downtown.','port-credit':'A waterfront village with a growing new edge.',lakeview:'An industrial waterfront becomes a new neighbourhood.',clarkson:'New density around an established GO connection.',cooksville:'A changing crossroads on the Hurontario corridor.',uptown:'The next skyline along the north–south line.','erin-mills':'Growth around established neighbourhoods.',streetsville:'New development around the historic village.',meadowvale:'Explore Meadowvale’s neighbourhoods and town centres.',malton:'Mississauga’s northeast neighbourhoods.','dixie-applewood':'New homes along the eastern corridors.',erindale:'Communities connected by the Dundas corridor.','airport-corporate':'Explore the airport and surrounding employment areas.',heartland:'The city’s northern employment and growth corridors.'};
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 const link=s=>s?.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title||s.publisher||'Source')} ↗</a>`:esc(s?.title||s?.publisher||s?.source||'Contributor reference; original retained separately');
-const draftLabel=document.createElement('label'),draftToggle=document.createElement('input');draftToggle.type='checkbox';draftToggle.id='draftStudiesToggle';draftLabel.append(draftToggle,document.createTextNode(' Earlier / alternate design studies'));document.querySelector('.layer-controls').append(draftLabel);draftToggle.onchange=()=>{applyVisibility(mode);dirty=true;};
+let selectedStudyProjectId=null;
+const draftLabel=document.createElement('label'),draftToggle=document.createElement('input');draftToggle.type='checkbox';draftToggle.id='draftStudiesToggle';draftLabel.append(draftToggle,document.createTextNode(' Earlier / alternate design studies'));document.querySelector('.layer-controls').append(draftLabel);draftToggle.onchange=()=>{setSelectedStudy(null);applyVisibility(mode);dirty=true;};
+const studyNotice=document.createElement('div'),studyNoticeText=document.createElement('span'),leaveStudyButton=document.createElement('button');studyNotice.id='studyNotice';studyNotice.className='coverage';studyNotice.setAttribute('role','status');studyNotice.hidden=true;Object.assign(studyNotice.style,{gridColumn:'1 / -1',display:'flex',flexWrap:'wrap',alignItems:'center',gap:'8px 16px',margin:'0'});leaveStudyButton.type='button';leaveStudyButton.textContent='Return to current view';leaveStudyButton.className='locate';leaveStudyButton.style.margin='0';studyNotice.append(studyNoticeText,leaveStudyButton);document.querySelector('.map-presentation').prepend(studyNotice);
+function setSelectedStudy(project){selectedStudyProjectId=project?.localOptional?project.id:null;studyNotice.hidden=!selectedStudyProjectId;studyNoticeText.textContent=selectedStudyProjectId?'Earlier design study: '+project.name:'';}
+leaveStudyButton.onclick=()=>{focusRequest++;cancelCameraFlight();setSelectedStudy(null);draftToggle.checked=false;applyVisibility(mode);$('#selection').hidden=true;$('#modelSearchInput').value='';$('#modelSearchClear').hidden=true;$('#modelSearchStatus').textContent='Current view restored. Earlier design studies are hidden.';history.replaceState(null,'','explore.html?district='+current.id);dirty=true;};
 $('#districtSelect').innerHTML=districts.map(d=>`<option value="${d.id}">${esc(d.name)}</option>`).join('');$('#districtSelect').onchange=e=>loadDistrict(e.target.value);
 $('#researchStats').textContent=`${stats.researchedRecords} researched projects`;
 $('#aboutStats').textContent=`${stats.researchOperations} logged research operations and ${stats.linkedProjectSourceURLs} linked project-source URLs. Searches, page reads and failed access attempts are counted separately in the downloadable log; these are not counts of unique websites.`;
@@ -54,7 +59,7 @@ let architecturalEdges=[];
 let visibilityCacheKey='',lastLayerVisibilityKey='',lastModelVisibility=null,markerFocusVersion=0;
 const modelVisibilityCache=new Map();
 function applyVisibility(which){
- const modelKey=[model?.uuid,draftToggle.checked,$('#uncertainToggle').checked].join('|');
+ const modelKey=[model?.uuid,draftToggle.checked,selectedStudyProjectId,$('#uncertainToggle').checked].join('|');
  if(modelKey!==visibilityCacheKey){visibilityCacheKey=modelKey;modelVisibilityCache.clear();lastModelVisibility=null;lastLayerVisibilityKey='';}
  const layerKey=[modelKey,which,$('#goToggle').checked,$('#transitwayToggle').checked,$('#lrtToggle').checked,$('#markersToggle').checked,markerFocusVersion].join('|');
  if(layerKey===lastLayerVisibilityKey)return;
@@ -62,7 +67,7 @@ function applyVisibility(which){
  // Resolve replacements only when the model or filters change, never while panning.
  // Comparison frames reuse compact flags for each already-resolved scenario.
  let visibility=modelVisibilityCache.get(which);
- if(!visibility){visibility={...applyModelVisibility(modelMeshes,which,{referenceStudies:draftToggle.checked,uncertainVersions:$('#uncertainToggle').checked}),flags:Uint8Array.from(modelMeshes,o=>Number(o.visible))};modelVisibilityCache.set(which,visibility);}
+ if(!visibility){visibility={...applyModelVisibility(modelMeshes,which,{referenceStudies:draftToggle.checked,selectedStudyProjectId,uncertainVersions:$('#uncertainToggle').checked}),flags:Uint8Array.from(modelMeshes,o=>Number(o.visible))};modelVisibilityCache.set(which,visibility);}
  else if(lastModelVisibility!==visibility)for(let i=0;i<modelMeshes.length;i++)modelMeshes[i].visible=Boolean(visibility.flags[i]);
  lastModelVisibility=visibility;
  treeMeshes.forEach(o=>o.visible=!o.userData.treeMode||o.userData.treeMode===(which==='existing'?'baseline':'future'));
@@ -70,7 +75,7 @@ function applyVisibility(which){
  detailMeshes.forEach(o=>{const c=o.userData.layerCategory;o.visible=c==='StreetContext'||c==='Landscape'||c==='GO'&&$('#goToggle').checked||c==='Transitway'&&$('#transitwayToggle').checked||c==='HML'&&$('#lrtToggle').checked&&which!=='existing'||c==='SchematicVehicle'&&$('#lrtToggle').checked&&which==='future';});
  transitGroup.visible=false;markerGroup.visible=$('#markersToggle').checked&&which==='future';
 }
-function setMode(m){dirty=true;mode=m;$('#constructionNote').hidden=m!=='construction';compare=false;$('#compareToggle').checked=false;syncCompare();applyVisibility(m);$('#scenarioSelect').value=m;$('#scenarioTag').textContent=m==='existing'?'EXISTING CITY · SOURCE DATES VARY':m==='construction'?'DATED CONSTRUCTION':'FUTURE SCENARIO';}
+function setMode(m){dirty=true;if(m!=='future')setSelectedStudy(null);mode=m;$('#constructionNote').hidden=m!=='construction';compare=false;$('#compareToggle').checked=false;syncCompare();applyVisibility(m);$('#scenarioSelect').value=m;$('#scenarioTag').textContent=m==='existing'?'EXISTING CITY · SOURCE DATES VARY':m==='construction'?'DATED CONSTRUCTION':'FUTURE SCENARIO';}
 const transitGroup=new THREE.Group();transitGroup.name='Hazel McCallion Line — mapped construction alignment';scene.add(transitGroup);
 // Transit geometry is loaded from reconciled route assets; no duplicate gold ribbons.
 function updateTransit(){const b=current.bounds;$('#transitStation').innerHTML='<option value="">Choose a transit station…</option>'+(transitData.stations||[]).map((s,i)=>({s,i})).filter(({s})=>{const [x,,z]=s.position;return current.id==='citywide'||x>=b[0]&&x<=b[2]&&z>=b[1]&&z<=b[3];}).map(({s,i})=>`<option value="${i}">${esc(s.name)} · ${esc(s.system)}</option>`).join('');}
@@ -99,7 +104,7 @@ $('#fitAreaBtn').onclick=()=>{focusRequest++;fitStudyArea();};
 let treeDataCache={};
 async function compressedJSON(url){const r=await fetch(versionedTreeURL(url));if(!r.ok)throw new Error('Tree data unavailable');return new Response(r.body.pipeThrough(new DecompressionStream('gzip'))).json();}
 async function addTrees(id,parent,token,treeMode){if(!treeDataCache[id])treeDataCache[id]=compressedJSON('data/'+id+'-trees.json.gz').catch(e=>{delete treeDataCache[id];throw e;});const base=await treeDataCache[id];let data=base;if(treeMode){const delta=await compressedJSON(landscapeLayers.trees[id][treeMode].url),changes=new Map(delta.adjustments);data={...base,trees:base.trees.map(row=>changes.has(row[0])?[...row.slice(0,6),null,changes.get(row[0])]:row)};}if(token!==loadToken||!data.trees.length)return;const geo=new THREE.IcosahedronGeometry(1,1),material=new THREE.MeshStandardMaterial({color:0xffffff,roughness:.92}),mesh=new THREE.InstancedMesh(geo,material,data.trees.length),dummy=new THREE.Object3D();data.trees.forEach((t,i)=>{const crownScale=t[7]??1;const [id,x,y,z,species]=t,kind=String(species).toLowerCase(),conifer=/pine|spruce|fir|cedar/.test(kind),slender=/poplar|aspen|birch/.test(kind),r=(2.3+(id%13)*.21)*(conifer?.7:slender?.8:1)*crownScale,h=(5.8+(id%17)*.37)*(conifer?1.2:slender?1.15:1);dummy.position.set(x,y+h*.6,z);dummy.scale.set(r,crownScale>0?h*.5:0,r);dummy.rotation.y=(id%37)*.17;dummy.updateMatrix();mesh.setMatrixAt(i,dummy.matrix);mesh.setColorAt(i,new THREE.Color().setHSL(.24+(id%5)*.008,.28+(id%7)*.012,.25+(id%11)*.011));});mesh.castShadow=true;mesh.receiveShadow=true;mesh.instanceMatrix.needsUpdate=true;mesh.name='City tree positions; illustrative species canopy';mesh.userData.treeMode=treeMode;if(treeMode){const asset=landscapeLayers.trees[id][treeMode];visibleAttribution.registerAsset(mesh,asset.url,asset.sha256);}parent.add(mesh);}
-async function loadDistrict(id,searchRequest){const previousDirection=current?camera.position.clone().sub(controls.target).normalize():null;cancelCameraFlight();if(searchRequest===undefined){focusRequest++;$('#modelSearchInput').value='';$('#modelSearchClear').hidden=true;$('#modelSearchStatus').textContent='';}closeModelSearch();const token=++loadToken,district=districts.find(d=>d.id===id)||districts.find(d=>d.id==='downtown');current=district;id=district.id;surroundingCity.setDistrict(district);$('#cityContextToggle').disabled=id==='citywide';$('#cityContextControl').hidden=id==='citywide';
+async function loadDistrict(id,searchRequest){const previousDirection=current?camera.position.clone().sub(controls.target).normalize():null;cancelCameraFlight();if(searchRequest===undefined){focusRequest++;setSelectedStudy(null);$('#modelSearchInput').value='';$('#modelSearchClear').hidden=true;$('#modelSearchStatus').textContent='';}closeModelSearch();const token=++loadToken,district=districts.find(d=>d.id===id)||districts.find(d=>d.id==='downtown');current=district;id=district.id;surroundingCity.setDistrict(district);$('#cityContextToggle').disabled=id==='citywide';$('#cityContextControl').hidden=id==='citywide';
  const pending=new Set();let committed=false,abandoned=false;
  const loadAsset=async url=>{const asset=await loader.loadAsync(url);if(abandoned||token!==loadToken){dispose(asset.scene);throw new DOMException('A newer district was selected.','AbortError');}visibleAttribution.registerAsset(asset.scene,url,modelAssetVersions.sha256[url]||assetVersions.get(new URL(url,document.baseURI).href));pending.add(asset.scene);return asset;};
  const loadDistrictContext=async()=>{const root=new THREE.Group();pending.add(root);const items=await Promise.all((contextAssets[id]||['models/'+id+'-context.glb']).map(loadAsset));for(const item of items)root.add(item.scene);return {scene:root};};
@@ -135,7 +140,7 @@ async function loadDistrict(id,searchRequest){const previousDirection=current?ca
 function modelDownloads(p){return '';}
 function completionDetails(p){return completionRowsHTML(p);}
 function sourceDetails(p){return projectDetailsHTML(p,{asset:refinementData.assets.find(a=>a.projectId===p.id)});}
-function selectProject(p,focus=false){$('#selection').innerHTML=`<button class="icon-button" aria-label="Close selection"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 6 12 12M18 6 6 18"/></svg></button>${sourceDetails(p)}`;$('#selection').hidden=false;$('#selection button').onclick=()=>$('#selection').hidden=true;if(focus)focusProject(p);}
+function selectProject(p,focus=false){if(selectedStudyProjectId&&selectedStudyProjectId!==p.id){setSelectedStudy(null);applyVisibility(mode);dirty=true;}$('#selection').innerHTML=`<button class="icon-button" aria-label="Close selection"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 6 12 12M18 6 6 18"/></svg></button>${sourceDetails(p)}`;$('#selection').hidden=false;$('#selection button').onclick=()=>$('#selection').hidden=true;if(focus)focusProject(p);}
 function cancelCameraFlight(){if(!cameraFlight)return;controls.enableDamping=cameraFlight.damping;cameraFlight=null;dirty=true;}
 controls.addEventListener('start',()=>{homeFraming=null;cancelCameraFlight();});
 canvas.addEventListener('pointerdown',cancelCameraFlight,{capture:true});
@@ -144,7 +149,7 @@ canvas.addEventListener('keydown',cancelCameraFlight,{capture:true});
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
 function projectMeshes(p){
  const ids=new Set(p.meshIds||[]),found=[];
- for(const root of [model,context])root?.traverse(o=>{if(!o.isMesh)return;const d=o.userData;if(d.contextModelVisibility)return;if(!(d.draftStudy&&!draftToggle.checked)&&(d.projectId===p.id||ids.has(d.id))&&!d.hiddenObsolete&&!(d.replacementModes?.includes('future')&&!d.sourceReplacements)&&(!d.modes||d.modes.includes('future'))&&o.geometry?.attributes?.position?.count>0&&o.geometry.index?.count!==0)found.push(o);});
+ for(const root of [model,context])root?.traverse(o=>{if(!o.isMesh)return;const d=o.userData;if(d.contextModelVisibility)return;if(!(d.draftStudy&&!draftToggle.checked&&d.projectId!==selectedStudyProjectId)&&(d.projectId===p.id||ids.has(d.id))&&!d.hiddenObsolete&&!(d.replacementModes?.includes('future')&&!d.sourceReplacements)&&(!d.modes||d.modes.includes('future'))&&o.geometry?.attributes?.position?.count>0&&o.geometry.index?.count!==0)found.push(o);});
  const studies=p.referenceStudy?found.filter(o=>o.userData.assetId&&o.userData.projectId===p.id):[],candidates=studies.length?studies:found,visible=candidates.filter(o=>o.visible);
  return visible.length?visible:candidates;
 }
@@ -181,7 +186,7 @@ function frameProject(p,meshes){
  return {target,position,bounds:[box.min.toArray(),box.max.toArray()],ground,viewport:{left,right,top,bottom}};
 }
 async function focusProject(p){homeFraming=null;
- const request=++focusRequest;if(p.localOptional){draftToggle.checked=true;applyVisibility(mode);}cancelCameraFlight();closeModelSearch();$('#modelSearchInput').value=p.name;$('#modelSearchClear').hidden=false;
+ const request=++focusRequest;setSelectedStudy(p);applyVisibility(mode);cancelCameraFlight();closeModelSearch();$('#modelSearchInput').value=p.name;$('#modelSearchClear').hidden=false;
  const district=districtForProject(p);$('#modelSearchStatus').textContent='Opening '+p.name+'.';
  if(!district){selectProject(p,false);const notice=document.createElement('p');notice.className='coverage';notice.textContent='This location is outside the available 3D model. The map has not moved.';$('#selection h3')?.after(notice);if(innerWidth<=700)$('#modelSearchInput').blur();$('#modelSearchStatus').textContent=p.name+'. Project details opened; its location is outside the available model coverage.';return;}
  if(current.id!==district.id||window.atlasReady!==current.id)await loadDistrict(district.id,request);
@@ -246,20 +251,24 @@ function clearExportImage(){
 window.addEventListener('pagehide',clearExportImage);
 $('#exportBtn').onclick=async()=>{
  if(exporting||!current||window.atlasReady!==current.id)return;
- const button=$('#exportBtn'),status=$('#exportStatus'),scenario=compare?'Existing city / future scenario':({existing:'Existing city',construction:'Dated construction',future:'Future scenario'})[mode];
+ const button=$('#exportBtn'),status=$('#exportStatus'),scenario=selectedStudyProjectId?'Earlier design study':compare?'Existing city / future scenario':({existing:'Existing city',construction:'Dated construction',future:'Future scenario'})[mode];
  const filename='future-mississauga-'+current.id+'-'+(compare?'comparison':mode)+'.png';
  exporting=true;button.disabled=true;button.setAttribute('aria-busy','true');clearExportImage();
  try{
   await Promise.all([document.fonts.load('500 23px "Bricolage Grotesque"'),document.fonts.load('15px Lato')]);
   render();const out=document.createElement('canvas');out.width=canvas.width;const layout=presentationLayout(out.width),ctx=out.getContext('2d'),fontSize=Math.max(7,12*layout.scale),inset=28*layout.scale,lineHeight=fontSize*1.5,maxWidth=out.width-inset*2;
   const captions=exportCreditLines(displayedSources);
-  ctx.font=fontSize+'px Lato, sans-serif';const lines=[];for(const text of captions){let line='';for(const word of text.split(' ')){const next=line?line+' '+word:word;if(line&&ctx.measureText(next).width>maxWidth){lines.push(line);line=word;}else line=next;}if(line)lines.push(line);}
   const footerHeight=layout.height;
-  out.height=Math.ceil(canvas.height+footerHeight+16*layout.scale+lines.length*lineHeight);
+  out.height=Math.ceil(canvas.height+footerHeight+36*layout.scale);
   ctx.fillStyle='#ffffff';ctx.fillRect(0,0,out.width,out.height);ctx.drawImage(canvas,0,0);
-  drawPresentationFooter(ctx,{width:out.width,top:canvas.height,title:'Future Mississauga · '+current.name,scenario,bearing:projectNorth(THREE,camera,controls.target,canvas.width,canvas.height)});
-  ctx.fillStyle='#6b6662';ctx.font=fontSize+'px Lato, sans-serif';lines.forEach((line,i)=>ctx.fillText(line,inset,canvas.height+footerHeight+fontSize+4*layout.scale+i*lineHeight));
-  const blob=await new Promise((resolve,reject)=>out.toBlob(value=>value?resolve(value):reject(new Error('PNG encoding failed')),'image/png'));
+  drawPresentationFooter(ctx,{width:out.width,top:canvas.height,title:current.name,scenario,bearing:projectNorth(THREE,camera,controls.target,canvas.width,canvas.height)});
+  ctx.fillStyle='#6b6662';ctx.font=fontSize+'px Lato, sans-serif';
+  const creditY=canvas.height+footerHeight+19*layout.scale;
+  const cityCredit='City of Mississauga'+(captions.some(line=>line.includes('OpenStreetMap'))?' · © OpenStreetMap':'');
+  ctx.textAlign='left';ctx.fillText(cityCredit,inset,creditY,maxWidth*.48);
+  ctx.textAlign='right';ctx.fillText('futuremississauga.com/sources.html',out.width-inset,creditY,maxWidth*.48);
+  const encoded=await new Promise((resolve,reject)=>out.toBlob(value=>value?resolve(value):reject(new Error('PNG encoding failed')),'image/png'));
+  const blob=await withPNGMetadata(encoded,{'Title':current.name,'Source':captions.join('\n'),'Licence URL':'https://www.ontario.ca/page/open-government-licence-ontario','Sources URL':'https://futuremississauga.com/sources.html'});
   const download=document.createElement('a'),open=document.createElement('a');
   exportImageURL=URL.createObjectURL(blob);
   download.download=filename;download.href=exportImageURL;download.textContent='Download PNG';
@@ -272,8 +281,8 @@ $('#exportBtn').onclick=async()=>{
   exporting=false;button.removeAttribute('aria-busy');button.disabled=!current||window.atlasReady!==current.id;
  }
 };
-function tick(){requestAnimationFrame(tick);if(cameraFlight){const f=cameraFlight,t=Math.min(1,(performance.now()-f.start)/f.duration),e=t*t*(3-2*t);camera.position.lerpVectors(f.fromPosition,f.position,e);controls.target.lerpVectors(f.fromTarget,f.target,e);controls.update();dirty=true;if(t===1){controls.enableDamping=f.damping;cameraFlight=null;}}else controls.update();if(dirty){render();dirty=false;}}resize();tick();await loadDistrict(initialQuery.get('district')||'downtown');
+function tick(){requestAnimationFrame(tick);if(cameraFlight){const f=cameraFlight,t=Math.min(1,(performance.now()-f.start)/f.duration),e=t*t*(3-2*t);camera.position.lerpVectors(f.fromPosition,f.position,e);controls.target.lerpVectors(f.fromTarget,f.target,e);controls.update();dirty=true;if(t===1){controls.enableDamping=f.damping;cameraFlight=null;}}else controls.update();if(dirty){render();dirty=false;}}resize();tick();const initialDistrictLoad=loadDistrict(initialQuery.get('district')||'downtown'),initialFocusRequest=focusRequest;await initialDistrictLoad;
 window.atlas={scene,camera,controls,renderer,districts,projects,groups,stats,loadDistrict,setMode,reset,render,selectProject,get current(){return current;},get isFocusing(){return Boolean(cameraFlight);},get model(){return model;},get futureMeshes(){return futureMeshes;},setCompare(value,position=.5){compare=value;split=position;$('#compareToggle').checked=value;$('#compareRange').value=position*100;syncCompare();},setLRT(value){$('#lrtToggle').checked=value;applyVisibility(mode);}};
-const initialProject=projects.find(p=>p.id===initialQuery.get('project'));if(initialProject)await focusProject(initialProject);
+const initialProject=projects.find(p=>p.id===initialQuery.get('project'));if(initialProject&&focusRequest===initialFocusRequest&&window.atlasReady===current.id)await focusProject(initialProject);
 // WebMCP exposes the same read-only evidence and district controls as the visible UI.
 if(navigator.modelContext?.registerTool){navigator.modelContext.registerTool({name:'explore_mississauga_district',description:'Open one of the atlas districts. Does not change project evidence.',inputSchema:{type:'object',properties:{district:{type:'string',enum:districts.map(d=>d.id)}},required:['district']},execute:async({district})=>{if(!districts.some(d=>d.id===district))throw new Error('Unknown district');await loadDistrict(district);return {content:[{type:'text',text:'Opened '+current.name}]};}});navigator.modelContext.registerTool({name:'find_mississauga_projects',description:'Read cited research records by project name or address.',inputSchema:{type:'object',properties:{query:{type:'string'}},required:['query']},execute:async({query})=>({content:[{type:'text',text:JSON.stringify(projects.filter(p=>(p.name+' '+p.address).toLowerCase().includes(query.toLowerCase())).slice(0,12))}]})});}

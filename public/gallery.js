@@ -1,4 +1,4 @@
-import {createImagePreview,shortResolution,shortDate} from './image-preview.js?v=20261023-usability3';
+import {createImagePreview,shortResolution,shortDate} from './image-preview.js?v=20261023-cardfooter1';
 import {refreshPictureAssets} from './media-catalog.js?v=20261023-usability1';
 import {bindComparison} from './comparison.js?v=20261023-usability1';
 const $=s=>document.querySelector(s);
