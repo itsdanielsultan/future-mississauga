@@ -1,4 +1,4 @@
-import {createImagePreview,shortResolution,shortDate} from './image-preview.js?v=20261023-usability1';
+import {createImagePreview,shortResolution,shortDate} from './image-preview.js?v=20261023-usability3';
 import {resolveMedia} from './media-catalog.js?v=20261023-usability1';
 export function installSocialPreview(root=document){
  const preview=createImagePreview();

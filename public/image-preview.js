@@ -42,6 +42,7 @@ export function createImagePreview({views = false} = {}) {
     const description=dialog.querySelector('.media-preview__description');description.textContent=info.description||'';description.hidden=!info.description;
     const notes=dialog.querySelector('.media-preview__notes');notes.hidden=!info.notes;notes.open=false;notes.querySelector('p').textContent=info.notes||'';
     const download=dialog.querySelector('[download]');download.href=info.download;download.download=new URL(info.download,location.href).pathname.split('/').pop();
+    const format=download.download.split('.').pop().toUpperCase();download.textContent=['PNG','JPG','JPEG','SVG','AVIF','WEBP'].includes(format)?'Download '+format:'Download image';
     const explore=dialog.querySelector('.media-preview__explore');explore.hidden=!info.explore;if(info.explore)explore.href=info.explore;
     dialog.querySelector('.media-preview__osm').hidden=!info.osm;
     dialog.classList.toggle('media-preview--portrait',info.height>info.width);
@@ -71,8 +72,10 @@ export function installImagePreviews(resolve = async image => ({src:image.curren
     event.preventDefault();event.stopPropagation();
     generic ||= createImagePreview();
     const info=await resolve(image,anchor);
-    const section=image.closest('section,article,figure');
-    generic.show({title:section?.querySelector('h2,h3')?.textContent||image.alt||'Picture',alt:image.alt,width:image.naturalWidth,height:image.naturalHeight,preview:image.currentSrc||image.src,...info},anchor||image.closest('button')||image);
+    const section=image.closest('article,section');
+    const heading=section?.querySelector('h2,h3')?.textContent?.trim();
+    const title=image.dataset.previewTitle||anchor?.dataset.previewTitle||heading||(image.alt.length<=70?image.alt:'Image preview');
+    generic.show({title:title||'Picture',alt:image.alt,width:image.naturalWidth,height:image.naturalHeight,preview:image.currentSrc||image.src,...info},anchor||image.closest('button')||image);
   });
   const enhance=()=>document.querySelectorAll('main img').forEach(image=>{
     if(image.closest('dialog,.picture-compare,.social-grid,[data-open],.site-brand'))return;
