@@ -1,0 +1,64 @@
+/* Supporting detail stays available without crowding the main view. */
+html .reading-note {
+  max-width: 88ch;
+  margin: 16px 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #6b6662;
+  font: 400 15px/1.6 'Lato', sans-serif;
+}
+html .reading-note > summary {
+  min-height: 44px;
+  padding: 10px 0;
+  color: #a23b3b;
+  font: inherit;
+  cursor: pointer;
+}
+html .reading-note > p { max-width: 82ch; margin: 8px 0 14px; }
+html .reading-note > p:last-child { margin-bottom: 6px; }
+html .reading-note a { color: #a23b3b; }
+html .source-hub-link {
+  margin: 0;
+  padding: 28px var(--page-gutter, 4.8vw) 36px;
+  font: 400 16px/1.5 'Lato', sans-serif;
+}
+html .source-hub-link a { color: #a23b3b; text-underline-offset: .2em; }
+html .source-hub-link a > span { margin-left: 8px; }
+html .sources-download-groups { min-width: 0; }
+html .sources-download-groups > div + div { margin-top: 30px; }
+html .sources-download-groups h3 {
+  margin: 0 0 14px;
+  color: #2e2b2a;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+html .sources-download-groups .sources-documents > a:first-child { border-top: 0; padding-top: 0; }
+html .sources-download-groups .reading-note { margin-top: 8px; margin-bottom: 0; }
+html .route-reading-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 26px;
+  margin: 22px 0 10px;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.5;
+}
+html .route-reading-key li { display: inline-flex; align-items: center; gap: 10px; }
+html .route-reading-key .route-dot { display: inline-block; width: 22px; height: 3px; border-radius: 2px; }
+html .route-reading-key .route-go { background: #34884b; }
+html .route-reading-key .route-transitway { background: #1783bc; }
+html .route-reading-key .route-lrt { background: #bd941f; }
+html .map-caption > div { min-width: 0; }
+html .map-caption .reading-note { margin: 6px 0 0; }
+html .map-caption .reading-note > summary { min-height: 40px; padding: 8px 0; }
+html .reading-page .approval-update > .reading-note { margin: 8px 0 12px; }
+html .reading-page .approval-update > .reading-note > p { font-size: 15px; line-height: 1.6; }
+@media (max-width: 650px) {
+  html .source-hub-link { padding: 24px 22px 30px; }
+  html .route-reading-key { gap: 10px 20px; }
+  html .sources-download-groups > div + div { margin-top: 24px; }
+}

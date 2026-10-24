@@ -1,9 +1,14 @@
 // Display framing only. Source geometry, study bounds and elevations stay unchanged.
+export const DEFAULT_VIEW_ELEVATION_DEGREES = 38;
+export function defaultViewDirection(THREE) {
+  const elevation = THREE.MathUtils.degToRad(DEFAULT_VIEW_ELEVATION_DEGREES);
+  return new THREE.Vector3(0, Math.sin(elevation), Math.cos(elevation));
+}
 export function neighbourhoodFrame(THREE, district, aspect, fov = 35, bearingDirection = null) {
   const b = district.bounds;
   const ground = district.sourceCropCenter?.[1] ?? district.center[1];
   const target = new THREE.Vector3((b[0] + b[2]) / 2, ground, (b[1] + b[3]) / 2);
-  const direction = bearingDirection?.clone().normalize() ?? new THREE.Vector3(0, Math.sin(Math.PI * 55 / 180), Math.cos(Math.PI * 55 / 180));
+  const direction = bearingDirection?.clone().normalize() ?? defaultViewDirection(THREE);
   const right = new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),direction).normalize(), up = new THREE.Vector3().crossVectors(direction,right).normalize();
   const tan = Math.tan(THREE.MathUtils.degToRad(fov / 2));
   let distance = Infinity;

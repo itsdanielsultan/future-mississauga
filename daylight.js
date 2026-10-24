@@ -8,8 +8,16 @@ export function daylightShadowFrame(target, viewDistance, districtRadius) {
     position:[target.x - height * .6, target.y + height, target.z + height * .6]};
 }
 
+export function daylightShadowBias(frame, mapSize = 4096) {
+  const texel = frame.extent * 2 / mapSize;
+  // Bias is measured in normalized shadow depth; normalBias is world metres.
+  // Scale gently with the map footprint, rather than detaching close-up shadows.
+  return {bias:-Math.max(.04, texel * .08) / (frame.far - frame.near),
+    normalBias:Math.min(.8, Math.max(.18, texel * .3))};
+}
+
 export function createDaylight(THREE, scene, renderer) {
-  renderer.setClearColor('#eef2f5');
+  renderer.setClearColor('#e8f2f7');
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -22,7 +30,7 @@ export function createDaylight(THREE, scene, renderer) {
   sun.shadow.mapSize.set(4096,4096);
   sun.shadow.bias = -.000015;
   sun.shadow.normalBias = .12;
-  sun.shadow.radius = 1.25;
+  sun.shadow.radius = 1;
   sun.shadow.intensity = .65;
   scene.add(sky,fill,sun,sun.target);
   const previousTarget = new THREE.Vector3(Infinity,Infinity,Infinity);
@@ -31,6 +39,7 @@ export function createDaylight(THREE, scene, renderer) {
     const frame = daylightShadowFrame(target,camera.position.distanceTo(target),radius);
     if (Math.abs(frame.extent - previousExtent) < Math.max(1,previousExtent * .025)
       && target.distanceTo(previousTarget) < Math.max(1,frame.extent * .025)) return;
+    Object.assign(sun.shadow, daylightShadowBias(frame,sun.shadow.mapSize.width));
     sun.position.set(...frame.position);
     sun.target.position.copy(target);
     Object.assign(sun.shadow.camera,{left:-frame.extent,right:frame.extent,
