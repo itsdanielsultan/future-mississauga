@@ -1,5 +1,5 @@
 {
-  "edition": "Framing, navigation and city context refinement, 2026-10-23",
+  "edition": "Image previews, neighbourhood labels and viewer usability, 2026-10-23",
   "siteOrigin": "https://futuremississauga.com/",
   "finalRenderLockAcknowledged": true,
   "files": [
@@ -15,18 +15,23 @@
     },
     {
       "file": "accuracy-review.html",
-      "bytes": 146393,
-      "sha256": "0b9fcd94bbbcf0f4ae6b6775a5d20081b2ef5fed738ec63273e65b7a02f5b5bf"
+      "bytes": 146538,
+      "sha256": "edbf3043298d64419393812ba18529d68c425da26620431577dc32faf0586f5d"
     },
     {
       "file": "app.js",
-      "bytes": 57841,
-      "sha256": "e1b7bcdf44dcfaec5df5f1fbe86e2d4b652ca3507697490f47e739d5899ca964"
+      "bytes": 57775,
+      "sha256": "2100c8818da74832fd095839c84232c5f2d39a5828f6c38e5856da6693b15439"
     },
     {
       "file": "assets/apple-touch-icon.png",
       "bytes": 2565,
       "sha256": "f86bc76536100c1d01bb3833403c64d1271f3bac6e10da6b4145f1ed1f28220b"
+    },
+    {
+      "file": "assets/chevron-down.svg",
+      "bytes": 207,
+      "sha256": "ce1dc813d9b4c109eae644209499ea1976192f0759f538c15bdefb076ba4b811"
     },
     {
       "file": "assets/coverage-baseline.svg",
@@ -89,6 +94,11 @@
       "sha256": "b10f3704f6e42cd7e65c9e0d01ba435b618499cc366f37fde1aaeacb02cd9312"
     },
     {
+      "file": "building-details.css",
+      "bytes": 4077,
+      "sha256": "00a2a903c2c2e977f5c98afafe75b358dcb14fed0f94d4e40fbf31701e843019"
+    },
+    {
       "file": "building-presentation.js",
       "bytes": 2251,
       "sha256": "bbcc6feac756d9fb9ee16271084a3e2ba3db963d5657e2aeb98f9489282c40a1"
@@ -115,8 +125,8 @@
     },
     {
       "file": "comparison.js",
-      "bytes": 1936,
-      "sha256": "9669bb63012468a3e970d38dfa7c247a94ff7094712c9d261e96c686dfef57a8"
+      "bytes": 2529,
+      "sha256": "0dc8a517b39a7b19a28e89923f801d6aa7e81db85af4e4487ef3b44210cacedf"
     },
     {
       "file": "context-model-visibility.js",
@@ -419,6 +429,16 @@
       "sha256": "bee94c2d76e3bfece689f748a645655bb2c950c9715cf6eaf83947d83dcdcd0d"
     },
     {
+      "file": "data/labelled-image-assets.json",
+      "bytes": 190983,
+      "sha256": "3146629c422f56df738c823aed8139fe16adbfea63f6a7b8f290d942372836dd"
+    },
+    {
+      "file": "data/labelled-media-integrity.json",
+      "bytes": 70905,
+      "sha256": "6c014755ad072b0e1c89bd5606ac66fe1884080bf67c8d9aa7c9df850557b43c"
+    },
+    {
       "file": "data/lakeview-meshes.json",
       "bytes": 47847,
       "sha256": "312bc34a6de4f6993b185308e550f59227e978a191d217c5251a903766768044"
@@ -710,8 +730,8 @@
     },
     {
       "file": "daylight.js",
-      "bytes": 2094,
-      "sha256": "b72b0e8fa1d5c0620e0896872e09eb5b7243184e7319b263c622935370797732"
+      "bytes": 2569,
+      "sha256": "1be9882980807c8bc34575f7e095cdec5b176a7601a1da0f348231fdeb793b51"
     },
     {
       "file": "downloads/30-Eglinton-West-review.md",
@@ -1160,8 +1180,8 @@
     },
     {
       "file": "explore.html",
-      "bytes": 16427,
-      "sha256": "a0b953aecd3aaee2f87c5fcb98848f88ed4e5064444b757bd3b715e65e46a24c"
+      "bytes": 17061,
+      "sha256": "09a5f5890b58f398d87c528372277a54d4f4db4ac3a21ee330dd07e253f7b8d5"
     },
     {
       "file": "gallery.css",
@@ -1170,8 +1190,8 @@
     },
     {
       "file": "gallery.js",
-      "bytes": 8877,
-      "sha256": "0ca8fb6bc7a490d22c37acee03b8eeae8e7924bd2d50d6b2d9744f47a08118cf"
+      "bytes": 7276,
+      "sha256": "6b4916384f33e1b2e1e84a4c99920192e8ba019aa9209df18483bcc8fc48b214"
     },
     {
       "file": "gallery/Downtown-transformation.mp4",
@@ -1929,9 +1949,19 @@
       "sha256": "20a10c304c845e37f45156333dd3a1176e034cb8f4b78124d83bcb807b364276"
     },
     {
+      "file": "image-experience.js",
+      "bytes": 1123,
+      "sha256": "62f4f377adcd29d1a30b837a528a944fdd96a5792b9a3ff42da91680f19f2b9f"
+    },
+    {
+      "file": "image-preview.js",
+      "bytes": 6986,
+      "sha256": "2ad1e098202c4dd7f718613960066a3ecd0b881ffc53c01a5574adf4c0790944"
+    },
+    {
       "file": "index.html",
-      "bytes": 17076,
-      "sha256": "f67dbb4b887c25696fdf67342babda6e692f7b652167630f8048598881ca0f47"
+      "bytes": 14468,
+      "sha256": "7dad2e249270dacee81fbd5d82b483aef5081ee5c0419683c83aeafaead9d43c"
     },
     {
       "file": "licenses/BricolageGrotesque-OFL.txt",
@@ -1962,6 +1992,11 @@
       "file": "map-presentation.css",
       "bytes": 1434,
       "sha256": "b43c01a3705f7763f24f8823419ffd37e329063f9b1157fef2cc8a5b7bfa2d18"
+    },
+    {
+      "file": "media-catalog.js",
+      "bytes": 3048,
+      "sha256": "150025f1d7cece8686fba53eaee98f612a2fe237bb6629a18559b9b736b77b2f"
     },
     {
       "file": "media-player.js",
@@ -3139,14 +3174,24 @@
       "sha256": "72c662ec2517eb59caad3abd50e1f630bc7a43190652fbe709f044f12427b6e6"
     },
     {
+      "file": "reading-notes.css",
+      "bytes": 2336,
+      "sha256": "5f1f5f32a19ffb8829e136920dcf55a4a24d381a4a26bfa9e3c4cc44c947dcc1"
+    },
+    {
       "file": "reading-pages.css",
       "bytes": 8333,
       "sha256": "d256bfdafe62aeb3623673c3c1f5a9ad174775e2ac8a1c8fee26d68fb2d40492"
     },
     {
+      "file": "reference-updates.css",
+      "bytes": 4126,
+      "sha256": "d95b23ed6a958016f094ff4527210edf9011d6eeb21e47cfa9d67a02720a0ffd"
+    },
+    {
       "file": "reference-updates.html",
-      "bytes": 70351,
-      "sha256": "aea4d21cc3a8cb9d7a29db188f7eb2f64b891367c6da454f4030ec17f3ab2564"
+      "bytes": 72244,
+      "sha256": "9ce963e41da08a0d3c15051208cccb6b343d92be2e7ee9e1a189a8ec978df9b9"
     },
     {
       "file": "renders/revamp/source-elevation-repair-qa.png",
@@ -3200,8 +3245,8 @@
     },
     {
       "file": "review-renders.html",
-      "bytes": 36035,
-      "sha256": "ab94aff401dd81b4fb93c280349ef0079e3306b4d8e8390f2525ac92e79cb43f"
+      "bytes": 36984,
+      "sha256": "1ecdb8b58d10c7c163b0fb1c37681d122fdde5240a2106a626e31a2defe1cb38"
     },
     {
       "file": "robots.txt",
@@ -3210,8 +3255,8 @@
     },
     {
       "file": "scene-presentation.js",
-      "bytes": 3336,
-      "sha256": "120975c97e7c94e4cdb3c45ff2b354aa499c469bda3a5733d5bc3f1770643179"
+      "bytes": 3406,
+      "sha256": "cb21412e9e959f1397c6d36bd3b2ea67ce46f9fe74e7809941dbba8ea98a791a"
     },
     {
       "file": "site-ui.css",
@@ -3240,8 +3285,8 @@
     },
     {
       "file": "social-preview.js",
-      "bytes": 6341,
-      "sha256": "c5e08d07d35ac46712ede195938621ab7066a669467d574789632ecdde9ce1f0"
+      "bytes": 1454,
+      "sha256": "3556467207aa719d20fbcb09ec1946fccd8bfc2d6126362ebbb61615a4c97234"
     },
     {
       "file": "social.css",
@@ -3250,13 +3295,13 @@
     },
     {
       "file": "social.html",
-      "bytes": 33452,
-      "sha256": "aef37d45ffb0136fb7f1b3e4f7b537eb50213694c7c242148966972cae70a427"
+      "bytes": 33806,
+      "sha256": "b118f9cb9b236a4ac1eaad79a7a641305aec60ab3a5c3b44184c2dc8e53b884c"
     },
     {
       "file": "social.js",
-      "bytes": 1092,
-      "sha256": "bed9aa9eb1cac5e18d1aea0437773e98d7dd467a4a0c5980b5447a7c7cfee99f"
+      "bytes": 1094,
+      "sha256": "4d3c4381153baca654662e08f339a6298e769fd5b043171ecebd9b03e415b6a8"
     },
     {
       "file": "source-attribution-regions.js",
@@ -3280,8 +3325,8 @@
     },
     {
       "file": "sources.html",
-      "bytes": 7670,
-      "sha256": "fffe506ff90bc6b6d696cc50adf20230a10f66460c4754c1b4e123320a30795a"
+      "bytes": 8753,
+      "sha256": "e39acf2585f434741d8663430eb778f9dbc49226453ea004a48a22a04478b5a8"
     },
     {
       "file": "sources.js",
@@ -3305,13 +3350,18 @@
     },
     {
       "file": "subway.html",
-      "bytes": 21765,
-      "sha256": "943ba8a7fe43797c2946e291e9c47a3d08545420a599f702b4ec01905dbc7dad"
+      "bytes": 22185,
+      "sha256": "88ea7c6af5ea1fca75ce4c1e4beadf4bd66219cc046b10129ea5e37ec45c4711"
     },
     {
       "file": "subway.js",
       "bytes": 18139,
       "sha256": "27ea1b6e7f9e204a8b9ae85f86351ad8743364d6da0ae8812590fe99f34e2c26"
+    },
+    {
+      "file": "surface-rendering.js",
+      "bytes": 579,
+      "sha256": "35f4cc4d99e2974c9c70fc2148f0298c678aab93f9fc4a64b0b2fbda8f24b4bd"
     },
     {
       "file": "updates.css",
@@ -3320,8 +3370,13 @@
     },
     {
       "file": "updates.html",
-      "bytes": 32426,
-      "sha256": "cba0d0b95ac137fa8247525eb54c1da041608f5a87748d663655f4643dc3438c"
+      "bytes": 34220,
+      "sha256": "5dd3844490ea5f62fb2c74cd5c396a7ab0e5e57a307c05202b463c979c24322f"
+    },
+    {
+      "file": "usability.css",
+      "bytes": 5963,
+      "sha256": "63d38d52bdcda6105d5cf2c58c230c19dfdfc652b6efb0a000be993232d0f7c7"
     },
     {
       "file": "vendor/addons/controls/OrbitControls.js",
@@ -3615,8 +3670,8 @@
     },
     {
       "file": "viewer-camera.js",
-      "bytes": 1344,
-      "sha256": "2eb686379c5b2a0c8e82889825d42d68556a85708d846f9c0524257064313d2f"
+      "bytes": 1540,
+      "sha256": "eb6edbfbdd1f5ac35a78270951681669a8096daad1ad895aabe2b258d3d8912c"
     },
     {
       "file": "viewer-search.js",
@@ -3624,7 +3679,7 @@
       "sha256": "2d9cfb19a32fac7548704fbfca44060267c233522645aa354fb4f6069e012d97"
     }
   ],
-  "publishedBytes": 999655751,
+  "publishedBytes": 999945530,
   "originalPNGCount": 33,
   "displayPNGCount": 33,
   "displayScale": 0.5,
@@ -3849,7 +3904,7 @@
     "cityViewerUnchanged": true,
     "sherobeeOrientationCorrectedInReferenceStudy": true
   },
-  "exportedAt": "2026-10-24T00:31:28.075009+00:00",
+  "exportedAt": "2026-10-24T01:21:25.145093+00:00",
   "cityModelUpdateDate": "2026-10-22",
   "pictureRenderingDateUnchanged": true,
   "originalPNGStorage": "GitHub Release citywide-accuracy-images-2026-10-17; independently downloaded byte proof in public/data/original-image-release-integrity.json",
@@ -4072,13 +4127,23 @@
   "publishedBytesMeaning": "Exact static export size; publication verified separately.",
   "visualNavigationRefinement": {
     "date": "2026-10-23",
-    "sourceBase": "f72cbaaa6760b0f2b64de449f189d80bb80731c2",
+    "sourceBase": "cc052d4adb233814b79fa321eaadb2edb00d31b4",
     "sourceGeometryUnchanged": true,
     "sourceFilesAndOriginalsPreserved": true,
     "neutralViewerLighting": true,
     "stableNavigation": true,
     "onDemandNeighbourContext": true,
     "neighbourhoodBoundaryClaimed": false,
+    "sharedImagePreviews": true,
+    "highDensityPreviews": true,
+    "areaFirstImageFooters": true,
+    "compactPublicCopy": true,
+    "sourcesAndDownloadsMoved": true,
+    "fullscreenFilmNeutralUI": true,
+    "comparisonLabelsFollowVisibleHalves": true,
+    "defaultCameraElevation": 38,
+    "parkShadowBandingFixed": true,
+    "outsideModelBackground": "#e8f2f7",
     "cleanOnsiteImageBars": true,
     "sourceAwareStandaloneDownloads": true,
     "panoramicPublished": false,

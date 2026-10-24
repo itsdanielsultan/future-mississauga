@@ -1,0 +1,112 @@
+/* Let the building pictures lead, with context available on demand. */
+html .reading-page .building-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 28px 64px;
+  align-items: start;
+  padding-bottom: 32px;
+}
+html .reading-page .building-intro h1 { margin: 0 0 14px; }
+html .reading-page .building-count {
+  margin: 0;
+  color: #6b6662;
+  font-size: 14px;
+  line-height: 1.5;
+}
+html .reading-page .building-intro-copy > p {
+  max-width: 50ch;
+  margin: 2px 0 14px;
+  font-size: 19px;
+  line-height: 1.55;
+}
+html .reading-page .render-main .building-about {
+  max-width: 56ch;
+  padding: 0;
+  font-size: 14px;
+}
+html .reading-page .render-main .building-about summary {
+  min-height: 0;
+  padding: 4px 0;
+  line-height: 1.5;
+}
+html .reading-page .render-main .building-about p { margin: 12px 0 0; }
+html .reading-page .building-browse {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px 36px;
+  padding: 24px 0;
+  border-top: 1px solid #e4dedb;
+  border-bottom: 1px solid #e4dedb;
+}
+html .reading-page .building-project-picker { flex: 1 1 420px; max-width: 610px; margin: 0; }
+html .reading-page .building-project-picker label {
+  display: block;
+  margin-bottom: 8px;
+  color: #6b6662;
+  font-size: 13px;
+  line-height: 1.4;
+}
+html .reading-page .building-picker-controls { display: flex; gap: 10px; }
+html .reading-page .building-picker-controls select {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 44px 10px 14px;
+  border: 1px solid #ded8d4;
+  border-radius: 6px;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23534b47' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") right 16px center / 16px 16px no-repeat;
+  color: var(--site-ink);
+  font: 400 15px/1.4 'Lato', sans-serif;
+  appearance: none;
+  -webkit-appearance: none;
+}
+html .reading-page .building-picker-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  gap: 14px;
+  min-height: 46px;
+  padding: 10px 16px;
+  border: 1px solid #a23b3b;
+  border-radius: 6px;
+  background: #a23b3b;
+  color: #fff;
+  font: 400 14px/1.4 'Lato', sans-serif;
+  cursor: pointer;
+}
+html .reading-page .building-picker-controls button:hover { background: #8c3030; border-color: #8c3030; }
+html .reading-page .building-related {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 24px;
+  padding-bottom: 11px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+html .reading-page .render-project { padding: 36px 0 40px; }
+html .reading-page .render-project h2 { margin: 8px 0 22px; }
+html .reading-page .render-project > .render-basis { margin: 16px 0 4px; }
+html .reading-page .render-project .render-actions { margin: 16px 0 0; }
+@media (max-width: 900px) {
+  html .reading-page .building-intro { gap: 24px 32px; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); }
+  html .reading-page .building-intro h1 { font-size: clamp(38px, 5vw, 52px); }
+  html .reading-page .building-intro-copy > p { font-size: 18px; }
+  html .reading-page .building-related { padding-bottom: 0; }
+}
+@media (max-width: 650px) {
+  html .reading-page .building-intro { grid-template-columns: 1fr; gap: 20px; padding-bottom: 24px; }
+  html .reading-page .building-intro h1 { margin-bottom: 12px; }
+  html .reading-page .building-intro-copy > p { margin-top: 0; font-size: 17px; }
+  html .reading-page .building-browse { padding: 20px 0; gap: 18px; }
+  html .reading-page .building-project-picker { flex-basis: 100%; }
+  html .reading-page .building-picker-controls { flex-wrap: wrap; }
+  html .reading-page .building-picker-controls select { flex-basis: 100%; font-size: 16px; }
+  html .reading-page .building-picker-controls button { padding: 10px 15px; }
+  html .reading-page .building-related { gap: 9px 20px; font-size: 13px; }
+  html .reading-page .render-project { padding-top: 28px; }
+}

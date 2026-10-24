@@ -22,3 +22,10 @@ test('rotated area transitions and portrait resize preserve bearing and tilt whi
   }
  }
 });
+
+test('the initial neighbourhood view looks forward from a high point instead of steeply down',()=>{
+ const d=districts.find(d=>d.id==='east-credit-creditview'),frame=neighbourhoodFrame(THREE,d,1.78),offset=frame.position.clone().sub(frame.target);
+ const elevation=THREE.MathUtils.radToDeg(Math.atan2(offset.y,Math.hypot(offset.x,offset.z)));
+ assert.ok(elevation>=35&&elevation<=40,'initial view should sit in the reviewed 35 to 40 degree high-oblique range');
+ assert.ok(Math.hypot(offset.x,offset.z)>offset.y,'the camera has more forward distance than height');
+});

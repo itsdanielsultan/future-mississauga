@@ -47,8 +47,8 @@ export function drawPresentationFooter(ctx, {width, top, title, scenario, bearin
   ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, w, height / s);
   ctx.strokeStyle = '#e4e6e6'; ctx.beginPath(); ctx.moveTo(28, 0); ctx.lineTo(w - 28, 0); ctx.stroke();
   ctx.textAlign = 'left'; ctx.fillStyle = '#2e2b2a';
-  ctx.font = '500 23px "Bricolage Grotesque", sans-serif'; ctx.fillText('Daniel Sultan', 28, 36);
-  ctx.font = '15px Lato, sans-serif'; ctx.fillText(title, 28, 60, compact ? 500 : 580);
+  ctx.font = '500 23px "Bricolage Grotesque", sans-serif'; ctx.fillText(title.replace(/^Future Mississauga\s*[·:]\s*/, ''), 28, 36, compact ? 500 : 620);
+  ctx.font = '15px Lato, sans-serif'; ctx.fillText('by Daniel Sultan', 28, 60, compact ? 500 : 580);
   ctx.fillStyle = '#63696b'; ctx.font = '13px Lato, sans-serif'; ctx.fillText(scenario + ' · Source dates vary', 28, 82, compact ? 500 : 580);
   drawNorth(ctx, w - 56, compact ? 48 : 54, 62, bearing);
   STATUS_LEGEND.forEach((item, i) => {
