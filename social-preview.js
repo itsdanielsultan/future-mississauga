@@ -10,7 +10,7 @@ export function installSocialPreview(root=document){
    const date=shortDate(row?.renderInfo?.renderDate);
    preview.show({title:card.querySelector('h2')?.textContent||'Picture',meta:[date?'Rendered '+date:'',shortResolution(row?.download.width||3240)].filter(Boolean).join(' · '),src:row?.displayMaster.url||card.dataset.displayUrl,download:row?.download.url||card.querySelector('.save').href,preview:thumb.currentSrc||thumb.src,width:row?.displayMaster.width||3240,height:row?.displayMaster.height||4050,osm:row?.sourceAttribution.openStreetMap??card.dataset.osm!=='false'},trigger);
   };
-  link.setAttribute('aria-haspopup','dialog');link.addEventListener('click',event=>open(event,link));
+  link.setAttribute('aria-label','Preview '+(card.querySelector('h2')?.textContent||'picture'));link.setAttribute('aria-haspopup','dialog');link.addEventListener('click',event=>open(event,link));
   if(button){button.hidden=false;button.setAttribute('aria-haspopup','dialog');button.addEventListener('click',event=>open(event,button));}
  }
  return preview.dialog;
