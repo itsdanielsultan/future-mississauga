@@ -1,11 +1,11 @@
 // Supplemental models and their municipal fallbacks share one visibility decision.
 // The helper is independent of rendering, navigation and district selection.
-export function applyModelVisibility(meshes,which,{referenceStudies=false,uncertainVersions=true}={}){
+export function applyModelVisibility(meshes,which,{referenceStudies=false,selectedStudyProjectId=null,uncertainVersions=true}={}){
  const visibleAssets=new Set();
  for(const mesh of meshes){
   const d=mesh.userData||{};
   let visible=!d.hiddenObsolete;
-  if(d.draftStudy&&!referenceStudies)visible=false;
+  if(d.draftStudy&&!referenceStudies&&d.projectId!==selectedStudyProjectId)visible=false;
   if(d.displayStatus!=='Existing'&&d.uncertain&&!uncertainVersions)visible=false;
   if(which==='construction'&&d.displayStatus==='Under Construction'&&!d.recordedProgress)visible=false;
   if(!Array.isArray(d.sourceReplacements)&&d.replacementModes?.includes(which))visible=false;

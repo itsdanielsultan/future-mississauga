@@ -1,3 +1,4 @@
+import {isDirectDownload,prepareImageLinks} from './file-actions.js?v=20261023-cardfooter1';
 // A shared image viewer. Downloads remain separate, explicit links.
 export const shortResolution = width => Math.round(width / 1000) + 'K PNG';
 export function shortDate(date) {
@@ -61,21 +62,25 @@ export function createImagePreview({views = false} = {}) {
 }
 
 let generic;
-export function installImagePreviews(resolve = async image => ({src:image.currentSrc||image.src,download:image.currentSrc||image.src})) {
+export function installImagePreviews(resolve = async (image,anchor) => ({src:image?.currentSrc||image?.src||anchor.href,download:image?.currentSrc||image?.src||anchor.href})) {
   document.addEventListener('click',async event=>{
     if(event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
-    const trigger=event.target.closest('a,button');
-    const image=event.target.closest('main img')||trigger?.querySelector('main img, img');
-    if(!image?.closest('main'))return;
-    if(!image||image.closest('dialog,.picture-compare,.social-grid,[data-open],.site-brand'))return;
-    const anchor=image.closest('a');
+    const trigger=event.target.closest('a,button'),anchor=trigger?.matches('a')?trigger:null;
+    if(isDirectDownload(anchor))return;
+    const clickedImage=event.target.closest('main img')||trigger?.querySelector('img');
+    const fileLink=anchor&&/\.(png|jpe?g|webp|avif|svg)(\?|$)/i.test(anchor.href);
+    if(!clickedImage&&!fileLink)return;
+    if(!(clickedImage||anchor)?.closest('main'))return;
+    if((clickedImage||anchor).closest('dialog,.picture-compare,.social-grid,[data-open],.site-brand'))return;
     event.preventDefault();event.stopPropagation();
+    const section=(clickedImage||anchor).closest('article,section');
+    const image=clickedImage||[...section?.querySelectorAll('img')||[]].find(img=>new URL(img.src).pathname===new URL(anchor.href).pathname);
     generic ||= createImagePreview();
     const info=await resolve(image,anchor);
-    const section=image.closest('article,section');
     const heading=section?.querySelector('h2,h3')?.textContent?.trim();
-    const title=image.dataset.previewTitle||anchor?.dataset.previewTitle||heading||(image.alt.length<=70?image.alt:'Image preview');
-    generic.show({title:title||'Picture',alt:image.alt,width:image.naturalWidth,height:image.naturalHeight,preview:image.currentSrc||image.src,...info},anchor||image.closest('button')||image);
+    const title=image?.dataset.previewTitle||anchor?.dataset.previewTitle||heading||(image?.alt?.length<=70?image.alt:'Image preview');
+    generic.show({title:title||'Picture',alt:image?.alt||title,width:image?.naturalWidth||1200,height:image?.naturalHeight||800,preview:image?.currentSrc||image?.src,...info},anchor||image?.closest('button')||image);
+
   });
   const enhance=()=>document.querySelectorAll('main img').forEach(image=>{
     if(image.closest('dialog,.picture-compare,.social-grid,[data-open],.site-brand'))return;
@@ -83,5 +88,6 @@ export function installImagePreviews(resolve = async image => ({src:image.curren
     if(anchor){anchor.setAttribute('aria-haspopup','dialog');anchor.setAttribute('aria-label','Preview '+(image.alt||'picture'));}
     else if(!image.closest('button')){const button=document.createElement('button');button.type='button';button.className='image-preview-trigger';button.setAttribute('aria-label','Preview '+(image.alt||'picture'));button.setAttribute('aria-haspopup','dialog');image.replaceWith(button);button.append(image);}
   });
+  prepareImageLinks();
   enhance();
 }
