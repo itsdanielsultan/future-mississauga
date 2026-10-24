@@ -1,4 +1,4 @@
-import {installImagePreviews,shortResolution} from './image-preview.js?v=20261023-usability1';
+import {installImagePreviews,shortResolution} from './image-preview.js?v=20261023-usability3';
 import {resolveMedia,installResponsiveImages} from './media-catalog.js?v=20261023-usability1';
 installImagePreviews(async(image,anchor)=>{
   const row=await resolveMedia(image.src);
