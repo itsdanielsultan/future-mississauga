@@ -16,7 +16,7 @@
       200
     ],
     "summary": "Completed first two sculpted towers form part of the present-day baseline.",
-    "modelCaveat": "CTBUH architectural heights differ from UrbanToronto's 197.81 m and 60 storeys. The City's 61-storey figure is a marketing count. Preserve the distinction.",
+    "modelCaveat": "CTBUH architectural heights differ from UrbanToronto's 197.81 m and 60 storeys. The City's 61-storey figure is a marketing count. Preserve the distinction. Optional Rev02 exterior studies retain source-registered podium surfaces and unchanged inferred tower geometry. M1 podium cues: May 2026 Street View. M2 Quartz/Webb cues: June 2024 Street View; May 2026 pair view covers a different frontage. Dimensions, bay widths, portal locations, glazing colours and floor schedules remain approximate; 63-storey references also conflict. Unresolved M2 patterned wall is omitted.",
     "sources": [
       {
         "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/",
@@ -125,7 +125,11 @@
       "63-6248",
       "63-6252"
     ],
-    "geometryCoverage": "Source geometry available; current detail may differ"
+    "geometryCoverage": "Municipal source is the default. Two opt-in approximate completed exterior studies, podium Rev02; not authoritative as-built.",
+    "studyLabel": "Optional approximate completed exterior \u00b7 M City Rev02",
+    "studyActionLabel": "Review approximate exterior",
+    "localOptional": true,
+    "localReview": true
   },
   {
     "id": "mcity-3",

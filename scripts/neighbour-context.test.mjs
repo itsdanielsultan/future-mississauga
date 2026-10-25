@@ -25,3 +25,28 @@ test('anonymous existing batches survive while geometry stays unchanged and over
  for(const scene of loaded){assert.equal(scene.children[0].visible,true);assert.deepEqual(scene.children[0].position.toArray(),[1,2,3]);assert.equal(scene.children[1].visible,false);assert.equal(scene.children[2].visible,false);}
  assert.deepEqual(loaded.map(s=>s.children[0].material.userData.coverageMask.count.value).sort(),[1,2]);
 });
+
+test('neighbour payload and file limits can suppress all extra downloads',async()=>{
+ const district=districts.find(d=>d.id==='streetsville');
+ assert.deepEqual(chooseNeighbourDistricts(district,districts,0,0),[]);
+ const result=await loadNeighbourContext({THREE,district,districts,loader:{loadAsync:()=>{throw new Error('Unexpected download');}},classify:d=>d.Status,overrides:{},styleExisting:()=>{},maxBytes:0,maxFiles:0});
+ assert.equal(result.metrics.payloadBytes,0);assert.deepEqual(result.metrics.files,[]);
+});
+
+test('neighbour memory rejection disposes loaded geometry and never commits a partial crop',async()=>{
+ const district={id:'focus',bounds:[0,0,100,100],bytes:100},nearby={id:'nearby',bounds:[-1000,-1000,1100,0],bytes:1000};
+ let disposed=0;
+ await assert.rejects(loadNeighbourContext({THREE,district,districts:[district,nearby],loader:{loadAsync:async()=>{
+  const scene=new THREE.Group(),mesh=new THREE.Mesh(new THREE.BoxGeometry(),new THREE.MeshBasicMaterial());mesh.userData={Status:'Existing',id:'native'};mesh.geometry.addEventListener('dispose',()=>disposed++);scene.add(mesh);return {scene};
+ }},classify:d=>d.Status,overrides:{},styleExisting:()=>{},maxGeometryBytes:1,concurrency:1}),/memory budget/);
+ assert.equal(disposed,1);
+});
+
+test('cancellation after a neighbouring crop commits releases every buffer exactly once',async()=>{
+ const district={id:'focus',bounds:[0,0,100,100],bytes:100},nearby={id:'nearby',bounds:[-1000,-1000,1100,0],bytes:1000};
+ let current=true,disposed=0;
+ const result=await loadNeighbourContext({THREE,district,districts:[district,nearby],loader:{loadAsync:async()=>{
+  const scene=new THREE.Group(),mesh=new THREE.Mesh(new THREE.BoxGeometry(),new THREE.MeshBasicMaterial());mesh.userData={Status:'Existing',id:'native'};mesh.geometry.addEventListener('dispose',()=>disposed++);scene.add(mesh);return {scene};
+ }},classify:d=>d.Status,overrides:{},styleExisting:()=>{setTimeout(()=>{current=false;},0);},isCurrent:()=>current});
+ assert.equal(result.metrics.cancelled,true);assert.equal(result.root.children.length,0);assert.equal(disposed,1);
+});

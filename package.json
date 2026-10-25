@@ -6,7 +6,7 @@
   "description": "Independent Mississauga model atlas, served entirely as static files.",
   "engines": { "node": ">=22" },
   "scripts": {
-    "check": "node scripts/validate.mjs",
+    "check": "node scripts/check-publication.mjs",
     "build": "node scripts/build.mjs",
     "dev": "node scripts/serve.mjs",
     "preview": "node scripts/serve.mjs --site dist"

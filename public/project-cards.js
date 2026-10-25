@@ -125,5 +125,5 @@ export function projectDetailsHTML(project,{asset=null}={}){
 /** Research-register card. The existing [data-project] focus handler is retained. */
 export function projectCardHTML(project,options={}){
   const located=Array.isArray(project.position)&&project.position.length===3&&project.position.every(Number.isFinite);
-  return `<article class="project project-card" id="project-${escapeHTML(project.id)}">${projectDetailsHTML(project,options)}${located?`<button class="locate" data-project="${escapeHTML(project.id)}">Show on map <span aria-hidden="true">↗</span></button>`:''}</article>`;
+  return `<article class="project project-card" id="project-${escapeHTML(project.id)}">${projectDetailsHTML(project,options)}${located?`<button class="locate" data-project="${escapeHTML(project.id)}">${escapeHTML(project.studyActionLabel||'Show on map')} <span aria-hidden="true">↗</span></button>`:''}</article>`;
 }

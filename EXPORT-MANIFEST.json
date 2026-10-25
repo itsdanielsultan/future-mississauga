@@ -1,5 +1,5 @@
 {
-  "edition": "Document previews, compact image credits and consistent study navigation, 2026-10-23",
+  "edition": "Recovered M City Rev02 local review, 2026-10-25; NOT approved for publication",
   "siteOrigin": "https://futuremississauga.com/",
   "finalRenderLockAcknowledged": true,
   "files": [
@@ -9,19 +9,14 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "file": "CNAME",
-      "bytes": 22,
-      "sha256": "69b7e2d297a684bab475321326f08f913676ce1ac3e12909f95c28a2f6060d47"
-    },
-    {
       "file": "accuracy-review.html",
       "bytes": 146581,
       "sha256": "331e4af56e9cafdf8e37342e4c50b4d2a655c41f9bbd70e857072b1062fd26bf"
     },
     {
       "file": "app.js",
-      "bytes": 59807,
-      "sha256": "3bde922e1d16054e9320e11730aae8508f8d6f56e0c3dad253604089672d6810"
+      "bytes": 63479,
+      "sha256": "0d713ab6fab27385fb36b6f74a9205be2d08e5a300dd5fb54b6d3592972ad16f"
     },
     {
       "file": "assets/apple-touch-icon.png",
@@ -122,6 +117,11 @@
       "file": "city-context.js",
       "bytes": 5391,
       "sha256": "cc13556cda32b3d7b387c2d3ee5d2e691afbb15ee3d9940c7b081eda2bc25d9e"
+    },
+    {
+      "file": "CNAME",
+      "bytes": 22,
+      "sha256": "69b7e2d297a684bab475321326f08f913676ce1ac3e12909f95c28a2f6060d47"
     },
     {
       "file": "comparison.js",
@@ -359,21 +359,6 @@
       "sha256": "fc669f304834b787db008e19008a68b7765cfdf0d0ab32eb0843b4d85999192a"
     },
     {
-      "file": "data/history/Picture-index-before-partial-refresh.json",
-      "bytes": 113465,
-      "sha256": "4e38b0c83d356792595a6b9f54337c4dcf487fcb7c487785fdb3b53a8241f94c"
-    },
-    {
-      "file": "data/history/Picture-index-before-presentation-2026-10-22.json",
-      "bytes": 87920,
-      "sha256": "dc6c49dc2bdd5f83104b5edc98186e7facec8c4f94d32933bef12dd68b32d462"
-    },
-    {
-      "file": "data/history/Picture-index-before-refresh-2026-10-23.json",
-      "bytes": 246128,
-      "sha256": "3f9473d65f43e16975cfd48b04ddf23af5c98fc6e451c3a97a39df64fc3d844a"
-    },
-    {
       "file": "data/history/original-image-release-integrity-before-partial-refresh.json",
       "bytes": 19248,
       "sha256": "6e07ec3650668b6befb6fe1c6057b54300819ffa86ff1327cbf57c5665ccc5fa"
@@ -397,6 +382,21 @@
       "file": "data/history/picture-assets-before-refresh-2026-10-23.json",
       "bytes": 132871,
       "sha256": "a3a28b2999edb822659b885563e468b4ec0f4cfe7521a02e773a5bede1915891"
+    },
+    {
+      "file": "data/history/Picture-index-before-partial-refresh.json",
+      "bytes": 113465,
+      "sha256": "4e38b0c83d356792595a6b9f54337c4dcf487fcb7c487785fdb3b53a8241f94c"
+    },
+    {
+      "file": "data/history/Picture-index-before-presentation-2026-10-22.json",
+      "bytes": 87920,
+      "sha256": "dc6c49dc2bdd5f83104b5edc98186e7facec8c4f94d32933bef12dd68b32d462"
+    },
+    {
+      "file": "data/history/Picture-index-before-refresh-2026-10-23.json",
+      "bytes": 246128,
+      "sha256": "3f9473d65f43e16975cfd48b04ddf23af5c98fc6e451c3a97a39df64fc3d844a"
     },
     {
       "file": "data/history/portrait-release-integrity-before-partial-refresh.json",
@@ -550,8 +550,8 @@
     },
     {
       "file": "data/model-asset-versions.json",
-      "bytes": 27654,
-      "sha256": "79c25e2f11c865583efc450134b702da5e6944c96be35c67915da579eca0fb69"
+      "bytes": 27914,
+      "sha256": "e43b21b1a016bc014bf78e1f3393a7f63d2d67eeff4757c3e7462b172787cfb5"
     },
     {
       "file": "data/original-image-release-integrity.json",
@@ -615,8 +615,8 @@
     },
     {
       "file": "data/projects.json",
-      "bytes": 1048189,
-      "sha256": "f6aff6e816e31f7731473c83f7d0bdcaaad725ca087435db591cbfc2dbaf01d1"
+      "bytes": 1048867,
+      "sha256": "bd48b58e2ad5c01e81397693bf21a770ae7f8383fd1e29d4958d7cb7e00dd9ac"
     },
     {
       "file": "data/recent-project-updates.json",
@@ -640,8 +640,8 @@
     },
     {
       "file": "data/refinement-models.json",
-      "bytes": 2603400,
-      "sha256": "33c7eb956bf1ff48233baf1b6a9321626979413d2e96d05e471d2ae9bda74816"
+      "bytes": 2653368,
+      "sha256": "9eedbc23203608806b8229fdde633f634b19cf4516cf31ee8df702c47c728e15"
     },
     {
       "file": "data/social-pictures.json",
@@ -804,6 +804,36 @@
       "sha256": "3a2bb8f14dde5068352a7b0455756ea949dd81759f7eb315befa329a4b0c1f4e"
     },
     {
+      "file": "downloads/depth/Atlas-final-QA.json",
+      "bytes": 13776,
+      "sha256": "490ecf2381a3026ae6c377d890446558235cc451b6c4a87bbec93e0354129703"
+    },
+    {
+      "file": "downloads/depth/Atlas-font-QA.json",
+      "bytes": 653,
+      "sha256": "ebe44ed6c7c385054f2999a09de7f993f9422349d7974fa28af47cd14441cedb"
+    },
+    {
+      "file": "downloads/depth/Atlas-link-QA.json",
+      "bytes": 26727,
+      "sha256": "9d19b61b6bb8915efcba2a9c8b25a69d90b0065454ac1e24342cf718df388e4a"
+    },
+    {
+      "file": "downloads/depth/Atlas-render-source-audit.json",
+      "bytes": 60109,
+      "sha256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
+    },
+    {
+      "file": "downloads/depth/Film-build-manifest.json",
+      "bytes": 5965,
+      "sha256": "c9e1ad1e7a4f333995d119bdf4a66a414204cf4f70bf8489a52e1762714db361"
+    },
+    {
+      "file": "downloads/development-component-register.csv",
+      "bytes": 530420,
+      "sha256": "97803ea8b5698bef5d1c7b04b2425b521f3a878c3d5cd967cb5dfb6572f700c5"
+    },
+    {
       "file": "downloads/Existing-building-replacement-validation.json",
       "bytes": 13765,
       "sha256": "6e27608ff468e735e1677c8a740b89428529719b9f339a46f44b7189a4ae2758"
@@ -839,6 +869,11 @@
       "sha256": "d2d1a4a4a9d99a4da0b0bfc9225dcf8f3e89b6583cf990bb6bd0b6f71e775ede"
     },
     {
+      "file": "downloads/municipal-source-audit.csv",
+      "bytes": 35644,
+      "sha256": "0d3052d4f00fb629fc47babb2ea034cb34ab8ea5aed269f6346e4115665644bb"
+    },
+    {
       "file": "downloads/Original-picture-upload-validation.json",
       "bytes": 49431,
       "sha256": "10c6b662c697d28e218888d601a3e6d234ffc5ba5b51192d2f47093e7a2dfb76"
@@ -849,9 +884,29 @@
       "sha256": "23d952a04be0858e903002c45f31cc67be424b48c73246a2711ce3673a6432fc"
     },
     {
+      "file": "downloads/project-reference-audit.csv",
+      "bytes": 42840,
+      "sha256": "a12a7110193dcc7a2bce09d99cd03adc9a654823f29187077dc4d5a86672caf6"
+    },
+    {
+      "file": "downloads/project-reference-audit.json",
+      "bytes": 465482,
+      "sha256": "a06be1bab236b3c9eedc2c31a6d472b6dece6ae1fffa84f6e31943f3527d5491"
+    },
+    {
+      "file": "downloads/project-register.csv",
+      "bytes": 352874,
+      "sha256": "607be46ac99d9057ecd099995f56040298119b084bac54228cc3ed13cb57f1b8"
+    },
+    {
       "file": "downloads/Public-evidence-link-validation.json",
       "bytes": 50439,
       "sha256": "19e86fffe76b691dae1cebb98ef02204169866a5ec91eb76fed2b6b629a152cb"
+    },
+    {
+      "file": "downloads/public-project-reference-coverage.json",
+      "bytes": 145548,
+      "sha256": "6b7588008ab4ac46227e882955a18943f4de508db14164016426b61396b70dda"
     },
     {
       "file": "downloads/Reference-update-2026-09-29.json",
@@ -887,91 +942,6 @@
       "file": "downloads/Release-validation.json",
       "bytes": 4220,
       "sha256": "a72e97eef1ed4a46dd87a14adf409d30b2c280383b6fa31be566bbc086d50fb7"
-    },
-    {
-      "file": "downloads/Road-visibility-validation.json",
-      "bytes": 4849,
-      "sha256": "c71874328eb6b76ca0c029327a8ce4520c3d93ac8683baef5e024c4fde50b49f"
-    },
-    {
-      "file": "downloads/Terrain-provenance.json",
-      "bytes": 1569,
-      "sha256": "eebb9bfe446e3b786fa5c4008cbf4dbd90f480f17c53c27899cad03bfc9aedbb"
-    },
-    {
-      "file": "downloads/Visual-design-review.md",
-      "bytes": 5811,
-      "sha256": "98497c55610cbf9ad9c90b9605d7dc2806828d679c05ebb07196678f73c1960b"
-    },
-    {
-      "file": "downloads/Waterfront-viewer-water-extents.json",
-      "bytes": 3964,
-      "sha256": "4a9f0c2d4e7b0d7193d86a60d0c6206c626bee14a0409b6e819b6fc0964f0cc8"
-    },
-    {
-      "file": "downloads/Website-validation.json",
-      "bytes": 3081,
-      "sha256": "05262f64599e55b01f58c2a98a3d0b17c4c4d55a1deb451f2368a1f07a7a89a7"
-    },
-    {
-      "file": "downloads/Winding-entrance-ground-note.json",
-      "bytes": 1604,
-      "sha256": "1e54de29655c689f93d9ac274a669bf0d724bb5c73a145f8f3160bc64dc44e54"
-    },
-    {
-      "file": "downloads/depth/Atlas-final-QA.json",
-      "bytes": 13776,
-      "sha256": "490ecf2381a3026ae6c377d890446558235cc451b6c4a87bbec93e0354129703"
-    },
-    {
-      "file": "downloads/depth/Atlas-font-QA.json",
-      "bytes": 653,
-      "sha256": "ebe44ed6c7c385054f2999a09de7f993f9422349d7974fa28af47cd14441cedb"
-    },
-    {
-      "file": "downloads/depth/Atlas-link-QA.json",
-      "bytes": 26727,
-      "sha256": "9d19b61b6bb8915efcba2a9c8b25a69d90b0065454ac1e24342cf718df388e4a"
-    },
-    {
-      "file": "downloads/depth/Atlas-render-source-audit.json",
-      "bytes": 60109,
-      "sha256": "8de92c69d8bd33d5c942da3286a6b57766dfc91a0cddcb26872ab3ea68f18b14"
-    },
-    {
-      "file": "downloads/depth/Film-build-manifest.json",
-      "bytes": 5965,
-      "sha256": "c9e1ad1e7a4f333995d119bdf4a66a414204cf4f70bf8489a52e1762714db361"
-    },
-    {
-      "file": "downloads/development-component-register.csv",
-      "bytes": 530420,
-      "sha256": "97803ea8b5698bef5d1c7b04b2425b521f3a878c3d5cd967cb5dfb6572f700c5"
-    },
-    {
-      "file": "downloads/municipal-source-audit.csv",
-      "bytes": 35644,
-      "sha256": "0d3052d4f00fb629fc47babb2ea034cb34ab8ea5aed269f6346e4115665644bb"
-    },
-    {
-      "file": "downloads/project-reference-audit.csv",
-      "bytes": 42840,
-      "sha256": "a12a7110193dcc7a2bce09d99cd03adc9a654823f29187077dc4d5a86672caf6"
-    },
-    {
-      "file": "downloads/project-reference-audit.json",
-      "bytes": 465482,
-      "sha256": "a06be1bab236b3c9eedc2c31a6d472b6dece6ae1fffa84f6e31943f3527d5491"
-    },
-    {
-      "file": "downloads/project-register.csv",
-      "bytes": 352874,
-      "sha256": "607be46ac99d9057ecd099995f56040298119b084bac54228cc3ed13cb57f1b8"
-    },
-    {
-      "file": "downloads/public-project-reference-coverage.json",
-      "bytes": 145548,
-      "sha256": "6b7588008ab4ac46227e882955a18943f4de508db14164016426b61396b70dda"
     },
     {
       "file": "downloads/research-log.json",
@@ -1014,14 +984,14 @@
       "sha256": "48c9b030b7cf9bfdb7d8edf126b134d044875310cdcc4c148ad1dad652bf6cbb"
     },
     {
-      "file": "downloads/revamp/transit-visibility/Visibility-audit.md",
-      "bytes": 4060,
-      "sha256": "9f2604adc5303d4000376b0065b52cbf479caefb09e8046928d9a45bcf0c40b0"
-    },
-    {
       "file": "downloads/revamp/transit-visibility/visibility-audit.json",
       "bytes": 115698,
       "sha256": "67326b6847bd9a79b18c138877ff9349de689a536b30ab391c50ec3b70992a11"
+    },
+    {
+      "file": "downloads/revamp/transit-visibility/Visibility-audit.md",
+      "bytes": 4060,
+      "sha256": "9f2604adc5303d4000376b0065b52cbf479caefb09e8046928d9a45bcf0c40b0"
     },
     {
       "file": "downloads/revamp/transit-visibility/visibility-checks/downtown-junction-after.png",
@@ -1169,12 +1139,22 @@
       "sha256": "5eacd9a0a0b1009ecfb4dbe9df01529b2134e35996e8098125a22943c3c1f68d"
     },
     {
-      "file": "downloads/transit-depth/Editable-scene-QA.json",
+      "file": "downloads/Road-visibility-validation.json",
+      "bytes": 4849,
+      "sha256": "c71874328eb6b76ca0c029327a8ce4520c3d93ac8683baef5e024c4fde50b49f"
+    },
+    {
+      "file": "downloads/Terrain-provenance.json",
+      "bytes": 1569,
+      "sha256": "eebb9bfe446e3b786fa5c4008cbf4dbd90f480f17c53c27899cad03bfc9aedbb"
+    },
+    {
+      "file": "downloads/transit-depth/Editable-scene-depth-audit.json",
       "bytes": 76049,
       "sha256": "43ec0a41e36e1a507d2636b30e4bd443138d55e8171801421c4e54f38e2bcea3"
     },
     {
-      "file": "downloads/transit-depth/Editable-scene-depth-audit.json",
+      "file": "downloads/transit-depth/Editable-scene-QA.json",
       "bytes": 76049,
       "sha256": "43ec0a41e36e1a507d2636b30e4bd443138d55e8171801421c4e54f38e2bcea3"
     },
@@ -1199,14 +1179,34 @@
       "sha256": "2c9077d2d1a3f69da0ef44f7799f3dc52875144845c5d497e5491bd553c1d211"
     },
     {
+      "file": "downloads/Visual-design-review.md",
+      "bytes": 5811,
+      "sha256": "98497c55610cbf9ad9c90b9605d7dc2806828d679c05ebb07196678f73c1960b"
+    },
+    {
+      "file": "downloads/Waterfront-viewer-water-extents.json",
+      "bytes": 3964,
+      "sha256": "4a9f0c2d4e7b0d7193d86a60d0c6206c626bee14a0409b6e819b6fc0964f0cc8"
+    },
+    {
+      "file": "downloads/Website-validation.json",
+      "bytes": 3081,
+      "sha256": "05262f64599e55b01f58c2a98a3d0b17c4c4d55a1deb451f2368a1f07a7a89a7"
+    },
+    {
+      "file": "downloads/Winding-entrance-ground-note.json",
+      "bytes": 1604,
+      "sha256": "1e54de29655c689f93d9ac274a669bf0d724bb5c73a145f8f3160bc64dc44e54"
+    },
+    {
       "file": "existing-materials.js",
       "bytes": 2538,
       "sha256": "795418454ab98170ee6d065c5f93bb76440bbd23834bcbfe0eb226f3bff23d8f"
     },
     {
       "file": "explore.html",
-      "bytes": 17060,
-      "sha256": "c9a3c96954784873d5230692abd958562cbbd42201dc4deed00f4df8cad9bad7"
+      "bytes": 17059,
+      "sha256": "00d18d13f3f3c8bf7d8641ddf246fdc32d257150e2ef5052feae04881e5accfd"
     },
     {
       "file": "file-actions.js",
@@ -3114,6 +3114,16 @@
       "sha256": "af637271fef72c40c8e90a66e143fd7edbd1323af0fa58e627885bedd34ac162"
     },
     {
+      "file": "models/studies-20261025/mcity-m1-exterior-study.glb.gz",
+      "bytes": 2905404,
+      "sha256": "9e6746e6007da48d6512d7670fbdd6c0c32fef8bd32157ac282c2e35e0ae03e7"
+    },
+    {
+      "file": "models/studies-20261025/mcity-m2-exterior-study.glb.gz",
+      "bytes": 3043983,
+      "sha256": "9c118fc0406db610dde0a4c8bf861653c528aed37864c24af0f2845dc385235b"
+    },
+    {
       "file": "models/subway-coastal-water.glb",
       "bytes": 691476,
       "sha256": "59b01e0f2a24a2fa1e44964a99140956790f313af7a6f78616e5b72eb61382dd"
@@ -3139,14 +3149,14 @@
       "sha256": "bd63fd97620556298d08da441095c4574c09956a8ea759c0a54d998e8f8c15ad"
     },
     {
-      "file": "models/supplemental/refinement-lakeview/README.md",
-      "bytes": 3705,
-      "sha256": "4b7af6d46d80d5098444a7604ae1cc34881737ade5f205ce622219cfa71ebc92"
-    },
-    {
       "file": "models/supplemental/refinement-lakeview/manifest.json",
       "bytes": 25984,
       "sha256": "882b9bedce7af43cb36c451de87316cba9fbd2f74f715ba4779dba295cc65451"
+    },
+    {
+      "file": "models/supplemental/refinement-lakeview/README.md",
+      "bytes": 3705,
+      "sha256": "4b7af6d46d80d5098444a7604ae1cc34881737ade5f205ce622219cfa71ebc92"
     },
     {
       "file": "models/supplemental/revamp-landscape/READ-ME.md",
@@ -3205,8 +3215,8 @@
     },
     {
       "file": "project-cards.js",
-      "bytes": 10695,
-      "sha256": "72c662ec2517eb59caad3abd50e1f630bc7a43190652fbe709f044f12427b6e6"
+      "bytes": 10738,
+      "sha256": "b9beac32d40fa3f5edd7f8c9d9ff93fd43785754277382fe3c616159e9fed953"
     },
     {
       "file": "reading-notes.css",
@@ -3227,6 +3237,11 @@
       "file": "reference-updates.html",
       "bytes": 72246,
       "sha256": "dc44712e20203e32d05b6514dd9841dff79ca5afc11da1a6859dbc2a6d5f64ae"
+    },
+    {
+      "file": "refinement-loading.js",
+      "bytes": 2004,
+      "sha256": "88b1c3f02362310e43973bffadc3a5340fd3790f1ec14dfa1945ffee33473d4d"
     },
     {
       "file": "renders/revamp/source-elevation-repair-qa.png",
@@ -3350,8 +3365,8 @@
     },
     {
       "file": "source-layer-cut.js",
-      "bytes": 3471,
-      "sha256": "9e48470a186293269aa0b31bed1bdc60ea445f255eaa0b86e2781e875b9acd2c"
+      "bytes": 3998,
+      "sha256": "97489ede2050d2ef49e471547d92c8d622662e9de0f4821b985d2f2932cf7b28"
     },
     {
       "file": "sources.css",
@@ -3434,19 +3449,9 @@
       "sha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f"
     },
     {
-      "file": "vendor/fonts/SOURCES.json",
-      "bytes": 2083,
-      "sha256": "82418839532789f12641d95c38ee9beb5a7126882b377dff9337d8b9818e560f"
-    },
-    {
       "file": "vendor/fonts/bricolage-grotesque-variable.ttf",
       "bytes": 408496,
       "sha256": "413e7357809ddd12fd80a96a8a396de0e401638d4acd3cb3e37532f0472ac682"
-    },
-    {
-      "file": "vendor/fonts/dm-sans-OFL.txt",
-      "bytes": 4482,
-      "sha256": "9af36190332437f5ecd09974de43c1f7c77a310a996cdd8ceb25628b458840e1"
     },
     {
       "file": "vendor/fonts/dm-sans-latin-400-800.woff2",
@@ -3459,6 +3464,11 @@
       "sha256": "219b02c7d8884817d3d6ad4c8771f2c000ce4c5669a67ef4e2e5617ffa25c4cc"
     },
     {
+      "file": "vendor/fonts/dm-sans-OFL.txt",
+      "bytes": 4482,
+      "sha256": "9af36190332437f5ecd09974de43c1f7c77a310a996cdd8ceb25628b458840e1"
+    },
+    {
       "file": "vendor/fonts/fonts.css",
       "bytes": 841,
       "sha256": "503784b4fe478b87880917dc9393bc95369ad9a1d6aba5cc49b6056c057bce16"
@@ -3467,11 +3477,6 @@
       "file": "vendor/fonts/lato/FONT-COPYRIGHT.txt",
       "bytes": 139,
       "sha256": "e1700de06affc4886fae18b74d02a4cb50a977724e7c2f8313eed12a59d6e798"
-    },
-    {
-      "file": "vendor/fonts/lato/OFL.txt",
-      "bytes": 4407,
-      "sha256": "74ba064d03f1f1c4a952da936c3eb71866c34404916734de3cae73b34357e59e"
     },
     {
       "file": "vendor/fonts/lato/lato-latin-400-normal.woff2",
@@ -3509,6 +3514,11 @@
       "sha256": "76f33d4cfadb045ea8b44d61fa41ef069f907fa0c4c1b239e0b01c4b76e00045"
     },
     {
+      "file": "vendor/fonts/lato/OFL.txt",
+      "bytes": 4407,
+      "sha256": "74ba064d03f1f1c4a952da936c3eb71866c34404916734de3cae73b34357e59e"
+    },
+    {
       "file": "vendor/fonts/lato/provenance.json",
       "bytes": 3439,
       "sha256": "ffbfd750d4ca668891acbd23a2e69697fbf91ad40505322f3768613e0b0e0e9a"
@@ -3519,9 +3529,9 @@
       "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b"
     },
     {
-      "file": "vendor/media-chrome-4.19.2/LICENSE.txt",
-      "bytes": 1053,
-      "sha256": "13faec6cc4820429b213665a1fff88e1bcfad5a3aff10956f90dea08bf45e808"
+      "file": "vendor/fonts/SOURCES.json",
+      "bytes": 2083,
+      "sha256": "82418839532789f12641d95c38ee9beb5a7126882b377dff9337d8b9818e560f"
     },
     {
       "file": "vendor/media-chrome-4.19.2/constants.js",
@@ -3532,6 +3542,11 @@
       "file": "vendor/media-chrome-4.19.2/lang/en.js",
       "bytes": 3108,
       "sha256": "74b3a8e49f55a3c4301a914aa4821e7801bf0b12fa99af3d253e2c357ebc62eb"
+    },
+    {
+      "file": "vendor/media-chrome-4.19.2/LICENSE.txt",
+      "bytes": 1053,
+      "sha256": "13faec6cc4820429b213665a1fff88e1bcfad5a3aff10956f90dea08bf45e808"
     },
     {
       "file": "vendor/media-chrome-4.19.2/media-chrome-button.js",
@@ -4188,5 +4203,71 @@
     "staleStartupFocusCancelled": true,
     "compactSourceFooter": true,
     "verification": "Root live-byte and browser proof tracked separately after deployment."
+  },
+  "recoveryInventory": {
+    "baseCommit": "bdc90b554778f27160f90d329fba1e0e7e67feb6",
+    "scope": "Exact baseline EXPORT-MANIFEST plus locally materialized candidate replacements/additions. Unmaterialized baseline bytes remain pinned by unchanged Git entries; this is NOT a full build or complete current byte rehash.",
+    "baselineFiles": 742,
+    "baselinePublicBytes": 999997309,
+    "projectedFiles": 745,
+    "materializedFiles": 432,
+    "projectedPublicBytes": 1006003847,
+    "deltaBytes": 6006538,
+    "limitBytesExclusive": 1000000000,
+    "sizePass": false,
+    "oversizeBytes": 6003848,
+    "perFilePass": true,
+    "changedPublicFiles": [
+      {
+        "file": "app.js",
+        "bytes": 63479,
+        "sha256": "0d713ab6fab27385fb36b6f74a9205be2d08e5a300dd5fb54b6d3592972ad16f"
+      },
+      {
+        "file": "data/model-asset-versions.json",
+        "bytes": 27914,
+        "sha256": "e43b21b1a016bc014bf78e1f3393a7f63d2d67eeff4757c3e7462b172787cfb5"
+      },
+      {
+        "file": "data/projects.json",
+        "bytes": 1048867,
+        "sha256": "bd48b58e2ad5c01e81397693bf21a770ae7f8383fd1e29d4958d7cb7e00dd9ac"
+      },
+      {
+        "file": "data/refinement-models.json",
+        "bytes": 2653368,
+        "sha256": "9eedbc23203608806b8229fdde633f634b19cf4516cf31ee8df702c47c728e15"
+      },
+      {
+        "file": "explore.html",
+        "bytes": 17059,
+        "sha256": "00d18d13f3f3c8bf7d8641ddf246fdc32d257150e2ef5052feae04881e5accfd"
+      },
+      {
+        "file": "models/studies-20261025/mcity-m1-exterior-study.glb.gz",
+        "bytes": 2905404,
+        "sha256": "9e6746e6007da48d6512d7670fbdd6c0c32fef8bd32157ac282c2e35e0ae03e7"
+      },
+      {
+        "file": "models/studies-20261025/mcity-m2-exterior-study.glb.gz",
+        "bytes": 3043983,
+        "sha256": "9c118fc0406db610dde0a4c8bf861653c528aed37864c24af0f2845dc385235b"
+      },
+      {
+        "file": "project-cards.js",
+        "bytes": 10738,
+        "sha256": "b9beac32d40fa3f5edd7f8c9d9ff93fd43785754277382fe3c616159e9fed953"
+      },
+      {
+        "file": "refinement-loading.js",
+        "bytes": 2004,
+        "sha256": "88b1c3f02362310e43973bffadc3a5340fd3790f1ec14dfa1945ffee33473d4d"
+      },
+      {
+        "file": "source-layer-cut.js",
+        "bytes": 3998,
+        "sha256": "97489ede2050d2ef49e471547d92c8d622662e9de0f4821b985d2f2932cf7b28"
+      }
+    ]
   }
 }
