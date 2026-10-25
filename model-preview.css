@@ -9,3 +9,6 @@ main{max-width:1280px;margin:auto;padding:24px max(20px,env(safe-area-inset-righ
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
 /* WebKit's native select can override minimum height until appearance is reset. */
 select{appearance:none;-webkit-appearance:none;height:48px;min-height:44px;padding-right:40px;background-image:linear-gradient(45deg,transparent 50%,#625b56 50%),linear-gradient(135deg,#625b56 50%,transparent 50%);background-position:calc(100% - 22px) 21px,calc(100% - 16px) 21px;background-size:6px 6px;background-repeat:no-repeat}.controls button{min-width:44px}.compressed-links a{min-height:44px;display:flex;align-items:center}
+
+/* Keep labels and touch controls outside the geometry view. */
+.canvas-caption{position:static;display:block;width:fit-content;margin:0 0 9px;background:#eef0ee}.activate{position:static;transform:none;box-shadow:none;white-space:normal}.controls .activate{background:#8f3032;color:#fff;border-color:#8f3032}.controls .activate:hover{background:#742628}
