@@ -1,0 +1,213 @@
+{
+  "schema": "future-mississauga-model-previews/v1",
+  "reviewDate": "2026-10-25",
+  "assets": [
+    {
+      "id": "mcity-m1",
+      "title": "M City M1",
+      "url": "models/studies-20261025/mcity-m1-exterior-study.glb.gz",
+      "bytes": 2905404,
+      "decodedBytes": 18386320,
+      "sha256": "455e233d45f594f1fd0f035925b233e2095bee6eddb214924ebcac33d6bf0857",
+      "downloadSHA256": "9e6746e6007da48d6512d7670fbdd6c0c32fef8bd32157ac282c2e35e0ae03e7",
+      "downloadName": "M_City_M1_Rev02_Web_Study.glb",
+      "sourceSHA256": "bbc3a2fe2a2e2759911e7d9ae5cb1974bcba5d6df3175e14712c10d63e49850b",
+      "sourceArchiveSHA256": "2215122874e043c6a56e4ddf4fcc9935402ca7d48fdd0262a5949e79dd56dc83",
+      "representation": "Existing source-registered web derivative. Includes scene registration and batch metadata; not the byte-identical native export.",
+      "cityDataTerms": true
+    },
+    {
+      "id": "mcity-m2",
+      "title": "M City M2",
+      "url": "models/studies-20261025/mcity-m2-exterior-study.glb.gz",
+      "bytes": 3043983,
+      "decodedBytes": 19344212,
+      "sha256": "70184168843412c21a54e92ae102f8796196274faed3d2794beb7ab96042b271",
+      "downloadSHA256": "9c118fc0406db610dde0a4c8bf861653c528aed37864c24af0f2845dc385235b",
+      "downloadName": "M_City_M2_Rev02_Web_Study.glb",
+      "sourceSHA256": "4e32fd3af9751ddde545b6dd2b2abd60e87212c8a53e060fe847f0b75160eba6",
+      "sourceArchiveSHA256": "2215122874e043c6a56e4ddf4fcc9935402ca7d48fdd0262a5949e79dd56dc83",
+      "representation": "Existing source-registered web derivative. Includes scene registration and batch metadata; not the byte-identical native export.",
+      "cityDataTerms": true
+    },
+    {
+      "id": "artform",
+      "title": "Artform",
+      "url": "models/studies-20261025/artform-rev03.glb.gz",
+      "bytes": 1888394,
+      "decodedBytes": 15798312,
+      "sha256": "8bcba67694f6f80553a505ca037fa5bbc3451d7cadd11c554b9221625c50964e",
+      "downloadSHA256": "cf708ba198b87b9373b5c74a2311dccde96a72fb17f05dbef693f889c40e3da7",
+      "downloadName": "Artform_Exterior_Study_rev03.glb",
+      "sourceArchiveSHA256": "2a4bfb61e489aecc0eca530a6b0bdd19621d36a01c049f3a677ed40a0be1a54c",
+      "sourceLibraryId": "libfile_cf9399f695088191aca3b9244b708b21",
+      "sourceMember": "Artform_Rev03_20261025/models/Artform_Exterior_Study_rev03.glb",
+      "representation": "Exact accepted Rev03 GLB bytes after lossless gzip decompression. Local model coordinates; no surveyed city registration claimed."
+    }
+  ],
+  "views": [
+    {
+      "subtitle": "Completed buildings · Approximate exterior · Rev02",
+      "summary": "A draft interpretation of the completed towers and podiums. The tower geometry is unchanged from the accepted study; selected podium details follow dated views.",
+      "credit": "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+      "limits": "Tower plates, floor schedules, heights, podium dimensions and hidden faces remain approximate. M1 podium observations: May 2026. M2 Quartz/Webb observations: June 2024. The unresolved M2 patterned wall is omitted. Not certified as-built, survey or construction information.",
+      "rights": "Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
+      "cameraDirection": [
+        -1,
+        0.55,
+        1.3
+      ],
+      "sources": [
+        {
+          "title": "CORE Architects — M City Phase 1",
+          "url": "https://www.corearchitects.com/project/m-city-phase-1/"
+        },
+        {
+          "title": "RJC Engineers — M1 & M2",
+          "url": "https://www.rjc.ca/project-details/m1-m2-condos.html"
+        },
+        {
+          "title": "City of Mississauga — M City",
+          "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
+        },
+        {
+          "title": "City source data and terms",
+          "url": "https://data.mississauga.ca/pages/mississauga-3d"
+        },
+        {
+          "title": "M City architecture gallery",
+          "url": "https://mcitycondos.com/m1-m2-gallery-architecture.php",
+          "note": "Reference only; images are not redistributed."
+        }
+      ],
+      "id": "mcity-pair",
+      "title": "M City M1 and M2",
+      "assets": [
+        "mcity-m1",
+        "mcity-m2"
+      ]
+    },
+    {
+      "subtitle": "Completed buildings · Approximate exterior · Rev02",
+      "summary": "A draft interpretation of the completed towers and podiums. The tower geometry is unchanged from the accepted study; selected podium details follow dated views.",
+      "credit": "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+      "limits": "Tower plates, floor schedules, heights, podium dimensions and hidden faces remain approximate. M1 podium observations: May 2026. M2 Quartz/Webb observations: June 2024. The unresolved M2 patterned wall is omitted. Not certified as-built, survey or construction information.",
+      "rights": "Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
+      "cameraDirection": [
+        -1,
+        0.55,
+        1.3
+      ],
+      "sources": [
+        {
+          "title": "CORE Architects — M City Phase 1",
+          "url": "https://www.corearchitects.com/project/m-city-phase-1/"
+        },
+        {
+          "title": "RJC Engineers — M1 & M2",
+          "url": "https://www.rjc.ca/project-details/m1-m2-condos.html"
+        },
+        {
+          "title": "City of Mississauga — M City",
+          "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
+        },
+        {
+          "title": "City source data and terms",
+          "url": "https://data.mississauga.ca/pages/mississauga-3d"
+        },
+        {
+          "title": "M City architecture gallery",
+          "url": "https://mcitycondos.com/m1-m2-gallery-architecture.php",
+          "note": "Reference only; images are not redistributed."
+        }
+      ],
+      "id": "mcity-m1",
+      "title": "M City M1",
+      "assets": [
+        "mcity-m1"
+      ]
+    },
+    {
+      "subtitle": "Completed buildings · Approximate exterior · Rev02",
+      "summary": "A draft interpretation of the completed towers and podiums. The tower geometry is unchanged from the accepted study; selected podium details follow dated views.",
+      "credit": "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+      "limits": "Tower plates, floor schedules, heights, podium dimensions and hidden faces remain approximate. M1 podium observations: May 2026. M2 Quartz/Webb observations: June 2024. The unresolved M2 patterned wall is omitted. Not certified as-built, survey or construction information.",
+      "rights": "Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
+      "cameraDirection": [
+        -1,
+        0.55,
+        1.3
+      ],
+      "sources": [
+        {
+          "title": "CORE Architects — M City Phase 1",
+          "url": "https://www.corearchitects.com/project/m-city-phase-1/"
+        },
+        {
+          "title": "RJC Engineers — M1 & M2",
+          "url": "https://www.rjc.ca/project-details/m1-m2-condos.html"
+        },
+        {
+          "title": "City of Mississauga — M City",
+          "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
+        },
+        {
+          "title": "City source data and terms",
+          "url": "https://data.mississauga.ca/pages/mississauga-3d"
+        },
+        {
+          "title": "M City architecture gallery",
+          "url": "https://mcitycondos.com/m1-m2-gallery-architecture.php",
+          "note": "Reference only; images are not redistributed."
+        }
+      ],
+      "id": "mcity-m2",
+      "title": "M City M2",
+      "assets": [
+        "mcity-m2"
+      ]
+    },
+    {
+      "id": "artform",
+      "title": "Artform",
+      "subtitle": "86 Dundas Street East · Approximate exterior · Rev03",
+      "assets": [
+        "artform"
+      ],
+      "summary": "A completed-building exterior study informed by historical plans and dated photographs. April 2026 observations inform the warm masonry, frontage openings and recessed colonnade. Rev03 removes only exact duplicate opaque surfaces.",
+      "credit": "Model study: Daniel Sultan / Future Mississauga. Architectural design: Studio JCI. Developer: EMBLEM. Reference photographs: Edward Skira and Tim MacDonald / UrbanToronto; Google Street View, April 2026.",
+      "limits": "Passage depth, rear continuation, hidden faces and finished heights remain unverified. Zoning maxima are not measured as-built heights. Ground, interiors and surrounding site works are excluded; this standalone study is not a surveyed placement on the city map.",
+      "rights": "Independent study; no architect, owner or photographer endorsement. Model geometry and generated views are separate from the architectural design and reference-image rights. Original photographs, Google image pixels and planning PDFs are not included.",
+      "cameraDirection": [
+        -1,
+        0.65,
+        1.3
+      ],
+      "sources": [
+        {
+          "title": "EMBLEM — Artform",
+          "url": "https://www.emblemdevcorp.com/projects/artform"
+        },
+        {
+          "title": "City of Mississauga — Artform / Studio JCI submission",
+          "url": "https://campaign.mississauga.ca/mississauga-urban-design-awards/"
+        },
+        {
+          "title": "Historical plan — July 2020 City PDC agenda",
+          "url": "https://www7.mississauga.ca/documents/committees/pdc/2020/2020_07_13_PDC_Agenda.pdf",
+          "note": "Pages 83–84; historical design, not as-built drawings."
+        },
+        {
+          "title": "Edward Skira — December 2024 reference photograph",
+          "url": "https://urbantoronto.ca/forum/attachments/img_5543-jpg.617963/",
+          "note": "Reference only; not redistributed."
+        },
+        {
+          "title": "Tim MacDonald — February 2024 reference photograph",
+          "url": "https://urbantoronto.ca/forum/attachments/1708437291750-jpeg.541842/",
+          "note": "Dated construction-stage reference; not proof of final details."
+        }
+      ]
+    }
+  ]
+}

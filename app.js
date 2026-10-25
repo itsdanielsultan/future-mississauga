@@ -1,7 +1,7 @@
 import {drawingPolicy,createFrameScheduler} from './viewer-runtime.js?v=20261025-mobile1';
 import {withPNGMetadata} from './png-metadata.js?v=20261023-cardfooter1';
 import {createVisibleAttribution, exportCreditLines} from './source-attribution.js?v=20261023-refined1';
-import {projectDetailsHTML, projectCardHTML, completionRowsHTML} from './project-cards.js?v=20261025-recovered1';
+import {projectDetailsHTML, projectCardHTML, completionRowsHTML} from './project-cards.js?v=20261025-preview1';
 import {createDaylight} from './daylight.js?v=20261023-usability1';
 import {neighbourhoodFrame,defaultViewDirection} from './viewer-camera.js?v=20261023-usability1';
 import {prepareMappedSurface} from './surface-rendering.js?v=20261023-usability1';
