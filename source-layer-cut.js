@@ -1,7 +1,7 @@
 // Source-based building replacements. Separate superseded municipal building faces once at load time.
 // Roads, terrain, transit and all source GLB bytes remain untouched.
 export function splitSourceOverlaps(THREE,root,assets){
- const regions=assets.filter(a=>a.localReview&&a.replacementFootprintsXZ?.length).flatMap(a=>a.replacementFootprintsXZ.map(poly=>({poly,asset:a,minX:Math.min(...poly.map(p=>p[0])),maxX:Math.max(...poly.map(p=>p[0])),minZ:Math.min(...poly.map(p=>p[1])),maxZ:Math.max(...poly.map(p=>p[1]))})));
+ const regions=assets.filter(a=>a.localReview&&(a.replacementTriangleKeys?.length||a.replacementFootprintsXZ?.length)).flatMap(a=>a.replacementTriangleKeys?.length?[{asset:a,keys:new Set(a.replacementTriangleKeys),minX:a.bounds[0][0]-.01,maxX:a.bounds[1][0]+.01,minZ:a.bounds[0][2]-.01,maxZ:a.bounds[1][2]+.01}]:(a.replacementFootprintsXZ||[]).map(poly=>({poly,asset:a,minX:Math.min(...poly.map(p=>p[0])),maxX:Math.max(...poly.map(p=>p[0])),minZ:Math.min(...poly.map(p=>p[1])),maxZ:Math.max(...poly.map(p=>p[1]))})));
  if(!regions.length)return [];
  root.updateMatrixWorld(true);const originals=[];root.traverse(o=>{if(o.isMesh&&/existing/i.test(o.userData.Status||''))originals.push(o);});const audit=[],scratch=new THREE.Vector3();
  for(const o of originals){const geo=o.geometry,pos=geo.getAttribute('position');if(!pos)continue;const box=new THREE.Box3().setFromObject(o);const possible=regions.filter(r=>box.max.x>=r.minX&&box.min.x<=r.maxX&&box.max.z>=r.minZ&&box.min.z<=r.maxZ);if(!possible.length)continue;
@@ -10,7 +10,8 @@ export function splitSourceOverlaps(THREE,root,assets){
  for(let k=0;k<length;k+=3){const a=indices?indices.getX(k):k,b=indices?indices.getX(k+1):k+1,c=indices?indices.getX(k+2):k+2;
  const lx=(pos.getX(a)+pos.getX(b)+pos.getX(c))/3,ly=(pos.getY(a)+pos.getY(b)+pos.getY(c))/3,lz=(pos.getZ(a)+pos.getZ(b)+pos.getZ(c))/3;
  const x=matrix[0]*lx+matrix[4]*ly+matrix[8]*lz+matrix[12],z=matrix[2]*lx+matrix[6]*ly+matrix[10]*lz+matrix[14];
- const hits=possible.filter(r=>x>=r.minX&&x<=r.maxX&&z>=r.minZ&&z<=r.maxZ&&inside(x,z,r.poly));
+ let triangleKey=null;
+ const hits=possible.filter(r=>{if(r.keys){if(x<r.minX||x>r.maxX||z<r.minZ||z>r.maxZ)return false;if(triangleKey===null)triangleKey=[a,b,c].map(i=>scratch.fromBufferAttribute(pos,i).applyMatrix4(o.matrixWorld).toArray().map(v=>v.toFixed(3)).join(',')).sort().join('|');return r.keys.has(triangleKey);}return x>=r.minX&&x<=r.maxX&&z>=r.minZ&&z<=r.maxZ&&inside(x,z,r.poly);});
  if(!hits.length){kept.push(a,b,c);continue;}
  const bindings=[...new Map(hits.map(r=>[r.asset.id,{assetId:r.asset.id,modes:r.asset.replacementModes||r.asset.modes}])).values()].sort((a,b)=>a.assetId.localeCompare(b.assetId)),key=bindings.map(b=>b.assetId).join('|');
  if(!fallbackGroups.has(key))fallbackGroups.set(key,{indices:[],bindings});fallbackGroups.get(key).indices.push(a,b,c);
