@@ -25,8 +25,8 @@
       "reviewedAssetListSHA256": "cfd6c8797da771363e61d2ee6da46a0277eeeab8bd376512da83fb25a394db50",
       "publicBytesVerified": true
     },
-    "files": 749,
-    "publishedBytes": 997948014,
+    "files": 756,
+    "publishedBytes": 999874768,
     "originalPNGs": 33,
     "originalImageVerification": {
       "nativeMasterURLsPreserved": true,
@@ -55,8 +55,8 @@
     },
     "markdownFiles": 22,
     "markdownLocalLinks": 139,
-    "cssFiles": 20,
-    "cssLocalDependencies": 15,
+    "cssFiles": 21,
+    "cssLocalDependencies": 16,
     "districtMetadata": {
       "publicDistricts": 20,
       "flatBoundsVerified": true,
@@ -138,8 +138,8 @@
     },
     {
       "file": "app.js",
-      "bytes": 68437,
-      "sha256": "d0adced55dd52261171591e3e06a30490c8e646d122dd4a63878282321409af0"
+      "bytes": 68435,
+      "sha256": "3cb39101395a591ce1282af9fcf61f7385ca60463b7ef5070e80477ba33eb14f"
     },
     {
       "file": "assets/apple-touch-icon.png",
@@ -672,6 +672,11 @@
       "sha256": "43b9748be8d3385d37bf1fe6ae91a2334522fbca794700830076145aebfb31ab"
     },
     {
+      "file": "data/model-previews.json",
+      "bytes": 10846,
+      "sha256": "9f70d2a9747df1e492f9b2964d4ea81e6823e7b541033117c001125dbae48039"
+    },
+    {
       "file": "data/original-image-release-integrity.json",
       "bytes": 37877,
       "sha256": "cbeb28df32dedc41eec80da780cc1a59b615c91e0a837c15dbf2db7a26936e74"
@@ -739,7 +744,7 @@
     {
       "file": "data/publication-derivatives.json",
       "bytes": 108728,
-      "sha256": "6a77fa13faa6f272375167a4cdbd44ffa8ffbbd6124326cfab1645d0c4876cac"
+      "sha256": "a3c9a09e6dbd76de99b0a29cf51d6f5537bc0a65adb7a05a4d2b003d086f294c"
     },
     {
       "file": "data/recent-project-updates.json",
@@ -960,6 +965,11 @@
       "file": "downloads/Model-reference-index.csv",
       "bytes": 193695,
       "sha256": "d2d1a4a4a9d99a4da0b0bfc9225dcf8f3e89b6583cf990bb6bd0b6f71e775ede"
+    },
+    {
+      "file": "downloads/Model-study-credits.txt",
+      "bytes": 3576,
+      "sha256": "0b41af55d10a07b40e5891e18a691d7eebae07f19e032d4bb38b44be4066ddb4"
     },
     {
       "file": "downloads/Original-picture-upload-validation.json",
@@ -1328,8 +1338,8 @@
     },
     {
       "file": "explore.html",
-      "bytes": 17463,
-      "sha256": "cd2fe9882064c1883e848a6213a67aa5728cb09de4479a8e23b18dfc02bf7f96"
+      "bytes": 17545,
+      "sha256": "6b1c290ba4cb4fc250fd923f84cc9a1c8a2c2bd600301f0175c6ffde3176ac3a"
     },
     {
       "file": "file-actions.js",
@@ -2157,9 +2167,29 @@
       "sha256": "f279d8663bb6a140b31a6369f08699e0ffda6ad9d876280d9e07db8b7ee79709"
     },
     {
+      "file": "model-preview-loading.js",
+      "bytes": 1658,
+      "sha256": "58d271ab18b0d8592234be7e149d3990e61422f3056786c69dd9dae87623ea3c"
+    },
+    {
+      "file": "model-preview.css",
+      "bytes": 5115,
+      "sha256": "14ca342f00c220a6572f230b72dd706172b11b69795c09524e45c5fd11b0fd94"
+    },
+    {
+      "file": "model-preview.js",
+      "bytes": 12825,
+      "sha256": "27a4f0fd82b4d5a26d7881f8334d0e1044eabe7d8b04b90e4a470fb9502cb2e3"
+    },
+    {
       "file": "model-visibility.js",
       "bytes": 1792,
       "sha256": "7c7ebad9c0077ea6b3bdaacf2485b8b6682f6e8b0d64703ec9a5e282efa7a3cd"
+    },
+    {
+      "file": "model.html",
+      "bytes": 3805,
+      "sha256": "7e40f22d8cb46818c402501782f9a5adcbb1b89d4986aecd181176ccad7f961f"
     },
     {
       "file": "models/airport-corporate-context.glb",
@@ -3237,6 +3267,11 @@
       "sha256": "af637271fef72c40c8e90a66e143fd7edbd1323af0fa58e627885bedd34ac162"
     },
     {
+      "file": "models/studies-20261025/artform-rev03.glb.gz",
+      "bytes": 1888394,
+      "sha256": "cf708ba198b87b9373b5c74a2311dccde96a72fb17f05dbef693f889c40e3da7"
+    },
+    {
       "file": "models/studies-20261025/mcity-m1-exterior-study.glb.gz",
       "bytes": 2905404,
       "sha256": "9e6746e6007da48d6512d7670fbdd6c0c32fef8bd32157ac282c2e35e0ae03e7"
@@ -3338,8 +3373,8 @@
     },
     {
       "file": "project-cards.js",
-      "bytes": 10738,
-      "sha256": "b9beac32d40fa3f5edd7f8c9d9ff93fd43785754277382fe3c616159e9fed953"
+      "bytes": 10979,
+      "sha256": "2fccb95b85aec2d918a7a92ae38c99a08d1ba89f53f7230abc4c769709e20214"
     },
     {
       "file": "reading-notes.css",
@@ -3498,8 +3533,8 @@
     },
     {
       "file": "sources.html",
-      "bytes": 8946,
-      "sha256": "e79e419bcf008b6de83cbbc23b57ac7a48c4cb3639b943b0a4bd556fc0235b4c"
+      "bytes": 9159,
+      "sha256": "927e7d0e8de9c23f8999496acc89ee1f42712889479b7344bb6b29b5d3f979f7"
     },
     {
       "file": "sources.js",
@@ -3843,8 +3878,8 @@
     },
     {
       "file": "viewer-bootstrap.js",
-      "bytes": 799,
-      "sha256": "b5faee1efefeded25649b301c72cb58cf9d2bdbf2201ecf17559c7a410faa764"
+      "bytes": 800,
+      "sha256": "c4f9a7fc0e0c4c1a30f78cd8b353ae8fb66a0265ccad98368b34dd1ff1affaee"
     },
     {
       "file": "viewer-camera.js",
@@ -3867,5 +3902,5 @@
       "sha256": "2d9cfb19a32fac7548704fbfca44060267c233522645aa354fb4f6069e012d97"
     }
   ],
-  "bytes": 997948014
+  "bytes": 999874768
 }
