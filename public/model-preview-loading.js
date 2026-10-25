@@ -2,7 +2,15 @@ export function selectPreview(manifest, id) {
   return manifest.views.find(view => view.id === id) || null;
 }
 
+export function trustedModelURL(url) {
+  return typeof url === 'string' && (
+    /^models\/[a-zA-Z0-9_/-]+\.glb(?:\.gz)?$/.test(url) ||
+    /^https:\/\/raw\.githubusercontent\.com\/itsdanielsultan\/future-mississauga\/[a-f0-9]{40}\/model-assets\/20261025\/[a-z0-9-]+\.glb\.gz$/.test(url)
+  );
+}
+
 export async function verifiedModelBytes(asset, fetcher = globalThis.fetch) {
+  if (!trustedModelURL(asset.url)) throw new Error('The model download address is unavailable.');
   const response = await fetcher(asset.url);
   if (!response.ok) throw new Error('The model could not be downloaded. Please try again.');
   let bytes = new Uint8Array(await response.arrayBuffer());

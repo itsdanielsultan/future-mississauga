@@ -3,12 +3,13 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {gunzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
-import {selectPreview,verifiedModelBytes} from '../public/model-preview-loading.js';
+import {selectPreview,verifiedModelBytes,trustedModelURL} from '../public/model-preview-loading.js';
 import {projectDetailsHTML} from '../public/project-cards.js';
 import {CITY_DATA_TERMS_URL} from '../public/city-data-terms.js';
 const root=new URL('../public/',import.meta.url);
 const manifest=JSON.parse(await readFile(new URL('data/model-previews.json',root),'utf8'));
 const sha=b=>createHash('sha256').update(b).digest('hex');
+const assetFile=a=>a.repositoryFile?new URL('../'+a.repositoryFile,import.meta.url):new URL(a.url,root);
 
 test('Preview routes select only exact registered IDs',()=>{
   for(const id of ['artform','mcity-m1','mcity-m2','mcity-pair'])assert.equal(selectPreview(manifest,id)?.id,id);
@@ -19,7 +20,7 @@ test('Preview routes select only exact registered IDs',()=>{
 
 test('Every download decodes to its pinned GLB and only reachable model geometry',async()=>{
   for(const asset of manifest.assets){
-    const encoded=await readFile(new URL(asset.url,root));
+    const encoded=await readFile(assetFile(asset));
     assert.equal(encoded.length,asset.bytes);assert.equal(sha(encoded),asset.downloadSHA256);
     const decoded=await verifiedModelBytes(asset,async()=>new Response(encoded));
     assert.equal(sha(decoded),asset.sha256);assert.equal(decoded.length,asset.decodedBytes);
@@ -29,7 +30,7 @@ test('Every download decodes to its pinned GLB and only reachable model geometry
     const reachable=new Set();const walk=i=>{assert(!reachable.has(i));reachable.add(i);for(const c of json.nodes[i].children||[])walk(c);};
     for(const i of json.scenes[json.scene||0].nodes)walk(i);
     assert.equal(reachable.size,json.nodes.length,asset.id+': unreferenced recovery nodes');
-    assert.equal(json.meshes.length,asset.id==='artform'?165:asset.id==='mcity-m1'?166:173);
+    assert.equal(json.meshes.length,asset.meshCount ?? (asset.id==='artform'?165:asset.id==='mcity-m1'?166:173));
   }
 });
 
@@ -75,4 +76,28 @@ test('City-derived previews require the verified City terms, independent Artform
   const credits=await readFile(new URL('downloads/Model-study-credits.txt',root),'utf8');
   assert.ok(credits.includes(CITY_DATA_TERMS_URL));
   assert.match(credits,/require recipients to agree/);
+});
+
+test('Only approved repository commit pins and local model paths may be fetched',async()=>{
+  for(const url of ['https://other.example/model.glb','https://raw.githubusercontent.com/itsdanielsultan/future-mississauga/main/model-assets/20261025/avia-1.glb.gz','models/../private.glb','/models/test.glb','models/test.glb?url=other']){
+    assert.equal(trustedModelURL(url),false);
+    await assert.rejects(verifiedModelBytes({url},()=>{throw new Error('must not fetch');}),/address is unavailable/);
+  }
+  for(const asset of manifest.assets)assert.equal(trustedModelURL(asset.url),true,asset.id);
+});
+
+test('The approved five models remain separate and Avia includes its shared podium',()=>{
+  for(const id of ['edge-1','edge-2','oro']){
+    const view=selectPreview(manifest,id);assert.deepEqual(view.assets,[id]);
+    assert.equal(manifest.assets.find(a=>a.id===id).cityDataTerms,false);
+  }
+  for(const id of ['avia-1','avia-2']){
+    const view=selectPreview(manifest,id);assert.deepEqual(view.assets,[id,'avia-podium']);
+    assert.match(view.downloadNote,/both the tower and shared podium/);
+    assert.match(view.summary,/other tower is omitted/);
+    assert.ok(view.assets.every(id=>manifest.assets.find(a=>a.id===id).cityDataTerms));
+  }
+  assert.match(selectPreview(manifest,'oro').subtitle,/Intended July 2020/);
+  assert.equal(selectPreview(manifest,'brightwater'),null);
+  assert.equal(selectPreview(manifest,'mason'),null);
 });

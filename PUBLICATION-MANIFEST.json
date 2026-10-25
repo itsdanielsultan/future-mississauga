@@ -25,8 +25,20 @@
       "reviewedAssetListSHA256": "cfd6c8797da771363e61d2ee6da46a0277eeeab8bd376512da83fb25a394db50",
       "publicBytesVerified": true
     },
-    "files": 758,
-    "publishedBytes": 999878681,
+    "modelPreviews": {
+      "views": 9,
+      "localAssets": 3,
+      "externalAssets": 6,
+      "externalBytes": 7354555,
+      "externalCommits": [
+        "38192a27c882e7c7e0a4020396b800f9a70a34a0"
+      ],
+      "allCompressedAndDecodedHashesVerified": true,
+      "externalCommitBytesVerifiedLocally": true,
+      "remoteAvailabilityCheckedSeparately": true
+    },
+    "files": 759,
+    "publishedBytes": 999921320,
     "originalPNGs": 33,
     "originalImageVerification": {
       "nativeMasterURLsPreserved": true,
@@ -138,8 +150,8 @@
     },
     {
       "file": "app.js",
-      "bytes": 68435,
-      "sha256": "3cb39101395a591ce1282af9fcf61f7385ca60463b7ef5070e80477ba33eb14f"
+      "bytes": 68432,
+      "sha256": "02a522dd9102cfbf452a12d10facaf963c4cc6301ae7624c0f8efc9ea8d3e2cb"
     },
     {
       "file": "assets/apple-touch-icon.png",
@@ -683,8 +695,8 @@
     },
     {
       "file": "data/model-previews.json",
-      "bytes": 10904,
-      "sha256": "b3d3982d8089efd3a6d5f0f507678e8f958906b46fde4f0b05f975679817b8f7"
+      "bytes": 36556,
+      "sha256": "9b330168c56d6f88499134a44a5cdd4552e787f34765b69307b573f319b8e2b5"
     },
     {
       "file": "data/original-image-release-integrity.json",
@@ -754,7 +766,7 @@
     {
       "file": "data/publication-derivatives.json",
       "bytes": 108728,
-      "sha256": "df3ee5bd48f4dbe56816f9f2514a06b11da82fcb627086f3c85d7ea62c095f5a"
+      "sha256": "8361f39b94525ef58e177d23e9015f1085c95ab460785dae0c69d39cc5d061e5"
     },
     {
       "file": "data/recent-project-updates.json",
@@ -978,8 +990,8 @@
     },
     {
       "file": "downloads/Model-study-credits.txt",
-      "bytes": 3958,
-      "sha256": "a73baaf0270d8a025174988e9d9e75066d67447b1148cec8ec9cf8de8827fd2e"
+      "bytes": 15540,
+      "sha256": "39375052f60ecce2371a4a1d88978dd1f696459f4bbb62ac5a8f6d9595f7df24"
     },
     {
       "file": "downloads/Original-picture-upload-validation.json",
@@ -1348,8 +1360,8 @@
     },
     {
       "file": "explore.html",
-      "bytes": 17606,
-      "sha256": "7c8ee22f2ea28d2b1d2e5ed413001b46c71727511212a1268e8694c519508698"
+      "bytes": 17605,
+      "sha256": "31ace21dd5243ea8bf65b2846d13162df34c02e8489f63e03f0d8ca0f21cbb80"
     },
     {
       "file": "file-actions.js",
@@ -2177,19 +2189,24 @@
       "sha256": "f279d8663bb6a140b31a6369f08699e0ffda6ad9d876280d9e07db8b7ee79709"
     },
     {
+      "file": "model-preview-batching.js",
+      "bytes": 4030,
+      "sha256": "a08346b9d7f8dfd4994d79541ab6ef84b67e1081cfd26278053df3a1bdf641ca"
+    },
+    {
       "file": "model-preview-loading.js",
-      "bytes": 1658,
-      "sha256": "58d271ab18b0d8592234be7e149d3990e61422f3056786c69dd9dae87623ea3c"
+      "bytes": 2052,
+      "sha256": "dba8dbb6a01923ca33c5289e3ccfca8a22f24441a6bf838d136bc5918e4255f8"
     },
     {
       "file": "model-preview.css",
-      "bytes": 5115,
-      "sha256": "14ca342f00c220a6572f230b72dd706172b11b69795c09524e45c5fd11b0fd94"
+      "bytes": 5471,
+      "sha256": "b6eba7012604d26afbf4c663b620e25d36048e50c88de8550f7ac876e226dc3b"
     },
     {
       "file": "model-preview.js",
-      "bytes": 13409,
-      "sha256": "e3dbc164e7a3c84e5aa7fc775214e93ee268c494ada3c6d42167d490c5e50cb1"
+      "bytes": 13714,
+      "sha256": "a492366b76015db5fc30584ecc79ceaf9898ce6e6ab428e91dea3bbcf5cfd890"
     },
     {
       "file": "model-visibility.js",
@@ -2198,8 +2215,8 @@
     },
     {
       "file": "model.html",
-      "bytes": 3873,
-      "sha256": "64b2e07397e1a4947c859dbe001ec7ada54bbb232bc9562a38f08e286d897906"
+      "bytes": 3916,
+      "sha256": "00ca5c5d7a95d782ed843fec176034aa859fc663bc105c8fce31ffed9253cf34"
     },
     {
       "file": "models/airport-corporate-context.glb",
@@ -3383,8 +3400,8 @@
     },
     {
       "file": "project-cards.js",
-      "bytes": 10979,
-      "sha256": "2fccb95b85aec2d918a7a92ae38c99a08d1ba89f53f7230abc4c769709e20214"
+      "bytes": 11263,
+      "sha256": "d77a2cac94e0c901214146070522b3c47b89f35c219ab046ad8c628016256ed8"
     },
     {
       "file": "reading-notes.css",
@@ -3888,8 +3905,8 @@
     },
     {
       "file": "viewer-bootstrap.js",
-      "bytes": 1123,
-      "sha256": "3f9e0a7bee63144a12c4f6d7aa1198e050a82c0ec36ae8f1043ce6404940d5b1"
+      "bytes": 1120,
+      "sha256": "00123f8dde63fa590640398132a9c83c81ea966de1f3a008cdbab68490afedca"
     },
     {
       "file": "viewer-camera.js",
@@ -3912,5 +3929,5 @@
       "sha256": "2d9cfb19a32fac7548704fbfca44060267c233522645aa354fb4f6069e012d97"
     }
   ],
-  "bytes": 999878681
+  "bytes": 999921320
 }

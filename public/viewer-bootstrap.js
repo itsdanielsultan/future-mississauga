@@ -5,7 +5,7 @@ try {
   document.querySelector('#main').prepend(notice.element);
   document.querySelector('#loading').textContent = 'Read the City data terms above, then choose Load city map.';
   await notice.ready;
-  await import('./app.js?v=20261025-preview1');
+  await import('./app.js?v=20261025-five1');
 } catch (error) {
   const loading = document.querySelector('#loading');
   loading.hidden = false;

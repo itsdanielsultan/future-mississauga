@@ -1,6 +1,7 @@
 import {validateLabelledImages} from './validate-labelled-images.mjs';
 import {validateDocumentPreviews} from './validate-document-previews.mjs';
 import {validatePictureMedia} from './validate-picture-media.mjs';
+import {validateModelPreviews} from './validate-model-previews.mjs';
 import {readFile, readdir, stat} from 'node:fs/promises';
 import {createReadStream} from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -177,7 +178,8 @@ export async function validate(site = join(ROOT, 'public')) {
   const labelledImages = await validateLabelledImages(site);
   const documentPreviews = await validateDocumentPreviews(site);
   const documentLinks = await validateDocumentLinks(site);
-  const report = {labelledImages, documentPreviews, files: files.length, publishedBytes: bytes, originalPNGs: entries.length, originalImageVerification, halfSizeDisplayPNGs: displayPreviewSummary?.halfSize ?? entries.length, displayPreviewSummary, portraitGallery, loadedModelAssets, refinementBounds, ...documentLinks, districtMetadata, localPNGchecksumsVerified: true, noHostedRuntime: true, noPrivateArtifacts: true};
+  const modelPreviews = names.has('data/model-previews.json') ? await validateModelPreviews(site) : null;
+  const report = {labelledImages, documentPreviews, modelPreviews, files: files.length, publishedBytes: bytes, originalPNGs: entries.length, originalImageVerification, halfSizeDisplayPNGs: displayPreviewSummary?.halfSize ?? entries.length, displayPreviewSummary, portraitGallery, loadedModelAssets, refinementBounds, ...documentLinks, districtMetadata, localPNGchecksumsVerified: true, noHostedRuntime: true, noPrivateArtifacts: true};
   console.log(JSON.stringify(report, null, 2));
   return report;
 }

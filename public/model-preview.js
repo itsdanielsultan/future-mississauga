@@ -2,11 +2,12 @@ import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {drawingPolicy, createFrameScheduler} from './viewer-runtime.js?v=20261025-mobile1';
-import {selectPreview, verifiedModelBytes} from './model-preview-loading.js?v=20261025-1';
+import {selectPreview, verifiedModelBytes} from './model-preview-loading.js?v=20261025-five1';
 import {cityDataNotice} from './city-data-terms.js?v=20261025-1';
+import {batchOpaqueStudy} from './model-preview-batching.js?v=20261025-1';
 
 const $ = id => document.getElementById(id);
-const response = await fetch('data/model-previews.json?v=20261025-terms1');
+const response = await fetch('data/model-previews.json?v=20261025-five1');
 if (!response.ok) throw new Error('Study catalogue unavailable');
 const manifest = await response.json();
 const requestedId = new URLSearchParams(location.search).get('model');
@@ -26,6 +27,7 @@ if (!view) {
   $('modelSubtitle').textContent = view.subtitle;
   $('studySummary').textContent = view.summary; $('studyCredit').textContent = view.credit;
   $('studyLimits').textContent = view.limits; $('rightsNote').textContent = view.rights;
+  $('downloadNote').textContent = view.downloadNote || 'GLB downloads contain the displayed study geometry. Keep the credits and limitations with the model.';
   for (const source of view.sources) {
     const li = document.createElement('li'), a = document.createElement('a');
     a.href = source.url; a.textContent = source.title; a.target = '_blank'; a.rel = 'noopener';
@@ -119,6 +121,7 @@ if (!view) {
         status('Loading ' + asset.title + '…');
         const data = await getBytes(asset); const gltf = await loader.parseAsync(data.buffer.slice(data.byteOffset, data.byteOffset + data.byteLength), '');
         if (request !== loadRequest || disposed) { gltf.scene.traverse(o => {o.geometry?.dispose(); for(const m of [o.material].flat().filter(Boolean))m.dispose();}); return; }
+        if (asset.batchOpaque) batchOpaqueStudy(gltf.scene, THREE);
         gltf.scene.userData.assetId = asset.id; model.add(gltf.scene);
       }
       const bounds = new THREE.Box3().setFromObject(model), centre = bounds.getCenter(new THREE.Vector3());
