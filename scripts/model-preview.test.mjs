@@ -5,6 +5,7 @@ import {gunzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import {selectPreview,verifiedModelBytes} from '../public/model-preview-loading.js';
 import {projectDetailsHTML} from '../public/project-cards.js';
+import {CITY_DATA_TERMS_URL} from '../public/city-data-terms.js';
 const root=new URL('../public/',import.meta.url);
 const manifest=JSON.parse(await readFile(new URL('data/model-previews.json',root),'utf8'));
 const sha=b=>createHash('sha256').update(b).digest('hex');
@@ -65,4 +66,13 @@ test('Credits distinguish local Artform and interpreted M City geometry',()=>{
   const art=selectPreview(manifest,'artform');assert.match(art.credit,/Studio JCI/);assert.match(art.credit,/EMBLEM/);
   assert.match(art.limits,/not a surveyed placement/);assert.match(art.limits,/Zoning maxima are not measured/);
   for(const view of manifest.views){assert.match(view.rights,/endorsement/);assert.ok(view.sources.length);assert.match(view.subtitle,/Approximate/);}
+});
+
+test('City-derived previews require the verified City terms, independent Artform does not',async()=>{
+  assert.equal(CITY_DATA_TERMS_URL,'https://mississauga.maps.arcgis.com/sharing/rest/content/items/961c790805c14d8da258ec91bf4117e3/data');
+  for(const id of ['mcity-m1','mcity-m2'])assert.equal(manifest.assets.find(a=>a.id===id).cityDataTerms,true);
+  assert.equal(Boolean(manifest.assets.find(a=>a.id==='artform').cityDataTerms),false);
+  const credits=await readFile(new URL('downloads/Model-study-credits.txt',root),'utf8');
+  assert.ok(credits.includes(CITY_DATA_TERMS_URL));
+  assert.match(credits,/require recipients to agree/);
 });

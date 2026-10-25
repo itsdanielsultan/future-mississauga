@@ -1,4 +1,10 @@
+import {cityDataNotice} from './city-data-terms.js?v=20261025-1';
+
 try {
+  const notice = cityDataNotice({loadLabel:'Load city map'});
+  document.querySelector('#main').prepend(notice.element);
+  document.querySelector('#loading').textContent = 'Read the City data terms above, then choose Load city map.';
+  await notice.ready;
   await import('./app.js?v=20261025-preview1');
 } catch (error) {
   const loading = document.querySelector('#loading');

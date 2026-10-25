@@ -3,9 +3,10 @@ import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {drawingPolicy, createFrameScheduler} from './viewer-runtime.js?v=20261025-mobile1';
 import {selectPreview, verifiedModelBytes} from './model-preview-loading.js?v=20261025-1';
+import {cityDataNotice} from './city-data-terms.js?v=20261025-1';
 
 const $ = id => document.getElementById(id);
-const response = await fetch('data/model-previews.json?v=20261025-1');
+const response = await fetch('data/model-previews.json?v=20261025-terms1');
 if (!response.ok) throw new Error('Study catalogue unavailable');
 const manifest = await response.json();
 const requestedId = new URLSearchParams(location.search).get('model');
@@ -32,6 +33,13 @@ if (!view) {
   }
   const assets = view.assets.map(id => manifest.assets.find(a => a.id === id));
   if (assets.some(a => !a)) throw new Error('Incomplete study catalogue');
+  const requiresCityTerms = assets.some(asset => asset.cityDataTerms);
+  let termsReady = Promise.resolve(), canLoad = !requiresCityTerms;
+  if (requiresCityTerms) {
+    const notice = cityDataNotice({loadLabel:'Load model'});
+    $('previewContent').before(notice.element); termsReady = notice.ready;
+    $('modelDownloads').before(cityDataNotice().element);
+  }
   const bytes = new Map(), pending = new Map(), downloadButtons = [];
   const status = (message, error = false) => { if(contextLost){message='Graphics paused. Restore the model to continue.';error=true;} $('previewStatus').textContent = message; $('previewStatus').classList.toggle('error', error); };
   async function getBytes(asset) {
@@ -103,7 +111,7 @@ if (!view) {
   function rotate(theta, phi = 0) { if (ready && !contextLost) { const spherical = new THREE.Spherical().setFromVector3(camera.position.clone().sub(controls.target)); spherical.theta += theta; spherical.phi = THREE.MathUtils.clamp(spherical.phi + phi, .08, Math.PI * .49); camera.position.copy(controls.target).add(new THREE.Vector3().setFromSpherical(spherical)); controls.update(); invalidate(); } }
   function recoverMessage(message) { ready = false; status(message, true); $('retryModel').hidden = false; interaction(false); }
   async function load() {
-    if (!renderer || contextLost) return;
+    if (!canLoad || !renderer || contextLost) return;
     const request = ++loadRequest; ready = false; $('retryModel').hidden = true; interaction(false); disposeModels();
     try {
       const loader = new GLTFLoader();
@@ -157,5 +165,8 @@ if (!view) {
   window.addEventListener('pagehide',() => {disposed=true;loadRequest++;clearTimeout(restoreTimer);scheduler.pause();observer.disconnect();intersection.disconnect();disposeModels();controls?.dispose();renderer?.dispose();bytes.clear();});
   window.addEventListener('pageshow',event=>{if(event.persisted)location.reload();});
   window.modelPreview = {id:view.id,model,camera,controls,renderer,assets,get ready(){return ready&&!contextLost;},get performance(){return {...policy(),frames:scheduler.frames,contextLost};},get decodedBytes(){return [...bytes.values()].reduce((n,b)=>n+b.byteLength,0);}};
-  if(renderer)await load();
+  if (requiresCityTerms) status('Read the City data terms, then choose Load model.');
+  await termsReady;
+  canLoad = true;
+  if(renderer && !disposed)await load();
 }
