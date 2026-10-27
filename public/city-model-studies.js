@@ -1,4 +1,5 @@
-import {registeredCityPlacements} from './city-model-placements.js?v=20261026-citymodels1';
+import {createCityLowerShell} from './city-lower-shell.js?v=20261027-orocomposite1';
+import {registeredCityPlacements} from './city-model-placements.js?v=20261027-orocomposite1';
 import {verifiedModelBytes} from './model-preview-loading.js?v=20261025-five1';
 import {batchOpaqueStudy} from './model-preview-batching.js?v=20261025-1';
 
@@ -41,7 +42,8 @@ export function presentCityStudyProjects(projects){
    project.geometryCoverage='Approximate completed exteriors and shared podium, Avia Rev02, registered to the City source model.';
    project.modelCaveat=project.modelCaveat?.replace('Native City source geometry retained.','City source geometry provides the placement and remains available if the detailed models cannot load. Exterior details and finishes are approximate.');
 }else if(project.id==='edge-oro'){
-   project.geometryCoverage='Edge 1 and 2 use approximate completed exteriors. Oro keeps the City source model; its July 2020 design is available as a separate preview.';
+   project.geometryCoverage='Edge 1 and 2 use approximate completed exteriors. Oro shows the intended July 2020 design.';
+   project.modelCaveat='Oro combines the detailed design with approximate lower massing from the City model and a derived flat cut closure. Their outlines differ by up to 6 m; retail facades are not reconstructed and ground contact remains approximate.';
   }else if(project.id==='artform'){
    project.summary='A completed 17-storey building on Dundas Street East.';
    project.localReview=true;
@@ -53,8 +55,8 @@ export function presentCityStudyProjects(projects){
 
 // A multi-file building is committed atomically. Failure disposes the partial
 // assembly; its municipal replacement binding is never activated.
-export async function loadCityStudy(THREE,loader,asset,{fetcher=globalThis.fetch,dispose}={}){
- const scene=new THREE.Group(),sourceAssets=[];
+export async function loadCityStudy(THREE,loader,asset,{fetcher=globalThis.fetch,dispose,sourceRoot}={}){
+ let scene=new THREE.Group();const sourceAssets=[];
  scene.name=asset.id;
  try{
   for(const preview of asset.previewAssets){
@@ -68,7 +70,8 @@ export async function loadCityStudy(THREE,loader,asset,{fetcher=globalThis.fetch
   if(asset.rotationYDegrees)scene.rotation.y=THREE.MathUtils.degToRad(asset.rotationYDegrees);
   scene.updateMatrixWorld(true);
   const box=new THREE.Box3().setFromObject(scene,true),actual=[box.min.toArray(),box.max.toArray()];
-  if(box.isEmpty()||actual.some((row,i)=>row.some((value,j)=>!Number.isFinite(value)||Math.abs(value-asset.bounds[i][j])>.02)))throw new Error('The model does not match its registered city bounds.');
+  if(box.isEmpty()||actual.some((row,i)=>row.some((value,j)=>!Number.isFinite(value)||Math.abs(value-(asset.detailBounds||asset.bounds)[i][j])>.02)))throw new Error('The model does not match its registered city bounds.');
+  if(asset.lowerShell){const lower=await createCityLowerShell(THREE,sourceRoot,asset.lowerShell),composite=new THREE.Group();composite.name=asset.id;composite.add(scene,lower);scene=composite;scene.updateMatrixWorld(true);const combined=new THREE.Box3().setFromObject(scene,true);if([combined.min.toArray(),combined.max.toArray()].some((row,i)=>row.some((v,j)=>Math.abs(v-asset.bounds[i][j])>.02)))throw new Error('The Oro composite does not match its reviewed bounds.');}
   return {scene,sourceAssets};
  }catch(error){dispose?.(scene);throw error;}
 }

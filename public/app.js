@@ -10,9 +10,9 @@ import {addArchitecturalEdges} from './building-presentation.js?v=20261022-detai
 import {projectNorth, presentationLayout, drawPresentationFooter} from './scene-presentation.js?v=20261023-usability1';
 import {adoptContextModelVisibility} from './context-model-visibility.js?v=20261017-contact1';
 import {loadModelAsset,shouldLoadRefinement,createOptionalRefinementLoader} from './refinement-loading.js?v=20261026-citymodels1';
-import {cityModelStudies,presentCityStudyProjects,loadCityStudy,bindStudyReplacement} from './city-model-studies.js?v=20261026-citymodels1';
+import {cityModelStudies,presentCityStudyProjects,loadCityStudy,bindStudyReplacement} from './city-model-studies.js?v=20261027-orocomposite1';
 import {splitSourceOverlaps} from './source-layer-cut.js?v=20261026-citymodels1';
-import {applyModelVisibility} from './model-visibility.js?v=20261023-study-focus1';
+import {applyModelVisibility} from './model-visibility.js?v=20261027-orocomposite1';
 import {createSearchIndex,searchProjects,normalizeSearch} from './viewer-search.js?v=20260927-model-search1';
 import {bindComparison} from './comparison.js?v=20261023-usability1';
 import {createExistingStyleIndex,applyExistingStyle} from './existing-materials.js?v=20260926-soft-grey';
@@ -167,14 +167,14 @@ async function ensureOptionalRefinements(){
  const statusRequest=++studyStatusRequest;
  let manager=optionalRefinementLoaders.get(target);
  if(!manager){manager=createOptionalRefinementLoader({
-  load:asset=>asset.previewAssets?loadCityStudy(THREE,loader,asset,{dispose}):loadModelAsset(loader,asset.url,versionedTreeURL),
+  load:asset=>asset.previewAssets?loadCityStudy(THREE,loader,asset,{dispose,sourceRoot:target}):loadModelAsset(loader,asset.url,versionedTreeURL),
   isCurrent:()=>model===target&&loadToken===token,
   dispose:extra=>dispose(extra.scene),
   commit:(asset,extra)=>{
    extra.scene.updateMatrixWorld(true);
    extra.scene.traverse(o=>{if(!o.isMesh)return;
     const box=new THREE.Box3().setFromObject(o,true),bounds=district.bounds;
-    Object.assign(o.userData,{Status:asset.status,displayStatus:asset.status,projectId:asset.projectId,assetId:asset.id,modelFidelity:asset.modelFidelity,modes:asset.modes,uncertainAsset:!!asset.uncertainGeometry,uncertain:!!asset.uncertainGeometry,recordedProgress:!!asset.recordedProgress,nativeTexture:!!asset.preserveMaterials,preserveSourceNormals:!!asset.preserveSourceNormals,localReview:!!asset.localReview,draftStudy:!asset.defaultVisible});
+    Object.assign(o.userData,{Status:asset.status,displayStatus:asset.status,projectId:asset.projectId,assetId:asset.id,modelFidelity:asset.modelFidelity,modes:asset.modes,uncertainAsset:!!asset.uncertainGeometry,uncertain:!!asset.uncertainGeometry,recordedProgress:!!asset.recordedProgress,constructionDesign:!!asset.constructionDesign,nativeTexture:!!asset.preserveMaterials,preserveSourceNormals:!!asset.preserveSourceNormals,localReview:!!asset.localReview,draftStudy:!asset.defaultVisible});
     o.userData.hiddenObsolete=district.id!=='citywide'&&!(asset.forceDistricts||[]).includes(district.id)&&(box.max.x<bounds[0]||box.min.x>bounds[2]||box.max.z<bounds[1]||box.min.z>bounds[3]);
     if(!asset.preserveMaterials){if(asset.status==='Existing')applyExistingStyle(THREE,o,existingStyleIndex);o.material=materials[asset.status==='Existing'?'Existing':asset.uncertainGeometry?'Uncertain':asset.status];}
     if(!asset.preserveSourceNormals)o.geometry.computeVertexNormals();o.castShadow=true;o.receiveShadow=true;modelMeshes.push(o);if(asset.status!=='Existing')futureMeshes.push(o);

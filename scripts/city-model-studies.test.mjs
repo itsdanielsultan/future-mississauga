@@ -13,7 +13,7 @@ const {splitSourceOverlaps}=await import('../public/source-layer-cut.js');
 const {validateCityModelStudies}=await import('./validate-city-model-studies.mjs');
 const root=new URL('../',import.meta.url),read=async path=>JSON.parse(await readFile(new URL(path,root)));
 const catalogue=await read('public/data/model-previews.json'),refinements=await read('public/data/refinement-models.json');
-const assets=cityModelStudies(refinements.assets,catalogue).filter(a=>a.defaultVisible);
+const assets=cityModelStudies(refinements.assets,catalogue).filter(a=>a.defaultVisible&&!a.lowerShell);
 const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
 const fetcher=async url=>{const a=catalogue.assets.find(a=>a.url===url);return new Response(await readFile(new URL(a.repositoryFile||'public/'+a.url,root)));};
 const meshes=root=>{const result=[];root.traverse(o=>{if(o.isMesh)result.push(o);});return result;};
@@ -21,7 +21,7 @@ const triangles=root=>meshes(root).reduce((n,m)=>n+(m.geometry.index?.count??m.g
 const dispose=root=>{root.traverse(o=>{o.geometry?.dispose();for(const material of [o.material].flat().filter(Boolean))material.dispose();});root.removeFromParent();};
 const parse=async bytes=>loader.parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');
 
-test('only registered public assemblies load by default; other optional studies remain optional',async()=>{
+test('registered completed assemblies load by default; unrelated optional studies remain optional',async()=>{
  assert.deepEqual(assets.map(a=>a.projectId),['mcity-1-2','mcity-1-2','avia','edge-oro','edge-oro','artform']);
  for(const asset of assets)assert(shouldLoadRefinement(asset));
  assert(!shouldLoadRefinement({localOptional:true,projectId:'unrelated'}));
@@ -102,7 +102,7 @@ test('Cooksville Artform uses all 240 exact source faces, including those beyond
  dispose(scene);dispose(detail);
 });
 
-test('Edge replacement preserves Oro municipal geometry and scenario visibility; no full intended-design model is integrated',async()=>{
+test('completed Edge replacement alone preserves Oro municipal geometry and scenario visibility',async()=>{
  assert(!assets.some(a=>a.previewAssets.some(p=>p.id==='oro')));
  const scene=(await parse(await readFile(new URL('public/models/downtown.glb',root)))).scene;
  const oro=meshes(scene).filter(m=>['63-6206','63-6207'].includes(m.userData.id));assert.equal(oro.length,2);

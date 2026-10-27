@@ -38,7 +38,7 @@
       "remoteAvailabilityCheckedSeparately": true
     },
     "cityModelStudies": {
-      "assemblies": 6,
+      "assemblies": 7,
       "existingPublicAssets": [
         "mcity-m1",
         "mcity-m2",
@@ -47,14 +47,19 @@
         "avia-podium",
         "edge-1",
         "edge-2",
-        "artform"
+        "artform",
+        "oro"
       ],
-      "allScenarios": true,
+      "completedModelsAllScenarios": true,
+      "intendedOroScenarios": [
+        "construction",
+        "future"
+      ],
       "atomicAssemblies": true,
       "assetHashesValidatedByModelPreviewCatalogue": true
     },
-    "files": 761,
-    "publishedBytes": 999962554,
+    "files": 762,
+    "publishedBytes": 999970606,
     "originalPNGs": 33,
     "originalImageVerification": {
       "nativeMasterURLsPreserved": true,
@@ -166,8 +171,8 @@
     },
     {
       "file": "app.js",
-      "bytes": 69655,
-      "sha256": "e1ef6869a2f29c5340d50be137e233dc6343ca53dfdea407a84ba9525b6ca6b8"
+      "bytes": 69722,
+      "sha256": "e58b7cbf52957215c6bf2226b1a3689c9de6198bef4d7ffce9096f93e340c1a5"
     },
     {
       "file": "assets/apple-touch-icon.png",
@@ -280,14 +285,19 @@
       "sha256": "a859bf89d21422a48db7ed0d1db402ddeae470a49e260f38fc0a004cbb21bd8d"
     },
     {
+      "file": "city-lower-shell.js",
+      "bytes": 5703,
+      "sha256": "1514dcb044a2de664f451224318090c20ae5f74fc6dd09c098398653ce763cbf"
+    },
+    {
       "file": "city-model-placements.js",
-      "bytes": 33261,
-      "sha256": "25133cf3094c02ab18b6f890eb80423066999ce727416c23160cab04239754b6"
+      "bytes": 34690,
+      "sha256": "b4402efbb973bc55e8bfb4540bd615af4da3d59459e46b3a9adb1b0862bc4b29"
     },
     {
       "file": "city-model-studies.js",
-      "bytes": 5859,
-      "sha256": "2d3d836a9c183131abedbbf3d386e0c8724439e98966622d99d05067f45603dd"
+      "bytes": 6662,
+      "sha256": "dadc07339b2feac65fd49a2fe12a5f465eb40aed272411a651622bba67fbfa83"
     },
     {
       "file": "comparison.js",
@@ -792,7 +802,7 @@
     {
       "file": "data/publication-derivatives.json",
       "bytes": 108728,
-      "sha256": "44faea6d9a1f7d7dbd8db9df531b0f2e3fb81862dc8bbb8b7ba633dde2e92177"
+      "sha256": "9955aaf622d9c4320b6ec67d61a6d91b175669d031946fa3d28d1699c0a1322e"
     },
     {
       "file": "data/recent-project-updates.json",
@@ -1386,8 +1396,8 @@
     },
     {
       "file": "explore.html",
-      "bytes": 17788,
-      "sha256": "e1cfaa368b2ef5282cd331765a488de357711b58e7bd70db9862e8895c4afc79"
+      "bytes": 17794,
+      "sha256": "3679c87cfa204581dd1700b92a57cec698056ac16c1448663545de0ccb161c23"
     },
     {
       "file": "file-actions.js",
@@ -2231,18 +2241,18 @@
     },
     {
       "file": "model-preview.js",
-      "bytes": 13906,
-      "sha256": "250c8e0779c17a825bf3b265866f192df26dbe601e98b5c492828eeff84d6f26"
+      "bytes": 13923,
+      "sha256": "a44fad446299c8fb884832a0805cd33f94401a879ea5044d70d71c5310b9b563"
     },
     {
       "file": "model-visibility.js",
-      "bytes": 1792,
-      "sha256": "7c7ebad9c0077ea6b3bdaacf2485b8b6682f6e8b0d64703ec9a5e282efa7a3cd"
+      "bytes": 1815,
+      "sha256": "f6d9208edc3a5444150c77effc100b543fe9d9224cd9695b4c8be27f56cfc0cb"
     },
     {
       "file": "model.html",
-      "bytes": 5221,
-      "sha256": "bc97d3348a097cc96b693052f4452bb11e374b1c3e006aef96ad7c5a2e5a805a"
+      "bytes": 5223,
+      "sha256": "ec6f414030f7f780cd14a979a470ec3ea8b9ff85f39fd8871beef53f0f949708"
     },
     {
       "file": "models/airport-corporate-context.glb",
@@ -3931,8 +3941,8 @@
     },
     {
       "file": "viewer-bootstrap.js",
-      "bytes": 803,
-      "sha256": "7d4213584e4d3163e8774244d789ca0ff4c83f15057e0f5a4f288c368a1eff97"
+      "bytes": 805,
+      "sha256": "73ede0b772688ce316bd505069633c5c7083ded3b965ce88243dca50fa5296e5"
     },
     {
       "file": "viewer-camera.js",
@@ -3955,5 +3965,5 @@
       "sha256": "2d9cfb19a32fac7548704fbfca44060267c233522645aa354fb4f6069e012d97"
     }
   ],
-  "bytes": 999962554
+  "bytes": 999970606
 }

@@ -7,7 +7,7 @@ export function applyModelVisibility(meshes,which,{referenceStudies=false,select
   let visible=!d.hiddenObsolete;
   if(d.draftStudy&&!referenceStudies&&d.projectId!==selectedStudyProjectId)visible=false;
   if(d.displayStatus!=='Existing'&&d.uncertain&&!uncertainVersions)visible=false;
-  if(which==='construction'&&d.displayStatus==='Under Construction'&&!d.recordedProgress)visible=false;
+  if(which==='construction'&&d.displayStatus==='Under Construction'&&!d.recordedProgress&&!d.constructionDesign)visible=false;
   if(!Array.isArray(d.sourceReplacements)&&d.replacementModes?.includes(which))visible=false;
   const inMode=d.modes?d.modes.includes(which):d.displayStatus==='Existing'||which==='future'||which==='construction'&&d.displayStatus==='Under Construction';
   mesh.visible=visible&&inMode;
