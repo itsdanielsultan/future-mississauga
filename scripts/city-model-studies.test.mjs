@@ -7,6 +7,7 @@ const THREE=await import('../public/vendor/three.module.js');
 const {GLTFLoader}=await import('../public/vendor/addons/loaders/GLTFLoader.js');
 const {MeshoptDecoder}=await import('../public/vendor/meshopt_decoder.mjs');
 const {cityModelStudies,loadCityStudy,bindStudyReplacement,presentCityStudyProjects}=await import('../public/city-model-studies.js');
+const {assetURL}=await import('../public/asset-delivery.js');
 const {shouldLoadRefinement,createOptionalRefinementLoader}=await import('../public/refinement-loading.js');
 const {applyModelVisibility}=await import('../public/model-visibility.js');
 const {splitSourceOverlaps}=await import('../public/source-layer-cut.js');
@@ -15,7 +16,7 @@ const root=new URL('../',import.meta.url),read=async path=>JSON.parse(await read
 const catalogue=await read('public/data/model-previews.json'),refinements=await read('public/data/refinement-models.json');
 const assets=cityModelStudies(refinements.assets,catalogue).filter(a=>a.defaultVisible&&!a.lowerShell);
 const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
-const fetcher=async url=>{const a=catalogue.assets.find(a=>a.url===url);return new Response(await readFile(new URL(a.repositoryFile||'public/'+a.url,root)));};
+const fetcher=async url=>{const a=catalogue.assets.find(a=>assetURL(a.url)===url);assert(a,'Only a resolved catalogue model may be requested');return new Response(await readFile(new URL(a.repositoryFile||'public/'+a.url,root)));};
 const meshes=root=>{const result=[];root.traverse(o=>{if(o.isMesh)result.push(o);});return result;};
 const triangles=root=>meshes(root).reduce((n,m)=>n+(m.geometry.index?.count??m.geometry.attributes.position.count)/3,0);
 const dispose=root=>{root.traverse(o=>{o.geometry?.dispose();for(const material of [o.material].flat().filter(Boolean))material.dispose();});root.removeFromParent();};

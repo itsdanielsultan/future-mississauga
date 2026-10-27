@@ -1,5 +1,5 @@
 try {
-  await import('./app.js?v=20261027-orocomposite1');
+  await import('./app.js?v=20261027-assets3');
 } catch (error) {
   const loading = document.querySelector('#loading');
   loading.hidden = false;

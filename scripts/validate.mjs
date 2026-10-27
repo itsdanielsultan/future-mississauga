@@ -131,7 +131,7 @@ export async function validateDocumentLinks(site = join(ROOT, 'public')) {
   }
   return report;
 }
-export async function validate(site = join(ROOT, 'public')) {
+export async function validate(site = join(ROOT, 'public'), {enforcePublicationSize = true} = {}) {
   site = resolve(site);
   const files = await walk(site);
   let bytes = 0;
@@ -161,7 +161,7 @@ export async function validate(site = join(ROOT, 'public')) {
       }
     }
   }
-  assert(bytes < 1_000_000_000, 'Published output exceeds conservative 1 GB limit.');
+  if(enforcePublicationSize)assert(bytes < 1_000_000_000, 'Published output exceeds conservative 1 GB limit.');
   let loadedModelAssets = 0, refinementBounds = null;
   for (const manifestName of ['refinement-models', 'transit-layer-manifest', 'landscape-layer-manifest']) {
     if (!names.has('data/' + manifestName + '.json')) continue;

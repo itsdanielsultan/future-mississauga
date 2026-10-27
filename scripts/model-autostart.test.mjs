@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 import {runInNewContext} from 'node:vm';
 import * as THREE from '../public/vendor/three.module.js';
 import {selectPreview} from '../public/model-preview-loading.js';
+import {assetURL} from '../public/asset-delivery.js';
 import {drawingPolicy} from '../public/viewer-runtime.js';
 
 const source = name => readFileSync(new URL('../public/' + name, import.meta.url), 'utf8');
@@ -61,7 +62,7 @@ function modelHarness({id = 'mcity-m1', graphics = true} = {}) {
     }
   }
   const context = {THREE: {...THREE, WebGLRenderer: Renderer}, OrbitControls: Controls, GLTFLoader: Loader,
-    selectPreview, drawingPolicy, batchOpaqueStudy() {},
+    selectPreview, assetURL, drawingPolicy, batchOpaqueStudy() {},
     createFrameScheduler: () => ({invalidate() { events.push('draw-request'); }, pause() {}, frames: 0}),
     verifiedModelBytes: asset => { const request = deferred(); requests.push({...request, id: asset.id}); return request.promise; },
     document: ui.document, window, location: {search: '?model=' + id, assign() {}, reload() { events.push('reload'); }},

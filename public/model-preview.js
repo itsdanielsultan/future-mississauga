@@ -1,8 +1,9 @@
+import {assetURL} from './asset-delivery.js?v=20261027-assets3';
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {drawingPolicy, createFrameScheduler} from './viewer-runtime.js?v=20261025-mobile1';
-import {selectPreview, verifiedModelBytes} from './model-preview-loading.js?v=20261025-five1';
+import {selectPreview, verifiedModelBytes} from './model-preview-loading.js?v=20261027-assets3';
 import {cityDataNotice} from './city-data-terms.js?v=20261026-direct1';
 import {batchOpaqueStudy} from './model-preview-batching.js?v=20261025-1';
 
@@ -63,7 +64,7 @@ if (!view) {
       finally { button.disabled = false; }
     };
     $('modelDownloads').append(button); downloadButtons.push(button);
-    const compressed = document.createElement('a'); compressed.href = asset.url; compressed.download = asset.url.split('/').pop();
+    const compressed = document.createElement('a'); compressed.href = assetURL(asset.url); compressed.download = asset.url.split('/').pop();
     compressed.textContent = asset.title + ': compressed GLB (' + (asset.bytes / 1e6).toFixed(2) + ' MB)'; $('compressedDownloads').append(compressed);
   }
 
