@@ -25,7 +25,7 @@ if (!view) {
   $('modelSelect').value = view.id; $('modelChooser').hidden = true; $('previewContent').hidden = false;
   $('modelTitle').textContent = view.title; document.title = view.title + ' · Future Mississauga';
   $('modelSubtitle').textContent = view.subtitle;
-  const cityProject = ({'mcity-pair':'mcity-1-2','mcity-m1':'mcity-1-2','mcity-m2':'mcity-1-2','avia-1':'avia','avia-2':'avia','edge-1':'edge-oro','edge-2':'edge-oro','artform':'artform'})[view.id];
+  const cityProject = ({'mcity-pair':'mcity-1-2','mcity-m1':'mcity-1-2','mcity-m2':'mcity-1-2','avia-1':'avia','avia-2':'avia','edge-1':'edge-oro','edge-2':'edge-oro','oro':'edge-oro','artform':'artform'})[view.id];
   if(cityProject){const link=document.createElement('a');link.href='explore.html?district='+(cityProject==='artform'?'cooksville':'downtown')+'&project='+cityProject;link.textContent='View in the city map ↗';const paragraph=document.createElement('p');paragraph.append(link);$('modelSubtitle').after(paragraph);}
   $('studySummary').textContent = view.summary; $('studyCredit').textContent = view.credit;
   $('studyLimits').textContent = view.limits; $('rightsNote').textContent = view.rights;
