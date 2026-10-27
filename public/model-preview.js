@@ -3,7 +3,7 @@ import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {drawingPolicy, createFrameScheduler} from './viewer-runtime.js?v=20261025-mobile1';
 import {selectPreview, verifiedModelBytes} from './model-preview-loading.js?v=20261025-five1';
-import {cityDataNotice} from './city-data-terms.js?v=20261025-1';
+import {cityDataNotice} from './city-data-terms.js?v=20261026-direct1';
 import {batchOpaqueStudy} from './model-preview-batching.js?v=20261025-1';
 
 const $ = id => document.getElementById(id);
@@ -25,6 +25,8 @@ if (!view) {
   $('modelSelect').value = view.id; $('modelChooser').hidden = true; $('previewContent').hidden = false;
   $('modelTitle').textContent = view.title; document.title = view.title + ' · Future Mississauga';
   $('modelSubtitle').textContent = view.subtitle;
+  const cityProject = ({'mcity-pair':'mcity-1-2','mcity-m1':'mcity-1-2','mcity-m2':'mcity-1-2','avia-1':'avia','avia-2':'avia','edge-1':'edge-oro','edge-2':'edge-oro','artform':'artform'})[view.id];
+  if(cityProject){const link=document.createElement('a');link.href='explore.html?district='+(cityProject==='artform'?'cooksville':'downtown')+'&project='+cityProject;link.textContent='View in the city map ↗';const paragraph=document.createElement('p');paragraph.append(link);$('modelSubtitle').after(paragraph);}
   $('studySummary').textContent = view.summary; $('studyCredit').textContent = view.credit;
   $('studyLimits').textContent = view.limits; $('rightsNote').textContent = view.rights;
   $('downloadNote').textContent = view.downloadNote || 'GLB downloads contain the displayed study geometry. Keep the credits and limitations with the model.';
@@ -36,10 +38,7 @@ if (!view) {
   const assets = view.assets.map(id => manifest.assets.find(a => a.id === id));
   if (assets.some(a => !a)) throw new Error('Incomplete study catalogue');
   const requiresCityTerms = assets.some(asset => asset.cityDataTerms);
-  let termsReady = Promise.resolve(), canLoad = !requiresCityTerms;
   if (requiresCityTerms) {
-    const notice = cityDataNotice({loadLabel:'Load model'});
-    $('previewContent').before(notice.element); termsReady = notice.ready;
     $('modelDownloads').before(cityDataNotice().element);
   }
   const bytes = new Map(), pending = new Map(), downloadButtons = [];
@@ -113,7 +112,7 @@ if (!view) {
   function rotate(theta, phi = 0) { if (ready && !contextLost) { const spherical = new THREE.Spherical().setFromVector3(camera.position.clone().sub(controls.target)); spherical.theta += theta; spherical.phi = THREE.MathUtils.clamp(spherical.phi + phi, .08, Math.PI * .49); camera.position.copy(controls.target).add(new THREE.Vector3().setFromSpherical(spherical)); controls.update(); invalidate(); } }
   function recoverMessage(message) { ready = false; status(message, true); $('retryModel').hidden = false; interaction(false); }
   async function load() {
-    if (!canLoad || !renderer || contextLost) return;
+    if (!renderer || contextLost || disposed) return;
     const request = ++loadRequest; ready = false; $('retryModel').hidden = true; interaction(false); disposeModels();
     try {
       const loader = new GLTFLoader();
@@ -168,8 +167,5 @@ if (!view) {
   window.addEventListener('pagehide',() => {disposed=true;loadRequest++;clearTimeout(restoreTimer);scheduler.pause();observer.disconnect();intersection.disconnect();disposeModels();controls?.dispose();renderer?.dispose();bytes.clear();});
   window.addEventListener('pageshow',event=>{if(event.persisted)location.reload();});
   window.modelPreview = {id:view.id,model,camera,controls,renderer,assets,get ready(){return ready&&!contextLost;},get performance(){return {...policy(),frames:scheduler.frames,contextLost};},get decodedBytes(){return [...bytes.values()].reduce((n,b)=>n+b.byteLength,0);}};
-  if (requiresCityTerms) status('Read the City data terms, then choose Load model.');
-  await termsReady;
-  canLoad = true;
   if(renderer && !disposed)await load();
 }

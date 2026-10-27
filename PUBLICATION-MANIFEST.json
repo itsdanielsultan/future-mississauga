@@ -37,8 +37,24 @@
       "externalCommitBytesVerifiedLocally": true,
       "remoteAvailabilityCheckedSeparately": true
     },
-    "files": 759,
-    "publishedBytes": 999923379,
+    "cityModelStudies": {
+      "assemblies": 6,
+      "existingPublicAssets": [
+        "mcity-m1",
+        "mcity-m2",
+        "avia-1",
+        "avia-2",
+        "avia-podium",
+        "edge-1",
+        "edge-2",
+        "artform"
+      ],
+      "allScenarios": true,
+      "atomicAssemblies": true,
+      "assetHashesValidatedByModelPreviewCatalogue": true
+    },
+    "files": 761,
+    "publishedBytes": 999962554,
     "originalPNGs": 33,
     "originalImageVerification": {
       "nativeMasterURLsPreserved": true,
@@ -150,8 +166,8 @@
     },
     {
       "file": "app.js",
-      "bytes": 68432,
-      "sha256": "02a522dd9102cfbf452a12d10facaf963c4cc6301ae7624c0f8efc9ea8d3e2cb"
+      "bytes": 69655,
+      "sha256": "e1ef6869a2f29c5340d50be137e233dc6343ca53dfdea407a84ba9525b6ca6b8"
     },
     {
       "file": "assets/apple-touch-icon.png",
@@ -255,13 +271,23 @@
     },
     {
       "file": "city-data-terms.css",
-      "bytes": 810,
-      "sha256": "fb3e3e360334cb2ca5c64ae66c31f362ce8a3b59019f45b7379d6917efd1d243"
+      "bytes": 273,
+      "sha256": "96a70be35290a77415de692a0f436adc82c04a979bd994bf90ee57cc7723494b"
     },
     {
       "file": "city-data-terms.js",
-      "bytes": 1627,
-      "sha256": "ec9f23e5345fed19e91b28c3b8130d0052098f0e984b3efeae1990de928ebc5c"
+      "bytes": 775,
+      "sha256": "a859bf89d21422a48db7ed0d1db402ddeae470a49e260f38fc0a004cbb21bd8d"
+    },
+    {
+      "file": "city-model-placements.js",
+      "bytes": 33261,
+      "sha256": "25133cf3094c02ab18b6f890eb80423066999ce727416c23160cab04239754b6"
+    },
+    {
+      "file": "city-model-studies.js",
+      "bytes": 5859,
+      "sha256": "2d3d836a9c183131abedbbf3d386e0c8724439e98966622d99d05067f45603dd"
     },
     {
       "file": "comparison.js",
@@ -766,7 +792,7 @@
     {
       "file": "data/publication-derivatives.json",
       "bytes": 108728,
-      "sha256": "8361f39b94525ef58e177d23e9015f1085c95ab460785dae0c69d39cc5d061e5"
+      "sha256": "44faea6d9a1f7d7dbd8db9df531b0f2e3fb81862dc8bbb8b7ba633dde2e92177"
     },
     {
       "file": "data/recent-project-updates.json",
@@ -1360,8 +1386,8 @@
     },
     {
       "file": "explore.html",
-      "bytes": 17636,
-      "sha256": "31d18109284bcc6e6de7838dd5525b8dc6045eaeee37ae91c5762116882739c1"
+      "bytes": 17788,
+      "sha256": "e1cfaa368b2ef5282cd331765a488de357711b58e7bd70db9862e8895c4afc79"
     },
     {
       "file": "file-actions.js",
@@ -2205,8 +2231,8 @@
     },
     {
       "file": "model-preview.js",
-      "bytes": 13714,
-      "sha256": "a492366b76015db5fc30584ecc79ceaf9898ce6e6ab428e91dea3bbcf5cfd890"
+      "bytes": 13906,
+      "sha256": "250c8e0779c17a825bf3b265866f192df26dbe601e98b5c492828eeff84d6f26"
     },
     {
       "file": "model-visibility.js",
@@ -2215,8 +2241,8 @@
     },
     {
       "file": "model.html",
-      "bytes": 5209,
-      "sha256": "953b5fc6b6e07a29f778be4db7498e9632de7069482da9312cdc8ebff0d30962"
+      "bytes": 5221,
+      "sha256": "bc97d3348a097cc96b693052f4452bb11e374b1c3e006aef96ad7c5a2e5a805a"
     },
     {
       "file": "models/airport-corporate-context.glb",
@@ -3425,8 +3451,8 @@
     },
     {
       "file": "refinement-loading.js",
-      "bytes": 2004,
-      "sha256": "88b1c3f02362310e43973bffadc3a5340fd3790f1ec14dfa1945ffee33473d4d"
+      "bytes": 2094,
+      "sha256": "56d30b1a26bb9edbce050e5d768b460f89fffb4d458ea118e5b15e31dfdbb797"
     },
     {
       "file": "renders/revamp/source-elevation-repair-qa.png",
@@ -3550,8 +3576,8 @@
     },
     {
       "file": "source-layer-cut.js",
-      "bytes": 3998,
-      "sha256": "97489ede2050d2ef49e471547d92c8d622662e9de0f4821b985d2f2932cf7b28"
+      "bytes": 4090,
+      "sha256": "19de9de2a3f95dca672d70b2fb704620efc3baf18622a5c4c0b84f18685c8d04"
     },
     {
       "file": "sources.css",
@@ -3905,8 +3931,8 @@
     },
     {
       "file": "viewer-bootstrap.js",
-      "bytes": 1120,
-      "sha256": "00123f8dde63fa590640398132a9c83c81ea966de1f3a008cdbab68490afedca"
+      "bytes": 803,
+      "sha256": "7d4213584e4d3163e8774244d789ca0ff4c83f15057e0f5a4f288c368a1eff97"
     },
     {
       "file": "viewer-camera.js",
@@ -3929,5 +3955,5 @@
       "sha256": "2d9cfb19a32fac7548704fbfca44060267c233522645aa354fb4f6069e012d97"
     }
   ],
-  "bytes": 999923379
+  "bytes": 999962554
 }
