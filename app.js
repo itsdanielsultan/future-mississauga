@@ -1,3 +1,4 @@
+import {assetURL} from './asset-delivery.js?v=20261027-assets3';
 import {drawingPolicy,createFrameScheduler} from './viewer-runtime.js?v=20261025-mobile1';
 import {withPNGMetadata} from './png-metadata.js?v=20261023-cardfooter1';
 import {createVisibleAttribution, exportCreditLines} from './source-attribution.js?v=20261023-refined1';
@@ -10,7 +11,7 @@ import {addArchitecturalEdges} from './building-presentation.js?v=20261022-detai
 import {projectNorth, presentationLayout, drawPresentationFooter} from './scene-presentation.js?v=20261023-usability1';
 import {adoptContextModelVisibility} from './context-model-visibility.js?v=20261017-contact1';
 import {loadModelAsset,shouldLoadRefinement,createOptionalRefinementLoader} from './refinement-loading.js?v=20261026-citymodels1';
-import {cityModelStudies,presentCityStudyProjects,loadCityStudy,bindStudyReplacement} from './city-model-studies.js?v=20261027-orocomposite1';
+import {cityModelStudies,presentCityStudyProjects,loadCityStudy,bindStudyReplacement} from './city-model-studies.js?v=20261027-assets3';
 import {splitSourceOverlaps} from './source-layer-cut.js?v=20261026-citymodels1';
 import {applyModelVisibility} from './model-visibility.js?v=20261027-orocomposite1';
 import {createSearchIndex,searchProjects,normalizeSearch} from './viewer-search.js?v=20260927-model-search1';
@@ -31,7 +32,7 @@ const daylight=createDaylight(THREE,scene,renderer);
 daylight.sun.shadow.mapSize.setScalar(getDrawingPolicy().shadowSize);
 const visibleAttribution=createVisibleAttribution({THREE,scene,camera});let displayedSources={osm:false};
 function syncVisibleAttribution(sources){displayedSources=sources;for(const node of document.querySelectorAll('[data-osm-credit]'))node.hidden=!displayedSources.osm;}
-const assetVersions=new Map();const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);loader.manager.setURLModifier(url=>{if(!url.includes('models/'))return url;const resolved=new URL(url,document.baseURI),version=assetVersions.get(resolved.href)||'20260926-visual-polish';resolved.searchParams.set('edition',version);return resolved.href;});let model,context,current,mode='future',futureMeshes=[],modelMeshes=[],detailMeshes=[],treeMeshes=[],loadToken=0,compare=false,split=.5,scope='district',registry='research',exporting=false,cameraFlight=null,focusRequest=0,homeFraming=null,homeDirection=null,framedProject=null;controls.addEventListener('change',()=>invalidate());
+const assetVersions=new Map();const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);loader.manager.setURLModifier(url=>{if(!url.includes('models/'))return url;const resolved=new URL(url,document.baseURI),version=assetVersions.get(resolved.href)||'20260926-visual-polish';resolved.searchParams.set('edition',version);return assetURL(resolved.href);});let model,context,current,mode='future',futureMeshes=[],modelMeshes=[],detailMeshes=[],treeMeshes=[],loadToken=0,compare=false,split=.5,scope='district',registry='research',exporting=false,cameraFlight=null,focusRequest=0,homeFraming=null,homeDirection=null,framedProject=null;controls.addEventListener('change',()=>invalidate());
 async function readData(n){for(let attempt=0;attempt<3;attempt++){try{const r=await fetch('data/'+n+'.json',{cache:'no-store',signal:AbortSignal.timeout(30000)});if(!r.ok)throw new Error(n+' unavailable');return await r.json();}catch(e){if(attempt===2){$('#loading').textContent='The model data could not be loaded. Reload this page to try again.';throw e;}}}}
 const initialQuery=new URLSearchParams(location.search);
 const [districts,projects,groups,overrides,stats,transitData,transitResearch,refinementData]=await Promise.all(['districts','projects','groups','overrides','stats','transit','transit-research','refinement-models'].map(readData));
@@ -43,7 +44,7 @@ for(const [url,version] of Object.entries({"models/exchange-textured-phase-aware
 for(const variants of Object.values(landscapeLayers.trees||{}))for(const asset of Object.values(variants))if(asset.url&&asset.sha256)assetVersions.set(new URL(asset.url,document.baseURI).href,asset.sha256.slice(0,16));
 const modelAssetVersions=await readData('model-asset-versions');
 for(const [url,hash] of Object.entries(modelAssetVersions.sha256))assetVersions.set(new URL(url,document.baseURI).href,hash.slice(0,16));
-function versionedTreeURL(url){const resolved=new URL(url,document.baseURI);resolved.searchParams.set('edition',assetVersions.get(resolved.href)||'20260926-visual-polish');return resolved.href;}
+function versionedTreeURL(url){const resolved=new URL(url,document.baseURI);resolved.searchParams.set('edition',assetVersions.get(resolved.href)||'20260926-visual-polish');return assetURL(resolved.href);}
 const projectById=new Map(projects.map(p=>[p.id,p])),groupByMesh=new Map();groups.forEach(g=>g.meshIds.forEach(id=>groupByMesh.set(id,g)));
 const notes={citywide:'Explore development across Mississauga.',downtown:'From parking lots to a connected downtown.','port-credit':'A waterfront village with a growing new edge.',lakeview:'An industrial waterfront becomes a new neighbourhood.',clarkson:'New density around an established GO connection.',cooksville:'A changing crossroads on the Hurontario corridor.',uptown:'The next skyline along the north–south line.','erin-mills':'Growth around established neighbourhoods.',streetsville:'New development around the historic village.',meadowvale:'Explore Meadowvale’s neighbourhoods and town centres.',malton:'Mississauga’s northeast neighbourhoods.','dixie-applewood':'New homes along the eastern corridors.',erindale:'Communities connected by the Dundas corridor.','airport-corporate':'Explore the airport and surrounding employment areas.',heartland:'The city’s northern employment and growth corridors.'};
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}

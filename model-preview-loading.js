@@ -1,3 +1,4 @@
+import {assetURL} from './asset-delivery.js?v=20261027-assets3';
 export function selectPreview(manifest, id) {
   return manifest.views.find(view => view.id === id) || null;
 }
@@ -11,7 +12,7 @@ export function trustedModelURL(url) {
 
 export async function verifiedModelBytes(asset, fetcher = globalThis.fetch) {
   if (!trustedModelURL(asset.url)) throw new Error('The model download address is unavailable.');
-  const response = await fetcher(asset.url);
+  const response = await fetcher(assetURL(asset.url));
   if (!response.ok) throw new Error('The model could not be downloaded. Please try again.');
   let bytes = new Uint8Array(await response.arrayBuffer());
   const sha = async value => Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', value)), b => b.toString(16).padStart(2, '0')).join('');

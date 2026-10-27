@@ -1,6 +1,6 @@
 import {createCityLowerShell} from './city-lower-shell.js?v=20261027-orocomposite1';
 import {registeredCityPlacements} from './city-model-placements.js?v=20261027-orocomposite1';
-import {verifiedModelBytes} from './model-preview-loading.js?v=20261025-five1';
+import {verifiedModelBytes} from './model-preview-loading.js?v=20261027-assets3';
 import {batchOpaqueStudy} from './model-preview-batching.js?v=20261025-1';
 
 // Only already-published models with documented registration enter the city map.
