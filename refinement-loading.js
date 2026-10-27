@@ -1,7 +1,8 @@
-// Optional studies are explicit, lazy and recoverable. No source is hidden until
+// Registered building details load by default; alternate studies remain opt-in.
+// All additions are lazy and recoverable. No source is hidden until
 // its replacement is loaded and actually visible in the chosen scenario.
 export function shouldLoadRefinement(asset,{referenceStudies=false,selectedStudyProjectId=null}={}){
- return !asset.localOptional||referenceStudies||asset.projectId===selectedStudyProjectId;
+ return asset.defaultVisible||!asset.localOptional||referenceStudies||asset.projectId===selectedStudyProjectId;
 }
 export async function loadModelAsset(loader,url,resolveURL=x=>x,fetcher=globalThis.fetch){
  if(!/\.glb\.gz(?:[?#]|$)/i.test(url))return loader.loadAsync(url);
