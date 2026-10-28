@@ -1,7 +1,20 @@
 import test from 'node:test';import assert from 'node:assert/strict';import {gzipSync} from 'node:zlib';import {readFileSync} from 'node:fs';import {runInNewContext} from 'node:vm';
-import {shouldLoadRefinement,loadModelAsset,createOptionalRefinementLoader} from '../public/refinement-loading.js';
+import {shouldLoadRefinement,refinementInDistrict,loadModelAsset,createOptionalRefinementLoader} from '../public/refinement-loading.js';
 const bytes=new Uint8Array([0x67,0x6c,0x54,0x46,2,0,0,0,12,0,0,0]);
 const loader={parseAsync:async b=>({bytes:[...new Uint8Array(b)]}),loadAsync:async url=>({url})};
+test('coverage restrictions override a sliver of overlap and forced loading, including citywide',()=>{
+ const asset={bounds:[[99,0,40],[160,12,80]],viewerDistricts:['citywide'],forceDistricts:['edge']};
+ assert(!refinementInDistrict(asset,{id:'edge',bounds:[0,0,100,100]}));
+ assert(refinementInDistrict(asset,{id:'citywide',bounds:[0,0,200,200]}));
+ assert(!refinementInDistrict({...asset,viewerDistricts:['other']},{id:'citywide',bounds:[0,0,200,200]}));
+});
+test('unrestricted refinements retain existing overlap, citywide and force-district behavior',()=>{
+ const asset={bounds:[[99,0,40],[160,12,80]]},edge={id:'edge',bounds:[0,0,100,100]},far={id:'far',bounds:[200,200,300,300]};
+ assert(refinementInDistrict(asset,edge));assert(!refinementInDistrict(asset,far));
+ assert(refinementInDistrict({...asset,forceDistricts:['far']},far));
+ assert(refinementInDistrict(asset,{id:'citywide',bounds:far.bounds}));
+ assert(refinementInDistrict({},far));
+});
 test('optional assets never load by default; selected project and explicit global opt-in load',()=>{const a={localOptional:true,projectId:'mcity'};assert(!shouldLoadRefinement(a));assert(shouldLoadRefinement(a,{selectedStudyProjectId:'mcity'}));assert(shouldLoadRefinement(a,{referenceStudies:true}));assert(!shouldLoadRefinement(a,{selectedStudyProjectId:'other'}));assert(shouldLoadRefinement({}));});
 test('ordinary GLB path is left to loader URL modifier without double-versioning',async()=>{assert.deepEqual(await loadModelAsset(loader,'model.glb',()=>{throw Error('must not resolve');}),{url:'model.glb'});});
 test('gzip URL decodes gzip bytes with versioned fetch and no external dependencies',async()=>{let url;const result=await loadModelAsset(loader,'model.glb.gz',x=>x+'?edition=hash',async x=>{url=x;return new Response(gzipSync(bytes));});assert.equal(url,'model.glb.gz?edition=hash');assert.deepEqual(result.bytes,[...bytes]);});

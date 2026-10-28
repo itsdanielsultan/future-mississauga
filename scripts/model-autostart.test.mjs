@@ -1,3 +1,6 @@
+import {modelDownloadAssets,configureStudyActions,studyViewerMessage} from '../public/model-study-presentation.js';
+import {buildingFeedbackHTML,bindBuildingFeedback} from '../public/building-feedback.js';
+import {modelRevisionForProject} from '../public/model-revisions.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -27,6 +30,7 @@ function dom() {
       disabled: false, textContent: '', clientWidth: 800, clientHeight: 600,
       classList: {toggle() {}},
       append(...nodes) { this.children.push(...nodes); },
+      insertAdjacentHTML(position,html) { (this.insertedHTML??=[]).push({position,html}); },
       prepend(...nodes) { this.children.unshift(...nodes); },
       before(...nodes) { this.preceding.push(...nodes); },
       after(...nodes) { (this.following??=[]).push(...nodes); },
@@ -39,7 +43,8 @@ function dom() {
     created.push(node); return node;
   }
   const get = id => { if (!elements.has(id)) elements.set(id, element()); return elements.get(id); };
-  const document = {hidden: false, title: '', getElementById: get, querySelector: selector => get(selector.slice(1)),
+  const document = {hidden: false, title: '', getElementById: get, querySelector: selector => selector.startsWith('#')?get(selector.slice(1)):null,
+    querySelectorAll: selector => selector.startsWith('#')?[get(selector.slice(1))]:[],
     createElement: element, createTextNode: text => text, addEventListener() {}, body: element('body')};
   return {get, created, document, element};
 }
@@ -63,7 +68,7 @@ function modelHarness({id = 'mcity-m1', graphics = true} = {}) {
     }
   }
   const context = {THREE: {...THREE, WebGLRenderer: Renderer}, OrbitControls: Controls, GLTFLoader: Loader,
-    selectPreview, assetURL, drawingPolicy, fitPerspectiveBox, batchOpaqueStudy() {},
+    selectPreview, assetURL, drawingPolicy, fitPerspectiveBox, modelDownloadAssets,studyViewerMessage,configureStudyActions:view=>configureStudyActions(view,ui.document),buildingFeedbackHTML,bindBuildingFeedback,modelRevisionForProject,loadModelRevisions:async()=>null,batchOpaqueStudy() {},
     createFrameScheduler: () => ({invalidate() { events.push('draw-request'); }, pause() {}, frames: 0}),
     verifiedModelBytes: asset => { const request = deferred(); requests.push({...request, id: asset.id}); return request.promise; },
     document: ui.document, window, location: {search: '?model=' + id, assign() {}, reload() { events.push('reload'); }},
@@ -164,6 +169,19 @@ test('Maritz starts directly, links to Heartland and retains the design credit a
  assert.match(run.get('studyCredit').textContent,/Design: SG&M Architects Inc\. \(formerly Sirlin Giller & Malek Architects\)\./);
  assert.match(run.get('studyCredit').textContent,/Model creation: Daniel Sultan/);
  assert.match(run.get('studyLimits').textContent,/photograph date is unknown/);
+ assert.equal(run.created.filter(node=>node.className==='city-data-terms').length,1);
+ run.requests[0].resolve(new Uint8Array(8));await run.done;assert.equal(run.window.modelPreview.ready,true);
+});
+
+
+test('275 Superior starts directly with visible photo and City credits, without model download controls',async()=>{
+ const run=modelHarness({id:'ergocentric-275-superior'});await settle();
+ assert.deepEqual(run.requests.map(request=>request.id),['ergocentric-275-superior']);
+ assert.equal(run.created.filter(node=>node.href==='explore.html?district=citywide&project=ergocentric-275-superior').length,1);
+ assert.equal(run.get('modelDownloads').hidden,true);assert.equal(run.get('modelDownloads').children.length,0);
+ assert.equal(run.get('compressedDownloads').hidden,true);assert.equal(run.get('compressedDownloads').children.length,0);
+ assert.equal(run.get('downloadNote').hidden,true);
+ assert.match(run.get('studyCredit').insertedHTML[0].html,/>David Lasker\/Cityscape Photography<\/a>/);
  assert.equal(run.created.filter(node=>node.className==='city-data-terms').length,1);
  run.requests[0].resolve(new Uint8Array(8));await run.done;assert.equal(run.window.modelPreview.ready,true);
 });

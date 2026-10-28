@@ -96,3 +96,57 @@ test('Maritz fallback, unrelated project and empty geometry do not claim facade 
   assert.deepEqual(exportCreditLines({osm:false,designCredits:[]}),exportCreditLines({osm:false}));
   assert(exportCreditLines({osm:true,designCredits:['Design: test']}).some(line=>line.includes('openstreetmap.org/copyright')));
 });
+
+const PHOTO_CREDIT='Photographic reference: David Lasker/Cityscape Photography · davidlaskerphotography.com';
+const PHOTO_LINK={label:'David Lasker/Cityscape Photography',url:'https://davidlaskerphotography.com/'};
+function photoScene(){
+  const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(35,1,1,1000);
+  camera.position.set(0,0,100);camera.lookAt(0,0,0);
+  const root=new THREE.Group(),mesh=new THREE.Mesh(new THREE.BoxGeometry(10,10,10),new THREE.MeshBasicMaterial());
+  mesh.userData={projectId:'ergocentric-275-superior',assetId:'ergocentric-275-superior-exterior-study'};
+  root.add(mesh);scene.add(root);scene.updateMatrixWorld(true);
+  return {scene,camera,root,mesh,attribution:createVisibleAttribution({THREE,scene,camera})};
+}
+
+test('275 Superior photograph credit follows the exact visible asset once and survives image export',()=>{
+  const {scene,root,mesh,attribution}=photoScene();
+  const second=mesh.clone();second.material=mesh.material.clone();root.add(second);scene.updateMatrixWorld(true);attribution.refresh();
+  const visible=attribution.update();
+  assert.deepEqual(visible.designCredits,[PHOTO_CREDIT]);assert.deepEqual(visible.creditLinks,[PHOTO_LINK]);
+  assert.equal(exportCreditLines(visible).filter(line=>line===PHOTO_CREDIT).length,1);
+  assert.equal(visible.osm,false);
+  root.visible=false;assert.deepEqual(attribution.update().designCredits,[]);assert.deepEqual(attribution.update().creditLinks,[]);
+  root.visible=true;root.position.x=1000;scene.updateMatrixWorld(true);
+  assert.deepEqual(attribution.update().creditLinks,[],'Off-camera models add no linked credit');
+  root.position.x=0;scene.updateMatrixWorld(true);mesh.visible=false;second.visible=false;
+  assert.deepEqual(attribution.update().designCredits,[],'Hidden scenario geometry adds no credit');
+  mesh.visible=true;second.visible=true;scene.remove(root);attribution.refresh();
+  assert.deepEqual(attribution.update().designCredits,[]);assert.deepEqual(attribution.update().creditLinks,[],'Unloaded studies remove their links');
+});
+
+test('275 municipal fallback, wrong project, empty geometry and invisible materials cannot claim the photo reference',()=>{
+  const {mesh,attribution}=photoScene();
+  mesh.userData={projectId:'ergocentric-275-superior'};attribution.refresh();
+  assert.deepEqual(attribution.update().designCredits,[]);assert.deepEqual(attribution.update().creditLinks,[]);
+  mesh.userData={projectId:'other-building',assetId:'ergocentric-275-superior-exterior-study'};attribution.refresh();
+  assert.deepEqual(attribution.update().creditLinks,[]);
+  mesh.userData={projectId:'ergocentric-275-superior',assetId:'ergocentric-275-superior-exterior-study'};attribution.refresh();
+  mesh.material.opacity=0;assert.deepEqual(attribution.update().creditLinks,[]);
+  mesh.material.opacity=1;mesh.material.visible=false;assert.deepEqual(attribution.update().designCredits,[]);
+  mesh.material.visible=true;mesh.geometry.setIndex([]);assert.deepEqual(attribution.update().creditLinks,[]);
+});
+
+test('Maritz and 275 credits coexist and remain available for comparison-view union',()=>{
+  const {scene,mesh,attribution}=photoScene();
+  const maritz=mesh.clone();maritz.userData={projectId:'sgm-maritz-6710',assetId:'sgm-maritz-6710-exterior-study'};
+  scene.add(maritz);scene.updateMatrixWorld(true);attribution.refresh();
+  const design='Design: SG&M Architects Inc. (formerly Sirlin Giller & Malek Architects).';
+  assert.deepEqual(attribution.update().designCredits,[design,PHOTO_CREDIT]);
+  assert.deepEqual(attribution.update().creditLinks,[PHOTO_LINK]);
+  mesh.visible=false;const existing=attribution.update('existing');
+  assert.deepEqual(existing.designCredits,[design]);assert.deepEqual(existing.creditLinks,[]);
+  mesh.visible=true;maritz.visible=false;const future=attribution.update('future');
+  assert.deepEqual(future.designCredits,[PHOTO_CREDIT]);assert.deepEqual(future.creditLinks,[PHOTO_LINK]);
+  const union={osm:existing.osm||future.osm,designCredits:[...new Set([...existing.designCredits,...future.designCredits])]};
+  assert(exportCreditLines(union).includes(design));assert(exportCreditLines(union).includes(PHOTO_CREDIT));
+});

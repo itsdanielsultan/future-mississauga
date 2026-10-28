@@ -18,7 +18,7 @@ test('Preview routes select only exact registered IDs',()=>{
   assert.deepEqual(selectPreview(manifest,'mcity-pair').assets,['mcity-m1','mcity-m2']);
 });
 
-test('Every download decodes to its pinned GLB and only reachable model geometry',async()=>{
+test('Every public model payload decodes to its pinned GLB and only reachable geometry',async()=>{
   for(const asset of manifest.assets){
     const encoded=await readFile(assetFile(asset));
     assert.equal(encoded.length,asset.bytes);assert.equal(sha(encoded),asset.downloadSHA256);

@@ -8,7 +8,7 @@ const {GLTFLoader}=await import('../public/vendor/addons/loaders/GLTFLoader.js')
 const {MeshoptDecoder}=await import('../public/vendor/meshopt_decoder.mjs');
 const {cityModelStudies,loadCityStudy,bindStudyReplacement,presentCityStudyProjects}=await import('../public/city-model-studies.js');
 const {assetURL}=await import('../public/asset-delivery.js');
-const {shouldLoadRefinement,createOptionalRefinementLoader}=await import('../public/refinement-loading.js');
+const {shouldLoadRefinement,refinementInDistrict,createOptionalRefinementLoader}=await import('../public/refinement-loading.js');
 const {applyModelVisibility}=await import('../public/model-visibility.js');
 const {splitSourceOverlaps}=await import('../public/source-layer-cut.js');
 const {validateCityModelStudies}=await import('./validate-city-model-studies.mjs');
@@ -23,7 +23,7 @@ const dispose=root=>{root.traverse(o=>{o.geometry?.dispose();for(const material 
 const parse=async bytes=>loader.parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');
 
 test('registered completed assemblies load by default; unrelated optional studies remain optional',async()=>{
- assert.deepEqual(assets.map(a=>a.projectId),['mcity-1-2','mcity-1-2','avia','edge-oro','edge-oro','artform','sgm-maritz-6710']);
+ assert.deepEqual(assets.map(a=>a.projectId),['mcity-1-2','mcity-1-2','avia','edge-oro','edge-oro','artform','sgm-maritz-6710','ergocentric-275-superior']);
  for(const asset of assets)assert(shouldLoadRefinement(asset));
  assert(!shouldLoadRefinement({localOptional:true,projectId:'unrelated'}));
  assert.equal(cityModelStudies(refinements.assets,catalogue).filter(a=>!a.defaultVisible).length,refinements.assets.length-2);
@@ -158,5 +158,26 @@ test('Maritz failures preserve source; concurrent retries commit once and an old
 
 test('Maritz focus retains an explicitly selected supported area and otherwise opens Heartland',async()=>{
  const {runInNewContext}=await import('node:vm'),source=await readFile(new URL('public/app.js',root),'utf8'),start=source.indexOf('function districtForProject(p){'),end=source.indexOf('function frameProject(',start),project=(await read('public/data/projects.json')).find(p=>p.id==='sgm-maritz-6710'),districts=await read('public/data/districts.json');
- for(const id of ['heartland','meadowvale-village','citywide','downtown']){const current=districts.find(d=>d.id===id),selected=runInNewContext(source.slice(start,end)+';districtForProject(project)',{project,current,districts});assert.equal(selected.id,id==='downtown'?'heartland':id);}
+ for(const id of ['heartland','meadowvale-village','citywide','downtown']){const current=districts.find(d=>d.id===id),selected=runInNewContext(source.slice(start,end)+';districtForProject(project)',{project,current,districts,window:{atlasReady:id},projectMeshes:()=>[]});assert.equal(selected.id,id==='downtown'?'heartland':id);}
+});
+
+const ergocentric=assets.find(asset=>asset.projectId==='ergocentric-275-superior');
+test('275 Superior uses the complete credited model at original City coordinates and restricts the incomplete district crop',async()=>{
+ assert.deepEqual(ergocentric.translation,[0,0,0]);assert.equal(ergocentric.rotationYDegrees,0);assert.deepEqual(ergocentric.viewerDistricts,['citywide']);
+ const districts=await read('public/data/districts.json');
+ for(const district of districts)assert.equal(refinementInDistrict(ergocentric,district),district.id==='citywide');
+ const result=await loadCityStudy(THREE,loader,ergocentric,{fetcher,dispose});
+ assert.equal(triangles(result.scene),1472);const baseline=meshes(result.scene).find(m=>m.name==='32-897');assert(baseline);
+ assert.deepEqual(meshKeys(baseline).sort(),[...ergocentric.replacementTriangleKeys].sort());assert.equal(ergocentric.replacementTriangleKeys.length,44);
+ const project=(await read('public/data/projects.json')).find(p=>p.id===ergocentric.projectId);assert.equal(project.viewerDistrict,'citywide');assert.deepEqual(project.viewerDistricts,['citywide']);
+ const photographer=project.sources.find(s=>s.title==='David Lasker/Cityscape Photography');assert.equal(photographer.url,'https://davidlaskerphotography.com/');
+ dispose(result.scene);
+});
+test('275 Superior is additive to current Citywide without cutting unrelated source faces',async()=>{
+ const scene=(await parse(await readFile(new URL('public/models/citywide.glb',root)))).scene,before=triangles(scene);
+ const audit=splitSourceOverlaps(THREE,scene,[ergocentric]);assert.equal(triangles(scene),before);assert.equal(audit.reduce((n,a)=>n+a.fallbackTriangles,0),0);
+ const result=await loadCityStudy(THREE,loader,ergocentric,{fetcher,dispose}),details=meshes(result.scene);
+ for(const m of details)Object.assign(m.userData,{assetId:ergocentric.id,projectId:ergocentric.projectId,displayStatus:'Existing',modes:ergocentric.modes,draftStudy:false});
+ for(const mode of ['existing','construction','future']){applyModelVisibility(details,mode,{referenceStudies:false,uncertainVersions:false});assert(details.every(m=>m.visible));}
+ dispose(scene);dispose(result.scene);
 });

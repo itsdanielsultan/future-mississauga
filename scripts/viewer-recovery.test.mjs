@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {runInNewContext} from 'node:vm';
 import * as THREE from '../public/vendor/three.module.js';
-import {shouldLoadRefinement} from '../public/refinement-loading.js';
+import {shouldLoadRefinement,refinementInDistrict} from '../public/refinement-loading.js';
 
 // Run the real handlers with deferred network/encoding work. These tests cover
 // state transitions that synchronous source assertions cannot establish.
@@ -58,6 +58,7 @@ function districtHarness(){
   districts:[{id,name:'Streetsville',bounds:[0,0,10,10]}],notes:{},treeDataCache:{},window:{atlasReady:null,dispatchEvent(){}},
   document:{baseURI:'https://local.invalid/',querySelectorAll:()=>[],createTextNode:text=>text,createElement:()=>element()},
   wrap:$('#sceneWrap'),controls:{enabled:true},surroundingCity:{setDistrict(){}},contextAssets:{},
+  localNeighbourhood:{clear(){}},updateNeighbourhood(){},
   loadModelAsset:async(_loader,url)=>{if(url===`models/${id}.glb`)await base.promise;return {scene:new THREE.Group()};},
   loader:{},versionedTreeURL:x=>x,assetVersions:new Map(),modelAssetVersions:{sha256:{}},URL,DOMException,
   visibleAttribution:{registerAsset(){},refresh(){}},refinementData:{assets:[],constructionEvidence:[]},
@@ -67,7 +68,7 @@ function districtHarness(){
   showStudyLoadStatus(){},cancelCameraFlight(){},setSelectedStudy(){},closeModelSearch(){},reset(){},updateTransit(){},
   ensureOptionalRefinements:()=>optional.promise,invalidate:()=>invalidations.push(context.window.atlasReady),history:{replaceState(){}},CustomEvent:class{},
   console:{error:error=>errors.push(error)}};
- runInNewContext(section('async function loadDistrict(', 'const optionalRefinementLoaders='),context);
+ runInNewContext(section('async function loadDistrict(', 'const neighbourhoodAsset='),context);
  return {context,$,base,optional,errors,invalidations,start:()=>context.loadDistrict(id)};
 }
 
@@ -103,7 +104,7 @@ test('late optional failure cannot undo Return to current view or restore its re
  const context={$,model,loadToken:1,current:{id:'downtown',bounds:[0,0,10,10]},window:{atlasReady:'downtown'},
   studyStatusRequest:0,selectedStudyProjectId:'mcity',draftToggle:{checked:false},
   optionalRefinementLoaders:new WeakMap([[model,manager]]),refinementData:{assets:[{id:'m1',projectId:'mcity',localOptional:true}]},
-  shouldLoadRefinement,showStudyLoadStatus:(message,retry=false)=>messages.push({message,retry}),
+  shouldLoadRefinement,refinementInDistrict,showStudyLoadStatus:(message,retry=false)=>messages.push({message,retry}),
   studyNotice:{},studyNoticeText:{},console:{warn(){}}};
  runInNewContext(section('async function ensureOptionalRefinements(){','function modelDownloads(p)'),context);
  runInNewContext(section('function setSelectedStudy(project){','leaveStudyButton.onclick='),context);

@@ -7,9 +7,12 @@ import {drawingPolicy, createFrameScheduler} from './viewer-runtime.js?v=2026102
 import {selectPreview, verifiedModelBytes} from './model-preview-loading.js?v=20261027-assets3';
 import {cityDataNotice} from './city-data-terms.js?v=20261026-direct1';
 import {batchOpaqueStudy} from './model-preview-batching.js?v=20261025-1';
+import {buildingFeedbackHTML,bindBuildingFeedback} from './building-feedback.js?v=20261028-improvements1';
+import {loadModelRevisions,modelRevisionForProject} from './model-revisions.js?v=20261028-improvements1';
+import {modelDownloadAssets,configureStudyActions,studyViewerMessage} from './model-study-presentation.js?v=20261028-superior1';
 
 const $ = id => document.getElementById(id);
-const response = await fetch('data/model-previews.json?v=20261028-maritz1');
+const response = await fetch('data/model-previews.json?v=20261028-superior1');
 if (!response.ok) throw new Error('Study catalogue unavailable');
 const manifest = await response.json();
 const requestedId = new URLSearchParams(location.search).get('model');
@@ -22,17 +25,23 @@ for (const item of manifest.views) {
 }
 $('modelSelect').onchange = () => { if ($('modelSelect').value) location.assign('model.html?model=' + encodeURIComponent($('modelSelect').value)); };
 if (!view) {
-  $('choiceStatus').textContent = requestedId ? 'This model link is unavailable. Choose an available study below.' : 'Choose a model to explore and download.';
+  $('choiceStatus').textContent = requestedId ? 'This model link is unavailable. Choose an available study below.' : 'Choose a building study to explore.';
 } else {
   $('modelSelect').value = view.id; $('modelChooser').hidden = true; $('previewContent').hidden = false;
   $('modelTitle').textContent = view.title; document.title = view.title + ' · Future Mississauga';
   $('modelSubtitle').textContent = view.subtitle;
   const cityProject = ({'mcity-pair':'mcity-1-2','mcity-m1':'mcity-1-2','mcity-m2':'mcity-1-2','avia-1':'avia','avia-2':'avia','edge-1':'edge-oro','edge-2':'edge-oro','oro':'edge-oro','artform':'artform','sgm-maritz-6710':'sgm-maritz-6710'})[view.id];
-  if(cityProject){const link=document.createElement('a');link.href='explore.html?district='+(cityProject==='sgm-maritz-6710'?'heartland':cityProject==='artform'?'cooksville':'downtown')+'&project='+cityProject;link.textContent='View in the city map ↗';const paragraph=document.createElement('p');paragraph.append(link);$('modelSubtitle').after(paragraph);}
+  const projectId=view.projectId||cityProject;
+  const feedback=document.createElement('p');feedback.className='project-model-preview';feedback.innerHTML=buildingFeedbackHTML({id:projectId,name:view.title},{viewURL:location.href});$('modelSubtitle').after(feedback);
+  bindBuildingFeedback(feedback,()=>({viewURL:location.href}));
+  void loadModelRevisions().then(registry=>{const revision=modelRevisionForProject(registry,manifest,projectId,view.id);if(!revision)return;const paragraph=document.createElement('p');paragraph.className='muted';paragraph.setAttribute('aria-label','Model revision');const time=document.createElement('time');time.dateTime=revision.updatedOn;time.textContent=revision.label;paragraph.append(time);$('modelSubtitle').after(paragraph);});
+  const cityURL=view.cityURL||(cityProject?'explore.html?district='+(cityProject==='sgm-maritz-6710'?'heartland':cityProject==='artform'?'cooksville':'downtown')+'&project='+cityProject:'');
+  if(cityURL){const link=document.createElement('a');link.href=cityURL;link.textContent='View in the city map ↗';const paragraph=document.createElement('p');paragraph.append(link);$('modelSubtitle').after(paragraph);}
   if(view.comparisonURL){const link=document.createElement('a');link.href=view.comparisonURL;link.textContent='Before and after ↗';const paragraph=document.createElement('p');paragraph.append(link);$('modelSubtitle').after(paragraph);}
   $('studySummary').textContent = view.summary; $('studyCredit').textContent = view.credit;
   $('studyLimits').textContent = view.limits; $('rightsNote').textContent = view.rights;
   $('downloadNote').textContent = view.downloadNote || 'GLB downloads contain the displayed study geometry. Keep the credits and limitations with the model.';
+  configureStudyActions(view);
   for (const source of view.sources) {
     const li = document.createElement('li'), a = document.createElement('a');
     a.href = source.url; a.textContent = source.title; a.target = '_blank'; a.rel = 'noopener';
@@ -45,13 +54,13 @@ if (!view) {
     $('modelDownloads').before(cityDataNotice().element);
   }
   const bytes = new Map(), pending = new Map(), downloadButtons = [];
-  const status = (message, error = false) => { if(contextLost){message='Graphics paused. Restore the model to continue.';error=true;} $('previewStatus').textContent = message; $('previewStatus').classList.toggle('error', error); };
+  const status = (message, error = false) => { if(contextLost){message='Graphics paused. Restore the model to continue.';error=true;} $('previewStatus').textContent = studyViewerMessage(view,message); $('previewStatus').classList.toggle('error', error); };
   async function getBytes(asset) {
     if (bytes.has(asset.id)) return bytes.get(asset.id);
     if (!pending.has(asset.id)) pending.set(asset.id, verifiedModelBytes(asset).then(data => { bytes.set(asset.id, data); return data; }).finally(() => pending.delete(asset.id)));
     return pending.get(asset.id);
   }
-  for (const asset of assets) {
+  for (const asset of modelDownloadAssets(view,assets)) {
     const button = document.createElement('button'); button.dataset.download = asset.id;
     button.textContent = 'Download ' + asset.title + ' GLB · ' + (asset.decodedBytes / 1e6).toFixed(1) + ' MB';
     button.onclick = async () => {
@@ -156,7 +165,7 @@ if (!view) {
     if(contextLost){
       try{contextRestorer?.restoreContext();}catch{}
       clearTimeout(restoreTimer);
-      restoreTimer=setTimeout(()=>{if(contextLost){reloadForRecovery=true;$('retryModel').textContent='Reload viewer';$('previewStatus').textContent='Graphics could not be restored. Reload the viewer or use the model download.';}},3000);
+      restoreTimer=setTimeout(()=>{if(contextLost){reloadForRecovery=true;$('retryModel').textContent='Reload viewer';$('previewStatus').textContent=studyViewerMessage(view,'Graphics could not be restored. Reload the viewer or use the model download.');}},3000);
       return;
     }
     load();

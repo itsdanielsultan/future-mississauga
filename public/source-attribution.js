@@ -3,6 +3,8 @@ import {indirectSourceRegions} from './source-attribution-regions.js?v=20261023-
 // Rules are audited against the saved City, transit, airfield and Voya assets.
 const OSM = /OpenStreetMap|\bOSM\b|openstreetmap\.org/i;
 const MARITZ_DESIGN_CREDIT = 'Design: SG&M Architects Inc. (formerly Sirlin Giller & Malek Architects).';
+const ERGOCENTRIC_PHOTO_CREDIT = 'Photographic reference: David Lasker/Cityscape Photography · davidlaskerphotography.com';
+const ERGOCENTRIC_PHOTO_LINK = {label:'David Lasker/Cityscape Photography',url:'https://davidlaskerphotography.com/'};
 export function usesOpenStreetMap(data = {}, name = '') {
   return /^OSM-/i.test(name) || /^osm-beach-/i.test(data.id || '') ||
     OSM.test(String(data.source || '')) ||
@@ -12,14 +14,16 @@ export function usesOpenStreetMap(data = {}, name = '') {
 
 export function createVisibleAttribution({THREE, scene, camera, regions=indirectSourceRegions}) {
   const frustum = new THREE.Frustum(), matrix = new THREE.Matrix4(), assets = new WeakMap();
-  let candidates = [], indirect = [], unknown = [], designCandidates = [];
+  let candidates = [], indirect = [], unknown = [], designCandidates = [], photoCandidates = [];
   function registerAsset(root, url, sha256) {assets.set(root,{url,sha256});}
   function refresh() {
-    candidates = []; indirect = []; unknown = []; designCandidates = [];
+    candidates = []; indirect = []; unknown = []; designCandidates = []; photoCandidates = [];
     scene.traverse(object => {
       if (object.isMesh && usesOpenStreetMap(object.userData, object.name)) candidates.push(object);
       if (object.isMesh && object.userData?.projectId === 'sgm-maritz-6710' &&
           object.userData?.assetId === 'sgm-maritz-6710-exterior-study') designCandidates.push(object);
+      if (object.isMesh && object.userData?.projectId === 'ergocentric-275-superior' &&
+          object.userData?.assetId === 'ergocentric-275-superior-exterior-study') photoCandidates.push(object);
       const asset=assets.get(object);
       if(!asset)return;
       const matches=regions.filter(region=>region.assetUrl===asset.url);
@@ -41,9 +45,11 @@ export function createVisibleAttribution({THREE, scene, camera, regions=indirect
   function update(mode='future') {
     camera.updateMatrixWorld();
     frustum.setFromProjectionMatrix(matrix.multiplyMatrices(camera.projectionMatrix, camera.matrixWorldInverse));
+    const photoVisible=photoCandidates.some(visible);
     return {
       osm:candidates.some(visible)||unknown.some(visible)||indirect.some(region=>region.modes.includes(mode)&&region.meshes.some(isShown)&&frustum.intersectsBox(region.box)),
-      designCredits:designCandidates.some(visible)?[MARITZ_DESIGN_CREDIT]:[]
+      designCredits:[...(designCandidates.some(visible)?[MARITZ_DESIGN_CREDIT]:[]),...(photoVisible?[ERGOCENTRIC_PHOTO_CREDIT]:[])],
+      creditLinks:photoVisible?[{...ERGOCENTRIC_PHOTO_LINK}]:[]
     };
   }
   refresh();

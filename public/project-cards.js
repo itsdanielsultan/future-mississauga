@@ -1,4 +1,5 @@
 /** Project card presentation only. Does not change project facts or model status. */
+import {buildingFeedbackHTML} from './building-feedback.js?v=20261028-improvements1';
 const escapeHTML=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const text=value=>typeof value==='string'?value.trim():typeof value==='number'&&Number.isFinite(value)?String(value):'';
 const unique=values=>[...new Set(values.map(text).filter(Boolean))];
@@ -112,16 +113,19 @@ function modelNotes(project,asset,override){
 }
 
 /** Selection-panel contents. Existing close button and camera logic stay in app.js. */
-export function projectDetailsHTML(project,{asset=null}={}){
+export function projectDetailsHTML(project,{asset=null,view={},revision=null}={}){
   const override=overrides[project.id],status=projectStatus(project),summary=override?.summary||text(project.summary);
   const location=unique([project.address&&project.address!==project.name?project.address:'',project.district||project.researchArea]).join(' · ');
   const notes=modelNotes(project,asset,override),sources=sourceItems(project,override),raw=text(project.status);
   const statusDetail=!override?.omitStatusDetail&&raw&&raw!==status.label?`<p class="project-card-status-detail">${escapeHTML(raw)}${project.statusDate?` · ${escapeHTML(project.statusDate)}`:''}</p>`:'';
   const sourceNote=override?.sourceNote||'Reference material belongs to its credited owners. A source link does not grant permission to reuse it.';
   const detail=notes.length||sources.length||statusDetail||facts(project).length,qualifier=modelQualifier(project,asset,override);
-  const previews=({'sgm-maritz-6710':[['sgm-maritz-6710','Open model preview & download']],'artform':[['artform','Open model preview & download']],'mcity-1-2':[['mcity-pair','Open model preview & download']],'edge-oro':[['edge-1','Edge 1 study'],['edge-2','Edge 2 study'],['oro','Oro intended-design study']],'avia':[['avia-1','Avia 1 with shared podium'],['avia-2','Avia 2 with shared podium']]})[project.id];
+  const previews=({'ergocentric-275-superior':[['ergocentric-275-superior','Open model preview']],'sgm-maritz-6710':[['sgm-maritz-6710','Open model preview & download']],'artform':[['artform','Open model preview & download']],'mcity-1-2':[['mcity-pair','Open model preview & download']],'edge-oro':[['edge-1','Edge 1 study'],['edge-2','Edge 2 study'],['oro','Oro intended-design study']],'avia':[['avia-1','Avia 1 with shared podium'],['avia-2','Avia 2 with shared podium']]})[project.id];
   const preview=previews?`<p class="project-model-preview">${previews.map(([id,title])=>`<a href="model.html?model=${id}">${escapeHTML(title)} ↗</a>`).join(' · ')}</p>`:'';
-  return `<div class="project-card-content"><div class="project-card-meta"><span class="project-card-status" data-tone="${status.tone}">${escapeHTML(status.label)}</span>${qualifier?`<span class="project-card-qualifier">${escapeHTML(qualifier)}</span>`:''}</div><h3>${escapeHTML(project.name)}</h3>${location?`<p class="project-card-location">${escapeHTML(location)}</p>`:''}${summary?`<p class="project-card-summary">${escapeHTML(summary)}</p>`:''}${preview}${detail?`<details class="project-card-disclosure"><summary>About this model & sources</summary><div class="project-card-details">${statusDetail}${notes.length?`<section aria-label="Model details"><h4>The model</h4>${notes.map(note=>`<p>${escapeHTML(note)}</p>`).join('')}</section>`:''}${completionRowsHTML(project)}${sourcesHTML(sources)}${sources.length?`<p class="project-card-rights">${escapeHTML(sourceNote)}</p>`:''}</div></details>`:''}</div>`;
+  const revisionLine=revision?.projectId===project.id?`<p class="project-card-location" aria-label="Model revision"><time datetime="${escapeHTML(revision.updatedOn)}">${escapeHTML(revision.label)}</time></p>`:'';
+  const feedback=`<p class="project-model-preview">${buildingFeedbackHTML(project,view)}</p>`;
+  const referenceCredit=project.id==='ergocentric-275-superior'?'<p class="project-card-location">Photographic reference: <a href="https://davidlaskerphotography.com/" target="_blank" rel="noopener noreferrer">David Lasker/Cityscape Photography</a></p>':'';
+  return `<div class="project-card-content"><div class="project-card-meta"><span class="project-card-status" data-tone="${status.tone}">${escapeHTML(status.label)}</span>${qualifier?`<span class="project-card-qualifier">${escapeHTML(qualifier)}</span>`:''}</div><h3>${escapeHTML(project.name)}</h3>${location?`<p class="project-card-location">${escapeHTML(location)}</p>`:''}${summary?`<p class="project-card-summary">${escapeHTML(summary)}</p>`:''}${revisionLine}${preview}${referenceCredit}${detail?`<details class="project-card-disclosure"><summary>About this model & sources</summary><div class="project-card-details">${statusDetail}${notes.length?`<section aria-label="Model details"><h4>The model</h4>${notes.map(note=>`<p>${escapeHTML(note)}</p>`).join('')}</section>`:''}${completionRowsHTML(project)}${sourcesHTML(sources)}${sources.length?`<p class="project-card-rights">${escapeHTML(sourceNote)}</p>`:''}</div></details>`:''}${feedback}</div>`;
 }
 
 /** Research-register card. The existing [data-project] focus handler is retained. */

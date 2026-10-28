@@ -1,0 +1,93 @@
+{
+  "schema": "future-mississauga-study-media/v1",
+  "id": "ergocentric-275-superior",
+  "sectionId": "ergocentric-275-superior",
+  "title": "275 Superior Boulevard",
+  "updatedOn": "2026-10-28",
+  "renderDate": null,
+  "previewLabel": "Facade study",
+  "description": "An approximate study of the glazing, cladding and entrance canopy.",
+  "sourceGeometryNote": "2024 municipal information and an earlier photograph of unknown date.",
+  "sourceAttribution": {
+    "cityOfMississauga": true,
+    "openStreetMap": false
+  },
+  "credits": {
+    "photoReference": "David Lasker/Cityscape Photography",
+    "photoReferenceURL": "https://davidlaskerphotography.com/",
+    "model": "Daniel Sultan / Future Mississauga",
+    "baseline": "City of Mississauga"
+  },
+  "cityDataTermsURL": "https://mississauga.maps.arcgis.com/sharing/rest/content/items/961c790805c14d8da258ec91bf4117e3/data",
+  "publicationScope": "Rendered study images from the credited facade model. The source photograph remains private.",
+  "originalPhotographPublic": false,
+  "geometryOrMaterialChanges": false,
+  "publicHandoffSHA256": "d3d6327169efa43311ce2ba246534293a8000d8213d6dae01e73c439cd8d95af",
+  "matchedRenderProofSHA256": "748bc07af465b9a5a6f3958779a2d78970ede268d7c16afa167137b7d5e49eb3",
+  "matchedPresentation": {
+    "cameraPositionBlender": [
+      118.44522094726562,
+      -14.48412036895752,
+      11.800000190734863
+    ],
+    "cameraQuaternionBlender": [
+      0.5674746632575989,
+      0.5099506378173828,
+      0.4321017265319824,
+      0.48084402084350586
+    ],
+    "targetBlender": [
+      53.96377182006836,
+      -3.753647804260254,
+      4.800000190734863
+    ],
+    "projection": "ORTHO",
+    "orthoScale": 66.0,
+    "lensMm": null,
+    "resolution": [
+      1800,
+      1100
+    ],
+    "lighting": {
+      "sunDirectionFrom": [
+        101.42838287353516,
+        -49.36884307861328,
+        120.0
+      ],
+      "sunEnergy": 2.4,
+      "sunAngle": 0.18,
+      "worldColor": [
+        0.78,
+        0.85,
+        1
+      ],
+      "worldStrength": 0.45
+    }
+  },
+  "background": "#e8f2f7",
+  "images": [
+    {
+      "role": "before",
+      "caption": "Before",
+      "url": "assets/ergocentric-20261028/275-Superior-frontage-before.png",
+      "sha256": "202359a6313abb18f011a6d49c08646d06b31ce65e7ae420a5bc50c11bad4d0d",
+      "bytes": 601351,
+      "width": 1800,
+      "height": 1348,
+      "sourceModelSHA256": "bf875a9dc869bfe22727103a3e4658c3417acd43a109848867bc00a1dea5239a",
+      "rawRenderSHA256": "648cd86ba198387e2d081ca1a2d1be037cce60029b6699ce787c6da9cabfde41"
+    },
+    {
+      "role": "after",
+      "caption": "Partial facade detail",
+      "url": "assets/ergocentric-20261028/275-Superior-frontage-after.png",
+      "sha256": "a8cf3366ea6dd27e8219c80f265fda1cc684396bfb48c424826fa2adf8abc5fd",
+      "bytes": 678203,
+      "width": 1800,
+      "height": 1348,
+      "sourceModelSHA256": "c3bf9ec74a0d8cf57fc96cb8230b1dc2f59cbacd9163c9deff3881adfb9f632e",
+      "rawRenderSHA256": "675ab7f17b3ff1c2a549ab55078b7cc117110ce17f58a2ff011a1de1790ca3c4"
+    }
+  ],
+  "scopeDecisionSHA256": "b9033f35f87d1bd9a3c3a668a46ae066a59c84921452592d7b4eb385f7607324"
+}
