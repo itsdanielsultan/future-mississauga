@@ -74,7 +74,7 @@ if (!view) {
   let renderer, controls, contextRestorer, restoreTimer, reloadForRecovery = false, contextLost = false, visible = true, ready = false, loadRequest = 0, disposed = false;
   let fitDistance = 1, modelRadius = 1, modelSize = [1,1,1];
   const scene = new THREE.Scene(), camera = new THREE.PerspectiveCamera(35, 1, .1, 50000), model = new THREE.Group();
-  scene.background = new THREE.Color('#e8eef0'); scene.add(model);
+  scene.background = new THREE.Color('#e8f2f7'); scene.add(model);
   scene.add(new THREE.HemisphereLight(0xf5f8ff, 0xb3b1a6, 2.1));
   const light = new THREE.DirectionalLight(0xfff9ef, 2.6); light.position.set(-100, 180, 100); scene.add(light);
   const fill = new THREE.DirectionalLight(0xdbe7ff, .8); fill.position.set(100, 60, -100); scene.add(fill);

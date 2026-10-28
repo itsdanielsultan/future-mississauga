@@ -85,6 +85,7 @@
   scroll-padding-block: 6px;
 }
 .viewer-page .scene-wrap {
+  background: #e8f2f7;
   height: clamp(260px, calc(100svh - 258px), 740px);
   min-height: 0;
   scroll-margin-top: calc(var(--site-header-height) + env(safe-area-inset-top, 0px) + 12px);
