@@ -17,6 +17,15 @@
   margin-left: var(--viewer-left);
   margin-right: var(--viewer-right);
 }
+/* The decorative N keeps its centre while its box follows the glyph, not
+   the whole touch target. Rotating north must not widen the phone page. */
+.viewer-page .map-presentation .compass-label {
+  inset: 50% auto auto 50%;
+  width: 1em;
+  height: 1em;
+  margin: -.5em 0 0 -.5em;
+  pointer-events: none;
+}
 .viewer-page .view-head { padding-top: 20px; padding-bottom: 16px; gap: 16px 24px; }
 .viewer-page .view-head h2 { font-size: clamp(26px, 3vw, 42px); }
 .viewer-page .view-actions { display: flex; align-items: flex-start; width: auto; }
