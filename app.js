@@ -1,8 +1,8 @@
 import {assetURL} from './asset-delivery.js?v=20261027-assets3';
 import {drawingPolicy,createFrameScheduler} from './viewer-runtime.js?v=20261025-mobile1';
 import {withPNGMetadata} from './png-metadata.js?v=20261023-cardfooter1';
-import {createVisibleAttribution, exportCreditLines} from './source-attribution.js?v=20261023-refined1';
-import {projectDetailsHTML, projectCardHTML, completionRowsHTML} from './project-cards.js?v=20261025-five1';
+import {createVisibleAttribution, exportCreditLines} from './source-attribution.js?v=20261028-maritz1';
+import {projectDetailsHTML, projectCardHTML, completionRowsHTML} from './project-cards.js?v=20261028-maritz1';
 import {createDaylight} from './daylight.js?v=20261023-usability1';
 import {neighbourhoodFrame,defaultViewDirection} from './viewer-camera.js?v=20261023-usability1';
 import {prepareMappedSurface} from './surface-rendering.js?v=20261023-usability1';
@@ -11,7 +11,7 @@ import {addArchitecturalEdges} from './building-presentation.js?v=20261022-detai
 import {projectNorth, presentationLayout, drawPresentationFooter} from './scene-presentation.js?v=20261023-usability1';
 import {adoptContextModelVisibility} from './context-model-visibility.js?v=20261017-contact1';
 import {loadModelAsset,shouldLoadRefinement,createOptionalRefinementLoader} from './refinement-loading.js?v=20261026-citymodels1';
-import {cityModelStudies,presentCityStudyProjects,loadCityStudy,bindStudyReplacement} from './city-model-studies.js?v=20261027-assets3';
+import {cityModelStudies,presentCityStudyProjects,loadCityStudy,bindStudyReplacement} from './city-model-studies.js?v=20261028-maritz1';
 import {splitSourceOverlaps} from './source-layer-cut.js?v=20261026-citymodels1';
 import {applyModelVisibility} from './model-visibility.js?v=20261027-orocomposite1';
 import {createSearchIndex,searchProjects,normalizeSearch} from './viewer-search.js?v=20260927-model-search1';
@@ -30,8 +30,9 @@ function invalidate(){frameScheduler?.invalidate();}
 const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(35,1,1,160000),controls=new OrbitControls(camera,canvas);controls.enableDamping=true;controls.dampingFactor=.08;controls.minPolarAngle=Math.PI/18;controls.maxPolarAngle=Math.PI*.39;controls.minDistance=100;controls.maxDistance=100000;controls.screenSpacePanning=false;controls.zoomToCursor=false;controls.zoomSpeed=.5;controls.rotateSpeed=.4;controls.panSpeed=.7;controls.mouseButtons.LEFT=THREE.MOUSE.PAN;controls.touches.ONE=THREE.TOUCH.PAN;controls.listenToKeyEvents(canvas);
 const daylight=createDaylight(THREE,scene,renderer);
 daylight.sun.shadow.mapSize.setScalar(getDrawingPolicy().shadowSize);
-const visibleAttribution=createVisibleAttribution({THREE,scene,camera});let displayedSources={osm:false};
-function syncVisibleAttribution(sources){displayedSources=sources;for(const node of document.querySelectorAll('[data-osm-credit]'))node.hidden=!displayedSources.osm;}
+const visibleAttribution=createVisibleAttribution({THREE,scene,camera});let displayedSources={osm:false,designCredits:[]};
+const visibleDesignCredit=document.createElement('p');visibleDesignCredit.className='map-attribution';visibleDesignCredit.hidden=true;document.querySelector('.map-attribution').after(visibleDesignCredit);
+function syncVisibleAttribution(sources){displayedSources=sources;for(const node of document.querySelectorAll('[data-osm-credit]'))node.hidden=!displayedSources.osm;const credit=(sources.designCredits||[]).join(' ');if(visibleDesignCredit.textContent!==credit)visibleDesignCredit.textContent=credit;visibleDesignCredit.hidden=!credit;}
 const assetVersions=new Map();const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);loader.manager.setURLModifier(url=>{if(!url.includes('models/'))return url;const resolved=new URL(url,document.baseURI),version=assetVersions.get(resolved.href)||'20260926-visual-polish';resolved.searchParams.set('edition',version);return assetURL(resolved.href);});let model,context,current,mode='future',futureMeshes=[],modelMeshes=[],detailMeshes=[],treeMeshes=[],loadToken=0,compare=false,split=.5,scope='district',registry='research',exporting=false,cameraFlight=null,focusRequest=0,homeFraming=null,homeDirection=null,framedProject=null;controls.addEventListener('change',()=>invalidate());
 async function readData(n){for(let attempt=0;attempt<3;attempt++){try{const r=await fetch('data/'+n+'.json',{cache:'no-store',signal:AbortSignal.timeout(30000)});if(!r.ok)throw new Error(n+' unavailable');return await r.json();}catch(e){if(attempt===2){$('#loading').textContent='The model data could not be loaded. Reload this page to try again.';throw e;}}}}
 const initialQuery=new URLSearchParams(location.search);
@@ -213,6 +214,7 @@ function projectMeshes(p){
  return visible.length?visible:candidates;
 }
 function districtForProject(p){
+ if(p.viewerDistricts?.includes(current?.id))return current;
  if(p.viewerDistrict)return districts.find(d=>d.id===p.viewerDistrict)||current;
  if(!p.position)return current;
  if(current.id!=='citywide'&&inDistrict(p))return current;
@@ -230,8 +232,8 @@ function frameProject(p,meshes){
  const centre=box.getCenter(new THREE.Vector3()),rect=canvas.getBoundingClientRect(),panel=$('#selection').getBoundingClientRect(),sidePanel=getComputedStyle($('#selection')).position==='absolute'&&!$('#selection').hidden;
  const left=18,right=rect.width-(sidePanel?panel.width+34:18),top=Math.min(94,rect.height*.24),bottom=rect.height-38;
  const nx=(left+right)/rect.width-1,ny=1-(top+bottom)/rect.height,tan=Math.tan(THREE.MathUtils.degToRad(camera.fov/2));
- // Preserve both bearing and tilt when focusing a building. Rotation is a deliberate user action.
- const direction=camera.position.clone().sub(controls.target).normalize();
+ // A documented facade view can orient a study; other buildings retain the current bearing and tilt.
+ const direction=Array.isArray(p.cameraDirection)?new THREE.Vector3(...p.cameraDirection).normalize():camera.position.clone().sub(controls.target).normalize();
  if(direction.lengthSq()<.01)direction.set(0,.82,.57).normalize();
  const up=new THREE.Vector3(0,1,0),rightVector=new THREE.Vector3().crossVectors(up,direction).normalize(),upVector=new THREE.Vector3().crossVectors(direction,rightVector).normalize(),corners=[];
  for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z])corners.push(new THREE.Vector3(x,y,z));
@@ -268,7 +270,7 @@ function closeModelSearch(){modelSearchInput.setAttribute('aria-expanded','false
 function highlightSearch(index){searchActive=index;for(const [i,node] of [...modelSearchResults.children].entries())node.setAttribute('aria-selected',String(i===index));if(index>=0){modelSearchInput.setAttribute('aria-activedescendant','model-result-'+index);modelSearchResults.children[index]?.scrollIntoView({block:'nearest'});}else modelSearchInput.removeAttribute('aria-activedescendant');}
 function showModelSearch(){
  const query=modelSearchInput.value;$('#modelSearchClear').hidden=!query;searchMatches=searchProjects(modelSearchIndex,query);searchActive=-1;
- modelSearchResults.innerHTML=searchMatches.map((p,i)=>`<li id="model-result-${i}" role="option" aria-selected="false" data-search-index="${i}"><strong>${esc(p.name)}</strong><span>${esc(p.address||'Address not confirmed')}</span><span class="search-location">${esc(String(p.district||'Mississauga').replace(/\b[a-z]/g,c=>c.toUpperCase()))} · ${esc(String(p.status||'Status under review').replace(/^./,c=>c.toUpperCase()))}</span></li>`).join('');
+ modelSearchResults.innerHTML=searchMatches.map((p,i)=>`<li id="model-result-${i}" role="option" aria-selected="false" data-search-index="${i}"><strong>${esc(p.name)}</strong>${p.address===p.name?'':`<span>${esc(p.address||'Address not confirmed')}</span>`}<span class="search-location">${esc(String(p.district||'Mississauga').replace(/\b[a-z]/g,c=>c.toUpperCase()))} · ${esc(String(p.status||'Status under review').replace(/^./,c=>c.toUpperCase()))}</span></li>`).join('');
  modelSearchInput.removeAttribute('aria-activedescendant');if(!query.trim()){closeModelSearch();$('#modelSearchStatus').textContent='';return;}
  $('#modelSearchEmpty').hidden=searchMatches.length>0;$('#modelSearchPopup').hidden=false;modelSearchInput.setAttribute('aria-expanded','true');$('#modelSearchStatus').textContent=searchMatches.length?`${searchMatches.length} matching ${searchMatches.length===1?'place':'places'}. Use the arrow keys, then Enter to explore.`:'No matching places. Try a building name or street.';
 }
@@ -303,7 +305,7 @@ bindComparison({panel:wrap,handle:$('#compareLine'),input:$('#compareRange'),ini
 for(const id of ['lrtToggle','goToggle','transitwayToggle','uncertainToggle','markersToggle'])$('#'+id).onchange=()=>{applyVisibility(mode);invalidate();};
 $('#detailToggle').onchange=e=>{architecturalEdges.forEach(layer=>layer.visible=e.target.checked);invalidate();};
 $('#scenarioSelect').onchange=e=>setMode(e.target.value);$('#resetBtn').onclick=()=>{focusRequest++;reset();};$('#sourcesBtn').onclick=()=>$('#about').showModal();$('#closeAbout').onclick=()=>$('#about').close();
-function render(){if(contextLost)return;if(current)daylight.update(controls.target,camera,current.radius);let sourceState={osm:false};if(compare){const size=renderer.getSize(new THREE.Vector2()),cut=Math.round(size.x*split);renderer.setScissorTest(true);renderer.setScissor(0,0,cut,size.y);applyVisibility('existing');renderer.render(scene,camera);sourceState=visibleAttribution.update('existing');renderer.setScissor(cut,0,size.x-cut,size.y);applyVisibility('future');renderer.render(scene,camera);renderer.setScissorTest(false);sourceState.osm=visibleAttribution.update('future').osm||sourceState.osm;}else{applyVisibility(mode);renderer.render(scene,camera);sourceState=visibleAttribution.update(mode);}syncVisibleAttribution(sourceState);const bearing=projectNorth(THREE,camera,controls.target,canvas.width,canvas.height);const arrow=$('#northArrow');arrow.hidden=!bearing;if(bearing){arrow.style.transform='rotate('+bearing.degrees+'deg)';const northLabel=arrow.parentElement.querySelector('.compass-label');if(northLabel)northLabel.style.transform='translate('+bearing.x*27+'px,'+bearing.y*27+'px)';arrow.parentElement.setAttribute('aria-label','Point north. Currently '+Math.round((bearing.degrees+360)%360)+' degrees clockwise from the top of the image');}}
+function render(){if(contextLost)return;if(current)daylight.update(controls.target,camera,current.radius);let sourceState={osm:false};if(compare){const size=renderer.getSize(new THREE.Vector2()),cut=Math.round(size.x*split);renderer.setScissorTest(true);renderer.setScissor(0,0,cut,size.y);applyVisibility('existing');renderer.render(scene,camera);sourceState=visibleAttribution.update('existing');renderer.setScissor(cut,0,size.x-cut,size.y);applyVisibility('future');renderer.render(scene,camera);renderer.setScissorTest(false);const futureSources=visibleAttribution.update('future');sourceState={osm:futureSources.osm||sourceState.osm,designCredits:[...new Set([...(sourceState.designCredits||[]),...(futureSources.designCredits||[])])]};}else{applyVisibility(mode);renderer.render(scene,camera);sourceState=visibleAttribution.update(mode);}syncVisibleAttribution(sourceState);const bearing=projectNorth(THREE,camera,controls.target,canvas.width,canvas.height);const arrow=$('#northArrow');arrow.hidden=!bearing;if(bearing){arrow.style.transform='rotate('+bearing.degrees+'deg)';const northLabel=arrow.parentElement.querySelector('.compass-label');if(northLabel)northLabel.style.transform='translate('+bearing.x*27+'px,'+bearing.y*27+'px)';arrow.parentElement.setAttribute('aria-label','Point north. Currently '+Math.round((bearing.degrees+360)%360)+' degrees clockwise from the top of the image');}}
 let exportImageURL=null;
 function clearExportImage(){
  if(exportImageURL){URL.revokeObjectURL(exportImageURL);exportImageURL=null;}
@@ -319,9 +321,9 @@ $('#exportBtn').onclick=async()=>{
   await Promise.all([document.fonts.load('500 23px "Bricolage Grotesque"'),document.fonts.load('15px Lato')]);
   if(contextLost)throw new Error('Graphics context unavailable');
   render();const out=document.createElement('canvas');out.width=canvas.width;const layout=presentationLayout(out.width),ctx=out.getContext('2d'),fontSize=Math.max(7,12*layout.scale),inset=28*layout.scale,lineHeight=fontSize*1.5,maxWidth=out.width-inset*2;
-  const captions=exportCreditLines(displayedSources);
+  const captions=exportCreditLines(displayedSources),designCredits=displayedSources.designCredits||[];
   const footerHeight=layout.height;
-  out.height=Math.ceil(canvas.height+footerHeight+36*layout.scale);
+  out.height=Math.ceil(canvas.height+footerHeight+36*layout.scale+designCredits.length*lineHeight);
   ctx.fillStyle='#ffffff';ctx.fillRect(0,0,out.width,out.height);ctx.drawImage(canvas,0,0);
   drawPresentationFooter(ctx,{width:out.width,top:canvas.height,title:current.name,scenario,bearing:projectNorth(THREE,camera,controls.target,canvas.width,canvas.height)});
   ctx.fillStyle='#6b6662';ctx.font=fontSize+'px Lato, sans-serif';
@@ -329,6 +331,7 @@ $('#exportBtn').onclick=async()=>{
   const cityCredit='City of Mississauga'+(captions.some(line=>line.includes('OpenStreetMap'))?' · © OpenStreetMap':'');
   ctx.textAlign='left';ctx.fillText(cityCredit,inset,creditY,maxWidth*.48);
   ctx.textAlign='right';ctx.fillText('futuremississauga.com/sources.html',out.width-inset,creditY,maxWidth*.48);
+  ctx.textAlign='left';designCredits.forEach((credit,index)=>ctx.fillText(credit,inset,creditY+(index+1)*lineHeight,maxWidth));
   const encoded=await new Promise((resolve,reject)=>out.toBlob(value=>value?resolve(value):reject(new Error('PNG encoding failed')),'image/png'));
   if(contextLost)throw new Error('Graphics context unavailable');
   const blob=await withPNGMetadata(encoded,{'Title':current.name,'Source':captions.join('\n'),'Licence URL':'https://www.ontario.ca/page/open-government-licence-ontario','Sources URL':'https://futuremississauga.com/sources.html'});

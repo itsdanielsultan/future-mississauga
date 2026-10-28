@@ -199,6 +199,23 @@
       "representation": "Exact accepted GLB bytes after lossless gzip decompression. Standalone local coordinates; no surveyed city registration claimed.",
       "repositoryCommit": "38192a27c882e7c7e0a4020396b800f9a70a34a0",
       "batchOpaque": true
+    },
+    {
+      "id": "sgm-maritz-6710",
+      "title": "6710 Maritz Drive",
+      "file": "sgm-maritz-6710-exterior-study.glb.gz",
+      "url": "models/studies-20261027/sgm-maritz-6710-exterior-study.glb.gz",
+      "downloadName": "6710-Maritz-facade-study.glb",
+      "bytes": 35809,
+      "decodedBytes": 292136,
+      "sha256": "8b67989cd54e9ecbdf66f866de5c6e2a2828d338952471ba83b862849f7c58a4",
+      "downloadSHA256": "e36e3f7a5814d4904bc3a0b0bd41bef8d34b03dfaf53eba3b6b1edf2dd0a83df",
+      "meshCount": 29,
+      "triangles": 4196,
+      "cityDataTerms": true,
+      "representation": "Exact checked combined GLB after lossless gzip decompression. City map coordinates retained; original municipal massing with a partial facade refinement.",
+      "sourceModelId": "23-3369",
+      "modelReviewDate": "2026-10-27"
     }
   ],
   "views": [
@@ -608,6 +625,38 @@
         "avia-podium"
       ],
       "downloadNote": "Download both the tower and shared podium GLBs to reproduce this preview. The other tower is omitted. Keep their original positions when importing them together."
+    },
+    {
+      "id": "sgm-maritz-6710",
+      "title": "6710 Maritz Drive",
+      "subtitle": "Approximate facade study",
+      "assets": [
+        "sgm-maritz-6710"
+      ],
+      "summary": "Folded entrance glazing and pale precast frontage added to the City building model.",
+      "credit": "Design: SG&M Architects Inc. (formerly Sirlin Giller & Malek Architects). Model creation: Daniel Sultan / Future Mississauga. Municipal baseline: City of Mississauga.",
+      "limits": "Partial facade study. Dimensions, glazing divisions and finishes are approximate. The photograph date is unknown. The roof, rear and unseen parts retain City massing; an outer City side slab partly obscures the side treatment.",
+      "rights": "Derived model published with SG&M design credit. Keep the design and model credits, City attribution and supplied terms with redistributed assets. Source photographs and renderings are not included. Independent visualization; no official endorsement.",
+      "sources": [
+        {
+          "title": "SG&M Architects Inc.",
+          "url": "https://sgm-arch.com/industrial/",
+          "note": "Photograph and material reference supplied privately. The photograph capture date is unknown."
+        },
+        {
+          "title": "City of Mississauga 3D source data",
+          "url": "https://data.mississauga.ca/pages/mississauga-3d",
+          "note": "Baseline building massing, source 23-3369."
+        }
+      ],
+      "cameraDirection": [
+        1,
+        0.18,
+        0.2
+      ],
+      "downloadNote": "The GLB includes the complete City baseline and the partial facade refinement in their original map coordinates. Keep the credits and City data terms with the model.",
+      "fitToBounds": true,
+      "comparisonURL": "reference-updates.html#sgm-maritz-6710"
     }
   ]
 }
