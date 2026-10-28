@@ -109,3 +109,10 @@ html .reading-page .model-change .update-links { margin: 16px 0 0; }
 }
 
 html .reading-page #latestStudies { scroll-margin-top: calc(var(--site-header-height) + 20px); }
+
+/* Maritz keeps the comparison controls distinct from the source notes. */
+html .reading-page .maritz-actions,
+html .reading-page .maritz-comparisons { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; }
+html .reading-page .maritz-comparisons { margin: 22px 0; font-size: 14px; }
+html .reading-page #sgm-maritz-6710 .image-pair figcaption { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+html .reading-page #sgm-maritz-6710 .reference-about { margin-top: 16px; }

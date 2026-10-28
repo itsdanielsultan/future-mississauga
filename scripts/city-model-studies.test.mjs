@@ -23,7 +23,7 @@ const dispose=root=>{root.traverse(o=>{o.geometry?.dispose();for(const material 
 const parse=async bytes=>loader.parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');
 
 test('registered completed assemblies load by default; unrelated optional studies remain optional',async()=>{
- assert.deepEqual(assets.map(a=>a.projectId),['mcity-1-2','mcity-1-2','avia','edge-oro','edge-oro','artform']);
+ assert.deepEqual(assets.map(a=>a.projectId),['mcity-1-2','mcity-1-2','avia','edge-oro','edge-oro','artform','sgm-maritz-6710']);
  for(const asset of assets)assert(shouldLoadRefinement(asset));
  assert(!shouldLoadRefinement({localOptional:true,projectId:'unrelated'}));
  assert.equal(cityModelStudies(refinements.assets,catalogue).filter(a=>!a.defaultVisible).length,refinements.assets.length-2);
@@ -45,7 +45,7 @@ for(const asset of assets)test(asset.id+' verifies original bytes and preserves 
  for(const [i,row]of[box.min.toArray(),box.max.toArray()].entries())for(let j=0;j<3;j++)assert(Math.abs(row[j]-asset.bounds[i][j])<.02);
  assert.equal(loaded.sourceAssets.length,asset.previewAssets.length);
  assert.equal(triangles(loaded.scene),asset.previewAssets.reduce((n,a)=>n+(a.triangles||0),0)||asset.triangles||(asset.projectId==='artform'?291104:undefined));
- assert(meshes(loaded.scene).every(m=>m.geometry.attributes.normal));
+ assert(meshes(loaded.scene).every(m=>m.geometry.attributes.normal||[m.material].flat().every(material=>material.flatShading)),'Source normals or glTF flat-shading fallback must define surface shading');
  if(asset.projectId==='avia'){
   assert.deepEqual(loaded.scene.position.toArray(),[-6040,88.3,-10]);assert.deepEqual(loaded.scene.scale.toArray(),[1,1,1]);assert.equal(loaded.scene.rotation.y,0);
   assert(loaded.scene.children.every(o=>o.userData.displayBatching?.batches>0));
@@ -116,4 +116,47 @@ test('completed Edge replacement alone preserves Oro municipal geometry and scen
   applyModelVisibility([...oro,...edgeDetails],scenario);assert.deepEqual(oro.map(m=>m.visible),baseline);assert(edgeDetails.every(m=>m.visible));edgeDetails.forEach(dispose);
  }
  dispose(scene);
+});
+
+const maritz=assets.find(asset=>asset.projectId==='sgm-maritz-6710');
+const meshKeys=mesh=>{const p=mesh.geometry.getAttribute('position'),index=mesh.geometry.getIndex(),count=index?.count??p.count,result=[];mesh.updateWorldMatrix(true,false);for(let i=0;i<count;i+=3)result.push([0,1,2].map(j=>new THREE.Vector3().fromBufferAttribute(p,index?index.getX(i+j):i+j).applyMatrix4(mesh.matrixWorld).toArray().map(v=>v.toFixed(3)).join(',')).sort().join('|'));return result;};
+test('Maritz uses the accepted complete model at identity coordinates with exact City baseline keys',async()=>{
+ assert.equal(maritz.previewAssets.length,1);assert.equal(maritz.previewAssets[0].sha256,'8b67989cd54e9ecbdf66f866de5c6e2a2828d338952471ba83b862849f7c58a4');
+ assert.deepEqual(maritz.translation,[0,0,0]);assert.equal(maritz.rotationYDegrees,0);assert.deepEqual(maritz.replacesSourceIds,[]);
+ const result=await loadCityStudy(THREE,loader,maritz,{fetcher,dispose}),baseline=meshes(result.scene).find(m=>m.name==='23-3369');
+ assert(baseline);assert.equal(triangles(result.scene),4196);assert.deepEqual(meshKeys(baseline).sort(),[...maritz.replacementTriangleKeys].sort());
+ assert.equal(triangles(result.scene)-maritz.replacementTriangleKeys.length,3852);
+ const project=(await read('public/data/projects.json')).find(p=>p.id===maritz.projectId);assert.equal(project.viewerDistrict,'heartland');assert(project.hasDerivedModel&&!project.localOptional);assert.deepEqual(project.meshIds,[]);
+ dispose(result.scene);
+});
+for(const [district,expected] of [['heartland',344],['meadowvale-village',344],['citywide',0]])test('Maritz '+district+' removes only exact baseline faces after details are visible and restores them on removal',async()=>{
+ const scene=(await parse(await readFile(new URL('public/models/'+district+'.glb',root)))).scene,before=triangles(scene);
+ const audit=splitSourceOverlaps(THREE,scene,[maritz]);assert.equal(triangles(scene),before);assert.equal(audit.reduce((n,a)=>n+a.fallbackTriangles,0),expected);
+ const municipal=meshes(scene);for(const m of municipal)m.userData.displayStatus=m.userData.Status;
+ const fallback=municipal.filter(m=>m.userData.sourceLayerSeparated);
+ assert.deepEqual(fallback.flatMap(meshKeys).sort(),expected?[...maritz.replacementTriangleKeys].sort():[]);
+ const result=await loadCityStudy(THREE,loader,maritz,{fetcher,dispose}),detail=meshes(result.scene);
+ for(const m of detail)Object.assign(m.userData,{assetId:maritz.id,projectId:maritz.projectId,displayStatus:maritz.status,modes:maritz.modes,draftStudy:false});
+ for(const scenario of ['existing','construction','future']){
+  applyModelVisibility(municipal,scenario,{referenceStudies:false,uncertainVersions:false});assert(fallback.every(m=>m.visible));const unrelated=municipal.filter(m=>!fallback.includes(m)),visibility=unrelated.map(m=>m.visible);
+  applyModelVisibility([...municipal,...detail],scenario,{referenceStudies:false,uncertainVersions:false});assert(detail.every(m=>m.visible));assert(fallback.every(m=>!m.visible));assert.deepEqual(unrelated.map(m=>m.visible),visibility);
+  applyModelVisibility(municipal,scenario,{referenceStudies:false,uncertainVersions:false});assert(fallback.every(m=>m.visible));
+ }
+ dispose(scene);dispose(result.scene);
+});
+
+test('Maritz failures preserve source; concurrent retries commit once and an old area cannot commit late',async()=>{
+ let unavailable=true,current=true,commits=0,disposed=0,release;
+ const manager=createOptionalRefinementLoader({load:asset=>loadCityStudy(THREE,loader,asset,{fetcher:url=>unavailable?Promise.resolve(new Response('',{status:404})):fetcher(url),dispose}),commit:(_,r)=>{commits++;dispose(r.scene);},dispose:r=>{disposed++;dispose(r.scene);},isCurrent:()=>current});
+ await assert.rejects(manager.load(maritz),/downloaded/);assert.equal(commits,0);assert(!manager.has(maritz.id));
+ unavailable=false;const first=manager.load(maritz),duplicate=manager.load(maritz);assert.equal(first,duplicate);await first;await manager.load(maritz);assert.equal(commits,1);
+ const stale=createOptionalRefinementLoader({load:async asset=>{await new Promise(resolve=>release=resolve);return loadCityStudy(THREE,loader,asset,{fetcher,dispose});},commit:()=>{commits++;},dispose:r=>{disposed++;dispose(r.scene);},isCurrent:()=>current});
+ const pending=stale.load(maritz);await Promise.resolve();current=false;release();assert.equal((await pending).stale,true);assert.equal(commits,1);assert.equal(disposed,1);assert(!stale.has(maritz.id));
+ await assert.rejects(loadCityStudy(THREE,loader,maritz,{fetcher:async()=>new Response('substitute'),dispose}),/integrity/);
+});
+
+
+test('Maritz focus retains an explicitly selected supported area and otherwise opens Heartland',async()=>{
+ const {runInNewContext}=await import('node:vm'),source=await readFile(new URL('public/app.js',root),'utf8'),start=source.indexOf('function districtForProject(p){'),end=source.indexOf('function frameProject(',start),project=(await read('public/data/projects.json')).find(p=>p.id==='sgm-maritz-6710'),districts=await read('public/data/districts.json');
+ for(const id of ['heartland','meadowvale-village','citywide','downtown']){const current=districts.find(d=>d.id===id),selected=runInNewContext(source.slice(start,end)+';districtForProject(project)',{project,current,districts});assert.equal(selected.id,id==='downtown'?'heartland':id);}
 });

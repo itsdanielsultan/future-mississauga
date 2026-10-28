@@ -23,7 +23,7 @@ export async function validateCityModelStudies(site){
    used.push(preview.id);
   }
  }
- assert.deepEqual(used,['mcity-m1','mcity-m2','avia-1','avia-2','avia-podium','edge-1','edge-2','artform','oro']);
+ assert.deepEqual(used,['mcity-m1','mcity-m2','avia-1','avia-2','avia-podium','edge-1','edge-2','artform','oro','sgm-maritz-6710']);
  const avia=assets.find(a=>a.projectId==='avia');assert.deepEqual(avia.translation,[-6040,88.3,-10]);assert.deepEqual(avia.replacesSourceIds,['63-6237']);
  for(const asset of assets.filter(a=>a.projectId==='mcity-1-2')){assert(!asset.translation);assert(asset.replacementTriangleKeys.length);}
  return {assemblies:assets.length,existingPublicAssets:used,completedModelsAllScenarios:true,intendedOroScenarios:['construction','future'],atomicAssemblies:true,assetHashesValidatedByModelPreviewCatalogue:true};

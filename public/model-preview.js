@@ -1,3 +1,4 @@
+import {fitPerspectiveBox} from './model-preview-framing.js?v=20261028-maritz1';
 import {assetURL} from './asset-delivery.js?v=20261027-assets3';
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
@@ -8,7 +9,7 @@ import {cityDataNotice} from './city-data-terms.js?v=20261026-direct1';
 import {batchOpaqueStudy} from './model-preview-batching.js?v=20261025-1';
 
 const $ = id => document.getElementById(id);
-const response = await fetch('data/model-previews.json?v=20261025-five1');
+const response = await fetch('data/model-previews.json?v=20261028-maritz1');
 if (!response.ok) throw new Error('Study catalogue unavailable');
 const manifest = await response.json();
 const requestedId = new URLSearchParams(location.search).get('model');
@@ -26,8 +27,9 @@ if (!view) {
   $('modelSelect').value = view.id; $('modelChooser').hidden = true; $('previewContent').hidden = false;
   $('modelTitle').textContent = view.title; document.title = view.title + ' · Future Mississauga';
   $('modelSubtitle').textContent = view.subtitle;
-  const cityProject = ({'mcity-pair':'mcity-1-2','mcity-m1':'mcity-1-2','mcity-m2':'mcity-1-2','avia-1':'avia','avia-2':'avia','edge-1':'edge-oro','edge-2':'edge-oro','oro':'edge-oro','artform':'artform'})[view.id];
-  if(cityProject){const link=document.createElement('a');link.href='explore.html?district='+(cityProject==='artform'?'cooksville':'downtown')+'&project='+cityProject;link.textContent='View in the city map ↗';const paragraph=document.createElement('p');paragraph.append(link);$('modelSubtitle').after(paragraph);}
+  const cityProject = ({'mcity-pair':'mcity-1-2','mcity-m1':'mcity-1-2','mcity-m2':'mcity-1-2','avia-1':'avia','avia-2':'avia','edge-1':'edge-oro','edge-2':'edge-oro','oro':'edge-oro','artform':'artform','sgm-maritz-6710':'sgm-maritz-6710'})[view.id];
+  if(cityProject){const link=document.createElement('a');link.href='explore.html?district='+(cityProject==='sgm-maritz-6710'?'heartland':cityProject==='artform'?'cooksville':'downtown')+'&project='+cityProject;link.textContent='View in the city map ↗';const paragraph=document.createElement('p');paragraph.append(link);$('modelSubtitle').after(paragraph);}
+  if(view.comparisonURL){const link=document.createElement('a');link.href=view.comparisonURL;link.textContent='Before and after ↗';const paragraph=document.createElement('p');paragraph.append(link);$('modelSubtitle').after(paragraph);}
   $('studySummary').textContent = view.summary; $('studyCredit').textContent = view.credit;
   $('studyLimits').textContent = view.limits; $('rightsNote').textContent = view.rights;
   $('downloadNote').textContent = view.downloadNote || 'GLB downloads contain the displayed study geometry. Keep the credits and limitations with the model.';
@@ -70,7 +72,7 @@ if (!view) {
 
   const canvas = $('previewCanvas'), wrap = $('previewWrap');
   let renderer, controls, contextRestorer, restoreTimer, reloadForRecovery = false, contextLost = false, visible = true, ready = false, loadRequest = 0, disposed = false;
-  let fitDistance = 1, modelRadius = 1;
+  let fitDistance = 1, modelRadius = 1, modelSize = [1,1,1];
   const scene = new THREE.Scene(), camera = new THREE.PerspectiveCamera(35, 1, .1, 50000), model = new THREE.Group();
   scene.background = new THREE.Color('#e8eef0'); scene.add(model);
   scene.add(new THREE.HemisphereLight(0xf5f8ff, 0xb3b1a6, 2.1));
@@ -90,6 +92,7 @@ if (!view) {
     model.clear(); model.position.set(0,0,0);
   }
   function calculateFit() {
+    if(view.fitToBounds)return fitPerspectiveBox(modelSize,view.cameraDirection,camera.fov,camera.aspect);
     const vertical = THREE.MathUtils.degToRad(camera.fov), horizontal = 2 * Math.atan(Math.tan(vertical / 2) * camera.aspect);
     return modelRadius / Math.sin(Math.min(vertical, horizontal) / 2) * 1.08;
   }
@@ -125,7 +128,8 @@ if (!view) {
         gltf.scene.userData.assetId = asset.id; model.add(gltf.scene);
       }
       const bounds = new THREE.Box3().setFromObject(model), centre = bounds.getCenter(new THREE.Vector3());
-      modelRadius = bounds.getSize(new THREE.Vector3()).length() / 2;
+      modelSize = bounds.getSize(new THREE.Vector3()).toArray();
+      modelRadius = Math.hypot(...modelSize) / 2;
       if (!Number.isFinite(modelRadius) || modelRadius <= 0) throw new Error('The model has invalid dimensions.');
       model.position.copy(centre).negate();
       ready = true; resize();

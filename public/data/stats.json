@@ -1,6 +1,6 @@
 {
   "asOf": "2026-09-20",
-  "researchedRecords": 148,
+  "researchedRecords": 149,
   "municipalGroups": 181,
   "futureSourceComponents": 765,
   "sourceTiles": 30,
@@ -14,7 +14,7 @@
   "retainedFutureSourceComponents": 660,
   "geometryConflictComponents": 152,
   "secondaryCorroborationRecords": 31,
-  "note": "Research operations include searches, page/document reviews and failed attempts. They are not a count of unique websites. The public project and refinement counts were checked on October 22; source-link counts retain their recorded date; initial City-source tile and visibility totals retain their recorded dates. Architectural forms, legal envelopes and estimates are distinguished in the individual project records.",
+  "note": "Research operations include searches, page/document reviews and failed attempts. They are not a count of unique websites. The named project count was updated on October 28; refinement-manifest, source-link, City tile and visibility totals retain their recorded dates. Architectural forms, legal envelopes and estimates are distinguished in the individual project records.",
   "refinementAssets": 69,
   "edition": "Visual Polish 2026-09-26",
   "roadCrossingEvidenceAsOf": "2026-09-21",
@@ -59,7 +59,7 @@
   },
   "buildingStudyUpdateDate": "2026-10-09",
   "targetedStatusReviewDate": "2026-10-10",
-  "projectRegisterCountAsOf": "2026-10-22",
+  "projectRegisterCountAsOf": "2026-10-28",
   "linkedProjectSourceURLsAsOf": "2026-10-17",
   "linkedProjectSourceURLsScope": "Distinct linked URLs across the current named research records, excluding private source filenames.",
   "receivedReferenceUpdate": {
@@ -130,5 +130,13 @@
         "details": "data/structure-coverage-summary.json"
       }
     }
+  },
+  "maritzFacadeUpdate": {
+    "modelReviewDate": "2026-10-27",
+    "publicationEdition": "2026-10-28",
+    "projectId": "sgm-maritz-6710",
+    "partialExistingBuildingRefinements": 1,
+    "newBuildingMasses": 0,
+    "sourceOriginalsPublished": false
   }
 }

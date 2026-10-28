@@ -6,6 +6,7 @@ import * as THREE from '../public/vendor/three.module.js';
 import {selectPreview} from '../public/model-preview-loading.js';
 import {assetURL} from '../public/asset-delivery.js';
 import {drawingPolicy} from '../public/viewer-runtime.js';
+import {fitPerspectiveBox} from '../public/model-preview-framing.js';
 
 const source = name => readFileSync(new URL('../public/' + name, import.meta.url), 'utf8');
 const manifest = JSON.parse(source('data/model-previews.json'));
@@ -62,7 +63,7 @@ function modelHarness({id = 'mcity-m1', graphics = true} = {}) {
     }
   }
   const context = {THREE: {...THREE, WebGLRenderer: Renderer}, OrbitControls: Controls, GLTFLoader: Loader,
-    selectPreview, assetURL, drawingPolicy, batchOpaqueStudy() {},
+    selectPreview, assetURL, drawingPolicy, fitPerspectiveBox, batchOpaqueStudy() {},
     createFrameScheduler: () => ({invalidate() { events.push('draw-request'); }, pause() {}, frames: 0}),
     verifiedModelBytes: asset => { const request = deferred(); requests.push({...request, id: asset.id}); return request.promise; },
     document: ui.document, window, location: {search: '?model=' + id, assign() {}, reload() { events.push('reload'); }},
@@ -152,4 +153,17 @@ test('failed city map import keeps retry and gallery recovery available', async 
   const retry = run.get('loading').children.find(node => node?.textContent === 'Retry map');
   assert.ok(retry); retry.click(); assert.deepEqual(run.events, ['reload']);
   assert.ok(run.get('loading').children.some(node => node?.href === './#pictures'));
+});
+
+
+test('Maritz starts directly, links to Heartland and retains the design credit and City terms',async()=>{
+ const run=modelHarness({id:'sgm-maritz-6710'});await settle();
+ assert.deepEqual(run.requests.map(request=>request.id),['sgm-maritz-6710']);
+ assert.equal(run.created.filter(node=>node.href==='explore.html?district=heartland&project=sgm-maritz-6710').length,1);
+ assert.equal(run.created.filter(node=>node.href==='reference-updates.html#sgm-maritz-6710').length,1);
+ assert.match(run.get('studyCredit').textContent,/Design: SG&M Architects Inc\. \(formerly Sirlin Giller & Malek Architects\)\./);
+ assert.match(run.get('studyCredit').textContent,/Model creation: Daniel Sultan/);
+ assert.match(run.get('studyLimits').textContent,/photograph date is unknown/);
+ assert.equal(run.created.filter(node=>node.className==='city-data-terms').length,1);
+ run.requests[0].resolve(new Uint8Array(8));await run.done;assert.equal(run.window.modelPreview.ready,true);
 });

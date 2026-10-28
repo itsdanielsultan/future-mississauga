@@ -58,3 +58,41 @@ test('source-dependent omissions require the loaded version, scenario, visible l
   camera.position.set(0,0,100);camera.lookAt(0,0,0);
   credit.registerAsset(root,region.assetUrl,'changed-unreviewed-version');credit.refresh();assert.equal(credit.update('existing').osm,true);
 });
+
+test('Maritz design credit follows visible registered model meshes and is carried into exported images', () => {
+  const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(35,1,1,1000);
+  camera.position.set(0,0,100);camera.lookAt(0,0,0);
+  const root=new THREE.Group(),mesh=new THREE.Mesh(new THREE.BoxGeometry(10,10,10),new THREE.MeshBasicMaterial());
+  mesh.userData={projectId:'sgm-maritz-6710',assetId:'sgm-maritz-6710-exterior-study'};
+  root.add(mesh);scene.add(root);scene.updateMatrixWorld(true);
+  const attribution=createVisibleAttribution({THREE,scene,camera});
+  const exact='Design: SG&M Architects Inc. (formerly Sirlin Giller & Malek Architects).';
+  assert.deepEqual(attribution.update().designCredits,[exact]);
+  assert(exportCreditLines(attribution.update()).includes(exact));
+  assert.equal(attribution.update().osm,false);
+  const second=mesh.clone();root.add(second);scene.updateMatrixWorld(true);attribution.refresh();
+  assert.deepEqual(attribution.update().designCredits,[exact],'Several model meshes yield one credit');
+  root.visible=false;assert.deepEqual(attribution.update().designCredits,[]);
+  assert(!exportCreditLines(attribution.update()).includes(exact));
+  root.visible=true;root.position.x=1000;scene.updateMatrixWorld(true);
+  assert.deepEqual(attribution.update().designCredits,[],'Off-camera model is not credited');
+  root.position.x=0;scene.updateMatrixWorld(true);mesh.visible=false;second.visible=false;
+  assert.deepEqual(attribution.update().designCredits,[],'Hidden scenario meshes are not credited');
+  mesh.visible=true;second.visible=true;scene.remove(root);attribution.refresh();
+  assert.deepEqual(attribution.update().designCredits,[],'Area changes remove unloaded credits');
+});
+
+test('Maritz fallback, unrelated project and empty geometry do not claim facade design credit', () => {
+  const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(35,1,1,1000);
+  camera.position.set(0,0,100);camera.lookAt(0,0,0);
+  const mesh=new THREE.Mesh(new THREE.BoxGeometry(10,10,10),new THREE.MeshBasicMaterial());
+  mesh.userData={projectId:'sgm-maritz-6710',sourceLayerSeparated:true};scene.add(mesh);scene.updateMatrixWorld(true);
+  const attribution=createVisibleAttribution({THREE,scene,camera});
+  assert.deepEqual(attribution.update().designCredits,[],'Municipal fallback is not the refined asset');
+  mesh.userData={projectId:'city-group-1',assetId:'sgm-maritz-6710-exterior-study'};attribution.refresh();
+  assert.deepEqual(attribution.update().designCredits,[],'Unrelated 6967 Maritz is excluded');
+  mesh.userData={projectId:'sgm-maritz-6710',assetId:'sgm-maritz-6710-exterior-study'};mesh.geometry.setIndex([]);attribution.refresh();
+  assert.deepEqual(attribution.update().designCredits,[],'An empty replacement has no visible facade');
+  assert.deepEqual(exportCreditLines({osm:false,designCredits:[]}),exportCreditLines({osm:false}));
+  assert(exportCreditLines({osm:true,designCredits:['Design: test']}).some(line=>line.includes('openstreetmap.org/copyright')));
+});

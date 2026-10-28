@@ -26,8 +26,8 @@
       "publicBytesVerified": true
     },
     "modelPreviews": {
-      "views": 9,
-      "localAssets": 3,
+      "views": 10,
+      "localAssets": 4,
       "externalAssets": 6,
       "externalBytes": 7354555,
       "externalCommits": [
@@ -38,7 +38,7 @@
       "remoteAvailabilityCheckedSeparately": true
     },
     "cityModelStudies": {
-      "assemblies": 7,
+      "assemblies": 8,
       "existingPublicAssets": [
         "mcity-m1",
         "mcity-m2",
@@ -48,7 +48,8 @@
         "edge-1",
         "edge-2",
         "artform",
-        "oro"
+        "oro",
+        "sgm-maritz-6710"
       ],
       "completedModelsAllScenarios": true,
       "intendedOroScenarios": [
@@ -58,8 +59,8 @@
       "atomicAssemblies": true,
       "assetHashesValidatedByModelPreviewCatalogue": true
     },
-    "files": 764,
-    "publishedBytes": 586012979,
+    "files": 774,
+    "publishedBytes": 590759860,
     "originalPNGs": 33,
     "originalImageVerification": {
       "nativeMasterURLsPreserved": true,
@@ -145,7 +146,7 @@
     "localPNGchecksumsVerified": true,
     "noHostedRuntime": true,
     "noPrivateArtifacts": true,
-    "completeReviewBytes": 1000014667
+    "completeReviewBytes": 1004761548
   },
   "derivatives": {
     "legacyPNGFilesVerified": 91,
@@ -161,8 +162,8 @@
     "quality": "Exact published bytes",
     "offloadedFiles": 280,
     "offloadedBytes": 414091741,
-    "publishedBytes": 586012979,
-    "publishedFiles": 485
+    "publishedBytes": 590759860,
+    "publishedFiles": 495
   },
   "files": [
     {
@@ -182,8 +183,8 @@
     },
     {
       "file": "app.js",
-      "bytes": 69801,
-      "sha256": "f6ef26ccc125ce955872848165b5d3ac76eaae379c0d2902670deeae76a7aadf"
+      "bytes": 70716,
+      "sha256": "030e7b9f80242609eba2add81a4c3ed7e215d91c58203a96f2112483406f46d5"
     },
     {
       "file": "asset-delivery-map.js",
@@ -234,6 +235,46 @@
       "file": "assets/local-coverage-map.svg",
       "bytes": 246877,
       "sha256": "672537934566e90977c15bf6f3b1b5b66ca4a07336dc0e309a327656085c04f6"
+    },
+    {
+      "file": "assets/maritz-20261027/6710-Maritz-entrance-before-after.png",
+      "bytes": 662010,
+      "sha256": "199981b7e814e86f5b3fff1a80014a9db98f4202513c3e79f45eacda4c9e7566"
+    },
+    {
+      "file": "assets/maritz-20261027/6710-Maritz-entrance-before-after.webp",
+      "bytes": 90324,
+      "sha256": "0b1beaa12335979f7d459ce65a6a68da9b328dcc1e4341e9c966ca82f4910f23"
+    },
+    {
+      "file": "assets/maritz-20261027/6710-Maritz-frontage-after.png",
+      "bytes": 1435538,
+      "sha256": "2569ae7cda666cf5e40a560d63c245870ffe2abd9d158435e0ca0b365236add9"
+    },
+    {
+      "file": "assets/maritz-20261027/6710-Maritz-frontage-before-after.png",
+      "bytes": 594948,
+      "sha256": "4225b691c1c73cd82040f5e97c4c31395a55abc95a33e0ce0d25e0752df9c3f9"
+    },
+    {
+      "file": "assets/maritz-20261027/6710-Maritz-frontage-before-after.webp",
+      "bytes": 88224,
+      "sha256": "374551aad115022327162537fbc50a68069a43315ed48d622bfdef9d0d36a60a"
+    },
+    {
+      "file": "assets/maritz-20261027/6710-Maritz-frontage-before.png",
+      "bytes": 1295668,
+      "sha256": "ba1c7360cd74f307f2c59fbd7916f7a24248562f661de4a5a5578111a5b76904"
+    },
+    {
+      "file": "assets/maritz-20261027/6710-Maritz-overview-before-after.png",
+      "bytes": 431439,
+      "sha256": "6f6b31d84ef91c79c91c5e9d960575b190e5d6bacbe2acda4326bebfd78abea8"
+    },
+    {
+      "file": "assets/maritz-20261027/6710-Maritz-overview-before-after.webp",
+      "bytes": 67432,
+      "sha256": "e471b0ec26d6897d2e5240d37f30e1d24e85a2d3bc9b19f584371cd60f0c2e60"
     },
     {
       "file": "assets/subway/2001-city-centre-original.png",
@@ -312,13 +353,13 @@
     },
     {
       "file": "city-model-placements.js",
-      "bytes": 34690,
-      "sha256": "b4402efbb973bc55e8bfb4540bd615af4da3d59459e46b3a9adb1b0862bc4b29"
+      "bytes": 66433,
+      "sha256": "5c048c83de1e0c771b9fac2d90400676427edd4fcee67ca0b9ce3d47207e1dde"
     },
     {
       "file": "city-model-studies.js",
-      "bytes": 6664,
-      "sha256": "f8a9daf1b983e6adafade2e4c716c9a47b08a6fe975db4a3c5052138c7b2e343"
+      "bytes": 6658,
+      "sha256": "5d73f2cec64ae5a1a550f664960023b326c424f00ee70c069ef65e35cf3aae47"
     },
     {
       "file": "comparison.js",
@@ -512,8 +553,8 @@
     },
     {
       "file": "data/model-previews.json",
-      "bytes": 36556,
-      "sha256": "9b330168c56d6f88499134a44a5cdd4552e787f34765b69307b573f319b8e2b5"
+      "bytes": 39189,
+      "sha256": "a4f36cd1369686cad3a7b30e1d39996212b411150568408883d03643dade7693"
     },
     {
       "file": "data/original-image-release-integrity.json",
@@ -562,13 +603,13 @@
     },
     {
       "file": "data/projects.json",
-      "bytes": 867443,
-      "sha256": "fe9ec51bbb7b8e8538d14c7445d1f3dce6153297cf6366822eb691ea8490756a"
+      "bytes": 867014,
+      "sha256": "7e3bcd874146175f3f1ace1e6f0ac704c4795f8808ff1adf047323217639db80"
     },
     {
       "file": "data/publication-derivatives.json",
       "bytes": 108728,
-      "sha256": "7e9d6cec45054656e36f9bfc85bfc37c435b894462ef0bbd66807a2081a2953f"
+      "sha256": "4fc0b1d703b48e9e9c9f311574f7c6cdec89519484221da8b36c17b1a418c2b7"
     },
     {
       "file": "data/recent-project-updates.json",
@@ -607,8 +648,8 @@
     },
     {
       "file": "data/stats.json",
-      "bytes": 4864,
-      "sha256": "cb4ce8b995fdf632a576ef1ce9a2ea59229d0ce74b1651db14d497f4b2d459de"
+      "bytes": 5030,
+      "sha256": "2df589521109a3179e79fe43794efcfbf95bcf59e51cf55917cd8a4bcaedcbe6"
     },
     {
       "file": "data/streetsville-meshes.json",
@@ -762,8 +803,8 @@
     },
     {
       "file": "downloads/Model-study-credits.txt",
-      "bytes": 15540,
-      "sha256": "39375052f60ecce2371a4a1d88978dd1f696459f4bbb62ac5a8f6d9595f7df24"
+      "bytes": 17336,
+      "sha256": "da60d71ddeda73a3ebb3614ac3d7d0ea9d3062e97758ffd24db052f8a500bb82"
     },
     {
       "file": "downloads/Original-picture-upload-validation.json",
@@ -892,8 +933,8 @@
     },
     {
       "file": "downloads/project-register.csv",
-      "bytes": 352874,
-      "sha256": "607be46ac99d9057ecd099995f56040298119b084bac54228cc3ed13cb57f1b8"
+      "bytes": 353850,
+      "sha256": "4243a3c0efa137d6e3a65a24b6cc0d57bfc7dd8f132f0f7b5c531c3acfb7317c"
     },
     {
       "file": "downloads/public-project-reference-coverage.json",
@@ -1133,7 +1174,7 @@
     {
       "file": "explore.html",
       "bytes": 17788,
-      "sha256": "988a2681244f16bd27ca9e81468a798349761fecd20e071923be2ad321a0f941"
+      "sha256": "8f25bdff280f7d5e088b00b9565f56e1829130acae827dd5cdf28cf2ebd5a32b"
     },
     {
       "file": "file-actions.js",
@@ -1966,6 +2007,11 @@
       "sha256": "a08346b9d7f8dfd4994d79541ab6ef84b67e1081cfd26278053df3a1bdf641ca"
     },
     {
+      "file": "model-preview-framing.js",
+      "bytes": 1123,
+      "sha256": "44cebaba84b7b09c03e5032bfec21475357fd5e6ff7ca266b0f33c733142a6a1"
+    },
+    {
       "file": "model-preview-loading.js",
       "bytes": 2127,
       "sha256": "aa09f655378dda5e960abf341ac8ace8ad547017ae61f21a085d1ce07d0da487"
@@ -1977,8 +2023,8 @@
     },
     {
       "file": "model-preview.js",
-      "bytes": 14000,
-      "sha256": "43c247d94140e22213d73ba7bac92f4b669afbb9d66b2e33ab543148e0a99778"
+      "bytes": 14574,
+      "sha256": "f5da4919ffcd825f60e473f92b672ac32d1f67a74414beb2f46a9cc36cd78bd7"
     },
     {
       "file": "model-visibility.js",
@@ -1988,7 +2034,7 @@
     {
       "file": "model.html",
       "bytes": 5217,
-      "sha256": "840c5685002857d0c56d93f906939ec684017c62eab7eac714e5ecb001c7a178"
+      "sha256": "b22e76eac659dcd19f86e30f4f5814991d85858ee5a0b2a5acd62b39c1fc2c2c"
     },
     {
       "file": "models/citywide-details.glb",
@@ -2009,6 +2055,11 @@
       "file": "models/refinement/cooksville-toc-2025-tower-envelopes.glb",
       "bytes": 16484,
       "sha256": "9509a7705840cbbb7dcb9a8b7efe4ea4dd680ae8914196ea263c410f61550a22"
+    },
+    {
+      "file": "models/studies-20261027/sgm-maritz-6710-exterior-study.glb.gz",
+      "bytes": 35809,
+      "sha256": "e36e3f7a5814d4904bc3a0b0bd41bef8d34b03dfaf53eba3b6b1edf2dd0a83df"
     },
     {
       "file": "models/supplemental/pearson-airfield-context.json",
@@ -2062,8 +2113,8 @@
     },
     {
       "file": "project-cards.js",
-      "bytes": 11263,
-      "sha256": "d77a2cac94e0c901214146070522b3c47b89f35c219ab046ad8c628016256ed8"
+      "bytes": 11335,
+      "sha256": "a21696c180411b16b19de7bab3c8ffe5f7e4f93b082ad4bf59d24e1aa18cfb54"
     },
     {
       "file": "reading-notes.css",
@@ -2077,13 +2128,13 @@
     },
     {
       "file": "reference-updates.css",
-      "bytes": 4126,
-      "sha256": "d95b23ed6a958016f094ff4527210edf9011d6eeb21e47cfa9d67a02720a0ffd"
+      "bytes": 4643,
+      "sha256": "0118f6a7854c31aace83d8b32dd95c1332da96e32d786c7e9f5e7a1796f1fc04"
     },
     {
       "file": "reference-updates.html",
-      "bytes": 72283,
-      "sha256": "c580ae24c9f9aad59d56d9941c515b48478e6cb306a38b84eec65eafbc308e3d"
+      "bytes": 77218,
+      "sha256": "89aa9ea275e42d7f0b762397f1b40352a932c49315df5cf4156555deccc732a3"
     },
     {
       "file": "refinement-loading.js",
@@ -2207,8 +2258,8 @@
     },
     {
       "file": "source-attribution.js",
-      "bytes": 3012,
-      "sha256": "0410b84bf1ac3f147fe5b83199fe43d673ae161950330ebf698884feabc47ea1"
+      "bytes": 3486,
+      "sha256": "9ff7377e2ab08389f3ab6f1b17117384e6f653d97c57fa8510e6bf8527f0022d"
     },
     {
       "file": "source-layer-cut.js",
@@ -2568,7 +2619,7 @@
     {
       "file": "viewer-bootstrap.js",
       "bytes": 799,
-      "sha256": "e02a41e784c6615ad21666f2eed1db41ff7eb3b73793c30457e45b7cde8bbcb4"
+      "sha256": "92005156607df2aa432abb3063d93f505a2263b71ce1ef280101af66977b17ae"
     },
     {
       "file": "viewer-camera.js",
@@ -2591,5 +2642,5 @@
       "sha256": "2d9cfb19a32fac7548704fbfca44060267c233522645aa354fb4f6069e012d97"
     }
   ],
-  "bytes": 586012979
+  "bytes": 590759860
 }
