@@ -25,6 +25,17 @@
       "reviewedAssetListSHA256": "cfd6c8797da771363e61d2ee6da46a0277eeeab8bd376512da83fb25a394db50",
       "publicBytesVerified": true
     },
+    "currentCitywideMedia": {
+      "status": "LOCAL_BYTES_VERIFIED",
+      "publicationEvidence": "NOT_CHECKED_BY_LOCAL_STRUCTURE_PREFLIGHT",
+      "currentImages": 1,
+      "newAssets": 40,
+      "newAtlasPages": 35,
+      "historicalDocumentsPreserved": 13,
+      "historicalPagesPreserved": 61,
+      "rawMasterPublished": false,
+      "mixedSourceDates": true
+    },
     "modelPreviews": {
       "views": 11,
       "localAssets": 5,
@@ -60,8 +71,8 @@
       "atomicAssemblies": true,
       "assetHashesValidatedByModelPreviewCatalogue": true
     },
-    "files": 791,
-    "publishedBytes": 595954930,
+    "files": 837,
+    "publishedBytes": 659081471,
     "originalPNGs": 33,
     "originalImageVerification": {
       "nativeMasterURLsPreserved": true,
@@ -147,7 +158,7 @@
     "localPNGchecksumsVerified": true,
     "noHostedRuntime": true,
     "noPrivateArtifacts": true,
-    "completeReviewBytes": 1009956618
+    "completeReviewBytes": 1073083159
   },
   "derivatives": {
     "legacyPNGFilesVerified": 91,
@@ -163,8 +174,8 @@
     "quality": "Exact published bytes",
     "offloadedFiles": 280,
     "offloadedBytes": 414091741,
-    "publishedBytes": 595954930,
-    "publishedFiles": 512
+    "publishedBytes": 659081471,
+    "publishedFiles": 558
   },
   "files": [
     {
@@ -179,8 +190,8 @@
     },
     {
       "file": "accuracy-review.html",
-      "bytes": 146637,
-      "sha256": "92fbe2f422f4cd8e2faf884f2e1e828dee9beed557767d7cf5adbeb70ef2c3a5"
+      "bytes": 146633,
+      "sha256": "6486534adf5570d375b9cf8142ec7c0675ff089a0252e37fe2e1087102b631ea"
     },
     {
       "file": "app.js",
@@ -408,6 +419,21 @@
       "sha256": "48594ba5be1d8ba043436af6cccddaa1f5cf3bef2a1b64d7e18c4f06a37d7b36"
     },
     {
+      "file": "data/citywide-media-20261028-public-proof.json",
+      "bytes": 10903,
+      "sha256": "9369eeb3c2f055ac0b25368a3bb17d0e7e72a64a7283b0f905c72e4ecfd8e309"
+    },
+    {
+      "file": "data/citywide-media-20261028.json",
+      "bytes": 11902,
+      "sha256": "b0bd3fb4d7afef984a960851b4a9e1ebec559cdf3de27bdd4227ae9d29014284"
+    },
+    {
+      "file": "data/citywide-source-attribution-20261028.json",
+      "bytes": 43491,
+      "sha256": "5fd98b06250876e042956c269373ffc72f516cb145d802f29ac108e40f5dd99c"
+    },
+    {
       "file": "data/clarkson-meshes.json",
       "bytes": 18948,
       "sha256": "b3fe59b7ff7baab4d06abfae8af96d9522daf5f65c333d329a3086658358dceb"
@@ -431,6 +457,11 @@
       "file": "data/districts.json",
       "bytes": 15621,
       "sha256": "265f18af9e1788644ba73d9214b758c7e034596a552680080358df07c26e808d"
+    },
+    {
+      "file": "data/document-previews-20261028.json",
+      "bytes": 8166,
+      "sha256": "76720af368a9a8d4a9ed994e856492eaaa5572358c63103ad264c897cf076683"
     },
     {
       "file": "data/document-previews.json",
@@ -655,7 +686,7 @@
     {
       "file": "data/publication-derivatives.json",
       "bytes": 108728,
-      "sha256": "7f094794e5941f70448f9c12a260e19afbdb9db9bfa5d1329a1e8a9706002c24"
+      "sha256": "b9871b5336f16d331c033f4feb2e7d03f706e95d4f2617149908782e6317ea1d"
     },
     {
       "file": "data/recent-project-updates.json",
@@ -753,6 +784,11 @@
       "sha256": "1be9882980807c8bc34575f7e095cdec5b176a7601a1da0f348231fdeb793b51"
     },
     {
+      "file": "document-page-text-20261028.txt",
+      "bytes": 24973,
+      "sha256": "15c8dbe15e59c8043d7c0806e23157fdd5a4e028c419eda5b8fc987fb5eac5aa"
+    },
+    {
       "file": "document-page-text.txt",
       "bytes": 18760,
       "sha256": "0fd144cde35d7c12c586bc45874815ca1cd8ff79497b6119cdf4b6e1c0a8d879"
@@ -764,8 +800,183 @@
     },
     {
       "file": "document-preview.js",
-      "bytes": 6942,
-      "sha256": "a07af38368516aa87ab7d1b01b2f1e1600e91e38028c97419e729678e0b4988d"
+      "bytes": 8564,
+      "sha256": "1ab308efcf77073094f556595010fa1211fd363995555d950eab60bc3988912d"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-01.avif",
+      "bytes": 475134,
+      "sha256": "add51e433604c373c4176a487bc0e054c8e3bbca45a4dc57459a1ff522d4ba64"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-02.avif",
+      "bytes": 802799,
+      "sha256": "67a81fc8e783dbd50dc05ec595364322b726b5621b994fc514c8a2783c92ffeb"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-03.avif",
+      "bytes": 783063,
+      "sha256": "128a0bf48ec75e28b7ecf43021e769e424d4c5774cfe7131f4cb5299081ad5e6"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-04.avif",
+      "bytes": 622358,
+      "sha256": "92310baf8a0ad588e093423edd593142feea905375de5f8cdf8bb8fe87896dc3"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-05.avif",
+      "bytes": 358187,
+      "sha256": "3e2f520c3240d3edb5397dde7a5d617a6e7ea61d584b03c86eba1cb838425767"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-06.avif",
+      "bytes": 350449,
+      "sha256": "53c90642a34c8bfe2904315611e459c5e6e300ee1b5672c0d315203ed25a95a9"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-07.avif",
+      "bytes": 496016,
+      "sha256": "3b02caf8608a692523307c68a07f0603b811b1c71911bade16270181f4d05d68"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-08.avif",
+      "bytes": 509388,
+      "sha256": "cb52b8ff5282c3282b295d2041e2dd810ad9005a27aa05c03520e5ede47b5f44"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-09.avif",
+      "bytes": 493900,
+      "sha256": "058a6747ecc8dd43d70cb2110735d86949910bd0de60c7b03ba416f438b550c8"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-10.avif",
+      "bytes": 832042,
+      "sha256": "dc8446da1901c2e2401a27eb3c36a367d68f2dc26438eaee4d30b31c96054661"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-11.avif",
+      "bytes": 871037,
+      "sha256": "6abb28b549ddf594a1a9247bdaa637ef9df79debd4e5fe146e6210964070679c"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-12.avif",
+      "bytes": 649182,
+      "sha256": "55e95fd045ccfdc9eecb2e6cfbcc2a70b28f4784551585a679583120ac2f6e53"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-13.avif",
+      "bytes": 552962,
+      "sha256": "69dab0358f0d912efdd5e5c7e375c4eeb2c9b26c242532611c929e715302564a"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-14.avif",
+      "bytes": 519323,
+      "sha256": "4873af2e4fb0c3b69ab7b344301c9c00e3710584150ed01ad818c40437b9e682"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-15.avif",
+      "bytes": 497966,
+      "sha256": "7682390168e942144780171fa9118e78f5e92a63720cf062e72a253b1488c9b6"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-16.avif",
+      "bytes": 412300,
+      "sha256": "42cb8cdf5e2f8a29e6b6a1380cd7fdce286828fa6f2c9351457b8834bac32fbf"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-17.avif",
+      "bytes": 390364,
+      "sha256": "abb9e79f624e43b404a3adfd977f2c71a2954df10259d21cc658924a4be0d3a0"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-18.avif",
+      "bytes": 755887,
+      "sha256": "b71c0818ed84c29a7ae6dc6dead9dfec72a65b2355190298caac5ec75593fe87"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-19.avif",
+      "bytes": 787904,
+      "sha256": "6f630cf44ac7a1c6a5e508e875221531a664f1d010322f0a103c86b62ae02be3"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-20.avif",
+      "bytes": 595608,
+      "sha256": "32fe3fc45cba18faf878ec518926e863d4c96999b79ea5bd3cda58e4d48ca9bd"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-21.avif",
+      "bytes": 591176,
+      "sha256": "1cc2dbc1d0a07fcc82e0ab93103077faed9bc0aed72360f5a1838e4bd088430e"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-22.avif",
+      "bytes": 827584,
+      "sha256": "c845f84f6236987ca48fd4892b23fcc7e412eaac5ccca3670293f36e6ba710db"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-23.avif",
+      "bytes": 668322,
+      "sha256": "410507784845e1ed1e0a35709dd78a3699bcfbee56b5c953c888aa00bcc5789b"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-24.avif",
+      "bytes": 829307,
+      "sha256": "930562b0098cb46678be22950a520fe90d761afb657afabf805e34d4526596d5"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-25.avif",
+      "bytes": 750057,
+      "sha256": "81649e3aafcb444fa819d5527c468ed031e4e9d28c9d9e8c682cd082a53da3fa"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-26.avif",
+      "bytes": 1070632,
+      "sha256": "2a227f50a95f28e6d9d202b1dc7642d71608f48059c18385940e0aa88ce4743c"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-27.avif",
+      "bytes": 960286,
+      "sha256": "02dfd6683b0d82a9d0bd72c6253261a6de48173dc4f38be11ba55c715daa0e6f"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-28.avif",
+      "bytes": 888174,
+      "sha256": "a9933b540f0dbcecebf8d77854fbaf0b8a12e55ab694793793c314e80c19253a"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-29.avif",
+      "bytes": 659188,
+      "sha256": "a70f094df5c6ed6b0b1e7f2135eedcaa1d7cf19a30e214c8ddbf3538f6539a6f"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-30.avif",
+      "bytes": 892140,
+      "sha256": "87d1ddc0fa9fe972175b1b86c10bc6aca879be9639488676a49fcf98b068e722"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-31.avif",
+      "bytes": 1159345,
+      "sha256": "d3a927f75e32337e5405856da91cb31b32365ae66e599ee994e3b0166240ca16"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-32.avif",
+      "bytes": 424881,
+      "sha256": "64b846cd4f72dd94cec1785ca5ad8edfaf870c26e09bff6964b7d8c0e86a444a"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-33.avif",
+      "bytes": 678686,
+      "sha256": "3912c9a76a7796d5a9caf5b3d215c2310d1be39f5ab735c56eb1354f6168253e"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-34.avif",
+      "bytes": 242469,
+      "sha256": "fbcadaf0bcf2696e62021bd320b09320e824aab91c1246a246caddcd75f91b02"
+    },
+    {
+      "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-35.avif",
+      "bytes": 179812,
+      "sha256": "04368525038636298576067ccd5ffd263a75ce1d550349e078f4d4bb00ebe7af"
     },
     {
       "file": "downloads/30-Eglinton-West-review.md",
@@ -798,6 +1009,11 @@
       "sha256": "76e0c18b3d807639b0aa9df04df41a9bfc999bdad10762954a333bdd939cbce4"
     },
     {
+      "file": "downloads/Citywide-image-credits-20261028.txt",
+      "bytes": 13285,
+      "sha256": "d4b3024e564936ec7cbebada465f4c05c80d60e773830ac1ae738a994eeeb0d8"
+    },
+    {
       "file": "downloads/Clarkson-mainland-context-repair.json",
       "bytes": 5955,
       "sha256": "b6d0ac3cf0ee714d5ab8273f34995a03b1e88c761cfcb05bdcc83501b60bed91"
@@ -816,6 +1032,11 @@
       "file": "downloads/Existing-building-replacement-validation.json",
       "bytes": 13765,
       "sha256": "6e27608ff468e735e1677c8a740b89428529719b9f339a46f44b7189a4ae2758"
+    },
+    {
+      "file": "downloads/Future-Mississauga-Atlas-20261028-bf41d7ee2a66.pdf",
+      "bytes": 25427538,
+      "sha256": "bf41d7ee2a665ac3f3ed680b9dbc3bbdcd0e75ca743aac793d19632b9da5d96d"
     },
     {
       "file": "downloads/Future-Mississauga-Atlas.pdf",
@@ -1219,13 +1440,13 @@
     },
     {
       "file": "explore.html",
-      "bytes": 17797,
-      "sha256": "7dc4653b2b015ba93ca5640caa002d583a0cdd1316fc049c1ee01e435e6a70af"
+      "bytes": 17793,
+      "sha256": "f1d69e8ffa2781a9158868a2750157dc5a8cde9a67ec5dda110606134aec7259"
     },
     {
       "file": "file-actions.js",
-      "bytes": 2181,
-      "sha256": "77c5abd1cc5d65a64932e3e80d79a3677f63ccfb1c88080b21edb34239355a42"
+      "bytes": 2411,
+      "sha256": "32ae73ecfafad180f2f659fa580a9a1a673504c2309739b2b295186d1457c94e"
     },
     {
       "file": "gallery.css",
@@ -1234,13 +1455,33 @@
     },
     {
       "file": "gallery.js",
-      "bytes": 7093,
-      "sha256": "1f2dc7ebaa205c6642840dcbb8e120045ba8aa5868df1696cb92f056759d300b"
+      "bytes": 7084,
+      "sha256": "6dba9babb9c4629bda7bf0a7a9714c4d2926724ddab25535a77e71b8c8201343"
     },
     {
       "file": "gallery/Downtown-transformation.mp4",
       "bytes": 951775,
       "sha256": "0d666f25b34dca8129ea76c5091f536bc767ab5ae6335c677b3dafe4baf1aa49"
+    },
+    {
+      "file": "gallery/citywide-20261028/citywide-future-2026-10-28.png",
+      "bytes": 7129594,
+      "sha256": "ad2b8463b592cb2818545b9aa1b78b322b724db783b399e0a857a6bb477b408c"
+    },
+    {
+      "file": "gallery/citywide-20261028/display-citywide-future-2026-10-28.png",
+      "bytes": 7126258,
+      "sha256": "af6f0611f9260016ad19e81ef6df57b201ff12dcd5e918724e004202d48100f3"
+    },
+    {
+      "file": "gallery/citywide-20261028/wide-citywide-future-1200-af6f0611f926.avif",
+      "bytes": 117855,
+      "sha256": "feced1d163d904acc476313c15eab235ecf448b15d4caa5259fb665af94fa7c4"
+    },
+    {
+      "file": "gallery/citywide-20261028/wide-citywide-future-3200-af6f0611f926.avif",
+      "bytes": 628529,
+      "sha256": "e46ce0359e8e9a3adde16b0ab1c9cb9b509edd2e93e794986299fbe54dae49b9"
     },
     {
       "file": "gallery/previews/020ca39a65103c2b/clarkson-future.png",
@@ -1994,23 +2235,23 @@
     },
     {
       "file": "image-experience.js",
-      "bytes": 1502,
-      "sha256": "c759e0f8c2382c83b0f5fbb9941c66a007d919b4c7a34455793982dd845dff9f"
+      "bytes": 1488,
+      "sha256": "a038f1991c762daf27323e9637c61b0cdf5425693e75a70e4ba77801cbcfddd7"
     },
     {
       "file": "image-preview.js",
-      "bytes": 8176,
-      "sha256": "3134a21d197c47f07eff58ddbf477b032dfc611b6c8694cd7d85e906aee0f77a"
+      "bytes": 8166,
+      "sha256": "63bb168eaa3fde29ccd988d2e7d8fe509b47d6820a211f9b91c60d77a7d36f5e"
     },
     {
       "file": "image-provenance.js",
-      "bytes": 2016,
-      "sha256": "05be0ca3ded0ba54f35d306d31f4870d0edb0ff99e8b2446dd9253d982d25f17"
+      "bytes": 2085,
+      "sha256": "dfa777534a4aad0eee04d6aa8de82bb1b971d02b07c1ec3ca1a09e60a2f4e2ed"
     },
     {
       "file": "index.html",
-      "bytes": 14477,
-      "sha256": "cb5b67325591c537034b3bca440edc76ea7d939f1ebb9e0e38031ce0b4628e98"
+      "bytes": 14457,
+      "sha256": "718e4e5fccdd5e4ab3d5ca433195af33675a53aa8d7eebbc163f62b08ccb321c"
     },
     {
       "file": "licenses/BricolageGrotesque-OFL.txt",
@@ -2044,8 +2285,8 @@
     },
     {
       "file": "media-catalog.js",
-      "bytes": 3048,
-      "sha256": "150025f1d7cece8686fba53eaee98f612a2fe237bb6629a18559b9b736b77b2f"
+      "bytes": 7162,
+      "sha256": "4bdb5b9a1f4819168693e17dd6a42cd310b93e35aad6359100d8e240203c759f"
     },
     {
       "file": "media-player.js",
@@ -2184,8 +2425,8 @@
     },
     {
       "file": "neighbourhood-media.js",
-      "bytes": 1924,
-      "sha256": "ed4fab04d191a97a34857c3a3b8b73c610ed21844c16d3b4c88192962146f60d"
+      "bytes": 1920,
+      "sha256": "605fb40a2080d650b8057ef8618f52083098b07f8d56cce248d3c933b29722ad"
     },
     {
       "file": "png-metadata.js",
@@ -2214,8 +2455,8 @@
     },
     {
       "file": "reference-updates.html",
-      "bytes": 83056,
-      "sha256": "d818c58b16491cef6bd816b8b9dd5a495fc2d7775a8ae8c8acc8f3911d4b9d55"
+      "bytes": 83052,
+      "sha256": "a8b1bf5f98fb3f62f5708a3d86d69d13e1ade8e0b88cea6d4bb94f6210950364"
     },
     {
       "file": "refinement-loading.js",
@@ -2274,8 +2515,8 @@
     },
     {
       "file": "review-renders.html",
-      "bytes": 37264,
-      "sha256": "27ef5deae9f02b07dfea85236f1b82d407d1f76c0ac67ea3ccac5ec3dceb07e9"
+      "bytes": 37260,
+      "sha256": "db4352d3f3760497064e7c18bfa5c21ba280e8ba3e403b4c52932c0659e00a19"
     },
     {
       "file": "robots.txt",
@@ -2314,8 +2555,8 @@
     },
     {
       "file": "social-preview.js",
-      "bytes": 1236,
-      "sha256": "7d07c0afc3d925ba360603b08caa1eada7b61df9d2e4d88b0680ea25394e84ab"
+      "bytes": 1227,
+      "sha256": "e6aaab41613abf856de34f3e3344d5888c531d69910583504986d1dbfe01afe2"
     },
     {
       "file": "social.css",
@@ -2324,13 +2565,13 @@
     },
     {
       "file": "social.html",
-      "bytes": 40286,
-      "sha256": "8277d0a8099e32356bff9322f1e9cb6b480bb09459483a944dd13b03f770c177"
+      "bytes": 40278,
+      "sha256": "5a0e4803884309c3c130a346dddb668beff174a8fb3b5da4ccc82f9b5820df60"
     },
     {
       "file": "social.js",
-      "bytes": 1097,
-      "sha256": "796499e9020a4e510079373d2bd364de04655082730935b1fef59a935ba91879"
+      "bytes": 1093,
+      "sha256": "5be3ce39202b95d9beb9c29ca234759a61448334edd59302aa516190d19e62ef"
     },
     {
       "file": "source-attribution-regions.js",
@@ -2354,8 +2595,8 @@
     },
     {
       "file": "sources.html",
-      "bytes": 9209,
-      "sha256": "fa4c1e5fb647ce075030b4ba2fce9a71fcc7602902ccd75804cf63babffcf12c"
+      "bytes": 9395,
+      "sha256": "0309c36b3dcf06630afa313df0ec9d52493049e917c2d18b1b680ea0b1264f2a"
     },
     {
       "file": "sources.js",
@@ -2379,8 +2620,8 @@
     },
     {
       "file": "subway.html",
-      "bytes": 22389,
-      "sha256": "d704ccf27795680d40382ac2a2123f5d707124bd2d6523b8164b5488cccd0189"
+      "bytes": 22385,
+      "sha256": "d26786fb36935eca17f1bca58944b4ed6660c1ff4542db05b42ec35dac5701b7"
     },
     {
       "file": "subway.js",
@@ -2399,8 +2640,8 @@
     },
     {
       "file": "updates.html",
-      "bytes": 31062,
-      "sha256": "410c4330d822e1d9ebaf5d23e3d62b26e851ebdda810ab096a8fa33ed600754f"
+      "bytes": 31058,
+      "sha256": "33498089518a2b319b66064f4b3e1e3646a6f21fcb002df24a807be0b4fb1fff"
     },
     {
       "file": "usability.css",
@@ -2728,5 +2969,5 @@
       "sha256": "2d9cfb19a32fac7548704fbfca44060267c233522645aa354fb4f6069e012d97"
     }
   ],
-  "bytes": 595954930
+  "bytes": 659081471
 }

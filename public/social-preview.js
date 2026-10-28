@@ -1,6 +1,6 @@
-import {createImagePreview} from './image-preview.js?v=20261028-improvements1';
-import {pictureProvenance} from './image-provenance.js?v=20261028-improvements1';
-import {resolveMedia} from './media-catalog.js?v=20261023-usability1';
+import {createImagePreview} from './image-preview.js?v=20261028-citywide1';
+import {pictureProvenance} from './image-provenance.js?v=20261028-citywide1';
+import {resolveMedia} from './media-catalog.js?v=20261028-citywide1';
 export function installSocialPreview(root=document){
  const preview=createImagePreview();
  for(const link of root.querySelectorAll('.social-grid .image-link')){

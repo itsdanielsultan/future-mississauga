@@ -1,6 +1,6 @@
-import {createImagePreview} from './image-preview.js?v=20261028-improvements1';
-import {pictureProvenance} from './image-provenance.js?v=20261028-improvements1';
-import {refreshPictureAssets} from './media-catalog.js?v=20261023-usability1';
+import {createImagePreview} from './image-preview.js?v=20261028-citywide1';
+import {pictureProvenance} from './image-provenance.js?v=20261028-citywide1';
+import {refreshPictureAssets} from './media-catalog.js?v=20261028-citywide1';
 import {bindComparison} from './comparison.js?v=20261023-usability1';
 const $=s=>document.querySelector(s);
 const [districts,pictures]=await Promise.all(['districts','picture-assets'].map(x=>fetch('data/'+x+'.json',{cache:'no-store'}).then(r=>r.json())));
