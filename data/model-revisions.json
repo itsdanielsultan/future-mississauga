@@ -1,0 +1,181 @@
+{
+  "schema": "future-mississauga-model-revisions/v1",
+  "datePolicy": "Updated on describes a verified model revision. Publication, reference capture and image render dates are separate. Unbound or undated assets receive no model update label.",
+  "revisions": [
+    {
+      "id": "sgm-maritz-6710-20261027",
+      "projectId": "sgm-maritz-6710",
+      "updatedOn": "2026-10-27",
+      "publishedOn": "2026-10-28",
+      "viewIds": [
+        "sgm-maritz-6710"
+      ],
+      "scope": "Partial facade refinement. The roof, rear and unseen parts retain the City baseline.",
+      "modelAssets": [
+        {
+          "id": "sgm-maritz-6710",
+          "url": "models/studies-20261027/sgm-maritz-6710-exterior-study.glb.gz",
+          "sha256": "8b67989cd54e9ecbdf66f866de5c6e2a2828d338952471ba83b862849f7c58a4",
+          "downloadSHA256": "e36e3f7a5814d4904bc3a0b0bd41bef8d34b03dfaf53eba3b6b1edf2dd0a83df",
+          "bytes": 35809,
+          "decodedBytes": 292136
+        }
+      ],
+      "media": [
+        {
+          "url": "assets/maritz-20261027/6710-Maritz-frontage-before.png",
+          "bytes": 1295668,
+          "sha256": "ba1c7360cd74f307f2c59fbd7916f7a24248562f661de4a5a5578111a5b76904",
+          "role": "before",
+          "modelSHA256s": [
+            "d7e421984a075ccabe504ed17f7d70614ab110e66277fd626a7dbb246e4fe28f"
+          ]
+        },
+        {
+          "url": "assets/maritz-20261027/6710-Maritz-frontage-after.png",
+          "bytes": 1435538,
+          "sha256": "2569ae7cda666cf5e40a560d63c245870ffe2abd9d158435e0ca0b365236add9",
+          "role": "after",
+          "modelSHA256s": [
+            "8b67989cd54e9ecbdf66f866de5c6e2a2828d338952471ba83b862849f7c58a4"
+          ]
+        },
+        {
+          "url": "assets/maritz-20261027/6710-Maritz-frontage-before-after.png",
+          "bytes": 594948,
+          "sha256": "4225b691c1c73cd82040f5e97c4c31395a55abc95a33e0ce0d25e0752df9c3f9",
+          "role": "comparison",
+          "modelSHA256s": [
+            "d7e421984a075ccabe504ed17f7d70614ab110e66277fd626a7dbb246e4fe28f",
+            "8b67989cd54e9ecbdf66f866de5c6e2a2828d338952471ba83b862849f7c58a4"
+          ]
+        },
+        {
+          "url": "assets/maritz-20261027/6710-Maritz-frontage-before-after.webp",
+          "bytes": 88224,
+          "sha256": "374551aad115022327162537fbc50a68069a43315ed48d622bfdef9d0d36a60a",
+          "role": "comparison",
+          "modelSHA256s": [
+            "d7e421984a075ccabe504ed17f7d70614ab110e66277fd626a7dbb246e4fe28f",
+            "8b67989cd54e9ecbdf66f866de5c6e2a2828d338952471ba83b862849f7c58a4"
+          ]
+        },
+        {
+          "url": "assets/maritz-20261027/6710-Maritz-overview-before-after.png",
+          "bytes": 431439,
+          "sha256": "6f6b31d84ef91c79c91c5e9d960575b190e5d6bacbe2acda4326bebfd78abea8",
+          "role": "comparison",
+          "modelSHA256s": [
+            "d7e421984a075ccabe504ed17f7d70614ab110e66277fd626a7dbb246e4fe28f",
+            "8b67989cd54e9ecbdf66f866de5c6e2a2828d338952471ba83b862849f7c58a4"
+          ]
+        },
+        {
+          "url": "assets/maritz-20261027/6710-Maritz-overview-before-after.webp",
+          "bytes": 67432,
+          "sha256": "e471b0ec26d6897d2e5240d37f30e1d24e85a2d3bc9b19f584371cd60f0c2e60",
+          "role": "comparison",
+          "modelSHA256s": [
+            "d7e421984a075ccabe504ed17f7d70614ab110e66277fd626a7dbb246e4fe28f",
+            "8b67989cd54e9ecbdf66f866de5c6e2a2828d338952471ba83b862849f7c58a4"
+          ]
+        },
+        {
+          "url": "assets/maritz-20261027/6710-Maritz-entrance-before-after.png",
+          "bytes": 662010,
+          "sha256": "199981b7e814e86f5b3fff1a80014a9db98f4202513c3e79f45eacda4c9e7566",
+          "role": "comparison",
+          "modelSHA256s": [
+            "d7e421984a075ccabe504ed17f7d70614ab110e66277fd626a7dbb246e4fe28f",
+            "8b67989cd54e9ecbdf66f866de5c6e2a2828d338952471ba83b862849f7c58a4"
+          ]
+        },
+        {
+          "url": "assets/maritz-20261027/6710-Maritz-entrance-before-after.webp",
+          "bytes": 90324,
+          "sha256": "0b1beaa12335979f7d459ce65a6a68da9b328dcc1e4341e9c966ca82f4910f23",
+          "role": "comparison",
+          "modelSHA256s": [
+            "d7e421984a075ccabe504ed17f7d70614ab110e66277fd626a7dbb246e4fe28f",
+            "8b67989cd54e9ecbdf66f866de5c6e2a2828d338952471ba83b862849f7c58a4"
+          ]
+        }
+      ],
+      "evidence": {
+        "modelDate": "Model-specific modelReviewDate and accepted 27 October 2026 geometry package.",
+        "renderBinding": "Matched render proof binds the before views to the City baseline and after views to this exact model.",
+        "renderProofSHA256": "21867550cb214d6ec2639563a10df923a4cff84e5c47d24fa26835d2ca0f2a3d",
+        "mediaAdoptionSHA256": "f7957e75e82526f18ad5074bc695e92d847bd6477ba65958590a860056bfb38a"
+      }
+    },
+    {
+      "id": "ergocentric-275-superior-20261028",
+      "projectId": "ergocentric-275-superior",
+      "updatedOn": "2026-10-28",
+      "viewIds": [
+        "ergocentric-275-superior"
+      ],
+      "scope": "Partial facade reference study; original City massing retained outside the treated frontage.",
+      "modelAssets": [
+        {
+          "id": "ergocentric-275-superior",
+          "url": "models/studies-20261028/ergocentric-275-superior.glb.gz",
+          "sha256": "1be0160ad175e161e8d2f023d03f91cbc908ec9baa4f4787aae7c5ba6f1e2df4",
+          "downloadSHA256": "2073d1b0373039fb4317e70aef33af2dd0abdd5bb12835955765f9647bd55c02",
+          "bytes": 18362,
+          "decodedBytes": 100940
+        }
+      ],
+      "media": [
+        {
+          "url": "assets/ergocentric-20261028/275-Superior-frontage-before.png",
+          "bytes": 601351,
+          "sha256": "202359a6313abb18f011a6d49c08646d06b31ce65e7ae420a5bc50c11bad4d0d",
+          "role": "before",
+          "modelSHA256s": [
+            "bf875a9dc869bfe22727103a3e4658c3417acd43a109848867bc00a1dea5239a"
+          ]
+        },
+        {
+          "url": "assets/ergocentric-20261028/275-Superior-frontage-after.png",
+          "bytes": 678203,
+          "sha256": "a8cf3366ea6dd27e8219c80f265fda1cc684396bfb48c424826fa2adf8abc5fd",
+          "role": "after",
+          "modelSHA256s": [
+            "c3bf9ec74a0d8cf57fc96cb8230b1dc2f59cbacd9163c9deff3881adfb9f632e"
+          ],
+          "geometryEquivalentPublicModelSHA256": "1be0160ad175e161e8d2f023d03f91cbc908ec9baa4f4787aae7c5ba6f1e2df4",
+          "metadataOnlyProofSHA256": "faf0c4a8cfb1f9d456234b78bc81900bc170cb3d94552d999f20eb43bf543942"
+        }
+      ],
+      "evidence": {
+        "modelDate": "Authored geometry created on 28 October 2026 at 12:52:11 UTC. Public publication-state metadata was corrected without changing geometry or materials.",
+        "scopeDecisionSHA256": "b9033f35f87d1bd9a3c3a668a46ae066a59c84921452592d7b4eb385f7607324",
+        "geometryQASHA256": "1fd056969591ff1ac553ac8ed7ffd1d879bd27dcb4e710dd163b179320f449c5",
+        "imageBinding": "Each image retains its actual baseline or authored-model SHA256. The public payload differs only in publication-state metadata; the after image has identical geometry, transforms and materials. No render date is inferred.",
+        "publicImageManifestSHA256": "d3d6327169efa43311ce2ba246534293a8000d8213d6dae01e73c439cd8d95af"
+      },
+      "modelCreatedUTC": "2026-10-28T12:52:11.137762+00:00",
+      "geometryIdentity": {
+        "authoredModelSHA256": "c3bf9ec74a0d8cf57fc96cb8230b1dc2f59cbacd9163c9deff3881adfb9f632e",
+        "publicModelSHA256": "1be0160ad175e161e8d2f023d03f91cbc908ec9baa4f4787aae7c5ba6f1e2df4",
+        "geometryTransformsAndMaterialsUnchanged": true,
+        "metadataOnlyProofSHA256": "faf0c4a8cfb1f9d456234b78bc81900bc170cb3d94552d999f20eb43bf543942"
+      }
+    }
+  ],
+  "coverageGaps": [
+    {
+      "scope": "Other standalone models and city refinements",
+      "reason": "General review dates, archive names, source-photo dates and drawing dates have not been established as exact model-version dates. No Updated on label is inferred."
+    },
+    {
+      "scope": "Labelled city and social renders",
+      "reason": "Their existing renderInfo records bind older source-model editions separately from render dates. The 6710 Maritz revision does not redate or update those images."
+    },
+    {
+      "scope": "Municipal buildings without individual revision records",
+      "reason": "The city catalogue edition is not evidence of each building having been revised on that date."
+    }
+  ]
+}

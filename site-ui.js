@@ -26,7 +26,7 @@ if(header){
    if(window.scrollY>0&&window.scrollY+window.innerHeight>=document.documentElement.scrollHeight-2)selected=sections.at(-1)?.link||selected;
   }
   for(const link of links){
-   const state=home?(link===selected?'location':null):link.getAttribute('href')===current?'page':current==='reference-updates.html'&&link.getAttribute('href')==='updates.html'?'location':null;
+   const state=home?(link===selected?'location':null):link.getAttribute('href')===current?'page':current==='reference-updates.html'&&link.getAttribute('href')==='review-renders.html'?'location':null;
    if(state)link.setAttribute('aria-current',state);
    else link.removeAttribute('aria-current');
   }

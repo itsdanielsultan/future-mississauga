@@ -4,6 +4,13 @@
 export function shouldLoadRefinement(asset,{referenceStudies=false,selectedStudyProjectId=null}={}){
  return asset.defaultVisible||!asset.localOptional||referenceStudies||asset.projectId===selectedStudyProjectId;
 }
+// A checked coverage restriction takes priority over geometric overlap. A small
+// intersection with a district edge is not evidence of usable surrounding ground.
+export function refinementInDistrict(asset,district){
+ if(asset.viewerDistricts&&!asset.viewerDistricts.includes(district.id))return false;
+ const b=asset.bounds,v=district.bounds;
+ return district.id==='citywide'||(asset.forceDistricts||[]).includes(district.id)||!b||!(b[1][0]<v[0]||b[0][0]>v[2]||b[1][2]<v[1]||b[0][2]>v[3]);
+}
 export async function loadModelAsset(loader,url,resolveURL=x=>x,fetcher=globalThis.fetch){
  if(!/\.glb\.gz(?:[?#]|$)/i.test(url))return loader.loadAsync(url);
  const response=await fetcher(resolveURL(url));

@@ -2,7 +2,7 @@ export const STATUS_LEGEND = Object.freeze([
   {key: 'existing', label: 'Existing', color: '#b8b9b6'},
   {key: 'construction', label: 'Under construction', color: '#85b4bf'},
   {key: 'proposed', label: 'Proposed / approved', color: '#d8b7ac'},
-  {key: 'uncertain', label: 'Uncertain source versions', color: '#b89bc3'}
+  {key: 'uncertain', label: 'Needs checking', color: '#b89bc3'}
 ]);
 
 // NDC coordinates need pixel aspect scaling before they become a compass bearing.

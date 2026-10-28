@@ -1,4 +1,5 @@
-import {createImagePreview,shortResolution,shortDate} from './image-preview.js?v=20261023-cardfooter1';
+import {createImagePreview} from './image-preview.js?v=20261028-improvements1';
+import {pictureProvenance} from './image-provenance.js?v=20261028-improvements1';
 import {refreshPictureAssets} from './media-catalog.js?v=20261023-usability1';
 import {bindComparison} from './comparison.js?v=20261023-usability1';
 const $=s=>document.querySelector(s);
@@ -17,10 +18,8 @@ const viewFiles={aerial:'-future.png',portrait:'-portrait-future.png',skyline:'-
 const viewNames={aerial:'Wide aerial',portrait:'Perspective',skyline:'Skyline panorama',existing:'Existing context',existingSkyline:'Existing skyline',constructionSkyline:'Dated construction skyline',landmark:'Absolute World detail',junction:'City Centre interchange'};
 function showPicture(view){
  const d=openDistrict,file=d.id+viewFiles[view],info=pictures.images[file];
- const date=shortDate(info.renderInfo?.renderDate);
- const historical=info.renderInfo?.state==='retained-earlier'?'This earlier view has not been updated with the latest model changes. ':'';
- const notes=historical+'Source dates vary. Proposed buildings may change or never be built. The purple colour marks uncertain source versions.';
- preview.show({title:d.name,description:captions[d.id],meta:[date?'Rendered '+date:'',shortResolution(info.width)].filter(Boolean).join(' · '),notes,src:info.displayMaster.url,preview:info.display.url,download:info.url,width:info.width,height:info.height,osm:info.sourceAttribution?.openStreetMap!==false,explore:'explore.html?district='+d.id},opener);
+ const notes='Source dates vary. Proposed buildings may change or never be built. The purple colour marks uncertain source versions.';
+ preview.show({title:d.name,description:captions[d.id],...pictureProvenance(info.renderInfo,info.width),notes,src:info.displayMaster.url,preview:info.display.url,download:info.url,width:info.width,height:info.height,osm:info.sourceAttribution?.openStreetMap!==false,explore:'explore.html?district='+d.id},opener);
 }
 document.querySelectorAll('[data-open]').forEach(button=>button.onclick=()=>{
  opener=button;openDistrict=districts.find(d=>d.id===button.dataset.open);

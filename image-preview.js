@@ -1,10 +1,7 @@
 import {isDirectDownload,prepareImageLinks} from './file-actions.js?v=20261023-cardfooter1';
+import {cityMapLinkForSection} from './image-provenance.js?v=20261028-improvements1';
+export {shortResolution,shortDate} from './image-provenance.js?v=20261028-improvements1';
 // A shared image viewer. Downloads remain separate, explicit links.
-export const shortResolution = width => Math.round(width / 1000) + 'K PNG';
-export function shortDate(date) {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(date || '')) return '';
-  return new Intl.DateTimeFormat('en-CA', {day:'numeric', month:'short', year:'numeric', timeZone:'UTC'}).format(new Date(date+'T12:00:00Z'));
-}
 
 let nextId = 0;
 export function createImagePreview({views = false} = {}) {
@@ -13,12 +10,12 @@ export function createImagePreview({views = false} = {}) {
   dialog.className = 'media-preview';
   dialog.setAttribute('aria-labelledby', id+'Title');
   dialog.innerHTML = `<div class="media-preview__shell">
-    <header class="media-preview__header"><div><h2 id="${id}Title"></h2><p class="media-preview__meta"></p></div>
+    <header class="media-preview__header"><div><h2 id="${id}Title"></h2><p class="media-preview__meta"></p><p class="media-preview__edition media-preview__meta" hidden></p></div>
     <label class="media-preview__view" ${views?'':'hidden'}>View <select aria-label="Picture view"></select></label>
     <button type="button" class="media-preview__close" aria-label="Close picture">×</button></header>
     <div class="media-preview__stage" aria-busy="true"><img alt=""><p class="media-preview__status" role="status" hidden></p></div>
-    <div class="media-preview__details"><p class="media-preview__description"></p>
-    <footer class="media-preview__footer"><a class="media-preview__download" download>Download PNG</a><a class="media-preview__explore" hidden>Explore in 3D</a><span class="media-preview__credits"><a class="media-preview__osm" href="https://www.openstreetmap.org/copyright" hidden>OpenStreetMap</a><a href="sources.html">Sources &amp; credits</a></span></footer>
+    <div class="media-preview__details"><p class="media-preview__description"></p><p class="media-preview__notice media-preview__description" hidden></p>
+    <footer class="media-preview__footer"><a class="media-preview__download" download>Download PNG</a><a class="media-preview__explore" hidden>View in city map</a><span class="media-preview__credits"><a class="media-preview__osm" href="https://www.openstreetmap.org/copyright" hidden>OpenStreetMap</a><a href="sources.html">Sources &amp; credits</a></span></footer>
     <details class="media-preview__notes" hidden><summary>About this image</summary><p></p></details></div></div>`;
   document.body.append(dialog);
   const image=dialog.querySelector('img'), stage=dialog.querySelector('.media-preview__stage'), status=dialog.querySelector('[role="status"]'), select=dialog.querySelector('select');
@@ -40,6 +37,8 @@ export function createImagePreview({views = false} = {}) {
     if(trigger)opener=trigger;
     dialog.querySelector('h2').textContent=info.title||'Picture';
     const meta=dialog.querySelector('.media-preview__meta');meta.textContent=info.meta||'';meta.hidden=!info.meta;
+    const edition=dialog.querySelector('.media-preview__edition');edition.textContent=info.sourceEdition||'';edition.hidden=!info.sourceEdition;
+    const notice=dialog.querySelector('.media-preview__notice');notice.textContent=info.notice||'';notice.hidden=!info.notice;
     const description=dialog.querySelector('.media-preview__description');description.textContent=info.description||'';description.hidden=!info.description;
     const notes=dialog.querySelector('.media-preview__notes');notes.hidden=!info.notes;notes.open=false;notes.querySelector('p').textContent=info.notes||'';
     const download=dialog.querySelector('[download]');download.href=info.download;download.download=new URL(info.download,location.href).pathname.split('/').pop();
@@ -79,7 +78,7 @@ export function installImagePreviews(resolve = async (image,anchor) => ({src:ima
     const info=await resolve(image,anchor);
     const heading=section?.querySelector('h2,h3')?.textContent?.trim();
     const title=image?.dataset.previewTitle||anchor?.dataset.previewTitle||heading||(image?.alt?.length<=70?image.alt:'Image preview');
-    generic.show({title:title||'Picture',alt:image?.alt||title,width:image?.naturalWidth||1200,height:image?.naturalHeight||800,preview:image?.currentSrc||image?.src,...info},anchor||image?.closest('button')||image);
+    generic.show({title:title||'Picture',alt:image?.alt||title,width:image?.naturalWidth||1200,height:image?.naturalHeight||800,preview:image?.currentSrc||image?.src,explore:cityMapLinkForSection(section,location.href),...info},anchor||image?.closest('button')||image);
 
   });
   const enhance=()=>document.querySelectorAll('main img').forEach(image=>{

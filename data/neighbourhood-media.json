@@ -1,0 +1,126 @@
+{
+  "schema": "future-mississauga-neighbourhood-media/v1",
+  "id": "fairview",
+  "sectionId": "fairview-neighbourhood",
+  "title": "Fairview: more neighbourhood detail",
+  "updatedOn": "2026-10-28",
+  "renderDate": null,
+  "sourceGeometryDate": null,
+  "sourceGeometryNote": "Source geometry dates vary.",
+  "description": "Existing homes around Fairview have been added to the Citywide model.",
+  "cityURL": "explore.html?district=citywide&context=fairview",
+  "sourceAttribution": {
+    "cityOfMississauga": true,
+    "ontario": true,
+    "openStreetMap": false
+  },
+  "sources": [
+    {
+      "id": "baseline",
+      "file": "existing-citywide-decoded.glb",
+      "sha256": "d04be9339c14c9642f062590644ab41210d60d4aba08114bff6059d489f36d8e",
+      "bytes": 16973496
+    },
+    {
+      "id": "ground",
+      "file": "existing-citywide-ground-diagnostic.glb",
+      "sha256": "b651eb70905ff8ab20fee30aecbdf23db6ebc7a63e4dfa606fd4391b5037fa46",
+      "bytes": 1334488
+    },
+    {
+      "id": "addition",
+      "file": "oro-fairview-lowrise-context.glb",
+      "sha256": "f55d9fbad30e7392cab90928c181e2404602cbc640098dcb6c44de33f7a0cdb2",
+      "bytes": 742796
+    }
+  ],
+  "originalCitywideSHA256": "22985a67ab2901948ac0290da9c276782dbc1f00b90c0399ceade78679cb0af5",
+  "sourceComponentManifestSHA256": "fa2c733a4b12a9dfbfc36b129b7da25858b8c2b75396f801eb0f573ea49d4a86",
+  "sourceTriangleSequenceSHA256": "1ed2f6db2a57f99db662b403d2cfb60f8e1e76cc1ac48811e4fc4bf02a548b26",
+  "renderProofSHA256": "1ba6bc9332b262769cc44460c1689ac6df86c47d9fa67a8a6a999f6c2c2f2693",
+  "matchedPresentation": {
+    "cameraPositionBlender": [
+      -380.0,
+      -700.0,
+      535.0
+    ],
+    "cameraQuaternionBlender": [
+      0.8547180891036987,
+      0.44844773411750793,
+      -0.12146750092506409,
+      -0.23151081800460815
+    ],
+    "targetBlender": [
+      0.0,
+      -50.0,
+      15.0
+    ],
+    "projection": "ORTHO",
+    "scale": 740,
+    "resolution": [
+      1800,
+      1100
+    ],
+    "lightFrom": [
+      -850.0,
+      -420.0,
+      380.0
+    ],
+    "sunEnergy": 3.0,
+    "sunAngle": 0.05,
+    "worldColor": [
+      0.78,
+      0.85,
+      1
+    ],
+    "worldStrength": 0.08,
+    "exposure": -1.0,
+    "samples": 24,
+    "viewTransform": "AgX",
+    "look": "AgX - Medium High Contrast",
+    "presentationMaterial": "Source vertex colours preserved; explicit neutral nonmetal shading, metallic0 roughness0.85, identical before/after",
+    "mapPresentationOrigin": [
+      -4550,
+      70,
+      200
+    ]
+  },
+  "background": "#e8f2f7",
+  "geometryMutation": false,
+  "renderScope": {
+    "runtimeDetailedBuildingOverlays": false,
+    "runtimeVegetationOverlays": false,
+    "sourceGeometryDatesVary": true
+  },
+  "images": [
+    {
+      "role": "before",
+      "caption": "Before",
+      "url": "assets/fairview-20261028/neighbourhood-before.png",
+      "sha256": "8bad7e1a8834dafe30b4527f0fe4de50c6f3473b5901a8bab3e4ac6f85db9f92",
+      "bytes": 1722082,
+      "width": 1800,
+      "height": 1100,
+      "sourceModelSHA256s": [
+        "d04be9339c14c9642f062590644ab41210d60d4aba08114bff6059d489f36d8e",
+        "b651eb70905ff8ab20fee30aecbdf23db6ebc7a63e4dfa606fd4391b5037fa46"
+      ],
+      "additionVisible": false
+    },
+    {
+      "role": "after",
+      "caption": "Added surrounding homes",
+      "url": "assets/fairview-20261028/neighbourhood-after.png",
+      "sha256": "47e4f43794d0ecd5c5611f01eb8fddd5a975a22aa972226d7f632c0361ceacd1",
+      "bytes": 1979124,
+      "width": 1800,
+      "height": 1100,
+      "sourceModelSHA256s": [
+        "d04be9339c14c9642f062590644ab41210d60d4aba08114bff6059d489f36d8e",
+        "b651eb70905ff8ab20fee30aecbdf23db6ebc7a63e4dfa606fd4391b5037fa46",
+        "f55d9fbad30e7392cab90928c181e2404602cbc640098dcb6c44de33f7a0cdb2"
+      ],
+      "additionVisible": true
+    }
+  ]
+}

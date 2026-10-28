@@ -216,6 +216,30 @@
       "representation": "Exact checked combined GLB after lossless gzip decompression. City map coordinates retained; original municipal massing with a partial facade refinement.",
       "sourceModelId": "23-3369",
       "modelReviewDate": "2026-10-27"
+    },
+    {
+      "id": "ergocentric-275-superior",
+      "title": "275 Superior Boulevard",
+      "file": "ergocentric-275-superior.glb.gz",
+      "url": "models/studies-20261028/ergocentric-275-superior.glb.gz",
+      "compression": "gzip",
+      "bytes": 18362,
+      "decodedBytes": 100940,
+      "sha256": "1be0160ad175e161e8d2f023d03f91cbc908ec9baa4f4787aae7c5ba6f1e2df4",
+      "downloadSHA256": "2073d1b0373039fb4317e70aef33af2dd0abdd5bb12835955765f9647bd55c02",
+      "meshCount": 8,
+      "cityDataTerms": true,
+      "sourceModelId": "32-897",
+      "modelReviewDate": "2026-10-28",
+      "representation": "Complete City baseline with an approximate partial facade study. Original City map coordinates retained; no source photographs or textures are embedded.",
+      "publicGeometry": true,
+      "publicationScope": "Public interactive study; a standalone model download is not offered.",
+      "scopeDecisionSHA256": "b9033f35f87d1bd9a3c3a668a46ae066a59c84921452592d7b4eb385f7607324",
+      "modelCreatedUTC": "2026-10-28T12:52:11.137762+00:00",
+      "triangles": 1472,
+      "geometrySourceSHA256": "c3bf9ec74a0d8cf57fc96cb8230b1dc2f59cbacd9163c9deff3881adfb9f632e",
+      "metadataDerivativeProofSHA256": "faf0c4a8cfb1f9d456234b78bc81900bc170cb3d94552d999f20eb43bf543942",
+      "metadataDerivativeNote": "Publication-state metadata was updated for public interactive display. Geometry, transforms, materials, credits and limits are unchanged from the authored model."
     }
   ],
   "views": [
@@ -657,6 +681,43 @@
       "downloadNote": "The GLB includes the complete City baseline and the partial facade refinement in their original map coordinates. Keep the credits and City data terms with the model.",
       "fitToBounds": true,
       "comparisonURL": "reference-updates.html#sgm-maritz-6710"
+    },
+    {
+      "id": "ergocentric-275-superior",
+      "projectId": "ergocentric-275-superior",
+      "title": "275 Superior Boulevard",
+      "subtitle": "Approximate facade study",
+      "assets": [
+        "ergocentric-275-superior"
+      ],
+      "offerDownloads": false,
+      "summary": "A partial facade study at the northeast end of 275 Superior Boulevard.",
+      "credit": "Model creation: Daniel Sultan / Future Mississauga. Municipal baseline: City of Mississauga.",
+      "visibleReferenceCredit": {
+        "label": "David Lasker/Cityscape Photography",
+        "url": "https://davidlaskerphotography.com/"
+      },
+      "limits": "Frontage details interpret an earlier photograph and a 2024 City footprint. Dimensions, glazing, ribs and canopy details are approximate. The roof, rear and unseen bays retain City massing. The photograph capture date is unknown; this is not current as-built verification.",
+      "rights": "The photograph is not reproduced or used as a texture. Interactive display does not establish permission for separate model redistribution. Independent visualization; no official endorsement.",
+      "sources": [
+        {
+          "title": "David Lasker/Cityscape Photography",
+          "url": "https://davidlaskerphotography.com/",
+          "note": "Photographic reference, published in 2020; capture date unknown. The source photograph is not included."
+        },
+        {
+          "title": "City of Mississauga 3D source data",
+          "url": "https://data.mississauga.ca/pages/mississauga-3d",
+          "note": "Building source 32-897; approximate entrance plan informed by the 2024 municipal footprint."
+        }
+      ],
+      "cameraDirection": [
+        0.96,
+        0.22,
+        0.28
+      ],
+      "fitToBounds": true,
+      "cityURL": "explore.html?district=citywide&project=ergocentric-275-superior"
     }
   ]
 }

@@ -193,3 +193,31 @@
   .viewer-page .scene-info span:last-child { display: none; }
   .viewer-page .scene-help { bottom: 8px; }
 }
+
+/* Scenario and colour key stay immediately beside the model on every screen. */
+.viewer-page .viewer-viewbar { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px 24px; margin:0 var(--viewer-right) 12px var(--viewer-left); }
+.viewer-page .viewer-viewbar .scenario-picker { display:flex; align-items:center; gap:12px; margin:0; font-size:14px; }
+.viewer-page .viewer-viewbar select { min-height:44px; font-size:15px; max-width:100%; }
+.viewer-page .viewer-viewbar .scene-status-key { display:grid; grid-template-columns:repeat(4,auto); gap:10px 18px; margin:0; font-size:12px; }
+.viewer-page .viewer-viewbar .scene-status-key li { display:flex; align-items:center; gap:7px; }
+.viewer-page .viewer-viewbar .scene-status-key i { width:10px; height:10px; flex:none; }
+.viewer-page .map-direction-and-key { justify-content:flex-end; }
+.viewer-page .scene-wrap { height:clamp(260px,calc(100svh - 318px),740px); }
+@media(max-width:980px){
+ .viewer-page .viewer-viewbar .scene-status-key { grid-template-columns:repeat(2,auto); font-size:11px; gap:6px 16px; }
+}
+@media(max-width:540px){
+ .viewer-page .viewer-viewbar { gap:10px; }
+ .viewer-page .viewer-viewbar .scenario-picker { width:100%; }
+ .viewer-page .viewer-viewbar select { flex:1; min-width:0; font-size:16px; }
+ .viewer-page .viewer-viewbar .scene-status-key { width:100%; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px 12px; }
+ .viewer-page .scene-wrap { height:clamp(230px,45svh,400px); }
+ .viewer-page .map-presentation { grid-template-columns:minmax(0,1fr) auto; }
+ .viewer-page .map-creator { display:block; }
+ .viewer-page .map-attribution { grid-column:1/-1; }
+}
+
+@media(max-height:480px){ .viewer-page .scene-wrap { height:clamp(180px,calc(100svh - 116px),320px); } }
+
+.viewer-page .neighbourhood-status { margin:8px var(--viewer-right) 0 var(--viewer-left); color:var(--site-muted); font-size:12px; }
+.viewer-page .neighbourhood-status button { margin-left:12px; min-height:44px; padding:8px 12px; background:#fff; border:1px solid var(--line); border-radius:6px; }
