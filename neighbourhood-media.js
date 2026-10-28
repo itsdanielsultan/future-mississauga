@@ -1,4 +1,4 @@
-import {shortDate,shortResolution} from './image-provenance.js?v=20261028-improvements1';
+import {shortDate,shortResolution} from './image-provenance.js?v=20261028-citywide1';
 
 export function studyImagePreview(manifest, url, baseURL) {
   if (!['future-mississauga-neighbourhood-media/v1','future-mississauga-study-media/v1'].includes(manifest?.schema) || !Array.isArray(manifest.images)) return null;

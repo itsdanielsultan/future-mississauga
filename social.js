@@ -1,4 +1,4 @@
-import {installSocialPreview} from './social-preview.js?v=20261028-improvements1';
+import {installSocialPreview} from './social-preview.js?v=20261028-citywide1';
 const retryPreview = image => {
   if (image.dataset.retried) return;
   image.dataset.retried = 'true';

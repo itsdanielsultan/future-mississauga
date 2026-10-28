@@ -16,7 +16,7 @@ export function pictureProvenance(renderInfo = {}, width) {
   const sourceEdition = typeof renderInfo?.sourceEdition === 'string' ? renderInfo.sourceEdition.trim() : '';
   return {
     meta: [rendered ? 'Rendered '+rendered : '', shortResolution(width)].filter(Boolean).join(' · '),
-    sourceEdition: modelDate ? 'Model version: '+modelDate : renderInfo?.state === 'retained-earlier' ? 'Earlier model version' : sourceEdition ? 'Model date not recorded' : '',
+    sourceEdition: renderInfo?.sourceDatesMixed===true ? 'Model sources vary by date' : modelDate ? 'Model version: '+modelDate : renderInfo?.state === 'retained-earlier' ? 'Earlier model version' : sourceEdition ? 'Model date not recorded' : '',
     notice: renderInfo?.state === 'retained-earlier' ? 'This earlier view does not include later model changes.' : ''
   };
 }

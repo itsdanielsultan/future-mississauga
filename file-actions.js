@@ -8,9 +8,9 @@ export function prepareImageLinks(root=document){
   anchor.dataset.fileAction='';
   if(isDirectDownload(anchor)){anchor.dataset.download='';continue;}
   const label=anchor.textContent.trim(),section=anchor.closest('section,article');
-  const title=section?.querySelector('h2,h3')?.textContent?.trim()||label;
+  const title=section?.querySelector('h2,h3')?.textContent?.trim()||anchor.closest('figure')?.querySelector('figcaption b,figcaption strong')?.textContent?.trim()||label.replace(/^(?:Download\s*)+/i,'').replace(/[↓↧]/g,'').replace(/\b(?:PNG|JPG|JPEG|WEBP|AVIF|SVG)\b/gi,'').trim();
   const format=url.pathname.split('.').pop().toUpperCase();
-  const downloadLabel='Download '+title+' '+(/neighbourhood/i.test(label)?'neighbourhood ':/exterior/i.test(label)?'exterior ':'')+format;
+  const downloadLabel=['Download',title,/neighbourhood/i.test(label)?'neighbourhood':/exterior/i.test(label)?'exterior':'',format].filter(Boolean).join(' ');
   if(/^Download\b/i.test(label)){
    anchor.classList.add('file-download');anchor.dataset.download='';anchor.setAttribute('aria-label',downloadLabel);anchor.title=downloadLabel;anchor.innerHTML=icon;continue;
   }

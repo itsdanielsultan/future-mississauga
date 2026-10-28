@@ -1,0 +1,121 @@
+{
+  "schema": "future-mississauga-current-citywide-media/v1",
+  "image": {
+    "kind": "wide",
+    "file": "citywide-future.png",
+    "area": "All Mississauga",
+    "title": "All Mississauga",
+    "aliases": [],
+    "renderInfo": {
+      "state": "refreshed",
+      "renderDate": "2026-10-28",
+      "renderTimestampUTC": "2026-10-28T16:21:31.815872+00:00",
+      "renderDateTimezone": "America/Toronto",
+      "edition": "Current Citywide still with source-supported context, 2026-10-28",
+      "label": "Rendered 28 October 2026",
+      "sourceEdition": "Accepted 28 October 2026 Citywide projects with restored full existing City context for still presentation; mixed-date source geometry and approximate studies.",
+      "sourceModelDate": null,
+      "sourceModelCommit": "0b5f01b2fad18f727aaaab73965895bf509bf2a3",
+      "sourceManifestSHA256": "ab71efe1c265ba3afd9dd2d59e7420360102ae0bac8b987c269ac90e787fa430",
+      "sourcePolicySHA256": "b2052f98f5abf398d49eb0630250d856379c8ad56e59b015a46c11607c9b5fb2",
+      "sourceAttributionPolicySHA256": "5fd98b06250876e042956c269373ffc72f516cb145d802f29ac108e40f5dd99c",
+      "renderKey": "wide/citywide/future/aerial",
+      "note": "Accepted current Citywide still with source-supported context. Source dates and detail vary; original source-supported background and current project upgrades are combined for this static view.",
+      "candidateGeometryScopeSHA256": "b2052f98f5abf398d49eb0630250d856379c8ad56e59b015a46c11607c9b5fb2",
+      "fullSnapshotSHA256": "ab71efe1c265ba3afd9dd2d59e7420360102ae0bac8b987c269ac90e787fa430",
+      "sourceSupportedContextSHA256": "89c459910ef6be213537fdff02b83e8aec829b0a46839e7bfc5bf23be0ec2d18",
+      "acceptedSceneExportSHA256": "71c46af13b629cd9e54990ade019e561b7ae40dfe5147e951feb582a49656249",
+      "renderProofSHA256": "5e7f1921f3d88485e3b205e037a529485b4f1a2e0e6f71bbfb025cf405b3b771",
+      "sourceDatesMixed": true,
+      "sourceModelCommitScope": "Canonical base; current project changes are pinned by the full source snapshot and geometry policy."
+    },
+    "sourceAttribution": {
+      "openStreetMap": true,
+      "sourceURL": "https://futuremississauga.com/sources.html",
+      "details": "data/citywide-source-attribution-20261028.json",
+      "credits": "downloads/Citywide-image-credits-20261028.txt",
+      "photoReference": {
+        "name": "David Lasker/Cityscape Photography",
+        "url": "https://davidlaskerphotography.com/"
+      }
+    },
+    "displayMaster": {
+      "bytes": 7126258,
+      "sha256": "af6f0611f9260016ad19e81ef6df57b201ff12dcd5e918724e004202d48100f3",
+      "width": 3840,
+      "height": 2400,
+      "format": "image/png",
+      "sourceSHA256": "0f693d437eb76f9fcd64dda2ef1cb86b6654a793b206958b819a38012e419a54",
+      "url": "gallery/citywide-20261028/display-citywide-future-2026-10-28.png",
+      "nativeSourceSHA256": "0f693d437eb76f9fcd64dda2ef1cb86b6654a793b206958b819a38012e419a54"
+    },
+    "download": {
+      "bytes": 7129594,
+      "sha256": "ad2b8463b592cb2818545b9aa1b78b322b724db783b399e0a857a6bb477b408c",
+      "width": 3840,
+      "height": 2400,
+      "format": "image/png",
+      "sourceSHA256": "0f693d437eb76f9fcd64dda2ef1cb86b6654a793b206958b819a38012e419a54",
+      "url": "gallery/citywide-20261028/citywide-future-2026-10-28.png",
+      "nativeSourceSHA256": "0f693d437eb76f9fcd64dda2ef1cb86b6654a793b206958b819a38012e419a54"
+    },
+    "preview": {
+      "bytes": 117855,
+      "sha256": "feced1d163d904acc476313c15eab235ecf448b15d4caa5259fb665af94fa7c4",
+      "width": 1200,
+      "height": 750,
+      "format": "image/avif",
+      "sourceSHA256": "af6f0611f9260016ad19e81ef6df57b201ff12dcd5e918724e004202d48100f3",
+      "url": "gallery/citywide-20261028/wide-citywide-future-1200-af6f0611f926.avif"
+    },
+    "responsive": {
+      "bytes": 628529,
+      "sha256": "e46ce0359e8e9a3adde16b0ab1c9cb9b509edd2e93e794986299fbe54dae49b9",
+      "width": 3200,
+      "height": 2000,
+      "format": "image/avif",
+      "sourceSHA256": "af6f0611f9260016ad19e81ef6df57b201ff12dcd5e918724e004202d48100f3",
+      "url": "gallery/citywide-20261028/wide-citywide-future-3200-af6f0611f926.avif"
+    },
+    "sourceLimitations": [
+      "28 October is assembly/review date; individual source dates remain as recorded. Newly rendered does not mean all geometry is current as-built.",
+      "Source-supported full existing City background is included for this accepted static view. Current interactive loading policies differ; no historical pixels are reused.",
+      "Vegetation: 452,898 symbols, comprising 256,082 dated municipal inventory positions and 196,816 illustrative positions within mapped woodland. All crown sizes and representations are illustrative.",
+      "Existing background: 8,050,515 source triangles retained using horizontal coverage by the current native ground surfaces. Original source elevations are unchanged; this is not surveyed ground contact or current as-built verification.",
+      "Inventory positions are dated. Woodland fill positions and all crown dimensions are illustrative. Current unsupported or conflicting symbols are omitted; no source positions moved.",
+      "Exact-XYZ welded connected geometry parts, not a claim of complete City-record identities. Retained component conservative plan hulls are completely covered by actual current ground surfaces; horizontal support only, original elevations unchanged.",
+      "Building source massing and procedural studies are approximate; this image is not a current exterior or grade survey.",
+      "M City M1 and M2: Tower plates, floor schedules, heights, podium dimensions and hidden faces remain approximate. M1 podium observations: May 2026. M2 Quartz/Webb observations: June 2024. The unresolved M2 patterned wall is omitted. Not certified as-built, survey or construction information.",
+      "M City M1 and M2: Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
+      "M City M1: Tower plates, floor schedules, heights, podium dimensions and hidden faces remain approximate. M1 podium observations: May 2026. M2 Quartz/Webb observations: June 2024. The unresolved M2 patterned wall is omitted. Not certified as-built, survey or construction information.",
+      "M City M1: Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
+      "M City M2: Tower plates, floor schedules, heights, podium dimensions and hidden faces remain approximate. M1 podium observations: May 2026. M2 Quartz/Webb observations: June 2024. The unresolved M2 patterned wall is omitted. Not certified as-built, survey or construction information.",
+      "M City M2: Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
+      "Artform: Passage depth, rear continuation, hidden faces and finished heights remain unverified. Zoning maxima are not measured as-built heights. Ground, interiors and surrounding site works are excluded; this standalone study is not a surveyed placement on the city map.",
+      "Artform: Independent study; no architect, owner or photographer endorsement. Model geometry and generated views are separate from the architectural design and reference-image rights. Original photographs, Google image pixels and planning PDFs are not included.",
+      "Edge 1: Plan/photo-informed reconstruction, not measured as-built geometry. Facade modules, podium details, roofs and colours include inferred dimensions and appearance.",
+      "Edge 1: Original model geometry and uniform PBR materials. Architectural design rights remain with owners/designers. Referenced photographs, Google imagery and architectural PDFs are not included; source access is not a blanket redistribution licence. Independent research visualization; no official endorsement.",
+      "Edge 2: Plan/photo-informed reconstruction, not measured as-built geometry. Facade modules, podium details, roofs and colours include inferred dimensions and appearance.",
+      "Edge 2: Original model geometry and uniform PBR materials. Architectural design rights remain with owners/designers. Referenced photographs, Google imagery and architectural PDFs are not included; source access is not a blanket redistribution licence. Independent research visualization; no official endorsement.",
+      "Oro at Edge Towers: Historic intended design, not current construction progress or measured as-built geometry. Roof details, facade dimensions and colours include model interpretation.",
+      "Oro at Edge Towers: Original model geometry and uniform PBR materials. Architectural design rights remain with owners/designers. Referenced photographs, Google imagery and architectural PDFs are not included; source access is not a blanket redistribution licence. Independent research visualization; no official endorsement.",
+      "Avia 1: Appearance study, not measured as-built geometry. Source heights are retained; published height and storey counts conflict. Podium bay spacing, entry position and colours are inferred. Source elevation is not a certified survey datum.",
+      "Avia 1: Retains City-derived envelope geometry plus original procedural facade detail and uniform PBR materials. Keep the City attribution and supplied terms with redistributed assets. Source photography and Google imagery are not included. Independent research visualization; no official endorsement.",
+      "Avia 2: Appearance study, not measured as-built geometry. Source heights are retained; published height and storey counts conflict. Podium bay spacing, entry position and colours are inferred. Source elevation is not a certified survey datum.",
+      "Avia 2: Retains City-derived envelope geometry plus original procedural facade detail and uniform PBR materials. Keep the City attribution and supplied terms with redistributed assets. Source photography and Google imagery are not included. Independent research visualization; no official endorsement.",
+      "6710 Maritz Drive: Partial facade study. Dimensions, glazing divisions and finishes are approximate. The photograph date is unknown. The roof, rear and unseen parts retain City massing; an outer City side slab partly obscures the side treatment.",
+      "6710 Maritz Drive: Derived model published with SG&M design credit. Keep the design and model credits, City attribution and supplied terms with redistributed assets. Source photographs and renderings are not included. Independent visualization; no official endorsement.",
+      "275 Superior Boulevard: Frontage details interpret an earlier photograph and a 2024 City footprint. Dimensions, glazing, ribs and canopy details are approximate. The roof, rear and unseen bays retain City massing. The photograph capture date is unknown; this is not current as-built verification.",
+      "275 Superior Boulevard: The photograph is not reproduced or used as a texture. Interactive display does not establish permission for separate model redistribution. Independent visualization; no official endorsement."
+    ],
+    "nativeSource": {
+      "sha256": "0f693d437eb76f9fcd64dda2ef1cb86b6654a793b206958b819a38012e419a54",
+      "bytes": 7165121,
+      "width": 3840,
+      "height": 2400,
+      "renderDate": "2026-10-28"
+    }
+  },
+  "publicSourceAttribution": "data/citywide-source-attribution-20261028.json",
+  "nativeRenderSHA256": "0f693d437eb76f9fcd64dda2ef1cb86b6654a793b206958b819a38012e419a54"
+}

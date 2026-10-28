@@ -1,6 +1,6 @@
-import {isDirectDownload,prepareImageLinks} from './file-actions.js?v=20261023-cardfooter1';
-import {cityMapLinkForSection} from './image-provenance.js?v=20261028-improvements1';
-export {shortResolution,shortDate} from './image-provenance.js?v=20261028-improvements1';
+import {isDirectDownload,prepareImageLinks} from './file-actions.js?v=20261028-citywide1';
+import {cityMapLinkForSection} from './image-provenance.js?v=20261028-citywide1';
+export {shortResolution,shortDate} from './image-provenance.js?v=20261028-citywide1';
 // A shared image viewer. Downloads remain separate, explicit links.
 
 let nextId = 0;
