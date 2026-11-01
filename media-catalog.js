@@ -8,18 +8,17 @@ export function indexMedia(catalog,baseURL=location.href) {
   for(const row of catalog.images){
     for(const url of [...row.aliases,...pixelURLs(row)])index.set(clean(url,baseURL),row);
   }
-  if(catalog.currentCitywide){
-    for(const url of pixelURLs(catalog.currentCitywide)){
+  for(const row of [catalog.currentCitywide,...(catalog.currentPictures||[])].filter(Boolean)){
+    for(const url of pixelURLs(row)){
       const key=clean(url,baseURL);
-      if(index.has(key)&&index.get(key)!==catalog.currentCitywide)throw new Error('Current Citywide pixels must use new URLs.');
-      index.set(key,catalog.currentCitywide);
+      if(index.has(key)&&index.get(key)!==row)throw new Error('Current image pixels must use new URLs.');
+      index.set(key,row);
     }
   }
   return index;
 }
 
-export function integrateCurrentCitywide(catalog,row,baseURL=location.href) {
-  if(row?.kind!=='wide'||row.file!=='citywide-future.png'||!Array.isArray(row.aliases)||row.aliases.length)throw new Error('Expected one current Citywide view without historical aliases.');
+function validateCurrentPixels(row,baseURL) {
   if(!row.renderInfo||row.renderInfo.sourceDatesMixed!==true||row.renderInfo.sourceModelDate!==null||row.renderInfo.state==='retained-earlier'||typeof row.sourceAttribution?.openStreetMap!=='boolean')throw new Error('Current Citywide source dates and attribution are required.');
   for(const key of ['preview','responsive','displayMaster','download']){
     const asset=row[key];
@@ -29,8 +28,25 @@ export function integrateCurrentCitywide(catalog,row,baseURL=location.href) {
   }
   if(row.download.width!==row.displayMaster.width||row.download.height!==row.displayMaster.height||row.preview.width>=row.responsive.width||row.responsive.width>row.displayMaster.width)throw new Error('Current Citywide image dimensions do not match.');
   for(const key of ['preview','responsive'])if(row[key].sourceSHA256!==row.displayMaster.sha256||row[key].height!==Math.round(row.displayMaster.height*row[key].width/row.displayMaster.width))throw new Error('Current Citywide preview does not match its display master.');
+}
+export function integrateCurrentCitywide(catalog,row,baseURL=location.href) {
+  if(row?.kind!=='wide'||row.file!=='citywide-future.png'||!Array.isArray(row.aliases)||row.aliases.length)throw new Error('Expected one current Citywide view without historical aliases.');
+  validateCurrentPixels(row,baseURL);
   const current={...catalog,currentCitywide:structuredClone(row)};
   indexMedia(current,baseURL); // Reject collisions before any current view changes.
+  return current;
+}
+
+export function integrateCurrentPictures(catalog,rows,baseURL=location.href) {
+  if(!Array.isArray(rows)||!rows.length)throw new Error('Current picture edition is empty.');
+  const keys=new Set();
+  for(const row of rows){
+    if(!['wide','portraits'].includes(row?.kind)||!/^downtown-[a-z-]+\.png$/.test(row.file)||!Array.isArray(row.aliases)||row.aliases.length)throw new Error('Expected current Downtown views without historical aliases.');
+    const key=row.kind+'/'+row.file;if(keys.has(key))throw new Error('Duplicate current picture view.');keys.add(key);
+    validateCurrentPixels(row,baseURL);
+  }
+  const current={...catalog,currentPictures:structuredClone(rows)};
+  indexMedia(current,baseURL);
   return current;
 }
 
@@ -39,8 +55,8 @@ export function refreshCatalogPictures(pictures,catalog) {
     const original=pictures.images[row.file];if(!original)continue;
     pictures.images[row.file]={...original,url:row.download.url,sha256:row.download.sha256,bytes:row.download.bytes,display:row.preview,displayMaster:row.displayMaster,download:row.download,sourceAttribution:row.sourceAttribution};
   }
-  const row=catalog.currentCitywide;
-  if(row&&pictures.images[row.file]){
+  for(const row of [catalog.currentCitywide,...(catalog.currentPictures||[]).filter(row=>row.kind==='wide')].filter(Boolean)){
+    if(!pictures.images[row.file])continue;
     // Start from the new record so old presentation/camera/source metadata cannot
     // describe the new pixels. Its nativeOriginal, when supplied, is the new raw
     // render; previous editions remain in the unchanged historical catalogue.
@@ -48,11 +64,11 @@ export function refreshCatalogPictures(pictures,catalog) {
   }
   return pictures;
 }
-async function optionalCurrentManifest(fetcher,timeoutMs) {
+async function optionalCurrentManifest(fetcher,path,timeoutMs) {
   const controller=new AbortController();let timer;
   try{
     return await Promise.race([
-      fetcher('data/citywide-media-20261028.json',{cache:'no-store',signal:controller.signal}).then(response=>response.ok?response.json():null),
+      fetcher(path,{cache:'no-store',signal:controller.signal}).then(response=>response.ok?response.json():null),
       new Promise(resolve=>{timer=setTimeout(()=>{controller.abort();resolve(null);},Math.min(5000,Math.max(1,timeoutMs)));})
     ]);
   }catch{return null;}
@@ -69,10 +85,21 @@ export async function loadMediaCatalog(fetcher=fetch,{baseURL=location.href,curr
     }
     return {images:[]};
   })();
-  const [catalog,current]=await Promise.all([historicalRequest,optionalCurrentManifest(fetcher,currentTimeoutMs)]);
+  const [catalog,current,downtown]=await Promise.all([historicalRequest,optionalCurrentManifest(fetcher,'data/citywide-media-20261101.json',currentTimeoutMs),optionalCurrentManifest(fetcher,'data/downtown-media-20261101.json',currentTimeoutMs)]);
   // An unavailable or invalid new edition must leave the historical gallery usable.
-  if(current?.schema!=='future-mississauga-current-citywide-media/v1')return catalog;
-  try{return integrateCurrentCitywide(catalog,current.image,baseURL);}catch{return catalog;}
+  let result=catalog;
+  if(current?.schema==='future-mississauga-current-citywide-media/v1')try{
+    let history=result;
+    for(const edition of current.previousEditions||[]){
+      const verified=integrateCurrentCitywide(history,edition,baseURL).currentCitywide;
+      history={...history,images:[...history.images,verified]};
+    }
+    result=integrateCurrentCitywide(history,current.image,baseURL);
+  }catch{}
+  if(downtown?.schema==='future-mississauga-current-picture-media/v1')try{
+    result=integrateCurrentPictures(result,downtown.images,baseURL);
+  }catch{}
+  return result;
 }
 export const mediaCatalog=loadMediaCatalog();
 const catalogIndex = mediaCatalog.then(catalog=>indexMedia(catalog));

@@ -1,0 +1,2460 @@
+{
+  "schema": "future-mississauga-current-picture-media/v1",
+  "images": [
+    {
+      "kind": "wide",
+      "file": "downtown-existing.png",
+      "area": "Downtown",
+      "title": "Downtown",
+      "aliases": [],
+      "renderInfo": {
+        "state": "rendered",
+        "renderDate": "2026-11-01",
+        "renderTimestampUTC": "2026-11-01T22:39:47.020586+00:00",
+        "sourceEdition": "Downtown 2026-11-01 final frozen native existing assembly; sources mixed dates",
+        "sourceModelDate": null,
+        "sourceManifestSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "sourcePolicySHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceSceneSHA256": "2383e04156c5190704d9f5e97a2258dc880c0c245f4a267eea6565f52ea58dd2",
+        "sourceAttributionPolicySHA256": "d31c34bd591dc6f1ff5ddf490bb98252d33f63d36193ff9c79ae3f9a28de2b41",
+        "sourceRenderProofSHA256": "6697ec90764c1cf409a570b73da8d40a8ad875ece7f3ef0b1c8e1636cba28dbc",
+        "renderDateTimezone": "America/Toronto",
+        "renderKey": "wide/downtown/existing/aerial",
+        "north": {
+          "screenUnitVector": [
+            0.9141269064361335,
+            -0.40542816741009025
+          ],
+          "bearingClockwiseFromScreenUpDegrees": 66.08203890577505,
+          "qualification": "Exact rendered image centre, including lens shift; infinitesimal projected north direction. Square pixels, no crop.",
+          "method": "Project north through camera rotation and perspective derivative at shifted image centre: dx=nx+u*nz; dy=-(ny+v*nz). Lens shift included; square pixel aspect means focal-length factors cancel when normalizing.",
+          "sourceProofSHA256": "a585be85b45fbe11f3fade7f1ed0316897b59bba63ce9b6d409b55a4c76d29b4"
+        },
+        "nativeCamera": {
+          "runtimePosition": [
+            -3900,
+            1150,
+            1400
+          ],
+          "runtimeTarget": [
+            -5400,
+            125,
+            -150
+          ],
+          "blenderLocation": [
+            -3900.0,
+            -1400.0,
+            1150.0
+          ],
+          "blenderRotationEuler": [
+            1.1271812915802002,
+            -2.9152687375244568e-08,
+            0.7690063714981079
+          ],
+          "matrixWorld": [
+            [
+              0.7186020016670227,
+              -0.2984800934791565,
+              0.6281089186668396,
+              -3900.0
+            ],
+            [
+              0.695421576499939,
+              0.3084292709827423,
+              -0.6490456461906433,
+              -1400.0
+            ],
+            [
+              2.9152687375244568e-08,
+              0.9032059907913208,
+              0.42920738458633423,
+              1150.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "verticalFovDegrees": 35,
+          "lensMM": 38.059139251708984,
+          "sensorHeightMM": 24.0,
+          "sensorFit": "VERTICAL",
+          "sensorWidthMM": 36.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "pixelFrame": [
+            6144,
+            3840
+          ],
+          "canonicalPixelFrame": [
+            6144,
+            3840
+          ],
+          "noBorderCropOrUpscale": true
+        },
+        "note": "Fresh native scenario render. Source dates vary; detailed models retain architectural finishes.",
+        "sourceDatesMixed": true
+      },
+      "sourceAttribution": {
+        "openStreetMap": false,
+        "sourceEdition": "Downtown 2026-11-01 final frozen native existing assembly; sources mixed dates",
+        "osmBasis": "Direct metadata in exact exported native assembly; no frustum subtraction of source credits",
+        "modelCredits": [
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ],
+        "creator": "Daniel Sultan / Future Mississauga",
+        "description": "Fresh Downtown existing render of the accepted source-supported native assembly. Architectural finishes are preserved; lifecycle status and model accuracy are separate. Source dates vary. Geometry is not a surveyed as-built.",
+        "statusSnapshotSHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceFreezeSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "visibleProjectIds": [
+          "30-eglinton-west",
+          "absolute-world",
+          "alba",
+          "avia",
+          "block-nine",
+          "edge-oro",
+          "exchange-district",
+          "fairwinds-park-ship-study",
+          "mcity-1-2",
+          "mcity-3",
+          "mcity-4",
+          "mcity-5",
+          "square-one-block5-t1",
+          "square-one-phase1",
+          "voya"
+        ],
+        "visibleAssetIds": [
+          "30-eglinton-west-approved-envelope",
+          "30-eglinton-west-retained-office",
+          "absolute-world-source-derived",
+          "alba-existing-plan-derived",
+          "avia-20261025-exterior-study",
+          "block-nine-reference-derived",
+          "edge-1-20261025-exterior-study",
+          "edge-2-20261025-exterior-study",
+          "fairwinds-park-ship-study-reference-review",
+          "mcity-m1-20261025-exterior-study",
+          "mcity-m2-20261025-exterior-study"
+        ],
+        "sourceURLs": [
+          "https://futuremississauga.com/sources.html",
+          "https://mississauga.maps.arcgis.com/sharing/rest/content/items/961c790805c14d8da258ec91bf4117e3/data",
+          "https://www.ontario.ca/page/open-government-licence-ontario"
+        ],
+        "sourceURL": "https://futuremississauga.com/sources.html"
+      },
+      "displayMaster": {
+        "bytes": 18491385,
+        "sha256": "820898aee1027d4591f0e38737935774b5e82a5eaea51cef5496d60193941cb1",
+        "width": 6144,
+        "height": 3840,
+        "format": "image/png",
+        "sourceSHA256": "a0a65eafecaf48c81a348f22bcc21f08fbbb7d98b04273111c734881f1ae5749",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/wide-display-downtown-existing.png"
+      },
+      "download": {
+        "bytes": 18491385,
+        "sha256": "820898aee1027d4591f0e38737935774b5e82a5eaea51cef5496d60193941cb1",
+        "width": 6144,
+        "height": 3840,
+        "format": "image/png",
+        "sourceSHA256": "a0a65eafecaf48c81a348f22bcc21f08fbbb7d98b04273111c734881f1ae5749",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/wide-downtown-existing.png"
+      },
+      "preview": {
+        "bytes": 159299,
+        "sha256": "67cb8e04d9ef50c2d815606c165135632a77a8f960297d78c5250513598d963b",
+        "width": 1200,
+        "height": 750,
+        "format": "image/avif",
+        "sourceSHA256": "820898aee1027d4591f0e38737935774b5e82a5eaea51cef5496d60193941cb1",
+        "url": "gallery/downtown-20261101/wide-downtown-existing-1200-820898aee102.avif"
+      },
+      "responsive": {
+        "bytes": 642931,
+        "sha256": "804f7c05e28e408a750b99d32c4ff990fd43e25ca991066e922f523803d8472a",
+        "width": 3200,
+        "height": 2000,
+        "format": "image/avif",
+        "sourceSHA256": "820898aee1027d4591f0e38737935774b5e82a5eaea51cef5496d60193941cb1",
+        "url": "gallery/downtown-20261101/wide-downtown-existing-3200-820898aee102.avif"
+      }
+    },
+    {
+      "kind": "wide",
+      "file": "downtown-skyline-existing.png",
+      "area": "Downtown",
+      "title": "Downtown",
+      "aliases": [],
+      "renderInfo": {
+        "state": "rendered",
+        "renderDate": "2026-11-01",
+        "renderTimestampUTC": "2026-11-01T22:40:32.327845+00:00",
+        "sourceEdition": "Downtown 2026-11-01 final frozen native existing assembly; sources mixed dates",
+        "sourceModelDate": null,
+        "sourceManifestSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "sourcePolicySHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceSceneSHA256": "2383e04156c5190704d9f5e97a2258dc880c0c245f4a267eea6565f52ea58dd2",
+        "sourceAttributionPolicySHA256": "d31c34bd591dc6f1ff5ddf490bb98252d33f63d36193ff9c79ae3f9a28de2b41",
+        "sourceRenderProofSHA256": "6697ec90764c1cf409a570b73da8d40a8ad875ece7f3ef0b1c8e1636cba28dbc",
+        "renderDateTimezone": "America/Toronto",
+        "renderKey": "wide/downtown/existing/skyline",
+        "north": {
+          "screenUnitVector": [
+            -0.98666015730522,
+            -0.16279353177088524
+          ],
+          "bearingClockwiseFromScreenUpDegrees": 279.3690801556161,
+          "qualification": "Exact rendered image centre, including lens shift; infinitesimal projected north direction. Square pixels, no crop.",
+          "method": "Project north through camera rotation and perspective derivative at shifted image centre: dx=nx+u*nz; dy=-(ny+v*nz). Lens shift included; square pixel aspect means focal-length factors cancel when normalizing.",
+          "sourceProofSHA256": "a585be85b45fbe11f3fade7f1ed0316897b59bba63ce9b6d409b55a4c76d29b4"
+        },
+        "nativeCamera": {
+          "runtimePosition": [
+            -7200,
+            500,
+            2200
+          ],
+          "runtimeTarget": [
+            -5300,
+            100,
+            -250
+          ],
+          "blenderLocation": [
+            -7200.0,
+            -2200.0,
+            500.0
+          ],
+          "blenderRotationEuler": [
+            1.4424896240234375,
+            -3.927950231741306e-08,
+            -0.6596288681030273
+          ],
+          "matrixWorld": [
+            [
+              0.7902197241783142,
+              0.07841378450393677,
+              -0.6077861785888672,
+              -7200.0
+            ],
+            [
+              -0.6128236055374146,
+              0.10111254453659058,
+              -0.7837241291999817,
+              -2200.0
+            ],
+            [
+              3.927950231741306e-08,
+              0.9917799830436707,
+              0.12795494496822357,
+              500.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "verticalFovDegrees": 15.5,
+          "lensMM": 88.17433166503906,
+          "sensorHeightMM": 24.0,
+          "sensorFit": "VERTICAL",
+          "sensorWidthMM": 36.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "pixelFrame": [
+            6144,
+            2240
+          ],
+          "canonicalPixelFrame": [
+            6144,
+            2240
+          ],
+          "noBorderCropOrUpscale": true
+        },
+        "note": "Fresh native scenario render. Source dates vary; detailed models retain architectural finishes.",
+        "sourceDatesMixed": true
+      },
+      "sourceAttribution": {
+        "openStreetMap": false,
+        "sourceEdition": "Downtown 2026-11-01 final frozen native existing assembly; sources mixed dates",
+        "osmBasis": "Direct metadata in exact exported native assembly; no frustum subtraction of source credits",
+        "modelCredits": [
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ],
+        "creator": "Daniel Sultan / Future Mississauga",
+        "description": "Fresh Downtown existing render of the accepted source-supported native assembly. Architectural finishes are preserved; lifecycle status and model accuracy are separate. Source dates vary. Geometry is not a surveyed as-built.",
+        "statusSnapshotSHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceFreezeSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "visibleProjectIds": [
+          "30-eglinton-west",
+          "absolute-world",
+          "alba",
+          "avia",
+          "block-nine",
+          "edge-oro",
+          "exchange-district",
+          "fairwinds-park-ship-study",
+          "mcity-1-2",
+          "mcity-3",
+          "mcity-4",
+          "mcity-5",
+          "square-one-block5-t1",
+          "square-one-phase1",
+          "voya"
+        ],
+        "visibleAssetIds": [
+          "30-eglinton-west-approved-envelope",
+          "30-eglinton-west-retained-office",
+          "absolute-world-source-derived",
+          "alba-existing-plan-derived",
+          "avia-20261025-exterior-study",
+          "block-nine-reference-derived",
+          "edge-1-20261025-exterior-study",
+          "edge-2-20261025-exterior-study",
+          "fairwinds-park-ship-study-reference-review",
+          "mcity-m1-20261025-exterior-study",
+          "mcity-m2-20261025-exterior-study"
+        ],
+        "sourceURLs": [
+          "https://futuremississauga.com/sources.html",
+          "https://mississauga.maps.arcgis.com/sharing/rest/content/items/961c790805c14d8da258ec91bf4117e3/data",
+          "https://www.ontario.ca/page/open-government-licence-ontario"
+        ],
+        "sourceURL": "https://futuremississauga.com/sources.html"
+      },
+      "displayMaster": {
+        "bytes": 8178565,
+        "sha256": "cfefacce1fc1123a3bd62027885868c729711bf050bf89b24f4dd418f4b5aa41",
+        "width": 6144,
+        "height": 2240,
+        "format": "image/png",
+        "sourceSHA256": "caf94a52084b13153ef6674d9b1af48203248a8b30aa3eef5bd091b8c5950310",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/wide-display-downtown-skyline-existing.png"
+      },
+      "download": {
+        "bytes": 8178565,
+        "sha256": "cfefacce1fc1123a3bd62027885868c729711bf050bf89b24f4dd418f4b5aa41",
+        "width": 6144,
+        "height": 2240,
+        "format": "image/png",
+        "sourceSHA256": "caf94a52084b13153ef6674d9b1af48203248a8b30aa3eef5bd091b8c5950310",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/wide-downtown-skyline-existing.png"
+      },
+      "preview": {
+        "bytes": 70032,
+        "sha256": "84199d520bb1aa096f1ee83dfa20c23ab2429a14a418e520881cd5aea1760244",
+        "width": 1200,
+        "height": 438,
+        "format": "image/avif",
+        "sourceSHA256": "cfefacce1fc1123a3bd62027885868c729711bf050bf89b24f4dd418f4b5aa41",
+        "url": "gallery/downtown-20261101/wide-downtown-skyline-existing-1200-cfefacce1fc1.avif"
+      },
+      "responsive": {
+        "bytes": 287401,
+        "sha256": "c8f8047a66a7594317b119e5c27e3d97f4826ef475cffd4586327b3f345c7d17",
+        "width": 3200,
+        "height": 1167,
+        "format": "image/avif",
+        "sourceSHA256": "cfefacce1fc1123a3bd62027885868c729711bf050bf89b24f4dd418f4b5aa41",
+        "url": "gallery/downtown-20261101/wide-downtown-skyline-existing-3200-cfefacce1fc1.avif"
+      }
+    },
+    {
+      "kind": "portraits",
+      "file": "downtown-existing.png",
+      "area": "Downtown",
+      "title": "Downtown",
+      "aliases": [],
+      "renderInfo": {
+        "state": "rendered",
+        "renderDate": "2026-11-01",
+        "renderTimestampUTC": "2026-11-01T22:40:56.374968+00:00",
+        "sourceEdition": "Downtown 2026-11-01 final frozen native existing assembly; sources mixed dates",
+        "sourceModelDate": null,
+        "sourceManifestSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "sourcePolicySHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceSceneSHA256": "2383e04156c5190704d9f5e97a2258dc880c0c245f4a267eea6565f52ea58dd2",
+        "sourceAttributionPolicySHA256": "d31c34bd591dc6f1ff5ddf490bb98252d33f63d36193ff9c79ae3f9a28de2b41",
+        "sourceRenderProofSHA256": "6697ec90764c1cf409a570b73da8d40a8ad875ece7f3ef0b1c8e1636cba28dbc",
+        "renderDateTimezone": "America/Toronto",
+        "renderKey": "portrait/downtown/existing/aerial",
+        "north": {
+          "screenUnitVector": [
+            0.8024262196928711,
+            -0.596751340132059
+          ],
+          "bearingClockwiseFromScreenUpDegrees": 53.36241787946282,
+          "qualification": "Exact rendered image centre, including lens shift; infinitesimal projected north direction. Square pixels, no crop.",
+          "method": "Project north through camera rotation and perspective derivative at shifted image centre: dx=nx+u*nz; dy=-(ny+v*nz). Lens shift included; square pixel aspect means focal-length factors cancel when normalizing.",
+          "sourceProofSHA256": "a585be85b45fbe11f3fade7f1ed0316897b59bba63ce9b6d409b55a4c76d29b4"
+        },
+        "nativeCamera": {
+          "runtimePosition": [
+            -4200,
+            1450,
+            2400
+          ],
+          "runtimeTarget": [
+            -5520,
+            100,
+            400
+          ],
+          "blenderLocation": [
+            -4200.0,
+            -2400.0,
+            1450.0
+          ],
+          "blenderRotationEuler": [
+            1.0577527284622192,
+            2.4463322034762314e-08,
+            0.5833730101585388
+          ],
+          "matrixWorld": [
+            [
+              0.8346093893051147,
+              -0.27037057280540466,
+              0.4799238443374634,
+              -4200.0
+            ],
+            [
+              0.5508422255516052,
+              0.4096524119377136,
+              -0.7271572947502136,
+              -2400.0
+            ],
+            [
+              -2.4463322034762314e-08,
+              0.8712546229362488,
+              0.49083125591278076,
+              1450.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "verticalFovDegrees": 35,
+          "lensMM": 38.059139251708984,
+          "sensorHeightMM": 24.0,
+          "sensorFit": "VERTICAL",
+          "sensorWidthMM": 36.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "pixelFrame": [
+            3240,
+            4050
+          ],
+          "canonicalPixelFrame": [
+            3240,
+            4050
+          ],
+          "noBorderCropOrUpscale": true
+        },
+        "note": "Fresh native scenario render. Source dates vary; detailed models retain architectural finishes.",
+        "sourceDatesMixed": true
+      },
+      "sourceAttribution": {
+        "openStreetMap": false,
+        "sourceEdition": "Downtown 2026-11-01 final frozen native existing assembly; sources mixed dates",
+        "osmBasis": "Direct metadata in exact exported native assembly; no frustum subtraction of source credits",
+        "modelCredits": [
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ],
+        "creator": "Daniel Sultan / Future Mississauga",
+        "description": "Fresh Downtown existing render of the accepted source-supported native assembly. Architectural finishes are preserved; lifecycle status and model accuracy are separate. Source dates vary. Geometry is not a surveyed as-built.",
+        "statusSnapshotSHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceFreezeSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "visibleProjectIds": [
+          "30-eglinton-west",
+          "absolute-world",
+          "alba",
+          "avia",
+          "block-nine",
+          "edge-oro",
+          "exchange-district",
+          "fairwinds-park-ship-study",
+          "mcity-1-2",
+          "mcity-3",
+          "mcity-4",
+          "mcity-5",
+          "square-one-block5-t1",
+          "square-one-phase1",
+          "voya"
+        ],
+        "visibleAssetIds": [
+          "30-eglinton-west-approved-envelope",
+          "30-eglinton-west-retained-office",
+          "absolute-world-source-derived",
+          "alba-existing-plan-derived",
+          "avia-20261025-exterior-study",
+          "block-nine-reference-derived",
+          "edge-1-20261025-exterior-study",
+          "edge-2-20261025-exterior-study",
+          "fairwinds-park-ship-study-reference-review",
+          "mcity-m1-20261025-exterior-study",
+          "mcity-m2-20261025-exterior-study"
+        ],
+        "sourceURLs": [
+          "https://futuremississauga.com/sources.html",
+          "https://mississauga.maps.arcgis.com/sharing/rest/content/items/961c790805c14d8da258ec91bf4117e3/data",
+          "https://www.ontario.ca/page/open-government-licence-ontario"
+        ],
+        "sourceURL": "https://futuremississauga.com/sources.html"
+      },
+      "displayMaster": {
+        "bytes": 12405276,
+        "sha256": "c261b967eee58d975afca871dd12a0b48f09d51974427d376fbd3a4628a5728f",
+        "width": 3240,
+        "height": 4050,
+        "format": "image/png",
+        "sourceSHA256": "ab9cab12477aa41fde829f3b9e481bf0a48bb1abd4207d42babc5327e6b4f79b",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/portraits-display-downtown-existing.png"
+      },
+      "download": {
+        "bytes": 12405276,
+        "sha256": "c261b967eee58d975afca871dd12a0b48f09d51974427d376fbd3a4628a5728f",
+        "width": 3240,
+        "height": 4050,
+        "format": "image/png",
+        "sourceSHA256": "ab9cab12477aa41fde829f3b9e481bf0a48bb1abd4207d42babc5327e6b4f79b",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/portraits-downtown-existing.png"
+      },
+      "preview": {
+        "bytes": 165526,
+        "sha256": "717182da5eac7cd2f5820e78c3146accec18ab055120cb263b0423342c4b5a12",
+        "width": 810,
+        "height": 1013,
+        "format": "image/avif",
+        "sourceSHA256": "c261b967eee58d975afca871dd12a0b48f09d51974427d376fbd3a4628a5728f",
+        "url": "gallery/downtown-20261101/portraits-downtown-existing-810-c261b967eee5.avif"
+      },
+      "responsive": {
+        "bytes": 448881,
+        "sha256": "1349fdd060d7c4e443426224e787c14fe5dbebc825503606668a815d692d1cb7",
+        "width": 1620,
+        "height": 2025,
+        "format": "image/avif",
+        "sourceSHA256": "c261b967eee58d975afca871dd12a0b48f09d51974427d376fbd3a4628a5728f",
+        "url": "gallery/downtown-20261101/portraits-downtown-existing-1620-c261b967eee5.avif"
+      }
+    },
+    {
+      "kind": "portraits",
+      "file": "downtown-skyline-existing.png",
+      "area": "Downtown",
+      "title": "Downtown",
+      "aliases": [],
+      "renderInfo": {
+        "state": "rendered",
+        "renderDate": "2026-11-01",
+        "renderTimestampUTC": "2026-11-01T22:41:22.901402+00:00",
+        "sourceEdition": "Downtown 2026-11-01 final frozen native existing assembly; sources mixed dates",
+        "sourceModelDate": null,
+        "sourceManifestSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "sourcePolicySHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceSceneSHA256": "2383e04156c5190704d9f5e97a2258dc880c0c245f4a267eea6565f52ea58dd2",
+        "sourceAttributionPolicySHA256": "d31c34bd591dc6f1ff5ddf490bb98252d33f63d36193ff9c79ae3f9a28de2b41",
+        "sourceRenderProofSHA256": "6697ec90764c1cf409a570b73da8d40a8ad875ece7f3ef0b1c8e1636cba28dbc",
+        "renderDateTimezone": "America/Toronto",
+        "renderKey": "portrait/downtown/existing/skyline",
+        "north": {
+          "screenUnitVector": [
+            -0.9819704068853298,
+            -0.1890347058120818
+          ],
+          "bearingClockwiseFromScreenUpDegrees": 280.8964561002612,
+          "qualification": "Exact rendered image centre, including lens shift; infinitesimal projected north direction. Square pixels, no crop.",
+          "method": "Project north through camera rotation and perspective derivative at shifted image centre: dx=nx+u*nz; dy=-(ny+v*nz). Lens shift included; square pixel aspect means focal-length factors cancel when normalizing.",
+          "sourceProofSHA256": "a585be85b45fbe11f3fade7f1ed0316897b59bba63ce9b6d409b55a4c76d29b4"
+        },
+        "nativeCamera": {
+          "runtimePosition": [
+            -6500,
+            340,
+            2200
+          ],
+          "runtimeTarget": [
+            -5200,
+            60,
+            -450
+          ],
+          "blenderLocation": [
+            -6500.0,
+            -2200.0,
+            340.0
+          ],
+          "blenderRotationEuler": [
+            1.4762187004089355,
+            -5.583586926150019e-10,
+            -0.4560721218585968
+          ],
+          "matrixWorld": [
+            [
+              0.8977893590927124,
+              0.04159228876233101,
+              -0.43845680356025696,
+              -6500.0
+            ],
+            [
+              -0.4404250979423523,
+              0.08478425443172455,
+              -0.8937770128250122,
+              -2200.0
+            ],
+            [
+              5.583586926150019e-10,
+              0.9955308437347412,
+              0.09443669021129608,
+              340.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "verticalFovDegrees": 24,
+          "lensMM": 56.455562591552734,
+          "sensorHeightMM": 24.0,
+          "sensorFit": "VERTICAL",
+          "sensorWidthMM": 36.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "pixelFrame": [
+            3240,
+            4050
+          ],
+          "canonicalPixelFrame": [
+            3240,
+            4050
+          ],
+          "noBorderCropOrUpscale": true
+        },
+        "note": "Fresh native scenario render. Source dates vary; detailed models retain architectural finishes.",
+        "sourceDatesMixed": true
+      },
+      "sourceAttribution": {
+        "openStreetMap": false,
+        "sourceEdition": "Downtown 2026-11-01 final frozen native existing assembly; sources mixed dates",
+        "osmBasis": "Direct metadata in exact exported native assembly; no frustum subtraction of source credits",
+        "modelCredits": [
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ],
+        "creator": "Daniel Sultan / Future Mississauga",
+        "description": "Fresh Downtown existing render of the accepted source-supported native assembly. Architectural finishes are preserved; lifecycle status and model accuracy are separate. Source dates vary. Geometry is not a surveyed as-built.",
+        "statusSnapshotSHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceFreezeSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "visibleProjectIds": [
+          "30-eglinton-west",
+          "absolute-world",
+          "alba",
+          "avia",
+          "block-nine",
+          "edge-oro",
+          "exchange-district",
+          "fairwinds-park-ship-study",
+          "mcity-1-2",
+          "mcity-3",
+          "mcity-4",
+          "mcity-5",
+          "square-one-block5-t1",
+          "square-one-phase1",
+          "voya"
+        ],
+        "visibleAssetIds": [
+          "30-eglinton-west-approved-envelope",
+          "30-eglinton-west-retained-office",
+          "absolute-world-source-derived",
+          "alba-existing-plan-derived",
+          "avia-20261025-exterior-study",
+          "block-nine-reference-derived",
+          "edge-1-20261025-exterior-study",
+          "edge-2-20261025-exterior-study",
+          "fairwinds-park-ship-study-reference-review",
+          "mcity-m1-20261025-exterior-study",
+          "mcity-m2-20261025-exterior-study"
+        ],
+        "sourceURLs": [
+          "https://futuremississauga.com/sources.html",
+          "https://mississauga.maps.arcgis.com/sharing/rest/content/items/961c790805c14d8da258ec91bf4117e3/data",
+          "https://www.ontario.ca/page/open-government-licence-ontario"
+        ],
+        "sourceURL": "https://futuremississauga.com/sources.html"
+      },
+      "displayMaster": {
+        "bytes": 6350954,
+        "sha256": "5eb9d8504e60dd2a3f5ba51cb0deb0e04d8034cf85f94013395aa9af47796cc3",
+        "width": 3240,
+        "height": 4050,
+        "format": "image/png",
+        "sourceSHA256": "4d37ae537c75122d4bf591329a7beca60efa7120be2e72be2997c6d36f38e02a",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/portraits-display-downtown-skyline-existing.png"
+      },
+      "download": {
+        "bytes": 6350954,
+        "sha256": "5eb9d8504e60dd2a3f5ba51cb0deb0e04d8034cf85f94013395aa9af47796cc3",
+        "width": 3240,
+        "height": 4050,
+        "format": "image/png",
+        "sourceSHA256": "4d37ae537c75122d4bf591329a7beca60efa7120be2e72be2997c6d36f38e02a",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/portraits-downtown-skyline-existing.png"
+      },
+      "preview": {
+        "bytes": 59292,
+        "sha256": "a52851b2ae176540d9ba9ce76385e03100a196e60b18d4968dad92baabe04a9c",
+        "width": 810,
+        "height": 1013,
+        "format": "image/avif",
+        "sourceSHA256": "5eb9d8504e60dd2a3f5ba51cb0deb0e04d8034cf85f94013395aa9af47796cc3",
+        "url": "gallery/downtown-20261101/portraits-downtown-skyline-existing-810-5eb9d8504e60.avif"
+      },
+      "responsive": {
+        "bytes": 140397,
+        "sha256": "b5bfc049ebb9161aa4f4e2416a9f9dd45672d4d00a7d24f23c2f0626d78f7973",
+        "width": 1620,
+        "height": 2025,
+        "format": "image/avif",
+        "sourceSHA256": "5eb9d8504e60dd2a3f5ba51cb0deb0e04d8034cf85f94013395aa9af47796cc3",
+        "url": "gallery/downtown-20261101/portraits-downtown-skyline-existing-1620-5eb9d8504e60.avif"
+      }
+    },
+    {
+      "kind": "wide",
+      "file": "downtown-skyline-construction.png",
+      "area": "Downtown",
+      "title": "Downtown",
+      "aliases": [],
+      "renderInfo": {
+        "state": "rendered",
+        "renderDate": "2026-11-01",
+        "renderTimestampUTC": "2026-11-01T22:42:10.234944+00:00",
+        "sourceEdition": "Downtown 2026-11-01 final frozen native construction assembly; sources mixed dates",
+        "sourceModelDate": null,
+        "sourceManifestSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "sourcePolicySHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceSceneSHA256": "d27da494f56812342aacd41f422fc20feb0f0c0c72b014513d7d312d8df7cfdb",
+        "sourceAttributionPolicySHA256": "137ae09c8620d88f922b45eb1d868dc331d6ab4db07eab1b7710ad852517fcdc",
+        "sourceRenderProofSHA256": "cebba845e0a459a5a60a5bf50c88401c99bf34ab408b366bd43db0087f6f2240",
+        "renderDateTimezone": "America/Toronto",
+        "renderKey": "wide/downtown/construction/skyline",
+        "north": {
+          "screenUnitVector": [
+            -0.98666015730522,
+            -0.16279353177088524
+          ],
+          "bearingClockwiseFromScreenUpDegrees": 279.3690801556161,
+          "qualification": "Exact rendered image centre, including lens shift; infinitesimal projected north direction. Square pixels, no crop.",
+          "method": "Project north through camera rotation and perspective derivative at shifted image centre: dx=nx+u*nz; dy=-(ny+v*nz). Lens shift included; square pixel aspect means focal-length factors cancel when normalizing.",
+          "sourceProofSHA256": "a585be85b45fbe11f3fade7f1ed0316897b59bba63ce9b6d409b55a4c76d29b4"
+        },
+        "nativeCamera": {
+          "runtimePosition": [
+            -7200,
+            500,
+            2200
+          ],
+          "runtimeTarget": [
+            -5300,
+            100,
+            -250
+          ],
+          "blenderLocation": [
+            -7200.0,
+            -2200.0,
+            500.0
+          ],
+          "blenderRotationEuler": [
+            1.4424896240234375,
+            -3.927950231741306e-08,
+            -0.6596288681030273
+          ],
+          "matrixWorld": [
+            [
+              0.7902197241783142,
+              0.07841378450393677,
+              -0.6077861785888672,
+              -7200.0
+            ],
+            [
+              -0.6128236055374146,
+              0.10111254453659058,
+              -0.7837241291999817,
+              -2200.0
+            ],
+            [
+              3.927950231741306e-08,
+              0.9917799830436707,
+              0.12795494496822357,
+              500.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "verticalFovDegrees": 15.5,
+          "lensMM": 88.17433166503906,
+          "sensorHeightMM": 24.0,
+          "sensorFit": "VERTICAL",
+          "sensorWidthMM": 36.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "pixelFrame": [
+            6144,
+            2240
+          ],
+          "canonicalPixelFrame": [
+            6144,
+            2240
+          ],
+          "noBorderCropOrUpscale": true
+        },
+        "note": "Fresh native scenario render. Source dates vary; detailed models retain architectural finishes.",
+        "sourceDatesMixed": true
+      },
+      "sourceAttribution": {
+        "openStreetMap": true,
+        "sourceEdition": "Downtown 2026-11-01 final frozen native construction assembly; sources mixed dates",
+        "osmBasis": "Direct metadata in exact exported native assembly; no frustum subtraction of source credits",
+        "modelCredits": [
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Exact lower geometry: City of Mississauga. Architecture/reference plans: IBI Group / M City. Height: Andrew Fisher. Crown references: Tim MacDonald via UrbanToronto and Walters Group.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design/elevation: CORE Architects, March25,2020; official M City floorplans and brochure. Original drawing images remain private.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ],
+        "creator": "Daniel Sultan / Future Mississauga",
+        "description": "Fresh Downtown construction render of the accepted source-supported native assembly. Architectural finishes are preserved; lifecycle status and model accuracy are separate. Source dates vary. Geometry is not a surveyed as-built.",
+        "statusSnapshotSHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceFreezeSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "visibleProjectIds": [
+          "30-eglinton-west",
+          "absolute-world",
+          "alba",
+          "avia",
+          "block-nine",
+          "edge-oro",
+          "exchange-district",
+          "fairwinds-park-ship-study",
+          "mcity-1-2",
+          "mcity-3",
+          "mcity-4",
+          "mcity-5",
+          "square-one-block5-t1",
+          "square-one-phase1",
+          "voya"
+        ],
+        "visibleAssetIds": [
+          "30-eglinton-west-approved-envelope",
+          "30-eglinton-west-retained-office",
+          "absolute-world-source-derived",
+          "alba-existing-plan-derived",
+          "avia-20261025-exterior-study",
+          "block-nine-reference-derived",
+          "edge-1-20261025-exterior-study",
+          "edge-2-20261025-exterior-study",
+          "exchange-recorded-topped-structures",
+          "fairwinds-park-ship-study-reference-review",
+          "mcity-m1-20261025-exterior-study",
+          "mcity-m2-20261025-exterior-study",
+          "mcity-m3-upper-detail-20261101",
+          "mcity-m4-spring2026-detail-20261101",
+          "oro-20261027-composite",
+          "voya-towers-plan-derived"
+        ],
+        "sourceURLs": [
+          "https://futuremississauga.com/sources.html",
+          "https://mississauga.maps.arcgis.com/sharing/rest/content/items/961c790805c14d8da258ec91bf4117e3/data",
+          "https://www.ontario.ca/page/open-government-licence-ontario",
+          "https://www.openstreetmap.org/copyright"
+        ],
+        "sourceURL": "https://futuremississauga.com/sources.html"
+      },
+      "displayMaster": {
+        "bytes": 8230542,
+        "sha256": "3df2e0c93c3e05f84eb994c0180e5210cd2cd69ac6031ee4a7e9f84b68536344",
+        "width": 6144,
+        "height": 2240,
+        "format": "image/png",
+        "sourceSHA256": "cb06dbb01d7998d205a9740ef2acce0a1d7a4e85f4e9e657715eda62e2b13910",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/wide-display-downtown-skyline-construction.png"
+      },
+      "download": {
+        "bytes": 8237481,
+        "sha256": "ac156d5ed45840baaa3d752fb944538709f3b51ac293eb370a122734e5834391",
+        "width": 6144,
+        "height": 2240,
+        "format": "image/png",
+        "sourceSHA256": "cb06dbb01d7998d205a9740ef2acce0a1d7a4e85f4e9e657715eda62e2b13910",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/wide-downtown-skyline-construction.png"
+      },
+      "preview": {
+        "bytes": 71232,
+        "sha256": "57ceff37aae6bb2f64f4382bab5c2dbe5fea18b323009fd587d4b52594046276",
+        "width": 1200,
+        "height": 438,
+        "format": "image/avif",
+        "sourceSHA256": "3df2e0c93c3e05f84eb994c0180e5210cd2cd69ac6031ee4a7e9f84b68536344",
+        "url": "gallery/downtown-20261101/wide-downtown-skyline-construction-1200-3df2e0c93c3e.avif"
+      },
+      "responsive": {
+        "bytes": 291826,
+        "sha256": "4276e38a86344283954bb8b8c3fab19f4bae5a1017e96494c2b324e94c6a0905",
+        "width": 3200,
+        "height": 1167,
+        "format": "image/avif",
+        "sourceSHA256": "3df2e0c93c3e05f84eb994c0180e5210cd2cd69ac6031ee4a7e9f84b68536344",
+        "url": "gallery/downtown-20261101/wide-downtown-skyline-construction-3200-3df2e0c93c3e.avif"
+      }
+    },
+    {
+      "kind": "portraits",
+      "file": "downtown-skyline-construction.png",
+      "area": "Downtown",
+      "title": "Downtown",
+      "aliases": [],
+      "renderInfo": {
+        "state": "rendered",
+        "renderDate": "2026-11-01",
+        "renderTimestampUTC": "2026-11-01T22:42:34.029321+00:00",
+        "sourceEdition": "Downtown 2026-11-01 final frozen native construction assembly; sources mixed dates",
+        "sourceModelDate": null,
+        "sourceManifestSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "sourcePolicySHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceSceneSHA256": "d27da494f56812342aacd41f422fc20feb0f0c0c72b014513d7d312d8df7cfdb",
+        "sourceAttributionPolicySHA256": "137ae09c8620d88f922b45eb1d868dc331d6ab4db07eab1b7710ad852517fcdc",
+        "sourceRenderProofSHA256": "cebba845e0a459a5a60a5bf50c88401c99bf34ab408b366bd43db0087f6f2240",
+        "renderDateTimezone": "America/Toronto",
+        "renderKey": "portrait/downtown/construction/skyline",
+        "north": {
+          "screenUnitVector": [
+            -0.9819704068853298,
+            -0.1890347058120818
+          ],
+          "bearingClockwiseFromScreenUpDegrees": 280.8964561002612,
+          "qualification": "Exact rendered image centre, including lens shift; infinitesimal projected north direction. Square pixels, no crop.",
+          "method": "Project north through camera rotation and perspective derivative at shifted image centre: dx=nx+u*nz; dy=-(ny+v*nz). Lens shift included; square pixel aspect means focal-length factors cancel when normalizing.",
+          "sourceProofSHA256": "a585be85b45fbe11f3fade7f1ed0316897b59bba63ce9b6d409b55a4c76d29b4"
+        },
+        "nativeCamera": {
+          "runtimePosition": [
+            -6500,
+            340,
+            2200
+          ],
+          "runtimeTarget": [
+            -5200,
+            60,
+            -450
+          ],
+          "blenderLocation": [
+            -6500.0,
+            -2200.0,
+            340.0
+          ],
+          "blenderRotationEuler": [
+            1.4762187004089355,
+            -5.583586926150019e-10,
+            -0.4560721218585968
+          ],
+          "matrixWorld": [
+            [
+              0.8977893590927124,
+              0.04159228876233101,
+              -0.43845680356025696,
+              -6500.0
+            ],
+            [
+              -0.4404250979423523,
+              0.08478425443172455,
+              -0.8937770128250122,
+              -2200.0
+            ],
+            [
+              5.583586926150019e-10,
+              0.9955308437347412,
+              0.09443669021129608,
+              340.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "verticalFovDegrees": 24,
+          "lensMM": 56.455562591552734,
+          "sensorHeightMM": 24.0,
+          "sensorFit": "VERTICAL",
+          "sensorWidthMM": 36.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "pixelFrame": [
+            3240,
+            4050
+          ],
+          "canonicalPixelFrame": [
+            3240,
+            4050
+          ],
+          "noBorderCropOrUpscale": true
+        },
+        "note": "Fresh native scenario render. Source dates vary; detailed models retain architectural finishes.",
+        "sourceDatesMixed": true
+      },
+      "sourceAttribution": {
+        "openStreetMap": true,
+        "sourceEdition": "Downtown 2026-11-01 final frozen native construction assembly; sources mixed dates",
+        "osmBasis": "Direct metadata in exact exported native assembly; no frustum subtraction of source credits",
+        "modelCredits": [
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Exact lower geometry: City of Mississauga. Architecture/reference plans: IBI Group / M City. Height: Andrew Fisher. Crown references: Tim MacDonald via UrbanToronto and Walters Group.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design/elevation: CORE Architects, March25,2020; official M City floorplans and brochure. Original drawing images remain private.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ],
+        "creator": "Daniel Sultan / Future Mississauga",
+        "description": "Fresh Downtown construction render of the accepted source-supported native assembly. Architectural finishes are preserved; lifecycle status and model accuracy are separate. Source dates vary. Geometry is not a surveyed as-built.",
+        "statusSnapshotSHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceFreezeSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "visibleProjectIds": [
+          "30-eglinton-west",
+          "absolute-world",
+          "alba",
+          "avia",
+          "block-nine",
+          "edge-oro",
+          "exchange-district",
+          "fairwinds-park-ship-study",
+          "mcity-1-2",
+          "mcity-3",
+          "mcity-4",
+          "mcity-5",
+          "square-one-block5-t1",
+          "square-one-phase1",
+          "voya"
+        ],
+        "visibleAssetIds": [
+          "30-eglinton-west-approved-envelope",
+          "30-eglinton-west-retained-office",
+          "absolute-world-source-derived",
+          "alba-existing-plan-derived",
+          "avia-20261025-exterior-study",
+          "block-nine-reference-derived",
+          "edge-1-20261025-exterior-study",
+          "edge-2-20261025-exterior-study",
+          "exchange-recorded-topped-structures",
+          "fairwinds-park-ship-study-reference-review",
+          "mcity-m1-20261025-exterior-study",
+          "mcity-m2-20261025-exterior-study",
+          "mcity-m3-upper-detail-20261101",
+          "mcity-m4-spring2026-detail-20261101",
+          "oro-20261027-composite",
+          "voya-towers-plan-derived"
+        ],
+        "sourceURLs": [
+          "https://futuremississauga.com/sources.html",
+          "https://mississauga.maps.arcgis.com/sharing/rest/content/items/961c790805c14d8da258ec91bf4117e3/data",
+          "https://www.ontario.ca/page/open-government-licence-ontario",
+          "https://www.openstreetmap.org/copyright"
+        ],
+        "sourceURL": "https://futuremississauga.com/sources.html"
+      },
+      "displayMaster": {
+        "bytes": 6584469,
+        "sha256": "abf3fdc56faff8248835b89b5fa94485ff53edba8b5d422f9000e0dc6d6b24cc",
+        "width": 3240,
+        "height": 4050,
+        "format": "image/png",
+        "sourceSHA256": "ef7a1961c38034d61751848593bdf78aadb0f10bb04b2b57aa6787aab391df70",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/portraits-display-downtown-skyline-construction.png"
+      },
+      "download": {
+        "bytes": 6589821,
+        "sha256": "489e64a60b33fb16996e21f47b27b1d86a1965c9e08b16e37535133a0490836b",
+        "width": 3240,
+        "height": 4050,
+        "format": "image/png",
+        "sourceSHA256": "ef7a1961c38034d61751848593bdf78aadb0f10bb04b2b57aa6787aab391df70",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/portraits-downtown-skyline-construction.png"
+      },
+      "preview": {
+        "bytes": 62148,
+        "sha256": "cc9e3b61b954668a96db4a36f22ef0b07c1aa52f71d3ae9920770d9fd52a29f7",
+        "width": 810,
+        "height": 1013,
+        "format": "image/avif",
+        "sourceSHA256": "abf3fdc56faff8248835b89b5fa94485ff53edba8b5d422f9000e0dc6d6b24cc",
+        "url": "gallery/downtown-20261101/portraits-downtown-skyline-construction-810-abf3fdc56faf.avif"
+      },
+      "responsive": {
+        "bytes": 149745,
+        "sha256": "36f35edb9048eab145a451de2562316b72a030a4698ff9edd0b81b21464be926",
+        "width": 1620,
+        "height": 2025,
+        "format": "image/avif",
+        "sourceSHA256": "abf3fdc56faff8248835b89b5fa94485ff53edba8b5d422f9000e0dc6d6b24cc",
+        "url": "gallery/downtown-20261101/portraits-downtown-skyline-construction-1620-abf3fdc56faf.avif"
+      }
+    },
+    {
+      "kind": "wide",
+      "file": "downtown-future.png",
+      "area": "Downtown",
+      "title": "Downtown",
+      "aliases": [],
+      "renderInfo": {
+        "state": "rendered",
+        "renderDate": "2026-11-01",
+        "renderTimestampUTC": "2026-11-01T22:36:01.051271+00:00",
+        "sourceEdition": "Downtown 2026-11-01 final frozen native future assembly; sources mixed dates",
+        "sourceModelDate": null,
+        "sourceManifestSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "sourcePolicySHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceSceneSHA256": "64dfb4613c7acefd010e209f10b6f3f7189c79899dbf2f9d98e2ec0b1abfa514",
+        "sourceAttributionPolicySHA256": "f1264ae6406590f78385bf38754d887992bedc532dfb5d137f0daf996f038795",
+        "sourceRenderProofSHA256": "bcd04b7ddf34ed44bb1aefc95381c0625708699fd6378d105ccd34a35d193219",
+        "renderDateTimezone": "America/Toronto",
+        "renderKey": "wide/downtown/future/aerial",
+        "north": {
+          "screenUnitVector": [
+            0.9141269064361335,
+            -0.40542816741009025
+          ],
+          "bearingClockwiseFromScreenUpDegrees": 66.08203890577505,
+          "qualification": "Exact rendered image centre, including lens shift; infinitesimal projected north direction. Square pixels, no crop.",
+          "method": "Project north through camera rotation and perspective derivative at shifted image centre: dx=nx+u*nz; dy=-(ny+v*nz). Lens shift included; square pixel aspect means focal-length factors cancel when normalizing.",
+          "sourceProofSHA256": "a585be85b45fbe11f3fade7f1ed0316897b59bba63ce9b6d409b55a4c76d29b4"
+        },
+        "nativeCamera": {
+          "runtimePosition": [
+            -3900,
+            1150,
+            1400
+          ],
+          "runtimeTarget": [
+            -5400,
+            125,
+            -150
+          ],
+          "blenderLocation": [
+            -3900.0,
+            -1400.0,
+            1150.0
+          ],
+          "blenderRotationEuler": [
+            1.1271812915802002,
+            -2.9152687375244568e-08,
+            0.7690063714981079
+          ],
+          "matrixWorld": [
+            [
+              0.7186020016670227,
+              -0.2984800934791565,
+              0.6281089186668396,
+              -3900.0
+            ],
+            [
+              0.695421576499939,
+              0.3084292709827423,
+              -0.6490456461906433,
+              -1400.0
+            ],
+            [
+              2.9152687375244568e-08,
+              0.9032059907913208,
+              0.42920738458633423,
+              1150.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "verticalFovDegrees": 35,
+          "lensMM": 38.059139251708984,
+          "sensorHeightMM": 24.0,
+          "sensorFit": "VERTICAL",
+          "sensorWidthMM": 36.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "pixelFrame": [
+            6144,
+            3840
+          ],
+          "canonicalPixelFrame": [
+            6144,
+            3840
+          ],
+          "noBorderCropOrUpscale": true
+        },
+        "note": "Fresh native scenario render. Source dates vary; detailed models retain architectural finishes.",
+        "sourceDatesMixed": true
+      },
+      "sourceAttribution": {
+        "openStreetMap": true,
+        "sourceEdition": "Downtown 2026-11-01 final frozen native future assembly; sources mixed dates",
+        "osmBasis": "Direct metadata in exact exported native assembly; no frustum subtraction of source credits",
+        "modelCredits": [
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Exact lower geometry: City of Mississauga. Architecture/reference plans: IBI Group / M City. Height: Andrew Fisher. Crown references: Tim MacDonald via UrbanToronto and Walters Group.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design/elevation: CORE Architects, March25,2020; official M City floorplans and brochure. Original drawing images remain private.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design: IBI Group. Design references: official M City brochure and exterior renderings. No source-image pixels or native interaction mesh arrays embedded.",
+          "Architectural design: Hariri Pontarini Architects. Model: Future Mississauga / Daniel Sultan. City of Mississauga reference placement.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ],
+        "creator": "Daniel Sultan / Future Mississauga",
+        "description": "Fresh Downtown future render of the accepted source-supported native assembly. Architectural finishes are preserved; lifecycle status and model accuracy are separate. Source dates vary. Geometry is not a surveyed as-built.",
+        "statusSnapshotSHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceFreezeSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "visibleProjectIds": [
+          "180-burnhamthorpe",
+          "30-eglinton-west",
+          "325-burnhamthorpe",
+          "3600-hurontario",
+          "4310-sherwoodtowne",
+          "absolute-world",
+          "alba",
+          "avia",
+          "block-nine",
+          "city-group-49",
+          "city-group-88",
+          "city-group-90",
+          "city-group-91",
+          "city-group-92",
+          "connecting-cooksville",
+          "cooksville-toc",
+          "edge-oro",
+          "exchange-district",
+          "exchange-south",
+          "fairwinds-park-ship-study",
+          "mcity-1-2",
+          "mcity-3",
+          "mcity-4",
+          "mcity-5",
+          "mcity-6",
+          "mcity-7-8",
+          "square-one-block5-t1",
+          "square-one-office",
+          "square-one-phase1",
+          "square-one-phase2",
+          "voya"
+        ],
+        "visibleAssetIds": [
+          "30-eglinton-west-approved-envelope",
+          "30-eglinton-west-retained-office",
+          "absolute-world-source-derived",
+          "alba-existing-plan-derived",
+          "avia-20261025-exterior-study",
+          "block-nine-reference-derived",
+          "cooksville-toc-sep2026-envelopes",
+          "edge-1-20261025-exterior-study",
+          "edge-2-20261025-exterior-study",
+          "fairwinds-park-ship-study-reference-review",
+          "mcity-m1-20261025-exterior-study",
+          "mcity-m2-20261025-exterior-study",
+          "mcity-m3-upper-detail-20261101",
+          "mcity-m4-future-detail-20261101",
+          "mcity-m5-authored-detail-20261101",
+          "mcity-m6-20261101-dated-exterior",
+          "mcity-m7-m8-20261101-dated-exteriors",
+          "oro-20261027-composite",
+          "square-one-block5-t1-plan-derived",
+          "voya-towers-plan-derived"
+        ],
+        "sourceURLs": [
+          "https://futuremississauga.com/sources.html",
+          "https://mississauga.maps.arcgis.com/sharing/rest/content/items/961c790805c14d8da258ec91bf4117e3/data",
+          "https://www.ontario.ca/page/open-government-licence-ontario",
+          "https://www.openstreetmap.org/copyright"
+        ],
+        "sourceURL": "https://futuremississauga.com/sources.html"
+      },
+      "displayMaster": {
+        "bytes": 18942559,
+        "sha256": "98810a25e1b698787a5c9596b970217cbd6fe4f2057fd84558f5bc3674de0a62",
+        "width": 6144,
+        "height": 3840,
+        "format": "image/png",
+        "sourceSHA256": "1a50b2628de5f656e23563890feb7e6fbe4aad2ef205f7232610c9b6363566dd",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/wide-display-downtown-future.png"
+      },
+      "download": {
+        "bytes": 18949230,
+        "sha256": "7d5a1f6061fc11da6b196fb21d79be4d82e272509c648b0a6e94e1ce56a3a84a",
+        "width": 6144,
+        "height": 3840,
+        "format": "image/png",
+        "sourceSHA256": "1a50b2628de5f656e23563890feb7e6fbe4aad2ef205f7232610c9b6363566dd",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/wide-downtown-future.png"
+      },
+      "preview": {
+        "bytes": 164101,
+        "sha256": "235441c03a118e4827b83ab5ee9d01c25622351981381ce570b99bb62ba2647c",
+        "width": 1200,
+        "height": 750,
+        "format": "image/avif",
+        "sourceSHA256": "98810a25e1b698787a5c9596b970217cbd6fe4f2057fd84558f5bc3674de0a62",
+        "url": "gallery/downtown-20261101/wide-downtown-future-1200-98810a25e1b6.avif"
+      },
+      "responsive": {
+        "bytes": 668100,
+        "sha256": "52ec1320caa22daf0a212bc48971a57e75609e7d673a2eccad070351a588ac40",
+        "width": 3200,
+        "height": 2000,
+        "format": "image/avif",
+        "sourceSHA256": "98810a25e1b698787a5c9596b970217cbd6fe4f2057fd84558f5bc3674de0a62",
+        "url": "gallery/downtown-20261101/wide-downtown-future-3200-98810a25e1b6.avif"
+      }
+    },
+    {
+      "kind": "wide",
+      "file": "downtown-skyline-future.png",
+      "area": "Downtown",
+      "title": "Downtown",
+      "aliases": [],
+      "renderInfo": {
+        "state": "rendered",
+        "renderDate": "2026-11-01",
+        "renderTimestampUTC": "2026-11-01T22:36:54.220414+00:00",
+        "sourceEdition": "Downtown 2026-11-01 final frozen native future assembly; sources mixed dates",
+        "sourceModelDate": null,
+        "sourceManifestSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "sourcePolicySHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceSceneSHA256": "64dfb4613c7acefd010e209f10b6f3f7189c79899dbf2f9d98e2ec0b1abfa514",
+        "sourceAttributionPolicySHA256": "f1264ae6406590f78385bf38754d887992bedc532dfb5d137f0daf996f038795",
+        "sourceRenderProofSHA256": "bcd04b7ddf34ed44bb1aefc95381c0625708699fd6378d105ccd34a35d193219",
+        "renderDateTimezone": "America/Toronto",
+        "renderKey": "wide/downtown/future/skyline",
+        "north": {
+          "screenUnitVector": [
+            -0.98666015730522,
+            -0.16279353177088524
+          ],
+          "bearingClockwiseFromScreenUpDegrees": 279.3690801556161,
+          "qualification": "Exact rendered image centre, including lens shift; infinitesimal projected north direction. Square pixels, no crop.",
+          "method": "Project north through camera rotation and perspective derivative at shifted image centre: dx=nx+u*nz; dy=-(ny+v*nz). Lens shift included; square pixel aspect means focal-length factors cancel when normalizing.",
+          "sourceProofSHA256": "a585be85b45fbe11f3fade7f1ed0316897b59bba63ce9b6d409b55a4c76d29b4"
+        },
+        "nativeCamera": {
+          "runtimePosition": [
+            -7200,
+            500,
+            2200
+          ],
+          "runtimeTarget": [
+            -5300,
+            100,
+            -250
+          ],
+          "blenderLocation": [
+            -7200.0,
+            -2200.0,
+            500.0
+          ],
+          "blenderRotationEuler": [
+            1.4424896240234375,
+            -3.927950231741306e-08,
+            -0.6596288681030273
+          ],
+          "matrixWorld": [
+            [
+              0.7902197241783142,
+              0.07841378450393677,
+              -0.6077861785888672,
+              -7200.0
+            ],
+            [
+              -0.6128236055374146,
+              0.10111254453659058,
+              -0.7837241291999817,
+              -2200.0
+            ],
+            [
+              3.927950231741306e-08,
+              0.9917799830436707,
+              0.12795494496822357,
+              500.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "verticalFovDegrees": 15.5,
+          "lensMM": 88.17433166503906,
+          "sensorHeightMM": 24.0,
+          "sensorFit": "VERTICAL",
+          "sensorWidthMM": 36.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "pixelFrame": [
+            6144,
+            2240
+          ],
+          "canonicalPixelFrame": [
+            6144,
+            2240
+          ],
+          "noBorderCropOrUpscale": true
+        },
+        "note": "Fresh native scenario render. Source dates vary; detailed models retain architectural finishes.",
+        "sourceDatesMixed": true
+      },
+      "sourceAttribution": {
+        "openStreetMap": true,
+        "sourceEdition": "Downtown 2026-11-01 final frozen native future assembly; sources mixed dates",
+        "osmBasis": "Direct metadata in exact exported native assembly; no frustum subtraction of source credits",
+        "modelCredits": [
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Exact lower geometry: City of Mississauga. Architecture/reference plans: IBI Group / M City. Height: Andrew Fisher. Crown references: Tim MacDonald via UrbanToronto and Walters Group.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design/elevation: CORE Architects, March25,2020; official M City floorplans and brochure. Original drawing images remain private.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design: IBI Group. Design references: official M City brochure and exterior renderings. No source-image pixels or native interaction mesh arrays embedded.",
+          "Architectural design: Hariri Pontarini Architects. Model: Future Mississauga / Daniel Sultan. City of Mississauga reference placement.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ],
+        "creator": "Daniel Sultan / Future Mississauga",
+        "description": "Fresh Downtown future render of the accepted source-supported native assembly. Architectural finishes are preserved; lifecycle status and model accuracy are separate. Source dates vary. Geometry is not a surveyed as-built.",
+        "statusSnapshotSHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceFreezeSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "visibleProjectIds": [
+          "180-burnhamthorpe",
+          "30-eglinton-west",
+          "325-burnhamthorpe",
+          "3600-hurontario",
+          "4310-sherwoodtowne",
+          "absolute-world",
+          "alba",
+          "avia",
+          "block-nine",
+          "city-group-49",
+          "city-group-88",
+          "city-group-90",
+          "city-group-91",
+          "city-group-92",
+          "connecting-cooksville",
+          "cooksville-toc",
+          "edge-oro",
+          "exchange-district",
+          "exchange-south",
+          "fairwinds-park-ship-study",
+          "mcity-1-2",
+          "mcity-3",
+          "mcity-4",
+          "mcity-5",
+          "mcity-6",
+          "mcity-7-8",
+          "square-one-block5-t1",
+          "square-one-office",
+          "square-one-phase1",
+          "square-one-phase2",
+          "voya"
+        ],
+        "visibleAssetIds": [
+          "30-eglinton-west-approved-envelope",
+          "30-eglinton-west-retained-office",
+          "absolute-world-source-derived",
+          "alba-existing-plan-derived",
+          "avia-20261025-exterior-study",
+          "block-nine-reference-derived",
+          "cooksville-toc-sep2026-envelopes",
+          "edge-1-20261025-exterior-study",
+          "edge-2-20261025-exterior-study",
+          "fairwinds-park-ship-study-reference-review",
+          "mcity-m1-20261025-exterior-study",
+          "mcity-m2-20261025-exterior-study",
+          "mcity-m3-upper-detail-20261101",
+          "mcity-m4-future-detail-20261101",
+          "mcity-m5-authored-detail-20261101",
+          "mcity-m6-20261101-dated-exterior",
+          "mcity-m7-m8-20261101-dated-exteriors",
+          "oro-20261027-composite",
+          "square-one-block5-t1-plan-derived",
+          "voya-towers-plan-derived"
+        ],
+        "sourceURLs": [
+          "https://futuremississauga.com/sources.html",
+          "https://mississauga.maps.arcgis.com/sharing/rest/content/items/961c790805c14d8da258ec91bf4117e3/data",
+          "https://www.ontario.ca/page/open-government-licence-ontario",
+          "https://www.openstreetmap.org/copyright"
+        ],
+        "sourceURL": "https://futuremississauga.com/sources.html"
+      },
+      "displayMaster": {
+        "bytes": 8373470,
+        "sha256": "b38c9647f31d7aa37d95b15a0cdc21cc0e9449da5f5872bcd4807fa03f4fdd96",
+        "width": 6144,
+        "height": 2240,
+        "format": "image/png",
+        "sourceSHA256": "a8bb5f3cd60bbb63731ab0328da02a99b7635a308ac6584e975a80b91111b6d8",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/wide-display-downtown-skyline-future.png"
+      },
+      "download": {
+        "bytes": 8380273,
+        "sha256": "2bfab298ac7c6a5b0484bb68307e25c7c37559229e0ae5109a5104aacd7dab1e",
+        "width": 6144,
+        "height": 2240,
+        "format": "image/png",
+        "sourceSHA256": "a8bb5f3cd60bbb63731ab0328da02a99b7635a308ac6584e975a80b91111b6d8",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/wide-downtown-skyline-future.png"
+      },
+      "preview": {
+        "bytes": 71658,
+        "sha256": "24379a1a13a0bf147363bb1b38cf3aae9d15aebb2dd3ce6c78700ab9c4c98305",
+        "width": 1200,
+        "height": 438,
+        "format": "image/avif",
+        "sourceSHA256": "b38c9647f31d7aa37d95b15a0cdc21cc0e9449da5f5872bcd4807fa03f4fdd96",
+        "url": "gallery/downtown-20261101/wide-downtown-skyline-future-1200-b38c9647f31d.avif"
+      },
+      "responsive": {
+        "bytes": 290309,
+        "sha256": "d12e2ec94a09f1cdb7e731faa771a31688064989e8add69f7e733819c44aa241",
+        "width": 3200,
+        "height": 1167,
+        "format": "image/avif",
+        "sourceSHA256": "b38c9647f31d7aa37d95b15a0cdc21cc0e9449da5f5872bcd4807fa03f4fdd96",
+        "url": "gallery/downtown-20261101/wide-downtown-skyline-future-3200-b38c9647f31d.avif"
+      }
+    },
+    {
+      "kind": "portraits",
+      "file": "downtown-future.png",
+      "area": "Downtown",
+      "title": "Downtown",
+      "aliases": [],
+      "renderInfo": {
+        "state": "rendered",
+        "renderDate": "2026-11-01",
+        "renderTimestampUTC": "2026-11-01T22:37:19.952460+00:00",
+        "sourceEdition": "Downtown 2026-11-01 final frozen native future assembly; sources mixed dates",
+        "sourceModelDate": null,
+        "sourceManifestSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "sourcePolicySHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceSceneSHA256": "64dfb4613c7acefd010e209f10b6f3f7189c79899dbf2f9d98e2ec0b1abfa514",
+        "sourceAttributionPolicySHA256": "f1264ae6406590f78385bf38754d887992bedc532dfb5d137f0daf996f038795",
+        "sourceRenderProofSHA256": "bcd04b7ddf34ed44bb1aefc95381c0625708699fd6378d105ccd34a35d193219",
+        "renderDateTimezone": "America/Toronto",
+        "renderKey": "portrait/downtown/future/aerial",
+        "north": {
+          "screenUnitVector": [
+            0.8024262196928711,
+            -0.596751340132059
+          ],
+          "bearingClockwiseFromScreenUpDegrees": 53.36241787946282,
+          "qualification": "Exact rendered image centre, including lens shift; infinitesimal projected north direction. Square pixels, no crop.",
+          "method": "Project north through camera rotation and perspective derivative at shifted image centre: dx=nx+u*nz; dy=-(ny+v*nz). Lens shift included; square pixel aspect means focal-length factors cancel when normalizing.",
+          "sourceProofSHA256": "a585be85b45fbe11f3fade7f1ed0316897b59bba63ce9b6d409b55a4c76d29b4"
+        },
+        "nativeCamera": {
+          "runtimePosition": [
+            -4200,
+            1450,
+            2400
+          ],
+          "runtimeTarget": [
+            -5520,
+            100,
+            400
+          ],
+          "blenderLocation": [
+            -4200.0,
+            -2400.0,
+            1450.0
+          ],
+          "blenderRotationEuler": [
+            1.0577527284622192,
+            2.4463322034762314e-08,
+            0.5833730101585388
+          ],
+          "matrixWorld": [
+            [
+              0.8346093893051147,
+              -0.27037057280540466,
+              0.4799238443374634,
+              -4200.0
+            ],
+            [
+              0.5508422255516052,
+              0.4096524119377136,
+              -0.7271572947502136,
+              -2400.0
+            ],
+            [
+              -2.4463322034762314e-08,
+              0.8712546229362488,
+              0.49083125591278076,
+              1450.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "verticalFovDegrees": 35,
+          "lensMM": 38.059139251708984,
+          "sensorHeightMM": 24.0,
+          "sensorFit": "VERTICAL",
+          "sensorWidthMM": 36.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "pixelFrame": [
+            3240,
+            4050
+          ],
+          "canonicalPixelFrame": [
+            3240,
+            4050
+          ],
+          "noBorderCropOrUpscale": true
+        },
+        "note": "Fresh native scenario render. Source dates vary; detailed models retain architectural finishes.",
+        "sourceDatesMixed": true
+      },
+      "sourceAttribution": {
+        "openStreetMap": true,
+        "sourceEdition": "Downtown 2026-11-01 final frozen native future assembly; sources mixed dates",
+        "osmBasis": "Direct metadata in exact exported native assembly; no frustum subtraction of source credits",
+        "modelCredits": [
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Exact lower geometry: City of Mississauga. Architecture/reference plans: IBI Group / M City. Height: Andrew Fisher. Crown references: Tim MacDonald via UrbanToronto and Walters Group.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design/elevation: CORE Architects, March25,2020; official M City floorplans and brochure. Original drawing images remain private.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design: IBI Group. Design references: official M City brochure and exterior renderings. No source-image pixels or native interaction mesh arrays embedded.",
+          "Architectural design: Hariri Pontarini Architects. Model: Future Mississauga / Daniel Sultan. City of Mississauga reference placement.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ],
+        "creator": "Daniel Sultan / Future Mississauga",
+        "description": "Fresh Downtown future render of the accepted source-supported native assembly. Architectural finishes are preserved; lifecycle status and model accuracy are separate. Source dates vary. Geometry is not a surveyed as-built.",
+        "statusSnapshotSHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceFreezeSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "visibleProjectIds": [
+          "180-burnhamthorpe",
+          "30-eglinton-west",
+          "325-burnhamthorpe",
+          "3600-hurontario",
+          "4310-sherwoodtowne",
+          "absolute-world",
+          "alba",
+          "avia",
+          "block-nine",
+          "city-group-49",
+          "city-group-88",
+          "city-group-90",
+          "city-group-91",
+          "city-group-92",
+          "connecting-cooksville",
+          "cooksville-toc",
+          "edge-oro",
+          "exchange-district",
+          "exchange-south",
+          "fairwinds-park-ship-study",
+          "mcity-1-2",
+          "mcity-3",
+          "mcity-4",
+          "mcity-5",
+          "mcity-6",
+          "mcity-7-8",
+          "square-one-block5-t1",
+          "square-one-office",
+          "square-one-phase1",
+          "square-one-phase2",
+          "voya"
+        ],
+        "visibleAssetIds": [
+          "30-eglinton-west-approved-envelope",
+          "30-eglinton-west-retained-office",
+          "absolute-world-source-derived",
+          "alba-existing-plan-derived",
+          "avia-20261025-exterior-study",
+          "block-nine-reference-derived",
+          "cooksville-toc-sep2026-envelopes",
+          "edge-1-20261025-exterior-study",
+          "edge-2-20261025-exterior-study",
+          "fairwinds-park-ship-study-reference-review",
+          "mcity-m1-20261025-exterior-study",
+          "mcity-m2-20261025-exterior-study",
+          "mcity-m3-upper-detail-20261101",
+          "mcity-m4-future-detail-20261101",
+          "mcity-m5-authored-detail-20261101",
+          "mcity-m6-20261101-dated-exterior",
+          "mcity-m7-m8-20261101-dated-exteriors",
+          "oro-20261027-composite",
+          "square-one-block5-t1-plan-derived",
+          "voya-towers-plan-derived"
+        ],
+        "sourceURLs": [
+          "https://futuremississauga.com/sources.html",
+          "https://mississauga.maps.arcgis.com/sharing/rest/content/items/961c790805c14d8da258ec91bf4117e3/data",
+          "https://www.ontario.ca/page/open-government-licence-ontario",
+          "https://www.openstreetmap.org/copyright"
+        ],
+        "sourceURL": "https://futuremississauga.com/sources.html"
+      },
+      "displayMaster": {
+        "bytes": 12709154,
+        "sha256": "77d4a8f3205eb7d2437ef411280c524dfa0954e55ab5dbe21d8b00f8eababebf",
+        "width": 3240,
+        "height": 4050,
+        "format": "image/png",
+        "sourceSHA256": "6834960c78cfaeaf3699c752d9e6bb742a2a45f957a0842cc2168fb195e5daea",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/portraits-display-downtown-future.png"
+      },
+      "download": {
+        "bytes": 12715036,
+        "sha256": "0a14274df873b4342b05f206c0305aaa1645312f929397b3faa3612a05925afc",
+        "width": 3240,
+        "height": 4050,
+        "format": "image/png",
+        "sourceSHA256": "6834960c78cfaeaf3699c752d9e6bb742a2a45f957a0842cc2168fb195e5daea",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/portraits-downtown-future.png"
+      },
+      "preview": {
+        "bytes": 169063,
+        "sha256": "2528cfe998a46e10e2daf5593f56434716ae56fc55b358a085282125e97e9a40",
+        "width": 810,
+        "height": 1013,
+        "format": "image/avif",
+        "sourceSHA256": "77d4a8f3205eb7d2437ef411280c524dfa0954e55ab5dbe21d8b00f8eababebf",
+        "url": "gallery/downtown-20261101/portraits-downtown-future-810-77d4a8f3205e.avif"
+      },
+      "responsive": {
+        "bytes": 459558,
+        "sha256": "938c237d73feecc533f94fdaae4ae7d8a91563bc0d9d0be5d2669f6c4d6fe170",
+        "width": 1620,
+        "height": 2025,
+        "format": "image/avif",
+        "sourceSHA256": "77d4a8f3205eb7d2437ef411280c524dfa0954e55ab5dbe21d8b00f8eababebf",
+        "url": "gallery/downtown-20261101/portraits-downtown-future-1620-77d4a8f3205e.avif"
+      }
+    },
+    {
+      "kind": "portraits",
+      "file": "downtown-skyline-future.png",
+      "area": "Downtown",
+      "title": "Downtown",
+      "aliases": [],
+      "renderInfo": {
+        "state": "rendered",
+        "renderDate": "2026-11-01",
+        "renderTimestampUTC": "2026-11-01T22:37:48.512834+00:00",
+        "sourceEdition": "Downtown 2026-11-01 final frozen native future assembly; sources mixed dates",
+        "sourceModelDate": null,
+        "sourceManifestSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "sourcePolicySHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceSceneSHA256": "64dfb4613c7acefd010e209f10b6f3f7189c79899dbf2f9d98e2ec0b1abfa514",
+        "sourceAttributionPolicySHA256": "f1264ae6406590f78385bf38754d887992bedc532dfb5d137f0daf996f038795",
+        "sourceRenderProofSHA256": "bcd04b7ddf34ed44bb1aefc95381c0625708699fd6378d105ccd34a35d193219",
+        "renderDateTimezone": "America/Toronto",
+        "renderKey": "portrait/downtown/future/skyline",
+        "north": {
+          "screenUnitVector": [
+            -0.9819704068853298,
+            -0.1890347058120818
+          ],
+          "bearingClockwiseFromScreenUpDegrees": 280.8964561002612,
+          "qualification": "Exact rendered image centre, including lens shift; infinitesimal projected north direction. Square pixels, no crop.",
+          "method": "Project north through camera rotation and perspective derivative at shifted image centre: dx=nx+u*nz; dy=-(ny+v*nz). Lens shift included; square pixel aspect means focal-length factors cancel when normalizing.",
+          "sourceProofSHA256": "a585be85b45fbe11f3fade7f1ed0316897b59bba63ce9b6d409b55a4c76d29b4"
+        },
+        "nativeCamera": {
+          "runtimePosition": [
+            -6500,
+            340,
+            2200
+          ],
+          "runtimeTarget": [
+            -5200,
+            60,
+            -450
+          ],
+          "blenderLocation": [
+            -6500.0,
+            -2200.0,
+            340.0
+          ],
+          "blenderRotationEuler": [
+            1.4762187004089355,
+            -5.583586926150019e-10,
+            -0.4560721218585968
+          ],
+          "matrixWorld": [
+            [
+              0.8977893590927124,
+              0.04159228876233101,
+              -0.43845680356025696,
+              -6500.0
+            ],
+            [
+              -0.4404250979423523,
+              0.08478425443172455,
+              -0.8937770128250122,
+              -2200.0
+            ],
+            [
+              5.583586926150019e-10,
+              0.9955308437347412,
+              0.09443669021129608,
+              340.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "verticalFovDegrees": 24,
+          "lensMM": 56.455562591552734,
+          "sensorHeightMM": 24.0,
+          "sensorFit": "VERTICAL",
+          "sensorWidthMM": 36.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "pixelFrame": [
+            3240,
+            4050
+          ],
+          "canonicalPixelFrame": [
+            3240,
+            4050
+          ],
+          "noBorderCropOrUpscale": true
+        },
+        "note": "Fresh native scenario render. Source dates vary; detailed models retain architectural finishes.",
+        "sourceDatesMixed": true
+      },
+      "sourceAttribution": {
+        "openStreetMap": true,
+        "sourceEdition": "Downtown 2026-11-01 final frozen native future assembly; sources mixed dates",
+        "osmBasis": "Direct metadata in exact exported native assembly; no frustum subtraction of source credits",
+        "modelCredits": [
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Exact lower geometry: City of Mississauga. Architecture/reference plans: IBI Group / M City. Height: Andrew Fisher. Crown references: Tim MacDonald via UrbanToronto and Walters Group.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design/elevation: CORE Architects, March25,2020; official M City floorplans and brochure. Original drawing images remain private.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design: IBI Group. Design references: official M City brochure and exterior renderings. No source-image pixels or native interaction mesh arrays embedded.",
+          "Architectural design: Hariri Pontarini Architects. Model: Future Mississauga / Daniel Sultan. City of Mississauga reference placement.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ],
+        "creator": "Daniel Sultan / Future Mississauga",
+        "description": "Fresh Downtown future render of the accepted source-supported native assembly. Architectural finishes are preserved; lifecycle status and model accuracy are separate. Source dates vary. Geometry is not a surveyed as-built.",
+        "statusSnapshotSHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceFreezeSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "visibleProjectIds": [
+          "180-burnhamthorpe",
+          "30-eglinton-west",
+          "325-burnhamthorpe",
+          "3600-hurontario",
+          "4310-sherwoodtowne",
+          "absolute-world",
+          "alba",
+          "avia",
+          "block-nine",
+          "city-group-49",
+          "city-group-88",
+          "city-group-90",
+          "city-group-91",
+          "city-group-92",
+          "connecting-cooksville",
+          "cooksville-toc",
+          "edge-oro",
+          "exchange-district",
+          "exchange-south",
+          "fairwinds-park-ship-study",
+          "mcity-1-2",
+          "mcity-3",
+          "mcity-4",
+          "mcity-5",
+          "mcity-6",
+          "mcity-7-8",
+          "square-one-block5-t1",
+          "square-one-office",
+          "square-one-phase1",
+          "square-one-phase2",
+          "voya"
+        ],
+        "visibleAssetIds": [
+          "30-eglinton-west-approved-envelope",
+          "30-eglinton-west-retained-office",
+          "absolute-world-source-derived",
+          "alba-existing-plan-derived",
+          "avia-20261025-exterior-study",
+          "block-nine-reference-derived",
+          "cooksville-toc-sep2026-envelopes",
+          "edge-1-20261025-exterior-study",
+          "edge-2-20261025-exterior-study",
+          "fairwinds-park-ship-study-reference-review",
+          "mcity-m1-20261025-exterior-study",
+          "mcity-m2-20261025-exterior-study",
+          "mcity-m3-upper-detail-20261101",
+          "mcity-m4-future-detail-20261101",
+          "mcity-m5-authored-detail-20261101",
+          "mcity-m6-20261101-dated-exterior",
+          "mcity-m7-m8-20261101-dated-exteriors",
+          "oro-20261027-composite",
+          "square-one-block5-t1-plan-derived",
+          "voya-towers-plan-derived"
+        ],
+        "sourceURLs": [
+          "https://futuremississauga.com/sources.html",
+          "https://mississauga.maps.arcgis.com/sharing/rest/content/items/961c790805c14d8da258ec91bf4117e3/data",
+          "https://www.ontario.ca/page/open-government-licence-ontario",
+          "https://www.openstreetmap.org/copyright"
+        ],
+        "sourceURL": "https://futuremississauga.com/sources.html"
+      },
+      "displayMaster": {
+        "bytes": 7007643,
+        "sha256": "a1d03c288de50ab151b42051dfa8c72523e5102705a97e61188893fb76a97719",
+        "width": 3240,
+        "height": 4050,
+        "format": "image/png",
+        "sourceSHA256": "04ec2fa12b58a990ce64bc07254e310c0998bcd7b75987e44f6278c07ae4a9f3",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/portraits-display-downtown-skyline-future.png"
+      },
+      "download": {
+        "bytes": 7012339,
+        "sha256": "a3d4b1ccd2ef23096b8a333d3be8f7c514fdbdb542b71399f325d7ac3333c033",
+        "width": 3240,
+        "height": 4050,
+        "format": "image/png",
+        "sourceSHA256": "04ec2fa12b58a990ce64bc07254e310c0998bcd7b75987e44f6278c07ae4a9f3",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/portraits-downtown-skyline-future.png"
+      },
+      "preview": {
+        "bytes": 66191,
+        "sha256": "3fbc7768d632a241cd7f0ce7ba72472657c6e5cb94425a4c0acbdc8a604f4525",
+        "width": 810,
+        "height": 1013,
+        "format": "image/avif",
+        "sourceSHA256": "a1d03c288de50ab151b42051dfa8c72523e5102705a97e61188893fb76a97719",
+        "url": "gallery/downtown-20261101/portraits-downtown-skyline-future-810-a1d03c288de5.avif"
+      },
+      "responsive": {
+        "bytes": 162356,
+        "sha256": "128578ae8ae9e7cb53a321f8556aaed14bbfd71acea4bfc6fa744f74b6fcfbdb",
+        "width": 1620,
+        "height": 2025,
+        "format": "image/avif",
+        "sourceSHA256": "a1d03c288de50ab151b42051dfa8c72523e5102705a97e61188893fb76a97719",
+        "url": "gallery/downtown-20261101/portraits-downtown-skyline-future-1620-a1d03c288de5.avif"
+      }
+    },
+    {
+      "kind": "wide",
+      "file": "downtown-portrait-future.png",
+      "area": "Downtown",
+      "title": "Downtown",
+      "aliases": [],
+      "renderInfo": {
+        "state": "rendered",
+        "renderDate": "2026-11-01",
+        "renderTimestampUTC": "2026-11-01T22:38:13.547687+00:00",
+        "sourceEdition": "Downtown 2026-11-01 final frozen native future assembly; sources mixed dates",
+        "sourceModelDate": null,
+        "sourceManifestSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "sourcePolicySHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceSceneSHA256": "64dfb4613c7acefd010e209f10b6f3f7189c79899dbf2f9d98e2ec0b1abfa514",
+        "sourceAttributionPolicySHA256": "f1264ae6406590f78385bf38754d887992bedc532dfb5d137f0daf996f038795",
+        "sourceRenderProofSHA256": "bcd04b7ddf34ed44bb1aefc95381c0625708699fd6378d105ccd34a35d193219",
+        "renderDateTimezone": "America/Toronto",
+        "renderKey": "wide/downtown/future/portrait",
+        "north": {
+          "screenUnitVector": [
+            0.4212169710734963,
+            -0.906959901693382
+          ],
+          "bearingClockwiseFromScreenUpDegrees": 24.911443825291013,
+          "qualification": "Exact rendered image centre, including lens shift; infinitesimal projected north direction. Square pixels, no crop.",
+          "method": "Project north through camera rotation and perspective derivative at shifted image centre: dx=nx+u*nz; dy=-(ny+v*nz). Lens shift included; square pixel aspect means focal-length factors cancel when normalizing.",
+          "sourceProofSHA256": "a585be85b45fbe11f3fade7f1ed0316897b59bba63ce9b6d409b55a4c76d29b4"
+        },
+        "nativeCamera": {
+          "runtimePosition": null,
+          "runtimeTarget": null,
+          "blenderLocation": [
+            -4510.0,
+            -2970.0,
+            1775.0
+          ],
+          "blenderRotationEuler": [
+            1.0903023481369019,
+            -4.4030654677840175e-09,
+            0.21336868405342102
+          ],
+          "matrixWorld": [
+            [
+              0.9773231148719788,
+              -0.09787607938051224,
+              0.1877758502960205,
+              -4510.0
+            ],
+            [
+              0.21175338327884674,
+              0.45173564553260803,
+              -0.8666576147079468,
+              -2970.0
+            ],
+            [
+              4.4030654677840175e-09,
+              0.8867667317390442,
+              0.4622172713279724,
+              1775.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "verticalFovDegrees": null,
+          "lensMM": 65.40880584716797,
+          "sensorHeightMM": 24.0,
+          "sensorFit": "AUTO",
+          "sensorWidthMM": 36.0,
+          "shift": [
+            -0.02784905582666397,
+            -0.06878930330276489
+          ],
+          "pixelFrame": [
+            6144,
+            3840
+          ],
+          "canonicalPixelFrame": [
+            6144,
+            3840
+          ],
+          "noBorderCropOrUpscale": true
+        },
+        "note": "Fresh native scenario render. Source dates vary; detailed models retain architectural finishes.",
+        "sourceDatesMixed": true
+      },
+      "sourceAttribution": {
+        "openStreetMap": true,
+        "sourceEdition": "Downtown 2026-11-01 final frozen native future assembly; sources mixed dates",
+        "osmBasis": "Direct metadata in exact exported native assembly; no frustum subtraction of source credits",
+        "modelCredits": [
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Exact lower geometry: City of Mississauga. Architecture/reference plans: IBI Group / M City. Height: Andrew Fisher. Crown references: Tim MacDonald via UrbanToronto and Walters Group.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design/elevation: CORE Architects, March25,2020; official M City floorplans and brochure. Original drawing images remain private.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design: IBI Group. Design references: official M City brochure and exterior renderings. No source-image pixels or native interaction mesh arrays embedded.",
+          "Architectural design: Hariri Pontarini Architects. Model: Future Mississauga / Daniel Sultan. City of Mississauga reference placement.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ],
+        "creator": "Daniel Sultan / Future Mississauga",
+        "description": "Fresh Downtown future render of the accepted source-supported native assembly. Architectural finishes are preserved; lifecycle status and model accuracy are separate. Source dates vary. Geometry is not a surveyed as-built.",
+        "statusSnapshotSHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceFreezeSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "visibleProjectIds": [
+          "180-burnhamthorpe",
+          "30-eglinton-west",
+          "325-burnhamthorpe",
+          "3600-hurontario",
+          "4310-sherwoodtowne",
+          "absolute-world",
+          "alba",
+          "avia",
+          "block-nine",
+          "city-group-49",
+          "city-group-88",
+          "city-group-90",
+          "city-group-91",
+          "city-group-92",
+          "connecting-cooksville",
+          "cooksville-toc",
+          "edge-oro",
+          "exchange-district",
+          "exchange-south",
+          "fairwinds-park-ship-study",
+          "mcity-1-2",
+          "mcity-3",
+          "mcity-4",
+          "mcity-5",
+          "mcity-6",
+          "mcity-7-8",
+          "square-one-block5-t1",
+          "square-one-office",
+          "square-one-phase1",
+          "square-one-phase2",
+          "voya"
+        ],
+        "visibleAssetIds": [
+          "30-eglinton-west-approved-envelope",
+          "30-eglinton-west-retained-office",
+          "absolute-world-source-derived",
+          "alba-existing-plan-derived",
+          "avia-20261025-exterior-study",
+          "block-nine-reference-derived",
+          "cooksville-toc-sep2026-envelopes",
+          "edge-1-20261025-exterior-study",
+          "edge-2-20261025-exterior-study",
+          "fairwinds-park-ship-study-reference-review",
+          "mcity-m1-20261025-exterior-study",
+          "mcity-m2-20261025-exterior-study",
+          "mcity-m3-upper-detail-20261101",
+          "mcity-m4-future-detail-20261101",
+          "mcity-m5-authored-detail-20261101",
+          "mcity-m6-20261101-dated-exterior",
+          "mcity-m7-m8-20261101-dated-exteriors",
+          "oro-20261027-composite",
+          "square-one-block5-t1-plan-derived",
+          "voya-towers-plan-derived"
+        ],
+        "sourceURLs": [
+          "https://futuremississauga.com/sources.html",
+          "https://mississauga.maps.arcgis.com/sharing/rest/content/items/961c790805c14d8da258ec91bf4117e3/data",
+          "https://www.ontario.ca/page/open-government-licence-ontario",
+          "https://www.openstreetmap.org/copyright"
+        ],
+        "sourceURL": "https://futuremississauga.com/sources.html"
+      },
+      "displayMaster": {
+        "bytes": 25292229,
+        "sha256": "22e3b1fcb704efe0e9cc60f0d063d67ebe82fe9fc6e6cff9282d65ef9e80ef74",
+        "width": 6144,
+        "height": 3840,
+        "format": "image/png",
+        "sourceSHA256": "4aa316240c4e046bf6e81b705f38335c36833590aa049cd6851efa293e82d4d7",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/wide-display-downtown-portrait-future.png"
+      },
+      "download": {
+        "bytes": 25300095,
+        "sha256": "2bb8aeae4a16d9bbeb0e4f625ffa8a3c21f9b62e56707ddd6660d73b6bf810d5",
+        "width": 6144,
+        "height": 3840,
+        "format": "image/png",
+        "sourceSHA256": "4aa316240c4e046bf6e81b705f38335c36833590aa049cd6851efa293e82d4d7",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/wide-downtown-portrait-future.png"
+      },
+      "preview": {
+        "bytes": 209702,
+        "sha256": "965f7fb57d17d85f4665cfdfba328f7b3be1f00ba0bf2e94e5d4560630f28f2c",
+        "width": 1200,
+        "height": 750,
+        "format": "image/avif",
+        "sourceSHA256": "22e3b1fcb704efe0e9cc60f0d063d67ebe82fe9fc6e6cff9282d65ef9e80ef74",
+        "url": "gallery/downtown-20261101/wide-downtown-portrait-future-1200-22e3b1fcb704.avif"
+      },
+      "responsive": {
+        "bytes": 851461,
+        "sha256": "f15512c52f529f7538412ae86395dc3ee441c28df5f06d2aabd01aadd64f7122",
+        "width": 3200,
+        "height": 2000,
+        "format": "image/avif",
+        "sourceSHA256": "22e3b1fcb704efe0e9cc60f0d063d67ebe82fe9fc6e6cff9282d65ef9e80ef74",
+        "url": "gallery/downtown-20261101/wide-downtown-portrait-future-3200-22e3b1fcb704.avif"
+      }
+    },
+    {
+      "kind": "wide",
+      "file": "downtown-landmark-future.png",
+      "area": "Downtown",
+      "title": "Downtown",
+      "aliases": [],
+      "renderInfo": {
+        "state": "rendered",
+        "renderDate": "2026-11-01",
+        "renderTimestampUTC": "2026-11-01T22:48:27.903580+00:00",
+        "sourceEdition": "Downtown 2026-11-01 final frozen native future assembly; sources mixed dates",
+        "sourceModelDate": null,
+        "sourceManifestSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "sourcePolicySHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceSceneSHA256": "64dfb4613c7acefd010e209f10b6f3f7189c79899dbf2f9d98e2ec0b1abfa514",
+        "sourceAttributionPolicySHA256": "f1264ae6406590f78385bf38754d887992bedc532dfb5d137f0daf996f038795",
+        "sourceRenderProofSHA256": "b52023f0830b7d212f736adbe36c382a21f953f11cbf9cb76b4b70e5b2419d7b",
+        "renderDateTimezone": "America/Toronto",
+        "renderKey": "wide/downtown/future/landmark",
+        "north": {
+          "screenUnitVector": [
+            0.9821110670667896,
+            0.18830255427086431
+          ],
+          "bearingClockwiseFromScreenUpDegrees": 100.85373975484583,
+          "qualification": "Exact projected north at image centre. Camera shift is zero; principal-axis and image-centre directions coincide. Perspective north varies elsewhere in frame.",
+          "method": "Zero-shift perspective camera; rotate worldnorth[0,1,0] into camera plane and normalize square-pixel screen direction.",
+          "sourceProofSHA256": "3f5bc6ef524bf57fb24d6924318ae2a8913130b160094c604c988017b7ef9299"
+        },
+        "nativeCamera": {
+          "runtimePosition": null,
+          "runtimeTarget": null,
+          "blenderLocation": [
+            -4007.0,
+            1263.0,
+            490.0
+          ],
+          "blenderRotationEuler": [
+            1.2387851476669312,
+            -4.277236698158049e-08,
+            2.10252046585083
+          ],
+          "matrixWorld": [
+            [
+              -0.5070201754570007,
+              -0.2809431552886963,
+              0.814862847328186,
+              -4007.0
+            ],
+            [
+              0.8619341850280762,
+              -0.16526074707508087,
+              0.4793311655521393,
+              1263.0
+            ],
+            [
+              4.277236698158049e-08,
+              0.9453887343406677,
+              0.32594501972198486,
+              490.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "verticalFovDegrees": null,
+          "lensMM": 55.0,
+          "sensorHeightMM": 24.0,
+          "sensorFit": "AUTO",
+          "sensorWidthMM": 36.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "pixelFrame": [
+            6144,
+            3840
+          ],
+          "canonicalPixelFrame": [
+            6144,
+            3840
+          ],
+          "noBorderCropOrUpscale": true
+        },
+        "note": "Fresh native scenario render. Source dates vary; detailed models retain architectural finishes.",
+        "sourceDatesMixed": true
+      },
+      "sourceAttribution": {
+        "openStreetMap": true,
+        "sourceEdition": "Downtown 2026-11-01 final frozen native future assembly; sources mixed dates",
+        "osmBasis": "Direct metadata in exact exported native assembly; no frustum subtraction of source credits",
+        "modelCredits": [
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Exact lower geometry: City of Mississauga. Architecture/reference plans: IBI Group / M City. Height: Andrew Fisher. Crown references: Tim MacDonald via UrbanToronto and Walters Group.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design/elevation: CORE Architects, March25,2020; official M City floorplans and brochure. Original drawing images remain private.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design: IBI Group. Design references: official M City brochure and exterior renderings. No source-image pixels or native interaction mesh arrays embedded.",
+          "Architectural design: Hariri Pontarini Architects. Model: Future Mississauga / Daniel Sultan. City of Mississauga reference placement.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ],
+        "creator": "Daniel Sultan / Future Mississauga",
+        "description": "Fresh Downtown future render of the accepted source-supported native assembly. Architectural finishes are preserved; lifecycle status and model accuracy are separate. Source dates vary. Geometry is not a surveyed as-built.",
+        "statusSnapshotSHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+        "sourceFreezeSHA256": "4a8b9a0c89be8853db32ac4afb9ee0aaba4a580b30f05d4872f6e0675df2f412",
+        "visibleProjectIds": [
+          "180-burnhamthorpe",
+          "30-eglinton-west",
+          "325-burnhamthorpe",
+          "3600-hurontario",
+          "4310-sherwoodtowne",
+          "absolute-world",
+          "alba",
+          "avia",
+          "block-nine",
+          "city-group-49",
+          "city-group-88",
+          "city-group-90",
+          "city-group-91",
+          "city-group-92",
+          "connecting-cooksville",
+          "cooksville-toc",
+          "edge-oro",
+          "exchange-district",
+          "exchange-south",
+          "fairwinds-park-ship-study",
+          "mcity-1-2",
+          "mcity-3",
+          "mcity-4",
+          "mcity-5",
+          "mcity-6",
+          "mcity-7-8",
+          "square-one-block5-t1",
+          "square-one-office",
+          "square-one-phase1",
+          "square-one-phase2",
+          "voya"
+        ],
+        "visibleAssetIds": [
+          "30-eglinton-west-approved-envelope",
+          "30-eglinton-west-retained-office",
+          "absolute-world-source-derived",
+          "alba-existing-plan-derived",
+          "avia-20261025-exterior-study",
+          "block-nine-reference-derived",
+          "cooksville-toc-sep2026-envelopes",
+          "edge-1-20261025-exterior-study",
+          "edge-2-20261025-exterior-study",
+          "fairwinds-park-ship-study-reference-review",
+          "mcity-m1-20261025-exterior-study",
+          "mcity-m2-20261025-exterior-study",
+          "mcity-m3-upper-detail-20261101",
+          "mcity-m4-future-detail-20261101",
+          "mcity-m5-authored-detail-20261101",
+          "mcity-m6-20261101-dated-exterior",
+          "mcity-m7-m8-20261101-dated-exteriors",
+          "oro-20261027-composite",
+          "square-one-block5-t1-plan-derived",
+          "voya-towers-plan-derived"
+        ],
+        "sourceURLs": [
+          "https://futuremississauga.com/sources.html",
+          "https://mississauga.maps.arcgis.com/sharing/rest/content/items/961c790805c14d8da258ec91bf4117e3/data",
+          "https://www.ontario.ca/page/open-government-licence-ontario",
+          "https://www.openstreetmap.org/copyright"
+        ],
+        "sourceURL": "https://futuremississauga.com/sources.html"
+      },
+      "displayMaster": {
+        "bytes": 20103372,
+        "sha256": "837559edbbacf4916acdf650c06716858d02c56c5285bd76afe44b6eb26a9853",
+        "width": 6144,
+        "height": 3840,
+        "format": "image/png",
+        "sourceSHA256": "7a014fb00d5ff74da5320a2131a7334bad5685a82382ec6c9ef49e23fd141248",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/wide-display-downtown-landmark-future.png"
+      },
+      "download": {
+        "bytes": 20111821,
+        "sha256": "392b11ac71b750fc407b0f464d7054bef8d76c999698004d0f13f3ce3cb5e6cf",
+        "width": 6144,
+        "height": 3840,
+        "format": "image/png",
+        "sourceSHA256": "7a014fb00d5ff74da5320a2131a7334bad5685a82382ec6c9ef49e23fd141248",
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-downtown-2026-11-01/wide-downtown-landmark-future.png"
+      },
+      "preview": {
+        "bytes": 124672,
+        "sha256": "1d69165b44de85a30c16fd59d600fd90e33b46a9fcaa1945149bd812204209da",
+        "width": 1200,
+        "height": 750,
+        "format": "image/avif",
+        "sourceSHA256": "837559edbbacf4916acdf650c06716858d02c56c5285bd76afe44b6eb26a9853",
+        "url": "gallery/downtown-20261101/wide-downtown-landmark-future-1200-837559edbbac.avif"
+      },
+      "responsive": {
+        "bytes": 413571,
+        "sha256": "b91850d3380f7161019db6d82624b1c81a5ec81b46541471ae7fbb734df2a475",
+        "width": 3200,
+        "height": 2000,
+        "format": "image/avif",
+        "sourceSHA256": "837559edbbacf4916acdf650c06716858d02c56c5285bd76afe44b6eb26a9853",
+        "url": "gallery/downtown-20261101/wide-downtown-landmark-future-3200-837559edbbac.avif"
+      }
+    }
+  ],
+  "retainedDowntownIdentities": [
+    {
+      "kind": "wide",
+      "file": "downtown-junction-future.png"
+    },
+    {
+      "kind": "portraits",
+      "file": "downtown-landmark-future.png"
+    },
+    {
+      "kind": "portraits",
+      "file": "downtown-portrait-future.png"
+    },
+    {
+      "kind": "portraits",
+      "file": "downtown-junction-future.png"
+    }
+  ],
+  "historicalCatalogueSHA256": "90b18c1969f70cd7c23c64746aaa07fc4d773cbb4c261aa2c1607ee12dc94eaa"
+}

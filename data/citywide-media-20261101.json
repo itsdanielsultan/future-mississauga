@@ -1,0 +1,850 @@
+{
+  "schema": "future-mississauga-current-citywide-media/v1",
+  "image": {
+    "kind": "wide",
+    "file": "citywide-future.png",
+    "area": "All Mississauga",
+    "title": "All Mississauga",
+    "aliases": [],
+    "renderInfo": {
+      "state": "refreshed",
+      "renderDate": "2026-11-01",
+      "renderTimestampUTC": "2026-11-01T22:32:50.726715+00:00",
+      "renderDateTimezone": "America/Toronto",
+      "edition": "Citywide with November 1 exterior refinements and lifecycle review",
+      "label": "Rendered 1 November 2026",
+      "sourceEdition": "Preserved October 28 Citywide context plus accepted November 1 M1-M8 and 50 High exterior studies; mixed-date sources.",
+      "sourceModelDate": null,
+      "sourceModelCommit": "0b5f01b2fad18f727aaaab73965895bf509bf2a3",
+      "sourceManifestSHA256": "422db76d9fe10bcfa55e1b2765d1f3d30c593055dbc5f80c2e8484bdc3e7fc7b",
+      "sourcePolicySHA256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+      "sourceAttributionPolicySHA256": "38dcd4d1b0fe92ca149f435a848b8023e4b3f1ee3ac27c5d3f52c0bb5be8ba35",
+      "renderKey": "wide/citywide/future/aerial",
+      "note": "Current accepted geometry changes are independently pinned. Base context, source dates and accuracy vary.",
+      "candidateGeometryScopeSHA256": "422db76d9fe10bcfa55e1b2765d1f3d30c593055dbc5f80c2e8484bdc3e7fc7b",
+      "fullSnapshotSHA256": "0b14b3d5760ecf908192d1fd37a778a18869a771566421bf65418da7fe98e2cd",
+      "sourceSupportedContextSHA256": "89c459910ef6be213537fdff02b83e8aec829b0a46839e7bfc5bf23be0ec2d18",
+      "renderProofSHA256": "cf7e5ac379847d43ce7e1dd83f66d9632d6b5c1d23fada654a0809a898d2cea4",
+      "sourceModelCommitScope": "Preserved October 28 base context only; current exterior assemblies and lifecycle classifications are pinned by separate hashes.",
+      "nativeSemanticTintPolicySHA256": "ff6545bf7875bd0b5cd4ad99152e660e53ecea068404d25d0959d6b8c79887f8",
+      "sourceDatesMixed": true
+    },
+    "sourceAttribution": {
+      "openStreetMap": true,
+      "modelCredits": [
+        {
+          "id": "mcity-pair",
+          "title": "M City M1 and M2",
+          "subtitle": "Completed buildings · Approximate exterior · Rev03",
+          "credit": "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "limits": "Tower plates, floor schedules, heights, podium dimensions and hidden faces remain approximate. M1 podium observations: May 2026. M2 Quartz/Webb observations: June 2024. The unresolved M2 patterned wall is omitted. Not certified as-built, survey or construction information. November 2026 detail adds source-informed piers, window sash, glazing/guard contrast and roof surface while retaining the earlier plate, height and podium geometry.",
+          "rights": "Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
+          "sources": [
+            {
+              "title": "CORE Architects — M City Phase 1",
+              "url": "https://www.corearchitects.com/project/m-city-phase-1/"
+            },
+            {
+              "title": "RJC Engineers — M1 & M2",
+              "url": "https://www.rjc.ca/project-details/m1-m2-condos.html"
+            },
+            {
+              "title": "City of Mississauga — M City",
+              "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
+            },
+            {
+              "title": "City source data and terms",
+              "url": "https://data.mississauga.ca/pages/mississauga-3d"
+            },
+            {
+              "title": "M City architecture gallery",
+              "url": "https://mcitycondos.com/m1-m2-gallery-architecture.php",
+              "note": "Reference only; images are not redistributed."
+            }
+          ]
+        },
+        {
+          "id": "mcity-m1",
+          "title": "M City M1",
+          "subtitle": "Completed buildings · Approximate exterior · Rev03",
+          "credit": "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "limits": "Tower plates, floor schedules, heights, podium dimensions and hidden faces remain approximate. M1 podium observations: May 2026. M2 Quartz/Webb observations: June 2024. The unresolved M2 patterned wall is omitted. Not certified as-built, survey or construction information. November 2026 detail adds source-informed piers, window sash, glazing/guard contrast and roof surface while retaining the earlier plate, height and podium geometry.",
+          "rights": "Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
+          "sources": [
+            {
+              "title": "CORE Architects — M City Phase 1",
+              "url": "https://www.corearchitects.com/project/m-city-phase-1/"
+            },
+            {
+              "title": "RJC Engineers — M1 & M2",
+              "url": "https://www.rjc.ca/project-details/m1-m2-condos.html"
+            },
+            {
+              "title": "City of Mississauga — M City",
+              "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
+            },
+            {
+              "title": "City source data and terms",
+              "url": "https://data.mississauga.ca/pages/mississauga-3d"
+            },
+            {
+              "title": "M City architecture gallery",
+              "url": "https://mcitycondos.com/m1-m2-gallery-architecture.php",
+              "note": "Reference only; images are not redistributed."
+            }
+          ]
+        },
+        {
+          "id": "mcity-m2",
+          "title": "M City M2",
+          "subtitle": "Completed buildings · Approximate exterior · Rev03",
+          "credit": "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "limits": "Tower plates, floor schedules, heights, podium dimensions and hidden faces remain approximate. M1 podium observations: May 2026. M2 Quartz/Webb observations: June 2024. The unresolved M2 patterned wall is omitted. Not certified as-built, survey or construction information. November 2026 detail adds source-informed piers, window sash, glazing/guard contrast and roof surface while retaining the earlier plate, height and podium geometry.",
+          "rights": "Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
+          "sources": [
+            {
+              "title": "CORE Architects — M City Phase 1",
+              "url": "https://www.corearchitects.com/project/m-city-phase-1/"
+            },
+            {
+              "title": "RJC Engineers — M1 & M2",
+              "url": "https://www.rjc.ca/project-details/m1-m2-condos.html"
+            },
+            {
+              "title": "City of Mississauga — M City",
+              "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
+            },
+            {
+              "title": "City source data and terms",
+              "url": "https://data.mississauga.ca/pages/mississauga-3d"
+            },
+            {
+              "title": "M City architecture gallery",
+              "url": "https://mcitycondos.com/m1-m2-gallery-architecture.php",
+              "note": "Reference only; images are not redistributed."
+            }
+          ]
+        },
+        {
+          "id": "artform",
+          "title": "Artform",
+          "subtitle": "86 Dundas Street East · Approximate exterior · Rev03",
+          "credit": "Model study: Daniel Sultan / Future Mississauga. Architectural design: Studio JCI. Developer: EMBLEM. Reference photographs: Edward Skira and Tim MacDonald / UrbanToronto; Google Street View, April 2026.",
+          "limits": "Passage depth, rear continuation, hidden faces and finished heights remain unverified. Zoning maxima are not measured as-built heights. Ground, interiors and surrounding site works are excluded; this standalone study is not a surveyed placement on the city map.",
+          "rights": "Independent study; no architect, owner or photographer endorsement. Model geometry and generated views are separate from the architectural design and reference-image rights. Original photographs, Google image pixels and planning PDFs are not included.",
+          "sources": [
+            {
+              "title": "EMBLEM — Artform",
+              "url": "https://www.emblemdevcorp.com/projects/artform"
+            },
+            {
+              "title": "City of Mississauga — Artform / Studio JCI submission",
+              "url": "https://campaign.mississauga.ca/mississauga-urban-design-awards/"
+            },
+            {
+              "title": "Historical plan — July 2020 City PDC agenda",
+              "url": "https://www7.mississauga.ca/documents/committees/pdc/2020/2020_07_13_PDC_Agenda.pdf",
+              "note": "Pages 83–84; historical design, not as-built drawings."
+            },
+            {
+              "title": "Edward Skira — December 2024 reference photograph",
+              "url": "https://urbantoronto.ca/forum/attachments/img_5543-jpg.617963/",
+              "note": "Reference only; not redistributed."
+            },
+            {
+              "title": "Tim MacDonald — February 2024 reference photograph",
+              "url": "https://urbantoronto.ca/forum/attachments/1708437291750-jpeg.541842/",
+              "note": "Dated construction-stage reference; not proof of final details."
+            }
+          ]
+        },
+        {
+          "id": "edge-1",
+          "title": "Edge 1",
+          "subtitle": "Completed buildings · Approximate exterior · Rev03 package",
+          "credit": "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "limits": "Plan/photo-informed reconstruction, not measured as-built geometry. Facade modules, podium details, roofs and colours include inferred dimensions and appearance.",
+          "rights": "Original model geometry and uniform PBR materials. Architectural design rights remain with owners/designers. Referenced photographs, Google imagery and architectural PDFs are not included; source access is not a blanket redistribution licence. Independent research visualization; no official endorsement.",
+          "sources": [
+            {
+              "title": "Solmar — Edge / Oro design credits",
+              "url": "https://www.solmar.ca/news",
+              "note": "Developer-published 2017 Edge and 2021 Oro articles identify the architectural team."
+            },
+            {
+              "title": "Architectural plans · July 2020",
+              "url": "https://www7.mississauga.ca/Departments/Marketing/documents/building-planning/16-Elm/Architectural-Plans-July-2020.pdf",
+              "note": "Historic intended design; not issued as-built drawings."
+            },
+            {
+              "title": "Wind study · July 2020",
+              "url": "https://www7.mississauga.ca/Departments/Marketing/documents/building-planning/16-Elm/Wind-Study-July-2020.pdf",
+              "note": "Secondary design-height evidence; published values conflict."
+            },
+            {
+              "title": "Solmar · Oro at Edge Towers",
+              "url": "https://www.solmar.ca/oro-at-edge-towers",
+              "note": "Construction-status source reviewed for the accepted 25 October 2026 study."
+            },
+            {
+              "title": "UrbanToronto · Edge and Oro reference photographs",
+              "url": "https://urbantoronto.ca/forum/threads/oro-edge-towers-m-50s-solmar-rosario-varacalli.19140/page-48",
+              "note": "Contributor photographs used as research references; images are not included."
+            }
+          ]
+        },
+        {
+          "id": "edge-2",
+          "title": "Edge 2",
+          "subtitle": "Completed buildings · Approximate exterior · Rev03 package",
+          "credit": "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "limits": "Plan/photo-informed reconstruction, not measured as-built geometry. Facade modules, podium details, roofs and colours include inferred dimensions and appearance.",
+          "rights": "Original model geometry and uniform PBR materials. Architectural design rights remain with owners/designers. Referenced photographs, Google imagery and architectural PDFs are not included; source access is not a blanket redistribution licence. Independent research visualization; no official endorsement.",
+          "sources": [
+            {
+              "title": "Solmar — Edge / Oro design credits",
+              "url": "https://www.solmar.ca/news",
+              "note": "Developer-published 2017 Edge and 2021 Oro articles identify the architectural team."
+            },
+            {
+              "title": "Architectural plans · July 2020",
+              "url": "https://www7.mississauga.ca/Departments/Marketing/documents/building-planning/16-Elm/Architectural-Plans-July-2020.pdf",
+              "note": "Historic intended design; not issued as-built drawings."
+            },
+            {
+              "title": "Wind study · July 2020",
+              "url": "https://www7.mississauga.ca/Departments/Marketing/documents/building-planning/16-Elm/Wind-Study-July-2020.pdf",
+              "note": "Secondary design-height evidence; published values conflict."
+            },
+            {
+              "title": "Solmar · Oro at Edge Towers",
+              "url": "https://www.solmar.ca/oro-at-edge-towers",
+              "note": "Construction-status source reviewed for the accepted 25 October 2026 study."
+            },
+            {
+              "title": "UrbanToronto · Edge and Oro reference photographs",
+              "url": "https://urbantoronto.ca/forum/threads/oro-edge-towers-m-50s-solmar-rosario-varacalli.19140/page-48",
+              "note": "Contributor photographs used as research references; images are not included."
+            },
+            {
+              "title": "Google Street View · Elm Drive, May 2026",
+              "url": "https://www.google.com/maps/place/EDGE+TOWERS-+TOWER+%23+2/@43.5901857,-79.6319598,141a,75y,148.55h,127.96t/data=!3m7!1e1!3m5!1sR611EPPLfxkLL56JqG6cCA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-37.95683850876205%26panoid%3DR611EPPLfxkLL56JqG6cCA%26yaw%3D148.5546!7i16384!8i8192!4m13!1m2!2m1!1sEdge+Towers+Mississauga!3m9!1s0x882b47003c618187:0xbb15703159fff6c0!8m2!3d43.5899417!4d-79.6317541!10e5!14m1!1BCgIgARICCAI!15sChdFZGdlIFRvd2VycyBNaXNzaXNzYXVnYZIBE2NvbmRvbWluaXVtX2NvbXBsZXjgAQA!16s%2Fg%2F11x98_wlnj?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "note": "Edge 2 frontage appearance reference; no image pixels included."
+            }
+          ]
+        },
+        {
+          "id": "oro",
+          "title": "Oro at Edge Towers",
+          "subtitle": "Intended July 2020 design · Approximate exterior · Rev03",
+          "credit": "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "limits": "Historic intended design, not current construction progress or measured as-built geometry. Roof details, facade dimensions and colours include model interpretation.",
+          "rights": "Original model geometry and uniform PBR materials. Architectural design rights remain with owners/designers. Referenced photographs, Google imagery and architectural PDFs are not included; source access is not a blanket redistribution licence. Independent research visualization; no official endorsement.",
+          "sources": [
+            {
+              "title": "Solmar — Edge / Oro design credits",
+              "url": "https://www.solmar.ca/news",
+              "note": "Developer-published 2017 Edge and 2021 Oro articles identify the architectural team."
+            },
+            {
+              "title": "Architectural plans · July 2020",
+              "url": "https://www7.mississauga.ca/Departments/Marketing/documents/building-planning/16-Elm/Architectural-Plans-July-2020.pdf",
+              "note": "Historic intended design; not issued as-built drawings."
+            },
+            {
+              "title": "Wind study · July 2020",
+              "url": "https://www7.mississauga.ca/Departments/Marketing/documents/building-planning/16-Elm/Wind-Study-July-2020.pdf",
+              "note": "Secondary design-height evidence; published values conflict."
+            },
+            {
+              "title": "Solmar · Oro at Edge Towers",
+              "url": "https://www.solmar.ca/oro-at-edge-towers",
+              "note": "Construction-status source reviewed for the accepted 25 October 2026 study."
+            },
+            {
+              "title": "UrbanToronto · Edge and Oro reference photographs",
+              "url": "https://urbantoronto.ca/forum/threads/oro-edge-towers-m-50s-solmar-rosario-varacalli.19140/page-48",
+              "note": "Contributor photographs used as research references; images are not included."
+            }
+          ]
+        },
+        {
+          "id": "avia-1",
+          "title": "Avia 1",
+          "subtitle": "Completed buildings · Approximate exterior · Rev02 · Shared podium included",
+          "credit": "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "limits": "Appearance study, not measured as-built geometry. Source heights are retained; published height and storey counts conflict. Podium bay spacing, entry position and colours are inferred. Source elevation is not a certified survey datum.",
+          "rights": "Retains City-derived envelope geometry plus original procedural facade detail and uniform PBR materials. Keep the City attribution and supplied terms with redistributed assets. Source photography and Google imagery are not included. Independent research visualization; no official endorsement.",
+          "sources": [
+            {
+              "title": "Amacon — Avia design team, 2019",
+              "url": "https://amacon.com/2019/06/welcome-to-avia-at-parkside-village/"
+            },
+            {
+              "title": "Amacon — Avia and Avia 2, 2025",
+              "url": "https://amacon.com/2025/07/celebrating-avia-and-the-ongoing-evolution-of-parkside-village/"
+            },
+            {
+              "title": "Turner Fleischer Architects Inc.",
+              "url": "https://www.turnerfleischer.com/"
+            },
+            {
+              "title": "Life at Parkside · Avia",
+              "url": "https://www.lifeatparkside.com/avia",
+              "note": "Completed exterior appearance reference."
+            },
+            {
+              "title": "UrbanToronto · Avia reference photographs",
+              "url": "https://urbantoronto.ca/forum/threads/toronto-parkside-village-avia-1-2-m-50s-amacon-turner-fleischer.19213/page-25",
+              "note": "KAR246 photograph, claimed capture 12 October 2025; reference image not included."
+            },
+            {
+              "title": "Google Street View · Square One Drive, May 2026",
+              "url": "https://www.google.com/maps/place/Avia+1/@43.5884839,-79.6507813,160a,75y,137.8h,90t/data=!3m7!1e1!3m5!1sdgfpSwhAYBmyM5slS536vg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DdgfpSwhAYBmyM5slS536vg%26yaw%3D137.79565!7i16384!8i8192!4m13!1m2!2m1!1sAvia+1+Mississauga!3m9!1s0x882b410071f8bf45:0xc19a4ee179094cbf!8m2!3d43.58826!4d-79.6504999!10e5!14m1!1BCgIgARICCAI!15sChJBdmlhIDEgTWlzc2lzc2F1Z2GSARNjb25kb21pbml1bV9jb21wbGV44AEA!16s%2Fg%2F11ymjzljys?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "note": "Northwest shared-podium appearance reference; exact facade dimensions and colours are inferred."
+            },
+            {
+              "title": "City of Mississauga 3D source data",
+              "url": "https://data.mississauga.ca/pages/mississauga-3d"
+            }
+          ]
+        },
+        {
+          "id": "avia-2",
+          "title": "Avia 2",
+          "subtitle": "Completed buildings · Approximate exterior · Rev02 · Shared podium included",
+          "credit": "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "limits": "Appearance study, not measured as-built geometry. Source heights are retained; published height and storey counts conflict. Podium bay spacing, entry position and colours are inferred. Source elevation is not a certified survey datum.",
+          "rights": "Retains City-derived envelope geometry plus original procedural facade detail and uniform PBR materials. Keep the City attribution and supplied terms with redistributed assets. Source photography and Google imagery are not included. Independent research visualization; no official endorsement.",
+          "sources": [
+            {
+              "title": "Amacon — Avia design team, 2019",
+              "url": "https://amacon.com/2019/06/welcome-to-avia-at-parkside-village/"
+            },
+            {
+              "title": "Amacon — Avia and Avia 2, 2025",
+              "url": "https://amacon.com/2025/07/celebrating-avia-and-the-ongoing-evolution-of-parkside-village/"
+            },
+            {
+              "title": "Turner Fleischer Architects Inc.",
+              "url": "https://www.turnerfleischer.com/"
+            },
+            {
+              "title": "Life at Parkside · Avia",
+              "url": "https://www.lifeatparkside.com/avia",
+              "note": "Completed exterior appearance reference."
+            },
+            {
+              "title": "UrbanToronto · Avia reference photographs",
+              "url": "https://urbantoronto.ca/forum/threads/toronto-parkside-village-avia-1-2-m-50s-amacon-turner-fleischer.19213/page-25",
+              "note": "KAR246 photograph, claimed capture 12 October 2025; reference image not included."
+            },
+            {
+              "title": "Google Street View · Square One Drive, May 2026",
+              "url": "https://www.google.com/maps/place/Avia+1/@43.5884839,-79.6507813,160a,75y,137.8h,90t/data=!3m7!1e1!3m5!1sdgfpSwhAYBmyM5slS536vg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DdgfpSwhAYBmyM5slS536vg%26yaw%3D137.79565!7i16384!8i8192!4m13!1m2!2m1!1sAvia+1+Mississauga!3m9!1s0x882b410071f8bf45:0xc19a4ee179094cbf!8m2!3d43.58826!4d-79.6504999!10e5!14m1!1BCgIgARICCAI!15sChJBdmlhIDEgTWlzc2lzc2F1Z2GSARNjb25kb21pbml1bV9jb21wbGV44AEA!16s%2Fg%2F11ymjzljys?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "note": "Northwest shared-podium appearance reference; exact facade dimensions and colours are inferred."
+            },
+            {
+              "title": "City of Mississauga 3D source data",
+              "url": "https://data.mississauga.ca/pages/mississauga-3d"
+            }
+          ]
+        },
+        {
+          "id": "sgm-maritz-6710",
+          "title": "6710 Maritz Drive",
+          "subtitle": "Approximate facade study",
+          "credit": "Design: SG&M Architects Inc. (formerly Sirlin Giller & Malek Architects). Model creation: Daniel Sultan / Future Mississauga. Municipal baseline: City of Mississauga.",
+          "limits": "Partial facade study. Dimensions, glazing divisions and finishes are approximate. The photograph date is unknown. The roof, rear and unseen parts retain City massing; an outer City side slab partly obscures the side treatment.",
+          "rights": "Derived model published with SG&M design credit. Keep the design and model credits, City attribution and supplied terms with redistributed assets. Source photographs and renderings are not included. Independent visualization; no official endorsement.",
+          "sources": [
+            {
+              "title": "SG&M Architects Inc.",
+              "url": "https://sgm-arch.com/industrial/",
+              "note": "Photograph and material reference supplied privately. The photograph capture date is unknown."
+            },
+            {
+              "title": "City of Mississauga 3D source data",
+              "url": "https://data.mississauga.ca/pages/mississauga-3d",
+              "note": "Baseline building massing, source 23-3369."
+            }
+          ]
+        },
+        {
+          "id": "ergocentric-275-superior",
+          "title": "275 Superior Boulevard",
+          "subtitle": "Approximate facade study",
+          "credit": "Model creation: Daniel Sultan / Future Mississauga. Municipal baseline: City of Mississauga.",
+          "visibleReferenceCredit": {
+            "label": "David Lasker/Cityscape Photography",
+            "url": "https://davidlaskerphotography.com/"
+          },
+          "limits": "Frontage details interpret an earlier photograph and a 2024 City footprint. Dimensions, glazing, ribs and canopy details are approximate. The roof, rear and unseen bays retain City massing. The photograph capture date is unknown; this is not current as-built verification.",
+          "rights": "The photograph is not reproduced or used as a texture. Interactive display does not establish permission for separate model redistribution. Independent visualization; no official endorsement.",
+          "sources": [
+            {
+              "title": "David Lasker/Cityscape Photography",
+              "url": "https://davidlaskerphotography.com/",
+              "note": "Photographic reference, published in 2020; capture date unknown. The source photograph is not included."
+            },
+            {
+              "title": "City of Mississauga 3D source data",
+              "url": "https://data.mississauga.ca/pages/mississauga-3d",
+              "note": "Building source 32-897; approximate entrance plan informed by the 2024 municipal footprint."
+            }
+          ]
+        },
+        {
+          "id": "mcity-m3-upper-detail-20261101",
+          "title": "M3 exterior overlay v2",
+          "credit": "Independent interpretation: Daniel Sultan / Future Mississauga. Exact lower geometry: City of Mississauga. Architecture/reference plans: IBI Group / M City. Height: Andrew Fisher. Crown references: Tim MacDonald via UrbanToronto and Walters Group.",
+          "limits": "Continuous approximate lower/upper exterior glazing and balcony articulation, podium bands/mullions and qualified glass-pavilion facade treatment; exact City lower capture retained beneath overlays. [\"The original City geometry and placement remain exactly unchanged beneath exterior layers. No source photographs or drawing pixels are embedded.\", \"Below the originally detailed upper floors, bands follow the coarse City footprint. Exact lower floor contours, per-floor white return phase, facade bay count and metric depths are not measured.\", \"Podium six-level split is estimated within the captured28m envelope: [0, 5.8, 10.2, 14.6, 19.0, 23.5, 28.0]. Pavilion is an approximate corner facade treatment and shallow roof frame, not a measured freestanding volume.\", \"Source reconciliation join and inherited floor schedule remain. Inherited floor height uncertainty15m, footprint4m, placement5m, crown6m remain.\", \"Crown is still a closed simplified six-strip envelope; exact open mechanical steel/cavities remain unmodeled.\", \"Opaque glazing represents exterior material only. No interior geometry or present-day as-built claim.\"]",
+          "rights": "Independent source-informed study. Architectural design and reference images retain separate rights. Original drawings, photographs and private correspondence are not included. City-derived placement and geometry retain City of Mississauga data terms.",
+          "sources": [
+            {
+              "url": "https://mcitycondos.com/assets/img/condominiums/m3/floorplans/M3_2.pdf",
+              "publisher": "M City / IBI Group",
+              "claim": "Traced lower typical balcony types and floor74 contour"
+            },
+            {
+              "url": "https://www.waltersgroupinc.com/project/m-city/",
+              "publisher": "Walters Group",
+              "claim": "Crown appearance reference, not measured steel geometry"
+            },
+            {
+              "url": "https://urbantoronto.ca/news/2026/07/crown-materializing-crane-dematerialzing-m3-canadas-tallest-building-outside-toronto.61378",
+              "publisher": "Tim MacDonald via UrbanToronto",
+              "claim": "Dated crown and full lower tower/podium photographic references; no current as-built claim"
+            }
+          ],
+          "sourceDate": "2026-11-01 v2 lower facade and podium overlay; mixed source dates retained"
+        },
+        {
+          "id": "mcity-m4-future-detail-20261101",
+          "title": "mcity-4",
+          "credit": "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design/elevation: CORE Architects, March25,2020; official M City floorplans and brochure. Original drawing images remain private.",
+          "limits": "Partial projecting balcony strips traced from the official developer floor key; Glazing, floor spandrels and vertical curtain-wall mullions; Stacked three-storey podium frame language from official architecture render; Separate unchanged Spring2026 concrete height with recorded level26 glazing limit. Approximate source-informed exterior study. [\"Inherited plan registration and maximum215.65m height retained. Exact shorter crown footprints remain unresolved.\", \"Three-storey podium frame pattern is approximate within the inherited envelope; exact projecting podium subdivisions are not asserted.\", \"Slab0.20m, guard1.05m, mullion1.8m and podium fin2.4m spacing are visual estimates.\", \"Typical floor pitch2.95m is source-supported; upper special floor placement remains approximate. No interior geometry.\"]",
+          "rights": "Independent source-informed study. Architectural design and reference images retain separate rights. Original drawings, photographs and private correspondence are not included. City-derived placement and geometry retain City of Mississauga data terms.",
+          "sources": [
+            {
+              "url": "https://www.corearchitects.com/project/m4-condominium/",
+              "publisher": "CORE Architects",
+              "claim": "926m² S-shaped plate and alternating cladding/curtain-wall design"
+            },
+            {
+              "url": "https://mcitycondos.com/assets/brochures/M4-M-City-Condominiums.pdf",
+              "publisher": "M City / CORE Architects",
+              "claim": "Exterior material and podium frame language"
+            },
+            {
+              "url": "https://www.mcitycondos.com/construction.php",
+              "publisher": "M City",
+              "claim": "Spring2026 concrete41/glazing26"
+            }
+          ],
+          "sourceDate": "2026-11-01 independent detail revision; source dates mixed and retained"
+        },
+        {
+          "id": "mcity-m5-authored-detail-20261101",
+          "title": "mcity-5",
+          "credit": "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design: IBI Group. Design references: official M City brochure and exterior renderings. No source-image pixels or native interaction mesh arrays embedded.",
+          "limits": "Two staggered black/white tower volumes; Three-storey grid frames with recessed glazing and balcony slabs; Six-storey dark masonry podium with projecting balconies and entrance canopy. Approximate source-informed exterior study. [\"All metric façade depths and grid-bay positions are approximate readings of published renderings.\", \"2.2m stagger, near-midpoint volume split,1.0m glazing recess,0.42m frame and3.3m bay spacing are not architect dimensions. Podium footprint is an independently drawn half-metre rounded trapezoid at the approximate proxy comparison scale, not a copied native mesh.\", \"The full detailed model remains future-only; no floor27 construction clip is invented.\", \"The inherited native117.871679-unit extent remains unverified.36 storeys and six-storey masonry podium are text-confirmed in official brochurep23.\"]",
+          "rights": "Independent source-informed study. Architectural design and reference images retain separate rights. Original drawings, photographs and private correspondence are not included. City-derived placement and geometry retain City of Mississauga data terms.",
+          "sources": [
+            {
+              "url": "https://mcitycondos.com/assets/brochures/M5-M-City-Condominiums.pdf",
+              "publisher": "M City / IBI Group",
+              "claim": "Two staggered black/white volumes;36storeys;6-storey masonry podium;7th-floor amenities"
+            },
+            {
+              "url": "https://mcitycondos.com/m5-condominiums.php",
+              "publisher": "M City",
+              "claim": "Official exterior design imagery, kept as private reference only"
+            }
+          ],
+          "sourceDate": "2026-11-01 independent detail revision; source dates mixed and retained"
+        },
+        {
+          "id": "mcity-m6-20261101-dated-exterior",
+          "title": "mcity-6",
+          "credit": "Architectural design: Hariri Pontarini Architects. Model: Future Mississauga / Daniel Sultan. City of Mississauga reference placement.",
+          "limits": "July 3 2025 fifth SPA submission, independently reconstructed from supplied exterior references. New owner plans under review. ",
+          "rights": "Independent source-informed study. Architectural design and reference images retain separate rights. Original drawings, photographs and private correspondence are not included. City-derived placement and geometry retain City of Mississauga data terms.",
+          "sources": [],
+          "sourceDate": "2025-07-03"
+        },
+        {
+          "id": "mcity-m7-m8-20261101-dated-exteriors",
+          "title": "mcity-7-8",
+          "credit": "Architectural design: Hariri Pontarini Architects. Model: Future Mississauga / Daniel Sultan. City of Mississauga reference placement.",
+          "limits": "September 17 2024 submitted design, independently reconstructed from supplied exterior references. New owner plans under review. ",
+          "rights": "Independent source-informed study. Architectural design and reference images retain separate rights. Original drawings, photographs and private correspondence are not included. City-derived placement and geometry retain City of Mississauga data terms.",
+          "sources": [],
+          "sourceDate": "2024-09-17"
+        },
+        {
+          "id": "wf-50high-current-plan",
+          "title": "50 High Street East",
+          "credit": "Architectural design: Chamberlain Architect Services. Independent model study: Daniel Sultan / Future Mississauga. Municipal source: City of Mississauga.",
+          "limits": "December 2025 design drawings; original registered envelope and source levels retained. South/east facade frames and rounded arches are source-scaled interpretations. Fine dimensions and finishes remain approximate. A 12 mm exact-footprint terrace display relief resolves coincident surfaces and is not a source level change. Approved zoning does not establish new-building construction.",
+          "sources": [
+            {
+              "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/15104453/Site-Plan-OZ-25-19-W1-November-2025.pdf",
+              "title": "50high site — current municipal application drawing",
+              "publisher": "City of Mississauga / Chamberlain Architect Services"
+            },
+            {
+              "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/12100408/Survey-Plan-OZ-25-19-w1-september-2025.pdf",
+              "title": "50high survey — current municipal application drawing",
+              "publisher": "City of Mississauga / Chamberlain Architect Services"
+            },
+            {
+              "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/15104412/Elevation-Plan-1-OZ-25-19-W1-November-2025.pdf",
+              "title": "50high elevation — current municipal application drawing",
+              "publisher": "City of Mississauga / Chamberlain Architect Services"
+            },
+            {
+              "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/15104416/Floor-Plans-Ground-Floor-and-Basement-OZ-25-19-W1-November-2025.pdf",
+              "title": "50high ground — current municipal application drawing",
+              "publisher": "City of Mississauga / Chamberlain Architect Services"
+            },
+            {
+              "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/15104420/Floor-Plan-Level-2nd-and-3rd-OZ-25-19-W1-November-2025.pdf",
+              "title": "50high low — current municipal application drawing",
+              "publisher": "City of Mississauga / Chamberlain Architect Services"
+            },
+            {
+              "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/15104418/Floor-Plan-10th-and-11th-OZ-25-19-W1-November-2025.pdf",
+              "title": "50high top — current municipal application drawing",
+              "publisher": "City of Mississauga / Chamberlain Architect Services"
+            },
+            {
+              "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/15104443/Roof-Plan-OZ-25-19-W1-November-2025.pdf",
+              "title": "50high roof — current municipal application drawing",
+              "publisher": "City of Mississauga / Chamberlain Architect Services"
+            }
+          ]
+        }
+      ],
+      "activeSourceCredits": [
+        {
+          "assetId": "wf-clarkson-toc-current-plan",
+          "creditLines": [
+            "Architectural massing © Zeidler Architecture Inc.; supplied by Infrastructure Ontario. Independent city placement and visualisation by Future Mississauga.",
+            "Clarkson TOC 3D Model, packaged November 28, 2025: Architectural massing by Zeidler Architecture Inc., supplied by Infrastructure Ontario. Independently positioned and visualised by Future Mississauga.",
+            "Clarkson GO Station, A100 Site Plan and A200–A202 Cross Sections / Elevations, project 24-01-048, revision 1: Copyright Zeidler Architecture Inc.; no blanket redistribution licence identified",
+            "Ontario Digital Terrain Model, lidar-derived: Contains information licensed under the Open Government Licence – Ontario.",
+            "Ontario Digital Terrain Model, lidar-derived: https://www.ontario.ca/page/open-government-licence-ontario"
+          ],
+          "sources": [
+            {
+              "title": "Clarkson TOC 3D Model, packaged November 28, 2025",
+              "url": "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/clarkson-go-transit-oriented-community/",
+              "attribution": "Architectural massing by Zeidler Architecture Inc., supplied by Infrastructure Ontario. Independently positioned and visualised by Future Mississauga.",
+              "sourceDate": "2025-11-28"
+            },
+            {
+              "title": "Clarkson GO Station, A100 Site Plan and A200–A202 Cross Sections / Elevations, project 24-01-048, revision 1",
+              "url": "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/clarkson-go-transit-oriented-community/",
+              "copyright": "Copyright Zeidler Architecture Inc.; no blanket redistribution licence identified"
+            },
+            {
+              "title": "Ontario Digital Terrain Model, lidar-derived",
+              "url": "https://ws.geoservices.lrc.gov.on.ca/arcgis5/rest/services/Elevation/Ontario_DTM_LidarDerived/ImageServer",
+              "attribution": "Contains information licensed under the Open Government Licence – Ontario.",
+              "license": "https://www.ontario.ca/page/open-government-licence-ontario"
+            }
+          ]
+        },
+        {
+          "assetId": "wf-brightwater-missing-blocks-concept",
+          "creditLines": [
+            "Ontario lidar-derived DTM: Contains information licensed under the Open Government Licence – Ontario.",
+            "Ontario lidar-derived DTM: https://www.ontario.ca/page/open-government-licence-ontario"
+          ],
+          "sources": [
+            {
+              "title": "Ontario lidar-derived DTM",
+              "url": "https://ws.geoservices.lrc.gov.on.ca/arcgis5/rest/services/Elevation/Ontario_DTM_LidarDerived/ImageServer",
+              "attribution": "Contains information licensed under the Open Government Licence – Ontario.",
+              "license": "https://www.ontario.ca/page/open-government-licence-ontario"
+            }
+          ]
+        },
+        {
+          "assetId": "wf-70-settlement-envelope",
+          "creditLines": [
+            "Ontario lidar-derived DTM: Contains information licensed under the Open Government Licence – Ontario."
+          ],
+          "sources": [
+            {
+              "title": "Ontario lidar-derived DTM",
+              "url": "https://ws.geoservices.lrc.gov.on.ca/arcgis5/rest/services/Elevation/Ontario_DTM_LidarDerived/ImageServer",
+              "attribution": "Contains information licensed under the Open Government Licence – Ontario."
+            }
+          ]
+        },
+        {
+          "assetId": "wf-170-settlement-envelope",
+          "creditLines": [
+            "Ontario lidar-derived DTM: Contains information licensed under the Open Government Licence – Ontario."
+          ],
+          "sources": [
+            {
+              "title": "Ontario lidar-derived DTM",
+              "url": "https://ws.geoservices.lrc.gov.on.ca/arcgis5/rest/services/Elevation/Ontario_DTM_LidarDerived/ImageServer",
+              "attribution": "Contains information licensed under the Open Government Licence – Ontario."
+            }
+          ]
+        },
+        {
+          "assetId": "lakeview-mapped-waterfront",
+          "creditLines": [
+            "City of Mississauga geographic data, used under the City of Mississauga Terms of Use. © OpenStreetMap contributors, ODbL. Mixed-date Ontario DTM terrain."
+          ],
+          "sources": []
+        },
+        {
+          "assetId": "port-credit-mapped-docks",
+          "creditLines": [
+            "City of Mississauga planimetric geographic data."
+          ],
+          "sources": []
+        },
+        {
+          "assetId": "alba-existing-plan-derived",
+          "creditLines": [
+            "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga."
+          ],
+          "sources": []
+        },
+        {
+          "assetId": "queen-228-source-reference-study",
+          "creditLines": [
+            "City of Mississauga; exterior interpretation by Future Mississauga"
+          ],
+          "sources": []
+        },
+        {
+          "assetId": "queen-228-schematic-foundation",
+          "creditLines": [
+            "City of Mississauga; exterior interpretation by Future Mississauga"
+          ],
+          "sources": []
+        }
+      ],
+      "sourceURL": "https://futuremississauga.com/sources.html",
+      "details": "data/citywide-source-attribution-20261101.json",
+      "credits": "downloads/Citywide-image-credits-20261101.txt",
+      "photoReference": {
+        "name": "David Lasker/Cityscape Photography",
+        "url": "https://davidlaskerphotography.com/"
+      }
+    },
+    "displayMaster": {
+      "bytes": 7147227,
+      "sha256": "53d496052b9c5cf9b9812b6391d11e50664dc27d2ee9d05fc840856e9489f6af",
+      "width": 3840,
+      "height": 2400,
+      "format": "image/png",
+      "sourceSHA256": "beae93b83b5734c12672bb41a2e3e2c4c2e5cdce6efb936f0a22e64cc6867b53",
+      "url": "gallery/citywide-20261101/display-citywide-future-2026-11-01.png",
+      "nativeSourceSHA256": "beae93b83b5734c12672bb41a2e3e2c4c2e5cdce6efb936f0a22e64cc6867b53"
+    },
+    "download": {
+      "bytes": 7150650,
+      "sha256": "c7347bebf53c5bdd5b516143f2bb4d4ae4994290b06e2ad41ec4a7f407aeac62",
+      "width": 3840,
+      "height": 2400,
+      "format": "image/png",
+      "sourceSHA256": "beae93b83b5734c12672bb41a2e3e2c4c2e5cdce6efb936f0a22e64cc6867b53",
+      "url": "gallery/citywide-20261101/citywide-future-2026-11-01.png",
+      "nativeSourceSHA256": "beae93b83b5734c12672bb41a2e3e2c4c2e5cdce6efb936f0a22e64cc6867b53"
+    },
+    "preview": {
+      "bytes": 128718,
+      "sha256": "8d449988c0d56c5a97bc67385c3d3f84a92d22701bfc71b9f500bfc8741eb4a8",
+      "width": 1200,
+      "height": 750,
+      "format": "image/avif",
+      "sourceSHA256": "53d496052b9c5cf9b9812b6391d11e50664dc27d2ee9d05fc840856e9489f6af",
+      "url": "gallery/citywide-20261101/wide-citywide-future-1200-53d496052b9c.avif"
+    },
+    "responsive": {
+      "bytes": 656022,
+      "sha256": "6e2f96aa68042475dd095ba833bab98c897835f9811c38e422f1d2bbe4ac69de",
+      "width": 3200,
+      "height": 2000,
+      "format": "image/avif",
+      "sourceSHA256": "53d496052b9c5cf9b9812b6391d11e50664dc27d2ee9d05fc840856e9489f6af",
+      "url": "gallery/citywide-20261101/wide-citywide-future-3200-53d496052b9c.avif"
+    },
+    "sourceLimitations": [
+      "1 November 2026 is the render and review date. The retained Citywide context and earlier studies have mixed source dates; newly rendered does not mean current as-built.",
+      "Source-supported full existing City background is included for this accepted static view. Current interactive loading policies differ; no historical pixels are reused.",
+      "Vegetation: 452,898 symbols, comprising 256,082 dated municipal inventory positions and 196,816 illustrative positions within mapped woodland. All crown sizes and representations are illustrative.",
+      "Existing background: 8,050,515 source triangles retained using horizontal coverage by the current native ground surfaces. Original source elevations are unchanged; this is not surveyed ground contact or current as-built verification.",
+      "Inventory positions are dated. Woodland fill positions and all crown dimensions are illustrative. Current unsupported or conflicting symbols are omitted; no source positions moved.",
+      "Exact-XYZ welded connected geometry parts, not a claim of complete City-record identities. Retained component conservative plan hulls are completely covered by actual current ground surfaces; horizontal support only, original elevations unchanged.",
+      "Building source massing and procedural studies are approximate; this image is not a current exterior or grade survey.",
+      "M City M1 and M2: Tower plates, floor schedules, heights, podium dimensions and hidden faces remain approximate. M1 podium observations: May 2026. M2 Quartz/Webb observations: June 2024. The unresolved M2 patterned wall is omitted. Not certified as-built, survey or construction information.",
+      "M City M1 and M2: Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
+      "M City M1: Tower plates, floor schedules, heights, podium dimensions and hidden faces remain approximate. M1 podium observations: May 2026. M2 Quartz/Webb observations: June 2024. The unresolved M2 patterned wall is omitted. Not certified as-built, survey or construction information.",
+      "M City M1: Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
+      "M City M2: Tower plates, floor schedules, heights, podium dimensions and hidden faces remain approximate. M1 podium observations: May 2026. M2 Quartz/Webb observations: June 2024. The unresolved M2 patterned wall is omitted. Not certified as-built, survey or construction information.",
+      "M City M2: Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
+      "Artform: Passage depth, rear continuation, hidden faces and finished heights remain unverified. Zoning maxima are not measured as-built heights. Ground, interiors and surrounding site works are excluded; this standalone study is not a surveyed placement on the city map.",
+      "Artform: Independent study; no architect, owner or photographer endorsement. Model geometry and generated views are separate from the architectural design and reference-image rights. Original photographs, Google image pixels and planning PDFs are not included.",
+      "Edge 1: Plan/photo-informed reconstruction, not measured as-built geometry. Facade modules, podium details, roofs and colours include inferred dimensions and appearance.",
+      "Edge 1: Original model geometry and uniform PBR materials. Architectural design rights remain with owners/designers. Referenced photographs, Google imagery and architectural PDFs are not included; source access is not a blanket redistribution licence. Independent research visualization; no official endorsement.",
+      "Edge 2: Plan/photo-informed reconstruction, not measured as-built geometry. Facade modules, podium details, roofs and colours include inferred dimensions and appearance.",
+      "Edge 2: Original model geometry and uniform PBR materials. Architectural design rights remain with owners/designers. Referenced photographs, Google imagery and architectural PDFs are not included; source access is not a blanket redistribution licence. Independent research visualization; no official endorsement.",
+      "Oro at Edge Towers: Historic intended design, not current construction progress or measured as-built geometry. Roof details, facade dimensions and colours include model interpretation.",
+      "Oro at Edge Towers: Original model geometry and uniform PBR materials. Architectural design rights remain with owners/designers. Referenced photographs, Google imagery and architectural PDFs are not included; source access is not a blanket redistribution licence. Independent research visualization; no official endorsement.",
+      "Avia 1: Appearance study, not measured as-built geometry. Source heights are retained; published height and storey counts conflict. Podium bay spacing, entry position and colours are inferred. Source elevation is not a certified survey datum.",
+      "Avia 1: Retains City-derived envelope geometry plus original procedural facade detail and uniform PBR materials. Keep the City attribution and supplied terms with redistributed assets. Source photography and Google imagery are not included. Independent research visualization; no official endorsement.",
+      "Avia 2: Appearance study, not measured as-built geometry. Source heights are retained; published height and storey counts conflict. Podium bay spacing, entry position and colours are inferred. Source elevation is not a certified survey datum.",
+      "Avia 2: Retains City-derived envelope geometry plus original procedural facade detail and uniform PBR materials. Keep the City attribution and supplied terms with redistributed assets. Source photography and Google imagery are not included. Independent research visualization; no official endorsement.",
+      "6710 Maritz Drive: Partial facade study. Dimensions, glazing divisions and finishes are approximate. The photograph date is unknown. The roof, rear and unseen parts retain City massing; an outer City side slab partly obscures the side treatment.",
+      "6710 Maritz Drive: Derived model published with SG&M design credit. Keep the design and model credits, City attribution and supplied terms with redistributed assets. Source photographs and renderings are not included. Independent visualization; no official endorsement.",
+      "275 Superior Boulevard: Frontage details interpret an earlier photograph and a 2024 City footprint. Dimensions, glazing, ribs and canopy details are approximate. The roof, rear and unseen bays retain City massing. The photograph capture date is unknown; this is not current as-built verification.",
+      "275 Superior Boulevard: The photograph is not reproduced or used as a texture. Interactive display does not establish permission for separate model redistribution. Independent visualization; no official endorsement.",
+      "M3 exterior overlay v2: Continuous approximate lower/upper exterior glazing and balcony articulation, podium bands/mullions and qualified glass-pavilion facade treatment; exact City lower capture retained beneath overlays. [\"The original City geometry and placement remain exactly unchanged beneath exterior layers. No source photographs or drawing pixels are embedded.\", \"Below the originally detailed upper floors, bands follow the coarse City footprint. Exact lower floor contours, per-floor white return phase, facade bay count and metric depths are not measured.\", \"Podium six-level split is estimated within the captured28m envelope: [0, 5.8, 10.2, 14.6, 19.0, 23.5, 28.0]. Pavilion is an approximate corner facade treatment and shallow roof frame, not a measured freestanding volume.\", \"Source reconciliation join and inherited floor schedule remain. Inherited floor height uncertainty15m, footprint4m, placement5m, crown6m remain.\", \"Crown is still a closed simplified six-strip envelope; exact open mechanical steel/cavities remain unmodeled.\", \"Opaque glazing represents exterior material only. No interior geometry or present-day as-built claim.\"]",
+      "mcity-4: Partial projecting balcony strips traced from the official developer floor key; Glazing, floor spandrels and vertical curtain-wall mullions; Stacked three-storey podium frame language from official architecture render; Separate unchanged Spring2026 concrete height with recorded level26 glazing limit. Approximate source-informed exterior study. [\"Inherited plan registration and maximum215.65m height retained. Exact shorter crown footprints remain unresolved.\", \"Three-storey podium frame pattern is approximate within the inherited envelope; exact projecting podium subdivisions are not asserted.\", \"Slab0.20m, guard1.05m, mullion1.8m and podium fin2.4m spacing are visual estimates.\", \"Typical floor pitch2.95m is source-supported; upper special floor placement remains approximate. No interior geometry.\"]",
+      "mcity-5: Two staggered black/white tower volumes; Three-storey grid frames with recessed glazing and balcony slabs; Six-storey dark masonry podium with projecting balconies and entrance canopy. Approximate source-informed exterior study. [\"All metric façade depths and grid-bay positions are approximate readings of published renderings.\", \"2.2m stagger, near-midpoint volume split,1.0m glazing recess,0.42m frame and3.3m bay spacing are not architect dimensions. Podium footprint is an independently drawn half-metre rounded trapezoid at the approximate proxy comparison scale, not a copied native mesh.\", \"The full detailed model remains future-only; no floor27 construction clip is invented.\", \"The inherited native117.871679-unit extent remains unverified.36 storeys and six-storey masonry podium are text-confirmed in official brochurep23.\"]",
+      "mcity-6: July 3 2025 fifth SPA submission, independently reconstructed from supplied exterior references. New owner plans under review. ",
+      "mcity-7-8: September 17 2024 submitted design, independently reconstructed from supplied exterior references. New owner plans under review. ",
+      "50 High Street East: December 2025 design drawings; original registered envelope and source levels retained. South/east facade frames and rounded arches are source-scaled interpretations. Fine dimensions and finishes remain approximate. A 12 mm exact-footprint terrace display relief resolves coincident surfaces and is not a source level change. Approved zoning does not establish new-building construction.",
+      "M6 is based on the 3 July 2025 fifth SPA submission, revision 6. M7/M8 are based on the 17 September 2024 submission, revision 6. These are last-submitted proposals under new-owner review, not confirmed final or active construction designs.",
+      "M6 lower envelope and fin transitions, M7/M8 balcony schedules, crown screen intermediate levels, facade depths and finishes include declared interpretation. Source heights, footprints and placement remain pinned to the reviewed model records.",
+      "Project lifecycle comes from the frozen 1 November 2026 source-reviewed snapshot. Existing, under construction, approved planning, proposed and status unverified are separate. Detailed models retain architectural finishes; material colour alone is not lifecycle evidence."
+    ],
+    "nativeSource": {
+      "bytes": 7216425,
+      "sha256": "beae93b83b5734c12672bb41a2e3e2c4c2e5cdce6efb936f0a22e64cc6867b53",
+      "width": 3840,
+      "height": 2400,
+      "renderDate": "2026-11-01"
+    }
+  },
+  "previousEditions": [
+    {
+      "kind": "wide",
+      "file": "citywide-future.png",
+      "area": "All Mississauga",
+      "title": "All Mississauga",
+      "aliases": [],
+      "renderInfo": {
+        "state": "refreshed",
+        "renderDate": "2026-10-28",
+        "renderTimestampUTC": "2026-10-28T16:21:31.815872+00:00",
+        "renderDateTimezone": "America/Toronto",
+        "edition": "Current Citywide still with source-supported context, 2026-10-28",
+        "label": "Rendered 28 October 2026",
+        "sourceEdition": "Accepted 28 October 2026 Citywide projects with restored full existing City context for still presentation; mixed-date source geometry and approximate studies.",
+        "sourceModelDate": null,
+        "sourceModelCommit": "0b5f01b2fad18f727aaaab73965895bf509bf2a3",
+        "sourceManifestSHA256": "ab71efe1c265ba3afd9dd2d59e7420360102ae0bac8b987c269ac90e787fa430",
+        "sourcePolicySHA256": "b2052f98f5abf398d49eb0630250d856379c8ad56e59b015a46c11607c9b5fb2",
+        "sourceAttributionPolicySHA256": "5fd98b06250876e042956c269373ffc72f516cb145d802f29ac108e40f5dd99c",
+        "renderKey": "wide/citywide/future/aerial",
+        "note": "Accepted current Citywide still with source-supported context. Source dates and detail vary; original source-supported background and current project upgrades are combined for this static view.",
+        "candidateGeometryScopeSHA256": "b2052f98f5abf398d49eb0630250d856379c8ad56e59b015a46c11607c9b5fb2",
+        "fullSnapshotSHA256": "ab71efe1c265ba3afd9dd2d59e7420360102ae0bac8b987c269ac90e787fa430",
+        "sourceSupportedContextSHA256": "89c459910ef6be213537fdff02b83e8aec829b0a46839e7bfc5bf23be0ec2d18",
+        "acceptedSceneExportSHA256": "71c46af13b629cd9e54990ade019e561b7ae40dfe5147e951feb582a49656249",
+        "renderProofSHA256": "5e7f1921f3d88485e3b205e037a529485b4f1a2e0e6f71bbfb025cf405b3b771",
+        "sourceDatesMixed": true,
+        "sourceModelCommitScope": "Canonical base; current project changes are pinned by the full source snapshot and geometry policy."
+      },
+      "sourceAttribution": {
+        "openStreetMap": true,
+        "sourceURL": "https://futuremississauga.com/sources.html",
+        "details": "data/citywide-source-attribution-20261028.json",
+        "credits": "downloads/Citywide-image-credits-20261028.txt",
+        "photoReference": {
+          "name": "David Lasker/Cityscape Photography",
+          "url": "https://davidlaskerphotography.com/"
+        }
+      },
+      "displayMaster": {
+        "bytes": 7126258,
+        "sha256": "af6f0611f9260016ad19e81ef6df57b201ff12dcd5e918724e004202d48100f3",
+        "width": 3840,
+        "height": 2400,
+        "format": "image/png",
+        "sourceSHA256": "0f693d437eb76f9fcd64dda2ef1cb86b6654a793b206958b819a38012e419a54",
+        "url": "gallery/citywide-20261028/display-citywide-future-2026-10-28.png",
+        "nativeSourceSHA256": "0f693d437eb76f9fcd64dda2ef1cb86b6654a793b206958b819a38012e419a54"
+      },
+      "download": {
+        "bytes": 7129594,
+        "sha256": "ad2b8463b592cb2818545b9aa1b78b322b724db783b399e0a857a6bb477b408c",
+        "width": 3840,
+        "height": 2400,
+        "format": "image/png",
+        "sourceSHA256": "0f693d437eb76f9fcd64dda2ef1cb86b6654a793b206958b819a38012e419a54",
+        "url": "gallery/citywide-20261028/citywide-future-2026-10-28.png",
+        "nativeSourceSHA256": "0f693d437eb76f9fcd64dda2ef1cb86b6654a793b206958b819a38012e419a54"
+      },
+      "preview": {
+        "bytes": 117855,
+        "sha256": "feced1d163d904acc476313c15eab235ecf448b15d4caa5259fb665af94fa7c4",
+        "width": 1200,
+        "height": 750,
+        "format": "image/avif",
+        "sourceSHA256": "af6f0611f9260016ad19e81ef6df57b201ff12dcd5e918724e004202d48100f3",
+        "url": "gallery/citywide-20261028/wide-citywide-future-1200-af6f0611f926.avif"
+      },
+      "responsive": {
+        "bytes": 628529,
+        "sha256": "e46ce0359e8e9a3adde16b0ab1c9cb9b509edd2e93e794986299fbe54dae49b9",
+        "width": 3200,
+        "height": 2000,
+        "format": "image/avif",
+        "sourceSHA256": "af6f0611f9260016ad19e81ef6df57b201ff12dcd5e918724e004202d48100f3",
+        "url": "gallery/citywide-20261028/wide-citywide-future-3200-af6f0611f926.avif"
+      },
+      "sourceLimitations": [
+        "28 October is assembly/review date; individual source dates remain as recorded. Newly rendered does not mean all geometry is current as-built.",
+        "Source-supported full existing City background is included for this accepted static view. Current interactive loading policies differ; no historical pixels are reused.",
+        "Vegetation: 452,898 symbols, comprising 256,082 dated municipal inventory positions and 196,816 illustrative positions within mapped woodland. All crown sizes and representations are illustrative.",
+        "Existing background: 8,050,515 source triangles retained using horizontal coverage by the current native ground surfaces. Original source elevations are unchanged; this is not surveyed ground contact or current as-built verification.",
+        "Inventory positions are dated. Woodland fill positions and all crown dimensions are illustrative. Current unsupported or conflicting symbols are omitted; no source positions moved.",
+        "Exact-XYZ welded connected geometry parts, not a claim of complete City-record identities. Retained component conservative plan hulls are completely covered by actual current ground surfaces; horizontal support only, original elevations unchanged.",
+        "Building source massing and procedural studies are approximate; this image is not a current exterior or grade survey.",
+        "M City M1 and M2: Tower plates, floor schedules, heights, podium dimensions and hidden faces remain approximate. M1 podium observations: May 2026. M2 Quartz/Webb observations: June 2024. The unresolved M2 patterned wall is omitted. Not certified as-built, survey or construction information.",
+        "M City M1 and M2: Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
+        "M City M1: Tower plates, floor schedules, heights, podium dimensions and hidden faces remain approximate. M1 podium observations: May 2026. M2 Quartz/Webb observations: June 2024. The unresolved M2 patterned wall is omitted. Not certified as-built, survey or construction information.",
+        "M City M1: Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
+        "M City M2: Tower plates, floor schedules, heights, podium dimensions and hidden faces remain approximate. M1 podium observations: May 2026. M2 Quartz/Webb observations: June 2024. The unresolved M2 patterned wall is omitted. Not certified as-built, survey or construction information.",
+        "M City M2: Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
+        "Artform: Passage depth, rear continuation, hidden faces and finished heights remain unverified. Zoning maxima are not measured as-built heights. Ground, interiors and surrounding site works are excluded; this standalone study is not a surveyed placement on the city map.",
+        "Artform: Independent study; no architect, owner or photographer endorsement. Model geometry and generated views are separate from the architectural design and reference-image rights. Original photographs, Google image pixels and planning PDFs are not included.",
+        "Edge 1: Plan/photo-informed reconstruction, not measured as-built geometry. Facade modules, podium details, roofs and colours include inferred dimensions and appearance.",
+        "Edge 1: Original model geometry and uniform PBR materials. Architectural design rights remain with owners/designers. Referenced photographs, Google imagery and architectural PDFs are not included; source access is not a blanket redistribution licence. Independent research visualization; no official endorsement.",
+        "Edge 2: Plan/photo-informed reconstruction, not measured as-built geometry. Facade modules, podium details, roofs and colours include inferred dimensions and appearance.",
+        "Edge 2: Original model geometry and uniform PBR materials. Architectural design rights remain with owners/designers. Referenced photographs, Google imagery and architectural PDFs are not included; source access is not a blanket redistribution licence. Independent research visualization; no official endorsement.",
+        "Oro at Edge Towers: Historic intended design, not current construction progress or measured as-built geometry. Roof details, facade dimensions and colours include model interpretation.",
+        "Oro at Edge Towers: Original model geometry and uniform PBR materials. Architectural design rights remain with owners/designers. Referenced photographs, Google imagery and architectural PDFs are not included; source access is not a blanket redistribution licence. Independent research visualization; no official endorsement.",
+        "Avia 1: Appearance study, not measured as-built geometry. Source heights are retained; published height and storey counts conflict. Podium bay spacing, entry position and colours are inferred. Source elevation is not a certified survey datum.",
+        "Avia 1: Retains City-derived envelope geometry plus original procedural facade detail and uniform PBR materials. Keep the City attribution and supplied terms with redistributed assets. Source photography and Google imagery are not included. Independent research visualization; no official endorsement.",
+        "Avia 2: Appearance study, not measured as-built geometry. Source heights are retained; published height and storey counts conflict. Podium bay spacing, entry position and colours are inferred. Source elevation is not a certified survey datum.",
+        "Avia 2: Retains City-derived envelope geometry plus original procedural facade detail and uniform PBR materials. Keep the City attribution and supplied terms with redistributed assets. Source photography and Google imagery are not included. Independent research visualization; no official endorsement.",
+        "6710 Maritz Drive: Partial facade study. Dimensions, glazing divisions and finishes are approximate. The photograph date is unknown. The roof, rear and unseen parts retain City massing; an outer City side slab partly obscures the side treatment.",
+        "6710 Maritz Drive: Derived model published with SG&M design credit. Keep the design and model credits, City attribution and supplied terms with redistributed assets. Source photographs and renderings are not included. Independent visualization; no official endorsement.",
+        "275 Superior Boulevard: Frontage details interpret an earlier photograph and a 2024 City footprint. Dimensions, glazing, ribs and canopy details are approximate. The roof, rear and unseen bays retain City massing. The photograph capture date is unknown; this is not current as-built verification.",
+        "275 Superior Boulevard: The photograph is not reproduced or used as a texture. Interactive display does not establish permission for separate model redistribution. Independent visualization; no official endorsement."
+      ],
+      "nativeSource": {
+        "sha256": "0f693d437eb76f9fcd64dda2ef1cb86b6654a793b206958b819a38012e419a54",
+        "bytes": 7165121,
+        "width": 3840,
+        "height": 2400,
+        "renderDate": "2026-10-28"
+      }
+    }
+  ],
+  "publicSourceAttribution": "data/citywide-source-attribution-20261101.json",
+  "nativeRenderSHA256": "beae93b83b5734c12672bb41a2e3e2c4c2e5cdce6efb936f0a22e64cc6867b53"
+}

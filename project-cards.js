@@ -8,6 +8,34 @@ const isKnown=value=>(typeof value!=='number'||value>0)&&Boolean(text(value))&&!
 const validURL=value=>{try{const u=new URL(text(value));return /^(https?:)$/.test(u.protocol)?u.href:null;}catch{return null;}};
 
 const overrides={
+  "port-credit-50-high":{
+    targetCompletionLabels:{"2028-01":"January 2028 · City programme forecast"},
+    notes:[
+      "The exterior follows the December 2025 drawings, including facade frames and roof arches. Frame depths, glazing and finishes are approximate.",
+      "The future view shows the planned building. The dated City model retains the older building; the extent of demolition is not mapped."
+]
+  },
+  "mcity-3":{
+    credit:"Model: Daniel Sultan. Architecture: IBI Group. City geometry: City of Mississauga. References: Tim MacDonald / UrbanToronto, Walters Group and Andrew Fisher.",
+    notes:[
+      "The exterior follows published plans and July 2026 photographs, with the City’s lower building geometry retained.",
+      "Upper-floor elevations carry about ±15 m uncertainty. Balcony details and the closed crown are simplified; mechanical steel and cavities are not modelled."
+    ]
+  },
+  "mcity-4":{
+    credit:"Model: Daniel Sultan. Architecture: CORE Architects.",
+    notes:[
+      "The completed-design view follows CORE Architects’ March 2020 drawings and later exterior references. The 215.65 m maximum height follows the drawing; shorter crown shapes and podium details remain approximate.",
+      "The construction view records Spring 2026 progress: concrete at level 41 and glazing at level 26."
+    ]
+  },
+  "mcity-5":{
+    credit:"Model: Daniel Sultan. Architecture: IBI Group.",
+    notes:[
+      "The future view follows the brochure’s 36-storey design, six-storey masonry podium and seventh-floor amenities.",
+      "Facade dimensions and placement are approximate; building height is unverified. The model shows the intended finished exterior, not a measured construction stage."
+    ]
+  },
   'merner-41-bay':{
     summary:'A gabled home with an addition and a wraparound porch.',
     omitStatusDetail:true,
@@ -68,7 +96,7 @@ function facts(project){
   if(isKnown(project.approvalStage))rows.push(['Planning approval',text(project.approvalStage)]);
   if(isKnown(project.statusEvidenceDate))rows.push(['Status evidence',text(project.statusEvidenceDate)]);
   if(isKnown(actual))rows.push(['Completion / occupancy',text(actual)]);
-  if(isKnown(target))rows.push(['Target completion / occupancy',text(target)]);
+  if(isKnown(target))rows.push(['Target completion / occupancy',overrides[project.id]?.targetCompletionLabels?.[target]||text(target)]);
   if(!isKnown(actual)&&isKnown(project.completionYear))rows.push(['Reported completion year',text(project.completionYear)]);
   const construction=project.actualConstruction;
   if(construction){
@@ -87,8 +115,9 @@ export function completionRowsHTML(project){
   return rows.length?`<dl class="project-card-facts">${rows.map(([label,value])=>`<div><dt>${escapeHTML(label)}</dt><dd>${escapeHTML(value)}</dd></div>`).join('')}</dl>`:'';
 }
 
-function sourceItems(project,override){
-  const sources=override?.sources?override.sources(project):(project.sources||[]);
+function sourceItems(project,override,asset){
+  const projectSources=override?.sources?override.sources(project):(project.sources||[]);
+  const sources=[...projectSources,...(asset?.sources||[])];
   const seen=new Set();
   return sources.map(s=>typeof s==='string'?{url:s,title:s}:s).filter(Boolean).filter(s=>{
     const key=validURL(s.url)||unique([s.title,s.publisher,s.source]).join('|');
@@ -96,13 +125,13 @@ function sourceItems(project,override){
     seen.add(key);return true;
   });
 }
-function sourcesHTML(sources){
-  if(!sources.length)return '';
-  return `<section class="project-card-sources" aria-label="Sources and credits"><h4>Sources & credits</h4><ul>${sources.map(s=>{
+function sourcesHTML(sources,credit){
+  if(!sources.length&&!credit)return '';
+  return `<section class="project-card-sources" aria-label="Sources and credits"><h4>Sources & credits</h4>${credit?`<p class="project-card-credit">${escapeHTML(credit)}</p>`:''}${sources.length?`<ul>${sources.map(s=>{
     const url=validURL(s.url),label=text(s.title||s.publisher||s.source)||'Source';
     const credit=text(s.publisher);
     return `<li>${url?`<a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(label)}<span aria-hidden="true"> ↗</span></a>`:`<span>${escapeHTML(label)}</span>`}${credit&&credit!==label&&!label.toLowerCase().includes(credit.toLowerCase())?`<small>${escapeHTML(credit)}</small>`:''}${s.note?`<small>${escapeHTML(s.note)}</small>`:''}</li>`;
-  }).join('')}</ul></section>`;
+  }).join('')}</ul>`:''}</section>`;
 }
 function modelNotes(project,asset,override){
   if(override?.notes)return override.notes;
@@ -121,17 +150,18 @@ function modelNotes(project,asset,override){
 export function projectDetailsHTML(project,{asset=null,view={},revision=null}={}){
   const override=overrides[project.id],status=projectStatus(project),summary=override?.summary||text(project.summary);
   const location=unique([project.address&&project.address!==project.name?project.address:'',project.district||project.researchArea]).join(' · ');
-  const notes=modelNotes(project,asset,override),sources=sourceItems(project,override),raw=text(project.status);
+  const notes=modelNotes(project,asset,override),sources=sourceItems(project,override,asset),raw=text(project.status);
+  const credit=text(override?.credit||asset?.credit);
   const currentStatusNote=text(project.lifecycleNote);
   const statusDetail=(currentStatusNote?`<p class="project-card-status-detail">${escapeHTML(currentStatusNote)}</p>`:'')+(!override?.omitStatusDetail&&raw&&raw!==status.label?`<p class="project-card-status-detail">${escapeHTML(raw)}${project.statusDate?` · ${escapeHTML(project.statusDate)}`:''}</p>`:'');
   const sourceNote=override?.sourceNote||'Reference material belongs to its credited owners. A source link does not grant permission to reuse it.';
-  const detail=notes.length||sources.length||statusDetail||facts(project).length,qualifier=modelQualifier(project,asset,override);
+  const detail=notes.length||sources.length||credit||statusDetail||facts(project).length,qualifier=modelQualifier(project,asset,override);
   const previews=({'ergocentric-275-superior':[['ergocentric-275-superior','Open model preview']],'sgm-maritz-6710':[['sgm-maritz-6710','Open model preview & download']],'artform':[['artform','Open model preview & download']],'mcity-1-2':[['mcity-pair','Open model preview & download']],'edge-oro':[['edge-1','Edge 1 study'],['edge-2','Edge 2 study'],['oro','Oro intended-design study']],'avia':[['avia-1','Avia 1 with shared podium'],['avia-2','Avia 2 with shared podium']]})[project.id];
   const preview=previews?`<p class="project-model-preview">${previews.map(([id,title])=>`<a href="model.html?model=${id}">${escapeHTML(title)} ↗</a>`).join(' · ')}</p>`:'';
   const revisionLine=revision?.projectId===project.id?`<p class="project-card-location" aria-label="Model revision"><time datetime="${escapeHTML(revision.updatedOn)}">${escapeHTML(revision.label)}</time></p>`:'';
   const feedback=`<p class="project-model-preview">${buildingFeedbackHTML(project,view)}</p>`;
   const referenceCredit=project.id==='ergocentric-275-superior'?'<p class="project-card-location">Photographic reference: <a href="https://davidlaskerphotography.com/" target="_blank" rel="noopener noreferrer">David Lasker/Cityscape Photography</a></p>':'';
-  return `<div class="project-card-content"><div class="project-card-meta"><span class="project-card-status" data-tone="${status.tone}">${escapeHTML(status.label)}</span>${qualifier?`<span class="project-card-qualifier">${escapeHTML(qualifier)}</span>`:''}</div><h3>${escapeHTML(project.name)}</h3>${location?`<p class="project-card-location">${escapeHTML(location)}</p>`:''}${summary?`<p class="project-card-summary">${escapeHTML(summary)}</p>`:''}${revisionLine}${preview}${referenceCredit}${detail?`<details class="project-card-disclosure"><summary>About this model & sources</summary><div class="project-card-details">${statusDetail}${notes.length?`<section aria-label="Model details"><h4>The model</h4>${notes.map(note=>`<p>${escapeHTML(note)}</p>`).join('')}</section>`:''}${completionRowsHTML(project)}${sourcesHTML(sources)}${sources.length?`<p class="project-card-rights">${escapeHTML(sourceNote)}</p>`:''}</div></details>`:''}${feedback}</div>`;
+  return `<div class="project-card-content"><div class="project-card-meta"><span class="project-card-status" data-tone="${status.tone}">${escapeHTML(status.label)}</span>${qualifier?`<span class="project-card-qualifier">${escapeHTML(qualifier)}</span>`:''}</div><h3>${escapeHTML(project.name)}</h3>${location?`<p class="project-card-location">${escapeHTML(location)}</p>`:''}${summary?`<p class="project-card-summary">${escapeHTML(summary)}</p>`:''}${revisionLine}${preview}${referenceCredit}${detail?`<details class="project-card-disclosure"><summary>About this model & sources</summary><div class="project-card-details">${statusDetail}${notes.length?`<section aria-label="Model details"><h4>The model</h4>${notes.map(note=>`<p>${escapeHTML(note)}</p>`).join('')}</section>`:''}${completionRowsHTML(project)}${sourcesHTML(sources,credit)}${sources.length?`<p class="project-card-rights">${escapeHTML(sourceNote)}</p>`:''}</div></details>`:''}${feedback}</div>`;
 }
 
 /** Research-register card. The existing [data-project] focus handler is retained. */

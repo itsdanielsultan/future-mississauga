@@ -7,7 +7,7 @@ import {assetURL} from './asset-delivery.js?v=20261027-assets3';
 import {drawingPolicy,createFrameScheduler} from './viewer-runtime.js?v=20261025-mobile1';
 import {withPNGMetadata} from './png-metadata.js?v=20261023-cardfooter1';
 import {createVisibleAttribution, exportCreditLines} from './source-attribution.js?v=20261028-improvements1';
-import {projectDetailsHTML, projectCardHTML, completionRowsHTML} from './project-cards.js?v=20261101-status2';
+import {projectDetailsHTML, projectCardHTML, completionRowsHTML} from './project-cards.js?v=20261101-mcity4';
 import {createDaylight} from './daylight.js?v=20261023-usability1';
 import {neighbourhoodFrame,defaultViewDirection} from './viewer-camera.js?v=20261023-usability1';
 import {prepareMappedSurface} from './surface-rendering.js?v=20261023-usability1';
@@ -16,8 +16,8 @@ import {addArchitecturalEdges} from './building-presentation.js?v=20261022-detai
 import {projectNorth, presentationLayout, drawPresentationFooter, statusLegendFor} from './scene-presentation.js?v=20261101-status2';
 import {adoptContextModelVisibility} from './context-model-visibility.js?v=20261017-contact1';
 import {loadModelAsset,shouldLoadRefinement,refinementInDistrict,createOptionalRefinementLoader} from './refinement-loading.js?v=20261028-improvements1';
-import {cityModelStudies,presentCityStudyProjects,loadCityStudy,bindStudyReplacement} from './city-model-studies.js?v=20261028-improvements1';
-import {splitSourceOverlaps} from './source-layer-cut.js?v=20261026-citymodels1';
+import {cityModelStudies,presentCityStudyProjects,loadCityStudy,bindStudyReplacement} from './city-model-studies.js?v=20261101-mcity1';
+import {splitSourceOverlaps} from './source-layer-cut.js?v=20261101-mcity1';
 import {applyModelVisibility} from './model-visibility.js?v=20261101-status2';
 import {createSearchIndex,searchProjects,normalizeSearch} from './viewer-search.js?v=20260927-model-search1';
 import {bindComparison} from './comparison.js?v=20261023-usability1';
@@ -63,7 +63,7 @@ try{const response=await fetch('data/model-previews.json',{cache:'no-store',sign
 const existingStyleIndex=createExistingStyleIndex(await readData('existing-building-style'));
 const [contextAssets,transitLayers,landscapeLayers]=await Promise.all(['context-assets','transit-layer-manifest','landscape-layer-manifest'].map(n=>fetch('data/'+n+'.json',{cache:'no-store',signal:AbortSignal.timeout(30000)}).then(r=>r.ok?r.json():{})));
 for(const asset of [...(transitLayers.assets||[]),...(landscapeLayers.assets||[]),...(refinementData.assets||[]),...districts.map(d=>({url:'models/'+d.id+'.glb',sha256:d.sha256}))])if(asset.url&&(asset.downloadSHA256||asset.sha256))assetVersions.set(new URL(asset.url,document.baseURI).href,(asset.downloadSHA256||asset.sha256).slice(0,16));
-for(const [url,version] of Object.entries({"models/exchange-textured-phase-aware.glb": "2ebd17feb79c7429", "models/mcity-m4-plan-derived.glb": "4a2a1a170015c707", "models/mcity-m3-upper-envelope.glb": "dc378b8747e4c119"}))assetVersions.set(new URL(url,document.baseURI).href,version);
+for(const [url,version] of Object.entries({"models/exchange-textured-phase-aware.glb": "2ebd17feb79c7429"}))assetVersions.set(new URL(url,document.baseURI).href,version);
 for(const variants of Object.values(landscapeLayers.trees||{}))for(const asset of Object.values(variants))if(asset.url&&asset.sha256)assetVersions.set(new URL(asset.url,document.baseURI).href,asset.sha256.slice(0,16));
 const modelAssetVersions=await readData('model-asset-versions');
 for(const [url,hash] of Object.entries(modelAssetVersions.sha256))assetVersions.set(new URL(url,document.baseURI).href,hash.slice(0,16));
@@ -173,13 +173,11 @@ async function loadDistrict(id,searchRequest){localNeighbourhood?.clear();framed
   nextContext.add(airport.scene);
  }
  if(['downtown','cooksville','uptown','heartland','citywide'].includes(id)){
-  const [native,m4,m3]=await Promise.all([loadAsset('models/exchange-textured-phase-aware.glb'),loadAsset('models/mcity-m4-plan-derived.glb'),loadAsset('models/mcity-m3-upper-envelope.glb')]);
+  const native=await loadAsset('models/exchange-textured-phase-aware.glb');
   if(token!==loadToken){return;}
   nextModel.traverse(o=>{if(['63-6155','63-6156'].includes(o.userData.id))o.userData.replacedByNative=true;});
   native.scene.traverse(o=>{if(o.isMesh){o.userData.Status=o.userData.atlasStatus||'Under Construction';o.userData.projectId='exchange-district';o.userData.nativeTexture=true;}});
-  m4.scene.traverse(o=>{if(o.isMesh){o.userData.Status='Under Construction';o.userData.projectId='mcity-4';o.userData.modelFidelity='Plan-derived maximum envelope; approximate placement and profile. See project evidence.';}});
-  m3.scene.traverse(o=>{if(o.isMesh){o.userData.Status='Under Construction';o.userData.projectId='mcity-3';o.userData.recordedProgress=true;o.userData.modelFidelity='Schematic upper envelope derived from floor plans. Approximate crown silhouette is a separate asset; see project evidence.';}});
-  for(const supplement of [native.scene,m4.scene,m3.scene]){supplement.updateMatrixWorld(true);supplement.traverse(o=>{if(o.isMesh){const box=new THREE.Box3().setFromObject(o),bounds=district.bounds;o.userData.outsideDistrict=district.id!=='citywide'&&(box.max.x<bounds[0]||box.min.x>bounds[2]||box.max.z<bounds[1]||box.min.z>bounds[3]);}});}nextModel.add(native.scene,m4.scene,m3.scene);
+  for(const supplement of [native.scene]){supplement.updateMatrixWorld(true);supplement.traverse(o=>{if(o.isMesh){const box=new THREE.Box3().setFromObject(o),bounds=district.bounds;o.userData.outsideDistrict=district.id!=='citywide'&&(box.max.x<bounds[0]||box.min.x>bounds[2]||box.max.z<bounds[1]||box.min.z>bounds[3]);}});}nextModel.add(native.scene);
  }
 
  const additionAssets=(refinementData.assets||[]).filter(a=>refinementInDistrict(a,district));

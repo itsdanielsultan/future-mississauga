@@ -1,8 +1,8 @@
-import {installDocumentPreviews} from './document-preview.js?v=20261028-citywide1';
+import {installDocumentPreviews} from './document-preview.js?v=20261101-media2';
 import {installImagePreviews} from './image-preview.js?v=20261101-gallery1';
 import {pictureProvenance} from './image-provenance.js?v=20261101-gallery1';
 import {resolveStudyImage} from './neighbourhood-media.js?v=20261101-gallery1';
-import {resolveMedia,installResponsiveImages} from './media-catalog.js?v=20261028-citywide1';
+import {resolveMedia,installResponsiveImages} from './media-catalog.js?v=20261101-media2';
 installImagePreviews(async(image,anchor)=>{
   const row=await resolveMedia(image?.src||anchor.href);
   if(row)return {title:row.title,src:row.displayMaster.url,download:row.download.url,preview:row.preview.url,width:row.displayMaster.width,height:row.displayMaster.height,osm:row.sourceAttribution.openStreetMap,...pictureProvenance(row.renderInfo,row.download.width)};
