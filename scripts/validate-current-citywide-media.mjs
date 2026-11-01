@@ -7,10 +7,6 @@ import {fileURLToPath} from 'node:url';
 import {validateDocumentPreviews} from './validate-document-previews.mjs';
 
 const SITE = 'https://futuremississauga.com/';
-const MANIFEST = 'data/citywide-media-20261028.json';
-const PROOF = 'data/citywide-media-20261028-public-proof.json';
-const DOCUMENTS = 'data/document-previews-20261028.json';
-const TEXT = 'document-page-text-20261028.txt';
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 const readJSON = async (root, path) => JSON.parse(await readFile(join(root, path), 'utf8'));
 const key = value => { const url = new URL(value, SITE); return url.origin + url.pathname; };
@@ -82,7 +78,7 @@ function avifDimensions(bytes) {
   return extents[0];
 }
 
-function imageDimensions(bytes, type) {
+export function imageDimensions(bytes, type) {
   if (type === 'image/avif') return avifDimensions(bytes);
   assert(bytes.length >= 33 && bytes.subarray(0, 8).toString('hex') === '89504e470d0a1a0a', 'Invalid PNG header');
   assert.equal(bytes.readUInt32BE(8), 13, 'Invalid PNG IHDR length');
@@ -97,17 +93,30 @@ function decodeText(bytes) {
   return JSON.parse(gunzipSync(compressed, {maxOutputLength: 2_000_000}));
 }
 
-export async function validateCurrentCitywideMedia(root) {
+export async function validateCurrentCitywideMedia(root, {edition = '20261028'} = {}) {
+  assert(['20261028', '20261101'].includes(edition), 'Unknown reviewed Citywide edition');
+  const MANIFEST = `data/citywide-media-${edition}.json`;
+  const PROOF = `data/citywide-media-${edition}-public-proof.json`;
+  const DOCUMENTS = `data/document-previews-${edition}.json`;
+  const TEXT = `document-page-text-${edition}.txt`;
+  const previous = edition === '20261101';
+  // Each new edition preserves and verifies the complete previous document chain.
+  if (previous) await validateCurrentCitywideMedia(root, {edition: '20261028'});
   // This also verifies the immutable original catalogue, text and compact proof pins.
   const historical = await validateDocumentPreviews(root);
   const [manifest, proof, catalog, oldCatalog, oldTextBytes, newTextBytes, pictures, labelled] = await Promise.all([
     readJSON(root, MANIFEST), readJSON(root, PROOF), readJSON(root, DOCUMENTS),
-    readJSON(root, 'data/document-previews.json'), readFile(join(root, 'document-page-text.txt')),
+    readJSON(root, previous ? 'data/document-previews-20261028.json' : 'data/document-previews.json'),
+    readFile(join(root, previous ? 'document-page-text-20261028.txt' : 'document-page-text.txt')),
     readFile(join(root, TEXT)), readJSON(root, 'data/picture-assets.json'), readJSON(root, 'data/labelled-image-assets.json'),
   ]);
   assert.equal(manifest.schema, 'future-mississauga-current-citywide-media/v1');
   assert.equal(proof.schema, 'future-mississauga-current-citywide-media-public-proof/v1');
   assert.equal(proof.status, 'LOCAL_BYTES_VERIFIED');
+  if (previous) {
+    const previousManifest = await readJSON(root, 'data/citywide-media-20261028.json');
+    assert.deepEqual(manifest.previousEditions, [previousManifest.image], 'Previous Citywide pixels and provenance changed');
+  }
   publicContent(manifest, 'media'); publicContent(proof, 'proof'); publicContent(catalog, 'documents');
   const row = manifest.image;
   assert.equal(row?.kind, 'wide'); assert.equal(row.file, 'citywide-future.png');
@@ -132,7 +141,7 @@ export async function validateCurrentCitywideMedia(root) {
   if (nativeDate) assert.equal(nativeDate, info.renderDate, 'Native render date mismatch');
   if (row.nativeOriginal && row.nativeSource) for (const field of ['sha256', 'bytes', 'width', 'height']) assert.equal(row.nativeOriginal[field], row.nativeSource[field], 'Conflicting raw source identity');
 
-  const historicalURLs = oldURLs([pictures, labelled, oldCatalog]);
+  const historicalURLs = oldURLs([pictures, labelled, oldCatalog, ...(manifest.previousEditions || [])]);
   const expected = new Map();
   function expect(file, type, asset = {}) {
     localFile(file);
@@ -205,11 +214,13 @@ export async function validateCurrentCitywideMedia(root) {
   return {
     status: 'LOCAL_BYTES_VERIFIED', publicationEvidence: 'NOT_CHECKED_BY_LOCAL_STRUCTURE_PREFLIGHT',
     currentImages: 1, newAssets: expected.size, newAtlasPages: atlas.pages,
-    historicalDocumentsPreserved: historical.sourceDocuments, historicalPagesPreserved: historical.pagePreviews,
+    historicalDocumentsPreserved: oldCatalog.documents.length, historicalPagesPreserved: oldText.reduce((total, pages) => total + pages.length, 0),
     rawMasterPublished: Boolean(native.url), mixedSourceDates: true,
   };
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  console.log(JSON.stringify(await validateCurrentCitywideMedia(resolve(process.argv[2] || 'public')), null, 2));
+  console.log(JSON.stringify(await validateCurrentCitywideMedia(resolve(process.argv[2] || 'public'), {
+    edition: process.argv[3] || '20261028',
+  }), null, 2));
 }

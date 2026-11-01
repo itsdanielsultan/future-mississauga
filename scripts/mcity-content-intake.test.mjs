@@ -1,3 +1,4 @@
+import {withoutAcceptedModelFields as withoutModel,acceptedModelProjectIds} from './mcity-asset-scope.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
@@ -28,8 +29,8 @@ test('November intake changes only the two reviewed project records and permitte
  assert.deepEqual(projects.map(p=>p.id),baseline.map(p=>p.id));
  for(const before of baseline){
   const after=projects.find(p=>p.id===before.id);
-  if(!ids.includes(before.id)){assert.deepEqual(withoutStatus('projects',after),before,before.id);continue;}
-  assert.deepEqual(protectedFields(after),protectedFields(before),before.id+' geometry and other facts');
+  if(!ids.includes(before.id)){assert.deepEqual(withoutModel('projects',withoutStatus('projects',after)),withoutModel('projects',before),before.id);continue;}
+  assert.deepEqual(withoutModel('projects',protectedFields(after)),withoutModel('projects',protectedFields(before)),before.id+' geometry and other facts');
  }
 });
 
@@ -46,10 +47,10 @@ for(const id of ids)test(id+' retains dated proposal counts, unresolved tenure a
  assert.deepEqual(p.planningSnapshot,snapshot);
  assert.match(p.evidenceUpdateNote,/29 October 2026/);assert.match(p.evidenceUpdateNote,/no resubmission followed the sale/);
  assert.match(p.evidenceUpdateNote,/no building permits had been issued/);assert.match(p.evidenceUpdateNote,e.cycle);
- assert.match(p.modelCaveat,/Earlier City geometry/);assert.match(p.modelCaveat,/pending/);assert.doesNotMatch(p.modelCaveat,/unverified architectural|not (?:a )?verified architectural/);
+ assert.match(p.modelCaveat,/exterior study follows HPA/);assert.match(p.modelCaveat,/dated proposal/);assert.doesNotMatch(p.modelCaveat,/unverified architectural|not (?:a )?verified architectural/);
  assert.deepEqual(p.heightM,[]);assert.match(p.summary,/reviewing the plans and tenure/);
  assert.match(p.summary,id==='mcity-6'?/58 storeys and 889 homes/:/51 and 46 storeys.*1,457 homes combined/);
- if(id==='mcity-7-8')assert.match(p.modelCaveat,/individual component-to-tower matching/);
+ if(id==='mcity-7-8')assert.match(p.modelCaveat,/sampled viewer terrain/);
  assert.doesNotMatch(p.evidenceUpdateNote,/lateSeptember/);
  assert.doesNotMatch([p.summary,p.modelCaveat,p.evidenceUpdateNote,p.completion.note].join(' '),/no (?:building[- ]?)permit applications|(?:approved|confirmed|settled) (?:rental|condominium|condo) (?:design|tenure)|\bwill (?:start|complete|open)\b/i);
  assert.deepEqual(projectStatus(p),{label:'Under review',tone:'proposed'});
@@ -125,7 +126,11 @@ test('download register mirrors the reviewed records and preserves every other r
  assert.deepEqual(current.header,[...before.header,...statusColumns]);assert.deepEqual(current.rows.map(r=>r.id),before.rows.map(r=>r.id));
  for(const row of current.rows){
   const prior=before.rows.find(r=>r.id===row.id);
-  if(!ids.includes(row.id)){assert.deepEqual(Object.fromEntries(before.header.map(k=>[k,k==='status'&&['ninth-6344','longview-44-45'].includes(row.id)?prior[k]:row[k]])),prior);continue;}
+  if(!ids.includes(row.id)){
+   const fields=before.header.filter(k=>!acceptedModelProjectIds.has(row.id)||!['modelCaveat','geometryCoverage'].includes(k));
+   assert.deepEqual(Object.fromEntries(fields.map(k=>[k,k==='status'&&['ninth-6344','longview-44-45'].includes(row.id)?prior[k]:row[k]])),Object.fromEntries(fields.map(k=>[k,prior[k]])));
+   if(acceptedModelProjectIds.has(row.id)){const project=projects.find(p=>p.id===row.id);for(const key of ['modelCaveat','geometryCoverage'])assert.equal(row[key],project[key]);}continue;
+  }
   const project=projects.find(p=>p.id===row.id);
   for(const key of ['status','statusDate','geometryCoverage','modelCaveat'])assert.equal(row[key],project[key]);
   assert.deepEqual(JSON.parse(row.storeys),project.storeys);

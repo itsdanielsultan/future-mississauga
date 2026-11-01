@@ -22,7 +22,7 @@ export function cityModelStudies(refinements,catalogue){
   if(previews.some(asset=>!asset))throw new Error('A registered city model is absent from the public catalogue.');
   const index=result.findIndex(asset=>asset.id===placement.id),prior=index<0?{}:result[index];
   if(!placement.translation&&(!prior.registration||!prior.replacementTriangleKeys?.length))throw new Error('The registered municipal replacement is unavailable.');
-  const asset={...prior,...placement,previewAssets:previews,defaultVisible:true,localOptional:true,localReview:true,
+  const asset={...prior,...placement,previewAssets:previews,defaultVisible:true,localOptional:true,
    status:placement.status||'Existing',modes:placement.modes||['existing','construction','future'],replacementModes:placement.modes||['existing','construction','future'],
    preserveMaterials:true,preserveSourceNormals:true,uncertainGeometry:true,
    modelFidelity:placement.projectId==='avia'?'Approximate completed exteriors and shared podium, Avia Rev02. Registered to the City source model; facade details and dimensions remain approximate.':placement.modelFidelity||prior.modelFidelity};
@@ -35,8 +35,8 @@ export function presentCityStudyProjects(projects){
  for(const project of projects){
   if(project.id==='mcity-1-2'){
    project.localOptional=false;project.studyActionLabel='Show on map';
-   project.geometryCoverage='Approximate completed exteriors, M City Rev02. The City source geometry remains available if the detailed models cannot load.';
-   project.modelCaveat=project.modelCaveat?.replace('Optional Rev02 exterior studies','Rev02 exterior studies');
+   project.geometryCoverage='Approximate completed exteriors, M City Rev03. The City source geometry remains available if the detailed models cannot load.';
+   project.modelCaveat=project.modelCaveat?.replace('Optional Rev02 exterior studies','Rev03 exterior studies');
   }else if(project.id==='avia'){
    project.localReview=true;
    project.geometryCoverage='Approximate completed exteriors and shared podium, Avia Rev02, registered to the City source model.';

@@ -5,7 +5,7 @@ import {createHash} from 'node:crypto';
 import {pictureProvenance} from '../public/image-provenance.js';
 
 const read=path=>JSON.parse(fs.readFileSync(new URL('../public/'+path,import.meta.url)));
-const historical=read('data/labelled-image-assets.json'),pictures=read('data/picture-assets.json'),actual=read('data/citywide-media-20261028.json');
+const historical=read('data/labelled-image-assets.json'),pictures=read('data/picture-assets.json'),actual=read('data/citywide-media-20261101.json');
 const base='https://futuremississauga.com/';
 const requests=[],previousFetch=globalThis.fetch;
 globalThis.fetch=async url=>{requests.push(url);return new Response(JSON.stringify(historical));};
@@ -28,7 +28,7 @@ function fixture(){
 }
 
 test('catalogue requests the exact new version beside the unchanged historical catalogue',()=>{
- assert.deepEqual(requests,['data/labelled-image-assets.json','data/citywide-media-20261028.json']);assert.equal(mediaCatalog instanceof Promise,true);
+ assert.deepEqual(requests,['data/labelled-image-assets.json','data/citywide-media-20261101.json','data/downtown-media-20261101.json']);assert.equal(mediaCatalog instanceof Promise,true);
 });
 
 test('current Citywide uses new pixel URLs while every historical alias retains its exact edition',()=>{
@@ -109,16 +109,28 @@ test('the actual approved Citywide package selects current pixels and dates whil
   if(asset.format==='image/png'){assert.equal(bytes.readUInt32BE(16),asset.width);assert.equal(bytes.readUInt32BE(20),asset.height);}
  }
  const current=refreshCatalogPictures(structuredClone(pictures),loaded).images['citywide-future.png'];
- assert.equal(current.width,3840);assert.equal(current.height,2400);assert.equal(current.renderInfo.renderDate,'2026-10-28');
+ assert.equal(current.width,3840);assert.equal(current.height,2400);assert.equal(current.renderInfo.renderDate,'2026-11-01');
  assert.equal(current.nativeSource.sha256,actual.nativeRenderSHA256);assert.equal(current.nativeOriginal,undefined);
  assert.equal(current.sourceAttribution.photoReference.name,'David Lasker/Cityscape Photography');
  const shown=pictureProvenance(current.renderInfo,current.width);
- assert.deepEqual(shown,{meta:'Rendered 28 Oct 2026 · 4K PNG'});
+ assert.deepEqual(shown,{meta:'Rendered 1 Nov 2026 · 4K PNG'});
  const index=indexMedia(loaded,base),old=historical.images.find(row=>row.file==='citywide-future.png');
  for(const url of [...old.aliases,old.download.url,old.displayMaster.url]){
   const record=index.get(new URL(url,base).href);assert.equal(record.renderInfo.renderDate,'2026-10-04');assert.deepEqual(Object.keys(pictureProvenance(record.renderInfo,record.download.width)),['meta']);
  }
  assert.deepEqual(historical,snapshot);
+});
+
+test('November Citywide preserves all October 28 pixel identities and source dates',async()=>{
+ const previous=read('data/citywide-media-20261028.json').image;
+ assert.deepEqual(actual.previousEditions,[previous]);
+ const loaded=await loadMediaCatalog(async url=>new Response(JSON.stringify(url==='data/labelled-image-assets.json'?historical:actual)),{baseURL:base});
+ const index=indexMedia(loaded,base);
+ for(const field of ['preview','responsive','displayMaster','download']){
+  const old=index.get(new URL(previous[field].url,base).href);
+  assert.deepEqual(old,previous);assert.equal(old.renderInfo.renderDate,'2026-10-28');
+  assert.notEqual(old[field].url,loaded.currentCitywide[field].url);
+ }
 });
 
 test('new-edition HTTP, decoding, schema or identity failure falls back to the complete historical catalogue',async()=>{

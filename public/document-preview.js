@@ -1,6 +1,6 @@
 // Switch both paths together when the reviewed combined edition is available.
-export const DOCUMENT_PREVIEW_CATALOG_URL = 'data/document-previews-20261028.json?v=20261028-citywide1';
-export const DOCUMENT_PAGE_TEXT_URL = 'document-page-text-20261028.txt?v=20261028-citywide1';
+export const DOCUMENT_PREVIEW_CATALOG_URL = 'data/document-previews-20261101.json?v=20261101-media1';
+export const DOCUMENT_PAGE_TEXT_URL = 'document-page-text-20261101.txt?v=20261101-media1';
 
 // PDF pathnames identify editions. Query strings may bust caches, never rebind pages.
 export function documentPreviewKey(url, baseURL) {

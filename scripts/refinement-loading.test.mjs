@@ -28,11 +28,11 @@ test('app refuses lazy attachment while the new district is still loading',async
 test('existing-capable study selection survives existing/construction mode changes',()=>{const app=readFileSync(new URL('../public/app.js',import.meta.url),'utf8'),fn=app.slice(app.indexOf('function setMode(m){'),app.indexOf('\n',app.indexOf('function setMode(m){')));let cleared=false;const context={invalidate:()=>{},selectedStudyProjectId:'mcity',refinementData:{assets:[{projectId:'mcity',modes:['existing','construction','future']}]},setSelectedStudy:()=>cleared=true,$:()=>({}),mode:'future',compare:false,syncCompare:()=>{},applyVisibility:()=>{}};runInNewContext('('+fn+')('+'"existing"'+')',context);assert(!cleared);assert.equal(context.mode,'existing');});
 test('recovered M City card explicitly enters the opt-in study selection path',()=>{
  const project=JSON.parse(readFileSync(new URL('../public/data/projects.json',import.meta.url))).find(p=>p.id==='mcity-1-2');
- assert.equal(project.localOptional,true);assert.equal(project.localReview,true);assert.match(project.studyActionLabel,/approximate/);
+ assert.equal(project.localOptional,true);assert.equal(project.localReview,undefined);assert.match(project.studyActionLabel,/approximate/);
  const app=readFileSync(new URL('../public/app.js',import.meta.url),'utf8');
  const extract=name=>{const start=app.indexOf('function '+name+'(project){');assert(start>=0);return app.slice(start,app.indexOf('\n',start));};
  const context={studyStatusRequest:0,showStudyLoadStatus:()=>{},selectedStudyProjectId:null,studyNotice:{},studyNoticeText:{},project,inactiveLifecycle,LIFECYCLE_LABELS};
  runInNewContext(extract('selectedStudyLabel')+'\n'+extract('setSelectedStudy')+'\nsetSelectedStudy(project);',context);
- assert.equal(context.selectedStudyProjectId,'mcity-1-2');assert.equal(context.studyNotice.hidden,false);assert.match(context.studyNoticeText.textContent,/approximate completed exterior/);
+ assert.equal(context.selectedStudyProjectId,'mcity-1-2');assert.equal(context.studyNotice.hidden,false);assert.match(context.studyNoticeText.textContent,/approximate completed exterior/i);
 });
 test('a browser without gzip streams rejects the optional model without parsing it',async()=>{const original=globalThis.DecompressionStream;try{globalThis.DecompressionStream=undefined;await assert.rejects(loadModelAsset(loader,'x.glb.gz',x=>x,async()=>new Response(gzipSync(bytes))),/municipal baseline remains available/);}finally{globalThis.DecompressionStream=original;}});

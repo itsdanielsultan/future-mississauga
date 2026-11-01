@@ -31,10 +31,21 @@
       "currentImages": 1,
       "newAssets": 40,
       "newAtlasPages": 35,
-      "historicalDocumentsPreserved": 13,
-      "historicalPagesPreserved": 61,
+      "historicalDocumentsPreserved": 14,
+      "historicalPagesPreserved": 96,
       "rawMasterPublished": false,
       "mixedSourceDates": true
+    },
+    "currentPictureMedia": {
+      "currentViews": 12,
+      "retainedDowntownViews": 4,
+      "localAVIFs": 24,
+      "localAVIFBytes": 6199452,
+      "remoteOriginalPNGs": 24,
+      "remoteOriginalBytes": 305391894,
+      "nativeDimensionsPreserved": true,
+      "shareJPEGBytes": 399463,
+      "publicationEvidence": "REQUIRES_SEPARATE_PUBLIC_BYTE_RECEIPT"
     },
     "modelPreviews": {
       "views": 11,
@@ -71,8 +82,8 @@
       "atomicAssemblies": true,
       "assetHashesValidatedByModelPreviewCatalogue": true
     },
-    "files": 827,
-    "publishedBytes": 647910600,
+    "files": 911,
+    "publishedBytes": 732375860,
     "originalPNGs": 33,
     "originalImageVerification": {
       "nativeMasterURLsPreserved": true,
@@ -94,9 +105,9 @@
       "dimensionsVerified": true,
       "separatePublicHashProofRequired": true
     },
-    "loadedModelAssets": 125,
+    "loadedModelAssets": 128,
     "refinementBounds": {
-      "assets": 71,
+      "assets": 74,
       "finiteOrderedBoundsVerified": true
     },
     "markdownFiles": 22,
@@ -158,7 +169,7 @@
     "localPNGchecksumsVerified": true,
     "noHostedRuntime": true,
     "noPrivateArtifacts": true,
-    "completeReviewBytes": 1061912288
+    "completeReviewBytes": 1146377548
   },
   "derivatives": {
     "legacyPNGFilesVerified": 91,
@@ -174,8 +185,8 @@
     "quality": "Exact published bytes",
     "offloadedFiles": 280,
     "offloadedBytes": 414091741,
-    "publishedBytes": 647910600,
-    "publishedFiles": 548
+    "publishedBytes": 732375860,
+    "publishedFiles": 632
   },
   "files": [
     {
@@ -190,13 +201,13 @@
     },
     {
       "file": "accuracy-review.html",
-      "bytes": 149647,
-      "sha256": "6a2004325040e69236e917e90884536cc98cc6194042a3270d9a553ceb2a92a2"
+      "bytes": 149763,
+      "sha256": "90c83709e21c2675958a14305420d8925ccb0a93a7c2ed36dbd2f670ccb2f292"
     },
     {
       "file": "app.js",
-      "bytes": 78012,
-      "sha256": "d526ea765cc4187e46abb1febb4ff89194f5b6f830355c966022c3be219a3735"
+      "bytes": 77210,
+      "sha256": "f2670f39e13bcfe94442c846a81bfa89be1a70e5a0ff391df62c29ff74d5cfd8"
     },
     {
       "file": "asset-delivery-map.js",
@@ -365,8 +376,8 @@
     },
     {
       "file": "city-model-studies.js",
-      "bytes": 6664,
-      "sha256": "1fc0c79e218ffa8fbc2df059fbb4b997cccbf853ca3ced49ea5daa3f8a4e82f5"
+      "bytes": 6647,
+      "sha256": "d5c8a39f7f199fa59aefd1968247a2a1dbb1caf0ca746bda4870e89ebe8dad6a"
     },
     {
       "file": "comparison.js",
@@ -399,9 +410,24 @@
       "sha256": "b0bd3fb4d7afef984a960851b4a9e1ebec559cdf3de27bdd4227ae9d29014284"
     },
     {
+      "file": "data/citywide-media-20261101-public-proof.json",
+      "bytes": 10903,
+      "sha256": "a2ae8688c03d4f6248564df2cae50495c590a7a0cf1797c49036a9307c9859a9"
+    },
+    {
+      "file": "data/citywide-media-20261101.json",
+      "bytes": 71039,
+      "sha256": "ab2b23d77e481029f996ac74b6a39ba0d38c1370327e24c360aac8ac9b0fcbae"
+    },
+    {
       "file": "data/citywide-source-attribution-20261028.json",
       "bytes": 43491,
       "sha256": "5fd98b06250876e042956c269373ffc72f516cb145d802f29ac108e40f5dd99c"
+    },
+    {
+      "file": "data/citywide-source-attribution-20261101.json",
+      "bytes": 60821,
+      "sha256": "38dcd4d1b0fe92ca149f435a848b8023e4b3f1ee3ac27c5d3f52c0bb5be8ba35"
     },
     {
       "file": "data/clarkson-meshes.json",
@@ -434,6 +460,11 @@
       "sha256": "76720af368a9a8d4a9ed994e856492eaaa5572358c63103ad264c897cf076683"
     },
     {
+      "file": "data/document-previews-20261101.json",
+      "bytes": 10334,
+      "sha256": "381910f1fcd4a74916f6dede19d1c721b02be3900e97973ca15d428991efcf20"
+    },
+    {
       "file": "data/document-previews.json",
       "bytes": 3833,
       "sha256": "f7ba640d8799bba3211be0d475f865f85739fbeb3a604e30d724d0614efa55ce"
@@ -442,6 +473,16 @@
       "file": "data/document-proof.json",
       "bytes": 370,
       "sha256": "5320da5b80d4f082c31f10c3efcd526c4f1dbcb68e79e60d5ebb00865404ee01"
+    },
+    {
+      "file": "data/downtown-media-20261101-integrity.json",
+      "bytes": 24471,
+      "sha256": "7837330191c1a46b99cdaaa2c3ae2f31509e7324652a6db1015af19a13fb2b1c"
+    },
+    {
+      "file": "data/downtown-media-20261101.json",
+      "bytes": 115302,
+      "sha256": "65419d920618c4b27cb6b00ac6466e161f64488b34d796812a6fa23d6f3bb852"
     },
     {
       "file": "data/downtown-meshes.json",
@@ -580,13 +621,13 @@
     },
     {
       "file": "data/model-asset-versions.json",
-      "bytes": 26485,
-      "sha256": "43b9748be8d3385d37bf1fe6ae91a2334522fbca794700830076145aebfb31ab"
+      "bytes": 27714,
+      "sha256": "6e0041998e1e75c4df51c384792c8ac42c4c11167cabc2269d848fa57c50d857"
     },
     {
       "file": "data/model-previews.json",
-      "bytes": 42545,
-      "sha256": "0e9fdeb2ac72019e9f62ccf84ac44bc16bb4018e667bb2def792fc1c857884e9"
+      "bytes": 42593,
+      "sha256": "ae92fa0435d04186426c49aaf0d03398490fc0092525046b825c7a296257c3b0"
     },
     {
       "file": "data/model-revisions.json",
@@ -655,13 +696,13 @@
     },
     {
       "file": "data/projects.json",
-      "bytes": 913806,
-      "sha256": "ffa38686b1084193bffd91b34ae08f7c1c3ca901dca9b5bc045fd38dfb170996"
+      "bytes": 911606,
+      "sha256": "af74f0edeb01c9de335d748611607409917f9cdb94a4a8125a729bc60fb2f211"
     },
     {
       "file": "data/publication-derivatives.json",
       "bytes": 107534,
-      "sha256": "19da24ac16b8c67b3b6a7dff657d9a588101774a6a1ed73960e49080fce8cdc8"
+      "sha256": "92c3ec66405a73769d79dccc36389609ca72f11efacc03f3e20f2a998fd908fa"
     },
     {
       "file": "data/recent-project-updates.json",
@@ -685,8 +726,13 @@
     },
     {
       "file": "data/refinement-models.json",
-      "bytes": 1581420,
-      "sha256": "39ef747eee907406d2e50e1295517918da39a0a5d406109da94ab53cc972696b"
+      "bytes": 1589127,
+      "sha256": "7dfdb06e7bae5bf6ea42fa8804623fc193dd2988e3676a70715a914078666c97"
+    },
+    {
+      "file": "data/share-preview-20261101.json",
+      "bytes": 454,
+      "sha256": "9e471bc8999a5d0e9e91af326ee37715686847530ca4173f18f1d74c48174ab6"
     },
     {
       "file": "data/social-pictures.json",
@@ -749,6 +795,11 @@
       "sha256": "15c8dbe15e59c8043d7c0806e23157fdd5a4e028c419eda5b8fc987fb5eac5aa"
     },
     {
+      "file": "document-page-text-20261101.txt",
+      "bytes": 25429,
+      "sha256": "d21515703ef3435346532bd647bbf1bc630e5a99cba8d2940d741e2880f616cc"
+    },
+    {
       "file": "document-page-text.txt",
       "bytes": 18760,
       "sha256": "0fd144cde35d7c12c586bc45874815ca1cd8ff79497b6119cdf4b6e1c0a8d879"
@@ -760,8 +811,8 @@
     },
     {
       "file": "document-preview.js",
-      "bytes": 8564,
-      "sha256": "1ab308efcf77073094f556595010fa1211fd363995555d950eab60bc3988912d"
+      "bytes": 8558,
+      "sha256": "346fcafd6f79a4a80e3c8a6dcf34dcc2906940972324e439e2c1ec8c6535c9d9"
     },
     {
       "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-01.avif",
@@ -939,6 +990,181 @@
       "sha256": "04368525038636298576067ccd5ffd263a75ce1d550349e078f4d4bb00ebe7af"
     },
     {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-01.avif",
+      "bytes": 476163,
+      "sha256": "f06f35329fb7884226d728aa20a7c4197a1086c25b1cc51fd5f6a13c2a87a665"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-02.avif",
+      "bytes": 802799,
+      "sha256": "67a81fc8e783dbd50dc05ec595364322b726b5621b994fc514c8a2783c92ffeb"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-03.avif",
+      "bytes": 783063,
+      "sha256": "128a0bf48ec75e28b7ecf43021e769e424d4c5774cfe7131f4cb5299081ad5e6"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-04.avif",
+      "bytes": 622358,
+      "sha256": "92310baf8a0ad588e093423edd593142feea905375de5f8cdf8bb8fe87896dc3"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-05.avif",
+      "bytes": 358187,
+      "sha256": "3e2f520c3240d3edb5397dde7a5d617a6e7ea61d584b03c86eba1cb838425767"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-06.avif",
+      "bytes": 350449,
+      "sha256": "53c90642a34c8bfe2904315611e459c5e6e300ee1b5672c0d315203ed25a95a9"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-07.avif",
+      "bytes": 496016,
+      "sha256": "3b02caf8608a692523307c68a07f0603b811b1c71911bade16270181f4d05d68"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-08.avif",
+      "bytes": 509388,
+      "sha256": "cb52b8ff5282c3282b295d2041e2dd810ad9005a27aa05c03520e5ede47b5f44"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-09.avif",
+      "bytes": 493900,
+      "sha256": "058a6747ecc8dd43d70cb2110735d86949910bd0de60c7b03ba416f438b550c8"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-10.avif",
+      "bytes": 832042,
+      "sha256": "dc8446da1901c2e2401a27eb3c36a367d68f2dc26438eaee4d30b31c96054661"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-11.avif",
+      "bytes": 871037,
+      "sha256": "6abb28b549ddf594a1a9247bdaa637ef9df79debd4e5fe146e6210964070679c"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-12.avif",
+      "bytes": 649182,
+      "sha256": "55e95fd045ccfdc9eecb2e6cfbcc2a70b28f4784551585a679583120ac2f6e53"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-13.avif",
+      "bytes": 552962,
+      "sha256": "69dab0358f0d912efdd5e5c7e375c4eeb2c9b26c242532611c929e715302564a"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-14.avif",
+      "bytes": 519323,
+      "sha256": "4873af2e4fb0c3b69ab7b344301c9c00e3710584150ed01ad818c40437b9e682"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-15.avif",
+      "bytes": 497966,
+      "sha256": "7682390168e942144780171fa9118e78f5e92a63720cf062e72a253b1488c9b6"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-16.avif",
+      "bytes": 412300,
+      "sha256": "42cb8cdf5e2f8a29e6b6a1380cd7fdce286828fa6f2c9351457b8834bac32fbf"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-17.avif",
+      "bytes": 390364,
+      "sha256": "abb9e79f624e43b404a3adfd977f2c71a2954df10259d21cc658924a4be0d3a0"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-18.avif",
+      "bytes": 755887,
+      "sha256": "b71c0818ed84c29a7ae6dc6dead9dfec72a65b2355190298caac5ec75593fe87"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-19.avif",
+      "bytes": 787904,
+      "sha256": "6f630cf44ac7a1c6a5e508e875221531a664f1d010322f0a103c86b62ae02be3"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-20.avif",
+      "bytes": 595608,
+      "sha256": "32fe3fc45cba18faf878ec518926e863d4c96999b79ea5bd3cda58e4d48ca9bd"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-21.avif",
+      "bytes": 591176,
+      "sha256": "1cc2dbc1d0a07fcc82e0ab93103077faed9bc0aed72360f5a1838e4bd088430e"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-22.avif",
+      "bytes": 827584,
+      "sha256": "c845f84f6236987ca48fd4892b23fcc7e412eaac5ccca3670293f36e6ba710db"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-23.avif",
+      "bytes": 668322,
+      "sha256": "410507784845e1ed1e0a35709dd78a3699bcfbee56b5c953c888aa00bcc5789b"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-24.avif",
+      "bytes": 829307,
+      "sha256": "930562b0098cb46678be22950a520fe90d761afb657afabf805e34d4526596d5"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-25.avif",
+      "bytes": 750057,
+      "sha256": "81649e3aafcb444fa819d5527c468ed031e4e9d28c9d9e8c682cd082a53da3fa"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-26.avif",
+      "bytes": 1070632,
+      "sha256": "2a227f50a95f28e6d9d202b1dc7642d71608f48059c18385940e0aa88ce4743c"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-27.avif",
+      "bytes": 960286,
+      "sha256": "02dfd6683b0d82a9d0bd72c6253261a6de48173dc4f38be11ba55c715daa0e6f"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-28.avif",
+      "bytes": 888174,
+      "sha256": "a9933b540f0dbcecebf8d77854fbaf0b8a12e55ab694793793c314e80c19253a"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-29.avif",
+      "bytes": 659188,
+      "sha256": "a70f094df5c6ed6b0b1e7f2135eedcaa1d7cf19a30e214c8ddbf3538f6539a6f"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-30.avif",
+      "bytes": 892140,
+      "sha256": "87d1ddc0fa9fe972175b1b86c10bc6aca879be9639488676a49fcf98b068e722"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-31.avif",
+      "bytes": 1159345,
+      "sha256": "d3a927f75e32337e5405856da91cb31b32365ae66e599ee994e3b0166240ca16"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-32.avif",
+      "bytes": 424881,
+      "sha256": "64b846cd4f72dd94cec1785ca5ad8edfaf870c26e09bff6964b7d8c0e86a444a"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-33.avif",
+      "bytes": 678686,
+      "sha256": "3912c9a76a7796d5a9caf5b3d215c2310d1be39f5ab735c56eb1354f6168253e"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-34.avif",
+      "bytes": 242469,
+      "sha256": "fbcadaf0bcf2696e62021bd320b09320e824aab91c1246a246caddcd75f91b02"
+    },
+    {
+      "file": "document-previews/citywide-20261101/atlas-3ec6b565b82d-35.avif",
+      "bytes": 179812,
+      "sha256": "04368525038636298576067ccd5ffd263a75ce1d550349e078f4d4bb00ebe7af"
+    },
+    {
       "file": "downloads/30-Eglinton-West-review.md",
       "bytes": 4156,
       "sha256": "4f25376ce3c5a99584ac4ef1336ea703e2fb3a7544c70d10b6ef605d41170995"
@@ -974,6 +1200,11 @@
       "sha256": "d4b3024e564936ec7cbebada465f4c05c80d60e773830ac1ae738a994eeeb0d8"
     },
     {
+      "file": "downloads/Citywide-image-credits-20261101.txt",
+      "bytes": 18844,
+      "sha256": "8cd2318c3a0490ad07041c64277365a79d044a315647e9855937d98c57837b44"
+    },
+    {
       "file": "downloads/Clarkson-mainland-context-repair.json",
       "bytes": 5955,
       "sha256": "b6d0ac3cf0ee714d5ab8273f34995a03b1e88c761cfcb05bdcc83501b60bed91"
@@ -997,6 +1228,11 @@
       "file": "downloads/Future-Mississauga-Atlas-20261028-bf41d7ee2a66.pdf",
       "bytes": 25427538,
       "sha256": "bf41d7ee2a665ac3f3ed680b9dbc3bbdcd0e75ca743aac793d19632b9da5d96d"
+    },
+    {
+      "file": "downloads/Future-Mississauga-Atlas-20261101-3ec6b565b82d.pdf",
+      "bytes": 25922250,
+      "sha256": "3ec6b565b82d8fb1e83b06a5856d6b7bb3f051c257f7dd0ed43725cbba86adec"
     },
     {
       "file": "downloads/Future-Mississauga-Atlas.pdf",
@@ -1160,8 +1396,8 @@
     },
     {
       "file": "downloads/project-register.csv",
-      "bytes": 364923,
-      "sha256": "547cd0a7fabcf357756ae54742c1c9774078475c7abb39c9d60471aa72d30309"
+      "bytes": 365653,
+      "sha256": "367406b9b82a40793e93b57c1fff51c8192dc7cc76bcba5c8e35475f9f453696"
     },
     {
       "file": "downloads/public-project-reference-coverage.json",
@@ -1400,8 +1636,8 @@
     },
     {
       "file": "explore.html",
-      "bytes": 17722,
-      "sha256": "5a586d5a7d32a4356a7894982aeb9b1383bc56c8da3f7c301d23ac34662d6314"
+      "bytes": 17633,
+      "sha256": "967824e88274fa547001648605e3a844a908a6e8c8e673721d009eb563e3dbaf"
     },
     {
       "file": "file-actions.js",
@@ -1415,8 +1651,8 @@
     },
     {
       "file": "gallery.js",
-      "bytes": 5641,
-      "sha256": "bb2648380017901083eb1176d39db3d373ee011fadce329849fb2173ba8a4405"
+      "bytes": 5638,
+      "sha256": "58080a02a082996ae94cdf618b439c658b80bee1f75b399d4de857d4cb2aeea6"
     },
     {
       "file": "gallery/Downtown-transformation.mp4",
@@ -1442,6 +1678,151 @@
       "file": "gallery/citywide-20261028/wide-citywide-future-3200-af6f0611f926.avif",
       "bytes": 628529,
       "sha256": "e46ce0359e8e9a3adde16b0ab1c9cb9b509edd2e93e794986299fbe54dae49b9"
+    },
+    {
+      "file": "gallery/citywide-20261101/citywide-future-2026-11-01.png",
+      "bytes": 7150650,
+      "sha256": "c7347bebf53c5bdd5b516143f2bb4d4ae4994290b06e2ad41ec4a7f407aeac62"
+    },
+    {
+      "file": "gallery/citywide-20261101/display-citywide-future-2026-11-01.png",
+      "bytes": 7147227,
+      "sha256": "53d496052b9c5cf9b9812b6391d11e50664dc27d2ee9d05fc840856e9489f6af"
+    },
+    {
+      "file": "gallery/citywide-20261101/wide-citywide-future-1200-53d496052b9c.avif",
+      "bytes": 128718,
+      "sha256": "8d449988c0d56c5a97bc67385c3d3f84a92d22701bfc71b9f500bfc8741eb4a8"
+    },
+    {
+      "file": "gallery/citywide-20261101/wide-citywide-future-3200-53d496052b9c.avif",
+      "bytes": 656022,
+      "sha256": "6e2f96aa68042475dd095ba833bab98c897835f9811c38e422f1d2bbe4ac69de"
+    },
+    {
+      "file": "gallery/downtown-20261101/portraits-downtown-existing-1620-c261b967eee5.avif",
+      "bytes": 448881,
+      "sha256": "1349fdd060d7c4e443426224e787c14fe5dbebc825503606668a815d692d1cb7"
+    },
+    {
+      "file": "gallery/downtown-20261101/portraits-downtown-existing-810-c261b967eee5.avif",
+      "bytes": 165526,
+      "sha256": "717182da5eac7cd2f5820e78c3146accec18ab055120cb263b0423342c4b5a12"
+    },
+    {
+      "file": "gallery/downtown-20261101/portraits-downtown-future-1620-77d4a8f3205e.avif",
+      "bytes": 459558,
+      "sha256": "938c237d73feecc533f94fdaae4ae7d8a91563bc0d9d0be5d2669f6c4d6fe170"
+    },
+    {
+      "file": "gallery/downtown-20261101/portraits-downtown-future-810-77d4a8f3205e.avif",
+      "bytes": 169063,
+      "sha256": "2528cfe998a46e10e2daf5593f56434716ae56fc55b358a085282125e97e9a40"
+    },
+    {
+      "file": "gallery/downtown-20261101/portraits-downtown-skyline-construction-1620-abf3fdc56faf.avif",
+      "bytes": 149745,
+      "sha256": "36f35edb9048eab145a451de2562316b72a030a4698ff9edd0b81b21464be926"
+    },
+    {
+      "file": "gallery/downtown-20261101/portraits-downtown-skyline-construction-810-abf3fdc56faf.avif",
+      "bytes": 62148,
+      "sha256": "cc9e3b61b954668a96db4a36f22ef0b07c1aa52f71d3ae9920770d9fd52a29f7"
+    },
+    {
+      "file": "gallery/downtown-20261101/portraits-downtown-skyline-existing-1620-5eb9d8504e60.avif",
+      "bytes": 140397,
+      "sha256": "b5bfc049ebb9161aa4f4e2416a9f9dd45672d4d00a7d24f23c2f0626d78f7973"
+    },
+    {
+      "file": "gallery/downtown-20261101/portraits-downtown-skyline-existing-810-5eb9d8504e60.avif",
+      "bytes": 59292,
+      "sha256": "a52851b2ae176540d9ba9ce76385e03100a196e60b18d4968dad92baabe04a9c"
+    },
+    {
+      "file": "gallery/downtown-20261101/portraits-downtown-skyline-future-1620-a1d03c288de5.avif",
+      "bytes": 162356,
+      "sha256": "128578ae8ae9e7cb53a321f8556aaed14bbfd71acea4bfc6fa744f74b6fcfbdb"
+    },
+    {
+      "file": "gallery/downtown-20261101/portraits-downtown-skyline-future-810-a1d03c288de5.avif",
+      "bytes": 66191,
+      "sha256": "3fbc7768d632a241cd7f0ce7ba72472657c6e5cb94425a4c0acbdc8a604f4525"
+    },
+    {
+      "file": "gallery/downtown-20261101/share-preview-downtown-20261101-7d5a1f6061fc.jpg",
+      "bytes": 399463,
+      "sha256": "1553f62ecdad069aefb7b7f9180bbcc29fe40ada63c5dc6cafcd2fcc9534f609"
+    },
+    {
+      "file": "gallery/downtown-20261101/wide-downtown-existing-1200-820898aee102.avif",
+      "bytes": 159299,
+      "sha256": "67cb8e04d9ef50c2d815606c165135632a77a8f960297d78c5250513598d963b"
+    },
+    {
+      "file": "gallery/downtown-20261101/wide-downtown-existing-3200-820898aee102.avif",
+      "bytes": 642931,
+      "sha256": "804f7c05e28e408a750b99d32c4ff990fd43e25ca991066e922f523803d8472a"
+    },
+    {
+      "file": "gallery/downtown-20261101/wide-downtown-future-1200-98810a25e1b6.avif",
+      "bytes": 164101,
+      "sha256": "235441c03a118e4827b83ab5ee9d01c25622351981381ce570b99bb62ba2647c"
+    },
+    {
+      "file": "gallery/downtown-20261101/wide-downtown-future-3200-98810a25e1b6.avif",
+      "bytes": 668100,
+      "sha256": "52ec1320caa22daf0a212bc48971a57e75609e7d673a2eccad070351a588ac40"
+    },
+    {
+      "file": "gallery/downtown-20261101/wide-downtown-landmark-future-1200-837559edbbac.avif",
+      "bytes": 124672,
+      "sha256": "1d69165b44de85a30c16fd59d600fd90e33b46a9fcaa1945149bd812204209da"
+    },
+    {
+      "file": "gallery/downtown-20261101/wide-downtown-landmark-future-3200-837559edbbac.avif",
+      "bytes": 413571,
+      "sha256": "b91850d3380f7161019db6d82624b1c81a5ec81b46541471ae7fbb734df2a475"
+    },
+    {
+      "file": "gallery/downtown-20261101/wide-downtown-portrait-future-1200-22e3b1fcb704.avif",
+      "bytes": 209702,
+      "sha256": "965f7fb57d17d85f4665cfdfba328f7b3be1f00ba0bf2e94e5d4560630f28f2c"
+    },
+    {
+      "file": "gallery/downtown-20261101/wide-downtown-portrait-future-3200-22e3b1fcb704.avif",
+      "bytes": 851461,
+      "sha256": "f15512c52f529f7538412ae86395dc3ee441c28df5f06d2aabd01aadd64f7122"
+    },
+    {
+      "file": "gallery/downtown-20261101/wide-downtown-skyline-construction-1200-3df2e0c93c3e.avif",
+      "bytes": 71232,
+      "sha256": "57ceff37aae6bb2f64f4382bab5c2dbe5fea18b323009fd587d4b52594046276"
+    },
+    {
+      "file": "gallery/downtown-20261101/wide-downtown-skyline-construction-3200-3df2e0c93c3e.avif",
+      "bytes": 291826,
+      "sha256": "4276e38a86344283954bb8b8c3fab19f4bae5a1017e96494c2b324e94c6a0905"
+    },
+    {
+      "file": "gallery/downtown-20261101/wide-downtown-skyline-existing-1200-cfefacce1fc1.avif",
+      "bytes": 70032,
+      "sha256": "84199d520bb1aa096f1ee83dfa20c23ab2429a14a418e520881cd5aea1760244"
+    },
+    {
+      "file": "gallery/downtown-20261101/wide-downtown-skyline-existing-3200-cfefacce1fc1.avif",
+      "bytes": 287401,
+      "sha256": "c8f8047a66a7594317b119e5c27e3d97f4826ef475cffd4586327b3f345c7d17"
+    },
+    {
+      "file": "gallery/downtown-20261101/wide-downtown-skyline-future-1200-b38c9647f31d.avif",
+      "bytes": 71658,
+      "sha256": "24379a1a13a0bf147363bb1b38cf3aae9d15aebb2dd3ce6c78700ab9c4c98305"
+    },
+    {
+      "file": "gallery/downtown-20261101/wide-downtown-skyline-future-3200-b38c9647f31d.avif",
+      "bytes": 290309,
+      "sha256": "d12e2ec94a09f1cdb7e731faa771a31688064989e8add69f7e733819c44aa241"
     },
     {
       "file": "gallery/previews/020ca39a65103c2b/clarkson-future.png",
@@ -2195,8 +2576,8 @@
     },
     {
       "file": "image-experience.js",
-      "bytes": 1485,
-      "sha256": "a26d7f2d3265502c311ceffbcd948f339699767d9119ebb1bc62b7645e5c1b19"
+      "bytes": 1479,
+      "sha256": "9ead0bee9164217daec50d37f7f7e395d76207880b6a36a033091e6742357dcd"
     },
     {
       "file": "image-preview.js",
@@ -2210,8 +2591,8 @@
     },
     {
       "file": "index.html",
-      "bytes": 13068,
-      "sha256": "275a305be9e07344c26e30035d08de8238002dee60b8923ed94c16febd1d97b6"
+      "bytes": 12921,
+      "sha256": "9111f76bca373e9c05afb63d4165c0a14043875b5c0fcf1bcb901d58aab97b98"
     },
     {
       "file": "licenses/BricolageGrotesque-OFL.txt",
@@ -2245,8 +2626,8 @@
     },
     {
       "file": "media-catalog.js",
-      "bytes": 7162,
-      "sha256": "4bdb5b9a1f4819168693e17dd6a42cd310b93e35aad6359100d8e240203c759f"
+      "bytes": 8585,
+      "sha256": "97096b14b36444864782c1521e5aa2bfac525ab12a0eb33b738956a82c3fd98d"
     },
     {
       "file": "media-player.js",
@@ -2339,6 +2720,56 @@
       "sha256": "2073d1b0373039fb4317e70aef33af2dd0abdd5bb12835955765f9647bd55c02"
     },
     {
+      "file": "models/studies-20261101/50-high-exterior.glb",
+      "bytes": 418340,
+      "sha256": "5f367841de44129bebba0dc20fffc2a7c6d4fe9a2688e641159289ee43de78cc"
+    },
+    {
+      "file": "models/studies-20261101/50-high-exterior.glb.gz",
+      "bytes": 61988,
+      "sha256": "19076afc33d61c6bd21d480ce58b133aa83b862feaee7351cfe46257c6042d7f"
+    },
+    {
+      "file": "models/studies-20261101/mcity-m1-rev03-exterior.glb.gz",
+      "bytes": 3318788,
+      "sha256": "fa2dbb81b9cd0a03bbdf7d1c189e81066ca10ff5d0e0c45dae96b502c2e7320a"
+    },
+    {
+      "file": "models/studies-20261101/mcity-m2-rev03-exterior.glb.gz",
+      "bytes": 3454743,
+      "sha256": "f8df47618a455813ce83c64ced978e5b18797ee13f233be743ed09e8ce7f9f87"
+    },
+    {
+      "file": "models/studies-20261101/mcity-m3-exterior-overlay-v2.glb",
+      "bytes": 1832884,
+      "sha256": "de41aa0078aab3d32c0bdee631434878c8f0bed44dfaff66244b67dc50231699"
+    },
+    {
+      "file": "models/studies-20261101/mcity-m4-future-detail.glb",
+      "bytes": 338492,
+      "sha256": "193a33d5866adb9dbdd2aa8915ed802d9c4420918b4a34c9453d9aa12397fd3a"
+    },
+    {
+      "file": "models/studies-20261101/mcity-m4-spring2026-level41-detail.glb",
+      "bytes": 205772,
+      "sha256": "71ddefd801ed80defa5ccfeb7c2b36836c0a3ec0e14db93eef2f07c3ed4a4783"
+    },
+    {
+      "file": "models/studies-20261101/mcity-m5-design-detail.glb",
+      "bytes": 131820,
+      "sha256": "5fd6bd183936e546469e7d07fb7191767bed79f043cc8c74ec1d48727dede1b3"
+    },
+    {
+      "file": "models/studies-20261101/mcity-m6-dated-exterior.glb.gz",
+      "bytes": 1549077,
+      "sha256": "03cffd7b17cae8d431f3e30b567ac628415b87a09746951137d47a5ddab29693"
+    },
+    {
+      "file": "models/studies-20261101/mcity-m7-m8-dated-exteriors.glb.gz",
+      "bytes": 2621952,
+      "sha256": "109c685cb649b359df4b7a1340f9b228101f75d7505bdf988d0fc894128351f8"
+    },
+    {
       "file": "models/supplemental/pearson-airfield-context.json",
       "bytes": 1462,
       "sha256": "bd63fd97620556298d08da441095c4574c09956a8ea759c0a54d998e8f8c15ad"
@@ -2400,8 +2831,8 @@
     },
     {
       "file": "project-cards.js",
-      "bytes": 12985,
-      "sha256": "a8d054066ba26f44510a01947f7ae23cf637adc75431191d1c2cd62c93ef9cd7"
+      "bytes": 15042,
+      "sha256": "38dd644245984784a407c82b86b88f3287293754ab8ba5033886ab8462642025"
     },
     {
       "file": "reading-layout.css",
@@ -2425,8 +2856,8 @@
     },
     {
       "file": "reference-updates.html",
-      "bytes": 83016,
-      "sha256": "f7f8a0626e256bd41ec49921a68fc76694285c0cd5e7baf4c5ba2c4529cce29c"
+      "bytes": 83014,
+      "sha256": "875b60ccc8c0f91b2245df6092e38f9d35058dfb7fa1fa2b9d4ec395afabef3e"
     },
     {
       "file": "refinement-loading.js",
@@ -2485,8 +2916,8 @@
     },
     {
       "file": "review-renders.html",
-      "bytes": 37223,
-      "sha256": "3d5bdb2421d28276b6fa6be244b28f8e1c398c9a5553c784f3555749cdde7fb4"
+      "bytes": 37221,
+      "sha256": "b2487dc18fb6e4c0894ff3f85fe701c2750dd2f3e15ddb34bcafb930b84bb6a1"
     },
     {
       "file": "robots.txt",
@@ -2525,8 +2956,8 @@
     },
     {
       "file": "social-preview.js",
-      "bytes": 1225,
-      "sha256": "eb2b57945069bbe60507c06dca56176065f67d14a99586f0359d863fb723773b"
+      "bytes": 1222,
+      "sha256": "f5e56b905e8a7f9f37cee3ef81ca60f4a1fb77a1980be7f237aef6e8cd21eda4"
     },
     {
       "file": "social.css",
@@ -2535,8 +2966,8 @@
     },
     {
       "file": "social.html",
-      "bytes": 40302,
-      "sha256": "e9a4ce34e6d10940a10633a9f51dcbd1ad0a07b63b39072ecc66921b3830673e"
+      "bytes": 40299,
+      "sha256": "0e96c9bd95a96c8e07dd4224f61748f38577951067fb055bd0209a588e0b31f7"
     },
     {
       "file": "social.js",
@@ -2555,8 +2986,8 @@
     },
     {
       "file": "source-layer-cut.js",
-      "bytes": 4090,
-      "sha256": "19de9de2a3f95dca672d70b2fb704620efc3baf18622a5c4c0b84f18685c8d04"
+      "bytes": 4075,
+      "sha256": "8475a91921c44e811a584c8fa757dcd01f6d05c6252e10cb62b22d68fd087cb9"
     },
     {
       "file": "sources.css",
@@ -2565,8 +2996,8 @@
     },
     {
       "file": "sources.html",
-      "bytes": 12500,
-      "sha256": "f7ffaa291256e3917e70b9e25b726112ba9be4121a3571f22331eb987ff1e978"
+      "bytes": 12498,
+      "sha256": "61c65c9e802a09451e99f36d03a69449aafd377517fbe2189caa59b79b3ef7e3"
     },
     {
       "file": "sources.js",
@@ -2590,8 +3021,8 @@
     },
     {
       "file": "updates.html",
-      "bytes": 34417,
-      "sha256": "dbb862d977b39001d1fba225e9a37b5f87643c67144e9eb940bffe0f57e92dff"
+      "bytes": 35473,
+      "sha256": "5a9b2fb7034ec465f8ae3ce400d7fb6466b271357dbdb31c5c2b191d84439fbf"
     },
     {
       "file": "usability.css",
@@ -2890,8 +3321,8 @@
     },
     {
       "file": "viewer-bootstrap.js",
-      "bytes": 799,
-      "sha256": "4a56b1ac23f2e158e9f3ab31f4fff58d6079d36459097a820ea650a57badb80b"
+      "bytes": 798,
+      "sha256": "7c9cecec87ba8499a4295624dadf5c022d2d7114065e80b8bbc78d8d48141421"
     },
     {
       "file": "viewer-camera.js",
@@ -2919,5 +3350,5 @@
       "sha256": "2d9cfb19a32fac7548704fbfca44060267c233522645aa354fb4f6069e012d97"
     }
   ],
-  "bytes": 647910600
+  "bytes": 732375860
 }

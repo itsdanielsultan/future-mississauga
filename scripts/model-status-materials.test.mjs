@@ -24,10 +24,10 @@ function context(overrides={}){
 }
 
 test('construction and geometry confidence are independent in all three real material paths',()=>{
- for(const id of ['mcity-m5-developer-proxy','voya-towers-plan-derived']){
+ for(const id of ['mcity-m5-authored-detail-20261101','voya-towers-plan-derived']){
   const recorded=assets.find(asset=>asset.id===id);assert.ok(recorded,id);assert.equal(recorded.status,'Under Construction');assert.equal(recorded.uncertainGeometry,true);
   for(const uncertainGeometry of [false,true]){
-   const asset={...recorded,uncertainGeometry},body=mesh(asset.status,uncertainGeometry),nextModel=new THREE.Group();nextModel.add(body);
+   const asset={...recorded,uncertainGeometry,preserveMaterials:false},body=mesh(asset.status,uncertainGeometry),nextModel=new THREE.Group();nextModel.add(body);
    const run=context();Object.assign(run,{nextModel,asset});runInNewContext(mainPass,run);
    assert.equal(body.userData.displayStatus,'Under Construction',id);
    assert.equal(body.material.color.getHex(),statusColours['Under Construction'],id+' body');

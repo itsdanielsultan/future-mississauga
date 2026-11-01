@@ -1,3 +1,4 @@
+import {withoutAcceptedModelFields as withoutModel,comparableMcityAssets,acceptedModelProjectIds} from './mcity-asset-scope.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -15,12 +16,13 @@ const allowed=new Set(['existing','under_construction','approved','proposed','on
 for(const [kind,file,list] of [['projects','projects.json',projects],['groups','groups.json',groups],['assets','refinement-models.json',manifest.assets]]){
  test(`${kind}: exact reviewed IDs may only receive the listed new metadata; all prior fields remain intact`,()=>{
   const oldData=prior(file),old=kind==='assets'?oldData.assets:oldData;
-  assert.deepEqual(list.map(r=>kind==='projects'?withoutMcity(withoutStatus(kind,r)):withoutStatus(kind,r)),kind==='projects'?old.map(withoutMcity):old);
+  const comparable=rows=>(kind==='assets'?comparableMcityAssets(rows):rows).map(r=>withoutModel(kind,kind==='projects'?withoutMcity(withoutStatus(kind,r)):withoutStatus(kind,r)));
+  assert.deepEqual(comparable(list),comparable(old));
   for(const r of list){
    const expected=scope[kind][r.id];
    if(!expected)continue;
    const before=old.find(x=>x.id===r.id);
-   const metadataAfter=kind==='projects'?withoutMcity(r):r,metadataBefore=kind==='projects'?withoutMcity(before):before;
+   const metadataAfter=withoutModel(kind,kind==='projects'?withoutMcity(r):r),metadataBefore=withoutModel(kind,kind==='projects'?withoutMcity(before):before);
    assert.deepEqual(Object.keys(metadataAfter).filter(k=>!Object.hasOwn(metadataBefore,k)).sort(),expected);
    assert(allowed.has(r.lifecycle),r.id);assert.equal(r.lifecycleReviewedOn,'2026-11-01');
   }
@@ -98,7 +100,7 @@ test('CSV preserves every original record and field while adding only reviewed l
  const old=parseCSV(execFileSync('git',['show',base+':public/downloads/project-register.csv'],{encoding:'utf8',maxBuffer:16*1024*1024}));
  const current=parseCSV(fs.readFileSync(new URL('../public/downloads/project-register.csv',import.meta.url),'utf8'));
  const added=['lifecycle','approvalStage','lifecycleReviewedOn','lifecycleNote'];assert.deepEqual(current.headers,[...old.headers,...added]);
- const unchangedFields=r=>Object.fromEntries(old.headers.filter(k=>(!mcityContentIds.has(r.id)||!['status','statusDate','storeys','geometryCoverage','modelCaveat','sources'].includes(k))&&(!['ninth-6344','longview-44-45'].includes(r.id)||k!=='status')).map(k=>[k,r[k]]));
+ const unchangedFields=r=>Object.fromEntries(old.headers.filter(k=>(!mcityContentIds.has(r.id)||!['status','statusDate','storeys','geometryCoverage','modelCaveat','sources'].includes(k))&&(!['ninth-6344','longview-44-45'].includes(r.id)||k!=='status')&&(!acceptedModelProjectIds.has(r.id)||!['modelCaveat','geometryCoverage'].includes(k))).map(k=>[k,r[k]]));
  assert.deepEqual(current.rows.map(unchangedFields),old.rows.map(unchangedFields));
  for(const r of current.rows)for(const k of added)assert.equal(r[k],scope.projects[r.id]?(project(r.id)[k]||''):'');
 });
@@ -111,7 +113,11 @@ test('accuracy table current status matches project metadata while model notes r
   const row=rowFor(current,id),before=rowFor(old,id);assert(row&&before,id);
   const cells=[...row.matchAll(/<td>([\s\S]*?)<\/td>/g)].map(m=>m[1]);const oldCells=[...before.matchAll(/<td>([\s\S]*?)<\/td>/g)].map(m=>m[1]);
   assert(cells[1].includes(snapshot.taxonomy[project(id).lifecycle]),id);
-  assert.deepEqual([cells[0],...cells.slice(2)],[oldCells[0],...oldCells.slice(2)],id);
+  if(acceptedModelProjectIds.has(id)){
+   assert.equal(cells[0],oldCells[0],id);assert.equal(cells[2],oldCells[2].replace('No separate refinement asset registered','Supplemental model registered'),id);
+   const concise={'mcity-3':['±15 m uncertainty','City’s lower building geometry','mechanical steel and cavities are not modelled'],'mcity-4':['March 2020','215.65 m','Spring 2026','level 41','level 26'],'mcity-5':['36-storey','building height is unverified','not a measured construction stage'],'port-credit-50-high':['December 2025 drawings','facade frames and roof arches','Frame depths, glazing and finishes are approximate','future view shows the planned building','dated City model retains the older building','extent of demolition is not mapped']}[id];
+   if(concise){for(const text of concise)assert(cells[3].includes(text),id+': '+text);}else{assert(cells[3].includes(project(id).geometryCoverage),id);assert(cells[3].includes(project(id).modelCaveat),id);}
+  }else assert.deepEqual([cells[0],...cells.slice(2)],[oldCells[0],...oldCells.slice(2)],id);
  }
 });
 

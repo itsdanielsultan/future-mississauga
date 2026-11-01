@@ -10,7 +10,7 @@ const assets=read('refinement-models').assets,projects=read('projects'),override
 const model=(lifecycle,extra={})=>({userData:{lifecycle,displayStatus:displayStatusForLifecycle(lifecycle),...extra},geometry:{attributes:{position:{count:3}},index:{count:3}}});
 
 test('the actual Voya and M5 records retain construction lifecycle when approximate geometry is filtered',()=>{
- for(const id of ['voya-towers-plan-derived','mcity-m5-developer-proxy']){
+ for(const id of ['voya-towers-plan-derived','mcity-m5-authored-detail-20261101']){
   const asset=assets.find(item=>item.id===id),project=projects.find(item=>item.id===asset.projectId);
   const lifecycle=resolveModelLifecycle({Status:asset.status,lifecycle:asset.lifecycle,componentPhase:asset.componentPhase},{},project);
   assert.equal(lifecycle,'under_construction',id);assert.equal(asset.uncertainGeometry,true);

@@ -14,7 +14,7 @@ const {splitSourceOverlaps}=await import('../public/source-layer-cut.js');
 const {validateCityModelStudies}=await import('./validate-city-model-studies.mjs');
 const root=new URL('../',import.meta.url),read=async path=>JSON.parse(await readFile(new URL(path,root)));
 const catalogue=await read('public/data/model-previews.json'),refinements=await read('public/data/refinement-models.json');
-const assets=cityModelStudies(refinements.assets,catalogue).filter(a=>a.defaultVisible&&!a.lowerShell);
+const assets=cityModelStudies(refinements.assets,catalogue).filter(a=>a.previewAssets?.length&&!a.lowerShell);
 const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
 const fetcher=async url=>{const a=catalogue.assets.find(a=>assetURL(a.url)===url);assert(a,'Only a resolved catalogue model may be requested');return new Response(await readFile(new URL(a.repositoryFile||'public/'+a.url,root)));};
 const meshes=root=>{const result=[];root.traverse(o=>{if(o.isMesh)result.push(o);});return result;};
@@ -26,7 +26,7 @@ test('registered completed assemblies load by default; unrelated optional studie
  assert.deepEqual(assets.map(a=>a.projectId),['mcity-1-2','mcity-1-2','avia','edge-oro','edge-oro','artform','sgm-maritz-6710','ergocentric-275-superior']);
  for(const asset of assets)assert(shouldLoadRefinement(asset));
  assert(!shouldLoadRefinement({localOptional:true,projectId:'unrelated'}));
- assert.equal(cityModelStudies(refinements.assets,catalogue).filter(a=>!a.defaultVisible).length,refinements.assets.length-2);
+ assert.deepEqual(cityModelStudies(refinements.assets,catalogue).filter(a=>!a.previewAssets).map(a=>a.id),refinements.assets.filter(a=>!a.id.startsWith('mcity-m1-20261025')&&!a.id.startsWith('mcity-m2-20261025')).map(a=>a.id));
  await validateCityModelStudies(new URL('../public',import.meta.url).pathname);
 });
 

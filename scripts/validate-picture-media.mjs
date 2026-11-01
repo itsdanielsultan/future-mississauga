@@ -89,6 +89,8 @@ export async function validateRefinedPictureStructure(site){
  assert.deepEqual(Object.keys(pictures.images),Object.keys(before.images));assert.deepEqual(social.images.map(r=>r.file),oldSocial.images.map(r=>r.file));
  assert.equal(pictures.presentationDerivativeCount,33);assert.equal(social.presentationDerivativeCount,24);assert(social.nativePortraitRendering);
  const page=await readFile(join(site,'social.html'),'utf8');const articles=page.match(/<article\b[\s\S]*?<\/article>/g)??[];assert.equal(articles.length,24);
+ const current=await load(site,'data/downtown-media-20261101.json');
+ const currentPortraits=new Map(current.images.filter(row=>row.kind==='portraits').map(row=>[row.file,row]));
  let totalPreviewBytes=0,newFrames=0;
  for(const e of manifest.entries){
   const row=e.kind==='wide'?pictures.images[e.file]:social.images.find(r=>r.file===e.file);
@@ -102,8 +104,9 @@ export async function validateRefinedPictureStructure(site){
    assert.equal(row.width,3240);assert.equal(row.height,4050);assert.equal(e.preview.width,810);
    assert.equal(row.preview,e.preview.url);assert.equal(row.previewSHA256,e.preview.sha256);assert.equal(row.previewBytes,e.preview.bytes);
    assert.equal(row.previewWidth,e.preview.width);assert.equal(row.previewHeight,e.preview.height);
-   const card=articles.find(a=>a.includes('href="'+row.url+'"'));assert(card);assert.equal(card.split('href="'+row.url+'"').length-1,2);
-   assert(card.includes('src="'+row.preview+'"'));assert(card.includes('data-osm="'+row.sourceAttribution.openStreetMap+'"'));assert(card.includes('data-display-url="'+row.displayMaster.url+'"'));assert(card.includes('data-display-width="3240"'));assert(card.includes('data-display-height="4050"'));
+   const latest=currentPortraits.get(e.file),shown=latest||row,url=latest?.download.url||row.url,thumbnail=latest?.preview.url||row.preview;
+   const card=articles.find(a=>a.includes('href="'+url+'"'));assert(card);assert.equal(card.split('href="'+url+'"').length-1,2);
+   assert(card.includes('src="'+thumbnail+'"'));assert(card.includes('data-osm="'+shown.sourceAttribution.openStreetMap+'"'));assert(card.includes('data-display-url="'+shown.displayMaster.url+'"'));assert(card.includes('data-display-width="3240"'));assert(card.includes('data-display-height="4050"'));
   }
  }
  assert.equal(newFrames,31);assert.equal(totalPreviewBytes,manifest.previewTotalBytes);assert(totalPreviewBytes<=6500000);
@@ -112,7 +115,7 @@ export async function validateRefinedPictureStructure(site){
  for(const r of ix.images){const row=r.kind==='wide'?pictures.images[r.file]:social.images.find(p=>p.file===r.file);assert.equal(r.sha256,row.sha256);assert.deepEqual(r.nativeOriginal,row.nativeOriginal);assert.deepEqual(r.renderInfo,row.renderInfo);}
  for(const r of sources.images){const e=manifest.entries.find(p=>p.kind===r.kind&&p.file===r.file);assert.equal(r.sourceAttribution.openStreetMap,e.sourceAttribution.openStreetMap);assert(r.sourceAttribution.creditLines.length>=3);assert(!r.sourceAttribution.creditLines.join(' ').includes('OpenStreetMap contributors'));}
  const share=manifest.sharePreview,bytes=await readFile(join(site,share.url));assert.equal(share.format,'image/jpeg');assert.equal(bytes.length,share.bytes);assert.equal(sha(bytes),share.sha256);assert.deepEqual(jpegSize(bytes),[1200,750]);
- const home=await readFile(join(site,'index.html'),'utf8');const labelled=await load(site,'data/labelled-image-assets.json');for(const p of [home,page])assert(p.includes(labelled.sharePreview.url));
+ const home=await readFile(join(site,'index.html'),'utf8');const currentShare=await load(site,'data/share-preview-20261101.json');for(const p of [home,page])assert(p.includes('https://futuremississauga.com/'+currentShare.url));
  assert(!/\/Users\/|\/private\/|file:\/\/|\/home\/|\/var\/|\/tmp\//.test(JSON.stringify([manifest,sources,ix])),'Private paths leaked');
  return {publicationEvidence:'NOT_CHECKED_BY_LOCAL_STRUCTURE_PREFLIGHT',entries:Object.entries(pictures.images),originalImageVerification:{nativeMasterURLsPreserved:true,presentationDerivatives:33,separatePublicHashProofRequired:true,remoteBytesFetchedByThisStaticCheck:false},portraitGallery:{nativePortraitRecords:24,presentationDerivatives:24,localAVIFPreviews:24,dimensionsVerified:true,separatePublicHashProofRequired:true},displayPreviewSummary:{totalWide:33,totalPortraits:24,format:'AVIF',bytes:totalPreviewBytes},presentation:{images:57,publicAssets:manifest.assets.length,nativeCameraRefinements:newFrames,originalSourceDatesPreserved:true,nativeMasterURLsPreserved:true}};
 }

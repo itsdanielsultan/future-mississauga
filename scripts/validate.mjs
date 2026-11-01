@@ -1,6 +1,7 @@
 import {validateLabelledImages} from './validate-labelled-images.mjs';
 import {validateDocumentPreviews} from './validate-document-previews.mjs';
 import {validateCurrentCitywideMedia} from './validate-current-citywide-media.mjs';
+import {validateCurrentPictureMedia} from './validate-current-picture-media.mjs';
 import {validatePictureMedia} from './validate-picture-media.mjs';
 import {validateCityModelStudies} from './validate-city-model-studies.mjs';
 import {validateModelPreviews} from './validate-model-previews.mjs';
@@ -179,11 +180,12 @@ export async function validate(site = join(ROOT, 'public'), {enforcePublicationS
   const {entries, originalImageVerification, portraitGallery, displayPreviewSummary} = await validatePictureMedia(site);
   const labelledImages = await validateLabelledImages(site);
   const documentPreviews = await validateDocumentPreviews(site);
-  const currentCitywideMedia = await validateCurrentCitywideMedia(site);
+  const currentCitywideMedia = await validateCurrentCitywideMedia(site, {edition: '20261101'});
+  const currentPictureMedia = await validateCurrentPictureMedia(site);
   const documentLinks = await validateDocumentLinks(site);
   const modelPreviews = names.has('data/model-previews.json') ? await validateModelPreviews(site) : null;
   const cityModelStudies = await validateCityModelStudies(site);
-  const report = {labelledImages, documentPreviews, currentCitywideMedia, modelPreviews, cityModelStudies, files: files.length, publishedBytes: bytes, originalPNGs: entries.length, originalImageVerification, halfSizeDisplayPNGs: displayPreviewSummary?.halfSize ?? entries.length, displayPreviewSummary, portraitGallery, loadedModelAssets, refinementBounds, ...documentLinks, districtMetadata, localPNGchecksumsVerified: true, noHostedRuntime: true, noPrivateArtifacts: true};
+  const report = {labelledImages, documentPreviews, currentCitywideMedia, currentPictureMedia, modelPreviews, cityModelStudies, files: files.length, publishedBytes: bytes, originalPNGs: entries.length, originalImageVerification, halfSizeDisplayPNGs: displayPreviewSummary?.halfSize ?? entries.length, displayPreviewSummary, portraitGallery, loadedModelAssets, refinementBounds, ...documentLinks, districtMetadata, localPNGchecksumsVerified: true, noHostedRuntime: true, noPrivateArtifacts: true};
   console.log(JSON.stringify(report, null, 2));
   return report;
 }

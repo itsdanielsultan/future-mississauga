@@ -7,10 +7,11 @@ import {trustedModelURL} from '../public/model-preview-loading.js';
 export async function validateCityModelStudies(site){
  const catalogue=JSON.parse(await readFile(join(site,'data/model-previews.json')));
  const refinements=JSON.parse(await readFile(join(site,'data/refinement-models.json')));
- const assets=cityModelStudies(refinements.assets,catalogue).filter(asset=>asset.defaultVisible);
+ const assets=cityModelStudies(refinements.assets,catalogue).filter(asset=>asset.previewAssets?.length);
  assert.equal(assets.length,cityStudyPlacements.length);
  const used=[];
  for(const asset of assets){
+  assert.equal(asset.defaultVisible,true);
   assert(asset.bounds.length===2&&asset.bounds.every(row=>row.length===3&&row.every(Number.isFinite)));
   assert(asset.bounds[0].every((value,axis)=>value<=asset.bounds[1][axis]));
   if(asset.lowerShell){assert.equal(asset.id,'oro-20261027-composite');assert.equal(asset.status,'Under Construction');assert.deepEqual(asset.modes,['construction','future']);assert.equal(asset.constructionDesign,true);assert.equal(asset.lowerShell.plane,69.55);assert.deepEqual(asset.replacesSourceIds,['63-6206','63-6207']);assert.equal(asset.registration.scale,1);}else{assert.equal(asset.status,'Existing');assert.deepEqual(asset.modes,['existing','construction','future']);}
