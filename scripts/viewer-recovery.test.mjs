@@ -22,12 +22,12 @@ function exportHarness(){
  const output={width:0,height:0,getContext:()=>({fillRect(){},fillText(){},drawImage(){events.push('copy');}}),
   toBlob(callback){events.push('encode');encoding.promise.then(callback);}};
  const context={$,exporting:false,contextLost:false,current:{id:'downtown',name:'Downtown'},window:{atlasReady:'downtown'},
-  selectedStudyProjectId:null,projectById:new Map(),compare:false,mode:'future',exportImageURL:null,
+  selectedStudyProjectId:null,projectById:new Map(),selectedStudyLabel:()=>"Historical model study",compare:false,mode:'future',exportImageURL:null,
   document:{fonts:{load:()=>fonts.promise},createElement:type=>type==='canvas'?output:element(),createTextNode:text=>text},
   clearExportImage(){},render(){events.push('render');},canvas:{width:600,height:400},
-  presentationLayout:()=>({height:60,scale:1}),exportCreditLines:()=>['City of Mississauga'],displayedSources:{osm:false},
+  currentStatusLegend:()=>[],presentationLayout:()=>({height:60,scale:1}),exportCreditLines:()=>['City of Mississauga'],displayedSources:{osm:false},
   drawPresentationFooter(){},projectNorth:()=>null,THREE,camera:{},controls:{target:{}},
-  withPNGMetadata:()=>{events.push('metadata');return metadata.promise;},
+  STATUS_CLASSIFICATION_EDITION:'2026-11-01',withPNGMetadata:()=>{events.push('metadata');return metadata.promise;},
   URL:{createObjectURL:blob=>{urls.push(blob);return 'blob:test';}}};
  runInNewContext(section("$('#exportBtn').onclick=async()=>{",'function drawFrame(){'),context);
  return {context,$,fonts,encoding,metadata,events,urls,start:()=>$('#exportBtn').onclick()};

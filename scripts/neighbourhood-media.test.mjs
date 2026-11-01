@@ -37,14 +37,14 @@ test('before and after bind the same base and ground, with the existing-home add
   assert.deepEqual(manifest.matchedPresentation.lightFrom,[-850,-420,380]);
 });
 
-test('Fairview preview reports the study update and varying source dates without inventing a render date',()=>{
+test('Fairview preview keeps the study update date without generic source-version copy',()=>{
   assert.equal(manifest.renderDate,null);assert.equal(manifest.sourceGeometryDate,null);
   for(const row of manifest.images){
     const preview=neighbourhoodPreview(manifest,row.url,base);
     assert.match(preview.meta,/Updated 28 Oct 2026/);assert.doesNotMatch(preview.meta,/Rendered/);
-    assert.equal(preview.sourceEdition,'Source geometry dates vary.');assert.equal(preview.osm,false);
+    assert.equal(preview.sourceEdition,undefined);assert.equal(preview.description,undefined);assert.equal(preview.osm,false);
     assert.equal(preview.download,row.url);assert.equal(preview.src,row.url);
-    assert.match(preview.description,/Existing homes.*added.*Citywide model/);
+    assert.match(manifest.description,/Existing homes.*added.*Citywide model/);
     assert.equal(neighbourhoodPreview(manifest,'https://other.example/'+row.url,base),null);
   }
   assert.equal(neighbourhoodPreview(manifest,'assets/other-study.png',base),null);

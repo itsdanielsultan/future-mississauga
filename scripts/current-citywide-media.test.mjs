@@ -54,7 +54,7 @@ test('gallery selection merges new dimensions and provenance without stale camer
  assert.equal(row.presentationInfo.type,'new-still-assembly');assert.equal(row.presentationInfo.cameraChanged,undefined);
  for(const [name,record]of Object.entries(ordinary.images))if(name!=='citywide-future.png')assert.deepEqual(current.images[name],record,name);
  const shown=pictureProvenance(row.renderInfo,row.width);
- assert.equal(shown.meta,'Rendered 28 Oct 2026 · 5K PNG');assert.equal(shown.sourceEdition,'Model sources vary by date');assert.equal(shown.notice,'');
+ assert.deepEqual(shown,{meta:'Rendered 28 Oct 2026 · 5K PNG'});
  assert.deepEqual(refreshCatalogPictures(structuredClone(current),integrated),current,'reapplying current selection is idempotent');
  const withoutPresentation=fixture();delete withoutPresentation.presentationInfo;
  const selected=refreshCatalogPictures(structuredClone(pictures),integrateCurrentCitywide(historical,withoutPresentation,base));
@@ -92,10 +92,10 @@ test('wrong view, missing mixed-source evidence and mismatched preview bytes fai
  assert.equal(historical.currentCitywide,undefined);
 });
 
-test('mixed-source presentation cannot accidentally show a single as-built date',()=>{
- assert.equal(pictureProvenance({sourceDatesMixed:true,sourceModelDate:'2026-10-28'},3840).sourceEdition,'Model sources vary by date');
- assert.equal(pictureProvenance({sourceModelDate:'2026-10-21'},6144).sourceEdition,'Model version: 21 Oct 2026');
- assert.match(pictureProvenance(pictures.images['citywide-future.png'].renderInfo,3840).notice,/earlier view/);
+test('picture controls never substitute a source-model date for the rendered date',()=>{
+ assert.deepEqual(pictureProvenance({sourceDatesMixed:true,sourceModelDate:'2026-10-28'},3840),{meta:'4K PNG'});
+ assert.deepEqual(pictureProvenance({sourceModelDate:'2026-10-21'},6144),{meta:'6K PNG'});
+ assert.deepEqual(pictureProvenance(pictures.images['citywide-future.png'].renderInfo,3840),{meta:'Rendered 4 Oct 2026 · 4K PNG'});
 });
 
 
@@ -113,10 +113,10 @@ test('the actual approved Citywide package selects current pixels and dates whil
  assert.equal(current.nativeSource.sha256,actual.nativeRenderSHA256);assert.equal(current.nativeOriginal,undefined);
  assert.equal(current.sourceAttribution.photoReference.name,'David Lasker/Cityscape Photography');
  const shown=pictureProvenance(current.renderInfo,current.width);
- assert.equal(shown.meta,'Rendered 28 Oct 2026 · 4K PNG');assert.equal(shown.sourceEdition,'Model sources vary by date');assert.equal(shown.notice,'');
+ assert.deepEqual(shown,{meta:'Rendered 28 Oct 2026 · 4K PNG'});
  const index=indexMedia(loaded,base),old=historical.images.find(row=>row.file==='citywide-future.png');
  for(const url of [...old.aliases,old.download.url,old.displayMaster.url]){
-  const record=index.get(new URL(url,base).href);assert.equal(record.renderInfo.renderDate,'2026-10-04');assert.match(pictureProvenance(record.renderInfo,record.download.width).notice,/earlier view/);
+  const record=index.get(new URL(url,base).href);assert.equal(record.renderInfo.renderDate,'2026-10-04');assert.deepEqual(Object.keys(pictureProvenance(record.renderInfo,record.download.width)),['meta']);
  }
  assert.deepEqual(historical,snapshot);
 });

@@ -1,5 +1,5 @@
-import {createImagePreview} from './image-preview.js?v=20261028-citywide1';
-import {pictureProvenance} from './image-provenance.js?v=20261028-citywide1';
+import {createImagePreview} from './image-preview.js?v=20261101-gallery1';
+import {pictureProvenance} from './image-provenance.js?v=20261101-gallery1';
 import {resolveMedia} from './media-catalog.js?v=20261028-citywide1';
 export function installSocialPreview(root=document){
  const preview=createImagePreview();

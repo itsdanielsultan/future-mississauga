@@ -12,15 +12,10 @@ html .media-preview__close:hover{background:#f7eeee}
 html .media-preview__stage{position:relative;display:grid;place-items:center;overflow:hidden;min-height:0;padding:12px;background:#f8fafb}
 html .media-preview__stage>img{display:block;width:100%;height:100%;max-height:none;min-width:0;min-height:0;object-fit:contain;background:transparent}
 html .media-preview__status{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);max-width:90%;padding:8px 12px;margin:0;background:#fffffff2;border-radius:4px;font-size:12px;text-align:center;color:#6b6662}
-html .media-preview__details{padding:14px 24px;max-height:35dvh;overflow:auto;background:#fff;border-top:1px solid #e4dedb}
-html .media-preview .media-preview__description{font-size:14px;line-height:1.5;margin:0 0 8px;max-width:70ch;color:#6b6662}
-html .media-preview .media-preview__footer{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;border:0;padding:0;margin:0;background:#fff}
+html .media-preview .media-preview__footer{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;border:0;border-top:1px solid #e4dedb;padding:14px 24px;margin:0;background:#fff}
 html .media-preview__footer a{display:inline-flex;align-items:center;min-height:44px;font-size:14px;color:#a23b3b;margin:0;text-underline-offset:4px}
 html .media-preview__footer .media-preview__download{padding:9px 18px;border-radius:5px;background:#a23b3b;color:#fff;text-decoration:none;font-weight:700}
 html .media-preview__credits{display:flex;flex-wrap:wrap;gap:14px;margin-left:auto}
-html .media-preview__notes{font-size:12px;color:#6b6662;margin-top:8px}
-html .media-preview__notes summary{cursor:pointer;padding:5px 0}
-html .media-preview__notes p{font-size:12px;line-height:1.5;margin:8px 0;max-width:75ch}
 html dialog.media-preview--portrait{width:min(820px,calc(100vw - 40px),calc((100dvh - 210px)*.8 + 24px))}
 html .image-preview-trigger{display:block;padding:0;border:0;background:transparent;width:100%;cursor:zoom-in}
 html main a:has(>img){cursor:zoom-in}
@@ -41,11 +36,9 @@ html .skyline-film media-loading-indicator{--media-primary-color:#a23b3b;--media
  html .media-preview__view{order:3;flex-basis:100%}
  html .media-preview__view select{max-width:none;flex:1}
  html .media-preview__stage{padding:7px}
- html .media-preview__details{padding:10px 14px;max-height:31dvh}
  html .media-preview__credits{margin-left:0;gap:12px}
- html .media-preview__footer{gap:6px 14px}
+ html .media-preview .media-preview__footer{gap:6px 14px;padding:10px 14px}
  html .media-preview__footer a{font-size:12px;min-height:40px}
- html .media-preview .media-preview__description{font-size:13px}
 }
 html .media-preview [hidden]{display:none!important}
 

@@ -1535,7 +1535,9 @@
       "replacementModes": [
         "future"
       ],
-      "sha256": "2aae3db6fa73b801eab356839b37c10587316bf29ff2c2d4ab66c694dc5ed1a6"
+      "sha256": "2aae3db6fa73b801eab356839b37c10587316bf29ff2c2d4ab66c694dc5ed1a6",
+      "lifecycle": "under_construction",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "assetId": "voya-towers-plan-derived",
@@ -13904,7 +13906,9 @@
         ]
       },
       "downloadSHA256": "2402b603d47c3ba0770eb55847632a9c1a32c7a0117d914fe810705652e181f6",
-      "downloadBytes": 1104356
+      "downloadBytes": 1104356,
+      "lifecycle": "under_construction",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "wf-26park-current-plan",
@@ -15612,7 +15616,9 @@
         "demolitionPermitIssued": "2026-08-12",
         "source": "https://urbantoronto.ca/news/2026/10/demolition-advances-11-storey-affordable-rental-near-port-credit-go.61899",
         "permitSource": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Issued_Building_Permits/FeatureServer/0/query?where=ADDRESS+%3D+%2750+HIGH+ST+E%27&outFields=%2A&returnGeometry=false&f=json"
-      }
+      },
+      "lifecycle": "approved",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "wf-128-current-plan",
@@ -16217,7 +16223,9 @@
       "replacementModes": [
         "future"
       ],
-      "bytes": 13884
+      "bytes": 13884,
+      "lifecycle": "approved",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "wf-900-lakeshore-current-plan",
@@ -23830,7 +23838,14 @@
       ],
       "replacementModes": [
         "future"
-      ]
+      ],
+      "componentPhase": {
+        "id": "brightwater-future-concept",
+        "label": "Future blocks in the adopted 2024 concept",
+        "lifecycle": "proposed"
+      },
+      "lifecycle": "proposed",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "wf-70-settlement-envelope",
@@ -24327,7 +24342,9 @@
       "replacementModes": [
         "future"
       ],
-      "bytes": 10420
+      "bytes": 10420,
+      "lifecycle": "approved",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "wf-170-settlement-envelope",
@@ -24645,7 +24662,9 @@
       "replacementModes": [
         "future"
       ],
-      "bytes": 5564
+      "bytes": 5564,
+      "lifecycle": "approved",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "exchange-recorded-topped-structures",
@@ -25394,7 +25413,9 @@
       "url": "models/refinement/aura-townhome-envelopes.glb",
       "replacementModes": [
         "future"
-      ]
+      ],
+      "lifecycle": "proposed",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "projectId": null,
@@ -27560,7 +27581,9 @@
         "minimumTerrainClearanceM": 0.01,
         "watertight": false,
         "fabricationReady": false
-      }
+      },
+      "lifecycle": "proposed",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "perla-towers-source-envelope",
@@ -27991,7 +28014,9 @@
         "Plan registration relates older source contours to the 2024 mapped podium. Exact current balconies, roof plant and facade details are not reconstructed.",
         "The Ontario 2023 DSM catalog record returned NoData here; no LiDAR-derived building height is claimed.",
         "The seven native municipal scene leaves inspected around this site did not contain these two towers. No existing source IDs are suppressed."
-      ]
+      ],
+      "lifecycle": "existing",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "assetId": "emtc-northwest-2026-settlement",
@@ -28688,7 +28713,9 @@
           227.86000061035156,
           3618.4912109375
         ]
-      ]
+      ],
+      "lifecycle": "approved",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "port-credit-mapped-docks",
@@ -33438,7 +33465,9 @@
       "statusDateCaveat": "Planned full form only. Level8 work mentioned August2026 is not converted into an invented measurable current-progress object.",
       "downloadSHA256": "66400f11de4bd7444dad508f3d118415d50b9fd7686e07f7c33c1c56969b1fa1",
       "downloadBytes": 399380,
-      "materialNote": "Display palette supplied by the atlas, matching other uncertain reconstructions; no imported default metallic material."
+      "materialNote": "Display palette supplied by the atlas, matching other uncertain reconstructions; no imported default metallic material.",
+      "lifecycle": "under_construction",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "pier-house-townhome-reference",
@@ -49666,7 +49695,9 @@
       "targetCompletionDate": null,
       "geometryDate": "2026marketing plan/current City parcel, checked2026-09-27",
       "downloadSHA256": "d54087418b93f9baa585036443739a9b66ddfaef752e452ad6b2622df3964447",
-      "downloadBytes": 1423948
+      "downloadBytes": 1423948,
+      "lifecycle": "approved",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "south-banks-plan-derived",
@@ -68188,7 +68219,9 @@
       "modelCaveat": "Independent reconstruction of seventeen South Banks marketing-plan blocks, registered to City SP 26/2 W1 with street/address checks. The plan is artist concept reproduced by a broker, corroborated by the developer location map and official streetscape; not permit/BIM geometry. Three visible facade levels inform an estimated 9.9 m wall height, 12.9 m pitched roof maximum or 13.0 m flat-roof access/parapet maximum. The artist concept compresses road allowances; a direct street-centre fit places edge roofs beyond the legal parcel, so one whole-plan transform fits the visible landscaped site edge to the City parcel rectangle. No published metric heights were recovered: height uncertainty \u00b13 m, placement \u00b14 m and outline \u00b12 m are modelling judgements, not survey confidence intervals. Roof pitches, roof-access outlines, individual bays, windows, balcony/parapet dimensions and floor spacing are schematic; no dwelling count is inferred from facade bays. The City application records 306 townhouses, active with no approval date; this future-only model does not establish construction or occupancy. Candidate exterior refinement: repeated cross-gables interpreted from the 11 August 2026 South Banks artist-concept plan and Elevation A. Ridge centres are approximate plan picks; gable rise of 2.25 m and bay half-width of 0.16 times block short dimension are modelling assumptions. Existing block placement, eaves, main roof maximum, facade levels, terrain foundations and eight flat-roof blocks are unchanged. This does not establish permit dimensions, exact roof pitch, construction status or completion. Gable solids intersect the retained main roof as a visual assembly, not fabrication-ready union geometry. Cross-gables follow the original August 11, 2026 artist concept and Elevation A. Gable rise and spacing are inferred proportions, not approved dimensions. September launch material advertises 2029 occupancy as a non-guaranteed target; construction is unverified.",
       "downloadSHA256": "bf3673b5ebe83ada7f6a84c4985b2b370d17597a0c6066065e8430556b647639",
       "downloadBytes": 1837036,
-      "publicModelFileDownloadPermission": "Original design files and separate model downloads are not distributed. Adapted geometry is used in the interactive planning visualization."
+      "publicModelFileDownloadPermission": "Original design files and separate model downloads are not distributed. Adapted geometry is used in the interactive planning visualization.",
+      "lifecycle": "proposed",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "aura-additional-plan-envelopes",
@@ -68844,7 +68877,9 @@
       "completionDate": null,
       "targetCompletionDate": null,
       "downloadSHA256": "83c8a8a5d6056894ce3af0210f12d9631c7f8c54c3fa3155d0e5aea73ea24f0b",
-      "downloadBytes": 33964
+      "downloadBytes": 33964,
+      "lifecycle": "proposed",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "30-eglinton-west-approved-envelope",
@@ -69805,7 +69840,9 @@
         "sourceLimitation": "Primary City application appendix text indexed by search; direct PDF403 prevented full source-plan inspection. Research agent holds corroboration."
       },
       "downloadSHA256": "8bdbe8bbf8f0535cc773a151bc79a3afbebf6ef02fef50c691e29632f78ff460",
-      "downloadBytes": 43748
+      "downloadBytes": 43748,
+      "lifecycle": "approved",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "30-eglinton-west-retained-office",
@@ -70126,7 +70163,14 @@
         "minimumTowerClearanceM": 13.59062779338193
       },
       "downloadSHA256": "3f61b3e773fba6fbe76973bda1abb7ba7cf4a638a695db9c3020ede61bfb18e0",
-      "downloadBytes": 16732
+      "downloadBytes": 16732,
+      "componentPhase": {
+        "id": "retained-office",
+        "label": "Retained existing office",
+        "lifecycle": "existing"
+      },
+      "lifecycle": "existing",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "block-nine-reference-derived",
@@ -71673,7 +71717,9 @@
       "publicModelFileDownloadPermission": "Independent study asset served in the viewer; public model downloads remain disabled. Source brochure images are references and are not republished.",
       "url": "models/refinement/block-nine-reference-derived.glb",
       "downloadSHA256": "f338d310c703599d5a23282d23f143e424dafda25dbcce6101eb4a86e9f31cd6",
-      "downloadBytes": 93900
+      "downloadBytes": 93900,
+      "lifecycle": "existing",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "aldo-1422-study",
@@ -71804,7 +71850,9 @@
           "sources": "North-up aerial imagery, City 2024 footprint, supplied front and rear design references",
           "sourceGeometryChanged": false
         }
-      }
+      },
+      "lifecycle": "unknown",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "glen-erin-2026-private-plan-study",
@@ -72568,7 +72616,9 @@
         84.44373321533203,
         5134.441162109375
       ],
-      "uncertainGeometry": true
+      "uncertainGeometry": true,
+      "lifecycle": "under_construction",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "burnhamthorpe-community-centre-20261008",
@@ -72875,7 +72925,9 @@
       ],
       "url": "models/tomken-4094-study.glb",
       "downloadBytes": 573948,
-      "downloadSHA256": "a599aa29470632af0c34f87bd6ba325016395b47df372c29dfef0a5f8454a5a0"
+      "downloadSHA256": "a599aa29470632af0c34f87bd6ba325016395b47df372c29dfef0a5f8454a5a0",
+      "lifecycle": "approved",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "st-hilary-photo-derived-private-pilot",
@@ -73013,7 +73065,9 @@
         -1986.2542114257812,
         31.559999465942383,
         1938.443359375
-      ]
+      ],
+      "lifecycle": "existing",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "block22-2021-private-roof-study",
@@ -73364,7 +73418,9 @@
       ],
       "url": "models/square-one-block22-study.glb",
       "downloadBytes": 919312,
-      "downloadSHA256": "ac7a62680275ab2961e1e7c15de66e9cd5359c18ac32306256b06491b7c8760b"
+      "downloadSHA256": "ac7a62680275ab2961e1e7c15de66e9cd5359c18ac32306256b06491b7c8760b",
+      "lifecycle": "on_hold",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "merner-41-bay-20261008",
@@ -73675,7 +73731,9 @@
         -707.7188720703125,
         8.836400032043457,
         4396.316162109375
-      ]
+      ],
+      "lifecycle": "unknown",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "leanne-2155-current-plan",
@@ -75311,7 +75369,9 @@
       "displayGroundNote": "Displayed foundation contacts follow the atlas terrain. Source roof/floor levels above the foundation are retained; vertical-datum compatibility is not survey-certified.",
       "replacementModes": [
         "future"
-      ]
+      ],
+      "lifecycle": "approved",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "bytes": 55452,
@@ -75439,7 +75499,9 @@
         3605.0999755859375
       ],
       "lon": -79.58667833285853,
-      "lat": 43.55477533216643
+      "lat": 43.55477533216643,
+      "lifecycle": "approved",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "bytes": 2048,
@@ -75557,7 +75619,9 @@
         1692.2421875
       ],
       "lon": -79.56333381776086,
-      "lat": 43.571707791126485
+      "lat": 43.571707791126485,
+      "lifecycle": "under_construction",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "dundas-1225-may2026-plan-envelope",
@@ -76067,7 +76131,9 @@
         2120.005859375
       ],
       "lon": -79.59819964604004,
-      "lat": 43.56828908218127
+      "lat": 43.56828908218127,
+      "lifecycle": "approved",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "village-green-725-uncertain-reference",
@@ -76493,7 +76559,9 @@
       "replacementModes": [
         "future"
       ],
-      "replacementFootprintsXZ": []
+      "replacementFootprintsXZ": [],
+      "lifecycle": "under_construction",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "fowler-1970-july2026-plan-envelope",
@@ -76776,7 +76844,7 @@
       "sourceIds": [],
       "status": "Approved",
       "statusDate": "2026-09-29",
-      "displayStatus": "Council adopted zoning amendment; appeal period open until October 28, 2026",
+      "displayStatus": "Council passed; appeal outcome unverified",
       "sourceAsOf": "2026-10-10",
       "uncertain": true,
       "uncertainGeometry": true,
@@ -78533,7 +78601,15 @@
         }
       ],
       "displayGroundNote": "Displayed foundation contacts follow the atlas terrain. Source roof/floor levels above the foundation are retained; vertical-datum compatibility is not survey-certified.",
-      "modelQuality": "Three current public-plan envelopes; unit/approval-version confirmation pending. Roof levels primary verified, notched outlines independently traced, facade and roof equipment omitted."
+      "modelQuality": "Three current public-plan envelopes; unit/approval-version confirmation pending. Roof levels primary verified, notched outlines independently traced, facade and roof equipment omitted.",
+      "lifecycle": "approved",
+      "lifecycleReviewedOn": "2026-11-01",
+      "displayStatusHistory": [
+        {
+          "displayStatus": "Council adopted zoning amendment; appeal period open until October 28, 2026",
+          "supersededOn": "2026-11-01"
+        }
+      ]
     },
     {
       "id": "longview-three-new-homes-reference",
@@ -78912,7 +78988,9 @@
       "replacementModes": [
         "future"
       ],
-      "replacementFootprintsXZ": []
+      "replacementFootprintsXZ": [],
+      "lifecycle": "approved",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "nrc-2620-speakman-reference-review",
@@ -79250,7 +79328,9 @@
       "fitToTerrain": false,
       "modelFidelity": "Optional early-plan exterior study. Source controls from December2023 50-home plan; current51-home architecture/height/grade not verified.",
       "replacesSourceIds": [],
-      "replacementFootprintsXZ": []
+      "replacementFootprintsXZ": [],
+      "lifecycle": "under_construction",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "winding-trail-1355-local-integration",
@@ -79837,7 +79917,9 @@
           "title": "SV-M2-01 \u00b7 Street View June 2024",
           "use": "Private visual reference, no images or textures redistributed"
         }
-      ]
+      ],
+      "lifecycle": "existing",
+      "lifecycleReviewedOn": "2026-11-01"
     },
     {
       "id": "mcity-m2-20261025-exterior-study",
@@ -80231,7 +80313,9 @@
           "title": "SV-M2-01 \u00b7 Street View June 2024",
           "use": "Private visual reference, no images or textures redistributed"
         }
-      ]
+      ],
+      "lifecycle": "existing",
+      "lifecycleReviewedOn": "2026-11-01"
     }
   ],
   "projectUpdates": [

@@ -28,3 +28,16 @@ test('a download without a figure caption does not duplicate the action or forma
  const {anchor,attributes,root}=fixture();prepareImageLinks(root);
  assert.equal(attributes.get('aria-label'),'Download PNG');assert.equal(anchor.title,'Download PNG');
 });
+
+test('a picture download keeps its own title inside a broad updates section',()=>{
+ globalThis.location={href:'https://futuremississauga.com/updates.html',origin:'https://futuremississauga.com'};
+ const {anchor,attributes,root}=fixture('1225 Dundas Street East');
+ const originalClosest=anchor.closest;
+ anchor.closest=selector=>selector==='section,article'?{querySelector:()=>({textContent:'A simpler way to browse.'})}:originalClosest(selector);
+ prepareImageLinks(root);
+ assert.equal(attributes.get('aria-label'),'Download 1225 Dundas Street East PNG');
+ const second=fixture('A longer descriptive caption');
+ second.anchor.dataset.previewTitle='1225 Dundas Street East';
+ prepareImageLinks(second.root);
+ assert.equal(second.attributes.get('aria-label'),'Download 1225 Dundas Street East PNG');
+});

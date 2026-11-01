@@ -1,86 +1,145 @@
-/* Supporting pages extend the same open white/red reading system. */
-html .reading-page { margin: 0; background: #fff; color: var(--site-ink); }
+/* Shared reading rhythm for the supporting pages. */
+html .reading-page {
+  --reading-width: 1280px;
+  --reading-gutter: clamp(24px, 4vw, 48px);
+  --reading-measure: 65ch;
+  --reading-rule: #e4dedb;
+  --reading-muted: #6b6662;
+  --reading-accent: #a23b3b;
+  margin: 0;
+  background: #fff;
+  color: var(--site-ink, #2e2b2a);
+}
 .reading-page main, .reading-page main * { box-sizing: border-box; }
-html .reading-page :is(.render-main, .review-main, .accuracy-main, .recent-updates) { max-width: 1536px; margin: 0 auto; padding: 54px var(--page-gutter) 60px; font: 400 16px/1.65 'Lato', sans-serif; }
-html .reading-page :is(.render-main, .review-main, .accuracy-main, .update-intro) h1 { max-width: 1000px; margin: 0 0 22px; font-size: clamp(42px, 4.7vw, 68px); line-height: 1.08; font-weight: 500; letter-spacing: -.04em; }
-html .reading-page :is(.render-main, .review-main, .accuracy-main, .recent-updates) h2 { font-weight: 500; letter-spacing: -.025em; }
-html .reading-page :is(.render-main, .review-main, .accuracy-main, .recent-updates) a { color: #a23b3b; }
-html .reading-page :is(.render-intro, .lede) { max-width: 74ch; font-size: 20px; line-height: 1.55; }
-html .reading-page .page-date { margin: -8px 0 22px; color: #6b6662; font-size: 14px; line-height: 1.5; }
-html .reading-page :is(.render-basis, .change-intro, .limit, .credits, .review-footer) { max-width: 85ch; line-height: 1.65; }
-html .reading-page :is(.render-pair figcaption, .image-pair figcaption, .limit, .credits, .review-footer, .note, .count, .update-note, .update-bottom p, .update-render figcaption, .state, .accuracy-main small) { color: #6b6662; }
-html .reading-page :is(.render-note, .local-note) { max-width: 90ch; padding: 18px 0; margin: 24px 0; border: 0; border-top: 1px solid #e4dedb; border-bottom: 1px solid #e4dedb; border-radius: 0; background: #fff; color: #6b6662; font-size: 15px; line-height: 1.65; }
-html .reading-page :is(.render-main details, .update-note, .approval-update) { background: transparent; }
-html .reading-page .render-main details { color: #6b6662; padding: 12px 0; }
-html .reading-page .render-main summary { color: #a23b3b; min-height: 32px; }
-html .reading-page .render-main details p { margin: 6px 0 0; }
-html .reading-page :is(.render-project, .model-change, .work, .stats) { border-color: #e4dedb; }
-html .reading-page :is(.render-project, .model-change) { scroll-margin-top: calc(var(--site-header-height) + 18px); }
-html .reading-page :is(.render-jump, .jump-list) { font: 400 15px/1.6 'Lato', sans-serif; gap: 10px 24px; }
-html .reading-page :is(.render-pair img, .image-frame, .accuracy-main figure img) { background: #f5f4f2; border-radius: 6px; }
-html .reading-page .eyebrow { color: #6b6662; font-size: 13px; font-weight: 400; text-transform: none; letter-spacing: 0; line-height: 1.5; }
-html .reading-page .latest-studies { padding-top: 12px; }
-html .reading-page .update-intro { max-width: 880px; margin-bottom: 36px; }
-html .reading-page .update-intro > p:not(.page-date):not(.update-note) { font-size: 20px; line-height: 1.55; }
-html .reading-page .approval-update { max-width: 980px; margin-top: 36px; padding-top: 28px; border-top: 1px solid #e4dedb; }
-html .reading-page .approval-update h2 { font-size: clamp(26px, 2.4vw, 34px); line-height: 1.2; margin: 0 0 16px; }
-html .reading-page .approval-update p { margin: 0 0 14px; }
-html .reading-page .approval-update .update-area { margin-bottom: 9px; }
-html .reading-page .update-list { margin: 38px 0; gap: 0; }
-html .reading-page .update-row { padding: 28px 0; gap: 48px; border-top: 1px solid #e4dedb; }
-html .reading-page .update-area { color: #6b6662; font-size: 13px; letter-spacing: 0; text-transform: none; }
-html .reading-page .update-links { gap: 10px 24px; }
-html .reading-page .update-row h2 a { color: #2e2b2a; }
-html .reading-page .update-row h2 a:hover { color: #a23b3b; }
-html .reading-page .accuracy-main :is(select, input) { min-height: 44px; background: #fff; border: 1px solid #e4dedb; border-radius: 6px; font: 400 15px/1.4 'Lato', sans-serif; }
-html .reading-page .accuracy-main .map-choice { gap: 16px; }
-html .reading-page .accuracy-main .bar { background: linear-gradient(to right, #a23b3b var(--length), #e4dedb var(--length)); }
+html .reading-page :is(.render-main, .review-main, .accuracy-main, .recent-updates) {
+  width: 100%;
+  max-width: var(--reading-width);
+  margin: 0 auto;
+  padding: 64px var(--reading-gutter) 80px;
+  font: 400 17px/1.65 'Lato', sans-serif;
+}
+html .reading-page :is(.render-main, .review-main, .accuracy-main, .recent-updates) > * { min-width: 0; }
+html .reading-page :is(.render-main, .review-main, .accuracy-main, .update-intro) h1 {
+  max-width: 18ch;
+  margin: 0 0 24px;
+  font: 500 clamp(42px, 4.7vw, 64px)/1.08 'Bricolage Grotesque', sans-serif;
+  letter-spacing: -.04em;
+  text-wrap: balance;
+}
+html .reading-page :is(.render-main, .review-main, .accuracy-main, .recent-updates) h2 {
+  font: 500 clamp(28px, 2.5vw, 36px)/1.18 'Bricolage Grotesque', sans-serif;
+  letter-spacing: -.03em;
+  text-wrap: balance;
+}
+html .reading-page :is(.render-main, .review-main, .accuracy-main, .recent-updates) a { color: var(--reading-accent); text-underline-offset: .22em; }
+html .reading-page :is(.render-main, .review-main, .accuracy-main, .recent-updates) :focus-visible { outline: 2px solid var(--reading-accent); outline-offset: 5px; }
+html .reading-page :is(.render-intro, .lede) { max-width: 60ch; font-size: 20px; line-height: 1.55; }
+html .reading-page .page-date { margin: 0 0 24px; color: var(--reading-muted); font-size: 14px; line-height: 1.5; }
+html .reading-page :is(.render-basis, .change-intro, .limit, .credits, .review-footer, .accuracy-main > p, .accuracy-main .work p) { max-width: var(--reading-measure); line-height: 1.65; }
+html .reading-page :is(.render-pair figcaption, .image-pair figcaption, .limit, .credits, .review-footer, .note, .count, .update-note, .update-bottom p, .update-render figcaption, .state, .accuracy-main small) { color: var(--reading-muted); }
+html .reading-page :is(.render-note, .local-note) { max-width: var(--reading-measure); padding: 20px 0; margin: 28px 0; border: 0; border-top: 1px solid var(--reading-rule); border-bottom: 1px solid var(--reading-rule); border-radius: 0; background: #fff; color: var(--reading-muted); font-size: 15px; line-height: 1.65; }
+html .reading-page :is(.render-main details, .review-main details) { max-width: var(--reading-measure); background: transparent; color: var(--reading-muted); padding: 12px 0; font-size: 15px; }
+html .reading-page :is(.render-main, .review-main) summary { color: var(--reading-accent); min-height: 44px; padding: 9px 0; line-height: 1.6; cursor: pointer; }
+html .reading-page :is(.render-main, .review-main) details p { margin: 8px 0 12px; overflow-wrap: anywhere; }
+html .reading-page :is(.render-project, .model-change, .work, .stats) { border-color: var(--reading-rule); }
+html .reading-page :is(.render-project, .model-change, .work) { scroll-margin-top: calc(var(--site-header-height, 80px) + 24px); }
+html .reading-page :is(.render-jump, .jump-list) { font: 400 15px/1.6 'Lato', sans-serif; gap: 12px 28px; }
+html .reading-page :is(.render-pair, .image-pair) { gap: 32px; }
+html .reading-page :is(.render-pair figure, .image-pair figure, .coverage > *) { min-width: 0; }
+html .reading-page :is(.render-pair img, .image-frame, .accuracy-main figure img) { background: #eef5f8; border-radius: 4px; }
+html .reading-page :is(.render-pair figcaption, .image-pair figcaption) { margin-top: 12px; font-size: 14px; line-height: 1.55; }
+html .reading-page .eyebrow { color: var(--reading-muted); font-size: 14px; font-weight: 400; text-transform: none; letter-spacing: 0; line-height: 1.5; }
+html .reading-page .latest-studies { padding-top: 0; }
+
+/* Keep images broad while giving the accompanying prose a readable measure. */
+html .reading-page .render-main .building-intro { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 32px 64px; padding-bottom: 48px; }
+html .reading-page .render-main .building-intro-copy > p { max-width: 60ch; margin: 0 0 18px; font-size: 19px; line-height: 1.6; }
+html .reading-page .render-main .building-about { max-width: 65ch; }
+html .reading-page .render-main .building-about summary { min-height: 44px; padding: 10px 0; }
+html .reading-page .render-main .building-browse { gap: 24px 40px; padding: 28px 0; }
+html .reading-page .render-main .building-project-picker { max-width: 620px; }
+html .reading-page .render-main .building-picker-controls { gap: 12px; }
+html .reading-page .render-main .building-picker-controls :is(select, button) { min-height: 48px; font-size: 16px; }
+html .reading-page .render-main .building-related { gap: 12px 28px; padding-bottom: 0; }
+html .reading-page .render-main .building-related a { padding: 10px 0; }
+html .reading-page .render-main .render-project { padding: 64px 0; }
+html .reading-page .render-main .render-project h2 { max-width: 36ch; margin: 10px 0 28px; }
+html .reading-page .render-main .render-project > .render-basis { margin: 24px 0 8px; font-size: 16px; }
+html .reading-page .render-main .render-project .render-actions { align-items: center; gap: 12px 28px; margin-top: 20px; font-size: 15px; }
+html .reading-page .render-main .render-actions > a { display: inline-flex; align-items: center; min-height: 44px; }
+
+/* Coverage notes use a heading rail; the register remains a full-width table. */
+html .reading-page .accuracy-main .stats { padding: 32px 0; margin: 32px 0 56px; gap: 32px; }
 html .reading-page .accuracy-main .stat strong { font: 500 36px/1.2 'Bricolage Grotesque', sans-serif; }
-html .reading-page .accuracy-main th { background: #f5f4f2; color: #2e2b2a; }
-html .reading-page .accuracy-main :is(th, td) { border-color: #e4dedb; }
-html .reading-page .accuracy-main .table-scroll { max-width: 100%; border-top: 1px solid #e4dedb; overscroll-behavior-inline: contain; }
-html .reading-page .accuracy-main summary { min-height: 32px; }
-/* Route, GO and LRT colours remain tied to the map rather than the red chrome. */
-html .reading-page .subway-main { max-width: 1536px; padding: 0 var(--page-gutter); font-family: 'Lato', sans-serif; }
-html .reading-page .subway-intro { padding-top: 54px; }
-html .reading-page .subway-intro h1 { font-weight: 500; }
-html .reading-page .subway-main :is(.intro-context, .feature-heading > p, .interactive-heading > p, .historic-map-figure figcaption div > span, .map-caption p, .areas-note, .independence, .details-content, .study-question, .subway-details summary small, .map-help) { color: #6b6662; }
-html .reading-page .subway-main a { color: #a23b3b; }
-html .reading-page :is(.concept-tag, .concept-status) { padding: 0; border: 0; border-radius: 0; background: none; }
-html .reading-page .concept-tag { color: #2e2b2a; }
-html .reading-page .concept-status { color: #6b6662; }
-html .reading-page :is(.historic-map-figure, .subway-details, .map-caption, .subway-details > details) { background: #fff; }
-html .reading-page :is(.map-section, .historic-map-link, .source-figure > a, .details-content .network-figure img) { border-color: #e4dedb; border-radius: 6px; }
-html .reading-page .map-toolbar { padding: 16px 20px; }
-html .reading-page .map-selects select { min-height: 44px; background: #fff; border-color: #e4dedb; border-radius: 6px; font-size: 14px; }
-html .reading-page .map-selects label, html .reading-page .map-toggle label { font-size: 13px; }
-html .reading-page .map-toggle label { min-height: 32px; }
-html .reading-page :is(.subway-map, .map-loading) { background: #f5f4f2; color: #6b6662; }
-html .reading-page .loading-orb { background: #f7eeee; border-color: #d9b9b9; }
-html .reading-page .map-tools button { min-width: 44px; min-height: 44px; background: #fff; color: #2e2b2a; border-color: #e4dedb; box-shadow: none; }
-html .reading-page .map-tools button:hover { background: #f7eeee; color: #a23b3b; }
-html .reading-page .map-bottom { color: #4c4744; background: linear-gradient(transparent, #fffffff2); }
-html .reading-page .legend-route { border-color: #80529e; }
-html .reading-page #routeToggle { accent-color: #80529e; }
-html .reading-page .details-content .source-figure > a, html .reading-page .details-content .network-figure img { background: #f5f4f2; }
-html .reading-page .subway-details summary small { font-family: 'Lato', sans-serif; }
+html .reading-page .accuracy-main .stat span { margin-top: 10px; font-size: 15px; line-height: 1.55; }
+html .reading-page .accuracy-main .coverage { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 48px; padding: 0 0 64px; }
+html .reading-page .accuracy-main .coverage h2 { margin: 0 0 20px; }
+html .reading-page .accuracy-main .coverage p { max-width: 56ch; }
+html .reading-page .accuracy-main .legend { gap: 12px 24px; margin: 18px 0; }
+html .reading-page .accuracy-main .work { display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); gap: 16px 64px; padding: 64px 0; }
+html .reading-page .accuracy-main .work > * { grid-column: 2; min-width: 0; margin-top: 0; margin-bottom: 0; }
+html .reading-page .accuracy-main .work > h2 { grid-column: 1; grid-row: 1; max-width: 24ch; }
+html .reading-page .accuracy-main .work > h2 + :is(p, .work-grid, .checks) { grid-row: 1; }
+html .reading-page .accuracy-main .work-grid { grid-template-columns: 1fr; gap: 36px; }
+html .reading-page .accuracy-main .work-grid article + article { padding-top: 28px; border-top: 1px solid var(--reading-rule); }
+html .reading-page .accuracy-main .work-grid h3 { margin: 0 0 12px; font: 500 24px/1.25 'Bricolage Grotesque', sans-serif; }
+html .reading-page .accuracy-main .work-grid p { margin: 0 0 14px; }
+html .reading-page .accuracy-main .checks { padding-left: 22px; max-width: 65ch; }
+html .reading-page .accuracy-main .checks li { padding: 0 0 20px 6px; }
+html .reading-page .accuracy-main .work:has(.table-scroll) { display: block; }
+html .reading-page .accuracy-main .work:has(.table-scroll) > h2 { max-width: none; margin-bottom: 20px; }
+html .reading-page .accuracy-main .work:has(.table-scroll) > p { margin-bottom: 24px; }
+html .reading-page .accuracy-main :is(select, input) { min-height: 48px; min-width: 0; max-width: 100%; background-color: #fff; border: 1px solid var(--reading-rule); border-radius: 5px; font: 400 16px/1.4 'Lato', sans-serif; }
+html .reading-page .accuracy-main .map-choice { gap: 20px; margin-bottom: 20px; line-height: 1.5; }
+html .reading-page .accuracy-main select { appearance: none; -webkit-appearance: none; padding: 12px 46px 12px 14px; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23534b47' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") right 16px center / 16px no-repeat; }
+html .reading-page .accuracy-main .controls { margin: 32px 0; gap: 20px 28px; }
+html .reading-page .accuracy-main .controls label { flex: 1 1 240px; max-width: 340px; gap: 10px; }
+html .reading-page .accuracy-main .controls .count { margin: 0 0 12px; }
+html .reading-page .accuracy-main .bar { background: linear-gradient(to right, var(--reading-accent) var(--length), var(--reading-rule) var(--length)); }
+html .reading-page .accuracy-main th { background: #fff; color: var(--site-ink, #2e2b2a); }
+html .reading-page .accuracy-main :is(th, td) { padding: 22px 16px; border-color: var(--reading-rule); line-height: 1.6; }
+html .reading-page .accuracy-main th:first-child, html .reading-page .accuracy-main td:first-child { padding-left: 0; }
+html .reading-page .accuracy-main .table-scroll { width: 100%; max-width: 100%; overflow-x: auto; border-top: 1px solid var(--reading-rule); overscroll-behavior-inline: contain; }
+html .reading-page .accuracy-main summary { min-height: 44px; padding: 6px 0; }
+html .reading-page .accuracy-main details p { max-width: 52ch; margin: 12px 0; overflow-wrap: anywhere; }
+
+@media (max-width: 900px) {
+  html .reading-page :is(.render-main, .review-main, .accuracy-main, .recent-updates) { padding-top: 48px; }
+  html .reading-page .render-main .building-intro { gap: 28px 36px; }
+  html .reading-page .accuracy-main .coverage { gap: 32px; }
+  html .reading-page .accuracy-main .work { column-gap: 36px; }
+}
 @media (max-width: 760px) {
-  html .reading-page :is(.render-main, .review-main, .accuracy-main, .recent-updates) { padding: 36px 20px 44px; }
-  html .reading-page :is(.render-main, .review-main, .accuracy-main, .update-intro) h1 { font-size: clamp(38px, 10vw, 52px); }
-  html .reading-page :is(.render-intro, .lede, .update-intro > p:not(.page-date):not(.update-note)) { font-size: 18px; }
+  html .reading-page { --reading-gutter: clamp(20px, 4vw, 24px); }
+  html .reading-page :is(.render-main, .review-main, .accuracy-main, .recent-updates) { padding: 40px var(--reading-gutter) 64px; font-size: 16px; }
+  html .reading-page :is(.render-main, .review-main, .accuracy-main, .update-intro) h1 { max-width: 18ch; font-size: clamp(38px, 9vw, 52px); }
+  html .reading-page :is(.render-intro, .lede) { font-size: 18px; }
+  html .reading-page .render-main .building-intro { grid-template-columns: 1fr; gap: 24px; padding-bottom: 32px; }
+  html .reading-page .render-main .building-intro-copy > p { font-size: 18px; }
+  html .reading-page .render-main .building-browse { gap: 20px; padding: 24px 0; }
+  html .reading-page .render-main .building-project-picker { flex-basis: 100%; }
+  html .reading-page .render-main .building-related { gap: 8px 24px; }
+  html .reading-page .render-main .render-project { padding: 48px 0; }
+  html .reading-page .render-main .render-project h2 { margin-bottom: 24px; }
+  html .reading-page :is(.render-pair, .image-pair) { grid-template-columns: 1fr; gap: 28px; }
   html .reading-page .section-head { display: block; }
   html .reading-page .section-head .state { white-space: normal; }
-  html .reading-page .update-row { gap: 12px; padding: 24px 0; }
-  html .reading-page .approval-update { margin-top: 28px; padding-top: 24px; }
-  html .reading-page .accuracy-main .stats { gap: 24px; }
-  html .reading-page .accuracy-main .stat { grid-template-columns: 1fr; gap: 6px; }
+  html .reading-page .accuracy-main .stats { gap: 24px; margin-bottom: 40px; }
+  html .reading-page .accuracy-main .stat { grid-template-columns: 1fr; gap: 0; }
   html .reading-page .accuracy-main .stat span { max-width: none; }
-  html .reading-page .accuracy-main .map-choice { align-items: start; flex-direction: column; gap: 8px; }
+  html .reading-page .accuracy-main .coverage { grid-template-columns: 1fr; gap: 40px; padding-bottom: 48px; }
+  html .reading-page .accuracy-main .work { display: block; padding: 48px 0; }
+  html .reading-page .accuracy-main .work > h2 { max-width: 26ch; margin-bottom: 24px; }
+  html .reading-page .accuracy-main .work > p { margin-bottom: 18px; }
+  html .reading-page .accuracy-main .work > p:last-child { margin-bottom: 0; }
+  html .reading-page .accuracy-main .work-grid { margin-top: 28px; }
+  html .reading-page .accuracy-main .map-choice { align-items: start; flex-direction: column; gap: 10px; }
   html .reading-page .accuracy-main .map-choice select { width: 100%; }
-  html .reading-page .accuracy-main .controls :is(input, select) { width: 100%; min-width: 0; }
-  html .reading-page .subway-main { padding: 0 20px; }
-  html .reading-page .subway-intro { padding-top: 36px; }
-  html .reading-page .subway-intro h1 { font-size: 46px; }
-  html .reading-page .map-selects { width: 100%; }
-  html .reading-page .map-selects label { grid-template-columns: 80px minmax(0, 1fr); }
+  html .reading-page .accuracy-main .controls { align-items: stretch; gap: 20px; }
+  html .reading-page .accuracy-main .controls label { flex-basis: 100%; max-width: none; }
+  html .reading-page .accuracy-main .controls :is(input, select) { width: 100%; }
+  html .reading-page .accuracy-main .controls .count { margin: 0; }
 }
+
+/* Standalone end notes follow the same reading measure as project prose. */
+html .reading-page :is(.render-main,.review-main,.accuracy-main)>p{max-width:65ch}

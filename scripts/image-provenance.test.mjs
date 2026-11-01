@@ -7,40 +7,39 @@ const json = path => JSON.parse(fs.readFileSync(new URL('../public/'+path,import
 const pictures = json('data/picture-assets.json');
 const catalog = json('data/labelled-image-assets.json');
 
-test('a reframed camera keeps the older model date distinct from its render date',()=>{
+test('a reframed camera displays its actual render date without a model-version line',()=>{
   const row = pictures.images['downtown-future.png'];
   const shown = pictureProvenance(row.renderInfo,row.width);
   assert.match(shown.meta,/Rendered 23 Oct 2026/);
-  assert.match(shown.sourceEdition,/21 Oct 2026/);
-  assert.doesNotMatch(shown.sourceEdition,/23 Oct|25 Oct|27 Oct|28 Oct/);
-  assert.equal(shown.notice,'');
+  assert.deepEqual(Object.keys(shown),['meta']);
+  assert.equal(row.renderInfo.sourceModelDate,'2026-10-21');
 });
 
-test('a refreshed Lakeview render still identifies its source model edition',()=>{
+test('a refreshed Lakeview render shows its image date while source dates stay in the record',()=>{
   const row = pictures.images['lakeview-future.png'];
   const shown = pictureProvenance(row.renderInfo,row.width);
   assert.match(shown.meta,/Rendered 22 Oct 2026/);
-  assert.match(shown.sourceEdition,/21 Oct 2026/);
+  assert.deepEqual(Object.keys(shown),['meta']);
+  assert.equal(row.renderInfo.sourceModelDate,'2026-10-21');
 });
 
-test('retained Clarkson views expose the earlier-view notice without inventing a model date',()=>{
+test('retained Clarkson views show the render date without an earlier-version disclaimer',()=>{
   const row = pictures.images['clarkson-future.png'];
   assert.equal(row.renderInfo.sourceModelDate,null);
   const shown = pictureProvenance(row.renderInfo,row.width);
   assert.match(shown.meta,/Rendered 29 Sept? 2026/);
-  assert.equal(shown.sourceEdition,'Earlier model version');
-  assert.match(shown.notice,/earlier view.*later model changes/);
-  assert.doesNotMatch(shown.sourceEdition,/Visual Polish|2026-09-26/);
+  assert.deepEqual(Object.keys(shown),['meta']);
+  assert.doesNotMatch(shown.meta,/model|earlier|source/i);
 });
 
 test('presentation and catalogue dates never become render or model dates',()=>{
   for(const renderInfo of [undefined,null,{}, {edition:'Presentation refresh 2026-10-28',reviewDate:'2026-10-25',publishedOn:'2026-10-28',modelReviewDate:'2026-10-27'}]){
     const shown=pictureProvenance(renderInfo,6144);
-    assert.equal(shown.meta,'6K PNG');assert.equal(shown.sourceEdition,'');assert.equal(shown.notice,'');
+    assert.deepEqual(shown,{meta:'6K PNG'});
   }
   for(const invalid of ['2026-02-30','2026-13-01','2026-01-00','28 October 2026',new Date('2026-10-28')])assert.equal(shortDate(invalid),'');
   assert.match(shortDate('2024-02-29'),/29 Feb 2024/);
-  assert.equal(pictureProvenance({sourceEdition:'Unverified source 2026-10-28'},1800).sourceEdition,'Model date not recorded');
+  assert.deepEqual(pictureProvenance({sourceEdition:'Unverified source 2026-10-28'},1800),{meta:'2K PNG'});
 });
 
 test('all labelled wide views show the same provenance as the gallery originals',()=>{
@@ -51,7 +50,7 @@ test('all labelled wide views show the same provenance as the gallery originals'
   const wide=catalog.images.filter(row=>row.kind==='wide'&&row.renderInfo?.state==='retained-earlier');
   const social=catalog.images.filter(row=>row.kind==='portraits'&&row.renderInfo?.state==='retained-earlier');
   assert.equal(wide.length,4);assert.equal(social.length,2);
-  for(const row of social)assert.match(pictureProvenance(row.renderInfo,row.download.width).notice,/earlier view/);
+  for(const row of social)assert.deepEqual(Object.keys(pictureProvenance(row.renderInfo,row.download.width)),['meta']);
 });
 
 test('catalog URL refresh and aliases preserve original render lineage',async()=>{

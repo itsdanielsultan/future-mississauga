@@ -71,8 +71,8 @@
       "atomicAssemblies": true,
       "assetHashesValidatedByModelPreviewCatalogue": true
     },
-    "files": 837,
-    "publishedBytes": 659081471,
+    "files": 827,
+    "publishedBytes": 647910600,
     "originalPNGs": 33,
     "originalImageVerification": {
       "nativeMasterURLsPreserved": true,
@@ -102,7 +102,7 @@
     "markdownFiles": 22,
     "markdownLocalLinks": 139,
     "cssFiles": 22,
-    "cssLocalDependencies": 16,
+    "cssLocalDependencies": 15,
     "districtMetadata": {
       "publicDistricts": 20,
       "flatBoundsVerified": true,
@@ -158,12 +158,12 @@
     "localPNGchecksumsVerified": true,
     "noHostedRuntime": true,
     "noPrivateArtifacts": true,
-    "completeReviewBytes": 1073083159
+    "completeReviewBytes": 1061912288
   },
   "derivatives": {
     "legacyPNGFilesVerified": 91,
     "changedLegacyPNGs": 69,
-    "jsonWhitespaceFilesVerified": 88,
+    "jsonWhitespaceFilesVerified": 84,
     "originalSourceFilesRetained": true,
     "decodedPixelsAndMetadataVerified": true
   },
@@ -174,8 +174,8 @@
     "quality": "Exact published bytes",
     "offloadedFiles": 280,
     "offloadedBytes": 414091741,
-    "publishedBytes": 659081471,
-    "publishedFiles": 558
+    "publishedBytes": 647910600,
+    "publishedFiles": 548
   },
   "files": [
     {
@@ -190,13 +190,13 @@
     },
     {
       "file": "accuracy-review.html",
-      "bytes": 146633,
-      "sha256": "6486534adf5570d375b9cf8142ec7c0675ff089a0252e37fe2e1087102b631ea"
+      "bytes": 149647,
+      "sha256": "6a2004325040e69236e917e90884536cc98cc6194042a3270d9a553ceb2a92a2"
     },
     {
       "file": "app.js",
-      "bytes": 77013,
-      "sha256": "b4a3d2fb7e24fa14588039818eacf8cd1a50c0f41245d66588cea581e25f091f"
+      "bytes": 78012,
+      "sha256": "d526ea765cc4187e46abb1febb4ff89194f5b6f830355c966022c3be219a3735"
     },
     {
       "file": "asset-delivery-map.js",
@@ -307,36 +307,6 @@
       "file": "assets/maritz-20261027/6710-Maritz-overview-before-after.webp",
       "bytes": 67432,
       "sha256": "e471b0ec26d6897d2e5240d37f30e1d24e85a2d3bc9b19f584371cd60f0c2e60"
-    },
-    {
-      "file": "assets/subway/2001-city-centre-original.png",
-      "bytes": 685757,
-      "sha256": "87f1fd05d5fa538a36209c5c493a79181f4523d9b9de20e5d32ab4f08f0e236a"
-    },
-    {
-      "file": "assets/subway/2001-kipling-dixie-original.png",
-      "bytes": 3491150,
-      "sha256": "2e4856535ad704a3ccb679320b90dcadf3ea31bb045465c3b743794e4d0c4952"
-    },
-    {
-      "file": "assets/subway/downtown-context.png",
-      "bytes": 3644418,
-      "sha256": "f7055b477ec3280dabea42199b55dfc15da899dfef3a7f788a653704caad7e48"
-    },
-    {
-      "file": "assets/subway/dundas-subway-alternatives-original.png",
-      "bytes": 678495,
-      "sha256": "fc96d8167d9f2c4c4fe122f84cc7cca0be011f9a2f4ad94a2506d082362b0fa3"
-    },
-    {
-      "file": "assets/subway/subway-corridor-context.metadata.json",
-      "bytes": 923,
-      "sha256": "b3f6142a7b95369ea20dda1fbe74ea1c758b7994f7989bfb284d9ed8a5c8d680"
-    },
-    {
-      "file": "assets/subway/subway-corridor-context.png",
-      "bytes": 2786402,
-      "sha256": "b10f3704f6e42cd7e65c9e0d01ba435b618499cc366f37fde1aaeacb02cd9312"
     },
     {
       "file": "building-details.css",
@@ -495,8 +465,8 @@
     },
     {
       "file": "data/groups.json",
-      "bytes": 517388,
-      "sha256": "9e9fa9f940bbcb3d539efab063883b2644d0f6b9b406b6ab81825d594d8555d4"
+      "bytes": 539389,
+      "sha256": "6bcb28840b34c4bfc46b32e209d654a596aa852568f80d4db39e494d8625c08e"
     },
     {
       "file": "data/history/Picture-index-before-partial-refresh.json",
@@ -640,8 +610,8 @@
     },
     {
       "file": "data/overrides.json",
-      "bytes": 865634,
-      "sha256": "2bc66e7439874f75ab9f8fbcb7396ca2c7b218c49c3fe79357fb36e6012decc2"
+      "bytes": 884347,
+      "sha256": "71f4aa4ef0f0453a48034f2fe92aee0a7dbf989dcf1cea7b8f61f9146f72088a"
     },
     {
       "file": "data/picture-assets.json",
@@ -679,14 +649,19 @@
       "sha256": "b03d48e2a60c0d01b4835e1cb3ef6668486eeda2389dcd2c0db815cf8ec1b5d9"
     },
     {
+      "file": "data/project-lifecycle-20261101.json",
+      "bytes": 100239,
+      "sha256": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24"
+    },
+    {
       "file": "data/projects.json",
-      "bytes": 871319,
-      "sha256": "2df6028fe84cf50075aa8c981828eaa817ef8685ab4b377627019533553c0c0c"
+      "bytes": 913806,
+      "sha256": "ffa38686b1084193bffd91b34ae08f7c1c3ca901dca9b5bc045fd38dfb170996"
     },
     {
       "file": "data/publication-derivatives.json",
-      "bytes": 108728,
-      "sha256": "b9871b5336f16d331c033f4feb2e7d03f706e95d4f2617149908782e6317ea1d"
+      "bytes": 107534,
+      "sha256": "19da24ac16b8c67b3b6a7dff657d9a588101774a6a1ed73960e49080fce8cdc8"
     },
     {
       "file": "data/recent-project-updates.json",
@@ -710,8 +685,8 @@
     },
     {
       "file": "data/refinement-models.json",
-      "bytes": 1579038,
-      "sha256": "aed5c18d4ee2d9236d409d732466719679bb66a30c22c2a94a4058e1d794b819"
+      "bytes": 1581420,
+      "sha256": "39ef747eee907406d2e50e1295517918da39a0a5d406109da94ab53cc972696b"
     },
     {
       "file": "data/social-pictures.json",
@@ -739,24 +714,9 @@
       "sha256": "6d28cf3727b3e73b9fdc64377c82d7b53ffd488efd74f0eac38688a3ab438a7b"
     },
     {
-      "file": "data/subway-map.json",
-      "bytes": 11055,
-      "sha256": "e96a3340029c66998a3e561a288d722ef80eba5d387ca9a8653bf3eb13129cc0"
-    },
-    {
-      "file": "data/subway-sources.json",
-      "bytes": 16906,
-      "sha256": "d82e27599cbfb01c623df452909b340900d150c6516e49e38ecfa6f663f778eb"
-    },
-    {
       "file": "data/subway-toronto-context.json",
       "bytes": 4976,
       "sha256": "d9cb24e2c385954b828d387833bb2d12efb18a12d4af04da56689f8c44b5c178"
-    },
-    {
-      "file": "data/subway-transit-context.json",
-      "bytes": 2844,
-      "sha256": "33b70c30321d6e629c5e5652c735aca394d070a7419181d40a0517f0fdd0eaf3"
     },
     {
       "file": "data/transit-layer-manifest.json",
@@ -1200,8 +1160,8 @@
     },
     {
       "file": "downloads/project-register.csv",
-      "bytes": 353850,
-      "sha256": "4243a3c0efa137d6e3a65a24b6cc0d57bfc7dd8f132f0f7b5c531c3acfb7317c"
+      "bytes": 364923,
+      "sha256": "547cd0a7fabcf357756ae54742c1c9774078475c7abb39c9d60471aa72d30309"
     },
     {
       "file": "downloads/public-project-reference-coverage.json",
@@ -1440,13 +1400,13 @@
     },
     {
       "file": "explore.html",
-      "bytes": 17793,
-      "sha256": "f1d69e8ffa2781a9158868a2750157dc5a8cde9a67ec5dda110606134aec7259"
+      "bytes": 17722,
+      "sha256": "5a586d5a7d32a4356a7894982aeb9b1383bc56c8da3f7c301d23ac34662d6314"
     },
     {
       "file": "file-actions.js",
-      "bytes": 2411,
-      "sha256": "32ae73ecfafad180f2f659fa580a9a1a673504c2309739b2b295186d1457c94e"
+      "bytes": 2440,
+      "sha256": "537dab0f0105dd171be161e131752af60513e3e5768c7c4c7683eb55e898912e"
     },
     {
       "file": "gallery.css",
@@ -1455,8 +1415,8 @@
     },
     {
       "file": "gallery.js",
-      "bytes": 7084,
-      "sha256": "6dba9babb9c4629bda7bf0a7a9714c4d2926724ddab25535a77e71b8c8201343"
+      "bytes": 5641,
+      "sha256": "bb2648380017901083eb1176d39db3d373ee011fadce329849fb2173ba8a4405"
     },
     {
       "file": "gallery/Downtown-transformation.mp4",
@@ -2235,23 +2195,23 @@
     },
     {
       "file": "image-experience.js",
-      "bytes": 1488,
-      "sha256": "a038f1991c762daf27323e9637c61b0cdf5425693e75a70e4ba77801cbcfddd7"
+      "bytes": 1485,
+      "sha256": "a26d7f2d3265502c311ceffbcd948f339699767d9119ebb1bc62b7645e5c1b19"
     },
     {
       "file": "image-preview.js",
-      "bytes": 8166,
-      "sha256": "63bb168eaa3fde29ccd988d2e7d8fe509b47d6820a211f9b91c60d77a7d36f5e"
+      "bytes": 7247,
+      "sha256": "0875dc3916ce60d9479b8732a22086935a23abc55e01ad2b5211bf7fbef8d569"
     },
     {
       "file": "image-provenance.js",
-      "bytes": 2085,
-      "sha256": "dfa777534a4aad0eee04d6aa8de82bb1b971d02b07c1ec3ca1a09e60a2f4e2ed"
+      "bytes": 1620,
+      "sha256": "b5621165e67309f3e6caf750c4fd4278c02eb7ad9dd3c774445e97308c64fc0c"
     },
     {
       "file": "index.html",
-      "bytes": 14457,
-      "sha256": "718e4e5fccdd5e4ab3d5ca433195af33675a53aa8d7eebbc163f62b08ccb321c"
+      "bytes": 13068,
+      "sha256": "275a305be9e07344c26e30035d08de8238002dee60b8923ed94c16febd1d97b6"
     },
     {
       "file": "licenses/BricolageGrotesque-OFL.txt",
@@ -2324,19 +2284,24 @@
       "sha256": "ddee6654801527b85e4d8674bd5594af56af9fbd72e603f9103a94660e4da025"
     },
     {
+      "file": "model-status-materials.js",
+      "bytes": 3163,
+      "sha256": "b82b97f45692e419a360d6852f81759c1caef058bca2033798aa0beafde095cf"
+    },
+    {
       "file": "model-study-presentation.js",
       "bytes": 2117,
       "sha256": "6a59aaa7da4bd5a6a6698df83ac88c79f471ba9090b5b38785323c581835a6f4"
     },
     {
       "file": "model-visibility.js",
-      "bytes": 1815,
-      "sha256": "f6d9208edc3a5444150c77effc100b543fe9d9224cd9695b4c8be27f56cfc0cb"
+      "bytes": 2235,
+      "sha256": "1d56207c5de1348bb9bf795e9541f74719280a6928b823a2654c0060b633f8d0"
     },
     {
       "file": "model.html",
-      "bytes": 5257,
-      "sha256": "acac6f5b44162e1657bed8fc3c11bba56ae4fa9dfc52a06ff0b73c7ce3d5f484"
+      "bytes": 5286,
+      "sha256": "8606294e8eabf68161ceecb3b181b95eb5db887ef08b45047ba3aeac34befa51"
     },
     {
       "file": "models/citywide-details.glb",
@@ -2425,8 +2390,8 @@
     },
     {
       "file": "neighbourhood-media.js",
-      "bytes": 1920,
-      "sha256": "605fb40a2080d650b8057ef8618f52083098b07f8d56cce248d3c933b29722ad"
+      "bytes": 1807,
+      "sha256": "79301059d522d2c4034d00a97e169bfefd1b231c6b0d98b64c6116cbb9f7c0c9"
     },
     {
       "file": "png-metadata.js",
@@ -2435,8 +2400,13 @@
     },
     {
       "file": "project-cards.js",
-      "bytes": 12132,
-      "sha256": "a770ffb062b2a9eebbd1803fa65763adb0ece0afbef727510ae7121fa03be1ad"
+      "bytes": 12985,
+      "sha256": "a8d054066ba26f44510a01947f7ae23cf637adc75431191d1c2cd62c93ef9cd7"
+    },
+    {
+      "file": "reading-layout.css",
+      "bytes": 5794,
+      "sha256": "fa513823e1a06ca24325c4ef307d0162fba9628293c3970f72d9482273afb369"
     },
     {
       "file": "reading-notes.css",
@@ -2445,18 +2415,18 @@
     },
     {
       "file": "reading-pages.css",
-      "bytes": 8333,
-      "sha256": "d256bfdafe62aeb3623673c3c1f5a9ad174775e2ac8a1c8fee26d68fb2d40492"
+      "bytes": 12340,
+      "sha256": "b02ac682496f1fdf52288944455449e64ad1246785983112f1ec3e094a348e07"
     },
     {
       "file": "reference-updates.css",
-      "bytes": 4643,
-      "sha256": "0118f6a7854c31aace83d8b32dd95c1332da96e32d786c7e9f5e7a1796f1fc04"
+      "bytes": 5063,
+      "sha256": "3e712fa34c94d67b0c632172007e6d10c8bf7a15ad52a941e7a00d469ef173bb"
     },
     {
       "file": "reference-updates.html",
-      "bytes": 83052,
-      "sha256": "a8b1bf5f98fb3f62f5708a3d86d69d13e1ade8e0b88cea6d4bb94f6210950364"
+      "bytes": 83016,
+      "sha256": "f7f8a0626e256bd41ec49921a68fc76694285c0cd5e7baf4c5ba2c4529cce29c"
     },
     {
       "file": "refinement-loading.js",
@@ -2515,8 +2485,8 @@
     },
     {
       "file": "review-renders.html",
-      "bytes": 37260,
-      "sha256": "db4352d3f3760497064e7c18bfa5c21ba280e8ba3e403b4c52932c0659e00a19"
+      "bytes": 37223,
+      "sha256": "3d5bdb2421d28276b6fa6be244b28f8e1c398c9a5553c784f3555749cdde7fb4"
     },
     {
       "file": "robots.txt",
@@ -2525,8 +2495,8 @@
     },
     {
       "file": "scene-presentation.js",
-      "bytes": 3395,
-      "sha256": "8bfd95207a34308604ec87afe042d23908e5836ed610755650353c0441962e4d"
+      "bytes": 3967,
+      "sha256": "5603b55144d368b831dd84b0ebbf98530693ea389feb5a3c82e7e37fa044c2e5"
     },
     {
       "file": "site-ui.css",
@@ -2540,8 +2510,8 @@
     },
     {
       "file": "sitemap.xml",
-      "bytes": 812,
-      "sha256": "231051fa1556f67bfec894eea89c11443afc8314bd91ea02abb43e7b703d0855"
+      "bytes": 749,
+      "sha256": "b14b7661f99c8301cac3bd54211118341a5f5551035a70c4e6663d3e2bf8ca38"
     },
     {
       "file": "social-base.css",
@@ -2555,8 +2525,8 @@
     },
     {
       "file": "social-preview.js",
-      "bytes": 1227,
-      "sha256": "e6aaab41613abf856de34f3e3344d5888c531d69910583504986d1dbfe01afe2"
+      "bytes": 1225,
+      "sha256": "eb2b57945069bbe60507c06dca56176065f67d14a99586f0359d863fb723773b"
     },
     {
       "file": "social.css",
@@ -2565,13 +2535,13 @@
     },
     {
       "file": "social.html",
-      "bytes": 40278,
-      "sha256": "5a0e4803884309c3c130a346dddb668beff174a8fb3b5da4ccc82f9b5820df60"
+      "bytes": 40302,
+      "sha256": "e9a4ce34e6d10940a10633a9f51dcbd1ad0a07b63b39072ecc66921b3830673e"
     },
     {
       "file": "social.js",
-      "bytes": 1093,
-      "sha256": "5be3ce39202b95d9beb9c29ca234759a61448334edd59302aa516190d19e62ef"
+      "bytes": 1092,
+      "sha256": "d9dab43f67c6c471d4a2a257ac2d07313d285301ba3239b01b4dffa6d7ef791a"
     },
     {
       "file": "source-attribution-regions.js",
@@ -2590,43 +2560,23 @@
     },
     {
       "file": "sources.css",
-      "bytes": 4111,
-      "sha256": "12813635e626a8a6e0879f18304fef7eca362f67dd5c72b631879a17c4aa2eab"
+      "bytes": 7262,
+      "sha256": "1f582eeb8485bd022f8f54747b37dc4d68f2dd45c011c1e801aafbe7d5c89f42"
     },
     {
       "file": "sources.html",
-      "bytes": 9395,
-      "sha256": "0309c36b3dcf06630afa313df0ec9d52493049e917c2d18b1b680ea0b1264f2a"
+      "bytes": 12500,
+      "sha256": "f7ffaa291256e3917e70b9e25b726112ba9be4121a3571f22331eb987ff1e978"
     },
     {
       "file": "sources.js",
-      "bytes": 721,
-      "sha256": "1f031bcfae860741496d63835d58b44b073f92035718cd25c07d54d3ab9ed299"
+      "bytes": 875,
+      "sha256": "a4d9f57516c83a527eb15672bef3d182181eeda5763209faba4ab8a54bde6117"
     },
     {
       "file": "style.css",
-      "bytes": 26752,
-      "sha256": "33bb3b10be000196b9b8fa682c5c2c28c5a189e273761f415bf535722a595c88"
-    },
-    {
-      "file": "subway-accordions.js",
-      "bytes": 7404,
-      "sha256": "c60eed0904024dec496426f97d6eef4d922bd46032ea930d9c3be8df8a1a6267"
-    },
-    {
-      "file": "subway.css",
-      "bytes": 27867,
-      "sha256": "bd341902b3fc884d7578113242d4d5b8e00cfe6005d938f3a4c6be12c5c9db53"
-    },
-    {
-      "file": "subway.html",
-      "bytes": 22385,
-      "sha256": "d26786fb36935eca17f1bca58944b4ed6660c1ff4542db05b42ec35dac5701b7"
-    },
-    {
-      "file": "subway.js",
-      "bytes": 18214,
-      "sha256": "b815e65e2b47eacb4b4c07c9428b3f6af448715283932b2befb4dd73b98f4b14"
+      "bytes": 26960,
+      "sha256": "9788048a3d501ede60bf989c9ad79870046529ebaf59eb133da13fdc8cd04f37"
     },
     {
       "file": "surface-rendering.js",
@@ -2635,18 +2585,18 @@
     },
     {
       "file": "updates.css",
-      "bytes": 1727,
-      "sha256": "f68957d2af7aab3842b851a01d09210bf9ecd91af768224303a6e566524d5811"
+      "bytes": 4757,
+      "sha256": "7c59b4d0668d978cb240480a03dfc2862e46ba8e4d53c11b5539e88716860671"
     },
     {
       "file": "updates.html",
-      "bytes": 31058,
-      "sha256": "33498089518a2b319b66064f4b3e1e3646a6f21fcb002df24a807be0b4fb1fff"
+      "bytes": 34417,
+      "sha256": "dbb862d977b39001d1fba225e9a37b5f87643c67144e9eb940bffe0f57e92dff"
     },
     {
       "file": "usability.css",
-      "bytes": 6590,
-      "sha256": "20c434afb94399ac008095a28ad795137db58569962d67b4ccf9ce6e52c3c907"
+      "bytes": 6055,
+      "sha256": "e1a9e32f6df8c9c56ac5d60a9b89be865aadcad99a04ccbb6b268a01a530162c"
     },
     {
       "file": "vendor/addons/controls/OrbitControls.js",
@@ -2940,8 +2890,8 @@
     },
     {
       "file": "viewer-bootstrap.js",
-      "bytes": 805,
-      "sha256": "d7ed2c49362fd47c331fa4bacee9ce728e24b19102def6e4974e1bfd8a9220c0"
+      "bytes": 799,
+      "sha256": "4a56b1ac23f2e158e9f3ab31f4fff58d6079d36459097a820ea650a57badb80b"
     },
     {
       "file": "viewer-camera.js",
@@ -2969,5 +2919,5 @@
       "sha256": "2d9cfb19a32fac7548704fbfca44060267c233522645aa354fb4f6069e012d97"
     }
   ],
-  "bytes": 659081471
+  "bytes": 647910600
 }

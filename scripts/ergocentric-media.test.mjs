@@ -43,7 +43,7 @@ test('275 Superior reflects the corrected scope without a static-only claim or p
   for(const row of manifest.images){
     const preview=studyImagePreview(manifest,row.url,base);
     assert.match(preview.meta,/Updated 28 Oct 2026/);assert.doesNotMatch(preview.meta,/Rendered/);
-    assert.equal(preview.sourceEdition,'Facade study');
+    assert.equal(preview.sourceEdition,undefined);assert.equal(preview.description,undefined);
     assert.equal(preview.src,row.url);assert.equal(preview.download,row.url);
   }
   assert.ok(html.indexOf('id="fairview-neighbourhood"')<html.indexOf('id="ergocentric-275-superior"'));

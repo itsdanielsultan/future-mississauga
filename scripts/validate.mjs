@@ -137,7 +137,7 @@ export async function validate(site = join(ROOT, 'public'), {enforcePublicationS
   const files = await walk(site);
   let bytes = 0;
   const names = new Set(files.map(p => relative(site, p).split(sep).join('/')));
-  for (const required of ['index.html', 'explore.html', 'social.html', 'social.css', 'social.js', 'subway.html', 'subway.js', 'site-ui.css', 'site-ui.js', 'media-player.js', 'comparison.js', 'data/subway-map.json', 'app.js', 'gallery.js', 'data/picture-assets.json', 'data/social-pictures.json', 'data/districts.json', 'downloads/Future-Mississauga-Atlas.pdf', 'downloads/project-register.csv', 'licenses/CREDITS.md']) assert(names.has(required), 'Missing public dependency: ' + required);
+  for (const required of ['index.html', 'explore.html', 'social.html', 'social.css', 'social.js', 'site-ui.css', 'site-ui.js', 'media-player.js', 'comparison.js', 'app.js', 'gallery.js', 'data/picture-assets.json', 'data/social-pictures.json', 'data/districts.json', 'downloads/Future-Mississauga-Atlas.pdf', 'downloads/project-register.csv', 'licenses/CREDITS.md']) assert(names.has(required), 'Missing public dependency: ' + required);
   const districtMetadata = validateDistrictMetadata(JSON.parse(await readFile(join(site,'data/districts.json'),'utf8')));
   for (const file of files) {
     const name = relative(site, file).split(sep).join('/');

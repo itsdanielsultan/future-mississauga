@@ -40,6 +40,7 @@ test('Oro composite and its fallback preserve construction/future inclusion and 
  const original=await source('downtown'),nodes=meshes(original).filter(m=>oro.replacesSourceIds.includes(m.userData.id));for(const node of nodes){node.userData.displayStatus='Under Construction';node.userData.recordedProgress=true;}
  const detail=new THREE.Mesh(new THREE.BoxGeometry());detail.userData={assetId:oro.id,projectId:oro.projectId,displayStatus:oro.status,modes:oro.modes,constructionDesign:true,uncertain:true};bindStudyReplacement(original,oro);
  for(const mode of ['existing','construction','future']){applyModelVisibility([...nodes,detail],mode);assert.equal(detail.visible,mode!=='existing');assert(nodes.every(m=>!m.visible));applyModelVisibility(nodes,mode);assert(nodes.every(m=>m.visible===(mode!=='existing')));}
- applyModelVisibility([...nodes,detail],'construction',{uncertainVersions:false});assert(!detail.visible);assert(nodes.every(m=>m.visible));
+ applyModelVisibility([...nodes,detail],'construction',{unknownStatuses:false});assert(detail.visible,'known construction remains visible when unverified status is hidden, regardless of approximate geometry');assert(nodes.every(m=>!m.visible),'the visible detailed model still replaces its source fallback');
+ applyModelVisibility(nodes,'construction',{unknownStatuses:false});assert(nodes.every(m=>m.visible),'the construction fallback remains available if the detailed model is absent');
  const unrelated=new THREE.Mesh(new THREE.BoxGeometry());unrelated.userData={displayStatus:'Under Construction'};applyModelVisibility([unrelated],'construction');assert(!unrelated.visible,'other unverified construction meshes keep their prior behavior');dispose(original);dispose(detail);dispose(unrelated);
 });

@@ -1,0 +1,2457 @@
+{
+  "schema": "future-mississauga-project-lifecycle/v1",
+  "reviewedOn": "2026-11-01",
+  "baseline": "dc9bb6a53020ad77ef407affff56a8b94a585aab",
+  "taxonomy": {
+    "existing": "Existing",
+    "under_construction": "Under construction",
+    "approved": "Approved",
+    "proposed": "Proposed",
+    "on_hold": "On hold",
+    "cancelled": "Cancelled",
+    "unknown": "Status unverified",
+    "mixed": "Mixed phases"
+  },
+  "limits": [
+    "Lifecycle is separate from model accuracy. Existing geometry, source flags and historical notes are unchanged.",
+    "Approval is limited to the stated planning stage; it does not establish a building permit, construction start or completion.",
+    "Mixed communities use component status. Do not apply a community-wide construction or approval colour.",
+    "The review combines newly checked primary records with dated saved evidence. Unverified physical stages remain qualified.",
+    "Previously rendered images retain the status and source dates of their own edition.",
+    "Approval includes explicitly qualified approvals in principle and Council-passed amendments. Conditions, site-plan stages and physical delivery remain separate.",
+    "Environmental assessment approval is not classified as development approval; the proposed marina retains its separately stated assessment stage."
+  ],
+  "projects": [
+    {
+      "id": "180-burnhamthorpe",
+      "recordType": "project",
+      "name": "180 Burnhamthorpe Road West",
+      "lifecycle": "proposed",
+      "note": "Proposed. The design editions differ; current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+21%2F119%27&outFields=%2A&returnGeometry=false",
+        "https://pub-mississauga.escribemeetings.com/filestream.ashx?DocumentId=83367",
+        "https://urbantoronto.ca/forum/threads/toronto-180-burnhamthorpe-road-west-230-15m-71s-emblem-developments-arcadis.32151/page-4",
+        "https://www.skyscrapercenter.com/building/180-burnhamthorpe-road-west-tower-a/46733"
+      ],
+      "statusEvidenceDate": "2026-09-20"
+    },
+    {
+      "id": "30-eglinton-west",
+      "recordType": "project",
+      "name": "30 Eglinton Avenue West",
+      "lifecycle": "approved",
+      "note": "Official Plan and zoning approved by the final OLT order of 10 January 2024. The site-plan application remains active; construction timing is unverified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+22%2F015%27&outFields=%2A&returnGeometry=false",
+        "https://www7.mississauga.ca/Departments/PB/OfficialDocs/OLT-22-004548-JAN-10-2024-ORD.pdf",
+        "https://www.omb.gov.on.ca/e-decisions/OLT-22-004548-NOV-20-2023.PDF",
+        "https://www7.mississauga.ca/Departments/PB/OfficialDocs/OLT-22-004548-MAY-25-2026-ORD.pdf"
+      ],
+      "approvalStage": "Official Plan and zoning approved; site plan active",
+      "statusEvidenceDate": "2026-05-25"
+    },
+    {
+      "id": "4310-sherwoodtowne",
+      "recordType": "project",
+      "name": "4310 Sherwoodtowne Boulevard",
+      "lifecycle": "proposed",
+      "note": "Proposed. Current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+24%2F041%27&outFields=%2A&returnGeometry=false",
+        "https://urbantoronto.ca/forum/threads/toronto-4310-sherwoodtowne-boulevard-226-1m-70s-bdp-quadrangle.35512/",
+        "https://www.mississauga.ca/wp-content/uploads/2025/01/15082458/MOPA177-jan-2025.pdf",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0"
+      ],
+      "statusEvidenceDate": "2026-09-20"
+    },
+    {
+      "id": "aldo-1422-study",
+      "recordType": "project",
+      "name": "1422 Aldo Drive · reference-finish study",
+      "lifecycle": "unknown",
+      "note": "Historical design study. The current condition and project status have not been verified.",
+      "sourceRefs": [
+        "https://data.mississauga.ca/pages/mississauga-3d",
+        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=611201%2C4821250%2C611361%2C4821410&bboxSR=26917&imageSR=26917&size=1600%2C1600&format=png32&f=image",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Building_Footprints_2024/FeatureServer/0/query?f=json&where=1%3D1&geometry=%7B%22x%22%3A+611281.3129077428%2C+%22y%22%3A+4821330.616274131%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+26917%7D%7D&geometryType=esriGeometryPoint&inSR=26917&spatialRel=esriSpatialRelIntersects&distance=65&units=esriSRUnit_Meter&outFields=%2A&outSR=26917&returnGeometry=true"
+      ],
+      "statusEvidenceDate": "2026-10-08"
+    },
+    {
+      "id": "block-nine",
+      "recordType": "project",
+      "name": "Block Nine: North and South towers",
+      "lifecycle": "existing",
+      "note": "The developer lists both Block Nine towers as completed. The model remains an approximate reference.",
+      "sourceRefs": [
+        "https://www.lifeatparkside.com/communities",
+        "https://amacon.com/portfolio/",
+        "https://www7.mississauga.ca/documents/pb/opendata/2020/2020_Residential_Directory_Report_Final.pdf#page=102",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Building_Footprints_2024/FeatureServer/0"
+      ],
+      "statusEvidenceDate": "2026-10-03"
+    },
+    {
+      "id": "brightwater-bridge-house",
+      "recordType": "project",
+      "name": "Bridge House at Brightwater",
+      "lifecycle": "proposed",
+      "note": "The dated developer filing places Bridge House in planning. A construction start has not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+21%2F130%27&outFields=%2A&returnGeometry=false",
+        "https://renx.ca/index.php/brightwater-community-is-progressing-in-all-facets",
+        "https://experiencebrightwater.ca/",
+        "https://newsfile.futunn.com/public/NN-PersistNoticeAttachment/7781/20260218/SEDAR_PLUS/CSA_SEDAR_PLUS_NOTICE_RECORD_ID_2321819.pdf"
+      ],
+      "statusEvidenceDate": "2026-02-18"
+    },
+    {
+      "id": "brightwater-master",
+      "recordType": "project",
+      "name": "Brightwater / Port Credit West Village",
+      "lifecycle": "mixed",
+      "note": "Completed residences and future blocks have different statuses. Retained SP 22/103 townhouse components remain proposed until their delivery is verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+22%2F103%27&outFields=%2A&returnGeometry=false",
+        "https://experiencebrightwater.ca/",
+        "https://www.mississauga.ca/wp-content/uploads/2026/01/22112618/OZ-25-17-W1-Notice-of-Passing-public-notice.pdf",
+        "https://pub-mississauga.escribemeetings.com/Meeting.aspx?Agenda=Merged&Id=3a029998-7e38-412d-ae02-2a20023eeedf&lang=English"
+      ],
+      "statusEvidenceDate": "2026-08-04"
+    },
+    {
+      "id": "city-group-1",
+      "recordType": "municipalGroup",
+      "name": "Studio Bottega / 6967 Maritz Drive",
+      "lifecycle": "proposed",
+      "note": "Proposed. Current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+21%2F182%27&outFields=%2A&returnGeometry=false",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D180&outFields=*&outSR=4326&f=pjson",
+        "https://pub-mississauga.escribemeetings.com/filestream.ashx?DocumentId=68886",
+        "https://www.mississauga.ca/wp-content/uploads/2024/12/05145710/Transportation-Impact-Study-OZ-OPA-24-2-W11-21T-M24001-W11.pdf"
+      ]
+    },
+    {
+      "id": "city-group-107",
+      "recordType": "municipalGroup",
+      "name": "Chelsea on the Green I",
+      "lifecycle": "proposed",
+      "note": "Proposed. Current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+23%2F11+W3%27&outFields=%2A&returnGeometry=false",
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/4100-ponytrail-drive-and-1850-rathburn-road-east-oz-opa-26-9-w3/",
+        "https://www.mississauga.ca/wp-content/uploads/2026/06/11112228/Site-Plan-Phase-2-OZ-OPA-26-9-W3-June-2026.pdf"
+      ],
+      "statusEvidenceDate": "2026-06-24"
+    },
+    {
+      "id": "city-group-131",
+      "recordType": "municipalGroup",
+      "name": "1325 Burnhamthorpe Road East veterinary clinic and office",
+      "lifecycle": "proposed",
+      "note": "Proposed. Current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+25%2F022%27&outFields=%2A&returnGeometry=false",
+        "https://pub-mississauga.escribemeetings.com/filestream.ashx?DocumentId=77934",
+        "https://chrisfonseca.ca/1325-burnhamthorpe-road-east/",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D106&outFields=*&outSR=4326&f=pjson"
+      ]
+    },
+    {
+      "id": "city-group-139",
+      "recordType": "municipalGroup",
+      "name": "Winchester Convention Centre",
+      "lifecycle": "approved",
+      "note": "The City records SP 24/025 as approved on 2025-11-25. Construction and completion have not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+24%2F025%27&outFields=%2A&returnGeometry=false",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Issued_Building_Permits/FeatureServer/0/query?f=json&geometry=%7B%22x%22%3A+-79.63138295307073%2C+%22y%22%3A+43.62319959341515%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&distance=90&units=esriSRUnit_Meter&outFields=BuildingPermitNumber%2CIssuedDate%2CBuildingPermitType%2CBuildingPermitScope%2CAddress%2CApprovedUse%2CResidentialUnits%2CNonResidentialGFA_m2&outSR=4326&returnGeometry=true"
+      ],
+      "approvalStage": "Site plan approved 2025-11-25",
+      "statusEvidenceDate": "2026-11-01"
+    },
+    {
+      "id": "city-group-14",
+      "recordType": "project",
+      "name": "49 South Service Road",
+      "lifecycle": "approved",
+      "note": "Zoning approved by the OLT in November 2024. The site-plan application remains active; construction has not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+24%2F032%27&outFields=%2A&returnGeometry=false",
+        "https://www.mississauga.ca/wp-content/uploads/2024/11/20122457/ontario-land-tribunal-case-olt-23-000390.pdf",
+        "https://sajeckiplanning.squarespace.com/news/nru-publishing-highlights-successful-olt-settlement-for-49-south-service-road",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=WARD+IN+%281%2C2%29&outFields=OBJECTID%2CAPP_FILE_NO%2CAPPLICATION_DATE%2CAPPROVAL_DATE%2CSITE_ADDRESS%2CDESCRIPTION%2CSIMPLE_STATUS%2CAPPLICANT%2CRES_APTS%2CTOTAL_RES_UNITS&returnGeometry=false&resultRecordCount=2000&f=json"
+      ],
+      "approvalStage": "Tribunal zoning approved; site plan active",
+      "statusEvidenceDate": "2026-10-10"
+    },
+    {
+      "id": "city-group-143",
+      "recordType": "municipalGroup",
+      "name": "3855 Dundas St. West",
+      "lifecycle": "proposed",
+      "note": "Proposed. Current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/3855-dundas-street-west-oz-18-18-w8/",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D188&outFields=*&outSR=4326&f=pjson"
+      ]
+    },
+    {
+      "id": "city-group-148",
+      "recordType": "municipalGroup",
+      "name": "1139 Lorne Park Rd.",
+      "lifecycle": "proposed",
+      "note": "Proposed. Current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Issued_Building_Permits/FeatureServer/0/query?f=json&geometry=%7B%22x%22%3A+-79.61469329623921%2C+%22y%22%3A+43.53164401162314%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&distance=90&units=esriSRUnit_Meter&outFields=BuildingPermitNumber%2CIssuedDate%2CBuildingPermitType%2CBuildingPermitScope%2CAddress%2CApprovedUse%2CResidentialUnits%2CNonResidentialGFA_m2&outSR=4326&returnGeometry=true",
+        "https://www.zolo.ca/mississauga-real-estate/1139-lorne-park-road"
+      ],
+      "statusEvidenceDate": "2026-06-19"
+    },
+    {
+      "id": "city-group-15",
+      "recordType": "municipalGroup",
+      "name": "Dixie Outlet Mall redevelopment",
+      "lifecycle": "proposed",
+      "note": "Proposed. Current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/1250-south-service-road-oz-opa-22-32-w1/",
+        "https://www.mississauga.ca/wp-content/uploads/2024/05/31105545/A100-Site-Plan-may-2024.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2024/05/31105548/A302-North-Elevation-may-2024.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2024/05/31105533/A013-Statistics-V2-may-2024.pdf"
+      ],
+      "statusEvidenceDate": "2026-06-08"
+    },
+    {
+      "id": "city-group-155",
+      "recordType": "municipalGroup",
+      "name": "St. Gerasimos and St. Barbara Greek Orthodox Church",
+      "lifecycle": "proposed",
+      "note": "Proposed. Current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+25%2F023%27&outFields=%2A&returnGeometry=false",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D11&outFields=*&outSR=4326&f=pjson",
+        "https://stbarbaragoc.ca/"
+      ]
+    },
+    {
+      "id": "city-group-156",
+      "recordType": "municipalGroup",
+      "name": "805 Winston Churchill Blvd.",
+      "lifecycle": "approved",
+      "note": "The City records SP 21/164 as approved on 2025-05-13. Construction and completion have not been verified. The current addresses are 745 and 795 Hazelhurst Road, formerly 805 Winston Churchill Boulevard.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+21%2F164%27&outFields=%2A&returnGeometry=false",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Issued_Building_Permits/FeatureServer/0/query?f=json&geometry=%7B%22x%22%3A+-79.63853623925023%2C+%22y%22%3A+43.4931877608898%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&distance=90&units=esriSRUnit_Meter&outFields=BuildingPermitNumber%2CIssuedDate%2CBuildingPermitType%2CBuildingPermitScope%2CAddress%2CApprovedUse%2CResidentialUnits%2CNonResidentialGFA_m2&outSR=4326&returnGeometry=true",
+        "https://www.mississauga.ca/wp-content/uploads/2020/09/13140903/04_11_16_-_PDC_Agenda-1-1.pdf",
+        "https://www.oakville.ca/getmedia/2bcd86e0-4585-455f-b538-052f4a46eddd/sp-160102901-TIS_TruckTurning-S5.pdf"
+      ],
+      "approvalStage": "Site plan approved 2025-05-13",
+      "statusEvidenceDate": "2026-11-01"
+    },
+    {
+      "id": "city-group-158",
+      "recordType": "municipalGroup",
+      "name": "Fire Station #103 Renovation & Addition",
+      "lifecycle": "approved",
+      "note": "The City records SP 24/055 as approved on 2025-07-02. Construction and completion have not been verified. This concerns an addition to an existing fire station.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+24%2F055%27&outFields=%2A&returnGeometry=false",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Issued_Building_Permits/FeatureServer/0/query?f=json&geometry=%7B%22x%22%3A+-79.62833297011105%2C+%22y%22%3A+43.510568916774965%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&distance=90&units=esriSRUnit_Meter&outFields=BuildingPermitNumber%2CIssuedDate%2CBuildingPermitType%2CBuildingPermitScope%2CAddress%2CApprovedUse%2CResidentialUnits%2CNonResidentialGFA_m2&outSR=4326&returnGeometry=true",
+        "https://www.mississauga.ca/wp-content/uploads/2024/08/08093225/July_2024_Competitive_Acquisitions_Report.pdf"
+      ],
+      "approvalStage": "Site plan approved 2025-07-02",
+      "statusEvidenceDate": "2026-11-01"
+    },
+    {
+      "id": "city-group-174",
+      "recordType": "municipalGroup",
+      "name": "2040 Camilla Rd.",
+      "lifecycle": "proposed",
+      "note": "Proposed. Current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+23%2F019%27&outFields=%2A&returnGeometry=false",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D124&outFields=*&outSR=4326&f=pjson",
+        "https://consulatedevelopment.com/portfolio-item/twenty20-towns-mississauga/",
+        "https://urbantoronto.ca/forum/threads/toronto-20-twenty-towns-m-3s-consulate-gmb.28450/page-4"
+      ],
+      "statusEvidenceDate": "2026-06-30"
+    },
+    {
+      "id": "city-group-24",
+      "recordType": "municipalGroup",
+      "name": "2395 Speakman Dr.",
+      "lifecycle": "proposed",
+      "note": "Proposed. Current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+23%2F004%27&outFields=%2A&returnGeometry=false",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D7&outFields=*&outSR=4326&f=pjson",
+        "https://www.zolo.ca/mississauga-real-estate/2395-speakman-drive/opt-1",
+        "https://www.loopnet.com/Listing/2395-Speakman-Dr-Mississauga-ON/26691148/"
+      ]
+    },
+    {
+      "id": "city-group-25",
+      "recordType": "municipalGroup",
+      "name": "2251 North Sheridan Way",
+      "lifecycle": "proposed",
+      "note": "Proposed. Current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+19%2F124%27&outFields=%2A&returnGeometry=false",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D69&outFields=*&outSR=4326&f=pjson",
+        "https://morguardleasing.com/building/2251-north-sheridan-way/"
+      ]
+    },
+    {
+      "id": "city-group-30",
+      "recordType": "project",
+      "name": "Byngmount Shores",
+      "lifecycle": "under_construction",
+      "note": "Under construction. October 2026 photographs show an unfinished structural frame.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+24%2F035%27&outFields=%2A&returnGeometry=false",
+        "https://peelregion.ca/business/housing-development/current-housing-projects",
+        "https://peelregion.ca/sites/default/files/styles/gallery_images_640x480/public/2026-10/byngmount-shores-october-2026-construction.jpg?itok=zY9uORlk",
+        "https://peelregion.ca/business/housing-development/byngmount-shores"
+      ],
+      "statusEvidenceDate": "2026-10-10"
+    },
+    {
+      "id": "city-group-55",
+      "recordType": "municipalGroup",
+      "name": "Artisan Towns / 1725 Barbertown Road",
+      "lifecycle": "approved",
+      "note": "The City records SP 22/27 W6 as approved on 2026-01-27. Construction and completion have not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+22%2F27+W6%27&outFields=%2A&returnGeometry=false",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Issued_Building_Permits/FeatureServer/0/query?f=json&geometry=%7B%22x%22%3A+-79.69469037316367%2C+%22y%22%3A+43.57619586458607%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&distance=90&units=esriSRUnit_Meter&outFields=BuildingPermitNumber%2CIssuedDate%2CBuildingPermitType%2CBuildingPermitScope%2CAddress%2CApprovedUse%2CResidentialUnits%2CNonResidentialGFA_m2&outSR=4326&returnGeometry=true",
+        "https://impactcondoinvestments.com/artisan/",
+        "https://royalerealtybrokerage.com/project/artisan-towns/"
+      ],
+      "approvalStage": "Site plan approved 2026-01-27",
+      "statusEvidenceDate": "2026-11-01"
+    },
+    {
+      "id": "city-group-59",
+      "recordType": "municipalGroup",
+      "name": "5985 McLaughlin Rd.",
+      "lifecycle": "proposed",
+      "note": "Proposed. Current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Issued_Building_Permits/FeatureServer/0/query?f=json&geometry=%7B%22x%22%3A+-79.68857881432224%2C+%22y%22%3A+43.61729728181459%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&distance=90&units=esriSRUnit_Meter&outFields=BuildingPermitNumber%2CIssuedDate%2CBuildingPermitType%2CBuildingPermitScope%2CAddress%2CApprovedUse%2CResidentialUnits%2CNonResidentialGFA_m2&outSR=4326&returnGeometry=true",
+        "https://www.mississauga.ca/file/COM/BLDG_DETAILMAY2011.pdf"
+      ]
+    },
+    {
+      "id": "city-group-61",
+      "recordType": "municipalGroup",
+      "name": "Yee Hong Mississauga retirement and life-lease development",
+      "lifecycle": "proposed",
+      "note": "Proposed. Current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Issued_Building_Permits/FeatureServer/0/query?f=json&geometry=%7B%22x%22%3A+-79.68792021907555%2C+%22y%22%3A+43.60549077761041%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&distance=90&units=esriSRUnit_Meter&outFields=BuildingPermitNumber%2CIssuedDate%2CBuildingPermitType%2CBuildingPermitScope%2CAddress%2CApprovedUse%2CResidentialUnits%2CNonResidentialGFA_m2&outSR=4326&returnGeometry=true",
+        "https://www.mississauga.ca/wp-content/uploads/2021/11/02141242/W6_5510_Waste_and_Recycling_Plan_August2021.pdf"
+      ]
+    },
+    {
+      "id": "city-group-68",
+      "recordType": "municipalGroup",
+      "name": "Meadowvale Lane",
+      "lifecycle": "proposed",
+      "note": "Proposed. Current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+20%2F086%27&outFields=%2A&returnGeometry=false",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D78&outFields=*&outSR=4326&f=pjson",
+        "https://www.zolo.ca/mississauga-real-estate/6532--6544-winston-churchill-boulevard",
+        "https://www.loopnet.ca/Listing/6532-6544-Winston-Churchill-Blvd-Mississauga-ON/34973347/"
+      ]
+    },
+    {
+      "id": "city-group-70",
+      "recordType": "municipalGroup",
+      "name": "Fire Station #111 - Renovation & Addition",
+      "lifecycle": "approved",
+      "note": "The City records SP 24/056 as approved on 2025-08-19. Construction and completion have not been verified. This concerns an addition to an existing fire station.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+24%2F056%27&outFields=%2A&returnGeometry=false",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Issued_Building_Permits/FeatureServer/0/query?f=json&geometry=%7B%22x%22%3A+-79.76434312244024%2C+%22y%22%3A+43.59349323819572%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&distance=90&units=esriSRUnit_Meter&outFields=BuildingPermitNumber%2CIssuedDate%2CBuildingPermitType%2CBuildingPermitScope%2CAddress%2CApprovedUse%2CResidentialUnits%2CNonResidentialGFA_m2&outSR=4326&returnGeometry=true",
+        "https://ward9.ca/ward-9-development/",
+        "https://www.mississauga.ca/wp-content/uploads/2024/08/08093225/July_2024_Competitive_Acquisitions_Report.pdf"
+      ],
+      "approvalStage": "Site plan approved 2025-08-19",
+      "statusEvidenceDate": "2026-11-01"
+    },
+    {
+      "id": "city-group-79",
+      "recordType": "municipalGroup",
+      "name": "1646 Dundas St. West",
+      "lifecycle": "proposed",
+      "note": "Proposed. Current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+22%2F090%27&outFields=%2A&returnGeometry=false",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D22&outFields=*&outSR=4326&f=pjson",
+        "https://www.emersonhouseresidences.com/project/",
+        "https://urbantoronto.ca/database/projects/emerson-house.51025"
+      ],
+      "statusEvidenceDate": "2026-06-30"
+    },
+    {
+      "id": "city-group-8",
+      "recordType": "municipalGroup",
+      "name": "Eagle Tech Recycling",
+      "lifecycle": "proposed",
+      "note": "Proposed. Current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Issued_Building_Permits/FeatureServer/0/query?f=json&geometry=%7B%22x%22%3A+-79.6435431115511%2C+%22y%22%3A+43.572733989658076%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&distance=90&units=esriSRUnit_Meter&outFields=BuildingPermitNumber%2CIssuedDate%2CBuildingPermitType%2CBuildingPermitScope%2CAddress%2CApprovedUse%2CResidentialUnits%2CNonResidentialGFA_m2&outSR=4326&returnGeometry=true",
+        "https://eagletechrecycling.ca/contact/"
+      ]
+    },
+    {
+      "id": "city-group-81",
+      "recordType": "municipalGroup",
+      "name": "2515-2532 Argyle Rd.",
+      "lifecycle": "approved",
+      "note": "The City records SP 24/016 as approved on 2025-09-11. Construction and completion have not been verified. The current record is 2512 Argyle Road with 101 homes; the older model address and edition still need reconciliation.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+24%2F016%27&outFields=%2A&returnGeometry=false",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Issued_Building_Permits/FeatureServer/0/query?f=json&geometry=%7B%22x%22%3A+-79.61896264843541%2C+%22y%22%3A+43.57337653683028%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&distance=90&units=esriSRUnit_Meter&outFields=BuildingPermitNumber%2CIssuedDate%2CBuildingPermitType%2CBuildingPermitScope%2CAddress%2CApprovedUse%2CResidentialUnits%2CNonResidentialGFA_m2&outSR=4326&returnGeometry=true",
+        "https://pub-mississauga.escribemeetings.com/filestream.ashx?DocumentId=9927"
+      ],
+      "approvalStage": "Site plan approved 2025-09-11",
+      "statusEvidenceDate": "2026-11-01"
+    },
+    {
+      "id": "city-group-9",
+      "recordType": "municipalGroup",
+      "name": "6969 Rexwood Road",
+      "lifecycle": "approved",
+      "note": "The City records SP 24/47 as approved on 2025-12-19. Construction and completion have not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+24%2F47%27&outFields=%2A&returnGeometry=false",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Issued_Building_Permits/FeatureServer/0/query?f=json&geometry=%7B%22x%22%3A+-79.62625321257399%2C+%22y%22%3A+43.71544796677629%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&distance=90&units=esriSRUnit_Meter&outFields=BuildingPermitNumber%2CIssuedDate%2CBuildingPermitType%2CBuildingPermitScope%2CAddress%2CApprovedUse%2CResidentialUnits%2CNonResidentialGFA_m2&outSR=4326&returnGeometry=true"
+      ],
+      "approvalStage": "Site plan approved 2025-12-19",
+      "statusEvidenceDate": "2026-11-01"
+    },
+    {
+      "id": "city-group-92",
+      "recordType": "municipalGroup",
+      "name": "Metro Store No. 461",
+      "lifecycle": "proposed",
+      "note": "Proposed. Current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SPM+22%2F163%27&outFields=%2A&returnGeometry=false",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Issued_Building_Permits/FeatureServer/0/query?f=json&geometry=%7B%22x%22%3A+-79.62535321070291%2C+%22y%22%3A+43.592378382695856%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&distance=90&units=esriSRUnit_Meter&outFields=BuildingPermitNumber%2CIssuedDate%2CBuildingPermitType%2CBuildingPermitScope%2CAddress%2CApprovedUse%2CResidentialUnits%2CNonResidentialGFA_m2&outSR=4326&returnGeometry=true"
+      ]
+    },
+    {
+      "id": "clarkson-creekside-1639",
+      "recordType": "project",
+      "name": "Creekside Apartments",
+      "lifecycle": "under_construction",
+      "note": "Peel Region identifies the 51-home project as under construction. The optional model is an earlier 50-home design study.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+24%2F29%27&outFields=%2A&returnGeometry=false",
+        "https://peelregion.ca/business/housing-development/creekside-apartments",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Issued_Building_Permits/FeatureServer/0/query?where=BP_NO+%3D+%27BP+3NEW+24-4424%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
+        "https://peelregion.ca/business/housing-development/current-housing-projects"
+      ]
+    },
+    {
+      "id": "cooksville-60-dundas-east",
+      "recordType": "project",
+      "name": "60 Dundas Street East",
+      "lifecycle": "approved",
+      "note": "Zoning settled in January 2025. Current architectural details and construction remain unverified.",
+      "sourceRefs": [
+        "https://www.mississauga.ca/wp-content/uploads/2025/01/15082139/MOPA-178-OLT-23-000393-JAN-08-2025-ORD.pdf",
+        "https://www.omb.gov.on.ca/e-decisions/OLT-23-000393-AUG-28-2024.PDF",
+        "https://www.mississauga.ca/wp-content/uploads/2026/05/28095905/March-2026-Statistics-Canada-Permit-Report.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2022/09/12180552/W7_60_Noise_and_Vibration_Impact_Study_February2022.pdf"
+      ],
+      "approvalStage": "Zoning settled",
+      "statusEvidenceDate": "2026-10-10"
+    },
+    {
+      "id": "cooksville-toc",
+      "recordType": "project",
+      "name": "Cooksville GO transit-oriented community",
+      "lifecycle": "proposed",
+      "note": "Proposed transit-oriented community, with a revised concept presented on 22 September 2026. An older parking-garage approval does not approve this concept.",
+      "sourceRefs": [
+        "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/cooksville-go-transit-oriented-community/",
+        "https://www.infrastructureontario.ca/48f8a0/contentassets/e44b38c8189641c2aa193899c6727b3d/2025-09-25_cooksville-toc_planning-justification-report.pdf",
+        "https://www.mississauga.ca/publication/toc-cooksville-3210-hurontario-street/",
+        "https://urbantoronto.ca/forum/threads/cooksville-toc-151-5m-49s-io-arup.42581/"
+      ],
+      "statusEvidenceDate": "2026-09-22"
+    },
+    {
+      "id": "courtney-630",
+      "recordType": "project",
+      "name": "630–670 Courtney Valley Road",
+      "lifecycle": "unknown",
+      "note": "Historical reference retained. The current application and delivery status have not been confirmed.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/LOD2_Buildings_Scene/SceneServer",
+        "https://www7.mississauga.ca/documents/agendas/committees/pdc/2015/10-05-2015_PDC_Agenda.pdf",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D67&outFields=*&outSR=4326&f=pjson"
+      ],
+      "statusEvidenceDate": "2026-10-08"
+    },
+    {
+      "id": "emtc-northwest",
+      "recordType": "project",
+      "name": "Erin Mills Town Centre — northwest phase",
+      "lifecycle": "approved",
+      "note": "The City lists OZ/OPA 24-15 as OLT-approved and subdivision 21T-M 26-3 as under review. This does not confirm construction or resolution of every final-order or holding condition.",
+      "sourceRefs": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/5100-erin-mills-parkway-oz-opa-24-15-w9/",
+        "https://www.mississauga.ca/wp-content/uploads/2025/09/25141740/Cover-Letter-21T-M-26-3-W9-August-2026.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2025/09/25141742/Draft-Plan-of-Subdivision-21T-M-26-3-W9-August-2026.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2025/09/25141752/Phasing-Concept-Plan-21T-M-26-3-W9-August-2026.pdf"
+      ],
+      "approvalStage": "OLT-approved planning; subdivision under review",
+      "statusEvidenceDate": "2026-09-24"
+    },
+    {
+      "id": "lakeview-aquanova",
+      "recordType": "project",
+      "name": "Aquanova",
+      "lifecycle": "proposed",
+      "note": "Proposed. Current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+24%2F015%27&outFields=%2A&returnGeometry=false",
+        "https://greenparkgroup.ca/new-homes/mississauga/aquanova/",
+        "https://urbantoronto.ca/forum/threads/toronto-aquanova-condos-at-lakeview-village-m-43s-greenpark-graziani-corazza.32662/",
+        "https://aquanovacondos.com/"
+      ],
+      "statusEvidenceDate": "2026-09-20"
+    },
+    {
+      "id": "lakeview-aura",
+      "recordType": "project",
+      "name": "Aura Towns at Lakeview Village",
+      "lifecycle": "proposed",
+      "note": "Proposed. Current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://caivan.com/aura/",
+        "https://caivan.com/wp-content/uploads/2026/02/Aura-Site-plan-260806.jpg",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0",
+        "https://caivan.com/wp-content/uploads/2026/02/Caivan-Aura-Site-Plan-260615.pdf"
+      ],
+      "statusEvidenceDate": "2026-09-20"
+    },
+    {
+      "id": "lakeview-caven",
+      "recordType": "project",
+      "name": "579–619 Lakeshore / Caven",
+      "lifecycle": "proposed",
+      "note": "Proposed. Current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/579-to-619-lakeshore-road-east-1022-and-1028-caven-street-oz-opa-22-26-w1/",
+        "https://www.mississauga.ca/wp-content/uploads/2022/12/Geotechnical-Investigation-December-2022.pdf",
+        "https://urbantoronto.ca/forum/threads/toronto-579-619-lakeshore-road-east-58-4m-16s-breda-group-bdp-quadrangle.34724/"
+      ],
+      "statusEvidenceDate": "2026-06-08"
+    },
+    {
+      "id": "lakeview-deco-opus",
+      "recordType": "project",
+      "name": "South Banks",
+      "lifecycle": "proposed",
+      "note": "Proposed. Current construction or completion has not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+26%2F2+W1%27&outFields=%2A&returnGeometry=false",
+        "https://opushomes.com/communities/lakeview-village/",
+        "https://www.decohomes.ca/southbanks/",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0"
+      ],
+      "statusEvidenceDate": "2026-09-29"
+    },
+    {
+      "id": "lakeview-harbourwalk",
+      "recordType": "project",
+      "name": "Harbourwalk",
+      "lifecycle": "under_construction",
+      "note": "Under construction. The August 2026 developer update reported work at Level 8; the model shows the planned finished form.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+21%2F168%27&outFields=%2A&returnGeometry=false",
+        "https://www.tridel.com/lakeviewvillagecondos/news/",
+        "https://urbantoronto.ca/database/projects/harbourwalk-lakeview-village.48912",
+        "https://www.mississauga.ca/projects-and-strategies/city-projects/lakeview-waterfront-area-redevelopment/lakeview-village/"
+      ],
+      "statusEvidenceDate": "2026-08"
+    },
+    {
+      "id": "lakeview-master",
+      "recordType": "project",
+      "name": "Lakeview Village",
+      "lifecycle": "mixed",
+      "note": "Each block has its own status. Block 1 has site-plan approval; Blocks 2 and 15 remain active applications. Harbourwalk is separately recorded as under construction.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+22%2F082%27&outFields=%2A&returnGeometry=false",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+22%2F056%27&outFields=%2A&returnGeometry=false",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+24%2F019%27&outFields=%2A&returnGeometry=false",
+        "https://www.mississauga.ca/projects-and-strategies/city-projects/lakeview-waterfront-area-redevelopment/lakeview-village/"
+      ],
+      "statusEvidenceDate": "2026-09-20"
+    },
+    {
+      "id": "lakeview-pier-house",
+      "recordType": "project",
+      "name": "Pier House",
+      "lifecycle": "approved",
+      "note": "The City records Section 47 site-plan approval for Block 4 on 17 September 2026. Construction has not been confirmed.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+25%2F48+W1%27&outFields=%2A&returnGeometry=false",
+        "https://www.branthaven.com/communities/pier-house/",
+        "https://www.condominiums.ca/wp-content/uploads/2026/03/PierHouse-Brochure.pdf",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0"
+      ],
+      "approvalStage": "Section 47 site plan approved",
+      "statusEvidenceDate": "2026-09-20"
+    },
+    {
+      "id": "longview-44-45",
+      "recordType": "project",
+      "name": "44–45 Longview Place",
+      "lifecycle": "approved",
+      "note": "Council passed the planning amendments on 29 September 2026. The appeal outcome and remaining holding conditions have not been verified.",
+      "sourceRefs": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/44-45-longview-place-formerly-0-derry-road-west-oz-opa-21-12-w11/",
+        "https://www.mississauga.ca/wp-content/uploads/2026/10/08090813/OZ-OPA-21-12-W11-OPA-14-Notice-of-Passing-public-notice.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2026/02/09120815/East-Elevation-Lot-3-OZ-OPA-21-12-W11-Feb-2026.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2026/02/09120819/North-Elevation-Lot-3-OZ-OPA-21-12-W11-Feb-2026.pdf"
+      ],
+      "approvalStage": "Council passed; appeal and holding outcomes unverified",
+      "statusEvidenceDate": "2026-10-10"
+    },
+    {
+      "id": "mcity-1-2",
+      "recordType": "project",
+      "name": "M City M1 and M2",
+      "lifecycle": "existing",
+      "note": "Existing towers, with occupancy recorded in 2023 and 2024. Approximate exterior studies do not change their status.",
+      "sourceRefs": [
+        "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/",
+        "https://www.mcitycondos.com/construction.php",
+        "https://urbantoronto.ca/database/projects/m-city",
+        "https://www.skyscrapercenter.com/complex/2859"
+      ]
+    },
+    {
+      "id": "mcity-5",
+      "recordType": "project",
+      "name": "M City M5",
+      "lifecycle": "under_construction",
+      "note": "Under construction. The latest dated developer update is Spring 2026; the completion target is a forecast.",
+      "sourceRefs": [
+        "https://www.mcitycondos.com/construction.php",
+        "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/",
+        "https://www.mcitycondos.com/assets/img/community/m6-community-map.jpg",
+        "https://www.skyscrapercenter.com/complex/2859"
+      ]
+    },
+    {
+      "id": "merner-42-john",
+      "recordType": "project",
+      "name": "42 John Street South",
+      "lifecycle": "unknown",
+      "note": "Dated 2025 addition study. The current application and physical condition have not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Building_Footprints_2024/FeatureServer/0",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Address/FeatureServer/0",
+        "https://ws.geoservices.lrc.gov.on.ca/arcgis5/rest/services/Elevation/Ontario_DTM_LidarDerived/ImageServer"
+      ],
+      "statusEvidenceDate": "2026-10-08"
+    },
+    {
+      "id": "ninth-6344",
+      "recordType": "project",
+      "name": "6344 Ninth Line",
+      "lifecycle": "approved",
+      "note": "Council passed the zoning amendment on 29 September 2026. The 28 October appeal deadline has passed; the appeal outcome has not been verified.",
+      "sourceRefs": [
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/6344-ninth-line-oz-26-11-w10/",
+        "https://www.mississauga.ca/wp-content/uploads/2026/10/08090244/OZ-26-11-W10-Notice-of-Passing-public-notice.pdf",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Rezoning_Applications/FeatureServer/0/query?f=json&where=SITE_ADDRESS+LIKE+%27%256344%25%27&outFields=%2A&returnGeometry=true&outSR=26917&resultRecordCount=2000",
+        "https://www.mississauga.ca/wp-content/uploads/2026/07/09102734/Overall-Elevations-Exterior-OZ-26-11-W10-June-2026.pdf"
+      ],
+      "approvalStage": "Council passed; appeal outcome unverified",
+      "statusEvidenceDate": "2026-10-10"
+    },
+    {
+      "id": "perla-towers",
+      "recordType": "project",
+      "name": "Perla Towers at Pinnacle Uptown",
+      "lifecycle": "existing",
+      "note": "Existing towers listed in the developer’s completed-project portfolio. An operating residence at 35 Watergarden is separately documented.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+17%2F035%27&outFields=%2A&returnGeometry=false",
+        "https://www.delsuites.com/suites/perla_towers/detail.php",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Building_Footprints_2024/FeatureServer/0",
+        "https://pinnacleinternational.ca/past-projects/"
+      ],
+      "statusEvidenceDate": "2026-09-26"
+    },
+    {
+      "id": "port-credit-42-46-park",
+      "recordType": "project",
+      "name": "42–46 Park / Park and Elizabeth",
+      "lifecycle": "approved",
+      "note": "Approved rental proposal with demolition or early works reported. Full building construction has not been established.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+25%2F010%27&outFields=%2A&returnGeometry=false",
+        "https://www.mississauga.ca/wp-content/uploads/2025/12/18093753/OZ-OPA-25-10-W1-Notice-of-Passing-public-notice.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2026/01/23103916/MOPA205-Jan-2026.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2025/06/18125538/Planning-Rationale-OZ-OPA-25-10-W1-June-2025.pdf"
+      ],
+      "approvalStage": "Approved rental proposal",
+      "statusEvidenceDate": "2026-10-10"
+    },
+    {
+      "id": "port-credit-88-park",
+      "recordType": "project",
+      "name": "88 Park / Port Credit mobility hub",
+      "lifecycle": "approved",
+      "note": "Planning settled at the tribunal. The City site-plan record remains active; its recorded approval date alone does not establish final site-plan approval.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+25%2F5+W1%27&outFields=%2A&returnGeometry=false",
+        "https://pub-mississauga.escribemeetings.com/filestream.ashx?DocumentId=78584",
+        "https://www.mississauga.ca/wp-content/uploads/2025/06/18125538/Planning-Rationale-OZ-OPA-25-10-W1-June-2025.pdf",
+        "https://urbantoronto.ca/forum/threads/toronto-88-park-131-5m-36s-edenshaw-core-architects.21550/page-5"
+      ],
+      "approvalStage": "Tribunal settlement; site-plan record active",
+      "statusEvidenceDate": "2025-03"
+    },
+    {
+      "id": "south-common-community-centre",
+      "recordType": "project",
+      "name": "South Common Community Centre & Library",
+      "lifecycle": "under_construction",
+      "note": "Under construction according to the City’s January 2026 update. The planned reopening is a forecast.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+23%2F21%27&outFields=%2A&returnGeometry=false",
+        "https://www.mississauga.ca/city-of-mississauga-news/news/mississaugas-2026-budget-adopted/",
+        "https://www.mississauga.ca/projects-and-strategies/city-projects/south-common-community-centre-and-library-renovation/",
+        "https://www.canam.com/en/case-study/a-hybrid-construction-in-mississauga/"
+      ],
+      "statusEvidenceDate": "2026-10-08"
+    },
+    {
+      "id": "square-one-block22",
+      "recordType": "project",
+      "name": "Square One District Block 22 /97–101 City Centre",
+      "lifecycle": "on_hold",
+      "note": "On hold. The optional model is a dated 2021 design reference.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+20%2F006%27&outFields=%2A&returnGeometry=false",
+        "https://fliphtml5.com/dbzgn/hsze/HPA-_Selected_Residential_Mixed-Use_Portfolio_2025_Q2/",
+        "https://urbantoronto.ca/forum/threads/toronto-97-101-city-centre-drive-m-65s-oxford-properties-hariri-pontarini.30788/"
+      ],
+      "statusEvidenceDate": "2026-10-08"
+    },
+    {
+      "id": "st-hilarys-anglican-church",
+      "recordType": "project",
+      "name": "St Hilary’s Anglican Church · roof study",
+      "lifecycle": "existing",
+      "note": "Existing church. The photo-derived roof study does not change its development status.",
+      "sourceRefs": [
+        "https://sthilarys.com/about/history/",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Building_Footprints_2024/FeatureServer/0",
+        "https://yuanartstudio.com/studio-specials/2026-outdoor-sketching-program/st-hilarys-church/"
+      ],
+      "statusEvidenceDate": "2026-10-08"
+    },
+    {
+      "id": "tomken-4094",
+      "recordType": "project",
+      "name": "4094 Tomken / 924 Rathburn",
+      "lifecycle": "approved",
+      "note": "Approved planning framework. The optional 2024 reference and current upper-building geometry remain qualified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+25%2F29+W3%27&outFields=%2A&returnGeometry=false",
+        "https://www.mississauga.ca/wp-content/uploads/2026/01/08091741/Mississauga-Official-Plan-Amendment-190.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2023/11/Architectural-Drawings_Oct-2023_OZ-21-17-W3.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2023/11/Building-Elevations-and-Sections_Oct-2023_OZ-21-17-W3.pdf"
+      ],
+      "approvalStage": "Approved planning framework",
+      "statusEvidenceDate": "2026-10-08"
+    },
+    {
+      "id": "village-green-725",
+      "recordType": "project",
+      "name": "Village Green",
+      "lifecycle": "under_construction",
+      "note": "Under construction, supported by the developer’s construction launch and issued building permits. The current structural stage has not been measured.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+17%2F131%27&outFields=%2A&returnGeometry=false",
+        "https://www.morguard.com/news-knowledge/news/news-detail/?nid=123505",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=UPPER%28SITE_ADDRESS%29+LIKE+%27%25VILLAGE+GREEN%25%27+OR+APP_FILE_NO%3D%27SP+17%2F131%27&outFields=%2A&returnGeometry=true&outSR=26917",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Issued_Building_Permits/FeatureServer/0/query?f=json&where=1%3D1&geometry=%7B%22rings%22%3A+%5B%5B%5B615242.813200062%2C+4825636.44399946%5D%2C+%5B615314.416800062%2C+4825732.35039946%5D%2C+%5B615324.884400062%2C+4825733.22479946%5D%2C+%5B615347.558400062%2C+4825712.98919946%5D%2C+%5B615347.556800063%2C+4825712.99039946%5D%2C+%5B615317.791600062%2C+4825673.58839946%5D%2C+%5B615375.769600062%2C+4825616.39759946%5D%2C+%5B615371.091200061%2C+4825610.14039946%5D%2C+%5B615371.13720006%2C+4825610.24439946%5D%2C+%5B615348.406000062%2C+4825586.53359946%5D%2C+%5B615348.495200061%2C+4825580.85999946%5D%2C+%5B615348.451600062%2C+4825580.89399946%5D%2C+%5B615379.238000061%2C+4825549.54079946%5D%2C+%5B615358.624800062%2C+4825522.27839946%5D%2C+%5B615338.614800062%2C+4825520.59159946%5D%2C+%5B615338.60880006%2C+4825520.59399946%5D%2C+%5B615244.417600062%2C+4825614.19239946%5D%2C+%5B615242.813200062%2C+4825636.44399946%5D%5D%5D%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+26917%7D%7D&geometryType=esriGeometryPolygon&inSR=26917&outSR=26917&outFields=%2A&returnGeometry=true&spatialRel=esriSpatialRelIntersects"
+      ],
+      "statusEvidenceDate": "2026-10-10"
+    },
+    {
+      "id": "voya",
+      "recordType": "project",
+      "name": "Voya at Parkside Village",
+      "lifecycle": "under_construction",
+      "note": "The developer still lists Voya as under construction. A forecast completion season is not confirmation of completion or occupancy.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+21%2F185%27&outFields=%2A&returnGeometry=false",
+        "https://www.lifeatparkside.com/communities",
+        "https://www.lifeatparkside.com/post/voya-takes-shape-as-construction-reaches-new-heights",
+        "https://drive.google.com/file/d/115Ov9j6l_W9jU44khuYdgLmyBYevCrkq/view"
+      ],
+      "statusEvidenceDate": "2026-08-09"
+    },
+    {
+      "id": "watergarden",
+      "recordType": "project",
+      "name": "Pinnacle Uptown / Watergarden / Gemma",
+      "lifecycle": "mixed",
+      "note": "Gemma is move-in ready according to the developer’s September 2026 record. The separate south Watergarden application SP 22/099 remains proposed.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+20%2F073%27&outFields=%2A&returnGeometry=false",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+22%2F099%27&outFields=%2A&returnGeometry=false",
+        "https://www7.mississauga.ca/documents/Business/Planning_Justification_Report_-_June_2018_0_and_5044_Hurontario_St.pdf",
+        "https://pinnacleinternational.ca/communities/gemma/"
+      ],
+      "statusEvidenceDate": "2026-09-26"
+    },
+    {
+      "id": "lakeview-birch",
+      "recordType": "project",
+      "name": "Birch Condos & Towns",
+      "lifecycle": "approved",
+      "note": "The City records Block 1 / SP 22/056 as approved on 3 September 2026. Construction has not been verified. The eight existing component assignments are unchanged.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=WARD+IN+%281%2C2%29&outFields=OBJECTID%2CAPP_FILE_NO%2CAPPLICATION_DATE%2CAPPROVAL_DATE%2CSITE_ADDRESS%2CDESCRIPTION%2CSIMPLE_STATUS%2CAPPLICANT%2CRES_APTS%2CTOTAL_RES_UNITS&returnGeometry=false&resultRecordCount=2000&f=json"
+      ],
+      "statusEvidenceDate": "2026-10-10",
+      "approvalStage": "Site plan approved 2026-09-03"
+    },
+    {
+      "id": "port-credit-70-park",
+      "recordType": "project",
+      "name": "70 Park infill",
+      "lifecycle": "approved",
+      "note": "The final OLT order of 10 July 2025 approves the planning amendments for the infill. Construction has not been verified. The retained 28-storey apartment remains existing context.",
+      "sourceRefs": [
+        "https://www7.mississauga.ca/Departments/PB/OfficialDocs/OLT-23-000684-JUL-10-2025-ORD.pdf"
+      ],
+      "statusEvidenceDate": "2025-07-10",
+      "approvalStage": "Official Plan and zoning approved by final OLT order"
+    },
+    {
+      "id": "bloor-1785",
+      "recordType": "project",
+      "name": "1785 Bloor Street infill",
+      "lifecycle": "approved",
+      "note": "The project planner confirms Official Plan and zoning approval in April 2024. Site-plan approval is still required; construction has not been verified. The existing apartment is retained.",
+      "sourceRefs": [
+        "https://sajeckiplanning.squarespace.com/projects/1785-bloor-street-mississauga",
+        "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/1785-bloor-street-oz-opa-22-14-w3/"
+      ],
+      "statusEvidenceDate": "2024-04",
+      "approvalStage": "Official Plan and zoning approved; site plan required"
+    },
+    {
+      "id": "orchard-189",
+      "recordType": "project",
+      "name": "The Orchard District / 189 Dundas Street West",
+      "lifecycle": "approved",
+      "note": "The August 2024 OLT order confirms the final planning amendments for the revised scheme. Site-plan approval and construction remain unverified. Superseded municipal geometry stays excluded.",
+      "sourceRefs": [
+        "https://www.mississauga.ca/wp-content/uploads/2024/08/14083711/mississauga-official-plan-amendment-mopa-168.pdf",
+        "https://www.omb.gov.on.ca/e-decisions/OLT-22-004125-JAN-19-2024.PDF"
+      ],
+      "statusEvidenceDate": "2024-08-07",
+      "approvalStage": "Final OLT planning order; site plan pending"
+    },
+    {
+      "id": "port-credit-50-high",
+      "recordType": "project",
+      "name": "50 High Street East",
+      "lifecycle": "approved",
+      "note": "Council passed the zoning amendment on 28 January 2026. The October 2026 report describes demolition with site-plan and new-building permit applications pending. Demolition does not establish new-building construction.",
+      "sourceRefs": [
+        "https://www.mississauga.ca/wp-content/uploads/2026/02/05085229/OZ-25-19-W1-Notice-of-Passing-Public-Notice.pdf",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Issued_Building_Permits/FeatureServer/0/query?where=ADDRESS+%3D+%2750+HIGH+ST+E%27&outFields=%2A&returnGeometry=false&f=json",
+        "https://urbantoronto.ca/news/2026/10/demolition-advances-11-storey-affordable-rental-near-port-credit-go.61899"
+      ],
+      "statusEvidenceDate": "2026-10-10",
+      "approvalStage": "Zoning by-law passed; later approvals not confirmed"
+    },
+    {
+      "id": "lakeview-1407-lakeshore-east",
+      "recordType": "project",
+      "name": "1407 Lakeshore Road East",
+      "lifecycle": "approved",
+      "note": "The City records approval of the earlier nine-storey zoning in April 2025 and subsequent holding removal. The current 85-apartment site plan remains active; its architecture and construction are unverified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27SP+25%2F55+W1%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27OZ-OPA%2F22%2F013%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27H-OZ%2F24%2F001%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json"
+      ],
+      "statusEvidenceDate": "2026-11-01",
+      "approvalStage": "Earlier zoning and holding removal approved; current site plan active"
+    },
+    {
+      "id": "lorne-1110-townhomes",
+      "recordType": "project",
+      "name": "1110 Lorne Park Road · six townhomes",
+      "lifecycle": "approved",
+      "note": "The City records six-townhome zoning approval in January 2022 and holding removal in February 2024. Current construction and completion have not been verified.",
+      "sourceRefs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27OZ-OPA+%2F+19+%2F+006%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27H-OZ%2F22%2F002%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json"
+      ],
+      "statusEvidenceDate": "2026-11-01",
+      "approvalStage": "Earlier townhouse zoning and holding removal approved"
+    },
+    {
+      "id": "port-credit-128-lakeshore",
+      "recordType": "project",
+      "name": "128 Lakeshore Road East",
+      "lifecycle": "approved",
+      "note": "The 3 November 2023 interim order approved the planning amendments in principle and withheld the final order pending conditions. Later resolution and construction have not been verified.",
+      "sourceRefs": [
+        "https://www.omb.gov.on.ca/e-decisions/OLT-22-004078-NOV-03-2023.PDF"
+      ],
+      "statusEvidenceDate": "2025-08",
+      "approvalStage": "Tribunal approval in principle; final-order conditions unverified"
+    },
+    {
+      "id": "port-credit-170-lakeshore",
+      "recordType": "project",
+      "name": "170 Lakeshore Road East",
+      "lifecycle": "approved",
+      "note": "The 24 February 2025 interim order approved the planning amendments in principle and withheld the final order pending conditions. Later resolution and construction have not been verified.",
+      "sourceRefs": [
+        "https://www.omb.gov.on.ca/e-decisions/OLT-22-004584-FEB-24-2025.PDF"
+      ],
+      "statusEvidenceDate": "2025-02-24",
+      "approvalStage": "Tribunal approval in principle; final-order conditions unverified"
+    },
+    {
+      "id": "mcity-6",
+      "recordType": "project",
+      "name": "M City M6",
+      "lifecycle": "proposed",
+      "note": "Last-submitted proposal. Plans and tenure remain under review following the October 2026 acquisition. The City confirmed no issued building permits as of 29 October 2026.",
+      "sourceRefs": [
+        "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
+      ],
+      "statusEvidenceDate": "2026-10-29",
+      "sourceCitations": [
+        {
+          "title": "Urban Capital response, 28 October 2026",
+          "publisher": "Urban Capital",
+          "reviewedOn": "2026-11-01"
+        },
+        {
+          "title": "City planning response, 29 October 2026",
+          "publisher": "City of Mississauga",
+          "reviewedOn": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "mcity-7-8",
+      "recordType": "project",
+      "name": "M City M7 and M8",
+      "lifecycle": "proposed",
+      "note": "Last-submitted proposal. Plans and tenure remain under review following the October 2026 acquisition. The City confirmed no issued building permits as of 29 October 2026.",
+      "sourceRefs": [
+        "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
+      ],
+      "statusEvidenceDate": "2026-10-29",
+      "sourceCitations": [
+        {
+          "title": "Urban Capital response, 28 October 2026",
+          "publisher": "Urban Capital",
+          "reviewedOn": "2026-11-01"
+        },
+        {
+          "title": "City planning response, 29 October 2026",
+          "publisher": "City of Mississauga",
+          "reviewedOn": "2026-11-01"
+        },
+        {
+          "title": "HPA response, 28 October 2026",
+          "publisher": "Hariri Pontarini Architects",
+          "reviewedOn": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "port-credit-marina",
+      "recordType": "project",
+      "name": "1 Port Street proposed marina",
+      "lifecycle": "proposed",
+      "note": "The environmental assessment was approved on 5 June 2026. This does not establish development approval, funding, construction or completion.",
+      "sourceRefs": [
+        "https://www.mississauga.ca/projects-and-strategies/environmental-assessments/1-port-street-east-proposed-marina/"
+      ],
+      "approvalStage": "Environmental assessment approved; development delivery unverified",
+      "statusEvidenceDate": "2026-06-05"
+    }
+  ],
+  "meshOverrides": [
+    {
+      "meshId": "62-5932",
+      "lifecycle": "proposed",
+      "projectId": "city-group-8"
+    },
+    {
+      "meshId": "42-808",
+      "lifecycle": "approved",
+      "projectId": "city-group-9"
+    },
+    {
+      "meshId": "103-1073",
+      "lifecycle": "under_construction",
+      "projectId": "city-group-30",
+      "excluded": true
+    },
+    {
+      "meshId": "103-1074",
+      "lifecycle": "under_construction",
+      "projectId": "city-group-30",
+      "excluded": true
+    },
+    {
+      "meshId": "103-1075",
+      "lifecycle": "under_construction",
+      "projectId": "city-group-30",
+      "excluded": true
+    },
+    {
+      "meshId": "22-14211",
+      "lifecycle": "approved",
+      "projectId": "city-group-55"
+    },
+    {
+      "meshId": "22-14212",
+      "lifecycle": "approved",
+      "projectId": "city-group-55"
+    },
+    {
+      "meshId": "22-14213",
+      "lifecycle": "approved",
+      "projectId": "city-group-55"
+    },
+    {
+      "meshId": "22-14214",
+      "lifecycle": "approved",
+      "projectId": "city-group-55"
+    },
+    {
+      "meshId": "22-14215",
+      "lifecycle": "approved",
+      "projectId": "city-group-55"
+    },
+    {
+      "meshId": "22-14216",
+      "lifecycle": "approved",
+      "projectId": "city-group-55"
+    },
+    {
+      "meshId": "22-14217",
+      "lifecycle": "approved",
+      "projectId": "city-group-55"
+    },
+    {
+      "meshId": "22-14218",
+      "lifecycle": "approved",
+      "projectId": "city-group-55"
+    },
+    {
+      "meshId": "22-14219",
+      "lifecycle": "approved",
+      "projectId": "city-group-55"
+    },
+    {
+      "meshId": "22-14220",
+      "lifecycle": "approved",
+      "projectId": "city-group-55"
+    },
+    {
+      "meshId": "22-14221",
+      "lifecycle": "approved",
+      "projectId": "city-group-55"
+    },
+    {
+      "meshId": "22-14225",
+      "lifecycle": "proposed",
+      "projectId": "city-group-59"
+    },
+    {
+      "meshId": "22-14227",
+      "lifecycle": "proposed",
+      "projectId": "city-group-61"
+    },
+    {
+      "meshId": "22-14228",
+      "lifecycle": "proposed",
+      "projectId": "city-group-61"
+    },
+    {
+      "meshId": "22-14229",
+      "lifecycle": "proposed",
+      "projectId": "city-group-61"
+    },
+    {
+      "meshId": "22-14230",
+      "lifecycle": "proposed",
+      "projectId": "city-group-61"
+    },
+    {
+      "meshId": "13-11438",
+      "lifecycle": "approved",
+      "projectId": "city-group-70"
+    },
+    {
+      "meshId": "91-5025",
+      "lifecycle": "approved",
+      "projectId": "city-group-81"
+    },
+    {
+      "meshId": "91-5026",
+      "lifecycle": "approved",
+      "projectId": "city-group-81"
+    },
+    {
+      "meshId": "91-5027",
+      "lifecycle": "approved",
+      "projectId": "city-group-81"
+    },
+    {
+      "meshId": "91-5028",
+      "lifecycle": "approved",
+      "projectId": "city-group-81"
+    },
+    {
+      "meshId": "72-6171",
+      "lifecycle": "proposed",
+      "projectId": "city-group-92"
+    },
+    {
+      "meshId": "73-4291",
+      "lifecycle": "proposed",
+      "projectId": "city-group-107",
+      "excluded": true
+    },
+    {
+      "meshId": "73-4292",
+      "lifecycle": "proposed",
+      "projectId": "city-group-107"
+    },
+    {
+      "meshId": "73-4293",
+      "lifecycle": "proposed",
+      "projectId": "city-group-107",
+      "excluded": true
+    },
+    {
+      "meshId": "71-6192",
+      "lifecycle": "approved",
+      "projectId": "city-group-139"
+    },
+    {
+      "meshId": "92-4846",
+      "lifecycle": "proposed",
+      "projectId": "city-group-148"
+    },
+    {
+      "meshId": "83-1947",
+      "lifecycle": "approved",
+      "projectId": "city-group-156"
+    },
+    {
+      "meshId": "83-1948",
+      "lifecycle": "approved",
+      "projectId": "city-group-156"
+    },
+    {
+      "meshId": "83-1950",
+      "lifecycle": "approved",
+      "projectId": "city-group-158"
+    },
+    {
+      "meshId": "23-6944",
+      "lifecycle": "proposed",
+      "projectId": "city-group-1"
+    },
+    {
+      "meshId": "23-6945",
+      "lifecycle": "proposed",
+      "projectId": "city-group-1"
+    },
+    {
+      "meshId": "102-7050",
+      "lifecycle": "approved",
+      "projectId": "city-group-14",
+      "excluded": true
+    },
+    {
+      "meshId": "81-2826",
+      "lifecycle": "proposed",
+      "projectId": "city-group-24"
+    },
+    {
+      "meshId": "81-2827",
+      "lifecycle": "proposed",
+      "projectId": "city-group-24"
+    },
+    {
+      "meshId": "81-2828",
+      "lifecycle": "proposed",
+      "projectId": "city-group-24"
+    },
+    {
+      "meshId": "81-2829",
+      "lifecycle": "proposed",
+      "projectId": "city-group-24"
+    },
+    {
+      "meshId": "81-2830",
+      "lifecycle": "proposed",
+      "projectId": "city-group-24"
+    },
+    {
+      "meshId": "81-2831",
+      "lifecycle": "proposed",
+      "projectId": "city-group-25"
+    },
+    {
+      "meshId": "13-11417",
+      "lifecycle": "proposed",
+      "projectId": "city-group-68"
+    },
+    {
+      "meshId": "13-11418",
+      "lifecycle": "proposed",
+      "projectId": "city-group-68"
+    },
+    {
+      "meshId": "13-11419",
+      "lifecycle": "proposed",
+      "projectId": "city-group-68"
+    },
+    {
+      "meshId": "13-11420",
+      "lifecycle": "proposed",
+      "projectId": "city-group-68"
+    },
+    {
+      "meshId": "13-11421",
+      "lifecycle": "proposed",
+      "projectId": "city-group-68"
+    },
+    {
+      "meshId": "13-11422",
+      "lifecycle": "proposed",
+      "projectId": "city-group-68"
+    },
+    {
+      "meshId": "13-11423",
+      "lifecycle": "proposed",
+      "projectId": "city-group-68"
+    },
+    {
+      "meshId": "13-11424",
+      "lifecycle": "proposed",
+      "projectId": "city-group-68"
+    },
+    {
+      "meshId": "13-11425",
+      "lifecycle": "proposed",
+      "projectId": "city-group-68"
+    },
+    {
+      "meshId": "13-11426",
+      "lifecycle": "proposed",
+      "projectId": "city-group-68"
+    },
+    {
+      "meshId": "13-11427",
+      "lifecycle": "proposed",
+      "projectId": "city-group-68"
+    },
+    {
+      "meshId": "13-11428",
+      "lifecycle": "proposed",
+      "projectId": "city-group-68"
+    },
+    {
+      "meshId": "13-11429",
+      "lifecycle": "proposed",
+      "projectId": "city-group-68"
+    },
+    {
+      "meshId": "13-11430",
+      "lifecycle": "proposed",
+      "projectId": "city-group-68"
+    },
+    {
+      "meshId": "13-11431",
+      "lifecycle": "proposed",
+      "projectId": "city-group-68"
+    },
+    {
+      "meshId": "51-5294",
+      "lifecycle": "proposed",
+      "projectId": "city-group-143"
+    },
+    {
+      "meshId": "51-5295",
+      "lifecycle": "proposed",
+      "projectId": "city-group-143"
+    },
+    {
+      "meshId": "21-4738",
+      "lifecycle": "proposed",
+      "projectId": "city-group-155"
+    },
+    {
+      "meshId": "21-4739",
+      "lifecycle": "proposed",
+      "projectId": "city-group-155"
+    },
+    {
+      "meshId": "91-5023",
+      "lifecycle": "proposed",
+      "projectId": "city-group-79"
+    },
+    {
+      "meshId": "101-4564",
+      "lifecycle": "proposed",
+      "projectId": "city-group-174"
+    },
+    {
+      "meshId": "101-4565",
+      "lifecycle": "proposed",
+      "projectId": "city-group-174"
+    },
+    {
+      "meshId": "101-4566",
+      "lifecycle": "proposed",
+      "projectId": "city-group-174"
+    },
+    {
+      "meshId": "101-4567",
+      "lifecycle": "proposed",
+      "projectId": "city-group-174"
+    },
+    {
+      "meshId": "101-4568",
+      "lifecycle": "proposed",
+      "projectId": "city-group-174"
+    },
+    {
+      "meshId": "102-7051",
+      "lifecycle": "proposed",
+      "projectId": "city-group-15"
+    },
+    {
+      "meshId": "102-7052",
+      "lifecycle": "proposed",
+      "projectId": "city-group-15"
+    },
+    {
+      "meshId": "102-7053",
+      "lifecycle": "proposed",
+      "projectId": "city-group-15"
+    },
+    {
+      "meshId": "102-7054",
+      "lifecycle": "proposed",
+      "projectId": "city-group-15"
+    },
+    {
+      "meshId": "102-7055",
+      "lifecycle": "proposed",
+      "projectId": "city-group-15"
+    },
+    {
+      "meshId": "102-7056",
+      "lifecycle": "proposed",
+      "projectId": "city-group-15"
+    },
+    {
+      "meshId": "102-7057",
+      "lifecycle": "proposed",
+      "projectId": "city-group-15"
+    },
+    {
+      "meshId": "71-6168",
+      "lifecycle": "proposed",
+      "projectId": "city-group-131"
+    },
+    {
+      "meshId": "71-6169",
+      "lifecycle": "proposed",
+      "projectId": "city-group-131"
+    },
+    {
+      "meshId": "63-6191",
+      "lifecycle": "on_hold",
+      "projectId": "square-one-block22"
+    },
+    {
+      "meshId": "63-6192",
+      "lifecycle": "on_hold",
+      "projectId": "square-one-block22"
+    },
+    {
+      "meshId": "63-6193",
+      "lifecycle": "on_hold",
+      "projectId": "square-one-block22"
+    },
+    {
+      "meshId": "63-6194",
+      "lifecycle": "proposed",
+      "projectId": "180-burnhamthorpe"
+    },
+    {
+      "meshId": "63-6195",
+      "lifecycle": "proposed",
+      "projectId": "180-burnhamthorpe"
+    },
+    {
+      "meshId": "63-6196",
+      "lifecycle": "proposed",
+      "projectId": "180-burnhamthorpe"
+    },
+    {
+      "meshId": "63-6248",
+      "lifecycle": "existing",
+      "projectId": "mcity-1-2"
+    },
+    {
+      "meshId": "63-6252",
+      "lifecycle": "existing",
+      "projectId": "mcity-1-2"
+    },
+    {
+      "meshId": "72-6172",
+      "lifecycle": "proposed",
+      "projectId": "4310-sherwoodtowne"
+    },
+    {
+      "meshId": "72-6173",
+      "lifecycle": "proposed",
+      "projectId": "4310-sherwoodtowne"
+    },
+    {
+      "meshId": "72-6174",
+      "lifecycle": "proposed",
+      "projectId": "4310-sherwoodtowne"
+    },
+    {
+      "meshId": "92-4848",
+      "lifecycle": "approved",
+      "projectId": "port-credit-42-46-park",
+      "excluded": true
+    },
+    {
+      "meshId": "92-4849",
+      "lifecycle": "approved",
+      "projectId": "port-credit-42-46-park",
+      "excluded": true
+    },
+    {
+      "meshId": "92-4850",
+      "lifecycle": "approved",
+      "projectId": "port-credit-88-park"
+    },
+    {
+      "meshId": "92-4851",
+      "lifecycle": "approved",
+      "projectId": "port-credit-88-park"
+    },
+    {
+      "meshId": "92-4852",
+      "lifecycle": "approved",
+      "projectId": "port-credit-88-park"
+    },
+    {
+      "meshId": "92-4853",
+      "lifecycle": "approved",
+      "projectId": "port-credit-88-park"
+    },
+    {
+      "meshId": "92-4854",
+      "lifecycle": "approved",
+      "projectId": "port-credit-88-park"
+    },
+    {
+      "meshId": "92-4855",
+      "lifecycle": "approved",
+      "projectId": "port-credit-88-park"
+    },
+    {
+      "meshId": "92-4856",
+      "lifecycle": "approved",
+      "projectId": "port-credit-88-park"
+    },
+    {
+      "meshId": "102-7040",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-caven"
+    },
+    {
+      "meshId": "102-7041",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-caven"
+    },
+    {
+      "meshId": "102-7042",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-caven"
+    },
+    {
+      "meshId": "102-7043",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-caven"
+    },
+    {
+      "meshId": "102-7044",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-caven"
+    },
+    {
+      "meshId": "102-7045",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-caven"
+    },
+    {
+      "meshId": "102-7046",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-caven"
+    },
+    {
+      "meshId": "102-7047",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-caven"
+    },
+    {
+      "meshId": "102-7048",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-caven"
+    },
+    {
+      "meshId": "102-7049",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-caven"
+    },
+    {
+      "meshId": "93-742",
+      "lifecycle": "proposed",
+      "projectId": "brightwater-bridge-house"
+    },
+    {
+      "meshId": "93-743",
+      "lifecycle": "proposed",
+      "projectId": "brightwater-bridge-house"
+    },
+    {
+      "meshId": "93-744",
+      "lifecycle": "proposed",
+      "projectId": "brightwater-bridge-house"
+    },
+    {
+      "meshId": "93-745",
+      "lifecycle": "proposed",
+      "projectId": "brightwater-bridge-house"
+    },
+    {
+      "meshId": "93-746",
+      "lifecycle": "proposed",
+      "projectId": "brightwater-bridge-house"
+    },
+    {
+      "meshId": "93-747",
+      "lifecycle": "proposed",
+      "projectId": "brightwater-bridge-house"
+    },
+    {
+      "meshId": "93-748",
+      "lifecycle": "proposed",
+      "projectId": "brightwater-bridge-house"
+    },
+    {
+      "meshId": "93-749",
+      "lifecycle": "proposed",
+      "projectId": "brightwater-master",
+      "componentPhase": {
+        "id": "brightwater-sp22-103",
+        "label": "Townhouse application SP 22/103",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "93-750",
+      "lifecycle": "proposed",
+      "projectId": "brightwater-master",
+      "componentPhase": {
+        "id": "brightwater-sp22-103",
+        "label": "Townhouse application SP 22/103",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "93-751",
+      "lifecycle": "proposed",
+      "projectId": "brightwater-master",
+      "componentPhase": {
+        "id": "brightwater-sp22-103",
+        "label": "Townhouse application SP 22/103",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "93-752",
+      "lifecycle": "proposed",
+      "projectId": "brightwater-master",
+      "componentPhase": {
+        "id": "brightwater-sp22-103",
+        "label": "Townhouse application SP 22/103",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "93-753",
+      "lifecycle": "proposed",
+      "projectId": "brightwater-master",
+      "componentPhase": {
+        "id": "brightwater-sp22-103",
+        "label": "Townhouse application SP 22/103",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "93-754",
+      "lifecycle": "proposed",
+      "projectId": "brightwater-master",
+      "componentPhase": {
+        "id": "brightwater-sp22-103",
+        "label": "Townhouse application SP 22/103",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "93-755",
+      "lifecycle": "proposed",
+      "projectId": "brightwater-master",
+      "componentPhase": {
+        "id": "brightwater-sp22-103",
+        "label": "Townhouse application SP 22/103",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "93-756",
+      "lifecycle": "proposed",
+      "projectId": "brightwater-master",
+      "componentPhase": {
+        "id": "brightwater-sp22-103",
+        "label": "Townhouse application SP 22/103",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "103-1077",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-block-15",
+        "label": "Block 15 · SP 24/019",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "103-1078",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-block-15",
+        "label": "Block 15 · SP 24/019",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "103-1079",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-block-15",
+        "label": "Block 15 · SP 24/019",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "103-1080",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-sp24-015",
+        "label": "Greenpark application SP 24/015",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "103-1081",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-sp24-015",
+        "label": "Greenpark application SP 24/015",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "103-1082",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-sp24-015",
+        "label": "Greenpark application SP 24/015",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "103-1083",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-aquanova",
+      "componentPhase": {
+        "id": "lakeview-sp24-015",
+        "label": "Greenpark application SP 24/015",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "103-1084",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-sp24-015",
+        "label": "Greenpark application SP 24/015",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "103-1085",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-sp24-015",
+        "label": "Greenpark application SP 24/015",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "103-1086",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-sp24-015",
+        "label": "Greenpark application SP 24/015",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "103-1087",
+      "lifecycle": "approved",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-block-1",
+        "label": "Block 1 · SP 22/056",
+        "lifecycle": "approved"
+      }
+    },
+    {
+      "meshId": "103-1088",
+      "lifecycle": "approved",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-block-1",
+        "label": "Block 1 · SP 22/056",
+        "lifecycle": "approved"
+      }
+    },
+    {
+      "meshId": "103-1089",
+      "lifecycle": "approved",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-block-1",
+        "label": "Block 1 · SP 22/056",
+        "lifecycle": "approved"
+      }
+    },
+    {
+      "meshId": "103-1090",
+      "lifecycle": "approved",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-block-1",
+        "label": "Block 1 · SP 22/056",
+        "lifecycle": "approved"
+      }
+    },
+    {
+      "meshId": "103-1091",
+      "lifecycle": "approved",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-block-1",
+        "label": "Block 1 · SP 22/056",
+        "lifecycle": "approved"
+      }
+    },
+    {
+      "meshId": "103-1092",
+      "lifecycle": "approved",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-block-1",
+        "label": "Block 1 · SP 22/056",
+        "lifecycle": "approved"
+      }
+    },
+    {
+      "meshId": "103-1093",
+      "lifecycle": "approved",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-block-1",
+        "label": "Block 1 · SP 22/056",
+        "lifecycle": "approved"
+      }
+    },
+    {
+      "meshId": "103-1094",
+      "lifecycle": "approved",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-block-1",
+        "label": "Block 1 · SP 22/056",
+        "lifecycle": "approved"
+      }
+    },
+    {
+      "meshId": "103-1095",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-block-2",
+        "label": "Block 2 · SP 22/082",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "103-1096",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-block-2",
+        "label": "Block 2 · SP 22/082",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "103-1097",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-block-2",
+        "label": "Block 2 · SP 22/082",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "103-1098",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-block-2",
+        "label": "Block 2 · SP 22/082",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "103-1099",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-block-2",
+        "label": "Block 2 · SP 22/082",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "103-1100",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-block-2",
+        "label": "Block 2 · SP 22/082",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "103-1101",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-block-2",
+        "label": "Block 2 · SP 22/082",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "103-1102",
+      "lifecycle": "proposed",
+      "projectId": "lakeview-master",
+      "componentPhase": {
+        "id": "lakeview-block-2",
+        "label": "Block 2 · SP 22/082",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "12-17032",
+      "lifecycle": "approved",
+      "projectId": "emtc-northwest"
+    },
+    {
+      "meshId": "12-17033",
+      "lifecycle": "approved",
+      "projectId": "emtc-northwest"
+    },
+    {
+      "meshId": "12-17034",
+      "lifecycle": "approved",
+      "projectId": "emtc-northwest"
+    },
+    {
+      "meshId": "12-17035",
+      "lifecycle": "approved",
+      "projectId": "emtc-northwest"
+    },
+    {
+      "meshId": "12-17036",
+      "lifecycle": "approved",
+      "projectId": "emtc-northwest"
+    },
+    {
+      "meshId": "12-17037",
+      "lifecycle": "approved",
+      "projectId": "emtc-northwest"
+    },
+    {
+      "meshId": "12-17038",
+      "lifecycle": "approved",
+      "projectId": "emtc-northwest"
+    },
+    {
+      "meshId": "12-17039",
+      "lifecycle": "approved",
+      "projectId": "emtc-northwest"
+    },
+    {
+      "meshId": "12-17040",
+      "lifecycle": "approved",
+      "projectId": "emtc-northwest"
+    },
+    {
+      "meshId": "12-17041",
+      "lifecycle": "approved",
+      "projectId": "emtc-northwest"
+    },
+    {
+      "meshId": "12-17042",
+      "lifecycle": "approved",
+      "projectId": "emtc-northwest"
+    },
+    {
+      "meshId": "12-17043",
+      "lifecycle": "approved",
+      "projectId": "emtc-northwest"
+    },
+    {
+      "meshId": "12-17044",
+      "lifecycle": "approved",
+      "projectId": "emtc-northwest"
+    },
+    {
+      "meshId": "12-17045",
+      "lifecycle": "approved",
+      "projectId": "emtc-northwest"
+    },
+    {
+      "meshId": "12-17046",
+      "lifecycle": "approved",
+      "projectId": "emtc-northwest"
+    },
+    {
+      "meshId": "12-17047",
+      "lifecycle": "approved",
+      "projectId": "emtc-northwest"
+    },
+    {
+      "meshId": "12-17048",
+      "lifecycle": "approved",
+      "projectId": "emtc-northwest"
+    },
+    {
+      "meshId": "22-14233",
+      "lifecycle": "existing",
+      "projectId": "watergarden",
+      "componentPhase": {
+        "id": "gemma",
+        "label": "Gemma",
+        "lifecycle": "existing"
+      }
+    },
+    {
+      "meshId": "22-14234",
+      "lifecycle": "existing",
+      "projectId": "watergarden",
+      "componentPhase": {
+        "id": "gemma",
+        "label": "Gemma",
+        "lifecycle": "existing"
+      }
+    },
+    {
+      "meshId": "22-14235",
+      "lifecycle": "existing",
+      "projectId": "watergarden",
+      "componentPhase": {
+        "id": "gemma",
+        "label": "Gemma",
+        "lifecycle": "existing"
+      }
+    },
+    {
+      "meshId": "22-14236",
+      "lifecycle": "proposed",
+      "projectId": "watergarden",
+      "componentPhase": {
+        "id": "watergarden-south-sp22-099",
+        "label": "South Watergarden · SP 22/099",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "22-14237",
+      "lifecycle": "proposed",
+      "projectId": "watergarden",
+      "componentPhase": {
+        "id": "watergarden-south-sp22-099",
+        "label": "South Watergarden · SP 22/099",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "22-14238",
+      "lifecycle": "proposed",
+      "projectId": "watergarden",
+      "componentPhase": {
+        "id": "watergarden-south-sp22-099",
+        "label": "South Watergarden · SP 22/099",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "22-14239",
+      "lifecycle": "proposed",
+      "projectId": "watergarden",
+      "componentPhase": {
+        "id": "watergarden-south-sp22-099",
+        "label": "South Watergarden · SP 22/099",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "meshId": "71-6186",
+      "lifecycle": "approved",
+      "projectId": "tomken-4094"
+    },
+    {
+      "meshId": "71-6187",
+      "lifecycle": "approved",
+      "projectId": "tomken-4094"
+    },
+    {
+      "meshId": "62-5925",
+      "lifecycle": "unknown",
+      "projectId": "courtney-630"
+    },
+    {
+      "meshId": "62-5926",
+      "lifecycle": "unknown",
+      "projectId": "courtney-630"
+    },
+    {
+      "meshId": "62-5927",
+      "lifecycle": "unknown",
+      "projectId": "courtney-630"
+    },
+    {
+      "meshId": "62-5928",
+      "lifecycle": "unknown",
+      "projectId": "courtney-630"
+    },
+    {
+      "meshId": "62-5929",
+      "lifecycle": "unknown",
+      "projectId": "courtney-630"
+    },
+    {
+      "meshId": "22-14240",
+      "lifecycle": "existing",
+      "projectId": "watergarden",
+      "componentPhase": {
+        "id": "gemma",
+        "label": "Gemma",
+        "lifecycle": "existing"
+      },
+      "excluded": true
+    },
+    {
+      "meshId": "102-7101",
+      "lifecycle": "unknown"
+    },
+    {
+      "meshId": "102-7105",
+      "lifecycle": "unknown"
+    },
+    {
+      "meshId": "103-1103",
+      "lifecycle": "unknown"
+    },
+    {
+      "meshId": "11-5545",
+      "lifecycle": "unknown"
+    },
+    {
+      "meshId": "71-6200",
+      "lifecycle": "unknown"
+    },
+    {
+      "meshId": "51-5314",
+      "lifecycle": "unknown"
+    },
+    {
+      "meshId": "92-4866",
+      "lifecycle": "unknown"
+    },
+    {
+      "meshId": "21-4741",
+      "lifecycle": "unknown"
+    },
+    {
+      "meshId": "41-7762",
+      "lifecycle": "unknown"
+    },
+    {
+      "meshId": "63-6170",
+      "projectId": "mcity-7-8",
+      "lifecycle": "proposed"
+    },
+    {
+      "meshId": "63-6171",
+      "projectId": "mcity-7-8",
+      "lifecycle": "proposed"
+    },
+    {
+      "meshId": "63-6172",
+      "projectId": "mcity-7-8",
+      "lifecycle": "proposed"
+    },
+    {
+      "meshId": "63-6173",
+      "projectId": "mcity-6",
+      "lifecycle": "proposed"
+    },
+    {
+      "meshId": "63-6174",
+      "projectId": "mcity-6",
+      "lifecycle": "proposed"
+    },
+    {
+      "meshId": "92-4843",
+      "projectId": "port-credit-70-park",
+      "lifecycle": "approved",
+      "excluded": true
+    },
+    {
+      "meshId": "92-4844",
+      "projectId": "port-credit-70-park",
+      "lifecycle": "approved",
+      "excluded": true
+    },
+    {
+      "meshId": "92-4845",
+      "projectId": "port-credit-70-park",
+      "lifecycle": "approved",
+      "excluded": true
+    },
+    {
+      "meshId": "92-4847",
+      "projectId": "port-credit-128-lakeshore",
+      "lifecycle": "approved",
+      "excluded": true
+    },
+    {
+      "meshId": "102-7071",
+      "projectId": "port-credit-170-lakeshore",
+      "lifecycle": "approved",
+      "excluded": true
+    },
+    {
+      "meshId": "102-7072",
+      "projectId": "port-credit-170-lakeshore",
+      "lifecycle": "approved",
+      "excluded": true
+    },
+    {
+      "meshId": "73-4300",
+      "projectId": "bloor-1785",
+      "lifecycle": "approved"
+    },
+    {
+      "meshId": "73-4301",
+      "projectId": "bloor-1785",
+      "lifecycle": "approved"
+    },
+    {
+      "meshId": "63-6229",
+      "projectId": "orchard-189",
+      "lifecycle": "approved",
+      "excluded": true
+    },
+    {
+      "meshId": "63-6230",
+      "projectId": "orchard-189",
+      "lifecycle": "approved",
+      "excluded": true
+    },
+    {
+      "meshId": "63-6231",
+      "projectId": "orchard-189",
+      "lifecycle": "approved",
+      "excluded": true
+    },
+    {
+      "meshId": "63-6232",
+      "projectId": "orchard-189",
+      "lifecycle": "approved",
+      "excluded": true
+    },
+    {
+      "meshId": "63-6233",
+      "projectId": "orchard-189",
+      "lifecycle": "approved",
+      "excluded": true
+    },
+    {
+      "meshId": "63-6234",
+      "projectId": "orchard-189",
+      "lifecycle": "approved",
+      "excluded": true
+    }
+  ],
+  "refinementAssets": [
+    {
+      "id": "mcity-m5-developer-proxy",
+      "projectId": "mcity-5",
+      "lifecycle": "under_construction"
+    },
+    {
+      "id": "voya-towers-plan-derived",
+      "projectId": "voya",
+      "lifecycle": "under_construction"
+    },
+    {
+      "id": "wf-brightwater-missing-blocks-concept",
+      "projectId": "brightwater-master",
+      "lifecycle": "proposed",
+      "componentPhase": {
+        "id": "brightwater-future-concept",
+        "label": "Future blocks in the adopted 2024 concept",
+        "lifecycle": "proposed"
+      }
+    },
+    {
+      "id": "aura-townhome-envelopes",
+      "projectId": "lakeview-aura",
+      "lifecycle": "proposed"
+    },
+    {
+      "id": "cooksville-toc-sep2026-envelopes",
+      "projectId": "cooksville-toc",
+      "lifecycle": "proposed"
+    },
+    {
+      "id": "perla-towers-source-envelope",
+      "projectId": "perla-towers",
+      "lifecycle": "existing"
+    },
+    {
+      "id": "emtc-northwest-2026-settlement",
+      "projectId": "emtc-northwest",
+      "lifecycle": "approved"
+    },
+    {
+      "id": "harbourwalk-terraced-reference",
+      "projectId": "lakeview-harbourwalk",
+      "lifecycle": "under_construction"
+    },
+    {
+      "id": "pier-house-townhome-reference",
+      "projectId": "lakeview-pier-house",
+      "lifecycle": "approved"
+    },
+    {
+      "id": "south-banks-plan-derived",
+      "projectId": "lakeview-deco-opus",
+      "lifecycle": "proposed"
+    },
+    {
+      "id": "aura-additional-plan-envelopes",
+      "projectId": "lakeview-aura",
+      "lifecycle": "proposed"
+    },
+    {
+      "id": "30-eglinton-west-approved-envelope",
+      "projectId": "30-eglinton-west",
+      "lifecycle": "approved"
+    },
+    {
+      "id": "30-eglinton-west-retained-office",
+      "projectId": "30-eglinton-west",
+      "lifecycle": "existing",
+      "componentPhase": {
+        "id": "retained-office",
+        "label": "Retained existing office",
+        "lifecycle": "existing"
+      }
+    },
+    {
+      "id": "block-nine-reference-derived",
+      "projectId": "block-nine",
+      "lifecycle": "existing"
+    },
+    {
+      "id": "aldo-1422-study",
+      "projectId": "aldo-1422-study",
+      "lifecycle": "unknown"
+    },
+    {
+      "id": "south-common-source-derived-preview",
+      "projectId": "south-common-community-centre",
+      "lifecycle": "under_construction"
+    },
+    {
+      "id": "westminster-2024-private-reference",
+      "projectId": "tomken-4094",
+      "lifecycle": "approved"
+    },
+    {
+      "id": "st-hilary-photo-derived-private-pilot",
+      "projectId": "st-hilarys-anglican-church",
+      "lifecycle": "existing"
+    },
+    {
+      "id": "block22-2021-private-roof-study",
+      "projectId": "square-one-block22",
+      "lifecycle": "on_hold"
+    },
+    {
+      "id": "merner-42-john-20261008",
+      "projectId": "merner-42-john",
+      "lifecycle": "unknown"
+    },
+    {
+      "id": "60-dundas-olt-zoning-envelope",
+      "projectId": "cooksville-60-dundas-east",
+      "lifecycle": "approved"
+    },
+    {
+      "id": "46-park-current-envelope-review",
+      "projectId": "port-credit-42-46-park",
+      "lifecycle": "approved"
+    },
+    {
+      "id": "byngmount-seven-storey-review",
+      "projectId": "city-group-30",
+      "lifecycle": "under_construction"
+    },
+    {
+      "id": "49-south-olt-height-envelope-review",
+      "projectId": "city-group-14",
+      "lifecycle": "approved"
+    },
+    {
+      "id": "village-green-725-uncertain-reference",
+      "projectId": "village-green-725",
+      "lifecycle": "under_construction"
+    },
+    {
+      "id": "ninth-6344-three-plan-envelopes",
+      "projectId": "ninth-6344",
+      "lifecycle": "approved"
+    },
+    {
+      "id": "longview-three-new-homes-reference",
+      "projectId": "longview-44-45",
+      "lifecycle": "approved"
+    },
+    {
+      "id": "creekside-source-reference-study",
+      "projectId": "clarkson-creekside-1639",
+      "lifecycle": "under_construction"
+    },
+    {
+      "id": "mcity-m1-20261025-exterior-study",
+      "projectId": "mcity-1-2",
+      "lifecycle": "existing"
+    },
+    {
+      "id": "mcity-m2-20261025-exterior-study",
+      "projectId": "mcity-1-2",
+      "lifecycle": "existing"
+    },
+    {
+      "id": "wf-50high-current-plan",
+      "projectId": "port-credit-50-high",
+      "lifecycle": "approved"
+    },
+    {
+      "id": "wf-128-current-plan",
+      "projectId": "port-credit-128-lakeshore",
+      "lifecycle": "approved"
+    },
+    {
+      "id": "wf-70-settlement-envelope",
+      "projectId": "port-credit-70-park",
+      "lifecycle": "approved"
+    },
+    {
+      "id": "wf-170-settlement-envelope",
+      "projectId": "port-credit-170-lakeshore",
+      "lifecycle": "approved"
+    }
+  ]
+}

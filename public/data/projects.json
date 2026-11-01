@@ -129,7 +129,17 @@
     "studyLabel": "Optional approximate completed exterior \u00b7 M City Rev02",
     "studyActionLabel": "Review approximate exterior",
     "localOptional": true,
-    "localReview": true
+    "localReview": true,
+    "lifecycle": "existing",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high for existing semantic classification; no full as-built certification",
+    "lifecycleNote": "Existing towers, with occupancy recorded in 2023 and 2024. Approximate exterior studies do not change their status.",
+    "lifecycleSourceRefs": [
+      "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/",
+      "https://www.mcitycondos.com/construction.php",
+      "https://urbantoronto.ca/database/projects/m-city",
+      "https://www.skyscrapercenter.com/complex/2859"
+    ]
   },
   {
     "id": "mcity-3",
@@ -521,7 +531,17 @@
       "actualHeightM": null,
       "source": "https://www.mcitycondos.com/construction.php"
     },
-    "targetCompletionSource": "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
+    "targetCompletionSource": "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/",
+    "lifecycle": "under_construction",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high",
+    "lifecycleNote": "Under construction. The latest dated developer update is Spring 2026; the completion target is a forecast.",
+    "lifecycleSourceRefs": [
+      "https://www.mcitycondos.com/construction.php",
+      "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/",
+      "https://www.mcitycondos.com/assets/img/community/m6-community-map.jpg",
+      "https://www.skyscrapercenter.com/complex/2859"
+    ]
   },
   {
     "id": "mcity-6",
@@ -529,14 +549,14 @@
     "address": "3990 Redmond Road",
     "lat": 43.58222282652768,
     "lon": -79.64755419260095,
-    "status": "proposed-preconstruction",
-    "statusDate": "2026-10-06",
+    "status": "plans-under-review",
+    "statusDate": "2026-10-29",
     "storeys": [
       58
     ],
     "heightM": [],
-    "summary": "Single tower forming M City Block 2, one of the final three phases.",
-    "modelCaveat": "The June 2026 City register describes 58 storeys. The architect page describes an earlier 55-storey version. Municipal SP 22-145 geometry has a 186.85 m tower height attribute; retain its exact surfaces. CTBUH explicitly estimates 194 m and that estimate is not a replacement height.",
+    "summary": "Urban Capital is reviewing the plans and tenure after acquiring the lands. The last City submission proposes 58 storeys and 889 homes.",
+    "modelCaveat": "Earlier City geometry. Comparison against HPA revision 6, dated 3 July 2025, is still pending. The submitted design is a dated proposal; plans and tenure remain under review.",
     "sources": [
       {
         "url": "https://www.hariripontarini.com/projects/m-city-block-2-3",
@@ -545,7 +565,8 @@
         "accessed": "2026-09-20",
         "claims": [
           "M6 single 55-storey tower; M7/M8 50/45-storey pair on shared podium; final three phases."
-        ]
+        ],
+        "note": "Earlier published design. Counts differ from the last submission; future plans remain under review."
       },
       {
         "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/",
@@ -574,6 +595,24 @@
           "SP 22-145: 58-storey mixed-use building at 3990 Redmond Road.",
           "Withheld is a workflow status, not a cancellation."
         ]
+      },
+      {
+        "title": "Urban Capital response, 28 October 2026",
+        "publisher": "Urban Capital",
+        "accessed": "2026-11-01",
+        "note": "Acquisition closed 23 October to UC M City Inc. Plans and tenure remain under review; no imminent condo launch."
+      },
+      {
+        "title": "City planning response, 29 October 2026",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-11-01",
+        "note": "Last-submitted proposals confirmed. No post-sale resubmission or building permits issued as of that date."
+      },
+      {
+        "title": "M6 submitted drawings, revision 6, 3 July 2025",
+        "publisher": "Hariri Pontarini Architects; supplied by City of Mississauga",
+        "accessed": "2026-11-01",
+        "note": "A003 gives 186.85 m excluding and 195.85 m including the mechanical penthouse. The City reports 58 storeys. A003 labels 58 + MECHANICAL and the elevations label Level 58/Mech. These do not establish 58 residential storeys."
       }
     ],
     "geometrySources": [
@@ -604,14 +643,14 @@
       "actual": null,
       "target": null,
       "targetIsGuaranteed": false,
-      "note": "No verified completion date is published in the checked sources. This remains a proposal, future phase or planning concept; no date is inferred from its age.",
-      "reviewed": "2026-09-20",
+      "note": "No verified construction or completion date was announced in Urban Capital\u2019s 28 October 2026 response.",
+      "reviewed": "2026-11-01",
       "sources": [
         "https://www.hariripontarini.com/projects/m-city-block-2-3",
         "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
       ]
     },
-    "lastStatusReview": "2026-10-08",
+    "lastStatusReview": "2026-11-01",
     "researchArea": "downtown",
     "district": "Downtown",
     "meshIds": [
@@ -627,8 +666,55 @@
       "63-6173",
       "63-6174"
     ],
-    "geometryCoverage": "Source geometry available; current detail may differ",
-    "evidenceUpdateNote": "City confirms open applications and a lateSeptember resubmission; no delivery guarantee or new height change follows from this."
+    "geometryCoverage": "Earlier municipal proposal geometry; design under review",
+    "evidenceUpdateNote": "The City confirmed on 29 October 2026 that no resubmission followed the sale and no building permits had been issued. M6 awaits a response to Cycle 5 comments issued 12 August 2025. Holding removal remains unresolved.",
+    "submittedDrawing": {
+      "architect": "Hariri Pontarini Architects",
+      "date": "2025-07-03",
+      "revision": 6,
+      "revisionDescription": "Issued for 5th SPA submission",
+      "towers": [
+        "M6"
+      ],
+      "heightExcludingMPHM": [
+        186.85
+      ],
+      "heightIncludingMPHM": [
+        195.85
+      ],
+      "storeyCountNote": "The City reports 58 storeys. A003 labels 58 + MECHANICAL and the elevations label Level 58/Mech. These do not establish 58 residential storeys.",
+      "reviewed": "2026-11-01",
+      "status": "Last-submitted proposal; comparison with displayed geometry pending"
+    },
+    "ownershipReview": {
+      "owner": "UC M City Inc.",
+      "acquisitionClosed": "2026-10-23",
+      "confirmedBy": "Urban Capital",
+      "confirmedOn": "2026-10-28",
+      "rogersRetainedRole": false,
+      "plansAndTenure": "Under review",
+      "imminentCondoLaunch": false
+    },
+    "planningSnapshot": {
+      "asOf": "2026-10-29",
+      "application": "SP 22-145 W7",
+      "submittedStoreys": [
+        58
+      ],
+      "submittedUnits": 889,
+      "postSaleResubmissionReceived": false,
+      "buildingPermitsIssued": false,
+      "holdingRemoval": "Awaiting resubmission; not yet approved",
+      "status": "Last-submitted proposal; future plans under review"
+    },
+    "lifecycle": "proposed",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high for the stated planning stage; current physical delivery remains unverified",
+    "lifecycleNote": "Last-submitted proposal. Plans and tenure remain under review following the October 2026 acquisition. The City confirmed no issued building permits as of 29 October 2026.",
+    "lifecycleSourceRefs": [
+      "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
+    ],
+    "statusEvidenceDate": "2026-10-29"
   },
   {
     "id": "mcity-7-8",
@@ -636,15 +722,15 @@
     "address": "3970 Redmond Road and 535 Webb Drive",
     "lat": 43.58169583258391,
     "lon": -79.64669661456749,
-    "status": "proposed-preconstruction",
-    "statusDate": "2026-10-06",
+    "status": "plans-under-review",
+    "statusDate": "2026-10-29",
     "storeys": [
-      50,
-      45
+      51,
+      46
     ],
     "heightM": [],
-    "summary": "Two towers on a shared podium, with rounded corners and alternating balconies, form the final phases.",
-    "modelCaveat": "Municipal SP 24-30 geometry attributes are 163.16 and 146.91 m. CTBUH's 175 and 159 m were not accepted as verified measurements. Assign individual tower names only after checking their positions against a site plan.",
+    "summary": "Urban Capital is reviewing the plans and tenure after acquiring the lands. The last City submission proposes 51 and 46 storeys on a shared podium, with 1,457 homes combined.",
+    "modelCaveat": "Earlier City geometry. Comparison against HPA issue 6, dated 17 September 2024, and individual component-to-tower matching are still pending. The submitted design is a dated proposal; plans and tenure remain under review.",
     "sources": [
       {
         "url": "https://www.hariripontarini.com/projects/m-city-block-2-3",
@@ -653,7 +739,8 @@
         "accessed": "2026-09-20",
         "claims": [
           "M6 single 55-storey tower; M7/M8 50/45-storey pair on shared podium; final three phases."
-        ]
+        ],
+        "note": "Earlier published design. Counts differ from the last submission; future plans remain under review."
       },
       {
         "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/",
@@ -682,6 +769,30 @@
           "SP 24-30: two condominium buildings on a shared podium at 3970 Redmond Road and 535 Webb Drive.",
           "Withheld is a workflow status, not a cancellation."
         ]
+      },
+      {
+        "title": "Urban Capital response, 28 October 2026",
+        "publisher": "Urban Capital",
+        "accessed": "2026-11-01",
+        "note": "Acquisition closed 23 October to UC M City Inc. Plans and tenure remain under review; no imminent condo launch."
+      },
+      {
+        "title": "City planning response, 29 October 2026",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-11-01",
+        "note": "Last-submitted proposals confirmed. No post-sale resubmission or building permits issued as of that date."
+      },
+      {
+        "title": "HPA response, 28 October 2026",
+        "publisher": "Hariri Pontarini Architects",
+        "accessed": "2026-11-01",
+        "note": "M7/M8: 51 and 46 storeys including mechanical penthouses in the last submission. Website designs remain preliminary."
+      },
+      {
+        "title": "M7/M8 submitted drawings, issue 6, 17 September 2024",
+        "publisher": "Hariri Pontarini Architects; supplied by City of Mississauga",
+        "accessed": "2026-11-01",
+        "note": "A004 gives M7 heights of 163.16/175.16 m and M8 heights of 146.91/158.91 m, excluding/including mechanical penthouses. The City reports 51/46 storeys. HPA describes these as including mechanical penthouses, while the elevations label Level 51/46 below Mech and Mech Roof. The counting convention remains unresolved; 1,457 units is the combined total."
       }
     ],
     "geometrySources": [
@@ -714,14 +825,14 @@
       "actual": null,
       "target": null,
       "targetIsGuaranteed": false,
-      "note": "No verified completion date is published in the checked sources. This remains a proposal, future phase or planning concept; no date is inferred from its age.",
-      "reviewed": "2026-09-20",
+      "note": "No verified construction or completion date was announced in Urban Capital\u2019s 28 October 2026 response.",
+      "reviewed": "2026-11-01",
       "sources": [
         "https://www.hariripontarini.com/projects/m-city-block-2-3",
         "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
       ]
     },
-    "lastStatusReview": "2026-10-08",
+    "lastStatusReview": "2026-11-01",
     "researchArea": "downtown",
     "district": "Downtown",
     "meshIds": [
@@ -739,8 +850,60 @@
       "63-6171",
       "63-6172"
     ],
-    "geometryCoverage": "Source geometry available; current detail may differ",
-    "evidenceUpdateNote": "City confirms open applications and a lateSeptember resubmission; no delivery guarantee or new height change follows from this."
+    "geometryCoverage": "Earlier municipal proposal geometry; design under review",
+    "evidenceUpdateNote": "The City confirmed on 29 October 2026 that no resubmission followed the sale and no building permits had been issued. M7/M8 await a response to Cycle 1 comments issued 11 December 2024. Holding removal remains unresolved.",
+    "submittedDrawing": {
+      "architect": "Hariri Pontarini Architects",
+      "date": "2024-09-17",
+      "revision": 6,
+      "revisionDescription": "Issued for Zoning Review No. 03",
+      "towers": [
+        "M7",
+        "M8"
+      ],
+      "heightExcludingMPHM": [
+        163.16,
+        146.91
+      ],
+      "heightIncludingMPHM": [
+        175.16,
+        158.91
+      ],
+      "storeyCountNote": "The City reports 51/46 storeys. HPA describes these as including mechanical penthouses, while the elevations label Level 51/46 below Mech and Mech Roof. The counting convention remains unresolved; 1,457 units is the combined total.",
+      "reviewed": "2026-11-01",
+      "status": "Last-submitted proposal; comparison with displayed geometry pending"
+    },
+    "ownershipReview": {
+      "owner": "UC M City Inc.",
+      "acquisitionClosed": "2026-10-23",
+      "confirmedBy": "Urban Capital",
+      "confirmedOn": "2026-10-28",
+      "rogersRetainedRole": false,
+      "plansAndTenure": "Under review",
+      "imminentCondoLaunch": false
+    },
+    "planningSnapshot": {
+      "asOf": "2026-10-29",
+      "application": "SP 24-30 W7",
+      "submittedStoreys": [
+        51,
+        46
+      ],
+      "submittedUnits": 1457,
+      "postSaleResubmissionReceived": false,
+      "buildingPermitsIssued": false,
+      "holdingRemoval": "Awaiting resubmission; not yet approved",
+      "status": "Last-submitted proposal; future plans under review",
+      "storeyConvention": "The City reports 51/46 storeys. HPA describes these as including mechanical penthouses, while the elevations label Level 51/46 below Mech and Mech Roof. The counting convention remains unresolved; 1,457 units is the combined total."
+    },
+    "lifecycle": "proposed",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high for the stated planning stage; current physical delivery remains unverified",
+    "lifecycleNote": "Last-submitted proposal. Plans and tenure remain under review following the October 2026 acquisition. The City confirmed no issued building permits as of 29 October 2026.",
+    "lifecycleSourceRefs": [
+      "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
+    ],
+    "statusEvidenceDate": "2026-10-29"
   },
   {
     "id": "square-one-masterplan",
@@ -1263,7 +1426,17 @@
     },
     "localReview": true,
     "localOptional": true,
-    "referenceStudy": true
+    "referenceStudy": true,
+    "lifecycle": "on_hold",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "medium; existing source record, not all facts freshly rechecked",
+    "lifecycleNote": "On hold. The optional model is a dated 2021 design reference.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+20%2F006%27&outFields=%2A&returnGeometry=false",
+      "https://fliphtml5.com/dbzgn/hsze/HPA-_Selected_Residential_Mixed-Use_Portfolio_2025_Q2/",
+      "https://urbantoronto.ca/forum/threads/toronto-97-101-city-centre-drive-m-65s-oxford-properties-hariri-pontarini.30788/"
+    ],
+    "statusEvidenceDate": "2026-10-08"
   },
   {
     "id": "square-one-office",
@@ -1871,7 +2044,18 @@
       "63-6195",
       "63-6196"
     ],
-    "geometryCoverage": "Geometry conflict or version uncertainty; inspect evidence"
+    "geometryCoverage": "Geometry conflict or version uncertainty; inspect evidence",
+    "lifecycle": "proposed",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "medium; existing source record, not all facts freshly rechecked",
+    "lifecycleNote": "Proposed. The design editions differ; current construction or completion has not been verified.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+21%2F119%27&outFields=%2A&returnGeometry=false",
+      "https://pub-mississauga.escribemeetings.com/filestream.ashx?DocumentId=83367",
+      "https://urbantoronto.ca/forum/threads/toronto-180-burnhamthorpe-road-west-230-15m-71s-emblem-developments-arcadis.32151/page-4",
+      "https://www.skyscrapercenter.com/building/180-burnhamthorpe-road-west-tower-a/46733"
+    ],
+    "statusEvidenceDate": "2026-09-20"
   },
   {
     "id": "4310-sherwoodtowne",
@@ -1974,7 +2158,18 @@
       "72-6173",
       "72-6174"
     ],
-    "geometryCoverage": "Geometry conflict or version uncertainty; inspect evidence"
+    "geometryCoverage": "Geometry conflict or version uncertainty; inspect evidence",
+    "lifecycle": "proposed",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "medium; existing source record, not all facts freshly rechecked",
+    "lifecycleNote": "Proposed. Current construction or completion has not been verified.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+24%2F041%27&outFields=%2A&returnGeometry=false",
+      "https://urbantoronto.ca/forum/threads/toronto-4310-sherwoodtowne-boulevard-226-1m-70s-bdp-quadrangle.35512/",
+      "https://www.mississauga.ca/wp-content/uploads/2025/01/15082458/MOPA177-jan-2025.pdf",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0"
+    ],
+    "statusEvidenceDate": "2026-09-20"
   },
   {
     "id": "avia",
@@ -2371,7 +2566,18 @@
     "primaryDecisionSource": "https://www.mississauga.ca/apps/#/property-preview/compliance-report-coa-text/66203/329571",
     "geometryAdded": true,
     "podiumModelled": true,
-    "geometryReviewDate": "2026-09-27"
+    "geometryReviewDate": "2026-09-27",
+    "lifecycle": "under_construction",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high",
+    "lifecycleNote": "The developer still lists Voya as under construction. A forecast completion season is not confirmation of completion or occupancy.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+21%2F185%27&outFields=%2A&returnGeometry=false",
+      "https://www.lifeatparkside.com/communities",
+      "https://www.lifeatparkside.com/post/voya-takes-shape-as-construction-reaches-new-heights",
+      "https://drive.google.com/file/d/115Ov9j6l_W9jU44khuYdgLmyBYevCrkq/view"
+    ],
+    "statusEvidenceDate": "2026-08-09"
   },
   {
     "id": "parkside-block11",
@@ -3469,7 +3675,17 @@
     "modelQuality": "Dated plan-derived concept; storey-based vertical estimate",
     "geometryReviewDate": "2026-09-20",
     "geometrySourceDate": "2024-07-10",
-    "hasSupplementalModel": true
+    "hasSupplementalModel": true,
+    "lifecycle": "mixed",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high mixed-phase principle; component-stage review needed",
+    "lifecycleNote": "Completed residences and future blocks have different statuses. Retained SP 22/103 townhouse components remain proposed until their delivery is verified.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+22%2F103%27&outFields=%2A&returnGeometry=false",
+      "https://experiencebrightwater.ca/",
+      "https://www.mississauga.ca/wp-content/uploads/2026/01/22112618/OZ-25-17-W1-Notice-of-Passing-public-notice.pdf",
+      "https://pub-mississauga.escribemeetings.com/Meeting.aspx?Agenda=Merged&Id=3a029998-7e38-412d-ae02-2a20023eeedf&lang=English"
+    ]
   },
   {
     "id": "brightwater-one-two",
@@ -3777,7 +3993,17 @@
       "93-747",
       "93-748"
     ],
-    "geometryCoverage": "Geometry conflict or version uncertainty; inspect evidence"
+    "geometryCoverage": "Geometry conflict or version uncertainty; inspect evidence",
+    "lifecycle": "proposed",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "medium; existing source record, not all facts freshly rechecked",
+    "lifecycleNote": "The dated developer filing places Bridge House in planning. A construction start has not been verified.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+21%2F130%27&outFields=%2A&returnGeometry=false",
+      "https://renx.ca/index.php/brightwater-community-is-progressing-in-all-facets",
+      "https://experiencebrightwater.ca/",
+      "https://newsfile.futunn.com/public/NN-PersistNoticeAttachment/7781/20260218/SEDAR_PLUS/CSA_SEDAR_PLUS_NOTICE_RECORD_ID_2321819.pdf"
+    ]
   },
   {
     "id": "lakeview-master",
@@ -4023,7 +4249,17 @@
         "source": "https://thepointer.com/article/2026-09-04/mississauga-residents-skeptical-after-lakeview-village-proposal-drops-by-4k-units-to-accommodate-more-townhomes"
       }
     ],
-    "lastStatusReview": "2026-09-26"
+    "lastStatusReview": "2026-09-26",
+    "lifecycle": "mixed",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high mixed-phase principle; component-stage review needed",
+    "lifecycleNote": "Each block has its own status. Block 1 has site-plan approval; Blocks 2 and 15 remain active applications. Harbourwalk is separately recorded as under construction.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+22%2F082%27&outFields=%2A&returnGeometry=false",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+22%2F056%27&outFields=%2A&returnGeometry=false",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+24%2F019%27&outFields=%2A&returnGeometry=false",
+      "https://www.mississauga.ca/projects-and-strategies/city-projects/lakeview-waterfront-area-redevelopment/lakeview-village/"
+    ]
   },
   {
     "id": "lakeview-harbourwalk",
@@ -4668,7 +4904,17 @@
       "approvalDate": "2025-01-15",
       "unitsInCityRecord": 865,
       "unitsCaveat": "City application record reports 865 apartments; older marketing descriptions have 863. This does not establish final registered unit count."
-    }
+    },
+    "lifecycle": "under_construction",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high",
+    "lifecycleNote": "Under construction. The August 2026 developer update reported work at Level 8; the model shows the planned finished form.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+21%2F168%27&outFields=%2A&returnGeometry=false",
+      "https://www.tridel.com/lakeviewvillagecondos/news/",
+      "https://urbantoronto.ca/database/projects/harbourwalk-lakeview-village.48912",
+      "https://www.mississauga.ca/projects-and-strategies/city-projects/lakeview-waterfront-area-redevelopment/lakeview-village/"
+    ]
   },
   {
     "id": "lakeview-aquanova",
@@ -4791,7 +5037,17 @@
       1526.4694213867188
     ],
     "coordinateProvenance": "Registered source geometry in atlas EPSG26917 coordinates; representative model centre, not a surveyed entrance.",
-    "reviewedDate": "2026-09-27"
+    "reviewedDate": "2026-09-27",
+    "lifecycle": "proposed",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "medium; existing source record, not all facts freshly rechecked",
+    "lifecycleNote": "Proposed. Current construction or completion has not been verified.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+24%2F015%27&outFields=%2A&returnGeometry=false",
+      "https://greenparkgroup.ca/new-homes/mississauga/aquanova/",
+      "https://urbantoronto.ca/forum/threads/toronto-aquanova-condos-at-lakeview-village-m-43s-greenpark-graziani-corazza.32662/",
+      "https://aquanovacondos.com/"
+    ]
   },
   {
     "id": "lakeview-birch",
@@ -4954,7 +5210,15 @@
     ],
     "coordinateProvenance": "Registered source geometry in atlas EPSG26917 coordinates; representative model centre, not a surveyed entrance.",
     "reviewedDate": "2026-09-27",
-    "lastStatusReview": "2026-10-10"
+    "lastStatusReview": "2026-10-10",
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high for the stated planning stage; current physical delivery remains unverified",
+    "lifecycleNote": "The City records Block 1 / SP 22/056 as approved on 3 September 2026. Construction has not been verified. The eight existing component assignments are unchanged.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=WARD+IN+%281%2C2%29&outFields=OBJECTID%2CAPP_FILE_NO%2CAPPLICATION_DATE%2CAPPROVAL_DATE%2CSITE_ADDRESS%2CDESCRIPTION%2CSIMPLE_STATUS%2CAPPLICANT%2CRES_APTS%2CTOTAL_RES_UNITS&returnGeometry=false&resultRecordCount=2000&f=json"
+    ],
+    "approvalStage": "Site plan approved 2026-09-03"
   },
   {
     "id": "lakeview-innovation",
@@ -5581,7 +5845,18 @@
       "92-4855",
       "92-4856"
     ],
-    "geometryCoverage": "Geometry conflict or version uncertainty; inspect evidence"
+    "geometryCoverage": "Geometry conflict or version uncertainty; inspect evidence",
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "medium-high planning; physical stage unverified",
+    "lifecycleNote": "Planning settled at the tribunal. The City site-plan record remains active; its recorded approval date alone does not establish final site-plan approval.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+25%2F5+W1%27&outFields=%2A&returnGeometry=false",
+      "https://pub-mississauga.escribemeetings.com/filestream.ashx?DocumentId=78584",
+      "https://www.mississauga.ca/wp-content/uploads/2025/06/18125538/Planning-Rationale-OZ-OPA-25-10-W1-June-2025.pdf",
+      "https://urbantoronto.ca/forum/threads/toronto-88-park-131-5m-36s-edenshaw-core-architects.21550/page-5"
+    ],
+    "approvalStage": "Tribunal settlement; site-plan record active"
   },
   {
     "id": "port-credit-42-46-park",
@@ -5806,7 +6081,18 @@
       "46-park-current-envelope-review.glb"
     ],
     "geometrySourceDate": null,
-    "geometryReviewDate": "2026-10-10"
+    "geometryReviewDate": "2026-10-10",
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "medium; existing source record, not all facts freshly rechecked",
+    "lifecycleNote": "Approved rental proposal with demolition or early works reported. Full building construction has not been established.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+25%2F010%27&outFields=%2A&returnGeometry=false",
+      "https://www.mississauga.ca/wp-content/uploads/2025/12/18093753/OZ-OPA-25-10-W1-Notice-of-Passing-public-notice.pdf",
+      "https://www.mississauga.ca/wp-content/uploads/2026/01/23103916/MOPA205-Jan-2026.pdf",
+      "https://www.mississauga.ca/wp-content/uploads/2025/06/18125538/Planning-Rationale-OZ-OPA-25-10-W1-June-2025.pdf"
+    ],
+    "approvalStage": "Approved rental proposal"
   },
   {
     "id": "port-credit-70-park",
@@ -5974,7 +6260,15 @@
       "92-4843",
       "92-4844",
       "92-4845"
-    ]
+    ],
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high for the stated planning stage; current physical delivery remains unverified",
+    "lifecycleNote": "The final OLT order of 10 July 2025 approves the planning amendments for the infill. Construction has not been verified. The retained 28-storey apartment remains existing context.",
+    "lifecycleSourceRefs": [
+      "https://www7.mississauga.ca/Departments/PB/OfficialDocs/OLT-23-000684-JUL-10-2025-ORD.pdf"
+    ],
+    "approvalStage": "Official Plan and zoning approved by final OLT order"
   },
   {
     "id": "port-credit-the-ann",
@@ -6435,7 +6729,15 @@
       4029.0462396768853
     ],
     "retainedMeshIds": [],
-    "geometryCoverage": "Latest geometry unavailable in source model"
+    "geometryCoverage": "Latest geometry unavailable in source model",
+    "lifecycle": "proposed",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high for environmental assessment approval only",
+    "lifecycleNote": "The environmental assessment was approved on 5 June 2026. This does not establish development approval, funding, construction or completion.",
+    "approvalStage": "Environmental assessment approved; development delivery unverified",
+    "lifecycleSourceRefs": [
+      "https://www.mississauga.ca/projects-and-strategies/environmental-assessments/1-port-street-east-proposed-marina/"
+    ]
   },
   {
     "id": "lakeshore-west-900",
@@ -6867,7 +7169,16 @@
       "102-7048",
       "102-7049"
     ],
-    "geometryCoverage": "Geometry conflict or version uncertainty; inspect evidence"
+    "geometryCoverage": "Geometry conflict or version uncertainty; inspect evidence",
+    "lifecycle": "proposed",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "medium; existing source record, not all facts freshly rechecked",
+    "lifecycleNote": "Proposed. Current construction or completion has not been verified.",
+    "lifecycleSourceRefs": [
+      "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/579-to-619-lakeshore-road-east-1022-and-1028-caven-street-oz-opa-22-26-w1/",
+      "https://www.mississauga.ca/wp-content/uploads/2022/12/Geotechnical-Investigation-December-2022.pdf",
+      "https://urbantoronto.ca/forum/threads/toronto-579-619-lakeshore-road-east-58-4m-16s-breda-group-bdp-quadrangle.34724/"
+    ]
   },
   {
     "id": "lakeview-dxe",
@@ -7312,7 +7623,15 @@
     "modelQuality": "Survey-registered plan-derived schematic envelope",
     "geometryReviewDate": "2026-09-20",
     "geometrySourceDate": "2025-10-24",
-    "hasSupplementalModel": true
+    "hasSupplementalModel": true,
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high for the stated planning stage; current physical delivery remains unverified",
+    "lifecycleNote": "The 3 November 2023 interim order approved the planning amendments in principle and withheld the final order pending conditions. Later resolution and construction have not been verified.",
+    "lifecycleSourceRefs": [
+      "https://www.omb.gov.on.ca/e-decisions/OLT-22-004078-NOV-03-2023.PDF"
+    ],
+    "approvalStage": "Tribunal approval in principle; final-order conditions unverified"
   },
   {
     "id": "lakeview-jim-tovey",
@@ -7540,7 +7859,15 @@
       "102-7071",
       "102-7072",
       "102-3266"
-    ]
+    ],
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high for the stated planning stage; current physical delivery remains unverified",
+    "lifecycleNote": "The 24 February 2025 interim order approved the planning amendments in principle and withheld the final order pending conditions. Later resolution and construction have not been verified.",
+    "lifecycleSourceRefs": [
+      "https://www.omb.gov.on.ca/e-decisions/OLT-22-004584-FEB-24-2025.PDF"
+    ],
+    "approvalStage": "Tribunal approval in principle; final-order conditions unverified"
   },
   {
     "id": "port-credit-26-park",
@@ -7988,7 +8315,17 @@
         "source": "https://urbantoronto.ca/news/2026/10/demolition-advances-11-storey-affordable-rental-near-port-credit-go.61899"
       }
     },
-    "recordedProgressModel": "The new building appears only in the illustrated future. The municipal baseline retains the older rental building as dated source context; the extent of demolition has not been mapped."
+    "recordedProgressModel": "The new building appears only in the illustrated future. The municipal baseline retains the older rental building as dated source context; the extent of demolition has not been mapped.",
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high for the stated planning stage; current physical delivery remains unverified",
+    "lifecycleNote": "Council passed the zoning amendment on 28 January 2026. The October 2026 report describes demolition with site-plan and new-building permit applications pending. Demolition does not establish new-building construction.",
+    "lifecycleSourceRefs": [
+      "https://www.mississauga.ca/wp-content/uploads/2026/02/05085229/OZ-25-19-W1-Notice-of-Passing-Public-Notice.pdf",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Issued_Building_Permits/FeatureServer/0/query?where=ADDRESS+%3D+%2750+HIGH+ST+E%27&outFields=%2A&returnGeometry=false&f=json",
+      "https://urbantoronto.ca/news/2026/10/demolition-advances-11-storey-affordable-rental-near-port-credit-go.61899"
+    ],
+    "approvalStage": "Zoning by-law passed; later approvals not confirmed"
   },
   {
     "id": "lakeview-aura",
@@ -8185,6 +8522,16 @@
         "units": 264,
         "modelCoverage": "Ten retained source-plan envelopes lie inside this active application polygon."
       }
+    ],
+    "lifecycle": "proposed",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "medium; existing source record, not all facts freshly rechecked",
+    "lifecycleNote": "Proposed. Current construction or completion has not been verified.",
+    "lifecycleSourceRefs": [
+      "https://caivan.com/aura/",
+      "https://caivan.com/wp-content/uploads/2026/02/Aura-Site-plan-260806.jpg",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0",
+      "https://caivan.com/wp-content/uploads/2026/02/Caivan-Aura-Site-Plan-260615.pdf"
     ]
   },
   {
@@ -9986,7 +10333,18 @@
     ],
     "reviewedDate": "2026-09-27",
     "lastStatusReview": "2026-10-12",
-    "sitePlanApprovalDate": "2026-09-17"
+    "sitePlanApprovalDate": "2026-09-17",
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high",
+    "lifecycleNote": "The City records Section 47 site-plan approval for Block 4 on 17 September 2026. Construction has not been confirmed.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+25%2F48+W1%27&outFields=%2A&returnGeometry=false",
+      "https://www.branthaven.com/communities/pier-house/",
+      "https://www.condominiums.ca/wp-content/uploads/2026/03/PierHouse-Brochure.pdf",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0"
+    ],
+    "approvalStage": "Section 47 site plan approved"
   },
   {
     "id": "lakeview-deco-opus",
@@ -11645,7 +12003,17 @@
       "south-banks-plan-derived.glb"
     ],
     "referenceUpdateDocument": "downloads/Reference-update-2026-09-29.md",
-    "referenceUpdateDate": "2026-09-29"
+    "referenceUpdateDate": "2026-09-29",
+    "lifecycle": "proposed",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "medium; existing source record, not all facts freshly rechecked",
+    "lifecycleNote": "Proposed. Current construction or completion has not been verified.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+26%2F2+W1%27&outFields=%2A&returnGeometry=false",
+      "https://opushomes.com/communities/lakeview-village/",
+      "https://www.decohomes.ca/southbanks/",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0"
+    ]
   },
   {
     "id": "ninth-6344",
@@ -11654,7 +12022,7 @@
     "address": "6344 Ninth Line",
     "lat": 43.565188651775046,
     "lon": -79.7757389657545,
-    "status": "Council passed \u00b7 appeal period open",
+    "status": "Council passed \u00b7 appeal outcome unverified",
     "statusDate": "2026-09-29",
     "application": "OZ 26 11",
     "storeys": [
@@ -11855,7 +12223,26 @@
     ],
     "geometrySourceDate": null,
     "geometryReviewDate": "2026-10-10",
-    "surroundingContextSourceDate": "2024"
+    "surroundingContextSourceDate": "2024",
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high prior passing; current appeal outcome unverified",
+    "lifecycleNote": "Council passed the zoning amendment on 29 September 2026. The 28 October appeal deadline has passed; the appeal outcome has not been verified.",
+    "lifecycleSourceRefs": [
+      "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/6344-ninth-line-oz-26-11-w10/",
+      "https://www.mississauga.ca/wp-content/uploads/2026/10/08090244/OZ-26-11-W10-Notice-of-Passing-public-notice.pdf",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Rezoning_Applications/FeatureServer/0/query?f=json&where=SITE_ADDRESS+LIKE+%27%256344%25%27&outFields=%2A&returnGeometry=true&outSR=26917&resultRecordCount=2000",
+      "https://www.mississauga.ca/wp-content/uploads/2026/07/09102734/Overall-Elevations-Exterior-OZ-26-11-W10-June-2026.pdf"
+    ],
+    "approvalStage": "Council passed; appeal outcome unverified",
+    "statusHistory": [
+      {
+        "status": "Council passed \u00b7 appeal period open",
+        "statusDate": "2026-09-29",
+        "statusEvidenceDate": "2026-10-10",
+        "supersededOn": "2026-11-01"
+      }
+    ]
   },
   {
     "id": "chelsea-2026",
@@ -14010,7 +14397,18 @@
       "12-17047",
       "12-17048"
     ],
-    "lastStatusReview": "2026-10-12"
+    "lastStatusReview": "2026-10-12",
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high",
+    "lifecycleNote": "The City lists OZ/OPA 24-15 as OLT-approved and subdivision 21T-M 26-3 as under review. This does not confirm construction or resolution of every final-order or holding condition.",
+    "lifecycleSourceRefs": [
+      "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/5100-erin-mills-parkway-oz-opa-24-15-w9/",
+      "https://www.mississauga.ca/wp-content/uploads/2025/09/25141740/Cover-Letter-21T-M-26-3-W9-August-2026.pdf",
+      "https://www.mississauga.ca/wp-content/uploads/2025/09/25141742/Draft-Plan-of-Subdivision-21T-M-26-3-W9-August-2026.pdf",
+      "https://www.mississauga.ca/wp-content/uploads/2025/09/25141752/Phasing-Concept-Plan-21T-M-26-3-W9-August-2026.pdf"
+    ],
+    "approvalStage": "OLT-approved planning; subdivision under review"
   },
   {
     "id": "tannery-51",
@@ -15723,7 +16121,17 @@
       "73-4300",
       "73-4301"
     ],
-    "geometryCoverage": "Source geometry available; current detail may differ"
+    "geometryCoverage": "Source geometry available; current detail may differ",
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high for the stated planning stage; current physical delivery remains unverified",
+    "lifecycleNote": "The project planner confirms Official Plan and zoning approval in April 2024. Site-plan approval is still required; construction has not been verified. The existing apartment is retained.",
+    "lifecycleSourceRefs": [
+      "https://sajeckiplanning.squarespace.com/projects/1785-bloor-street-mississauga",
+      "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/1785-bloor-street-oz-opa-22-14-w3/"
+    ],
+    "statusEvidenceDate": "2024-04",
+    "approvalStage": "Official Plan and zoning approved; site plan required"
   },
   {
     "id": "connecting-cooksville",
@@ -17658,7 +18066,18 @@
     "geometrySourceDate": "2026-08-17",
     "referenceUpdateDocument": "downloads/Reference-update-2026-09-29.md",
     "referenceUpdateDate": "2026-09-29",
-    "sourceCredits": "Source design: Infrastructure Ontario / Arup; independent adaptation and visualization by Future Mississauga."
+    "sourceCredits": "Source design: Infrastructure Ontario / Arup; independent adaptation and visualization by Future Mississauga.",
+    "lifecycle": "proposed",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high proposed status",
+    "lifecycleNote": "Proposed transit-oriented community, with a revised concept presented on 22 September 2026. An older parking-garage approval does not approve this concept.",
+    "lifecycleSourceRefs": [
+      "https://www.infrastructureontario.ca/en/what-we-do/projectssearch/cooksville-go-transit-oriented-community/",
+      "https://www.infrastructureontario.ca/48f8a0/contentassets/e44b38c8189641c2aa193899c6727b3d/2025-09-25_cooksville-toc_planning-justification-report.pdf",
+      "https://www.mississauga.ca/publication/toc-cooksville-3210-hurontario-street/",
+      "https://urbantoronto.ca/forum/threads/cooksville-toc-151-5m-49s-io-arup.42581/"
+    ],
+    "statusEvidenceDate": "2026-09-22"
   },
   {
     "id": "john-69",
@@ -18207,7 +18626,18 @@
       "22-14235"
     ],
     "geometryCoverage": "Current source-plan approximation; see project model caveat.",
-    "lastStatusReview": "2026-09-26"
+    "lastStatusReview": "2026-09-26",
+    "lifecycle": "mixed",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high scope distinction; medium future-stage",
+    "lifecycleNote": "Gemma is move-in ready according to the developer\u2019s September 2026 record. The separate south Watergarden application SP 22/099 remains proposed.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+20%2F073%27&outFields=%2A&returnGeometry=false",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+22%2F099%27&outFields=%2A&returnGeometry=false",
+      "https://www7.mississauga.ca/documents/Business/Planning_Justification_Report_-_June_2018_0_and_5044_Hurontario_St.pdf",
+      "https://pinnacleinternational.ca/communities/gemma/"
+    ],
+    "statusEvidenceDate": "2026-09-26"
   },
   {
     "id": "mississauga-hospital",
@@ -18561,7 +18991,17 @@
       1207.8917797729373
     ],
     "retainedMeshIds": [],
-    "geometryCoverage": "Duplicate or superseded source geometry excluded; inspect replacement evidence"
+    "geometryCoverage": "Duplicate or superseded source geometry excluded; inspect replacement evidence",
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high for the stated planning stage; current physical delivery remains unverified",
+    "lifecycleNote": "The August 2024 OLT order confirms the final planning amendments for the revised scheme. Site-plan approval and construction remain unverified. Superseded municipal geometry stays excluded.",
+    "lifecycleSourceRefs": [
+      "https://www.mississauga.ca/wp-content/uploads/2024/08/14083711/mississauga-official-plan-amendment-mopa-168.pdf",
+      "https://www.omb.gov.on.ca/e-decisions/OLT-22-004125-JAN-19-2024.PDF"
+    ],
+    "statusEvidenceDate": "2024-08-07",
+    "approvalStage": "Final OLT planning order; site plan pending"
   },
   {
     "id": "tomken-4094",
@@ -18748,7 +19188,19 @@
     "localOptional": true,
     "lastStatusReview": "2026-10-08",
     "modelLayer": "proposed",
-    "referenceStudy": true
+    "referenceStudy": true,
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "medium; existing source record, not all facts freshly rechecked",
+    "lifecycleNote": "Approved planning framework. The optional 2024 reference and current upper-building geometry remain qualified.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+25%2F29+W3%27&outFields=%2A&returnGeometry=false",
+      "https://www.mississauga.ca/wp-content/uploads/2026/01/08091741/Mississauga-Official-Plan-Amendment-190.pdf",
+      "https://www.mississauga.ca/wp-content/uploads/2023/11/Architectural-Drawings_Oct-2023_OZ-21-17-W3.pdf",
+      "https://www.mississauga.ca/wp-content/uploads/2023/11/Building-Elevations-and-Sections_Oct-2023_OZ-21-17-W3.pdf"
+    ],
+    "approvalStage": "Approved planning framework",
+    "statusEvidenceDate": "2026-10-08"
   },
   {
     "id": "st-luke-westminster",
@@ -19300,7 +19752,17 @@
     ],
     "geometryCoverage": "Source geometry available; current detail may differ",
     "lastStatusReview": "2026-10-08",
-    "evidenceUpdateNote": "Historical source version; not a confirmed current scheme."
+    "evidenceUpdateNote": "Historical source version; not a confirmed current scheme.",
+    "lifecycle": "unknown",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "medium; existing source record, not all facts freshly rechecked",
+    "lifecycleNote": "Historical reference retained. The current application and delivery status have not been confirmed.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/LOD2_Buildings_Scene/SceneServer",
+      "https://www7.mississauga.ca/documents/agendas/committees/pdc/2015/10-05-2015_PDC_Agenda.pdf",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Growth_Management_%E2%80%93_Active_Development_Applications/FeatureServer/0/query?where=OBJECTID%3D67&outFields=*&outSR=4326&f=pjson"
+    ],
+    "statusEvidenceDate": "2026-10-08"
   },
   {
     "id": "absolute-world",
@@ -19507,7 +19969,18 @@
       "target": null,
       "targetIsGuaranteed": false,
       "note": "The completed-project developer portfolio and an operating residence provider confirm current use. No precise completion day is established."
-    }
+    },
+    "lifecycle": "existing",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high for existing semantic classification; no full as-built certification",
+    "lifecycleNote": "Existing towers listed in the developer\u2019s completed-project portfolio. An operating residence at 35 Watergarden is separately documented.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+17%2F035%27&outFields=%2A&returnGeometry=false",
+      "https://www.delsuites.com/suites/perla_towers/detail.php",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Building_Footprints_2024/FeatureServer/0",
+      "https://pinnacleinternational.ca/past-projects/"
+    ],
+    "statusEvidenceDate": "2026-09-26"
   },
   {
     "id": "alba",
@@ -20606,7 +21079,18 @@
         ],
         "claims": "Existing 9-storey office retained exactly from three disconnected components of municipal source 63-5062 (164 original triangles, including walls to original grade). Separate low retail source components and 63-2579 are replaced in the future scenario only, following the retained-office/heritage layout of approved RA5-62. 63-1607 Wilcox heritage remains in original context unchanged. No architectural vertices, faces, coordinates, heights or base were fabricated, clipped or rescaled. Municipal source geometry is a dated massing snapshot, not a surveyed architectural as-built. Baseline/context construction modes retain all original geometry."
       }
-    ]
+    ],
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high",
+    "lifecycleNote": "Official Plan and zoning approved by the final OLT order of 10 January 2024. The site-plan application remains active; construction timing is unverified.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+22%2F015%27&outFields=%2A&returnGeometry=false",
+      "https://www7.mississauga.ca/Departments/PB/OfficialDocs/OLT-22-004548-JAN-10-2024-ORD.pdf",
+      "https://www.omb.gov.on.ca/e-decisions/OLT-22-004548-NOV-20-2023.PDF",
+      "https://www7.mississauga.ca/Departments/PB/OfficialDocs/OLT-22-004548-MAY-25-2026-ORD.pdf"
+    ],
+    "approvalStage": "Official Plan and zoning approved; site plan active"
   },
   {
     "id": "block-nine",
@@ -20782,7 +21266,18 @@
       }
     ],
     "modelCaveat": "Existing status and 25/34 storeys are corroborated by primary sources. Approximate 79.9/106.5 m vertical envelopes come from a secondary catalogue, not a current surveyed elevation. Tower plates are interpreted from the developer amenity illustration registered to current City mapped footprint limits. Allow about 5 m for tower position/contour interpretation; this is not a statistical accuracy claim. The 14 m podium, floor divisions, balcony projections, vertical fins and roof enclosures are simplified reference-based estimates. Exact as-built facade and slab dimensions have not been obtained. Nine selected native City LOD 2 scene leaves and the inherited municipal model do not contain either tower. Existing neighbouring source geometry is retained. No downloadable architect-native model was located.",
-    "district": "Downtown"
+    "district": "Downtown",
+    "lifecycle": "existing",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high for existing semantic classification; no full as-built certification",
+    "lifecycleNote": "The developer lists both Block Nine towers as completed. The model remains an approximate reference.",
+    "lifecycleSourceRefs": [
+      "https://www.lifeatparkside.com/communities",
+      "https://amacon.com/portfolio/",
+      "https://www7.mississauga.ca/documents/pb/opendata/2020/2020_Residential_Directory_Report_Final.pdf#page=102",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Building_Footprints_2024/FeatureServer/0"
+    ],
+    "statusEvidenceDate": "2026-10-03"
   },
   {
     "id": "aldo-1422-study",
@@ -20842,7 +21337,17 @@
     "localOptional": false,
     "referenceStudy": true,
     "evidenceUpdateNote": "Upper flat roof corrected to plain black following project-team feedback on 9 October 2026; sloped roofs retain shingles. Historical references and approximate map alignment remain; current built exterior not verified.",
-    "geometryReviewDate": "2026-10-10"
+    "geometryReviewDate": "2026-10-10",
+    "lifecycle": "unknown",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "medium; existing source record, not all facts freshly rechecked",
+    "lifecycleNote": "Historical design study. The current condition and project status have not been verified.",
+    "lifecycleSourceRefs": [
+      "https://data.mississauga.ca/pages/mississauga-3d",
+      "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=611201%2C4821250%2C611361%2C4821410&bboxSR=26917&imageSR=26917&size=1600%2C1600&format=png32&f=image",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Building_Footprints_2024/FeatureServer/0/query?f=json&where=1%3D1&geometry=%7B%22x%22%3A+611281.3129077428%2C+%22y%22%3A+4821330.616274131%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+26917%7D%7D&geometryType=esriGeometryPoint&inSR=26917&spatialRel=esriSpatialRelIntersects&distance=65&units=esriSRUnit_Meter&outFields=%2A&outSR=26917&returnGeometry=true"
+    ],
+    "statusEvidenceDate": "2026-10-08"
   },
   {
     "id": "hazelhurst-business-park",
@@ -20949,7 +21454,18 @@
     "localReview": true,
     "completionDateNote": "Completion and reopening are not guaranteed. City sources currently differ between spring and summer 2027.",
     "localOptional": false,
-    "referenceStudy": true
+    "referenceStudy": true,
+    "lifecycle": "under_construction",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high",
+    "lifecycleNote": "Under construction according to the City\u2019s January 2026 update. The planned reopening is a forecast.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+23%2F21%27&outFields=%2A&returnGeometry=false",
+      "https://www.mississauga.ca/city-of-mississauga-news/news/mississaugas-2026-budget-adopted/",
+      "https://www.mississauga.ca/projects-and-strategies/city-projects/south-common-community-centre-and-library-renovation/",
+      "https://www.canam.com/en/case-study/a-hybrid-construction-in-mississauga/"
+    ],
+    "statusEvidenceDate": "2026-10-08"
   },
   {
     "id": "burnhamthorpe-community-centre",
@@ -21115,7 +21631,17 @@
     "researchArea": "Cooksville",
     "localReview": true,
     "localOptional": false,
-    "referenceStudy": true
+    "referenceStudy": true,
+    "lifecycle": "existing",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high for existing semantic classification; no full as-built certification",
+    "lifecycleNote": "Existing church. The photo-derived roof study does not change its development status.",
+    "lifecycleSourceRefs": [
+      "https://sthilarys.com/about/history/",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Building_Footprints_2024/FeatureServer/0",
+      "https://yuanartstudio.com/studio-specials/2026-outdoor-sketching-program/st-hilarys-church/"
+    ],
+    "statusEvidenceDate": "2026-10-08"
   },
   {
     "id": "merner-41-bay",
@@ -21280,7 +21806,17 @@
     "researchArea": "Port Credit",
     "localReview": true,
     "localOptional": true,
-    "referenceStudy": true
+    "referenceStudy": true,
+    "lifecycle": "unknown",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "medium; existing source record, not all facts freshly rechecked",
+    "lifecycleNote": "Dated 2025 addition study. The current application and physical condition have not been verified.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Building_Footprints_2024/FeatureServer/0",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Address/FeatureServer/0",
+      "https://ws.geoservices.lrc.gov.on.ca/arcgis5/rest/services/Elevation/Ontario_DTM_LidarDerived/ImageServer"
+    ],
+    "statusEvidenceDate": "2026-10-08"
   },
   {
     "id": "city-group-96",
@@ -21388,7 +21924,7 @@
     ],
     "lat": 43.636419746470715,
     "lon": -79.7092539524444,
-    "status": "Council passed \u00b7 appeal period and holding conditions remain",
+    "status": "Council passed \u00b7 appeal and holding outcomes unverified",
     "statusDate": "2026-09-29",
     "statusEvidenceDate": "2026-10-10",
     "lastStatusReview": "2026-10-10",
@@ -21572,7 +22108,26 @@
       "longview-three-new-homes-reference.glb"
     ],
     "geometrySourceDate": "2026-03-11",
-    "geometryReviewDate": "2026-10-10"
+    "geometryReviewDate": "2026-10-10",
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high prior passing; current appeal outcome unverified",
+    "lifecycleNote": "Council passed the planning amendments on 29 September 2026. The appeal outcome and remaining holding conditions have not been verified.",
+    "lifecycleSourceRefs": [
+      "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/44-45-longview-place-formerly-0-derry-road-west-oz-opa-21-12-w11/",
+      "https://www.mississauga.ca/wp-content/uploads/2026/10/08090813/OZ-OPA-21-12-W11-OPA-14-Notice-of-Passing-public-notice.pdf",
+      "https://www.mississauga.ca/wp-content/uploads/2026/02/09120815/East-Elevation-Lot-3-OZ-OPA-21-12-W11-Feb-2026.pdf",
+      "https://www.mississauga.ca/wp-content/uploads/2026/02/09120819/North-Elevation-Lot-3-OZ-OPA-21-12-W11-Feb-2026.pdf"
+    ],
+    "approvalStage": "Council passed; appeal and holding outcomes unverified",
+    "statusHistory": [
+      {
+        "status": "Council passed \u00b7 appeal period and holding conditions remain",
+        "statusDate": "2026-09-29",
+        "statusEvidenceDate": "2026-10-10",
+        "supersededOn": "2026-11-01"
+      }
+    ]
   },
   {
     "id": "village-green-725",
@@ -21741,6 +22296,16 @@
         "publisher": "Ontario Ministry of Natural Resources",
         "accessed": "2026-10-10"
       }
+    ],
+    "lifecycle": "under_construction",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "medium-high",
+    "lifecycleNote": "Under construction, supported by the developer\u2019s construction launch and issued building permits. The current structural stage has not been measured.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+17%2F131%27&outFields=%2A&returnGeometry=false",
+      "https://www.morguard.com/news-knowledge/news/news-detail/?nid=123505",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=UPPER%28SITE_ADDRESS%29+LIKE+%27%25VILLAGE+GREEN%25%27+OR+APP_FILE_NO%3D%27SP+17%2F131%27&outFields=%2A&returnGeometry=true&outSR=26917",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Issued_Building_Permits/FeatureServer/0/query?f=json&where=1%3D1&geometry=%7B%22rings%22%3A+%5B%5B%5B615242.813200062%2C+4825636.44399946%5D%2C+%5B615314.416800062%2C+4825732.35039946%5D%2C+%5B615324.884400062%2C+4825733.22479946%5D%2C+%5B615347.558400062%2C+4825712.98919946%5D%2C+%5B615347.556800063%2C+4825712.99039946%5D%2C+%5B615317.791600062%2C+4825673.58839946%5D%2C+%5B615375.769600062%2C+4825616.39759946%5D%2C+%5B615371.091200061%2C+4825610.14039946%5D%2C+%5B615371.13720006%2C+4825610.24439946%5D%2C+%5B615348.406000062%2C+4825586.53359946%5D%2C+%5B615348.495200061%2C+4825580.85999946%5D%2C+%5B615348.451600062%2C+4825580.89399946%5D%2C+%5B615379.238000061%2C+4825549.54079946%5D%2C+%5B615358.624800062%2C+4825522.27839946%5D%2C+%5B615338.614800062%2C+4825520.59159946%5D%2C+%5B615338.60880006%2C+4825520.59399946%5D%2C+%5B615244.417600062%2C+4825614.19239946%5D%2C+%5B615242.813200062%2C+4825636.44399946%5D%5D%5D%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+26917%7D%7D&geometryType=esriGeometryPolygon&inSR=26917&outSR=26917&outFields=%2A&returnGeometry=true&spatialRel=esriSpatialRelIntersects"
     ]
   },
   {
@@ -22154,7 +22719,18 @@
         "claim": "Recent photographic condition reference, not official approval or exact design-height evidence.",
         "accessed": "2026-10-10"
       }
-    ]
+    ],
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "medium; existing source record, not all facts freshly rechecked",
+    "lifecycleNote": "Zoning settled in January 2025. Current architectural details and construction remain unverified.",
+    "lifecycleSourceRefs": [
+      "https://www.mississauga.ca/wp-content/uploads/2025/01/15082139/MOPA-178-OLT-23-000393-JAN-08-2025-ORD.pdf",
+      "https://www.omb.gov.on.ca/e-decisions/OLT-23-000393-AUG-28-2024.PDF",
+      "https://www.mississauga.ca/wp-content/uploads/2026/05/28095905/March-2026-Statistics-Canada-Permit-Report.pdf",
+      "https://www.mississauga.ca/wp-content/uploads/2022/09/12180552/W7_60_Noise_and_Vibration_Impact_Study_February2022.pdf"
+    ],
+    "approvalStage": "Zoning settled"
   },
   {
     "id": "city-group-30",
@@ -22304,6 +22880,16 @@
         "usedFor": "27.5 m height convention only. This dimension has not been verified against a current primary elevation.",
         "accessed": "2026-10-10"
       }
+    ],
+    "lifecycle": "under_construction",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "medium-high",
+    "lifecycleNote": "Under construction. October 2026 photographs show an unfinished structural frame.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+24%2F035%27&outFields=%2A&returnGeometry=false",
+      "https://peelregion.ca/business/housing-development/current-housing-projects",
+      "https://peelregion.ca/sites/default/files/styles/gallery_images_640x480/public/2026-10/byngmount-shores-october-2026-construction.jpg?itok=zY9uORlk",
+      "https://peelregion.ca/business/housing-development/byngmount-shores"
     ]
   },
   {
@@ -22431,7 +23017,18 @@
         "usedFor": "Updated design images and approved-version discussion.",
         "accessed": "2026-10-10"
       }
-    ]
+    ],
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "medium; existing source record, not all facts freshly rechecked",
+    "lifecycleNote": "Zoning approved by the OLT in November 2024. The site-plan application remains active; construction has not been verified.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+24%2F032%27&outFields=%2A&returnGeometry=false",
+      "https://www.mississauga.ca/wp-content/uploads/2024/11/20122457/ontario-land-tribunal-case-olt-23-000390.pdf",
+      "https://sajeckiplanning.squarespace.com/news/nru-publishing-highlights-successful-olt-settlement-for-49-south-service-road",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=WARD+IN+%281%2C2%29&outFields=OBJECTID%2CAPP_FILE_NO%2CAPPLICATION_DATE%2CAPPROVAL_DATE%2CSITE_ADDRESS%2CDESCRIPTION%2CSIMPLE_STATUS%2CAPPLICANT%2CRES_APTS%2CTOTAL_RES_UNITS&returnGeometry=false&resultRecordCount=2000&f=json"
+    ],
+    "approvalStage": "Tribunal zoning approved; site plan active"
   },
   {
     "id": "nrc-2620-speakman",
@@ -23187,7 +23784,18 @@
     "meshIds": [],
     "geometrySources": [],
     "lastStatusReview": "2026-10-12",
-    "modelCaveat": "Exact current proposed exterior/footprint/dimensions not yet verified. Existing municipal roofs are context, not the new design."
+    "modelCaveat": "Exact current proposed exterior/footprint/dimensions not yet verified. Existing municipal roofs are context, not the new design.",
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high for the stated planning stage; current physical delivery remains unverified",
+    "lifecycleNote": "The City records approval of the earlier nine-storey zoning in April 2025 and subsequent holding removal. The current 85-apartment site plan remains active; its architecture and construction are unverified.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27SP+25%2F55+W1%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27OZ-OPA%2F22%2F013%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27H-OZ%2F24%2F001%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json"
+    ],
+    "statusEvidenceDate": "2026-11-01",
+    "approvalStage": "Earlier zoning and holding removal approved; current site plan active"
   },
   {
     "name": "Creekside Apartments",
@@ -23318,7 +23926,17 @@
     "sourceVersionBoundary": "Do not call December2023 50-unitplan the currently approved51-unit drawing set. Invizij current51-unit page and2024publicrender references corroborate broad exterior continuity,not every final metric.",
     "estimatedStudyHeightM": 13.65,
     "studySourceUnits": 50,
-    "currentProgrammeUnits": 51
+    "currentProgrammeUnits": 51,
+    "lifecycle": "under_construction",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high",
+    "lifecycleNote": "Peel Region identifies the 51-home project as under construction. The optional model is an earlier 50-home design study.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+24%2F29%27&outFields=%2A&returnGeometry=false",
+      "https://peelregion.ca/business/housing-development/creekside-apartments",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Issued_Building_Permits/FeatureServer/0/query?where=BP_NO+%3D+%27BP+3NEW+24-4424%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
+      "https://peelregion.ca/business/housing-development/current-housing-projects"
+    ]
   },
   {
     "name": "1110 Lorne Park Road \u00b7 six townhomes",
@@ -23366,7 +23984,17 @@
     "meshIds": [],
     "geometrySources": [],
     "lastStatusReview": "2026-10-12",
-    "modelCaveat": "Exact current proposed exterior/footprint/dimensions not yet verified. Existing municipal roofs are context, not the new design."
+    "modelCaveat": "Exact current proposed exterior/footprint/dimensions not yet verified. Existing municipal roofs are context, not the new design.",
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleConfidence": "high for the stated planning stage; current physical delivery remains unverified",
+    "lifecycleNote": "The City records six-townhome zoning approval in January 2022 and holding removal in February 2024. Current construction and completion have not been verified.",
+    "lifecycleSourceRefs": [
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27OZ-OPA+%2F+19+%2F+006%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27H-OZ%2F22%2F002%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json"
+    ],
+    "statusEvidenceDate": "2026-11-01",
+    "approvalStage": "Earlier townhouse zoning and holding removal approved"
   },
   {
     "name": "Port Credit Active Transportation Bridge",

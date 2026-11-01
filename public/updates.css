@@ -1,1 +1,51 @@
-.recent-updates{max-width:1280px;margin:auto;padding:86px 40px 96px}.update-intro{max-width:780px;margin-bottom:58px}.update-intro h1{font-size:clamp(48px,6vw,86px);line-height:1.04;letter-spacing:-.055em;margin:14px 0 22px}.update-intro p{line-height:1.65}.update-note{font-size:14px;color:#58676a}.update-list{display:grid;gap:42px}.update-row{display:grid;grid-template-columns:minmax(230px,.72fr) minmax(0,1.28fr);gap:56px}.update-row h2{font-size:26px;line-height:1.2;letter-spacing:-.035em;margin:6px 0}.update-row h2 a{text-decoration:none;color:inherit}.update-area{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#637273;margin:0}.update-row p{line-height:1.6;margin:0 0 13px}.update-links{display:flex;flex-wrap:wrap;gap:20px;font-size:14px}.update-links a{color:#263e43;text-underline-offset:4px}.approval-update{max-width:850px;margin-top:72px}.approval-update h2{font-size:36px;letter-spacing:-.035em}.approval-update p{line-height:1.65}.update-bottom{margin-top:54px;max-width:850px}.update-bottom p{color:#58676a;line-height:1.65}@media(max-width:760px){.recent-updates{padding:48px 22px 70px}.update-row{grid-template-columns:1fr;gap:12px}.update-list{gap:34px}.update-row h2{font-size:25px}.approval-update{margin-top:54px}.update-intro{margin-bottom:40px}} .skip-link{position:absolute;left:-9999px;top:8px;z-index:100}.skip-link:focus{left:12px;padding:10px 14px;background:#fff;color:#22343a}.update-render{margin:0 0 18px;max-width:1400px}.update-render img{display:block;width:100%;height:auto}.update-render figcaption{font-size:14px;line-height:1.6;margin-top:16px;color:#58676a}.update-render figcaption a{color:#263e43;text-underline-offset:3px;display:inline-block;margin-left:8px}
+/* Dated updates share an open heading rail and a comfortable reading measure. */
+.recent-updates { max-width: 1280px; margin: auto; padding: 64px clamp(24px, 4vw, 48px) 80px; }
+html .reading-page .update-intro { max-width: 760px; margin: 0 0 56px; }
+.update-intro h1 { font-size: clamp(42px, 4.7vw, 64px); line-height: 1.08; letter-spacing: -.04em; margin: 0 0 24px; }
+html .reading-page .update-intro > p { max-width: 60ch; margin: 0 0 18px; font-size: 20px; line-height: 1.55; }
+html .reading-page .update-intro > .page-date { font-size: 14px; }
+html .reading-page .approval-update { max-width: none; margin: 0; padding: 56px 0; border-top: 1px solid #e4dedb; background: transparent; }
+html .reading-page .approval-update:has(> .update-heading) { display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); gap: 32px 64px; align-items: start; }
+html .reading-page .approval-update > :is(.update-heading, .update-copy) { min-width: 0; }
+html .reading-page .update-heading { display: block; height: auto; margin: 0; padding: 0; border: 0; background: none; }
+html .reading-page .approval-update h2 { max-width: 25ch; margin: 0 0 20px; font-size: clamp(27px, 2.4vw, 34px); line-height: 1.2; font-weight: 500; letter-spacing: -.03em; }
+html .reading-page .approval-update .update-heading h2 { margin-bottom: 0; }
+html .reading-page :is(.approval-update, .update-row) p { max-width: 65ch; margin: 0 0 18px; line-height: 1.65; }
+html .reading-page .approval-update .update-area { margin-bottom: 14px; }
+html .reading-page :is(.approval-update, .update-row) :is(ul, ol) { max-width: 65ch; margin: 20px 0; padding-left: 22px; }
+html .reading-page :is(.approval-update, .update-row) li { margin: 0 0 10px; padding-left: 4px; }
+html .reading-page :is(.approval-update, .update-row) :is(p, ul, ol):last-child { margin-bottom: 0; }
+html .reading-page .update-note { max-width: 65ch; padding: 0; background: transparent; color: #6b6662; font-size: 15px; line-height: 1.65; }
+html .reading-page .update-list { display: grid; gap: 0; margin: 0; }
+html .reading-page .update-row { display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); gap: 32px 64px; padding: 48px 0; border-top: 1px solid #e4dedb; }
+html .reading-page .update-row > div { min-width: 0; }
+html .reading-page .update-row h2 { max-width: 26ch; margin: 12px 0 0; font-size: clamp(26px, 2.3vw, 32px); line-height: 1.2; letter-spacing: -.03em; }
+html .reading-page .update-row h2 a { text-decoration: none; color: #2e2b2a; }
+html .reading-page .update-row h2 a:hover { color: #a23b3b; }
+html .reading-page .update-area { font-size: 14px; letter-spacing: 0; text-transform: none; color: #6b6662; margin: 0; }
+html .reading-page .update-links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 28px; margin-top: 20px; font-size: 15px; }
+html .reading-page .update-links a { display: inline-flex; align-items: center; min-height: 44px; color: #a23b3b; text-underline-offset: .22em; }
+html .reading-page .update-bottom { max-width: 65ch; margin-top: 32px; padding-top: 32px; border-top: 1px solid #e4dedb; }
+html .reading-page .update-bottom p { color: #6b6662; line-height: 1.65; margin: 0 0 18px; }
+html .reading-page .update-render { margin: 0 0 24px; max-width: 100%; }
+.update-render img { display: block; width: 100%; height: auto; }
+html .reading-page .update-render figcaption { font-size: 14px; line-height: 1.6; margin-top: 12px; color: #6b6662; }
+.update-render figcaption a { color: #a23b3b; text-underline-offset: .22em; display: inline-block; margin-left: 8px; }
+html .reading-page :is(.update-copy, .update-row) .reading-note { max-width: 65ch; margin: 20px 0; }
+html .reading-page :is(.update-copy, .update-row) .reading-note p { max-width: 65ch; }
+.skip-link { position: absolute; left: -9999px; top: 8px; z-index: 100; }
+.skip-link:focus { left: 12px; padding: 10px 14px; background: #fff; color: #2e2b2a; }
+@media (max-width: 900px) {
+  html .reading-page :is(.approval-update:has(> .update-heading), .update-row) { column-gap: 36px; }
+}
+@media (max-width: 760px) {
+  html .reading-page .update-intro { margin-bottom: 40px; }
+  html .reading-page .update-intro > p:not(.page-date) { font-size: 18px; }
+  html .reading-page .approval-update { padding: 40px 0; }
+  html .reading-page .approval-update:has(> .update-heading), html .reading-page .update-row { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  html .reading-page .update-row { padding: 40px 0; }
+  html .reading-page .approval-update h2, html .reading-page .update-row h2 { max-width: 28ch; font-size: 28px; }
+  html .reading-page .update-row h2 { margin-top: 10px; }
+  html .reading-page .update-links { gap: 8px 24px; }
+  html .reading-page .update-bottom { margin-top: 24px; }
+}

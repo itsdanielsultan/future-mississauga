@@ -9,16 +9,11 @@ export function shortDate(value) {
 
 export const shortResolution = width => Number.isFinite(width) && width > 0 ? Math.max(1, Math.round(width / 1000))+'K PNG' : '';
 
-// A new delivery URL or presentation date does not change the model depicted.
+// Show the image's actual render date and download size. Source lineage remains
+// in the catalogues and source records, separate from the picture controls.
 export function pictureProvenance(renderInfo = {}, width) {
   const rendered = shortDate(renderInfo?.renderDate);
-  const modelDate = shortDate(renderInfo?.sourceModelDate);
-  const sourceEdition = typeof renderInfo?.sourceEdition === 'string' ? renderInfo.sourceEdition.trim() : '';
-  return {
-    meta: [rendered ? 'Rendered '+rendered : '', shortResolution(width)].filter(Boolean).join(' · '),
-    sourceEdition: renderInfo?.sourceDatesMixed===true ? 'Model sources vary by date' : modelDate ? 'Model version: '+modelDate : renderInfo?.state === 'retained-earlier' ? 'Earlier model version' : sourceEdition ? 'Model date not recorded' : '',
-    notice: renderInfo?.state === 'retained-earlier' ? 'This earlier view does not include later model changes.' : ''
-  };
+  return {meta: [rendered ? 'Rendered '+rendered : '', shortResolution(width)].filter(Boolean).join(' · ')};
 }
 
 // Use the page's existing exact mapping. Nearby or similarly named studies are not evidence.

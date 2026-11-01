@@ -4,6 +4,8 @@ import fs from 'node:fs/promises';
 import {register} from 'node:module';
 import {createHash} from 'node:crypto';
 import {gunzipSync} from 'node:zlib';
+import {withoutReviewedStatusMetadata as withoutStatus} from './status-metadata-scope.mjs';
+import {withoutReviewedMcityContent as withoutMcity} from './mcity-content-scope.mjs';
 register('./recovery-three-loader.mjs',import.meta.url);
 const THREE=await import('../public/vendor/three.module.js');
 const {GLTFLoader}=await import('../public/vendor/addons/loaders/GLTFLoader.js');
@@ -48,7 +50,7 @@ test('exact source keys do not suppress an adjacent triangle inside the same bou
  const a={id:'exact',localReview:true,bounds:[[0,0,0],[1,1,1]],modes:['existing'],replacementTriangleKeys:['0.000,0.000,0.000|0.000,0.000,1.000|1.000,0.000,0.000']};const audit=splitSourceOverlaps(THREE,root,[a]);assert.equal(audit[0].fallbackTriangles,1);assert.equal(audit[0].remainingTriangles,1);assert.equal(count(m),1);
 });
 test('all baseline refinement assets and every prior non-M City project remain semantically unchanged',async()=>{
- const {execFileSync}=await import('node:child_process');const base='bdc90b554778f27160f90d329fba1e0e7e67feb6';const old=JSON.parse(execFileSync('git',['show',base+':public/data/refinement-models.json'],{maxBuffer:32*1024*1024}));assert.deepEqual(manifest.assets.slice(0,old.assets.length),old.assets);assert.equal(manifest.assets.length,old.assets.length+2);
- const before=JSON.parse(execFileSync('git',['show',base+':public/data/projects.json'],{maxBuffer:32*1024*1024})),after=JSON.parse(await fs.readFile(new URL('../public/data/projects.json',import.meta.url)));const prior=after.filter(p=>!['sgm-maritz-6710','ergocentric-275-superior'].includes(p.id));assert.equal(after.length,before.length+2);assert.equal(after.filter(p=>p.id==='sgm-maritz-6710').length,1);assert.equal(after.filter(p=>p.id==='ergocentric-275-superior').length,1);assert.equal(before.length,prior.length);assert.deepEqual(prior.filter(p=>p.id!=='mcity-1-2'),before.filter(p=>p.id!=='mcity-1-2'));
+ const {execFileSync}=await import('node:child_process');const base='bdc90b554778f27160f90d329fba1e0e7e67feb6';const old=JSON.parse(execFileSync('git',['show',base+':public/data/refinement-models.json'],{maxBuffer:32*1024*1024}));assert.deepEqual(manifest.assets.slice(0,old.assets.length).map(a=>withoutStatus('assets',a)),old.assets);assert.equal(manifest.assets.length,old.assets.length+2);
+ const before=JSON.parse(execFileSync('git',['show',base+':public/data/projects.json'],{maxBuffer:32*1024*1024})),after=JSON.parse(await fs.readFile(new URL('../public/data/projects.json',import.meta.url)));const prior=after.filter(p=>!['sgm-maritz-6710','ergocentric-275-superior'].includes(p.id));assert.equal(after.length,before.length+2);assert.equal(after.filter(p=>p.id==='sgm-maritz-6710').length,1);assert.equal(after.filter(p=>p.id==='ergocentric-275-superior').length,1);assert.equal(before.length,prior.length);assert.deepEqual(prior.filter(p=>p.id!=='mcity-1-2').map(p=>withoutMcity(withoutStatus('projects',p))),before.filter(p=>p.id!=='mcity-1-2').map(withoutMcity));
  const a=after.find(p=>p.id==='mcity-1-2'),b=before.find(p=>p.id==='mcity-1-2');for(const key of ['status','statusDate','towers','heightM','storeys','sources','geometrySources','meshIds','retainedMeshIds','position','actualCompletionDate','completion'])assert.deepEqual(a[key],b[key]);
 });
