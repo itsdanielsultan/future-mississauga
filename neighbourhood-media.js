@@ -1,4 +1,4 @@
-import {shortDate,shortResolution} from './image-provenance.js?v=20261028-citywide1';
+import {shortDate,shortResolution} from './image-provenance.js?v=20261101-gallery1';
 
 export function studyImagePreview(manifest, url, baseURL) {
   if (!['future-mississauga-neighbourhood-media/v1','future-mississauga-study-media/v1'].includes(manifest?.schema) || !Array.isArray(manifest.images)) return null;
@@ -12,8 +12,6 @@ export function studyImagePreview(manifest, url, baseURL) {
     src: row.url, download: row.url, preview: row.url,
     width: row.width, height: row.height,
     meta: [updated ? 'Updated '+updated : '',shortResolution(row.width)].filter(Boolean).join(' · '),
-    sourceEdition: manifest.previewLabel || manifest.sourceGeometryNote,
-    description: manifest.description,
     osm: manifest.sourceAttribution?.openStreetMap === true
   };
 }

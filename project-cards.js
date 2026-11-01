@@ -1,3 +1,4 @@
+import {LIFECYCLE_LABELS} from './model-status-materials.js?v=20261101-status2';
 /** Project card presentation only. Does not change project facts or model status. */
 import {buildingFeedbackHTML} from './building-feedback.js?v=20261028-improvements1';
 const escapeHTML=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -31,6 +32,8 @@ const overrides={
 
 /** The full underlying status remains in the disclosure if the short label differs. */
 export function projectStatus(project){
+  if(project.lifecycle==='proposed'&&project.status==='plans-under-review')return {label:'Under review',tone:'proposed'};
+  if(LIFECYCLE_LABELS[project.lifecycle])return {label:LIFECYCLE_LABELS[project.lifecycle],tone:({existing:'existing',under_construction:'construction',approved:'approved',proposed:'proposed',on_hold:'neutral',cancelled:'neutral',unknown:'uncertain',mixed:'neutral'})[project.lifecycle]};
   const raw=text(project.status),status=raw.toLowerCase().replace(/[_–—-]+/g,' ').replace(/\s+/g,' ');
   // Mixed communities and partial structures must never become “Existing”.
   if(/(?:partially built|partly completed|mixed completed|partially completed)/.test(status))return {label:'Partly built',tone:'construction'};
@@ -62,6 +65,8 @@ function facts(project){
   const actual=project.actualCompletionDate||project.completionDate||project.completion?.actual;
   const target=project.targetCompletionDate;
   const rows=[];
+  if(isKnown(project.approvalStage))rows.push(['Planning approval',text(project.approvalStage)]);
+  if(isKnown(project.statusEvidenceDate))rows.push(['Status evidence',text(project.statusEvidenceDate)]);
   if(isKnown(actual))rows.push(['Completion / occupancy',text(actual)]);
   if(isKnown(target))rows.push(['Target completion / occupancy',text(target)]);
   if(!isKnown(actual)&&isKnown(project.completionYear))rows.push(['Reported completion year',text(project.completionYear)]);
@@ -117,7 +122,8 @@ export function projectDetailsHTML(project,{asset=null,view={},revision=null}={}
   const override=overrides[project.id],status=projectStatus(project),summary=override?.summary||text(project.summary);
   const location=unique([project.address&&project.address!==project.name?project.address:'',project.district||project.researchArea]).join(' · ');
   const notes=modelNotes(project,asset,override),sources=sourceItems(project,override),raw=text(project.status);
-  const statusDetail=!override?.omitStatusDetail&&raw&&raw!==status.label?`<p class="project-card-status-detail">${escapeHTML(raw)}${project.statusDate?` · ${escapeHTML(project.statusDate)}`:''}</p>`:'';
+  const currentStatusNote=text(project.lifecycleNote);
+  const statusDetail=(currentStatusNote?`<p class="project-card-status-detail">${escapeHTML(currentStatusNote)}</p>`:'')+(!override?.omitStatusDetail&&raw&&raw!==status.label?`<p class="project-card-status-detail">${escapeHTML(raw)}${project.statusDate?` · ${escapeHTML(project.statusDate)}`:''}</p>`:'');
   const sourceNote=override?.sourceNote||'Reference material belongs to its credited owners. A source link does not grant permission to reuse it.';
   const detail=notes.length||sources.length||statusDetail||facts(project).length,qualifier=modelQualifier(project,asset,override);
   const previews=({'ergocentric-275-superior':[['ergocentric-275-superior','Open model preview']],'sgm-maritz-6710':[['sgm-maritz-6710','Open model preview & download']],'artform':[['artform','Open model preview & download']],'mcity-1-2':[['mcity-pair','Open model preview & download']],'edge-oro':[['edge-1','Edge 1 study'],['edge-2','Edge 2 study'],['oro','Oro intended-design study']],'avia':[['avia-1','Avia 1 with shared podium'],['avia-2','Avia 2 with shared podium']]})[project.id];

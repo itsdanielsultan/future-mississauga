@@ -1,15 +1,20 @@
+import {legacyLifecycle,inactiveLifecycle} from './model-status-materials.js?v=20261101-status2';
 // Supplemental models and their municipal fallbacks share one visibility decision.
 // The helper is independent of rendering, navigation and district selection.
-export function applyModelVisibility(meshes,which,{referenceStudies=false,selectedStudyProjectId=null,uncertainVersions=true}={}){
+export function applyModelVisibility(meshes,which,{referenceStudies=false,selectedStudyProjectId=null,unknownStatuses,uncertainVersions}={}){
+ const showUnknown=unknownStatuses??uncertainVersions??true;
  const visibleAssets=new Set();
  for(const mesh of meshes){
-  const d=mesh.userData||{};
+  const d=mesh.userData||{},lifecycle=d.lifecycle||legacyLifecycle(d.displayStatus||d.Status);
+  const selectedHistoricalStudy=d.draftStudy&&d.projectId===selectedStudyProjectId;
   let visible=!d.hiddenObsolete;
+  if(inactiveLifecycle(lifecycle)&&!selectedHistoricalStudy)visible=false;
   if(d.draftStudy&&!referenceStudies&&d.projectId!==selectedStudyProjectId)visible=false;
-  if(d.displayStatus!=='Existing'&&d.uncertain&&!uncertainVersions)visible=false;
-  if(which==='construction'&&d.displayStatus==='Under Construction'&&!d.recordedProgress&&!d.constructionDesign)visible=false;
+  if((lifecycle==='unknown'||lifecycle==='mixed')&&!showUnknown)visible=false;
+  if(which==='construction'&&lifecycle==='under_construction'&&!d.recordedProgress&&!d.constructionDesign)visible=false;
   if(!Array.isArray(d.sourceReplacements)&&d.replacementModes?.includes(which))visible=false;
-  const inMode=d.modes?d.modes.includes(which):d.displayStatus==='Existing'||which==='future'||which==='construction'&&d.displayStatus==='Under Construction';
+  const lifecycleInMode=lifecycle==='existing'||which==='future'||which==='construction'&&lifecycle==='under_construction';
+  const inMode=lifecycleInMode&&(!d.modes||d.modes.includes(which));
   mesh.visible=visible&&inMode;
   if(mesh.visible&&hasGeometry(mesh)&&d.assetId)visibleAssets.add(d.assetId);
  }

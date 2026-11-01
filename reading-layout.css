@@ -1,0 +1,76 @@
+/* Spacing for the standalone model browser and portrait gallery. */
+html:has(#modelChooser), html body:has(#modelChooser), html .social-site { background: #fff; color: #2e2b2a; }
+html body:has(#modelChooser) main, html .social-page {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: clamp(24px, 4vw, 48px);
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+html body:has(#modelChooser) main { padding-top: 64px; padding-bottom: 80px; }
+html body:has(#modelChooser) .intro { align-items: end; gap: 32px 48px; margin-bottom: 40px; }
+html body:has(#modelChooser) .intro > div { min-width: 0; }
+html body:has(#modelChooser) h1, html .social-page h1 { max-width: 20ch; margin: 0 0 18px; font: 500 clamp(42px, 4.7vw, 64px)/1.08 'Bricolage Grotesque', sans-serif; letter-spacing: -.04em; text-wrap: balance; }
+html body:has(#modelChooser) h2 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 500; line-height: 1.2; letter-spacing: -.025em; }
+html body:has(#modelChooser) .subtitle { max-width: 62ch; margin: 0; font-size: 18px; line-height: 1.6; color: #6b6662; }
+html body:has(#modelChooser) .picker { gap: 10px; min-width: min(280px, 100%); max-width: 360px; }
+html body:has(#modelChooser) .picker select { min-width: 0; width: 100%; border-radius: 5px; padding-right: 46px; }
+html body:has(#modelChooser) .no-model { padding: 32px 0 0; border: 0; border-top: 1px solid #e4dedb; border-radius: 0; background: transparent; }
+html body:has(#modelChooser) .no-model > p { max-width: 65ch; margin: 0 0 24px; line-height: 1.65; }
+html body:has(#modelChooser) .chooser { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 32px; margin: 24px 0 48px; }
+html body:has(#modelChooser) .chooser .button { min-width: 0; min-height: 76px; padding: 20px 0; border: 0; border-top: 1px solid #e4dedb; border-radius: 0; background: transparent; line-height: 1.45; color: #a23b3b; }
+html body:has(#modelChooser) .chooser .button:hover { color: #842d32; text-decoration: underline; }
+html body:has(#modelChooser) .models-more { margin-top: 0; padding-top: 32px; }
+html body:has(#modelChooser) .models-more h2 { margin: 0 0 18px; font-size: 28px; }
+html body:has(#modelChooser) .models-more nav { gap: 12px 32px; }
+html body:has(#modelChooser) .preview-layout { gap: 40px; }
+html body:has(#modelChooser) .sidebar { padding: 0 0 0 28px; border: 0; border-left: 1px solid #e4dedb; border-radius: 0; background: transparent; }
+html body:has(#modelChooser) .sidebar h2 { margin: 0 0 16px; font-size: 24px; }
+html body:has(#modelChooser) .sidebar p { margin: 0 0 18px; max-width: 65ch; line-height: 1.65; }
+html body:has(#modelChooser) .limits { margin-top: 28px; padding-top: 24px; }
+html body:has(#modelChooser) .sources { margin-top: 40px; padding-top: 24px; }
+html body:has(#modelChooser) .sources > ul { max-width: 65ch; padding-left: 22px; }
+html body:has(#modelChooser) .sources li { margin-bottom: 16px; }
+html body:has(#modelChooser) .controls { gap: 10px; margin-top: 16px; }
+html body:has(#modelChooser) .instructions { max-width: 65ch; margin-top: 16px; }
+html .social-page .hero { padding: 64px 0 36px; }
+html .social-page .hero .lede { max-width: 60ch; margin: 0 0 16px; font-size: 20px; line-height: 1.55; }
+html .social-page .hero .social-note { max-width: 65ch; line-height: 1.65; }
+html .social-page .gallery-controls { flex-wrap: wrap; gap: 16px 32px; padding-bottom: 32px; }
+html .social-page .gallery-controls label { gap: 16px; min-width: 0; }
+html .social-page .gallery-controls select { min-height: 48px; padding-right: 46px; }
+html .social-page .social-grid { gap: 48px 32px; }
+html .social-page .social-context { gap: 32px 64px; margin-top: 64px; padding: 48px 0 64px; }
+html .social-page .social-context h2 { max-width: 26ch; font-size: 30px; }
+html .social-page .social-context p { max-width: 65ch; line-height: 1.65; }
+@media (max-width: 1000px) {
+  html body:has(#modelChooser) .chooser { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  html body:has(#modelChooser) .preview-layout { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  html body:has(#modelChooser) .sidebar { padding: 28px 0 0; border: 0; border-top: 1px solid #e4dedb; }
+}
+@media (max-width: 760px) {
+  html body:has(#modelChooser) main, html .social-page { padding-inline: clamp(20px, 4vw, 24px); }
+  html body:has(#modelChooser) main { padding-top: 40px; padding-bottom: 64px; }
+  html body:has(#modelChooser) h1, html .social-page h1 { font-size: clamp(38px, 9vw, 52px); }
+  html body:has(#modelChooser) .intro { display: flex; flex-direction: column; align-items: stretch; gap: 28px; margin-bottom: 32px; }
+  html body:has(#modelChooser) .picker { width: 100%; max-width: none; margin-top: 0; }
+  html body:has(#modelChooser) .chooser { margin-bottom: 36px; gap: 0 24px; }
+  html body:has(#modelChooser) .models-more nav { gap: 8px 24px; }
+  html .social-page .hero { padding: 40px 0 28px; }
+  html .social-page .hero .lede { font-size: 18px; }
+  html .social-page .gallery-controls { gap: 16px 24px; padding-bottom: 28px; }
+  html .social-page .gallery-controls select { width: min(100%, 260px); }
+  html .social-page .social-grid { gap: 36px 24px; }
+  html .social-page .social-context { grid-template-columns: 1fr; gap: 24px; margin-top: 48px; padding: 32px 0 48px; }
+}
+@media (max-width: 480px) {
+  html body:has(#modelChooser) .chooser { grid-template-columns: minmax(0, 1fr); }
+  html body:has(#modelChooser) .chooser .button { min-height: 64px; padding: 18px 0; }
+  html .social-page .gallery-controls { align-items: start; }
+  html .social-page .gallery-controls label { flex: 1 1 100%; }
+  html .social-page .gallery-controls select { width: 100%; }
+  html .social-page .gallery-controls p { padding-bottom: 0; }
+}

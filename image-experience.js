@@ -1,7 +1,7 @@
 import {installDocumentPreviews} from './document-preview.js?v=20261028-citywide1';
-import {installImagePreviews} from './image-preview.js?v=20261028-citywide1';
-import {pictureProvenance} from './image-provenance.js?v=20261028-citywide1';
-import {resolveStudyImage} from './neighbourhood-media.js?v=20261028-citywide1';
+import {installImagePreviews} from './image-preview.js?v=20261101-gallery1';
+import {pictureProvenance} from './image-provenance.js?v=20261101-gallery1';
+import {resolveStudyImage} from './neighbourhood-media.js?v=20261101-gallery1';
 import {resolveMedia,installResponsiveImages} from './media-catalog.js?v=20261028-citywide1';
 installImagePreviews(async(image,anchor)=>{
   const row=await resolveMedia(image?.src||anchor.href);

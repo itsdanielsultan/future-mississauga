@@ -1,9 +1,15 @@
-export const STATUS_LEGEND = Object.freeze([
-  {key: 'existing', label: 'Existing', color: '#b8b9b6'},
-  {key: 'construction', label: 'Under construction', color: '#85b4bf'},
-  {key: 'proposed', label: 'Proposed / approved', color: '#d8b7ac'},
-  {key: 'uncertain', label: 'Needs checking', color: '#b89bc3'}
+import {statusColours,LIFECYCLE_LABELS} from './model-status-materials.js?v=20261101-status2';
+const legendItem=(key,material,color)=>Object.freeze({key,label:LIFECYCLE_LABELS[key],color:color||'#'+statusColours[material].toString(16).padStart(6,'0')});
+export const STATUS_LEGEND=Object.freeze([
+  legendItem('existing','Existing','#b8b9b6'),legendItem('under_construction','Under Construction'),
+  legendItem('approved','Approved'),legendItem('proposed','Proposed'),legendItem('unknown','Uncertain')
 ]);
+export function statusLegendFor(lifecycles=[]){
+  const shown=new Set(lifecycles),items=[...STATUS_LEGEND];
+  if(shown.has('on_hold'))items.push(legendItem('on_hold','On Hold'));
+  if(shown.has('cancelled'))items.push(legendItem('cancelled','Cancelled'));
+  return items;
+}
 
 // NDC coordinates need pixel aspect scaling before they become a compass bearing.
 export function northBearingFromNDC(anchor, north, width, height) {
@@ -20,9 +26,10 @@ export function projectNorth(THREE, camera, target, width, height) {
   return northBearingFromNDC(anchor, north, width, height);
 }
 
-export function presentationLayout(width) {
+export function presentationLayout(width,legend=STATUS_LEGEND) {
   const compact = width < 1000, scale = width / (compact ? 650 : 1400);
-  return {compact, scale, height: Math.ceil((compact ? 160 : 116) * scale)};
+  const rows=Math.ceil(legend.length/2),height=compact?118+(rows-1)*26+24:Math.max(116,43+(rows-1)*30+24);
+  return {compact,scale,height:Math.ceil(height*scale)};
 }
 
 function drawNorth(ctx, x, y, size, bearing) {
@@ -40,8 +47,8 @@ function drawNorth(ctx, x, y, size, bearing) {
   ctx.restore();
 }
 
-export function drawPresentationFooter(ctx, {width, top, title, scenario, bearing}) {
-  const {compact, scale: s, height} = presentationLayout(width);
+export function drawPresentationFooter(ctx, {width, top, title, scenario, bearing, legend=STATUS_LEGEND}) {
+  const {compact, scale: s, height} = presentationLayout(width,legend);
   ctx.save(); ctx.translate(0, top); ctx.scale(s, s);
   const w = width / s;
   ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, w, height / s);
@@ -49,9 +56,9 @@ export function drawPresentationFooter(ctx, {width, top, title, scenario, bearin
   ctx.textAlign = 'left'; ctx.fillStyle = '#2e2b2a';
   ctx.font = '500 23px "Bricolage Grotesque", sans-serif'; ctx.fillText(title.replace(/^Future Mississauga\s*[·:]\s*/, ''), 28, 36, compact ? 500 : 620);
   ctx.font = '15px Lato, sans-serif'; ctx.fillText('by Daniel Sultan', 28, 60, compact ? 500 : 580);
-  ctx.fillStyle = '#63696b'; ctx.font = '13px Lato, sans-serif'; ctx.fillText(scenario + ' · Source dates vary', 28, 82, compact ? 500 : 580);
+  ctx.fillStyle = '#63696b'; ctx.font = '13px Lato, sans-serif'; ctx.fillText(scenario, 28, 82, compact ? 500 : 580);
   drawNorth(ctx, w - 56, compact ? 48 : 54, 62, bearing);
-  STATUS_LEGEND.forEach((item, i) => {
+  legend.forEach((item, i) => {
     const x = compact ? 28 + (i % 2) * 308 : 750 + (i % 2) * 230;
     const y = compact ? 118 + Math.floor(i / 2) * 26 : 43 + Math.floor(i / 2) * 30;
     ctx.fillStyle = item.color; ctx.fillRect(x, y - 11, 16, 12);
