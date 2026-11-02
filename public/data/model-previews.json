@@ -5,34 +5,36 @@
     {
       "id": "mcity-m1",
       "title": "M City M1",
-      "url": "models/studies-20261101/mcity-m1-rev03-exterior.glb.gz",
-      "bytes": 3318788,
-      "decodedBytes": 20403268,
-      "sha256": "e64ff2ddcb44f0d8dc5da7830a1f9d202fd257a827d31362fb94cc4061afada5",
-      "downloadSHA256": "fa2dbb81b9cd0a03bbdf7d1c189e81066ca10ff5d0e0c45dae96b502c2e7320a",
-      "downloadName": "M_City_M1_Rev03_Web_Study.glb",
-      "sourceSHA256": "bbc3a2fe2a2e2759911e7d9ae5cb1974bcba5d6df3175e14712c10d63e49850b",
+      "url": "models/studies-20261101/mcity-m1-likeness-v5.glb.gz",
+      "bytes": 3730812,
+      "decodedBytes": 21567616,
+      "sha256": "2395254cbc740cba2bb3bae74bbb00cc4039ea1997414635bb368b93cea92521",
+      "downloadSHA256": "630368744c2ba9f8252004d87bf31d31f66397c3cc037b21db65f43e6da7f9ca",
+      "downloadName": "M_City_M1_Exterior_Study.glb",
+      "sourceSHA256": "af8f08bd86bff83adcde4b8f4c4144d999969031e9567128bcd98d927a207dc5",
       "sourceArchiveSHA256": "2215122874e043c6a56e4ddf4fcc9935402ca7d48fdd0262a5949e79dd56dc83",
-      "representation": "Source-registered authored Rev03 facade refinement, November1 2026; original Rev02 geometry retained.",
+      "representation": "Approximate completed exterior with source-traced floor plates and selected podium surface details. Floor phase and dimensions remain qualified.",
       "cityDataTerms": true,
-      "triangles": 342311,
-      "meshCount": 171
+      "triangles": 363263,
+      "meshCount": 183,
+      "modelReviewDate": "2026-11-01"
     },
     {
       "id": "mcity-m2",
       "title": "M City M2",
-      "url": "models/studies-20261101/mcity-m2-rev03-exterior.glb.gz",
-      "bytes": 3454743,
-      "decodedBytes": 21364304,
-      "sha256": "9b7836cbd765b203f231963ec17430a73c989ddefb7595c88009a333c835894a",
-      "downloadSHA256": "f8df47618a455813ce83c64ced978e5b18797ee13f233be743ed09e8ce7f9f87",
-      "downloadName": "M_City_M2_Rev03_Web_Study.glb",
-      "sourceSHA256": "4e32fd3af9751ddde545b6dd2b2abd60e87212c8a53e060fe847f0b75160eba6",
+      "url": "models/studies-20261101/mcity-m2-likeness-v5.glb.gz",
+      "bytes": 3662186,
+      "decodedBytes": 21373484,
+      "sha256": "e5a8a29b8f5553e4f92418c11c4ef63397cded152d7d06ba48d690e1e18597fd",
+      "downloadSHA256": "1f6d68734e2486165984f0e56605638fc0ea705a4cb326afbe33b0a4dde0ef20",
+      "downloadName": "M_City_M2_Exterior_Study.glb",
+      "sourceSHA256": "cfd3815278c1495fc91eb4b54afe37601ba63e03bed1c6172b37f22ab3d3a08e",
       "sourceArchiveSHA256": "2215122874e043c6a56e4ddf4fcc9935402ca7d48fdd0262a5949e79dd56dc83",
-      "representation": "Source-registered authored Rev03 facade refinement, November1 2026; original Rev02 geometry retained.",
+      "representation": "Approximate completed exterior with source-traced floor plates and selected podium surface details. Floor phase and dimensions remain qualified.",
       "cityDataTerms": true,
-      "triangles": 351511,
-      "meshCount": 178
+      "triangles": 353191,
+      "meshCount": 182,
+      "modelReviewDate": "2026-11-01"
     },
     {
       "id": "artform",
@@ -244,14 +246,30 @@
       "geometrySourceSHA256": "c3bf9ec74a0d8cf57fc96cb8230b1dc2f59cbacd9163c9deff3881adfb9f632e",
       "metadataDerivativeProofSHA256": "faf0c4a8cfb1f9d456234b78bc81900bc170cb3d94552d999f20eb43bf543942",
       "metadataDerivativeNote": "Publication-state metadata was updated for public interactive display. Geometry, transforms, materials, credits and limits are unchanged from the authored model."
+    },
+    {
+      "id": "mcity-m5-v5",
+      "projectId": "mcity-5",
+      "title": "M City M5",
+      "url": "models/studies-20261101/mcity-m5-exterior-v5-af9d51546ca3.glb.gz",
+      "bytes": 375477,
+      "decodedBytes": 1505248,
+      "sha256": "af9d51546ca35a1fbc850b2afc3cbf1565010ee7c196f03df7e8cf6679ff829a",
+      "downloadSHA256": "4162051b4d6706a65b3f5f0606ce31dfd9500c41f6ea766f1a40eb15ac519b6f",
+      "downloadName": "M_City_M5_Exterior_Study_Rev05.glb",
+      "representation": "Approximate independently authored completed-design study. Metric dimensions and placement remain unverified.",
+      "cityDataTerms": false,
+      "triangles": 89856,
+      "meshCount": 56,
+      "modelReviewDate": "2026-11-01"
     }
   ],
   "views": [
     {
-      "subtitle": "Completed buildings · Approximate exterior · Rev02",
-      "summary": "A draft interpretation of the completed towers and podiums. The tower geometry is unchanged from the accepted study; selected podium details follow dated views.",
+      "subtitle": "Completed buildings · Approximate exterior",
+      "summary": "An approximate exterior study using CORE’s floor-plate diagram and completed-building photographs.",
       "credit": "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
-      "limits": "Tower plates, floor schedules, heights, podium dimensions and hidden faces remain approximate. M1 podium observations: May 2026. M2 Quartz/Webb observations: June 2024. The unresolved M2 patterned wall is omitted. Not certified as-built, survey or construction information.",
+      "limits": "Floor sequence, heights, crown details and podium dimensions remain approximate. Added glazing and bands cover selected surfaces; they do not reconstruct the full podium. M1’s low faceted pavilion remains coarse or absent.",
       "rights": "Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
       "cameraDirection": [
         -1,
@@ -289,10 +307,10 @@
       ]
     },
     {
-      "subtitle": "Completed buildings · Approximate exterior · Rev02",
-      "summary": "A draft interpretation of the completed towers and podiums. The tower geometry is unchanged from the accepted study; selected podium details follow dated views.",
+      "subtitle": "Completed buildings · Approximate exterior",
+      "summary": "An approximate exterior study using CORE’s floor-plate diagram and completed-building photographs.",
       "credit": "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
-      "limits": "Tower plates, floor schedules, heights, podium dimensions and hidden faces remain approximate. M1 podium observations: May 2026. M2 Quartz/Webb observations: June 2024. The unresolved M2 patterned wall is omitted. Not certified as-built, survey or construction information.",
+      "limits": "Floor sequence, heights, crown details and podium dimensions remain approximate. Added glazing and bands cover selected surfaces; they do not reconstruct the full podium. M1’s low faceted pavilion remains coarse or absent.",
       "rights": "Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
       "cameraDirection": [
         -1,
@@ -329,10 +347,10 @@
       ]
     },
     {
-      "subtitle": "Completed buildings · Approximate exterior · Rev02",
-      "summary": "A draft interpretation of the completed towers and podiums. The tower geometry is unchanged from the accepted study; selected podium details follow dated views.",
+      "subtitle": "Completed buildings · Approximate exterior",
+      "summary": "An approximate exterior study using CORE’s floor-plate diagram and completed-building photographs.",
       "credit": "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
-      "limits": "Tower plates, floor schedules, heights, podium dimensions and hidden faces remain approximate. M1 podium observations: May 2026. M2 Quartz/Webb observations: June 2024. The unresolved M2 patterned wall is omitted. Not certified as-built, survey or construction information.",
+      "limits": "Floor sequence, heights, crown details and podium dimensions remain approximate. Added glazing and bands cover selected surfaces; they do not reconstruct the full podium.",
       "rights": "Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
       "cameraDirection": [
         -1,
@@ -722,6 +740,47 @@
       ],
       "fitToBounds": true,
       "cityURL": "explore.html?district=citywide&project=ergocentric-275-superior"
+    },
+    {
+      "id": "mcity-m5",
+      "projectId": "mcity-5",
+      "title": "M City M5",
+      "subtitle": "Future design · Approximate exterior",
+      "summary": "An illustrative view of the overlapping tower volumes, facade frames and masonry podium.",
+      "credit": "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design: IBI Group / Arcadis. Design references: M City and Urban Capital.",
+      "limits": "The 117.87 m height and 34 m width are comparison dimensions, not verified measurements. Placement, podium bays, frame depths, glazing and finishes remain approximate. This view does not show current construction.",
+      "rights": "Independent research visualization; no official endorsement. Source renderings, drawings and private correspondence are not included. Architectural design and source material retain separate rights.",
+      "cameraDirection": [
+        1,
+        0.26,
+        -0.43
+      ],
+      "cityURL": "explore.html?district=downtown&project=mcity-5",
+      "assets": [
+        "mcity-m5-v5"
+      ],
+      "sources": [
+        {
+          "title": "M City / IBI Group",
+          "url": "https://mcitycondos.com/assets/brochures/M5-M-City-Condominiums.pdf",
+          "note": "Official design reference; 36 storeys, six-storey masonry podium and seventh-floor amenities."
+        },
+        {
+          "title": "M City",
+          "url": "https://mcitycondos.com/m5-condominiums.php",
+          "note": "Official completed-design imagery, used as reference only."
+        },
+        {
+          "title": "Urban Capital",
+          "url": "https://www.urbancapital.ca/m5-mississauga",
+          "note": "Primary exterior design reference."
+        },
+        {
+          "title": "M City developer plan, public mirror",
+          "url": "https://urbantoronto.ca/forum/attachments/m5-vip-hot-list-and-floor-plans-august-6-2022-pdf.419597/",
+          "note": "Page 20 plan key dated 16 March 2022 informs footprint topology; no source pages are redistributed."
+        }
+      ]
     }
   ]
 }

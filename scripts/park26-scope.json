@@ -1,0 +1,112 @@
+{
+  "asset": {
+    "id": "wf-26park-current-plan",
+    "oldValues": {
+      "modelQuality": "Plan-derived schematic envelope",
+      "simplifications": [
+        "Three podium/shaft extents and mechanical enclosure follow the site-plan outline and labelled level elevations.",
+        "Minor podium recesses, balcony projections, cladding, windows and ground-level openings are omitted.",
+        "Aerial massing is more complete than the prior absent building, but this is not a fabrication-ready architectural model."
+      ],
+      "modelFidelity": "Plan-derived schematic envelope",
+      "url": "models/refinement/26-park-current-plan.glb",
+      "sha256": "c245fa1beebfe015b7058a7514672d4f438071bfea3d7fdeb9f1ad2d98b6f535",
+      "bytes": 3444,
+      "triangles": 48,
+      "bounds": [
+        [
+          -983.1935706425978,
+          8.799999999999997,
+          3619.2654758733966
+        ],
+        [
+          -912.2359918973253,
+          98.75,
+          3698.42817021508
+        ]
+      ]
+    },
+    "absentKeys": [
+      "geometryCoverage",
+      "credit",
+      "downloadSHA256",
+      "decodedSHA256",
+      "decodedBytes",
+      "triangleCount",
+      "preserveMaterials",
+      "preserveSourceNormals",
+      "lifecycle",
+      "modelReviewDate",
+      "modelCaveat"
+    ],
+    "newValues": {
+      "modelQuality": "Source-informed south facade and podium study",
+      "simplifications": [
+        "Original four registered core boxes and all labelled level elevations retained.",
+        "South facade proportions manually interpreted from A4.00 raster elevation; 1.50m balcony projection from A1.00 written dimension.",
+        "Unshown elevations, minor podium recesses and interior parking ramps remain omitted. Shallow visible deck-edge bands do not model interior ramps.",
+        "Exact thickness, guard height, fine counts and PBR finish values are display approximations."
+      ],
+      "modelFidelity": "Preserved registered envelope with A4.00 south frame groups, separate balconies, material hierarchy and source-visible podium treatment",
+      "geometryCoverage": "Only the supplied south elevation and short front returns detailed. Other elevations remain schematic.",
+      "credit": "Design reference: Kohn Partnership Architects / City of Mississauga. Independent authored model: Daniel Sultan / Future Mississauga.",
+      "url": "models/studies-20261101/26-park-south-facade-c9769467d130.glb.gz",
+      "sha256": "c9769467d130d1ddbf4e6b6a35c06b7e58abbf54c180c10bd3b4d6f0acf03a30",
+      "downloadSHA256": "8eb2cd0baf4f4fe0166566ca00f1f20e2d8fdde5e80ebc010cb7062d48c9dccd",
+      "decodedSHA256": "c9769467d130d1ddbf4e6b6a35c06b7e58abbf54c180c10bd3b4d6f0acf03a30",
+      "bytes": 271188,
+      "decodedBytes": 1970412,
+      "triangles": 23028,
+      "triangleCount": 23028,
+      "bounds": [
+        [
+          -983.1935424804688,
+          8.800000190734863,
+          3619.265380859375
+        ],
+        [
+          -912.15576171875,
+          98.75,
+          3698.478759765625
+        ]
+      ],
+      "preserveMaterials": true,
+      "preserveSourceNormals": true,
+      "lifecycle": "proposed",
+      "modelReviewDate": "2026-11-01",
+      "modelCaveat": "Source-informed south facade and podium study based on Kohn drawings dated July 30, 2026. The registered core and labelled floor/roof levels are retained. Other elevations remain schematic. Bay widths, minor relief, guards, slab thickness and finishes are illustrative. Inherited placement has a working +/-2 m horizontal allowance; architectural ASL minus70 datum compatibility is not independently certified. Proposed application-stage design, not as-built."
+    },
+    "newFingerprint": "964a946c88ce0965fa3e3b8d6eee93e2d45ceb89ce3565c39670b7b0b554f785"
+  },
+  "project": {
+    "id": "port-credit-26-park",
+    "oldValues": {
+      "geometryCoverage": "Plan-derived schematic envelope",
+      "modelCaveat": "Three podium/shaft extents and mechanical enclosure follow the site-plan outline and labelled level elevations. Minor podium recesses, balcony projections, cladding, windows and ground-level openings are omitted. Aerial massing is more complete than the prior absent building, but this is not a fabrication-ready architectural model."
+    },
+    "absentKeys": [],
+    "newValues": {
+      "geometryCoverage": "South facade and podium study following Kohn’s July 2026 drawings.",
+      "modelCaveat": "Other elevations remain schematic. Facade widths, relief and finishes are approximate; thin screen bars can shimmer at oblique angles. Placement retains a ±2 m working allowance, and the height datum is unverified. This shows the proposed design."
+    },
+    "newFingerprint": "109c43a2fb6841534c68a7ae08c9f6f1005a7b42e5ddad37e84ec3717cf40cf6"
+  },
+  "version": {
+    "url": "models/studies-20261101/26-park-south-facade-c9769467d130.glb.gz",
+    "sha256": "8eb2cd0baf4f4fe0166566ca00f1f20e2d8fdde5e80ebc010cb7062d48c9dccd"
+  },
+  "csvOldRow": "port-credit-26-park,26 Park Street East,12 and 26 Park Street East,Application received,2026-08-20,26,[83.945],,,,Plan-derived schematic envelope,\"Three podium/shaft extents and mechanical enclosure follow the site-plan outline and labelled level elevations. Minor podium recesses, balcony projections, cladding, windows and ground-level openings are omitted. Aerial massing is more complete than the prior absent building, but this is not a fabrication-ready architectural model.\",\"[{\"\"url\"\": \"\"https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/12-and-26-park-street-east-oz-opa-26-13-w1/\"\", \"\"title\"\": \"\"12 and 26 Park Street East application\"\", \"\"publisher\"\": \"\"City of Mississauga\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"Received in August 2026; proposes a 26-storey rental tower with 288 homes while retaining existing rental buildings.\"\"]}, {\"\"url\"\": \"\"https://www.mississauga.ca/wp-content/uploads/2026/08/18152356/Elevations-OZ-OPA-26-13-W1-August-2026.pdf\"\", \"\"title\"\": \"\"26 Park south elevation, July 30, 2026\"\", \"\"publisher\"\": \"\"City of Mississauga\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"Main building-height dimension 83,945 mm; six-metre mechanical enclosure; floor 1 at 78.80 m ASL and mechanical roof at 168.75 m ASL.\"\"]}, {\"\"url\"\": \"\"https://urbantoronto.ca/news/2026/08/26-storey-infill-rental-tower-proposed-near-port-credit-go.61597\"\", \"\"title\"\": \"\"26-storey infill rental tower proposed near Port Credit GO\"\", \"\"publisher\"\": \"\"UrbanToronto\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"Secondary cross-check of 26-storey proposal and 89.95 m overall height.\"\"]}, {\"\"url\"\": \"\"https://www.mississauga.ca/wp-content/uploads/2026/08/18152435/Site-Plan-and-Site-Statistics-OZ-OPA-26-13-W1-August-2026.pdf\"\", \"\"title\"\": \"\"Site Plan and Site Statistics — OZ/OPA 26-13 W1\"\", \"\"publisher\"\": \"\"City of Mississauga / Kohn Partnership Architects\"\", \"\"drawingDate\"\": \"\"2026-07-30\"\", \"\"use\"\": \"\"Horizontal envelopes, written dimensions and existing-building references\"\", \"\"localSourceSha256\"\": \"\"a0484182dc77a93edb1824fb6c305f6cfafcbbd289fb093273bb34a45d69da8f\"\"}, {\"\"url\"\": \"\"https://data.mississauga.ca/pages/mississauga-3d\"\", \"\"title\"\": \"\"City 3D source tile 92\"\", \"\"publisher\"\": \"\"City of Mississauga\"\", \"\"use\"\": \"\"Existing components 92-828 and 92-3995 for coordinate registration\"\"}]\",,,,",
+  "csvNewRow": "port-credit-26-park,26 Park Street East,12 and 26 Park Street East,Application received,2026-08-20,26,[83.945],,,,South facade and podium study following Kohn’s July 2026 drawings.,\"Other elevations remain schematic. Facade widths, relief and finishes are approximate; thin screen bars can shimmer at oblique angles. Placement retains a ±2 m working allowance, and the height datum is unverified. This shows the proposed design.\",\"[{\"\"url\"\": \"\"https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/12-and-26-park-street-east-oz-opa-26-13-w1/\"\", \"\"title\"\": \"\"12 and 26 Park Street East application\"\", \"\"publisher\"\": \"\"City of Mississauga\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"Received in August 2026; proposes a 26-storey rental tower with 288 homes while retaining existing rental buildings.\"\"]}, {\"\"url\"\": \"\"https://www.mississauga.ca/wp-content/uploads/2026/08/18152356/Elevations-OZ-OPA-26-13-W1-August-2026.pdf\"\", \"\"title\"\": \"\"26 Park south elevation, July 30, 2026\"\", \"\"publisher\"\": \"\"City of Mississauga\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"Main building-height dimension 83,945 mm; six-metre mechanical enclosure; floor 1 at 78.80 m ASL and mechanical roof at 168.75 m ASL.\"\"]}, {\"\"url\"\": \"\"https://urbantoronto.ca/news/2026/08/26-storey-infill-rental-tower-proposed-near-port-credit-go.61597\"\", \"\"title\"\": \"\"26-storey infill rental tower proposed near Port Credit GO\"\", \"\"publisher\"\": \"\"UrbanToronto\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"Secondary cross-check of 26-storey proposal and 89.95 m overall height.\"\"]}, {\"\"url\"\": \"\"https://www.mississauga.ca/wp-content/uploads/2026/08/18152435/Site-Plan-and-Site-Statistics-OZ-OPA-26-13-W1-August-2026.pdf\"\", \"\"title\"\": \"\"Site Plan and Site Statistics — OZ/OPA 26-13 W1\"\", \"\"publisher\"\": \"\"City of Mississauga / Kohn Partnership Architects\"\", \"\"drawingDate\"\": \"\"2026-07-30\"\", \"\"use\"\": \"\"Horizontal envelopes, written dimensions and existing-building references\"\", \"\"localSourceSha256\"\": \"\"a0484182dc77a93edb1824fb6c305f6cfafcbbd289fb093273bb34a45d69da8f\"\"}, {\"\"url\"\": \"\"https://data.mississauga.ca/pages/mississauga-3d\"\", \"\"title\"\": \"\"City 3D source tile 92\"\", \"\"publisher\"\": \"\"City of Mississauga\"\", \"\"use\"\": \"\"Existing components 92-828 and 92-3995 for coordinate registration\"\"}]\",,,,",
+  "accuracyOldRow": "<tr data-refined=\"1\" data-search=\"26 park street east 12 and 26 park street east\"><td><a href=\"explore.html?district=port-credit&amp;project=port-credit-26-park\">26 Park Street East</a><small>12 and 26 Park Street East</small></td><td>Application received</td><td>5 linked sources<small>Supplemental model registered</small></td><td><details><summary>Model notes</summary><p>Plan-derived schematic envelope</p><p>Three podium/shaft extents and mechanical enclosure follow the site-plan outline and labelled level elevations. Minor podium recesses, balcony projections, cladding, windows and ground-level openings are omitted. Aerial massing is more complete than the prior absent building, but this is not a fabrication-ready architectural model.</p></details></td></tr>",
+  "accuracyNewRow": "<tr data-refined=\"1\" data-search=\"26 park street east 12 and 26 park street east\"><td><a href=\"explore.html?district=port-credit&amp;project=port-credit-26-park\">26 Park Street East</a><small>12 and 26 Park Street East</small></td><td>Application received</td><td>5 linked sources<small>Supplemental model registered</small></td><td><details><summary>Model notes</summary><p>South facade and podium study following Kohn’s July 2026 drawings.</p><p>Other elevations remain schematic. Facade widths, relief and finishes are approximate; thin screen bars can shimmer at oblique angles. Placement retains a ±2 m working allowance, and the height datum is unverified. This shows the proposed design.</p></details></td></tr>",
+  "priorProjectsFingerprint": "8adb96f85d0126cdf9fb3d9acd033a7a0dc78699bcf2b4e6e7fe00bee8d97620",
+  "priorRefinementsFingerprint": "02fdef7148530e8309f1cc9c7b6b933270453a9090aa13b4acbb938fcedb9be0",
+  "priorVersionsFingerprint": "390a50f9f43bb641228c9a4fbdc4b01745ec5db32227c852c792c9f92a457fb8",
+  "facts": {
+    "groups.json": "ec5a204a8b3ca359739aa36688fcd6a321d3fb2c45b48efab474f3aef2922c80",
+    "overrides.json": "681d45800329659f0627c9f86f63617facd98e9bf2ed5c83cbfbc35318ea09af",
+    "project-lifecycle-20261101.json": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+    "model-previews.json": "022bec30d5118196647aab403e8d20117929abe4caedf6e5eb8195ae58c3c4e6",
+    "model-revisions.json": "616131960d64d77b812bce7fe38030876b81d9e5d083a48dcc7da28ec0124187"
+  }
+}

@@ -1,3 +1,5 @@
+import {sourceTriangleKeys,pilotView} from '../public/citywide-detail.js';
+import {createModelAppearance,NATURAL_MASSING_COLOUR} from '../public/model-appearance.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {gzipSync} from 'node:zlib';
@@ -238,7 +240,7 @@ const app = readFileSync(new URL('../public/app.js', import.meta.url), 'utf8');
 const updateSource = app.split('\n').find(line => line.startsWith('function updateNeighbourhood()'));
 test('app context readiness gate is safe before initialization and while a district loads', () => {
   const calls = [], context = {
-    localNeighbourhood: {update: view => calls.push(view)}, current: undefined, window: {},
+    localNeighbourhood: {update: view => calls.push(view)}, citywideDetail: null, districts: [], neighbourhoodData: null, pilotView, current: undefined, window: {},
     controls: {target: {x: 0, z: 0}}, camera: {position: {distanceTo: () => 1500}},
   };
   const update = runInNewContext('(' + updateSource + ')', context);
@@ -252,16 +254,16 @@ test('actual app adapters attach additive geometry, preserve base/material owner
   const scene = new THREE.Scene(), base = new THREE.Group(), patch = new THREE.Group();
   scene.add(base);
   const geometry = new THREE.BoxGeometry(5, 5, 5), originalPositions = [...geometry.attributes.position.array];
-  const oldMaterial = new THREE.MeshStandardMaterial(), shared = new THREE.MeshStandardMaterial();
+  const oldMaterial = new THREE.MeshStandardMaterial(), appearance = createModelAppearance(THREE);
+  let shared;
   const mesh = new THREE.Mesh(geometry, oldMaterial); patch.add(mesh);
   let oldDisposals = 0, sharedDisposals = 0, geometryDisposals = 0, fetchSignal;
   oldMaterial.addEventListener('dispose', () => oldDisposals++);
-  shared.addEventListener('dispose', () => sharedDisposals++);
   geometry.addEventListener('dispose', () => geometryDisposals++);
   const actualAsset = {district: 'citywide', url: asset.url, sha256: 'a'.repeat(64), boundsXZ: bounds};
   const context = {
-    THREE, scene, materials: {Existing: shared}, markerMaterial: {}, assetVersions: new Map(),
-    neighbourhoodData: {assets: [actualAsset]}, localNeighbourhood: null, URL,
+    THREE, scene, appearance, markerMaterial: {}, assetVersions: new Map(),
+    neighbourhoodData: {assets: [actualAsset]}, localNeighbourhood: null, fairviewDetailVisible: true, fairviewKeys: null, sourceTriangleKeys, URL,
     document: {baseURI: 'https://futuremississauga.com/explore.html'},
     existingStyleIndex: {ids: new Set(), contains: () => false}, applyExistingStyle,
     createNeighbourhoodContext, versionedTreeURL: url => url + '?edition=reviewed',
@@ -276,17 +278,20 @@ test('actual app adapters attach additive geometry, preserve base/material owner
   };
   const disposeSource = app.slice(app.indexOf('function dispose(g)'), app.indexOf('\nfunction settleControls'));
   context.dispose = runInNewContext('(' + disposeSource + ')', context);
-  const integration = app.slice(app.indexOf('const neighbourhoodAsset='), app.indexOf('\nasync function focusNeighbourhood()'));
+  const integration = app.slice(app.indexOf('const neighbourhoodAsset='), app.indexOf('\n// Close city views use'));
   runInNewContext(integration, context);
   await context.localNeighbourhood.update(near);
   assert(fetchSignal instanceof AbortSignal);
   assert.equal(patch.parent, scene); assert.equal(base.parent, scene); assert.equal(base.visible, true);
-  assert.equal(mesh.material, shared); assert.equal(oldDisposals, 1);
+  shared=mesh.material;shared.addEventListener('dispose', () => sharedDisposals++);
+  assert.notEqual(shared,oldMaterial);assert.equal(shared.color.getHex(),NATURAL_MASSING_COLOUR);assert.equal(oldDisposals,0);
   assert.deepEqual([...geometry.attributes.position.array], originalPositions);
   assert.equal(mesh.userData.Status, 'Existing'); assert.equal(mesh.userData.neighbourhoodContext, true);
   await context.localNeighbourhood.update({...near, district: 'downtown'});
   assert.equal(patch.parent, null); assert.equal(base.parent, scene); assert.equal(base.visible, true);
   assert.equal(geometryDisposals, 1); assert.equal(sharedDisposals, 0);
+  assert.equal(mesh.material,oldMaterial);assert.equal(oldDisposals,1);
+  appearance.dispose();assert.equal(sharedDisposals,1);assert.equal(oldDisposals,1);
 });
 
 const routingSource = app.slice(app.indexOf('function districtForProject(p)'), app.indexOf('\nfunction ', app.indexOf('function districtForProject(p)') + 1));

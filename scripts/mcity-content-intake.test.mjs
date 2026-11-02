@@ -1,3 +1,4 @@
+import {restoreM1M2Revisions} from './mcity-m1-m2-v5-scope.mjs';
 import {withoutAcceptedModelFields as withoutModel,acceptedModelProjectIds} from './mcity-asset-scope.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -121,7 +122,7 @@ function csv(text){
  const [header,...values]=rows;return {header,rows:values.map(values=>Object.fromEntries(header.map((key,i)=>[key,values[i]])))};
 }
 test('download register mirrors the reviewed records and preserves every other row',async()=>{
- const current=csv(await read('public/downloads/project-register.csv')),before=csv(original('public/downloads/project-register.csv'));
+ const current=csv(restore26Register(await read('public/downloads/project-register.csv'))),before=csv(original('public/downloads/project-register.csv'));
  const statusColumns=['lifecycle','approvalStage','lifecycleReviewedOn','lifecycleNote'];
  assert.deepEqual(current.header,[...before.header,...statusColumns]);assert.deepEqual(current.rows.map(r=>r.id),before.rows.map(r=>r.id));
  for(const row of current.rows){
@@ -140,7 +141,7 @@ test('download register mirrors the reviewed records and preserves every other r
 });
 
 test('accuracy rows and dated update explain the same facts without changing unrelated rows',async()=>{
- const accuracy=await read('public/accuracy-review.html'),prior=original('public/accuracy-review.html');
+ const accuracy=restore26Accuracy(await read('public/accuracy-review.html')),prior=original('public/accuracy-review.html');
  const rows=text=>text.match(/<tr\b[^>]*>.*?<\/tr>/gs)||[];
  const targeted=row=>/data-search="m city m(?:6 |7 and m8 )/.test(row);
  // Other rows are covered by the separate lifecycle-table and release guards.
@@ -151,7 +152,7 @@ test('accuracy rows and dated update explain the same facts without changing unr
   assert.match(row,/Plans under review/);assert.match(row,/4 linked sources \+ dated correspondence and drawings/);
  }
  const updates=await read('public/updates.html'),entry=updates.match(/<section[^>]+id="november-1-m-city"[^>]*>(.*?)<\/section>/s)?.[1];
- assert(entry);assert.match(entry,/1 November 2026/);assert.match(entry,/October 23/);assert.match(entry,/October 29/);
+ assert(entry);assert.match(updates, /id="latestNotesDate"[^>]*><time datetime="2026-11-01">1 November 2026<\/time>/);assert.match(updates, /id="november-1-m-city" aria-describedby="latestNotesDate"/);assert.match(entry,/October 23/);assert.match(entry,/October 29/);
  assert.match(entry,/Rogers retains no ownership, financing or development role in those lands/);
  assert.match(entry,/58 storeys and 889 homes/);assert.match(entry,/51 and 46 storeys, with 1,457 homes combined/);
  assert.doesNotMatch(entry,/mechanical penthouse/);assert.match(entry,/no building permits/);
@@ -159,7 +160,10 @@ test('accuracy rows and dated update explain the same facts without changing unr
 });
 
 test('source-geometry records and historical audit files remain byte-for-byte unchanged',async()=>{
- for(const path of ['public/data/model-revisions.json','public/downloads/revision-ledger.csv','public/downloads/project-reference-audit.json','public/downloads/project-reference-audit.csv','public/downloads/public-project-reference-coverage.json','public/downloads/research-log.json','public/data/history/presentation-sources-before-refresh-2026-10-23.json']){
+ const revisions=restoreM1M2Revisions(JSON.parse(await read('public/data/model-revisions.json'))),priorRevisions=JSON.parse(original('public/data/model-revisions.json'));
+ const appended=revisions.revisions.filter(row=>row.id==='mcity-m5-v5-20261101');assert.equal(appended.length,1);assert.equal(appended[0].modelAssets[0].sha256,'af9d51546ca35a1fbc850b2afc3cbf1565010ee7c196f03df7e8cf6679ff829a');
+ assert.deepEqual({...revisions,revisions:revisions.revisions.filter(row=>row.id!=='mcity-m5-v5-20261101')},priorRevisions,'Only the exact M5 revision may append; every historical record stays unchanged');
+ for(const path of ['public/downloads/revision-ledger.csv','public/downloads/project-reference-audit.json','public/downloads/project-reference-audit.csv','public/downloads/public-project-reference-coverage.json','public/downloads/research-log.json','public/data/history/presentation-sources-before-refresh-2026-10-23.json']){
   assert.equal(await read(path),original(path),path);
  }
 });
@@ -177,3 +181,4 @@ test('five component notes append only the exact dated review; all source flags 
   assert.deepEqual(withoutStatus('overrides',after[key],key),expected,key);
  }
 });
+import {restore26Register,restore26Accuracy} from './park26-scope.mjs';

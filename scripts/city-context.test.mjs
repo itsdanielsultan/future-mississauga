@@ -69,3 +69,20 @@ test('overview memory limit fails closed, releases partial assets and permits a 
  assert.equal(context.ready,false);assert.equal(scene.children[0].children.length,0);assert.equal(disposed,1);
  large=false;await context.setEnabled(true);assert.equal(context.ready,true);
 });
+
+test('camera coverage expands only after detailed neighbours commit and is revoked on unload',async()=>{
+ let resolveNeighbour,neighbourStarted;const started=new Promise(resolve=>{neighbourStarted=resolve;});
+ const neighbour={id:'nearby',bounds:[-1000,-1000,0,1000],bytes:1000,center:[-500,18,0],geometryBounds:[[-1000,2,-1000],[0,100,1000]]};
+ let context;const callbacks=[];
+ ({context}=controller({loadAsync:async url=>{
+  if(url==='models/nearby.glb'){neighbourStarted();await new Promise(resolve=>{resolveNeighbour=resolve;});}
+  return group(mesh({Status:'Existing'}));
+ }},['ground.glb'],{districts:[district,neighbour],onChange:()=>callbacks.push(context.detailedBounds)}));
+ context.setDistrict(district);const pending=context.setEnabled(true);await started;
+ assert.equal(context.ready,true);assert.deepEqual(context.detailedBounds,[],'coarse overview is not detailed coverage');
+ resolveNeighbour();await pending;assert.deepEqual(context.detailedBounds,[neighbour.bounds]);
+ assert.equal(context.detailedGround,2);assert.equal(context.detailedCeiling,18);
+ const copy=context.detailedBounds;copy[0][0]=999;assert.equal(context.detailedBounds[0][0],-1000);
+ await context.setEnabled(false);assert.deepEqual(context.detailedBounds,[]);assert.deepEqual(callbacks.at(-1),[]);
+ assert.equal(context.detailedGround,null);assert.equal(context.detailedCeiling,null);
+});

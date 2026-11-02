@@ -48,8 +48,8 @@
       "publicationEvidence": "REQUIRES_SEPARATE_PUBLIC_BYTE_RECEIPT"
     },
     "modelPreviews": {
-      "views": 11,
-      "localAssets": 5,
+      "views": 12,
+      "localAssets": 6,
       "externalAssets": 6,
       "externalBytes": 7354555,
       "externalCommits": [
@@ -82,8 +82,8 @@
       "atomicAssemblies": true,
       "assetHashesValidatedByModelPreviewCatalogue": true
     },
-    "files": 912,
-    "publishedBytes": 732377574,
+    "files": 1064,
+    "publishedBytes": 875479895,
     "originalPNGs": 33,
     "originalImageVerification": {
       "nativeMasterURLsPreserved": true,
@@ -169,12 +169,12 @@
     "localPNGchecksumsVerified": true,
     "noHostedRuntime": true,
     "noPrivateArtifacts": true,
-    "completeReviewBytes": 1146379262
+    "completeReviewBytes": 1289481583
   },
   "derivatives": {
     "legacyPNGFilesVerified": 91,
     "changedLegacyPNGs": 69,
-    "jsonWhitespaceFilesVerified": 84,
+    "jsonWhitespaceFilesVerified": 81,
     "originalSourceFilesRetained": true,
     "decodedPixelsAndMetadataVerified": true
   },
@@ -185,8 +185,8 @@
     "quality": "Exact published bytes",
     "offloadedFiles": 280,
     "offloadedBytes": 414091741,
-    "publishedBytes": 732377574,
-    "publishedFiles": 633
+    "publishedBytes": 875479895,
+    "publishedFiles": 785
   },
   "files": [
     {
@@ -201,13 +201,18 @@
     },
     {
       "file": "accuracy-review.html",
-      "bytes": 149763,
-      "sha256": "90c83709e21c2675958a14305420d8925ccb0a93a7c2ed36dbd2f670ccb2f292"
+      "bytes": 149359,
+      "sha256": "5c25c7a4a51e5bc069958e7c6e455575393935cd57c87cc5e0af9e7cb7f79414"
     },
     {
       "file": "app.js",
-      "bytes": 77210,
-      "sha256": "f2670f39e13bcfe94442c846a81bfa89be1a70e5a0ff391df62c29ff74d5cfd8"
+      "bytes": 83275,
+      "sha256": "71c236b0dd8b9aed7bce22ced49197c81909cb95c48a899f71560bfc5454a3cb"
+    },
+    {
+      "file": "apron-contact.js",
+      "bytes": 22912,
+      "sha256": "b7cd85b1961bedc679ee6b672e976a3d3234c1e4e2a601aec17fc45ae28204c5"
     },
     {
       "file": "asset-delivery-map.js",
@@ -321,18 +326,13 @@
     },
     {
       "file": "building-details.css",
-      "bytes": 4077,
-      "sha256": "00a2a903c2c2e977f5c98afafe75b358dcb14fed0f94d4e40fbf31701e843019"
+      "bytes": 4182,
+      "sha256": "2e1990a0f2c6d17e2d61cc74262f1581074ca54f8e0739fb91e2e5514da855a4"
     },
     {
       "file": "building-feedback.js",
       "bytes": 3629,
       "sha256": "878c54010041fdf334f461e9790e428f169e52d7a1b6a93e9d6e10afa7c3ac54"
-    },
-    {
-      "file": "building-presentation.js",
-      "bytes": 2251,
-      "sha256": "bbcc6feac756d9fb9ee16271084a3e2ba3db963d5657e2aeb98f9489282c40a1"
     },
     {
       "file": "checkpoints/01-lighting/Checkpoint.json",
@@ -351,8 +351,8 @@
     },
     {
       "file": "city-context.js",
-      "bytes": 8003,
-      "sha256": "bef696bb61757008cf739e5ed8140e82a365904308ea644b2e48d3e4f53ca4b9"
+      "bytes": 11967,
+      "sha256": "4c499d703ac420cc55f98511546b1aa619b006463f59b7c3b93970a859511637"
     },
     {
       "file": "city-data-terms.css",
@@ -361,8 +361,8 @@
     },
     {
       "file": "city-data-terms.js",
-      "bytes": 775,
-      "sha256": "a859bf89d21422a48db7ed0d1db402ddeae470a49e260f38fc0a004cbb21bd8d"
+      "bytes": 627,
+      "sha256": "17dc218e4b08a00e24761bfca433e581ce87e00e14bc46509e5db13573ab32f2"
     },
     {
       "file": "city-lower-shell.js",
@@ -376,8 +376,18 @@
     },
     {
       "file": "city-model-studies.js",
-      "bytes": 6647,
-      "sha256": "d5c8a39f7f199fa59aefd1968247a2a1dbb1caf0ca746bda4870e89ebe8dad6a"
+      "bytes": 6502,
+      "sha256": "d07b5ab3c5a15e28ee2c4d9210e1c852b67ab30f662ec1eafea01a4e5d854c18"
+    },
+    {
+      "file": "citywide-detail.js",
+      "bytes": 7452,
+      "sha256": "53f11dd639ed63a3e5b99d00abe1bd1776e4d03cb38d9603d4e682674b73ba6b"
+    },
+    {
+      "file": "clean-media.js",
+      "bytes": 32260,
+      "sha256": "c90a43b0f1cfafd77f146a9d70719693668e14676c7d09d8f1d14a0afcb3eeb7"
     },
     {
       "file": "comparison.js",
@@ -388,6 +398,11 @@
       "file": "context-model-visibility.js",
       "bytes": 557,
       "sha256": "d903dccc34af07fde9031d44121a6ab40c8d692b5bce571ca400163ef5929243"
+    },
+    {
+      "file": "coverage-controller.js",
+      "bytes": 11805,
+      "sha256": "21fd45adb6964a6d4692e63ba65bab12540485252f8c5ca2e4073c40f14ee93d"
     },
     {
       "file": "data/asset-delivery.json",
@@ -436,8 +451,8 @@
     },
     {
       "file": "data/context-assets.json",
-      "bytes": 1816,
-      "sha256": "cf45cce6ede0488795d1340ed53ab212b899611f14a216bfa7dec81436f127c4"
+      "bytes": 1927,
+      "sha256": "f456f2a34ee4458dcb10126b30d895d4032e6e30e0c68d60ae87dd8585ac44fd"
     },
     {
       "file": "data/cooksville-meshes.json",
@@ -506,8 +521,13 @@
     },
     {
       "file": "data/groups.json",
-      "bytes": 539389,
-      "sha256": "6bcb28840b34c4bfc46b32e209d654a596aa852568f80d4db39e494d8625c08e"
+      "bytes": 664733,
+      "sha256": "ec5a204a8b3ca359739aa36688fcd6a321d3fb2c45b48efab474f3aef2922c80"
+    },
+    {
+      "file": "data/harborn-terrain-v4.json",
+      "bytes": 13350,
+      "sha256": "74a5524ec2d80e1ece32a7ce7a0e8f170ef8f2b0fb032376412886c2cec6aa43"
     },
     {
       "file": "data/history/Picture-index-before-partial-refresh.json",
@@ -615,29 +635,64 @@
       "sha256": "7ff2bd9c2eae0556f6887d1bacc441978ad019b3125c04c1e0bc475ec10209ae"
     },
     {
+      "file": "data/matched-pairs/clarkson-wide-20261102-a1ee36f29358.json",
+      "bytes": 11685,
+      "sha256": "a1ee36f29358b7cc0db23e2dded6850168196b21aa5451914e2530b104f63fba"
+    },
+    {
+      "file": "data/matched-pairs/downtown-wide-20261102-dbf0e751ee24.json",
+      "bytes": 12200,
+      "sha256": "dbf0e751ee24d59e50110f67529c6828170c1fab49ed47d10664360303808be7"
+    },
+    {
+      "file": "data/matched-pairs/fairview-neighbourhood-20261102-8a808803c386.json",
+      "bytes": 15151,
+      "sha256": "8a808803c3862fbf6676234423354bc298a8728d847e41ecb31c60191869ed82"
+    },
+    {
+      "file": "data/matched-pairs/lakeview-wide-20261102-6642d10b15ee.json",
+      "bytes": 28137,
+      "sha256": "6642d10b15eed782d9769bc28aa5ee9c3707ace211c39aa4ee7decb2e50dc477"
+    },
+    {
+      "file": "data/matched-pairs/port-credit-wide-20261102-3272ea8d9882.json",
+      "bytes": 16880,
+      "sha256": "3272ea8d98829893bccad2ec8f30bc322c091f3f6b9adf0f7fd07bdeb11c1446"
+    },
+    {
       "file": "data/meadowvale-meshes.json",
       "bytes": 39200,
       "sha256": "5dcd2c52d17a230cc1f7750ff1097e034a203c8b8d445e26fafe916e08164606"
     },
     {
       "file": "data/model-asset-versions.json",
-      "bytes": 27714,
-      "sha256": "6e0041998e1e75c4df51c384792c8ac42c4c11167cabc2269d848fa57c50d857"
+      "bytes": 29418,
+      "sha256": "39cc7391f7113386f9629c3b2105f817f918af7ac82d02b6431df845aa353535"
     },
     {
       "file": "data/model-previews.json",
-      "bytes": 42593,
-      "sha256": "ae92fa0435d04186426c49aaf0d03398490fc0092525046b825c7a296257c3b0"
+      "bytes": 45118,
+      "sha256": "022bec30d5118196647aab403e8d20117929abe4caedf6e5eb8195ae58c3c4e6"
     },
     {
       "file": "data/model-revisions.json",
-      "bytes": 8512,
-      "sha256": "57b158613910c1f4a2ee83877e8d803e665752d508f83ef6f5e90c150f2d9639"
+      "bytes": 12923,
+      "sha256": "616131960d64d77b812bce7fe38030876b81d9e5d083a48dcc7da28ec0124187"
+    },
+    {
+      "file": "data/native-media-20261102.json",
+      "bytes": 416618,
+      "sha256": "8bb02d792e404dbec86faca65105e10688a54daeea4ea53b1edbc698c4a31b9f"
     },
     {
       "file": "data/neighbourhood-context.json",
       "bytes": 5604,
       "sha256": "fd951a57bf7623aadef33304814e22b785d769ae280c81fdb5cc598608c1a7b3"
+    },
+    {
+      "file": "data/neighbourhood-media-20261102.json",
+      "bytes": 18353,
+      "sha256": "5b7b64cc81074f2413ebd3fa543032bcd7a7f377358363dedfc2618516a46531"
     },
     {
       "file": "data/neighbourhood-media.json",
@@ -651,8 +706,8 @@
     },
     {
       "file": "data/overrides.json",
-      "bytes": 884347,
-      "sha256": "71f4aa4ef0f0453a48034f2fe92aee0a7dbf989dcf1cea7b8f61f9146f72088a"
+      "bytes": 968975,
+      "sha256": "681d45800329659f0627c9f86f63617facd98e9bf2ed5c83cbfbc35318ea09af"
     },
     {
       "file": "data/picture-assets.json",
@@ -696,13 +751,13 @@
     },
     {
       "file": "data/projects.json",
-      "bytes": 911606,
-      "sha256": "af74f0edeb01c9de335d748611607409917f9cdb94a4a8125a729bc60fb2f211"
+      "bytes": 1097768,
+      "sha256": "7ee7f6961ad0b25bee1831798db4d091a36a62a8e428184de0bc737a264f171d"
     },
     {
       "file": "data/publication-derivatives.json",
-      "bytes": 107534,
-      "sha256": "67231fffe4688552b443d9f54618afc2ac76fb37fdc90329a279e0e262c6837d"
+      "bytes": 106732,
+      "sha256": "272d51e30702d378f522d56599fd10e695c07582328883e66fcdd0ea5cb01b21"
     },
     {
       "file": "data/recent-project-updates.json",
@@ -726,8 +781,8 @@
     },
     {
       "file": "data/refinement-models.json",
-      "bytes": 1589127,
-      "sha256": "7dfdb06e7bae5bf6ea42fa8804623fc193dd2988e3676a70715a914078666c97"
+      "bytes": 1591139,
+      "sha256": "97865ab97c48ab16fa05b29e0e7fb51df9b50e86eba7ca0b1a62c38464b84f7d"
     },
     {
       "file": "data/share-preview-20261101.json",
@@ -806,13 +861,13 @@
     },
     {
       "file": "document-preview.css",
-      "bytes": 3423,
-      "sha256": "d8a626a6064153cdd3d57b86c117f12145c69a69a94ca61e81ab8ef0a3d2083c"
+      "bytes": 3576,
+      "sha256": "54897a8ef43d9bd6e4567b053279e121d467074b007eff39d8c3114cb12961ee"
     },
     {
       "file": "document-preview.js",
       "bytes": 8558,
-      "sha256": "346fcafd6f79a4a80e3c8a6dcf34dcc2906940972324e439e2c1ec8c6535c9d9"
+      "sha256": "6af4d8beb66f171e1548174738c2a9850d2f8d614f0f02c69058f637541fdd01"
     },
     {
       "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-01.avif",
@@ -1396,8 +1451,8 @@
     },
     {
       "file": "downloads/project-register.csv",
-      "bytes": 365653,
-      "sha256": "367406b9b82a40793e93b57c1fff51c8192dc7cc76bcba5c8e35475f9f453696"
+      "bytes": 365093,
+      "sha256": "950853c0329fe93cc85e861ae28dd2f3264da47ff47c0e14ec3054c7300e50eb"
     },
     {
       "file": "downloads/public-project-reference-coverage.json",
@@ -1636,8 +1691,13 @@
     },
     {
       "file": "explore.html",
-      "bytes": 17633,
-      "sha256": "967824e88274fa547001648605e3a844a908a6e8c8e673721d009eb563e3dbaf"
+      "bytes": 15159,
+      "sha256": "13d2bba3f7d9fa148196d315be5ca3c2a290eba81f7cb24ec4a8fe581b02aad6"
+    },
+    {
+      "file": "fairview-media.js",
+      "bytes": 5655,
+      "sha256": "6d3e1afb09357af0f794fb6e36e56f3d68db125c7146e88da0888a815c0b944b"
     },
     {
       "file": "file-actions.js",
@@ -1645,9 +1705,14 @@
       "sha256": "537dab0f0105dd171be161e131752af60513e3e5768c7c4c7683eb55e898912e"
     },
     {
+      "file": "flat-shadow-receiver.js",
+      "bytes": 5492,
+      "sha256": "cd2f365042ed246bfc90780f0a71d9d8ce75e29f6ecf448094135baa14c1ee7e"
+    },
+    {
       "file": "gallery-entry.js",
-      "bytes": 1722,
-      "sha256": "89a5fc8ec827682a1d084359aa7d0ad8df2185dee8f4a746f803027c1bc71310"
+      "bytes": 1725,
+      "sha256": "7dbe4cf707a971f53910824146f13d05ec7cefc3eb2cafee60838d99d88f8200"
     },
     {
       "file": "gallery.css",
@@ -1656,8 +1721,8 @@
     },
     {
       "file": "gallery.js",
-      "bytes": 5638,
-      "sha256": "58080a02a082996ae94cdf618b439c658b80bee1f75b399d4de857d4cb2aeea6"
+      "bytes": 6521,
+      "sha256": "40a2aa5f6069219360003280f0633ad67357e58031b3b51d6436885b8121dd94"
     },
     {
       "file": "gallery/Downtown-transformation.mp4",
@@ -1828,6 +1893,601 @@
       "file": "gallery/downtown-20261101/wide-downtown-skyline-future-3200-b38c9647f31d.avif",
       "bytes": 290309,
       "sha256": "d12e2ec94a09f1cdb7e731faa771a31688064989e8add69f7e733819c44aa241"
+    },
+    {
+      "file": "gallery/native-20261102/neighbourhood-fairview-after-scene-1200-004b19b397c3.avif",
+      "bytes": 202768,
+      "sha256": "004b19b397c3bb79cb7777193607410a90da673c44aa5128c244cdd42522d16d"
+    },
+    {
+      "file": "gallery/native-20261102/neighbourhood-fairview-after-scene-1800-01c932f06ce6.avif",
+      "bytes": 327537,
+      "sha256": "01c932f06ce6626bf1e75946b1e5bcb4e0f66e41753f2df2c8a706b695534488"
+    },
+    {
+      "file": "gallery/native-20261102/neighbourhood-fairview-before-scene-1200-cde1b26c0245.avif",
+      "bytes": 168846,
+      "sha256": "cde1b26c0245704f8deecd139818af01d6a589d59b46580983c665826ef915de"
+    },
+    {
+      "file": "gallery/native-20261102/neighbourhood-fairview-before-scene-1800-cb0a540e98e4.avif",
+      "bytes": 272145,
+      "sha256": "cb0a540e98e468969301730b0ba068089b8e9f0741d916076e5bbdabd316686f"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-clarkson-existing-scene-1200-c898caec8416.avif",
+      "bytes": 559886,
+      "sha256": "c898caec84161d8c333d1f2bd7c8e305b1684402e570b8a21e1b9557900791cd"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-clarkson-existing-scene-3200-2db9b0a63c40.avif",
+      "bytes": 2181311,
+      "sha256": "2db9b0a63c40c8c05e78448a9075d3d255a2d872f1c358f00ee08c367565df3a"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-clarkson-future-scene-1200-2e44f3795528.avif",
+      "bytes": 562891,
+      "sha256": "2e44f37955288a37ac9d66a3d0ea5ae1885eb465d8cf83494dbb183dbb5d73ed"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-clarkson-future-scene-3200-2485c84a2292.avif",
+      "bytes": 2177678,
+      "sha256": "2485c84a2292cd393e8d678177ff90bcc6d5ee22653ebd204d87c7acdac1459f"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-clarkson-portrait-future-scene-1200-c3b9ef756618.avif",
+      "bytes": 568081,
+      "sha256": "c3b9ef75661844789632dc66757b2361a3a1cad0a186b944bc8ee5dc7e22c965"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-clarkson-portrait-future-scene-3200-8754e261fd6b.avif",
+      "bytes": 2444044,
+      "sha256": "8754e261fd6bf9f42849d53cca981faee3f6b96a1891c74d17ed416af543ccff"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-cooksville-future-scene-1200-c39a620e4c93.avif",
+      "bytes": 825384,
+      "sha256": "c39a620e4c93ef5c43918f0b59dbd61eefe9b644220074853cf0d210aa564b38"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-cooksville-future-scene-3200-f961c51bb56c.avif",
+      "bytes": 3026403,
+      "sha256": "f961c51bb56cf861f38c3ddfa86b2758301007024efa37ecd32000b5f9a10d9c"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-cooksville-portrait-future-scene-1200-2cca054ea1dd.avif",
+      "bytes": 659845,
+      "sha256": "2cca054ea1dd9a59422eb1d6f31c3f2cdc37cddce5d0d6fccf69473a8e52c965"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-cooksville-portrait-future-scene-3200-dcc0990cb69d.avif",
+      "bytes": 2275761,
+      "sha256": "dcc0990cb69d95399c99ce2a4ced84956425fb414743e7d4ed496f435ddce87b"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-downtown-existing-scene-1200-adc23f4f80db.avif",
+      "bytes": 665039,
+      "sha256": "adc23f4f80db89be8084432e72102a5881946e1467e6acd7e3d12535a376e0c0"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-downtown-existing-scene-3200-fcf8276f8b55.avif",
+      "bytes": 2372783,
+      "sha256": "fcf8276f8b550e982d0105e1cebc9e5ee8d8cf6dd25c7c166bf20d25b0de6258"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-downtown-future-scene-1200-f64db312b4c0.avif",
+      "bytes": 683199,
+      "sha256": "f64db312b4c0906c604be651f59622f8f0116ad220082514ddb74c06c5887016"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-downtown-future-scene-3200-92f4b79335fd.avif",
+      "bytes": 2463465,
+      "sha256": "92f4b79335fd5b8e4c3ce341e4b774f6c50537b3ee6d7245830cd5d5ebaef7c4"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-downtown-junction-future-scene-1200-19b0dee01bcb.avif",
+      "bytes": 331255,
+      "sha256": "19b0dee01bcb48d69320b9aaeef27f70a4c2b8bee52b0ad10a849795e8aadf14"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-downtown-junction-future-scene-3200-7b41d920bad3.avif",
+      "bytes": 1005704,
+      "sha256": "7b41d920bad38033565e10316d41ef0a7d23143f2ef1ca44145d9ffce3f4a724"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-downtown-landmark-future-scene-1200-01b8a535940c.avif",
+      "bytes": 417863,
+      "sha256": "01b8a535940c3083c9d57989a503a7ba732b70f6da4934c0d7a401d66b8301af"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-downtown-landmark-future-scene-3200-7aa72208e67a.avif",
+      "bytes": 1393397,
+      "sha256": "7aa72208e67afdff967458930263dc61d4d46ecf6ead2330814a426b4df7f383"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-downtown-portrait-future-scene-1200-fe1d96b742a1.avif",
+      "bytes": 723858,
+      "sha256": "fe1d96b742a1b37eb3139147e628ddcab04e3f75831c8fae0b325d6bcfd08a0d"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-downtown-portrait-future-scene-3200-72e62054f99d.avif",
+      "bytes": 2770959,
+      "sha256": "72e62054f99d238497fede858baf463823dd2f26d60dc7cc34b1f012641e70b4"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-downtown-skyline-construction-scene-1200-e1b6cc9632ab.avif",
+      "bytes": 113646,
+      "sha256": "e1b6cc9632abf3cbc449dabcf4b60bb0622ad4bb1e572c9cfeae87465ab16e73"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-downtown-skyline-construction-scene-3200-7fd77d3eac95.avif",
+      "bytes": 340211,
+      "sha256": "7fd77d3eac95f737dc56ca180a28eb4e0d2542461b23d2e9389b855fa0fc3cd5"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-downtown-skyline-existing-scene-1200-c7e4c0ef2bc2.avif",
+      "bytes": 97724,
+      "sha256": "c7e4c0ef2bc2eb923baff19bd6830fee89511d2128b685a153ceb193cb5851c6"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-downtown-skyline-existing-scene-3200-02d0315dd31b.avif",
+      "bytes": 281483,
+      "sha256": "02d0315dd31bd096181355ee8e0590aad406fd14fa094cc321ece13c67e7a4a7"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-downtown-skyline-future-scene-1200-0b1f9b1ff32b.avif",
+      "bytes": 128503,
+      "sha256": "0b1f9b1ff32bb2faaa68e8eea844fcfc587b97a48c15e0f5d680890600366eae"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-downtown-skyline-future-scene-3200-9be55c94471f.avif",
+      "bytes": 411023,
+      "sha256": "9be55c94471fd1bb2f375b0ba745df5e1f396e111808029468007f569a3923dd"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-erin-mills-future-scene-1200-feb8f906f4e2.avif",
+      "bytes": 959976,
+      "sha256": "feb8f906f4e2a9a3fef350f09068586a33178eea1088616c3acb31beab987a80"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-erin-mills-future-scene-3200-10f4f5bd4803.avif",
+      "bytes": 3937406,
+      "sha256": "10f4f5bd4803e3213d33130e2a2c729c610c6122bca3f759630f4bcc630e6be3"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-lakeview-existing-scene-1200-2c24d22cc095.avif",
+      "bytes": 415610,
+      "sha256": "2c24d22cc0956bcf5d2ab43cca6d64ea0664a65e2ba28784051d9a942dc36050"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-lakeview-existing-scene-3200-d2075ed2017e.avif",
+      "bytes": 1558917,
+      "sha256": "d2075ed2017e768209212d6768521764bab9a9095b8b9c45c6cc7e7d127995b8"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-lakeview-future-scene-1200-1edc6e367450.avif",
+      "bytes": 425476,
+      "sha256": "1edc6e36745003e4c459e69bf35cd616c061b3546f683e5ddd6599fee8d9e933"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-lakeview-future-scene-3200-78ab2b639ac0.avif",
+      "bytes": 1588344,
+      "sha256": "78ab2b639ac07be1adb67b7d7874dc569a51ccefd80ea1a45de9f462556b7482"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-lakeview-portrait-future-scene-1200-146d78782b1b.avif",
+      "bytes": 426664,
+      "sha256": "146d78782b1b7f38e46e1729ac686fe22e8625920f933e53d6f55e263e827837"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-lakeview-portrait-future-scene-3200-926666c0c71f.avif",
+      "bytes": 1555163,
+      "sha256": "926666c0c71f14ce4ded95485d611483714f77b33b28ec0376d22d0780166d03"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-port-credit-existing-scene-1200-0274a9969e09.avif",
+      "bytes": 570598,
+      "sha256": "0274a9969e09fda7b89f3fb107ae8a971dae73a0941d60d9e0f90296a0bf8b98"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-port-credit-existing-scene-3200-f3f7a835b34e.avif",
+      "bytes": 2026607,
+      "sha256": "f3f7a835b34eae08593a2c73fc45b25afad57ab5597d31c91d93f1e5a6c5ff7d"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-port-credit-future-scene-1200-e05e7b8adf7d.avif",
+      "bytes": 581441,
+      "sha256": "e05e7b8adf7d4cb4dcfd6bfefc4ba6745180798272accf01f2198305096b3c4f"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-port-credit-future-scene-3200-95b86d7712e1.avif",
+      "bytes": 2049119,
+      "sha256": "95b86d7712e155aa4e07598fe4d3fe2acc43961a4f14d2c023cb332cd66d7906"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-port-credit-portrait-future-scene-1200-bbc0ace0f65e.avif",
+      "bytes": 624849,
+      "sha256": "bbc0ace0f65efce3a04322507754cf364e3deb4931c23c42289bc329485f985d"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-port-credit-portrait-future-scene-3200-3a92f6e80c90.avif",
+      "bytes": 2318774,
+      "sha256": "3a92f6e80c9041005b6fd17fac996567ca8f2811eded2a2d1b01aad1825ff468"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-port-credit-skyline-future-scene-1200-883d1eccebde.avif",
+      "bytes": 435104,
+      "sha256": "883d1eccebded2377ef197012e3ea71ac8b37ceb56eac1bd32b8130557148467"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-port-credit-skyline-future-scene-3200-88cfffa89555.avif",
+      "bytes": 1569127,
+      "sha256": "88cfffa895555f7593886daf8fdc5bef476f6bcd11dfc4f0d8961b8d37fc2525"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-streetsville-future-scene-1200-df46b4e47c49.avif",
+      "bytes": 904344,
+      "sha256": "df46b4e47c496abf77c441a93f72bc94b47ee869b31f68d6f6f384b53a93d3b6"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-streetsville-future-scene-3200-6f34685e6f3c.avif",
+      "bytes": 3477516,
+      "sha256": "6f34685e6f3c6d31618c25aeabdda1da5fc7f0cb59b24039b27ba20065033d04"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-uptown-future-scene-1200-0073fd50f8c1.avif",
+      "bytes": 655144,
+      "sha256": "0073fd50f8c186b3b0ff65312ac6904587e094710999defe390437424adb25c5"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-uptown-future-scene-3200-f8113cce61a8.avif",
+      "bytes": 2382654,
+      "sha256": "f8113cce61a8ce282c790101afdbf9dde140c78e8254ab6aa3147d068ed08e3d"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-uptown-portrait-future-scene-1200-780df60abb83.avif",
+      "bytes": 673296,
+      "sha256": "780df60abb830829244b252ced021949fc9b373e41ad956f8b77a3eb0118d32b"
+    },
+    {
+      "file": "gallery/native-20261102/portraits-uptown-portrait-future-scene-3200-10cfe231fdca.avif",
+      "bytes": 2480247,
+      "sha256": "10cfe231fdcaf0650ffe13b5a46e7c5a0d3c43a14980286fc95d2aea84d248b0"
+    },
+    {
+      "file": "gallery/native-20261102/wide-airport-corporate-future-scene-1200-c7ea399f7ddb.avif",
+      "bytes": 162237,
+      "sha256": "c7ea399f7ddb5a26c4332f1e49e997a34365104f255d56acd97f1a6e4da3147c"
+    },
+    {
+      "file": "gallery/native-20261102/wide-airport-corporate-future-scene-3200-d2e458d0872b.avif",
+      "bytes": 596605,
+      "sha256": "d2e458d0872b89414bcadffe50232f3a2d40cc852f432beebe6f8e877c252a72"
+    },
+    {
+      "file": "gallery/native-20261102/wide-citywide-future-scene-1200-167592111ee0.avif",
+      "bytes": 171573,
+      "sha256": "167592111ee09fcaeac2f376a3034a977eb72322a119d059d3c85e8d1576e503"
+    },
+    {
+      "file": "gallery/native-20261102/wide-citywide-future-scene-3200-10289c08727e.avif",
+      "bytes": 770195,
+      "sha256": "10289c08727e8d05cdc8f992cbf995f94e59fc70e14b5187ba9d3ed5b78487c8"
+    },
+    {
+      "file": "gallery/native-20261102/wide-clarkson-existing-scene-1200-cd4f3ff24179.avif",
+      "bytes": 340708,
+      "sha256": "cd4f3ff241795d6b6ed331cd846856ce54bab77847ceaeef3dc808248bed0d58"
+    },
+    {
+      "file": "gallery/native-20261102/wide-clarkson-existing-scene-3200-c4956e7dbb13.avif",
+      "bytes": 1591554,
+      "sha256": "c4956e7dbb13ef5c5b7fe2c379b512059115ca51f5a3959fad12f84fb8068c25"
+    },
+    {
+      "file": "gallery/native-20261102/wide-clarkson-future-scene-1200-35862bb4bb9e.avif",
+      "bytes": 338061,
+      "sha256": "35862bb4bb9ef85b994090bd281b8554c7218fab498a7b534f376de1af8a0f2d"
+    },
+    {
+      "file": "gallery/native-20261102/wide-clarkson-future-scene-3200-2e8b04c59137.avif",
+      "bytes": 1494279,
+      "sha256": "2e8b04c591370e15eebb7ad5eb2f5432d00fb479a1a0f362c2e18ba1aad22ba9"
+    },
+    {
+      "file": "gallery/native-20261102/wide-clarkson-portrait-future-scene-1200-db115f5bacfa.avif",
+      "bytes": 360660,
+      "sha256": "db115f5bacfac626064dcb89ffaed01d66ea334d8b91004907267741d4bd1aa5"
+    },
+    {
+      "file": "gallery/native-20261102/wide-clarkson-portrait-future-scene-3200-d05d5e50cf81.avif",
+      "bytes": 1566104,
+      "sha256": "d05d5e50cf816cca40973ad7362aa6ea5113d01c51b69349089e61a3a4461836"
+    },
+    {
+      "file": "gallery/native-20261102/wide-clarkson-skyline-future-scene-1200-1633aa9e7e00.avif",
+      "bytes": 230399,
+      "sha256": "1633aa9e7e005b5347537ca0122bc351b99620e7b531f51408b02530fc2ee2bc"
+    },
+    {
+      "file": "gallery/native-20261102/wide-clarkson-skyline-future-scene-3200-dd80747bf06f.avif",
+      "bytes": 1064802,
+      "sha256": "dd80747bf06f9cdc2c8b5640406620f75af8dfd9b8d39142fe1668f57583d675"
+    },
+    {
+      "file": "gallery/native-20261102/wide-cooksville-future-scene-1200-759083db7685.avif",
+      "bytes": 487302,
+      "sha256": "759083db768581bd15ac81d26853ff61ac8d70d91d54cadbc9265ed009e4061f"
+    },
+    {
+      "file": "gallery/native-20261102/wide-cooksville-future-scene-3200-93406d6e90b9.avif",
+      "bytes": 1990159,
+      "sha256": "93406d6e90b98ed79edf51ac60bc119994720cf5bb97d903d3aa64ab491e2c01"
+    },
+    {
+      "file": "gallery/native-20261102/wide-cooksville-portrait-future-scene-1200-313aed1affbb.avif",
+      "bytes": 413341,
+      "sha256": "313aed1affbbe9edd8766363f4c49863a971eae6094da52b3c1fc36fca31547d"
+    },
+    {
+      "file": "gallery/native-20261102/wide-cooksville-portrait-future-scene-3200-783e43493ba5.avif",
+      "bytes": 1619581,
+      "sha256": "783e43493ba56acbb831f7ad8112a7c3c6e6e8f2445fc281b496c221c7000259"
+    },
+    {
+      "file": "gallery/native-20261102/wide-dixie-applewood-future-scene-1200-4fe17a9084b0.avif",
+      "bytes": 480245,
+      "sha256": "4fe17a9084b0493dceda651a8aa732678684f16e8191823d1556b43acc11c198"
+    },
+    {
+      "file": "gallery/native-20261102/wide-dixie-applewood-future-scene-3200-55b568431805.avif",
+      "bytes": 2018945,
+      "sha256": "55b5684318058d83473114f9e74ded92ff4314d4b18ac802885ef3c4770716ed"
+    },
+    {
+      "file": "gallery/native-20261102/wide-downtown-existing-scene-1200-f771f506abe1.avif",
+      "bytes": 397388,
+      "sha256": "f771f506abe1dc7e18c0fdbe44d3545738dee706cd6b3ca53995bc1916042b36"
+    },
+    {
+      "file": "gallery/native-20261102/wide-downtown-existing-scene-3200-06f2caa480fa.avif",
+      "bytes": 1728410,
+      "sha256": "06f2caa480faa61e5c6e1d2649fddb7cb54cf4b384e498a9bc24fd4561ccc45f"
+    },
+    {
+      "file": "gallery/native-20261102/wide-downtown-future-scene-1200-63f7bf715d80.avif",
+      "bytes": 406282,
+      "sha256": "63f7bf715d8022c7e58790b31d9c77e1c3c7529c867cb3d169681306e2ad582e"
+    },
+    {
+      "file": "gallery/native-20261102/wide-downtown-future-scene-3200-c71b48d62507.avif",
+      "bytes": 1777388,
+      "sha256": "c71b48d62507331ae26a476bad15c794510eacbdfd57807e77393ad1765514e5"
+    },
+    {
+      "file": "gallery/native-20261102/wide-downtown-junction-future-scene-1200-d05e02b06cb2.avif",
+      "bytes": 213428,
+      "sha256": "d05e02b06cb21e1c7731f31e774a16fa0f0e0360fcaac9904c167bb713f7859c"
+    },
+    {
+      "file": "gallery/native-20261102/wide-downtown-junction-future-scene-3200-c5635d6e9898.avif",
+      "bytes": 718841,
+      "sha256": "c5635d6e9898594f2aa4789f8f793ced2ebefde6d2dcd345c8afc359f9988385"
+    },
+    {
+      "file": "gallery/native-20261102/wide-downtown-landmark-future-scene-1200-244f010fe098.avif",
+      "bytes": 228868,
+      "sha256": "244f010fe0983abfa3a7976fc79822189cc8c3e1a50d3cba060ea74258b2fcbb"
+    },
+    {
+      "file": "gallery/native-20261102/wide-downtown-landmark-future-scene-3200-11cbaf88c59c.avif",
+      "bytes": 786452,
+      "sha256": "11cbaf88c59c255c0d19a582701554adcc1e3c3d20a9cf28cc4c4831c685227f"
+    },
+    {
+      "file": "gallery/native-20261102/wide-downtown-portrait-future-scene-1200-e54cfba9bab1.avif",
+      "bytes": 404629,
+      "sha256": "e54cfba9bab102b002033ae6228b65b6e32039d54e1d6c16f98b5ca293a0fd3f"
+    },
+    {
+      "file": "gallery/native-20261102/wide-downtown-portrait-future-scene-3200-f2d84d9f7740.avif",
+      "bytes": 1678391,
+      "sha256": "f2d84d9f7740ae305d1ad7a6c3a18e195a235ba473d83c889d0a6a180e160bb7"
+    },
+    {
+      "file": "gallery/native-20261102/wide-downtown-skyline-construction-scene-1200-3a479375c0cf.avif",
+      "bytes": 90205,
+      "sha256": "3a479375c0cfa52d5d8a88afa2425d5850efc07ea5d4d89fb8211280ace1a8f8"
+    },
+    {
+      "file": "gallery/native-20261102/wide-downtown-skyline-construction-scene-3200-0aa35c64be26.avif",
+      "bytes": 317217,
+      "sha256": "0aa35c64be26f0b93561b145e10a23d670f6ae22c1b826327198c692b9cb47f1"
+    },
+    {
+      "file": "gallery/native-20261102/wide-downtown-skyline-existing-scene-1200-b137fdc258fd.avif",
+      "bytes": 87420,
+      "sha256": "b137fdc258fd54ce9dcac95c44f4242f8817f04b0b09bbca8e1c619f38bc8f27"
+    },
+    {
+      "file": "gallery/native-20261102/wide-downtown-skyline-existing-scene-3200-39d3a031d5a3.avif",
+      "bytes": 311206,
+      "sha256": "39d3a031d5a3f4bc361f1f66b84d9175bf49598b0413a5b78ca9f461a1d6045e"
+    },
+    {
+      "file": "gallery/native-20261102/wide-downtown-skyline-future-scene-1200-6eae9210abd1.avif",
+      "bytes": 92528,
+      "sha256": "6eae9210abd130026682c0d8e25cf7fd36955f6008dab56375c046b08ce1ea2f"
+    },
+    {
+      "file": "gallery/native-20261102/wide-downtown-skyline-future-scene-3200-5e9162165582.avif",
+      "bytes": 323912,
+      "sha256": "5e91621655829f3b1c68c391c6dad4b120d2600495c2e20339eb35ccc2d0fb2e"
+    },
+    {
+      "file": "gallery/native-20261102/wide-erin-mills-future-scene-1200-7b22da75d9c0.avif",
+      "bytes": 581624,
+      "sha256": "7b22da75d9c02ff5774165bb47cfbe8cf3e9a43819395a517ef2d2747bdcfa9d"
+    },
+    {
+      "file": "gallery/native-20261102/wide-erin-mills-future-scene-3200-2d44c02dff4d.avif",
+      "bytes": 2765894,
+      "sha256": "2d44c02dff4dcab016862bce3d1388653e5c53dd5a801d1f6ba95dc6a1f6d630"
+    },
+    {
+      "file": "gallery/native-20261102/wide-erindale-future-scene-1200-b57bfd00b6f4.avif",
+      "bytes": 646406,
+      "sha256": "b57bfd00b6f4fbcea567d93c223b0986cb57db30dc4961e1e8ca21279bc16953"
+    },
+    {
+      "file": "gallery/native-20261102/wide-erindale-future-scene-3200-09345f21b094.avif",
+      "bytes": 3081766,
+      "sha256": "09345f21b094a68d51363c6284b2560a0b93397d931c6cb5652585cda2dda30e"
+    },
+    {
+      "file": "gallery/native-20261102/wide-heartland-future-scene-1200-d00fb39cb12c.avif",
+      "bytes": 355078,
+      "sha256": "d00fb39cb12cab85d29bff88692d422c64b0d068286bda497cab035114f5d175"
+    },
+    {
+      "file": "gallery/native-20261102/wide-heartland-future-scene-3200-1b84e1fd34ca.avif",
+      "bytes": 1519438,
+      "sha256": "1b84e1fd34ca958ecbb94b680f094c26c0c1e820ae11ca680e977b0ffaa12122"
+    },
+    {
+      "file": "gallery/native-20261102/wide-lakeview-existing-scene-1200-841ad9db93ab.avif",
+      "bytes": 283649,
+      "sha256": "841ad9db93ab7d9952c501b0ccc2cd66a72599396ece82ed43f2ea092b339e2a"
+    },
+    {
+      "file": "gallery/native-20261102/wide-lakeview-existing-scene-3200-6b1b89c91c31.avif",
+      "bytes": 1200196,
+      "sha256": "6b1b89c91c31cb6d8be381c4629b99127ee432ce310c0cffd09e9310c161ead2"
+    },
+    {
+      "file": "gallery/native-20261102/wide-lakeview-future-scene-1200-788b4de4db3d.avif",
+      "bytes": 290787,
+      "sha256": "788b4de4db3de4fd75275a8e846cea499af1ef59e27ff1b1d17e62e4243a76ac"
+    },
+    {
+      "file": "gallery/native-20261102/wide-lakeview-future-scene-3200-f81d9a989a29.avif",
+      "bytes": 1225640,
+      "sha256": "f81d9a989a2941203dc49894ce3b0579504576caa169f7a4d49c218e5366f9f1"
+    },
+    {
+      "file": "gallery/native-20261102/wide-lakeview-portrait-future-scene-1200-d9f3ffdd2a3e.avif",
+      "bytes": 290484,
+      "sha256": "d9f3ffdd2a3ee67c17303defeacd32d24e2f4746ac68d0c67be88cc58c0c87ef"
+    },
+    {
+      "file": "gallery/native-20261102/wide-lakeview-portrait-future-scene-3200-b723dba2722a.avif",
+      "bytes": 1210039,
+      "sha256": "b723dba2722a321b82b6b0c0593334efbc5c6fe0b2033041df3116cb35b33078"
+    },
+    {
+      "file": "gallery/native-20261102/wide-lakeview-skyline-future-scene-1200-240dcfe5f8b1.avif",
+      "bytes": 196892,
+      "sha256": "240dcfe5f8b184ced220e58baeed4861f4f8cb8314f657a8c465b630c39cda04"
+    },
+    {
+      "file": "gallery/native-20261102/wide-lakeview-skyline-future-scene-3200-0fe2a53022c9.avif",
+      "bytes": 872346,
+      "sha256": "0fe2a53022c96e4158389478be8ae4c07f583fceeefa505013bc06c49752173f"
+    },
+    {
+      "file": "gallery/native-20261102/wide-malton-future-scene-1200-5fed6b0fc630.avif",
+      "bytes": 356027,
+      "sha256": "5fed6b0fc630b84588e8fdcc45d5061172469b47525c062304aa0e4d4e99d67e"
+    },
+    {
+      "file": "gallery/native-20261102/wide-malton-future-scene-3200-f4a667a6990b.avif",
+      "bytes": 1469232,
+      "sha256": "f4a667a6990b2cb7314071a2046ad2f9c60a40747f394678e4e30d2bb05ad0a8"
+    },
+    {
+      "file": "gallery/native-20261102/wide-meadowvale-future-scene-1200-95fd9d4ef179.avif",
+      "bytes": 470767,
+      "sha256": "95fd9d4ef1795957fc38872074ab43f0a41a29d8c57bd508e3771bfebea1f713"
+    },
+    {
+      "file": "gallery/native-20261102/wide-meadowvale-future-scene-3200-cfb6f3ff3230.avif",
+      "bytes": 2140267,
+      "sha256": "cfb6f3ff3230f9b7b7f44f8f39b6ad24354e50d031ec9fdf91347325402de441"
+    },
+    {
+      "file": "gallery/native-20261102/wide-port-credit-existing-scene-1200-3e34677f074f.avif",
+      "bytes": 471376,
+      "sha256": "3e34677f074f56d4cc9cb1c8b521810fc5cbc822d6f5992893b3dcdd2ae86223"
+    },
+    {
+      "file": "gallery/native-20261102/wide-port-credit-existing-scene-3200-35a81436571b.avif",
+      "bytes": 1944792,
+      "sha256": "35a81436571b32d22116ffa5586af9f563e737d03a8b093241375faeff59aff0"
+    },
+    {
+      "file": "gallery/native-20261102/wide-port-credit-future-scene-1200-31f7162c1411.avif",
+      "bytes": 480063,
+      "sha256": "31f7162c1411944fb092079f26dc1aefb28ad44ce284e290e723273234234c7e"
+    },
+    {
+      "file": "gallery/native-20261102/wide-port-credit-future-scene-3200-69ec961f8334.avif",
+      "bytes": 1970067,
+      "sha256": "69ec961f8334d4274fc3a952c4d53256f96a5fc7fef665c1adc92cd6fdf73c7f"
+    },
+    {
+      "file": "gallery/native-20261102/wide-port-credit-portrait-future-scene-1200-d149d702440a.avif",
+      "bytes": 468385,
+      "sha256": "d149d702440a9ff49e3f3905dcbfc3c88cb3fdb781ca45450c68ed7f4509ba01"
+    },
+    {
+      "file": "gallery/native-20261102/wide-port-credit-portrait-future-scene-3200-ce8f054fa531.avif",
+      "bytes": 1980164,
+      "sha256": "ce8f054fa531dfa583c96b181037963d66ef2ece49189b64b027fad8c135579d"
+    },
+    {
+      "file": "gallery/native-20261102/wide-port-credit-skyline-future-scene-1200-03ce2d678724.avif",
+      "bytes": 267910,
+      "sha256": "03ce2d678724b832bc9a26d25a3e98b6c6012cdbc5a9d3eb1fb5cb3e1f3c1833"
+    },
+    {
+      "file": "gallery/native-20261102/wide-port-credit-skyline-future-scene-3200-d38f5b354bfc.avif",
+      "bytes": 1166676,
+      "sha256": "d38f5b354bfc03825e37975f3667bfa36517cb9efea7ea4fc2365307051be1cc"
+    },
+    {
+      "file": "gallery/native-20261102/wide-streetsville-future-scene-1200-f57858937aa9.avif",
+      "bytes": 550754,
+      "sha256": "f57858937aa94f74d91cb68a92cb65ace07eeba7337210b1d68055928ba8ea44"
+    },
+    {
+      "file": "gallery/native-20261102/wide-streetsville-future-scene-3200-7bb25d05d9cf.avif",
+      "bytes": 2439919,
+      "sha256": "7bb25d05d9cf58a8fc29e0531f1f0a5826a3f4697dfb58fcffa601282b6ecf6c"
+    },
+    {
+      "file": "gallery/native-20261102/wide-uptown-future-scene-1200-c8e046e8989c.avif",
+      "bytes": 450690,
+      "sha256": "c8e046e8989cb71b3e644892beb411795c952bbf1ad51309e9c72cd19f4e11cc"
+    },
+    {
+      "file": "gallery/native-20261102/wide-uptown-future-scene-3200-b9e2e1c84a3f.avif",
+      "bytes": 1960571,
+      "sha256": "b9e2e1c84a3f5c1b18ed13ee361f10f06119dac8ec02d3be7d956c2298be1d61"
+    },
+    {
+      "file": "gallery/native-20261102/wide-uptown-portrait-future-scene-1200-e63421d1c9de.avif",
+      "bytes": 445429,
+      "sha256": "e63421d1c9dec7adce7c89d8a1e5ab45e5f31b7f26e0691d33a1eeae49e4cb00"
+    },
+    {
+      "file": "gallery/native-20261102/wide-uptown-portrait-future-scene-3200-281bb918d708.avif",
+      "bytes": 1898955,
+      "sha256": "281bb918d708822caa4317347ad992ef19bd5cf9d40ed754fca5a662ae6257fe"
+    },
+    {
+      "file": "gallery/native-share-20261102/downtown-future-55990e1619f1.jpg",
+      "bytes": 508055,
+      "sha256": "55990e1619f1f330567b0e71e440285cf7e9b24375280e335212081109a861db"
     },
     {
       "file": "gallery/previews/020ca39a65103c2b/clarkson-future.png",
@@ -2580,14 +3240,24 @@
       "sha256": "20a10c304c845e37f45156333dd3a1176e034cb8f4b78124d83bcb807b364276"
     },
     {
+      "file": "harborn-terrain.js",
+      "bytes": 16851,
+      "sha256": "0ddfede09457df89a71f4ab441a5049b2b5581d17d09e75081e1c04df1d31c98"
+    },
+    {
+      "file": "image-entry.js",
+      "bytes": 3297,
+      "sha256": "81ee99f6105afae2a74ef0ffea1962e900897b2099ca57fbf8884d4adaabd04e"
+    },
+    {
       "file": "image-experience.js",
-      "bytes": 1479,
-      "sha256": "9ead0bee9164217daec50d37f7f7e395d76207880b6a36a033091e6742357dcd"
+      "bytes": 1508,
+      "sha256": "51a790bebc22eef4118dd9133313e3e223a4f68ea1d036e811b3fedd2f045219"
     },
     {
       "file": "image-preview.js",
-      "bytes": 7247,
-      "sha256": "0875dc3916ce60d9479b8732a22086935a23abc55e01ad2b5211bf7fbef8d569"
+      "bytes": 13274,
+      "sha256": "32eeffb23a58b25a7d0722fe5b3b0d5942ef8f595406d79ef1612458deb5825b"
     },
     {
       "file": "image-provenance.js",
@@ -2596,8 +3266,8 @@
     },
     {
       "file": "index.html",
-      "bytes": 12913,
-      "sha256": "c4cf5441da9c8f5958222041fc1a43eca7b113bf6eaa64339d05c1dbf27c0be7"
+      "bytes": 13383,
+      "sha256": "c971faff6758e0c91a5ea6524f76a262f34c9fd2f805a40b2ebed2217cbd7c9b"
     },
     {
       "file": "licenses/BricolageGrotesque-OFL.txt",
@@ -2606,8 +3276,8 @@
     },
     {
       "file": "licenses/CREDITS.md",
-      "bytes": 11344,
-      "sha256": "04c2353527ec3dfef656270727dd0a8d992396dd027d7c3107108212f462ee34"
+      "bytes": 11827,
+      "sha256": "8a566313f255bcf34b289d286e85ee810ab38e1f6fb2ee2f24798bf086613af9"
     },
     {
       "file": "licenses/media-chrome-4.19.2-MIT.txt",
@@ -2626,18 +3296,23 @@
     },
     {
       "file": "map-presentation.css",
-      "bytes": 1434,
-      "sha256": "b43c01a3705f7763f24f8823419ffd37e329063f9b1157fef2cc8a5b7bfa2d18"
+      "bytes": 1157,
+      "sha256": "fc0552cd907be4696a560bf1d23302b0b3e5e7a3ec0a085ca80033980fe579d7"
     },
     {
       "file": "media-catalog.js",
-      "bytes": 8585,
-      "sha256": "97096b14b36444864782c1521e5aa2bfac525ab12a0eb33b738956a82c3fd98d"
+      "bytes": 15494,
+      "sha256": "e0235c06a87c85d2fe27807c577a6c223883a2b01b74fc8d3e12ea8db80cb4fc"
     },
     {
       "file": "media-player.js",
       "bytes": 4496,
       "sha256": "f279d8663bb6a140b31a6369f08699e0ffda6ad9d876280d9e07db8b7ee79709"
+    },
+    {
+      "file": "model-appearance.js",
+      "bytes": 4091,
+      "sha256": "1fbf1315ff73656e23999a650df84f37118179d9abe744b25aa7b9c9a94399fc"
     },
     {
       "file": "model-preview-batching.js",
@@ -2656,18 +3331,18 @@
     },
     {
       "file": "model-preview.css",
-      "bytes": 5958,
-      "sha256": "a14b05f9988a438eb212c90a43dfca0691a23b147f5dade4c5f699a43d8a33c8"
+      "bytes": 6099,
+      "sha256": "8b38033850f34e07a628dc8636d06ddfba7c957035ecf43d6d3a20a79e1d5b27"
     },
     {
       "file": "model-preview.js",
-      "bytes": 15840,
-      "sha256": "cdd06b1e44ec252ad4ca0b3d1202de09a13ac7bc1aff51c632603e2eea43e58c"
+      "bytes": 15702,
+      "sha256": "d754e7d80cc23d2574090ddf7f4897cc0de2109da766b628404984863d3d5621"
     },
     {
       "file": "model-revisions.js",
-      "bytes": 3126,
-      "sha256": "ddee6654801527b85e4d8674bd5594af56af9fbd72e603f9103a94660e4da025"
+      "bytes": 3151,
+      "sha256": "b71451b3638f7fa94970509e0508d45e44e85b79dd6442c5b9c91cc6f2e53988"
     },
     {
       "file": "model-status-materials.js",
@@ -2676,8 +3351,8 @@
     },
     {
       "file": "model-study-presentation.js",
-      "bytes": 2117,
-      "sha256": "6a59aaa7da4bd5a6a6698df83ac88c79f471ba9090b5b38785323c581835a6f4"
+      "bytes": 2137,
+      "sha256": "50969ac287db59d0d73b852503289890cf0556b7902ea09d766e5a346a80d9ac"
     },
     {
       "file": "model-visibility.js",
@@ -2686,8 +3361,8 @@
     },
     {
       "file": "model.html",
-      "bytes": 5286,
-      "sha256": "8606294e8eabf68161ceecb3b181b95eb5db887ef08b45047ba3aeac34befa51"
+      "bytes": 5452,
+      "sha256": "25308b145404e26c79cdc058f6b36f098c48651f64b602a9bbe0444bb972b12b"
     },
     {
       "file": "models/citywide-details.glb",
@@ -2698,6 +3373,11 @@
       "file": "models/context-parts/citywide-context-08.glb",
       "bytes": 2404616,
       "sha256": "d8c1057a3ddb269872323589d7bb1383fbc51b0f00cb466595df630f26f79638"
+    },
+    {
+      "file": "models/context-supplements/lakeview-ohn-offshore-0f27774f67dc.glb",
+      "bytes": 5668,
+      "sha256": "0f27774f67dc09a29e0713d401b40dcabc6e14011874a0bb8daf7c654bcd814d"
     },
     {
       "file": "models/dixie-applewood-context.glb",
@@ -2725,6 +3405,11 @@
       "sha256": "2073d1b0373039fb4317e70aef33af2dd0abdd5bb12835955765f9647bd55c02"
     },
     {
+      "file": "models/studies-20261101/26-park-south-facade-c9769467d130.glb.gz",
+      "bytes": 271188,
+      "sha256": "8eb2cd0baf4f4fe0166566ca00f1f20e2d8fdde5e80ebc010cb7062d48c9dccd"
+    },
+    {
       "file": "models/studies-20261101/50-high-exterior.glb",
       "bytes": 418340,
       "sha256": "5f367841de44129bebba0dc20fffc2a7c6d4fe9a2688e641159289ee43de78cc"
@@ -2735,9 +3420,29 @@
       "sha256": "19076afc33d61c6bd21d480ce58b133aa83b862feaee7351cfe46257c6042d7f"
     },
     {
+      "file": "models/studies-20261101/harborn-grading-v4-0e5224cfbe25.glb.gz",
+      "bytes": 551356,
+      "sha256": "b3b0636313d4dc3346884f293653f7d31df855246b69ac2c70b4ab4ae0561fe1"
+    },
+    {
+      "file": "models/studies-20261101/harborn-tie-v4-4dfd05d9de20.bin",
+      "bytes": 569640,
+      "sha256": "4dfd05d9de20d67ac49d2f79b77199d547c6dff8a46d6011fccc8bf63e029368"
+    },
+    {
+      "file": "models/studies-20261101/mcity-m1-likeness-v5.glb.gz",
+      "bytes": 3730812,
+      "sha256": "630368744c2ba9f8252004d87bf31d31f66397c3cc037b21db65f43e6da7f9ca"
+    },
+    {
       "file": "models/studies-20261101/mcity-m1-rev03-exterior.glb.gz",
       "bytes": 3318788,
       "sha256": "fa2dbb81b9cd0a03bbdf7d1c189e81066ca10ff5d0e0c45dae96b502c2e7320a"
+    },
+    {
+      "file": "models/studies-20261101/mcity-m2-likeness-v5.glb.gz",
+      "bytes": 3662186,
+      "sha256": "1f6d68734e2486165984f0e56605638fc0ea705a4cb326afbe33b0a4dde0ef20"
     },
     {
       "file": "models/studies-20261101/mcity-m2-rev03-exterior.glb.gz",
@@ -2750,9 +3455,24 @@
       "sha256": "de41aa0078aab3d32c0bdee631434878c8f0bed44dfaff66244b67dc50231699"
     },
     {
+      "file": "models/studies-20261101/mcity-m3-exterior-v7-425f374d4a72.glb",
+      "bytes": 3450676,
+      "sha256": "425f374d4a72f53471dc19e0222bafaf38058ed570793674cfa5a065ea3eeca1"
+    },
+    {
+      "file": "models/studies-20261101/mcity-m3-exterior-v7-425f374d4a72.glb.gz",
+      "bytes": 1129653,
+      "sha256": "46069389dca1b1f6f129b0a88d96f19ff8c00aa6d2fb2d87ddf05e0106c0c78f"
+    },
+    {
       "file": "models/studies-20261101/mcity-m4-future-detail.glb",
       "bytes": 338492,
       "sha256": "193a33d5866adb9dbdd2aa8915ed802d9c4420918b4a34c9453d9aa12397fd3a"
+    },
+    {
+      "file": "models/studies-20261101/mcity-m4-future-v3-685ea68ae21c.glb.gz",
+      "bytes": 138450,
+      "sha256": "c29a55cdc94e15748a826087415fecbb84be0a0bd324f15dac1023450cb943a2"
     },
     {
       "file": "models/studies-20261101/mcity-m4-spring2026-level41-detail.glb",
@@ -2760,14 +3480,34 @@
       "sha256": "71ddefd801ed80defa5ccfeb7c2b36836c0a3ec0e14db93eef2f07c3ed4a4783"
     },
     {
+      "file": "models/studies-20261101/mcity-m4-spring2026-v3-78e0bc6f549a.glb.gz",
+      "bytes": 68472,
+      "sha256": "3383b5178f56a75fb709a1d201d812e6887cdd3f4255728bb8c2bc1701eaac60"
+    },
+    {
       "file": "models/studies-20261101/mcity-m5-design-detail.glb",
       "bytes": 131820,
       "sha256": "5fd6bd183936e546469e7d07fb7191767bed79f043cc8c74ec1d48727dede1b3"
     },
     {
+      "file": "models/studies-20261101/mcity-m5-exterior-v5-af9d51546ca3.glb.gz",
+      "bytes": 375477,
+      "sha256": "4162051b4d6706a65b3f5f0606ce31dfd9500c41f6ea766f1a40eb15ac519b6f"
+    },
+    {
+      "file": "models/studies-20261101/mcity-m6-appearance-d53f79a74e73.glb.gz",
+      "bytes": 1678043,
+      "sha256": "cad1af48cf240c74696e9d60a59694d7423092801e1f30f0bc9cc044e6976493"
+    },
+    {
       "file": "models/studies-20261101/mcity-m6-dated-exterior.glb.gz",
       "bytes": 1549077,
       "sha256": "03cffd7b17cae8d431f3e30b567ac628415b87a09746951137d47a5ddab29693"
+    },
+    {
+      "file": "models/studies-20261101/mcity-m7-m8-appearance-5ed5ca6a9a5a.glb.gz",
+      "bytes": 3061801,
+      "sha256": "ab9f1a2ebe1df2f2eb3260d2acd853ba56cc7d50a02ef2d9106ea79b9103b198"
     },
     {
       "file": "models/studies-20261101/mcity-m7-m8-dated-exteriors.glb.gz",
@@ -2816,18 +3556,28 @@
     },
     {
       "file": "neighbour-context.js",
-      "bytes": 7001,
-      "sha256": "d4fa99143b3f2403778dd500098b22e335a1da1a4a38a9766ef8fed7cfe81909"
+      "bytes": 7134,
+      "sha256": "92f72bdb89e03f23642900379274536addf2d5719908234347846ab6d00678c6"
     },
     {
       "file": "neighbourhood-context.js",
-      "bytes": 6766,
-      "sha256": "a2f3915c56d4bdae4a512f74a0725c9482db031884c724acc8b8d36f3791631c"
+      "bytes": 6818,
+      "sha256": "805f4614b8f9437a9c6f84e7f7c580cee757d1dd7665e1001abb68a7b742efe3"
     },
     {
       "file": "neighbourhood-media.js",
-      "bytes": 1807,
-      "sha256": "79301059d522d2c4034d00a97e169bfefd1b231c6b0d98b64c6116cbb9f7c0c9"
+      "bytes": 3772,
+      "sha256": "7955e704f249a7bd51c7569a933e5c6ee113d8c148c8e2cc30c80cbc87f59461"
+    },
+    {
+      "file": "offshore-context.js",
+      "bytes": 3866,
+      "sha256": "23a90394b9cac0863aaa1ff003363f42b038e8de7cf7629150aa093d043b41b3"
+    },
+    {
+      "file": "planning-appearance.js",
+      "bytes": 1450,
+      "sha256": "2f7fdba5821a60aa88ad6ebf3c1348452e24a1412da238994c2ec3410bbe42c3"
     },
     {
       "file": "png-metadata.js",
@@ -2836,33 +3586,33 @@
     },
     {
       "file": "project-cards.js",
-      "bytes": 15042,
-      "sha256": "38dd644245984784a407c82b86b88f3287293754ab8ba5033886ab8462642025"
+      "bytes": 16279,
+      "sha256": "29ce8c569b651aa0d4a7013caaba8980731eb7970dde0df23bf70fc0c41ac7ce"
     },
     {
       "file": "reading-layout.css",
-      "bytes": 5794,
-      "sha256": "fa513823e1a06ca24325c4ef307d0162fba9628293c3970f72d9482273afb369"
+      "bytes": 8151,
+      "sha256": "4d01d4dde6e914d5dcefa7f6e92a7dfe6333925469907c635783d3a9b24b218a"
     },
     {
       "file": "reading-notes.css",
-      "bytes": 2336,
-      "sha256": "5f1f5f32a19ffb8829e136920dcf55a4a24d381a4a26bfa9e3c4cc44c947dcc1"
+      "bytes": 2387,
+      "sha256": "fc2fc670d5ba620e6e93a664c5b2dcfe343f8091265b0bed0640f371a3c256ea"
     },
     {
       "file": "reading-pages.css",
-      "bytes": 12340,
-      "sha256": "b02ac682496f1fdf52288944455449e64ad1246785983112f1ec3e094a348e07"
+      "bytes": 12386,
+      "sha256": "79383a2533a1455f62357778c93b654f40a5235fc42aaf1c42598107f9ef6c8f"
     },
     {
       "file": "reference-updates.css",
-      "bytes": 5063,
-      "sha256": "3e712fa34c94d67b0c632172007e6d10c8bf7a15ad52a941e7a00d469ef173bb"
+      "bytes": 5179,
+      "sha256": "edb4082240df7c4faa8bac4c67df9edfa298b46b3318df80ddb73022cd91eb3f"
     },
     {
       "file": "reference-updates.html",
-      "bytes": 83014,
-      "sha256": "875b60ccc8c0f91b2245df6092e38f9d35058dfb7fa1fa2b9d4ec395afabef3e"
+      "bytes": 84433,
+      "sha256": "c4226e482df26fcb7565ab85849ea91ebdbee4775c14f9b1b193cd3b6c586352"
     },
     {
       "file": "refinement-loading.js",
@@ -2916,13 +3666,13 @@
     },
     {
       "file": "revamp.css",
-      "bytes": 16028,
-      "sha256": "73c8342b03f0723e14677babc0b7951b03323a23a074acb55e3584f865a3b615"
+      "bytes": 12795,
+      "sha256": "66f77fdd77b4cceec301986398b329d75d7b0bd871dbb81931f0e366978f71bd"
     },
     {
       "file": "review-renders.html",
-      "bytes": 37221,
-      "sha256": "b2487dc18fb6e4c0894ff3f85fe701c2750dd2f3e15ddb34bcafb930b84bb6a1"
+      "bytes": 37164,
+      "sha256": "51e98971d4c16c5d25329a9fcc3ca8afca2ec4737d5bc5bb2f99556fff4d44b9"
     },
     {
       "file": "robots.txt",
@@ -2931,18 +3681,23 @@
     },
     {
       "file": "scene-presentation.js",
-      "bytes": 3967,
-      "sha256": "5603b55144d368b831dd84b0ebbf98530693ea389feb5a3c82e7e37fa044c2e5"
+      "bytes": 4047,
+      "sha256": "c261f71a2e3ff113c36e7443b14e51204362600a59e40345a8bcfd4948e0cfda"
+    },
+    {
+      "file": "semantic-material-slots.js",
+      "bytes": 23808,
+      "sha256": "f93bb95cadc64024de7fd46af88796106930215402e4f74a9cbc44eafc1fdc5f"
     },
     {
       "file": "site-ui.css",
-      "bytes": 20178,
-      "sha256": "d972c4a7b15900cc730f3b5ff9331d960adb938ba3567b65147c352e016cb7f4"
+      "bytes": 11483,
+      "sha256": "51deb8e0831e6728a7fa01c3807e9ff364102a519171259ad6e7b2bb391441e4"
     },
     {
       "file": "site-ui.js",
-      "bytes": 2993,
-      "sha256": "d8f7dbc3472eaf4932e43e62728ec90896b3e9eb82396274df2c3d33ea567534"
+      "bytes": 1413,
+      "sha256": "29f37b9449ddcf8cbba6c934aa354a1879b6d77ef184bcbeff2d62edb3ad9c08"
     },
     {
       "file": "sitemap.xml",
@@ -2956,28 +3711,28 @@
     },
     {
       "file": "social-preview.css",
-      "bytes": 3280,
-      "sha256": "c3ba15e4304ff973593c1c828013d60ee4115044035414c67532b6858341ae80"
+      "bytes": 3376,
+      "sha256": "e3c80bd1a6391fd1691311f90316b2bd1c8df4f44dd0f20046c9d295a7c9eee1"
     },
     {
       "file": "social-preview.js",
-      "bytes": 1222,
-      "sha256": "f5e56b905e8a7f9f37cee3ef81ca60f4a1fb77a1980be7f237aef6e8cd21eda4"
+      "bytes": 1221,
+      "sha256": "81b3026236be7ddb589f5d33ac5a96d310a5e2f04f663e5f594a9c2b9fb9292a"
     },
     {
       "file": "social.css",
-      "bytes": 4302,
-      "sha256": "f721edad378fac8ec49e5c24cfa92d32c7b301aec4948b4c8d820a297d25a4e7"
+      "bytes": 4503,
+      "sha256": "0184255a19782fae03dc9c2941b0bc005e0aca7a807ee9650900a902ab5e1fad"
     },
     {
       "file": "social.html",
-      "bytes": 40299,
-      "sha256": "0e96c9bd95a96c8e07dd4224f61748f38577951067fb055bd0209a588e0b31f7"
+      "bytes": 45727,
+      "sha256": "3a6b7ab146b5a1b4eb22a6cacdec1fe14d7605eb77afcb86741f70d6521af0e7"
     },
     {
       "file": "social.js",
-      "bytes": 1092,
-      "sha256": "d9dab43f67c6c471d4a2a257ac2d07313d285301ba3239b01b4dffa6d7ef791a"
+      "bytes": 990,
+      "sha256": "b31d6fa981cfdc19e30edacc0f344683d26f0acaacf522b7eef1fd03efdaf1d1"
     },
     {
       "file": "source-attribution-regions.js",
@@ -2986,8 +3741,8 @@
     },
     {
       "file": "source-attribution.js",
-      "bytes": 4148,
-      "sha256": "4a0ae2d1bfe7a31eddc32157f6b931a184facfc234585c917dff39d8b1262522"
+      "bytes": 4542,
+      "sha256": "6c63f0cf35e26e637404b1fb913ea066d49119f61dd0258793d7c8583db0971c"
     },
     {
       "file": "source-layer-cut.js",
@@ -2996,23 +3751,18 @@
     },
     {
       "file": "sources.css",
-      "bytes": 7262,
-      "sha256": "1f582eeb8485bd022f8f54747b37dc4d68f2dd45c011c1e801aafbe7d5c89f42"
+      "bytes": 6445,
+      "sha256": "c4f4bc8051b1b3b0fd41895c65e8180e55100738f285cd780b7b1f27fb5050a9"
     },
     {
       "file": "sources.html",
-      "bytes": 12498,
-      "sha256": "61c65c9e802a09451e99f36d03a69449aafd377517fbe2189caa59b79b3ef7e3"
-    },
-    {
-      "file": "sources.js",
-      "bytes": 875,
-      "sha256": "a4d9f57516c83a527eb15672bef3d182181eeda5763209faba4ab8a54bde6117"
+      "bytes": 13695,
+      "sha256": "716e5ee8b247f87e7ad544df79afe6830ed85098dfc9d8dbc882eecfcb817410"
     },
     {
       "file": "style.css",
-      "bytes": 26960,
-      "sha256": "9788048a3d501ede60bf989c9ad79870046529ebaf59eb133da13fdc8cd04f37"
+      "bytes": 27127,
+      "sha256": "34f28007a87f399cb6671dbb3a9f2cf12fe89fc8f52368f975520a5dc4011bfa"
     },
     {
       "file": "surface-rendering.js",
@@ -3021,18 +3771,23 @@
     },
     {
       "file": "updates.css",
-      "bytes": 4757,
-      "sha256": "7c59b4d0668d978cb240480a03dfc2862e46ba8e4d53c11b5539e88716860671"
+      "bytes": 7704,
+      "sha256": "2bcff830d3c5a59549010c2a1389b14fc3196b7a85f5767f149e033ab104d5e4"
     },
     {
       "file": "updates.html",
-      "bytes": 35473,
-      "sha256": "5a9b2fb7034ec465f8ae3ce400d7fb6466b271357dbdb31c5c2b191d84439fbf"
+      "bytes": 39702,
+      "sha256": "3255f21e78286e5f95ba34dbf637b43bd6ea660f2833d83301cf535c2c9ec2e6"
+    },
+    {
+      "file": "updates.js",
+      "bytes": 1769,
+      "sha256": "e7eb2eaeef687646b1903e7dafd2ae6c6efbd649c4119fa6a6343bd54e387949"
     },
     {
       "file": "usability.css",
-      "bytes": 6055,
-      "sha256": "e1a9e32f6df8c9c56ac5d60a9b89be865aadcad99a04ccbb6b268a01a530162c"
+      "bytes": 6671,
+      "sha256": "ab213670fe267a1afc28ef245477cd6d1986049e173839dfc7b589b0bd8f9e1d"
     },
     {
       "file": "vendor/addons/controls/OrbitControls.js",
@@ -3326,8 +4081,8 @@
     },
     {
       "file": "viewer-bootstrap.js",
-      "bytes": 798,
-      "sha256": "7c9cecec87ba8499a4295624dadf5c022d2d7114065e80b8bbc78d8d48141421"
+      "bytes": 801,
+      "sha256": "168c3f6f15af87962569c2ff310de35e2b1d8ca8e93a7acb8f607a2b8da0b224"
     },
     {
       "file": "viewer-camera.js",
@@ -3336,13 +4091,13 @@
     },
     {
       "file": "viewer-layout.js",
-      "bytes": 876,
-      "sha256": "8eb3204bbd140ad363b45e61ed9835d427cc0adcc6f5c63b6ca328e6704e4afa"
+      "bytes": 272,
+      "sha256": "4ebbfa980b20e9ce6066a5f9c01beea14c23d5b197885e5006fb14fbb6b16250"
     },
     {
       "file": "viewer-responsive.css",
-      "bytes": 12454,
-      "sha256": "194028365fb3939593bc533c138a05d5e6978c78e686707b824b6b4e22469521"
+      "bytes": 11360,
+      "sha256": "c0cc78642edb4a540d0129151baa82aa86a9a104aa3b0bbbd6d3fead1d09dfa0"
     },
     {
       "file": "viewer-runtime.js",
@@ -3353,7 +4108,12 @@
       "file": "viewer-search.js",
       "bytes": 2101,
       "sha256": "2d9cfb19a32fac7548704fbfca44060267c233522645aa354fb4f6069e012d97"
+    },
+    {
+      "file": "voya-appearance.js",
+      "bytes": 16279,
+      "sha256": "e47dd0cc9de819cb1318ff85446be96bb32726ee3d715d65904b87995d4b6279"
     }
   ],
-  "bytes": 732377574
+  "bytes": 875479895
 }

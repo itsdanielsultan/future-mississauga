@@ -1,0 +1,373 @@
+{
+  "schema": "future-mississauga-neighbourhood-media/v2",
+  "id": "fairview",
+  "state": "READY_FOR_PUBLICATION",
+  "publication": true,
+  "images": [
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "identity": "neighbourhood/fairview/before",
+      "title": "Fairview",
+      "scenario": "existing",
+      "nativeSceneDimensions": [
+        1800,
+        1100
+      ],
+      "sourceSceneSHA256": "599eb68485069dedb00a9c38eacd517146896d220dfa170a63d395e876eff07a",
+      "renderTimestampUTC": "2026-11-02T05:47:11.510609+00:00",
+      "sourceFreezeState": "FINAL_FROZEN",
+      "historicalURLsRebound": false,
+      "aliases": [],
+      "caption": {
+        "title": "Fairview",
+        "area": "Fairview",
+        "creator": "Daniel Sultan",
+        "scenario": "existing",
+        "geographicScope": "neighbourhood",
+        "cityCredit": "City of Mississauga \u00b7 Ontario data",
+        "openStreetMap": true,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "requiredModelCredits": [
+          "275 Superior Boulevard photo reference: David Lasker/Cityscape Photography \u00b7 davidlaskerphotography.com"
+        ],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "\u00a9 OpenStreetMap contributors. https://www.openstreetmap.org/copyright",
+          "City of Mississauga geographic data, used under the City of Mississauga Terms of Use. \u00a9 OpenStreetMap contributors, ODbL. Mixed-date Ontario DTM terrain.",
+          "City of Mississauga planimetric geographic data.",
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Architecture: DelDom Design & Construction. Proposed grading: SKIRA & Associates Ltd. Study: Daniel Sultan / Future Mississauga.",
+          "City of Mississauga; exterior interpretation by Future Mississauga",
+          "Independent model: Daniel Sultan / Future Mississauga. Architecture: IBI Group / Arcadis. City of Mississauga geometry informs placement. Plan and photographic references are credited in sources.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: Studio JCI. Developer: EMBLEM. Reference photographs: Edward Skira and Tim MacDonald / UrbanToronto; Google Street View, April 2026.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Design: SG&M Architects Inc. (formerly Sirlin Giller & Malek Architects). Model creation: Daniel Sultan / Future Mississauga. Municipal baseline: City of Mississauga.",
+          "Model creation: Daniel Sultan / Future Mississauga. Municipal baseline: City of Mississauga.",
+          "275 Superior Boulevard photo reference: David Lasker/Cityscape Photography \u00b7 davidlaskerphotography.com",
+          "Riley Snelling",
+          "Earthscape Play"
+        ],
+        "renderTimestampUTC": "2026-11-02T05:47:11.510609+00:00",
+        "sourceDates": "Mixed; source data dates unchanged. Actual new render timestamp is separate.",
+        "comparisonState": "before"
+      },
+      "provenance": {
+        "sceneProof": {
+          "sha256": "63e231da4128b85e8dad62118ebc416867e865234415b9fcb869c492b2e1e280"
+        },
+        "creditProof": {
+          "sha256": "b8adba64d750d04ebdd4e9fcb26bc9c19bef323120666dde2140645edccbbf55"
+        },
+        "layoutProof": {
+          "sha256": "5f46dbb31317428d209ce4afc33647e067735e6142f5ec6448d0c879122b0db3"
+        },
+        "packageScript": {
+          "sha256": "ba0a961b10b180c85fd87edb13510b2c07e8d1e3b413606bfd63668ab30e34f4"
+        },
+        "deliveryManifest": {
+          "sha256": "6eeddb2a281a17774fe466a0d4892bb6e5018268a98f4f2474ce0ad3c1d6e278"
+        }
+      },
+      "displayMaster": {
+        "bytes": 2019083,
+        "sha256": "a46e6e7987d50bfa2aab085d66f8fa84dbffd93fecb16f61ba5f70ee035773cc",
+        "dimensions": [
+          1800,
+          1100
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false,
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-native-2026-11-02/neighbourhood-fairview-before-clean-a46e6e7987d5.png"
+      },
+      "download": {
+        "bytes": 2050068,
+        "sha256": "d152f00f86f8330b4f448c3e37f9bc8a469c2c03a2b938cd02b27b376d0a8dd7",
+        "dimensions": [
+          1800,
+          1271
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneWithAppendedCreditFooter",
+        "sceneDimensions": [
+          1800,
+          1100
+        ],
+        "sceneBounds": [
+          0,
+          0,
+          1800,
+          1100
+        ],
+        "footerBounds": [
+          0,
+          1100,
+          1800,
+          1271
+        ],
+        "sceneSourceSHA256": "a46e6e7987d50bfa2aab085d66f8fa84dbffd93fecb16f61ba5f70ee035773cc",
+        "allScenePixelsExact": true,
+        "sceneCrop": false,
+        "sceneResize": false,
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-native-2026-11-02/neighbourhood-fairview-before-download-d152f00f86f8.png"
+      },
+      "responsivePreviews": [
+        {
+          "bytes": 168846,
+          "sha256": "cde1b26c0245704f8deecd139818af01d6a589d59b46580983c665826ef915de",
+          "dimensions": [
+            1200,
+            733
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "a46e6e7987d50bfa2aab085d66f8fa84dbffd93fecb16f61ba5f70ee035773cc",
+          "url": "gallery/native-20261102/neighbourhood-fairview-before-scene-1200-cde1b26c0245.avif"
+        },
+        {
+          "bytes": 279601,
+          "sha256": "346b652e297dadb82c0e628244bc6f8d496932de29fcf85f50fd64b0163e1d9e",
+          "dimensions": [
+            1200,
+            733
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "a46e6e7987d50bfa2aab085d66f8fa84dbffd93fecb16f61ba5f70ee035773cc",
+          "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-native-2026-11-02/neighbourhood-fairview-before-scene-1200-346b652e297d.jpg"
+        },
+        {
+          "bytes": 272145,
+          "sha256": "cb0a540e98e468969301730b0ba068089b8e9f0741d916076e5bbdabd316686f",
+          "dimensions": [
+            1800,
+            1100
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": false,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "a46e6e7987d50bfa2aab085d66f8fa84dbffd93fecb16f61ba5f70ee035773cc",
+          "url": "gallery/native-20261102/neighbourhood-fairview-before-scene-1800-cb0a540e98e4.avif"
+        },
+        {
+          "bytes": 505254,
+          "sha256": "34d07284f9ed624f5e5cdbb096c88c6a3c0d82dabb4d5bca86f4da32b25f4442",
+          "dimensions": [
+            1800,
+            1100
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": false,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "a46e6e7987d50bfa2aab085d66f8fa84dbffd93fecb16f61ba5f70ee035773cc",
+          "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-native-2026-11-02/neighbourhood-fairview-before-scene-1800-34d07284f9ed.jpg"
+        }
+      ]
+    },
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "identity": "neighbourhood/fairview/after",
+      "title": "Fairview",
+      "scenario": "existing",
+      "nativeSceneDimensions": [
+        1800,
+        1100
+      ],
+      "sourceSceneSHA256": "ef65efb0c72734f469a849fe4768266285387e13e6f42d4a63a2996730bf7149",
+      "renderTimestampUTC": "2026-11-02T05:47:28.458041+00:00",
+      "sourceFreezeState": "FINAL_FROZEN",
+      "historicalURLsRebound": false,
+      "aliases": [],
+      "caption": {
+        "title": "Fairview",
+        "area": "Fairview",
+        "creator": "Daniel Sultan",
+        "scenario": "existing",
+        "geographicScope": "neighbourhood",
+        "cityCredit": "City of Mississauga \u00b7 Ontario data",
+        "openStreetMap": true,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "requiredModelCredits": [
+          "275 Superior Boulevard photo reference: David Lasker/Cityscape Photography \u00b7 davidlaskerphotography.com"
+        ],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "\u00a9 OpenStreetMap contributors. https://www.openstreetmap.org/copyright",
+          "City of Mississauga geographic data, used under the City of Mississauga Terms of Use. \u00a9 OpenStreetMap contributors, ODbL. Mixed-date Ontario DTM terrain.",
+          "City of Mississauga planimetric geographic data.",
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Architecture: DelDom Design & Construction. Proposed grading: SKIRA & Associates Ltd. Study: Daniel Sultan / Future Mississauga.",
+          "City of Mississauga; exterior interpretation by Future Mississauga",
+          "Independent model: Daniel Sultan / Future Mississauga. Architecture: IBI Group / Arcadis. City of Mississauga geometry informs placement. Plan and photographic references are credited in sources.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: Studio JCI. Developer: EMBLEM. Reference photographs: Edward Skira and Tim MacDonald / UrbanToronto; Google Street View, April 2026.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Design: SG&M Architects Inc. (formerly Sirlin Giller & Malek Architects). Model creation: Daniel Sultan / Future Mississauga. Municipal baseline: City of Mississauga.",
+          "Model creation: Daniel Sultan / Future Mississauga. Municipal baseline: City of Mississauga.",
+          "275 Superior Boulevard photo reference: David Lasker/Cityscape Photography \u00b7 davidlaskerphotography.com",
+          "Riley Snelling",
+          "Earthscape Play"
+        ],
+        "renderTimestampUTC": "2026-11-02T05:47:28.458041+00:00",
+        "sourceDates": "Mixed; source data dates unchanged. Actual new render timestamp is separate.",
+        "comparisonState": "after"
+      },
+      "provenance": {
+        "sceneProof": {
+          "sha256": "2cd52c9092f815b09f5a148e0e8427d143b7e900d8356e9288d77ba974c3a27f"
+        },
+        "creditProof": {
+          "sha256": "0f30decebc185f23f4544b7d471b7149ebd0019cf640cdd15ab10c2a9f4921d5"
+        },
+        "layoutProof": {
+          "sha256": "6daa6d3234f80f382f1fb124cb465dc98f58e1d7fd219c17525f4d10e0bfa75f"
+        },
+        "packageScript": {
+          "sha256": "ba0a961b10b180c85fd87edb13510b2c07e8d1e3b413606bfd63668ab30e34f4"
+        },
+        "deliveryManifest": {
+          "sha256": "e0954821d4c0f52eec3279a68f7972f9e91161a9c6e6281d7eb68476c6b1bb36"
+        }
+      },
+      "displayMaster": {
+        "bytes": 2128073,
+        "sha256": "c14c5d4e0b5ef82366aee857f325e6c77a5baaf905b971afc5317f5ad1a2f1ee",
+        "dimensions": [
+          1800,
+          1100
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false,
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-native-2026-11-02/neighbourhood-fairview-after-clean-c14c5d4e0b5e.png"
+      },
+      "download": {
+        "bytes": 2159776,
+        "sha256": "0a949e92d332df8ef4b2491f3c1153e8f7caaa5ab4d561039f8a917d293fed25",
+        "dimensions": [
+          1800,
+          1271
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneWithAppendedCreditFooter",
+        "sceneDimensions": [
+          1800,
+          1100
+        ],
+        "sceneBounds": [
+          0,
+          0,
+          1800,
+          1100
+        ],
+        "footerBounds": [
+          0,
+          1100,
+          1800,
+          1271
+        ],
+        "sceneSourceSHA256": "c14c5d4e0b5ef82366aee857f325e6c77a5baaf905b971afc5317f5ad1a2f1ee",
+        "allScenePixelsExact": true,
+        "sceneCrop": false,
+        "sceneResize": false,
+        "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-native-2026-11-02/neighbourhood-fairview-after-download-0a949e92d332.png"
+      },
+      "responsivePreviews": [
+        {
+          "bytes": 202768,
+          "sha256": "004b19b397c3bb79cb7777193607410a90da673c44aa5128c244cdd42522d16d",
+          "dimensions": [
+            1200,
+            733
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "c14c5d4e0b5ef82366aee857f325e6c77a5baaf905b971afc5317f5ad1a2f1ee",
+          "url": "gallery/native-20261102/neighbourhood-fairview-after-scene-1200-004b19b397c3.avif"
+        },
+        {
+          "bytes": 320725,
+          "sha256": "879e937ecdeb763dc4c449a8b74cf62f0e22af6d4b9408579609a65e8cf90067",
+          "dimensions": [
+            1200,
+            733
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "c14c5d4e0b5ef82366aee857f325e6c77a5baaf905b971afc5317f5ad1a2f1ee",
+          "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-native-2026-11-02/neighbourhood-fairview-after-scene-1200-879e937ecdeb.jpg"
+        },
+        {
+          "bytes": 327537,
+          "sha256": "01c932f06ce6626bf1e75946b1e5bcb4e0f66e41753f2df2c8a706b695534488",
+          "dimensions": [
+            1800,
+            1100
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": false,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "c14c5d4e0b5ef82366aee857f325e6c77a5baaf905b971afc5317f5ad1a2f1ee",
+          "url": "gallery/native-20261102/neighbourhood-fairview-after-scene-1800-01c932f06ce6.avif"
+        },
+        {
+          "bytes": 578748,
+          "sha256": "d4a8500890bbffe39e2beb82691cad56aa86ac717c0c7a56ee043a85b9ce0e00",
+          "dimensions": [
+            1800,
+            1100
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": false,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "c14c5d4e0b5ef82366aee857f325e6c77a5baaf905b971afc5317f5ad1a2f1ee",
+          "url": "https://github.com/itsdanielsultan/future-mississauga/releases/download/pictures-native-2026-11-02/neighbourhood-fairview-after-scene-1800-d4a8500890bb.jpg"
+        }
+      ]
+    }
+  ],
+  "comparisonProofs": [
+    {
+      "url": "data/matched-pairs/fairview-neighbourhood-20261102-8a808803c386.json",
+      "sha256": "8a808803c3862fbf6676234423354bc298a8728d847e41ecb31c60191869ed82",
+      "proofID": "fm-fairview-pilot-d85914f94b931b996c6871c1"
+    }
+  ]
+}

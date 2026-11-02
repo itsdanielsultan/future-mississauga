@@ -98,7 +98,7 @@ function parseCSV(text){
 }
 test('CSV preserves every original record and field while adding only reviewed lifecycle columns',()=>{
  const old=parseCSV(execFileSync('git',['show',base+':public/downloads/project-register.csv'],{encoding:'utf8',maxBuffer:16*1024*1024}));
- const current=parseCSV(fs.readFileSync(new URL('../public/downloads/project-register.csv',import.meta.url),'utf8'));
+ const current=parseCSV(restore26Register(fs.readFileSync(new URL('../public/downloads/project-register.csv',import.meta.url),'utf8')));
  const added=['lifecycle','approvalStage','lifecycleReviewedOn','lifecycleNote'];assert.deepEqual(current.headers,[...old.headers,...added]);
  const unchangedFields=r=>Object.fromEntries(old.headers.filter(k=>(!mcityContentIds.has(r.id)||!['status','statusDate','storeys','geometryCoverage','modelCaveat','sources'].includes(k))&&(!['ninth-6344','longview-44-45'].includes(r.id)||k!=='status')&&(!acceptedModelProjectIds.has(r.id)||!['modelCaveat','geometryCoverage'].includes(k))).map(k=>[k,r[k]]));
  assert.deepEqual(current.rows.map(unchangedFields),old.rows.map(unchangedFields));
@@ -115,7 +115,7 @@ test('accuracy table current status matches project metadata while model notes r
   assert(cells[1].includes(snapshot.taxonomy[project(id).lifecycle]),id);
   if(acceptedModelProjectIds.has(id)){
    assert.equal(cells[0],oldCells[0],id);assert.equal(cells[2],oldCells[2].replace('No separate refinement asset registered','Supplemental model registered'),id);
-   const concise={'mcity-3':['±15 m uncertainty','City’s lower building geometry','mechanical steel and cavities are not modelled'],'mcity-4':['March 2020','215.65 m','Spring 2026','level 41','level 26'],'mcity-5':['36-storey','building height is unverified','not a measured construction stage'],'port-credit-50-high':['December 2025 drawings','facade frames and roof arches','Frame depths, glazing and finishes are approximate','future view shows the planned building','dated City model retains the older building','extent of demolition is not mapped']}[id];
+   const concise={'mcity-1-2':['CORE’s seven floor-plate outlines guide the exterior. Added glazing and bands improve selected podium surfaces.','Floor phase, heights and podium details remain approximate. M1’s low faceted pavilion is coarse or absent; this is not a measured as-built model.'],'mcity-3':['±15 m uncertainty','City’s lower building geometry','mechanical steel and cavities are not modelled'],'mcity-4':['March 2020','215.65 m','Spring 2026','level 41','level 26'],'mcity-5':['36-storey','building height is unverified','not a measured construction stage'],'port-credit-50-high':['December 2025 drawings','facade frames and roof arches','Frame depths, glazing and finishes are approximate','future view shows the planned building','dated City model retains the older building','extent of demolition is not mapped']}[id];
    if(concise){for(const text of concise)assert(cells[3].includes(text),id+': '+text);}else{assert(cells[3].includes(project(id).geometryCoverage),id);assert(cells[3].includes(project(id).modelCaveat),id);}
   }else assert.deepEqual([cells[0],...cells.slice(2)],[oldCells[0],...oldCells.slice(2)],id);
  }
@@ -145,3 +145,4 @@ test('elapsed appeal labels are current while their prior wording is preserved a
  const r=asset('ninth-6344-three-plan-envelopes'),before=prior('refinement-models.json').assets.find(x=>x.id===r.id);
  assert.equal(r.displayStatus,'Council passed; appeal outcome unverified');assert.deepEqual(r.displayStatusHistory,[{displayStatus:before.displayStatus,supersededOn:'2026-11-01'}]);
 });
+import {restore26Register} from './park26-scope.mjs';

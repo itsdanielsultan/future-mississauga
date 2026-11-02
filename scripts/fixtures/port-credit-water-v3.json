@@ -1,0 +1,776 @@
+{
+  "purpose": "Exact accepted evidence metadata for unit tests. URL values are synthetic test-only paths; no public assets or manifests are written.",
+  "rows": [
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "identity": "wide/port-credit-existing.png",
+      "title": "Port Credit",
+      "scenario": "existing",
+      "nativeSceneDimensions": [
+        6144,
+        3840
+      ],
+      "sourceSceneSHA256": "dae345f5aed865ba02ab9e3c0da2004e1f2eb6fdd52a478d10652d8ea442689b",
+      "renderTimestampUTC": "2026-11-02T03:45:32.876624+00:00",
+      "sourceFreezeState": "FINAL_FROZEN",
+      "historicalURLsRebound": false,
+      "caption": {
+        "title": "Port Credit",
+        "area": "Port Credit",
+        "creator": "Daniel Sultan",
+        "scenario": "existing",
+        "geographicScope": "named_district_scene",
+        "cityCredit": "City of Mississauga \u00b7 Ontario data",
+        "openStreetMap": true,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "requiredModelCredits": [],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "\u00a9 OpenStreetMap contributors. https://www.openstreetmap.org/copyright",
+          "City of Mississauga geographic data, used under the City of Mississauga Terms of Use. \u00a9 OpenStreetMap contributors, ODbL. Mixed-date Ontario DTM terrain.",
+          "City of Mississauga planimetric geographic data."
+        ],
+        "renderTimestampUTC": "2026-11-02T03:45:32.876624+00:00",
+        "sourceDates": "Mixed; source data dates unchanged. Actual new render timestamp is separate.",
+        "placement": "One responsive HTML caption adjacent to the clean picture, including the modal. Mandatory model credits remain visible."
+      },
+      "renderRepresentation": {
+        "kind": "source-bound-water-underlay-priority-clip",
+        "adapterProofSHA256": "8f714e77fb556382b684807d8bc2f5c547164d5ebc0406d5df93adbd93989db1",
+        "clipProofSHA256": "ae566f778b2b70c274115c89d89d6e14bf4d419cbddfd38e54aba238a9ca8945",
+        "originalNativeSourceSHA256": "dae345f5aed865ba02ab9e3c0da2004e1f2eb6fdd52a478d10652d8ea442689b",
+        "derivedPackedSceneSHA256": "67173c15c884803080aa7192a48143a4f9485be8cf2bf7e5b2c592738ee0f616",
+        "derivedUnderlayGeometryEdited": true,
+        "originalSourceFilesUnchanged": true,
+        "waterUnionSymmetricDifferenceM2": 0.013554037631327346,
+        "maximumNewVertexFloat32DisplacementMetres": 0.00024296467781090034,
+        "shadowRestoredFromFrozenSource": true,
+        "shadowSourceCodeSHA256": "6af13061c9a9b509443dfc69631cb3470f678866c450d074dd5bb838cd0ac4bf",
+        "qualification": "Only derived water underlay representation is changed. Float32 seam differences remain measured; no mathematically exact union or unchanged native-render claim."
+      },
+      "provenance": {
+        "deliveryManifest": {
+          "sha256": "b0fb4c2d649d680cc5831afb1ec7b50fe2a3b41f78260d79717a5b3a725942ad"
+        }
+      },
+      "displayMaster": {
+        "bytes": 26919999,
+        "sha256": "89236ddc73e8a73b36b84664a78301a783e6d7e5e640e31e0b542b3d963a9f2c",
+        "dimensions": [
+          6144,
+          3840
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false,
+        "url": "gallery/test-only/wide-port-credit-existing.png-89236ddc73e8.png"
+      },
+      "download": {
+        "bytes": 27005868,
+        "sha256": "ceea66f34ba5520419f8bc46d975232a464321fa8cf86ae8e2e9290b159dc80e",
+        "dimensions": [
+          6144,
+          4415
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneWithAppendedCreditFooter",
+        "sceneDimensions": [
+          6144,
+          3840
+        ],
+        "sceneBounds": [
+          0,
+          0,
+          6144,
+          3840
+        ],
+        "footerBounds": [
+          0,
+          3840,
+          6144,
+          4415
+        ],
+        "sceneSourceSHA256": "89236ddc73e8a73b36b84664a78301a783e6d7e5e640e31e0b542b3d963a9f2c",
+        "allScenePixelsExact": true,
+        "sceneCrop": false,
+        "sceneResize": false,
+        "url": "gallery/test-only/wide-port-credit-existing.png-ceea66f34ba5.png"
+      },
+      "responsivePreviews": [
+        {
+          "bytes": 471376,
+          "sha256": "3e34677f074f56d4cc9cb1c8b521810fc5cbc822d6f5992893b3dcdd2ae86223",
+          "role": "responsivePreview",
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "89236ddc73e8a73b36b84664a78301a783e6d7e5e640e31e0b542b3d963a9f2c",
+          "url": "gallery/test-only/wide-port-credit-existing.png-3e34677f074f.avif"
+        },
+        {
+          "bytes": 564704,
+          "sha256": "0d19e39da8b40229bd9598c558646c2fc8149ecaa69b71d16c6364ebd6f74217",
+          "role": "responsivePreview",
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "89236ddc73e8a73b36b84664a78301a783e6d7e5e640e31e0b542b3d963a9f2c",
+          "url": "gallery/test-only/wide-port-credit-existing.png-0d19e39da8b4.jpg"
+        },
+        {
+          "bytes": 1944792,
+          "sha256": "35a81436571b32d22116ffa5586af9f563e737d03a8b093241375faeff59aff0",
+          "role": "responsivePreview",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "89236ddc73e8a73b36b84664a78301a783e6d7e5e640e31e0b542b3d963a9f2c",
+          "url": "gallery/test-only/wide-port-credit-existing.png-35a81436571b.avif"
+        },
+        {
+          "bytes": 2803932,
+          "sha256": "2c7d7aa1de27730160997e9fe531381a3a3706d31606601c9dab2884436691a3",
+          "role": "responsivePreview",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "89236ddc73e8a73b36b84664a78301a783e6d7e5e640e31e0b542b3d963a9f2c",
+          "url": "gallery/test-only/wide-port-credit-existing.png-2c7d7aa1de27.jpg"
+        }
+      ]
+    },
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "identity": "wide/port-credit-future.png",
+      "title": "Port Credit",
+      "scenario": "future",
+      "nativeSceneDimensions": [
+        6144,
+        3840
+      ],
+      "sourceSceneSHA256": "c53c5ed09c6dfdce0cd3d48179157dfc372f8a5f888844f0a550db1b6bffc40c",
+      "renderTimestampUTC": "2026-11-02T03:48:55.300623+00:00",
+      "sourceFreezeState": "FINAL_FROZEN",
+      "historicalURLsRebound": false,
+      "caption": {
+        "title": "Port Credit",
+        "area": "Port Credit",
+        "creator": "Daniel Sultan",
+        "scenario": "future",
+        "geographicScope": "named_district_scene",
+        "cityCredit": "City of Mississauga \u00b7 Ontario data",
+        "openStreetMap": true,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "requiredModelCredits": [],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "\u00a9 OpenStreetMap contributors. https://www.openstreetmap.org/copyright",
+          "Design reference: Kohn Partnership Architects / City of Mississauga. Independent authored model: Daniel Sultan / Future Mississauga.",
+          "Architectural design: Chamberlain Architect Services. Model interpretation: Daniel Sultan / Future Mississauga.",
+          "https://www.ontario.ca/page/open-government-licence-ontario",
+          "Contains information licensed under the Open Government Licence \u2013 Ontario.",
+          "City of Mississauga geographic data, used under the City of Mississauga Terms of Use. \u00a9 OpenStreetMap contributors, ODbL. Mixed-date Ontario DTM terrain.",
+          "City of Mississauga planimetric geographic data."
+        ],
+        "renderTimestampUTC": "2026-11-02T03:48:55.300623+00:00",
+        "sourceDates": "Mixed; source data dates unchanged. Actual new render timestamp is separate.",
+        "placement": "One responsive HTML caption adjacent to the clean picture, including the modal. Mandatory model credits remain visible."
+      },
+      "renderRepresentation": {
+        "kind": "source-bound-water-underlay-priority-clip",
+        "adapterProofSHA256": "82ed97e6d9d84dc3c41787cc80e264f3991d10fc556104f67d6f092f8c0c1c9a",
+        "clipProofSHA256": "ae566f778b2b70c274115c89d89d6e14bf4d419cbddfd38e54aba238a9ca8945",
+        "originalNativeSourceSHA256": "c53c5ed09c6dfdce0cd3d48179157dfc372f8a5f888844f0a550db1b6bffc40c",
+        "derivedPackedSceneSHA256": "9c3cd86023ad034a78d6e3c2e6789ad1a32371e36690dbc84b92d2683767ee5f",
+        "derivedUnderlayGeometryEdited": true,
+        "originalSourceFilesUnchanged": true,
+        "waterUnionSymmetricDifferenceM2": 0.013554037631327346,
+        "maximumNewVertexFloat32DisplacementMetres": 0.00024296467781090034,
+        "shadowRestoredFromFrozenSource": true,
+        "shadowSourceCodeSHA256": "6af13061c9a9b509443dfc69631cb3470f678866c450d074dd5bb838cd0ac4bf",
+        "qualification": "Only derived water underlay representation is changed. Float32 seam differences remain measured; no mathematically exact union or unchanged native-render claim."
+      },
+      "provenance": {
+        "deliveryManifest": {
+          "sha256": "c0f79f1f1f3573f3c3e9cf65d2ffeae1588cc009c398be792593c44b84c87a58"
+        }
+      },
+      "displayMaster": {
+        "bytes": 26977884,
+        "sha256": "0d2100870771f18b70f52d87c3bb7eac54e9a43272415dde03da624c1364da65",
+        "dimensions": [
+          6144,
+          3840
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false,
+        "url": "gallery/test-only/wide-port-credit-future.png-0d2100870771.png"
+      },
+      "download": {
+        "bytes": 27064796,
+        "sha256": "4da98dfab596b8b65242cf289a1412b9fb48329c187b6f055cbface11e04aeaf",
+        "dimensions": [
+          6144,
+          4415
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneWithAppendedCreditFooter",
+        "sceneDimensions": [
+          6144,
+          3840
+        ],
+        "sceneBounds": [
+          0,
+          0,
+          6144,
+          3840
+        ],
+        "footerBounds": [
+          0,
+          3840,
+          6144,
+          4415
+        ],
+        "sceneSourceSHA256": "0d2100870771f18b70f52d87c3bb7eac54e9a43272415dde03da624c1364da65",
+        "allScenePixelsExact": true,
+        "sceneCrop": false,
+        "sceneResize": false,
+        "url": "gallery/test-only/wide-port-credit-future.png-4da98dfab596.png"
+      },
+      "responsivePreviews": [
+        {
+          "bytes": 480063,
+          "sha256": "31f7162c1411944fb092079f26dc1aefb28ad44ce284e290e723273234234c7e",
+          "role": "responsivePreview",
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "0d2100870771f18b70f52d87c3bb7eac54e9a43272415dde03da624c1364da65",
+          "url": "gallery/test-only/wide-port-credit-future.png-31f7162c1411.avif"
+        },
+        {
+          "bytes": 574422,
+          "sha256": "212584eed5a286d73a97934bcfb6f99b8431482ba81604bec210481b27988842",
+          "role": "responsivePreview",
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "0d2100870771f18b70f52d87c3bb7eac54e9a43272415dde03da624c1364da65",
+          "url": "gallery/test-only/wide-port-credit-future.png-212584eed5a2.jpg"
+        },
+        {
+          "bytes": 1970067,
+          "sha256": "69ec961f8334d4274fc3a952c4d53256f96a5fc7fef665c1adc92cd6fdf73c7f",
+          "role": "responsivePreview",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "0d2100870771f18b70f52d87c3bb7eac54e9a43272415dde03da624c1364da65",
+          "url": "gallery/test-only/wide-port-credit-future.png-69ec961f8334.avif"
+        },
+        {
+          "bytes": 2837782,
+          "sha256": "a438d95e08d7bd3729ba0daca61343aa1ef3cf00c3f28c9278c1ccc4568b0753",
+          "role": "responsivePreview",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "0d2100870771f18b70f52d87c3bb7eac54e9a43272415dde03da624c1364da65",
+          "url": "gallery/test-only/wide-port-credit-future.png-a438d95e08d7.jpg"
+        }
+      ]
+    }
+  ],
+  "proof": {
+    "schema": "future-mississauga-matched-view-proof/v2",
+    "state": "VERIFIED_MATCHED_FRAMING_EQUAL_NATIVE_DIMENSIONS",
+    "members": [
+      {
+        "identity": "wide/port-credit-existing.png",
+        "scenario": "existing",
+        "district": "port-credit",
+        "geographicScope": "named_district_scene",
+        "cleanPNG": {
+          "sha256": "89236ddc73e8a73b36b84664a78301a783e6d7e5e640e31e0b542b3d963a9f2c",
+          "bytes": 26919999,
+          "dimensions": [
+            6144,
+            3840
+          ],
+          "mimeType": "image/png",
+          "nativePixelsNoUpscaling": true,
+          "crop": false,
+          "captionBaked": false
+        },
+        "responsiveImages": [
+          {
+            "file": "scene-1200.avif",
+            "sha256": "3e34677f074f56d4cc9cb1c8b521810fc5cbc822d6f5992893b3dcdd2ae86223",
+            "bytes": 471376,
+            "dimensions": [
+              1200,
+              750
+            ],
+            "mimeType": "image/avif",
+            "resized": true,
+            "lossyEncoding": true,
+            "crop": false
+          },
+          {
+            "file": "scene-1200.jpg",
+            "sha256": "0d19e39da8b40229bd9598c558646c2fc8149ecaa69b71d16c6364ebd6f74217",
+            "bytes": 564704,
+            "dimensions": [
+              1200,
+              750
+            ],
+            "mimeType": "image/jpeg",
+            "resized": true,
+            "lossyEncoding": true,
+            "crop": false
+          },
+          {
+            "file": "scene-3200.avif",
+            "sha256": "35a81436571b32d22116ffa5586af9f563e737d03a8b093241375faeff59aff0",
+            "bytes": 1944792,
+            "dimensions": [
+              3200,
+              2000
+            ],
+            "mimeType": "image/avif",
+            "resized": true,
+            "lossyEncoding": true,
+            "crop": false
+          },
+          {
+            "file": "scene-3200.jpg",
+            "sha256": "2c7d7aa1de27730160997e9fe531381a3a3706d31606601c9dab2884436691a3",
+            "bytes": 2803932,
+            "dimensions": [
+              3200,
+              2000
+            ],
+            "mimeType": "image/jpeg",
+            "resized": true,
+            "lossyEncoding": true,
+            "crop": false
+          }
+        ],
+        "sourceSceneSHA256": "dae345f5aed865ba02ab9e3c0da2004e1f2eb6fdd52a478d10652d8ea442689b",
+        "renderStartedUTC": "2026-11-02T03:45:32.876624+00:00",
+        "renderCompletedUTC": "2026-11-02T03:46:36.780873+00:00",
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison."
+        ],
+        "evidenceSHA256": {
+          "deliveryManifest": "b0fb4c2d649d680cc5831afb1ec7b50fe2a3b41f78260d79717a5b3a725942ad",
+          "sceneProof": "c9977e601da10d316e203a25cb34b64f5d4cd5abd18a65889e8dc07906c56ec7",
+          "renderProof": "6a7f9fa9229b7fe7a6995435e87efb9fe48bff78ee5e59ac14c0a867ea794641",
+          "importProof": "03001ac6ed9f494ab452c7b16c6e3b675d91731498d2629312b4cc93f978868d",
+          "nativeInventory": "9de687afde151de04ef55d58a8d4e21cc309d26f37ebfe3637f6ebae42d7801e",
+          "rendererSource": "499f6e3c7fd678de4f61af5044fb049cfbcf26b18c2fbff1bd92e7ffbbc2adb6",
+          "compositionProof": "e64a627828911ee4114cd49abe812870c027247b5d50718bd0fdcc9d2ac26265",
+          "originalRGBA": "221dc7f2e3c367fb04fcc6c6150fa36918b94693fb54533d286264bc38b0956d"
+        },
+        "renderRepresentation": {
+          "kind": "source-bound-water-underlay-priority-clip",
+          "adapterProofSHA256": "8f714e77fb556382b684807d8bc2f5c547164d5ebc0406d5df93adbd93989db1",
+          "originalNativeImportSHA256": "2ccd6e3a35cdbe7ca11b8420138e62cbbf2a23dada36112503a1e443b41c97db",
+          "originalPackedSceneSHA256": "33288e1d30c18c2ef202850e55f79b4cf5b74fb446b2f805cc67d9b3317c2889",
+          "derivedPackedSceneSHA256": "67173c15c884803080aa7192a48143a4f9485be8cf2bf7e5b2c592738ee0f616",
+          "clipProofSHA256": "ae566f778b2b70c274115c89d89d6e14bf4d419cbddfd38e54aba238a9ca8945",
+          "independentAuditSHA256": "d413df9c1dd8cfef66a613c2d27d9c697452bd7210f4fb2411ff9858d2498655",
+          "originalSourceFilesUnchanged": true,
+          "derivedUnderlayGeometryEdited": true,
+          "districtWaterAndAllOtherGeometryPreserved": true,
+          "waterElevationMapY": 5,
+          "materialsAndTexturesPreserved": true,
+          "shadowRestoration": {
+            "object": "LakeOntarioUnified",
+            "visibleShadowBefore": true,
+            "visibleShadowAfter": false,
+            "frozenSourceCodeSHA256": "6af13061c9a9b509443dfc69631cb3470f678866c450d074dd5bb838cd0ac4bf",
+            "sourceLines": [
+              35,
+              38
+            ],
+            "nativeUnderlayRowSHA256": "1f8a9cd3cfb8512ea14fdf5274fe02e904b4f7c0be205cfb952cb077ca1a866d"
+          },
+          "precision": {
+            "removedUnionAreaM2": 0.013544493147797824,
+            "addedUnionAreaM2": 9.544483529522196e-06,
+            "totalSymmetricDifferenceM2": 0.013554037631327346,
+            "rawAllBoundariesHausdorffMetres": 400.00008804501,
+            "exteriorRingHausdorffMetres": 1.291920459392896e-05,
+            "maximumNewVertexFloat32DisplacementMetres": 0.00024296467781090034
+          },
+          "changedAreaSourceEdgeBandMetres": 0.00025,
+          "qualification": "The original source union is preserved only within measured float32 rounding. Hairline seam topology changes make raw boundary Hausdorff unsuitable as a shoreline-displacement claim. Primary district shoreline geometry remains exact. No mathematically exact union claim."
+        }
+      },
+      {
+        "identity": "wide/port-credit-future.png",
+        "scenario": "future",
+        "district": "port-credit",
+        "geographicScope": "named_district_scene",
+        "cleanPNG": {
+          "sha256": "0d2100870771f18b70f52d87c3bb7eac54e9a43272415dde03da624c1364da65",
+          "bytes": 26977884,
+          "dimensions": [
+            6144,
+            3840
+          ],
+          "mimeType": "image/png",
+          "nativePixelsNoUpscaling": true,
+          "crop": false,
+          "captionBaked": false
+        },
+        "responsiveImages": [
+          {
+            "file": "scene-1200.avif",
+            "sha256": "31f7162c1411944fb092079f26dc1aefb28ad44ce284e290e723273234234c7e",
+            "bytes": 480063,
+            "dimensions": [
+              1200,
+              750
+            ],
+            "mimeType": "image/avif",
+            "resized": true,
+            "lossyEncoding": true,
+            "crop": false
+          },
+          {
+            "file": "scene-1200.jpg",
+            "sha256": "212584eed5a286d73a97934bcfb6f99b8431482ba81604bec210481b27988842",
+            "bytes": 574422,
+            "dimensions": [
+              1200,
+              750
+            ],
+            "mimeType": "image/jpeg",
+            "resized": true,
+            "lossyEncoding": true,
+            "crop": false
+          },
+          {
+            "file": "scene-3200.avif",
+            "sha256": "69ec961f8334d4274fc3a952c4d53256f96a5fc7fef665c1adc92cd6fdf73c7f",
+            "bytes": 1970067,
+            "dimensions": [
+              3200,
+              2000
+            ],
+            "mimeType": "image/avif",
+            "resized": true,
+            "lossyEncoding": true,
+            "crop": false
+          },
+          {
+            "file": "scene-3200.jpg",
+            "sha256": "a438d95e08d7bd3729ba0daca61343aa1ef3cf00c3f28c9278c1ccc4568b0753",
+            "bytes": 2837782,
+            "dimensions": [
+              3200,
+              2000
+            ],
+            "mimeType": "image/jpeg",
+            "resized": true,
+            "lossyEncoding": true,
+            "crop": false
+          }
+        ],
+        "sourceSceneSHA256": "c53c5ed09c6dfdce0cd3d48179157dfc372f8a5f888844f0a550db1b6bffc40c",
+        "renderStartedUTC": "2026-11-02T03:48:55.300623+00:00",
+        "renderCompletedUTC": "2026-11-02T03:50:07.863570+00:00",
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison."
+        ],
+        "evidenceSHA256": {
+          "deliveryManifest": "c0f79f1f1f3573f3c3e9cf65d2ffeae1588cc009c398be792593c44b84c87a58",
+          "sceneProof": "c8f1377024dcd0b92320d939d3d501e58a17187cb0fa8e170da074d7079d412a",
+          "renderProof": "feb3a94cc3152eef038df8a0c500f9f8eb907334b9274f74d88eb8e86c33951a",
+          "importProof": "a7bb2d45aecb94441dcb6dea65d997f39a4476bd74b0d06d0c237e0efa78ec07",
+          "nativeInventory": "92dc5d0b99fc9c0f24f1891231aa877d74f0e65efdbe760c5fc4f6721e160164",
+          "rendererSource": "499f6e3c7fd678de4f61af5044fb049cfbcf26b18c2fbff1bd92e7ffbbc2adb6",
+          "compositionProof": "a40189e9d1c9b604b56971d82d062a1568eec3d26348f3bafbcef6a00777696c",
+          "originalRGBA": "ec25e2f2c814fcbcba5b7f3cb57a4161429a502ac7d6e5d38047a4e772491602"
+        },
+        "renderRepresentation": {
+          "kind": "source-bound-water-underlay-priority-clip",
+          "adapterProofSHA256": "82ed97e6d9d84dc3c41787cc80e264f3991d10fc556104f67d6f092f8c0c1c9a",
+          "originalNativeImportSHA256": "459dc5924b0882efa6a65e00ce00b3fd1060e57a651d73398f92ad739bd10e60",
+          "originalPackedSceneSHA256": "678aace5a40a792e08b5e20263f9c10a3f0b8311934c23fa04284bb7706ace00",
+          "derivedPackedSceneSHA256": "9c3cd86023ad034a78d6e3c2e6789ad1a32371e36690dbc84b92d2683767ee5f",
+          "clipProofSHA256": "ae566f778b2b70c274115c89d89d6e14bf4d419cbddfd38e54aba238a9ca8945",
+          "independentAuditSHA256": "d413df9c1dd8cfef66a613c2d27d9c697452bd7210f4fb2411ff9858d2498655",
+          "originalSourceFilesUnchanged": true,
+          "derivedUnderlayGeometryEdited": true,
+          "districtWaterAndAllOtherGeometryPreserved": true,
+          "waterElevationMapY": 5,
+          "materialsAndTexturesPreserved": true,
+          "shadowRestoration": {
+            "object": "LakeOntarioUnified",
+            "visibleShadowBefore": true,
+            "visibleShadowAfter": false,
+            "frozenSourceCodeSHA256": "6af13061c9a9b509443dfc69631cb3470f678866c450d074dd5bb838cd0ac4bf",
+            "sourceLines": [
+              35,
+              38
+            ],
+            "nativeUnderlayRowSHA256": "1f8a9cd3cfb8512ea14fdf5274fe02e904b4f7c0be205cfb952cb077ca1a866d"
+          },
+          "precision": {
+            "removedUnionAreaM2": 0.013544493147797824,
+            "addedUnionAreaM2": 9.544483529522196e-06,
+            "totalSymmetricDifferenceM2": 0.013554037631327346,
+            "rawAllBoundariesHausdorffMetres": 400.00008804501,
+            "exteriorRingHausdorffMetres": 1.291920459392896e-05,
+            "maximumNewVertexFloat32DisplacementMetres": 0.00024296467781090034
+          },
+          "changedAreaSourceEdgeBandMetres": 0.00025,
+          "qualification": "The original source union is preserved only within measured float32 rounding. Hairline seam topology changes make raw boundary Hausdorff unsuitable as a shoreline-displacement claim. Primary district shoreline geometry remains exact. No mathematically exact union claim."
+        }
+      }
+    ],
+    "shared": {
+      "camera": {
+        "location": [
+          1750.0,
+          -4850.0,
+          2140.0
+        ],
+        "rotationEuler": [
+          1.0131158828735352,
+          -2.5438353645768075e-08,
+          1.3405768871307373
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2250.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "lightingAndColourManagement": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "aspectRatio": {
+        "numerator": 8,
+        "denominator": 5
+      },
+      "pixelAspect": [
+        1,
+        1
+      ],
+      "rendererSettings": {
+        "s.render.pixel_aspect_x": 1,
+        "s.render.pixel_aspect_y": 1,
+        "s.render.resolution_percentage": 100,
+        "s.render.use_border": false,
+        "s.render.use_crop_to_border": false,
+        "s.render.engine": "CYCLES",
+        "s.cycles.use_denoising": true,
+        "s.cycles.use_adaptive_sampling": true,
+        "s.cycles.adaptive_threshold": 0.022
+      },
+      "samples": 96,
+      "blenderVersion": "5.2.2 LTS",
+      "representationPolicy": {
+        "kind": "source-bound-water-underlay-priority-clip",
+        "clipProofSHA256": "ae566f778b2b70c274115c89d89d6e14bf4d419cbddfd38e54aba238a9ca8945",
+        "shadowRestoration": {
+          "object": "LakeOntarioUnified",
+          "visibleShadowBefore": true,
+          "visibleShadowAfter": false,
+          "frozenSourceCodeSHA256": "6af13061c9a9b509443dfc69631cb3470f678866c450d074dd5bb838cd0ac4bf"
+        }
+      },
+      "sourceFreeze": {
+        "state": "FINAL_FROZEN",
+        "frozenUTC": "2026-11-02T01:52:12.261407+00:00",
+        "threeRevision": "186",
+        "sourceFilesManifestSHA256": "55656f820dd5a3b4197aca3c3ab6db6d0828a6ede8d8d215f78e1710df1a67ca",
+        "completeRevisionCanonicalJSON_SHA256": "6fe3371308e3d050e8a75df3c1123e509f5f8d2350cf0999fdc58e6c3e9be367"
+      },
+      "north": {
+        "screenUnitRightDown": [
+          0.9923931088168323,
+          -0.12310937240057294
+        ],
+        "bearingClockwiseFromScreenUpDegrees": 82.92841250099252,
+        "method": "Actual projection of world north at image-centre ray; lens shift, sensor fit, pixel frame accounted for",
+        "worldNorthBlender": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    "checks": {
+      "cameraParametersExactlyEqual": true,
+      "lightingParametersExactlyEqual": true,
+      "sourceFreezeExactlyEqual": true,
+      "aspectRatioExactlyEqual": true,
+      "normalizedCameraFramingEqual": true,
+      "nativePixelDimensionsEqual": true,
+      "separateActualNativeScenarioExportsVerified": true,
+      "sameDeclaredRepresentationPolicy": true,
+      "renderedRepresentationAdapterDisclosed": true,
+      "cleanPNGHashesAndDimensionsVerified": true,
+      "cleanOriginalFrameCompositionRGBVerified": true,
+      "nativeMastersResizedOrCroppedByThisReview": false
+    },
+    "commonResponsiveFormats": [
+      {
+        "dimensions": [
+          1200,
+          750
+        ],
+        "mimeType": "image/avif",
+        "memberSHA256": [
+          "3e34677f074f56d4cc9cb1c8b521810fc5cbc822d6f5992893b3dcdd2ae86223",
+          "31f7162c1411944fb092079f26dc1aefb28ad44ce284e290e723273234234c7e"
+        ],
+        "equalPixelDimensions": true,
+        "identicalImagePixelsClaimed": false
+      },
+      {
+        "dimensions": [
+          1200,
+          750
+        ],
+        "mimeType": "image/jpeg",
+        "memberSHA256": [
+          "0d19e39da8b40229bd9598c558646c2fc8149ecaa69b71d16c6364ebd6f74217",
+          "212584eed5a286d73a97934bcfb6f99b8431482ba81604bec210481b27988842"
+        ],
+        "equalPixelDimensions": true,
+        "identicalImagePixelsClaimed": false
+      },
+      {
+        "dimensions": [
+          3200,
+          2000
+        ],
+        "mimeType": "image/avif",
+        "memberSHA256": [
+          "35a81436571b32d22116ffa5586af9f563e737d03a8b093241375faeff59aff0",
+          "69ec961f8334d4274fc3a952c4d53256f96a5fc7fef665c1adc92cd6fdf73c7f"
+        ],
+        "equalPixelDimensions": true,
+        "identicalImagePixelsClaimed": false
+      },
+      {
+        "dimensions": [
+          3200,
+          2000
+        ],
+        "mimeType": "image/jpeg",
+        "memberSHA256": [
+          "2c7d7aa1de27730160997e9fe531381a3a3706d31606601c9dab2884436691a3",
+          "a438d95e08d7bd3729ba0daca61343aa1ef3cf00c3f28c9278c1ccc4568b0753"
+        ],
+        "equalPixelDimensions": true,
+        "identicalImagePixelsClaimed": false
+      }
+    ],
+    "qualification": [
+      "Matched normalized framing follows from exact camera parameters, identical image aspect and square pixels. It is not a claim that scenario image pixels are identical.",
+      "Native dimensions are listed separately for each image. Equal-size responsive images are resized, lossy derivatives, not equal-resolution native masters.",
+      "The proof verifies stored render parameters and the image/proof hash chain. It is not an independent geometry accuracy, visual likeness, source-rights or publication approval.",
+      "Scene geometry and source dates may differ by scenario. A common frozen application source does not mean identical scene contents.",
+      "When a water representation adapter is present, each member explicitly binds its original native import, derived packed scene, measured precision limits and separate source-supported shadow restoration. This is not a claim of an unmodified native render."
+    ],
+    "generator": {
+      "file": "generate_matched_pair_proof_v2.py",
+      "sha256": "42a90603130eb8f00f96802ebaa80d9da977cf5a05cb64fedb90e1c737b73c7d",
+      "adapterValidatorSHA256": "2bcabbbd89f8b528df83d4cf92037a0c07b9bc0875625000e176c21572fe753d"
+    },
+    "proofID": "fm-matched-view-140d4fbf29dd9feca365b198"
+  },
+  "proofSHA256": "3272ea8d98829893bccad2ec8f30bc322c091f3f6b9adf0f7fd07bdeb11c1446"
+}

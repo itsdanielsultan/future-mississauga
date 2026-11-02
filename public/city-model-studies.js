@@ -35,8 +35,7 @@ export function presentCityStudyProjects(projects){
  for(const project of projects){
   if(project.id==='mcity-1-2'){
    project.localOptional=false;project.studyActionLabel='Show on map';
-   project.geometryCoverage='Approximate completed exteriors, M City Rev03. The City source geometry remains available if the detailed models cannot load.';
-   project.modelCaveat=project.modelCaveat?.replace('Optional Rev02 exterior studies','Rev03 exterior studies');
+   project.geometryCoverage='Approximate completed exteriors with source-traced floor plates and selected podium surfaces.';
   }else if(project.id==='avia'){
    project.localReview=true;
    project.geometryCoverage='Approximate completed exteriors and shared podium, Avia Rev02, registered to the City source model.';

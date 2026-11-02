@@ -20,7 +20,7 @@
     return button;
   }
   function start() {
-    import('./gallery.js?v=20261101-media2').then(() => {
+    import('./gallery.js?v=20261102-coherent1').then(() => {
       const button = finish();
       if (button?.isConnected) button.click();
     }).catch(() => {

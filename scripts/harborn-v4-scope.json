@@ -1,0 +1,155 @@
+{
+  "state": "PRIVATE_ONLY_CONTACT_ACCEPTANCE_PENDING",
+  "id": "harborn-50-60-current-plan",
+  "oldValues": {
+    "url": "models/refinement/harborn-50-60-current-plan.glb",
+    "preserveMaterials": false,
+    "modelQuality": "Municipalparcel-registered architecturalplan-derived schematic envelope",
+    "modelCaveat": "Received proposal for twelve townhomes; approval and construction have not been established. The current A100 site plan shows seven homes in Building A and five in B; the separate statistics sheet lists thirteen and is inconsistent, so that count was not used. A201 supplies the roof and grade elevations. Main floorplates and mansard roofs are included; windows, dormers, porches, stairs, railings and garage details are omitted. The roof inset is a schematic interpretation. Registration follows City parcel corners, with approximately 1 m horizontal and vertical working uncertainty, rather than certified survey accuracy.",
+    "bounds": [
+      [
+        -2193.8583984375,
+        28.17322540283203,
+        2069.474853515625
+      ],
+      [
+        -2137.620361328125,
+        41.47999954223633,
+        2118.9072265625
+      ]
+    ],
+    "bytes": 3668,
+    "sha256": "478f0825d4c1b57127959682a75405065ac2917665dfce7ff69c1c424320b622",
+    "meshNodes": 4,
+    "triangles": 80,
+    "qa": {
+      "glbReopened": true,
+      "finite": true,
+      "allWatertight": true,
+      "allPositiveVolume": true,
+      "belowOwnGradeVertices": 0,
+      "bounds": [
+        [
+          -2193.8583984375,
+          29.059999465942383,
+          2069.474853515625
+        ],
+        [
+          -2137.620361328125,
+          41.47999954223633,
+          2118.9072265625
+        ]
+      ],
+      "count": 12,
+      "blocks": [
+        7,
+        5
+      ],
+      "controlResidualM": [
+        0.17409957555428296,
+        0.14513710377040048,
+        0.12351577323906951,
+        0.07348854238251186
+      ],
+      "maxControlResidualM": 0.17409957555428296,
+      "metresPerPixel": 0.10678435554289359,
+      "replacementObjectIds": [
+        46903,
+        48368,
+        48825
+      ]
+    },
+    "displayGroundAdaptation": [
+      {
+        "part": "harborn-B-four-storey-body",
+        "maximumDeltaM": 0.8867734527587885,
+        "method": "Only ground-contact vertices fitted to the atlas terrain; roof and elevated floor levels retained."
+      },
+      {
+        "part": "harborn-A-four-storey-body",
+        "maximumDeltaM": 0.5462049102783197,
+        "method": "Only ground-contact vertices fitted to the atlas terrain; roof and elevated floor levels retained."
+      }
+    ],
+    "displayGroundNote": "Displayed foundation contacts follow the atlas terrain. Source roof/floor levels above the foundation are retained; vertical-datum compatibility is not survey-certified."
+  },
+  "newValues": {
+    "url": "models/studies-20261101/harborn-grading-v4-0e5224cfbe25.glb.gz",
+    "preserveMaterials": true,
+    "modelQuality": "Source-normalized illustrative architecture",
+    "modelCaveat": "Twelve proposed townhomes from the received design. Facades, roofs and entrances are illustrated; dimensions and placement remain approximate. The proposed grading is illustrative.",
+    "bounds": [
+      [
+        -2200.983642578125,
+        27.762649536132812,
+        2062.882080078125
+      ],
+      [
+        -2124.5361328125,
+        41.47999954223633,
+        2140.607177734375
+      ]
+    ],
+    "bytes": 551356,
+    "sha256": "b3b0636313d4dc3346884f293653f7d31df855246b69ac2c70b4ab4ae0561fe1",
+    "meshNodes": 207,
+    "triangles": 55521,
+    "qa": {
+      "sourceCandidateSHA256": "0e5224cfbe2598d3eab0094599e5e225e874e260ff3d8a4cf5a03cf085d30d25",
+      "sourceGeometryImmutable": true,
+      "nativeContactAcceptancePending": false
+    },
+    "displayGroundAdaptation": {
+      "method": "Only the declared outer grading band follows the actual native ground. All building geometry and protected entrance and garage approaches remain fixed.",
+      "sourceContractSHA256": "f90136ed251f285a8de5365c5ff752cdc7eaed9c307bde9bc1269d505b17be44",
+      "nearestDryEdgeLimitM": 0.35,
+      "privateContactReviewPending": false
+    },
+    "displayGroundNote": "Proposed grading is illustrative and follows the surrounding model terrain.",
+    "downloadSHA256": "b3b0636313d4dc3346884f293653f7d31df855246b69ac2c70b4ab4ae0561fe1",
+    "decodedBytes": 1809744,
+    "preserveSourceNormals": true,
+    "viewerDistricts": [
+      "citywide",
+      "cooksville"
+    ],
+    "terrainAdapter": "harborn-v4",
+    "credit": "Architecture: DelDom Design & Construction. Proposed grading: SKIRA & Associates Ltd. Study: Daniel Sultan / Future Mississauga.",
+    "decodedSHA256": "0e5224cfbe2598d3eab0094599e5e225e874e260ff3d8a4cf5a03cf085d30d25"
+  },
+  "absentKeys": [
+    "downloadSHA256",
+    "decodedBytes",
+    "preserveSourceNormals",
+    "viewerDistricts",
+    "terrainAdapter",
+    "credit",
+    "decodedSHA256"
+  ],
+  "newFingerprint": "8312a5bbf499e176aeed62d097dc29cd566e011ed7755f4373cb439ab02fdd19",
+  "priorRefinementsFingerprint": "f9369a4b942b10f51a6a6216abd1494c514d847025368f5b90b81b650882fa3d",
+  "priorVersionsFingerprint": "713db81f2c8d96c080a8424da4f5a63e7db4cf60136959c50f230e31b584edbd",
+  "versions": [
+    {
+      "url": "models/studies-20261101/harborn-grading-v4-0e5224cfbe25.glb.gz",
+      "sha256": "b3b0636313d4dc3346884f293653f7d31df855246b69ac2c70b4ab4ae0561fe1"
+    },
+    {
+      "url": "models/studies-20261101/harborn-tie-v4-4dfd05d9de20.bin",
+      "sha256": "4dfd05d9de20d67ac49d2f79b77199d547c6dff8a46d6011fccc8bf63e029368"
+    }
+  ],
+  "facts": {
+    "projects.json": "7ee7f6961ad0b25bee1831798db4d091a36a62a8e428184de0bc737a264f171d",
+    "groups.json": "ec5a204a8b3ca359739aa36688fcd6a321d3fb2c45b48efab474f3aef2922c80",
+    "overrides.json": "681d45800329659f0627c9f86f63617facd98e9bf2ed5c83cbfbc35318ea09af",
+    "project-lifecycle-20261101.json": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24",
+    "model-previews.json": "022bec30d5118196647aab403e8d20117929abe4caedf6e5eb8195ae58c3c4e6",
+    "model-revisions.json": "616131960d64d77b812bce7fe38030876b81d9e5d083a48dcc7da28ec0124187"
+  },
+  "publicationFlagAcceptance": {
+    "ownerReceiptSHA256": "dc71e4d11b89c0e0141e71710ce3b178f0c2189d2b77b6531419a16391f5a48f",
+    "reconciliationReceiptSHA256": "a1af816ac5328ca01c6de50e789af9439fa4c03fdfaf6dd8e858900b94792656",
+    "meaning": "Only accepted pending flags and stale display note updated; original restore values and historical fingerprints unchanged."
+  }
+}

@@ -1,0 +1,380 @@
+{
+  "schema": "future-mississauga-matched-view-proof/v1",
+  "state": "VERIFIED_MATCHED_FRAMING_EQUAL_NATIVE_DIMENSIONS",
+  "members": [
+    {
+      "identity": "wide/downtown-existing.png",
+      "scenario": "existing",
+      "district": "downtown",
+      "geographicScope": "named_district_scene",
+      "cleanPNG": {
+        "sha256": "a07c566f17652265ac19755f0112975483c3e3cc9637cce32fd8769d08aa9a08",
+        "bytes": 25881650,
+        "dimensions": [
+          6144,
+          3840
+        ],
+        "mimeType": "image/png",
+        "nativePixelsNoUpscaling": true,
+        "crop": false,
+        "captionBaked": false
+      },
+      "responsiveImages": [
+        {
+          "file": "scene-1200.avif",
+          "sha256": "f771f506abe1dc7e18c0fdbe44d3545738dee706cd6b3ca53995bc1916042b36",
+          "bytes": 397388,
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "lossyEncoding": true,
+          "crop": false
+        },
+        {
+          "file": "scene-1200.jpg",
+          "sha256": "fb0f76d3f570fdf098bfb43e938a54c93e7ce971f793a3a83e6f3a5a6762e9f6",
+          "bytes": 498312,
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "lossyEncoding": true,
+          "crop": false
+        },
+        {
+          "file": "scene-3200.avif",
+          "sha256": "06f2caa480faa61e5c6e1d2649fddb7cb54cf4b384e498a9bc24fd4561ccc45f",
+          "bytes": 1728410,
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "lossyEncoding": true,
+          "crop": false
+        },
+        {
+          "file": "scene-3200.jpg",
+          "sha256": "4fc8396054b2a3e61e25b8ff8a264be1033f6e1691b9c760218f879da482e9dd",
+          "bytes": 2572601,
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "lossyEncoding": true,
+          "crop": false
+        }
+      ],
+      "sourceSceneSHA256": "127248e99dcdd2e2701973658580b6dd62bbf0b87154f14d1b0c1e290e6d3cf1",
+      "renderStartedUTC": "2026-11-02T02:04:56.868732+00:00",
+      "renderCompletedUTC": "2026-11-02T02:06:26.092760+00:00",
+      "cameraQualifications": [
+        "New source-context camera; low-resolution actual native context trial passed. Final models/frame review remains required."
+      ],
+      "evidenceSHA256": {
+        "deliveryManifest": "150ed159d065351e1842557f943479b69a139f551b427dd87d321fde76293d9d",
+        "sceneProof": "9633507aa756c1d4cd8f82a5447e5582c90106242660174db9c0dc0c505f5d77",
+        "renderProof": "b0af514b84f40ee7a25fee6d114d7f7d7080aa090044bdeaf48ca19c360ea6dd",
+        "importProof": "062fdf219d5d0030905d0bfb7d0443fdb32604292781d780251c53853d1ee1c8",
+        "nativeInventory": "a9abc8b3012d19f5d8aa25299928fee3a1678ce3ac30a2b715f1253db3f2cf36",
+        "rendererSource": "eebfbaf06da3bd75bcc15bd08e5147c6620cfe5a214196bb2b027a61dc0ca2f7",
+        "compositionProof": "12719b02def9b557e7e761e80b7908967c4ce7ed056b090598d30250ee053127",
+        "originalRGBA": "5cede4d7c721a5e5331aad62b3ca09aab3c88c39f134d5a0739c9e01cb6062c3"
+      }
+    },
+    {
+      "identity": "wide/downtown-future.png",
+      "scenario": "future",
+      "district": "downtown",
+      "geographicScope": "named_district_scene",
+      "cleanPNG": {
+        "sha256": "352ff7f55ac6a1210275505fe3c3d0526825c6f2debb1708668dcd64ce8c8ef4",
+        "bytes": 26314817,
+        "dimensions": [
+          6144,
+          3840
+        ],
+        "mimeType": "image/png",
+        "nativePixelsNoUpscaling": true,
+        "crop": false,
+        "captionBaked": false
+      },
+      "responsiveImages": [
+        {
+          "file": "scene-1200.avif",
+          "sha256": "63f7bf715d8022c7e58790b31d9c77e1c3c7529c867cb3d169681306e2ad582e",
+          "bytes": 406282,
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "lossyEncoding": true,
+          "crop": false
+        },
+        {
+          "file": "scene-1200.jpg",
+          "sha256": "55990e1619f1f330567b0e71e440285cf7e9b24375280e335212081109a861db",
+          "bytes": 508055,
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "lossyEncoding": true,
+          "crop": false
+        },
+        {
+          "file": "scene-3200.avif",
+          "sha256": "c71b48d62507331ae26a476bad15c794510eacbdfd57807e77393ad1765514e5",
+          "bytes": 1777388,
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "lossyEncoding": true,
+          "crop": false
+        },
+        {
+          "file": "scene-3200.jpg",
+          "sha256": "e3f98594718f5a68179a169bafee99413343f246e60e15952d56d2327a59c12f",
+          "bytes": 2637876,
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "lossyEncoding": true,
+          "crop": false
+        }
+      ],
+      "sourceSceneSHA256": "1c1a479e9f0cf7b1af999c26154acc352e51f1f9e5c513347a5fc4dda9278804",
+      "renderStartedUTC": "2026-11-02T02:10:13.520111+00:00",
+      "renderCompletedUTC": "2026-11-02T02:11:53.132314+00:00",
+      "cameraQualifications": [
+        "New source-context camera; low-resolution actual native context trial passed. Final models/frame review remains required."
+      ],
+      "evidenceSHA256": {
+        "deliveryManifest": "8d6db73bb82df8d6a14d551ec57da47fda193ad91dee9b8c294d8ec26624f022",
+        "sceneProof": "e214bc298639f11ef8c2a187f9e3042e63d91b7bba7d2140369ba25e2093ced7",
+        "renderProof": "43fd5225ac04bf429ce98b5676b479f4fb0012a28852bfedb760c21c9667374b",
+        "importProof": "4c5a0570dd1309cd9667c59e91d13daf043fe2fe42f0805c4f9dbf9ac276bce0",
+        "nativeInventory": "aa4b9c26fc4ba3ae23b41786880d4cf08f2961c02f55ec9e3af66c4a42a6f073",
+        "rendererSource": "eebfbaf06da3bd75bcc15bd08e5147c6620cfe5a214196bb2b027a61dc0ca2f7",
+        "compositionProof": "63fa93469f7d10d3d3af5e89c3677458c973c583724665ee578a4350d0745515",
+        "originalRGBA": "cef949d6bb67f08d8f2ab1d4760faa2e33313019c92aac1395acb15aacb0c946"
+      }
+    }
+  ],
+  "shared": {
+    "camera": {
+      "location": [
+        -3900.0,
+        -1400.0,
+        1150.0
+      ],
+      "rotationEuler": [
+        1.1271812915802002,
+        -2.9152687375244568e-08,
+        0.7690063714981079
+      ],
+      "matrixWorld": [
+        [
+          0.7186020016670227,
+          -0.2984800934791565,
+          0.6281089186668396,
+          -3900.0
+        ],
+        [
+          0.695421576499939,
+          0.3084292709827423,
+          -0.6490456461906433,
+          -1400.0
+        ],
+        [
+          2.9152687375244568e-08,
+          0.9032059907913208,
+          0.42920738458633423,
+          1150.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "type": "PERSP",
+      "lens": 38.059139251708984,
+      "orthoScale": 6.0,
+      "sensorFit": "VERTICAL",
+      "sensorWidth": 36.0,
+      "sensorHeight": 24.0,
+      "shift": [
+        0.0,
+        0.0
+      ],
+      "clip": [
+        1.0,
+        160000.0
+      ]
+    },
+    "lightingAndColourManagement": {
+      "sunRotationEuler": [
+        0.6108652381980153,
+        -0.3490658503988659,
+        -0.6981317007977318
+      ],
+      "sunEnergy": 2.4,
+      "sunAngle": 0.08,
+      "sunColour": [
+        1,
+        1,
+        1
+      ],
+      "worldColour": [
+        0.8,
+        0.86,
+        1,
+        1
+      ],
+      "worldStrength": 0.8,
+      "viewTransform": "AgX",
+      "look": "AgX - Medium High Contrast",
+      "exposure": 0.15,
+      "gamma": 1
+    },
+    "background": "#e8f2f7",
+    "aspectRatio": {
+      "numerator": 8,
+      "denominator": 5
+    },
+    "pixelAspect": [
+      1,
+      1
+    ],
+    "rendererSettings": {
+      "s.render.pixel_aspect_x": 1,
+      "s.render.pixel_aspect_y": 1,
+      "s.render.resolution_percentage": 100,
+      "s.render.use_border": false,
+      "s.render.use_crop_to_border": false,
+      "s.render.engine": "CYCLES",
+      "s.cycles.use_denoising": true,
+      "s.cycles.use_adaptive_sampling": true,
+      "s.cycles.adaptive_threshold": 0.022
+    },
+    "samples": 96,
+    "blenderVersion": "5.2.2 LTS",
+    "sourceFreeze": {
+      "state": "FINAL_FROZEN",
+      "frozenUTC": "2026-11-02T01:52:12.261407+00:00",
+      "threeRevision": "186",
+      "sourceFilesManifestSHA256": "55656f820dd5a3b4197aca3c3ab6db6d0828a6ede8d8d215f78e1710df1a67ca",
+      "completeRevisionCanonicalJSON_SHA256": "6fe3371308e3d050e8a75df3c1123e509f5f8d2350cf0999fdc58e6c3e9be367"
+    },
+    "north": {
+      "screenUnitRightDown": [
+        0.914100293112231,
+        -0.40548816768450047
+      ],
+      "bearingClockwiseFromScreenUpDegrees": 66.07827814508516,
+      "method": "Actual projection of world north at image-centre ray; lens shift, sensor fit, pixel frame accounted for",
+      "worldNorthBlender": [
+        0,
+        1,
+        0
+      ]
+    }
+  },
+  "checks": {
+    "cameraParametersExactlyEqual": true,
+    "lightingParametersExactlyEqual": true,
+    "sourceFreezeExactlyEqual": true,
+    "aspectRatioExactlyEqual": true,
+    "normalizedCameraFramingEqual": true,
+    "nativePixelDimensionsEqual": true,
+    "separateActualNativeScenarioExportsVerified": true,
+    "cleanPNGHashesAndDimensionsVerified": true,
+    "cleanOriginalFrameCompositionRGBVerified": true,
+    "nativeMastersResizedOrCroppedByThisReview": false
+  },
+  "commonResponsiveFormats": [
+    {
+      "dimensions": [
+        1200,
+        750
+      ],
+      "mimeType": "image/avif",
+      "memberSHA256": [
+        "f771f506abe1dc7e18c0fdbe44d3545738dee706cd6b3ca53995bc1916042b36",
+        "63f7bf715d8022c7e58790b31d9c77e1c3c7529c867cb3d169681306e2ad582e"
+      ],
+      "equalPixelDimensions": true,
+      "identicalImagePixelsClaimed": false
+    },
+    {
+      "dimensions": [
+        1200,
+        750
+      ],
+      "mimeType": "image/jpeg",
+      "memberSHA256": [
+        "fb0f76d3f570fdf098bfb43e938a54c93e7ce971f793a3a83e6f3a5a6762e9f6",
+        "55990e1619f1f330567b0e71e440285cf7e9b24375280e335212081109a861db"
+      ],
+      "equalPixelDimensions": true,
+      "identicalImagePixelsClaimed": false
+    },
+    {
+      "dimensions": [
+        3200,
+        2000
+      ],
+      "mimeType": "image/avif",
+      "memberSHA256": [
+        "06f2caa480faa61e5c6e1d2649fddb7cb54cf4b384e498a9bc24fd4561ccc45f",
+        "c71b48d62507331ae26a476bad15c794510eacbdfd57807e77393ad1765514e5"
+      ],
+      "equalPixelDimensions": true,
+      "identicalImagePixelsClaimed": false
+    },
+    {
+      "dimensions": [
+        3200,
+        2000
+      ],
+      "mimeType": "image/jpeg",
+      "memberSHA256": [
+        "4fc8396054b2a3e61e25b8ff8a264be1033f6e1691b9c760218f879da482e9dd",
+        "e3f98594718f5a68179a169bafee99413343f246e60e15952d56d2327a59c12f"
+      ],
+      "equalPixelDimensions": true,
+      "identicalImagePixelsClaimed": false
+    }
+  ],
+  "qualification": [
+    "Matched normalized framing follows from exact camera parameters, identical image aspect and square pixels. It is not a claim that scenario image pixels are identical.",
+    "Native dimensions are listed separately for each image. Equal-size responsive images are resized, lossy derivatives, not equal-resolution native masters.",
+    "The proof verifies stored render parameters and the image/proof hash chain. It is not an independent geometry accuracy, visual likeness, source-rights or publication approval.",
+    "Scene geometry and source dates may differ by scenario. A common frozen application source does not mean identical scene contents."
+  ],
+  "generator": {
+    "file": "generate_matched_pair_proof.py",
+    "sha256": "a76952a353c1b40ef8dd79b81ab804a7041c820b7997244792dbe1512a2c3acc"
+  },
+  "proofID": "fm-matched-view-08dae24341f9e91339c8bdf0"
+}

@@ -39,7 +39,7 @@ test('the saved Gemma and Lakeview phase records resolve independently in the mi
  }
 });
 
-test('approved geometry has its own colour and appears in future without implying construction',()=>{
+test('precise approval classification retains its historical palette and does not imply construction',()=>{
  const approved=assets.find(asset=>asset.id==='30-eglinton-west-approved-envelope');assert.equal(approved.lifecycle,'approved');
  const lifecycle=resolveModelLifecycle({Status:approved.status,lifecycle:approved.lifecycle},{},projects.find(project=>project.id===approved.projectId));
  assert.equal(lifecycle,'approved');assert.equal(statusColours[statusMaterialKey(displayStatusForLifecycle(lifecycle))],0xc49b52);
@@ -70,13 +70,14 @@ test('inactive designs require their exact historical-study selection and never 
  }
 });
 
-test('current viewer and newly saved image key separate approved from proposed and geometry confidence',()=>{
+test('historical picture legends preserve their precise approved, proposed and confidence keys',()=>{
  assert.deepEqual(STATUS_LEGEND.map(item=>item.key),['existing','under_construction','approved','proposed','unknown']);
  assert.equal(STATUS_LEGEND.find(item=>item.key==='approved').color,'#c49b52');
  assert.equal(STATUS_LEGEND.find(item=>item.key==='unknown').label,'Status unverified');
  const html=readFileSync(new URL('../public/explore.html',import.meta.url),'utf8');
  assert.match(html,/id="unknownStatusToggle"/);assert.doesNotMatch(html,/Proposed \/ approved|Needs checking|uncertainToggle/);
- assert.match(html,/Detailed studies retain their architectural materials/);
+ assert.doesNotMatch(html,/Detailed studies retain their architectural materials/);
+ assert.match(html,/id="appearanceSelect"/);
  for(const width of [390,1400])for(const states of [[],['on_hold','cancelled']]){
   const legend=statusLegendFor(states),labels=[],swatches=[],ctx={save(){},restore(){},translate(){},scale(){},beginPath(){},moveTo(){},lineTo(){},stroke(){},fillRect(x,y,w,h){if(w===16)swatches.push({x,y,w,h,color:this.fillStyle});},fillText(label,x,y){labels.push({label,x,y});}};
   const height=drawPresentationFooter(ctx,{width,top:0,title:'Downtown',scenario:'Future scenario',bearing:null,legend}),layout=presentationLayout(width,legend);
@@ -92,4 +93,16 @@ test('project details show dated planning evidence separately from approximate g
  const html=projectDetailsHTML(project,{asset:{uncertainGeometry:true}});
  assert.match(html,/Approved planning/);assert.match(html,/Approximate model/);assert.match(html,/Planning approval/);assert.match(html,/Zoning only/);assert.match(html,/2026-10-01/);assert.match(html,/roof outline remains approximate/);
  assert.equal(projectStatus({...project,lifecycle:'mixed'}).label,'Mixed phases');
+});
+
+
+test('natural view has no status swatches and optional legend includes only visible lifecycle classes',()=>{
+ assert.deepEqual(statusLegendFor(['existing','under_construction','approved'],{appearance:'natural'}),[]);
+ assert.deepEqual(statusLegendFor([],{appearance:'status'}),[]);
+ assert.deepEqual(statusLegendFor(['under_construction','under_construction','mixed'],{appearance:'status'}).map(item=>item.key),['under_construction','unknown']);
+ for(const width of [390,1400]){
+  const labels=[],swatches=[],ctx={save(){},restore(){},translate(){},scale(){},beginPath(){},moveTo(){},lineTo(){},stroke(){},fillRect(x,y,w,h){if(w===16)swatches.push({x,y,w,h});},fillText(label,x,y){labels.push({label,x,y});}};
+  const legend=statusLegendFor(['existing','approved'],{appearance:'natural'}),height=drawPresentationFooter(ctx,{width,top:0,title:'Downtown',scenario:'Future scenario',bearing:null,legend}),layout=presentationLayout(width,legend);
+  assert.equal(swatches.length,0);assert(labels.some(row=>row.label==='Downtown'));assert(labels.every(row=>row.y*layout.scale<height));
+ }
 });

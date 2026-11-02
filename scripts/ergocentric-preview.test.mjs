@@ -55,7 +55,7 @@ test('reversing only the three publication metadata edits reproduces the exact p
 test('the individual study offers no standalone model or compressed-download action',()=>{
   assert.equal(view.offerDownloads,false);assert.deepEqual(modelDownloadAssets(view,[asset]),[]);
   for(const prior of catalogue.views.filter(item=>item.id!==view.id)) assert.deepEqual(modelDownloadAssets(prior,['existing action']),['existing action']);
-  const selectors=['#modelDownloads','#compressedDownloads','#downloadNote','.sidebar > p.credit:not([id]):not([data-visible-reference-credit])','.sidebar > p:has(a[download])'];
+  const selectors=['#modelDownloads','#compressedDownloads','.download-options','#downloadNote','.sidebar > p.credit:not([id]):not([data-visible-reference-credit])','.sidebar > p:has(a[download])'];
   const elements=new Map(selectors.map(selector=>[selector,{hidden:false}]));let inserted='';
   const root={querySelectorAll:selector=>[elements.get(selector)],querySelector:selector=>selector==='#studyCredit'?{insertAdjacentHTML:(_position,html)=>{inserted=html;}}:null};
   configureStudyActions(view,root);

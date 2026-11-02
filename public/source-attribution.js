@@ -1,3 +1,4 @@
+import {usesOHNOffshore,OHN_SOURCE,OHN_CREDIT} from './offshore-context.js?v=20261102-ohn2';
 import {indirectSourceRegions} from './source-attribution-regions.js?v=20261023-refined1';
 // Match actual source metadata, never generic fidelity notes or a railway name.
 // Rules are audited against the saved City, transit, airfield and Voya assets.
@@ -14,11 +15,12 @@ export function usesOpenStreetMap(data = {}, name = '') {
 
 export function createVisibleAttribution({THREE, scene, camera, regions=indirectSourceRegions}) {
   const frustum = new THREE.Frustum(), matrix = new THREE.Matrix4(), assets = new WeakMap();
-  let candidates = [], indirect = [], unknown = [], designCandidates = [], photoCandidates = [];
+  let candidates = [], indirect = [], unknown = [], designCandidates = [], photoCandidates = [], waterCandidates = [];
   function registerAsset(root, url, sha256) {assets.set(root,{url,sha256});}
   function refresh() {
-    candidates = []; indirect = []; unknown = []; designCandidates = []; photoCandidates = [];
+    candidates = []; indirect = []; unknown = []; designCandidates = []; photoCandidates = []; waterCandidates = [];
     scene.traverse(object => {
+      if (object.isMesh && usesOHNOffshore(object.userData)) waterCandidates.push(object);
       if (object.isMesh && usesOpenStreetMap(object.userData, object.name)) candidates.push(object);
       if (object.isMesh && object.userData?.projectId === 'sgm-maritz-6710' &&
           object.userData?.assetId === 'sgm-maritz-6710-exterior-study') designCandidates.push(object);
@@ -45,11 +47,11 @@ export function createVisibleAttribution({THREE, scene, camera, regions=indirect
   function update(mode='future') {
     camera.updateMatrixWorld();
     frustum.setFromProjectionMatrix(matrix.multiplyMatrices(camera.projectionMatrix, camera.matrixWorldInverse));
-    const photoVisible=photoCandidates.some(visible);
+    const photoVisible=photoCandidates.some(visible), waterVisible=waterCandidates.some(visible);
     return {
       osm:candidates.some(visible)||unknown.some(visible)||indirect.some(region=>region.modes.includes(mode)&&region.meshes.some(isShown)&&frustum.intersectsBox(region.box)),
-      designCredits:[...(designCandidates.some(visible)?[MARITZ_DESIGN_CREDIT]:[]),...(photoVisible?[ERGOCENTRIC_PHOTO_CREDIT]:[])],
-      creditLinks:photoVisible?[{...ERGOCENTRIC_PHOTO_LINK}]:[]
+      designCredits:[...(designCandidates.some(visible)?[MARITZ_DESIGN_CREDIT]:[]),...(photoVisible?[ERGOCENTRIC_PHOTO_CREDIT]:[]),...(waterVisible?[OHN_CREDIT]:[])],
+      creditLinks:[...(photoVisible?[{...ERGOCENTRIC_PHOTO_LINK}]:[]),...(waterVisible?[{label:OHN_SOURCE.sourceDataset,url:OHN_SOURCE.sourceURL}]:[])]
     };
   }
   refresh();

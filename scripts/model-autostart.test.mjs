@@ -28,7 +28,7 @@ function dom() {
     const listeners = new Map();
     const node = {tag, children: [], preceding: [], style: {}, dataset: {}, attributes: {}, hidden: false,
       disabled: false, textContent: '', clientWidth: 800, clientHeight: 600,
-      classList: {toggle() {}},
+      classList: {add() {},toggle() {}},
       append(...nodes) { this.children.push(...nodes); },
       insertAdjacentHTML(position,html) { (this.insertedHTML??=[]).push({position,html}); },
       prepend(...nodes) { this.children.unshift(...nodes); },
@@ -83,15 +83,17 @@ function modelHarness({id = 'mcity-m1', graphics = true} = {}) {
   return {...ui, requests, events, window, done};
 }
 
-test('City-derived model starts without a click and retains one terms notice', async () => {
+test('City-derived model starts directly with a terms link inside its source disclosure', async () => {
   const run = modelHarness(); await settle();
   assert.equal(run.requests.length, 1, 'initial asset request must start without user action');
   const notices = run.created.filter(node => node.className === 'city-data-terms');
   assert.equal(notices.length, 1); assert.equal(notices[0].tag, 'p');
-  assert.deepEqual(run.get('modelDownloads').preceding, notices);
+  assert.deepEqual(run.get('modelDownloads').preceding, []);
+  assert.deepEqual(run.get('modelSources').following, notices);
+  assert.equal(notices[0].children.length, 1, 'source link must not reintroduce assent prose');
   assert.equal(run.get('previewContent').preceding.length, 0);
   assert.equal(run.created.some(node => node.className === 'city-data-load'), false);
-  assert.match(notices[0].children[1].href, /961c790805c14d8da258ec91bf4117e3\/data$/);
+  assert.match(notices[0].children[0].href, /961c790805c14d8da258ec91bf4117e3\/data$/);
   run.requests[0].resolve(new Uint8Array(8)); await run.done;
   assert.equal(run.window.modelPreview.ready, true);
   assert.match(run.get('previewStatus').textContent, /Model ready/);

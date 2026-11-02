@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
+import {mediaPreviewInfo,comparisonPair} from '../public/clean-media.js';
 
 const pub = new URL('../public/', import.meta.url);
 const source = fs.readFileSync(new URL('gallery.js', pub), 'utf8').replace(/^import .*;\n/gm, '');
@@ -25,6 +26,7 @@ function harness({bootstrap = true, failedImport = false} = {}) {
       removeAttribute(name) { delete this.attributes[name]; },
       addEventListener(type, callback) { this['on' + type] = callback; },
       insertAdjacentHTML() {},
+      querySelector() { return null; },
       append(...children) { this.children.push(...children); },
       after(message) { notices.push(message); },
       closest(selector) { return selector === '[data-open]' && this.dataset.open ? this : null; },
@@ -35,7 +37,7 @@ function harness({bootstrap = true, failedImport = false} = {}) {
   const elements = new Map(['.hero', '#galleryGrid', '#perspectiveGrid', '#pictureCompare', '#compareDivider', '#pictureSlider', '#beforePicture', '#comparisonDistrict'].map(id => [id, node()]));
   const document = {
     readyState: 'loading',
-    querySelector: selector => elements.get(selector),
+    querySelector: selector => {if(!elements.has(selector))elements.set(selector,node());return elements.get(selector);},
     querySelectorAll: selector => selector === '[data-open]' ? buttons : [],
     createElement: tag => node(tag),
     addEventListener(type, callback, options) {
@@ -54,7 +56,7 @@ function harness({bootstrap = true, failedImport = false} = {}) {
     fetch: path => data.promise.then(() => ({json: async () => structuredClone(path.includes('districts') ? districtData : pictureData)})),
     refreshPictureAssets: async () => { await metadata.promise; },
     createImagePreview: () => ({show: info => shows.push(info), setViews() {}}),
-    pictureProvenance: () => ({}), bindComparison() {},
+    mediaPreviewInfo, comparisonPair, bindComparison() {},
     loadGallery: () => {
       loads++;
       initialization = failedImport ? Promise.reject(new Error('Module unavailable')) : vm.runInContext('(async () => {' + source + '\n})()', context);
@@ -62,8 +64,8 @@ function harness({bootstrap = true, failedImport = false} = {}) {
     },
   });
   if (bootstrap) {
-    assert.equal(entry.split("import('./gallery.js?v=20261101-media2')").length, 2);
-    vm.runInContext(entry.replace("import('./gallery.js?v=20261101-media2')", 'loadGallery()'), context);
+    assert.equal(entry.split("import('./gallery.js?v=20261102-coherent1')").length, 2);
+    vm.runInContext(entry.replace("import('./gallery.js?v=20261102-coherent1')", 'loadGallery()'), context);
   } else context.loadGallery();
   return {hero, buttons, shows, notices, data, metadata, click,
     get loads() { return loads; }, get reloads() { return reloads; },
@@ -126,7 +128,7 @@ for (const failedImport of [false, true]) test((failedImport ? 'module' : 'metad
 
 test('capture loads before any visible picture and gallery initialization has only one owner', () => {
   const html = fs.readFileSync(new URL('index.html', pub), 'utf8');
-  const tag = '<script src="gallery-entry.js?v=20261101-click1"></script>';
+  const tag = '<script src="gallery-entry.js?v=20261102-coherent1"></script>';
   assert.equal(html.split(tag).length, 2);
   assert(html.indexOf(tag) < html.indexOf('data-open='));
   assert(!html.includes('src="gallery.js?'));

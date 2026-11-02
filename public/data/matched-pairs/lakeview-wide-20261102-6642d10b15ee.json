@@ -1,0 +1,625 @@
+{
+  "schema": "future-mississauga-matched-view-proof/v3",
+  "state": "VERIFIED_MATCHED_FRAMING_EQUAL_NATIVE_DIMENSIONS",
+  "members": [
+    {
+      "identity": "wide/lakeview-existing.png",
+      "scenario": "existing",
+      "district": "lakeview",
+      "geographicScope": "named_district_scene",
+      "cleanPNG": {
+        "sha256": "c4bce38c757c8afd626fffae70e4d196c9e87eea958c263d70acc1043b9fcfa0",
+        "bytes": 23054840,
+        "dimensions": [
+          6144,
+          3840
+        ],
+        "mimeType": "image/png",
+        "nativePixelsNoUpscaling": true,
+        "crop": false,
+        "captionBaked": false
+      },
+      "responsiveImages": [
+        {
+          "file": "scene-1200.avif",
+          "sha256": "841ad9db93ab7d9952c501b0ccc2cd66a72599396ece82ed43f2ea092b339e2a",
+          "bytes": 283649,
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "lossyEncoding": true,
+          "crop": false
+        },
+        {
+          "file": "scene-1200.jpg",
+          "sha256": "5025411f9a76d251bbad5f46d7a056295463767b9e9298409de87be2ea72abe7",
+          "bytes": 363357,
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "lossyEncoding": true,
+          "crop": false
+        },
+        {
+          "file": "scene-3200.avif",
+          "sha256": "6b1b89c91c31cb6d8be381c4629b99127ee432ce310c0cffd09e9310c161ead2",
+          "bytes": 1200196,
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "lossyEncoding": true,
+          "crop": false
+        },
+        {
+          "file": "scene-3200.jpg",
+          "sha256": "0a36d5afaeb20769645804d0c0518d5ced2e8cde5b457187f40ebfb30d9fe871",
+          "bytes": 1874103,
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "lossyEncoding": true,
+          "crop": false
+        }
+      ],
+      "sourceSceneSHA256": "9fe7f9a31bd3269b958f777877514b4c4e0b145dee5a712019817621091361e5",
+      "renderStartedUTC": "2026-11-02T06:30:36.477917+00:00",
+      "renderCompletedUTC": "2026-11-02T06:31:26.630304+00:00",
+      "cameraQualifications": [
+        "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison.",
+        "Bounded 1% narrower orthographic frame to exclude a small inland source coverage pocket at the image edge. Camera position, rotation, lighting and scene remain unchanged."
+      ],
+      "evidenceSHA256": {
+        "deliveryManifest": "1f636388a440603ae48722792d384f82684f2fcda37e3119f5ffb38b5448c646",
+        "sceneProof": "7bdbe3180e2a22166549cbb3cdfdf76b3154494edd84735a3d312fa6367a1f1b",
+        "renderProof": "0ecfcdcbcf396e2858a441a70d3f1ca86d619f7aad0baaf1432d334973f9144f",
+        "importProof": "84afcff322a228c0b359ccf056c45077e352895b4627a80c74c1a5d376c23b1a",
+        "nativeInventory": "447af9bee6de840134f29125e5cea98e93948a9e709498f2edb823631199e384",
+        "rendererSource": "0018f5c6cdc2956a98f7b6a9a503e1ca7db6281d71327e7d6751079809b8fdaa",
+        "compositionProof": "3edb73b837a330238d45ed2f232329884cae3c645f04466e66038f82cdc86267",
+        "originalRGBA": "dc9f790d88671c0b8c4b2b56d6f912aa02c339cae8e1660c2bdc6da3b6a197bc"
+      },
+      "renderRepresentation": {
+        "kind": "source-bound-water-underlay-priority-clip",
+        "adapterProofSHA256": "cf9fd4d340e5374e9da4d3544f72018c0dffa28127e23bd88c3ce5afc291497d",
+        "originalNativeImportSHA256": "707cd324a2fe2457f28107aa171eefffe16a7f68c83969fd97cdce622492443d",
+        "originalPackedSceneSHA256": "9acbac2b6becae0a65a1224d51f5ee59b9845a1cc92635ab22d8ef8702cc5d63",
+        "derivedPackedSceneSHA256": "199ed122bf17d66335237a624bf3725a424d7ae36dc9ed6d6db53b2694cd9416",
+        "clipProofSHA256": "845198d91819b46fb1258ca080cb6b6a99b01be3ef5e859c46849f7c7e541319",
+        "independentAuditSHA256": "d1e364a94a12ae347e53e39842e10507d30485778aa01c49fc2eb54d56d46316",
+        "originalSourceFilesUnchanged": true,
+        "derivedUnderlayGeometryEdited": true,
+        "districtWaterAndAllOtherGeometryPreserved": true,
+        "waterElevationMapY": 5,
+        "materialsAndTexturesPreserved": true,
+        "shadowRestoration": {
+          "object": "LakeOntarioUnified",
+          "visibleShadowBefore": true,
+          "visibleShadowAfter": false,
+          "frozenSourceCodeSHA256": "4c499d703ac420cc55f98511546b1aa619b006463f59b7c3b93970a859511637",
+          "sourceLines": [
+            39
+          ],
+          "nativeUnderlayRowSHA256": "1f8a9cd3cfb8512ea14fdf5274fe02e904b4f7c0be205cfb952cb077ca1a866d"
+        },
+        "precision": {
+          "removedUnionAreaM2": 0.009159071246555846,
+          "addedUnionAreaM2": 9.196525457733085e-05,
+          "totalSymmetricDifferenceM2": 0.009251036501132289,
+          "rawAllBoundariesHausdorffMetres": 399.9999793817417,
+          "exteriorRingHausdorffMetres": 116.94611243187887,
+          "maximumNewVertexFloat32DisplacementMetres": 0.00015364695433105994
+        },
+        "changedAreaSourceEdgeBandMetres": 0.00025,
+        "qualification": "The original source union is preserved only within measured float32 rounding. Hairline seam topology changes make raw boundary Hausdorff unsuitable as a shoreline-displacement claim. Primary district shoreline geometry remains exact. No mathematically exact union claim.",
+        "integratedOHN": {
+          "assetId": "ohn-lakeview-offshore-supplement-v1",
+          "sourceSHA256": "f2d917c4bdcf5277b9e934a5a6bd0b0a52431bbe033353be28a1fc667eab597c",
+          "assetSHA256": "0f27774f67dc09a29e0713d401b40dcabc6e14011874a0bb8daf7c654bcd814d",
+          "assetRevision": "offshore-margin-v2",
+          "vertices": 93,
+          "triangles": 91,
+          "unchangedByOfflineAdapter": true,
+          "nativeShadowRestored": true,
+          "sourceCredits": [
+            "Ontario Hydro Network Waterbody, Ontario Ministry of Natural Resources.",
+            "Contains information licensed under the Open Government Licence – Ontario."
+          ],
+          "independentEncodedAssetAuditSHA256": "b70ca5102efd7b09a496b0eaa5f38dd19605740c28741a61d84e250cb5abbfa9",
+          "encodedPrecision": {
+            "sourceAreaM2": 1696093.933661471,
+            "float32AreaM2": 1696093.8568029404,
+            "removedAreaM2": 0.13898916831252053,
+            "addedAreaM2": 0.062130637593168454,
+            "symmetricDifferenceM2": 0.20111980594040213,
+            "maximumVertexQuantizationMetres": 0.00024762839387452236,
+            "boundaryHausdorffMetres": 0.00023669100641025243,
+            "outsideOfficialPolygonAreaM2": 0.0,
+            "mathematicallyExactSourcePolygonUnion": false,
+            "encodedNativeWaterOverlapM2": 1.9331019356860768e-05,
+            "allAreaDifferenceWithinQuarterMillimetreSourceBoundaryBand": true,
+            "waterResidueOutsideQuarterMillimetreNativeBoundaryBandM2": 0.0,
+            "encodedAreaOutsideExact20mApproximationM2": 0.06211130742041344
+          },
+          "qualification": "Official 2D medium-scale western Lake Ontario partition. Source accuracy category Within 5 metres is not surveyed certification. Inherited map Y5 is illustrative. Float32 polygon residuals and tiny encoded native-water overlap remain as measured; no mathematically exact source-polygon or absolute-zero-overlap claim."
+        },
+        "nativeLightingRepresentation": {
+          "affectedRecordCount": 133,
+          "nativeRecordsSHA256": "a3cdde7041839582a4cbf4646cec95ea4135260eaf7f9c0b93a15e227f54f559",
+          "policies": [
+            {
+              "kind": "flat-directional-shadow-receiver-v3",
+              "wrapperVersion": 1,
+              "source": {
+                "path": "flat-shadow-receiver.js",
+                "bytes": 5492,
+                "sha256": "cd2f365042ed246bfc90780f0a71d9d8ce75e29f6ecf448094135baa14c1ee7e"
+              },
+              "priorPolicy": "Three.Material default",
+              "operation": "Remove only the registered WebGL directional-shadow sampling wrapper from the detached clone. Existing coverage is baked separately. Reviewed Cycles lighting replaces runtime lighting; pixel-lighting equivalence is not claimed.",
+              "sourceMaterialModified": false,
+              "PBRAndTexturesChanged": false
+            },
+            {
+              "kind": "flat-directional-shadow-receiver-v3",
+              "wrapperVersion": 1,
+              "source": {
+                "path": "flat-shadow-receiver.js",
+                "bytes": 5492,
+                "sha256": "cd2f365042ed246bfc90780f0a71d9d8ce75e29f6ecf448094135baa14c1ee7e"
+              },
+              "priorPolicy": "source-context-coverage-v1",
+              "operation": "Remove only the registered WebGL directional-shadow sampling wrapper from the detached clone. Existing coverage is baked separately. Reviewed Cycles lighting replaces runtime lighting; pixel-lighting equivalence is not claimed.",
+              "sourceMaterialModified": false,
+              "PBRAndTexturesChanged": false
+            }
+          ],
+          "runtimePixelLightingEquivalenceClaimed": false
+        }
+      }
+    },
+    {
+      "identity": "wide/lakeview-future.png",
+      "scenario": "future",
+      "district": "lakeview",
+      "geographicScope": "named_district_scene",
+      "cleanPNG": {
+        "sha256": "9aac5b73c9053c07adda6fe3cc6189229ab6d1bb629e9e509476a9e59b0aeafc",
+        "bytes": 23179372,
+        "dimensions": [
+          6144,
+          3840
+        ],
+        "mimeType": "image/png",
+        "nativePixelsNoUpscaling": true,
+        "crop": false,
+        "captionBaked": false
+      },
+      "responsiveImages": [
+        {
+          "file": "scene-1200.avif",
+          "sha256": "788b4de4db3de4fd75275a8e846cea499af1ef59e27ff1b1d17e62e4243a76ac",
+          "bytes": 290787,
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "lossyEncoding": true,
+          "crop": false
+        },
+        {
+          "file": "scene-1200.jpg",
+          "sha256": "7a369b200119e9dd8ad9f5bc4142255a6be942fbd9648ed97d67db3e32e30fa0",
+          "bytes": 371145,
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "lossyEncoding": true,
+          "crop": false
+        },
+        {
+          "file": "scene-3200.avif",
+          "sha256": "f81d9a989a2941203dc49894ce3b0579504576caa169f7a4d49c218e5366f9f1",
+          "bytes": 1225640,
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "lossyEncoding": true,
+          "crop": false
+        },
+        {
+          "file": "scene-3200.jpg",
+          "sha256": "ce99725fc508649debe8c8e965c08b5af3cc3dc7c14d06dc197a954fd4631e0f",
+          "bytes": 1913891,
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "lossyEncoding": true,
+          "crop": false
+        }
+      ],
+      "sourceSceneSHA256": "0986d6d2e023f6de2cf81ee2b26edf338dfdca70aae258f383926e4d71c76eb9",
+      "renderStartedUTC": "2026-11-02T06:31:35.772053+00:00",
+      "renderCompletedUTC": "2026-11-02T06:32:32.057789+00:00",
+      "cameraQualifications": [
+        "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison.",
+        "Bounded 1% narrower orthographic frame to exclude a small inland source coverage pocket at the image edge. Camera position, rotation, lighting and scene remain unchanged."
+      ],
+      "evidenceSHA256": {
+        "deliveryManifest": "9d2d76522c1f97be15b3022eb49d9b72c338d2ca507aca1c6f958b2453c45394",
+        "sceneProof": "50d5cbb2d74e444f622b1c0e665d53e05b5059ba4e6ca8ebee013b3cb5a03952",
+        "renderProof": "3bcbde83880f5c275d3d0d1f4a7f130f2fb2ea4ef0dcc8d25b46ada96247392d",
+        "importProof": "b5b9b603e46032f8c470ea3ab38ce3a3f7dcb266d2dbcffa9c2f90c72ce31a7a",
+        "nativeInventory": "94ccbfe116e283cb9e8abb149ce28d8f243e995f4ab349e13301c780feeefe8f",
+        "rendererSource": "0018f5c6cdc2956a98f7b6a9a503e1ca7db6281d71327e7d6751079809b8fdaa",
+        "compositionProof": "c0b747a0f7478580c7207cacdfa2d441ff264f4006166218ae8563808ac3dcbb",
+        "originalRGBA": "3ddbf677f79b002359ba25fa6f9c39cb85c8216054f6e7c829a1d8918ecdaffb"
+      },
+      "renderRepresentation": {
+        "kind": "source-bound-water-underlay-priority-clip",
+        "adapterProofSHA256": "d620b327a5aca4fc55dce556d9d7ded6828357df5264160b57f09db16f1875f4",
+        "originalNativeImportSHA256": "325becdc21805a3660e9a611b7277398a0e778b27b8064bee3fea4f159478064",
+        "originalPackedSceneSHA256": "725e039ba6949373c54df033f397b147f7b2adb0d3eef326ac1aaddf71506eab",
+        "derivedPackedSceneSHA256": "18621f596c4a2f7f8504ddc8df898f10259292174f0f094b8606f1db1556c879",
+        "clipProofSHA256": "845198d91819b46fb1258ca080cb6b6a99b01be3ef5e859c46849f7c7e541319",
+        "independentAuditSHA256": "d1e364a94a12ae347e53e39842e10507d30485778aa01c49fc2eb54d56d46316",
+        "originalSourceFilesUnchanged": true,
+        "derivedUnderlayGeometryEdited": true,
+        "districtWaterAndAllOtherGeometryPreserved": true,
+        "waterElevationMapY": 5,
+        "materialsAndTexturesPreserved": true,
+        "shadowRestoration": {
+          "object": "LakeOntarioUnified",
+          "visibleShadowBefore": true,
+          "visibleShadowAfter": false,
+          "frozenSourceCodeSHA256": "4c499d703ac420cc55f98511546b1aa619b006463f59b7c3b93970a859511637",
+          "sourceLines": [
+            39
+          ],
+          "nativeUnderlayRowSHA256": "1f8a9cd3cfb8512ea14fdf5274fe02e904b4f7c0be205cfb952cb077ca1a866d"
+        },
+        "precision": {
+          "removedUnionAreaM2": 0.009159071246555846,
+          "addedUnionAreaM2": 9.196525457733085e-05,
+          "totalSymmetricDifferenceM2": 0.009251036501132289,
+          "rawAllBoundariesHausdorffMetres": 399.9999793817417,
+          "exteriorRingHausdorffMetres": 116.94611243187887,
+          "maximumNewVertexFloat32DisplacementMetres": 0.00015364695433105994
+        },
+        "changedAreaSourceEdgeBandMetres": 0.00025,
+        "qualification": "The original source union is preserved only within measured float32 rounding. Hairline seam topology changes make raw boundary Hausdorff unsuitable as a shoreline-displacement claim. Primary district shoreline geometry remains exact. No mathematically exact union claim.",
+        "integratedOHN": {
+          "assetId": "ohn-lakeview-offshore-supplement-v1",
+          "sourceSHA256": "f2d917c4bdcf5277b9e934a5a6bd0b0a52431bbe033353be28a1fc667eab597c",
+          "assetSHA256": "0f27774f67dc09a29e0713d401b40dcabc6e14011874a0bb8daf7c654bcd814d",
+          "assetRevision": "offshore-margin-v2",
+          "vertices": 93,
+          "triangles": 91,
+          "unchangedByOfflineAdapter": true,
+          "nativeShadowRestored": true,
+          "sourceCredits": [
+            "Ontario Hydro Network Waterbody, Ontario Ministry of Natural Resources.",
+            "Contains information licensed under the Open Government Licence – Ontario."
+          ],
+          "independentEncodedAssetAuditSHA256": "b70ca5102efd7b09a496b0eaa5f38dd19605740c28741a61d84e250cb5abbfa9",
+          "encodedPrecision": {
+            "sourceAreaM2": 1696093.933661471,
+            "float32AreaM2": 1696093.8568029404,
+            "removedAreaM2": 0.13898916831252053,
+            "addedAreaM2": 0.062130637593168454,
+            "symmetricDifferenceM2": 0.20111980594040213,
+            "maximumVertexQuantizationMetres": 0.00024762839387452236,
+            "boundaryHausdorffMetres": 0.00023669100641025243,
+            "outsideOfficialPolygonAreaM2": 0.0,
+            "mathematicallyExactSourcePolygonUnion": false,
+            "encodedNativeWaterOverlapM2": 1.9331019356860768e-05,
+            "allAreaDifferenceWithinQuarterMillimetreSourceBoundaryBand": true,
+            "waterResidueOutsideQuarterMillimetreNativeBoundaryBandM2": 0.0,
+            "encodedAreaOutsideExact20mApproximationM2": 0.06211130742041344
+          },
+          "qualification": "Official 2D medium-scale western Lake Ontario partition. Source accuracy category Within 5 metres is not surveyed certification. Inherited map Y5 is illustrative. Float32 polygon residuals and tiny encoded native-water overlap remain as measured; no mathematically exact source-polygon or absolute-zero-overlap claim."
+        },
+        "nativeLightingRepresentation": {
+          "affectedRecordCount": 2113,
+          "nativeRecordsSHA256": "3ac0938af41c7ff16b253c6ffe7f20249af76462f59b75c74369bba01b9215c3",
+          "policies": [
+            {
+              "kind": "flat-directional-shadow-receiver-v3",
+              "wrapperVersion": 1,
+              "source": {
+                "path": "flat-shadow-receiver.js",
+                "bytes": 5492,
+                "sha256": "cd2f365042ed246bfc90780f0a71d9d8ce75e29f6ecf448094135baa14c1ee7e"
+              },
+              "priorPolicy": "Three.Material default",
+              "operation": "Remove only the registered WebGL directional-shadow sampling wrapper from the detached clone. Existing coverage is baked separately. Reviewed Cycles lighting replaces runtime lighting; pixel-lighting equivalence is not claimed.",
+              "sourceMaterialModified": false,
+              "PBRAndTexturesChanged": false
+            },
+            {
+              "kind": "flat-directional-shadow-receiver-v3",
+              "wrapperVersion": 1,
+              "source": {
+                "path": "flat-shadow-receiver.js",
+                "bytes": 5492,
+                "sha256": "cd2f365042ed246bfc90780f0a71d9d8ce75e29f6ecf448094135baa14c1ee7e"
+              },
+              "priorPolicy": "source-context-coverage-v1",
+              "operation": "Remove only the registered WebGL directional-shadow sampling wrapper from the detached clone. Existing coverage is baked separately. Reviewed Cycles lighting replaces runtime lighting; pixel-lighting equivalence is not claimed.",
+              "sourceMaterialModified": false,
+              "PBRAndTexturesChanged": false
+            }
+          ],
+          "runtimePixelLightingEquivalenceClaimed": false
+        }
+      }
+    }
+  ],
+  "shared": {
+    "camera": {
+      "location": [
+        2650.0,
+        -5580.0,
+        2060.0
+      ],
+      "rotationEuler": [
+        1.0961143970489502,
+        -3.869120490662681e-08,
+        0.32175058126449585
+      ],
+      "type": "ORTHO",
+      "lens": 50.0,
+      "orthoScale": 2772.0,
+      "sensorFit": "AUTO",
+      "sensorWidth": 36.0,
+      "sensorHeight": 24.0,
+      "shift": [
+        0.0,
+        0.0
+      ],
+      "clip": [
+        1,
+        160000
+      ]
+    },
+    "lightingAndColourManagement": {
+      "sunRotationEuler": [
+        0.6108652381980153,
+        -0.3490658503988659,
+        -0.6981317007977318
+      ],
+      "sunEnergy": 2.4,
+      "sunAngle": 0.08,
+      "sunColour": [
+        1,
+        1,
+        1
+      ],
+      "worldColour": [
+        0.8,
+        0.86,
+        1,
+        1
+      ],
+      "worldStrength": 0.8,
+      "viewTransform": "AgX",
+      "look": "AgX - Medium High Contrast",
+      "exposure": 0.15,
+      "gamma": 1
+    },
+    "background": "#e8f2f7",
+    "aspectRatio": {
+      "numerator": 8,
+      "denominator": 5
+    },
+    "pixelAspect": [
+      1,
+      1
+    ],
+    "rendererSettings": {
+      "s.render.pixel_aspect_x": 1,
+      "s.render.pixel_aspect_y": 1,
+      "s.render.resolution_percentage": 100,
+      "s.render.use_border": false,
+      "s.render.use_crop_to_border": false,
+      "s.render.engine": "CYCLES",
+      "s.cycles.use_denoising": true,
+      "s.cycles.use_adaptive_sampling": true,
+      "s.cycles.adaptive_threshold": 0.022
+    },
+    "samples": 96,
+    "blenderVersion": "5.2.2 LTS",
+    "representationPolicy": {
+      "kind": "source-bound-water-underlay-priority-clip",
+      "clipProofSHA256": "845198d91819b46fb1258ca080cb6b6a99b01be3ef5e859c46849f7c7e541319",
+      "shadowRestoration": {
+        "object": "LakeOntarioUnified",
+        "visibleShadowBefore": true,
+        "visibleShadowAfter": false,
+        "frozenSourceCodeSHA256": "4c499d703ac420cc55f98511546b1aa619b006463f59b7c3b93970a859511637"
+      },
+      "integratedOHN": {
+        "assetId": "ohn-lakeview-offshore-supplement-v1",
+        "sourceSHA256": "f2d917c4bdcf5277b9e934a5a6bd0b0a52431bbe033353be28a1fc667eab597c",
+        "assetSHA256": "0f27774f67dc09a29e0713d401b40dcabc6e14011874a0bb8daf7c654bcd814d",
+        "assetRevision": "offshore-margin-v2",
+        "vertices": 93,
+        "triangles": 91,
+        "unchangedByOfflineAdapter": true,
+        "nativeShadowRestored": true,
+        "sourceCredits": [
+          "Ontario Hydro Network Waterbody, Ontario Ministry of Natural Resources.",
+          "Contains information licensed under the Open Government Licence – Ontario."
+        ],
+        "independentEncodedAssetAuditSHA256": "b70ca5102efd7b09a496b0eaa5f38dd19605740c28741a61d84e250cb5abbfa9",
+        "encodedPrecision": {
+          "sourceAreaM2": 1696093.933661471,
+          "float32AreaM2": 1696093.8568029404,
+          "removedAreaM2": 0.13898916831252053,
+          "addedAreaM2": 0.062130637593168454,
+          "symmetricDifferenceM2": 0.20111980594040213,
+          "maximumVertexQuantizationMetres": 0.00024762839387452236,
+          "boundaryHausdorffMetres": 0.00023669100641025243,
+          "outsideOfficialPolygonAreaM2": 0.0,
+          "mathematicallyExactSourcePolygonUnion": false,
+          "encodedNativeWaterOverlapM2": 1.9331019356860768e-05,
+          "allAreaDifferenceWithinQuarterMillimetreSourceBoundaryBand": true,
+          "waterResidueOutsideQuarterMillimetreNativeBoundaryBandM2": 0.0,
+          "encodedAreaOutsideExact20mApproximationM2": 0.06211130742041344
+        },
+        "qualification": "Official 2D medium-scale western Lake Ontario partition. Source accuracy category Within 5 metres is not surveyed certification. Inherited map Y5 is illustrative. Float32 polygon residuals and tiny encoded native-water overlap remain as measured; no mathematically exact source-polygon or absolute-zero-overlap claim."
+      },
+      "nativeLightingPolicies": [
+        {
+          "kind": "flat-directional-shadow-receiver-v3",
+          "wrapperVersion": 1,
+          "source": {
+            "path": "flat-shadow-receiver.js",
+            "bytes": 5492,
+            "sha256": "cd2f365042ed246bfc90780f0a71d9d8ce75e29f6ecf448094135baa14c1ee7e"
+          },
+          "priorPolicy": "Three.Material default",
+          "operation": "Remove only the registered WebGL directional-shadow sampling wrapper from the detached clone. Existing coverage is baked separately. Reviewed Cycles lighting replaces runtime lighting; pixel-lighting equivalence is not claimed.",
+          "sourceMaterialModified": false,
+          "PBRAndTexturesChanged": false
+        },
+        {
+          "kind": "flat-directional-shadow-receiver-v3",
+          "wrapperVersion": 1,
+          "source": {
+            "path": "flat-shadow-receiver.js",
+            "bytes": 5492,
+            "sha256": "cd2f365042ed246bfc90780f0a71d9d8ce75e29f6ecf448094135baa14c1ee7e"
+          },
+          "priorPolicy": "source-context-coverage-v1",
+          "operation": "Remove only the registered WebGL directional-shadow sampling wrapper from the detached clone. Existing coverage is baked separately. Reviewed Cycles lighting replaces runtime lighting; pixel-lighting equivalence is not claimed.",
+          "sourceMaterialModified": false,
+          "PBRAndTexturesChanged": false
+        }
+      ]
+    },
+    "sourceFreeze": {
+      "state": "FINAL_FROZEN",
+      "frozenUTC": "2026-11-02T04:54:54.028520+00:00",
+      "threeRevision": "186",
+      "sourceFilesManifestSHA256": "ae821b28940a256ec6732bed07db359593b8c0faffcf5b900858a10bf4fbc20e",
+      "completeRevisionCanonicalJSON_SHA256": "4a9198eece70246af9ac112359493f9d037fd698d366f7c23eac1f82faa3cf47"
+    },
+    "north": {
+      "screenUnitRightDown": [
+        0.5893516629142457,
+        -0.8078766102692994
+      ],
+      "bearingClockwiseFromScreenUpDegrees": 36.11101372319979,
+      "method": "Actual projection of world north at image-centre ray; lens shift, sensor fit, pixel frame accounted for",
+      "worldNorthBlender": [
+        0,
+        1,
+        0
+      ]
+    }
+  },
+  "checks": {
+    "cameraParametersExactlyEqual": true,
+    "lightingParametersExactlyEqual": true,
+    "sourceFreezeExactlyEqual": true,
+    "aspectRatioExactlyEqual": true,
+    "normalizedCameraFramingEqual": true,
+    "nativePixelDimensionsEqual": true,
+    "separateActualNativeScenarioExportsVerified": true,
+    "sameDeclaredRepresentationPolicy": true,
+    "renderedRepresentationAdapterDisclosed": true,
+    "cleanPNGHashesAndDimensionsVerified": true,
+    "cleanOriginalFrameCompositionRGBVerified": true,
+    "nativeMastersResizedOrCroppedByThisReview": false
+  },
+  "commonResponsiveFormats": [
+    {
+      "dimensions": [
+        1200,
+        750
+      ],
+      "mimeType": "image/avif",
+      "memberSHA256": [
+        "841ad9db93ab7d9952c501b0ccc2cd66a72599396ece82ed43f2ea092b339e2a",
+        "788b4de4db3de4fd75275a8e846cea499af1ef59e27ff1b1d17e62e4243a76ac"
+      ],
+      "equalPixelDimensions": true,
+      "identicalImagePixelsClaimed": false
+    },
+    {
+      "dimensions": [
+        1200,
+        750
+      ],
+      "mimeType": "image/jpeg",
+      "memberSHA256": [
+        "5025411f9a76d251bbad5f46d7a056295463767b9e9298409de87be2ea72abe7",
+        "7a369b200119e9dd8ad9f5bc4142255a6be942fbd9648ed97d67db3e32e30fa0"
+      ],
+      "equalPixelDimensions": true,
+      "identicalImagePixelsClaimed": false
+    },
+    {
+      "dimensions": [
+        3200,
+        2000
+      ],
+      "mimeType": "image/avif",
+      "memberSHA256": [
+        "6b1b89c91c31cb6d8be381c4629b99127ee432ce310c0cffd09e9310c161ead2",
+        "f81d9a989a2941203dc49894ce3b0579504576caa169f7a4d49c218e5366f9f1"
+      ],
+      "equalPixelDimensions": true,
+      "identicalImagePixelsClaimed": false
+    },
+    {
+      "dimensions": [
+        3200,
+        2000
+      ],
+      "mimeType": "image/jpeg",
+      "memberSHA256": [
+        "0a36d5afaeb20769645804d0c0518d5ced2e8cde5b457187f40ebfb30d9fe871",
+        "ce99725fc508649debe8c8e965c08b5af3cc3dc7c14d06dc197a954fd4631e0f"
+      ],
+      "equalPixelDimensions": true,
+      "identicalImagePixelsClaimed": false
+    }
+  ],
+  "qualification": [
+    "Matched normalized framing follows from exact camera parameters, identical image aspect and square pixels. It is not a claim that scenario image pixels are identical.",
+    "Native dimensions are listed separately for each image. Equal-size responsive images are resized, lossy derivatives, not equal-resolution native masters.",
+    "The proof verifies stored render parameters and the image/proof hash chain. It is not an independent geometry accuracy, visual likeness, source-rights or publication approval.",
+    "Scene geometry and source dates may differ by scenario. A common frozen application source does not mean identical scene contents.",
+    "When a water representation adapter is present, each member explicitly binds its original native import, derived packed scene, measured precision limits and separate source-supported shadow restoration. This is not a claim of an unmodified native render."
+  ],
+  "generator": {
+    "file": "generate_matched_pair_proof_v3.py",
+    "sha256": "104a58c73aee46f0bb6607e27fead9a7b8aa6edda87fadcd88fd182696cd4247",
+    "adapterValidatorSHA256": "95bc3e4ee2df5cf346138d8ee21e551e62aaa7aa08aa33872d46ee21b13e6b96"
+  },
+  "proofID": "fm-matched-view-6b59d9899389aa74cad57e96"
+}

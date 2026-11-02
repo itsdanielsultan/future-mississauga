@@ -1,0 +1,460 @@
+{
+  "refinements": [
+    {
+      "id": "mcity-m1-20261025-exterior-study",
+      "newFingerprint": "274b29325c510d808bb0df4ad7e0ccf4c5b54c87dbf279fb60c6b266ba275b7d",
+      "oldValues": {
+        "url": "models/studies-20261101/mcity-m1-rev03-exterior.glb.gz",
+        "sha256": "e64ff2ddcb44f0d8dc5da7830a1f9d202fd257a827d31362fb94cc4061afada5",
+        "downloadSHA256": "fa2dbb81b9cd0a03bbdf7d1c189e81066ca10ff5d0e0c45dae96b502c2e7320a",
+        "sourceSHA256": "bbc3a2fe2a2e2759911e7d9ae5cb1974bcba5d6df3175e14712c10d63e49850b",
+        "bytes": 3318788,
+        "decodedBytes": 20403268,
+        "triangles": 342311,
+        "drawPrimitives": 171,
+        "transparentPrimitivesRetained": 132,
+        "bounds": [
+          [
+            -5669.689412453971,
+            84.71000000834465,
+            343.3714500007317
+          ],
+          [
+            -5569.98898433367,
+            284.25999450683594,
+            448.83600058104275
+          ]
+        ],
+        "registration": {
+          "family": "M1",
+          "rotationYDegrees": -40.88624229608553,
+          "translation": [
+            -5599.4176685531365,
+            85.05999755859375,
+            370.8613563643046
+          ],
+          "representation": "Optional architecture- and Street-View-informed approximate completed M1 study, podium revision 02; not dimension-verified as-built. Source podium surfaces restored to municipal world elevations. Tower dimensions, schedules and all new podium dimensions/finishes remain inferred.",
+          "podiumVerticalCorrections": {
+            "M1_P00": -0.34999847412109375,
+            "M1_P01": -0.029998779296875,
+            "M1_P02": -0.339996337890625,
+            "M1_P03": -0.04999542236328125
+          },
+          "preserveSemanticPartitions": true,
+          "entryPodiumComponents": {
+            "M1": "M1_P03",
+            "M2": "M2_P07"
+          },
+          "revision": "02"
+        },
+        "sourceRevision": "03",
+        "modelAccuracy": "Approximate",
+        "preserveMaterials": true,
+        "preserveSourceNormals": true,
+        "caveat": "Lower-confidence approximate study. Original tower plate cycle, floor schedule and architectural dimensions are inferred. Podium slab edges, guards, recesses and selective colour cues follow dated Street View; all bay/portal positions and depths remain inferred. Exact signed addresses do not establish exact entry geometry. M2 unresolved patterned wall omitted. Source heights and architectural heights differ; 61 versus 60/63 storey counts remain disputed. Municipal source is the default and is fully restorable.",
+        "downloadName": "M_City_M1_Rev03_Web_Study.glb",
+        "modelFidelity": "Approximate completed M1 exterior, Rev03 exterior; source-registered but not dimension-verified as-built",
+        "sources": [
+          {
+            "url": "https://www.google.com/maps/place/M1+Condos/@43.5847895,-79.6443837,156a,75y,231.42h,126.68t/data=!3m7!1e1!3m5!1s1N0E7D-90_XM6DP-_O1JmA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-36.684651840356935%26panoid%3D1N0E7D-90_XM6DP-_O1JmA%26yaw%3D231.41844!7i16384!8i8192!4m17!1m7!3m6!1s0x882b4776b968b24d:0x6438829a0463376e!2sM+City+Condos+Sales+Office!8m2!3d43.5817477!4d-79.6464696!16s%2Fg%2F11l2qdmk7q!3m8!1s0x882b46d42ebda639:0x1a7280854ecba4f5!8m2!3d43.5847069!4d-79.6445291!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11rgh7c26p?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+            "title": "SV-M1-01 · Street View May 2026",
+            "use": "Private visual reference, no images or textures redistributed"
+          },
+          {
+            "url": "https://www.google.com/maps/place/3900+Confederation+Pkwy,+Mississauga,+ON+L5B+0M3,+Canada/@43.584991,-79.644698,156a,75y,215.26h,106.99t/data=!3m7!1e1!3m5!1sufV24TlPo1qNCt5KRHkz0g!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-16.98829042500546%26panoid%3DufV24TlPo1qNCt5KRHkz0g%26yaw%3D215.26359977898662!7i16384!8i8192!4m7!3m6!1s0x882b46d69e18bcef:0xaca9642da284c427!8m2!3d43.5843984!4d-79.6456515!10e5!16s%2Fg%2F11pz7lrqtd?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+            "title": "SV-M1-02 · Street View May 2026",
+            "use": "Private visual reference, no images or textures redistributed"
+          },
+          {
+            "url": "https://www.google.com/maps/place/M2+Condos/@43.583382,-79.6440309,155a,75y,342.82h,90t/data=!3m7!1e1!3m5!1sJP98w7d4d6f7HVCWxELBBA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DJP98w7d4d6f7HVCWxELBBA%26yaw%3D342.81616!7i16384!8i8192!4m9!3m8!1s0x882b47c0bc2c0f85:0xc2626949182fbaef!8m2!3d43.583649!4d-79.6441714!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11lswsnlnc?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+            "title": "SV-M2-01 · Street View June 2024",
+            "use": "Private visual reference, no images or textures redistributed"
+          }
+        ]
+      },
+      "absentKeys": [
+        "modelReviewDate"
+      ],
+      "newValues": {
+        "url": "models/studies-20261101/mcity-m1-likeness-v5.glb.gz",
+        "sha256": "2395254cbc740cba2bb3bae74bbb00cc4039ea1997414635bb368b93cea92521",
+        "downloadSHA256": "630368744c2ba9f8252004d87bf31d31f66397c3cc037b21db65f43e6da7f9ca",
+        "sourceSHA256": "af8f08bd86bff83adcde4b8f4c4144d999969031e9567128bcd98d927a207dc5",
+        "bytes": 3730812,
+        "decodedBytes": 21567616,
+        "triangles": 363263,
+        "drawPrimitives": 183,
+        "transparentPrimitivesRetained": 132,
+        "bounds": [
+          [
+            -5669.689412453971,
+            84.71000000834465,
+            343.3714500007317
+          ],
+          [
+            -5569.98898433367,
+            284.25999450683594,
+            449.09374256956755
+          ]
+        ],
+        "registration": {
+          "family": "M1",
+          "rotationYDegrees": -40.88624229608553,
+          "translation": [
+            -5599.4176685531365,
+            85.05999755859375,
+            370.8613563643046
+          ],
+          "representation": "Source-informed exterior plates and selected podium surfaces. Floor phase, dimensions and placement remain approximate.",
+          "podiumVerticalCorrections": {
+            "M1_P00": -0.34999847412109375,
+            "M1_P01": -0.029998779296875,
+            "M1_P02": -0.339996337890625,
+            "M1_P03": -0.04999542236328125
+          },
+          "preserveSemanticPartitions": true,
+          "entryPodiumComponents": {
+            "M1": "M1_P03",
+            "M2": "M2_P07"
+          },
+          "revision": "05"
+        },
+        "sourceRevision": "05",
+        "modelAccuracy": "Approximate",
+        "preserveMaterials": true,
+        "preserveSourceNormals": true,
+        "caveat": "Approximate completed exterior study. CORE A–G exterior plates scaled from design diagram; inherited floor phase and total heights are not photo-verified. Bounded photo-informed glazing/fascia on retained City podium masses, with low M1 faceted pavilion/terrace subvolumes unresolved. Crown remains prior approximate geometry. No measured as-built claim.",
+        "downloadName": "M_City_M1_Exterior_Study.glb",
+        "modelFidelity": "Approximate completed M1 exterior using CORE floor-plate outlines and selected photo-informed podium surfaces.",
+        "modelReviewDate": "2026-11-01",
+        "sources": [
+          {
+            "url": "https://www.google.com/maps/place/M1+Condos/@43.5847895,-79.6443837,156a,75y,231.42h,126.68t/data=!3m7!1e1!3m5!1s1N0E7D-90_XM6DP-_O1JmA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-36.684651840356935%26panoid%3D1N0E7D-90_XM6DP-_O1JmA%26yaw%3D231.41844!7i16384!8i8192!4m17!1m7!3m6!1s0x882b4776b968b24d:0x6438829a0463376e!2sM+City+Condos+Sales+Office!8m2!3d43.5817477!4d-79.6464696!16s%2Fg%2F11l2qdmk7q!3m8!1s0x882b46d42ebda639:0x1a7280854ecba4f5!8m2!3d43.5847069!4d-79.6445291!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11rgh7c26p?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+            "title": "SV-M1-01 · Street View May 2026",
+            "use": "Private visual reference, no images or textures redistributed"
+          },
+          {
+            "url": "https://www.google.com/maps/place/3900+Confederation+Pkwy,+Mississauga,+ON+L5B+0M3,+Canada/@43.584991,-79.644698,156a,75y,215.26h,106.99t/data=!3m7!1e1!3m5!1sufV24TlPo1qNCt5KRHkz0g!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-16.98829042500546%26panoid%3DufV24TlPo1qNCt5KRHkz0g%26yaw%3D215.26359977898662!7i16384!8i8192!4m7!3m6!1s0x882b46d69e18bcef:0xaca9642da284c427!8m2!3d43.5843984!4d-79.6456515!10e5!16s%2Fg%2F11pz7lrqtd?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+            "title": "SV-M1-02 · Street View May 2026",
+            "use": "Private visual reference, no images or textures redistributed"
+          },
+          {
+            "url": "https://www.google.com/maps/place/M2+Condos/@43.583382,-79.6440309,155a,75y,342.82h,90t/data=!3m7!1e1!3m5!1sJP98w7d4d6f7HVCWxELBBA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DJP98w7d4d6f7HVCWxELBBA%26yaw%3D342.81616!7i16384!8i8192!4m9!3m8!1s0x882b47c0bc2c0f85:0xc2626949182fbaef!8m2!3d43.583649!4d-79.6441714!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11lswsnlnc?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+            "title": "SV-M2-01 · Street View June 2024",
+            "use": "Private visual reference, no images or textures redistributed"
+          },
+          {
+            "url": "https://www.corearchitects.com/project/m-city-phase-1/",
+            "title": "CORE Architects: M City Phase 1",
+            "use": "Architectural design and seven floor-plate outlines; design-era diagram, not an as-built survey."
+          },
+          {
+            "url": "https://www.rjc.ca/project-details/m1-m2-condos.html",
+            "title": "RJC Engineers: M1 and M2",
+            "use": "Completed exterior and selected podium appearance references; photograph capture dates are not stated."
+          }
+        ]
+      }
+    },
+    {
+      "id": "mcity-m2-20261025-exterior-study",
+      "newFingerprint": "0e5700d0af52c8a01a20d973d4fb13119ff29b422186fb39ea5c767404ed86d7",
+      "oldValues": {
+        "url": "models/studies-20261101/mcity-m2-rev03-exterior.glb.gz",
+        "sha256": "9b7836cbd765b203f231963ec17430a73c989ddefb7595c88009a333c835894a",
+        "downloadSHA256": "f8df47618a455813ce83c64ced978e5b18797ee13f233be743ed09e8ce7f9f87",
+        "sourceSHA256": "4e32fd3af9751ddde545b6dd2b2abd60e87212c8a53e060fe847f0b75160eba6",
+        "bytes": 3454743,
+        "decodedBytes": 21364304,
+        "triangles": 351511,
+        "drawPrimitives": 178,
+        "transparentPrimitivesRetained": 133,
+        "bounds": [
+          [
+            -5602.946918456248,
+            83.96000000089407,
+            387.0537115888363
+          ],
+          [
+            -5486.877735030047,
+            284,
+            482.1300436305165
+          ]
+        ],
+        "registration": {
+          "family": "M2",
+          "rotationYDegrees": -40.88624229608553,
+          "translation": [
+            -5599.4176685531365,
+            84,
+            370.8613563643046
+          ],
+          "representation": "Optional architecture- and Street-View-informed approximate completed M2 study, podium revision 02; not dimension-verified as-built. Source podium surfaces restored to municipal world elevations. Tower dimensions, schedules and all new podium dimensions/finishes remain inferred.",
+          "podiumVerticalCorrections": {
+            "M2_P04": 0,
+            "M2_P05": 0.5,
+            "M2_P06": 0.05999755859375,
+            "M2_P07": -0.04000091552734375
+          },
+          "preserveSemanticPartitions": true,
+          "entryPodiumComponents": {
+            "M1": "M1_P03",
+            "M2": "M2_P07"
+          },
+          "revision": "02"
+        },
+        "sourceRevision": "03",
+        "modelAccuracy": "Approximate",
+        "preserveMaterials": true,
+        "preserveSourceNormals": true,
+        "caveat": "Lower-confidence approximate study. Original tower plate cycle, floor schedule and architectural dimensions are inferred. Podium slab edges, guards, recesses and selective colour cues follow dated Street View; all bay/portal positions and depths remain inferred. Exact signed addresses do not establish exact entry geometry. M2 unresolved patterned wall omitted. Source heights and architectural heights differ; 61 versus 60/63 storey counts remain disputed. Municipal source is the default and is fully restorable.",
+        "downloadName": "M_City_M2_Rev03_Web_Study.glb",
+        "modelFidelity": "Approximate completed M2 exterior, Rev03 exterior; source-registered but not dimension-verified as-built",
+        "sources": [
+          {
+            "url": "https://www.google.com/maps/place/M1+Condos/@43.5847895,-79.6443837,156a,75y,231.42h,126.68t/data=!3m7!1e1!3m5!1s1N0E7D-90_XM6DP-_O1JmA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-36.684651840356935%26panoid%3D1N0E7D-90_XM6DP-_O1JmA%26yaw%3D231.41844!7i16384!8i8192!4m17!1m7!3m6!1s0x882b4776b968b24d:0x6438829a0463376e!2sM+City+Condos+Sales+Office!8m2!3d43.5817477!4d-79.6464696!16s%2Fg%2F11l2qdmk7q!3m8!1s0x882b46d42ebda639:0x1a7280854ecba4f5!8m2!3d43.5847069!4d-79.6445291!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11rgh7c26p?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+            "title": "SV-M1-01 · Street View May 2026",
+            "use": "Private visual reference, no images or textures redistributed"
+          },
+          {
+            "url": "https://www.google.com/maps/place/3900+Confederation+Pkwy,+Mississauga,+ON+L5B+0M3,+Canada/@43.584991,-79.644698,156a,75y,215.26h,106.99t/data=!3m7!1e1!3m5!1sufV24TlPo1qNCt5KRHkz0g!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-16.98829042500546%26panoid%3DufV24TlPo1qNCt5KRHkz0g%26yaw%3D215.26359977898662!7i16384!8i8192!4m7!3m6!1s0x882b46d69e18bcef:0xaca9642da284c427!8m2!3d43.5843984!4d-79.6456515!10e5!16s%2Fg%2F11pz7lrqtd?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+            "title": "SV-M1-02 · Street View May 2026",
+            "use": "Private visual reference, no images or textures redistributed"
+          },
+          {
+            "url": "https://www.google.com/maps/place/M2+Condos/@43.583382,-79.6440309,155a,75y,342.82h,90t/data=!3m7!1e1!3m5!1sJP98w7d4d6f7HVCWxELBBA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DJP98w7d4d6f7HVCWxELBBA%26yaw%3D342.81616!7i16384!8i8192!4m9!3m8!1s0x882b47c0bc2c0f85:0xc2626949182fbaef!8m2!3d43.583649!4d-79.6441714!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11lswsnlnc?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+            "title": "SV-M2-01 · Street View June 2024",
+            "use": "Private visual reference, no images or textures redistributed"
+          }
+        ]
+      },
+      "absentKeys": [
+        "modelReviewDate"
+      ],
+      "newValues": {
+        "url": "models/studies-20261101/mcity-m2-likeness-v5.glb.gz",
+        "sha256": "e5a8a29b8f5553e4f92418c11c4ef63397cded152d7d06ba48d690e1e18597fd",
+        "downloadSHA256": "1f6d68734e2486165984f0e56605638fc0ea705a4cb326afbe33b0a4dde0ef20",
+        "sourceSHA256": "cfd3815278c1495fc91eb4b54afe37601ba63e03bed1c6172b37f22ab3d3a08e",
+        "bytes": 3662186,
+        "decodedBytes": 21373484,
+        "triangles": 353191,
+        "drawPrimitives": 182,
+        "transparentPrimitivesRetained": 133,
+        "bounds": [
+          [
+            -5602.946918456248,
+            83.96000000089407,
+            387.0537115888363
+          ],
+          [
+            -5486.877735030047,
+            284,
+            482.1300436305165
+          ]
+        ],
+        "registration": {
+          "family": "M2",
+          "rotationYDegrees": -40.88624229608553,
+          "translation": [
+            -5599.4176685531365,
+            84,
+            370.8613563643046
+          ],
+          "representation": "Source-informed exterior plates and selected podium surfaces. Floor phase, dimensions and placement remain approximate.",
+          "podiumVerticalCorrections": {
+            "M2_P04": 0,
+            "M2_P05": 0.5,
+            "M2_P06": 0.05999755859375,
+            "M2_P07": -0.04000091552734375
+          },
+          "preserveSemanticPartitions": true,
+          "entryPodiumComponents": {
+            "M1": "M1_P03",
+            "M2": "M2_P07"
+          },
+          "revision": "05"
+        },
+        "sourceRevision": "05",
+        "modelAccuracy": "Approximate",
+        "preserveMaterials": true,
+        "preserveSourceNormals": true,
+        "caveat": "Approximate completed exterior study. CORE A–G exterior plates scaled from design diagram; inherited floor phase and total heights are not photo-verified. Bounded photo-informed glazing/fascia on retained City podium masses, with low M1 faceted pavilion/terrace subvolumes unresolved. Crown remains prior approximate geometry. No measured as-built claim.",
+        "downloadName": "M_City_M2_Exterior_Study.glb",
+        "modelFidelity": "Approximate completed M2 exterior using CORE floor-plate outlines and selected photo-informed podium surfaces.",
+        "modelReviewDate": "2026-11-01",
+        "sources": [
+          {
+            "url": "https://www.google.com/maps/place/M1+Condos/@43.5847895,-79.6443837,156a,75y,231.42h,126.68t/data=!3m7!1e1!3m5!1s1N0E7D-90_XM6DP-_O1JmA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-36.684651840356935%26panoid%3D1N0E7D-90_XM6DP-_O1JmA%26yaw%3D231.41844!7i16384!8i8192!4m17!1m7!3m6!1s0x882b4776b968b24d:0x6438829a0463376e!2sM+City+Condos+Sales+Office!8m2!3d43.5817477!4d-79.6464696!16s%2Fg%2F11l2qdmk7q!3m8!1s0x882b46d42ebda639:0x1a7280854ecba4f5!8m2!3d43.5847069!4d-79.6445291!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11rgh7c26p?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+            "title": "SV-M1-01 · Street View May 2026",
+            "use": "Private visual reference, no images or textures redistributed"
+          },
+          {
+            "url": "https://www.google.com/maps/place/3900+Confederation+Pkwy,+Mississauga,+ON+L5B+0M3,+Canada/@43.584991,-79.644698,156a,75y,215.26h,106.99t/data=!3m7!1e1!3m5!1sufV24TlPo1qNCt5KRHkz0g!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-16.98829042500546%26panoid%3DufV24TlPo1qNCt5KRHkz0g%26yaw%3D215.26359977898662!7i16384!8i8192!4m7!3m6!1s0x882b46d69e18bcef:0xaca9642da284c427!8m2!3d43.5843984!4d-79.6456515!10e5!16s%2Fg%2F11pz7lrqtd?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+            "title": "SV-M1-02 · Street View May 2026",
+            "use": "Private visual reference, no images or textures redistributed"
+          },
+          {
+            "url": "https://www.google.com/maps/place/M2+Condos/@43.583382,-79.6440309,155a,75y,342.82h,90t/data=!3m7!1e1!3m5!1sJP98w7d4d6f7HVCWxELBBA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DJP98w7d4d6f7HVCWxELBBA%26yaw%3D342.81616!7i16384!8i8192!4m9!3m8!1s0x882b47c0bc2c0f85:0xc2626949182fbaef!8m2!3d43.583649!4d-79.6441714!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11lswsnlnc?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+            "title": "SV-M2-01 · Street View June 2024",
+            "use": "Private visual reference, no images or textures redistributed"
+          },
+          {
+            "url": "https://www.corearchitects.com/project/m-city-phase-1/",
+            "title": "CORE Architects: M City Phase 1",
+            "use": "Architectural design and seven floor-plate outlines; design-era diagram, not an as-built survey."
+          },
+          {
+            "url": "https://www.rjc.ca/project-details/m1-m2-condos.html",
+            "title": "RJC Engineers: M1 and M2",
+            "use": "Completed exterior and selected podium appearance references; photograph capture dates are not stated."
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "mcity-m1",
+      "newFingerprint": "cd7a4ed05fea3b84d97e779e46b058a7ccd75345a00b8b8d1527bd477e33110e",
+      "oldValues": {
+        "url": "models/studies-20261101/mcity-m1-rev03-exterior.glb.gz",
+        "bytes": 3318788,
+        "decodedBytes": 20403268,
+        "sha256": "e64ff2ddcb44f0d8dc5da7830a1f9d202fd257a827d31362fb94cc4061afada5",
+        "downloadSHA256": "fa2dbb81b9cd0a03bbdf7d1c189e81066ca10ff5d0e0c45dae96b502c2e7320a",
+        "downloadName": "M_City_M1_Rev03_Web_Study.glb",
+        "sourceSHA256": "bbc3a2fe2a2e2759911e7d9ae5cb1974bcba5d6df3175e14712c10d63e49850b",
+        "triangles": 342311,
+        "meshCount": 171,
+        "representation": "Source-registered authored Rev03 facade refinement, November1 2026; original Rev02 geometry retained."
+      },
+      "absentKeys": [
+        "modelReviewDate"
+      ],
+      "newValues": {
+        "url": "models/studies-20261101/mcity-m1-likeness-v5.glb.gz",
+        "bytes": 3730812,
+        "decodedBytes": 21567616,
+        "sha256": "2395254cbc740cba2bb3bae74bbb00cc4039ea1997414635bb368b93cea92521",
+        "downloadSHA256": "630368744c2ba9f8252004d87bf31d31f66397c3cc037b21db65f43e6da7f9ca",
+        "downloadName": "M_City_M1_Exterior_Study.glb",
+        "sourceSHA256": "af8f08bd86bff83adcde4b8f4c4144d999969031e9567128bcd98d927a207dc5",
+        "triangles": 363263,
+        "meshCount": 183,
+        "modelReviewDate": "2026-11-01",
+        "representation": "Approximate completed exterior with source-traced floor plates and selected podium surface details. Floor phase and dimensions remain qualified."
+      }
+    },
+    {
+      "id": "mcity-m2",
+      "newFingerprint": "8d063144a6a825a8336e4c66f03c646fefb89826daccdc09b102468f2e71f691",
+      "oldValues": {
+        "url": "models/studies-20261101/mcity-m2-rev03-exterior.glb.gz",
+        "bytes": 3454743,
+        "decodedBytes": 21364304,
+        "sha256": "9b7836cbd765b203f231963ec17430a73c989ddefb7595c88009a333c835894a",
+        "downloadSHA256": "f8df47618a455813ce83c64ced978e5b18797ee13f233be743ed09e8ce7f9f87",
+        "downloadName": "M_City_M2_Rev03_Web_Study.glb",
+        "sourceSHA256": "4e32fd3af9751ddde545b6dd2b2abd60e87212c8a53e060fe847f0b75160eba6",
+        "triangles": 351511,
+        "meshCount": 178,
+        "representation": "Source-registered authored Rev03 facade refinement, November1 2026; original Rev02 geometry retained."
+      },
+      "absentKeys": [
+        "modelReviewDate"
+      ],
+      "newValues": {
+        "url": "models/studies-20261101/mcity-m2-likeness-v5.glb.gz",
+        "bytes": 3662186,
+        "decodedBytes": 21373484,
+        "sha256": "e5a8a29b8f5553e4f92418c11c4ef63397cded152d7d06ba48d690e1e18597fd",
+        "downloadSHA256": "1f6d68734e2486165984f0e56605638fc0ea705a4cb326afbe33b0a4dde0ef20",
+        "downloadName": "M_City_M2_Exterior_Study.glb",
+        "sourceSHA256": "cfd3815278c1495fc91eb4b54afe37601ba63e03bed1c6172b37f22ab3d3a08e",
+        "triangles": 353191,
+        "meshCount": 182,
+        "modelReviewDate": "2026-11-01",
+        "representation": "Approximate completed exterior with source-traced floor plates and selected podium surface details. Floor phase and dimensions remain qualified."
+      }
+    }
+  ],
+  "views": [
+    {
+      "id": "mcity-pair",
+      "newFingerprint": "2c5698462e3addf1b34b8a4bf921092f9088c5f17b2309f61a86a82cd5c7eb0d",
+      "oldValues": {
+        "summary": "A draft interpretation of the completed towers and podiums. The tower geometry is unchanged from the accepted study; selected podium details follow dated views.",
+        "limits": "Tower plates, floor schedules, heights, podium dimensions and hidden faces remain approximate. M1 podium observations: May 2026. M2 Quartz/Webb observations: June 2024. The unresolved M2 patterned wall is omitted. Not certified as-built, survey or construction information."
+      },
+      "absentKeys": [],
+      "newValues": {
+        "summary": "An approximate exterior study using CORE’s floor-plate diagram and completed-building photographs.",
+        "limits": "Floor sequence, heights, crown details and podium dimensions remain approximate. Added glazing and bands cover selected surfaces; they do not reconstruct the full podium. M1’s low faceted pavilion remains coarse or absent."
+      }
+    },
+    {
+      "id": "mcity-m1",
+      "newFingerprint": "71cd93b158524feb0d9bc709c5819f1043532c818124e5d766ed535af618b3fc",
+      "oldValues": {
+        "summary": "A draft interpretation of the completed towers and podiums. The tower geometry is unchanged from the accepted study; selected podium details follow dated views.",
+        "limits": "Tower plates, floor schedules, heights, podium dimensions and hidden faces remain approximate. M1 podium observations: May 2026. M2 Quartz/Webb observations: June 2024. The unresolved M2 patterned wall is omitted. Not certified as-built, survey or construction information."
+      },
+      "absentKeys": [],
+      "newValues": {
+        "summary": "An approximate exterior study using CORE’s floor-plate diagram and completed-building photographs.",
+        "limits": "Floor sequence, heights, crown details and podium dimensions remain approximate. Added glazing and bands cover selected surfaces; they do not reconstruct the full podium. M1’s low faceted pavilion remains coarse or absent."
+      }
+    },
+    {
+      "id": "mcity-m2",
+      "newFingerprint": "65d0fb384438e0eb48909780a8ea771234f1e32fab75d2677b62a7226d27bd40",
+      "oldValues": {
+        "summary": "A draft interpretation of the completed towers and podiums. The tower geometry is unchanged from the accepted study; selected podium details follow dated views.",
+        "limits": "Tower plates, floor schedules, heights, podium dimensions and hidden faces remain approximate. M1 podium observations: May 2026. M2 Quartz/Webb observations: June 2024. The unresolved M2 patterned wall is omitted. Not certified as-built, survey or construction information."
+      },
+      "absentKeys": [],
+      "newValues": {
+        "summary": "An approximate exterior study using CORE’s floor-plate diagram and completed-building photographs.",
+        "limits": "Floor sequence, heights, crown details and podium dimensions remain approximate. Added glazing and bands cover selected surfaces; they do not reconstruct the full podium."
+      }
+    }
+  ],
+  "revisionIds": [
+    "mcity-pair-v5-20261101",
+    "mcity-m1-v5-20261101",
+    "mcity-m2-v5-20261101"
+  ],
+  "versions": [
+    {
+      "url": "models/studies-20261101/mcity-m1-likeness-v5.glb.gz",
+      "sha256": "630368744c2ba9f8252004d87bf31d31f66397c3cc037b21db65f43e6da7f9ca"
+    },
+    {
+      "url": "models/studies-20261101/mcity-m2-likeness-v5.glb.gz",
+      "sha256": "1f6d68734e2486165984f0e56605638fc0ea705a4cb326afbe33b0a4dde0ef20"
+    }
+  ],
+  "priorProjectsFingerprint": "bdabf539d7cf972b10f92d6290fe12d9a1c4aa9682462c3739f408cb4d44cab6",
+  "newRevisionFingerprint": "c383fa80552ad00c55a4091206c7b2e1f194665d1f4b1bd3b5cd0eaefd01bf74",
+  "project": {
+    "id": "mcity-1-2",
+    "newFingerprint": "912e552b7de672de3baefafc8c1aea28f6e90750a56fc3db2a6d5e90e5286301",
+    "oldValues": {
+      "geometryCoverage": "Approximate completed exteriors, M City Rev03. Source-registered podiums and inferred tower geometry are retained.",
+      "modelCaveat": "CTBUH architectural heights differ from UrbanToronto's 197.81 m and 60 storeys. The City's 61-storey figure is a marketing count. Preserve the distinction. Rev03 exterior studies retain source-registered podium surfaces and unchanged inferred tower geometry. M1 podium cues: May 2026 Street View. M2 Quartz/Webb cues: June 2024 Street View; May 2026 pair view covers a different frontage. Dimensions, bay widths, portal locations, glazing colours and floor schedules remain approximate; 63-storey references also conflict. Unresolved M2 patterned wall is omitted."
+    },
+    "absentKeys": [],
+    "newValues": {
+      "geometryCoverage": "Approximate completed exteriors with source-traced floor plates and selected podium glazing and bands.",
+      "modelCaveat": "Published height and storey conventions differ, including 60, 61 and 63-storey counts. Floor phase, heights, crown details and podium dimensions remain approximate. M1’s low faceted pavilion remains coarse or absent; selected podium surface additions do not reconstruct it. This is not a measured as-built model."
+    }
+  },
+  "csvOldRow": "mcity-1-2,M City M1 and M2,Confederation Parkway and Burnhamthorpe Road West,completed,2024,\"[61, 61]\",\"[199.2, 200]\",2023–2024,,,\"Approximate completed exteriors, M City Rev03. Source-registered podiums and inferred tower geometry are retained.\",\"CTBUH architectural heights differ from UrbanToronto's 197.81 m and 60 storeys. The City's 61-storey figure is a marketing count. Preserve the distinction. Rev03 exterior studies retain source-registered podium surfaces and unchanged inferred tower geometry. M1 podium cues: May 2026 Street View. M2 Quartz/Webb cues: June 2024 Street View; May 2026 pair view covers a different frontage. Dimensions, bay widths, portal locations, glazing colours and floor schedules remain approximate; 63-storey references also conflict. Unresolved M2 patterned wall is omitted.\",\"[{\"\"url\"\": \"\"https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/\"\", \"\"title\"\": \"\"M City project\"\", \"\"publisher\"\": \"\"City of Mississauga\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"Eight-tower community; M1/M2 occupied; M3/M5/M4 target completion Q 4 2026/2027/2028.\"\"]}, {\"\"url\"\": \"\"https://www.mcitycondos.com/construction.php\"\", \"\"title\"\": \"\"Construction updates, Spring 2026\"\", \"\"publisher\"\": \"\"Rogers Real Estate Development / Urban Capital\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"M3 crown complete and phased occupancy underway; M4 slab at 41; M5 slab at 27.\"\"]}, {\"\"url\"\": \"\"https://www.skyscrapercenter.com/complex/2859\"\", \"\"title\"\": \"\"M City complex\"\", \"\"publisher\"\": \"\"Council on Tall Buildings and Urban Habitat\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"M3 260.3 m; M4 215.6 m; M1 199.2 m; M2 200 m; M6 194 m and M5 123 m are explicitly estimates.\"\"]}, {\"\"url\"\": \"\"https://urbantoronto.ca/database/projects/m-city\"\", \"\"title\"\": \"\"M City\"\", \"\"publisher\"\": \"\"UrbanToronto\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"M1/M2 completed; database uses 60 storeys and 197.81 m, differing from City 61-storey marketing.\"\"]}]\",existing,,2026-11-01,\"Existing towers, with occupancy recorded in 2023 and 2024. Approximate exterior studies do not change their status.\"",
+  "csvNewRow": "mcity-1-2,M City M1 and M2,Confederation Parkway and Burnhamthorpe Road West,completed,2024,\"[61, 61]\",\"[199.2, 200]\",2023–2024,,,Approximate completed exteriors with source-traced floor plates and selected podium glazing and bands.,\"Published height and storey conventions differ, including 60, 61 and 63-storey counts. Floor phase, heights, crown details and podium dimensions remain approximate. M1’s low faceted pavilion remains coarse or absent; selected podium surface additions do not reconstruct it. This is not a measured as-built model.\",\"[{\"\"url\"\": \"\"https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/\"\", \"\"title\"\": \"\"M City project\"\", \"\"publisher\"\": \"\"City of Mississauga\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"Eight-tower community; M1/M2 occupied; M3/M5/M4 target completion Q 4 2026/2027/2028.\"\"]}, {\"\"url\"\": \"\"https://www.mcitycondos.com/construction.php\"\", \"\"title\"\": \"\"Construction updates, Spring 2026\"\", \"\"publisher\"\": \"\"Rogers Real Estate Development / Urban Capital\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"M3 crown complete and phased occupancy underway; M4 slab at 41; M5 slab at 27.\"\"]}, {\"\"url\"\": \"\"https://www.skyscrapercenter.com/complex/2859\"\", \"\"title\"\": \"\"M City complex\"\", \"\"publisher\"\": \"\"Council on Tall Buildings and Urban Habitat\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"M3 260.3 m; M4 215.6 m; M1 199.2 m; M2 200 m; M6 194 m and M5 123 m are explicitly estimates.\"\"]}, {\"\"url\"\": \"\"https://urbantoronto.ca/database/projects/m-city\"\", \"\"title\"\": \"\"M City\"\", \"\"publisher\"\": \"\"UrbanToronto\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"M1/M2 completed; database uses 60 storeys and 197.81 m, differing from City 61-storey marketing.\"\"]}]\",existing,,2026-11-01,\"Existing towers, with occupancy recorded in 2023 and 2024. Approximate exterior studies do not change their status.\"",
+  "facts": {
+    "groups.json": "ec5a204a8b3ca359739aa36688fcd6a321d3fb2c45b48efab474f3aef2922c80",
+    "overrides.json": "681d45800329659f0627c9f86f63617facd98e9bf2ed5c83cbfbc35318ea09af",
+    "project-lifecycle-20261101.json": "fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24"
+  }
+}

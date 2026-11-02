@@ -1,18 +1,18 @@
 /* Reference studies use the same open heading and prose rhythm as Sources. */
 html .reading-page .reference-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 32px 64px; align-items: start; padding-bottom: 48px; }
 html .reading-page .reference-intro h1 { margin: 0 0 18px; }
-html .reading-page .reference-date { margin: 0; color: #6b6662; font-size: 14px; line-height: 1.5; }
+html .reading-page .reference-date { margin: 0; color: var(--site-muted); font-size: 14px; line-height: 1.5; }
 html .reading-page .reference-intro-copy > p { max-width: 60ch; margin: 0 0 18px; font-size: 19px; line-height: 1.6; }
 html .reading-page .review-main .reference-about { max-width: 65ch; padding: 0; font-size: 15px; }
 html .reading-page .review-main .reference-about summary { min-height: 44px; padding: 10px 0; line-height: 1.6; }
 html .reading-page .review-main .reference-about p { margin: 12px 0 18px; }
-html .reading-page .reference-browse { display: flex; align-items: end; justify-content: space-between; flex-wrap: wrap; gap: 24px 40px; padding: 28px 0; border-top: 1px solid #e4dedb; border-bottom: 1px solid #e4dedb; }
+html .reading-page .reference-browse { display: flex; align-items: end; justify-content: space-between; flex-wrap: wrap; gap: 24px 40px; padding: 28px 0; border-top: 1px solid var(--site-line); border-bottom: 1px solid var(--site-line); }
 html .reading-page .reference-project-picker { flex: 1 1 420px; max-width: 620px; margin: 0; min-width: 0; }
-html .reading-page .reference-project-picker label { display: block; margin-bottom: 10px; color: #6b6662; font-size: 14px; line-height: 1.4; }
+html .reading-page .reference-project-picker label { display: block; margin-bottom: 10px; color: var(--site-muted); font-size: 14px; line-height: 1.4; }
 html .reading-page .reference-picker-controls { display: flex; gap: 12px; }
-html .reading-page .reference-picker-controls select { flex: 1 1 auto; min-width: 0; width: 100%; min-height: 48px; padding: 12px 46px 12px 14px; border: 1px solid #e4dedb; border-radius: 5px; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23534b47' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") right 16px center / 16px 16px no-repeat; color: var(--site-ink, #2e2b2a); font: 400 16px/1.4 'Lato', sans-serif; appearance: none; -webkit-appearance: none; }
-html .reading-page .reference-picker-controls button { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; gap: 14px; min-height: 48px; padding: 12px 18px; border: 1px solid #a23b3b; border-radius: 5px; background: #a23b3b; color: #fff; font: 400 16px/1.4 'Lato', sans-serif; cursor: pointer; }
-html .reading-page .reference-picker-controls button:hover { background: #8c3030; border-color: #8c3030; }
+html .reading-page .reference-picker-controls select { flex: 1 1 auto; min-width: 0; width: 100%; min-height: 48px; padding: 12px 46px 12px 14px; border: 1px solid var(--site-line); border-radius: 5px; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23534b47' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") right 16px center / 16px 16px no-repeat; color: var(--site-ink, var(--site-ink)); font: 400 16px/1.4 'Lato', sans-serif; appearance: none; -webkit-appearance: none; }
+html .reading-page .reference-picker-controls button { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; gap: 14px; min-height: 48px; padding: 12px 18px; border: 1px solid var(--site-accent); border-radius: 5px; background: var(--site-accent); color: #fff; font: 400 16px/1.4 'Lato', sans-serif; cursor: pointer; }
+html .reading-page .reference-picker-controls button:hover { background: var(--site-accent-strong); border-color: var(--site-accent-strong); }
 html .reading-page .reference-related { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 0; font-size: 15px; line-height: 1.5; }
 html .reading-page .model-change { padding: 64px 0; }
 html .reading-page .model-change h2 { max-width: 36ch; margin: 10px 0 24px; }
@@ -25,7 +25,7 @@ html .reading-page #latestStudies { scroll-margin-top: calc(var(--site-header-he
 html .reading-page .maritz-actions, html .reading-page .maritz-comparisons { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; }
 html .reading-page .maritz-actions > a, html .reading-page .maritz-comparisons > a { display: inline-flex; align-items: center; min-height: 44px; }
 html .reading-page .maritz-comparisons { margin: 24px 0; font-size: 15px; }
-html .reading-page #sgm-maritz-6710 .image-pair figcaption { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+html .reading-page .image-pair figcaption:not(.media-caption) { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 html .reading-page #sgm-maritz-6710 .reference-about { margin-top: 20px; }
 @media (max-width: 900px) {
   html .reading-page .reference-intro { gap: 28px 36px; }

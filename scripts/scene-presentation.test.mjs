@@ -1,8 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {existsSync, readFileSync} from 'node:fs';
+import {runInNewContext} from 'node:vm';
 import * as THREE from '../public/vendor/three.module.js';
 import {northBearingFromNDC, projectNorth} from '../public/scene-presentation.js';
-import {addArchitecturalEdges} from '../public/building-presentation.js';
+import {createModelAppearance} from '../public/model-appearance.js';
+import {batchOpaqueStudy} from '../public/model-preview-batching.js';
 
 test('north bearing uses screen pixels on wide and portrait images', () => {
   const anchor = {x: 0, y: 0}, north = {x: .5, y: .5};
@@ -23,33 +26,79 @@ test('projected north agrees with the actual camera basis, including roll', () =
   }
 });
 
-test('architectural edges retain source geometry, materials, UVs and normal data', () => {
-  const geometry = new THREE.BoxGeometry(10, 30, 12), material = new THREE.MeshStandardMaterial({color: '#668899'});
-  const original = Object.fromEntries(Object.entries(geometry.attributes).map(([name, value]) => [name, Array.from(value.array)]));
-  const indices = Array.from(geometry.index.array), mesh = new THREE.Mesh(geometry, material);
-  mesh.userData = {assetId: 'reviewed-building', displayStatus: 'Under Construction', nativeTexture: true};
-  mesh.position.set(200, 80, -30); mesh.rotation.y = .45;
-  const result = addArchitecturalEdges(THREE, [mesh]);
-  assert.equal(result.layers.length, 1); assert.equal(result.layers[0].parent, mesh);
-  assert.equal(mesh.material, material); assert.deepEqual(Array.from(geometry.index.array), indices);
-  for (const [name, array] of Object.entries(original)) assert.deepEqual(Array.from(geometry.attributes[name].array), array);
-  const hits = []; result.layers[0].raycast(new THREE.Raycaster(), hits); assert.deepEqual(hits, []);
-  assert.equal(result.layers[0].material.depthTest, true); assert.equal(result.layers[0].material.depthWrite, false);
-  result.layers[0].geometry.dispose(); result.layers[0].material.dispose(); geometry.dispose(); material.dispose();
+test('the retired architectural outline generator is not shipped', () => {
+  assert.equal(existsSync(new URL('../public/building-presentation.js', import.meta.url)), false);
 });
 
-test('architectural edge budgets bound additional drawing work and skip hidden or instanced sources', () => {
-  const meshes = Array.from({length: 20}, () => {
-    const mesh = new THREE.Mesh(new THREE.BoxGeometry(), new THREE.MeshBasicMaterial());
-    mesh.userData = {assetId: 'small-building', displayStatus: 'Existing'};
-    return mesh;
+// Check dependency graphs, not just the entry files, so moving a generator into
+// another imported helper cannot silently restore display-only outlines.
+function assertNoGeneratedOutlines(entry) {
+  const seen = new Set();
+  function visit(url) {
+    url = new URL(url); url.search = ''; url.hash = '';
+    if (seen.has(url.href) || url.pathname.includes('/vendor/')) return;
+    seen.add(url.href);
+    const source = readFileSync(url, 'utf8');
+    assert.doesNotMatch(source, /addArchitecturalEdges|architecturalEdges|building-presentation\.js/, url.pathname);
+    assert.doesNotMatch(source, /\bnew\s+(?:\w+\.)?(?:EdgesGeometry|WireframeGeometry|LineSegments)\s*\(/, url.pathname);
+    for (const match of source.matchAll(/(?:\bfrom\s*|\bimport\s*\(?\s*)['"](\.[^'"]+\.js(?:\?[^'"]*)?)['"]/g)) visit(new URL(match[1], url));
+  }
+  visit(entry);
+  assert.ok(seen.size > 1, 'the entry must exercise its imported implementation');
+}
+for (const entry of ['app.js', 'model-preview.js']) {
+  test(`${entry} and its first-party dependencies never generate architectural LineSegments`, () => {
+    assertNoGeneratedOutlines(new URL('../public/' + entry, import.meta.url));
   });
-  meshes[0].userData.hiddenObsolete = true;
-  const instance = new THREE.InstancedMesh(new THREE.BoxGeometry(), new THREE.MeshBasicMaterial(), 5);
-  instance.userData.assetId = 'instances';
-  const result = addArchitecturalEdges(THREE, [...meshes, instance], {maxMeshes: 3, maxInputTriangles: 24, maxLineVertices: 100});
-  assert.ok(result.totals.meshes <= 3); assert.ok(result.totals.inputTriangles <= 24); assert.ok(result.totals.lineVertices <= 100);
-  assert.equal(meshes[0].children.length, 0); assert.equal(instance.children.length, 0);
-  for (const layer of result.layers) { layer.geometry.dispose(); layer.material.dispose(); }
-  for (const mesh of [...meshes, instance]) { mesh.geometry.dispose(); mesh.material.dispose(); }
+}
+
+test('Save Image copies the rendered scene once and draws its presentation below the model', async () => {
+  const app = readFileSync(new URL('../public/app.js', import.meta.url), 'utf8');
+  const start = app.indexOf("$('#exportBtn').onclick=async()=>{");
+  const end = app.indexOf('\nfunction drawFrame()', start);
+  assert.ok(start > 0 && end > start);
+  const canvas = {width: 1600, height: 900}, events = [], copied = [];
+  const button = {setAttribute(){}, removeAttribute(){}}, status = {replaceChildren(...children){this.children=children;}};
+  // The scene area accepts one canvas copy. This mock deliberately has no
+  // path/stroke methods with which to redraw an architectural outline layer.
+  const ctx = {fillRect(){}, drawImage(...args){copied.push(args);events.push('copy');}, fillText(){}};
+  const output = {getContext(){return ctx;},toBlob(callback,type){assert.equal(type,'image/png');callback(new Blob(['test']));}};
+  const document = {fonts:{load:async()=>{}},createTextNode:text=>text,createElement:tag=>tag==='canvas'?output:{click(){events.push('download');}}};
+  const run = {Blob,document,canvas,exporting:false,contextLost:false,current:{id:'downtown',name:'Downtown'},window:{atlasReady:'downtown'},selectedStudyProjectId:null,compare:false,mode:'future',appearance:{mode:'natural'},displayedSources:{designCredits:[]},THREE,camera:{},controls:{target:{}},STATUS_CLASSIFICATION_EDITION:'test',exportImageURL:null,
+    $:selector=>selector==='#exportBtn'?button:status,clearExportImage(){},render(){events.push('render');},
+    currentStatusLegend:()=>[],presentationLayout:()=>({height:104,scale:1}),exportCreditLines:()=>[],projectNorth:()=>null,
+    drawPresentationFooter(context,options){assert.equal(context,ctx);assert.equal(options.top,canvas.height);events.push('footer');},
+    withPNGMetadata:async blob=>blob,URL:{createObjectURL:()=> 'blob:test'}};
+  runInNewContext(app.slice(start,end),run);
+  await button.onclick();
+  assert.deepEqual(events,['render','copy','footer','download']);
+  assert.equal(copied.length,1);assert.equal(copied[0][0],canvas);assert.deepEqual(copied[0].slice(1),[0,0]);
+  assert.equal(output.width,canvas.width);assert.ok(output.height>canvas.height);
+  assert.equal(status.hidden,false);assert.equal(status.children[0],'Image ready.');
+});
+
+test('physical mullions, rails and slabs survive appearance changes and standalone batching', () => {
+  const root = new THREE.Group(), material = new THREE.MeshStandardMaterial({color: '#668899'});
+  const appearance = createModelAppearance(THREE);
+  const meshes = ['Architectural mullion', 'Balcony rail', 'Terrace slab'].map((name, i) => {
+    const geometry = new THREE.BoxGeometry(1 + i, 8 - i, 2); geometry.clearGroups();
+    const mesh = new THREE.Mesh(geometry, material); mesh.name = name; mesh.position.x = i * 5;
+    mesh.userData = {assetId: 'authored-building', lifecycle: 'under_construction', nativeTexture: true};
+    root.add(mesh); appearance.register(mesh, {authored: true}); return mesh;
+  });
+  const buffers = meshes.map(mesh => ({indices: Array.from(mesh.geometry.index.array), attributes: Object.fromEntries(Object.entries(mesh.geometry.attributes).map(([name, attribute]) => [name, Array.from(attribute.array)]))}));
+  for (const mode of ['status', 'natural']) appearance.setMode(mode);
+  for (const [i, mesh] of meshes.entries()) {
+    assert.equal(mesh.material, material); assert.equal(mesh.visible, true); assert.equal(mesh.children.length, 0);
+    assert.deepEqual(Array.from(mesh.geometry.index.array), buffers[i].indices);
+    for (const [name, values] of Object.entries(buffers[i].attributes)) assert.deepEqual(Array.from(mesh.geometry.attributes[name].array), values);
+  }
+  const originalIndices = meshes.reduce((n, mesh) => n + mesh.geometry.index.count, 0);
+  const result = batchOpaqueStudy(root, THREE);
+  assert.equal(result.batchedMeshes, 3); assert.equal(root.children.length, 1);
+  const merged = root.children[0];
+  assert.equal(merged.isMesh, true); assert.equal(merged.isLineSegments, undefined);
+  assert.deepEqual(merged.userData.sourceMeshNames, meshes.map(mesh => mesh.name));
+  assert.equal(merged.geometry.index.count, originalIndices); assert.equal(merged.material, material);
+  appearance.dispose(); merged.geometry.dispose(); material.dispose();
 });

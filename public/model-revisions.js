@@ -8,7 +8,7 @@ export async function loadModelRevisions(fetcher = globalThis.fetch, {timeoutMs 
   try {
     return await Promise.race([
       (async () => {
-        const response = await fetcher('data/model-revisions.json?v=20261028-1', {signal:controller.signal});
+        const response = await fetcher('data/model-revisions.json?v=20261102-coherent1', {cache:'no-store',signal:controller.signal});
         if (!response.ok) return null;
         const registry = await response.json();
         return registry.schema === schema && Array.isArray(registry.revisions) ? registry : null;

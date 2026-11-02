@@ -63,17 +63,20 @@ test('local previews and reserved original URLs retain exact accepted dimensions
  assert.equal(local.reduce((n,a)=>n+a.bytes,0),6199452);assert.equal(remote.reduce((n,a)=>n+a.bytes,0),305391894);
 });
 
-test('current markup, social dates, share image, and module versions all select the new edition',()=>{
+test('current markup selects native replacements while all Nov1 media remains byte-exact',()=>{
  const home=fs.readFileSync(new URL('index.html',pub),'utf8'),social=fs.readFileSync(new URL('social.html',pub),'utf8');
  for(const file of ['downtown-existing.png','downtown-future.png']){const row=downtown.images.find(r=>r.kind==='wide'&&r.file===file);assert(home.includes(row.preview.url));}
  const cards=[...social.matchAll(/<article\b[^>]*>[\s\S]*?<\/article>/g)].map(m=>m[0]);
- assert.equal(cards.filter(c=>c.includes('gallery/downtown-20261101/')).length,5);
+ const native=read('data/native-media-20261102.json'),replacements=new Map(native.images.map(row=>[row.identity,row]));
+ assert.equal(cards.filter(c=>c.includes('gallery/downtown-20261101/')).length,downtown.images.filter(row=>row.kind==='portraits'&&!replacements.has(row.kind+'/'+row.file)).length);
+ for(const row of downtown.images.filter(row=>row.kind==='portraits')){const newer=replacements.get(row.kind+'/'+row.file);if(newer){const card=cards.find(c=>c.includes(newer.displayMaster.url));assert(card,row.file);assert(card.includes(newer.download.url));assert(card.includes('data-osm="'+newer.caption.openStreetMap+'"'));}}
  for(const c of cards.filter(c=>c.includes('gallery/downtown-20261101/'))){assert.match(c,/Rendered 1 November 2026/);const row=downtown.images.find(r=>c.includes(r.preview.url));assert(c.includes('data-osm="'+row.sourceAttribution.openStreetMap+'"'));}
  const share=read('data/share-preview-20261101.json');assert.equal(share.sourceSHA256,downtown.images.find(r=>r.kind==='wide'&&r.file==='downtown-future.png').download.sha256);
  const bytes=fs.readFileSync(new URL(share.url,pub));assert.equal(createHash('sha256').update(bytes).digest('hex'),share.sha256);
- for(const name of ['index.html','explore.html','social.html']){const html=fs.readFileSync(new URL(name,pub),'utf8');assert(html.includes('https://futuremississauga.com/'+share.url));assert(!html.includes('share-preview-compact'));}
- for(const name of fs.readdirSync(pub).filter(n=>n.endsWith('.html'))){const html=fs.readFileSync(new URL(name,pub),'utf8');for(const match of html.matchAll(/(?:gallery|social-preview|image-experience)\.js\?v=([^"']+)/g))assert.equal(match[1],'20261101-media2',name);}
- for(const name of ['gallery.js','social-preview.js','image-experience.js']){const js=fs.readFileSync(new URL(name,pub),'utf8');for(const match of js.matchAll(/(?:media-catalog|document-preview)\.js\?v=([^"']+)/g))assert.equal(match[1],'20261101-media2',name);}
+ const activeShare=replacements.get('wide/downtown-future.png').responsivePreviews.find(a=>a.mimeType==='image/jpeg'&&a.dimensions[0]===1200);
+ for(const name of ['index.html','explore.html','social.html']){const html=fs.readFileSync(new URL(name,pub),'utf8');const og=html.match(/<meta property="og:image" content="([^"]+)"/)[1],twitter=html.match(/<meta name="twitter:image" content="([^"]+)"/)[1];assert.equal(og,twitter,name);assert(og.startsWith(base+'gallery/native-share-20261102/'));const bytes=fs.readFileSync(new URL(og.slice(base.length),pub));assert.equal(createHash('sha256').update(bytes).digest('hex'),activeShare.sha256,name);assert(!html.includes('share-preview-compact'));}
+ for(const name of fs.readdirSync(pub).filter(n=>n.endsWith('.html'))){const html=fs.readFileSync(new URL(name,pub),'utf8');for(const match of html.matchAll(/(?:gallery|social-preview|image-experience)\.js\?v=([^"']+)/g))assert.equal(match[1],'20261102-coherent1',name);}
+ for(const name of ['gallery.js','social-preview.js','image-experience.js']){const js=fs.readFileSync(new URL(name,pub),'utf8');for(const match of js.matchAll(/(media-catalog|document-preview)\.js\?v=([^"']+)/g))assert.equal(match[2],'20261102-coherent1',name+' '+match[1]);}
 });
 
 test('new atlas appends sharp previews and accessible text without changing either earlier edition',()=>{
@@ -82,5 +85,5 @@ test('new atlas appends sharp previews and accessible text without changing eith
  assert.deepEqual(current.documents.slice(0,14),old.documents);assert.deepEqual(text('document-page-text-20261101.txt').slice(0,14),text('document-page-text-20261028.txt'));
  const atlas=current.documents.at(-1);assert.equal(atlas.title,'Picture atlas');assert.equal(atlas.pages,35);assert.equal(atlas.sourceSHA256,'3ec6b565b82d8fb1e83b06a5856d6b7bb3f051c257f7dd0ed43725cbba86adec');assert(atlas.sizes.every(([w])=>w===2400));
  assert.equal(text('document-page-text-20261101.txt').at(-1).length,35);
- const sources=fs.readFileSync(new URL('sources.html',pub),'utf8');assert(sources.includes(atlas.url));assert(sources.includes(citywide.image.sourceAttribution.credits));assert(sources.includes('sources.js?v=20261101-library1'));
+ const sources=fs.readFileSync(new URL('sources.html',pub),'utf8');assert(sources.includes(atlas.url));assert(sources.includes(citywide.image.sourceAttribution.credits));assert.match(sources, /data-document-preview/);assert.doesNotMatch(sources, /sources-jumps|sources\.js\?/);
 });

@@ -57,9 +57,19 @@ test('the Fairview study offers previews and separate download icons and opens t
   assert.ok(section);assert.match(section,/data-preview-explore="explore.html\?district=citywide&amp;context=fairview"/);
   assert.equal((section.match(/class="file-download"/g)||[]).length,2);
   assert.equal((section.match(/<img /g)||[]).length,2);
-  for(const row of manifest.images){
-    assert.ok(section.includes('<a href="'+row.url+'"><div class="image-frame"><img'));
-    assert.ok(section.includes('href="'+row.url+'" download data-download'));
+  const current=JSON.parse(fs.readFileSync(new URL('data/neighbourhood-media-20261102.json',root)));
+  assert.deepEqual(current.images.map(row=>row.identity),['neighbourhood/fairview/before','neighbourhood/fairview/after']);
+  for(const row of current.images){
+    assert.equal(row.scenario,'existing');assert.equal(row.caption.comparisonState,row.identity.split('/').at(-1));
+    assert.ok(section.includes('<a href="'+row.displayMaster.url+'" data-preview-download="'+row.download.url+'"><div class="image-frame"><img'));
+    assert.ok(section.includes('href="'+row.download.url+'" download data-download'));
+    for(const preview of row.responsivePreviews.filter(asset=>asset.mimeType==='image/avif')){
+      assert.ok(section.includes(preview.url+' '+preview.dimensions[0]+'w'));
+      assert.equal(sha(fs.readFileSync(new URL(preview.url,root))),preview.sha256);
+    }
+    for(const credit of row.caption.requiredModelCredits)assert.ok(section.includes(credit));
   }
-  assert.doesNotMatch(section,/project=edge-oro|render-proof|SHA256|275|OpenStreetMap|vegetation overlays/);
+  assert.match(section,/Both views use the same camera and lighting/);
+  assert.match(section,/Building shapes and ground contact are approximate/);
+  assert.doesNotMatch(section,/project=edge-oro|render-proof|SHA256|vegetation overlays|The live map also includes|<p class="limit">Updated|assets\/fairview-20261028\//);
 });

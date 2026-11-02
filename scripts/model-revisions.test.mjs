@@ -39,7 +39,7 @@ test('changed model bytes, compressed download, source date or view assembly inv
 });
 
 test('generic review and reference dates never become dates for unrelated buildings or old images',()=>{
-  for(const id of ['artform','avia','edge-oro','mcity-1-2','municipal-23-3369']) assert.equal(modelRevisionForProject(registry,catalogue,id),null);
+  for(const id of ['artform','avia','edge-oro','municipal-23-3369']) assert.equal(modelRevisionForProject(registry,catalogue,id),null);
   assert.equal(mediaModelRevision(registry,{url:'assets/wide/downtown-future.png',sha256:'a'.repeat(64),modelSHA256:record.modelAssets[0].sha256}),null);
   const before=record.media.find(item=>item.role==='before'), after=record.media.find(item=>item.role==='after');
   assert.equal(mediaModelRevision(registry,{url:before.url,sha256:before.sha256,modelSHA256:after.modelSHA256s[0]}),null);
@@ -50,7 +50,7 @@ test('generic review and reference dates never become dates for unrelated buildi
 });
 
 test('revision records match actual GLB, compressed download and all eight derivative image files',()=>{
-  assert.equal(registry.revisions.length,2);
+  assert.deepEqual(registry.revisions.map(r=>r.id),['sgm-maritz-6710-20261027','ergocentric-275-superior-20261028','mcity-m5-v5-20261101','mcity-pair-v5-20261101','mcity-m1-v5-20261101','mcity-m2-v5-20261101']);
   const asset=record.modelAssets[0],compressed=fs.readFileSync(new URL(`../public/${asset.url}`,import.meta.url)),decoded=gunzipSync(compressed);
   assert.equal(compressed.length,asset.bytes);assert.equal(sha(compressed),asset.downloadSHA256);
   assert.equal(decoded.length,asset.decodedBytes);assert.equal(sha(decoded),asset.sha256);

@@ -16,17 +16,17 @@ const read=async path=>readFile(new URL('../'+path,import.meta.url));
 const json=async path=>JSON.parse(await read(path));
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const catalogue=await json('public/data/model-previews.json'),data=await json('public/data/refinement-models.json'),projects=await json('public/data/projects.json');
-const ids=['mcity-m4-future-detail-20261101','mcity-m4-spring2026-detail-20261101','mcity-m5-authored-detail-20261101','mcity-m7-m8-20261101-dated-exteriors','mcity-m3-upper-detail-20261101','mcity-m6-20261101-dated-exterior'];
+const ids=['mcity-m4-future-detail-20261101','mcity-m4-spring2026-detail-20261101','mcity-m5-authored-detail-20261101','mcity-m7-m8-20261101-dated-exteriors','mcity-m3-likeness-20261101-v7','mcity-m6-20261101-dated-exterior'];
 const accepted=[...catalogue.assets.filter(a=>['mcity-m1','mcity-m2'].includes(a.id)),...data.assets.filter(a=>ids.includes(a.id))];
 const acceptedHashes={
- 'mcity-m1':'fa2dbb81b9cd0a03bbdf7d1c189e81066ca10ff5d0e0c45dae96b502c2e7320a',
- 'mcity-m2':'f8df47618a455813ce83c64ced978e5b18797ee13f233be743ed09e8ce7f9f87',
- 'mcity-m3-upper-detail-20261101':'de41aa0078aab3d32c0bdee631434878c8f0bed44dfaff66244b67dc50231699',
- 'mcity-m4-future-detail-20261101':'193a33d5866adb9dbdd2aa8915ed802d9c4420918b4a34c9453d9aa12397fd3a',
- 'mcity-m4-spring2026-detail-20261101':'71ddefd801ed80defa5ccfeb7c2b36836c0a3ec0e14db93eef2f07c3ed4a4783',
- 'mcity-m5-authored-detail-20261101':'5fd6bd183936e546469e7d07fb7191767bed79f043cc8c74ec1d48727dede1b3',
- 'mcity-m6-20261101-dated-exterior':'03cffd7b17cae8d431f3e30b567ac628415b87a09746951137d47a5ddab29693',
- 'mcity-m7-m8-20261101-dated-exteriors':'109c685cb649b359df4b7a1340f9b228101f75d7505bdf988d0fc894128351f8'
+ 'mcity-m1':'630368744c2ba9f8252004d87bf31d31f66397c3cc037b21db65f43e6da7f9ca',
+ 'mcity-m2':'1f6d68734e2486165984f0e56605638fc0ea705a4cb326afbe33b0a4dde0ef20',
+ 'mcity-m3-likeness-20261101-v7':'46069389dca1b1f6f129b0a88d96f19ff8c00aa6d2fb2d87ddf05e0106c0c78f',
+ 'mcity-m4-future-detail-20261101':'c29a55cdc94e15748a826087415fecbb84be0a0bd324f15dac1023450cb943a2',
+ 'mcity-m4-spring2026-detail-20261101':'3383b5178f56a75fb709a1d201d812e6887cdd3f4255728bb8c2bc1701eaac60',
+ 'mcity-m5-authored-detail-20261101':'4162051b4d6706a65b3f5f0606ce31dfd9500c41f6ea766f1a40eb15ac519b6f',
+ 'mcity-m6-20261101-dated-exterior':'cad1af48cf240c74696e9d60a59694d7423092801e1f30f0bc9cc044e6976493',
+ 'mcity-m7-m8-20261101-dated-exteriors':'ab9f1a2ebe1df2f2eb3260d2acd853ba56cc7d50a02ef2d9106ea79b9103b198'
 };
 const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
 const meshes=root=>{const result=[];root.traverse(node=>{if(node.isMesh)result.push(node);});return result;};
@@ -49,7 +49,7 @@ test('only the eight accepted derivative identities are activated with clean URL
   for(const key of ['privateRuntimeStage','localReview','stagedLegacyAccuracyCompatibility','legacyStageCompatibility'])assert(!Object.hasOwn(asset,key),asset.id+': '+key);
   assert(asset.uncertainGeometry&&asset.preserveMaterials&&asset.preserveSourceNormals);
  }
- assert(data.assets.some(a=>a.id==='mcity-m3-upper-detail-20261101'));assert(data.assets.some(a=>a.id==='mcity-m6-20261101-dated-exterior'));
+ assert(data.assets.some(a=>a.id==='mcity-m3-likeness-20261101-v7'));assert(data.assets.some(a=>a.id==='mcity-m6-20261101-dated-exterior'));
 });
 
 test('M4 progress and future design are mutually exclusive; M5 remains future-only with construction lifecycle',async()=>{
@@ -87,16 +87,16 @@ for(const [id,sourceIds] of [['mcity-m7-m8-20261101-dated-exteriors',['63-6170',
  assert.equal(displayStatusForLifecycle(asset.lifecycle),'Proposed');dispose(source);dispose(detail);
 });
 
-test('M3 overlay keeps the exact municipal lower capture once with separate dated structural visibility',async()=>{
- const asset=data.assets.find(a=>a.id==='mcity-m3-upper-detail-20261101');assert.equal(asset.loadWithMunicipalMesh,'63-6249');assert.equal(asset.municipalMeshIncluded,false);
+test('M3 full replacement keeps municipal geometry unchanged and masks it once only while active',async()=>{
+ const asset=data.assets.find(a=>a.id==='mcity-m3-likeness-20261101-v7');assert.equal(asset.loadWithMunicipalMesh,null);assert.equal(asset.municipalMeshIncluded,false);assert.deepEqual(asset.replacesSourceIds,['63-6249']);assert.deepEqual(asset.replacementModes,['construction','future']);
  const source=(await parse(await read('public/models/downtown.glb'))).scene,detail=(await parse(await read('public/'+asset.url))).scene;
- const lower=meshes(source).filter(m=>m.userData.id==='63-6249');assert.equal(lower.length,1);
+ const lower=meshes(source).filter(m=>m.userData.id==='63-6249');assert.equal(lower.length,1);assert.equal(lower[0].geometry.index.count/3,32);
  const original=lower[0].geometry.attributes.position.array.slice();
- assert(meshes(detail).every(m=>m.userData.id!=='63-6249'));source.add(detail);
- assert.equal(meshes(source).filter(m=>m.userData.id==='63-6249').length,1);assert.deepEqual(lower[0].geometry.attributes.position.array,original);
- const overlay=meshes(detail);for(const mesh of overlay)Object.assign(mesh.userData,{assetId:asset.id,lifecycle:asset.lifecycle,modes:asset.modes,recordedProgress:asset.recordedProgress,uncertain:true});
- for(const mode of ['existing','construction','future']){applyModelVisibility(overlay,mode,{unknownStatuses:false});assert(overlay.every(m=>m.visible===(mode!=='existing')));}
- assert(overlay.every(m=>m.geometry.attributes.normal||[m.material].flat().every(material=>material.flatShading)));dispose(source);
+ Object.assign(lower[0].userData,{lifecycle:'under_construction',recordedProgress:true,sourceReplacements:[{assetId:asset.id,modes:asset.replacementModes}]});
+ const replacement=meshes(detail);assert.equal(replacement.length,39);assert(replacement.every(m=>m.userData.id!=='63-6249'));
+ for(const mesh of replacement)Object.assign(mesh.userData,{assetId:asset.id,lifecycle:asset.lifecycle,modes:asset.modes,recordedProgress:asset.recordedProgress,uncertain:true});
+ for(const mode of ['existing','construction','future']){applyModelVisibility([...lower,...replacement],mode,{unknownStatuses:false});assert(replacement.every(m=>m.visible===(mode!=='existing')));assert.equal(lower[0].visible,false);applyModelVisibility(lower,mode,{unknownStatuses:false});assert.equal(lower[0].visible,mode!=='existing');}
+ assert.deepEqual(lower[0].geometry.attributes.position.array,original);dispose(source);dispose(detail);
 });
 
 test('accepted M1/M2 preserve exact source masks even without localReview flags',async()=>{

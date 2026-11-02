@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 import {runInNewContext} from 'node:vm';
 import * as THREE from '../public/vendor/three.module.js';
 import {shouldLoadRefinement,refinementInDistrict} from '../public/refinement-loading.js';
+import {prepareOffshoreContext,isPreparedOffshore} from '../public/offshore-context.js';
 
 // Run the real handlers with deferred network/encoding work. These tests cover
 // state transitions that synchronous source assertions cannot establish.
@@ -22,7 +23,7 @@ function exportHarness(){
  const output={width:0,height:0,getContext:()=>({fillRect(){},fillText(){},drawImage(){events.push('copy');}}),
   toBlob(callback){events.push('encode');encoding.promise.then(callback);}};
  const context={$,exporting:false,contextLost:false,current:{id:'downtown',name:'Downtown'},window:{atlasReady:'downtown'},
-  selectedStudyProjectId:null,projectById:new Map(),selectedStudyLabel:()=>"Historical model study",compare:false,mode:'future',exportImageURL:null,
+  appearance:{mode:'natural'},selectedStudyProjectId:null,projectById:new Map(),selectedStudyLabel:()=>"Historical model study",compare:false,mode:'future',exportImageURL:null,
   document:{fonts:{load:()=>fonts.promise},createElement:type=>type==='canvas'?output:element(),createTextNode:text=>text},
   clearExportImage(){},render(){events.push('render');},canvas:{width:600,height:400},
   currentStatusLegend:()=>[],presentationLayout:()=>({height:60,scale:1}),exportCreditLines:()=>['City of Mississauga'],displayedSources:{osm:false},
@@ -52,39 +53,43 @@ test('a healthy export renders immediately before copying the non-preserved WebG
  assert.equal(run.$('#exportStatus').children[0],'Image ready.');
 });
 
-function districtHarness(){
- const {$}=dom(),base=deferred(),optional=deferred(),errors=[],invalidations=[],id='streetsville';
- const context={$,THREE,current:null,model:null,context:null,contextLost:false,exporting:false,loadToken:0,focusRequest:0,mode:'future',
+function districtHarness({holdTerrain=false}={}){
+ const {$}=dom(),terrain=deferred(),base=deferred(),optional=deferred(),errors=[],invalidations=[],cleanup=[],terrainRequests=[],id='streetsville';
+ const context={$,THREE,current:null,model:null,context:null,framedProject:'previous-study',contextLost:false,exporting:false,loadToken:0,focusRequest:0,mode:'future',
   districts:[{id,name:'Streetsville',bounds:[0,0,10,10]}],notes:{},treeDataCache:{},window:{atlasReady:null,dispatchEvent(){}},
   document:{baseURI:'https://local.invalid/',querySelectorAll:()=>[],createTextNode:text=>text,createElement:()=>element()},
   wrap:$('#sceneWrap'),controls:{enabled:true},surroundingCity:{setDistrict(){}},contextAssets:{},
-  localNeighbourhood:{clear(){}},updateNeighbourhood(){},
+  citywideDetail:{clear(){cleanup.push('citywide');}},localNeighbourhood:{clear(){cleanup.push('neighbourhood');}},updateNeighbourhood(){},syncCameraCoverage(){},
+  getHarbornTerrainContract:async district=>{terrainRequests.push(district);return holdTerrain?terrain.promise:null;},
   loadModelAsset:async(_loader,url)=>{if(url===`models/${id}.glb`)await base.promise;return {scene:new THREE.Group()};},
-  loader:{},versionedTreeURL:x=>x,assetVersions:new Map(),modelAssetVersions:{sha256:{}},URL,DOMException,
+  prepareOffshoreContext,isPreparedOffshore,loader:{},versionedTreeURL:x=>x,assetVersions:new Map(),modelAssetVersions:{sha256:{}},URL,DOMException,
   visibleAttribution:{registerAsset(){},refresh(){}},refinementData:{assets:[],constructionEvidence:[]},
   transitLayers:{assets:[]},landscapeLayers:{assets:[]},splitSourceOverlaps:()=>[],overrides:{},
   addTrees:async()=>{},adoptContextModelVisibility(){},dispose(){},scene:new THREE.Group(),
-  addArchitecturalEdges:()=>({layers:[]}),makeMarkers(){},applyVisibility(){},renderProjects(){},
+  appearance:{register(){}},makeMarkers(){},applyVisibility(){},renderProjects(){},
   showStudyLoadStatus(){},cancelCameraFlight(){},setSelectedStudy(){},closeModelSearch(){},reset(){},updateTransit(){},
   ensureOptionalRefinements:()=>optional.promise,invalidate:()=>invalidations.push(context.window.atlasReady),history:{replaceState(){}},CustomEvent:class{},
   console:{error:error=>errors.push(error)}};
  runInNewContext(section('async function loadDistrict(', 'const neighbourhoodAsset='),context);
- return {context,$,base,optional,errors,invalidations,start:()=>context.loadDistrict(id)};
+ return {context,$,terrain,base,optional,errors,invalidations,cleanup,terrainRequests,start:()=>context.loadDistrict(id)};
 }
 
 test('committed municipal scene is interactive while optional studies are still loading',async()=>{
  const run=districtHarness(),done=run.start();run.base.resolve();await settle();assert.deepEqual(run.errors,[]);
+ assert.deepEqual(run.cleanup,['citywide','neighbourhood'],'district navigation clears both previous detail roots once');
+ assert.deepEqual(run.terrainRequests,['streetsville']);assert.equal(run.context.framedProject,null);
  assert.equal(run.context.window.atlasReady,'streetsville');assert.equal(run.context.controls.enabled,true);
  assert.equal(run.$('#exportBtn').disabled,false);assert.equal(run.$('#sceneWrap').attributes['aria-busy'],'false');
  assert(run.invalidations.includes('streetsville'),'committed baseline requests a frame before optional downloads finish');
  assert.equal(run.$('#loading').style.display,'none');run.optional.resolve();await done;
 });
 
-test('district completion preserves the context-loss recovery overlay and disabled controls',async()=>{
- const run=districtHarness(),done=run.start();
+for(const stage of ['terrain lookup','baseline download'])test(`context loss during ${stage} preserves its recovery overlay through district completion`,async()=>{
+ const run=districtHarness({holdTerrain:stage==='terrain lookup'}),done=run.start();
+ if(stage==='baseline download')await settle();
  run.context.contextLost=true;run.$('#loading').textContent='Waiting to reconnect';
  run.$('#loading').children=['Reload map'];run.$('#loading').style.display='grid';
- run.base.resolve();await settle();assert.deepEqual(run.errors,[]);
+ run.terrain.resolve(null);run.base.resolve();await settle();assert.deepEqual(run.errors,[]);
  assert.equal(run.context.window.atlasReady,'streetsville');assert.equal(run.context.controls.enabled,false);
  assert.equal(run.$('#exportBtn').disabled,true);assert.equal(run.$('#loading').style.display,'grid');
  assert.equal(run.$('#loading').textContent,'Waiting to reconnect');assert.deepEqual(run.$('#loading').children,['Reload map']);

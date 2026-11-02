@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {runInNewContext} from 'node:vm';
 import * as THREE from '../public/vendor/three.module.js';
+import {createCoverageController} from '../public/coverage-controller.js';
 const app=readFileSync(new URL('../public/app.js',import.meta.url),'utf8');
 const frame=app.slice(app.indexOf('function frameProject(p,meshes){'),app.indexOf('async function focusProject(p)'));
 const resize=app.slice(app.indexOf('function resize(){'),app.indexOf('new ResizeObserver(resize)'));
@@ -16,6 +17,7 @@ function harness(){
   getComputedStyle:()=>({position:wrap.clientWidth>700?'absolute':'static'}),projectMeshes:()=>meshes,
   document:{documentElement:{style:{setProperty(){}}}},getDrawingPolicy:()=>({pixelRatio:1}),cancelCameraFlight(){},invalidate(){},
   renderer:{getSize:vector=>vector.copy(size),getPixelRatio:()=>1,setPixelRatio(){},setSize:(w,h)=>size.set(w,h)}};
+ state.cameraCoverage=createCoverageController({THREE,camera,controls});
  runInNewContext(frame+'\n'+resize+'\nconst fitted=frameProject(framedProject,projectMeshes());controls.target.copy(fitted.target);camera.position.copy(fitted.position);controls.update();',state);
  return {state,meshes};
 }

@@ -1,3 +1,4 @@
+import {prepareFlatShadowReceiver} from './flat-shadow-receiver.js?v=20261102-shadow3';
 // Reuse a bounded selection of the already-published detailed area files.
 // These are source components, not claims about complete physical buildings.
 export function chooseNeighbourDistricts(district,districts,maxBytes=36000000,maxFiles=4) {
@@ -34,6 +35,7 @@ export function setCoverageMask(THREE,material,rectangles){
    shader.fragmentShader=shader.fragmentShader.replace('#include <clipping_planes_fragment>','#include <clipping_planes_fragment>\nfor(int i=0;i<5;i++){if(i>=coveredRectangleCount)break;vec4 r=coveredRectangles[i];if(contextWorldXZ.x>=r.x&&contextWorldXZ.y>=r.y&&contextWorldXZ.x<=r.z&&contextWorldXZ.y<=r.w)discard;}');
   };
   material.customProgramCacheKey=()=> 'source-context-coverage-v1';material.needsUpdate=true;
+  prepareFlatShadowReceiver(THREE,material);
  }
  state.count.value=Math.min(rectangles.length,5);rectangles.slice(0,5).forEach((b,i)=>state.rectangles.value[i].set(...b));
 }

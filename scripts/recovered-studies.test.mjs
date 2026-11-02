@@ -19,9 +19,9 @@ const sha=b=>createHash('sha256').update(b).digest('hex');
 const parse=async b=>new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).parseAsync(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength),'');
 const meshList=root=>{const meshes=[];root.traverse(o=>{if(o.isMesh)meshes.push(o);});return meshes;};
 const count=m=>(m.geometry.index?.count??m.geometry.attributes.position.count)/3;
-test('recovered scope contains exactly two opt-in Existing M City Rev03 studies, no lost 3085 replacement',()=>{
+test('recovered scope contains exactly two opt-in Existing M City accepted exterior studies, no lost 3085 replacement',()=>{
  assert.equal(studies.length,2);assert.equal(manifest.assets.filter(a=>a.localOptional&&a.url.includes('studies-20261101')).length,2);
- for(const a of studies){assert.equal(a.status,'Existing');assert.deepEqual(a.modes,['existing','construction','future']);assert.equal(a.sourceRevision,'03');assert(a.uncertainGeometry&&a.preserveMaterials&&a.preserveSourceNormals);assert.deepEqual(a.replacesSourceIds,[]);assert.equal(a.replacementTriangleKeys.length,a.replacementGeometry.sourceTriangles);assert.match(a.caveat,/not|approximate|inferred/);}
+ for(const a of studies){assert.equal(a.status,'Existing');assert.deepEqual(a.modes,['existing','construction','future']);assert.equal(a.sourceRevision,'05');assert(a.uncertainGeometry&&a.preserveMaterials&&a.preserveSourceNormals);assert.deepEqual(a.replacesSourceIds,[]);assert.equal(a.replacementTriangleKeys.length,a.replacementGeometry.sourceTriangles);assert.match(a.caveat,/not|approximate|inferred/);}
  assert.equal(studies.reduce((n,a)=>n+a.replacementTriangleKeys.length,0),404);
  assert(manifest.localReviewRecovery.missing.some(s=>s.includes('3085')));
 });

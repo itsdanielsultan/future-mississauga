@@ -28,7 +28,7 @@ function fixture(){
 }
 
 test('catalogue requests the exact new version beside the unchanged historical catalogue',()=>{
- assert.deepEqual(requests,['data/labelled-image-assets.json','data/citywide-media-20261101.json','data/downtown-media-20261101.json']);assert.equal(mediaCatalog instanceof Promise,true);
+ assert.deepEqual(requests,['data/labelled-image-assets.json','data/citywide-media-20261101.json','data/downtown-media-20261101.json','data/native-media-20261102.json','data/neighbourhood-media-20261102.json']);assert.equal(mediaCatalog instanceof Promise,true);
 });
 
 test('current Citywide uses new pixel URLs while every historical alias retains its exact edition',()=>{

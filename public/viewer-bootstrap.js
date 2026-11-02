@@ -1,5 +1,5 @@
 try {
-  await import('./app.js?v=20261101-mcity4');
+  await import('./app.js?v=20261102-coherent3');
 } catch (error) {
   const loading = document.querySelector('#loading');
   loading.hidden = false;

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import {pictureProvenance} from '../public/image-provenance.js';
+import {mediaPreviewInfo,comparisonPair} from '../public/clean-media.js';
 
 const read=path=>fs.readFileSync(new URL('../public/'+path,import.meta.url),'utf8');
 const pictures=JSON.parse(read('data/picture-assets.json'));
@@ -14,21 +15,37 @@ const catalog=JSON.parse(read('data/labelled-image-assets.json'));
 test('every gallery image opens with its title, date, PNG details and exact actions',async()=>{
   const source=read('gallery.js'),shows=[],controls=new Map();let buttons,views=[],changeView;
   const control=id=>{
-    if(!controls.has(id))controls.set(id,{innerHTML:'',style:{},addEventListener(){},insertAdjacentHTML(_position,html){this.innerHTML+=html;}});
+    if(!controls.has(id))controls.set(id,{innerHTML:'',style:{},querySelector(){return null;},removeAttribute(){},addEventListener(){},insertAdjacentHTML(_position,html){this.innerHTML+=html;}});
     return controls.get(id);
   };
+  // Include every real logical figure, including the LRT corridor outside the
+  // panorama section. Each has separate inline, preview and download elements.
+  const figures=[...read('index.html').matchAll(/<figure\b[^>]*data-picture="([^"]+)"[^>]*>/g)].map(match=>{
+    const nodes={img:{},'a:not([download])':{},'a[download]':{}};
+    return {dataset:{picture:match[1]},nodes,querySelector:selector=>nodes[selector]};
+  });
+  assert(figures.some(figure=>figure.dataset.picture==='cooksville-future.png'),'actual LRT figure participates');
   const preview={show(info){shows.push(info);},setViews(items,_selected,callback){views=items;changeView=callback;}};
   const document={querySelector:control,querySelectorAll(selector){
+    if(selector==='figure[data-picture]')return figures;
     assert.equal(selector,'[data-open]');
     const markup=read('index.html')+control('#galleryGrid').innerHTML+control('#perspectiveGrid').innerHTML;
     buttons=[...markup.matchAll(/<button\b([^>]*\bdata-open="[^"]+"[^>]*)>/g)].map(match=>({dataset:{open:match[1].match(/data-open="([^"]+)"/)[1],view:match[1].match(/data-view="([^"]+)"/)?.[1]}}));
     return buttons;
   }};
   await vm.runInNewContext('(async()=>{'+source.replace(/^import .*;\n/gm,'')+'})()',{
-    document,pictureProvenance,fetch:async path=>({json:async()=>structuredClone(path.includes('picture-assets')?pictures:districts)}),
+    document,mediaPreviewInfo,comparisonPair,fetch:async path=>({json:async()=>structuredClone(path.includes('picture-assets')?pictures:districts)}),
     refreshPictureAssets:async value=>value,createImagePreview:()=>preview,bindComparison(){}
   });
+  for(const figure of figures){
+    const row=pictures.images[figure.dataset.picture];
+    assert.equal(figure.nodes.img.src,row.display.url,figure.dataset.picture+' inline preview');
+    assert.equal(figure.nodes['a:not([download])'].href,row.displayMaster.url,figure.dataset.picture+' clean master');
+    assert.equal(figure.nodes['a[download]'].href,row.download.url,figure.dataset.picture+' explicit download');
+  }
   assert.ok(buttons.length>15);
+  assert.equal(control('#heroImage').src,pictures.images['downtown-future.png'].display.url);
+  assert.equal(control('.hero a[download]').href,pictures.images['downtown-future.png'].download.url);
   for(const button of buttons){button.onclick();for(const item of views)changeView(item.value);}
   const imagesByURL=new Map(Object.entries(pictures.images).map(([file,row])=>[row.url,{file,row}]));
   assert.equal(new Set(shows.map(info=>info.download)).size,imagesByURL.size,'all catalogue pictures must be reachable');
