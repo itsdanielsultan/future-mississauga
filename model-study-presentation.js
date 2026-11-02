@@ -16,7 +16,7 @@ export function visibleReferenceCreditHTML(view) {
 
 export function configureStudyActions(view, root = document) {
   const hide = view.offerDownloads === false;
-  for (const selector of ['#modelDownloads','#compressedDownloads','#downloadNote','.sidebar > p.credit:not([id]):not([data-visible-reference-credit])','.sidebar > p:has(a[download])']) {
+  for (const selector of ['#modelDownloads','#compressedDownloads','.download-options','#downloadNote','.sidebar > p.credit:not([id]):not([data-visible-reference-credit])','.sidebar > p:has(a[download])']) {
     for (const element of root.querySelectorAll(selector)) element.hidden = hide;
   }
   const reference = visibleReferenceCreditHTML(view);

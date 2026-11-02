@@ -4,11 +4,11 @@ export const STATUS_LEGEND=Object.freeze([
   legendItem('existing','Existing','#b8b9b6'),legendItem('under_construction','Under Construction'),
   legendItem('approved','Approved'),legendItem('proposed','Proposed'),legendItem('unknown','Uncertain')
 ]);
-export function statusLegendFor(lifecycles=[]){
-  const shown=new Set(lifecycles),items=[...STATUS_LEGEND];
-  if(shown.has('on_hold'))items.push(legendItem('on_hold','On Hold'));
-  if(shown.has('cancelled'))items.push(legendItem('cancelled','Cancelled'));
-  return items;
+export function statusLegendFor(lifecycles=[],{appearance='status'}={}){
+  if(appearance!=='status')return [];
+  const shown=new Set(lifecycles.map(value=>value==='mixed'?'unknown':value));
+  const items=[...STATUS_LEGEND,legendItem('on_hold','On Hold'),legendItem('cancelled','Cancelled')];
+  return items.filter(item=>shown.has(item.key));
 }
 
 // NDC coordinates need pixel aspect scaling before they become a compass bearing.
@@ -28,7 +28,7 @@ export function projectNorth(THREE, camera, target, width, height) {
 
 export function presentationLayout(width,legend=STATUS_LEGEND) {
   const compact = width < 1000, scale = width / (compact ? 650 : 1400);
-  const rows=Math.ceil(legend.length/2),height=compact?118+(rows-1)*26+24:Math.max(116,43+(rows-1)*30+24);
+  const rows=Math.ceil(legend.length/2),height=!rows?104:compact?118+(rows-1)*26+24:Math.max(116,43+(rows-1)*30+24);
   return {compact,scale,height:Math.ceil(height*scale)};
 }
 

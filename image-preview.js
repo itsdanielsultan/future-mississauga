@@ -1,11 +1,69 @@
 import {isDirectDownload,prepareImageLinks} from './file-actions.js?v=20261101-gallery1';
 import {cityMapLinkForSection} from './image-provenance.js?v=20261101-gallery1';
+import {mediaPreviewInfo,imageAttribution,mediaScenarioLabel} from './clean-media.js?v=20261102-cleanmedia1';
 export {shortResolution,shortDate} from './image-provenance.js?v=20261101-gallery1';
 // A shared image viewer. Downloads remain separate, explicit links.
 
-let nextId = 0;
+export function renderImageAttribution(container,attribution={},doc=document){
+ const nodes=[];
+ const addText=value=>{if(!value)return;const span=doc.createElement('span');span.textContent=value;nodes.push(span);};
+ addText(attribution.cityCredit);
+ if(attribution.openStreetMap){const link=doc.createElement('a');link.href='https://www.openstreetmap.org/copyright';link.textContent='© OpenStreetMap';nodes.push(link);}
+ for(const credit of attribution.requiredModelCredits||[])addText(credit);
+ const sources=doc.createElement('a');sources.textContent='Sources';
+ let url;try{url=new URL(attribution.sourcesURL||'sources.html',location.href);}catch{}
+ sources.href=url&&['http:','https:'].includes(url.protocol)&&!url.username&&!url.password?url.href:'sources.html';nodes.push(sources);
+ container.replaceChildren(...nodes);
+}
+
+// Reuse the existing caption region. Only accepted clean-v2 pixels take this path;
+// historical cards retain their original text and all dedicated downloads survive.
+const comparisonMedia=new WeakMap();
+function updateComparisonCaption(panel,image,row){
+ let state=comparisonMedia.get(panel);
+ if(!state){state={images:new Map(),caption:null};comparisonMedia.set(panel,state);}
+ state.images.set(image,row);
+ const clean=[...state.images.values()].filter(value=>value.cleanPresentation);
+ if(!clean.length){state.caption?.remove();state.caption=null;return;}
+ const current=clean.at(-1),rows=[...state.images.values()].filter(value=>value.area===current.area);
+ const credits=rows.map(imageAttribution),attribution={...imageAttribution(current),openStreetMap:credits.some(value=>value.openStreetMap),requiredModelCredits:[...new Set(credits.flatMap(value=>value.requiredModelCredits))]};
+ if(!state.caption){state.caption=document.createElement('div');state.caption.className='media-caption media-caption--comparison';panel.after(state.caption);}
+ const title=document.createElement('strong');title.textContent=current.area;
+ const source=document.createElement('span');source.className='media-caption__credits';renderImageAttribution(source,attribution);
+ // The slider already labels both scenarios. Its shared credit stays outside
+ // both clipping layers and appears once at either end of the slider.
+ state.caption.replaceChildren(title,source);
+}
+export function updateCleanImageCaption(image,row){
+ const comparison=image.closest('.picture-compare');
+ if(comparison){updateComparisonCaption(comparison,image,row);return;}
+ if(!row.cleanPresentation)return;
+ const info=mediaPreviewInfo(row),storyCopy=image.closest('.update-story')?.querySelector('.update-story-copy');
+ if(storyCopy){
+  // The dated story already has its own title and narrative. Keep the two-column
+  // image/copy structure intact and add only its required source line.
+  let credits=storyCopy.querySelector('.media-caption__credits');
+  if(!credits){credits=document.createElement('span');credits.className='media-caption__credits';storyCopy.append(credits);}
+  renderImageAttribution(credits,info.attribution);return;
+ }
+ const card=image.closest('.picture-card,.social-grid article'),figure=image.closest('figure');
+ let copy=card?.querySelector('.card-caption > div,.card-copy')||figure?.querySelector('figcaption');
+ if(!copy){copy=document.createElement('div');copy.className='media-caption';(image.closest('a,button,picture')||image).after(copy);}
+ const title=copy.querySelector('h2,h3,strong,b')||document.createElement('strong');title.textContent=info.title;
+ const scenario=document.createElement('span');scenario.className='media-caption__scenario';scenario.textContent=mediaScenarioLabel(row);
+ const credits=document.createElement('span');credits.className='media-caption__credits';renderImageAttribution(credits,info.attribution);
+ const downloads=[...copy.querySelectorAll('a[download],.save,[data-download]')];
+ copy.classList.add('media-caption');copy.replaceChildren(title,scenario,credits,...downloads);
+}
+
+const previewCounter = Symbol.for('future-mississauga.preview-counter');
+export function previewTitle(info,{views=false}={}){
+ const title=info.title||'Picture';
+ return !views&&info.scenario==='construction'?title+' · Dated construction':title;
+}
 export function createImagePreview({views = false} = {}) {
-  const id = 'picturePreview' + ++nextId;
+  globalThis[previewCounter] = (globalThis[previewCounter] || 0) + 1;
+  const id = 'picturePreview-' + globalThis[previewCounter];
   const dialog = document.createElement('dialog');
   dialog.className = 'media-preview';
   dialog.setAttribute('aria-labelledby', id+'Title');
@@ -34,12 +92,12 @@ export function createImagePreview({views = false} = {}) {
   function show(info, trigger) {
     const token=++request;
     if(trigger)opener=trigger;
-    dialog.querySelector('h2').textContent=info.title||'Picture';
+    dialog.querySelector('h2').textContent=previewTitle(info,{views});
     const meta=dialog.querySelector('.media-preview__meta');meta.textContent=info.meta||'';meta.hidden=!info.meta;
     const download=dialog.querySelector('[download]');download.href=info.download;download.download=new URL(info.download,location.href).pathname.split('/').pop();
     const format=download.download.split('.').pop().toUpperCase();download.textContent=['PNG','JPG','JPEG','SVG','AVIF','WEBP'].includes(format)?'Download '+format:'Download image';
     const explore=dialog.querySelector('.media-preview__explore');explore.hidden=!info.explore;if(info.explore)explore.href=info.explore;
-    dialog.querySelector('.media-preview__osm').hidden=!info.osm;
+    renderImageAttribution(dialog.querySelector('.media-preview__credits'),info.attribution||{openStreetMap:info.osm});
     dialog.classList.toggle('media-preview--portrait',info.height>info.width);
     dialog.style.setProperty('--media-aspect',String((info.width||1200)/(info.height||750))); 
     image.alt=info.alt||info.title||'Picture';image.width=info.width||1200;image.height=info.height||750;
@@ -55,8 +113,41 @@ export function createImagePreview({views = false} = {}) {
   return {dialog,show,setViews(items,value,callback){select.replaceChildren(...items.map(x=>{const o=document.createElement('option');o.value=x.value;o.textContent=x.label;return o;}));select.value=value;onView=callback;select.closest('label').hidden=items.length<2;}};
 }
 
-let generic;
-export function installImagePreviews(resolve = async (image,anchor) => ({src:image?.currentSrc||image?.src||anchor.href,download:image?.currentSrc||image?.src||anchor.href})) {
+// Show the known file immediately; optional metadata can refine the same open view.
+export function createResolvedPreview(preview) {
+  let pending = 0;
+  preview.dialog.addEventListener('close', () => pending++);
+  return async (fallback, resolve, trigger) => {
+    const token = ++pending;
+    preview.show(fallback, trigger);
+    try {
+      const info = await resolve();
+      if (token === pending && preview.dialog.open && info) preview.show({...fallback, ...info});
+    } catch {
+      // The exact linked image and its download remain usable without metadata.
+    }
+  };
+}
+
+// A declared credited PNG stays available while optional catalogue data loads.
+// It is only a fallback; validated catalogue metadata remains authoritative.
+export function previewDownloadURL(anchor, fallback, baseURL = location.href) {
+  const declared=anchor?.dataset?.previewDownload;
+  if(!declared)return fallback;
+  try {
+    const base=new URL(baseURL),url=new URL(declared,base);
+    const local=url.origin===base.origin;
+    const hosted=url.protocol==='https:'&&url.hostname==='github.com'&&!url.port&&/^\/itsdanielsultan\/future-mississauga\/releases\/download\/[^/]+\/[^/]+\.png$/i.test(url.pathname);
+    if(!['http:','https:'].includes(url.protocol)||url.username||url.password||url.search||url.hash||!url.pathname.toLowerCase().endsWith('.png')||(!local&&!hosted))return fallback;
+    return url.href;
+  } catch {return fallback;}
+}
+
+let generic, openGeneric;
+export function installImagePreviews(resolve = async (image,anchor) => {
+  const src=image?.currentSrc||image?.src||anchor.href;
+  return {src,download:previewDownloadURL(anchor,src)};
+}) {
   document.addEventListener('click',async event=>{
     if(event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
     const trigger=event.target.closest('a,button'),anchor=trigger?.matches('a')?trigger:null;
@@ -69,11 +160,11 @@ export function installImagePreviews(resolve = async (image,anchor) => ({src:ima
     event.preventDefault();event.stopPropagation();
     const section=(clickedImage||anchor).closest('article,section');
     const image=clickedImage||[...section?.querySelectorAll('img')||[]].find(img=>new URL(img.src).pathname===new URL(anchor.href).pathname);
-    generic ||= createImagePreview();
-    const info=await resolve(image,anchor);
+    if (!generic) { generic=createImagePreview(); openGeneric=createResolvedPreview(generic); }
     const heading=section?.querySelector('h2,h3')?.textContent?.trim();
     const title=image?.dataset.previewTitle||anchor?.dataset.previewTitle||heading||(image?.alt?.length<=70?image.alt:'Image preview');
-    generic.show({title:title||'Picture',alt:image?.alt||title,width:image?.naturalWidth||1200,height:image?.naturalHeight||800,preview:image?.currentSrc||image?.src,explore:cityMapLinkForSection(section,location.href),...info},anchor||image?.closest('button')||image);
+    const src=fileLink?anchor.href:image?.currentSrc||image?.src;
+    openGeneric({title:title||'Picture',alt:image?.alt||title,src,download:previewDownloadURL(anchor,src),width:image?.naturalWidth||1200,height:image?.naturalHeight||800,preview:image?.currentSrc||image?.src,explore:cityMapLinkForSection(section,location.href)},()=>resolve(image,anchor),anchor||image?.closest('button')||image);
 
   });
   const enhance=()=>document.querySelectorAll('main img').forEach(image=>{

@@ -4,12 +4,12 @@ html body { background: #fff; }
 .social-page .hero { padding: 44px 0 28px; }
 .social-page h1 { max-width: none; font-size: clamp(42px, 4.7vw, 68px); font-weight: 500; line-height: 1.05; letter-spacing: -.045em; }
 .social-page .lede { margin: 16px 0 8px; font-size: clamp(19px, 1.65vw, 23px); line-height: 1.4; }
-.social-note { color: #6b6662; font-size: 15px; line-height: 1.55; }
+.social-note { color: var(--site-muted); font-size: 15px; line-height: 1.55; }
 .social-page .hero .social-note { margin: 0; }
 .gallery-controls { display: flex; align-items: center; justify-content: flex-start; gap: 24px; padding: 0 0 24px; }
 .gallery-controls label { display: flex; align-items: center; gap: 18px; font-size: 15px; font-weight: 700; }
-.gallery-controls select { font: 400 16px/1.4 var(--site-font-body, 'Lato', sans-serif); min-height: 44px; min-width: 220px; padding: 9px 36px 9px 14px; max-width: 100%; color: #2e2b2a; background: #fff; border: 1px solid #e4dedb; border-radius: 6px; }
-.gallery-controls p { margin: 0; font-size: 15px; color: #6b6662; }
+.gallery-controls select { font: 400 16px/1.4 var(--site-font-body, 'Lato', sans-serif); min-height: 44px; min-width: 220px; padding: 9px 36px 9px 14px; max-width: 100%; color: var(--site-ink); background: #fff; border: 1px solid var(--site-line); border-radius: 6px; }
+.gallery-controls p { margin: 0; font-size: 15px; color: var(--site-muted); }
 .social-page .social-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 28px; }
 .social-page .social-grid article { min-width: 0; overflow: visible; border: 0; border-radius: 0; background: transparent; }
 .social-grid article[hidden] { display: none; }
@@ -20,7 +20,7 @@ html body { background: #fff; }
 .social-grid .card-copy { min-width: 0; }
 .social-grid .card-text h2 { margin: 0 0 6px; font-size: 25px; font-weight: 500; line-height: 1.2; letter-spacing: -.025em; }
 .social-grid .card-text p { margin: 0; font-size: 15px; line-height: 1.5; }
-.social-grid .card-text .picture-detail { color: #2e2b2a; }
+.social-grid .card-text .picture-detail { color: var(--site-ink); }
 .social-grid .card-text .social-note { margin-top: 2px; font-size: 14px; }
 html .social-page .social-grid .save {
   display: inline-flex;
@@ -32,22 +32,22 @@ html .social-page .social-grid .save {
   min-width: 56px;
   min-height: 56px;
   padding: 0;
-  border: 1px solid #ded6d2;
+  border: 1px solid var(--site-line);
   border-radius: 12px;
   background: #fff;
-  color: #a23b3b;
+  color: var(--site-accent);
   text-decoration: none;
   cursor: pointer;
 }
 html .social-page .social-grid .save svg { display: block; flex: none; width: 30px; height: 30px; }
-html .social-page .social-grid .save:hover { color: #842d32; border-color: #bb8987; background: #f8eeee; }
-html .social-page .social-grid .save:focus-visible { outline: 3px solid #a23b3b; outline-offset: 4px; background: #f8eeee; }
-.social-page a, .picture-preview a { color: #a23b3b; }
-.social-page a:hover, .picture-preview a:hover { color: #842d32; }
-.social-page :focus-visible { outline: 2px solid #a23b3b; outline-offset: 4px; }
-.social-context { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; margin-top: 52px; padding: 30px 0 40px; border-top: 1px solid #e4dedb; }
+html .social-page .social-grid .save:hover { color: var(--site-accent-strong); border-color: var(--site-accent-line); background: var(--site-accent-soft); }
+html .social-page .social-grid .save:focus-visible { outline: 3px solid var(--site-accent); outline-offset: 4px; background: var(--site-accent-soft); }
+.social-page a, .picture-preview a { color: var(--site-accent); }
+.social-page a:hover, .picture-preview a:hover { color: var(--site-accent-strong); }
+.social-page :focus-visible { outline: 2px solid var(--site-accent); outline-offset: 4px; }
+.social-context { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; margin-top: 52px; padding: 30px 0 40px; border-top: 1px solid var(--site-line); }
 .social-context h2 { margin: 0; font-size: 25px; font-weight: 500; line-height: 1.2; letter-spacing: -.025em; }
-.social-context p { margin: 0 0 14px; max-width: 78ch; color: #6b6662; font-size: 15px; }
+.social-context p { margin: 0 0 14px; max-width: 78ch; color: var(--site-muted); font-size: 15px; }
 .social-context p:last-child { margin-bottom: 0; }
 @media (max-width: 650px) {
   .social-page { padding: 0 20px; }

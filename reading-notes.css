@@ -6,31 +6,31 @@ html .reading-note {
   border: 0;
   border-radius: 0;
   background: transparent;
-  color: #6b6662;
+  color: var(--site-muted);
   font: 400 15px/1.6 'Lato', sans-serif;
 }
 html .reading-note > summary {
   min-height: 44px;
   padding: 10px 0;
-  color: #a23b3b;
+  color: var(--site-accent);
   font: inherit;
   cursor: pointer;
 }
 html .reading-note > p { max-width: 82ch; margin: 8px 0 14px; }
 html .reading-note > p:last-child { margin-bottom: 6px; }
-html .reading-note a { color: #a23b3b; }
+html .reading-note a { color: var(--site-accent); }
 html .source-hub-link {
   margin: 0;
   padding: 28px var(--page-gutter, 4.8vw) 36px;
   font: 400 16px/1.5 'Lato', sans-serif;
 }
-html .source-hub-link a { color: #a23b3b; text-underline-offset: .2em; }
+html .source-hub-link a { color: var(--site-accent); text-underline-offset: .2em; }
 html .source-hub-link a > span { margin-left: 8px; }
 html .sources-download-groups { min-width: 0; }
 html .sources-download-groups > div + div { margin-top: 30px; }
 html .sources-download-groups h3 {
   margin: 0 0 14px;
-  color: #2e2b2a;
+  color: var(--site-ink);
   font-size: 19px;
   font-weight: 500;
   line-height: 1.35;

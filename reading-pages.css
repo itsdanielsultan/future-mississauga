@@ -3,12 +3,12 @@ html .reading-page {
   --reading-width: 1280px;
   --reading-gutter: clamp(24px, 4vw, 48px);
   --reading-measure: 65ch;
-  --reading-rule: #e4dedb;
-  --reading-muted: #6b6662;
-  --reading-accent: #a23b3b;
+  --reading-rule: var(--site-line);
+  --reading-muted: var(--site-muted);
+  --reading-accent: var(--site-accent);
   margin: 0;
   background: #fff;
-  color: var(--site-ink, #2e2b2a);
+  color: var(--site-ink, var(--site-ink));
 }
 .reading-page main, .reading-page main * { box-sizing: border-box; }
 html .reading-page :is(.render-main, .review-main, .accuracy-main, .recent-updates) {
@@ -96,7 +96,7 @@ html .reading-page .accuracy-main .controls { margin: 32px 0; gap: 20px 28px; }
 html .reading-page .accuracy-main .controls label { flex: 1 1 240px; max-width: 340px; gap: 10px; }
 html .reading-page .accuracy-main .controls .count { margin: 0 0 12px; }
 html .reading-page .accuracy-main .bar { background: linear-gradient(to right, var(--reading-accent) var(--length), var(--reading-rule) var(--length)); }
-html .reading-page .accuracy-main th { background: #fff; color: var(--site-ink, #2e2b2a); }
+html .reading-page .accuracy-main th { background: #fff; color: var(--site-ink, var(--site-ink)); }
 html .reading-page .accuracy-main :is(th, td) { padding: 22px 16px; border-color: var(--reading-rule); line-height: 1.6; }
 html .reading-page .accuracy-main th:first-child, html .reading-page .accuracy-main td:first-child { padding-left: 0; }
 html .reading-page .accuracy-main .table-scroll { width: 100%; max-width: 100%; overflow-x: auto; border-top: 1px solid var(--reading-rule); overscroll-behavior-inline: contain; }

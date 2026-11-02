@@ -1,0 +1,638 @@
+{
+  "version": 1,
+  "assetId": "harborn-50-60-current-plan",
+  "projectId": "harborn-50-60",
+  "ownerContractSHA256": "f90136ed251f285a8de5365c5ff752cdc7eaed9c307bde9bc1269d505b17be44",
+  "privateReviewOnly": false,
+  "candidate": {
+    "url": "models/studies-20261101/harborn-grading-v4-0e5224cfbe25.glb.gz",
+    "bytes": 551356,
+    "sha256": "b3b0636313d4dc3346884f293653f7d31df855246b69ac2c70b4ab4ae0561fe1",
+    "decodedBytes": 1809744,
+    "decodedSHA256": "0e5224cfbe2598d3eab0094599e5e225e874e260ff3d8a4cf5a03cf085d30d25"
+  },
+  "maxEdgeDistanceM": 0.35,
+  "polygonXZ": [
+    [
+      -2150.283564880083,
+      2140.607121304712
+    ],
+    [
+      -2200.983595961815,
+      2108.8789508371124
+    ],
+    [
+      -2172.519215816661,
+      2062.882013687589
+    ],
+    [
+      -2124.5360740959463,
+      2092.9010354861125
+    ],
+    [
+      -2140.366566552891,
+      2117.737135587858
+    ],
+    [
+      -2137.086327605757,
+      2119.7886230335102
+    ]
+  ],
+  "convexPartsXZ": [
+    [
+      [
+        -2150.283564880083,
+        2140.607121304712
+      ],
+      [
+        -2137.086327605757,
+        2119.7886230335102
+      ],
+      [
+        -2140.366566552891,
+        2117.737135587858
+      ]
+    ],
+    [
+      [
+        -2140.366566552891,
+        2117.737135587858
+      ],
+      [
+        -2124.5360740959463,
+        2092.9010354861125
+      ],
+      [
+        -2172.519215816661,
+        2062.882013687589
+      ]
+    ],
+    [
+      [
+        -2140.366566552891,
+        2117.737135587858
+      ],
+      [
+        -2200.983595961815,
+        2108.8789508371124
+      ],
+      [
+        -2150.283564880083,
+        2140.607121304712
+      ]
+    ],
+    [
+      [
+        -2200.983595961815,
+        2108.8789508371124
+      ],
+      [
+        -2140.366566552891,
+        2117.737135587858
+      ],
+      [
+        -2172.519215816661,
+        2062.882013687589
+      ]
+    ]
+  ],
+  "weights": {
+    "url": "models/studies-20261101/harborn-tie-v4-4dfd05d9de20.bin",
+    "bytes": 569640,
+    "sha256": "4dfd05d9de20d67ac49d2f79b77199d547c6dff8a46d6011fccc8bf63e029368",
+    "meshes": [
+      {
+        "nodeName": "C102 proposed concrete",
+        "vertexCount": 6948,
+        "POSITION_float32_SHA256": "706d2db48f61fd53033ff7c354da78b619f2363bf9df6146edaeeab599fdeb5d",
+        "index_uint32_SHA256": "ed7c3464fcaa881133ef5ab4a1eb7a86da7f95210b08782867f12c99addc9eb4",
+        "byteOffset": 0,
+        "byteLength": 55584,
+        "activeVertices": 339,
+        "zeroWeightVertices": 6609,
+        "insideProtectedApproachVertices": 3041
+      },
+      {
+        "nodeName": "C102 proposed curb",
+        "vertexCount": 1932,
+        "POSITION_float32_SHA256": "3301d85b808b141472156a28f9e7fc3289fc99fac674a6db57d306018bd88b16",
+        "index_uint32_SHA256": "8834a5361a780d15c8c6d0bfe6233fb12a2a224d52c981c81654d27530141101",
+        "byteOffset": 55584,
+        "byteLength": 15456,
+        "activeVertices": 77,
+        "zeroWeightVertices": 1855,
+        "insideProtectedApproachVertices": 0
+      },
+      {
+        "nodeName": "C102 proposed driveway",
+        "vertexCount": 9651,
+        "POSITION_float32_SHA256": "1b5484b08a3e5a03f70ea0b923da788955b89f8dfd72f84f7ef2574c7247a0d9",
+        "index_uint32_SHA256": "150aa6f7b55fe36153a252bfbd0ec5fbd9e3da7a5707fca76153fd24b4ddcddc",
+        "byteOffset": 71040,
+        "byteLength": 77208,
+        "activeVertices": 606,
+        "zeroWeightVertices": 9045,
+        "insideProtectedApproachVertices": 427
+      },
+      {
+        "nodeName": "C102 proposed road",
+        "vertexCount": 18237,
+        "POSITION_float32_SHA256": "05a307132f0331eb43ae81dc4eef3a422d31dc61c4561d8439a3decc5a146d19",
+        "index_uint32_SHA256": "4c8d889657dbdb67a23921003bcdc98ed1eb7b9125d0d9d02843062f96548e87",
+        "byteOffset": 148248,
+        "byteLength": 145896,
+        "activeVertices": 3866,
+        "zeroWeightVertices": 14371,
+        "insideProtectedApproachVertices": 0
+      },
+      {
+        "nodeName": "C102 proposed landscape",
+        "vertexCount": 34437,
+        "POSITION_float32_SHA256": "c8c4985b2895eef73ca4e465cd479fa79ac6c3a41761ddb8695fb3a9f0642585",
+        "index_uint32_SHA256": "97a916fb6c23a5bbcd2171d20ac21397eb1609feafd89cc47a1ec11c71e1f2e7",
+        "byteOffset": 294144,
+        "byteLength": 275496,
+        "activeVertices": 28122,
+        "zeroWeightVertices": 6315,
+        "insideProtectedApproachVertices": 232
+      }
+    ]
+  },
+  "ground": [
+    {
+      "district": "cooksville",
+      "url": "models/cooksville-context.glb",
+      "sha256": "d5800a7b654effd5f2a1e223940c572b2c77552e1eadfd84092b522b55755c52",
+      "bytes": 3379932,
+      "node": {
+        "nodeIndex": 5,
+        "name": "terrain",
+        "mesh": 0,
+        "primitiveIndex": 0,
+        "positionAccessor": 1,
+        "indexAccessor": 0
+      },
+      "positionSHA256": "b71e6db1c82dfb3c0932b5333e9bb2d28a932eb8c4fed7f84f6ee251f5e0c80e",
+      "indexSHA256": "380b3690ea4f9a410481a7373d177eb593d69b283a431288bdcd5b824ae81813",
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangleIndicesInLot": [
+        48308,
+        48330,
+        48331,
+        48332,
+        48333,
+        50092,
+        50093,
+        50094,
+        50095,
+        50096,
+        50097,
+        50098,
+        50099,
+        50100,
+        50101,
+        50102,
+        50103,
+        50104,
+        50105,
+        50106,
+        50107,
+        50108,
+        50109,
+        50110,
+        50111,
+        50112,
+        50113,
+        50114,
+        50115,
+        50116,
+        50117,
+        50118,
+        50119,
+        50120,
+        50121,
+        50122,
+        50123,
+        50124,
+        50125,
+        51659,
+        51660,
+        51661,
+        51662,
+        51663,
+        51664,
+        51665,
+        51666,
+        51667,
+        51668,
+        51669,
+        51670,
+        51671,
+        51672,
+        51673,
+        51674,
+        51675,
+        51676,
+        51677,
+        51678,
+        51679,
+        51680,
+        51681,
+        51682,
+        51683,
+        51688,
+        51689,
+        51690,
+        51691,
+        51692,
+        51693,
+        51694,
+        51695,
+        53347,
+        53348,
+        53349,
+        53350,
+        53351,
+        53352,
+        53353,
+        53354,
+        53355,
+        53368,
+        53369,
+        53370,
+        53371,
+        53372,
+        53387,
+        53388,
+        53389,
+        53390,
+        53391
+      ]
+    },
+    {
+      "district": "cooksville",
+      "url": "models/cooksville-context.glb",
+      "sha256": "d5800a7b654effd5f2a1e223940c572b2c77552e1eadfd84092b522b55755c52",
+      "bytes": 3379932,
+      "node": {
+        "nodeIndex": 4,
+        "name": "WoodedArea",
+        "mesh": 1,
+        "primitiveIndex": 0,
+        "positionAccessor": 4,
+        "indexAccessor": 3
+      },
+      "positionSHA256": "e6476a3b719338246245c1ab6515b64d0d7e4598be27c62e2175a7c5eb642181",
+      "indexSHA256": "df06827cade2943cec8876f5d50ed84745bf6add5bc156495918b72bd7a29892",
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangleIndicesInLot": [
+        6741,
+        6746,
+        6747,
+        6748,
+        6749,
+        6750,
+        6751,
+        6752,
+        6753,
+        6960,
+        6961,
+        6962,
+        6963,
+        6964,
+        6965,
+        6966,
+        6969,
+        6970
+      ]
+    },
+    {
+      "district": "cooksville",
+      "url": "models/cooksville-context.glb",
+      "sha256": "d5800a7b654effd5f2a1e223940c572b2c77552e1eadfd84092b522b55755c52",
+      "bytes": 3379932,
+      "node": {
+        "nodeIndex": 3,
+        "name": "RoadPaved",
+        "mesh": 2,
+        "primitiveIndex": 0,
+        "positionAccessor": 7,
+        "indexAccessor": 6
+      },
+      "positionSHA256": "4d38bb8a50b840da24d4571dc0298b2d53c108d3a2db69a7709abec8db4afb62",
+      "indexSHA256": "9c19828ada980472303f39caebab8880958eb56c2687c33021c4478be916d2e7",
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangleIndicesInLot": []
+    },
+    {
+      "district": "citywide",
+      "url": "models/context-parts/citywide-context-04.glb",
+      "sha256": "aa1985709f80f14ba5b3e76d893b8162ec8d87b1c2747d6bbfd0dfa30aef7b3f",
+      "bytes": 2476852,
+      "node": {
+        "nodeIndex": 2,
+        "name": "terrain",
+        "mesh": 2,
+        "primitiveIndex": 0,
+        "positionAccessor": 7,
+        "indexAccessor": 6
+      },
+      "positionSHA256": "f60cad8f1bfe0c2466bae144bc2c064cb7d6b43091ddaa0be335484b502b54d4",
+      "indexSHA256": "8ee41f5976ab1097bc79acae6caa03359a08b93b49f79a95b7e51de6131e4808",
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangleIndicesInLot": [
+        54468,
+        54469,
+        54470,
+        54471,
+        54472,
+        54473,
+        54474,
+        54475,
+        54476,
+        54477,
+        54478,
+        54479,
+        54480,
+        54481,
+        54482,
+        54483,
+        54517,
+        54518,
+        54519,
+        54520,
+        54521,
+        54522,
+        54531,
+        54535,
+        54536,
+        54537,
+        54540,
+        54541,
+        54546,
+        54549,
+        54553,
+        54557,
+        54558,
+        54563,
+        55942,
+        55943,
+        55944,
+        55945,
+        55946,
+        55947,
+        56106,
+        56119,
+        56120,
+        56121,
+        56122,
+        56123,
+        56124,
+        56125,
+        56126,
+        56127,
+        56128,
+        56129,
+        56130,
+        56131,
+        56132,
+        56133,
+        56134,
+        56135,
+        56136,
+        56137,
+        56138,
+        56139,
+        56140,
+        56141,
+        56142,
+        56143,
+        56144,
+        56145,
+        56165,
+        56166,
+        56167,
+        56168,
+        56181,
+        56182,
+        56187,
+        56188,
+        56195,
+        56196,
+        56197,
+        56198,
+        56203,
+        56206,
+        56210,
+        56213,
+        56216,
+        56218
+      ]
+    },
+    {
+      "district": "citywide",
+      "url": "models/context-parts/citywide-context-10.glb",
+      "sha256": "805fa195e6edc50ebf56f02026d1da96cda09ae529443fa7fee2ee95f266cd8c",
+      "bytes": 2648464,
+      "node": {
+        "nodeIndex": 1,
+        "name": "WoodedArea",
+        "mesh": 1,
+        "primitiveIndex": 0,
+        "positionAccessor": 4,
+        "indexAccessor": 3
+      },
+      "positionSHA256": "52dffffbbf7e6c78ac30b155f050be30647a7aa40ab591d80931a8382892c633",
+      "indexSHA256": "4899dc1aaedec7fde9e1fd21e93b675c87dcced9b8accf3cd180b63f845d5ce1",
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangleIndicesInLot": [
+        44633,
+        44638,
+        44639,
+        44640,
+        44641,
+        44642,
+        44643,
+        44644,
+        44645,
+        44852,
+        44853,
+        44854,
+        44855,
+        44856,
+        44857,
+        44858,
+        44861,
+        44862
+      ]
+    },
+    {
+      "district": "citywide",
+      "url": "models/context-parts/citywide-context-12.glb",
+      "sha256": "d5587e2268c3cec8dc4ec2e5f7bf158a730c651768faa0d64d5a73569c4a4171",
+      "bytes": 2464876,
+      "node": {
+        "nodeIndex": 0,
+        "name": "RoadPaved",
+        "mesh": 0,
+        "primitiveIndex": 0,
+        "positionAccessor": 1,
+        "indexAccessor": 0
+      },
+      "positionSHA256": "d945a57872bb419ceb32f3dbed944bf504671d5f9b51860c9777a1e47a32ee9d",
+      "indexSHA256": "bde846bbf26b03ad9d3dacca8c80eaa23b06bf9c75f3be89810cc160439be49f",
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangleIndicesInLot": []
+    }
+  ]
+}

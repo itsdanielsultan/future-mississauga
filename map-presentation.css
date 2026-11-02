@@ -1,13 +1,11 @@
-/* Keep the creator, key and direction in distinct, aligned columns. */
-html .map-presentation{display:grid;grid-template-columns:minmax(180px,1fr) auto;align-items:center;padding:22px 0 18px;gap:18px 40px}
-html .map-direction-and-key{display:flex;flex-direction:row-reverse;align-items:center;gap:32px;width:auto}
-html .scene-status-key{grid-template-columns:repeat(2,max-content);font-size:12px;gap:10px 30px}
-html .scene-status-key i{width:14px;height:10px}
-html .map-presentation .compass{width:52px;min-height:52px;flex:0 0 52px}
-html .map-attribution{grid-column:1/-1;margin:0;padding-top:12px;border-top:1px solid #e9ebeb;font-size:11px;line-height:1.6;color:#657074}
-html .map-creator strong{line-height:1.2}
-html .map-creator span{display:block;margin-top:6px}
-@media(min-width:1450px){html .scene-status-key{grid-template-columns:repeat(4,max-content)}}
-@media(max-width:850px){html .map-presentation{grid-template-columns:1fr;gap:18px;padding:20px 0 16px}html .map-direction-and-key{justify-content:space-between;gap:18px}html .scene-status-key{flex:1;grid-template-columns:repeat(2,minmax(0,1fr));font-size:11px;gap:10px 16px}html .scene-status-key li{gap:7px}html .map-attribution{padding-top:14px;font-size:10px}}
-
-@media(max-width:600px){html .view-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}html .view-actions button{min-height:44px;white-space:nowrap;font-size:12px;padding:8px 12px}}
+/* A short credit line keeps the model separate from its controls. */
+html .map-presentation{display:block;margin:0 var(--viewer-right,var(--page-gutter)) 0 var(--viewer-left,var(--page-gutter));padding:18px 0 24px;border:0;background:#fff;color:var(--site-muted)}
+html .map-attribution{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin:0;padding:0;border:0;font:14px/1.5 var(--site-font-body);color:var(--site-muted)}
+html .map-attribution + .map-attribution{display:block}
+html .map-source-link{margin-left:auto;color:var(--site-accent)}
+html .scene-status-key{display:flex;flex-wrap:wrap;gap:12px 24px;list-style:none;padding:0;margin:0 0 16px;font:14px/1.4 var(--site-font-body);color:var(--site-muted)}
+html .scene-status-key[hidden]{display:none}
+html .scene-status-key li{display:flex;align-items:center;gap:8px}
+html .scene-status-key i{display:block;width:12px;height:12px;border-radius:3px;flex:none}
+html .map-presentation #studyNotice{padding:12px 16px;margin:0 0 16px!important;border-radius:6px;font-size:14px}
+@media(max-width:600px){html .scene-status-key{gap:10px 18px;font-size:14px}html .map-attribution{font-size:14px}}

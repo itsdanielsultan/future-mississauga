@@ -1,51 +1,72 @@
-/* Dated updates share an open heading rail and a comfortable reading measure. */
-.recent-updates { max-width: 1280px; margin: auto; padding: 64px clamp(24px, 4vw, 48px) 80px; }
-html .reading-page .update-intro { max-width: 760px; margin: 0 0 56px; }
-.update-intro h1 { font-size: clamp(42px, 4.7vw, 64px); line-height: 1.08; letter-spacing: -.04em; margin: 0 0 24px; }
-html .reading-page .update-intro > p { max-width: 60ch; margin: 0 0 18px; font-size: 20px; line-height: 1.55; }
-html .reading-page .update-intro > .page-date { font-size: 14px; }
-html .reading-page .approval-update { max-width: none; margin: 0; padding: 56px 0; border-top: 1px solid #e4dedb; background: transparent; }
-html .reading-page .approval-update:has(> .update-heading) { display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); gap: 32px 64px; align-items: start; }
-html .reading-page .approval-update > :is(.update-heading, .update-copy) { min-width: 0; }
-html .reading-page .update-heading { display: block; height: auto; margin: 0; padding: 0; border: 0; background: none; }
-html .reading-page .approval-update h2 { max-width: 25ch; margin: 0 0 20px; font-size: clamp(27px, 2.4vw, 34px); line-height: 1.2; font-weight: 500; letter-spacing: -.03em; }
-html .reading-page .approval-update .update-heading h2 { margin-bottom: 0; }
-html .reading-page :is(.approval-update, .update-row) p { max-width: 65ch; margin: 0 0 18px; line-height: 1.65; }
-html .reading-page .approval-update .update-area { margin-bottom: 14px; }
-html .reading-page :is(.approval-update, .update-row) :is(ul, ol) { max-width: 65ch; margin: 20px 0; padding-left: 22px; }
-html .reading-page :is(.approval-update, .update-row) li { margin: 0 0 10px; padding-left: 4px; }
-html .reading-page :is(.approval-update, .update-row) :is(p, ul, ol):last-child { margin-bottom: 0; }
-html .reading-page .update-note { max-width: 65ch; padding: 0; background: transparent; color: #6b6662; font-size: 15px; line-height: 1.65; }
-html .reading-page .update-list { display: grid; gap: 0; margin: 0; }
-html .reading-page .update-row { display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); gap: 32px 64px; padding: 48px 0; border-top: 1px solid #e4dedb; }
-html .reading-page .update-row > div { min-width: 0; }
-html .reading-page .update-row h2 { max-width: 26ch; margin: 12px 0 0; font-size: clamp(26px, 2.3vw, 32px); line-height: 1.2; letter-spacing: -.03em; }
-html .reading-page .update-row h2 a { text-decoration: none; color: #2e2b2a; }
-html .reading-page .update-row h2 a:hover { color: #a23b3b; }
-html .reading-page .update-area { font-size: 14px; letter-spacing: 0; text-transform: none; color: #6b6662; margin: 0; }
-html .reading-page .update-links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 28px; margin-top: 20px; font-size: 15px; }
-html .reading-page .update-links a { display: inline-flex; align-items: center; min-height: 44px; color: #a23b3b; text-underline-offset: .22em; }
-html .reading-page .update-bottom { max-width: 65ch; margin-top: 32px; padding-top: 32px; border-top: 1px solid #e4dedb; }
-html .reading-page .update-bottom p { color: #6b6662; line-height: 1.65; margin: 0 0 18px; }
-html .reading-page .update-render { margin: 0 0 24px; max-width: 100%; }
-.update-render img { display: block; width: 100%; height: auto; }
-html .reading-page .update-render figcaption { font-size: 14px; line-height: 1.6; margin-top: 12px; color: #6b6662; }
-.update-render figcaption a { color: #a23b3b; text-underline-offset: .22em; display: inline-block; margin-left: 8px; }
-html .reading-page :is(.update-copy, .update-row) .reading-note { max-width: 65ch; margin: 20px 0; }
-html .reading-page :is(.update-copy, .update-row) .reading-note p { max-width: 65ch; }
-.skip-link { position: absolute; left: -9999px; top: 8px; z-index: 100; }
-.skip-link:focus { left: 12px; padding: 10px 14px; background: #fff; color: #2e2b2a; }
-@media (max-width: 900px) {
-  html .reading-page :is(.approval-update:has(> .update-heading), .update-row) { column-gap: 36px; }
-}
-@media (max-width: 760px) {
-  html .reading-page .update-intro { margin-bottom: 40px; }
-  html .reading-page .update-intro > p:not(.page-date) { font-size: 18px; }
-  html .reading-page .approval-update { padding: 40px 0; }
-  html .reading-page .approval-update:has(> .update-heading), html .reading-page .update-row { grid-template-columns: minmax(0, 1fr); gap: 24px; }
-  html .reading-page .update-row { padding: 40px 0; }
-  html .reading-page .approval-update h2, html .reading-page .update-row h2 { max-width: 28ch; font-size: 28px; }
-  html .reading-page .update-row h2 { margin-top: 10px; }
-  html .reading-page .update-links { gap: 8px 24px; }
-  html .reading-page .update-bottom { margin-top: 24px; }
-}
+/* Images lead the recent stories; dated notes and the archive stay compact. */
+html .reading-page .recent-updates{width:100%;max-width:1280px;margin:auto;padding:48px clamp(20px,4.8vw,64px) 64px;font:400 17px/1.6 var(--site-font-body,'Lato',sans-serif);color:var(--site-ink,#202b37)}
+html .reading-page .update-intro{margin:0 0 32px}
+html .reading-page .update-intro h1{font:600 clamp(44px,5.4vw,64px)/1.1 var(--site-font-heading,'Bricolage Grotesque',sans-serif);margin:0;letter-spacing:-.035em}
+html .reading-page .recent-updates :is(h2,h3){color:var(--site-ink,#202b37);font-family:var(--site-font-heading,'Bricolage Grotesque',sans-serif);font-weight:600;line-height:1.1;letter-spacing:-.03em;text-wrap:balance}
+html .reading-page .recent-updates a{color:var(--site-accent,#2463a0);text-underline-offset:5px}
+html .reading-page .recent-updates a:hover{color:var(--site-accent-strong,#174774)}
+html .reading-page .recent-updates :focus-visible{outline:2px solid var(--site-accent,#2463a0);outline-offset:5px}
+html .reading-page .recent-updates :is(article,section,details)[id]{scroll-margin-top:calc(var(--site-header-height,80px) + 24px)}
+.update-stories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 32px}
+.update-story{min-width:0}
+.update-story-lead{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);grid-column:1/-1;gap:32px;align-items:center}
+.update-story-image{display:block;overflow:hidden;border-radius:6px;background:var(--site-accent-soft,#eef5fc);line-height:0}
+.update-story-image img{display:block;width:100%;height:auto;aspect-ratio:1.6;object-fit:contain}
+.update-story-copy{padding-top:20px}
+.update-story-lead .update-story-copy{padding-top:0}
+html .reading-page .update-story h2{font-size:clamp(27px,2.7vw,34px);margin:10px 0 14px}
+html .reading-page .update-story p{max-width:55ch;margin:0 0 12px}
+html .reading-page .update-story .update-credit{color:var(--site-muted,#596675);font-size:15px;line-height:1.6}
+html .reading-page .recent-updates .text-link{display:inline-flex;align-items:center;min-height:44px;font-size:16px;line-height:1.4}
+html .reading-page .recent-updates .update-area{font-size:15px;line-height:1.4;letter-spacing:0;text-transform:none;color:var(--site-muted,#596675);margin:0}
+.update-notices{margin-top:48px}
+html .reading-page .update-section-title{font-size:30px;margin:0 0 24px}
+html .reading-page .approval-update{max-width:none;margin:0;padding:28px 0;border-top:1px solid var(--site-line,#dce4eb);background:transparent}
+html .reading-page .approval-update:has(>.update-heading){display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:24px 40px;align-items:start}
+html .reading-page .approval-update>:is(.update-heading,.update-copy){min-width:0}
+html .reading-page .update-heading{display:block;height:auto;margin:0;padding:0;border:0;background:none}
+html .reading-page .approval-update :is(h2,h3){max-width:28ch;font-size:25px;line-height:1.2;margin:10px 0 0}
+html .reading-page :is(.approval-update,.update-row) p{max-width:65ch;margin:0 0 14px;line-height:1.6}
+html .reading-page .approval-update .update-area{margin:0}
+html .reading-page :is(.approval-update,.update-row) :is(ul,ol){max-width:65ch;margin:16px 0;padding-left:22px}
+html .reading-page :is(.approval-update,.update-row) li{margin:0 0 8px;padding-left:4px}
+html .reading-page :is(.approval-update,.update-row) :is(p,ul,ol):last-child{margin-bottom:0}
+html .reading-page .update-note{max-width:65ch;padding:0;background:transparent;color:var(--site-muted,#596675);font-size:15px;line-height:1.6}
+html .reading-page .update-links{display:flex;flex-wrap:wrap;align-items:center;gap:4px 24px;margin-top:12px;font-size:16px;line-height:1.4}
+html .reading-page .update-links a{display:inline-flex;align-items:center;min-height:44px}
+.update-record{margin:12px 0 0;max-width:65ch}
+.update-record summary{min-height:44px;cursor:pointer;color:var(--site-accent,#2463a0);font-size:16px;padding:10px 0;line-height:1.4}
+.update-record[open] summary{margin-bottom:8px}
+.update-archive{border-top:1px solid var(--site-line,#dce4eb);border-bottom:1px solid var(--site-line,#dce4eb);margin-top:16px}
+.update-archive>summary{cursor:pointer;padding:24px 0;font:600 28px/1.2 var(--site-font-heading,'Bricolage Grotesque',sans-serif);color:var(--site-ink,#202b37)}
+.update-archive>summary:hover{color:var(--site-accent,#2463a0)}
+.update-archive-content{padding-bottom:12px}
+html .reading-page .update-list{display:grid;gap:0;margin:0}
+html .reading-page .update-row{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:24px 40px;padding:28px 0;border-top:1px solid var(--site-line,#dce4eb)}
+html .reading-page .update-row>div{min-width:0}
+html .reading-page .update-row h2{max-width:28ch;margin:10px 0 0;font-size:25px;line-height:1.2}
+html .reading-page .update-row h2 a{color:var(--site-ink,#202b37);text-decoration:none}
+html .reading-page .update-row h2 a:hover{color:var(--site-accent,#2463a0);text-decoration:underline}
+html .reading-page .update-render{margin:0 0 24px;max-width:100%}
+.update-render img{display:block;width:100%;height:auto}
+html .reading-page .update-render figcaption{font-size:15px;line-height:1.6;margin-top:12px;color:var(--site-muted,#596675)}
+.update-render figcaption a{display:inline-flex;align-items:center;min-height:44px;margin-left:8px}
+html .reading-page :is(.update-copy,.update-row) .reading-note{max-width:65ch;margin:16px 0}
+html .reading-page .update-bottom{margin-top:24px}
+.skip-link{position:absolute;left:-9999px;top:8px;z-index:100}
+.skip-link:focus{left:12px;padding:10px 14px;background:var(--site-paper,#fff);color:var(--site-ink,#202b37)}
+@media(max-width:900px){.update-story-lead{grid-template-columns:1.2fr 1fr;gap:24px}.update-story-lead h2{font-size:28px}}
+@media(max-width:760px){html .reading-page .recent-updates{padding:36px 20px 40px}.update-stories,.update-story-lead{grid-template-columns:1fr;gap:32px}.update-story-lead{gap:0}.update-story-lead .update-story-copy{padding-top:20px}.update-notices{margin-top:40px}html .reading-page .approval-update:has(>.update-heading),html .reading-page .update-row{grid-template-columns:minmax(0,1fr);gap:16px}html .reading-page .approval-update,html .reading-page .update-row{padding:24px 0}html .reading-page .approval-update :is(h2,h3),html .reading-page .update-row h2{max-width:100%;font-size:25px}.update-archive>summary{font-size:26px;padding:22px 0}.update-archive-content{padding-bottom:0}}
+
+/* Recent notes use one shared date and short entries rather than full-width prose rows. */
+.update-notices-heading{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:24px}
+html .reading-page .update-notices-heading .update-section-title{margin:0}
+.update-note-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px}
+html .reading-page .update-notices .approval-update{display:block;padding:24px 0}
+html .reading-page .update-notices .approval-update h3{font-size:25px;max-width:none;margin:0 0 12px}
+html .reading-page .update-notices .approval-update:last-child:nth-child(odd){grid-column:1/-1}
+html .reading-page .update-notices .update-copy>p{max-width:58ch}
+html .reading-page .update-notices .update-links{margin-top:8px}
+html .reading-page .update-notices .update-brief{margin:0;padding-left:20px;max-width:58ch}
+html .reading-page .update-notices .update-brief li{padding-left:2px;margin-bottom:6px}
+@media(max-width:760px){.update-notices-heading{display:block;margin-bottom:20px}.update-notices-heading .update-area{margin-top:10px!important}.update-note-grid{grid-template-columns:1fr;gap:0}html .reading-page .update-notices .approval-update{padding:22px 0}}

@@ -83,3 +83,12 @@ Full-resolution original city-gallery PNG downloads and the two approved Gala Ga
 
 
 The Winding Trail viewer includes a small schematic entrance forecourt based on the exterior-reference setting. It retains the original City floor and footprint, fits into the displayed terrain and keeps the original ground as a fallback. This is a display correction, not surveyed site grading. Roads and neighbouring buildings are unchanged. See [the entrance-ground note](../downloads/Winding-entrance-ground-note.json). Exterior references: KMA; starting municipal geometry: City of Mississauga.
+
+## Lakeview offshore water
+
+Ontario Hydro Network Waterbody, Ontario Ministry of Natural Resources.
+Contains information licensed under the Open Government Licence – Ontario.
+Dataset: https://data.ontario.ca/dataset/ontario-hydro-network-waterbody
+Licence: https://www.ontario.ca/page/open-government-licence-ontario
+
+This two-dimensional water boundary supplements the Lakeview model at its illustrative water level. It does not represent measured water elevation or bathymetry.

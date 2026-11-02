@@ -121,6 +121,7 @@ export function createNeighbourhoodContext({
       return snapshot();
     },
     get state() { return snapshot(); },
+    get root() { return retained?.value || null; },
   };
 }
 

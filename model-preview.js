@@ -5,14 +5,14 @@ import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {drawingPolicy, createFrameScheduler} from './viewer-runtime.js?v=20261025-mobile1';
 import {selectPreview, verifiedModelBytes} from './model-preview-loading.js?v=20261027-assets3';
-import {cityDataNotice} from './city-data-terms.js?v=20261026-direct1';
+import {cityDataNotice} from './city-data-terms.js?v=20261102-coherent1';
 import {batchOpaqueStudy} from './model-preview-batching.js?v=20261025-1';
 import {buildingFeedbackHTML,bindBuildingFeedback} from './building-feedback.js?v=20261028-improvements1';
-import {loadModelRevisions,modelRevisionForProject} from './model-revisions.js?v=20261028-improvements1';
-import {modelDownloadAssets,configureStudyActions,studyViewerMessage} from './model-study-presentation.js?v=20261028-superior1';
+import {loadModelRevisions,modelRevisionForProject} from './model-revisions.js?v=20261102-coherent1';
+import {modelDownloadAssets,configureStudyActions,studyViewerMessage} from './model-study-presentation.js?v=20261102-coherent1';
 
 const $ = id => document.getElementById(id);
-const response = await fetch('data/model-previews.json?v=20261028-superior1');
+const response = await fetch('data/model-previews.json?v=20261102-coherent1', {cache:'no-store'});
 if (!response.ok) throw new Error('Study catalogue unavailable');
 const manifest = await response.json();
 const requestedId = new URLSearchParams(location.search).get('model');
@@ -27,20 +27,21 @@ $('modelSelect').onchange = () => { if ($('modelSelect').value) location.assign(
 if (!view) {
   $('choiceStatus').textContent = requestedId ? 'This model link is unavailable. Choose an available study below.' : 'Choose a building study to explore.';
 } else {
+  document.body.classList.add('model-selected');
   $('modelSelect').value = view.id; $('modelChooser').hidden = true; $('previewContent').hidden = false;
   $('modelTitle').textContent = view.title; document.title = view.title + ' · Future Mississauga';
   $('modelSubtitle').textContent = view.subtitle;
   const cityProject = ({'mcity-pair':'mcity-1-2','mcity-m1':'mcity-1-2','mcity-m2':'mcity-1-2','avia-1':'avia','avia-2':'avia','edge-1':'edge-oro','edge-2':'edge-oro','oro':'edge-oro','artform':'artform','sgm-maritz-6710':'sgm-maritz-6710'})[view.id];
   const projectId=view.projectId||cityProject;
-  const feedback=document.createElement('p');feedback.className='project-model-preview';feedback.innerHTML=buildingFeedbackHTML({id:projectId,name:view.title},{viewURL:location.href});$('modelSubtitle').after(feedback);
+  const feedback=document.createElement('span');feedback.className='project-model-preview';feedback.innerHTML=buildingFeedbackHTML({id:projectId,name:view.title},{viewURL:location.href});$('modelActions').append(feedback);$('modelActions').hidden=false;
   bindBuildingFeedback(feedback,()=>({viewURL:location.href}));
-  void loadModelRevisions().then(registry=>{const revision=modelRevisionForProject(registry,manifest,projectId,view.id);if(!revision)return;const paragraph=document.createElement('p');paragraph.className='muted';paragraph.setAttribute('aria-label','Model revision');const time=document.createElement('time');time.dateTime=revision.updatedOn;time.textContent=revision.label;paragraph.append(time);$('modelSubtitle').after(paragraph);});
+  void loadModelRevisions().then(registry=>{const revision=modelRevisionForProject(registry,manifest,projectId,view.id);if(!revision)return;const paragraph=$('modelRevision');paragraph.hidden=false;paragraph.setAttribute('aria-label','Model revision');const time=document.createElement('time');time.dateTime=revision.updatedOn;time.textContent=revision.label;paragraph.replaceChildren(time);});
   const cityURL=view.cityURL||(cityProject?'explore.html?district='+(cityProject==='sgm-maritz-6710'?'heartland':cityProject==='artform'?'cooksville':'downtown')+'&project='+cityProject:'');
-  if(cityURL){const link=document.createElement('a');link.href=cityURL;link.textContent='View in the city map ↗';const paragraph=document.createElement('p');paragraph.append(link);$('modelSubtitle').after(paragraph);}
-  if(view.comparisonURL){const link=document.createElement('a');link.href=view.comparisonURL;link.textContent='Before and after ↗';const paragraph=document.createElement('p');paragraph.append(link);$('modelSubtitle').after(paragraph);}
+  if(cityURL){const link=document.createElement('a');link.href=cityURL;link.textContent='View in the city map ↗';$('modelActions').prepend(link);}
+  if(view.comparisonURL){const link=document.createElement('a');link.href=view.comparisonURL;link.textContent='Before and after ↗';$('modelActions').prepend(link);}
   $('studySummary').textContent = view.summary; $('studyCredit').textContent = view.credit;
   $('studyLimits').textContent = view.limits; $('rightsNote').textContent = view.rights;
-  $('downloadNote').textContent = view.downloadNote || 'GLB downloads contain the displayed study geometry. Keep the credits and limitations with the model.';
+  $('downloadNote').textContent = view.downloadNote || 'Keep the credits and model limits when sharing.';
   configureStudyActions(view);
   for (const source of view.sources) {
     const li = document.createElement('li'), a = document.createElement('a');
@@ -51,7 +52,7 @@ if (!view) {
   if (assets.some(a => !a)) throw new Error('Incomplete study catalogue');
   const requiresCityTerms = assets.some(asset => asset.cityDataTerms);
   if (requiresCityTerms) {
-    $('modelDownloads').before(cityDataNotice().element);
+    $('modelSources').after(cityDataNotice().element);
   }
   const bytes = new Map(), pending = new Map(), downloadButtons = [];
   const status = (message, error = false) => { if(contextLost){message='Graphics paused. Restore the model to continue.';error=true;} $('previewStatus').textContent = studyViewerMessage(view,message); $('previewStatus').classList.toggle('error', error); };

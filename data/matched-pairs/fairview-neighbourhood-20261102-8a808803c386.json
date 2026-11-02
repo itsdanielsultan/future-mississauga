@@ -1,0 +1,430 @@
+{
+  "schema": "future-mississauga-fairview-pilot-matched-view-proof/v2",
+  "state": "VERIFIED_MATCHED_EXISTING_PILOT_COMPARISON_EQUAL_NATIVE_DIMENSIONS",
+  "members": [
+    {
+      "identity": "neighbourhood/fairview/before",
+      "scenario": "existing",
+      "district": "citywide",
+      "geographicScope": "neighbourhood",
+      "cleanPNG": {
+        "sha256": "a46e6e7987d50bfa2aab085d66f8fa84dbffd93fecb16f61ba5f70ee035773cc",
+        "bytes": 2019083,
+        "dimensions": [
+          1800,
+          1100
+        ],
+        "mimeType": "image/png",
+        "nativePixelsNoUpscaling": true,
+        "crop": false,
+        "captionBaked": false
+      },
+      "responsiveImages": [
+        {
+          "file": "scene-1200.avif",
+          "sha256": "cde1b26c0245704f8deecd139818af01d6a589d59b46580983c665826ef915de",
+          "bytes": 168846,
+          "dimensions": [
+            1200,
+            733
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "lossyEncoding": true,
+          "crop": false,
+          "integerPixelRounding": {
+            "nativeAspectExactlyPreserved": false,
+            "dimensions": [
+              1200,
+              733
+            ],
+            "nativeDimensions": [
+              1800,
+              1100
+            ],
+            "integerHeightRoundingPixels": -0.33333333333337123,
+            "rule": "width=min(nativeWidth,1200 or3200); height=round(nativeHeight*width/nativeWidth)",
+            "completeFrameResizedWithoutCrop": true
+          }
+        },
+        {
+          "file": "scene-1200.jpg",
+          "sha256": "346b652e297dadb82c0e628244bc6f8d496932de29fcf85f50fd64b0163e1d9e",
+          "bytes": 279601,
+          "dimensions": [
+            1200,
+            733
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "lossyEncoding": true,
+          "crop": false,
+          "integerPixelRounding": {
+            "nativeAspectExactlyPreserved": false,
+            "dimensions": [
+              1200,
+              733
+            ],
+            "nativeDimensions": [
+              1800,
+              1100
+            ],
+            "integerHeightRoundingPixels": -0.33333333333337123,
+            "rule": "width=min(nativeWidth,1200 or3200); height=round(nativeHeight*width/nativeWidth)",
+            "completeFrameResizedWithoutCrop": true
+          }
+        },
+        {
+          "file": "scene-1800.avif",
+          "sha256": "cb0a540e98e468969301730b0ba068089b8e9f0741d916076e5bbdabd316686f",
+          "bytes": 272145,
+          "dimensions": [
+            1800,
+            1100
+          ],
+          "mimeType": "image/avif",
+          "resized": false,
+          "lossyEncoding": true,
+          "crop": false,
+          "integerPixelRounding": {
+            "nativeAspectExactlyPreserved": true,
+            "dimensions": [
+              1800,
+              1100
+            ],
+            "nativeDimensions": [
+              1800,
+              1100
+            ],
+            "integerHeightRoundingPixels": 0.0,
+            "rule": "width=min(nativeWidth,1200 or3200); height=round(nativeHeight*width/nativeWidth)",
+            "completeFrameResizedWithoutCrop": true
+          }
+        },
+        {
+          "file": "scene-1800.jpg",
+          "sha256": "34d07284f9ed624f5e5cdbb096c88c6a3c0d82dabb4d5bca86f4da32b25f4442",
+          "bytes": 505254,
+          "dimensions": [
+            1800,
+            1100
+          ],
+          "mimeType": "image/jpeg",
+          "resized": false,
+          "lossyEncoding": true,
+          "crop": false,
+          "integerPixelRounding": {
+            "nativeAspectExactlyPreserved": true,
+            "dimensions": [
+              1800,
+              1100
+            ],
+            "nativeDimensions": [
+              1800,
+              1100
+            ],
+            "integerHeightRoundingPixels": 0.0,
+            "rule": "width=min(nativeWidth,1200 or3200); height=round(nativeHeight*width/nativeWidth)",
+            "completeFrameResizedWithoutCrop": true
+          }
+        }
+      ],
+      "sourceSceneSHA256": "599eb68485069dedb00a9c38eacd517146896d220dfa170a63d395e876eff07a",
+      "renderStartedUTC": "2026-11-02T05:47:11.510609+00:00",
+      "renderCompletedUTC": "2026-11-02T05:47:17.912686+00:00",
+      "cameraQualifications": "Same actual native perspective capture camera and loaded generic context in both phases. Final orthographic camera is the exact recovered historic world camera; source geometry and materials unchanged.",
+      "evidenceSHA256": {
+        "deliveryManifest": "6eeddb2a281a17774fe466a0d4892bb6e5018268a98f4f2474ce0ad3c1d6e278",
+        "sceneProof": "63e231da4128b85e8dad62118ebc416867e865234415b9fcb869c492b2e1e280",
+        "renderProof": "1b82ee44ce592380009c5be2d75af69c94b471fceb210c13f8ef9758a3700054",
+        "importProof": "1ea63d9e0cd20af130f9ccabd58529ae7ef4af187c57db49a559840cb46361f7",
+        "nativeInventory": "9bd225be48cea63042920c9b504beaf75d63d5342ae90e99f5c77935e70351c2",
+        "rendererSource": "eebfbaf06da3bd75bcc15bd08e5147c6620cfe5a214196bb2b027a61dc0ca2f7",
+        "compositionProof": "c8293f7e089c0240b90fc48813f0eaca6ae31bdb9135e60545d3a4d270c0891b",
+        "originalRGBA": "6f5404717678067ef51a2cb73b8f77b5d452c876da8260219bbd9146cf63ec3a"
+      },
+      "renderRepresentation": {
+        "kind": "unaltered-native-scenario-import"
+      },
+      "comparisonState": "before"
+    },
+    {
+      "identity": "neighbourhood/fairview/after",
+      "scenario": "existing",
+      "district": "citywide",
+      "geographicScope": "neighbourhood",
+      "cleanPNG": {
+        "sha256": "c14c5d4e0b5ef82366aee857f325e6c77a5baaf905b971afc5317f5ad1a2f1ee",
+        "bytes": 2128073,
+        "dimensions": [
+          1800,
+          1100
+        ],
+        "mimeType": "image/png",
+        "nativePixelsNoUpscaling": true,
+        "crop": false,
+        "captionBaked": false
+      },
+      "responsiveImages": [
+        {
+          "file": "scene-1200.avif",
+          "sha256": "004b19b397c3bb79cb7777193607410a90da673c44aa5128c244cdd42522d16d",
+          "bytes": 202768,
+          "dimensions": [
+            1200,
+            733
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "lossyEncoding": true,
+          "crop": false,
+          "integerPixelRounding": {
+            "nativeAspectExactlyPreserved": false,
+            "dimensions": [
+              1200,
+              733
+            ],
+            "nativeDimensions": [
+              1800,
+              1100
+            ],
+            "integerHeightRoundingPixels": -0.33333333333337123,
+            "rule": "width=min(nativeWidth,1200 or3200); height=round(nativeHeight*width/nativeWidth)",
+            "completeFrameResizedWithoutCrop": true
+          }
+        },
+        {
+          "file": "scene-1200.jpg",
+          "sha256": "879e937ecdeb763dc4c449a8b74cf62f0e22af6d4b9408579609a65e8cf90067",
+          "bytes": 320725,
+          "dimensions": [
+            1200,
+            733
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "lossyEncoding": true,
+          "crop": false,
+          "integerPixelRounding": {
+            "nativeAspectExactlyPreserved": false,
+            "dimensions": [
+              1200,
+              733
+            ],
+            "nativeDimensions": [
+              1800,
+              1100
+            ],
+            "integerHeightRoundingPixels": -0.33333333333337123,
+            "rule": "width=min(nativeWidth,1200 or3200); height=round(nativeHeight*width/nativeWidth)",
+            "completeFrameResizedWithoutCrop": true
+          }
+        },
+        {
+          "file": "scene-1800.avif",
+          "sha256": "01c932f06ce6626bf1e75946b1e5bcb4e0f66e41753f2df2c8a706b695534488",
+          "bytes": 327537,
+          "dimensions": [
+            1800,
+            1100
+          ],
+          "mimeType": "image/avif",
+          "resized": false,
+          "lossyEncoding": true,
+          "crop": false,
+          "integerPixelRounding": {
+            "nativeAspectExactlyPreserved": true,
+            "dimensions": [
+              1800,
+              1100
+            ],
+            "nativeDimensions": [
+              1800,
+              1100
+            ],
+            "integerHeightRoundingPixels": 0.0,
+            "rule": "width=min(nativeWidth,1200 or3200); height=round(nativeHeight*width/nativeWidth)",
+            "completeFrameResizedWithoutCrop": true
+          }
+        },
+        {
+          "file": "scene-1800.jpg",
+          "sha256": "d4a8500890bbffe39e2beb82691cad56aa86ac717c0c7a56ee043a85b9ce0e00",
+          "bytes": 578748,
+          "dimensions": [
+            1800,
+            1100
+          ],
+          "mimeType": "image/jpeg",
+          "resized": false,
+          "lossyEncoding": true,
+          "crop": false,
+          "integerPixelRounding": {
+            "nativeAspectExactlyPreserved": true,
+            "dimensions": [
+              1800,
+              1100
+            ],
+            "nativeDimensions": [
+              1800,
+              1100
+            ],
+            "integerHeightRoundingPixels": 0.0,
+            "rule": "width=min(nativeWidth,1200 or3200); height=round(nativeHeight*width/nativeWidth)",
+            "completeFrameResizedWithoutCrop": true
+          }
+        }
+      ],
+      "sourceSceneSHA256": "ef65efb0c72734f469a849fe4768266285387e13e6f42d4a63a2996730bf7149",
+      "renderStartedUTC": "2026-11-02T05:47:28.458041+00:00",
+      "renderCompletedUTC": "2026-11-02T05:47:34.968292+00:00",
+      "cameraQualifications": "Same actual native perspective capture camera and loaded generic context in both phases. Final orthographic camera is the exact recovered historic world camera; source geometry and materials unchanged.",
+      "evidenceSHA256": {
+        "deliveryManifest": "e0954821d4c0f52eec3279a68f7972f9e91161a9c6e6281d7eb68476c6b1bb36",
+        "sceneProof": "2cd52c9092f815b09f5a148e0e8427d143b7e900d8356e9288d77ba974c3a27f",
+        "renderProof": "2f36505e978b1c8123178cbcb81967d7aacf07b30013c8da62177fdbb9004813",
+        "importProof": "fa0aa73b8d20a4ba903afe11dcca39a9652712654d50801447199e43fadafefc",
+        "nativeInventory": "92c7e58faea47b326f6235c706eba454a6029fb75a951913761fa52a339a1df3",
+        "rendererSource": "eebfbaf06da3bd75bcc15bd08e5147c6620cfe5a214196bb2b027a61dc0ca2f7",
+        "compositionProof": "7be0aede716d9f3dcb579bf70dc73fdd8286d801d47d1cd626119c35437bd83d",
+        "originalRGBA": "2d56188ef4b872d4fcc951df3897623dbffb08816819c4126e4691455b90453c"
+      },
+      "renderRepresentation": {
+        "kind": "unaltered-native-scenario-import"
+      },
+      "comparisonState": "after"
+    }
+  ],
+  "comparison": {
+    "kind": "native-neighbourhood-pilot-visibility",
+    "scenarioBoth": "existing",
+    "beforeIdentity": "neighbourhood/fairview/before",
+    "afterIdentity": "neighbourhood/fairview/after",
+    "pilotId": "oro-fairview-lowrise-context-pilot",
+    "sourceComponentsAdded": 233,
+    "trianglesAdded": 9722,
+    "mergedMeshesAdded": 1,
+    "genericContextUnchanged": true,
+    "sourceDatesUnchanged": true,
+    "actualNativeTransitionProofSHA256": "b92aff3ee65d47a9a6e03d7ae5d8b9704ceb58dd96b73892f6ebb2942296b76d"
+  },
+  "shared": {
+    "camera": {
+      "location": [
+        -4930.0,
+        -900.0,
+        605.0
+      ],
+      "rotationEuler": [
+        0.9663816495240751,
+        6.295796994848502e-08,
+        -0.5290305109263194
+      ],
+      "quaternionWXYZ": [
+        0.8547180891036987,
+        0.44844773411750793,
+        -0.12146750092506409,
+        -0.23151081800460815
+      ],
+      "type": "ORTHO",
+      "lens": 50,
+      "orthoScale": 740,
+      "sensorFit": "AUTO",
+      "sensorWidth": 36,
+      "sensorHeight": 24,
+      "shift": [
+        0,
+        0
+      ],
+      "clip": [
+        0.1,
+        100000
+      ],
+      "target": [
+        -4550.0,
+        -250.0,
+        85.0
+      ]
+    },
+    "lightingAndColourManagement": {
+      "sunRotationEuler": [
+        0.6108652381980153,
+        -0.3490658503988659,
+        -0.6981317007977318
+      ],
+      "sunEnergy": 2.4,
+      "sunAngle": 0.08,
+      "sunColour": [
+        1,
+        1,
+        1
+      ],
+      "worldColour": [
+        0.8,
+        0.86,
+        1,
+        1
+      ],
+      "worldStrength": 0.8,
+      "viewTransform": "AgX",
+      "look": "AgX - Medium High Contrast",
+      "exposure": 0.15,
+      "gamma": 1
+    },
+    "background": "#e8f2f7",
+    "aspectRatio": {
+      "numerator": 18,
+      "denominator": 11
+    },
+    "pixelAspect": [
+      1,
+      1
+    ],
+    "rendererSettings": {
+      "s.render.pixel_aspect_x": 1,
+      "s.render.pixel_aspect_y": 1,
+      "s.render.resolution_percentage": 100,
+      "s.render.use_border": false,
+      "s.render.use_crop_to_border": false,
+      "s.render.engine": "CYCLES",
+      "s.cycles.use_denoising": true,
+      "s.cycles.use_adaptive_sampling": true,
+      "s.cycles.adaptive_threshold": 0.022
+    },
+    "samples": 96,
+    "blenderVersion": "5.2.2 LTS",
+    "sourceFreeze": {
+      "state": "FINAL_FROZEN",
+      "frozenUTC": "2026-11-02T05:35:17.164557+00:00",
+      "threeRevision": "186",
+      "sourceFilesManifestSHA256": "676fdc8516202e6c802147f161dfb703ad314746564b2559435e7767fa980819",
+      "completeRevisionCanonicalJSON_SHA256": "11f88df4c068fad0be5c138ebc573f326822824b98aeb97e298f7204d9564672"
+    }
+  },
+  "checks": {
+    "cameraParametersExactlyEqual": true,
+    "lightingParametersExactlyEqual": true,
+    "sourceFreezeExactlyEqual": true,
+    "normalizedCameraFramingEqual": true,
+    "nativePixelDimensionsEqual": true,
+    "bothScenarioExisting": true,
+    "onlyPilotVisibilityChanges": true,
+    "exact233Components9722Triangles": true,
+    "genericContextCameraLightingFixed": true,
+    "cleanOriginalFrameCompositionRGBVerified": true,
+    "imagesResizedOrCroppedByThisReview": false
+  },
+  "qualification": [
+    "This is a before/after visibility comparison of a City-source neighbourhood pilot within the Existing scenario. It is not an Existing/Future development comparison.",
+    "Only the separately captured 233-component, 9722-triangle pilot changes visibility. The native generic context, camera and lighting remain fixed.",
+    "Responsive1200x733 derivatives use the existing formatter integer-height rounding of the full1800x1100 frame. Their rational aspect is slightly different; both members have equal responsive dimensions. Native camera/aspect remain exactly matched. No crop is applied.",
+    "The proof binds recorded native transition, render parameters and delivered pixels. It does not grant publication rights or certify source geometry accuracy."
+  ],
+  "generator": {
+    "file": "generate_fairview_pair_proof_v5.py",
+    "sha256": "9e045a54e80773ceac2dbc2cb754abf0830a7a42851b0bc6edebeb9f8bfb67f1",
+    "reusedMemberValidatorSHA256": "218ba467099f92ea9ffce16a55af306b7817dfe133779e9d82faa1be1582ce25",
+    "originalGeneralValidatorSHA256": "42a90603130eb8f00f96802ebaa80d9da977cf5a05cb64fedb90e1c737b73c7d"
+  },
+  "proofID": "fm-fairview-pilot-d85914f94b931b996c6871c1"
+}

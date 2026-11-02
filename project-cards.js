@@ -8,6 +8,14 @@ const isKnown=value=>(typeof value!=='number'||value>0)&&Boolean(text(value))&&!
 const validURL=value=>{try{const u=new URL(text(value));return /^(https?:)$/.test(u.protocol)?u.href:null;}catch{return null;}};
 
 const overrides={
+  "harborn-50-60":{summary:"Twelve proposed townhomes in two four-storey mansard rows."},
+  "mcity-1-2":{
+    credit:"Model: Daniel Sultan. Architecture: CORE Architects. City of Mississauga source podium geometry.",
+    notes:[
+      "CORE’s seven floor-plate outlines guide the exterior. Added glazing and bands improve selected podium surfaces.",
+      "Floor phase, heights and podium details remain approximate. M1’s low faceted pavilion is coarse or absent; this is not a measured as-built model."
+    ]
+  },
   "port-credit-50-high":{
     targetCompletionLabels:{"2028-01":"January 2028 · City programme forecast"},
     notes:[
@@ -16,10 +24,10 @@ const overrides={
 ]
   },
   "mcity-3":{
-    credit:"Model: Daniel Sultan. Architecture: IBI Group. City geometry: City of Mississauga. References: Tim MacDonald / UrbanToronto, Walters Group and Andrew Fisher.",
+    credit:"Model: Daniel Sultan. Architecture: IBI Group / Arcadis. City placement reference: City of Mississauga.",
     notes:[
-      "The exterior follows published plans and July 2026 photographs, with the City’s lower building geometry retained.",
-      "Upper-floor elevations carry about ±15 m uncertainty. Balcony details and the closed crown are simplified; mechanical steel and cavities are not modelled."
+      "The exterior follows published plans and dated 2026 photographs, including the changing tower outline, stepped crown and raised glass pavilion.",
+      "Floor spacing, facade patterns, crown details, podium and placement are approximate. This is an exterior interpretation, not a surveyed or as-built model."
     ]
   },
   "mcity-4":{
@@ -71,9 +79,13 @@ export function projectStatus(project){
   if(/^(?:uncertain|superseded|disputed)/.test(status))return {label:'Uncertain',tone:'uncertain'};
   if(/under construction|construction underway|construction in progress|topped out/.test(status)&&!/construction (?:not verified|unverified|unconfirmed)|(?:not |no |before |awaiting )construction/.test(status))return {label:'Under construction',tone:'construction'};
   if(project.modelLayer==='existing'||/^(?:existing|built|completed?|occupied|open\b)/.test(status))return {label:'Existing',tone:'existing'};
+  const approvalUnconfirmed=/\b(?:approval|approved)(?:\s+in\s+principle)?\s*(?:[(:;,·]\s*)?(?:(?:status|decision)\s+)?(?:unconfirmed|unverified|uncertain|pending|under review|(?:has\s+)?not(?:\s+yet)?(?:\s+been)?\s+(?:confirmed|established|verified|received|granted|issued))\b|\b(?:no|without|awaiting|pending)\s+(?:an?\s+)?approval\b|\bnot(?:\s+yet)?\s+approved\b/.test(status);
+  // Qualifiers apply to every approval fallback, including zoning and in-principle
+  // decisions. An unrelated pending permit does not negate confirmed zoning.
+  if(approvalUnconfirmed)return {label:'Under review',tone:'proposed'};
   if(/(?:approval|approved) in principle/.test(status))return {label:'Approval in principle',tone:'proposed'};
   if(/zoning approved|zoning settled/.test(status))return {label:'Zoning approved',tone:'proposed'};
-  if(/(?:approved|approval|council passed|zoning settled|holding provision removed|master plan endorsed)/.test(status))return {label:'Approved',tone:'proposed'};
+  if(/\b(?:approved|approval\s+(?:(?:has been|was|is)\s+)?(?:granted|issued|received)|(?:granted|issued|received)\s+(?:planning\s+|site plan\s+)?approval|council passed|zoning settled|holding provision removed|master plan endorsed)\b/.test(status))return {label:'Approved',tone:'proposed'};
   if(/appealed|appeal/.test(status))return {label:'Under appeal',tone:'uncertain'};
   if(/under review|received/.test(status))return {label:'Under review',tone:'proposed'};
   if(/(?:construction stage|construction timing|construction start|current application).*?(?:unverified|unconfirmed|not verified)/.test(status))return {label:'Status unconfirmed',tone:'uncertain'};
