@@ -2,11 +2,14 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
+import {assetURL} from '../public/asset-delivery.js';
 import {mediaPreviewInfo,comparisonPair} from '../public/clean-media.js';
 
 const pub = new URL('../public/', import.meta.url);
 const source = fs.readFileSync(new URL('gallery.js', pub), 'utf8').replace(/^import .*;\n/gm, '');
 const entry = fs.readFileSync(new URL('gallery-entry.js', pub), 'utf8');
+const galleryImports = [...entry.matchAll(/import\(\s*(['"])\.\/gallery\.js(?:\?[^'"]*)?\1\s*\)/g)];
+assert.equal(galleryImports.length, 1, 'the entry must import the gallery exactly once');
 const districtData = JSON.parse(fs.readFileSync(new URL('data/districts.json', pub)));
 const pictureData = JSON.parse(fs.readFileSync(new URL('data/picture-assets.json', pub)));
 const tick = () => new Promise(resolve => setImmediate(resolve));
@@ -56,7 +59,7 @@ function harness({bootstrap = true, failedImport = false} = {}) {
     fetch: path => data.promise.then(() => ({json: async () => structuredClone(path.includes('districts') ? districtData : pictureData)})),
     refreshPictureAssets: async () => { await metadata.promise; },
     createImagePreview: () => ({show: info => shows.push(info), setViews() {}}),
-    mediaPreviewInfo, comparisonPair, bindComparison() {},
+    mediaPreviewInfo, comparisonPair, assetURL, bindComparison() {},
     loadGallery: () => {
       loads++;
       initialization = failedImport ? Promise.reject(new Error('Module unavailable')) : vm.runInContext('(async () => {' + source + '\n})()', context);
@@ -64,8 +67,7 @@ function harness({bootstrap = true, failedImport = false} = {}) {
     },
   });
   if (bootstrap) {
-    assert.equal(entry.split("import('./gallery.js?v=20261102-coherent1')").length, 2);
-    vm.runInContext(entry.replace("import('./gallery.js?v=20261102-coherent1')", 'loadGallery()'), context);
+    vm.runInContext(entry.replace(galleryImports[0][0], 'loadGallery()'), context);
   } else context.loadGallery();
   return {hero, buttons, shows, notices, data, metadata, click,
     get loads() { return loads; }, get reloads() { return reloads; },
@@ -128,8 +130,9 @@ for (const failedImport of [false, true]) test((failedImport ? 'module' : 'metad
 
 test('capture loads before any visible picture and gallery initialization has only one owner', () => {
   const html = fs.readFileSync(new URL('index.html', pub), 'utf8');
-  const tag = '<script src="gallery-entry.js?v=20261102-coherent1"></script>';
-  assert.equal(html.split(tag).length, 2);
+  const tags = [...html.matchAll(/<script\s+src=(['"])gallery-entry\.js(?:\?[^'"]*)?\1><\/script>/g)];
+  assert.equal(tags.length, 1);
+  const tag = tags[0][0];
   assert(html.indexOf(tag) < html.indexOf('data-open='));
   assert(!html.includes('src="gallery.js?'));
 });

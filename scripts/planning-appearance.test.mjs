@@ -14,16 +14,17 @@ const makeMesh=lifecycle=>{
   mesh.userData={lifecycle,uncertain:true,modelCaveat:'Roof geometry remains approximate.'};return mesh;
 };
 
-test('planning appearance has exactly three groups and does not classify unknown or inactive designs as plans',()=>{
-  assert.deepEqual(PLANNING_APPEARANCE.map(x=>x.label),['Existing','Under construction','Planned']);
-  for(const lifecycle of ['approved','proposed'])assert.equal(planningAppearanceKey({lifecycle}),'planned');
-  for(const lifecycle of ['unknown','mixed','on_hold','cancelled','invalid']){
+test('planning colours distinguish recorded stages, unverified status and inactive designs',()=>{
+  assert.deepEqual(PLANNING_APPEARANCE.map(x=>x.label),['Existing','Under construction','Approved planning','Proposed','Status unverified','On hold','Cancelled']);
+  for(const lifecycle of ['existing','under_construction','approved','proposed','unknown','on_hold','cancelled'])assert.equal(planningAppearanceKey({lifecycle}),lifecycle);
+  assert.equal(planningAppearanceKey({lifecycle:'mixed'}),'unknown');
+  for(const lifecycle of ['invalid']){
     assert.equal(planningAppearanceKey({lifecycle,Status:'Proposed'}),null,lifecycle);
     assert.equal(planningAppearanceColour(null),NATURAL_MASSING_COLOUR);
   }
-  assert.equal(planningAppearanceKey({Status:'Proposed; dated2024 reference'}),'planned');
-  assert.equal(planningAppearanceKey({Status:'Proposed; applicant on hold'}),null);
-  assert.deepEqual(planningStatusLegendFor(['unknown','on_hold','cancelled']),[]);
+  assert.equal(planningAppearanceKey({Status:'Proposed; dated2024 reference'}),'proposed');
+  assert.equal(planningAppearanceKey({Status:'Proposed; applicant on hold'}),'on_hold');
+  assert.deepEqual(planningStatusLegendFor(['unknown','on_hold','cancelled']).map(x=>x.key),['unknown','on_hold','cancelled']);
 });
 
 test('planning colours never change lifecycle, confidence, filters or authored natural finishes',()=>{
@@ -37,7 +38,7 @@ test('planning colours never change lifecycle, confidence, filters or authored n
       assert.equal(x.material.color.getHex(),planningAppearanceColour(planningAppearanceKey(facts[i])));
       assert.deepEqual(x.userData,facts[i]);
     });
-    assert.equal(meshes[2].material,meshes[3].material,'approved and proposed share a material, never a factual record');
+    assert.notEqual(meshes[2].material,meshes[3].material,'approved and proposed remain visually distinct');
     assert.deepEqual(meshes.map(x=>x.visible),visibility);
     a.setMode('natural');meshes.forEach((x,i)=>assert.equal(x.material,originals[i]));
   }
@@ -49,11 +50,11 @@ test('planning colours never change lifecycle, confidence, filters or authored n
   a.dispose();
 });
 
-test('screen and saved-image legends use the same three colours as their actual mesh materials',()=>{
+test('screen and saved-image legends use the same recorded-stage colours as their mesh materials',()=>{
   const a=createModelAppearance(THREE),meshes=['existing','under_construction','approved','proposed','unknown'].map(makeMesh);
   meshes.forEach(x=>a.register(x));a.setMode('status');
   const legend=planningStatusLegendFor(meshes.map(x=>x.userData.lifecycle),{appearance:a.mode});
-  assert.deepEqual(legend.map(x=>x.key),['existing','under_construction','planned']);
+  assert.deepEqual(legend.map(x=>x.key),['existing','under_construction','approved','proposed','unknown']);
   for(const item of legend){
     const shown=meshes.filter(x=>planningAppearanceKey(x.userData)===item.key);assert(shown.length);
     shown.forEach(x=>assert.equal('#'+x.material.color.getHexString(),item.color));
@@ -62,8 +63,7 @@ test('screen and saved-image legends use the same three colours as their actual 
     const labels=[],swatches=[],ctx={save(){},restore(){},translate(){},scale(){},beginPath(){},moveTo(){},lineTo(){},stroke(){},fillRect(x,y,w,h){if(w===16)swatches.push(this.fillStyle);},fillText(text){labels.push(text);}};
     drawPresentationFooter(ctx,{width,top:0,title:'Downtown',scenario:'Future scenario',bearing:null,legend});
     assert.deepEqual(swatches,legend.map(x=>x.color));
-    assert.deepEqual(labels.slice(-3),['Existing','Under construction','Planned']);
-    assert(!labels.includes('Status unverified'));assert(!labels.includes('Approved planning'));
+    assert.deepEqual(labels.slice(-5),['Existing','Under construction','Approved planning','Proposed','Status unverified']);
   }
   a.setMode('natural');assert.deepEqual(planningStatusLegendFor(meshes.map(x=>x.userData.lifecycle),{appearance:a.mode}),[]);a.dispose();
 });
@@ -73,7 +73,7 @@ test('the actual app shares its visible planning legend with export and does not
   const source=app.split('\n').find(line=>line.startsWith('function currentStatusLegend()'));
   const context={planningStatusLegendFor,appearance:{mode:'status'},modelMeshes:[{visible:true,userData:{lifecycle:'approved'}},{visible:true,userData:{lifecycle:'proposed'}},{visible:true,userData:{lifecycle:'unknown'}},{visible:false,userData:{lifecycle:'under_construction'}}]};
   runInNewContext(source,context);
-  assert.deepEqual(context.currentStatusLegend().map(x=>x.key),['planned']);
+  assert.deepEqual(context.currentStatusLegend().map(x=>x.key),['approved','proposed','unknown']);
   context.appearance.mode='natural';assert.deepEqual(context.currentStatusLegend(),[]);
   assert.match(app,/const legend=currentStatusLegend\(\),layout=presentationLayout/);
   assert.match(app,/drawPresentationFooter\(ctx,\{[^\n]*legend,/);

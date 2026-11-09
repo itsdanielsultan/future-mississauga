@@ -146,8 +146,8 @@ test('Fairview v2 cannot become current or preview without its separate accepted
 });
 
 function docHarness(){
- const node=tag=>({tag,children:[],remove(){this.removed=true;},classList:{add(){}},textContent:'',replaceChildren(...children){this.children=children;},querySelector(){return null;},querySelectorAll(){return [];}});
- return {createElement:node};
+ const node=tag=>({tag,children:[],style:{},setAttribute(){},append(...children){this.children.push(...children);},remove(){this.removed=true;},classList:{add(){}},textContent:'',replaceChildren(...children){this.children=children;},querySelector(){return null;},querySelectorAll(){return [];}});
+ return {createElement:node,createTextNode:text=>({...node('#text'),textContent:text})};
 }
 test('compact visible attribution keeps required credits and one source link without metadata prose',()=>{
  const doc=docHarness(),container=doc.createElement('span'),input=fixture();
@@ -177,7 +177,7 @@ test('clean caption reuses its title region and preserves the separate download 
   const image={closest:selector=>selector==='.picture-card,.social-grid article'?{querySelector:()=>copy}:null};
   updateCleanImageCaption(image,normalizeCleanMedia(fixture(),base));
   assert.equal(copy.children[0],title);assert.equal(title.textContent,'Clarkson');assert.equal(copy.children.filter(n=>n===title).length,1);
-  assert.equal(copy.children[1].textContent,'Future scenario');assert.equal(copy.children.at(-1),download);
+  assert.equal(copy.children[1].textContent,'by Daniel Sultan');assert.equal(copy.children[2].textContent,'Future scenario');assert.equal(copy.children.at(-1),download);
  }finally{globalThis.document=previous;}
 });
 
@@ -188,15 +188,34 @@ test('comparison has one shared caption outside the clipped images and clears it
   const before=image(),after=image(),b=fixture('wide/clarkson-existing.png'),a=fixture();
   a.caption.requiredModelCredits.push('275 Superior Boulevard photo reference: David Lasker/Cityscape Photography · davidlaskerphotography.com');
   updateCleanImageCaption(before,normalizeCleanMedia(b,base));updateCleanImageCaption(after,normalizeCleanMedia(a,base));
-  assert.equal(captions.length,1);assert.equal(captions[0].children.length,2);
+  assert.equal(captions.length,1);assert.equal(captions[0].children.length,3);
   assert.equal(captions[0].children[0].textContent,'Clarkson');
-  const credits=captions[0].children[1].children;
+  assert.equal(captions[0].children[1].textContent,'by Daniel Sultan');
+  const credits=captions[0].children[2].children;
   assert.equal(credits.filter(node=>node.textContent==='Sources').length,1);
   assert.equal(credits.filter(node=>node.textContent==='© OpenStreetMap').length,1);
   assert(credits.some(node=>node.textContent===a.caption.requiredModelCredits.at(-1)));
   const legacy={area:'Clarkson',sourceAttribution:{openStreetMap:true}};
   updateCleanImageCaption(before,legacy);updateCleanImageCaption(after,legacy);
   assert.equal(captions[0].removed,true);
+ }finally{globalThis.document=previous;}
+});
+
+test('comparison key includes both scenarios even when the existing image arrives last',()=>{
+ const previous=globalThis.document,doc=docHarness();globalThis.document=doc;
+ try{
+  const entries=read('data/presentation-media-20261109.json').images;
+  const rows=['existing','future'].map(scenario=>normalizeCleanMedia(entries.find(row=>row.identity==='wide/downtown-'+scenario+'.png'),base));
+  const snapshot=structuredClone(rows);
+  for(const order of [[0,1],[1,0]]){
+   const captions=[],panel={after:node=>captions.push(node)},images=rows.map(()=>({closest:selector=>selector==='.picture-compare'?panel:null}));
+   for(const i of order)updateCleanImageCaption(images[i],rows[i]);
+   assert.equal(captions.length,1);
+   const key=captions[0].children.find(node=>node.className==='media-caption__key');
+   const labels=key.children.flatMap(node=>node.children.filter(child=>child.tag==='#text').map(child=>child.textContent));
+   for(const label of ['Existing','Under construction','Proposed','Status unverified'])assert.equal(labels.filter(value=>value===label).length,1);
+   assert.deepEqual(rows,snapshot);
+  }
  }finally{globalThis.document=previous;}
 });
 

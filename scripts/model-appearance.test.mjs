@@ -41,7 +41,7 @@ test('appearance does not alter scenario filters, phase lifecycle, or uncertain 
   applyModelVisibility(objects,scenario,{unknownStatuses:false});const flags=objects.map(o=>o.visible);
   for(const appearance of ['status','natural']){a.setMode(appearance);assert.deepEqual(objects.map(o=>o.visible),flags);assert.deepEqual(objects.map(o=>o.userData),facts);}
  }
- a.setMode('status');assert.equal(objects[2].material.color.getHex(),planningAppearanceColour('planned'));assert.equal(objects[3].material,objects[2].material);assert.equal(objects[4].material.color.getHex(),NATURAL_MASSING_COLOUR);assert.notEqual(objects[1].material,objects[4].material);a.dispose();
+ a.setMode('status');assert.equal(objects[2].material.color.getHex(),planningAppearanceColour('approved'));assert.notEqual(objects[3].material,objects[2].material);assert.equal(objects[3].material.color.getHex(),planningAppearanceColour('proposed'));assert.equal(objects[4].material.color.getHex(),planningAppearanceColour('unknown'));assert.notEqual(objects[1].material,objects[4].material);a.dispose();
 });
 
 test('release restores originals and disposes only owned display materials once',()=>{

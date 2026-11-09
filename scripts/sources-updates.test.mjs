@@ -13,12 +13,19 @@ const updates = read('updates.html');
 test('Sources removes the false tab strip while preserving real download and source destinations', () => {
   assert.doesNotMatch(sources, /sources-jumps|sources\.js/);
   assert.equal(fs.existsSync(new URL('sources.js', publicRoot)), false);
+  const catalogue = JSON.parse(read('data/document-previews-20261109.json'));
+  const currentAtlas = catalogue.documents.at(-1);
+  assert.equal(currentAtlas.pages, 35);
+  const currentPDF = fs.readFileSync(new URL(currentAtlas.url, publicRoot));
+  assert.equal(createHash('sha256').update(currentPDF).digest('hex'), currentAtlas.sourceSHA256);
+  assert(catalogue.documents.some(doc => doc.url === 'downloads/Future-Mississauga-Atlas-20261101-3ec6b565b82d.pdf'));
+  assert(fs.existsSync(new URL('downloads/Future-Mississauga-Atlas-20261101-3ec6b565b82d.pdf', publicRoot)));
   for (const href of [
-    'downloads/Future-Mississauga-Atlas-20261101-3ec6b565b82d.pdf',
+    currentAtlas.url,
     'social.html', 'explore.html#research', 'downloads/project-register.csv',
     'downloads/municipal-source-audit.csv', 'downloads/Refinement-notes.md',
     'downloads/Model-guide.md', 'downloads/Citywide-image-credits-20261101.txt',
-    'downloads/Model-study-credits.txt', 'licenses/CREDITS.md',
+    'downloads/Model-study-credits.txt', 'gallery/revision-20261109/Source-credits.txt', 'licenses/CREDITS.md',
     'downloads/City-of-Mississauga-Open-Data-Terms.pdf',
     'https://mississauga.maps.arcgis.com/sharing/rest/content/items/961c790805c14d8da258ec91bf4117e3/data',
     'https://data.ontario.ca/en/dataset/ontario-digital-terrain-model-lidar-derived',

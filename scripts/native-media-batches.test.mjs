@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import vm from 'node:vm';
+import {assetURL} from '../public/asset-delivery.js';
 import {assertNativeMediaTransport} from './native-media-transport.mjs';
 import {normalizeCleanMedia,matchedComparisonBinding,mediaScenarioLabel} from '../public/clean-media.js';
 
@@ -10,6 +11,7 @@ const pub=new URL('../public/',import.meta.url),base='https://futuremississauga.
 const text=path=>fs.readFileSync(new URL(path,pub),'utf8');
 const native=JSON.parse(text('data/native-media-20261102.json'));
 const normalized=native.images.map(row=>normalizeCleanMedia(row,base));
+const revised=JSON.parse(text('data/presentation-media-20261109.json')).images.map(row=>normalizeCleanMedia(row,base));
 
 test('every incrementally accepted native file retains its declared bytes and dimensions',()=>{
  assert.equal(new Set(native.images.map(row=>row.identity)).size,native.images.length);
@@ -85,7 +87,7 @@ test('the responsive enhancer preserves a fixed comparison candidate at one-time
  const row=normalized.find(row=>row.identity==='wide/clarkson-future.png'),node=image();node.src=row.preview.url;
  const index=new Map([[node.src,row]]),document={querySelectorAll:s=>s==='img'?[node]:[],querySelector:()=>({}),body:{}};
  const source=text('media-catalog.js').slice(text('media-catalog.js').indexOf('export async function installResponsiveImages')).replace('export async','async');
- await vm.runInNewContext(source+'\ninstallResponsiveImages();',{catalogIndex:Promise.resolve(index),clean:value=>value,document,HTMLImageElement:class{},MutationObserver:class{observe(){}}});
+ await vm.runInNewContext(source+'\ninstallResponsiveImages();',{catalogIndex:Promise.resolve(index),clean:value=>value,document,assetURL,HTMLImageElement:class{},MutationObserver:class{observe(){}}});
  assert.equal(node.src,row.responsive.url);assert.equal(node.srcset,row.responsive.url+' 1x');assert.equal(node.sizes,undefined);
 });
 
@@ -93,7 +95,7 @@ test('ordinary inline images cap their source candidates at the largest AVIF; na
  const row=normalized.find(row=>row.identity==='wide/downtown-future.png'),node=image();node.src=row.preview.url;node.closest=()=>null;
  const index=new Map([[node.src,row]]),document={querySelectorAll:s=>s==='img'?[node]:[],querySelector:()=>({}),body:{}};
  const source=text('media-catalog.js').slice(text('media-catalog.js').indexOf('export async function installResponsiveImages')).replace('export async','async');
- await vm.runInNewContext(source+'\ninstallResponsiveImages();',{catalogIndex:Promise.resolve(index),clean:value=>value,document,HTMLImageElement:class{},MutationObserver:class{observe(){}}});
+ await vm.runInNewContext(source+'\ninstallResponsiveImages();',{catalogIndex:Promise.resolve(index),clean:value=>value,document,assetURL,HTMLImageElement:class{},MutationObserver:class{observe(){}}});
  assert.equal(node.srcset,`${row.preview.url} 1200w, ${row.responsive.url} 3200w`);
  assert(!node.srcset.includes(row.displayMaster.url));assert.equal(row.displayMaster.width,6144);
 });
@@ -102,20 +104,20 @@ test('each homepage panorama pairs the current scene, clean preview and footer d
  const source=text('gallery.js').match(/function refreshPanorama\(figure,row\)\{[\s\S]*?\n\}/)[0];
  const html=text('index.html');
  for(const scenario of ['existing','construction','future']){
-  const file='downtown-skyline-'+scenario+'.png',row=normalized.find(row=>row.kind==='wide'&&row.file===file);
+  const file='downtown-skyline-'+scenario+'.png',row=revised.find(row=>row.kind==='wide'&&row.file===file);
   const image={},preview={},download={},figure={querySelector:selector=>selector==='img'?image:selector==='a[download]'?download:preview};
-  vm.runInNewContext(source+'\nrefreshPanorama(figure,row);',{figure,row:{...row,display:row.preview}});
-  assert.equal(image.src,row.preview.url);assert.equal(preview.href,row.displayMaster.url);assert.equal(download.href,row.download.url);
+  vm.runInNewContext(source+'\nrefreshPanorama(figure,row);',{figure,row:{...row,display:row.preview},assetURL});
+  assert.equal(image.src,row.preview.url);assert.equal(preview.href,assetURL(row.displayMaster.url));assert.equal(download.href,assetURL(row.download.url));
   assert(html.includes('data-picture="'+file+'"'));
  }
 });
 
 test('responsive enhancement keeps clean image anchors separate from explicit downloads',async()=>{
- const row=normalized.find(row=>row.identity==='wide/downtown-future.png');
+ const row=revised.find(row=>row.identity==='wide/downtown-future.png');
  const anchor=download=>({href:row.displayMaster.url,hasAttribute:name=>name==='download'&&download,classList:{contains:()=>false},querySelector:()=>download?null:{}});
  const preview=anchor(false),download=anchor(true),index=new Map([[row.displayMaster.url,row]]);
  const document={querySelectorAll:s=>s==='a[href]'?[preview,download]:[],querySelector:()=>({}),body:{}};
  const source=text('media-catalog.js').slice(text('media-catalog.js').indexOf('export async function installResponsiveImages')).replace('export async','async');
- await vm.runInNewContext(source+'\ninstallResponsiveImages();',{catalogIndex:Promise.resolve(index),clean:value=>value,document,HTMLImageElement:class{},MutationObserver:class{observe(){}}});
- assert.equal(preview.href,row.displayMaster.url);assert.equal(download.href,row.download.url);
+ await vm.runInNewContext(source+'\ninstallResponsiveImages();',{catalogIndex:Promise.resolve(index),clean:value=>value,document,assetURL,HTMLImageElement:class{},MutationObserver:class{observe(){}}});
+ assert.equal(preview.href,assetURL(row.displayMaster.url));assert.equal(download.href,assetURL(row.download.url));
 });

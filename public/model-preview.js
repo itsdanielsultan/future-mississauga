@@ -1,10 +1,10 @@
 import {fitPerspectiveBox} from './model-preview-framing.js?v=20261028-maritz1';
-import {assetURL} from './asset-delivery.js?v=20261027-assets3';
+import {assetURL} from './asset-delivery.js?v=20261109-delivery1';
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {drawingPolicy, createFrameScheduler} from './viewer-runtime.js?v=20261025-mobile1';
-import {selectPreview, verifiedModelBytes} from './model-preview-loading.js?v=20261027-assets3';
+import {selectPreview, verifiedModelBytes} from './model-preview-loading.js?v=20261109-delivery1';
 import {cityDataNotice} from './city-data-terms.js?v=20261102-coherent1';
 import {batchOpaqueStudy} from './model-preview-batching.js?v=20261025-1';
 import {buildingFeedbackHTML,bindBuildingFeedback} from './building-feedback.js?v=20261028-improvements1';
@@ -19,13 +19,29 @@ const requestedId = new URLSearchParams(location.search).get('model');
 const view = selectPreview(manifest, requestedId);
 for (const item of manifest.views) {
   $('modelSelect').add(new Option(item.title, item.id));
-  const link = document.createElement('a'); link.className = 'button';
-  link.href = 'model.html?model=' + encodeURIComponent(item.id); link.textContent = item.title;
-  $('previewLinks').append(link);
+  const card = document.createElement('article'); card.className = 'study-card';
+  const link = document.createElement('a'); link.className = 'study-card-link';
+  link.href = 'model.html?model=' + encodeURIComponent(item.id);
+  const image = document.createElement('img');
+  image.src = 'assets/study-thumbnails-20261109/' + encodeURIComponent(item.id) + '.png';
+  image.alt = ''; image.width = 800; image.height = 600;
+  image.loading = 'lazy'; image.decoding = 'async';
+  const title = document.createElement('span'); title.className = 'study-card-title';
+  title.textContent = item.title;
+  const arrow = document.createElement('span'); arrow.textContent = '→'; arrow.setAttribute('aria-hidden', 'true'); title.append(arrow);
+  link.append(image, title); card.append(link);
+  const note = document.createElement('p'); note.className = 'study-card-note';
+  note.textContent = item.subtitle.split(' · ')[0]; card.append(note);
+  if (item.visibleReferenceCredit) {
+    const credit = document.createElement('p'); credit.className = 'study-card-credit';
+    const source = document.createElement('a'); source.href = item.visibleReferenceCredit.url; source.textContent = item.visibleReferenceCredit.label;
+    credit.append('Reference: ', source); card.append(credit);
+  }
+  $('previewLinks').append(card);
 }
 $('modelSelect').onchange = () => { if ($('modelSelect').value) location.assign('model.html?model=' + encodeURIComponent($('modelSelect').value)); };
 if (!view) {
-  $('choiceStatus').textContent = requestedId ? 'This model link is unavailable. Choose an available study below.' : 'Choose a building study to explore.';
+  $('choiceStatus').textContent = requestedId ? 'This model link is unavailable. Choose a study below.' : 'Choose a building';
 } else {
   document.body.classList.add('model-selected');
   $('modelSelect').value = view.id; $('modelChooser').hidden = true; $('previewContent').hidden = false;

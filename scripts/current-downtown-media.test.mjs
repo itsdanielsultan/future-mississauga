@@ -65,7 +65,8 @@ test('local previews and reserved original URLs retain exact accepted dimensions
 
 test('current markup selects native replacements while all Nov1 media remains byte-exact',()=>{
  const home=fs.readFileSync(new URL('index.html',pub),'utf8'),social=fs.readFileSync(new URL('social.html',pub),'utf8');
- for(const file of ['downtown-existing.png','downtown-future.png']){const row=downtown.images.find(r=>r.kind==='wide'&&r.file===file);assert(home.includes(row.preview.url));}
+ const revision=read('data/presentation-media-20261109.json');
+ for(const file of ['downtown-existing.png','downtown-future.png']){const row=revision.images.find(r=>r.identity==='wide/'+file);assert(home.includes(row.responsivePreviews.find(a=>a.mimeType==='image/avif'&&a.dimensions[0]===3200).url));}
  const cards=[...social.matchAll(/<article\b[^>]*>[\s\S]*?<\/article>/g)].map(m=>m[0]);
  const native=read('data/native-media-20261102.json'),replacements=new Map(native.images.map(row=>[row.identity,row]));
  assert.equal(cards.filter(c=>c.includes('gallery/downtown-20261101/')).length,downtown.images.filter(row=>row.kind==='portraits'&&!replacements.has(row.kind+'/'+row.file)).length);
@@ -74,9 +75,10 @@ test('current markup selects native replacements while all Nov1 media remains by
  const share=read('data/share-preview-20261101.json');assert.equal(share.sourceSHA256,downtown.images.find(r=>r.kind==='wide'&&r.file==='downtown-future.png').download.sha256);
  const bytes=fs.readFileSync(new URL(share.url,pub));assert.equal(createHash('sha256').update(bytes).digest('hex'),share.sha256);
  const activeShare=replacements.get('wide/downtown-future.png').responsivePreviews.find(a=>a.mimeType==='image/jpeg'&&a.dimensions[0]===1200);
- for(const name of ['index.html','explore.html','social.html']){const html=fs.readFileSync(new URL(name,pub),'utf8');const og=html.match(/<meta property="og:image" content="([^"]+)"/)[1],twitter=html.match(/<meta name="twitter:image" content="([^"]+)"/)[1];assert.equal(og,twitter,name);assert(og.startsWith(base+'gallery/native-share-20261102/'));const bytes=fs.readFileSync(new URL(og.slice(base.length),pub));assert.equal(createHash('sha256').update(bytes).digest('hex'),activeShare.sha256,name);assert(!html.includes('share-preview-compact'));}
- for(const name of fs.readdirSync(pub).filter(n=>n.endsWith('.html'))){const html=fs.readFileSync(new URL(name,pub),'utf8');for(const match of html.matchAll(/(?:gallery|social-preview|image-experience)\.js\?v=([^"']+)/g))assert.equal(match[1],'20261102-coherent1',name);}
- for(const name of ['gallery.js','social-preview.js','image-experience.js']){const js=fs.readFileSync(new URL(name,pub),'utf8');for(const match of js.matchAll(/(media-catalog|document-preview)\.js\?v=([^"']+)/g))assert.equal(match[2],'20261102-coherent1',name+' '+match[1]);}
+ for(const name of ['index.html','explore.html','social.html']){const html=fs.readFileSync(new URL(name,pub),'utf8');const og=html.match(/<meta property="og:image" content="([^"]+)"/)[1],twitter=html.match(/<meta name="twitter:image" content="([^"]+)"/)[1];assert.equal(og,twitter,name);const expectedShare=name==='index.html'?revision.images.find(r=>r.identity==='wide/downtown-future.png').responsivePreviews.find(a=>a.mimeType==='image/jpeg'&&a.dimensions[0]===1200):activeShare;assert(og.startsWith(base+(name==='index.html'?'gallery/revision-20261109/':'gallery/native-share-20261102/')));const bytes=fs.readFileSync(new URL(og.slice(base.length),pub));assert.equal(createHash('sha256').update(bytes).digest('hex'),expectedShare.sha256,name);assert(!html.includes('share-preview-compact'));}
+ const versions={'gallery':'20261109-delivery1','social-preview':'20261109-delivery1','image-experience':'20261109-delivery1','media-catalog':'20261109-delivery1','document-preview':'20261109-feedback1'};
+ for(const name of fs.readdirSync(pub).filter(n=>n.endsWith('.html'))){const html=fs.readFileSync(new URL(name,pub),'utf8');for(const match of html.matchAll(/(gallery|social-preview|image-experience)\.js\?v=([^"']+)/g))assert.equal(match[2],versions[match[1]],name+' '+match[1]);}
+ for(const name of ['gallery.js','social-preview.js','image-experience.js']){const js=fs.readFileSync(new URL(name,pub),'utf8');for(const match of js.matchAll(/(media-catalog|document-preview)\.js\?v=([^"']+)/g))assert.equal(match[2],versions[match[1]],name+' '+match[1]);}
 });
 
 test('new atlas appends sharp previews and accessible text without changing either earlier edition',()=>{
@@ -85,5 +87,5 @@ test('new atlas appends sharp previews and accessible text without changing eith
  assert.deepEqual(current.documents.slice(0,14),old.documents);assert.deepEqual(text('document-page-text-20261101.txt').slice(0,14),text('document-page-text-20261028.txt'));
  const atlas=current.documents.at(-1);assert.equal(atlas.title,'Picture atlas');assert.equal(atlas.pages,35);assert.equal(atlas.sourceSHA256,'3ec6b565b82d8fb1e83b06a5856d6b7bb3f051c257f7dd0ed43725cbba86adec');assert(atlas.sizes.every(([w])=>w===2400));
  assert.equal(text('document-page-text-20261101.txt').at(-1).length,35);
- const sources=fs.readFileSync(new URL('sources.html',pub),'utf8');assert(sources.includes(atlas.url));assert(sources.includes(citywide.image.sourceAttribution.credits));assert.match(sources, /data-document-preview/);assert.doesNotMatch(sources, /sources-jumps|sources\.js\?/);
+ const sources=fs.readFileSync(new URL('sources.html',pub),'utf8');const activeCatalog=fs.readFileSync(new URL('document-preview.js',pub),'utf8').match(/DOCUMENT_PREVIEW_CATALOG_URL = '([^'?]+)/)[1];assert(sources.includes(read(activeCatalog).documents.at(-1).url));assert(sources.includes(citywide.image.sourceAttribution.credits));assert.match(sources, /data-document-preview/);assert.doesNotMatch(sources, /sources-jumps|sources\.js\?/);
 });

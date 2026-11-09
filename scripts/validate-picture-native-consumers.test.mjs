@@ -54,6 +54,26 @@ test('share metadata must use the exact current native JPEG for both services',a
  await assert.rejects(validateNativeSharePreviews(site,[page.replace(/<meta name="twitter:image"[^>]+>/,'')],row),/share metadata/);
 });
 
+test('homepage share uses the exact presentation JPEG while other pages retain the native edition',async()=>{
+ const home=await readFile(join(site,'index.html'),'utf8'),explore=await readFile(join(site,'explore.html'),'utf8');
+ const original=rows.find(row=>row.identity==='wide/downtown-future.png');
+ const revision=await json('data/presentation-media-20261109.json');
+ const revised=normalizeCleanMedia(revision.images.find(row=>row.identity==='wide/downtown-future.png'),'https://futuremississauga.com/');
+ const options={edition:'revision-20261109'};
+ await validateNativeSharePreviews(site,[home],revised,options);
+ await validateNativeSharePreviews(site,[page,explore],original);
+ await assert.rejects(validateNativeSharePreviews(site,[home],original));
+ await assert.rejects(validateNativeSharePreviews(site,[page,explore],revised,options));
+ for(const change of [
+  row=>{row.displayMaster.sha256='0'.repeat(64);},
+  row=>{row.responsivePreviews.find(a=>a.format==='image/jpeg'&&a.width===1200).bytes++;},
+  row=>{row.responsivePreviews.find(a=>a.format==='image/jpeg'&&a.width===1200).height++;},
+  row=>{row.responsivePreviews.find(a=>a.format==='image/jpeg'&&a.width===1200).sha256='0'.repeat(64);},
+  row=>{row.responsivePreviews.find(a=>a.format==='image/jpeg'&&a.width===1200).url='https://example.com/other.jpg';},
+ ]){const changed=structuredClone(revised);change(changed);await assert.rejects(validateNativeSharePreviews(site,[home],changed,options));}
+ await assert.rejects(validateNativeSharePreviews(site,[home.replace('property="og:image:height" content="750"','property="og:image:height" content="800"')],revised,options),/metadata height/);
+});
+
 async function changedData(name,mutate,check){
  const temporary=await mkdtemp(join(tmpdir(),'fm-native-validator-'));
  try{

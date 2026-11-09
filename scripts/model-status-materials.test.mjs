@@ -34,7 +34,7 @@ test('actual lazy commit preserves authored finishes by default and uses consist
 });
 test('explicit unknown lifecycle remains distinct from an uncertain shape',()=>{
  const run=context({source:{displayStatus:'Uncertain',includeInVerifiedScenario:false}}),body=mesh('Proposed',false);body.userData.id='source';run.nextModel=new THREE.Group();run.nextModel.add(body);runInNewContext(mainPass,run);
- assert.equal(body.userData.lifecycle,'unknown');assert.equal(body.userData.uncertain,true);assert.equal(body.material.color.getHex(),NATURAL_MASSING_COLOUR);run.appearance.setMode('status');assert.equal(body.material.color.getHex(),NATURAL_MASSING_COLOUR);run.appearance.dispose();
+ assert.equal(body.userData.lifecycle,'unknown');assert.equal(body.userData.uncertain,true);assert.equal(body.material.color.getHex(),NATURAL_MASSING_COLOUR);run.appearance.setMode('status');assert.equal(body.material.color.getHex(),statusColours.Uncertain);run.appearance.dispose();
 });
 test('approved and dated source statuses retain factual classification in the lazy path',()=>{
  for(const status of ['Existing','Approved','Proposed; dated2024 reference','Proposed; applicant on hold']){

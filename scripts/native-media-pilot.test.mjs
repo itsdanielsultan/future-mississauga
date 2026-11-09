@@ -7,7 +7,10 @@ import {normalizeCleanMedia,mediaPreviewInfo,comparisonPair,matchedComparisonBin
 const pub=new URL('../public/',import.meta.url),base='https://futuremississauga.com/';
 const read=file=>JSON.parse(fs.readFileSync(new URL(file,pub),'utf8'));
 const native=read('data/native-media-20261102.json'),clarkson=native.images.filter(row=>row.identity.includes('/clarkson-')),entry=native.images.find(row=>row.identity==='wide/clarkson-future.png');
-const fetcher=async path=>new Response(fs.readFileSync(new URL(path,pub),'utf8'));
+const fullFetcher=async path=>new Response(fs.readFileSync(new URL(path,pub),'utf8'));
+// Exercise the accepted November 2 pilot independently of the later presentation
+// overlay. A separate test below checks the complete current edition.
+const fetcher=path=>path==='data/presentation-media-20261109.json'?Promise.resolve(new Response('',{status:404})):fullFetcher(path);
 const previousFetch=globalThis.fetch;globalThis.fetch=fetcher;globalThis.location={href:base};
 const {mediaCatalog,loadMediaCatalog,indexMedia,refreshCatalogPictures}=await import('../public/media-catalog.js?native-pilot-test');
 const current=await mediaCatalog;globalThis.fetch=previousFetch;
@@ -70,6 +73,28 @@ test('actual pilot selects Clarkson while all former URL identities retain their
  const invalid=structuredClone(native);invalid.images[0].download.sceneSourceSHA256='0'.repeat(64);
  const rejected=await loadMediaCatalog(path=>path.includes('native-media')?Promise.resolve(new Response(JSON.stringify(invalid))):fetcher(path),{baseURL:base});
  assert.deepEqual(refreshCatalogPictures(structuredClone(input),rejected),before);
+});
+
+test('later presentation selection preserves every native pixel identity and updates only its five logical views',async()=>{
+ const revision=read('data/presentation-media-20261109.json'),active=await loadMediaCatalog(fullFetcher,{baseURL:base});
+ const historicalIndex=indexMedia(current,base),activeIndex=indexMedia(active,base);
+ for(const [url,row] of historicalIndex){
+  // Comparison bindings describe the active pair. Pixel metadata, attribution
+  // and render provenance remain exact when a former active row is archived.
+  const {comparisonProof:priorBinding,...prior}=row;
+  const {comparisonProof:activeBinding,...retained}=activeIndex.get(url);
+  assert.deepEqual(retained,prior,url);
+ }
+ const latest=new Map(revision.images.map(row=>[row.identity,row]));
+ const pictures=refreshCatalogPictures(read('data/picture-assets.json'),active);
+ for(const original of native.images.filter(row=>row.identity.startsWith('wide/'))){
+  const expected=latest.get(original.identity)||original,selected=pictures.images[original.identity.split('/')[1]];
+  assert.equal(selected.displayMaster.sha256,expected.displayMaster.sha256,original.identity);
+  assert.equal(selected.url,expected.download.url,original.identity);
+  assert.equal(selected.caption.scenario,expected.scenario,original.identity);
+ }
+ assert.equal(latest.size,5);
+ assert(comparisonPair(pictures,'downtown').every(row=>row.comparisonProof.proofID===revision.comparisonProofs[0].proofID));
 });
 
 test('shared native proof binds different native dimensions to equal comparison derivatives',()=>{

@@ -45,7 +45,7 @@
   }
   document.addEventListener('click', capture, true);
   function start() {
-    import('./image-experience.js?v=20261102-coherent1').then(() => {
+    import('./image-experience.js?v=20261109-delivery1').then(() => {
       document.removeEventListener('click', capture, true);
       const trigger = pending; pending = null;
       trigger?.removeAttribute('aria-busy');

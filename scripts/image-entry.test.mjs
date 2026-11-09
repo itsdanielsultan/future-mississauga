@@ -7,6 +7,8 @@ import {createResolvedPreview,createImagePreview} from '../public/image-preview.
 const pub=new URL('../public/',import.meta.url);
 const read=name=>fs.readFileSync(new URL(name,pub),'utf8');
 const entry=read('image-entry.js');
+const experienceImports=[...entry.matchAll(/import\(\s*(['"])\.\/image-experience\.js(?:\?[^'"]*)?\1\s*\)/g)];
+assert.equal(experienceImports.length,1,'the entry must import the shared experience exactly once');
 const tick=()=>new Promise(r=>setImmediate(r));
 const deferred=()=>{let resolve,reject;const promise=new Promise((a,b)=>{resolve=a;reject=b});return {promise,resolve,reject}};
 const page=read('review-renders.html');
@@ -40,7 +42,7 @@ function harness(){
  }
  const context=vm.createContext({document,location:{href:'https://futuremississauga.com/review-renders.html',origin:'https://futuremississauga.com',reload(){reloads++}},URL,Symbol,
   loadExperience(){loads++;return dependency.promise.then(()=>{installed=true})}});
- const source=entry.replace("import('./image-experience.js?v=20261102-coherent1')",'loadExperience()');
+ const source=entry.replace(experienceImports[0][0],'loadExperience()');
  const run=()=>vm.runInContext(source,context);run();
  return {control,click,opens,navigations,notices,dependency,run,get loads(){return loads},get reloads(){return reloads},get captures(){return(listeners.get('click')||[]).length},ready(){document.readyState='interactive';for(const row of [...listeners.get('DOMContentLoaded')||[]]){if(row.once)document.removeEventListener('DOMContentLoaded',row.fn);row.fn()}}};
 }
@@ -109,10 +111,12 @@ test('late metadata cannot reopen a closed dialog or replace a newer selection',
 
 test('all shared preview pages load capture before content and Social has one preview owner',()=>{
  const pages=['index.html','explore.html','social.html','sources.html','updates.html','review-renders.html','reference-updates.html','accuracy-review.html'];
- for(const name of pages){const html=read(name),tag='<script src="image-entry.js?v=20261102-coherent1"></script>';assert.equal(html.split(tag).length,2,name);assert(html.indexOf(tag)<html.indexOf('</head>'),name);assert.doesNotMatch(html,/<script[^>]+src="image-experience\.js/,name);}
+ for(const name of pages){const html=read(name),tags=[...html.matchAll(/<script\s+src=(['"])image-entry\.js(?:\?[^'"]*)?\1><\/script>/g)];assert.equal(tags.length,1,name);assert(html.indexOf(tags[0][0])<html.indexOf('</head>'),name);assert.doesNotMatch(html,/<script[^>]+src="image-experience\.js/,name);}
  assert.match(read('image-experience.js'),/if\(document\.querySelector\('\.social-grid'\)\) installSocialPreview\(\)/);
  assert.doesNotMatch(read('social.js'),/installSocialPreview/);
- assert.equal(createHash('sha256').update(fs.readFileSync(new URL('gallery-entry.js',pub))).digest('hex'),'7dbe4cf707a971f53910824146f13d05ec7cefc3eb2cafee60838d99d88f8200');
+ // Updating a cache token must leave the already-reviewed bootstrap code intact.
+ const galleryEntry=read('gallery-entry.js').replace(/(['"]\.\/gallery\.js\?v=)[^'"]+(['"])/g,(_match,start,end)=>start+'20261102-coherent1'+end);
+ assert.equal(createHash('sha256').update(galleryEntry).digest('hex'),'7dbe4cf707a971f53910824146f13d05ec7cefc3eb2cafee60838d99d88f8200');
 });
 
 // Cached gallery and refreshed shared entry can import different query editions.

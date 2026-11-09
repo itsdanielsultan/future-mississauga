@@ -1,9 +1,9 @@
-import {installSocialPreview} from './social-preview.js?v=20261102-coherent1';
-import {installDocumentPreviews} from './document-preview.js?v=20261102-coherent1';
-import {installImagePreviews,updateCleanImageCaption,previewDownloadURL} from './image-preview.js?v=20261102-coherent1';
-import {mediaPreviewInfo} from './clean-media.js?v=20261102-cleanmedia1';
-import {resolveStudyImage} from './neighbourhood-media.js?v=20261102-coherent1';
-import {resolveMedia,installResponsiveImages} from './media-catalog.js?v=20261102-coherent1';
+import {installSocialPreview} from './social-preview.js?v=20261109-delivery1';
+import {installDocumentPreviews} from './document-preview.js?v=20261109-feedback1';
+import {installImagePreviews,updateCleanImageCaption,previewDownloadURL} from './image-preview.js?v=20261109-delivery1';
+import {mediaPreviewInfo} from './clean-media.js?v=20261109-feedback1';
+import {resolveStudyImage} from './neighbourhood-media.js?v=20261109-delivery1';
+import {resolveMedia,installResponsiveImages} from './media-catalog.js?v=20261109-delivery1';
 installImagePreviews(async(image,anchor)=>{
   const row=await resolveMedia(image?.src||anchor.href);
   if(row)return mediaPreviewInfo(row);

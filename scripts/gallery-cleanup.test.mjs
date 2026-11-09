@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
+import {assetURL} from '../public/asset-delivery.js';
 import {pictureProvenance} from '../public/image-provenance.js';
 import {mediaPreviewInfo,comparisonPair} from '../public/clean-media.js';
 
@@ -34,18 +35,18 @@ test('every gallery image opens with its title, date, PNG details and exact acti
     return buttons;
   }};
   await vm.runInNewContext('(async()=>{'+source.replace(/^import .*;\n/gm,'')+'})()',{
-    document,mediaPreviewInfo,comparisonPair,fetch:async path=>({json:async()=>structuredClone(path.includes('picture-assets')?pictures:districts)}),
+    document,mediaPreviewInfo,comparisonPair,assetURL,fetch:async path=>({json:async()=>structuredClone(path.includes('picture-assets')?pictures:districts)}),
     refreshPictureAssets:async value=>value,createImagePreview:()=>preview,bindComparison(){}
   });
   for(const figure of figures){
     const row=pictures.images[figure.dataset.picture];
     assert.equal(figure.nodes.img.src,row.display.url,figure.dataset.picture+' inline preview');
-    assert.equal(figure.nodes['a:not([download])'].href,row.displayMaster.url,figure.dataset.picture+' clean master');
-    assert.equal(figure.nodes['a[download]'].href,row.download.url,figure.dataset.picture+' explicit download');
+    assert.equal(figure.nodes['a:not([download])'].href,assetURL(row.displayMaster.url),figure.dataset.picture+' clean master');
+    assert.equal(figure.nodes['a[download]'].href,assetURL(row.download.url),figure.dataset.picture+' explicit download');
   }
   assert.ok(buttons.length>15);
   assert.equal(control('#heroImage').src,pictures.images['downtown-future.png'].display.url);
-  assert.equal(control('.hero a[download]').href,pictures.images['downtown-future.png'].download.url);
+  assert.equal(control('.hero a[download]').href,assetURL(pictures.images['downtown-future.png'].download.url));
   for(const button of buttons){button.onclick();for(const item of views)changeView(item.value);}
   const imagesByURL=new Map(Object.entries(pictures.images).map(([file,row])=>[row.url,{file,row}]));
   assert.equal(new Set(shows.map(info=>info.download)).size,imagesByURL.size,'all catalogue pictures must be reachable');

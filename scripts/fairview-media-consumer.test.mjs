@@ -10,6 +10,16 @@ const history=JSON.parse(fs.readFileSync(new URL('data/labelled-image-assets.jso
 const legacy=JSON.parse(fs.readFileSync(new URL('data/neighbourhood-media.json',pub)));
 const sha=text=>createHash('sha256').update(text).digest('hex');
 const dataModule=source=>'data:text/javascript;base64,'+Buffer.from(source).toString('base64');
+function replaceImports(source,replacements){
+ const counts=new Map(Object.keys(replacements).map(name=>[name,0]));
+ const replaced=source.replace(/(\bfrom\s+|\bimport\(\s*)(['"])(\.\/[^'"?]+)(?:\?[^'"]*)?\2/g,(statement,prefix,quote,path)=>{
+  if(!Object.hasOwn(replacements,path))return statement;
+  counts.set(path,counts.get(path)+1);
+  return prefix+quote+replacements[path]+quote;
+ });
+ for(const [path,count]of counts)assert.equal(count,1,'one consumer import for '+path);
+ return replaced;
+}
 function entry(state){
  const identity='neighbourhood/fairview/'+state,timestamp='2026-11-02T01:30:00.000Z',remote='https://github.com/itsdanielsultan/future-mississauga/releases/download/test-only-fairview/';
  const asset=(role,width,height,mimeType)=>({url:(mimeType==='image/avif'?'gallery/test-only-fairview/':remote)+state+'-'+role+(mimeType==='image/png'?'.png':mimeType==='image/avif'?'.avif':'.jpg'),dimensions:[width,height],bytes:500000,sha256:sha(state+role+mimeType),mimeType});
@@ -34,9 +44,9 @@ const beforeGlobals={fetch:globalThis.fetch,location:globalThis.location};
 globalThis.location={href:base,origin:new URL(base).origin};globalThis.__fairviewConsumerValidatorCalls=0;
 const fetcher=async path=>path==='data/labelled-image-assets.json'?new Response(JSON.stringify(history)):path==='data/neighbourhood-media-20261102.json'?new Response(JSON.stringify(manifest)):path===proofPath?new Response(proofText):path.startsWith('data/neighbourhood-media.json')?new Response(JSON.stringify(legacy)):new Response('',{status:404});
 globalThis.fetch=fetcher;
-let catalogSource=fs.readFileSync(new URL('media-catalog.js',pub),'utf8').replace('./clean-media.js?v=20261102-cleanmedia1',new URL('clean-media.js',pub).href).replace('./fairview-media.js?v=20261102-fairview1',validatorStub);
+const catalogSource=replaceImports(fs.readFileSync(new URL('media-catalog.js',pub),'utf8'),{'./asset-delivery.js':new URL('asset-delivery.js',pub).href,'./clean-media.js':new URL('clean-media.js',pub).href,'./fairview-media.js':validatorStub});
 const catalogURL=dataModule(catalogSource),catalogModule=await import(catalogURL),catalog=await catalogModule.mediaCatalog;
-const studySource=fs.readFileSync(new URL('neighbourhood-media.js',pub),'utf8').replace('./image-provenance.js?v=20261101-gallery1',new URL('image-provenance.js',pub).href).replace('./clean-media.js?v=20261102-cleanmedia1',new URL('clean-media.js',pub).href).replace('./fairview-media.js?v=20261102-fairview1',validatorStub).replace('./media-catalog.js?v=20261102-coherent1',catalogURL);
+const studySource=replaceImports(fs.readFileSync(new URL('neighbourhood-media.js',pub),'utf8'),{'./image-provenance.js':new URL('image-provenance.js',pub).href,'./clean-media.js':new URL('clean-media.js',pub).href,'./fairview-media.js':validatorStub,'./media-catalog.js':catalogURL});
 const study=await import(dataModule(studySource));
 after(()=>{globalThis.fetch=beforeGlobals.fetch;globalThis.location=beforeGlobals.location;delete globalThis.__fairviewConsumerValidatorCalls;});
 

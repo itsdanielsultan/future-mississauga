@@ -97,13 +97,24 @@ export function validateNativeSocialCard(articles,row){
  assert(card.includes('href="'+escapeHTML(credit.sourcesURL)+'"'));
  return card;
 }
-export async function validateNativeSharePreviews(site,pages,row){
+export async function validateNativeSharePreviews(site,pages,row,{edition='native-20261102'}={}){
+ assert(['native-20261102','revision-20261109'].includes(edition),'Unknown share edition');
+ assert.equal(row.identity,'wide/downtown-future.png','Share image must use the declared Downtown view');
  const source=row.responsivePreviews.find(a=>a.format==='image/jpeg'&&a.width===1200);assert(source,'Native share JPEG source missing');
+ assert.equal(source.sourceSHA256,row.displayMaster.sha256,'Share JPEG must derive from this exact clean scene');
+ assert.equal(source.height,Math.round(row.displayMaster.height*source.width/row.displayMaster.width),'Share JPEG aspect ratio must match its clean scene');
+ const local=edition==='revision-20261109'
+  ?'gallery/revision-20261109/downtown-future-1200-'+source.sha256.slice(0,12)+'.jpg'
+  :'gallery/native-share-20261102/downtown-future-'+source.sha256.slice(0,12)+'.jpg';
+ if(edition==='revision-20261109')assert.equal(source.url,local,'Presentation share must use its exact local JPEG');
  for(const page of pages){
   const og=page.match(/<meta property="og:image" content="([^"]+)"/),twitter=page.match(/<meta name="twitter:image" content="([^"]+)"/);
   assert(og&&twitter,'Current share metadata required');assert.equal(og[1],twitter[1]);
-  const local='gallery/native-share-20261102/downtown-future-'+source.sha256.slice(0,12)+'.jpg';
   assert.equal(og[1],'https://futuremississauga.com/'+local);
+  for(const [key,value]of Object.entries({width:source.width,height:source.height,type:source.format})){
+   const tag=page.match(new RegExp('<meta property="og:image:'+key+'" content="([^"]+)"'));
+   if(tag)assert.equal(tag[1],String(value),'Share metadata '+key+' must match the actual JPEG');
+  }
   const bytes=await readFile(join(site,local));assert.equal(bytes.length,source.bytes);assert.equal(sha(bytes),source.sha256);assert.deepEqual(jpegSize(bytes),[source.width,source.height]);
  }
 }
@@ -156,7 +167,14 @@ export async function validateRefinedPictureStructure(site){
  const share=manifest.sharePreview,bytes=await readFile(join(site,share.url));assert.equal(share.format,'image/jpeg');assert.equal(bytes.length,share.bytes);assert.equal(sha(bytes),share.sha256);assert.deepEqual(jpegSize(bytes),[1200,750]);
  const home=await readFile(join(site,'index.html'),'utf8');const currentShare=await load(site,'data/share-preview-20261101.json');
  const oldShare=await readFile(join(site,currentShare.url));assert.equal(oldShare.length,currentShare.bytes);assert.equal(sha(oldShare),currentShare.sha256);assert.deepEqual(jpegSize(oldShare),[currentShare.width,currentShare.height]);
- await validateNativeSharePreviews(site,[home,page],currentRows.find(row=>row.identity==='wide/downtown-future.png'));
+ const revision=await load(site,'data/presentation-media-20261109.json');
+ assert.equal(revision.schema,'future-mississauga-native-media-catalog/v2');
+ assert.equal(revision.images.length,5);assert.equal(new Set(revision.images.map(row=>row.identity)).size,5);
+ const revisionRows=revision.images.map(row=>normalizeCleanMedia(row,'https://futuremississauga.com/'));
+ for(const row of revisionRows)assert(currentRows.some(old=>old.identity===row.identity),'Presentation overlay must preserve a registered native identity');
+ await validateNativeSharePreviews(site,[home],revisionRows.find(row=>row.identity==='wide/downtown-future.png'),{edition:'revision-20261109'});
+ const explore=await readFile(join(site,'explore.html'),'utf8');
+ await validateNativeSharePreviews(site,[page,explore],currentRows.find(row=>row.identity==='wide/downtown-future.png'));
  assert(!/\/Users\/|\/private\/|file:\/\/|\/home\/|\/var\/|\/tmp\//.test(JSON.stringify([manifest,sources,ix])),'Private paths leaked');
  return {publicationEvidence:'NOT_CHECKED_BY_LOCAL_STRUCTURE_PREFLIGHT',entries:Object.entries(pictures.images),originalImageVerification:{nativeMasterURLsPreserved:true,presentationDerivatives:33,separatePublicHashProofRequired:true,remoteBytesFetchedByThisStaticCheck:false},portraitGallery:{nativePortraitRecords:24,presentationDerivatives:24,localAVIFPreviews:24,dimensionsVerified:true,separatePublicHashProofRequired:true},displayPreviewSummary:{totalWide:33,totalPortraits:24,format:'AVIF',bytes:totalPreviewBytes},presentation:{images:57,publicAssets:manifest.assets.length,nativeCameraRefinements:newFrames,originalSourceDatesPreserved:true,nativeMasterURLsPreserved:true}};
 }
