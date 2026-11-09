@@ -1,5 +1,5 @@
 try {
-  await import('./app.js?v=20261102-coherent3');
+  await import('./app.js?v=20261109-delivery1');
 } catch (error) {
   const loading = document.querySelector('#loading');
   loading.hidden = false;

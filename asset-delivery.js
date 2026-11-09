@@ -1,4 +1,4 @@
-import {assetOrigin, deliveryPaths} from './asset-delivery-map.js?v=20261027-assets3';
+import {assetOrigin, deliveryPaths} from './asset-delivery-map.js?v=20261109-delivery1';
 
 // Resolve only at the network boundary. Source identities and credits keep the
 // original local paths. This function is never called in the rendering loop.

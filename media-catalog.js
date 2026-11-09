@@ -1,4 +1,5 @@
-import {normalizeCleanMedia,matchedComparisonBinding} from './clean-media.js?v=20261102-cleanmedia1';
+import {assetURL} from './asset-delivery.js?v=20261109-delivery1';
+import {normalizeCleanMedia,matchedComparisonBinding} from './clean-media.js?v=20261109-feedback1';
 import {matchedFairviewBinding} from './fairview-media.js?v=20261102-fairview1';
 const clean = (value,baseURL=location.href) => { const url=new URL(value,baseURL);url.search='';url.hash='';return url.href; };
 const pixelURLs = row => [...new Set([row.preview.url,row.responsive.url,row.displayMaster.url,row.download.url,...(row.responsivePreviews||[]).map(asset=>asset.url)])];
@@ -15,6 +16,16 @@ export function indexMedia(catalog,baseURL=location.href) {
       const key=clean(url,baseURL);
       if(index.has(key)&&index.get(key)!==row)throw new Error('Current image pixels must use new URLs.');
       index.set(key,row);
+    }
+  }
+  // Delivery aliases point to the same record; source URLs and provenance stay
+  // unchanged. Only destinations from the pinned delivery map become aliases.
+  for(const row of [...catalog.images,catalog.currentCitywide,...(catalog.currentPictures||[]),...(catalog.currentNeighbourhoods||[])].filter(Boolean)){
+    for(const url of [...row.aliases,...pixelURLs(row)]){
+      const delivered=clean(assetURL(url),baseURL),original=clean(url,baseURL);
+      if(delivered===original)continue;
+      if(index.has(delivered)&&index.get(delivered)!==row)throw new Error('Delivered image pixels must retain one source identity.');
+      index.set(delivered,row);
     }
   }
   return index;
@@ -125,7 +136,7 @@ export async function loadMediaCatalog(fetcher=fetch,{baseURL=location.href,curr
     }
     return {images:[]};
   })();
-  const [catalog,current,downtown,native,neighbourhood]=await Promise.all([historicalRequest,optionalCurrentManifest(fetcher,'data/citywide-media-20261101.json',currentTimeoutMs),optionalCurrentManifest(fetcher,'data/downtown-media-20261101.json',currentTimeoutMs),optionalCurrentManifest(fetcher,'data/native-media-20261102.json',currentTimeoutMs),optionalCurrentManifest(fetcher,'data/neighbourhood-media-20261102.json',currentTimeoutMs)]);
+  const [catalog,current,downtown,native,neighbourhood,revision]=await Promise.all([historicalRequest,optionalCurrentManifest(fetcher,'data/citywide-media-20261101.json',currentTimeoutMs),optionalCurrentManifest(fetcher,'data/downtown-media-20261101.json',currentTimeoutMs),optionalCurrentManifest(fetcher,'data/native-media-20261102.json',currentTimeoutMs),optionalCurrentManifest(fetcher,'data/neighbourhood-media-20261102.json',currentTimeoutMs),optionalCurrentManifest(fetcher,'data/presentation-media-20261109.json',currentTimeoutMs)]);
   // Fetch this independent proof alongside the picture-proof work. It never
   // shares the generic Existing/Future comparison validator or its allowlist.
   const fairviewProof=(async()=>{
@@ -156,7 +167,10 @@ export async function loadMediaCatalog(fetcher=fetch,{baseURL=location.href,curr
   if(native?.schema==='future-mississauga-native-media-catalog/v2')try{
     result=integrateCurrentPictures(result,native.images,baseURL);
   }catch{}
-  for(const reference of Array.isArray(native?.comparisonProofs)?native.comparisonProofs:[]){
+  if(revision?.schema==='future-mississauga-native-media-catalog/v2')try{
+    result=integrateCurrentPictures(result,revision.images,baseURL);
+  }catch{}
+  for(const reference of [...(Array.isArray(native?.comparisonProofs)?native.comparisonProofs:[]),...(Array.isArray(revision?.comparisonProofs)?revision.comparisonProofs:[])]){
     if(!/^data\/matched-pairs\/[a-z0-9-]+\.json$/.test(reference?.url)||!/^[a-f0-9]{64}$/.test(reference.sha256))continue;
     const proof=await optionalCurrentManifest(fetcher,reference.url,currentTimeoutMs,async response=>{
       const text=await response.text(),bytes=new TextEncoder().encode(text);
@@ -204,8 +218,8 @@ export async function installResponsiveImages({onCleanImage}={}){
   scan(document);
   document.querySelectorAll('a[href]').forEach(anchor=>{
     const row=index.get(clean(anchor.href));if(!row)return;
-    if(anchor.hasAttribute('download')||anchor.classList.contains('save'))anchor.href=row.download.url;
-    else if(anchor.querySelector('img'))anchor.href=row.displayMaster.url;
+    if(anchor.hasAttribute('download')||anchor.classList.contains('save'))anchor.href=assetURL(row.download.url);
+    else if(anchor.querySelector('img'))anchor.href=assetURL(row.displayMaster.url);
   });
   new MutationObserver(records=>{
     for(const record of records){if(record.type==='attributes')apply(record.target);else record.addedNodes.forEach(node=>{if(node.nodeType===1)scan(node);});}

@@ -200,6 +200,11 @@ export function normalizeCleanMedia(entry,baseURL,{neighbourhood=false}={}){
   caption.comparisonState=state;
  }
  caption.requiredModelCredits=[...c.requiredModelCredits];caption.fullCredits=[...c.fullCredits];
+ const presentation=entry.presentation;
+ if(presentation){
+  const fields=['kind','materialProofSHA256','geometrySHA256','sourceGeometryUnchanged','authoredFacadesPreserved','northDegrees','legend','qualification'];
+  if(Object.keys(presentation).length!==fields.length||fields.some(key=>!Object.hasOwn(presentation,key))||presentation.kind!=='massing-status-preserved-facades'||!hash(presentation.materialProofSHA256)||!hash(presentation.geometrySHA256)||presentation.sourceGeometryUnchanged!==true||presentation.authoredFacadesPreserved!==true||!Number.isFinite(presentation.northDegrees)||presentation.northDegrees<0||presentation.northDegrees>=360||!captionText(presentation.qualification)||!Array.isArray(presentation.legend)||presentation.legend.length>7||presentation.legend.some(item=>Object.keys(item).length!==2||!captionText(item.label,40)||!/^#[a-f0-9]{6}$/i.test(item.color)))fail('invalid presentation evidence');
+ }
  // No private paths or proof file names are copied into public metadata.
  const [kind,...rest]=entry.identity.split('/');
  const sourceProofSHA256s=Object.fromEntries(Object.entries(entry.provenance||{}).filter(([key,pin])=>/^[a-z][a-zA-Z0-9]*$/.test(key)&&hash(pin?.sha256)).map(([key,pin])=>[key,pin.sha256]));
@@ -209,7 +214,7 @@ export function normalizeCleanMedia(entry,baseURL,{neighbourhood=false}={}){
   cleanPresentation:{sceneDimensions:[w,h],sceneBounds:[...d.sceneBounds],footerBounds:[...d.footerBounds],sceneSourceSHA256:d.sceneSourceSHA256,allScenePixelsExact:true,sceneCrop:false,sceneResize:false},
   caption,sourceAttribution:{cityOfMississauga:true,openStreetMap:c.openStreetMap,cityCredit:c.cityCredit,requiredModelCredits:[...c.requiredModelCredits],creditLines:[...c.fullCredits],sourceURL:c.sourcesURL},
   renderInfo:{state:'rendered',renderDate:renderDate(entry.renderTimestampUTC),renderDateTimezone:'America/Toronto',renderTimestampUTC:entry.renderTimestampUTC,sourceDatesMixed:true,sourceModelDate:null,sourceEdition:c.sourceDates,sourceSceneSHA256:entry.sourceSceneSHA256,sourceProofSHA256s},
-  nativeSceneDimensions:[w,h],...(renderRepresentation?{renderRepresentation}: {})
+  nativeSceneDimensions:[w,h],...(presentation?{presentation:structuredClone(presentation)}:{}),...(renderRepresentation?{renderRepresentation}: {})
  };
 }
 
@@ -229,7 +234,7 @@ export function mediaPreviewInfo(row){
  const caption=row.caption,meta=pictureProvenance(row.renderInfo,row.displayMaster.width).meta;
  return {title:caption?.title||row.title,src:row.displayMaster.url,download:row.download?.url||row.url,preview:row.preview?.url||row.display?.url||row.displayMaster.url,width:row.displayMaster.width,height:row.displayMaster.height,
   meta:caption?[pictureProvenance(row.renderInfo,row.download.width).meta,(row.download.bytes/1e6).toFixed(1)+' MB'].join(' · '):meta,
-  scenario:caption?.scenario,creator:caption?.creator,attribution:imageAttribution(row),osm:row.sourceAttribution?.openStreetMap===true};
+  scenario:caption?.scenario,creator:caption?.creator,presentation:row.presentation,attribution:imageAttribution(row),osm:row.sourceAttribution?.openStreetMap===true};
 }
 export function matchedComparisonBinding(rows,proof,proofSHA256){
  if(!hash(proofSHA256)||!['future-mississauga-matched-view-proof/v1','future-mississauga-matched-view-proof/v2','future-mississauga-matched-view-proof/v3'].includes(proof?.schema)||!/^fm-matched-view-[a-f0-9]{24}$/.test(proof.proofID)||!Array.isArray(proof.members)||proof.members.length!==2)fail('matched comparison proof required');

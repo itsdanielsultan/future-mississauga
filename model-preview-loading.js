@@ -1,4 +1,4 @@
-import {assetURL} from './asset-delivery.js?v=20261027-assets3';
+import {assetURL} from './asset-delivery.js?v=20261109-delivery1';
 export function selectPreview(manifest, id) {
   return manifest.views.find(view => view.id === id) || null;
 }

@@ -1,6 +1,7 @@
-import {isDirectDownload,prepareImageLinks} from './file-actions.js?v=20261101-gallery1';
+import {assetURL} from './asset-delivery.js?v=20261109-delivery1';
+import {isDirectDownload,prepareImageLinks,isDeliveredImageURL,installManagedImageDownloads} from './file-actions.js?v=20261109-delivery1';
 import {cityMapLinkForSection} from './image-provenance.js?v=20261101-gallery1';
-import {mediaPreviewInfo,imageAttribution,mediaScenarioLabel} from './clean-media.js?v=20261102-cleanmedia1';
+import {mediaPreviewInfo,imageAttribution,mediaScenarioLabel} from './clean-media.js?v=20261109-feedback1';
 export {shortResolution,shortDate} from './image-provenance.js?v=20261101-gallery1';
 // A shared image viewer. Downloads remain separate, explicit links.
 
@@ -19,6 +20,18 @@ export function renderImageAttribution(container,attribution={},doc=document){
 // Reuse the existing caption region. Only accepted clean-v2 pixels take this path;
 // historical cards retain their original text and all dedicated downloads survive.
 const comparisonMedia=new WeakMap();
+export function presentationCaption(info,doc=document){
+ const nodes=[],presentation=info.presentation;
+ if(info.creator){const byline=doc.createElement('span');byline.className='media-caption__creator';byline.textContent='by '+info.creator;nodes.push(byline);}
+ if(presentation){
+  const key=doc.createElement('span');key.className='media-caption__key';key.setAttribute('aria-label','Massing colours; detailed facades retain their materials');
+  const label=doc.createElement('span');label.className='media-caption__key-label';label.textContent='Massing colours · Detailed finishes retained';key.append(label);
+  for(const item of presentation.legend){const label=doc.createElement('span'),swatch=doc.createElement('i');swatch.style.backgroundColor=item.color;swatch.setAttribute('aria-hidden','true');label.append(swatch,doc.createTextNode(item.label));key.append(label);}
+  const north=doc.createElement('span');north.className='media-caption__north';north.setAttribute('aria-label','North');
+  const arrow=doc.createElement('span');arrow.textContent='↑';arrow.style.transform=`rotate(${presentation.northDegrees}deg)`;arrow.setAttribute('aria-hidden','true');north.append(arrow,doc.createTextNode('N'));key.append(north);nodes.push(key);
+ }
+ return nodes;
+}
 function updateComparisonCaption(panel,image,row){
  let state=comparisonMedia.get(panel);
  if(!state){state={images:new Map(),caption:null};comparisonMedia.set(panel,state);}
@@ -30,9 +43,17 @@ function updateComparisonCaption(panel,image,row){
  if(!state.caption){state.caption=document.createElement('div');state.caption.className='media-caption media-caption--comparison';panel.after(state.caption);}
  const title=document.createElement('strong');title.textContent=current.area;
  const source=document.createElement('span');source.className='media-caption__credits';renderImageAttribution(source,attribution);
+ const info=mediaPreviewInfo(current),presentations=rows.filter(value=>value.cleanPresentation&&value.presentation).map(value=>value.presentation);
+ if(presentations.length){
+  // Both scenarios share one key, irrespective of image loading order. The
+  // existing scene alone cannot describe the future member's lifecycle colours.
+  const reference=presentations[0],legend=new Map();
+  for(const presentation of presentations)for(const item of presentation.legend)legend.set(item.label+'|'+item.color,item);
+  info.presentation={...reference,legend:[...legend.values()]};
+ }
  // The slider already labels both scenarios. Its shared credit stays outside
  // both clipping layers and appears once at either end of the slider.
- state.caption.replaceChildren(title,source);
+ state.caption.replaceChildren(title,...presentationCaption(info),source);
 }
 export function updateCleanImageCaption(image,row){
  const comparison=image.closest('.picture-compare');
@@ -53,7 +74,7 @@ export function updateCleanImageCaption(image,row){
  const scenario=document.createElement('span');scenario.className='media-caption__scenario';scenario.textContent=mediaScenarioLabel(row);
  const credits=document.createElement('span');credits.className='media-caption__credits';renderImageAttribution(credits,info.attribution);
  const downloads=[...copy.querySelectorAll('a[download],.save,[data-download]')];
- copy.classList.add('media-caption');copy.replaceChildren(title,scenario,credits,...downloads);
+ copy.classList.add('media-caption');copy.replaceChildren(title,...presentationCaption(info),scenario,credits,...downloads);
 }
 
 const previewCounter = Symbol.for('future-mississauga.preview-counter');
@@ -62,6 +83,7 @@ export function previewTitle(info,{views=false}={}){
  return !views&&info.scenario==='construction'?title+' · Dated construction':title;
 }
 export function createImagePreview({views = false} = {}) {
+  installManagedImageDownloads();
   globalThis[previewCounter] = (globalThis[previewCounter] || 0) + 1;
   const id = 'picturePreview-' + globalThis[previewCounter];
   const dialog = document.createElement('dialog');
@@ -72,7 +94,7 @@ export function createImagePreview({views = false} = {}) {
     <label class="media-preview__view" ${views?'':'hidden'}>View <select aria-label="Picture view"></select></label>
     <button type="button" class="media-preview__close" aria-label="Close picture">×</button></header>
     <div class="media-preview__stage" aria-busy="true"><img alt=""><p class="media-preview__status" role="status" hidden></p></div>
-    <footer class="media-preview__footer"><a class="media-preview__download" download>Download PNG</a><a class="media-preview__explore" hidden>View in city map</a><span class="media-preview__credits"><a class="media-preview__osm" href="https://www.openstreetmap.org/copyright" hidden>OpenStreetMap</a><a href="sources.html">Sources &amp; credits</a></span></footer>
+    <footer class="media-preview__footer"><div class="media-preview__identity"></div><a class="media-preview__download" download>Download PNG</a><a class="media-preview__explore" hidden>View in city map</a><span class="media-preview__credits"><a class="media-preview__osm" href="https://www.openstreetmap.org/copyright" hidden>OpenStreetMap</a><a href="sources.html">Sources &amp; credits</a></span></footer>
     </div>`;
   document.body.append(dialog);
   const image=dialog.querySelector('img'), stage=dialog.querySelector('.media-preview__stage'), status=dialog.querySelector('[role="status"]'), select=dialog.querySelector('select');
@@ -94,19 +116,20 @@ export function createImagePreview({views = false} = {}) {
     if(trigger)opener=trigger;
     dialog.querySelector('h2').textContent=previewTitle(info,{views});
     const meta=dialog.querySelector('.media-preview__meta');meta.textContent=info.meta||'';meta.hidden=!info.meta;
-    const download=dialog.querySelector('[download]');download.href=info.download;download.download=new URL(info.download,location.href).pathname.split('/').pop();
+    const download=dialog.querySelector('[download]');download.href=assetURL(info.download);download.download=new URL(info.download,location.href).pathname.split('/').pop();
     const format=download.download.split('.').pop().toUpperCase();download.textContent=['PNG','JPG','JPEG','SVG','AVIF','WEBP'].includes(format)?'Download '+format:'Download image';
     const explore=dialog.querySelector('.media-preview__explore');explore.hidden=!info.explore;if(info.explore)explore.href=info.explore;
     renderImageAttribution(dialog.querySelector('.media-preview__credits'),info.attribution||{openStreetMap:info.osm});
+    const identity=dialog.querySelector('.media-preview__identity'),area=document.createElement('strong');area.textContent=info.title||'Future Mississauga';identity.replaceChildren(area,...presentationCaption(info));
     dialog.classList.toggle('media-preview--portrait',info.height>info.width);
     dialog.style.setProperty('--media-aspect',String((info.width||1200)/(info.height||750))); 
     image.alt=info.alt||info.title||'Picture';image.width=info.width||1200;image.height=info.height||750;
-    image.removeAttribute('srcset');image.hidden=false;image.src=info.preview||info.src;
+    image.removeAttribute('srcset');image.hidden=false;image.src=assetURL(info.preview||info.src);
     stage.setAttribute('aria-busy','true');status.textContent='Loading full-resolution image…';status.hidden=false;
     const native=new Image();
-    native.onload=()=>{if(token!==request)return;image.src=info.src;image.hidden=false;status.hidden=true;stage.setAttribute('aria-busy','false');};
+    native.onload=()=>{if(token!==request)return;image.src=assetURL(info.src);image.hidden=false;status.hidden=true;stage.setAttribute('aria-busy','false');};
     native.onerror=()=>{if(token!==request)return;status.textContent='The full-resolution image could not load. Please try the download.';stage.setAttribute('aria-busy','false');};
-    native.src=info.src;
+    native.src=assetURL(info.src);
     if(!dialog.open)dialog.showModal();
     document.documentElement.classList.add('picture-preview-open');
   }
@@ -138,7 +161,7 @@ export function previewDownloadURL(anchor, fallback, baseURL = location.href) {
     const base=new URL(baseURL),url=new URL(declared,base);
     const local=url.origin===base.origin;
     const hosted=url.protocol==='https:'&&url.hostname==='github.com'&&!url.port&&/^\/itsdanielsultan\/future-mississauga\/releases\/download\/[^/]+\/[^/]+\.png$/i.test(url.pathname);
-    if(!['http:','https:'].includes(url.protocol)||url.username||url.password||url.search||url.hash||!url.pathname.toLowerCase().endsWith('.png')||(!local&&!hosted))return fallback;
+    if(!['http:','https:'].includes(url.protocol)||url.username||url.password||url.search||url.hash||!url.pathname.toLowerCase().endsWith('.png')||(!local&&!hosted&&!isDeliveredImageURL(url.href)))return fallback;
     return url.href;
   } catch {return fallback;}
 }

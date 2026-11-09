@@ -1,20 +1,21 @@
-import {createImagePreview} from './image-preview.js?v=20261102-coherent1';
-import {mediaPreviewInfo,comparisonPair} from './clean-media.js?v=20261102-cleanmedia1';
-import {refreshPictureAssets} from './media-catalog.js?v=20261102-coherent1';
+import {assetURL} from './asset-delivery.js?v=20261109-delivery1';
+import {createImagePreview} from './image-preview.js?v=20261109-delivery1';
+import {mediaPreviewInfo,comparisonPair} from './clean-media.js?v=20261109-feedback1';
+import {refreshPictureAssets} from './media-catalog.js?v=20261109-delivery1';
 import {bindComparison} from './comparison.js?v=20261023-usability1';
 const $=s=>document.querySelector(s);
 const [districts,pictures]=await Promise.all(['districts','picture-assets'].map(x=>fetch('data/'+x+'.json',{cache:'no-store'}).then(r=>r.json())));
 await refreshPictureAssets(pictures);
-const original=name=>{const image=pictures.images[name];if(!image)throw new Error('Original picture missing: '+name);return image.url+'?edition='+image.sha256.slice(0,16);};
+const original=name=>{const image=pictures.images[name];if(!image)throw new Error('Original picture missing: '+name);return assetURL(image.url+'?edition='+image.sha256.slice(0,16));};
 const display=name=>{const image=pictures.images[name]?.display;if(!image)throw new Error('Display picture missing: '+name);return image.url;};
 const hero=$('#heroImage');if(hero)hero.src=display('downtown-future.png');
-const heroDownload=$('.hero a[download]');if(heroDownload)heroDownload.href=pictures.images['downtown-future.png'].download?.url||pictures.images['downtown-future.png'].url;
+const heroDownload=$('.hero a[download]');if(heroDownload)heroDownload.href=assetURL(pictures.images['downtown-future.png'].download?.url||pictures.images['downtown-future.png'].url);
 function refreshPanorama(figure,row){
  if(!figure||!row)return;
  const image=figure.querySelector('img'),previewLink=figure.querySelector('a:not([download])'),download=figure.querySelector('a[download]');
  if(image)image.src=row.display.url;
- if(previewLink)previewLink.href=row.displayMaster.url;
- if(download)download.href=row.download?.url||row.url;
+ if(previewLink)previewLink.href=assetURL(row.displayMaster.url);
+ if(download)download.href=assetURL(row.download?.url||row.url);
 }
 document.querySelectorAll('figure[data-picture]').forEach(figure=>refreshPanorama(figure,pictures.images[figure.dataset.picture]));
 const ordered=['downtown','port-credit','lakeview','clarkson','cooksville','uptown','erin-mills','streetsville','meadowvale','malton','dixie-applewood','erindale','airport-corporate','heartland','citywide'].map(id=>districts.find(d=>d.id===id)).filter(Boolean);

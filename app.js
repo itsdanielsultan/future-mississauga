@@ -3,7 +3,7 @@ import {createNeighbourhoodContext,fetchNeighbourhoodModel} from './neighbourhoo
 import {arrangeViewerControls} from './viewer-layout.js?v=20261102-coherent1';
 import {bindBuildingFeedback} from './building-feedback.js?v=20261028-improvements1';
 import {loadModelRevisions,modelRevisionForProject} from './model-revisions.js?v=20261102-coherent1';
-import {assetURL} from './asset-delivery.js?v=20261027-assets3';
+import {assetURL} from './asset-delivery.js?v=20261109-delivery1';
 import {drawingPolicy,createFrameScheduler} from './viewer-runtime.js?v=20261025-mobile1';
 import {withPNGMetadata} from './png-metadata.js?v=20261023-cardfooter1';
 import {prepareOffshoreContext,isPreparedOffshore} from './offshore-context.js?v=20261102-ohn2';
@@ -14,12 +14,12 @@ import {neighbourhoodFrame,defaultViewDirection} from './viewer-camera.js?v=2026
 import {createCoverageController} from './coverage-controller.js?v=20261102-focus1';
 import {prepareMappedSurface} from './surface-rendering.js?v=20261023-usability1';
 import {createCityContext} from './city-context.js?v=20261102-shadow3';
-import {createModelAppearance} from './model-appearance.js?v=20261102-shadow3';
-import {planningStatusLegendFor} from './planning-appearance.js?v=20261102-coherent1';
+import {createModelAppearance} from './model-appearance.js?v=20261109-feedback1';
+import {planningStatusLegendFor} from './planning-appearance.js?v=20261109-feedback1';
 import {projectNorth, presentationLayout, drawPresentationFooter} from './scene-presentation.js?v=20261102-coherent1';
 import {adoptContextModelVisibility} from './context-model-visibility.js?v=20261017-contact1';
 import {loadModelAsset,shouldLoadRefinement,refinementInDistrict,createOptionalRefinementLoader} from './refinement-loading.js?v=20261028-improvements1';
-import {cityModelStudies,presentCityStudyProjects,loadCityStudy,bindStudyReplacement} from './city-model-studies.js?v=20261102-coherent1';
+import {cityModelStudies,presentCityStudyProjects,loadCityStudy,bindStudyReplacement} from './city-model-studies.js?v=20261109-delivery1';
 import {splitSourceOverlaps} from './source-layer-cut.js?v=20261101-mcity1';
 import {getHarbornTerrainContract,loadBoundTerrainAsset,prepareHarbornTerrain} from './harborn-terrain.js?v=20261102-contact4';
 import {createCitywideDetail,prepareCitywideSourceDetail,sourceTriangleKeys,districtContainsPilot,pilotView} from './citywide-detail.js?v=20261102-lod1';
@@ -122,7 +122,7 @@ function fitStudyArea(bearingDirection=null){
 
 function reset(bearingDirection=null){framedProject=null;if(!current)return;homeFraming='neighbourhood';homeDirection=bearingDirection?.clone().normalize()??defaultViewDirection(THREE);if(current.id==='citywide'){fitStudyArea(homeDirection);return;}markers.forEach(marker=>{marker.userData.focusHidden=false;});markerFocusVersion++;cancelCameraFlight();settleControls();const frame=neighbourhoodFrame(THREE,current,camera.aspect,camera.fov,homeDirection);controls.target.copy(frame.target);controls.cursor.copy(frame.target);controls.maxTargetRadius=Infinity;controls.minDistance=Math.min(60,frame.position.distanceTo(frame.target)*.9);controls.maxDistance=Math.max(current.radius*8,12000);camera.position.copy(frame.position);controls.update();applyVisibility(mode);invalidate();}
 
-const appearance=createModelAppearance(THREE);
+const appearance=createModelAppearance(THREE,{initial:'status'});
 function lifecycleFor(data){const override=overrides[data.id]||{};return resolveModelLifecycle(data,override,projectById.get(override.projectId||data.projectId)||groupById.get(override.projectId||data.projectId)||groupByMesh.get(data.id)||{});}
 function classify(data){return displayStatusForLifecycle(lifecycleFor(data));}
 let visibilityCacheKey='',lastLayerVisibilityKey='',lastModelVisibility=null,markerFocusVersion=0;
@@ -149,7 +149,7 @@ let statusLegendSignature='';
 function currentStatusLegend(){return planningStatusLegendFor(modelMeshes.filter(o=>o.visible).map(o=>o.userData.lifecycle),{appearance:appearance.mode});}
 function syncStatusLegend(){const key=document.querySelector('.scene-status-key'),items=currentStatusLegend(),signature=appearance.mode+'|'+items.map(x=>x.key).join('|');key.hidden=appearance.mode!=='status'||!items.length;if(signature===statusLegendSignature)return;statusLegendSignature=signature;key.innerHTML=items.map(item=>`<li><i style="background:${item.color}" aria-hidden="true"></i>${item.label}</li>`).join('');}
 const appearanceSelect=$('#appearanceSelect');
-if(appearanceSelect){appearanceSelect.value='natural';appearanceSelect.onchange=()=>{appearance.setMode(appearanceSelect.value);syncStatusLegend();invalidate();};}
+if(appearanceSelect){appearanceSelect.value=appearance.mode;appearanceSelect.onchange=()=>{appearance.setMode(appearanceSelect.value);syncStatusLegend();invalidate();};}
 syncStatusLegend();
 function setMode(m){invalidate();if(m!=='future'&&selectedStudyProjectId&&!refinementData.assets.some(a=>a.projectId===selectedStudyProjectId&&a.modes?.includes(m)))setSelectedStudy(null);mode=m;$('#constructionNote').hidden=m!=='construction';compare=false;$('#compareToggle').checked=false;syncCompare();applyVisibility(m);$('#scenarioSelect').value=m;$('#scenarioTag').textContent=m==='existing'?'EXISTING CITY · SOURCE DATES VARY':m==='construction'?'DATED CONSTRUCTION':'FUTURE SCENARIO';}
 const transitGroup=new THREE.Group();transitGroup.name='Hazel McCallion Line — mapped construction alignment';scene.add(transitGroup);
