@@ -1,6 +1,6 @@
 {
   "schema": "future-mississauga-publication-inventory/v1",
-  "publicationAuthorized": true,
+  "publicationAuthorized": false,
   "sourceAssetsUnchanged": true,
   "historicalExportManifest": "EXPORT-MANIFEST.json",
   "output": "dist",
@@ -82,8 +82,8 @@
       "atomicAssemblies": true,
       "assetHashesValidatedByModelPreviewCatalogue": true
     },
-    "files": 1153,
-    "publishedBytes": 937392669,
+    "files": 1157,
+    "publishedBytes": 937441479,
     "originalPNGs": 33,
     "originalImageVerification": {
       "nativeMasterURLsPreserved": true,
@@ -110,10 +110,10 @@
       "assets": 74,
       "finiteOrderedBoundsVerified": true
     },
-    "markdownFiles": 22,
+    "markdownFiles": 23,
     "markdownLocalLinks": 139,
-    "cssFiles": 24,
-    "cssLocalDependencies": 15,
+    "cssFiles": 26,
+    "cssLocalDependencies": 16,
     "districtMetadata": {
       "publicDistricts": 20,
       "flatBoundsVerified": true,
@@ -169,7 +169,7 @@
     "localPNGchecksumsVerified": true,
     "noHostedRuntime": true,
     "noPrivateArtifacts": true,
-    "completeReviewBytes": 1487297870
+    "completeReviewBytes": 1487346680
   },
   "derivatives": {
     "legacyPNGFilesVerified": 91,
@@ -185,8 +185,8 @@
     "quality": "Exact published bytes",
     "offloadedFiles": 290,
     "offloadedBytes": 549999384,
-    "publishedBytes": 937392669,
-    "publishedFiles": 864
+    "publishedBytes": 937441479,
+    "publishedFiles": 868
   },
   "files": [
     {
@@ -201,13 +201,13 @@
     },
     {
       "file": "accuracy-review.html",
-      "bytes": 149433,
-      "sha256": "848c21dfb6a5da6dfbe946007075a9e2a47b8d160488f82f8d940474637cd010"
+      "bytes": 149651,
+      "sha256": "e19f4a301e7cb8a23102df6c00ec32fdc4c77a1ab5315d35a506c671ca2a2348"
     },
     {
       "file": "app.js",
-      "bytes": 83304,
-      "sha256": "3a75b8f2261cd554c6c6d34a4304f24dfa3b9c084ed32b3184778f98105512f8"
+      "bytes": 83745,
+      "sha256": "b314dc122548794dd54381c76c0a653d4b02c441ed0e220c7258932baaaaba41"
     },
     {
       "file": "apron-contact.js",
@@ -837,7 +837,7 @@
     {
       "file": "data/publication-derivatives.json",
       "bytes": 106732,
-      "sha256": "da3c9d5971dbb3e00a33ee922d67f655126a94ad7bae4ed94a08fff555d043ae"
+      "sha256": "137e62e2723902a50caece1d3ceb03c1524ccced575caf42c28b8bafab6054f0"
     },
     {
       "file": "data/recent-project-updates.json",
@@ -951,8 +951,8 @@
     },
     {
       "file": "document-preview.js",
-      "bytes": 8604,
-      "sha256": "47fb1b58277fc93ff66609691208dfe3b06b7d97dfe4c255658c322ccf3ab10f"
+      "bytes": 9414,
+      "sha256": "8934a22bb74494a3958c675b02d4764ce5d55f89ef0dd70ed7a970d2892826d6"
     },
     {
       "file": "document-previews/citywide-20261028/atlas-bf41d7ee2a66-01.avif",
@@ -1956,8 +1956,8 @@
     },
     {
       "file": "explore.html",
-      "bytes": 14467,
-      "sha256": "6656d78b86708a5b17fc3de9133de3e1088b4c0a579bfc2f73b9cd101619d22c"
+      "bytes": 15239,
+      "sha256": "6000444e8e565b3074daaefc6b4334720ec053dcc2d6d55921ff25b6587d0ae3"
     },
     {
       "file": "fairview-media.js",
@@ -1966,8 +1966,8 @@
     },
     {
       "file": "file-actions.js",
-      "bytes": 5626,
-      "sha256": "229e60c731e9a542b06acbe6527a2873e22e73aaf826983b5fd33b4e386a4e9e"
+      "bytes": 5768,
+      "sha256": "708366d6f456f04db81288bb8e39a572cf01f2f9c856f2fa53cb9b1977f05f88"
     },
     {
       "file": "flat-shadow-receiver.js",
@@ -1976,8 +1976,8 @@
     },
     {
       "file": "gallery-entry.js",
-      "bytes": 1725,
-      "sha256": "71a3a2f3d855ead3b09c27f9e66ec4ec51b9dd3c5e311966bd7636da776b50f6"
+      "bytes": 1719,
+      "sha256": "37ae66c15d57262ecfd6a151d92110403179f47dc3fc79239d44b99b9786fcd2"
     },
     {
       "file": "gallery.css",
@@ -1986,8 +1986,8 @@
     },
     {
       "file": "gallery.js",
-      "bytes": 6626,
-      "sha256": "a575b0e8ff55df30c50bc648c38836853d7903695b0a132781317f389c4a49ed"
+      "bytes": 6770,
+      "sha256": "6920397470f27fba30a79013338cc34cc8b14540c3428d4b3e4cb8267f2145d5"
     },
     {
       "file": "gallery/Downtown-transformation.mp4",
@@ -3636,18 +3636,18 @@
     },
     {
       "file": "image-entry.js",
-      "bytes": 3297,
-      "sha256": "4a6022a150a0b60f7de6a25fcc0c7839de47777de91885d12acbc765b98a9312"
+      "bytes": 3291,
+      "sha256": "9cc37f47c7608627310a8b08d21fd5c4604d05f0fffe58c6ad151e264fc28fc3"
     },
     {
       "file": "image-experience.js",
-      "bytes": 1506,
-      "sha256": "259cefac92062c4cd4b596e5ccf46e10ab8e5d5806ee934aabeed010652c20fd"
+      "bytes": 1488,
+      "sha256": "0b5420e2b0ae025774ef5df0724ab555b5680a9fb076fcba0f29b04917d9588e"
     },
     {
       "file": "image-preview.js",
-      "bytes": 15654,
-      "sha256": "29f099f974f0ed5c92af44fdeabd30870b79a977a1835919a1026c40851ebd16"
+      "bytes": 15969,
+      "sha256": "18c03c87151dc8208474fc1f75b4dd589952a9b8f94a0f40f2072144023a2549"
     },
     {
       "file": "image-provenance.js",
@@ -3656,8 +3656,8 @@
     },
     {
       "file": "index.html",
-      "bytes": 13096,
-      "sha256": "2f3ada75ccc177a271fee5681970e5c64fca41da867604ede2a9791e3cf5be8c"
+      "bytes": 13369,
+      "sha256": "e921776aa71e719551745c1e1770513972ccbc1f59eb7953f64690443c0888a4"
     },
     {
       "file": "licenses/BricolageGrotesque-OFL.txt",
@@ -3731,8 +3731,8 @@
     },
     {
       "file": "model-preview.js",
-      "bytes": 16784,
-      "sha256": "d006e991420dc4b1e5cd87a9382407e03fcd716d3390316e93c2b2a8cbe34cb9"
+      "bytes": 16852,
+      "sha256": "0b4a972334025ad4ea43f94ad8366e29a220eef72f6d3f5d177e322b8d98f9e4"
     },
     {
       "file": "model-revisions.js",
@@ -3756,8 +3756,8 @@
     },
     {
       "file": "model.html",
-      "bytes": 5776,
-      "sha256": "44e4c8b897fddbeb4fe6ea8d1fafc69d7f60dae4270594b22d8f6a06eaddf4d8"
+      "bytes": 6347,
+      "sha256": "f2af1650dae37f4d1c430669e59c6912f626b96fb4f0bc01d29ec434945ff1b0"
     },
     {
       "file": "models/citywide-details.glb",
@@ -3981,8 +3981,8 @@
     },
     {
       "file": "project-cards.js",
-      "bytes": 16279,
-      "sha256": "29ce8c569b651aa0d4a7013caaba8980731eb7970dde0df23bf70fc0c41ac7ce"
+      "bytes": 16312,
+      "sha256": "63c9999db222b6b2882af999357a5a0ea31d8a172126e88b3bc1ea01ccf98058"
     },
     {
       "file": "reading-layout.css",
@@ -4006,8 +4006,8 @@
     },
     {
       "file": "reference-updates.html",
-      "bytes": 85529,
-      "sha256": "836c9ea60c2cb064b2c692eec135e464b747f365ad9edfd3794d6ac2d267c8c6"
+      "bytes": 85753,
+      "sha256": "7cc3144baa38cff74beca9d00f0e98ff7bc89262d66c5a1e6b501bece8c778e6"
     },
     {
       "file": "refinement-loading.js",
@@ -4066,8 +4066,8 @@
     },
     {
       "file": "review-renders.html",
-      "bytes": 37537,
-      "sha256": "38c5bc602201e87bec4e03614551731f4bda435577d93f3d9b13fde15985e18e"
+      "bytes": 37761,
+      "sha256": "1be5ce8d1d9da6744b72a1ea4a0d426be4518fd29956774541ccb27de2afaa6e"
     },
     {
       "file": "robots.txt",
@@ -4111,8 +4111,8 @@
     },
     {
       "file": "social-preview.js",
-      "bytes": 1219,
-      "sha256": "f2f10a9597a195de9f7595316a0064b213c39454b72227316a4f0810878d2355"
+      "bytes": 1213,
+      "sha256": "a9428384826685a03293750f9a897367b62944a2c15836e604e38c9a4683ee7c"
     },
     {
       "file": "social.css",
@@ -4121,8 +4121,8 @@
     },
     {
       "file": "social.html",
-      "bytes": 45801,
-      "sha256": "10f83b1dd5664c78153789b7cd65ad6ac9ec4edb362f0fbc1ce8fc5ee558d78e"
+      "bytes": 47136,
+      "sha256": "8f187a181bfc0651338df360986d784a9ff0af6a5607b6dae1df6292605822c4"
     },
     {
       "file": "social.js",
@@ -4151,8 +4151,8 @@
     },
     {
       "file": "sources.html",
-      "bytes": 14066,
-      "sha256": "ae10930f978d557d5b564e0fa5796f26dab4b733a9e2741a4eee2ee51691b37e"
+      "bytes": 14331,
+      "sha256": "f27fa512b9b9f0aad84703465067288ba663ab78df8311a7e04629f2fc210cda"
     },
     {
       "file": "style.css",
@@ -4165,14 +4165,19 @@
       "sha256": "35f4cc4d99e2974c9c70fc2148f0298c678aab93f9fc4a64b0b2fbda8f24b4bd"
     },
     {
+      "file": "ui-consistency.css",
+      "bytes": 7118,
+      "sha256": "fd47b2be42ae92c45580b2775cffae054fa3e71c8ca466fc9b3795494fa1c555"
+    },
+    {
       "file": "updates.css",
       "bytes": 7704,
       "sha256": "2bcff830d3c5a59549010c2a1389b14fc3196b7a85f5767f149e033ab104d5e4"
     },
     {
       "file": "updates.html",
-      "bytes": 39776,
-      "sha256": "d342065a03097834880def672ced901c3766d98a2dcf84f25e4a032062cd8192"
+      "bytes": 39941,
+      "sha256": "eadec0eea5400b49fff69a5c332952f38d47c4758a34f83ffb59aa266711dd22"
     },
     {
       "file": "updates.js",
@@ -4203,6 +4208,21 @@
       "file": "vendor/addons/utils/SkeletonUtils.js",
       "bytes": 11535,
       "sha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f"
+    },
+    {
+      "file": "vendor/basecoat/LICENSE.md",
+      "bytes": 1068,
+      "sha256": "160a6cea26ff1931297957499ab739e94c4bc79ecea18b490c9f533fa76ace78"
+    },
+    {
+      "file": "vendor/basecoat/controls.css",
+      "bytes": 33583,
+      "sha256": "314867f8cea34546a8452cf9f6992b9d5269ff6d5fdfb3e34af7d82b007d9f87"
+    },
+    {
+      "file": "vendor/basecoat/provenance.json",
+      "bytes": 1083,
+      "sha256": "37a32bfc663b02d415dad86044cb5b647c32e5fa544176e4419214477ca9aa8c"
     },
     {
       "file": "vendor/fonts/SOURCES.json",
@@ -4476,8 +4496,8 @@
     },
     {
       "file": "viewer-bootstrap.js",
-      "bytes": 801,
-      "sha256": "b7127d35088f0c117818bdf2eb993291be41341a1a9da7d958f594981f3ce294"
+      "bytes": 795,
+      "sha256": "dbd58b951433ab2f783b8ba3ec1f65b4767cdad4b9e2fd6d032f00942f8700b3"
     },
     {
       "file": "viewer-camera.js",
@@ -4510,7 +4530,5 @@
       "sha256": "e47dd0cc9de819cb1318ff85446be96bb32726ee3d715d65904b87995d4b6279"
     }
   ],
-  "bytes": 937392669,
-  "authorizationScope": "Owner approved the reviewed 9 November 2026 website/public atlas and ten exact asset additions; no private sources or outreach publication.",
-  "assetDeploymentID": "17e25224-f5f3-4ff5-a045-bbe74af6dd0f"
+  "bytes": 937441479
 }

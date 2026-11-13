@@ -52,7 +52,7 @@ test('each current Social article points to the clean master and a separate foot
   const card=cards.find(value=>value.includes('data-display-url="'+row.displayMaster.url+'"'));
   assert(card,row.identity);
   assert(card.includes('class="image-link" href="'+row.displayMaster.url+'"'));
-  assert(card.includes('class="save" href="'+row.download.url+'" download'));
+  const downloads=(card.match(/<a\b[^>]*>/g)||[]).filter(link=>(link.match(/\bclass="([^"]*)"/)?.[1]||'').split(/\s+/).includes('save'));assert.equal(downloads.length,1);assert(downloads[0].includes('href="'+row.download.url+'"'));assert(/\sdownload(?:\s|=|>)/.test(downloads[0]));
   const preview=row.responsivePreviews.find(a=>a.mimeType==='image/avif'&&a.dimensions[0]===1200);
   assert(card.includes('src="'+preview.url+'"'));
   assert(card.includes('City of Mississauga · Ontario data'));

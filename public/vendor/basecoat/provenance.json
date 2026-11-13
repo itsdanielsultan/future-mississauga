@@ -1,0 +1,38 @@
+{
+  "schema": "future-mississauga-ui-components/v1",
+  "library": "basecoat-css",
+  "version": "1.1.0",
+  "source": "https://github.com/hunvreus/basecoat",
+  "license": "MIT",
+  "components": [
+    "button",
+    "input",
+    "native-select"
+  ],
+  "style": "Vega",
+  "sourceProof": [
+    {
+      "file": "dist/components/button.css",
+      "sha256": "ce7d7495e91eab168229e4fc3725c5510eb8091791b877ccbd7fd8840dac5f5f"
+    },
+    {
+      "file": "dist/components/input.css",
+      "sha256": "5ead17b91061967a8671e58f70310d9fe1a1cb73f5313aa9285ee19d45e08735"
+    },
+    {
+      "file": "dist/components/native-select.css",
+      "sha256": "313aa3a152919ecfb4bfb425bcdec00670dfb917b92c8891a242a8fa1cd37744"
+    },
+    {
+      "file": "dist/styles/vega.css",
+      "sha256": "7d906a094e44c8559078473ef9bbb2aa840e79fb3bf44cb3d9c08f31b97e3fdf"
+    }
+  ],
+  "bytes": 33583,
+  "gzipBytes": 3052,
+  "sha256": "314867f8cea34546a8452cf9f6992b9d5269ff6d5fdfb3e34af7d82b007d9f87",
+  "runtimeJavaScriptBytes": 0,
+  "globalReset": false,
+  "preflight": false,
+  "buildCommand": "npm run build:ui"
+}

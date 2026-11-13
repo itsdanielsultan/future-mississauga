@@ -12,7 +12,7 @@ const app=readFileSync(new URL('../public/app.js',import.meta.url),'utf8');
 const section=(start,end)=>app.slice(app.indexOf(start),app.indexOf(end,app.indexOf(start)));
 const deferred=()=>{let resolve,reject;const promise=new Promise((a,b)=>{resolve=a;reject=b;});return {promise,resolve,reject};};
 const settle=()=>new Promise(resolve=>setImmediate(resolve));
-function element(){return {hidden:false,disabled:false,style:{},attributes:{},children:[],textContent:'',
+function element(){return {hidden:false,disabled:false,style:{},dataset:{},attributes:{},children:[],textContent:'',
  setAttribute(name,value){this.attributes[name]=value;},removeAttribute(name){delete this.attributes[name];},
  replaceChildren(...children){this.children=children;},append(...children){this.children.push(...children);},
  classList:{toggle(){}},click(){}};}

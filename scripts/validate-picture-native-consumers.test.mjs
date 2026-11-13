@@ -26,14 +26,14 @@ test('current card validation rejects stale pixels, crossed actions, dimensions 
  const corruptions=[
   card.replace(row.preview.url,'gallery/old-thumbnail.avif'),
   card.replace('class="image-link" href="'+row.displayMaster.url,'class="image-link" href="'+row.download.url),
-  card.replace('class="save" href="'+row.download.url,'class="save" href="'+row.displayMaster.url),
+  card.replace('href="'+row.download.url+'"','href="'+row.displayMaster.url+'"'),
   card.replace(' download aria-label=',' aria-label='),
   card.replace('class="image-link"','download class="image-link"'),
   card.replace('data-display-width="3240"','data-display-width="1200"'),
   card.replace('data-osm="true"','data-osm="false"'),
   card.replace('href="https://www.openstreetmap.org/copyright"','href="sources.html"'),
  ];
- for(const changed of corruptions)assert.throws(()=>validateNativeSocialCard([changed],row));
+ for(const changed of corruptions){assert.notEqual(changed,card,'Each corruption must change the actual card');assert.throws(()=>validateNativeSocialCard([changed],row));}
  assert.throws(()=>validateNativeSocialCard([card,card],row),/Exactly one/);
 });
 

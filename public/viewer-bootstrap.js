@@ -1,5 +1,5 @@
 try {
-  await import('./app.js?v=20261109-delivery1');
+  await import('./app.js?v=20261112-ui1');
 } catch (error) {
   const loading = document.querySelector('#loading');
   loading.hidden = false;

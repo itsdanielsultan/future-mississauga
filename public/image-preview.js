@@ -1,5 +1,5 @@
 import {assetURL} from './asset-delivery.js?v=20261109-delivery1';
-import {isDirectDownload,prepareImageLinks,isDeliveredImageURL,installManagedImageDownloads} from './file-actions.js?v=20261109-delivery1';
+import {isDirectDownload,prepareImageLinks,isDeliveredImageURL,installManagedImageDownloads} from './file-actions.js?v=20261112-ui1';
 import {cityMapLinkForSection} from './image-provenance.js?v=20261101-gallery1';
 import {mediaPreviewInfo,imageAttribution,mediaScenarioLabel} from './clean-media.js?v=20261109-feedback1';
 export {shortResolution,shortDate} from './image-provenance.js?v=20261101-gallery1';
@@ -91,10 +91,10 @@ export function createImagePreview({views = false} = {}) {
   dialog.setAttribute('aria-labelledby', id+'Title');
   dialog.innerHTML = `<div class="media-preview__shell">
     <header class="media-preview__header"><div><h2 id="${id}Title"></h2><p class="media-preview__meta"></p></div>
-    <label class="media-preview__view" ${views?'':'hidden'}>View <select aria-label="Picture view"></select></label>
-    <button type="button" class="media-preview__close" aria-label="Close picture">×</button></header>
+    <label class="media-preview__view" ${views?'':'hidden'}>View <select class="ui-select" aria-label="Picture view"></select></label>
+    <button type="button" class="media-preview__close ui-button" aria-label="Close picture" data-variant="ghost" data-size="icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></header>
     <div class="media-preview__stage" aria-busy="true"><img alt=""><p class="media-preview__status" role="status" hidden></p></div>
-    <footer class="media-preview__footer"><div class="media-preview__identity"></div><a class="media-preview__download" download>Download PNG</a><a class="media-preview__explore" hidden>View in city map</a><span class="media-preview__credits"><a class="media-preview__osm" href="https://www.openstreetmap.org/copyright" hidden>OpenStreetMap</a><a href="sources.html">Sources &amp; credits</a></span></footer>
+    <footer class="media-preview__footer"><div class="media-preview__identity"></div><a class="media-preview__download ui-button" download data-variant="primary">Download PNG</a><a class="media-preview__explore" hidden>View in city map</a><span class="media-preview__credits"><a class="media-preview__osm" href="https://www.openstreetmap.org/copyright" hidden>OpenStreetMap</a><a href="sources.html">Sources &amp; credits</a></span></footer>
     </div>`;
   document.body.append(dialog);
   const image=dialog.querySelector('img'), stage=dialog.querySelector('.media-preview__stage'), status=dialog.querySelector('[role="status"]'), select=dialog.querySelector('select');

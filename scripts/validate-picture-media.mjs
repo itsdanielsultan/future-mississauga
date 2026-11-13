@@ -81,7 +81,8 @@ export function validateNativeSocialCard(articles,row){
  const matching=articles.filter(card=>card.includes('data-display-url="'+escapeHTML(row.displayMaster.url)+'"'));
  assert.equal(matching.length,1,'Exactly one current Social card required: '+assetKey(row));
  const card=matching[0],links=card.match(/<a\b[^>]*>/g)??[];
- const preview=links.filter(link=>/class="image-link"/.test(link)),download=links.filter(link=>/class="save"/.test(link));
+ const hasClass=(link,name)=>(link.match(/\bclass="([^"]*)"/)?.[1]||'').split(/\s+/).includes(name);
+ const preview=links.filter(link=>hasClass(link,'image-link')),download=links.filter(link=>hasClass(link,'save'));
  assert.equal(preview.length,1);assert.equal(download.length,1);
  assert(preview[0].includes('href="'+escapeHTML(row.displayMaster.url)+'"'));
  assert(preview[0].includes('aria-haspopup="dialog"'));assert(!/\sdownload(?:\s|=|>)/.test(preview[0]),'Image click must preview, not download');

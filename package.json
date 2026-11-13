@@ -4,11 +4,21 @@
   "private": true,
   "type": "module",
   "description": "Independent Mississauga model atlas, served entirely as static files.",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "check": "node scripts/check-publication.mjs",
     "build": "node scripts/build.mjs",
     "dev": "node scripts/serve.mjs",
-    "preview": "node scripts/serve.mjs --site dist"
+    "preview": "node scripts/serve.mjs --site dist",
+    "build:ui": "node scripts/build-ui.mjs",
+    "prebuild": "npm run build:ui"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.5",
+    "basecoat-css": "1.1.0",
+    "postcss": "8.5.32",
+    "tailwindcss": "4.3.5"
   }
 }

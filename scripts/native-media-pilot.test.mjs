@@ -38,7 +38,7 @@ test('only three Clarkson Social cards select clean v2 pixels with separate down
  const current=cards.filter(card=>card.includes('gallery/native-20261102/portraits-clarkson-'));assert.equal(current.length,3);assert.equal(cards.length,24);
  for(const row of clarkson.filter(row=>row.identity.startsWith('portraits/'))){
   const card=current.find(card=>card.includes(row.displayMaster.url));assert(card,row.identity);
-  assert(card.includes('class="image-link" href="'+row.displayMaster.url+'"'));assert(card.includes('class="save" href="'+row.download.url+'" download'));
+  assert(card.includes('class="image-link" href="'+row.displayMaster.url+'"'));const downloads=(card.match(/<a\b[^>]*>/g)||[]).filter(link=>(link.match(/\bclass="([^"]*)"/)?.[1]||'').split(/\s+/).includes('save'));assert.equal(downloads.length,1);assert(downloads[0].includes('href="'+row.download.url+'"'));assert(/\sdownload(?:\s|=|>)/.test(downloads[0]));
   assert(card.includes('City of Mississauga · Ontario data'));assert.doesNotMatch(card,/Rendered|Earlier render|social-note/);
   assert.equal(card.includes('Massing © Zeidler Architecture Inc.; supplied by Infrastructure Ontario.'),row.scenario==='future');
  }
