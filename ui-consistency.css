@@ -1,0 +1,115 @@
+/* Site layout bridge for the selected Basecoat controls. Component styling lives
+   in vendor/basecoat/controls.css; these rules align their surrounding layouts. */
+html:root {
+  --ui-space-1: 8px;
+  --ui-space-2: 16px;
+  --ui-space-3: 24px;
+  --ui-space-4: 32px;
+  --ui-space-6: 48px;
+  --ui-control-height: 48px;
+  --ui-icon-height: 44px;
+  --ui-control-radius: 8px;
+  --ui-icon-size: 20px;
+  --ui-content-gutter: min(var(--page-gutter), 48px);
+  --control-height: var(--ui-control-height);
+  --icon-control-size: var(--ui-icon-height);
+  --control-radius: var(--ui-control-radius);
+  --control-icon-size: var(--ui-icon-size);
+}
+
+html .reading-page { --reading-gutter: var(--ui-content-gutter); }
+html :is(.sources-page, .social-page),
+html .building-pages main,
+html body:has(#modelChooser) main {
+  padding-inline: var(--ui-content-gutter);
+}
+
+/* A label and its field form one unit; neighboring units share the same rhythm. */
+html body :is(.district-picker, .scenario-picker, .appearance-picker, .picker,
+  .transit-picker label, .building-project-picker label) { gap: var(--ui-space-1); }
+html body :is(.view-actions, .building-picker-controls, .file-action-pair,
+  .document-action-pair, .controls, .document-toolbar > div) { gap: var(--ui-space-1); }
+html body :is(.gallery-controls, .research-tools) { gap: var(--ui-space-2) var(--ui-space-3); }
+html body :is(.building-browse, .reference-browse) { row-gap: var(--ui-space-3); }
+html .home-page .gallery-grid { gap: var(--ui-space-6) var(--ui-space-4); }
+html .home-page .card-caption { gap: var(--ui-space-2); margin-top: var(--ui-space-2); }
+html body .social-page .social-grid { gap: var(--ui-space-6) var(--ui-space-4); }
+html body.building-pages:has(#modelChooser) .chooser { gap: var(--ui-space-4) var(--ui-space-3); }
+html body.building-pages .building-formats { gap: var(--ui-space-4); }
+html body:has(#modelChooser) .controls { gap: var(--ui-space-1); margin-top: var(--ui-space-2); }
+html body:has(#modelChooser) .model-actions { gap: var(--ui-space-1) var(--ui-space-3); }
+html body:has(#modelChooser) .model-actions a { min-height: var(--ui-icon-height); }
+
+/* The search field keeps its icon and clear action in the existing shared shell. */
+html body.viewer-page .view-head { gap: var(--ui-space-3); padding-top: var(--ui-space-3); }
+html body.viewer-page .model-search form { min-height: var(--ui-control-height); border-radius: var(--ui-control-radius); }
+html body.viewer-page .model-search input.ui-input {
+  --control-height: 46px;
+  border: 0 !important; border-radius: 0 !important;
+  box-shadow: none !important; padding-inline: 0 !important; background: transparent !important;
+}
+html body.viewer-page .model-search form:focus-within { outline: 3px solid var(--site-accent); outline-offset: 3px; }
+html body.viewer-page .model-search input.ui-input:focus-visible { outline: none !important; }
+html body.viewer-page .viewer-options-content { gap: var(--ui-space-4); padding-bottom: var(--ui-space-4); }
+html body.viewer-page .viewer-options label:has(input[type=checkbox]) { min-height: var(--ui-icon-height); gap: var(--ui-space-1); }
+html body.viewer-page .navigation-tools { inset: var(--ui-space-2); }
+html body.viewer-page .navigation-modes .ui-button { --control-radius: 0px; border: 0 !important; }
+html body.viewer-page .viewer-tools-content { border-radius: var(--ui-control-radius); padding: var(--ui-space-1); }
+html body.viewer-page .viewer-tools-content .ui-button { justify-content: flex-start !important; }
+
+/* Matching image and document toolbars. The media itself keeps its native ratio. */
+html body .media-preview .media-preview__header,
+html body .document-preview header { gap: var(--ui-space-2); padding: var(--ui-space-2) var(--ui-space-3); }
+html body .media-preview .media-preview__footer { gap: var(--ui-space-2) var(--ui-space-3); padding: var(--ui-space-2) var(--ui-space-3); }
+html body .media-preview__view { gap: var(--ui-space-1); }
+html body .document-toolbar { gap: var(--ui-space-2) var(--ui-space-3); padding: var(--ui-space-1) var(--ui-space-3); }
+html body .document-toolbar .document-pagination { grid-template-columns: 44px 120px 44px; gap: var(--ui-space-1); }
+html body .document-toolbar .document-pagination .ui-select { --control-height: var(--ui-icon-height); }
+html body .document-toolbar .document-zoom { gap: var(--ui-space-1); }
+html body :is(.media-preview, .document-preview) { border-radius: var(--ui-control-radius); }
+html body .document-preview button[data-close] { font-size: 28px; }
+html body .media-preview .media-preview__close { font-size: 28px; }
+html body .resource-row { gap: var(--ui-space-3); padding-block: var(--ui-space-3); }
+html body .atlas-caption { gap: var(--ui-space-3); padding-top: var(--ui-space-2); }
+html body .file-action-pair, html body .document-action-pair { white-space: normal; }
+html body .file-action-pair > a:first-child { min-width: 0; }
+#modelDownloads .ui-button {
+  width: 100%; max-width: 100%; height: auto; min-height: var(--ui-control-height);
+  white-space: normal; text-align: left; justify-content: flex-start;
+}
+
+@media (min-width: 901px) {
+  html body .site-header .site-menu-toggle.ui-button { display: none !important; }
+}
+
+@media (max-width: 980px) {
+  html body.viewer-page .view-head { gap: var(--ui-space-2); }
+}
+@media (max-width: 600px) {
+  html body.viewer-page .view-head { padding-top: var(--ui-space-2); gap: var(--ui-space-2) var(--ui-space-1); }
+  html body.viewer-page .model-search { grid-column: 1 / -1; padding-right: 92px; }
+  html body.viewer-page .view-actions { grid-column: 1 / -1; justify-self: end; width: 84px; }
+  html body.viewer-page .viewer-tools > summary { width: 84px; justify-content: center; }
+  html body.viewer-page .navigation-tools { inset: var(--ui-space-1); }
+  html .home-page .gallery-grid,
+  html body .social-page .social-grid { gap: var(--ui-space-4); }
+  html body .media-preview .media-preview__header,
+  html body .media-preview .media-preview__footer,
+  html body .document-preview header { padding: var(--ui-space-2); gap: var(--ui-space-1); }
+  html body .document-toolbar { padding: var(--ui-space-1) var(--ui-space-2); }
+  html body .media-preview__footer a { font-size: 14px; min-height: var(--ui-icon-height); }
+  html body .media-preview__view { width: 100%; }
+  html body .resource-row { gap: var(--ui-space-2); }
+  html body.building-pages .building-formats { gap: var(--ui-space-3); }
+  html body:has(#modelChooser) .controls {
+    display: grid; grid-template-columns: repeat(4, 44px) minmax(0, 1fr);
+    gap: var(--ui-space-1); align-items: center;
+  }
+  html body:has(#modelChooser) .controls .activate { grid-column: 1 / -1; width: 100%; }
+  html body:has(#modelChooser) .controls .spacer { display: none; }
+  html body:has(#modelChooser) .controls #resetView { margin: 0; min-width: 0; padding-inline: 8px; white-space: normal; line-height: 1.2; }
+  html body:has(#modelChooser) .controls #leaveInteraction { grid-column: 1 / -1; width: 100%; }
+}
+@media (max-width: 380px) {
+  html body.building-pages .building-formats { flex-wrap: wrap; gap: 0 var(--ui-space-3); }
+}

@@ -78,7 +78,7 @@ if (!view) {
     return pending.get(asset.id);
   }
   for (const asset of modelDownloadAssets(view,assets)) {
-    const button = document.createElement('button'); button.dataset.download = asset.id;
+    const button = document.createElement('button'); button.className = 'ui-button'; button.dataset.variant = 'outline'; button.dataset.download = asset.id;
     button.textContent = 'Download ' + asset.title + ' GLB · ' + (asset.decodedBytes / 1e6).toFixed(1) + ' MB';
     button.onclick = async () => {
       button.disabled = true; status('Preparing ' + asset.title + ' download…');

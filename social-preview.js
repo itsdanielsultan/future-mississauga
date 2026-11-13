@@ -1,4 +1,4 @@
-import {createImagePreview,createResolvedPreview} from './image-preview.js?v=20261109-delivery1';
+import {createImagePreview,createResolvedPreview} from './image-preview.js?v=20261112-ui1';
 import {mediaPreviewInfo} from './clean-media.js?v=20261109-feedback1';
 import {resolveMedia} from './media-catalog.js?v=20261109-delivery1';
 export function installSocialPreview(root=document){

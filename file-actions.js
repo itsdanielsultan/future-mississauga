@@ -56,12 +56,12 @@ export function prepareImageLinks(root=document){
   const format=url.pathname.split('.').pop().toUpperCase();
   const downloadLabel=['Download',title,/neighbourhood/i.test(label)?'neighbourhood':/exterior/i.test(label)?'exterior':'',format].filter(Boolean).join(' ');
   if(/^Download\b/i.test(label)){
-   anchor.classList.add('file-download');anchor.dataset.download='';anchor.setAttribute('aria-label',downloadLabel);anchor.title=downloadLabel;anchor.innerHTML=icon;continue;
+   anchor.classList.add('file-download','ui-button');anchor.dataset.variant='ghost';anchor.dataset.size='icon';anchor.dataset.download='';anchor.setAttribute('aria-label',downloadLabel);anchor.title=downloadLabel;anchor.innerHTML=icon;continue;
   }
   anchor.removeAttribute('download');anchor.setAttribute('aria-haspopup','dialog');
   if(label==='Exterior PNG')anchor.textContent='Exterior view';
   if(label==='Neighbourhood PNG')anchor.textContent='Neighbourhood view';
   const pair=document.createElement('span');pair.className='file-action-pair';anchor.replaceWith(pair);pair.append(anchor);
-  const download=document.createElement('a');download.href=anchor.href;download.download=url.pathname.split('/').pop();download.dataset.download='';download.className='file-download';download.setAttribute('aria-label',downloadLabel);download.title=downloadLabel;download.innerHTML=icon;pair.append(download);
+  const download=document.createElement('a');download.href=anchor.href;download.download=url.pathname.split('/').pop();download.dataset.download='';download.className='file-download ui-button';download.dataset.variant='ghost';download.dataset.size='icon';download.setAttribute('aria-label',downloadLabel);download.title=downloadLabel;download.innerHTML=icon;pair.append(download);
  }
 }

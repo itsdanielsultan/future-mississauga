@@ -20,7 +20,7 @@
     return button;
   }
   function start() {
-    import('./gallery.js?v=20261109-delivery1').then(() => {
+    import('./gallery.js?v=20261112-ui1').then(() => {
       const button = finish();
       if (button?.isConnected) button.click();
     }).catch(() => {
