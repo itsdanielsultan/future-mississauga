@@ -1,8 +1,7 @@
 import './updates.js?v=20261102-coherent1';
 import {projectStatus,projectStatusDetail,publicModelCaveat} from './project-cards.js?v=20261113-design2';
 const search = document.querySelector('#projectFilter'), evidence = document.querySelector('#evidenceFilter'), area = document.querySelector('#accuracyArea'), status = document.querySelector('#accuracyStatus');
-const rows = [...document.querySelectorAll('#projectRows tr')], more = document.querySelector('#showAllRecords');
-let expanded = false;
+const rows = [...document.querySelectorAll('#projectRows tr')];
 const readable = value => value.split('-').map(word => word[0].toUpperCase() + word.slice(1)).join(' ');
 for (const id of [...new Set(rows.map(row => row.dataset.area))].sort()) area.add(new Option(id === 'citywide' ? 'Across Mississauga' : readable(id), id));
 function populateStatuses() {
@@ -15,13 +14,10 @@ populateStatuses();
 function update() {
   const terms = search.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
   const matches = rows.filter(row => terms.every(term => `${row.dataset.search} ${row.dataset.status}`.toLocaleLowerCase().includes(term)) && (evidence.value === 'all' || row.dataset.refined === evidence.value) && (!area.value || row.dataset.area === area.value) && (!status.value || (row.dataset.statusGroup || row.dataset.status) === status.value));
-  const shown = expanded || terms.length || evidence.value !== 'all' || area.value || status.value ? matches : matches.slice(0, 12);
-  document.querySelector('#projectRows').replaceChildren(...shown);
-  document.querySelector('#matchCount').textContent = matches.length ? `${shown.length === matches.length ? matches.length : `${shown.length} of ${matches.length}`} ${matches.length === 1 ? 'record' : 'records'}` : 'No projects match these filters.';
-  more.hidden = shown.length === matches.length; more.textContent = `Show all ${matches.length} records`;
+  document.querySelector('#projectRows').replaceChildren(...matches);
+  document.querySelector('#matchCount').textContent = matches.length ? `${matches.length} ${matches.length === 1 ? 'record' : 'records'}` : 'No projects match these filters.';
 }
-for (const control of [search, evidence, area, status]) control.addEventListener(control === search ? 'input' : 'change', () => {expanded = false; update();});
-more.addEventListener('click', () => {expanded = true; update();});
+for (const control of [search, evidence, area, status]) control.addEventListener(control === search ? 'input' : 'change', update);
 search.value = new URLSearchParams(location.search).get('q') || ''; update();
 // Reuse the public map's existing short status labels. Exact dated qualifications
 // remain visible in each record; the filter does not reinterpret project facts.

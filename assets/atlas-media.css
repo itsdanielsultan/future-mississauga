@@ -248,7 +248,7 @@ html body[data-atlas-media] #pictureCompare > img:first-child {
   position: static; display: block; width: 100%; height: auto; max-height: none; object-fit: contain;
 }
 html body[data-atlas-media] #beforePicture img { width: 100%; height: 100%; object-fit: contain; }
-html body[data-atlas-media] .compare-captions { top: 12px; left: 12px; right: 12px; font: 500 12px/1.3 var(--face); }
+html body[data-atlas-media] .compare-captions { top: 12px; left: 12px; right: 12px; font: 500 14px/1.3 var(--face); }
 html body[data-atlas-media] .compare-captions span { color: var(--wall-ink); border-radius: 3px; padding: 6px 8px; background: #fffffff5; }
 html body[data-atlas-media] #compareDivider .compare-handle-icon { border-color: #c3c7c7; color: var(--wall-ink); }
 html body[data-atlas-media] .media-caption--comparison { margin: 0; padding: 14px 0 0; background: transparent; }
@@ -284,7 +284,7 @@ html body[data-atlas-media] .film-chapters button {
 html body[data-atlas-media] .film-chapters button:hover,
 html body[data-atlas-media] .film-chapters button[aria-current] { color: var(--wall-ink); border-top-color: var(--wall-ink); background: transparent; }
 html body[data-atlas-media] .film-chapters button[aria-current] { background: #f3f4f3; }
-html body[data-atlas-media] .chapter-time { color: var(--wall-muted); white-space: nowrap; font: 450 12px/1.5 var(--face); font-variant-numeric: tabular-nums; }
+html body[data-atlas-media] .chapter-time { color: var(--wall-muted); white-space: nowrap; font: 450 14px/1.5 var(--face); font-variant-numeric: tabular-nums; }
 html body[data-atlas-media] .screening figcaption { margin: 10px 0 0; padding-top: 10px; border-top: 1px solid var(--wall-line); color: var(--wall-muted); }
 html body[data-atlas-media] .screening figcaption a { color: var(--wall-ink); font-weight: 500; }
 
@@ -367,3 +367,7 @@ html body[data-atlas-media] [data-compare-panel="stages"] .skyline-window { marg
   html body[data-atlas-media] main .skyline-formats { display:grid; width:100%; grid-template-columns:repeat(3,minmax(0,1fr)); }
   html body[data-atlas-media] main .skyline-formats a { padding-inline:4px; justify-content:center; text-align:center; }
 }
+
+html body[data-atlas-media] .portrait-collection { margin:0; border:0; padding:0; }
+html body[data-atlas-media] .portrait-collection:not([hidden]) ~ .portrait-collection:not([hidden]) { margin-top:clamp(32px,4vw,58px); border-top:1px solid var(--wall-line); padding-top:clamp(24px,3vw,40px); }
+html body[data-atlas-media] .portrait-collection-title { margin:0 0 clamp(16px,2vw,28px); font:550 clamp(23px,2.2vw,34px)/1.16 var(--face); letter-spacing:-.035em; }

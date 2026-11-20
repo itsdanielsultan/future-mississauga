@@ -181,3 +181,12 @@ html:root body .compact-footer > a[aria-current="page"] { border-radius:5px; pad
   html:root body .compact-footer .footer-identity { grid-column:1/-1; }
   html:root body .compact-footer > a { justify-self:start; }
 }
+@media (min-width:901px) and (max-width:1023px) {
+  html:root body header.site-header { gap:8px; }
+  html:root body header.site-header .site-nav a { padding-inline:7px; }
+}
+@media (max-width:350px) {
+  html:root header.site-header .site-map-action { padding-inline:7px; font-size:14px; }
+  html:root header.site-header .site-map-action svg { display:none; }
+  html:root header.site-header .site-brand span { font-size:14px; }
+}

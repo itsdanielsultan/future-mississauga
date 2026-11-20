@@ -8,6 +8,7 @@ if (browser) {
   const rows = sections.map(section => ({section, id: section.id, title: section.querySelector('h2')?.textContent.trim() || section.id, area: section.dataset.area || (section.querySelector('.eyebrow')?.textContent.trim().split(' · ')[0] || 'Mississauga').replace(/^City Centre$/, 'Downtown')}));
   const search = browser.querySelector('[type="search"]'), area = browser.querySelector('[data-study-area]'), choice = browser.querySelector('[data-study-choice]'), count = browser.querySelector('[role="status"]');
   const previous = browser.querySelector('[data-study-previous]'), next = browser.querySelector('[data-study-next]');
+  const currentNote = document.querySelector('[data-current-study-note]');
   function linkedStudy() {
     if (!location.hash) return rows.find(row => !row.section.hasAttribute('data-archive-study'))?.id;
     let anchor;
@@ -23,6 +24,9 @@ if (browser) {
     choice.replaceChildren(...matches.map(row => new Option(row.title, row.id)));
     if (missingLink) choice.prepend(new Option('Choose a study', ''));
     choice.value = selected || ''; choice.disabled = !matches.length;
+    if (currentNote) {
+      currentNote.href = selected ? 'study-notes.html#note-' + encodeURIComponent(selected) : 'study-notes.html#pdf-study-notes';
+    }
     for (const row of rows) row.section.hidden = row.id !== selected;
     const index = matches.findIndex(row => row.id === selected);
     previous.disabled = index <= 0; next.disabled = index < 0 || index >= matches.length - 1;

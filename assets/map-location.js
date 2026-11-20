@@ -13,7 +13,8 @@ export function nextMapLocation(current, {district, project, context, scenario, 
     else url.searchParams.delete(key);
   }
   if (!url.searchParams.get('project')) url.searchParams.delete('building');
-  if (district || project !== undefined || context !== undefined) url.searchParams.delete('view');
+  const previous = new URL(current).searchParams;
+  if (['district','project','context','building'].some(key=>previous.get(key)!==url.searchParams.get(key))) url.searchParams.delete('view');
   if (scenario && scenario !== 'comparison') url.searchParams.delete('split');
   return url;
 }

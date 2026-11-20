@@ -41,7 +41,8 @@ import {MeshoptDecoder} from './vendor/meshopt_decoder.mjs';
 arrangeViewerControls();
 const $=s=>document.querySelector(s),canvas=$('#scene'),wrap=$('#sceneWrap');
 const coarsePointer=matchMedia('(any-pointer: coarse)');
-const getDrawingPolicy=()=>drawingPolicy({width:wrap.clientWidth,height:wrap.clientHeight,pixelRatio:devicePixelRatio,coarse:coarsePointer.matches,memory:navigator.deviceMemory||8});
+let movingCamera=false, restoreDetailTimer;
+const getDrawingPolicy=()=>drawingPolicy({moving:movingCamera,width:wrap.clientWidth,height:wrap.clientHeight,pixelRatio:devicePixelRatio,coarse:coarsePointer.matches,memory:navigator.deviceMemory||8});
 const renderer=new THREE.WebGLRenderer({canvas,antialias:true,preserveDrawingBuffer:false,logarithmicDepthBuffer:true});renderer.setPixelRatio(getDrawingPolicy().pixelRatio);
 let contextLost=false,canvasVisible=true,frameScheduler;
 // A changed scene needs fresh shadows. Orbiting around the same target only
@@ -74,10 +75,15 @@ function syncVisibleAttribution(sources){
 }
 const assetVersions=new Map();const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);loader.manager.setURLModifier(url=>{if(!url.includes('models/'))return url;const resolved=new URL(url,document.baseURI),version=assetVersions.get(resolved.href)||'20260926-visual-polish';resolved.searchParams.set('edition',version);return assetURL(resolved.href);});let model,context,current,mode='future',futureMeshes=[],modelMeshes=[],detailMeshes=[],treeMeshes=[],loadToken=0,compare=false,split=.5,scope='district',registry='research',exporting=false,cameraFlight=null,focusRequest=0,homeFraming=null,homeDirection=null,framedProject=null;controls.addEventListener('change',invalidateCamera);
 async function readData(n){for(let attempt=0;attempt<3;attempt++){try{const r=await fetch('data/'+n+'.json',{cache:'no-store',signal:AbortSignal.timeout(30000)});if(!r.ok)throw new Error(n+' unavailable');return await r.json();}catch(e){if(attempt===2){$('#loading').textContent='The model data could not be loaded. Reload this page to try again.';throw e;}}}}
-const initialQuery=new URLSearchParams(location.search);
+const entryURL = new URL(location.href);
+const initialQuery=entryURL.searchParams;
+if (initialQuery.get('district')==='fairview') {
+ initialQuery.set('district','citywide');initialQuery.set('context','fairview');
+ history.replaceState(history.state,'',entryURL);
+}
 // Start independent metadata reads together before building the first scene.
 const metadataNames = [
- 'districts', 'projects', 'groups', 'overrides', 'stats', 'transit', 'transit-research',
+ 'districts', 'projects', 'groups', 'overrides', 'stats', 'map-stations',
  'refinement-models', 'existing-building-style', 'model-asset-versions'
 ];
 const manifests = ['context-assets', 'transit-layer-manifest', 'landscape-layer-manifest'];
@@ -91,7 +97,7 @@ const [coreData, modelRevisions, modelCatalogue, layerManifests, neighbourhoodDa
  fetch('data/neighbourhood-context.json?v=20261028-1',{signal:AbortSignal.timeout(2500)})
   .then(response => response.ok ? response.json() : null).catch(() => null)
 ]);
-const [districts,projects,groups,overrides,stats,transitData,transitResearch,refinementData,existingStyle,modelAssetVersions] = coreData;
+const [districts,projects,groups,overrides,stats,transitData,refinementData,existingStyle,modelAssetVersions] = coreData;
 const [contextAssets,transitLayers,landscapeLayers] = layerManifests;
 const existingStyleIndex = createExistingStyleIndex(existingStyle);
 bindBuildingFeedback(document,()=>({viewURL:location.href,scenario:compare?'comparison':mode,district:current?.id}));
@@ -187,7 +193,7 @@ function setMode(m){invalidate();if(m!=='future'&&selectedStudyProjectId&&!refin
 const transitGroup=new THREE.Group();transitGroup.name='Hazel McCallion Line — mapped construction alignment';scene.add(transitGroup);
 // Transit geometry is loaded from reconciled route assets; no duplicate gold ribbons.
 function updateTransit(){const b=current.bounds;$('#transitStation').innerHTML='<option value="">Choose a transit station…</option>'+(transitData.stations||[]).map((s,i)=>({s,i})).filter(({s})=>{const [x,,z]=s.position;return current.id==='citywide'||x>=b[0]&&x<=b[2]&&z>=b[1]&&z<=b[3];}).map(({s,i})=>`<option value="${i}">${esc(s.name)} · ${esc(s.system)}</option>`).join('');}
-$('#transitStation').onchange=e=>{if(e.target.value==='')return;const station=transitData.stations[Number(e.target.value)], [x,y,z]=station.position;framedProject=null;homeFraming=null;settleControls();const direction=camera.position.clone().sub(controls.target).normalize();controls.target.set(x,y+12,z);controls.cursor.copy(controls.target);camera.position.copy(controls.target).addScaledVector(direction,750);controls.update();const sources=station.source?[station.source].flat():[];$('#selection').innerHTML=`<button class="icon-button ui-button" aria-label="Close selection" data-variant="outline" data-size="icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 6 12 12M18 6 6 18"/></svg></button><div class="status">${esc(station.system)} · ${esc(station.status)}</div><h3>${esc(station.name)}</h3><p>${esc(station.coordinateCaveat||station.caveat||station.note||'Station locator from mapped or published sources. Symbol dimensions are illustrative.')}</p><div class="source-links">${sources.map(s=>typeof s==='string'?(/^https?:/.test(s)?link({url:s,title:'Station source'}):esc(s)):link(s)).join('')}</div>`;$('#selection').hidden=false;$('#selection button').onclick=()=>{$('#selection').hidden=true;navigateMap({project:null});};invalidate();};
+$('#transitStation').onchange=e=>{if(e.target.value==='')return;const station=transitData.stations[Number(e.target.value)], [x,y,z]=station.position;framedProject=null;homeFraming=null;settleControls();const direction=camera.position.clone().sub(controls.target).normalize();controls.target.set(x,y+12,z);controls.cursor.copy(controls.target);camera.position.copy(controls.target).addScaledVector(direction,750);controls.update();const sources=station.source?[station.source].flat():[];$('#selection').innerHTML=`<button class="icon-button ui-button" aria-label="Close selection" data-variant="outline" data-size="icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 6 12 12M18 6 6 18"/></svg></button><div class="status">${esc(station.system)} · ${esc(station.status)}</div><h3>${esc(station.name)}</h3><p>${esc(station.coordinateCaveat||station.positionCaveat||station.caveat||station.note||'Station locator from mapped or published sources. Symbol dimensions are illustrative.')}</p><div class="source-links">${sources.map(s=>typeof s==='string'?(/^https?:/.test(s)?link({url:s,title:'Station source'}):esc(s)):link(s)).join('')}</div>`;$('#selection').hidden=false;$('#selection button').onclick=()=>{$('#selection').hidden=true;navigateMap({project:null});};invalidate();};
 
 const markerGroup=new THREE.Group();scene.add(markerGroup);const markerMaterial=new THREE.MeshBasicMaterial({color:0x344b62,transparent:true,opacity:.8,side:THREE.DoubleSide});let markers=[];
 function makeMarkers(){for(const marker of markers)marker.geometry.dispose();markerGroup.clear();markers=[];
@@ -261,28 +267,30 @@ $('#fitAreaBtn').onclick=()=>{focusRequest++;fitStudyArea();};
 let treeDataCache={};
 async function compressedJSON(url){const r=await fetch(versionedTreeURL(url));if(!r.ok)throw new Error('Tree data unavailable');return new Response(r.body.pipeThrough(new DecompressionStream('gzip'))).json();}
 async function addTrees(id,parent,token,treeMode){const source=landscapeLayers.treeSources?.[id],sourceURL=source?.url||'data/'+id+'-trees.json.gz';if(!treeDataCache[id])treeDataCache[id]=compressedJSON(sourceURL).catch(e=>{delete treeDataCache[id];throw e;});const base=await treeDataCache[id];let data=base;if(treeMode){const delta=await compressedJSON(landscapeLayers.trees[id][treeMode].url),changes=new Map(delta.adjustments);data={...base,trees:base.trees.map(row=>changes.has(row[0])?[...row.slice(0,6),null,changes.get(row[0])]:row)};}if(token!==loadToken||!data.trees.length)return;const geo=new THREE.IcosahedronGeometry(1,1),material=new THREE.MeshStandardMaterial({color:0xffffff,roughness:.92}),mesh=new THREE.InstancedMesh(geo,material,data.trees.length),dummy=new THREE.Object3D();data.trees.forEach((t,i)=>{const crownScale=t[7]??1;const [id,x,y,z,species]=t,kind=String(species).toLowerCase(),conifer=/pine|spruce|fir|cedar/.test(kind),slender=/poplar|aspen|birch/.test(kind),r=(2.3+(id%13)*.21)*(conifer?.7:slender?.8:1)*crownScale,h=(5.8+(id%17)*.37)*(conifer?1.2:slender?1.15:1);dummy.position.set(x,y+h*.6,z);dummy.scale.set(r,crownScale>0?h*.5:0,r);dummy.rotation.y=(id%37)*.17;dummy.updateMatrix();mesh.setMatrixAt(i,dummy.matrix);mesh.setColorAt(i,new THREE.Color().setHSL(.24+(id%5)*.008,.28+(id%7)*.012,.25+(id%11)*.011));});mesh.castShadow=true;mesh.receiveShadow=true;mesh.instanceMatrix.needsUpdate=true;mesh.name='City tree positions; illustrative species canopy';mesh.userData.treeMode=treeMode;mesh.userData.treeSources=[{url:sourceURL,sha256:source?.sha256,downloadSHA256:source?.downloadSHA256},...(treeMode?[landscapeLayers.trees[id][treeMode]]:[])].map(({url,sha256,downloadSHA256})=>({url,sha256,downloadSHA256}));registerHarbornTreeContacts(THREE,mesh,data.trees,treeMode);registerBoundedCrownContacts(THREE,mesh,data.trees,treeMode);registerSouthCommonStudyOcclusion(THREE,mesh,data.trees,treeMode,refinementData.assets.find(a=>a.id==='south-common-source-derived-preview')?.downloadSHA256);if(treeMode){const asset=landscapeLayers.trees[id][treeMode];visibleAttribution.registerAsset(mesh,asset.url,asset.sha256);}parent.add(mesh);}
-async function loadDistrict(id,searchRequest,{preserveSearch=false}={}){citywideDetail?.clear();localNeighbourhood?.clear();framedProject=null;showStudyLoadStatus('');const previousDirection=current?camera.position.clone().sub(controls.target).normalize():null;cancelCameraFlight();if(searchRequest===undefined){focusRequest++;setSelectedStudy(null);if(!preserveSearch){$('#modelSearchInput').value='';$('#modelSearchClear').hidden=true;$('#modelSearchStatus').textContent='';}}closeModelSearch();const token=++loadToken,district=districts.find(d=>d.id===id)||districts.find(d=>d.id==='downtown');current=district;id=district.id;for(const cachedId of Object.keys(treeDataCache))if(cachedId!==id)delete treeDataCache[cachedId];surroundingCity.setDistrict(district);syncCameraCoverage();$('#cityContextToggle').disabled=id==='citywide';$('#cityContextControl').hidden=id==='citywide';
+async function loadDistrict(id,searchRequest,{preserveSearch=false,placeContext=null}={}){citywideDetail?.clear();localNeighbourhood?.clear();framedProject=null;showStudyLoadStatus('');const previousDirection=current?camera.position.clone().sub(controls.target).normalize():null;cancelCameraFlight();if(searchRequest===undefined){focusRequest++;setSelectedStudy(null);if(!preserveSearch){$('#modelSearchInput').value='';$('#modelSearchClear').hidden=true;$('#modelSearchStatus').textContent='';}}closeModelSearch();const token=++loadToken,district=districts.find(d=>d.id===id)||districts.find(d=>d.id==='downtown');current=district;id=district.id;for(const cachedId of Object.keys(treeDataCache))if(cachedId!==id)delete treeDataCache[cachedId];surroundingCity.setDistrict(district);syncCameraCoverage();$('#cityContextToggle').disabled=id==='citywide';$('#cityContextControl').hidden=id==='citywide';
  const pending=new Set();let committed=false,abandoned=false,nextTerrainController=null;
  const terrainSpec=await getHarbornTerrainContract(id).catch(error=>{console.warn('Harborn terrain remains unchanged.',error);return null;});
  if(token!==loadToken)return;
  const loadAsset=async url=>{const binding=terrainSpec&&(url===terrainSpec.contract.candidate.url?terrainSpec.contract.candidate:terrainSpec.contract.ground.find(b=>b.district===id&&b.url===url));const asset=binding?await loadBoundTerrainAsset(loader,url,versionedTreeURL,binding):await loadModelAsset(loader,url,versionedTreeURL);if(abandoned||token!==loadToken){dispose(asset.scene);throw new DOMException('A newer district was selected.','AbortError');}visibleAttribution.registerAsset(asset.scene,url,modelAssetVersions.sha256[url]||assetVersions.get(new URL(url,document.baseURI).href));pending.add(asset.scene);return asset;};
  const loadDistrictContext=async()=>{const root=new THREE.Group();pending.add(root);const urls=contextAssets[id]||['models/'+id+'-context.glb'];const items=await Promise.all(urls.map(loadAsset));items.forEach((item,index)=>{prepareOffshoreContext(THREE,item.scene,{district:id,url:urls[index],sha256:modelAssetVersions.sha256[urls[index]]});root.add(item.scene);});return {scene:root};};
- controls.enabled=false;$('#sceneWrap').setAttribute('aria-busy','true');$('#districtSelect').value=id;window.atlasReady=null;$('#exportBtn').disabled=true;$('#shareMapBtn').disabled=true;$('#exportStatus').hidden=true;if(!contextLost){$('#loading').hidden=false;$('#loading').style.display='grid';$('#loading').textContent='Loading '+district.name+'…';}$('#districtTitle').textContent=district.name;
- window.dispatchEvent(new CustomEvent('atlas-district-loading',{detail:district}));
+ const loadingPlace=id==='citywide' && placeContext==='fairview' ? {id:'fairview',name:'Fairview'} : district;
+ controls.enabled=false;$('#sceneWrap').setAttribute('aria-busy','true');$('#districtSelect').value=id;window.atlasReady=null;$('#exportBtn').disabled=true;$('#shareMapBtn').disabled=true;$('#exportStatus').hidden=true;if(!contextLost){$('#loading').hidden=false;$('#loading').style.display='grid';$('#loading').textContent='Loading '+loadingPlace.name+'…';}$('#districtTitle').textContent=loadingPlace.name;
+ window.dispatchEvent(new CustomEvent('atlas-district-loading',{detail:loadingPlace}));
  const galleryLink=$('#mapGalleryLink');
  if(galleryLink) {
-  galleryLink.href=id==='citywide'?'neighbourhoods.html':'place-'+encodeURIComponent(id)+'.html';
-  if(galleryLink.firstChild)galleryLink.firstChild.textContent=id==='citywide'?'Neighbourhoods ':'Explore '+district.name+' ';
+  galleryLink.href=loadingPlace.id==='citywide'?'neighbourhoods.html':'place-'+encodeURIComponent(loadingPlace.id)+'.html';
+  if(galleryLink.firstChild)galleryLink.firstChild.textContent=loadingPlace.id==='citywide'?'Neighbourhoods ':'Explore '+loadingPlace.name+' ';
  }
- document.querySelectorAll('[data-district]').forEach(b=>{b.classList.toggle('active',b.dataset.district===id);b.setAttribute('aria-current',b.dataset.district===id?'true':'false');});$('#selection').hidden=true;reset(previousDirection);updateTransit();try{const [a,b]=await Promise.all([loadAsset('models/'+id+'.glb'),loadDistrictContext()]);if(token!==loadToken){return;}const nextModel=a.scene,nextContext=b.scene;
- if(['airport-corporate','malton','citywide'].includes(id)){
-  const airport=await loadAsset('models/pearson-airfield-context.glb');
-  if(token!==loadToken){return;}
-  nextContext.add(airport.scene);
- }
- if(['downtown','cooksville','uptown','heartland','citywide'].includes(id)){
-  const native=await loadAsset('models/exchange-textured-phase-aware.glb');
-  if(token!==loadToken){return;}
+ document.querySelectorAll('[data-district]').forEach(b=>{b.classList.toggle('active',b.dataset.district===id);b.setAttribute('aria-current',b.dataset.district===id?'true':'false');});$('#selection').hidden=true;reset(previousDirection);updateTransit();try{
+ const [districtModel,districtContext,detail,airport,native]=await Promise.all([
+  loadAsset('models/'+id+'.glb'),loadDistrictContext(),loadAsset('models/'+id+'-details.glb'),
+  ['airport-corporate','malton','citywide'].includes(id)?loadAsset('models/pearson-airfield-context.glb'):null,
+  ['downtown','cooksville','uptown','heartland','citywide'].includes(id)?loadAsset('models/exchange-textured-phase-aware.glb'):null
+ ]);
+ if(token!==loadToken)return;
+ const nextModel=districtModel.scene,nextContext=districtContext.scene;
+ if(airport)nextContext.add(airport.scene);
+ if(native){
   nextModel.traverse(o=>{if(['63-6155','63-6156'].includes(o.userData.id))o.userData.replacedByNative=true;});
   native.scene.traverse(o=>{if(o.isMesh){o.userData.Status=o.userData.atlasStatus||'Under Construction';o.userData.projectId='exchange-district';o.userData.nativeTexture=true;}});
   for(const supplement of [native.scene]){supplement.updateMatrixWorld(true);supplement.traverse(o=>{if(o.isMesh){const box=new THREE.Box3().setFromObject(o),bounds=district.bounds;o.userData.outsideDistrict=district.id!=='citywide'&&(box.max.x<bounds[0]||box.min.x>bounds[2]||box.max.z<bounds[1]||box.min.z>bounds[3]);}});}nextModel.add(native.scene);
@@ -290,16 +298,19 @@ async function loadDistrict(id,searchRequest,{preserveSearch=false}={}){citywide
 
  const additionAssets=(refinementData.assets||[]).filter(a=>refinementInDistrict(a,district));
  window.atlasLocalCuts=splitSourceOverlaps(THREE,nextModel,additionAssets);
- for(const asset of additionAssets){
-  if(asset.localOptional)continue;
-  if(asset.terrainAdapter&&!terrainSpec)continue;
-  const extra=await loadAsset(asset.url);
-  if(token!==loadToken){return;}
+ const requiredAssets=additionAssets.filter(asset=>!asset.localOptional && (!asset.terrainAdapter||terrainSpec));
+ // Bound simultaneous GLB decodes and apply replacements in their registered order.
+ for(let start=0;start<requiredAssets.length;start+=3){
+  const batch=requiredAssets.slice(start,start+3);
+  const assets=await Promise.all(batch.map(asset=>loadAsset(asset.url)));
+  if(token!==loadToken)return;
+  for(const [index,asset] of batch.entries()){
+   const extra=assets[index];
   if(asset.terrainAdapter){try{nextTerrainController=await prepareHarbornTerrain(THREE,{context:nextContext,candidate:extra.scene,contract:terrainSpec.contract,weights:terrainSpec.weights,district:id});}catch(error){dispose(extra.scene);pending.delete(extra.scene);console.warn('Harborn replacement withheld; original ground retained.',error);continue;}}
   nextModel.traverse(o=>{if(o.isMesh&&(asset.replacesSourceIds||[]).includes(o.userData.id)){(o.userData.sourceReplacements??=[]).push({assetId:asset.id,modes:asset.replacementModes||asset.modes});}});
   extra.scene.updateMatrixWorld(true);extra.scene.traverse(o=>{if(o.isMesh){const box=new THREE.Box3().setFromObject(o),bounds=district.bounds;o.userData.outsideDistrict=district.id!=='citywide'&&!(asset.forceDistricts||[]).includes(id)&&(box.max.x<bounds[0]||box.min.x>bounds[2]||box.max.z<bounds[1]||box.min.z>bounds[3]);Object.assign(o.userData,{Status:asset.status,lifecycle:asset.lifecycle,componentPhase:asset.componentPhase,projectId:asset.projectId,assetId:asset.id,sourceAssetSHA256:asset.downloadSHA256||asset.sha256,modelFidelity:asset.modelFidelity,modes:asset.modes,uncertainAsset:asset.uncertainGeometry||asset.status==='Uncertain',recordedProgress:asset.recordedProgress||false,nativeTexture:asset.preserveMaterials||false,preserveSourceNormals:asset.preserveSourceNormals||false,localReview:asset.localReview||false,draftStudy:asset.localOptional||false});}});nextModel.add(extra.scene);
+  }
  }
- const detail=await loadAsset('models/'+id+'-details.glb');if(token!==loadToken){return;}
  const nextDetailMeshes=[];detail.scene.traverse(o=>{if(o.isMesh){nextDetailMeshes.push(o);o.receiveShadow=true;o.castShadow=true;o.userData.preserveFinish=true;}});nextContext.add(detail.scene);
  for(const manifest of [transitLayers,landscapeLayers]){for(const asset of manifest.assets||[]){if((asset.districtId||asset.district)!==id)continue;const extra=await loadAsset(asset.url);if(token!==loadToken){return;}extra.scene.traverse(o=>{if(o.isMesh){o.userData.layerCategory=o.userData.layerCategory||asset.system||'Landscape';o.userData.preserveFinish=true;if(o.userData.geometryRole==='service-guide'){const colour={GO:0x25825e,Transitway:0x1175b6,HML:0xd6ac39}[o.userData.layerCategory];o.material=new THREE.MeshBasicMaterial({color:colour??0x67726d,depthTest:true,depthWrite:true,toneMapped:false,side:THREE.DoubleSide});o.renderOrder=0;o.castShadow=false;o.receiveShadow=false;}else{o.castShadow=true;o.receiveShadow=true;if(manifest===landscapeLayers)prepareMappedSurface(o);}nextDetailMeshes.push(o);}});nextContext.add(extra.scene);}}
  adoptContextModelVisibility(nextModel,nextContext,o=>{if(!o.userData.preserveFinish){const name=o.name.toLowerCase(),water=/shore|river|lakeontario/.test(name),colour=water?0x638b98:/road|bridge/.test(name)?0x8b9190:/wood/.test(name)?0x698555:/park/.test(name)?0x9aaa7c:0xc4c7bb;o.material=new THREE.MeshStandardMaterial({color:colour,roughness:water?.35:.9,side:THREE.DoubleSide,flatShading:true});}});
@@ -334,7 +345,7 @@ if(!neighbourhoodAsset)controls.addEventListener('change',updateNeighbourhood);
 window.atlasFairviewDetail={setVisible(value){fairviewDetailVisible=Boolean(value);if(localNeighbourhood?.root)localNeighbourhood.root.visible=fairviewDetailVisible;visibleAttribution.refresh();invalidate();},get state(){return {...localNeighbourhood?.state,visible:Boolean(localNeighbourhood?.root?.visible),components:neighbourhoodAsset?.components,triangles:neighbourhoodAsset?.triangles};}};
 async function focusNeighbourhood(){
  const request=++focusRequest;
- if(current?.id!=='citywide'||window.atlasReady!=='citywide')await loadDistrict('citywide',request);
+ if(current?.id!=='citywide'||window.atlasReady!=='citywide')await loadDistrict('citywide',request,{placeContext:'fairview'});
  if(request!==focusRequest||window.atlasReady!=='citywide'||!neighbourhoodAsset)return;
  framedProject=null;homeFraming=null;setSelectedStudy(null);settleControls();$('#selection').hidden=true;
  controls.minDistance=60;controls.target.set(-4550,85,250);controls.cursor.copy(controls.target);
@@ -392,6 +403,24 @@ function sourceDetails(p){return projectDetailsHTML(p,{asset:refinementData.asse
 function selectProject(p,focus=false){if(selectedStudyProjectId&&selectedStudyProjectId!==p.id){setSelectedStudy(null);applyVisibility(mode);invalidate();}$('#selection').innerHTML=`<button class="icon-button ui-button" aria-label="Close selection" data-variant="outline" data-size="icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 6 12 12M18 6 6 18"/></svg></button>${sourceDetails(p)}`;$('#selection').hidden=false;$('#selection button').onclick=()=>{$('#selection').hidden=true;navigateMap({project:null});};if(focus)focusProject(p);}
 function cancelCameraFlight(){if(!cameraFlight)return;controls.enableDamping=cameraFlight.damping;cameraFlight=null;invalidate();}
 function leaveProjectFraming(){focusRequest++;framedProject=null;cancelCameraFlight();}
+// Keep native geometry detailed while reducing the pixel work on high-density screens during a drag.
+function setMotionResolution(moving) {
+ if (movingCamera===moving || contextLost) return;
+ if (exporting) {
+  if (!moving) restoreDetailTimer=setTimeout(()=>setMotionResolution(false),180);
+  return;
+ }
+ movingCamera=moving;
+ const ratio=getDrawingPolicy().pixelRatio;
+ if (renderer.getPixelRatio()!==ratio) {renderer.setPixelRatio(ratio);invalidateCamera();}
+}
+controls.addEventListener('start',()=>{
+ clearTimeout(restoreDetailTimer);setMotionResolution(true);
+});
+controls.addEventListener('end',()=>{
+ clearTimeout(restoreDetailTimer);
+ restoreDetailTimer=setTimeout(()=>setMotionResolution(false),180);
+});
 controls.addEventListener('start',()=>{homeFraming=null;leaveProjectFraming();});
 canvas.addEventListener('pointerdown',leaveProjectFraming,{capture:true});
 canvas.addEventListener('wheel',leaveProjectFraming,{capture:true,passive:true});
@@ -529,7 +558,11 @@ $('#shareMapBtn').onclick=async()=>{
   building:query.get('building'),context:query.get('context'),scenario:compare?'comparison':mode,
   split,target:controls.target.toArray(),position:camera.position.toArray()});
  const status=$('#exportStatus');
- try { await navigator.clipboard.writeText(url.href); status.textContent='View link copied.'; }
+ try {
+  await navigator.clipboard.writeText(url.href);
+  const open=document.createElement('a');open.href=url.href;open.textContent='Open saved view';
+  status.replaceChildren(document.createTextNode('View link copied. '),open);
+ }
  catch {
   const field=document.createElement('input');field.readOnly=true;field.value=url.href;
   field.setAttribute('aria-label','Share this map view');status.replaceChildren(field);
@@ -601,7 +634,7 @@ function tick(){invalidate();}
 document.addEventListener('visibilitychange',()=>{if(document.hidden)frameScheduler.pause();else invalidate();});
 new IntersectionObserver(entries=>{canvasVisible=entries[0].isIntersecting;if(canvasVisible)invalidate();else frameScheduler.pause();},{rootMargin:'100px'}).observe(wrap);
 canvas.addEventListener('webglcontextlost',event=>{
- event.preventDefault();contextLost=true;cancelCameraFlight();frameScheduler.pause();controls.enabled=false;$('#exportBtn').disabled=true;
+ event.preventDefault();contextLost=true;clearTimeout(restoreDetailTimer);movingCamera=false;cancelCameraFlight();frameScheduler.pause();controls.enabled=false;$('#exportBtn').disabled=true;
  const loading=$('#loading');loading.hidden=false;loading.style.display='grid';loading.replaceChildren(document.createTextNode('The map was paused to free graphics memory. Waiting to reconnect…'));
  const retry=document.createElement('button');retry.className='ui-button';retry.dataset.variant='outline';retry.type='button';retry.textContent='Reload map';retry.onclick=()=>location.reload();loading.append(retry);wrap.setAttribute('aria-busy','false');
 });
@@ -613,7 +646,7 @@ canvas.addEventListener('webglcontextrestored',()=>{
 window.addEventListener('pageshow',()=>{resize();invalidate();});
 window.visualViewport?.addEventListener('resize',resize);
 coarsePointer.addEventListener('change',()=>{setNavigationMode(navigationButtons.find(button=>button.getAttribute('aria-pressed')==='true').dataset.navigation);const size=getDrawingPolicy().shadowSize;if(daylight.sun.shadow.mapSize.x!==size){daylight.sun.shadow.map?.dispose();daylight.sun.shadow.map=null;daylight.sun.shadow.mapSize.setScalar(size);}resize();invalidate();});
-resize();tick();const initialScenarioInteractions=scenarioInteractions;const initialDistrictLoad=loadDistrict(initialQuery.get('district')||'downtown',undefined,{preserveSearch:true}),initialFocusRequest=focusRequest;await initialDistrictLoad;
+resize();tick();const initialScenarioInteractions=scenarioInteractions;const initialDistrictLoad=loadDistrict(initialQuery.get('district')||'downtown',undefined,{preserveSearch:true,placeContext:initialQuery.get('context')}),initialFocusRequest=focusRequest;await initialDistrictLoad;
 window.atlas={scene,camera,controls,renderer,cameraCoverage,districts,projects,groups,stats,loadDistrict,setMode,reset,render,selectProject,get current(){return current;},get isFocusing(){return Boolean(cameraFlight);},get performance(){return {...getDrawingPolicy(),frames:frameScheduler.frames,contextLost};},get model(){return model;},get contextReplacementAudit(){return surroundingCity.sourceReplacementAudit;},get futureMeshes(){return futureMeshes;},setCompare(value,position=.5){compare=value;split=position;$('#compareToggle').checked=value;$('#compareRange').value=position*100;syncCompare();},setLRT(value){$('#lrtToggle').checked=value;applyVisibility(mode);}};
 // A visitor can type before the data and search listeners finish loading.
 // Reuse that query once the initial model is ready; URL startup must not erase it.

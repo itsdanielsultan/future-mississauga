@@ -4,8 +4,8 @@ prepareAppearancePreference(document.querySelector('#appearanceSelect'));
 const wrap=document.querySelector('#sceneWrap');
 const picker=document.querySelector('#districtSelect');
 const route=window.fmLocal?.historyURL?.() || new URL(location.href);
-const fairview=route.searchParams.get('context')==='fairview';
-const selected=picker.querySelector('option[value="'+CSS.escape(route.searchParams.get('district')||'downtown')+'"]') || picker.querySelector('option[value="downtown"]');
+const fairview=route.searchParams.get('context')==='fairview' || route.searchParams.get('district')==='fairview';
+const selected=picker.querySelector('option[value="'+CSS.escape(fairview?'citywide':route.searchParams.get('district')||'downtown')+'"]') || picker.querySelector('option[value="downtown"]');
 function showArea(id,name) {
  const poster=id==='fairview'?'neighbourhood-fairview-after':'wide-'+id+'-future';
  wrap.style.setProperty('--loading-image','url("gallery/edition-20261120/'+poster+'.webp")');

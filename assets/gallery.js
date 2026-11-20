@@ -10,7 +10,13 @@ const [edition] = await Promise.all([loadEditionPlates(), refreshPictureAssets(p
 const plateFor = name => edition.get('wide/' + name);
 const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const original=name=>assetURL(plateFor(name)?.download.url || pictures.images[name].download?.url || pictures.images[name].url);
-const display=name=>assetURL(plateFor(name)?.webImage || pictures.images[name].display.url);
+function thumbnailAttributes(name) {
+  const plate = plateFor(name);
+  if (!plate) return 'src="' + escape(assetURL(pictures.images[name].display.url)) + '" width="1600" height="1000"';
+  const thumb = escape(assetURL(plate.thumbnail));
+  const preview = escape(assetURL(plate.webImage));
+  return 'src="' + thumb + '" srcset="' + thumb + ' 640w, ' + preview + ' ' + plate.width + 'w" sizes="(max-width: 560px) calc(100vw - 32px), (max-width: 1440px) 46vw, 650px" width="' + plate.width + '" height="' + plate.height + '"';
+}
 const downloadIcon='<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12m-5-5 5 5 5-5M5 20h14"/></svg>';
 const catalogue=buildGalleryCatalogue(districts,pictures.images),grid=$('#galleryGrid');
 const area=$('#galleryArea'),viewFilter=$('#galleryView'),search=$('#gallerySearch');
@@ -52,7 +58,7 @@ function updatePlaceLinks() {
 function renderGallery(){
  updatePlaceLinks();
  const {matches,visible}=filterGallery(catalogue,{area:area.value,view:viewFilter.value,search:search.value});
- const card = row => `<article class="picture-card" data-view-title="${escape(row.viewTitle)}" data-area-title="${escape(row.area)}" data-file="${escape(row.file)}"><button data-open="${escape(row.district)}" data-view="${row.view}" aria-label="Preview ${escape(row.area+' '+row.viewTitle+' '+row.scenario)}"><img src="${escape(display(row.file))}" alt="${escape(row.area+' · '+row.viewTitle+' · '+row.scenario)}" loading="lazy" decoding="async" width="1600" height="1000"></button><div class="card-caption"><div><span class="media-caption__area">${escape(row.area)}</span><h3>${escape(row.viewTitle)}</h3><span class="media-caption__scenario">${row.scenario}</span></div><a href="${escape(original(row.file))}" download class="icon-button ui-button" aria-label="Download ${escape(row.area+' '+row.viewTitle+' '+row.scenario)} PNG" data-variant="ghost" data-size="icon" title="Download PNG">${downloadIcon}</a></div></article>`;
+ const card = row => `<article class="picture-card" data-view-title="${escape(row.viewTitle)}" data-area-title="${escape(row.area)}" data-file="${escape(row.file)}"><button data-open="${escape(row.district)}" data-view="${row.view}" aria-label="Preview ${escape(row.area+' '+row.viewTitle+' '+row.scenario)}"><img ${thumbnailAttributes(row.file)} alt="${escape(row.area+' · '+row.viewTitle+' · '+row.scenario)}" loading="lazy" decoding="async"></button><div class="card-caption"><div><span class="media-caption__area">${escape(row.area)}</span><h3>${escape(row.viewTitle)}</h3><span class="media-caption__scenario">${row.scenario}</span></div><a href="${escape(original(row.file))}" download class="icon-button ui-button" aria-label="Download ${escape(row.area+' '+row.viewTitle+' '+row.scenario)} PNG" data-variant="ghost" data-size="icon" title="Download PNG">${downloadIcon}</a></div></article>`;
  const collections = [
    ['close', 'Landmarks and closer views'],
    ['aerial', 'Neighbourhood aerials'],

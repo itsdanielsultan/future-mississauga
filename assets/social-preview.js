@@ -15,7 +15,7 @@ export function installSocialPreview(root=document){
     const index=visible.indexOf(link);
     visible[(index+direction+visible.length)%visible.length].click();
    }:null);
-   const viewTitle=card.dataset.viewTitle||card.querySelector('h2')?.textContent||'Picture',area=card.dataset.areaTitle||'';
+   const viewTitle=card.dataset.viewTitle||card.querySelector('h3')?.textContent||'Picture',area=card.dataset.areaTitle||'';
    show({title:viewTitle,viewTitle,area,src:card.dataset.displayUrl||link.href,download:card.querySelector('.save').href,preview:thumb.currentSrc||thumb.src,width:Number(card.dataset.displayWidth)||3240,height:Number(card.dataset.displayHeight)||4050,osm:card.dataset.osm!=='false'},async()=>{
     const plate = (await plates).get(card.dataset.plate);
     const row=await resolveMedia(card.dataset.originalThumb || thumb.src);

@@ -4,6 +4,7 @@ const retryPreview = image => {
   image.dataset.retried = 'true';
   const url = new URL(image.src, document.baseURI);
   url.searchParams.set('retry', '1');
+  image.removeAttribute('srcset');
   image.src = url.href;
 };
 const cards=[...document.querySelectorAll('.social-grid article')];
@@ -22,6 +23,9 @@ function updatePortraits() {
   for (const card of cards) {
     card.hidden = area.value !== 'all' && card.dataset.district !== area.value;
     if (!card.hidden) count++;
+  }
+  for (const group of document.querySelectorAll('.portrait-collection')) {
+    group.hidden = !group.querySelector('article:not([hidden])');
   }
   countLabel.textContent = count + (count === 1 ? ' portrait' : ' portraits');
   empty.hidden = count !== 0;
@@ -54,9 +58,10 @@ for (const card of cards) {
   const plate = plates.get(card.dataset.plate);
   if (!plate) continue;
   const image = card.querySelector('img');
-  card.dataset.originalThumb = image.getAttribute('src');
-  image.removeAttribute('srcset');
-  image.src = plate.webImage;
+  if (!card.dataset.originalThumb) card.dataset.originalThumb = image.getAttribute('src');
+  image.sizes = '(max-width: 560px) calc(100vw - 32px), (max-width: 900px) 46vw, (max-width: 1440px) 30vw, 430px';
+  image.srcset = plate.thumbnail + ' 512w, ' + plate.webImage + ' ' + plate.width + 'w';
+  image.src = plate.thumbnail;
   card.dataset.displayUrl = plate.displayMaster.url;
   card.dataset.displayWidth = plate.displayMaster.width;
   card.dataset.displayHeight = plate.displayMaster.height;

@@ -5,3 +5,8 @@ html.document-preview-open{overflow:hidden}dialog.document-preview{box-sizing:bo
 .document-toolbar .document-zoom{display:grid;grid-template-columns:repeat(3,44px);gap:8px}
 .document-toolbar{align-items:center;column-gap:24px;row-gap:10px}
 @media(max-width:460px){.document-toolbar{justify-content:center;padding:10px}.document-toolbar .document-pagination{grid-template-columns:44px 120px 44px}.document-toolbar .document-zoom{grid-template-columns:repeat(3,44px)}}
+
+
+.document-preview .document-stage[data-page-fit=true] { touch-action:pan-y pinch-zoom; }
+.document-preview .document-stage { background:#f0f1f2; }
+.document-preview .document-shell h2 { font-family:var(--face,Inter,sans-serif); font-weight:560; letter-spacing:-.035em; }

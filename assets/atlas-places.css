@@ -1,6 +1,6 @@
 .atlas-places .place-main{margin-inline:auto;padding:0 var(--rail) var(--section);color:var(--ink)}
 .place-mast{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;padding:clamp(1.9rem,4vw,3.8rem) 0 clamp(1.2rem,2.7vw,2.2rem)}
-.place-mast h1,.place-main h2,.place-main figure{margin:0}.place-mast h1{font:560 clamp(2.2rem,4.3vw,4.2rem)/1.03 var(--face);letter-spacing:-.06em}
+.place-mast h1,.place-main h2,.place-main figure{margin:0}.place-mast h1{font:550 var(--page-title)/1.04 var(--face);letter-spacing:-.056em}
 .place-mast nav{display:flex;align-items:center;gap:1.5rem}.place-back{display:inline-block;margin-bottom:.6rem;color:var(--muted);font-size:.875rem}
 .place-main a{color:inherit;text-decoration:none}.place-action,.place-lead figcaption a{display:inline-flex;align-items:center;gap:.4rem;font-size:.9rem;font-weight:550}.place-main .place-action:hover,.place-main .place-back:hover,.place-lead figcaption a:hover{text-decoration:underline;text-underline-offset:.2em}
 .place-lead img{display:block;width:100%;max-height:min(78vh,55rem);height:auto;object-fit:contain;background:#f2f3f1}

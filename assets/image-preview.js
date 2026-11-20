@@ -14,7 +14,9 @@ export function renderImageAttribution(container,attribution={},doc=document){
  for(const credit of attribution.requiredModelCredits||[])addText(credit);
  const sources=doc.createElement('a');sources.textContent='Sources';
  let url;try{url=new URL(attribution.sourcesURL||'sources.html',location.href);}catch{}
- sources.href=url&&['http:','https:'].includes(url.protocol)&&!url.username&&!url.password?url.href:'sources.html';
+ const localSources = url?.hostname === 'futuremississauga.com' && url.pathname === '/sources.html';
+ if (localSources) sources.href = 'sources.html' + url.search + url.hash;
+ else sources.href = url && ['http:','https:'].includes(url.protocol) && !url.username && !url.password ? url.href : 'sources.html';
  if(new URL(sources.href,location.href).pathname!==location.pathname)nodes.push(sources);
  container.replaceChildren(...nodes);
 }
@@ -228,6 +230,27 @@ export function installImagePreviews(resolve = async (image,anchor) => {
     const section=(clickedImage||anchor).closest('article,section');
     const image=clickedImage||[...section?.querySelectorAll('img')||[]].find(img=>[img.src,img.closest('a')?.href].filter(Boolean).some(url=>new URL(url,location.href).href===anchor.href));
     if (!generic) { generic=createImagePreview(); openGeneric=createResolvedPreview(generic); }
+    const collection=anchor?.dataset.editionPlate && anchor.closest('[data-picture-area]');
+    if(collection){
+      const pictures=[...collection.querySelectorAll('a[data-edition-plate]')];
+      let index=pictures.indexOf(anchor);
+      const show=()=>{
+        const link=pictures[index], photo=link.querySelector('img');
+        openGeneric({
+          area:collection.dataset.pictureArea,viewTitle:link.dataset.previewTitle,
+          alt:photo.alt,src:link.href,preview:photo.currentSrc||photo.src,
+          width:Number(link.dataset.previewWidth),height:Number(link.dataset.previewHeight),
+          download:previewDownloadURL(link,link.href),explore:collection.dataset.pictureMap
+        },()=>resolve(photo,link),anchor);
+      };
+      generic.setSequence(pictures.length>1?direction=>{
+        index=(index+direction+pictures.length)%pictures.length;
+        show();
+      }:null);
+      show();
+      return;
+    }
+    generic.setSequence(null);
     const heading=section?.querySelector('h2,h3')?.textContent?.trim();
     const title=image?.dataset.previewTitle||anchor?.dataset.previewTitle||heading||(image?.alt?.length<=70?image.alt:'Image preview');
     const viewTitle=image?.closest('figure')?.querySelector('figcaption')?.textContent?.trim();

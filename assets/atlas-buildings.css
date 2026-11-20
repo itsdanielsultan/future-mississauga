@@ -6,7 +6,7 @@ body:is(.building-pages, .profile-page) main {
   --study-surface: #eeefef;
   --study-rail: clamp(184px, 16vw, 224px);
   --study-gap: clamp(26px, 4vw, 64px);
-  --catalogue-tracks: repeat(3, minmax(0, 1fr));
+  --catalogue-tracks: repeat(4, minmax(0, 1fr));
   --study-inset: var(--rail, clamp(18px, 4vw, 64px));
   --site-accent: var(--study-ink);
   --site-accent-strong: #08090b;
@@ -120,7 +120,7 @@ html body.building-pages.model-selected .subject-views > a:hover {
 html body.building-pages #modelChooser:not([hidden]) {
   display: grid;
   grid-template-columns: var(--study-rail) minmax(0, 1fr);
-  grid-template-areas: "filters count" "filters cards" ". more" ". map";
+  grid-template-areas: "filters count" "filters cards" ". map";
   align-items: start;
   gap: 0 var(--study-gap);
   padding: 0;
@@ -146,7 +146,7 @@ html body.building-pages .study-browser label {
   gap: 7px;
   min-width: 0;
   color: var(--study-ink);
-  font: 550 13px/1.35 var(--face);
+  font: 550 14px/1.35 var(--face);
 }
 html body.building-pages main#main :is(.ui-input, .ui-select) {
   box-sizing: border-box;
@@ -198,7 +198,7 @@ html body.building-pages .building-area > .area-heading {
   font: 555 clamp(22px, 2.4vw, 32px)/1.18 var(--face);
   letter-spacing: -.04em;
 }
-html body.building-pages .building-area > .project-heading {
+html body.building-pages .building-group > .project-heading {
   margin: 22px 0 9px;
   color: var(--study-muted);
   font: 530 14px/1.3 var(--face);
@@ -371,6 +371,13 @@ html body.building-pages :is(.render-pair, .image-pair) figcaption {
   color: var(--study-muted);
   font: 470 13px/1.4 var(--face);
 }
+html body.building-pages .render-pair[data-picture-area] figcaption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+}
 html body.building-pages .preview-layout { grid-template-columns: minmax(0, 1.8fr) minmax(230px, .75fr); gap: var(--study-gap); }
 html body.building-pages .canvas-caption { position: static; display: block; font: 450 13px/1.4 var(--face); color: var(--study-muted); }
 html body.building-pages .preview-layout .canvas-wrap { height: clamp(330px, 58svh, 640px); border-radius: 4px; }
@@ -443,7 +450,7 @@ html body.profile-page .building-profile :is(a, button):hover { text-decoration-
 @media (min-width: 931px) and (min-height: 660px) {
   html body.building-pages :is(#modelChooser .building-filters, .study-browser) { position: sticky; top: calc(var(--site-header-height, 64px) + 18px); }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1179px) {
   body:is(.building-pages, .profile-page) main { --catalogue-tracks: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 930px) {
@@ -454,7 +461,14 @@ html body.profile-page .building-profile :is(a, button):hover { text-decoration-
   html body.building-pages .study-browser { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr); gap: 15px; padding: 0 0 20px; border: 0; }
   html body.building-pages .study-browser .study-browser-meta { margin: 0; }
   html body.building-pages .study-browser .study-search-row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  html body.building-pages .preview-layout { grid-template-columns: minmax(0, 1fr); }
+  html body.building-pages .render-pair[data-picture-area] figcaption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+}
+html body.building-pages .preview-layout { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 700px) {
   body:is(.building-pages, .profile-page) main { --study-gap: 18px; }
@@ -475,7 +489,7 @@ html body.profile-page .building-profile :is(a, button):hover { text-decoration-
   html body.building-pages #modelChooser .building-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   html body.building-pages #modelChooser .building-filters label:first-child { grid-column: 1 / -1; }
   html body.building-pages main#main :is(.ui-select, .ui-input) { font-size: 16px; }
-  html body.building-pages main#main .building-formats a { min-height: 38px; padding-inline: 8px; font-size: 13px; }
+  html body.building-pages main#main .building-formats a { min-height: 40px; padding-inline: 8px; font-size: 14px; }
   html body.building-pages .building-card .building-card-link :is(h2, h3, h4) { font-size: 16px; }
 }
 @media (max-width: 520px) {
@@ -484,3 +498,8 @@ html body.profile-page .building-profile :is(a, button):hover { text-decoration-
 @media (max-width: 350px) {
   html body.building-pages main#main .building-formats { flex-wrap: wrap; }
 }
+
+html body.building-pages :is(.building-card,.building-area,.building-group)[hidden] { display:none; }
+html body.building-pages .building-group + .building-row { margin-top:24px; }
+html body.building-pages:not(.model-selected) .intro > div { align-items:start; }
+

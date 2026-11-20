@@ -21,7 +21,9 @@ window.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', event => {
     event.preventDefault();
     const url = new URL(form.action, document.baseURI);
-    url.searchParams.set('district', form.elements.district.value);
+    const district = form.elements.district.value;
+    url.searchParams.set('district', district === 'fairview' ? 'citywide' : district);
+    if (district === 'fairview') url.searchParams.set('context', 'fairview');
     location.assign(url.href);
   });
 });

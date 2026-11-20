@@ -82,9 +82,10 @@ function showComparison(id){
  if (id === 'downtown') {
    for (const [selector, state] of [['#pictureCompare > img','future'], ['#beforePicture img','existing']]) {
      const image = $(selector);
-     const url = 'gallery/city-plates/downtown-' + state + '-2560.webp';
-     image.srcset = url + ' 1x';
-     image.src = url;
+     const prefix = 'gallery/edition-20261120/home-' + state;
+     image.sizes = '(max-width: 900px) 92vw, 76vw';
+     image.srcset = prefix + '-1200.webp 1200w, ' + prefix + '-2560.webp 2560w';
+     image.src = prefix + '-1200.webp';
      image.alt = 'Square One, ' + (state === 'future' ? 'with proposed developments' : 'existing buildings');
    }
    const caption=$('.media-caption--comparison');
