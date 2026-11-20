@@ -3,13 +3,20 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import * as THREE from '../public/vendor/three.module.js';
 import {neighbourhoodFrame} from '../public/viewer-camera.js';
+import {projectNorth} from '../public/scene-presentation.js';
+const images = JSON.parse(readFileSync(new URL('../public/data/picture-assets.json',import.meta.url)));
 const districts = JSON.parse(readFileSync(new URL('../public/data/districts.json',import.meta.url)));
 test('default neighbourhood camera keeps the visible ground inside every study crop at wide and phone widths',()=>{
  for(const d of districts.filter(d=>d.id!=='citywide'))for(const aspect of [.48,1,1.78,2.4]){
   const frame=neighbourhoodFrame(THREE,d,aspect),camera=new THREE.PerspectiveCamera(35,aspect,1,160000);camera.position.copy(frame.position);camera.lookAt(frame.target);camera.updateMatrixWorld(true);
   const ground=new THREE.Plane(new THREE.Vector3(0,1,0),-frame.target.y),ray=new THREE.Raycaster(),point=new THREE.Vector3();
   for(const x of [-1,1])for(const y of [-1,1]){ray.setFromCamera(new THREE.Vector2(x,y),camera);assert.ok(ray.ray.intersectPlane(ground,point));assert.ok(point.x>d.bounds[0]&&point.x<d.bounds[2]&&point.z>d.bounds[1]&&point.z<d.bounds[3],`${d.id} ${aspect}: viewport must not show the rectangular cut edge`);}
-  assert.ok(Math.abs(frame.position.x-frame.target.x)<1e-8,'north stays upright');
+  const bearing = THREE.MathUtils.radToDeg(Math.atan2(frame.direction.x, frame.direction.z));
+  if (d.id==='downtown') {
+   const source = images.images['downtown-future.png'].presentationInfo.north.clockwiseDegreesFromImageUp;
+   const projected = projectNorth(THREE,camera,frame.target,aspect*1000,1000);
+   assert.ok(Math.abs(projected.degrees-source)<1e-8, 'Downtown shares the published aerial’s compass orientation');
+  } else assert.ok(Math.abs(bearing)<1e-8, d.id + ' opening bearing');
  }
 });
 test('rotated area transitions and portrait resize preserve bearing and tilt while keeping ground edges outside the frame',()=>{

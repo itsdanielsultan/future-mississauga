@@ -22,20 +22,24 @@ export async function loadModelRevisions(fetcher = globalThis.fetch, {timeoutMs 
 /** A date belongs to exact model bytes, not to the catalogue's review or publication date. */
 export function modelRevisionForProject(registry, catalogue, projectId, viewId) {
   if (registry?.schema !== schema || !Array.isArray(catalogue?.assets)) return null;
-  const record = registry.revisions?.find(item => item.projectId === projectId && (!viewId || item.viewIds?.includes(viewId)));
-  if (!record || !date(record.updatedOn) || !record.modelAssets?.length) return null;
-  if (viewId) {
-    const view = catalogue.views?.find(item => item.id === viewId);
-    if (!view || view.assets.length !== record.modelAssets.length || view.assets.some(id => !record.modelAssets.some(asset => asset.id === id))) return null;
-  }
-  const matches = record.modelAssets.every(expected => {
-    const asset = catalogue.assets.find(item => item.id === expected.id);
-    return asset && sha256(expected.sha256) && sha256(expected.downloadSHA256) &&
-      asset.sha256 === expected.sha256 && asset.downloadSHA256 === expected.downloadSHA256 &&
-      asset.url === expected.url && asset.decodedBytes === expected.decodedBytes && asset.bytes === expected.bytes &&
-      asset.modelReviewDate === record.updatedOn;
-  });
-  if (!matches) return null;
+  const record = (registry.revisions || []).filter(item => item.projectId === projectId && (!viewId || item.viewIds?.includes(viewId)))
+    .sort((a,b) => String(b.updatedOn).localeCompare(String(a.updatedOn)))
+    .find(item => {
+      if (!date(item.updatedOn) || !item.modelAssets?.length) return false;
+      if (viewId) {
+        const view = catalogue.views?.find(view => view.id === viewId);
+        if (!view || view.assets.length !== item.modelAssets.length || view.assets.some(id => !item.modelAssets.some(asset => asset.id === id))) return false;
+      }
+      return item.modelAssets.every(expected => {
+        const asset = catalogue.assets.find(asset => asset.id === expected.id);
+        const reviewedOn = expected.modelReviewDate ?? item.updatedOn;
+        return asset && date(reviewedOn) && reviewedOn <= item.updatedOn && sha256(expected.sha256) && sha256(expected.downloadSHA256) &&
+          asset.sha256 === expected.sha256 && asset.downloadSHA256 === expected.downloadSHA256 &&
+          asset.url === expected.url && asset.decodedBytes === expected.decodedBytes && asset.bytes === expected.bytes &&
+          asset.modelReviewDate === reviewedOn;
+      });
+    });
+  if (!record) return null;
   return {id:record.id, projectId:record.projectId, updatedOn:record.updatedOn, label:`Updated on ${new Date(`${record.updatedOn}T12:00:00Z`).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'})}`};
 }
 

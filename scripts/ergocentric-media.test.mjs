@@ -11,7 +11,7 @@ const manifest=JSON.parse(fs.readFileSync(new URL('data/ergocentric-media.json',
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const base='https://futuremississauga.com/reference-updates.html';
 const html=fs.readFileSync(new URL('reference-updates.html',root),'utf8');
-const section=html.match(/<section class="model-change" id="ergocentric-275-superior">[\s\S]*?<\/section>/)?.[0];
+const section=html.match(/<section class="model-change" id="ergocentric-275-superior"[^>]*>[\s\S]*?<\/section>/)?.[0];
 
 test('only the approved credited frontage PNGs are public, with exact dimensions and byte pins',()=>{
   const expected={before:'202359a6313abb18f011a6d49c08646d06b31ce65e7ae420a5bc50c11bad4d0d',after:'a8cf3366ea6dd27e8219c80f265fda1cc684396bfb48c424826fa2adf8abc5fd'};
@@ -31,7 +31,10 @@ test('the study retains exact photography credit, link and City terms beside the
   assert.ok(section);assert.match(section,/Photography reference: <a href="https:\/\/davidlaskerphotography\.com\/">David Lasker\/Cityscape Photography<\/a>/);
   assert.ok(section.includes(CITY_DATA_TERMS_URL));assert.equal(manifest.cityDataTermsURL,CITY_DATA_TERMS_URL);
   assert.match(section,/Model: Daniel Sultan \/ Future Mississauga/);
-  assert.match(section,/<details class="reference-about">[\s\S]*photograph’s date is unknown[\s\S]*roof and rear remain unchanged/);
+  assert.match(section,/href="study-notes\.html#ergocentric-275-superior"/);
+  const notes=fs.readFileSync(new URL('study-notes.html',root),'utf8');
+  const frontage=notes.match(/<article id="ergocentric-275-superior">[\s\S]*?<\/article>/)?.[0];
+  assert.match(frontage,/photograph’s date is unknown[\s\S]*roof and rear remain unchanged/);
   assert.equal((section.match(/class="file-download"/g)||[]).length,2);
   for(const row of manifest.images){assert.ok(section.includes('<a href="'+row.url+'"><div'));assert.ok(section.includes('href="'+row.url+'" download data-download'));}
 });

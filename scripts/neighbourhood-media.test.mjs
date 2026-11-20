@@ -69,7 +69,10 @@ test('the Fairview study offers previews and separate download icons and opens t
     }
     for(const credit of row.caption.requiredModelCredits)assert.ok(section.includes(credit));
   }
-  assert.match(section,/Both views use the same camera and lighting/);
-  assert.match(section,/Building shapes and ground contact are approximate/);
+  assert.match(section,/href="study-notes\.html#fairview-neighbourhood"/);
+  const notes=fs.readFileSync(new URL('study-notes.html',root),'utf8');
+  const fairview=notes.match(/<article id="fairview-neighbourhood">[\s\S]*?<\/article>/)?.[0];
+  assert.match(fairview,/Both views use the same camera and lighting/);
+  assert.match(fairview,/Building shapes and ground contact are approximate/);
   assert.doesNotMatch(section,/project=edge-oro|render-proof|SHA256|vegetation overlays|The live map also includes|<p class="limit">Updated|assets\/fairview-20261028\//);
 });

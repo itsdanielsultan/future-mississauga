@@ -1,0 +1,3033 @@
+{
+  "schema": "future-mississauga-native-media-catalog/v2",
+  "state": "PREPARED_OWNER_ACCEPTED_NATIVE_SCENES",
+  "publication": false,
+  "images": [
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "identity": "wide/downtown-existing.png",
+      "title": "Downtown",
+      "scenario": "existing",
+      "nativeSceneDimensions": [
+        6144,
+        3840
+      ],
+      "sourceSceneSHA256": "0fd6691734b1e5e537292f717880f45fb1887ae73be22c125385bffa691f5fa4",
+      "renderTimestampUTC": "2026-11-13T06:16:43.022042+00:00",
+      "sourceFreezeState": "FINAL_FROZEN",
+      "historicalURLsRebound": false,
+      "caption": {
+        "title": "Downtown",
+        "area": "Downtown",
+        "creator": "Daniel Sultan",
+        "scenario": "existing",
+        "geographicScope": "named_district_scene",
+        "cityCredit": "City of Mississauga · Ontario data",
+        "openStreetMap": false,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "renderTimestampUTC": "2026-11-13T06:16:43.022042+00:00",
+        "sourceDates": "Current native assembly frozen 13 November 2026. Municipal, planning and photographic source dates vary; existing source limitations remain.",
+        "requiredModelCredits": [],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent model: Daniel Sultan / Future Mississauga. Architecture: IBI Group / Arcadis. City of Mississauga geometry informs placement. Plan and photographic references are credited in sources.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ]
+      },
+      "provenance": {
+        "sceneProof": {
+          "sha256": "d1655da5e2538919c15b40ae534727e2554107c8afd11ae9b3a2068bc6a8b84e"
+        },
+        "creditProof": {
+          "sha256": "2a6c19665b9fe3446b5b8563e3b300329dc90669f3d66c639009d4bbe44b7121"
+        },
+        "renderProof": {
+          "sha256": "e7f1baf192f632e6241357bcc65c9d92a4022a1f89285e214796bcbd0dde00f5"
+        },
+        "sourceRevision": {
+          "sha256": "d421ae93200787d2c29782fcbf493c58f031633d5968e69d3a77ede43a8744b3"
+        },
+        "importProof": {
+          "sha256": "e4a0eb3e3d4ea05fb1b3d204e5f5f5781ccc556ddcef6f83bd8f5e55f8fb90cf"
+        },
+        "nativeInventory": {
+          "sha256": "0c90821b24cbe4286be5f4fe883d03271ec9de67249440543650962bd915caf8"
+        },
+        "compositionProof": {
+          "sha256": "ea9a0ccc3c053de55ac37c052829a74dad6e94ce1999c4807e80e48881d1396f"
+        },
+        "packageScript": {
+          "sha256": "89aa15266caa06b2ee85cac9b44f071bc9a5b7c609681e1c4c2e76ae9f09aa3b"
+        },
+        "footerScript": {
+          "sha256": "bcda208cbf7c0002f56eb4cf68b9f3c0b26a0f04ad03422d65a5a8c88ac4c9b6"
+        },
+        "packageContract": {
+          "sha256": "8656dc119c0e91505f719b2e2f4b041142b3b7ae378aab0abd52ff5a91c09771"
+        },
+        "footerWordingRevision": {
+          "sha256": "e7a31fe3ae865a0904207e449a564d9e66fe23733bb1ce554f2502d83768df1a"
+        }
+      },
+      "displayMaster": {
+        "url": "gallery/refreshed-20261113/wide-downtown-existing-clean-0121ce85c04b.png",
+        "bytes": 25580836,
+        "sha256": "0121ce85c04bb2050f67a7387ce11706e6bc5cf19dad7da7ea30733b2a1cbd8a",
+        "dimensions": [
+          6144,
+          3840
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false
+      },
+      "download": {
+        "url": "gallery/refreshed-20261113-v2/wide-downtown-existing-credited-bddb36031286.png",
+        "bytes": 24810957,
+        "sha256": "bddb360312864dbf1e40bebaeef7dabc9b2a4864087574eb30ab947c00e502df",
+        "dimensions": [
+          6144,
+          4238
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneWithAppendedCreditFooter",
+        "sceneBounds": [
+          0,
+          0,
+          6144,
+          3840
+        ],
+        "footerBounds": [
+          0,
+          3840,
+          6144,
+          4238
+        ],
+        "sceneCrop": false,
+        "sceneResize": false,
+        "sceneOverlay": false,
+        "sceneDimensions": [
+          6144,
+          3840
+        ],
+        "sceneSourceSHA256": "0121ce85c04bb2050f67a7387ce11706e6bc5cf19dad7da7ea30733b2a1cbd8a",
+        "allScenePixelsExact": true
+      },
+      "responsivePreviews": [
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-existing-scene-1200-23162d487535.avif",
+          "bytes": 224806,
+          "sha256": "23162d487535818e82c16102f22d34a458084105f98f3924af3357cac5b6b7d7",
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "0121ce85c04bb2050f67a7387ce11706e6bc5cf19dad7da7ea30733b2a1cbd8a",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-existing-scene-1200-3b718f90c97a.jpg",
+          "bytes": 362266,
+          "sha256": "3b718f90c97a686863a8b7d1a1710138f7d22197ba3cdb538871ff66a5204010",
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "0121ce85c04bb2050f67a7387ce11706e6bc5cf19dad7da7ea30733b2a1cbd8a",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-existing-scene-3200-2c1ee48b4a49.avif",
+          "bytes": 1020907,
+          "sha256": "2c1ee48b4a497c034e84487a6fff70a37213e51cfc0e34b0990b3b4a79c35e2d",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "0121ce85c04bb2050f67a7387ce11706e6bc5cf19dad7da7ea30733b2a1cbd8a",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-existing-scene-3200-07bd84012f58.jpg",
+          "bytes": 1845472,
+          "sha256": "07bd84012f58d8473b51a1fea0fb74ac00b31231e6958a0392db908e1e29f2a3",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "0121ce85c04bb2050f67a7387ce11706e6bc5cf19dad7da7ea30733b2a1cbd8a",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        }
+      ],
+      "presentation": {
+        "kind": "massing-status-preserved-facades",
+        "northDegrees": 66.08264806109014,
+        "legend": [
+          {
+            "label": "Existing",
+            "color": "#b8b9b6"
+          }
+        ],
+        "qualification": "Presentation override only on identified municipal non-existing massing and exact pinned semantic slots. Existing vertex colours, textures and authored facades preserved. Unknown is never labelled approved.",
+        "materialProofSHA256": "f8e916adb2d956b1a8afa098db160cdc72372f909125f18a5716d99e7718d8fd",
+        "geometrySHA256": "d3ab226ecb6d7020208e754da35d8526c9939be498b2badd35bac73f8696db82",
+        "sourceGeometryUnchanged": true,
+        "authoredFacadesPreserved": true
+      },
+      "sourceModelDate": null,
+      "sourceQualifications": [
+        "Mixed source dates; not a current surveyed/as-built statement.",
+        "Registered native directional-lighting wrapper is replaced by reviewed Cycles lighting; no WebGL pixel equality claim.",
+        "Original source context masks are baked by the exact pinned native exporter; zero-effective-triangle meshes remain excluded.",
+        "Prior current camera, full native aspect and lighting retained; no image crop or upscaling."
+      ],
+      "creditSidecar": {
+        "url": "gallery/refreshed-20261113/wide-downtown-existing-credits.txt",
+        "sha256": "41129718c45d8a48effd9b6e3ea63a4c54bc8cca5331033f49e64c86e380c168",
+        "bytes": 1886
+      }
+    },
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "identity": "wide/downtown-skyline-existing.png",
+      "title": "Downtown",
+      "scenario": "existing",
+      "nativeSceneDimensions": [
+        6144,
+        2240
+      ],
+      "sourceSceneSHA256": "0fd6691734b1e5e537292f717880f45fb1887ae73be22c125385bffa691f5fa4",
+      "renderTimestampUTC": "2026-11-13T06:17:53.451432+00:00",
+      "sourceFreezeState": "FINAL_FROZEN",
+      "historicalURLsRebound": false,
+      "caption": {
+        "title": "Downtown",
+        "area": "Downtown",
+        "creator": "Daniel Sultan",
+        "scenario": "existing",
+        "geographicScope": "named_district_scene",
+        "cityCredit": "City of Mississauga · Ontario data",
+        "openStreetMap": false,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "renderTimestampUTC": "2026-11-13T06:17:53.451432+00:00",
+        "sourceDates": "Current native assembly frozen 13 November 2026. Municipal, planning and photographic source dates vary; existing source limitations remain.",
+        "requiredModelCredits": [],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent model: Daniel Sultan / Future Mississauga. Architecture: IBI Group / Arcadis. City of Mississauga geometry informs placement. Plan and photographic references are credited in sources.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ]
+      },
+      "provenance": {
+        "sceneProof": {
+          "sha256": "b5ecde96f34dc26321ee8a80783935bc41358cf1e90fed7d862908b084558ca7"
+        },
+        "creditProof": {
+          "sha256": "2a6c19665b9fe3446b5b8563e3b300329dc90669f3d66c639009d4bbe44b7121"
+        },
+        "renderProof": {
+          "sha256": "e7f1baf192f632e6241357bcc65c9d92a4022a1f89285e214796bcbd0dde00f5"
+        },
+        "sourceRevision": {
+          "sha256": "d421ae93200787d2c29782fcbf493c58f031633d5968e69d3a77ede43a8744b3"
+        },
+        "importProof": {
+          "sha256": "e4a0eb3e3d4ea05fb1b3d204e5f5f5781ccc556ddcef6f83bd8f5e55f8fb90cf"
+        },
+        "nativeInventory": {
+          "sha256": "0c90821b24cbe4286be5f4fe883d03271ec9de67249440543650962bd915caf8"
+        },
+        "compositionProof": {
+          "sha256": "19567f1c6d0b3e7264ed7b895cbf707f42f9244935852c94edef5ba30a8c03c1"
+        },
+        "packageScript": {
+          "sha256": "89aa15266caa06b2ee85cac9b44f071bc9a5b7c609681e1c4c2e76ae9f09aa3b"
+        },
+        "footerScript": {
+          "sha256": "bcda208cbf7c0002f56eb4cf68b9f3c0b26a0f04ad03422d65a5a8c88ac4c9b6"
+        },
+        "packageContract": {
+          "sha256": "8656dc119c0e91505f719b2e2f4b041142b3b7ae378aab0abd52ff5a91c09771"
+        },
+        "footerWordingRevision": {
+          "sha256": "e7a31fe3ae865a0904207e449a564d9e66fe23733bb1ce554f2502d83768df1a"
+        }
+      },
+      "displayMaster": {
+        "url": "gallery/refreshed-20261113/wide-downtown-skyline-existing-clean-9d161a7e71a8.png",
+        "bytes": 6089299,
+        "sha256": "9d161a7e71a86a44e075c9ddd8aee70f7e4cb302b9329ab61c425fb5c39544e7",
+        "dimensions": [
+          6144,
+          2240
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false
+      },
+      "download": {
+        "url": "gallery/refreshed-20261113-v2/wide-downtown-skyline-existing-credited-05862ec35f4a.png",
+        "bytes": 5870260,
+        "sha256": "05862ec35f4a6d25a2255c131b912892e43f36a7c673e82d15d9f6a30c65eae9",
+        "dimensions": [
+          6144,
+          2638
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneWithAppendedCreditFooter",
+        "sceneBounds": [
+          0,
+          0,
+          6144,
+          2240
+        ],
+        "footerBounds": [
+          0,
+          2240,
+          6144,
+          2638
+        ],
+        "sceneCrop": false,
+        "sceneResize": false,
+        "sceneOverlay": false,
+        "sceneDimensions": [
+          6144,
+          2240
+        ],
+        "sceneSourceSHA256": "9d161a7e71a86a44e075c9ddd8aee70f7e4cb302b9329ab61c425fb5c39544e7",
+        "allScenePixelsExact": true
+      },
+      "responsivePreviews": [
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-skyline-existing-scene-1200-aeb7b58cbc33.avif",
+          "bytes": 50074,
+          "sha256": "aeb7b58cbc3393ccdccf3bc4c1f95167aaead64f72c7a8503bf9d9a0cd0e6c3d",
+          "dimensions": [
+            1200,
+            438
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "9d161a7e71a86a44e075c9ddd8aee70f7e4cb302b9329ab61c425fb5c39544e7",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-skyline-existing-scene-1200-fcafd02491ff.jpg",
+          "bytes": 91801,
+          "sha256": "fcafd02491ff2c535acb76565fc307169d4fa56cb111aebb10d94d283abeac3b",
+          "dimensions": [
+            1200,
+            438
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "9d161a7e71a86a44e075c9ddd8aee70f7e4cb302b9329ab61c425fb5c39544e7",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-skyline-existing-scene-3200-b2492832fd72.avif",
+          "bytes": 205476,
+          "sha256": "b2492832fd722ac9e40303c06b61ad584c0a18dcc0d89640929b3cab92c7ab3e",
+          "dimensions": [
+            3200,
+            1167
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "9d161a7e71a86a44e075c9ddd8aee70f7e4cb302b9329ab61c425fb5c39544e7",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-skyline-existing-scene-3200-b5e776e5e074.jpg",
+          "bytes": 437724,
+          "sha256": "b5e776e5e07489cd7a1b7af6897f03b749fea8c9e1bc45230874447cd837bacb",
+          "dimensions": [
+            3200,
+            1167
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "9d161a7e71a86a44e075c9ddd8aee70f7e4cb302b9329ab61c425fb5c39544e7",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        }
+      ],
+      "presentation": {
+        "kind": "massing-status-preserved-facades",
+        "northDegrees": 268.7042336133343,
+        "legend": [
+          {
+            "label": "Existing",
+            "color": "#b8b9b6"
+          }
+        ],
+        "qualification": "Presentation override only on identified municipal non-existing massing and exact pinned semantic slots. Existing vertex colours, textures and authored facades preserved. Unknown is never labelled approved.",
+        "materialProofSHA256": "f8e916adb2d956b1a8afa098db160cdc72372f909125f18a5716d99e7718d8fd",
+        "geometrySHA256": "d3ab226ecb6d7020208e754da35d8526c9939be498b2badd35bac73f8696db82",
+        "sourceGeometryUnchanged": true,
+        "authoredFacadesPreserved": true
+      },
+      "sourceModelDate": null,
+      "sourceQualifications": [
+        "Mixed source dates; not a current surveyed/as-built statement.",
+        "Registered native directional-lighting wrapper is replaced by reviewed Cycles lighting; no WebGL pixel equality claim.",
+        "Original source context masks are baked by the exact pinned native exporter; zero-effective-triangle meshes remain excluded.",
+        "Prior current camera, full native aspect and lighting retained; no image crop or upscaling."
+      ],
+      "creditSidecar": {
+        "url": "gallery/refreshed-20261113/wide-downtown-skyline-existing-credits.txt",
+        "sha256": "3fedd1097396ee84bbb22bd9c74d6f0fcade85d94c3aafc8b6e48654c1103264",
+        "bytes": 1886
+      }
+    },
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "identity": "portraits/downtown-existing.png",
+      "title": "Downtown",
+      "scenario": "existing",
+      "nativeSceneDimensions": [
+        3240,
+        4050
+      ],
+      "sourceSceneSHA256": "0fd6691734b1e5e537292f717880f45fb1887ae73be22c125385bffa691f5fa4",
+      "renderTimestampUTC": "2026-11-13T06:18:42.601932+00:00",
+      "sourceFreezeState": "FINAL_FROZEN",
+      "historicalURLsRebound": false,
+      "caption": {
+        "title": "Downtown",
+        "area": "Downtown",
+        "creator": "Daniel Sultan",
+        "scenario": "existing",
+        "geographicScope": "named_district_scene",
+        "cityCredit": "City of Mississauga · Ontario data",
+        "openStreetMap": false,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "renderTimestampUTC": "2026-11-13T06:18:42.601932+00:00",
+        "sourceDates": "Current native assembly frozen 13 November 2026. Municipal, planning and photographic source dates vary; existing source limitations remain.",
+        "requiredModelCredits": [],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent model: Daniel Sultan / Future Mississauga. Architecture: IBI Group / Arcadis. City of Mississauga geometry informs placement. Plan and photographic references are credited in sources.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ]
+      },
+      "provenance": {
+        "sceneProof": {
+          "sha256": "5c4338c6db695b7fca790eb3c085043cb6b861299e7f70ee8acd42a6a8f2e6a3"
+        },
+        "creditProof": {
+          "sha256": "2a6c19665b9fe3446b5b8563e3b300329dc90669f3d66c639009d4bbe44b7121"
+        },
+        "renderProof": {
+          "sha256": "ebd7075e461b3e54b2f318909448e9bd940391c35900fcf6b5a550af8a567b07"
+        },
+        "sourceRevision": {
+          "sha256": "d421ae93200787d2c29782fcbf493c58f031633d5968e69d3a77ede43a8744b3"
+        },
+        "importProof": {
+          "sha256": "e4a0eb3e3d4ea05fb1b3d204e5f5f5781ccc556ddcef6f83bd8f5e55f8fb90cf"
+        },
+        "nativeInventory": {
+          "sha256": "0c90821b24cbe4286be5f4fe883d03271ec9de67249440543650962bd915caf8"
+        },
+        "compositionProof": {
+          "sha256": "ffac477c228b627a08564552d478e94855a9f3bd85b63e512be32abe9dc17091"
+        },
+        "packageScript": {
+          "sha256": "89aa15266caa06b2ee85cac9b44f071bc9a5b7c609681e1c4c2e76ae9f09aa3b"
+        },
+        "footerScript": {
+          "sha256": "231e88e4b98275048bed1ec19fdccae70870b20707d6fad4adfe052cb4d82c94"
+        },
+        "packageContract": {
+          "sha256": "8656dc119c0e91505f719b2e2f4b041142b3b7ae378aab0abd52ff5a91c09771"
+        }
+      },
+      "displayMaster": {
+        "url": "gallery/refreshed-20261113/portraits-downtown-existing-clean-a28ddbb8bb02.png",
+        "bytes": 15133890,
+        "sha256": "a28ddbb8bb028fbee14a0c277e0dc2c0d480505e1bde8521ae3eaa5cf661d6a8",
+        "dimensions": [
+          3240,
+          4050
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false
+      },
+      "download": {
+        "url": "gallery/refreshed-20261113/portraits-downtown-existing-posting-eb66f5ce221e.png",
+        "bytes": 15312455,
+        "sha256": "eb66f5ce221e3158f3f03f6a7ad952a71dece0102d676072406477d3aaba483a",
+        "dimensions": [
+          3600,
+          4500
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneOnExpandedWhiteCanvas",
+        "sceneBounds": [
+          180,
+          0,
+          3420,
+          4050
+        ],
+        "footerBounds": [
+          0,
+          4050,
+          3600,
+          4500
+        ],
+        "sideMarginsPx": [
+          180,
+          180
+        ],
+        "sceneCrop": false,
+        "sceneResize": false,
+        "sceneOverlay": false,
+        "layoutProofSHA256": "4cf87aaf77078b2c1c42b8b9de6821f6917e8dc2bb41f38feb2a4e9507e55df7",
+        "sceneDimensions": [
+          3240,
+          4050
+        ],
+        "sceneSourceSHA256": "a28ddbb8bb028fbee14a0c277e0dc2c0d480505e1bde8521ae3eaa5cf661d6a8",
+        "allScenePixelsExact": true
+      },
+      "responsivePreviews": [
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-existing-scene-1200-56b89cacf096.avif",
+          "bytes": 385261,
+          "sha256": "56b89cacf09651a4cb9e9ab5cf4522aae2ca074d371dd1cc0cdc1395f370c5aa",
+          "dimensions": [
+            1200,
+            1500
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "a28ddbb8bb028fbee14a0c277e0dc2c0d480505e1bde8521ae3eaa5cf661d6a8",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-existing-scene-1200-9ff20f26b481.jpg",
+          "bytes": 624199,
+          "sha256": "9ff20f26b481bda39d300b574e143b01cf996e3f1831134e17d03155c1675aeb",
+          "dimensions": [
+            1200,
+            1500
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "a28ddbb8bb028fbee14a0c277e0dc2c0d480505e1bde8521ae3eaa5cf661d6a8",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-existing-scene-3200-73c5d5b9d172.avif",
+          "bytes": 1508770,
+          "sha256": "73c5d5b9d172db961561767acc9bf53ed29d6b9638362975d3142ff7aefbeebe",
+          "dimensions": [
+            3200,
+            4000
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "a28ddbb8bb028fbee14a0c277e0dc2c0d480505e1bde8521ae3eaa5cf661d6a8",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-existing-scene-3200-a4534ee317cd.jpg",
+          "bytes": 2881467,
+          "sha256": "a4534ee317cdf78f9e181d7ccab15972e5550493da4f18ef52ef1e55ec4fb7ab",
+          "dimensions": [
+            3200,
+            4000
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "a28ddbb8bb028fbee14a0c277e0dc2c0d480505e1bde8521ae3eaa5cf661d6a8",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        }
+      ],
+      "sourceModelDate": null,
+      "sourceQualifications": [
+        "Mixed source dates; not a current surveyed/as-built statement.",
+        "Registered native directional-lighting wrapper is replaced by reviewed Cycles lighting; no WebGL pixel equality claim.",
+        "Original source context masks are baked by the exact pinned native exporter; zero-effective-triangle meshes remain excluded.",
+        "Prior current camera, full native aspect and lighting retained; no image crop or upscaling."
+      ],
+      "creditSidecar": {
+        "url": "gallery/refreshed-20261113/portraits-downtown-existing-credits.txt",
+        "sha256": "cbc920c93594e893e3cb1ed1eb920d1e1900ce22f6fcab8033dea01191b13c5a",
+        "bytes": 1886
+      }
+    },
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "identity": "portraits/downtown-skyline-existing.png",
+      "title": "Downtown",
+      "scenario": "existing",
+      "nativeSceneDimensions": [
+        3240,
+        4050
+      ],
+      "sourceSceneSHA256": "0fd6691734b1e5e537292f717880f45fb1887ae73be22c125385bffa691f5fa4",
+      "renderTimestampUTC": "2026-11-13T06:19:23.922770+00:00",
+      "sourceFreezeState": "FINAL_FROZEN",
+      "historicalURLsRebound": false,
+      "caption": {
+        "title": "Downtown",
+        "area": "Downtown",
+        "creator": "Daniel Sultan",
+        "scenario": "existing",
+        "geographicScope": "named_district_scene",
+        "cityCredit": "City of Mississauga · Ontario data",
+        "openStreetMap": false,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "renderTimestampUTC": "2026-11-13T06:19:23.922770+00:00",
+        "sourceDates": "Current native assembly frozen 13 November 2026. Municipal, planning and photographic source dates vary; existing source limitations remain.",
+        "requiredModelCredits": [],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent model: Daniel Sultan / Future Mississauga. Architecture: IBI Group / Arcadis. City of Mississauga geometry informs placement. Plan and photographic references are credited in sources.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ]
+      },
+      "provenance": {
+        "sceneProof": {
+          "sha256": "48f56f3ee86cd711631d1015c4b2915c5983e1d964e9ee15b764f687b1ba8315"
+        },
+        "creditProof": {
+          "sha256": "2a6c19665b9fe3446b5b8563e3b300329dc90669f3d66c639009d4bbe44b7121"
+        },
+        "renderProof": {
+          "sha256": "ebd7075e461b3e54b2f318909448e9bd940391c35900fcf6b5a550af8a567b07"
+        },
+        "sourceRevision": {
+          "sha256": "d421ae93200787d2c29782fcbf493c58f031633d5968e69d3a77ede43a8744b3"
+        },
+        "importProof": {
+          "sha256": "e4a0eb3e3d4ea05fb1b3d204e5f5f5781ccc556ddcef6f83bd8f5e55f8fb90cf"
+        },
+        "nativeInventory": {
+          "sha256": "0c90821b24cbe4286be5f4fe883d03271ec9de67249440543650962bd915caf8"
+        },
+        "compositionProof": {
+          "sha256": "f957ec57d49eea50bb14cbb8dd2bddc0bfc07fae9bdb01c13f80d9cab1120a43"
+        },
+        "packageScript": {
+          "sha256": "89aa15266caa06b2ee85cac9b44f071bc9a5b7c609681e1c4c2e76ae9f09aa3b"
+        },
+        "footerScript": {
+          "sha256": "231e88e4b98275048bed1ec19fdccae70870b20707d6fad4adfe052cb4d82c94"
+        },
+        "packageContract": {
+          "sha256": "8656dc119c0e91505f719b2e2f4b041142b3b7ae378aab0abd52ff5a91c09771"
+        }
+      },
+      "displayMaster": {
+        "url": "gallery/refreshed-20261113/portraits-downtown-skyline-existing-clean-a4b4b3cfdceb.png",
+        "bytes": 5575115,
+        "sha256": "a4b4b3cfdceb701047d8daf078c9354b099f7587d55441a6e6fa3ecefa82e3ee",
+        "dimensions": [
+          3240,
+          4050
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false
+      },
+      "download": {
+        "url": "gallery/refreshed-20261113/portraits-downtown-skyline-existing-posting-9f44ec5ac8f8.png",
+        "bytes": 5830456,
+        "sha256": "9f44ec5ac8f82c8e420225876d190c062f830ec12a9e3438c04332a8c28ad93b",
+        "dimensions": [
+          3600,
+          4500
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneOnExpandedWhiteCanvas",
+        "sceneBounds": [
+          180,
+          0,
+          3420,
+          4050
+        ],
+        "footerBounds": [
+          0,
+          4050,
+          3600,
+          4500
+        ],
+        "sideMarginsPx": [
+          180,
+          180
+        ],
+        "sceneCrop": false,
+        "sceneResize": false,
+        "sceneOverlay": false,
+        "layoutProofSHA256": "4e780717bc6f50b4dcce3f51a4d30b96338c2768fbd4a28f8441a43b09a262c4",
+        "sceneDimensions": [
+          3240,
+          4050
+        ],
+        "sceneSourceSHA256": "a4b4b3cfdceb701047d8daf078c9354b099f7587d55441a6e6fa3ecefa82e3ee",
+        "allScenePixelsExact": true
+      },
+      "responsivePreviews": [
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-skyline-existing-scene-1200-c52d4c5163e8.avif",
+          "bytes": 64482,
+          "sha256": "c52d4c5163e83f9f480a01cfe93b20316cf750fa4ada4c810264a7cda55dfebb",
+          "dimensions": [
+            1200,
+            1500
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "a4b4b3cfdceb701047d8daf078c9354b099f7587d55441a6e6fa3ecefa82e3ee",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-skyline-existing-scene-1200-bda1507e23e2.jpg",
+          "bytes": 168802,
+          "sha256": "bda1507e23e2901690259198e69001a97c667b8f0e726c36711eaf8ee01ed9dd",
+          "dimensions": [
+            1200,
+            1500
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "a4b4b3cfdceb701047d8daf078c9354b099f7587d55441a6e6fa3ecefa82e3ee",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-skyline-existing-scene-3200-1ba918f13c58.avif",
+          "bytes": 212724,
+          "sha256": "1ba918f13c58dee4a8613ba06b15b3ada57f3fa29552332548ac5fbd97395f2c",
+          "dimensions": [
+            3200,
+            4000
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "a4b4b3cfdceb701047d8daf078c9354b099f7587d55441a6e6fa3ecefa82e3ee",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-skyline-existing-scene-3200-10683ac785b0.jpg",
+          "bytes": 771687,
+          "sha256": "10683ac785b0e998cee538e10c29ca91b57e0dbc089bfe85a9f4c94776c9ca17",
+          "dimensions": [
+            3200,
+            4000
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "a4b4b3cfdceb701047d8daf078c9354b099f7587d55441a6e6fa3ecefa82e3ee",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        }
+      ],
+      "sourceModelDate": null,
+      "sourceQualifications": [
+        "Mixed source dates; not a current surveyed/as-built statement.",
+        "Registered native directional-lighting wrapper is replaced by reviewed Cycles lighting; no WebGL pixel equality claim.",
+        "Original source context masks are baked by the exact pinned native exporter; zero-effective-triangle meshes remain excluded.",
+        "Prior current camera, full native aspect and lighting retained; no image crop or upscaling."
+      ],
+      "creditSidecar": {
+        "url": "gallery/refreshed-20261113/portraits-downtown-skyline-existing-credits.txt",
+        "sha256": "57b9eab1c0446dbfbfb52b4b6221331d66fdb08337a78041878649a2142902ff",
+        "bytes": 1886
+      }
+    },
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "identity": "wide/downtown-skyline-construction.png",
+      "title": "Downtown",
+      "scenario": "construction",
+      "nativeSceneDimensions": [
+        6144,
+        2240
+      ],
+      "sourceSceneSHA256": "0a417a5223db6c1d543f826a49aae8d0bcc4949261a96167ae854719ead3e9b5",
+      "renderTimestampUTC": "2026-11-13T06:20:17.241990+00:00",
+      "sourceFreezeState": "FINAL_FROZEN",
+      "historicalURLsRebound": false,
+      "caption": {
+        "title": "Downtown",
+        "area": "Downtown",
+        "creator": "Daniel Sultan",
+        "scenario": "construction",
+        "geographicScope": "named_district_scene",
+        "cityCredit": "City of Mississauga · Ontario data",
+        "openStreetMap": true,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "renderTimestampUTC": "2026-11-13T06:20:17.241990+00:00",
+        "sourceDates": "Current native assembly frozen 13 November 2026. Municipal, planning and photographic source dates vary; existing source limitations remain.",
+        "requiredModelCredits": [],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "© OpenStreetMap contributors. https://www.openstreetmap.org/copyright",
+          "Design reference: Amacon / Parkside Village. Independent authored model: Daniel Sultan / Future Mississauga. Inherited registration sources include City of Mississauga and OpenStreetMap contributors.",
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent model: Daniel Sultan / Future Mississauga. Architecture: IBI Group / Arcadis. City of Mississauga geometry informs placement. Plan and photographic references are credited in sources.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design/elevation: CORE Architects, March25,2020; official M City floorplans and brochure. Original drawing images remain private.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ]
+      },
+      "provenance": {
+        "sceneProof": {
+          "sha256": "8ff2b86705ac00249b829bfe0b7195cb0179c56d8cd3040b96f0022771002063"
+        },
+        "creditProof": {
+          "sha256": "4f016104c6edb249bd509929a697610f2bde24485a5c7be6126a89120976829c"
+        },
+        "renderProof": {
+          "sha256": "6b1d4503f3354b0234865866e4a94c6ea83f9d8281a577814c795a06aa15af03"
+        },
+        "sourceRevision": {
+          "sha256": "d421ae93200787d2c29782fcbf493c58f031633d5968e69d3a77ede43a8744b3"
+        },
+        "importProof": {
+          "sha256": "8730f879b2dcb1248d6f61eba7abef2e5076f03a39eb8b72e157ef94e906242f"
+        },
+        "nativeInventory": {
+          "sha256": "b981f64ffb9bbef80459181f3b5ed19f02af2be4032a6679482ad9050092688b"
+        },
+        "compositionProof": {
+          "sha256": "73524b80765bdf8d723f6509111c030781a569748c3902cb2295b3a7c9dce2c2"
+        },
+        "packageScript": {
+          "sha256": "89aa15266caa06b2ee85cac9b44f071bc9a5b7c609681e1c4c2e76ae9f09aa3b"
+        },
+        "footerScript": {
+          "sha256": "bcda208cbf7c0002f56eb4cf68b9f3c0b26a0f04ad03422d65a5a8c88ac4c9b6"
+        },
+        "packageContract": {
+          "sha256": "8656dc119c0e91505f719b2e2f4b041142b3b7ae378aab0abd52ff5a91c09771"
+        },
+        "footerWordingRevision": {
+          "sha256": "e7a31fe3ae865a0904207e449a564d9e66fe23733bb1ce554f2502d83768df1a"
+        }
+      },
+      "displayMaster": {
+        "url": "gallery/refreshed-20261113/wide-downtown-skyline-construction-clean-0f7b0987e91d.png",
+        "bytes": 6192002,
+        "sha256": "0f7b0987e91d6cb40b563f90e8ee77e26e37177697d50e83fc9c9adbe61827d8",
+        "dimensions": [
+          6144,
+          2240
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false
+      },
+      "download": {
+        "url": "gallery/refreshed-20261113-v2/wide-downtown-skyline-construction-credited-b42b1e1c26f4.png",
+        "bytes": 5980768,
+        "sha256": "b42b1e1c26f4af4b3d898f81e776b5e74d8f0b32c0cc5cc119755975b507ca7f",
+        "dimensions": [
+          6144,
+          2638
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneWithAppendedCreditFooter",
+        "sceneBounds": [
+          0,
+          0,
+          6144,
+          2240
+        ],
+        "footerBounds": [
+          0,
+          2240,
+          6144,
+          2638
+        ],
+        "sceneCrop": false,
+        "sceneResize": false,
+        "sceneOverlay": false,
+        "sceneDimensions": [
+          6144,
+          2240
+        ],
+        "sceneSourceSHA256": "0f7b0987e91d6cb40b563f90e8ee77e26e37177697d50e83fc9c9adbe61827d8",
+        "allScenePixelsExact": true
+      },
+      "responsivePreviews": [
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-skyline-construction-scene-1200-2da95b4ccc2a.avif",
+          "bytes": 51439,
+          "sha256": "2da95b4ccc2a3e7c2a1f56288f00ce6589990aa9619d63ef5538cde17dc04d2a",
+          "dimensions": [
+            1200,
+            438
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "0f7b0987e91d6cb40b563f90e8ee77e26e37177697d50e83fc9c9adbe61827d8",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-skyline-construction-scene-1200-d2f2734ae658.jpg",
+          "bytes": 94275,
+          "sha256": "d2f2734ae658f8a80848c119b02df2b4d68f126edf3db5797fc696cdcde3d091",
+          "dimensions": [
+            1200,
+            438
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "0f7b0987e91d6cb40b563f90e8ee77e26e37177697d50e83fc9c9adbe61827d8",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-skyline-construction-scene-3200-1ababd5f195f.avif",
+          "bytes": 208866,
+          "sha256": "1ababd5f195f5f5685987d659cf7cd734197039e3b9042e7a29f91113a62f792",
+          "dimensions": [
+            3200,
+            1167
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "0f7b0987e91d6cb40b563f90e8ee77e26e37177697d50e83fc9c9adbe61827d8",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-skyline-construction-scene-3200-0578ff31dea1.jpg",
+          "bytes": 447827,
+          "sha256": "0578ff31dea17a40505e49660c53daaf24eac983d73ee2d776191043adbf699c",
+          "dimensions": [
+            3200,
+            1167
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "0f7b0987e91d6cb40b563f90e8ee77e26e37177697d50e83fc9c9adbe61827d8",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        }
+      ],
+      "presentation": {
+        "kind": "massing-status-preserved-facades",
+        "northDegrees": 268.7042336133343,
+        "legend": [
+          {
+            "label": "Existing",
+            "color": "#b8b9b6"
+          },
+          {
+            "label": "Under construction",
+            "color": "#85b4bf"
+          }
+        ],
+        "qualification": "Presentation override only on identified municipal non-existing massing and exact pinned semantic slots. Existing vertex colours, textures and authored facades preserved. Unknown is never labelled approved.",
+        "materialProofSHA256": "e4efd689f18734aca4666ac35a1eb81ba5fe53136f14d119f0ac68e70f9117ce",
+        "geometrySHA256": "599dbf6cef90ee9ffc2e3bbf195dda865e2df38b053c87aaa09cca9c2e522b7a",
+        "sourceGeometryUnchanged": true,
+        "authoredFacadesPreserved": true
+      },
+      "sourceModelDate": null,
+      "sourceQualifications": [
+        "Mixed source dates; not a current surveyed/as-built statement.",
+        "Registered native directional-lighting wrapper is replaced by reviewed Cycles lighting; no WebGL pixel equality claim.",
+        "Original source context masks are baked by the exact pinned native exporter; zero-effective-triangle meshes remain excluded.",
+        "Prior current camera, full native aspect and lighting retained; no image crop or upscaling."
+      ],
+      "creditSidecar": {
+        "url": "gallery/refreshed-20261113/wide-downtown-skyline-construction-credits.txt",
+        "sha256": "a1ac02cb775817c4f5ae4e530b2681627738ed971394ca6d5c57a5da10d5f87f",
+        "bytes": 2365
+      }
+    },
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "identity": "portraits/downtown-skyline-construction.png",
+      "title": "Downtown",
+      "scenario": "construction",
+      "nativeSceneDimensions": [
+        3240,
+        4050
+      ],
+      "sourceSceneSHA256": "0a417a5223db6c1d543f826a49aae8d0bcc4949261a96167ae854719ead3e9b5",
+      "renderTimestampUTC": "2026-11-13T06:21:06.079656+00:00",
+      "sourceFreezeState": "FINAL_FROZEN",
+      "historicalURLsRebound": false,
+      "caption": {
+        "title": "Downtown",
+        "area": "Downtown",
+        "creator": "Daniel Sultan",
+        "scenario": "construction",
+        "geographicScope": "named_district_scene",
+        "cityCredit": "City of Mississauga · Ontario data",
+        "openStreetMap": true,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "renderTimestampUTC": "2026-11-13T06:21:06.079656+00:00",
+        "sourceDates": "Current native assembly frozen 13 November 2026. Municipal, planning and photographic source dates vary; existing source limitations remain.",
+        "requiredModelCredits": [],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "© OpenStreetMap contributors. https://www.openstreetmap.org/copyright",
+          "Design reference: Amacon / Parkside Village. Independent authored model: Daniel Sultan / Future Mississauga. Inherited registration sources include City of Mississauga and OpenStreetMap contributors.",
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent model: Daniel Sultan / Future Mississauga. Architecture: IBI Group / Arcadis. City of Mississauga geometry informs placement. Plan and photographic references are credited in sources.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design/elevation: CORE Architects, March25,2020; official M City floorplans and brochure. Original drawing images remain private.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ]
+      },
+      "provenance": {
+        "sceneProof": {
+          "sha256": "0a0e20ea2694129cb96fcced36dd07f2b1c3ddd43793102d87c2f7450e029f9a"
+        },
+        "creditProof": {
+          "sha256": "4f016104c6edb249bd509929a697610f2bde24485a5c7be6126a89120976829c"
+        },
+        "renderProof": {
+          "sha256": "4a01e0a944b4faa16fe35ccd6e679891de65bf407ba60843f2db53114ef83792"
+        },
+        "sourceRevision": {
+          "sha256": "d421ae93200787d2c29782fcbf493c58f031633d5968e69d3a77ede43a8744b3"
+        },
+        "importProof": {
+          "sha256": "8730f879b2dcb1248d6f61eba7abef2e5076f03a39eb8b72e157ef94e906242f"
+        },
+        "nativeInventory": {
+          "sha256": "b981f64ffb9bbef80459181f3b5ed19f02af2be4032a6679482ad9050092688b"
+        },
+        "compositionProof": {
+          "sha256": "34438375514e71827e37afbffb7a4e0c13ab4ccd8d6351e23976471b5af3dfe9"
+        },
+        "packageScript": {
+          "sha256": "89aa15266caa06b2ee85cac9b44f071bc9a5b7c609681e1c4c2e76ae9f09aa3b"
+        },
+        "footerScript": {
+          "sha256": "231e88e4b98275048bed1ec19fdccae70870b20707d6fad4adfe052cb4d82c94"
+        },
+        "packageContract": {
+          "sha256": "8656dc119c0e91505f719b2e2f4b041142b3b7ae378aab0abd52ff5a91c09771"
+        }
+      },
+      "displayMaster": {
+        "url": "gallery/refreshed-20261113/portraits-downtown-skyline-construction-clean-bc305e23392a.png",
+        "bytes": 5932131,
+        "sha256": "bc305e23392a9eb802fb72e6e00a1e0049c52cd2df641c44efda551d4eaf0230",
+        "dimensions": [
+          3240,
+          4050
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false
+      },
+      "download": {
+        "url": "gallery/refreshed-20261113/portraits-downtown-skyline-construction-posting-cc96ff8e2efe.png",
+        "bytes": 6188756,
+        "sha256": "cc96ff8e2efe7efd68b91291c4b1d5ecb6357560be54c0d8127a22811255388d",
+        "dimensions": [
+          3600,
+          4500
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneOnExpandedWhiteCanvas",
+        "sceneBounds": [
+          180,
+          0,
+          3420,
+          4050
+        ],
+        "footerBounds": [
+          0,
+          4050,
+          3600,
+          4500
+        ],
+        "sideMarginsPx": [
+          180,
+          180
+        ],
+        "sceneCrop": false,
+        "sceneResize": false,
+        "sceneOverlay": false,
+        "layoutProofSHA256": "31b0a68849d906d034ae22ebefc2b12e54f1bba7b6430d56f10f37e06f1c3a88",
+        "sceneDimensions": [
+          3240,
+          4050
+        ],
+        "sceneSourceSHA256": "bc305e23392a9eb802fb72e6e00a1e0049c52cd2df641c44efda551d4eaf0230",
+        "allScenePixelsExact": true
+      },
+      "responsivePreviews": [
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-skyline-construction-scene-1200-6e8f8b62d5fb.avif",
+          "bytes": 72774,
+          "sha256": "6e8f8b62d5fbfdca5c4188e4f685da1196fca14a2adac5a2428bc71b4451319e",
+          "dimensions": [
+            1200,
+            1500
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "bc305e23392a9eb802fb72e6e00a1e0049c52cd2df641c44efda551d4eaf0230",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-skyline-construction-scene-1200-80f10be5a96b.jpg",
+          "bytes": 186378,
+          "sha256": "80f10be5a96b5a5673d0d531ca0a7f055519c8ae24a5773a5748f70c54468b30",
+          "dimensions": [
+            1200,
+            1500
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "bc305e23392a9eb802fb72e6e00a1e0049c52cd2df641c44efda551d4eaf0230",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-skyline-construction-scene-3200-7b21bc0fa1aa.avif",
+          "bytes": 246364,
+          "sha256": "7b21bc0fa1aa2f57ae71e7d6ac6ded976c7883d993003c0d53ffd32b09c41c7a",
+          "dimensions": [
+            3200,
+            4000
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "bc305e23392a9eb802fb72e6e00a1e0049c52cd2df641c44efda551d4eaf0230",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-skyline-construction-scene-3200-d4989bb1bb4d.jpg",
+          "bytes": 862321,
+          "sha256": "d4989bb1bb4d597002890c65ff01362d641490cd5cc4daf6ab8de8fcebc381d8",
+          "dimensions": [
+            3200,
+            4000
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "bc305e23392a9eb802fb72e6e00a1e0049c52cd2df641c44efda551d4eaf0230",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        }
+      ],
+      "sourceModelDate": null,
+      "sourceQualifications": [
+        "Mixed source dates; not a current surveyed/as-built statement.",
+        "Registered native directional-lighting wrapper is replaced by reviewed Cycles lighting; no WebGL pixel equality claim.",
+        "Original source context masks are baked by the exact pinned native exporter; zero-effective-triangle meshes remain excluded.",
+        "Prior current camera, full native aspect and lighting retained; no image crop or upscaling."
+      ],
+      "creditSidecar": {
+        "url": "gallery/refreshed-20261113/portraits-downtown-skyline-construction-credits.txt",
+        "sha256": "248c911e97993943e941d74cc1cfeabe174fcb4fc83d6a17b5042679347a9792",
+        "bytes": 2365
+      }
+    },
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "identity": "wide/downtown-future.png",
+      "title": "Downtown",
+      "scenario": "future",
+      "nativeSceneDimensions": [
+        6144,
+        3840
+      ],
+      "sourceSceneSHA256": "3d544484d736a756c1d98b10d4f4664841f6b3a51db10a7a3d01df57deb6a871",
+      "renderTimestampUTC": "2026-11-13T06:22:05.282940+00:00",
+      "sourceFreezeState": "FINAL_FROZEN",
+      "historicalURLsRebound": false,
+      "caption": {
+        "title": "Downtown",
+        "area": "Downtown",
+        "creator": "Daniel Sultan",
+        "scenario": "future",
+        "geographicScope": "named_district_scene",
+        "cityCredit": "City of Mississauga · Ontario data",
+        "openStreetMap": true,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "renderTimestampUTC": "2026-11-13T06:22:05.282940+00:00",
+        "sourceDates": "Current native assembly frozen 13 November 2026. Municipal, planning and photographic source dates vary; existing source limitations remain.",
+        "requiredModelCredits": [],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "© OpenStreetMap contributors. https://www.openstreetmap.org/copyright",
+          "Design reference: Amacon / Parkside Village. Independent authored model: Daniel Sultan / Future Mississauga. Inherited registration sources include City of Mississauga and OpenStreetMap contributors.",
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent model: Daniel Sultan / Future Mississauga. Architecture: IBI Group / Arcadis. City of Mississauga geometry informs placement. Plan and photographic references are credited in sources.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design/elevation: CORE Architects, March25,2020; official M City floorplans and brochure. Original drawing images remain private.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design: IBI Group / Arcadis. Design references: M City and Urban Capital.",
+          "Architectural design: Hariri Pontarini Architects. Model: Future Mississauga / Daniel Sultan. City of Mississauga reference placement.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ]
+      },
+      "provenance": {
+        "sceneProof": {
+          "sha256": "071ef54e34365032dd628ae8770dc472883099cb69a348cb0ae78795f9280d40"
+        },
+        "creditProof": {
+          "sha256": "b48720da7bcad09c59862db5b8a7411576700ec3566ff60963b126ed4dd251d0"
+        },
+        "renderProof": {
+          "sha256": "f5e351ec0acec9a02fb1f05ab7f2df8214e77634862d2484e54a70b7c432c2b5"
+        },
+        "sourceRevision": {
+          "sha256": "d421ae93200787d2c29782fcbf493c58f031633d5968e69d3a77ede43a8744b3"
+        },
+        "importProof": {
+          "sha256": "0bc31e477fa2adf581b8cfa9b62072af9ac95ed7c8f8da581de1088a278d74b7"
+        },
+        "nativeInventory": {
+          "sha256": "e9b072bfc2c191b5c8ea198babde6b3b206f0a297012044432ed8c45791f869d"
+        },
+        "compositionProof": {
+          "sha256": "c66c59622be46cf589623874967248165386f5f9696dd5e88f6558de88ef1712"
+        },
+        "packageScript": {
+          "sha256": "89aa15266caa06b2ee85cac9b44f071bc9a5b7c609681e1c4c2e76ae9f09aa3b"
+        },
+        "footerScript": {
+          "sha256": "bcda208cbf7c0002f56eb4cf68b9f3c0b26a0f04ad03422d65a5a8c88ac4c9b6"
+        },
+        "packageContract": {
+          "sha256": "8656dc119c0e91505f719b2e2f4b041142b3b7ae378aab0abd52ff5a91c09771"
+        },
+        "footerWordingRevision": {
+          "sha256": "e7a31fe3ae865a0904207e449a564d9e66fe23733bb1ce554f2502d83768df1a"
+        }
+      },
+      "displayMaster": {
+        "url": "gallery/refreshed-20261113/wide-downtown-future-clean-04f83b2d5178.png",
+        "bytes": 26072259,
+        "sha256": "04f83b2d517813b828dd28d82f62c8b09f1d50ea5dd8b6d291649b263c911dab",
+        "dimensions": [
+          6144,
+          3840
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false
+      },
+      "download": {
+        "url": "gallery/refreshed-20261113-v2/wide-downtown-future-credited-ecaff991b1a0.png",
+        "bytes": 25315089,
+        "sha256": "ecaff991b1a0b4a0d7c980a3cc0530310a86e77b0a20a2c1470f2a2eae9510da",
+        "dimensions": [
+          6144,
+          4238
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneWithAppendedCreditFooter",
+        "sceneBounds": [
+          0,
+          0,
+          6144,
+          3840
+        ],
+        "footerBounds": [
+          0,
+          3840,
+          6144,
+          4238
+        ],
+        "sceneCrop": false,
+        "sceneResize": false,
+        "sceneOverlay": false,
+        "sceneDimensions": [
+          6144,
+          3840
+        ],
+        "sceneSourceSHA256": "04f83b2d517813b828dd28d82f62c8b09f1d50ea5dd8b6d291649b263c911dab",
+        "allScenePixelsExact": true
+      },
+      "responsivePreviews": [
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-future-scene-1200-f5a56254692c.avif",
+          "bytes": 229564,
+          "sha256": "f5a56254692cd4172e98f9b43530dacc323fc209b44247547403cbf0b2553904",
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "04f83b2d517813b828dd28d82f62c8b09f1d50ea5dd8b6d291649b263c911dab",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-future-scene-1200-be2c5d7bc541.jpg",
+          "bytes": 370296,
+          "sha256": "be2c5d7bc541ad582b8fc17831679271804144e217709d4b9b240b76723c75c1",
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "04f83b2d517813b828dd28d82f62c8b09f1d50ea5dd8b6d291649b263c911dab",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-future-scene-3200-e214d63649b3.avif",
+          "bytes": 1041736,
+          "sha256": "e214d63649b3a47dcab189351fb45c735dd4bad7977d4eab636eea36cdbb0f3e",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "04f83b2d517813b828dd28d82f62c8b09f1d50ea5dd8b6d291649b263c911dab",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-future-scene-3200-c5ee1bca3dfd.jpg",
+          "bytes": 1895140,
+          "sha256": "c5ee1bca3dfd784112846d53689ae97c15f82baa032163214ea188bbdb7f4396",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "04f83b2d517813b828dd28d82f62c8b09f1d50ea5dd8b6d291649b263c911dab",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        }
+      ],
+      "presentation": {
+        "kind": "massing-status-preserved-facades",
+        "northDegrees": 66.08264806109014,
+        "legend": [
+          {
+            "label": "Existing",
+            "color": "#b8b9b6"
+          },
+          {
+            "label": "Under construction",
+            "color": "#85b4bf"
+          },
+          {
+            "label": "Proposed",
+            "color": "#d8b7ac"
+          },
+          {
+            "label": "Status unverified",
+            "color": "#b89bc3"
+          }
+        ],
+        "qualification": "Presentation override only on identified municipal non-existing massing and exact pinned semantic slots. Existing vertex colours, textures and authored facades preserved. Unknown is never labelled approved.",
+        "materialProofSHA256": "14670a9daebf98a44d4e4b40952b6ee87c86e0e07304cda31ee5e84d1185b170",
+        "geometrySHA256": "34343fa7923f38de7b8f700bc02d6fae1bcf5fc6f565485188ac49d9f150e8d5",
+        "sourceGeometryUnchanged": true,
+        "authoredFacadesPreserved": true
+      },
+      "sourceModelDate": null,
+      "sourceQualifications": [
+        "Mixed source dates; not a current surveyed/as-built statement.",
+        "Registered native directional-lighting wrapper is replaced by reviewed Cycles lighting; no WebGL pixel equality claim.",
+        "Original source context masks are baked by the exact pinned native exporter; zero-effective-triangle meshes remain excluded.",
+        "Prior current camera, full native aspect and lighting retained; no image crop or upscaling."
+      ],
+      "creditSidecar": {
+        "url": "gallery/refreshed-20261113/wide-downtown-future-credits.txt",
+        "sha256": "b0040912b20e3e9ac3f79cd8437e044df9c4fa8ee47924a8d925cca09e27856f",
+        "bytes": 2652
+      }
+    },
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "identity": "wide/downtown-skyline-future.png",
+      "title": "Downtown",
+      "scenario": "future",
+      "nativeSceneDimensions": [
+        6144,
+        2240
+      ],
+      "sourceSceneSHA256": "3d544484d736a756c1d98b10d4f4664841f6b3a51db10a7a3d01df57deb6a871",
+      "renderTimestampUTC": "2026-11-13T07:12:05.024093+00:00",
+      "sourceFreezeState": "FINAL_FROZEN",
+      "historicalURLsRebound": false,
+      "caption": {
+        "title": "Downtown",
+        "area": "Downtown",
+        "creator": "Daniel Sultan",
+        "scenario": "future",
+        "geographicScope": "named_district_scene",
+        "cityCredit": "City of Mississauga · Ontario data",
+        "openStreetMap": true,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "renderTimestampUTC": "2026-11-13T07:12:05.024093+00:00",
+        "sourceDates": "Current native assembly frozen 13 November 2026. Municipal, planning and photographic source dates vary; existing source limitations remain.",
+        "requiredModelCredits": [],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "© OpenStreetMap contributors. https://www.openstreetmap.org/copyright",
+          "Design reference: Amacon / Parkside Village. Independent authored model: Daniel Sultan / Future Mississauga. Inherited registration sources include City of Mississauga and OpenStreetMap contributors.",
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent model: Daniel Sultan / Future Mississauga. Architecture: IBI Group / Arcadis. City of Mississauga geometry informs placement. Plan and photographic references are credited in sources.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design/elevation: CORE Architects, March25,2020; official M City floorplans and brochure. Original drawing images remain private.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design: IBI Group / Arcadis. Design references: M City and Urban Capital.",
+          "Architectural design: Hariri Pontarini Architects. Model: Future Mississauga / Daniel Sultan. City of Mississauga reference placement.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ]
+      },
+      "provenance": {
+        "sceneProof": {
+          "sha256": "380f8e8a21e39c5e3d80aa732d09cfbf0fbcd68fce01d50cbdee4b80f77b51b2"
+        },
+        "creditProof": {
+          "sha256": "b48720da7bcad09c59862db5b8a7411576700ec3566ff60963b126ed4dd251d0"
+        },
+        "renderProof": {
+          "sha256": "f5e351ec0acec9a02fb1f05ab7f2df8214e77634862d2484e54a70b7c432c2b5"
+        },
+        "sourceRevision": {
+          "sha256": "d421ae93200787d2c29782fcbf493c58f031633d5968e69d3a77ede43a8744b3"
+        },
+        "importProof": {
+          "sha256": "0bc31e477fa2adf581b8cfa9b62072af9ac95ed7c8f8da581de1088a278d74b7"
+        },
+        "nativeInventory": {
+          "sha256": "e9b072bfc2c191b5c8ea198babde6b3b206f0a297012044432ed8c45791f869d"
+        },
+        "compositionProof": {
+          "sha256": "24b386e6298b4bab5ffc24f8220e29e1cc98c5668ed6f723e5dd67cffc8eae66"
+        },
+        "packageScript": {
+          "sha256": "89aa15266caa06b2ee85cac9b44f071bc9a5b7c609681e1c4c2e76ae9f09aa3b"
+        },
+        "footerScript": {
+          "sha256": "bcda208cbf7c0002f56eb4cf68b9f3c0b26a0f04ad03422d65a5a8c88ac4c9b6"
+        },
+        "packageContract": {
+          "sha256": "8656dc119c0e91505f719b2e2f4b041142b3b7ae378aab0abd52ff5a91c09771"
+        },
+        "footerWordingRevision": {
+          "sha256": "e7a31fe3ae865a0904207e449a564d9e66fe23733bb1ce554f2502d83768df1a"
+        }
+      },
+      "displayMaster": {
+        "url": "gallery/refreshed-20261113/wide-downtown-skyline-future-clean-05521e6aba78.png",
+        "bytes": 6414936,
+        "sha256": "05521e6aba784781fce20b6e4d3e5b8dd6ded74840c814b1e3337231bf803348",
+        "dimensions": [
+          6144,
+          2240
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false
+      },
+      "download": {
+        "url": "gallery/refreshed-20261113-v2/wide-downtown-skyline-future-credited-a54f0bb5a557.png",
+        "bytes": 6195650,
+        "sha256": "a54f0bb5a557281a607504d2d64de285dd3799d3585a67f50ec272b4f24f3d53",
+        "dimensions": [
+          6144,
+          2638
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneWithAppendedCreditFooter",
+        "sceneBounds": [
+          0,
+          0,
+          6144,
+          2240
+        ],
+        "footerBounds": [
+          0,
+          2240,
+          6144,
+          2638
+        ],
+        "sceneCrop": false,
+        "sceneResize": false,
+        "sceneOverlay": false,
+        "sceneDimensions": [
+          6144,
+          2240
+        ],
+        "sceneSourceSHA256": "05521e6aba784781fce20b6e4d3e5b8dd6ded74840c814b1e3337231bf803348",
+        "allScenePixelsExact": true
+      },
+      "responsivePreviews": [
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-skyline-future-scene-1200-1643ba7040d2.avif",
+          "bytes": 52728,
+          "sha256": "1643ba7040d21f0830005b56f0159c8afb976b45668f7d4cbeae2ce80072189f",
+          "dimensions": [
+            1200,
+            438
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "05521e6aba784781fce20b6e4d3e5b8dd6ded74840c814b1e3337231bf803348",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-skyline-future-scene-1200-ad55f7990db5.jpg",
+          "bytes": 97659,
+          "sha256": "ad55f7990db5258f33c4fb504c43376c3f0384903965ef7db5e7cf4c2d9d66d3",
+          "dimensions": [
+            1200,
+            438
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "05521e6aba784781fce20b6e4d3e5b8dd6ded74840c814b1e3337231bf803348",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-skyline-future-scene-3200-e5f5dd37e7b7.avif",
+          "bytes": 213113,
+          "sha256": "e5f5dd37e7b7c07952dd4bd6356a5f8772cb8b021c245b06cdf248cada9ba6e6",
+          "dimensions": [
+            3200,
+            1167
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "05521e6aba784781fce20b6e4d3e5b8dd6ded74840c814b1e3337231bf803348",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-skyline-future-scene-3200-7681e893e193.jpg",
+          "bytes": 460176,
+          "sha256": "7681e893e193dda82e8e333ead220c9f9ce9ead62a68ed34ea37d3871d4e1297",
+          "dimensions": [
+            3200,
+            1167
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "05521e6aba784781fce20b6e4d3e5b8dd6ded74840c814b1e3337231bf803348",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        }
+      ],
+      "presentation": {
+        "kind": "massing-status-preserved-facades",
+        "northDegrees": 268.7042336133343,
+        "legend": [
+          {
+            "label": "Existing",
+            "color": "#b8b9b6"
+          },
+          {
+            "label": "Under construction",
+            "color": "#85b4bf"
+          },
+          {
+            "label": "Proposed",
+            "color": "#d8b7ac"
+          },
+          {
+            "label": "Status unverified",
+            "color": "#b89bc3"
+          }
+        ],
+        "qualification": "Presentation override only on identified municipal non-existing massing and exact pinned semantic slots. Existing vertex colours, textures and authored facades preserved. Unknown is never labelled approved.",
+        "materialProofSHA256": "14670a9daebf98a44d4e4b40952b6ee87c86e0e07304cda31ee5e84d1185b170",
+        "geometrySHA256": "34343fa7923f38de7b8f700bc02d6fae1bcf5fc6f565485188ac49d9f150e8d5",
+        "sourceGeometryUnchanged": true,
+        "authoredFacadesPreserved": true
+      },
+      "sourceModelDate": null,
+      "sourceQualifications": [
+        "Mixed source dates; not a current surveyed/as-built statement.",
+        "Registered native directional-lighting wrapper is replaced by reviewed Cycles lighting; no WebGL pixel equality claim.",
+        "Original source context masks are baked by the exact pinned native exporter; zero-effective-triangle meshes remain excluded.",
+        "Prior current camera, full native aspect and lighting retained; no image crop or upscaling."
+      ],
+      "creditSidecar": {
+        "url": "gallery/refreshed-20261113/wide-downtown-skyline-future-credits.txt",
+        "sha256": "e26041028733382de4ba56eb1059e4605fafce4d8f4440d8edbe5c208995fdfc",
+        "bytes": 2652
+      }
+    },
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "identity": "portraits/downtown-future.png",
+      "title": "Downtown",
+      "scenario": "future",
+      "nativeSceneDimensions": [
+        3240,
+        4050
+      ],
+      "sourceSceneSHA256": "3d544484d736a756c1d98b10d4f4664841f6b3a51db10a7a3d01df57deb6a871",
+      "renderTimestampUTC": "2026-11-13T08:23:59.449568+00:00",
+      "sourceFreezeState": "FINAL_FROZEN",
+      "historicalURLsRebound": false,
+      "caption": {
+        "title": "Downtown",
+        "area": "Downtown",
+        "creator": "Daniel Sultan",
+        "scenario": "future",
+        "geographicScope": "named_district_scene",
+        "cityCredit": "City of Mississauga · Ontario data",
+        "openStreetMap": true,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "renderTimestampUTC": "2026-11-13T08:23:59.449568+00:00",
+        "sourceDates": "Current native assembly frozen 13 November 2026. Municipal, planning and photographic source dates vary; existing source limitations remain.",
+        "requiredModelCredits": [],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "© OpenStreetMap contributors. https://www.openstreetmap.org/copyright",
+          "Design reference: Amacon / Parkside Village. Independent authored model: Daniel Sultan / Future Mississauga. Inherited registration sources include City of Mississauga and OpenStreetMap contributors.",
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent model: Daniel Sultan / Future Mississauga. Architecture: IBI Group / Arcadis. City of Mississauga geometry informs placement. Plan and photographic references are credited in sources.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design/elevation: CORE Architects, March25,2020; official M City floorplans and brochure. Original drawing images remain private.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design: IBI Group / Arcadis. Design references: M City and Urban Capital.",
+          "Architectural design: Hariri Pontarini Architects. Model: Future Mississauga / Daniel Sultan. City of Mississauga reference placement.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ]
+      },
+      "provenance": {
+        "sceneProof": {
+          "sha256": "37b8a23e2fd34513aea1457fcc0ddc8ea56778ff83aeb2071e84e3011f3627af"
+        },
+        "creditProof": {
+          "sha256": "b48720da7bcad09c59862db5b8a7411576700ec3566ff60963b126ed4dd251d0"
+        },
+        "renderProof": {
+          "sha256": "ee46a7ace55898ce4023b54803f588b99862dea3786085433ab354f7e654fab8"
+        },
+        "sourceRevision": {
+          "sha256": "d421ae93200787d2c29782fcbf493c58f031633d5968e69d3a77ede43a8744b3"
+        },
+        "importProof": {
+          "sha256": "0bc31e477fa2adf581b8cfa9b62072af9ac95ed7c8f8da581de1088a278d74b7"
+        },
+        "nativeInventory": {
+          "sha256": "e9b072bfc2c191b5c8ea198babde6b3b206f0a297012044432ed8c45791f869d"
+        },
+        "compositionProof": {
+          "sha256": "04f4a93d0b42be610224fa9d27bb5728212a489c6a253b0256d5e2b42a936493"
+        },
+        "packageScript": {
+          "sha256": "89aa15266caa06b2ee85cac9b44f071bc9a5b7c609681e1c4c2e76ae9f09aa3b"
+        },
+        "footerScript": {
+          "sha256": "231e88e4b98275048bed1ec19fdccae70870b20707d6fad4adfe052cb4d82c94"
+        },
+        "packageContract": {
+          "sha256": "8656dc119c0e91505f719b2e2f4b041142b3b7ae378aab0abd52ff5a91c09771"
+        }
+      },
+      "displayMaster": {
+        "url": "gallery/refreshed-20261113/portraits-downtown-future-clean-791d839b2945.png",
+        "bytes": 15399160,
+        "sha256": "791d839b294563a42f8c32ae2856523fcb8d22fe6e3b9bcb36c17946e4821846",
+        "dimensions": [
+          3240,
+          4050
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false
+      },
+      "download": {
+        "url": "gallery/refreshed-20261113/portraits-downtown-future-posting-3ee000d59f13.png",
+        "bytes": 15587712,
+        "sha256": "3ee000d59f13ee29fb0bda46457e8cb356f0aeba6c0b1f87aaa6e2e4ee715700",
+        "dimensions": [
+          3600,
+          4500
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneOnExpandedWhiteCanvas",
+        "sceneBounds": [
+          180,
+          0,
+          3420,
+          4050
+        ],
+        "footerBounds": [
+          0,
+          4050,
+          3600,
+          4500
+        ],
+        "sideMarginsPx": [
+          180,
+          180
+        ],
+        "sceneCrop": false,
+        "sceneResize": false,
+        "sceneOverlay": false,
+        "layoutProofSHA256": "51746e57fb2aca71af6452b78d06f51a8f632a98f8116e14eb8ea46abad61adb",
+        "sceneDimensions": [
+          3240,
+          4050
+        ],
+        "sceneSourceSHA256": "791d839b294563a42f8c32ae2856523fcb8d22fe6e3b9bcb36c17946e4821846",
+        "allScenePixelsExact": true
+      },
+      "responsivePreviews": [
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-future-scene-1200-7862ff593f23.avif",
+          "bytes": 392784,
+          "sha256": "7862ff593f239dc8261eba2b4b2cd4063c17682e86630043df103e3d1459b395",
+          "dimensions": [
+            1200,
+            1500
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "791d839b294563a42f8c32ae2856523fcb8d22fe6e3b9bcb36c17946e4821846",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-future-scene-1200-077872fff8dc.jpg",
+          "bytes": 636877,
+          "sha256": "077872fff8dc5291065828289e6916062ea83a5aedd8b28c9f1b9b97fed7bb83",
+          "dimensions": [
+            1200,
+            1500
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "791d839b294563a42f8c32ae2856523fcb8d22fe6e3b9bcb36c17946e4821846",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-future-scene-3200-99f95bfbed13.avif",
+          "bytes": 1550319,
+          "sha256": "99f95bfbed1340ad1543d4a1007b903f48cbf0655c4e380f7347f368c0600ed3",
+          "dimensions": [
+            3200,
+            4000
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "791d839b294563a42f8c32ae2856523fcb8d22fe6e3b9bcb36c17946e4821846",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-future-scene-3200-88c2c5ae5144.jpg",
+          "bytes": 2963012,
+          "sha256": "88c2c5ae51449c1c6e5705925b8542589b61a0dc7642dfb3b8821db7c433bd1e",
+          "dimensions": [
+            3200,
+            4000
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "791d839b294563a42f8c32ae2856523fcb8d22fe6e3b9bcb36c17946e4821846",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        }
+      ],
+      "sourceModelDate": null,
+      "sourceQualifications": [
+        "Mixed source dates; not a current surveyed/as-built statement.",
+        "Registered native directional-lighting wrapper is replaced by reviewed Cycles lighting; no WebGL pixel equality claim.",
+        "Original source context masks are baked by the exact pinned native exporter; zero-effective-triangle meshes remain excluded.",
+        "Prior current camera, full native aspect and lighting retained; no image crop or upscaling."
+      ],
+      "creditSidecar": {
+        "url": "gallery/refreshed-20261113/portraits-downtown-future-credits.txt",
+        "sha256": "dbba5d6ca633ffc6890437b96b9eefce75480fbd34d7822e46e2bb8a72230c08",
+        "bytes": 2652
+      }
+    },
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "identity": "portraits/downtown-skyline-future.png",
+      "title": "Downtown",
+      "scenario": "future",
+      "nativeSceneDimensions": [
+        3240,
+        4050
+      ],
+      "sourceSceneSHA256": "3d544484d736a756c1d98b10d4f4664841f6b3a51db10a7a3d01df57deb6a871",
+      "renderTimestampUTC": "2026-11-13T09:19:48.975595+00:00",
+      "sourceFreezeState": "FINAL_FROZEN",
+      "historicalURLsRebound": false,
+      "caption": {
+        "title": "Downtown",
+        "area": "Downtown",
+        "creator": "Daniel Sultan",
+        "scenario": "future",
+        "geographicScope": "named_district_scene",
+        "cityCredit": "City of Mississauga · Ontario data",
+        "openStreetMap": true,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "renderTimestampUTC": "2026-11-13T09:19:48.975595+00:00",
+        "sourceDates": "Current native assembly frozen 13 November 2026. Municipal, planning and photographic source dates vary; existing source limitations remain.",
+        "requiredModelCredits": [],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "© OpenStreetMap contributors. https://www.openstreetmap.org/copyright",
+          "Design reference: Amacon / Parkside Village. Independent authored model: Daniel Sultan / Future Mississauga. Inherited registration sources include City of Mississauga and OpenStreetMap contributors.",
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent model: Daniel Sultan / Future Mississauga. Architecture: IBI Group / Arcadis. City of Mississauga geometry informs placement. Plan and photographic references are credited in sources.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design/elevation: CORE Architects, March25,2020; official M City floorplans and brochure. Original drawing images remain private.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design: IBI Group / Arcadis. Design references: M City and Urban Capital.",
+          "Architectural design: Hariri Pontarini Architects. Model: Future Mississauga / Daniel Sultan. City of Mississauga reference placement.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ]
+      },
+      "provenance": {
+        "sceneProof": {
+          "sha256": "5d920c2a9e3c866c9188bd6a6c21a29ba83b0c72bfecc4de1374f98261512c98"
+        },
+        "creditProof": {
+          "sha256": "b48720da7bcad09c59862db5b8a7411576700ec3566ff60963b126ed4dd251d0"
+        },
+        "renderProof": {
+          "sha256": "ee46a7ace55898ce4023b54803f588b99862dea3786085433ab354f7e654fab8"
+        },
+        "sourceRevision": {
+          "sha256": "d421ae93200787d2c29782fcbf493c58f031633d5968e69d3a77ede43a8744b3"
+        },
+        "importProof": {
+          "sha256": "0bc31e477fa2adf581b8cfa9b62072af9ac95ed7c8f8da581de1088a278d74b7"
+        },
+        "nativeInventory": {
+          "sha256": "e9b072bfc2c191b5c8ea198babde6b3b206f0a297012044432ed8c45791f869d"
+        },
+        "compositionProof": {
+          "sha256": "7a0f1e8baf1786feb4fab744a3d64816eaec211200e511198b0d1f8f943e07d5"
+        },
+        "packageScript": {
+          "sha256": "89aa15266caa06b2ee85cac9b44f071bc9a5b7c609681e1c4c2e76ae9f09aa3b"
+        },
+        "footerScript": {
+          "sha256": "231e88e4b98275048bed1ec19fdccae70870b20707d6fad4adfe052cb4d82c94"
+        },
+        "packageContract": {
+          "sha256": "8656dc119c0e91505f719b2e2f4b041142b3b7ae378aab0abd52ff5a91c09771"
+        }
+      },
+      "displayMaster": {
+        "url": "gallery/refreshed-20261113/portraits-downtown-skyline-future-clean-db496bce27be.png",
+        "bytes": 6390047,
+        "sha256": "db496bce27beb11afcdc871de61af6c566bebe10354c189b773278e3aeed527f",
+        "dimensions": [
+          3240,
+          4050
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false
+      },
+      "download": {
+        "url": "gallery/refreshed-20261113/portraits-downtown-skyline-future-posting-1ccfc7b703f5.png",
+        "bytes": 6658747,
+        "sha256": "1ccfc7b703f586579c4063c7e4efc3344422af8de3f73770d46547b322d27c1b",
+        "dimensions": [
+          3600,
+          4500
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneOnExpandedWhiteCanvas",
+        "sceneBounds": [
+          180,
+          0,
+          3420,
+          4050
+        ],
+        "footerBounds": [
+          0,
+          4050,
+          3600,
+          4500
+        ],
+        "sideMarginsPx": [
+          180,
+          180
+        ],
+        "sceneCrop": false,
+        "sceneResize": false,
+        "sceneOverlay": false,
+        "layoutProofSHA256": "138a35fc4e7b9b906b8b4084403dce87fcadf4fa6916bcf684bebeb4e82ef9e2",
+        "sceneDimensions": [
+          3240,
+          4050
+        ],
+        "sceneSourceSHA256": "db496bce27beb11afcdc871de61af6c566bebe10354c189b773278e3aeed527f",
+        "allScenePixelsExact": true
+      },
+      "responsivePreviews": [
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-skyline-future-scene-1200-986f6b5e242e.avif",
+          "bytes": 79740,
+          "sha256": "986f6b5e242eb7c2a42a42dc9944ba78d9c60f20dee1f755e39d797ea3d36498",
+          "dimensions": [
+            1200,
+            1500
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "db496bce27beb11afcdc871de61af6c566bebe10354c189b773278e3aeed527f",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-skyline-future-scene-1200-d1dd58b09d9d.jpg",
+          "bytes": 200749,
+          "sha256": "d1dd58b09d9deb57fc2246086bc50745340bdee1da96a6c70dc8852f88f94905",
+          "dimensions": [
+            1200,
+            1500
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "db496bce27beb11afcdc871de61af6c566bebe10354c189b773278e3aeed527f",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-skyline-future-scene-3200-64690df33160.avif",
+          "bytes": 288325,
+          "sha256": "64690df33160e884f83a37a3d0cd5eacdbbed0e8eb53999b232d9d8664edae3d",
+          "dimensions": [
+            3200,
+            4000
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "db496bce27beb11afcdc871de61af6c566bebe10354c189b773278e3aeed527f",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-skyline-future-scene-3200-43fc8785df76.jpg",
+          "bytes": 946472,
+          "sha256": "43fc8785df76f8058951f15fb4a127cdfb98898be69ada574fc4c0b8739ea6f5",
+          "dimensions": [
+            3200,
+            4000
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "db496bce27beb11afcdc871de61af6c566bebe10354c189b773278e3aeed527f",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        }
+      ],
+      "sourceModelDate": null,
+      "sourceQualifications": [
+        "Mixed source dates; not a current surveyed/as-built statement.",
+        "Registered native directional-lighting wrapper is replaced by reviewed Cycles lighting; no WebGL pixel equality claim.",
+        "Original source context masks are baked by the exact pinned native exporter; zero-effective-triangle meshes remain excluded.",
+        "Prior current camera, full native aspect and lighting retained; no image crop or upscaling."
+      ],
+      "creditSidecar": {
+        "url": "gallery/refreshed-20261113/portraits-downtown-skyline-future-credits.txt",
+        "sha256": "e1dc6ba963013a01562c1958652c74950e3ae36f2cb56b740542ef9808146942",
+        "bytes": 2652
+      }
+    },
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "identity": "wide/downtown-landmark-future.png",
+      "title": "Downtown",
+      "scenario": "future",
+      "nativeSceneDimensions": [
+        6144,
+        3840
+      ],
+      "sourceSceneSHA256": "3d544484d736a756c1d98b10d4f4664841f6b3a51db10a7a3d01df57deb6a871",
+      "renderTimestampUTC": "2026-11-13T10:59:31.038515+00:00",
+      "sourceFreezeState": "FINAL_FROZEN",
+      "historicalURLsRebound": false,
+      "caption": {
+        "title": "Downtown",
+        "area": "Downtown",
+        "creator": "Daniel Sultan",
+        "scenario": "future",
+        "geographicScope": "named_district_scene",
+        "cityCredit": "City of Mississauga · Ontario data",
+        "openStreetMap": true,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "renderTimestampUTC": "2026-11-13T10:59:31.038515+00:00",
+        "sourceDates": "Current native assembly frozen 13 November 2026. Municipal, planning and photographic source dates vary; existing source limitations remain.",
+        "requiredModelCredits": [],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "© OpenStreetMap contributors. https://www.openstreetmap.org/copyright",
+          "Design reference: Amacon / Parkside Village. Independent authored model: Daniel Sultan / Future Mississauga. Inherited registration sources include City of Mississauga and OpenStreetMap contributors.",
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent model: Daniel Sultan / Future Mississauga. Architecture: IBI Group / Arcadis. City of Mississauga geometry informs placement. Plan and photographic references are credited in sources.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design/elevation: CORE Architects, March25,2020; official M City floorplans and brochure. Original drawing images remain private.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design: IBI Group / Arcadis. Design references: M City and Urban Capital.",
+          "Architectural design: Hariri Pontarini Architects. Model: Future Mississauga / Daniel Sultan. City of Mississauga reference placement.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ]
+      },
+      "provenance": {
+        "sceneProof": {
+          "sha256": "16f11cdeafb1899ea3debd86acd1dabff0fa9fc1b18a2772494cbd8b694d0cdb"
+        },
+        "creditProof": {
+          "sha256": "b48720da7bcad09c59862db5b8a7411576700ec3566ff60963b126ed4dd251d0"
+        },
+        "renderProof": {
+          "sha256": "ee46a7ace55898ce4023b54803f588b99862dea3786085433ab354f7e654fab8"
+        },
+        "sourceRevision": {
+          "sha256": "d421ae93200787d2c29782fcbf493c58f031633d5968e69d3a77ede43a8744b3"
+        },
+        "importProof": {
+          "sha256": "0bc31e477fa2adf581b8cfa9b62072af9ac95ed7c8f8da581de1088a278d74b7"
+        },
+        "nativeInventory": {
+          "sha256": "e9b072bfc2c191b5c8ea198babde6b3b206f0a297012044432ed8c45791f869d"
+        },
+        "compositionProof": {
+          "sha256": "3e7a808878c524fa1da170e3c4739e523b1b910ba9319a23143d68cd8a8ba15d"
+        },
+        "packageScript": {
+          "sha256": "89aa15266caa06b2ee85cac9b44f071bc9a5b7c609681e1c4c2e76ae9f09aa3b"
+        },
+        "footerScript": {
+          "sha256": "bcda208cbf7c0002f56eb4cf68b9f3c0b26a0f04ad03422d65a5a8c88ac4c9b6"
+        },
+        "packageContract": {
+          "sha256": "8656dc119c0e91505f719b2e2f4b041142b3b7ae378aab0abd52ff5a91c09771"
+        },
+        "footerWordingRevision": {
+          "sha256": "e7a31fe3ae865a0904207e449a564d9e66fe23733bb1ce554f2502d83768df1a"
+        }
+      },
+      "displayMaster": {
+        "url": "gallery/refreshed-20261113/wide-downtown-landmark-future-clean-79da5e33dfcc.png",
+        "bytes": 21017345,
+        "sha256": "79da5e33dfcc21dd8ad56a360b6ff9c3df87a233c2d17430688f8cf949d50268",
+        "dimensions": [
+          6144,
+          3840
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false
+      },
+      "download": {
+        "url": "gallery/refreshed-20261113-v2/wide-downtown-landmark-future-credited-68455c6ed5e1.png",
+        "bytes": 19911662,
+        "sha256": "68455c6ed5e1367b7207d422e1460f6290a5d20dedd27579190d618de8ea3c02",
+        "dimensions": [
+          6144,
+          4238
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneWithAppendedCreditFooter",
+        "sceneBounds": [
+          0,
+          0,
+          6144,
+          3840
+        ],
+        "footerBounds": [
+          0,
+          3840,
+          6144,
+          4238
+        ],
+        "sceneCrop": false,
+        "sceneResize": false,
+        "sceneOverlay": false,
+        "sceneDimensions": [
+          6144,
+          3840
+        ],
+        "sceneSourceSHA256": "79da5e33dfcc21dd8ad56a360b6ff9c3df87a233c2d17430688f8cf949d50268",
+        "allScenePixelsExact": true
+      },
+      "responsivePreviews": [
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-landmark-future-scene-1200-7cce5fbb9cf9.avif",
+          "bytes": 134208,
+          "sha256": "7cce5fbb9cf9a9fead4713107422d4d47b4d36dcbb510ca2c99728db6628aea9",
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "79da5e33dfcc21dd8ad56a360b6ff9c3df87a233c2d17430688f8cf949d50268",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-landmark-future-scene-1200-360a8744297b.jpg",
+          "bytes": 242947,
+          "sha256": "360a8744297be8653cf120d38b681d2eb1afd52502bc9b1470afaf2d98ba5a79",
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "79da5e33dfcc21dd8ad56a360b6ff9c3df87a233c2d17430688f8cf949d50268",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-landmark-future-scene-3200-82150cdd9677.avif",
+          "bytes": 509082,
+          "sha256": "82150cdd96775b4b6fe51e7c9ef3539380fd44bd63698655bbd210cc73fa423a",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "79da5e33dfcc21dd8ad56a360b6ff9c3df87a233c2d17430688f8cf949d50268",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-landmark-future-scene-3200-861b6e12b371.jpg",
+          "bytes": 1112814,
+          "sha256": "861b6e12b371c58b94c3df9fda0269b514db56c61c53ead5dfe0e4f46e8a86a6",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "79da5e33dfcc21dd8ad56a360b6ff9c3df87a233c2d17430688f8cf949d50268",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        }
+      ],
+      "sourceModelDate": null,
+      "sourceQualifications": [
+        "Mixed source dates; not a current surveyed/as-built statement.",
+        "Registered native directional-lighting wrapper is replaced by reviewed Cycles lighting; no WebGL pixel equality claim.",
+        "Original source context masks are baked by the exact pinned native exporter; zero-effective-triangle meshes remain excluded.",
+        "Prior current camera, full native aspect and lighting retained; no image crop or upscaling."
+      ],
+      "creditSidecar": {
+        "url": "gallery/refreshed-20261113/wide-downtown-landmark-future-credits.txt",
+        "sha256": "2bb00471f8f45f315c7ed9ccb2878a0d8bc1666ff0f02a1afba2a03c6c31c1a2",
+        "bytes": 2652
+      }
+    },
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "identity": "wide/downtown-portrait-future.png",
+      "title": "Downtown",
+      "scenario": "future",
+      "nativeSceneDimensions": [
+        6144,
+        3840
+      ],
+      "sourceSceneSHA256": "3d544484d736a756c1d98b10d4f4664841f6b3a51db10a7a3d01df57deb6a871",
+      "renderTimestampUTC": "2026-11-13T13:30:49.938297+00:00",
+      "sourceFreezeState": "FINAL_FROZEN",
+      "historicalURLsRebound": false,
+      "caption": {
+        "title": "Downtown",
+        "area": "Downtown",
+        "creator": "Daniel Sultan",
+        "scenario": "future",
+        "geographicScope": "named_district_scene",
+        "cityCredit": "City of Mississauga · Ontario data",
+        "openStreetMap": true,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "renderTimestampUTC": "2026-11-13T13:30:49.938297+00:00",
+        "sourceDates": "Current native assembly frozen 13 November 2026. Municipal, planning and photographic source dates vary; existing source limitations remain.",
+        "requiredModelCredits": [],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "© OpenStreetMap contributors. https://www.openstreetmap.org/copyright",
+          "Design reference: Amacon / Parkside Village. Independent authored model: Daniel Sultan / Future Mississauga. Inherited registration sources include City of Mississauga and OpenStreetMap contributors.",
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent model: Daniel Sultan / Future Mississauga. Architecture: IBI Group / Arcadis. City of Mississauga geometry informs placement. Plan and photographic references are credited in sources.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design/elevation: CORE Architects, March25,2020; official M City floorplans and brochure. Original drawing images remain private.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design: IBI Group / Arcadis. Design references: M City and Urban Capital.",
+          "Architectural design: Hariri Pontarini Architects. Model: Future Mississauga / Daniel Sultan. City of Mississauga reference placement.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ]
+      },
+      "provenance": {
+        "sceneProof": {
+          "sha256": "14893765788606a732d3bb02e854a7eb51b8c94424773be03507889cc05be9ff"
+        },
+        "creditProof": {
+          "sha256": "b48720da7bcad09c59862db5b8a7411576700ec3566ff60963b126ed4dd251d0"
+        },
+        "renderProof": {
+          "sha256": "ee46a7ace55898ce4023b54803f588b99862dea3786085433ab354f7e654fab8"
+        },
+        "sourceRevision": {
+          "sha256": "d421ae93200787d2c29782fcbf493c58f031633d5968e69d3a77ede43a8744b3"
+        },
+        "importProof": {
+          "sha256": "0bc31e477fa2adf581b8cfa9b62072af9ac95ed7c8f8da581de1088a278d74b7"
+        },
+        "nativeInventory": {
+          "sha256": "e9b072bfc2c191b5c8ea198babde6b3b206f0a297012044432ed8c45791f869d"
+        },
+        "compositionProof": {
+          "sha256": "d4bbd3392e6a9056334728f7d193e3061cab24369469589a975513b96307e35a"
+        },
+        "packageScript": {
+          "sha256": "89aa15266caa06b2ee85cac9b44f071bc9a5b7c609681e1c4c2e76ae9f09aa3b"
+        },
+        "footerScript": {
+          "sha256": "bcda208cbf7c0002f56eb4cf68b9f3c0b26a0f04ad03422d65a5a8c88ac4c9b6"
+        },
+        "packageContract": {
+          "sha256": "8656dc119c0e91505f719b2e2f4b041142b3b7ae378aab0abd52ff5a91c09771"
+        },
+        "footerWordingRevision": {
+          "sha256": "e7a31fe3ae865a0904207e449a564d9e66fe23733bb1ce554f2502d83768df1a"
+        }
+      },
+      "displayMaster": {
+        "url": "gallery/refreshed-20261113/wide-downtown-portrait-future-clean-088d4307a381.png",
+        "bytes": 26448008,
+        "sha256": "088d4307a381d51411d7dfb1a2cba26e89ab1ddf0caf19bd21007f5e4b8b427d",
+        "dimensions": [
+          6144,
+          3840
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false
+      },
+      "download": {
+        "url": "gallery/refreshed-20261113-v2/wide-downtown-portrait-future-credited-62681fc87013.png",
+        "bytes": 25636299,
+        "sha256": "62681fc870139050d1af29b5a51cfde11c2bb5beff997806a265a8d0c263dd3e",
+        "dimensions": [
+          6144,
+          4238
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneWithAppendedCreditFooter",
+        "sceneBounds": [
+          0,
+          0,
+          6144,
+          3840
+        ],
+        "footerBounds": [
+          0,
+          3840,
+          6144,
+          4238
+        ],
+        "sceneCrop": false,
+        "sceneResize": false,
+        "sceneOverlay": false,
+        "sceneDimensions": [
+          6144,
+          3840
+        ],
+        "sceneSourceSHA256": "088d4307a381d51411d7dfb1a2cba26e89ab1ddf0caf19bd21007f5e4b8b427d",
+        "allScenePixelsExact": true
+      },
+      "responsivePreviews": [
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-portrait-future-scene-1200-e546abcbe116.avif",
+          "bytes": 224225,
+          "sha256": "e546abcbe1162278d97db4546809be48d061b255984fc6a9b1bd78c889354d23",
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "088d4307a381d51411d7dfb1a2cba26e89ab1ddf0caf19bd21007f5e4b8b427d",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-portrait-future-scene-1200-b000b5e0fe47.jpg",
+          "bytes": 354833,
+          "sha256": "b000b5e0fe471501b0908a39317959de9959ce6b6e57e61ef97fbda4881ae4be",
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "088d4307a381d51411d7dfb1a2cba26e89ab1ddf0caf19bd21007f5e4b8b427d",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-portrait-future-scene-3200-d1b4838318a2.avif",
+          "bytes": 1008970,
+          "sha256": "d1b4838318a2874dc5523731c413988331c55654f2578e13a7e5890652dc7fa6",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "088d4307a381d51411d7dfb1a2cba26e89ab1ddf0caf19bd21007f5e4b8b427d",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/wide-downtown-portrait-future-scene-3200-c53f4388fd2a.jpg",
+          "bytes": 1795932,
+          "sha256": "c53f4388fd2a37a2e65c40f47b887daae134cfa9ce6ba006bf855d29dc5fcca8",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "088d4307a381d51411d7dfb1a2cba26e89ab1ddf0caf19bd21007f5e4b8b427d",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        }
+      ],
+      "sourceModelDate": null,
+      "sourceQualifications": [
+        "Mixed source dates; not a current surveyed/as-built statement.",
+        "Registered native directional-lighting wrapper is replaced by reviewed Cycles lighting; no WebGL pixel equality claim.",
+        "Original source context masks are baked by the exact pinned native exporter; zero-effective-triangle meshes remain excluded.",
+        "Prior current camera, full native aspect and lighting retained; no image crop or upscaling."
+      ],
+      "creditSidecar": {
+        "url": "gallery/refreshed-20261113/wide-downtown-portrait-future-credits.txt",
+        "sha256": "6ce744498cdfb2662bb2586de985ce9735619fe3d77552a42fd68d5663e88fdf",
+        "bytes": 2652
+      }
+    },
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "identity": "portraits/downtown-landmark-future.png",
+      "title": "Downtown",
+      "scenario": "future",
+      "nativeSceneDimensions": [
+        3240,
+        4050
+      ],
+      "sourceSceneSHA256": "3d544484d736a756c1d98b10d4f4664841f6b3a51db10a7a3d01df57deb6a871",
+      "renderTimestampUTC": "2026-11-13T13:32:21.570845+00:00",
+      "sourceFreezeState": "FINAL_FROZEN",
+      "historicalURLsRebound": false,
+      "caption": {
+        "title": "Downtown",
+        "area": "Downtown",
+        "creator": "Daniel Sultan",
+        "scenario": "future",
+        "geographicScope": "named_district_scene",
+        "cityCredit": "City of Mississauga · Ontario data",
+        "openStreetMap": true,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "renderTimestampUTC": "2026-11-13T13:32:21.570845+00:00",
+        "sourceDates": "Current native assembly frozen 13 November 2026. Municipal, planning and photographic source dates vary; existing source limitations remain.",
+        "requiredModelCredits": [],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "© OpenStreetMap contributors. https://www.openstreetmap.org/copyright",
+          "Design reference: Amacon / Parkside Village. Independent authored model: Daniel Sultan / Future Mississauga. Inherited registration sources include City of Mississauga and OpenStreetMap contributors.",
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent model: Daniel Sultan / Future Mississauga. Architecture: IBI Group / Arcadis. City of Mississauga geometry informs placement. Plan and photographic references are credited in sources.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design/elevation: CORE Architects, March25,2020; official M City floorplans and brochure. Original drawing images remain private.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design: IBI Group / Arcadis. Design references: M City and Urban Capital.",
+          "Architectural design: Hariri Pontarini Architects. Model: Future Mississauga / Daniel Sultan. City of Mississauga reference placement.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ]
+      },
+      "provenance": {
+        "sceneProof": {
+          "sha256": "d193a6422c57e25b284dc6d8ff2a50555af5ecd3c6004dbed6b2fbdef23aca4a"
+        },
+        "creditProof": {
+          "sha256": "b48720da7bcad09c59862db5b8a7411576700ec3566ff60963b126ed4dd251d0"
+        },
+        "renderProof": {
+          "sha256": "ee46a7ace55898ce4023b54803f588b99862dea3786085433ab354f7e654fab8"
+        },
+        "sourceRevision": {
+          "sha256": "d421ae93200787d2c29782fcbf493c58f031633d5968e69d3a77ede43a8744b3"
+        },
+        "importProof": {
+          "sha256": "0bc31e477fa2adf581b8cfa9b62072af9ac95ed7c8f8da581de1088a278d74b7"
+        },
+        "nativeInventory": {
+          "sha256": "e9b072bfc2c191b5c8ea198babde6b3b206f0a297012044432ed8c45791f869d"
+        },
+        "compositionProof": {
+          "sha256": "a2f14c3fe145017e9ffd9e92aa31e155b7b631147d023730adcdaca24044baba"
+        },
+        "packageScript": {
+          "sha256": "89aa15266caa06b2ee85cac9b44f071bc9a5b7c609681e1c4c2e76ae9f09aa3b"
+        },
+        "footerScript": {
+          "sha256": "231e88e4b98275048bed1ec19fdccae70870b20707d6fad4adfe052cb4d82c94"
+        },
+        "packageContract": {
+          "sha256": "8656dc119c0e91505f719b2e2f4b041142b3b7ae378aab0abd52ff5a91c09771"
+        }
+      },
+      "displayMaster": {
+        "url": "gallery/refreshed-20261113/portraits-downtown-landmark-future-clean-d0030fa30fa1.png",
+        "bytes": 12688959,
+        "sha256": "d0030fa30fa18c6b36c5ab363f52f6314dea9e802e0079cab0c5d2f6863f4978",
+        "dimensions": [
+          3240,
+          4050
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false
+      },
+      "download": {
+        "url": "gallery/refreshed-20261113/portraits-downtown-landmark-future-posting-228032db07e0.png",
+        "bytes": 12861741,
+        "sha256": "228032db07e08686ecaec388c55d37ba9cbe5a80cc3b29f3c57c167300d8b599",
+        "dimensions": [
+          3600,
+          4500
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneOnExpandedWhiteCanvas",
+        "sceneBounds": [
+          180,
+          0,
+          3420,
+          4050
+        ],
+        "footerBounds": [
+          0,
+          4050,
+          3600,
+          4500
+        ],
+        "sideMarginsPx": [
+          180,
+          180
+        ],
+        "sceneCrop": false,
+        "sceneResize": false,
+        "sceneOverlay": false,
+        "layoutProofSHA256": "3d618bc0e29a2c26b17b158ad519e00092aef41cf243cbf66a8a3359861a1d71",
+        "sceneDimensions": [
+          3240,
+          4050
+        ],
+        "sceneSourceSHA256": "d0030fa30fa18c6b36c5ab363f52f6314dea9e802e0079cab0c5d2f6863f4978",
+        "allScenePixelsExact": true
+      },
+      "responsivePreviews": [
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-landmark-future-scene-1200-f66925a82fb9.avif",
+          "bytes": 253204,
+          "sha256": "f66925a82fb9a717c38d63c4610f0907380a10f32a6b4f2fd6c6a0a29904200e",
+          "dimensions": [
+            1200,
+            1500
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "d0030fa30fa18c6b36c5ab363f52f6314dea9e802e0079cab0c5d2f6863f4978",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-landmark-future-scene-1200-eb21c571c9c9.jpg",
+          "bytes": 458841,
+          "sha256": "eb21c571c9c973bbb4e1aceaf45fc43352a2679171f75313351040db26ef7f50",
+          "dimensions": [
+            1200,
+            1500
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "d0030fa30fa18c6b36c5ab363f52f6314dea9e802e0079cab0c5d2f6863f4978",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-landmark-future-scene-3200-4441b1c255e9.avif",
+          "bytes": 918150,
+          "sha256": "4441b1c255e9702c21e13b5c893dde563449d70697ad7b21939ebb3af4776eb0",
+          "dimensions": [
+            3200,
+            4000
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "d0030fa30fa18c6b36c5ab363f52f6314dea9e802e0079cab0c5d2f6863f4978",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-landmark-future-scene-3200-6352950630a9.jpg",
+          "bytes": 2079256,
+          "sha256": "6352950630a91ae891b4a74e5599884eea01efc0beebe5ddd389992ba7fe6b1b",
+          "dimensions": [
+            3200,
+            4000
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "d0030fa30fa18c6b36c5ab363f52f6314dea9e802e0079cab0c5d2f6863f4978",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        }
+      ],
+      "sourceModelDate": null,
+      "sourceQualifications": [
+        "Mixed source dates; not a current surveyed/as-built statement.",
+        "Registered native directional-lighting wrapper is replaced by reviewed Cycles lighting; no WebGL pixel equality claim.",
+        "Original source context masks are baked by the exact pinned native exporter; zero-effective-triangle meshes remain excluded.",
+        "Prior current camera, full native aspect and lighting retained; no image crop or upscaling."
+      ],
+      "creditSidecar": {
+        "url": "gallery/refreshed-20261113/portraits-downtown-landmark-future-credits.txt",
+        "sha256": "0f1f2f0c444fec36cddba4eb1f925d57f468326e53b27cd11fc2f0121e613562",
+        "bytes": 2652
+      }
+    },
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "identity": "portraits/downtown-portrait-future.png",
+      "title": "Downtown",
+      "scenario": "future",
+      "nativeSceneDimensions": [
+        3240,
+        4050
+      ],
+      "sourceSceneSHA256": "3d544484d736a756c1d98b10d4f4664841f6b3a51db10a7a3d01df57deb6a871",
+      "renderTimestampUTC": "2026-11-13T13:33:15.546671+00:00",
+      "sourceFreezeState": "FINAL_FROZEN",
+      "historicalURLsRebound": false,
+      "caption": {
+        "title": "Downtown",
+        "area": "Downtown",
+        "creator": "Daniel Sultan",
+        "scenario": "future",
+        "geographicScope": "named_district_scene",
+        "cityCredit": "City of Mississauga · Ontario data",
+        "openStreetMap": true,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "renderTimestampUTC": "2026-11-13T13:33:15.546671+00:00",
+        "sourceDates": "Current native assembly frozen 13 November 2026. Municipal, planning and photographic source dates vary; existing source limitations remain.",
+        "requiredModelCredits": [],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "© OpenStreetMap contributors. https://www.openstreetmap.org/copyright",
+          "Design reference: Amacon / Parkside Village. Independent authored model: Daniel Sultan / Future Mississauga. Inherited registration sources include City of Mississauga and OpenStreetMap contributors.",
+          "City of Mississauga geographic and planning data; published Edenshaw/CORE architectural references; independent reconstruction by Future Mississauga.",
+          "Independent model: Daniel Sultan / Future Mississauga. Architecture: IBI Group / Arcadis. City of Mississauga geometry informs placement. Plan and photographic references are credited in sources.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design/elevation: CORE Architects, March25,2020; official M City floorplans and brochure. Original drawing images remain private.",
+          "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design: IBI Group / Arcadis. Design references: M City and Urban Capital.",
+          "Architectural design: Hariri Pontarini Architects. Model: Future Mississauga / Daniel Sultan. City of Mississauga reference placement.",
+          "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+          "Earthscape Play"
+        ]
+      },
+      "provenance": {
+        "sceneProof": {
+          "sha256": "101a3fb69b9bdc48f6452fc0ca8af556a9cce3663e5565ca1fbc13d5c96182d1"
+        },
+        "creditProof": {
+          "sha256": "b48720da7bcad09c59862db5b8a7411576700ec3566ff60963b126ed4dd251d0"
+        },
+        "renderProof": {
+          "sha256": "ee46a7ace55898ce4023b54803f588b99862dea3786085433ab354f7e654fab8"
+        },
+        "sourceRevision": {
+          "sha256": "d421ae93200787d2c29782fcbf493c58f031633d5968e69d3a77ede43a8744b3"
+        },
+        "importProof": {
+          "sha256": "0bc31e477fa2adf581b8cfa9b62072af9ac95ed7c8f8da581de1088a278d74b7"
+        },
+        "nativeInventory": {
+          "sha256": "e9b072bfc2c191b5c8ea198babde6b3b206f0a297012044432ed8c45791f869d"
+        },
+        "compositionProof": {
+          "sha256": "af5452d18b80526a8368a48fc6d2af3ab2b462dbf21af59bc85a78885fdefb88"
+        },
+        "packageScript": {
+          "sha256": "89aa15266caa06b2ee85cac9b44f071bc9a5b7c609681e1c4c2e76ae9f09aa3b"
+        },
+        "footerScript": {
+          "sha256": "231e88e4b98275048bed1ec19fdccae70870b20707d6fad4adfe052cb4d82c94"
+        },
+        "packageContract": {
+          "sha256": "8656dc119c0e91505f719b2e2f4b041142b3b7ae378aab0abd52ff5a91c09771"
+        }
+      },
+      "displayMaster": {
+        "url": "gallery/refreshed-20261113/portraits-downtown-portrait-future-clean-492708fdc22a.png",
+        "bytes": 16208119,
+        "sha256": "492708fdc22a62dd9ba17277a77a508a11519655b1d0e2ccb562ca7a975081e8",
+        "dimensions": [
+          3240,
+          4050
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false
+      },
+      "download": {
+        "url": "gallery/refreshed-20261113/portraits-downtown-portrait-future-posting-5846ba14a355.png",
+        "bytes": 16402839,
+        "sha256": "5846ba14a3558d2bf0d68c56b9badd5688882dca71afb6511ead14aa750cc6f6",
+        "dimensions": [
+          3600,
+          4500
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneOnExpandedWhiteCanvas",
+        "sceneBounds": [
+          180,
+          0,
+          3420,
+          4050
+        ],
+        "footerBounds": [
+          0,
+          4050,
+          3600,
+          4500
+        ],
+        "sideMarginsPx": [
+          180,
+          180
+        ],
+        "sceneCrop": false,
+        "sceneResize": false,
+        "sceneOverlay": false,
+        "layoutProofSHA256": "7c527e04fd1b220b9a0b878aedb82b087f0949c6c3f2536a8bf4d1d9227476db",
+        "sceneDimensions": [
+          3240,
+          4050
+        ],
+        "sceneSourceSHA256": "492708fdc22a62dd9ba17277a77a508a11519655b1d0e2ccb562ca7a975081e8",
+        "allScenePixelsExact": true
+      },
+      "responsivePreviews": [
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-portrait-future-scene-1200-0c200bd3ddc7.avif",
+          "bytes": 413916,
+          "sha256": "0c200bd3ddc7ed4d5ca32a768048b96f2c62eb8971941268c2c6f294b806afdf",
+          "dimensions": [
+            1200,
+            1500
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "492708fdc22a62dd9ba17277a77a508a11519655b1d0e2ccb562ca7a975081e8",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-portrait-future-scene-1200-fa96c5b0c643.jpg",
+          "bytes": 658770,
+          "sha256": "fa96c5b0c643c6bb8169aa4b8ef2c0044cd9fe05dc06a291ee50a2118164bf1c",
+          "dimensions": [
+            1200,
+            1500
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "492708fdc22a62dd9ba17277a77a508a11519655b1d0e2ccb562ca7a975081e8",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-portrait-future-scene-3200-6c7f90cea7eb.avif",
+          "bytes": 1712156,
+          "sha256": "6c7f90cea7eba1fb4891be616a4c07f16d5bc92360f0f967119288b0fd2694e3",
+          "dimensions": [
+            3200,
+            4000
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "492708fdc22a62dd9ba17277a77a508a11519655b1d0e2ccb562ca7a975081e8",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "url": "gallery/refreshed-20261113/portraits-downtown-portrait-future-scene-3200-6e629a4724af.jpg",
+          "bytes": 3183648,
+          "sha256": "6e629a4724af32aaed222581fa24e7356909ef04a4df62ecb76cb09495c8efcb",
+          "dimensions": [
+            3200,
+            4000
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "492708fdc22a62dd9ba17277a77a508a11519655b1d0e2ccb562ca7a975081e8",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        }
+      ],
+      "sourceModelDate": null,
+      "sourceQualifications": [
+        "Mixed source dates; not a current surveyed/as-built statement.",
+        "Registered native directional-lighting wrapper is replaced by reviewed Cycles lighting; no WebGL pixel equality claim.",
+        "Original source context masks are baked by the exact pinned native exporter; zero-effective-triangle meshes remain excluded.",
+        "Prior current camera, full native aspect and lighting retained; no image crop or upscaling."
+      ],
+      "creditSidecar": {
+        "url": "gallery/refreshed-20261113/portraits-downtown-portrait-future-credits.txt",
+        "sha256": "890a6b26c7f3fbc45a73d6768b6fd6e0f9c602219f377d2ee5dfaf2c6a842045",
+        "bytes": 2652
+      }
+    }
+  ],
+  "comparisonProofs": [
+    {
+      "url": "data/matched-pairs/downtown-wide-20261113-v3.json",
+      "sha256": "a830297cdf19c334308e025f47039e2cb8df227a4b6a44e7f55d92f2dbf1491c",
+      "proofID": "fm-matched-view-07193358e4ba605c8aa93a08"
+    }
+  ]
+}

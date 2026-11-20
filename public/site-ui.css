@@ -5,14 +5,14 @@ html:root{
  --site-paper:#fff;--paper:#fff;--site-line:#dce4eb;--line:var(--site-line);
  --site-accent:#2463a0;--accent:var(--site-accent);--site-accent-strong:#194b7d;
  --site-accent-soft:#eef5fc;--site-accent-line:#bbd0e6;--site-accent-on-dark:#a5c9ef;
- --site-font-body:'Lato',sans-serif;--site-font-heading:'Bricolage Grotesque',sans-serif;
+ --site-font-body:'Lato',sans-serif;--site-font-heading:'Lato',sans-serif;
  --page-gutter:clamp(22px,4.2vw,72px);--site-gutter:var(--page-gutter);--site-header-height:80px;
 }
 *{box-sizing:border-box}
 html{scroll-padding-top:calc(var(--site-header-height) + 20px)}
 html body{margin:0;background:var(--site-paper);color:var(--site-ink);font:17px/1.6 var(--site-font-body)}
 html :is(button,input,select,textarea){font-family:var(--site-font-body)}
-html :is(h1,h2,h3){font-family:var(--site-font-heading);line-height:1.12;color:var(--site-ink)}
+html :is(h1,h2,h3){font-family:var(--site-font-heading);font-weight:700;letter-spacing:-.015em;line-height:1.18;color:var(--site-ink)}
 html a{text-underline-offset:4px}
 html :is(a,button,input,select,textarea,summary):focus-visible{outline:3px solid var(--site-accent);outline-offset:3px}
 html input[type=checkbox],html input[type=range]{accent-color:var(--site-accent)}

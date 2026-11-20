@@ -1,5 +1,9 @@
 // Register before the first picture is parsed, while the gallery module loads.
 (() => {
+  const navigation=window.fmGalleryNavigation={manual:false};
+  const moved=()=>{navigation.manual=true;};
+  for(const event of ['wheel','touchstart','pointerdown','keydown'])window.addEventListener(event,moved,{passive:true});
+  window.addEventListener('hashchange',()=>{navigation.manual=false;});
   let pending = null;
   function capture(event) {
     if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
@@ -20,7 +24,7 @@
     return button;
   }
   function start() {
-    import('./gallery.js?v=20261112-ui1').then(() => {
+    import('./gallery.js?v=20261120-plates').then(() => {
       const button = finish();
       if (button?.isConnected) button.click();
     }).catch(() => {
@@ -36,7 +40,7 @@
       retry.textContent = 'Reload to try again';
       retry.addEventListener('click', () => location.reload());
       message.append(retry);
-      document.querySelector('.hero').after(message);
+      document.querySelector('#galleryGrid').before(message);
     });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, {once: true});

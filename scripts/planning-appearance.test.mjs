@@ -77,5 +77,6 @@ test('the actual app shares its visible planning legend with export and does not
   context.appearance.mode='natural';assert.deepEqual(context.currentStatusLegend(),[]);
   assert.match(app,/const legend=currentStatusLegend\(\),layout=presentationLayout/);
   assert.match(app,/drawPresentationFooter\(ctx,\{[^\n]*legend,/);
-  assert.match(app,/'Appearance':appearance\.mode==='status'\?'Planning status':'Natural'/);
+  assert.match(app,/savedAppearance=appearance\.mode/);
+  assert.match(app,/'Appearance':savedAppearance==='status'\?'Planning status':'Natural'/);
 });

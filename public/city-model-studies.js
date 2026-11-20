@@ -1,6 +1,6 @@
 import {createCityLowerShell} from './city-lower-shell.js?v=20261027-orocomposite1';
 import {registeredCityPlacements} from './city-model-placements.js?v=20261028-improvements1';
-import {verifiedModelBytes} from './model-preview-loading.js?v=20261109-delivery1';
+import {verifiedModelBytes} from './model-preview-loading.js?v=20261113-design2';
 import {batchOpaqueStudy} from './model-preview-batching.js?v=20261025-1';
 
 // Only already-published models with documented registration enter the city map.
@@ -63,6 +63,7 @@ export async function loadCityStudy(THREE,loader,asset,{fetcher=globalThis.fetch
    const gltf=await loader.parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');
    scene.add(gltf.scene);
    if(preview.batchOpaque)batchOpaqueStudy(gltf.scene,THREE);
+   gltf.scene.traverse(object=>{ if(object.isMesh) object.userData.cityPreviewId=preview.id; });
    sourceAssets.push({root:gltf.scene,url:preview.url,sha256:preview.downloadSHA256});
   }
   if(asset.translation)scene.position.fromArray(asset.translation);

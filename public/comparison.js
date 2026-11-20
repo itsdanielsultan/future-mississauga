@@ -1,4 +1,4 @@
-export function bindComparison({panel,handle,input,onChange,initial=50,min=0,max=100,clickToJump=false}) {
+export function bindComparison({panel,handle,input,onChange,onCommit,initial=50,min=0,max=100,clickToJump=false}) {
  let value=initial,active=null;
  const syncLabels=()=>{
   const labels=panel.querySelector('.compare-captions,#compareLabels');if(!labels)return;
@@ -13,9 +13,9 @@ export function bindComparison({panel,handle,input,onChange,initial=50,min=0,max
  const target=clickToJump?panel:handle;
  target.addEventListener('pointerdown',e=>{if(e.button!==0||active!==null||handle.hidden)return;e.preventDefault();e.stopPropagation();active=e.pointerId;target.setPointerCapture(e.pointerId);handle.focus({preventScroll:true});move(e);});
  target.addEventListener('pointermove',e=>{if(active===e.pointerId){e.preventDefault();move(e);}});
- const finish=e=>{if(active!==e.pointerId)return;active=null;if(target.hasPointerCapture(e.pointerId))target.releasePointerCapture(e.pointerId);};
+ const finish=e=>{if(active!==e.pointerId)return;active=null;onCommit?.(value);if(target.hasPointerCapture(e.pointerId))target.releasePointerCapture(e.pointerId);};
  target.addEventListener('pointerup',finish);target.addEventListener('pointercancel',finish);target.addEventListener('lostpointercapture',()=>active=null);
  if(clickToJump)panel.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();});
- handle.addEventListener('keydown',e=>{const step=e.shiftKey?10:1;const next={ArrowLeft:value-step,ArrowDown:value-step,ArrowRight:value+step,ArrowUp:value+step,Home:min,End:max}[e.key];if(next!==undefined){e.preventDefault();set(next);}});
- input.addEventListener('input',()=>set(Number(input.value)));set(initial);if('ResizeObserver' in globalThis)new ResizeObserver(syncLabels).observe(panel);return {set};
+ handle.addEventListener('keydown',e=>{const step=e.shiftKey?10:1;const next={ArrowLeft:value-step,ArrowDown:value-step,ArrowRight:value+step,ArrowUp:value+step,Home:min,End:max}[e.key];if(next!==undefined){e.preventDefault();set(next);onCommit?.(value);}});
+ input.addEventListener('input',()=>set(Number(input.value)));input.addEventListener('change',()=>onCommit?.(value));set(initial);if('ResizeObserver' in globalThis)new ResizeObserver(syncLabels).observe(panel);return {set};
 }

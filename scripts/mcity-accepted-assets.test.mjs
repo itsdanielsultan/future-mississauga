@@ -19,12 +19,12 @@ const catalogue=await json('public/data/model-previews.json'),data=await json('p
 const ids=['mcity-m4-future-detail-20261101','mcity-m4-spring2026-detail-20261101','mcity-m5-authored-detail-20261101','mcity-m7-m8-20261101-dated-exteriors','mcity-m3-likeness-20261101-v7','mcity-m6-20261101-dated-exterior'];
 const accepted=[...catalogue.assets.filter(a=>['mcity-m1','mcity-m2'].includes(a.id)),...data.assets.filter(a=>ids.includes(a.id))];
 const acceptedHashes={
- 'mcity-m1':'630368744c2ba9f8252004d87bf31d31f66397c3cc037b21db65f43e6da7f9ca',
+ 'mcity-m1':'478be2c24b1b8b8a0cbb649c6c75fa11df7658b29a7a40d186da34aa37773ae9',
  'mcity-m2':'1f6d68734e2486165984f0e56605638fc0ea705a4cb326afbe33b0a4dde0ef20',
  'mcity-m3-likeness-20261101-v7':'46069389dca1b1f6f129b0a88d96f19ff8c00aa6d2fb2d87ddf05e0106c0c78f',
  'mcity-m4-future-detail-20261101':'c29a55cdc94e15748a826087415fecbb84be0a0bd324f15dac1023450cb943a2',
  'mcity-m4-spring2026-detail-20261101':'3383b5178f56a75fb709a1d201d812e6887cdd3f4255728bb8c2bc1701eaac60',
- 'mcity-m5-authored-detail-20261101':'4162051b4d6706a65b3f5f0606ce31dfd9500c41f6ea766f1a40eb15ac519b6f',
+ 'mcity-m5-authored-detail-20261101':'d8847e7267ee38de9138f7aac388fb59865cb3ef139b4c0f66adb66127ab1af5',
  'mcity-m6-20261101-dated-exterior':'cad1af48cf240c74696e9d60a59694d7423092801e1f30f0bc9cc044e6976493',
  'mcity-m7-m8-20261101-dated-exteriors':'ab9f1a2ebe1df2f2eb3260d2acd853ba56cc7d50a02ef2d9106ea79b9103b198'
 };
@@ -36,7 +36,7 @@ const dispose=root=>root.traverse(node=>{node.geometry?.dispose();for(const mate
 test('only the eight accepted derivative identities are activated with clean URLs and no source images',async()=>{
  assert.equal(accepted.length,8);
  for(const asset of accepted){
-  assert.match(asset.url,/^models\/studies-20261101\/[a-z0-9-]+\.glb(?:\.gz)?$/);
+  assert.match(asset.url,/^models\/studies-202611(?:01|12)\/[a-z0-9-]+\.glb(?:\.gz)?$/);
   const encoded=await read('public/'+asset.url),decoded=encoded[0]===31?gunzipSync(encoded):encoded;
   assert.equal(encoded.length,asset.bytes);assert.equal(sha(encoded),asset.downloadSHA256);assert.equal(sha(encoded),acceptedHashes[asset.id]);
   assert.equal(sha(decoded),asset.decodedSHA256||asset.sha256);

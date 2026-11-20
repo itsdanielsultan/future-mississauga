@@ -1,0 +1,6 @@
+// Exact reviewed Downtown edition. Historical image and film routes remain intact.
+export const DOWNTOWN_CURRENT_MANIFEST_SHA256="20719b18cf14a8b4f1443d167310e8386935de8f63facb0b6249f73e626b9e74";
+export const DOWNTOWN_CURRENT_PARSED_SHA256="fe2e4f0d212e1aae519cfeabc1047a4d03933dceb42aa7f048fbcf58d92e9b97";
+export const DOWNTOWN_CURRENT_PACKAGE_SHA256="a9f1b0a129d485b0737cb889d1e2cc022cdaba43f56db22cfc8733debb46cb32";
+export const DOWNTOWN_CURRENT_IDENTITIES=Object.freeze(["wide/downtown-existing.png", "wide/downtown-skyline-existing.png", "portraits/downtown-existing.png", "portraits/downtown-skyline-existing.png", "wide/downtown-skyline-construction.png", "portraits/downtown-skyline-construction.png", "wide/downtown-future.png", "wide/downtown-skyline-future.png", "portraits/downtown-future.png", "portraits/downtown-skyline-future.png", "wide/downtown-landmark-future.png", "wide/downtown-portrait-future.png", "portraits/downtown-landmark-future.png", "portraits/downtown-portrait-future.png"]);
+export const DOWNTOWN_CURRENT_COMPARISON=Object.freeze({"url": "data/matched-pairs/downtown-wide-20261113-v3.json", "sha256": "a830297cdf19c334308e025f47039e2cb8df227a4b6a44e7f55d92f2dbf1491c", "proofID": "fm-matched-view-07193358e4ba605c8aa93a08"});

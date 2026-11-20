@@ -13,12 +13,13 @@ const startup=app.split('resize();tick();')[1].split('// WebMCP')[0]
 function deferred(){let resolve;const promise=new Promise(done=>resolve=done);return {promise,resolve};}
 const scenarioHandler=app.match(/\$\('#scenarioSelect'\)\.onchange=e=>\{[^}]+\};/)[0];
 const compareHandler=app.slice(app.indexOf("$('#compareToggle').onchange="),app.indexOf("$('#compareRange').oninput="));
-function start({project='square-one-block22',district='downtown',scenario,area,waitForFocus=false}={}){
+function start({project='square-one-block22',district='downtown',scenario,area,waitForFocus=false,search=''}={}){
  const loaded=deferred(),focusBarrier=deferred(),focusEntered=deferred();
- const focused=[],areas=[],modes=[],elements=new Map(),query={district};
+ const focused=[],areas=[],modes=[],searched=[],elements=new Map(),query={district};
  if(project)query.project=project;if(scenario)query.scenario=scenario;if(area)query.context=area;
  const context={
-  initialQuery:new URLSearchParams(query),scenarioInteractions:0,
+  initialQuery:new URLSearchParams(query),scenarioInteractions:0,modelSearchInput:{value:search},
+  showModelSearch:()=>searched.push(context.modelSearchInput.value),
   projects:[{id:'square-one-block22'}],focusRequest:0,current:null,
   window:{atlasReady:null},mode:'future',compare:false,split:.5,
   $:selector=>{if(!elements.has(selector))elements.set(selector,{});return elements.get(selector);},
@@ -31,7 +32,7 @@ function start({project='square-one-block22',district='downtown',scenario,area,w
  // from the startup replay guard while tests still pass.
  runInNewContext(scenarioHandler+compareHandler,context);
  const done=runInNewContext('(async()=>{'+startup+'})()',context);
- return {context,focused,areas,modes,elements,finish:loaded.resolve,done,
+ return {context,focused,areas,modes,searched,elements,finish:loaded.resolve,done,
   focusEntered:focusEntered.promise,finishFocus:focusBarrier.resolve,
   chooseScenario:value=>context.$('#scenarioSelect').onchange({target:{value}}),
   chooseComparison:checked=>context.$('#compareToggle').onchange({target:{checked}})};
@@ -101,7 +102,7 @@ function areaFocus({district='citywide',aspect=1,waitForLoad=false}={}){
   controls:{target:new THREE.Vector3(),cursor:new THREE.Vector3(),update:()=>{}},
   defaultViewDirection:()=>new THREE.Vector3(1,.8,1).normalize(),
   setSelectedStudy:()=>{},settleControls:()=>{},invalidate:()=>{},wrap:{scrollIntoView:()=>{}},
-  history:{replaceState:(_state,_title,url)=>urls.push(url)},updateNeighbourhood:()=>updates++,
+  navigateMap:({district,context})=>urls.push('explore.html?district='+district+'&context='+context),updateNeighbourhood:()=>updates++,
   $:selector=>{if(!elements.has(selector))elements.set(selector,{});return elements.get(selector);},
   loadDistrict:async(id,request)=>{loads.push(id);if(waitForLoad)await loaded.promise;if(request===context.focusRequest){context.current={id};context.window.atlasReady=id;}},
  };
@@ -123,4 +124,27 @@ test('Fairview focus loads Citywide once from a district and rejects a stale com
  const stale=areaFocus({district:'downtown',waitForLoad:true});stale.context.focusRequest++;
  stale.context.current={id:'malton'};stale.context.window.atlasReady='malton';stale.finish();await stale.done;
  assert.deepEqual(stale.urls,[]);assert.equal(stale.updates,0);assert.equal(stale.context.current.id,'malton');
+});
+
+test('query typed before data initialization survives startup and prevents stale URL focus',async()=>{
+ const run=start({search:'Alba',scenario:'existing'});run.finish();await run.done;
+ assert.equal(run.context.modelSearchInput.value,'Alba');assert.deepEqual(run.searched,['Alba']);
+ assert.deepEqual(run.focused,[]);assert.deepEqual(run.modes,[]);
+});
+test('query replaced during the initial load uses the latest field value',async()=>{
+ const run=start({search:'MCity'});run.context.modelSearchInput.value='Alba';run.finish();await run.done;
+ assert.deepEqual(run.searched,['Alba']);assert.deepEqual(run.focused,[]);
+});
+
+test('the first city frame needs the small station index without downloading route coordinates or research logs',()=>{
+ const source=JSON.parse(readFileSync(new URL('../public/data/transit.json',import.meta.url),'utf8'));
+ const stations=JSON.parse(readFileSync(new URL('../public/data/map-stations.json',import.meta.url),'utf8'));
+ const index=app.slice(app.indexOf('const metadataNames'),app.indexOf('const manifests'));
+ assert.ok(index.includes("'map-stations'"));
+ assert.doesNotMatch(index,/'transit'|'transit-research'/);
+ assert.equal(stations.asOf,source.asOf);
+ assert.equal(stations.stations.length,source.stations.length);
+ stations.stations.forEach((row,i)=>{
+  for(const field of ['name','system','status','position','coordinateCaveat','positionCaveat','caveat','note','source'])assert.deepEqual(row[field],source.stations[i][field]);
+ });
 });

@@ -16,7 +16,7 @@
       200
     ],
     "summary": "Completed first two sculpted towers form part of the present-day baseline.",
-    "modelCaveat": "Published height and storey conventions differ, including 60, 61 and 63-storey counts. Floor phase, heights, crown details and podium dimensions remain approximate. M1’s low faceted pavilion remains coarse or absent; selected podium surface additions do not reconstruct it. This is not a measured as-built model.",
+    "modelCaveat": "Published height and storey conventions differ, including 60, 61 and 63-storey counts. Floor phase, heights, crown details and podium dimensions remain approximate. M1’s added low pavilion follows a City footprint and photographs; roof height is estimated within about 2 m. Existing ground-level podium gaps remain unresolved. This is not a measured as-built model.",
     "sources": [
       {
         "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/",
@@ -125,7 +125,7 @@
       "63-6248",
       "63-6252"
     ],
-    "geometryCoverage": "Approximate completed exteriors with source-traced floor plates and selected podium glazing and bands.",
+    "geometryCoverage": "Approximate completed exteriors with source-traced floor plates, selected podium surfaces and a footprint-informed M1 pavilion.",
     "studyLabel": "Approximate completed exterior · M City Rev03",
     "studyActionLabel": "Review approximate exterior",
     "localOptional": true,
@@ -2297,7 +2297,7 @@
     "address": "4116 Parkside Village Drive",
     "lat": 43.587225504959,
     "lon": -79.649968584836,
-    "status": "Under construction; structurally topped; upper roof finishing continues",
+    "status": "Under construction; tower structures topped",
     "statusDate": "2026-08-09",
     "storeys": [
       44,
@@ -2307,7 +2307,7 @@
       142.25,
       null
     ],
-    "summary": "Two towers had formed to their mechanical penthouses in the official late-2025 update.",
+    "summary": "Both tower structures had reached their mechanical penthouses in the developer’s late-2025 update. Its current page still lists a fall 2026 completion target; final completion and occupancy have not been independently confirmed.",
     "modelCaveat": "Approximate reconstruction from published plans and photographs, not surveyed or as-built geometry. The connected podium, tower orientation and separate park-facing balcony outlines are source-referenced. Only explicitly labelled lower transition-floor variations are reconstructed; no repeating wave is invented. Existing tower centres and heights are retained; exact shorter-tower height and occupancy remain unverified. Voya is adjacent to Zonta Meadows, but the unnamed commenter’s intended building is not confirmed.",
     "sources": [
       {
@@ -2415,6 +2415,20 @@
         "publisher": "City of Mississauga",
         "claim": "Current parcel CITY_PIN 32957100, 8525.91 square metres; georeferenced outer limit for footprint reconstruction.",
         "accessed": "2026-09-27"
+      },
+      {
+        "url": "https://www.lifeatparkside.com/post/voya-takes-shape-as-construction-reaches-new-heights",
+        "publisher": "Amacon / Life at Parkside",
+        "title": "Voya takes shape as construction reaches new heights",
+        "accessed": "2026-11-12",
+        "claim": "The late-2025 update records both structures reaching their mechanical penthouses. Visible article date is October 31, 2025, structured publication time is November 1, 2025 UTC, and photographs are labelled August 2025. These dated observations do not establish current roof-finishing work."
+      },
+      {
+        "url": "https://www.lifeatparkside.com/communities",
+        "publisher": "Amacon / Life at Parkside",
+        "title": "Communities: Voya",
+        "accessed": "2026-11-12",
+        "claim": "The undated current page lists construction underway and a fall 2026 completion target. It does not confirm final completion or occupancy."
       }
     ],
     "geometrySources": [],
@@ -2572,9 +2586,9 @@
     "podiumModelled": true,
     "geometryReviewDate": "2026-09-27",
     "lifecycle": "under_construction",
-    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleReviewedOn": "2026-11-12",
     "lifecycleConfidence": "high",
-    "lifecycleNote": "The developer still lists Voya as under construction. A forecast completion season is not confirmation of completion or occupancy.",
+    "lifecycleNote": "The structures are built to their mechanical penthouses. The developer’s current page still labels construction underway and gives a fall 2026 target, but does not date that status or confirm final completion or occupancy.",
     "lifecycleSourceRefs": [
       "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+21%2F185%27&outFields=%2A&returnGeometry=false",
       "https://www.lifeatparkside.com/communities",
@@ -8343,8 +8357,8 @@
     "storeys": [],
     "heightM": [],
     "towers": [],
-    "summary": "Fifteen approximate townhome roof envelopes from the developer’s June plan and currently linked later image: ten retained envelopes plus five previously omitted grey contextual roofs. Three added eastern rows match the active Block 8 application.",
-    "modelCaveat": "Approximate marketing-plan-derived townhome envelopes, not surveyed architectural models. Seven June footprints and three additional highlighted blocks in the currently linked image are registered through two City street junctions and four common roof centroids. The image scale bar conflicts with City junction spacing by about 25%; City coordinates control the model scale. Estimated placement ±10 m and roof-outline tolerance ±3 m are interpretive, not statistical confidence bounds. The ten retained envelopes use an estimated 13 m maximum with ±3.5 m uncertainty, derived from about 6.2 m registered bay width and roughly 2.1:1 height-to-bay proportions in the official illustrative facade. No published dimensional height was found. Roofs, balconies, basements and facade articulation are omitted; grey marketing roofs are retained from the June version, not independently confirmed current building drawings. Five additional grey roof envelopes shown in Caivan’s June 2026 marketing plan, registered using the unchanged two-junction transform of the retained ten-envelope model. All five lie inside City parcel 33912100. Three eastern rows lie within current SP 25/68 W 1 (Block 8, 88 townhouses); two western contextual rows lie outside the reviewed current application polygons and have no verified active-file assignment. The grey background artwork is not a final architectural drawing or confirmed construction phase. Use as explicitly uncertain future context. The 13 m display height remains the original Aura estimate with ±3.5 m uncertainty; placement ±10 m and outline ±3 m remain interpretive bounds. No number of dwellings, exact metre height, occupancy date, detailed roofs or final facade is inferred from these envelopes. Existing ten-envelope geometry remains unchanged.",
+    "summary": "Block 8’s site plan for 88 townhomes was approved on October 8, 2026. Phase 2 remains an active application; construction has not been verified. The model’s townhome forms remain approximate.",
+    "modelCaveat": "Approximate marketing-plan-derived townhome envelopes, not surveyed architectural models. Seven June footprints and three additional highlighted blocks in the currently linked image are registered through two City street junctions and four common roof centroids. The image scale bar conflicts with City junction spacing by about 25%; City coordinates control the model scale. Estimated placement ±10 m and roof-outline tolerance ±3 m are interpretive, not statistical confidence bounds. The ten retained envelopes use an estimated 13 m maximum with ±3.5 m uncertainty, derived from about 6.2 m registered bay width and roughly 2.1:1 height-to-bay proportions in the official illustrative facade. No published dimensional height was found. Roofs, balconies, basements and facade articulation are omitted; grey marketing roofs are retained from the June version, not independently confirmed current building drawings. Five additional grey roof envelopes shown in Caivan’s June 2026 marketing plan, registered using the unchanged two-junction transform of the retained ten-envelope model. All five lie inside City parcel 33912100. Three eastern rows lie within SP 25/68 W1 (Block 8, 88 townhouses), recorded as site-plan approved on October 8, 2026; two western contextual rows remain outside the reviewed application polygons with no verified file assignment. The grey background artwork is not a final architectural drawing or confirmed construction phase. Use as explicitly uncertain future context. The 13 m display height remains the original Aura estimate with ±3.5 m uncertainty; placement ±10 m and outline ±3 m remain interpretive bounds. No number of dwellings, exact metre height, occupancy date, detailed roofs or final facade is inferred from these envelopes. Existing ten-envelope geometry remains unchanged.",
     "sources": [
       {
         "url": "https://caivan.com/aura/",
@@ -8393,6 +8407,13 @@
         "publisher": "City of Mississauga",
         "accessed": "2026-09-27",
         "claims": "SP25/68 W1 Block 8 and SP26/24 W1 Phase 2 polygons resolve parts of the developer plan. Two additional grey contextual rows remain unassigned to these application files."
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=%28YEAR%3D25+AND+APPLICATION_NO%3D68%29+OR+%28YEAR%3D26+AND+APPLICATION_NO%3D24%29&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
+        "publisher": "City of Mississauga",
+        "title": "Site Plan Applications: SP 25/68 W1 and SP 26/24 W1",
+        "accessed": "2026-11-12",
+        "claim": "Block 8 (SP 25/68 W1), 88 townhouses, has site-plan approval dated October 8, 2026. Phase 2 (SP 26/24 W1), 264 units, remains active with no approval date. The three eastern contextual model rows are within Block 8; two western rows remain unassigned. Construction and final architectural geometry are not verified."
       }
     ],
     "geometrySources": [
@@ -8518,7 +8539,7 @@
         "application": "SP25/68 W1",
         "description": "Block 8",
         "units": 88,
-        "modelCoverage": "Three added eastern reference envelopes inside this active application polygon."
+        "modelCoverage": "Three added eastern reference envelopes lie inside Block 8 (SP 25/68 W1), which the City records as site-plan approved on October 8, 2026. Construction is unverified."
       },
       {
         "application": "SP26/24 W1",
@@ -8528,9 +8549,9 @@
       }
     ],
     "lifecycle": "proposed",
-    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleReviewedOn": "2026-11-12",
     "lifecycleConfidence": "medium; existing source record, not all facts freshly rechecked",
-    "lifecycleNote": "Proposed. Current construction or completion has not been verified.",
+    "lifecycleNote": "The City records Block 8 site-plan approval on October 8, 2026, covering the three eastern contextual rows. Phase 2 remains active and the two western contextual rows are unassigned. Construction or completion has not been verified.",
     "lifecycleSourceRefs": [
       "https://caivan.com/aura/",
       "https://caivan.com/wp-content/uploads/2026/02/Aura-Site-plan-260806.jpg",
@@ -13166,8 +13187,8 @@
     "address": "1970 Fowler Drive",
     "lat": 43.52953271622367,
     "lon": -79.64970268793166,
-    "status": "Council passed · appeal period open",
-    "statusDate": "2026-09-29",
+    "status": "Official plan and zoning in effect",
+    "statusDate": "2026-11-10",
     "application": "OZ 25 23",
     "storeys": [
       24
@@ -13176,7 +13197,7 @@
       78.05
     ],
     "towers": [],
-    "summary": "The proposed 24-storey infill tower is now modelled from the July 2026 plans, with the two existing apartment buildings retained. Its source roof heights distinguish the 78.05 m main level from the 87.85 m highest roof. Council passage is recorded; the appeal period remains open through October 28.",
+    "summary": "The proposed 24-storey infill tower is modelled from the July 2026 plans, with the two existing apartment buildings retained. The official-plan amendment took effect on October 29, 2026, and the City lists the zoning amendment as in force. Construction timing remains unverified.",
     "modelCaveat": "The July 2026 drawings support the main floor outlines and roof levels. Balconies, finishes, small roof equipment and the parking-ramp cover are omitted. Placement has roughly 3 m working uncertainty. The existing apartment buildings are retained. Displayed foundations follow terrain; approved grading and vertical-datum agreement remain unverified.",
     "sources": [
       {
@@ -13314,6 +13335,20 @@
         ],
         "verification": "search-index-read",
         "limitations": "Reported 87.3 m is secondary; retain unknown model height until primary drawings verified."
+      },
+      {
+        "url": "https://www7.mississauga.ca/Departments/PB/OfficialDocs/ListOfUnconsolidatedOfficialPlanAmendments_and_LPAT_Decisions.pdf",
+        "publisher": "City of Mississauga",
+        "title": "Unconsolidated Official Plan Amendments and LPAT Decisions, updated November 2, 2026, page 3",
+        "accessed": "2026-11-12",
+        "claim": "MOPA 11 / OZ-OPA 25-23 W8 took effect on October 29, 2026. The row is matched through its file number, amendment, applicant, Sheridan character area, 24-storey building and adoption date; its location cell repeats Longview Place and is not relied on for the address."
+      },
+      {
+        "url": "https://www7.mississauga.ca/Departments/PB/OfficialDocs/UnconsolidatedZBL_Amendments.pdf",
+        "publisher": "City of Mississauga",
+        "title": "Unconsolidated Zoning By-law Amendments, updated November 10, 2026, page 2",
+        "accessed": "2026-11-12",
+        "claim": "By-law 0158-2026, RA4-67 / RA5-81, for OZ-OPA 25-23 W8 / MOPA 11 southeast of Fowler Drive and west of North Sheridan Way is listed as in force and effect. The register does not state a separate exact zoning effective date. This does not verify construction permission."
       }
     ],
     "geometrySources": [
@@ -13473,12 +13508,18 @@
       "councilPassage": "2026-09-29",
       "noticePublished": "2026-10-08",
       "appealDeadline": "2026-10-28",
-      "finalInForceVerified": false,
+      "finalInForceVerified": true,
       "constructionPermissionVerified": false,
-      "source": "https://www.mississauga.ca/wp-content/uploads/2026/10/08092551/OZ-OPA-25-23-W8-OPA-11-Notice-of-Passing-public-notice.pdf"
+      "source": "https://www.mississauga.ca/wp-content/uploads/2026/10/08092551/OZ-OPA-25-23-W8-OPA-11-Notice-of-Passing-public-notice.pdf",
+      "officialPlanInEffectDate": "2026-10-29",
+      "zoningInForceVerifiedAsOf": "2026-11-10",
+      "currentStatusSources": [
+        "https://www7.mississauga.ca/Departments/PB/OfficialDocs/ListOfUnconsolidatedOfficialPlanAmendments_and_LPAT_Decisions.pdf",
+        "https://www7.mississauga.ca/Departments/PB/OfficialDocs/UnconsolidatedZBL_Amendments.pdf"
+      ]
     },
-    "statusEvidenceDate": "2026-10-10",
-    "lastStatusReview": "2026-10-10",
+    "statusEvidenceDate": "2026-11-10",
+    "lastStatusReview": "2026-11-12",
     "mainHeightM": 78.05,
     "overallHeightM": 87.85,
     "hasSupplementalModel": true,
@@ -13489,7 +13530,15 @@
       "fowler-1970-july2026-plan-envelope.glb"
     ],
     "geometrySourceDate": "2026-07-10",
-    "geometryReviewDate": "2026-10-10"
+    "geometryReviewDate": "2026-10-10",
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-12",
+    "lifecycleConfidence": "Official-plan and zoning registers; construction permission unverified",
+    "lifecycleNote": "The official-plan amendment took effect on October 29, 2026. The City lists the zoning amendment as in force as of November 10. Construction permission and timing remain unverified.",
+    "lifecycleSourceRefs": [
+      "https://www7.mississauga.ca/Departments/PB/OfficialDocs/ListOfUnconsolidatedOfficialPlanAmendments_and_LPAT_Decisions.pdf",
+      "https://www7.mississauga.ca/Departments/PB/OfficialDocs/UnconsolidatedZBL_Amendments.pdf"
+    ]
   },
   {
     "id": "tenth-distribution",
@@ -13697,8 +13746,8 @@
     ],
     "heightM": [],
     "towers": [],
-    "summary": "Prologis proposes a two-storey data centre. The 40 MW proposal is affected by the City’s September 16, 2026 interim control bylaw pausing new major digital infrastructure facilities for up to one year. It has not been reported cancelled.",
-    "modelCaveat": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ. Temporarily paused proposal; do not depict as approved or under construction. Retain only with that status visible.",
+    "summary": "Prologis proposes a two-storey data centre. The 40 MW proposal is affected by the City’s September 16, 2026 interim control bylaw pausing new major digital infrastructure facilities for up to one year. It has not been reported cancelled. The latest City-listed resubmission has an October 15, 2026 cover letter; its A.400 elevations are revision 3, issued July 4, 2026 for site-plan review.",
+    "modelCaveat": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ. Temporarily paused proposal; do not depict as approved or under construction. Retain only with that status visible. The October package does not establish a geometry change or the end of the pause. Sheet A.400 is not released for construction. Its 7700 Tenth Line West address differs from the application title, 0 Tenth Line West, and the registry address, 7564 Tenth Line West; this remains unresolved.",
     "sources": [
       {
         "url": "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/0-tenth-line-west-oz-25-21-w9/",
@@ -13743,6 +13792,27 @@
         ],
         "verification": "search-index-read",
         "limitations": "Search-index full article read; direct fetch failed."
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/01/03152834/Cover-Letter-Transmittal-List-OZ-25-21-W9-October-2026.pdf",
+        "title": "October 15, 2026 resubmission cover letter and transmittal",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-11-13",
+        "verification": "read",
+        "claims": [
+          "Dated October 15, 2026; responds to Cycle 2 comments and acknowledges the interim control bylaw. The October package is newer than the May 2026 and December 2025 submissions."
+        ]
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/01/03152809/Overall-Building-Elevations-Data-Centre-OZ-25-21-W9-October-2026.pdf",
+        "title": "A.400 exterior elevations: revision 3, July 4, 2026",
+        "publisher": "City of Mississauga / Petroff Partnership Architects",
+        "accessed": "2026-11-13",
+        "verification": "read",
+        "claims": [
+          "A.400 revision 3 is dated July 4, 2026 and marked ISSUED FOR SPA. NOT RELEASED FOR CONSTRUCTION is checked."
+        ],
+        "limitations": "The October filename is a package label, not the drawing issue date. The title block says 7700 Tenth Line West; address labels remain unresolved. No geometry was rebuilt from this check."
       }
     ],
     "geometrySources": [
@@ -13805,6 +13875,16 @@
         "title": "Site Plan (Data Centre) – May 2026",
         "publisher": "City of Mississauga / applicant",
         "reviewed": false
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2026/01/03152809/Overall-Building-Elevations-Data-Centre-OZ-25-21-W9-October-2026.pdf",
+        "title": "A.400 exterior elevations, revision 3 of July 4, 2026, in October resubmission",
+        "publisher": "City of Mississauga / Petroff Partnership Architects",
+        "reviewed": true,
+        "reviewedOn": "2026-11-13",
+        "issue": "ISSUED FOR SPA",
+        "releasedForConstruction": false,
+        "geometryAdopted": false
       }
     ],
     "includeInModel": true,
@@ -13849,7 +13929,23 @@
       -754.7203351017088
     ],
     "retainedMeshIds": [],
-    "geometryCoverage": "Latest geometry unavailable in source model"
+    "geometryCoverage": "Latest geometry unavailable in source model",
+    "lastStatusReview": "2026-11-13",
+    "latestSourcePackage": {
+      "label": "October 2026 resubmission",
+      "coverLetterDate": "2026-10-15",
+      "elevationSheet": "A.400",
+      "elevationRevision": 3,
+      "elevationIssueDate": "2026-07-04",
+      "elevationIssue": "ISSUED FOR SPA",
+      "releasedForConstruction": false,
+      "geometryChangeVerified": false,
+      "sourceURLs": [
+        "https://www.mississauga.ca/wp-content/uploads/2026/01/03152834/Cover-Letter-Transmittal-List-OZ-25-21-W9-October-2026.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2026/01/03152809/Overall-Building-Elevations-Data-Centre-OZ-25-21-W9-October-2026.pdf"
+      ],
+      "reviewedOn": "2026-11-13"
+    }
   },
   {
     "id": "hurontario-7140",
@@ -18090,9 +18186,9 @@
     "address": "69 and 117 John Street",
     "lat": 43.586067091452044,
     "lon": -79.61935530174132,
-    "status": "Under review; live landing page unavailable",
-    "statusDate": "2026-09-20",
-    "application": "OZ 24 16",
+    "status": "Application cancelled",
+    "statusDate": null,
+    "application": "OZ/OPA 24 16",
     "sitePlan": "",
     "storeys": [
       32,
@@ -18101,8 +18197,8 @@
     ],
     "heightM": [],
     "towers": [],
-    "summary": "October 2025 resubmission shadow report explicitly confirms 32/31/24 storeys with an 8-storey shared podium. Older official headline 31/30/20 is superseded.",
-    "modelCaveat": "Existing City mesh matches old 63/93/96 m heights; latest revised massing requires comparison. Do not label snapshot as current. Live landing page returned 404 although indexed; PDF accessible.",
+    "summary": "The City lists OZ/OPA 24 16 for 69 and 117 John Street as cancelled, verified November 13, 2026. The October 2025 drawings remain a historical proposal for 32, 31 and 24 storeys with an eight-storey podium.",
+    "modelCaveat": "The cancelled proposal is excluded from the Future view. Existing context remains. The older City components, at 63, 93 and 96 m, do not represent the October 2025 revised design. The City does not display a cancellation date.",
     "sources": [
       {
         "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/19121446/Shadow-Study-Report-OZ-OPA-24-16-W7-October-2025.pdf",
@@ -18133,6 +18229,27 @@
           "Historical cross-check, predates October 2025 design."
         ],
         "verification": "search-index"
+      },
+      {
+        "url": "https://www.mississauga.ca/apps/#/property/view/development-applications",
+        "title": "City property application status: OZ/OPA 24 16",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-11-13",
+        "verification": "native-city-result",
+        "claims": [
+          "Search for 69 John Street returns OZ/OPA 24 16 as CANCELLED APPLICATION. Applied date: December 17, 2024. Cancellation date is not displayed."
+        ],
+        "limitations": "This status does not establish ownership, cancellation motive or a replacement proposal."
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/19121510/Cover-Letter-OZ-OPA-24-16-OZ-OPA-24-16-W7-October-2025.pdf",
+        "title": "October 28, 2025 cover letter: exact John Street application identity",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-11-13",
+        "verification": "read",
+        "claims": [
+          "The cover letter links OZ/OPA 24-16 W7 to 69 and 117 John Street East. The October 2025 resubmission is historical design evidence."
+        ]
       }
     ],
     "geometrySources": [],
@@ -18177,7 +18294,32 @@
       174.15501744113863
     ],
     "retainedMeshIds": [],
-    "geometryCoverage": "Duplicate or superseded source geometry excluded; inspect replacement evidence"
+    "geometryCoverage": "Cancelled proposal excluded; existing context retained",
+    "statusEvidenceDate": "2026-11-13",
+    "lastStatusReview": "2026-11-13",
+    "lifecycle": "cancelled",
+    "lifecycleReviewedOn": "2026-11-13",
+    "lifecycleConfidence": "High for the current native City application status; cancellation date is not displayed.",
+    "lifecycleNote": "City property information lists OZ/OPA 24 16 as CANCELLED APPLICATION, verified November 13, 2026. December 17, 2024 is the applied date, not the cancellation date. No ownership change or replacement proposal is established.",
+    "lifecycleSourceRefs": [
+      "https://www.mississauga.ca/apps/#/property/view/development-applications",
+      "https://www.mississauga.ca/wp-content/uploads/2025/09/19121510/Cover-Letter-OZ-OPA-24-16-OZ-OPA-24-16-W7-October-2025.pdf"
+    ],
+    "applicationStatus": {
+      "file": "OZ/OPA 24 16",
+      "status": "CANCELLED APPLICATION",
+      "appliedDate": "2024-12-17",
+      "cancellationDate": null,
+      "verifiedAtUTC": "2026-11-13T05:54:51Z",
+      "sourceURL": "https://www.mississauga.ca/apps/#/property/view/development-applications"
+    },
+    "statusHistory": [
+      {
+        "status": "Under review; live landing page unavailable",
+        "statusDate": "2026-09-20",
+        "supersededOn": "2026-11-13"
+      }
+    ]
   },
   {
     "id": "glen-erin-6719",
@@ -21131,12 +21273,12 @@
     "heightNote": "Approximate secondary catalogue envelopes, not verified as-built heights",
     "actualCompletionDate": null,
     "targetCompletionDate": null,
-    "completionDateNote": "Both buildings are completed. Secondary references report 2020; no exact occupancy/completion day has been verified.",
+    "completionDateNote": "Both buildings are completed. Amacon reports completion in 2021; secondary catalogues report 2020. An exact occupancy or construction-completion day is unverified.",
     "completion": {
       "actual": null,
       "target": null,
       "targetIsGuaranteed": false,
-      "note": "Completed; secondary sources report 2020. Exact completion date unverified."
+      "note": "Completed. Amacon reports 2021, while secondary catalogues report 2020; exact completion and occupancy dates remain unverified."
     },
     "summary": "Two completed Parkside Village towers sharing a podium, added after the missing 4085 address was identified in community feedback.",
     "includeInModel": true,
@@ -21267,6 +21409,13 @@
         "title": "Block 9 South",
         "accessed": "2026-10-03",
         "claim": "Built 2020, 34 storeys and roof approximately 106.5 m; height retained as approximate."
+      },
+      {
+        "url": "https://www.blockresidences.com/",
+        "publisher": "Amacon",
+        "title": "Block Residences portfolio: Block Nine",
+        "accessed": "2026-11-12",
+        "claim": "The developer reports completion in 2021. The page is undated and does not establish an exact completion or occupancy day; older secondary catalogues report 2020."
       }
     ],
     "modelCaveat": "Existing status and 25/34 storeys are corroborated by primary sources. Approximate 79.9/106.5 m vertical envelopes come from a secondary catalogue, not a current surveyed elevation. Tower plates are interpreted from the developer amenity illustration registered to current City mapped footprint limits. Allow about 5 m for tower position/contour interpretation; this is not a statistical accuracy claim. The 14 m podium, floor divisions, balcony projections, vertical fins and roof enclosures are simplified reference-based estimates. Exact as-built facade and slab dimensions have not been obtained. Nine selected native City LOD 2 scene leaves and the inherited municipal model do not contain either tower. Existing neighbouring source geometry is retained. No downloadable architect-native model was located.",
@@ -21281,7 +21430,8 @@
       "https://www7.mississauga.ca/documents/pb/opendata/2020/2020_Residential_Directory_Report_Final.pdf#page=102",
       "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Building_Footprints_2024/FeatureServer/0"
     ],
-    "statusEvidenceDate": "2026-10-03"
+    "statusEvidenceDate": "2026-10-03",
+    "completionYear": 2021
   },
   {
     "id": "aldo-1422-study",
@@ -21553,13 +21703,13 @@
     ],
     "status": "Redesign in progress; latest drawings unavailable",
     "statusDate": "2026-10-05",
-    "lastStatusReview": "2026-10-08",
+    "lastStatusReview": "2026-11-13",
     "storeys": [],
     "heightM": [],
     "historicalApplication": "SP18-110 / A131.22",
-    "summary": "The designer reports a redesign at a similar scale. Revised plans are not finalized. The local atlas records the site without inventing a new building.",
+    "summary": "The designer reported a redesign on October 5, 2026; the latest drawings remain unavailable. The City lists SP 24/051 as the active transfer of historical SP 18/110. This does not confirm final design approval.",
     "geometryCoverage": "Navigation/evidence record; current redesigned geometry unavailable",
-    "modelCaveat": "Historical City records describe a four-storey scheme and a13.72m flat roof request in2022. Those dimensions are not adopted as the2026redesign. No cancellation or confirmed current completion is established.",
+    "modelCaveat": "Historical records describe a four-storey scheme and a 13.72 m flat roof request in 2022. Those dimensions are not adopted as the current redesign. Active is a workflow category; the August 25, 2026 growth snapshot separately labels the file Withheld. No current construction or completion is verified.",
     "meshIds": [],
     "includeInModel": false,
     "modelLayer": "uncertain",
@@ -21577,6 +21727,17 @@
         "title": "City Lakeshore study development inventory (historical)",
         "publisher": "City of Mississauga",
         "accessed": "2026-10-08"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27SP+24%2F051%27&outFields=%2A&returnGeometry=false&f=json",
+        "title": "City current site-plan transfer record SP 24/051",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-11-13",
+        "verification": "read",
+        "claims": [
+          "PLNG_APP_ID 187683 explicitly transfers file 18-110 W1. It is Active, applied November 26, 2024, with no approval date."
+        ],
+        "limitations": "The registered four-storey, 12-unit proposal does not verify the latest redesign. The transfer date is not a drawing revision date."
       }
     ],
     "actualCompletionDate": null,
@@ -21587,7 +21748,22 @@
       "score": 100,
       "type": "PointAddress"
     },
-    "evidenceUpdateNote": "Designer clarification on October5,2026 separates current redesign from historical records."
+    "evidenceUpdateNote": "Designer clarification of October 5, 2026 separates the redesign from historical drawings. The November 13, 2026 registry check links current SP 24/051 explicitly to SP 18/110; no newer architectural package was found.",
+    "application": "SP 24/051",
+    "currentApplicationRecord": {
+      "file": "SP 24/051",
+      "linkedHistoricalFile": "SP 18/110",
+      "planningApplicationId": 187683,
+      "status": "Active",
+      "applicationDate": "2024-11-26",
+      "approvalDate": null,
+      "growthSnapshot": {
+        "asOf": "2026-08-25",
+        "status": "Withheld"
+      },
+      "reviewedOn": "2026-11-13",
+      "sourceURL": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27SP+24%2F051%27&outFields=%2A&returnGeometry=false&f=json"
+    }
   },
   {
     "id": "st-hilarys-anglican-church",
@@ -23966,7 +24142,7 @@
     "includeInModel": true,
     "proposedGeometryAvailable": false,
     "geometryCoverage": "Site marked; the six new townhomes need verified current building drawings. Nearby existing buildings are retained.",
-    "summary": "The City records an approved six-townhome scheme and later removal of its holding symbol. It is an older missing named project, not a newly verified October2026 construction start. Current delivery and exact architecture remain unconfirmed.",
+    "summary": "The City approved the six-townhome zoning application OZ-OPA 19/006 on January 6, 2022 and holding-removal application H-OZ/22/002 on February 28, 2024. Current construction, completion and exact architecture remain unverified.",
     "sources": [
       {
         "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27OZ-OPA+%2F+19+%2F+006%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
@@ -23981,24 +24157,36 @@
         "checked": "2026-10-12",
         "supports": "Sixthree-storeytownhouses;approved2024-02-28.",
         "sourceType": "primary"
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=PLNG_APP_ID+IN+%28171778%2C179586%29&outFields=%2A&returnGeometry=false&f=json",
+        "title": "City linked zoning and holding-removal approvals",
+        "publisher": "City of Mississauga",
+        "checked": "2026-11-13",
+        "sourceType": "primary",
+        "supports": "PLNG_APP_ID 171778 (OZ-OPA 19/006) approved January 6, 2022; PLNG_APP_ID 179586 (H-OZ/22/002), removal of the holding symbol for six three-storey townhouses, approved February 28, 2024. Building permits and physical delivery are not established."
       }
     ],
     "id": "lorne-1110-townhomes",
     "modelLayer": "unmodelled",
     "meshIds": [],
     "geometrySources": [],
-    "lastStatusReview": "2026-10-12",
+    "lastStatusReview": "2026-11-13",
     "modelCaveat": "Exact current proposed exterior/footprint/dimensions not yet verified. Existing municipal roofs are context, not the new design.",
     "lifecycle": "approved",
-    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleReviewedOn": "2026-11-13",
     "lifecycleConfidence": "high for the stated planning stage; current physical delivery remains unverified",
-    "lifecycleNote": "The City records six-townhome zoning approval in January 2022 and holding removal in February 2024. Current construction and completion have not been verified.",
+    "lifecycleNote": "OZ-OPA 19/006 was approved January 6, 2022; H-OZ/22/002 removed the holding symbol on February 28, 2024. These planning records do not establish building permits, construction start, occupancy or completion.",
     "lifecycleSourceRefs": [
       "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27OZ-OPA+%2F+19+%2F+006%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
-      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27H-OZ%2F22%2F002%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json"
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27H-OZ%2F22%2F002%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
+      "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=PLNG_APP_ID+IN+%28171778%2C179586%29&outFields=%2A&returnGeometry=false&f=json"
     ],
     "statusEvidenceDate": "2026-11-01",
-    "approvalStage": "Earlier townhouse zoning and holding removal approved"
+    "approvalStage": "Earlier townhouse zoning and holding removal approved",
+    "application": "OZ-OPA 19/006",
+    "holdingRemovalApplication": "H-OZ/22/002",
+    "evidenceUpdateNote": "The H-OZ prefix identifies a holding-removal application, not a separate OZ 22/2 rezoning. The linked approvals were rechecked November 13, 2026."
   },
   {
     "name": "Port Credit Active Transportation Bridge",
@@ -24012,11 +24200,11 @@
     ],
     "positionCaveat": "Research map locator at the model’s illustrative water level. This positions the camera and a project pin; it is not a bridge-deck elevation or a new span model.",
     "status": "Under construction · public opening not verified",
-    "statusDate": "2026-10-12 current City page",
+    "statusDate": "2026-11-13 current City page",
     "actualCompletionDate": null,
-    "targetCompletionDate": "Fall 2026 in the revised City notice; forecast only",
-    "summary": "A walking and cycling connection from Front Street North to Port Credit Memorial Park. The City still labels it in progress and documents the girder launch. No public opening confirmation was recovered.",
-    "geometryCoverage": "The City tender confirms a 66 m clear span. Final drawings are still needed for the deck height, width, abutment positions and alignment before the bridge is modelled.",
+    "targetCompletionDate": "Spring 2027 construction forecast; opening unverified",
+    "summary": "A walking and cycling connection from Front Street North to Port Credit Memorial Park. The City forecasts construction through spring 2027; a public opening has not been confirmed.",
+    "geometryCoverage": "The tender supports a 66 m clear span. The April 16, 2025 Transport Canada submission states 2.33 m vertical clearance above ordinary high water mark. This is not an absolute deck elevation or an as-built verification. Final drawings remain needed for deck width, vertical datum, abutment positions and alignment.",
     "sources": [
       {
         "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/port-credit-active-transportation-bridge/",
@@ -24052,13 +24240,27 @@
         "checked": "2026-10-12",
         "supports": "July 2026 construction observations. The original City tender now provides primary support for the 66 m clear span.",
         "sourceType": "secondary"
+      },
+      {
+        "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/port-credit-active-transportation-bridge/",
+        "title": "City bridge project: current construction forecast",
+        "checked": "2026-11-13",
+        "supports": "The current City page lists construction from spring 2025 through spring 2027 and approximately 24 months from the start. It has no explicit revision date and does not confirm public opening. This supersedes the fall 2026 forecast in the October 2025 notice.",
+        "sourceType": "primary"
+      },
+      {
+        "url": "https://nwar-rlen.tc.canada.ca/documents/ess/applications/12237/53614/UnclassifiedApplication.pdf",
+        "title": "Transport Canada application 2025-414741 / registry 12237, 16 April 2025, pages 2–3",
+        "checked": "2026-11-13",
+        "supports": "The submitted single-span integral-abutment slab-on-steel-girder bridge has 2.33 m navigation clearance above ordinary high water mark. This relative clearance is not an absolute deck elevation or as-built verification. Deck width, vertical datum, final abutment positions and alignment remain unverified.",
+        "sourceType": "primary"
       }
     ],
     "id": "port-credit-active-transportation-bridge",
     "modelLayer": "unmodelled",
     "meshIds": [],
     "geometrySources": [],
-    "lastStatusReview": "2026-10-12",
+    "lastStatusReview": "2026-11-13",
     "modelCaveat": "Source-supported deck datum, width, abutment locations and final alignment needed. Avoid altering nearbyGOrail or draping the new road/trail into water.",
     "includeInModel": true,
     "storeys": [],

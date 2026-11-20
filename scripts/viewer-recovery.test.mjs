@@ -23,9 +23,10 @@ function exportHarness(){
  const output={width:0,height:0,getContext:()=>({fillRect(){},fillText(){},drawImage(){events.push('copy');}}),
   toBlob(callback){events.push('encode');encoding.promise.then(callback);}};
  const context={$,exporting:false,contextLost:false,current:{id:'downtown',name:'Downtown'},window:{atlasReady:'downtown'},
-  appearance:{mode:'natural'},selectedStudyProjectId:null,projectById:new Map(),selectedStudyLabel:()=>"Historical model study",compare:false,mode:'future',exportImageURL:null,
+  appearance:{mode:'natural'},framedProject:null,renderer:{},selectedStudyProjectId:null,projectById:new Map(),selectedStudyLabel:()=>"Historical model study",compare:false,mode:'future',exportImageURL:null,
   document:{fonts:{load:()=>fonts.promise},createElement:type=>type==='canvas'?output:element(),createTextNode:text=>text},
   clearExportImage(){},render(){events.push('render');},canvas:{width:600,height:400},
+  captureViewerImage({render}){render();return {canvas:{width:1200,height:800},reduced:false};},
   currentStatusLegend:()=>[],presentationLayout:()=>({height:60,scale:1}),exportCreditLines:()=>['City of Mississauga'],displayedSources:{osm:false},
   drawPresentationFooter(){},projectNorth:()=>null,THREE,camera:{},controls:{target:{}},
   STATUS_CLASSIFICATION_EDITION:'2026-11-01',withPNGMetadata:()=>{events.push('metadata');return metadata.promise;},
@@ -71,8 +72,18 @@ function districtHarness({holdTerrain=false}={}){
   ensureOptionalRefinements:()=>optional.promise,invalidate:()=>invalidations.push(context.window.atlasReady),history:{replaceState(){}},CustomEvent:class{},
   console:{error:error=>errors.push(error)}};
  runInNewContext(section('async function loadDistrict(', 'const neighbourhoodAsset='),context);
- return {context,$,terrain,base,optional,errors,invalidations,cleanup,terrainRequests,start:()=>context.loadDistrict(id)};
+ return {context,$,terrain,base,optional,errors,invalidations,cleanup,terrainRequests,start:options=>context.loadDistrict(id,undefined,options)};
 }
+
+
+test('typing before initial model loading is preserved while ordinary area navigation clears search',async()=>{
+ const initial=districtHarness();initial.$('#modelSearchInput').value='Alba';initial.$('#modelSearchClear').hidden=false;
+ const ready=initial.start({preserveSearch:true});assert.equal(initial.$('#modelSearchInput').value,'Alba');
+ initial.base.resolve();await settle();assert.equal(initial.$('#modelSearchInput').value,'Alba');
+ initial.optional.resolve();await ready;assert.equal(initial.$('#modelSearchInput').value,'Alba');
+ const regular=districtHarness();regular.$('#modelSearchInput').value='Alba';const navigation=regular.start();
+ assert.equal(regular.$('#modelSearchInput').value,'');regular.base.resolve();regular.optional.resolve();await navigation;
+});
 
 test('committed municipal scene is interactive while optional studies are still loading',async()=>{
  const run=districtHarness(),done=run.start();run.base.resolve();await settle();assert.deepEqual(run.errors,[]);
@@ -82,6 +93,27 @@ test('committed municipal scene is interactive while optional studies are still 
  assert.equal(run.$('#exportBtn').disabled,false);assert.equal(run.$('#sceneWrap').attributes['aria-busy'],'false');
  assert(run.invalidations.includes('streetsville'),'committed baseline requests a frame before optional downloads finish');
  assert.equal(run.$('#loading').style.display,'none');run.optional.resolve();await done;
+});
+
+test('district files start together and building refinements load three at a time in registration order',async()=>{
+ const run=districtHarness(),files=[],gates=new Map();
+ run.context.refinementInDistrict=()=>true;
+ run.context.refinementData.assets=['one','two','three','four'].map(url=>({url,id:url,modes:['future']}));
+ run.context.loadModelAsset=async(_loader,url)=>{
+  files.push(url);
+  const gate=deferred();gates.set(url,gate);await gate.promise;
+  const scene=new THREE.Group();scene.name=url;return {scene};
+ };
+ const loading=run.start({preserveSearch:true});await settle();
+ assert.deepEqual(files.sort(),['models/streetsville-context.glb','models/streetsville-details.glb','models/streetsville.glb'].sort());
+ for(const gate of gates.values())gate.resolve();
+ await settle();assert.deepEqual(files.slice(3),['one','two','three']);
+ gates.get('three').resolve();gates.get('two').resolve();
+ await settle();assert(!gates.has('four'));
+ gates.get('one').resolve();await settle();gates.get('four').resolve();
+ run.optional.resolve();await loading;
+ assert.deepEqual(run.errors,[]);
+ assert.deepEqual(run.context.model.children.map(child=>child.name),['one','two','three','four']);
 });
 
 for(const stage of ['terrain lookup','baseline download'])test(`context loss during ${stage} preserves its recovery overlay through district completion`,async()=>{

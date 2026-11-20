@@ -1,3 +1,6 @@
+import {MEADOWVALE_POLICY,MEADOWVALE_IDENTITIES} from './meadowvale-media-policy.js?v=20261113-coverage1';
+import {EAST_CREDIT_POLICY,EAST_CREDIT_IDENTITIES} from './east-credit-media-policy.js?v=20261113-coverage1';
+import {COVERAGE_POLICY,COVERAGE_IDENTITIES,COVERAGE_ADOPTION_SHA256} from './coverage-media-policy.js?v=20261113-coverage1';
 import {pictureProvenance} from './image-provenance.js?v=20261101-gallery1';
 
 // Exact active scene identities, verified against the gallery and Social consumers.
@@ -152,9 +155,13 @@ function validateLakeviewPairMember(member,row,policy){
 // Public records use the native owner's v2 contract, with versioned public URLs
 // in place of private delivery paths. This checks the proof's declared bounds and
 // hash bindings; release validation must separately verify decoded RGB equality.
-export function normalizeCleanMedia(entry,baseURL,{neighbourhood=false}={}){
- const allowed=neighbourhood?ACTIVE_NEIGHBOURHOOD_IDENTITIES:ACTIVE_PICTURE_IDENTITIES;
+export function normalizeCleanMedia(entry,baseURL,{neighbourhood=false,coverage=false}={}){
+ const allowed=coverage?[...COVERAGE_IDENTITIES,...EAST_CREDIT_IDENTITIES,...MEADOWVALE_IDENTITIES]:neighbourhood?ACTIVE_NEIGHBOURHOOD_IDENTITIES:ACTIVE_PICTURE_IDENTITIES;
  if(entry?.schema!=='future-mississauga-current-native-media/v2'||!allowed.includes(entry.identity))fail('unsupported active identity');
+ const coveragePolicy=coverage?(COVERAGE_POLICY[entry.identity]||EAST_CREDIT_POLICY[entry.identity]||MEADOWVALE_POLICY[entry.identity]):null;
+ const adoptionSHA=coveragePolicy&&Object.hasOwn(coveragePolicy,'adoptionSHA256')?coveragePolicy.adoptionSHA256:COVERAGE_ADOPTION_SHA256;
+ if(coverage&&(neighbourhood||entry.originalSourceFreezeState!==(coveragePolicy.originalSourceFreezeState||'TRIAL_FROZEN')||(adoptionSHA&&entry.provenance?.finalFrozenAdoption?.sha256!==adoptionSHA)||(coveragePolicy.sourcePackageSHA256&&entry.provenance?.sourcePackage?.sha256!==coveragePolicy.sourcePackageSHA256)||entry.provenance?.deliveryManifest?.sha256!==coveragePolicy.manifestSHA256||entry.sourceSceneSHA256!==coveragePolicy.sourceSceneSHA256||entry.displayMaster?.sha256!==coveragePolicy.displaySHA256||entry.download?.sha256!==coveragePolicy.downloadSHA256))fail('coverage must bind its exact final adoption, original state and accepted pixels');
+ if(coverage&&(!sameJSON(entry.caption,coveragePolicy.caption)||entry.renderTimestampUTC!==coveragePolicy.renderTimestampUTC||!sameJSON(entry.responsivePreviews.map(x=>Object.fromEntries(['url','sha256','bytes','dimensions','mimeType'].map(k=>[k,x[k]]))),coveragePolicy.responsivePins)))fail('coverage captions, credits, dates and preview pins must remain exact');
  if(entry.aliases?.length||entry.historicalURLsRebound!==false)fail('historical aliases cannot be rebound');
  if(entry.sourceFreezeState!=='FINAL_FROZEN'||!hash(entry.sourceSceneSHA256))fail('frozen source scene required');
  if(!actualUTC(entry.renderTimestampUTC))fail('actual render UTC required');
@@ -162,7 +169,16 @@ export function normalizeCleanMedia(entry,baseURL,{neighbourhood=false}={}){
  const master=asset(entry.displayMaster,baseURL),download=asset(entry.download,baseURL),[w,h]=entry.nativeSceneDimensions||[];
  if(!same(entry.nativeSceneDimensions,[w,h])||!positive(w)||!positive(h)||master.width!==w||master.height!==h||master.format!=='image/png'||entry.displayMaster.role!=='cleanNativeScene'||entry.displayMaster.captionBaked!==false)fail('clean native master must retain the complete native dimensions');
  const d=entry.download;
- if(download.format!=='image/png'||d.role!=='nativeSceneWithAppendedCreditFooter'||download.width!==w||download.height<=h||!same(d.sceneDimensions,[w,h])||!same(d.sceneBounds,[0,0,w,h])||!same(d.footerBounds,[0,h,w,download.height]))fail('footer must extend below the complete scene without overlap or gaps');
+ const expandedPortrait=d.role==='nativeSceneOnExpandedWhiteCanvas';
+ if(expandedPortrait){
+  // Only the agreed portrait posting layout is supported. This is a larger
+  // canvas around the native scene, not permission to crop or resize a render.
+  if(neighbourhood||!entry.identity.startsWith('portraits/')||!same([w,h],[3240,4050]))fail('expanded white canvas requires the native portrait scene');
+  if(download.format!=='image/png'||!same([download.width,download.height],[3600,4500])||!same(d.sceneDimensions,[3240,4050])||!same(d.sceneBounds,[180,0,3420,4050])||!same(d.footerBounds,[0,4050,3600,4500])||!same(d.sideMarginsPx,[180,180]))fail('expanded portrait must retain exact scene, margin and footer bounds');
+  if(d.sceneOverlay!==false)fail('expanded portrait must declare no scene overlay');
+ }else if(d.role==='nativeSceneWithAppendedCreditFooter'){
+  if(download.format!=='image/png'||download.width!==w||download.height<=h||!same(d.sceneDimensions,[w,h])||!same(d.sceneBounds,[0,0,w,h])||!same(d.footerBounds,[0,h,w,download.height]))fail('footer must extend below the complete scene without overlap or gaps');
+ }else fail('unsupported download role');
  if(d.sceneSourceSHA256!==master.sha256||d.allScenePixelsExact!==true||d.sceneCrop!==false||d.sceneResize!==false)fail('exact uncropped, unscaled scene hash proof required');
  if(master.url===download.url||master.sha256===download.sha256)fail('clean display and footer download must be separate assets');
  const derivatives=entry.responsivePreviews;
@@ -184,9 +200,9 @@ export function normalizeCleanMedia(entry,baseURL,{neighbourhood=false}={}){
  if(!['existing','construction','future'].includes(c.scenario))fail('known scenario required');
  const areaId=neighbourhood?'fairview':Object.keys(areas).find(id=>entry.identity.split('/')[1].startsWith(id+'-'));
  const scenario=neighbourhood?'existing':entry.identity.match(/-(existing|construction|future)\.png$/)[1];
- if(c.scenario!==scenario||c.area!==(neighbourhood?'Fairview':areas[areaId]))fail('identity must match its area and scenario');
+ if(c.scenario!==scenario||c.area!==(coverage?coveragePolicy.area:neighbourhood?'Fairview':areas[areaId]))fail('identity must match its area and scenario');
  const exception=acceptedCameraScopes[entry.identity],acceptedCameraScope=exception&&c.geographicScope===exception.scope&&entry.provenance?.deliveryManifest?.sha256===exception.manifest;
- if(c.geographicScope!==(neighbourhood?'neighbourhood':areaId==='citywide'?'whole_municipality':'named_district_scene')&&!acceptedCameraScope)fail('identity must match its geographic scope');
+ if(c.geographicScope!==(coverage?coveragePolicy.scope:neighbourhood?'neighbourhood':areaId==='citywide'?'whole_municipality':'named_district_scene')&&!acceptedCameraScope)fail('identity must match its geographic scope');
  if(areaId==='citywide'&&!['Citywide','All Mississauga'].includes(c.title))fail('whole-city title must retain its municipality scope');
  if(!/City of Mississauga/.test(c.cityCredit))fail('City attribution required');
  const allCreditText=[...c.fullCredits,...c.requiredModelCredits].join('\n');
@@ -194,6 +210,7 @@ export function normalizeCleanMedia(entry,baseURL,{neighbourhood=false}={}){
  if(((areaId==='clarkson'&&scenario==='future')||/Zeidler Architecture/i.test(allCreditText))&&!c.requiredModelCredits.includes(zeidlerCredit))fail('Zeidler architectural massing credit must remain visible');
  if(areaId==='lakeview'&&renderRepresentation&&!c.requiredModelCredits.includes(lakeviewOHN.sourceCredits[1]))fail('Lakeview OHN attribution must remain visible');
  const caption=Object.fromEntries(['title','area','creator','scenario','geographicScope','cityCredit','openStreetMap','sourcesURL','renderTimestampUTC','sourceDates'].map(key=>[key,c[key]]));
+ if(c.subtitle!==undefined){if(!captionText(c.subtitle,100))fail('safe subtitle required');caption.subtitle=c.subtitle;}
  if(neighbourhood){
   const state=entry.identity.split('/').at(-1);
   if((entry.comparisonState&&entry.comparisonState!==state)||(c.comparisonState&&c.comparisonState!==state))fail('comparison state must match its identity');
@@ -209,9 +226,9 @@ export function normalizeCleanMedia(entry,baseURL,{neighbourhood=false}={}){
  const [kind,...rest]=entry.identity.split('/');
  const sourceProofSHA256s=Object.fromEntries(Object.entries(entry.provenance||{}).filter(([key,pin])=>/^[a-z][a-zA-Z0-9]*$/.test(key)&&hash(pin?.sha256)).map(([key,pin])=>[key,pin.sha256]));
  return {
-  kind,file:rest.join('/'),identity:entry.identity,area:c.area,title:c.title,aliases:[],
+  kind,file:rest.join('/'),identity:entry.identity,area:c.area,title:c.title,aliases:[],...(coverage?{coverageAddition:true}:{}),
   displayMaster:master,download,preview:previews.find(a=>a.format==='image/avif'&&a.width===widths[0]),responsive:previews.find(a=>a.format==='image/avif'&&a.width===widths.at(-1)),responsivePreviews:previews,
-  cleanPresentation:{sceneDimensions:[w,h],sceneBounds:[...d.sceneBounds],footerBounds:[...d.footerBounds],sceneSourceSHA256:d.sceneSourceSHA256,allScenePixelsExact:true,sceneCrop:false,sceneResize:false},
+  cleanPresentation:{sceneDimensions:[w,h],sceneBounds:[...d.sceneBounds],footerBounds:[...d.footerBounds],sceneSourceSHA256:d.sceneSourceSHA256,allScenePixelsExact:true,sceneCrop:false,sceneResize:false,...(expandedPortrait?{role:d.role,sideMarginsPx:[...d.sideMarginsPx],sceneOverlay:false}:{})},
   caption,sourceAttribution:{cityOfMississauga:true,openStreetMap:c.openStreetMap,cityCredit:c.cityCredit,requiredModelCredits:[...c.requiredModelCredits],creditLines:[...c.fullCredits],sourceURL:c.sourcesURL},
   renderInfo:{state:'rendered',renderDate:renderDate(entry.renderTimestampUTC),renderDateTimezone:'America/Toronto',renderTimestampUTC:entry.renderTimestampUTC,sourceDatesMixed:true,sourceModelDate:null,sourceEdition:c.sourceDates,sourceSceneSHA256:entry.sourceSceneSHA256,sourceProofSHA256s},
   nativeSceneDimensions:[w,h],...(presentation?{presentation:structuredClone(presentation)}:{}),...(renderRepresentation?{renderRepresentation}: {})
@@ -228,12 +245,13 @@ export function imageAttribution(row){
  }
  return {cityCredit:caption?.cityCredit||source.cityCredit||(source.cityOfMississauga?'City of Mississauga':''),openStreetMap:caption?.openStreetMap??source.openStreetMap===true,requiredModelCredits:required.map(value=>compactCredits[value]||value),sourcesURL:caption?.sourcesURL||source.sourceURL||'sources.html'};
 }
-const scenarios={future:'Future scenario',existing:'Existing context',construction:'Dated construction'};
+const scenarios={future:'Future scenario',existing:'Existing context',construction:'Construction snapshot'};
 export function mediaScenarioLabel(row){const caption=row.caption;return caption?[scenarios[caption.scenario]||caption.scenario,caption.comparisonState&&({before:'Before',after:'After'}[caption.comparisonState])].filter(Boolean).join(' · '):'';}
 export function mediaPreviewInfo(row){
  const caption=row.caption,meta=pictureProvenance(row.renderInfo,row.displayMaster.width).meta;
  return {title:caption?.title||row.title,src:row.displayMaster.url,download:row.download?.url||row.url,preview:row.preview?.url||row.display?.url||row.displayMaster.url,width:row.displayMaster.width,height:row.displayMaster.height,
   meta:caption?[pictureProvenance(row.renderInfo,row.download.width).meta,(row.download.bytes/1e6).toFixed(1)+' MB'].join(' · '):meta,
+  viewTitle:row.viewTitle,subtitle:caption?.subtitle,area:row.area||caption?.title||row.title,
   scenario:caption?.scenario,creator:caption?.creator,presentation:row.presentation,attribution:imageAttribution(row),osm:row.sourceAttribution?.openStreetMap===true};
 }
 export function matchedComparisonBinding(rows,proof,proofSHA256){

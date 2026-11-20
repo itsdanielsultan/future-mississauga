@@ -1,3 +1,4 @@
+import {restoreMcityV6Refinements} from './mcity-v6-scope.mjs';
 import {withoutAcceptedModelFields as withoutModel,comparableMcityAssets,acceptedMcityAssetIds} from './mcity-asset-scope.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -13,7 +14,7 @@ const {GLTFLoader}=await import('../public/vendor/addons/loaders/GLTFLoader.js')
 const {MeshoptDecoder}=await import('../public/vendor/meshopt_decoder.mjs');
 const {splitSourceOverlaps}=await import('../public/source-layer-cut.js');
 const {applyModelVisibility}=await import('../public/model-visibility.js');
-const manifest=JSON.parse(await fs.readFile(new URL('../public/data/refinement-models.json',import.meta.url)));
+const manifest=restoreMcityV6Refinements(JSON.parse(await fs.readFile(new URL('../public/data/refinement-models.json',import.meta.url))));
 const studies=manifest.assets.filter(a=>a.id?.startsWith('mcity-')&&a.localOptional);
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const parse=async b=>new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).parseAsync(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength),'');

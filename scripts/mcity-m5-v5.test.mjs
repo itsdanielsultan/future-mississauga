@@ -1,3 +1,4 @@
+import {restoreMcityV6Refinements,restoreMcityV6Catalogue,restoreMcityV6Projects,restoreMcityV6Revisions} from './mcity-v6-scope.mjs';
 import {restorePreOHNVersions} from './offshore-context-scope.mjs';
 import {restoreHarbornVersions} from './harborn-v4-scope.mjs';
 import {restoreM6M8Appearance,M6_M8_APPEARANCE} from './mcity-m6-m8-appearance-scope.mjs';
@@ -24,7 +25,7 @@ const fingerprint=value=>sha(JSON.stringify(stable(value)));
 const BASELINE={"maskedRefinements":"d64d4d3222ac40f3e0b61514b70795409c073e8c27e83d99496611e2cf64aacf","priorCatalogue":"9f74c27c0df8cd41e57ea8eff28e52eeceb1173015375ec4718fe77559f61a3d","priorRevisions":"1e7eb4e76fbfa6bfd02415484ce6b697bde408b4bed63f4dd2265efef78c121b","priorVersions":"a42ea0106f2c99c23041fa24dee25f44f2fa3cb92576c08aed7a73f580d14ae7","projects":"002407e16c575da384ee7adcf57b753b1cfd5880c1b01b85f157183ef764f00a","lifecycle":"fe4f314ef8289453de68d0abc602f036cb5be7447131168187bf67735d7fea24"};
 const CHANGED_KEYS=["url", "sha256", "downloadSHA256", "decodedSHA256", "bytes", "decodedBytes", "triangleCount", "bounds", "modelFidelity", "warning", "qualification", "credit", "sourceRevision", "sourceEvidenceDate", "sources", "modelReviewDate", "geometryConfidence", "comparisonWidthM", "heightVerified", "modelRevisionId"];
 const MODEL_URL='models/studies-20261101/mcity-m5-exterior-v5-af9d51546ca3.glb.gz',RAW='af9d51546ca35a1fbc850b2afc3cbf1565010ee7c196f03df7e8cf6679ff829a',GZIP='4162051b4d6706a65b3f5f0606ce31dfd9500c41f6ea766f1a40eb15ac519b6f';
-const refinements=json('refinement-models.json'),catalogue=json('model-previews.json'),revisions=json('model-revisions.json'),versions=json('model-asset-versions.json');
+const refinements=restoreMcityV6Refinements(json('refinement-models.json')),catalogue=restoreMcityV6Catalogue(json('model-previews.json')),revisions=restoreMcityV6Revisions(json('model-revisions.json')),versions=json('model-asset-versions.json');
 const asset=refinements.assets.find(a=>a.id==='mcity-m5-authored-detail-20261101');
 test('M5 V5 changes only its model metadata and appends exact standalone/revision bindings',()=>{
  const r=restoreM1M2Refinements(restoreM6M8Appearance(restoreM3V7Asset(restoreM4V3Fields(structuredClone(refinements))))),row=r.assets.find(a=>a.id===asset.id);for(const key of CHANGED_KEYS)delete row[key];assert.equal(fingerprint(r),BASELINE.maskedRefinements);

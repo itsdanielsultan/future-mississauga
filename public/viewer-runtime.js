@@ -1,9 +1,9 @@
 // Feature-based limits apply to touch devices, including folded and split windows.
 // These bound the drawing buffer, not the source geometry or exported originals.
-export function drawingPolicy({width, height, pixelRatio = 1, coarse = false, memory = 8}) {
+export function drawingPolicy({width, height, pixelRatio = 1, coarse = false, memory = 8, moving = false}) {
   const compact = coarse || memory <= 4;
   const pixelBudget = compact ? 1_500_000 : 4_000_000;
-  const ratio = Math.min(Math.max(1, pixelRatio), compact ? 1.5 : 2,
+  const ratio = Math.min(Math.max(1, pixelRatio), moving ? 1 : compact ? 1.5 : 2,
     Math.sqrt(pixelBudget / Math.max(1, width * height)));
   return {pixelRatio: ratio, shadowSize: compact ? 2048 : 4096, compact};
 }

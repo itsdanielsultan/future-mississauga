@@ -148,7 +148,7 @@ for(const [district,expected] of [['heartland',344],['meadowvale-village',344],[
 test('Maritz failures preserve source; concurrent retries commit once and an old area cannot commit late',async()=>{
  let unavailable=true,current=true,commits=0,disposed=0,release;
  const manager=createOptionalRefinementLoader({load:asset=>loadCityStudy(THREE,loader,asset,{fetcher:url=>unavailable?Promise.resolve(new Response('',{status:404})):fetcher(url),dispose}),commit:(_,r)=>{commits++;dispose(r.scene);},dispose:r=>{disposed++;dispose(r.scene);},isCurrent:()=>current});
- await assert.rejects(manager.load(maritz),/downloaded/);assert.equal(commits,0);assert(!manager.has(maritz.id));
+ await assert.rejects(manager.load(maritz),/could not be loaded/);assert.equal(commits,0);assert(!manager.has(maritz.id));
  unavailable=false;const first=manager.load(maritz),duplicate=manager.load(maritz);assert.equal(first,duplicate);await first;await manager.load(maritz);assert.equal(commits,1);
  const stale=createOptionalRefinementLoader({load:async asset=>{await new Promise(resolve=>release=resolve);return loadCityStudy(THREE,loader,asset,{fetcher,dispose});},commit:()=>{commits++;},dispose:r=>{disposed++;dispose(r.scene);},isCurrent:()=>current});
  const pending=stale.load(maritz);await Promise.resolve();current=false;release();assert.equal((await pending).stale,true);assert.equal(commits,1);assert.equal(disposed,1);assert(!stale.has(maritz.id));

@@ -1,15 +1,16 @@
+import {installBuildingCatalogue} from './building-catalogue.js?v=20261120-plates';
 import {fitPerspectiveBox} from './model-preview-framing.js?v=20261028-maritz1';
-import {assetURL} from './asset-delivery.js?v=20261109-delivery1';
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {drawingPolicy, createFrameScheduler} from './viewer-runtime.js?v=20261025-mobile1';
-import {selectPreview, verifiedModelBytes} from './model-preview-loading.js?v=20261109-delivery1';
+import {selectPreview, verifiedModelBytes} from './model-preview-loading.js?v=20261113-design2';
 import {cityDataNotice} from './city-data-terms.js?v=20261102-coherent1';
 import {batchOpaqueStudy} from './model-preview-batching.js?v=20261025-1';
 import {buildingFeedbackHTML,bindBuildingFeedback} from './building-feedback.js?v=20261028-improvements1';
-import {loadModelRevisions,modelRevisionForProject} from './model-revisions.js?v=20261102-coherent1';
-import {modelDownloadAssets,configureStudyActions,studyViewerMessage} from './model-study-presentation.js?v=20261102-coherent1';
+import {loadModelRevisions,modelRevisionForProject} from './model-revisions.js?v=20261113-design2';
+import {configureStudyCredits} from './model-study-presentation.js?v=20261113-design2';
+import {applyPreviewAppearance,previewClipping} from './model-preview-presentation.js?v=20261113-thumbnails1';
 
 const $ = id => document.getElementById(id);
 const response = await fetch('data/model-previews.json?v=20261102-coherent1', {cache:'no-store'});
@@ -17,95 +18,94 @@ if (!response.ok) throw new Error('Study catalogue unavailable');
 const manifest = await response.json();
 const requestedId = new URLSearchParams(location.search).get('model');
 const view = selectPreview(manifest, requestedId);
-for (const item of manifest.views) {
-  $('modelSelect').add(new Option(item.title, item.id));
-  const card = document.createElement('article'); card.className = 'study-card';
-  const link = document.createElement('a'); link.className = 'study-card-link';
-  link.href = 'model.html?model=' + encodeURIComponent(item.id);
-  const image = document.createElement('img');
-  image.src = 'assets/study-thumbnails-20261109/' + encodeURIComponent(item.id) + '.png';
-  image.alt = ''; image.width = 800; image.height = 600;
-  image.loading = 'lazy'; image.decoding = 'async';
-  const title = document.createElement('span'); title.className = 'study-card-title';
-  title.textContent = item.title;
-  const arrow = document.createElement('span'); arrow.textContent = '→'; arrow.setAttribute('aria-hidden', 'true'); title.append(arrow);
-  link.append(image, title); card.append(link);
-  const note = document.createElement('p'); note.className = 'study-card-note';
-  note.textContent = item.subtitle.split(' · ')[0]; card.append(note);
-  if (item.visibleReferenceCredit) {
-    const credit = document.createElement('p'); credit.className = 'study-card-credit';
-    const source = document.createElement('a'); source.href = item.visibleReferenceCredit.url; source.textContent = item.visibleReferenceCredit.label;
-    credit.append('Reference: ', source); card.append(credit);
-  }
-  $('previewLinks').append(card);
-}
+for (const item of manifest.views) $('modelSelect').add(new Option(item.title, item.id));
 $('modelSelect').onchange = () => { if ($('modelSelect').value) location.assign('model.html?model=' + encodeURIComponent($('modelSelect').value)); };
 if (!view) {
-  $('choiceStatus').textContent = requestedId ? 'This model link is unavailable. Choose a study below.' : 'Choose a building';
+  if(requestedId) $('modelSubtitle').textContent = 'This model is unavailable. Browse the public studies below.';
+  installBuildingCatalogue().catch(()=>{$('choiceStatus').textContent='The building catalogue could not load. Use the building studies or reference studies links above.';});
 } else {
   document.body.classList.add('model-selected');
+  const buildingLink = document.querySelector('.building-back');
+  const profile = $('studyProfile');
+  if ((profile.dataset.profiles || '').split(' ').includes(view.id)) {
+    profile.href = 'building-' + view.id + '.html';
+    profile.hidden = false;
+    if (buildingLink) {
+      buildingLink.href = profile.href;
+      buildingLink.textContent = '← Building, photos and location';
+    }
+  }
+  $('studyNotesLink').href = 'study-notes.html#model-' + encodeURIComponent(view.id);
   $('modelSelect').value = view.id; $('modelChooser').hidden = true; $('previewContent').hidden = false;
   $('modelTitle').textContent = view.title; document.title = view.title + ' · Future Mississauga';
-  $('modelSubtitle').textContent = view.subtitle;
-  const cityProject = ({'mcity-pair':'mcity-1-2','mcity-m1':'mcity-1-2','mcity-m2':'mcity-1-2','avia-1':'avia','avia-2':'avia','edge-1':'edge-oro','edge-2':'edge-oro','oro':'edge-oro','artform':'artform','sgm-maritz-6710':'sgm-maritz-6710'})[view.id];
+  $('modelSubtitle').textContent = view.subtitle.split(' · ')[0];
+  const cityProject = ({'mcity-pair':'mcity-1-2','mcity-m1':'mcity-1-2','mcity-m2':'mcity-1-2','mcity-m5':'mcity-5','avia-1':'avia','avia-2':'avia','edge-1':'edge-oro','edge-2':'edge-oro','oro':'edge-oro','artform':'artform','sgm-maritz-6710':'sgm-maritz-6710'})[view.id];
   const projectId=view.projectId||cityProject;
   const feedback=document.createElement('span');feedback.className='project-model-preview';feedback.innerHTML=buildingFeedbackHTML({id:projectId,name:view.title},{viewURL:location.href});$('modelActions').append(feedback);$('modelActions').hidden=false;
   bindBuildingFeedback(feedback,()=>({viewURL:location.href}));
   void loadModelRevisions().then(registry=>{const revision=modelRevisionForProject(registry,manifest,projectId,view.id);if(!revision)return;const paragraph=$('modelRevision');paragraph.hidden=false;paragraph.setAttribute('aria-label','Model revision');const time=document.createElement('time');time.dateTime=revision.updatedOn;time.textContent=revision.label;paragraph.replaceChildren(time);});
   const cityURL=view.cityURL||(cityProject?'explore.html?district='+(cityProject==='sgm-maritz-6710'?'heartland':cityProject==='artform'?'cooksville':'downtown')+'&project='+cityProject:'');
-  if(cityURL){const link=document.createElement('a');link.href=cityURL;link.textContent='View in the city map ↗';$('modelActions').prepend(link);}
-  if(view.comparisonURL){const link=document.createElement('a');link.href=view.comparisonURL;link.textContent='Before and after ↗';$('modelActions').prepend(link);}
-  $('studySummary').textContent = view.summary; $('studyCredit').textContent = view.credit;
-  $('studyLimits').textContent = view.limits; $('rightsNote').textContent = view.rights;
-  $('downloadNote').textContent = view.downloadNote || 'Keep the credits and model limits when sharing.';
-  configureStudyActions(view);
-  for (const source of view.sources) {
-    const li = document.createElement('li'), a = document.createElement('a');
-    a.href = source.url; a.textContent = source.title; a.target = '_blank'; a.rel = 'noopener';
-    li.append(a); if (source.note) li.append(document.createTextNode(' — ' + source.note)); $('modelSources').append(li);
+  const viewsNav = $('subjectViews');
+  const currentTab = document.createElement('span');
+  currentTab.textContent = '3D model';
+  currentTab.setAttribute('aria-current', 'page');
+  viewsNav.append(currentTab);
+  const viewRoutes = new Set();
+  function addView(label, url) {
+    if (!url || viewRoutes.has(url)) return;
+    viewRoutes.add(url);
+    const link = document.createElement('a');
+    link.href = url;
+    link.textContent = label;
+    viewsNav.append(link);
+    viewsNav.hidden = false;
   }
+  addView('City map', cityURL);
+  fetch('data/building-catalogue.json?v=20261120-plates')
+    .then(response => response.ok ? response.json() : null)
+    .then(catalogue => {
+      const building = catalogue?.entries?.find(entry => entry.id === view.id);
+      for (const link of building?.links || []) {
+        if (link.kind === 'study') addView(link.label, link.url);
+      }
+    }).catch(() => {});
+  if (document.referrer) {
+    const directory = new URL(document.referrer);
+    if (directory.origin === location.origin && directory.pathname === location.pathname && !directory.searchParams.has('model')) {
+      if (buildingLink) {
+        buildingLink.href = directory.href;
+        buildingLink.textContent = '← All buildings';
+      }
+    }
+  }
+  addView('Before and after', view.comparisonURL);
+  $('studySummary').textContent = view.summary; $('studyCredit').textContent = view.credit;
+  configureStudyCredits(view);
   const assets = view.assets.map(id => manifest.assets.find(a => a.id === id));
   if (assets.some(a => !a)) throw new Error('Incomplete study catalogue');
   const requiresCityTerms = assets.some(asset => asset.cityDataTerms);
   if (requiresCityTerms) {
-    $('modelSources').after(cityDataNotice().element);
+    $('studyCredit').after(cityDataNotice().element);
   }
-  const bytes = new Map(), pending = new Map(), downloadButtons = [];
-  const status = (message, error = false) => { if(contextLost){message='Graphics paused. Restore the model to continue.';error=true;} $('previewStatus').textContent = studyViewerMessage(view,message); $('previewStatus').classList.toggle('error', error); };
+  const bytes = new Map(), pending = new Map();
+  const status = (message, error = false) => { if(contextLost){message='Graphics paused. Restore the model to continue.';error=true;} $('previewStatus').textContent = message; $('previewStatus').classList.toggle('error', error); };
   async function getBytes(asset) {
     if (bytes.has(asset.id)) return bytes.get(asset.id);
     if (!pending.has(asset.id)) pending.set(asset.id, verifiedModelBytes(asset).then(data => { bytes.set(asset.id, data); return data; }).finally(() => pending.delete(asset.id)));
     return pending.get(asset.id);
   }
-  for (const asset of modelDownloadAssets(view,assets)) {
-    const button = document.createElement('button'); button.className = 'ui-button'; button.dataset.variant = 'outline'; button.dataset.download = asset.id;
-    button.textContent = 'Download ' + asset.title + ' GLB · ' + (asset.decodedBytes / 1e6).toFixed(1) + ' MB';
-    button.onclick = async () => {
-      button.disabled = true; status('Preparing ' + asset.title + ' download…');
-      try {
-        const data = await getBytes(asset);
-        const url = URL.createObjectURL(new Blob([data], {type: 'model/gltf-binary'}));
-        const a = document.createElement('a'); a.href = url; a.download = asset.downloadName; document.body.append(a); a.click(); a.remove();
-        setTimeout(() => URL.revokeObjectURL(url), 60000);
-        status('Download prepared. Please keep the credits and limitations with the model.');
-      } catch (error) { status(error.message, true); }
-      finally { button.disabled = false; }
-    };
-    $('modelDownloads').append(button); downloadButtons.push(button);
-    const compressed = document.createElement('a'); compressed.href = assetURL(asset.url); compressed.download = asset.url.split('/').pop();
-    compressed.textContent = asset.title + ': compressed GLB (' + (asset.bytes / 1e6).toFixed(2) + ' MB)'; $('compressedDownloads').append(compressed);
-  }
-
   const canvas = $('previewCanvas'), wrap = $('previewWrap');
   let renderer, controls, contextRestorer, restoreTimer, reloadForRecovery = false, contextLost = false, visible = true, ready = false, loadRequest = 0, disposed = false;
   let fitDistance = 1, modelRadius = 1, modelSize = [1,1,1];
+  const displayAppearances = [];
   const scene = new THREE.Scene(), camera = new THREE.PerspectiveCamera(35, 1, .1, 50000), model = new THREE.Group();
+  const clipCentre = new THREE.Vector3();
   scene.background = new THREE.Color('#e8f2f7'); scene.add(model);
   scene.add(new THREE.HemisphereLight(0xf5f8ff, 0xb3b1a6, 2.1));
   const light = new THREE.DirectionalLight(0xfff9ef, 2.6); light.position.set(-100, 180, 100); scene.add(light);
   const fill = new THREE.DirectionalLight(0xdbe7ff, .8); fill.position.set(100, 60, -100); scene.add(fill);
   const policy = () => drawingPolicy({width:wrap.clientWidth, height:wrap.clientHeight, pixelRatio:devicePixelRatio, coarse:matchMedia('(any-pointer: coarse)').matches, memory:navigator.deviceMemory || 8});
-  const scheduler = createFrameScheduler({canDraw:() => Boolean(renderer && !contextLost && !document.hidden && visible && !disposed), draw:() => { const changed = controls?.update(); renderer.render(scene, camera); return changed; }});
+  const scheduler = createFrameScheduler({canDraw:() => Boolean(renderer && !contextLost && !document.hidden && visible && !disposed), draw:() => { const changed = controls?.update(); if(ready){camera.updateMatrixWorld();const depth=-clipCentre.set(0,0,0).applyMatrix4(camera.matrixWorldInverse).z;const planes=previewClipping(depth,modelRadius);if(camera.near!==planes.near||camera.far!==planes.far){Object.assign(camera,planes);camera.updateProjectionMatrix();}} renderer.render(scene, camera); return changed; }});
   const invalidate = () => scheduler.invalidate();
   function interaction(enabled) {
     if (controls) controls.enabled = enabled && ready && !contextLost;
@@ -114,6 +114,7 @@ if (!view) {
     if (enabled) canvas.focus({preventScroll:true});
   }
   function disposeModels() {
+    for(const appearance of displayAppearances.splice(0))appearance.dispose();
     model.traverse(object => { object.geometry?.dispose(); for (const material of [object.material].flat().filter(Boolean)) material.dispose(); });
     model.clear(); model.position.set(0,0,0);
   }
@@ -151,6 +152,8 @@ if (!view) {
         const data = await getBytes(asset); const gltf = await loader.parseAsync(data.buffer.slice(data.byteOffset, data.byteOffset + data.byteLength), '');
         if (request !== loadRequest || disposed) { gltf.scene.traverse(o => {o.geometry?.dispose(); for(const m of [o.material].flat().filter(Boolean))m.dispose();}); return; }
         if (asset.batchOpaque) batchOpaqueStudy(gltf.scene, THREE);
+        const appearance = applyPreviewAppearance(THREE,gltf.scene,asset);
+        if(appearance)displayAppearances.push(appearance);
         gltf.scene.userData.assetId = asset.id; model.add(gltf.scene);
       }
       const bounds = new THREE.Box3().setFromObject(model), centre = bounds.getCenter(new THREE.Vector3());
@@ -171,7 +174,7 @@ if (!view) {
     renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1;
     controls = new OrbitControls(camera,canvas); controls.enableDamping = false; controls.maxPolarAngle = Math.PI * .49;
     controls.addEventListener('change',invalidate); interaction(false); resize();
-  } catch { recoverMessage('3D graphics are unavailable. You can still download the model and credits.'); }
+  } catch { recoverMessage('3D graphics are unavailable. Try another browser to view this study.'); }
   const observer = new ResizeObserver(resize); observer.observe(wrap);
   const intersection = new IntersectionObserver(([entry]) => {visible = entry.isIntersecting; if(visible)invalidate(); else scheduler.pause();}); intersection.observe(wrap);
   document.addEventListener('visibilitychange',() => {if(document.hidden)scheduler.pause(); else invalidate();});
@@ -182,7 +185,7 @@ if (!view) {
     if(contextLost){
       try{contextRestorer?.restoreContext();}catch{}
       clearTimeout(restoreTimer);
-      restoreTimer=setTimeout(()=>{if(contextLost){reloadForRecovery=true;$('retryModel').textContent='Reload viewer';$('previewStatus').textContent=studyViewerMessage(view,'Graphics could not be restored. Reload the viewer or use the model download.');}},3000);
+      restoreTimer=setTimeout(()=>{if(contextLost){reloadForRecovery=true;$('retryModel').textContent='Reload viewer';$('previewStatus').textContent='Graphics could not be restored. Reload the viewer to try again.';}},3000);
       return;
     }
     load();

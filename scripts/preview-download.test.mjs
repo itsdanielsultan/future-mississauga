@@ -46,8 +46,8 @@ test('the installed click handler preserves credited fallback when metadata fail
  const shown=[],listeners={},row=rows[0],anchor=anchorFor(row),section={querySelector:()=>({textContent:'Fairview'})};
  const image={src:new URL(row.responsivePreviews.find(p=>p.mimeType==='image/avif').url,base).href,alt:'Fairview before',dataset:{},naturalWidth:1800,naturalHeight:1100};
  image.closest=selector=>selector==='main img'?image:selector==='a,button'?anchor:selector==='main'?{}:selector==='article,section'?section:null;
- anchor.matches=selector=>selector==='a';anchor.querySelector=()=>image;
- const preview={dialog:{open:false,addEventListener(){}},show(info){this.dialog.open=true;shown.push(info)}};
+ anchor.matches=selector=>selector==='a';anchor.querySelector=()=>image;anchor.hasAttribute=()=>false;
+ const preview={dialog:{open:false,addEventListener(){}},setSequence(){},show(info){this.dialog.open=true;shown.push(info)}};
  const source=read('image-preview.js').replace(/^import .*;\n/gm,'').replace(/^export \{.*;\n/gm,'').replace(/export function /g,'function ').replace('generic=createImagePreview()','generic=testPreview()');
  vm.runInNewContext(source+'\ninstallImagePreviews(async()=>{throw Error("catalogue unavailable")});',{
   document:{addEventListener(type,fn){listeners[type]=fn},querySelectorAll:()=>[]},location:{href:base},URL,Symbol,
@@ -58,6 +58,12 @@ test('the installed click handler preserves credited fallback when metadata fail
  assert.equal(shown.length,0);
  const e=event();await listeners.click(e);assert.equal(e.defaultPrevented,true);assert.equal(shown.length,1);
  assert.equal(shown[0].src,anchor.href);assert.equal(shown[0].download,new URL(row.download.url,base).href);
+ anchor.href='https://futuremississauga.com/model.html?model=mcity-pair';
+ const modelClick=event();await listeners.click(modelClick);
+ assert.equal(modelClick.defaultPrevented,false,'a connected building thumbnail opens its study');assert.equal(shown.length,1);
+ anchor.href='https://futuremississauga.com/downloads/atlas.pdf';anchor.hasAttribute=name=>name==='data-document-preview';
+ const documentClick=event();await listeners.click(documentClick);
+ assert.equal(documentClick.defaultPrevented,false,'a PDF cover image belongs to the document preview');assert.equal(shown.length,1);
 });
 
 test('late accepted metadata replaces a declared download within the same preview',async()=>{

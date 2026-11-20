@@ -1,3 +1,4 @@
+import {registryReconciliationIds} from './registry-reconciliation-scope.mjs';
 import {withoutAcceptedModelFields as withoutModel,comparableMcityAssets,acceptedModelProjectIds} from './mcity-asset-scope.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -5,6 +6,8 @@ import fs from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {statusMetadataScope as scope, withoutReviewedStatusMetadata as withoutStatus} from './status-metadata-scope.mjs';
 import {mcityContentIds, withoutReviewedMcityContent as withoutMcity, withoutReviewedMcityNote as withoutMcityNote} from './mcity-content-scope.mjs';
+import {restoreNamedProjectReview,restoreNamedProjectRegister,namedProjectReviewIds} from './named-project-review-scope.mjs';
+import {publicModelCaveat} from '../public/project-cards.js';
 const base='dc9bb6a53020ad77ef407affff56a8b94a585aab';
 const read=f=>JSON.parse(fs.readFileSync(new URL('../public/data/'+f,import.meta.url)));
 const prior=f=>JSON.parse(execFileSync('git',['show',base+':public/data/'+f],{maxBuffer:32*1024*1024}));
@@ -22,9 +25,10 @@ for(const [kind,file,list] of [['projects','projects.json',projects],['groups','
    const expected=scope[kind][r.id];
    if(!expected)continue;
    const before=old.find(x=>x.id===r.id);
-   const metadataAfter=withoutModel(kind,kind==='projects'?withoutMcity(r):r),metadataBefore=withoutModel(kind,kind==='projects'?withoutMcity(before):before);
+   const reviewed=restoreNamedProjectReview(kind,r);
+   const metadataAfter=withoutModel(kind,kind==='projects'?withoutMcity(reviewed):reviewed),metadataBefore=withoutModel(kind,kind==='projects'?withoutMcity(before):before);
    assert.deepEqual(Object.keys(metadataAfter).filter(k=>!Object.hasOwn(metadataBefore,k)).sort(),expected);
-   assert(allowed.has(r.lifecycle),r.id);assert.equal(r.lifecycleReviewedOn,'2026-11-01');
+   assert(allowed.has(r.lifecycle),r.id);assert.equal(reviewed.lifecycleReviewedOn,'2026-11-01');
   }
   if(kind==='assets')assert.deepEqual({...manifest,assets:old},oldData,'manifest history and non-asset records stay unchanged');
  });
@@ -46,7 +50,7 @@ test('the 71 reviewed records preserve their identity and classify actual lifecy
  assert.equal(snapshot.projects.length,71);assert.equal(new Set(snapshot.projects.map(x=>x.id)).size,71);
  assert.equal(snapshot.schema,'future-mississauga-project-lifecycle/v1');assert.equal(snapshot.baseline,base);
  for(const r of snapshot.projects){
-  const record=r.recordType==='municipalGroup'?group(r.id):project(r.id);
+  const record=r.recordType==='municipalGroup'?group(r.id):restoreNamedProjectReview('projects',project(r.id));
   assert.equal(r.lifecycle,record.lifecycle);assert.equal(r.note,record.lifecycleNote);assert.deepEqual(r.sourceRefs,record.lifecycleSourceRefs);
   assert(r.sourceRefs.length);for(const url of r.sourceRefs)assert.equal(new URL(url).protocol,'https:');
  }
@@ -98,26 +102,33 @@ function parseCSV(text){
 }
 test('CSV preserves every original record and field while adding only reviewed lifecycle columns',()=>{
  const old=parseCSV(execFileSync('git',['show',base+':public/downloads/project-register.csv'],{encoding:'utf8',maxBuffer:16*1024*1024}));
- const current=parseCSV(restore26Register(fs.readFileSync(new URL('../public/downloads/project-register.csv',import.meta.url),'utf8')));
+ const current=parseCSV(restoreNamedProjectRegister(restore26Register(fs.readFileSync(new URL('../public/downloads/project-register.csv',import.meta.url),'utf8'))));
  const added=['lifecycle','approvalStage','lifecycleReviewedOn','lifecycleNote'];assert.deepEqual(current.headers,[...old.headers,...added]);
  const unchangedFields=r=>Object.fromEntries(old.headers.filter(k=>(!mcityContentIds.has(r.id)||!['status','statusDate','storeys','geometryCoverage','modelCaveat','sources'].includes(k))&&(!['ninth-6344','longview-44-45'].includes(r.id)||k!=='status')&&(!acceptedModelProjectIds.has(r.id)||!['modelCaveat','geometryCoverage'].includes(k))).map(k=>[k,r[k]]));
  assert.deepEqual(current.rows.map(unchangedFields),old.rows.map(unchangedFields));
- for(const r of current.rows)for(const k of added)assert.equal(r[k],scope.projects[r.id]?(project(r.id)[k]||''):'');
+ for(const r of current.rows)for(const k of added)assert.equal(r[k],scope.projects[r.id]?(restoreNamedProjectReview('projects',project(r.id))[k]||''):'');
 });
-test('accuracy table current status matches project metadata while model notes remain unchanged',()=>{
+test('accuracy table preserves source facts and uses the reviewed public wording',()=>{
  const current=fs.readFileSync(new URL('../public/accuracy-review.html',import.meta.url),'utf8');
  const old=execFileSync('git',['show',base+':public/accuracy-review.html'],{encoding:'utf8',maxBuffer:4*1024*1024});
  const rowFor=(text,id)=>[...text.matchAll(/<tr\b[^>]*>[\s\S]*?<\/tr>/g)].map(m=>m[0]).find(r=>r.includes('project='+id+'"')||r.includes('project='+id+'&amp;'));
  for(const id of Object.keys(scope.projects)){
-  if(mcityContentIds.has(id))continue;
+  if(mcityContentIds.has(id)||namedProjectReviewIds.has(id)||registryReconciliationIds.has(id))continue;
   const row=rowFor(current,id),before=rowFor(old,id);assert(row&&before,id);
-  const cells=[...row.matchAll(/<td>([\s\S]*?)<\/td>/g)].map(m=>m[1]);const oldCells=[...before.matchAll(/<td>([\s\S]*?)<\/td>/g)].map(m=>m[1]);
+  const cells=[...row.matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/g)].map(m=>m[1]);const oldCells=[...before.matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/g)].map(m=>m[1]);
+  const readableModelLabel=text=>text.replace('Supplemental model registered','Added model detail').replace('No separate refinement asset registered','No added model detail');
   assert(cells[1].includes(snapshot.taxonomy[project(id).lifecycle]),id);
   if(acceptedModelProjectIds.has(id)){
-   assert.equal(cells[0],oldCells[0],id);assert.equal(cells[2],oldCells[2].replace('No separate refinement asset registered','Supplemental model registered'),id);
+   assert.equal(cells[0],oldCells[0],id);assert.equal(cells[2],readableModelLabel(oldCells[2].replace('No separate refinement asset registered','Supplemental model registered')),id);
    const concise={'mcity-1-2':['CORE’s seven floor-plate outlines guide the exterior. Added glazing and bands improve selected podium surfaces.','Floor phase, heights and podium details remain approximate. M1’s low faceted pavilion is coarse or absent; this is not a measured as-built model.'],'mcity-3':['±15 m uncertainty','City’s lower building geometry','mechanical steel and cavities are not modelled'],'mcity-4':['March 2020','215.65 m','Spring 2026','level 41','level 26'],'mcity-5':['36-storey','building height is unverified','not a measured construction stage'],'port-credit-50-high':['December 2025 drawings','facade frames and roof arches','Frame depths, glazing and finishes are approximate','future view shows the planned building','dated City model retains the older building','extent of demolition is not mapped']}[id];
    if(concise){for(const text of concise)assert(cells[3].includes(text),id+': '+text);}else{assert(cells[3].includes(project(id).geometryCoverage),id);assert(cells[3].includes(project(id).modelCaveat),id);}
-  }else assert.deepEqual([cells[0],...cells.slice(2)],[oldCells[0],...oldCells.slice(2)],id);
+  }else {
+   const evidence=['artform','edge-oro','avia'].includes(id)?oldCells[2].replace('No separate refinement asset registered','Supplemental model registered'):oldCells[2];
+   const copyIds=new Set(['square-one-masterplan','square-one-phase1','180-burnhamthorpe','parkside-block11','keystone','brightwater-mason','winston-6020','brandon-3233','brightwater-credit-river-way']);
+   const encode=text=>text.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+   const notes=oldCells.slice(3).map(cell=>(copyIds.has(id)?cell.replace(encode(project(id).modelCaveat),encode(publicModelCaveat(project(id)))):cell).replace('Latest geometry unavailable in source model','The latest building design is not included in this model.'));
+   assert.deepEqual([cells[0],...cells.slice(2)],[oldCells[0],readableModelLabel(evidence),...notes],id);
+  }
  }
 });
 

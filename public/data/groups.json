@@ -7615,13 +7615,44 @@
     "completionDate": null,
     "targetCompletionDate": null,
     "completionDateNote": "No actual completion date or target completion date published in the sources reviewed for this proposed project.",
-    "currentStatus": "See linked detailed dossier; current completion unverified",
+    "currentStatus": "Application cancelled; verified November 13, 2026. Cancellation date not displayed.",
     "position": [
       -3540.8301628712798,
       70,
       174.15501744113863
     ],
-    "retainedComponents": 0
+    "retainedComponents": 0,
+    "lifecycle": "cancelled",
+    "lifecycleReviewedOn": "2026-11-13",
+    "lifecycleNote": "City property information lists OZ/OPA 24 16 as CANCELLED APPLICATION, verified November 13, 2026. December 17, 2024 is the applied date, not the cancellation date. No ownership change or replacement proposal is established.",
+    "lifecycleSourceRefs": [
+      "https://www.mississauga.ca/apps/#/property/view/development-applications",
+      "https://www.mississauga.ca/wp-content/uploads/2025/09/19121510/Cover-Letter-OZ-OPA-24-16-OZ-OPA-24-16-W7-October-2025.pdf"
+    ],
+    "statusEvidenceDate": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.mississauga.ca/apps/#/property/view/development-applications",
+        "title": "City property application status: OZ/OPA 24 16",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-11-13",
+        "verification": "native-city-result",
+        "claims": [
+          "Search for 69 John Street returns OZ/OPA 24 16 as CANCELLED APPLICATION. Applied date: December 17, 2024. Cancellation date is not displayed."
+        ],
+        "limitations": "This status does not establish ownership, cancellation motive or a replacement proposal."
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2025/09/19121510/Cover-Letter-OZ-OPA-24-16-OZ-OPA-24-16-W7-October-2025.pdf",
+        "title": "October 28, 2025 cover letter: exact John Street application identity",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-11-13",
+        "verification": "read",
+        "claims": [
+          "The cover letter links OZ/OPA 24-16 W7 to 69 and 117 John Street East. The October 2025 resubmission is historical design evidence."
+        ]
+      }
+    ]
   },
   {
     "id": "city-group-84",

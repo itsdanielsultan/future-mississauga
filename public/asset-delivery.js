@@ -1,4 +1,5 @@
 import {assetOrigin, deliveryPaths} from './asset-delivery-map.js?v=20261109-delivery1';
+import {releaseAssetURL} from './release-asset-delivery.js?v=20261113-delivery2';
 
 // Resolve only at the network boundary. Source identities and credits keep the
 // original local paths. This function is never called in the rendering loop.
@@ -21,4 +22,5 @@ export function createAssetResolver({origin, paths, baseURI = () => globalThis.d
   };
 }
 
-export const assetURL = createAssetResolver({origin: assetOrigin, paths: deliveryPaths});
+const cloudflareAssetURL = createAssetResolver({origin: assetOrigin, paths: deliveryPaths});
+export const assetURL = value => releaseAssetURL(cloudflareAssetURL(value));

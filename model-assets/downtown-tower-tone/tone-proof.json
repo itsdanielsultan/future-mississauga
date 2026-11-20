@@ -1,0 +1,56 @@
+{
+  "cameraSource": "Reviewed Downtown oblique captures of 9 November 2026",
+  "presentationDate": "2026-11-20",
+  "sourceRevision": "4f74309",
+  "scenePixels": [
+    6144,
+    2240
+  ],
+  "creditedPixels": [
+    6144,
+    2554
+  ],
+  "selection": "Visible existing municipal tower massing at least 35 m tall, depth-tested against each scenario. Detailed authored materials and planning-status meshes excluded.",
+  "maximumSRGBReduction": 0.052,
+  "scenarios": {
+    "future": {
+      "sourceFile": "downtown-skyline-future-credited-e6249b4e6565.png",
+      "sourceSHA256": "e6249b4e6565ae3414cf001a310dd7d79a82cf760645f08de1624b36e9f09d30",
+      "maskSHA256": "bd088beab49f917ea082cea0695464788385c7b179b124b3e62ed7a4e0183507",
+      "changedPixels": 1567620,
+      "medianChange8bit": 7.0,
+      "maxChange8bit": 9,
+      "outsideTowerPixelsChanged": 0,
+      "creditStripPixelsChanged": 0,
+      "mask": "future-mask.png",
+      "file": "downtown-skyline-future-credited-35f95425e587.png",
+      "sha256": "35f95425e58732dba1411a344fcdc0ac38d1b0af9aaa2fb5d91e6304dddc7ab6"
+    },
+    "construction": {
+      "sourceFile": "downtown-skyline-construction-credited-2e85cecb467d.png",
+      "sourceSHA256": "2e85cecb467df79c50fd707a4b00f45b046fc79cba8060dbcb6883d44c10e971",
+      "maskSHA256": "b8ad08e54117c98b471bc2e2cc7dc77e9cb782bf8ead5208b2198f37ee68d9ad",
+      "changedPixels": 1757092,
+      "medianChange8bit": 7.0,
+      "maxChange8bit": 9,
+      "outsideTowerPixelsChanged": 0,
+      "creditStripPixelsChanged": 0,
+      "mask": "construction-mask.png",
+      "file": "downtown-skyline-construction-credited-e4d79d25ce46.png",
+      "sha256": "e4d79d25ce460f104912fe9462c2886cadb399b6bf5cda6b719c82661b80b058"
+    },
+    "existing": {
+      "sourceFile": "downtown-skyline-existing-credited-46cdc07ecc8c.png",
+      "sourceSHA256": "46cdc07ecc8c5c495f462b289d1844b2554af145e2da036addf7786d90d73df5",
+      "maskSHA256": "3f8908d2944e84f415b87f673a7fdde2bdd1615253a4a3f5186a3319129b56b0",
+      "changedPixels": 1816175,
+      "medianChange8bit": 7.0,
+      "maxChange8bit": 9,
+      "outsideTowerPixelsChanged": 0,
+      "creditStripPixelsChanged": 0,
+      "mask": "existing-mask.png",
+      "file": "downtown-skyline-existing-credited-cef5ca5f00f2.png",
+      "sha256": "cef5ca5f00f29322a28158e7b08d72bb154406b9047166c2a63479968ad2e1d5"
+    }
+  }
+}

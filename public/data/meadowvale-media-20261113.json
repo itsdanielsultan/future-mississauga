@@ -1,0 +1,381 @@
+{
+  "schema": "future-mississauga-meadowvale-media/v1",
+  "state": "ACCEPTED_PREPARED_OUTSIDE_PUBLIC",
+  "publication": false,
+  "images": [
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "state": "FINAL_SOURCE_MEDIA_PREPARED_VISUAL_REVIEW_REQUIRED",
+      "identity": "wide/meadowvale-village-future.png",
+      "title": "Meadowvale Village",
+      "scenario": "future",
+      "displayMaster": {
+        "bytes": 23780031,
+        "sha256": "bf0eef75ca93fc8acdb64e36ad2a2d3f6ba29d9491e6dde6f3bb36c35e92fc2e",
+        "dimensions": [
+          6144,
+          3840
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false,
+        "url": "gallery/missing-areas-20261113/wide-meadowvale-village-future-cleanNativeScene-bf0eef75ca93.png"
+      },
+      "download": {
+        "bytes": 23876006,
+        "sha256": "0f93e3b1bb04470ee822e5e28fa993c23327aab8f8b2a079d134a66afc1046dc",
+        "dimensions": [
+          6144,
+          4415
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneWithAppendedCreditFooter",
+        "sceneDimensions": [
+          6144,
+          3840
+        ],
+        "sceneBounds": [
+          0,
+          0,
+          6144,
+          3840
+        ],
+        "footerBounds": [
+          0,
+          3840,
+          6144,
+          4415
+        ],
+        "sceneSourceSHA256": "bf0eef75ca93fc8acdb64e36ad2a2d3f6ba29d9491e6dde6f3bb36c35e92fc2e",
+        "allScenePixelsExact": true,
+        "sceneCrop": false,
+        "sceneResize": false,
+        "url": "gallery/missing-areas-20261113/wide-meadowvale-village-future-nativeSceneWithAppendedCreditFooter-0f93e3b1bb04.png"
+      },
+      "responsivePreviews": [
+        {
+          "bytes": 368278,
+          "sha256": "13febabb763de0b87ba30f1cf33ab0530ff8cf17876f06cb0d010e942631b7d9",
+          "role": "responsivePreview",
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "bf0eef75ca93fc8acdb64e36ad2a2d3f6ba29d9491e6dde6f3bb36c35e92fc2e",
+          "url": "gallery/missing-areas-20261113/wide-meadowvale-village-future-responsivePreview-13febabb763d.avif"
+        },
+        {
+          "bytes": 487814,
+          "sha256": "629c9f281a506132419f9d810c670a619a300341196ba0a3ba2e17696487e196",
+          "role": "responsivePreview",
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "bf0eef75ca93fc8acdb64e36ad2a2d3f6ba29d9491e6dde6f3bb36c35e92fc2e",
+          "url": "gallery/missing-areas-20261113/wide-meadowvale-village-future-responsivePreview-629c9f281a50.jpg"
+        },
+        {
+          "bytes": 1367813,
+          "sha256": "b98185c25619e9ee51dba6e8ec96ddef7f1826a32c219c4ee243360b002f876b",
+          "role": "responsivePreview",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "bf0eef75ca93fc8acdb64e36ad2a2d3f6ba29d9491e6dde6f3bb36c35e92fc2e",
+          "url": "gallery/missing-areas-20261113/wide-meadowvale-village-future-responsivePreview-b98185c25619.avif"
+        },
+        {
+          "bytes": 2273677,
+          "sha256": "974330d6480fa2262274fa88e4bb11c724214b1e1316a349ab5e803a9b1047b5",
+          "role": "responsivePreview",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "bf0eef75ca93fc8acdb64e36ad2a2d3f6ba29d9491e6dde6f3bb36c35e92fc2e",
+          "url": "gallery/missing-areas-20261113/wide-meadowvale-village-future-responsivePreview-974330d6480f.jpg"
+        }
+      ],
+      "caption": {
+        "title": "Meadowvale Village",
+        "area": "Meadowvale Village",
+        "creator": "Daniel Sultan",
+        "scenario": "future",
+        "geographicScope": "bounded_study_crop",
+        "cityCredit": "City of Mississauga \u00b7 Ontario data",
+        "openStreetMap": true,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "requiredModelCredits": [],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "\u00a9 OpenStreetMap contributors. https://www.openstreetmap.org/copyright",
+          "Design: SG&M Architects Inc. (formerly Sirlin Giller & Malek Architects). Model creation: Daniel Sultan / Future Mississauga. Municipal baseline: City of Mississauga."
+        ],
+        "renderTimestampUTC": "2026-11-13T20:43:56.947985+00:00",
+        "sourceDates": "Mixed; source data dates unchanged. Actual new render timestamp is separate.",
+        "placement": "One responsive HTML caption adjacent to the clean picture, including the modal. Mandatory model credits remain visible."
+      },
+      "sourceSceneSHA256": "444df4f0a4f74109b4cbba8bc5a96b6405e0bbce0b3770772d9aae6ad3de3aa7",
+      "renderTimestampUTC": "2026-11-13T20:43:56.947985+00:00",
+      "nativeSceneDimensions": [
+        6144,
+        3840
+      ],
+      "sourceFreezeState": "FINAL_FROZEN",
+      "finalSourceAdoption": null,
+      "sourcePresentationWarnings": [
+        {
+          "object": "LakeOntarioUnified",
+          "material": "",
+          "kind": "opaqueDepthWriteDisabled",
+          "renderOrder": -1,
+          "note": "Source underlay ordering is not encoded by glTF; inspect overlapping source water/terrain offline before acceptance."
+        }
+      ],
+      "provenance": {
+        "sceneProof": {
+          "bytes": 2780,
+          "sha256": "426def732a989f15b9c198d93d66a1577a3ce3386ba2e615dd1e6b9230b45bed"
+        },
+        "creditProof": {
+          "bytes": 3988,
+          "sha256": "7642d7c7ce6906568463b8aa08734e11d66e13487921c8004d3f920e4e5ba684"
+        },
+        "layoutProof": {
+          "bytes": 3645,
+          "sha256": "49e7cc3cbb1eb8bda076047ef0961fc2465a3604d4cadbef5db4e7a22eddbc5b"
+        },
+        "packageScript": {
+          "bytes": 8023,
+          "sha256": "d6af18fd37ee76e7d2948f7caaf821fbcdc9d9fc228426d460f5ef165070e54d"
+        },
+        "deliveryManifest": {
+          "bytes": 9335,
+          "sha256": "c012b77cfbf11b26910344bbf61cdb24a9fdd73842c7e34bffa2b2e6bf185cb8"
+        },
+        "sourcePackage": {
+          "sha256": "6684467eb06f7fcbf8722aa34f36600c62a687bf5674b9c536d51e293ad4e394",
+          "bytes": 7933
+        }
+      },
+      "publication": false,
+      "historicalURLsRebound": false,
+      "originalSourceFreezeState": "FINAL_FROZEN"
+    },
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "state": "FINAL_SOURCE_MEDIA_PREPARED_VISUAL_REVIEW_REQUIRED",
+      "identity": "portraits/meadowvale-village-future.png",
+      "title": "Meadowvale Village",
+      "scenario": "future",
+      "displayMaster": {
+        "bytes": 12941126,
+        "sha256": "6372cfdb1f8942fd20983ef085d9f5490bc9953262d3fd17de150e437f2a4f0d",
+        "dimensions": [
+          3240,
+          4050
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false,
+        "url": "gallery/missing-areas-20261113/portraits-meadowvale-village-future-cleanNativeScene-6372cfdb1f89.png"
+      },
+      "download": {
+        "bytes": 13158158,
+        "sha256": "6599a3e9abb41438a5eff0df8cc1def0013df4f31c916dfcaf79cb38b09b24b3",
+        "dimensions": [
+          3600,
+          4500
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneOnExpandedWhiteCanvas",
+        "sceneDimensions": [
+          3240,
+          4050
+        ],
+        "sceneBounds": [
+          180,
+          0,
+          3420,
+          4050
+        ],
+        "footerBounds": [
+          0,
+          4050,
+          3600,
+          4500
+        ],
+        "sceneSourceSHA256": "6372cfdb1f8942fd20983ef085d9f5490bc9953262d3fd17de150e437f2a4f0d",
+        "allScenePixelsExact": true,
+        "sceneCrop": false,
+        "sceneResize": false,
+        "url": "gallery/missing-areas-20261113/portraits-meadowvale-village-future-nativeSceneOnTrue4x5WhiteCanvas-6599a3e9abb4.png",
+        "sideMarginsPx": [
+          180,
+          180
+        ],
+        "sceneOverlay": false
+      },
+      "responsivePreviews": [
+        {
+          "bytes": 475949,
+          "sha256": "42c0780185353f43ca2243c44f486af3154f88fa9c034250300b1faf911a7fcb",
+          "role": "responsivePreview",
+          "dimensions": [
+            1200,
+            1500
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "6372cfdb1f8942fd20983ef085d9f5490bc9953262d3fd17de150e437f2a4f0d",
+          "url": "gallery/missing-areas-20261113/portraits-meadowvale-village-future-responsivePreview-42c078018535.avif"
+        },
+        {
+          "bytes": 717094,
+          "sha256": "97835f084cf58d6235c5e1b5276b78f2e6dbba707bdce0ee6df88a3dcd623b38",
+          "role": "responsivePreview",
+          "dimensions": [
+            1200,
+            1500
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "6372cfdb1f8942fd20983ef085d9f5490bc9953262d3fd17de150e437f2a4f0d",
+          "url": "gallery/missing-areas-20261113/portraits-meadowvale-village-future-responsivePreview-97835f084cf5.jpg"
+        },
+        {
+          "bytes": 1430156,
+          "sha256": "974e89cf2e2d777315922f0aab2c6a7290cc553c12b4587dac65b4d2f5561b53",
+          "role": "responsivePreview",
+          "dimensions": [
+            3200,
+            4000
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "6372cfdb1f8942fd20983ef085d9f5490bc9953262d3fd17de150e437f2a4f0d",
+          "url": "gallery/missing-areas-20261113/portraits-meadowvale-village-future-responsivePreview-974e89cf2e2d.avif"
+        },
+        {
+          "bytes": 3079613,
+          "sha256": "cc7832c63cb74788347a3ea98865a36d076359abf3d2d896fb7b285af069c18b",
+          "role": "responsivePreview",
+          "dimensions": [
+            3200,
+            4000
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "6372cfdb1f8942fd20983ef085d9f5490bc9953262d3fd17de150e437f2a4f0d",
+          "url": "gallery/missing-areas-20261113/portraits-meadowvale-village-future-responsivePreview-cc7832c63cb7.jpg"
+        }
+      ],
+      "caption": {
+        "title": "Meadowvale Village",
+        "area": "Meadowvale Village",
+        "creator": "Daniel Sultan",
+        "scenario": "future",
+        "geographicScope": "bounded_study_crop",
+        "cityCredit": "City of Mississauga \u00b7 Ontario data",
+        "openStreetMap": true,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "requiredModelCredits": [],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "\u00a9 OpenStreetMap contributors. https://www.openstreetmap.org/copyright",
+          "Design: SG&M Architects Inc. (formerly Sirlin Giller & Malek Architects). Model creation: Daniel Sultan / Future Mississauga. Municipal baseline: City of Mississauga."
+        ],
+        "renderTimestampUTC": "2026-11-13T20:43:17.518893+00:00",
+        "sourceDates": "Mixed; source data dates unchanged. Actual new render timestamp is separate.",
+        "placement": "One responsive HTML caption adjacent to the clean picture, including the modal. Mandatory model credits remain visible."
+      },
+      "sourceSceneSHA256": "444df4f0a4f74109b4cbba8bc5a96b6405e0bbce0b3770772d9aae6ad3de3aa7",
+      "renderTimestampUTC": "2026-11-13T20:43:17.518893+00:00",
+      "nativeSceneDimensions": [
+        3240,
+        4050
+      ],
+      "sourceFreezeState": "FINAL_FROZEN",
+      "finalSourceAdoption": null,
+      "sourcePresentationWarnings": [
+        {
+          "object": "LakeOntarioUnified",
+          "material": "",
+          "kind": "opaqueDepthWriteDisabled",
+          "renderOrder": -1,
+          "note": "Source underlay ordering is not encoded by glTF; inspect overlapping source water/terrain offline before acceptance."
+        }
+      ],
+      "provenance": {
+        "sceneProof": {
+          "bytes": 2652,
+          "sha256": "52525bf11a07624b3356eb3c7cc840ea14df2ca4c0d39b0fc7b30fcc576becb1"
+        },
+        "creditProof": {
+          "bytes": 3988,
+          "sha256": "7642d7c7ce6906568463b8aa08734e11d66e13487921c8004d3f920e4e5ba684"
+        },
+        "layoutProof": {
+          "bytes": 3059,
+          "sha256": "9fb521f2aad8d3a6e181172553f2a227a8b1ee3fc39feb57257aa25b8d87ec6b"
+        },
+        "packageScript": {
+          "bytes": 8023,
+          "sha256": "d6af18fd37ee76e7d2948f7caaf821fbcdc9d9fc228426d460f5ef165070e54d"
+        },
+        "deliveryManifest": {
+          "bytes": 9408,
+          "sha256": "4d25386d071afc1dbcc3b32693c89f9c6dfb41d0189acf2099c2824b536c0edb"
+        },
+        "sourcePackage": {
+          "sha256": "6684467eb06f7fcbf8722aa34f36600c62a687bf5674b9c536d51e293ad4e394",
+          "bytes": 7933
+        }
+      },
+      "publication": false,
+      "historicalURLsRebound": false,
+      "originalSourceFreezeState": "FINAL_FROZEN"
+    }
+  ],
+  "comparisonProofs": [],
+  "sourcePackageSHA256": "6684467eb06f7fcbf8722aa34f36600c62a687bf5674b9c536d51e293ad4e394",
+  "sourceCaptureHistoryPreserved": true
+}

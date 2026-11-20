@@ -2,7 +2,6 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
-import {createHash} from 'node:crypto';
 import {createResolvedPreview,createImagePreview} from '../public/image-preview.js';
 const pub=new URL('../public/',import.meta.url);
 const read=name=>fs.readFileSync(new URL(name,pub),'utf8');
@@ -12,7 +11,7 @@ assert.equal(experienceImports.length,1,'the entry must import the shared experi
 const tick=()=>new Promise(r=>setImmediate(r));
 const deferred=()=>{let resolve,reject;const promise=new Promise((a,b)=>{resolve=a;reject=b});return {promise,resolve,reject}};
 const page=read('review-renders.html');
-const exterior=page.match(/href="([^"]+-study-exterior\.png)"/)[1];
+const exterior=page.match(/href="([^"]+\/exteriors\/[^"]+-front\.webp)"/)[1];
 const reviewPDF=page.match(/href="([^"]+-study-review\.pdf)"/)[1];
 function harness(){
  const dependency=deferred(),listeners=new Map(),notices=[],opens=[],navigations=[];
@@ -52,6 +51,16 @@ for(const kind of ['image','png','pdf'])test('first '+kind+' preview click queue
  h.ready();await tick();assert.equal(h.opens.length,0);assert.equal(h.navigations.length,0);
  h.dependency.resolve();await tick();assert.deepEqual(h.opens,[c.a.href]);assert.equal(c.a.attrs['aria-busy'],undefined);assert.equal(h.captures,0);
  h.click(c.target);assert.equal(h.opens.length,2);assert.equal(h.navigations.length,0);
+});
+
+test('linked images open their destination while the preview code is loading',()=>{
+ const h=harness();
+ for(const href of ['model.html?model=mcity-pair','index.html?scenario=construction#skyline']){
+  const link=h.control('image',{href});
+  assert.equal(h.click(link.target).defaultPrevented,false);
+  assert.equal(link.a.attrs['aria-busy'],undefined);
+  assert.equal(h.navigations.at(-1),href);
+ }
 });
 
 test('rapid early clicks retain only the last preview and duplicate entry execution installs once',async()=>{
@@ -110,19 +119,21 @@ test('late metadata cannot reopen a closed dialog or replace a newer selection',
 });
 
 test('all shared preview pages load capture before content and Social has one preview owner',()=>{
- const pages=['index.html','explore.html','social.html','sources.html','updates.html','review-renders.html','reference-updates.html','accuracy-review.html'];
+ const pages=['index.html','gallery.html','compare.html','film.html','explore.html','social.html','sources.html','updates.html','review-renders.html','reference-updates.html','accuracy-review.html'];
  for(const name of pages){const html=read(name),tags=[...html.matchAll(/<script\s+src=(['"])image-entry\.js(?:\?[^'"]*)?\1><\/script>/g)];assert.equal(tags.length,1,name);assert(html.indexOf(tags[0][0])<html.indexOf('</head>'),name);assert.doesNotMatch(html,/<script[^>]+src="image-experience\.js/,name);}
  assert.match(read('image-experience.js'),/if\(document\.querySelector\('\.social-grid'\)\) installSocialPreview\(\)/);
  assert.doesNotMatch(read('social.js'),/installSocialPreview/);
- // Updating a cache token must leave the already-reviewed bootstrap code intact.
- const galleryEntry=read('gallery-entry.js').replace(/(['"]\.\/gallery\.js\?v=)[^'"]+(['"])/g,(_match,start,end)=>start+'20261102-coherent1'+end);
- assert.equal(createHash('sha256').update(galleryEntry).digest('hex'),'7dbe4cf707a971f53910824146f13d05ec7cefc3eb2cafee60838d99d88f8200');
+ // Bootstrap behavior, including early clicks and manual-scroll protection, is
+ // exercised in gallery-entry.test.mjs. Keep only the ownership contract here.
+ const galleryEntry=read('gallery-entry.js');
+ assert.equal([...galleryEntry.matchAll(/import\(['"]\.\/gallery\.js(?:\?[^'"]*)?['"]\)/g)].length,1);
+ assert.doesNotMatch(galleryEntry,/createImagePreview|installImagePreviews|installSocialPreview/);
 });
 
 // Cached gallery and refreshed shared entry can import different query editions.
 test('preview labels remain unique across module query editions',async()=>{
  const previous=globalThis.document;
- const node=()=>({attrs:{},style:{},setAttribute(k,v){this.attrs[k]=v},addEventListener(){},querySelector(){return node()}});
+ const node=()=>({attrs:{},style:{},setAttribute(k,v){this.attrs[k]=v},addEventListener(){},querySelectorAll(){return []},querySelector(){return node()}});
  globalThis.document={createElement:node,body:{append(){}}};
  try{
   const second=await import('../public/image-preview.js?preview-counter-regression');

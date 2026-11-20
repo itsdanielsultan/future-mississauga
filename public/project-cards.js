@@ -1,9 +1,12 @@
+import {buildingMapProfiles} from './building-map-profiles.js?v=20261120-buildings';
 import {LIFECYCLE_LABELS} from './model-status-materials.js?v=20261101-status2';
 /** Project card presentation only. Does not change project facts or model status. */
 import {buildingFeedbackHTML} from './building-feedback.js?v=20261028-improvements1';
 const escapeHTML=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const text=value=>typeof value==='string'?value.trim():typeof value==='number'&&Number.isFinite(value)?String(value):'';
 const unique=values=>[...new Set(values.map(text).filter(Boolean))];
+const districtLabels=Object.freeze({citywide:'All Mississauga',downtown:'Downtown','port-credit':'Port Credit',lakeview:'Lakeview',clarkson:'Clarkson',cooksville:'Cooksville',uptown:'Uptown & Hurontario','erin-mills':'Erin Mills',streetsville:'Streetsville',meadowvale:'Meadowvale & Lisgar',malton:'Malton','dixie-applewood':'Dixie & Applewood',erindale:'Erindale & Sheridan','airport-corporate':'Airport & Corporate',heartland:'Heartland & Gateway','lorne-park':'Lorne Park · Aldo area','churchill-meadows':'Churchill Meadows',lisgar:'Lisgar & Argentia','meadowvale-village':'Meadowvale Village','east-credit-creditview':'East Credit & Creditview'});
+export const projectDistrictLabel=project=>{const district=text(project.district)||text(project.researchArea);return districtLabels[district]||district;};
 const isKnown=value=>(typeof value!=='number'||value>0)&&Boolean(text(value))&&!/^(?:unknown|unconfirmed|not (?:known|confirmed|independently confirmed|available|verified)|no (?:verified|confirmed|known|date)|n\/?a|null|none|tbd|to be (?:confirmed|determined))\b/i.test(text(value));
 const validURL=value=>{try{const u=new URL(text(value));return /^(https?:)$/.test(u.protocol)?u.href:null;}catch{return null;}};
 
@@ -13,7 +16,7 @@ const overrides={
     credit:"Model: Daniel Sultan. Architecture: CORE Architects. City of Mississauga source podium geometry.",
     notes:[
       "CORE’s seven floor-plate outlines guide the exterior. Added glazing and bands improve selected podium surfaces.",
-      "Floor phase, heights and podium details remain approximate. M1’s low faceted pavilion is coarse or absent; this is not a measured as-built model."
+      "Floor phase, heights and podium details remain approximate. M1’s added low pavilion has an estimated roof height; existing ground-level podium gaps remain unresolved. This is not a measured as-built model."
     ]
   },
   "port-credit-50-high":{
@@ -66,7 +69,34 @@ const overrides={
   }
 };
 
-/** The full underlying status remains in the disclosure if the short label differs. */
+const readableStatuses={
+ 'sale-feasibility-concept':'Sale and feasibility concept',
+ 'mixed-completed-and-under-construction':'Some buildings completed; others under construction',
+ 'proposed-active':'Active proposal',
+ 'under-construction-partly-completed':'Under construction; some buildings completed',
+ 'council-endorsed-vision-feasibility':'Council-endorsed vision under feasibility review',
+ 'under-construction':'Under construction',
+ 'approved-old-current-status-unconfirmed':'Earlier approval; current status unconfirmed',
+ 'site-plan-proposed':'Site plan proposal',
+ 'long-term-masterplan':'Long-term master plan',
+ 'completed-operating':'Completed and operating'
+};
+export const projectStatusDetail=project=>{const detail=readableStatuses[text(project.status)]||text(project.status);return detail?detail[0].toUpperCase()+detail.slice(1):'';};
+const publicCaveats={
+ 'square-one-masterplan':"Oxford’s 2025 account describes 48 buildings, including 41 residential buildings; the original architect’s plan has 37 towers. These totals describe different versions or definitions. Individual phases are listed separately.",
+ 'square-one-phase1':"The model uses the City’s dated 2024 shapes. Published storey counts differ: STAK 36 is listed at 48 storeys in the current Daniels fact sheet and 44 in older Oxford material; Dialogue is marketed at 37, while some architectural records count 36. Final roof details remain unverified.",
+ '180-burnhamthorpe':"The City’s June 2026 register describes 40- and 60-storey towers with an eight-storey podium. A published 2023 revision gives 71 and 46 storeys. The dated City shapes do not match that revision, and no approved elevation has resolved the difference.",
+ 'parkside-block11':"An older approval is recorded, but the current status, exact block and any later design change remain unconfirmed. Cancellation has not been established.",
+ 'keystone':"The completed City model shapes are shown. Heights of 81.42 m and 71.90 m are calculated from the captured geometry, not verified architectural dimensions.",
+ 'brightwater-mason':"The source footprint matches the master plan’s G1 building and shows a body of roughly nine storeys. Captured roof levels are source geometry, not a new survey.",
+ 'winston-6020':"The model shows a qualified planned building shape. Its current built form and structural progress remain unverified. Peel forecasts the second quarter of 2028; the City programme forecasts fall 2027. Both are expected dates, not confirmed completion.",
+ 'brandon-3233':"The earlier mixed-use design has been superseded. Funding material describes 85 affordable rental units, not 85 separate townhouse buildings.",
+ 'brightwater-credit-river-way':"The City’s 2024 shape matches the master plan’s D1 building. The informal name ‘The Kee’ was not supported by the reviewed primary sources. Its captured roof level is source geometry, not a new survey."
+};
+export const publicModelCaveat=project=>publicCaveats[project.id]||text(project.modelCaveat);
+export const publicModelCoverage=project=>text(project.geometryCoverage)==='Latest geometry unavailable in source model'?'The latest building design is not included in this model.':text(project.geometryCoverage);
+
+/** Detailed source qualifications remain separate from the short status label. */
 export function projectStatus(project){
   if(project.lifecycle==='proposed'&&project.status==='plans-under-review')return {label:'Under review',tone:'proposed'};
   if(LIFECYCLE_LABELS[project.lifecycle])return {label:LIFECYCLE_LABELS[project.lifecycle],tone:({existing:'existing',under_construction:'construction',approved:'approved',proposed:'proposed',on_hold:'neutral',cancelled:'neutral',unknown:'uncertain',mixed:'neutral'})[project.lifecycle]};
@@ -148,7 +178,7 @@ function sourcesHTML(sources,credit){
 function modelNotes(project,asset,override){
   if(override?.notes)return override.notes;
   const summary=text(project.summary);
-  const notes=unique([project.geometryCoverage,project.modelCaveat,asset?.modelFidelity,asset?.warning,project.recordedProgressModel])
+  const notes=unique([publicModelCoverage(project),publicModelCaveat(project),asset?.modelFidelity,asset?.warning,project.recordedProgressModel])
     .filter(note=>note!==summary);
   const completionNote=text(project.completion?.note||project.completionDateNote);
   // Boilerplate about absent dates adds no useful information to an undated card.
@@ -158,22 +188,38 @@ function modelNotes(project,asset,override){
   return notes;
 }
 
+function placeLinks(project) {
+  const profiles = buildingMapProfiles[project.id] || [];
+  const links = profiles.map(([id, name]) => {
+    const label = profiles.length === 1 ? 'Building, photos and location' : name;
+    return `<a href="building-${encodeURIComponent(id)}.html">${escapeHTML(label)}</a>`;
+  });
+  const point = Number.isFinite(project.lat) && Number.isFinite(project.lon);
+  const street = project.address?.trim();
+  const query = point ? project.lat + ',' + project.lon : street ? street + ', Mississauga, Ontario, Canada' : '';
+  if (query) {
+    links.push(`<a href="https://www.google.com/maps/search/?api=1&amp;query=${encodeURIComponent(query)}">Google Maps</a>`);
+    links.push(`<a href="https://maps.apple.com/?q=${encodeURIComponent(query)}">Apple Maps</a>`);
+  }
+  return links.length ? `<nav class="place-destinations" aria-label="Explore this project">${links.join(' ')}</nav>` : '';
+}
+
 /** Selection-panel contents. Existing close button and camera logic stay in app.js. */
 export function projectDetailsHTML(project,{asset=null,view={},revision=null}={}){
   const override=overrides[project.id],status=projectStatus(project),summary=override?.summary||text(project.summary);
-  const location=unique([project.address&&project.address!==project.name?project.address:'',project.district||project.researchArea]).join(' · ');
-  const notes=modelNotes(project,asset,override),sources=sourceItems(project,override,asset),raw=text(project.status);
+  const location=unique([project.address&&project.address!==project.name?project.address:'',projectDistrictLabel(project)]).join(' · ');
+  const notes=modelNotes(project,asset,override),sources=sourceItems(project,override,asset),raw=projectStatusDetail(project);
   const credit=text(override?.credit||asset?.credit);
   const currentStatusNote=text(project.lifecycleNote);
   const statusDetail=(currentStatusNote?`<p class="project-card-status-detail">${escapeHTML(currentStatusNote)}</p>`:'')+(!override?.omitStatusDetail&&raw&&raw!==status.label?`<p class="project-card-status-detail">${escapeHTML(raw)}${project.statusDate?` · ${escapeHTML(project.statusDate)}`:''}</p>`:'');
   const sourceNote=override?.sourceNote||'Reference material belongs to its credited owners. A source link does not grant permission to reuse it.';
   const detail=notes.length||sources.length||credit||statusDetail||facts(project).length,qualifier=modelQualifier(project,asset,override);
-  const previews=({'ergocentric-275-superior':[['ergocentric-275-superior','Open model preview']],'sgm-maritz-6710':[['sgm-maritz-6710','Open model preview & download']],'artform':[['artform','Open model preview & download']],'mcity-1-2':[['mcity-pair','Open model preview & download']],'edge-oro':[['edge-1','Edge 1 study'],['edge-2','Edge 2 study'],['oro','Oro intended-design study']],'avia':[['avia-1','Avia 1 with shared podium'],['avia-2','Avia 2 with shared podium']]})[project.id];
-  const preview=previews?`<p class="project-model-preview">${previews.map(([id,title])=>`<a href="model.html?model=${id}">${escapeHTML(title)} ↗</a>`).join(' · ')}</p>`:'';
+  const previews=({'harborn-50-60':[['harborn-50-60','Open model preview']],'port-credit-26-park':[['port-credit-26-park','Open model preview']],'voya':[['voya','Open model preview']],'ergocentric-275-superior':[['ergocentric-275-superior','Open model preview']],'sgm-maritz-6710':[['sgm-maritz-6710','Open model preview']],'artform':[['artform','Open model preview']],'mcity-1-2':[['mcity-pair','Open model preview']],'mcity-5':[['mcity-m5','Open model preview']],'edge-oro':[['edge-1','Edge 1 study'],['edge-2','Edge 2 study'],['oro','Oro intended-design study']],'avia':[['avia-1','Avia 1 with shared podium'],['avia-2','Avia 2 with shared podium']]})[project.id];
+  const preview=previews?`<p class="project-model-preview">${previews.map(([id,title])=>`<a href="model.html?model=${id}">${escapeHTML(title)} →</a>`).join(' · ')}</p>`:'';
   const revisionLine=revision?.projectId===project.id?`<p class="project-card-location" aria-label="Model revision"><time datetime="${escapeHTML(revision.updatedOn)}">${escapeHTML(revision.label)}</time></p>`:'';
   const feedback=`<p class="project-model-preview">${buildingFeedbackHTML(project,view)}</p>`;
   const referenceCredit=project.id==='ergocentric-275-superior'?'<p class="project-card-location">Photographic reference: <a href="https://davidlaskerphotography.com/" target="_blank" rel="noopener noreferrer">David Lasker/Cityscape Photography</a></p>':'';
-  return `<div class="project-card-content"><div class="project-card-meta"><span class="project-card-status" data-tone="${status.tone}">${escapeHTML(status.label)}</span>${qualifier?`<span class="project-card-qualifier">${escapeHTML(qualifier)}</span>`:''}</div><h3>${escapeHTML(project.name)}</h3>${location?`<p class="project-card-location">${escapeHTML(location)}</p>`:''}${summary?`<p class="project-card-summary">${escapeHTML(summary)}</p>`:''}${revisionLine}${preview}${referenceCredit}${detail?`<details class="project-card-disclosure"><summary>About this model & sources</summary><div class="project-card-details">${statusDetail}${notes.length?`<section aria-label="Model details"><h4>The model</h4>${notes.map(note=>`<p>${escapeHTML(note)}</p>`).join('')}</section>`:''}${completionRowsHTML(project)}${sourcesHTML(sources,credit)}${sources.length?`<p class="project-card-rights">${escapeHTML(sourceNote)}</p>`:''}</div></details>`:''}${feedback}</div>`;
+  return `<div class="project-card-content"><div class="project-card-meta"><span class="project-card-status" data-tone="${status.tone}">${escapeHTML(status.label)}</span>${qualifier?`<span class="project-card-qualifier">${escapeHTML(qualifier)}</span>`:''}</div><h3>${escapeHTML(project.name)}</h3>${location?`<p class="project-card-location">${escapeHTML(location)}</p>`:''}${summary?`<p class="project-card-summary">${escapeHTML(summary)}</p>`:''}${revisionLine}${placeLinks(project)}${detail ? '' : preview}${referenceCredit}${detail?`<details class="project-card-disclosure"><summary>About this model & sources</summary><div class="project-card-details">${preview}${statusDetail}${notes.length?`<section aria-label="Model details"><h4>The model</h4>${notes.map(note=>`<p>${escapeHTML(note)}</p>`).join('')}</section>`:''}${completionRowsHTML(project)}${sourcesHTML(sources,credit)}${sources.length?`<p class="project-card-rights">${escapeHTML(sourceNote)}</p>`:''}</div></details>`:''}${feedback}</div>`;
 }
 
 /** Research-register card. The existing [data-project] focus handler is retained. */

@@ -1,3 +1,5 @@
+import * as treeRuntime from './tree-runtime-fixture.mjs';
+import {applyHarbornTreeContacts} from '../public/harborn-tree-contacts.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -119,12 +121,12 @@ function districtHarness({holdOffshore=false}={}){
  const $=id=>{if(!elements.has(id))elements.set(id,element());return elements.get(id);};
  const errors=[],requests=[],disposed=[],parsed=[],gates=[];
  const dispose=root=>{if(!root)return;root.removeFromParent();root.traverse(object=>{if(object.isMesh){disposed.push(object);object.geometry.dispose();object.material.dispose();}});};
- const state={$,THREE,prepareOffshoreContext,isPreparedOffshore,applyModelVisibility,current:null,model:null,context:null,framedProject:null,contextLost:false,exporting:false,loadToken:0,focusRequest:0,mode:'future',
+ const state={...treeRuntime,$,THREE,applyHarbornTreeContacts,prepareOffshoreContext,isPreparedOffshore,applyModelVisibility,current:null,model:null,context:null,framedProject:null,contextLost:false,exporting:false,loadToken:0,focusRequest:0,mode:'future',
   districts:[{id:'lakeview',name:'Lakeview',bounds:[0,0,5000,5000]},{id:'streetsville',name:'Streetsville',bounds:[0,0,10,10]}],treeDataCache:{},window:{atlasReady:null,dispatchEvent(){}},
   document:{baseURI:'https://local.invalid/',querySelectorAll:()=>[],createTextNode:text=>text,createElement:element},wrap:$('#sceneWrap'),controls:{enabled:true,target:new THREE.Vector3()},camera:new THREE.PerspectiveCamera(),
-  surroundingCity:{enabled:true,setDistrict(){}},contextAssets:json('data/context-assets.json'),citywideDetail:{clear(){}},localNeighbourhood:{clear(){}},syncCameraCoverage(){},updateNeighbourhood(){},getHarbornTerrainContract:async()=>null,
+  surroundingCity:{enabled:true,setDistrict(){},updateSourceReplacements(){}},contextAssets:json('data/context-assets.json'),citywideDetail:{clear(){}},localNeighbourhood:{clear(){}},syncCameraCoverage(){},updateNeighbourhood(){},getHarbornTerrainContract:async()=>null,
   loadModelAsset:async(_loader,url)=>{requests.push(url);if(url===OHN_ASSET_URL){const asset=await load();parsed.push(asset.scene);if(holdOffshore)await new Promise(resolve=>gates.push(resolve));return asset;}return {scene:new THREE.Group()};},
-  loader:{},versionedTreeURL:url=>url,assetVersions:new Map(),modelAssetVersions:json('data/model-asset-versions.json'),URL,DOMException,visibleAttribution:{registerAsset(){},refresh(){}},refinementData:{assets:[],constructionEvidence:[]},transitLayers:{assets:[]},landscapeLayers:{assets:[]},splitSourceOverlaps:()=>[],overrides:{},addTrees:async()=>{},adoptContextModelVisibility(){},dispose,scene:new THREE.Scene(),appearance:{register(){}},makeMarkers(){},renderProjects(){},showStudyLoadStatus(){},cancelCameraFlight(){},setSelectedStudy(){},closeModelSearch(){},reset(){},updateTransit(){},ensureOptionalRefinements:async()=>{},invalidate(){},history:{replaceState(){}},CustomEvent:class{},console:{error:error=>errors.push(error)},
+  loader:{},versionedTreeURL:url=>url,assetVersions:new Map(),modelAssetVersions:json('data/model-asset-versions.json'),URL,DOMException,visibleAttribution:{registerAsset(){},refresh(){}},refinementData:{assets:[],constructionEvidence:[]},transitLayers:{assets:[]},landscapeLayers:{assets:[]},splitSourceOverlaps:()=>[],overrides:{},addTrees:async()=>{},adoptContextModelVisibility(){},dispose,scene:new THREE.Scene(),appearance:{register(){}},makeMarkers(){},renderProjects(){},showStudyLoadStatus(){},cancelCameraFlight(){},setSelectedStudy(){},closeModelSearch(){},reset(){},updateTransit(){},ensureOptionalRefinements:async()=>{},invalidate(){},navigateMap(){},history:{replaceState(){}},CustomEvent:class{},console:{error:error=>errors.push(error)},
   draftToggle:{checked:false},selectedStudyProjectId:null,modelMeshes:[],treeMeshes:[],detailMeshes:[],markers:[],projectById:new Map(),transitGroup:{},markerGroup:{},syncStatusLegend(){}};
  runInNewContext(app.slice(app.indexOf('let visibilityCacheKey='),app.indexOf('let statusLegendSignature=')),state);
  runInNewContext(app.slice(app.indexOf('async function loadDistrict('),app.indexOf('const neighbourhoodAsset=')),state);

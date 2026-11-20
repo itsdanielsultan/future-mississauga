@@ -1,3 +1,5 @@
+import {restoreUptownEligibility} from './uptown-neighbour-scope.mjs';
+import {restoreNamedProjectReview} from './named-project-review-scope.mjs';
 // Exact metadata and current-label scope of the 1 November 2026 lifecycle review.
 export const statusMetadataScope = {
   "projects": {
@@ -1595,7 +1597,8 @@ export const statusMetadataScope = {
 };
 
 export function withoutReviewedStatusMetadata(kind, record, id = record.id) {
-  const result = structuredClone(record);
+  const input = kind === "assets" ? restoreUptownEligibility(structuredClone(record)) : record;
+  const result = structuredClone(restoreNamedProjectReview(kind, input, id));
   for (const key of statusMetadataScope[kind]?.[id] || []) delete result[key];
   if (kind === "projects" && ["ninth-6344", "longview-44-45"].includes(id)) result.status = record.statusHistory?.[0]?.status ?? record.status;
   if (kind === "assets" && id === "ninth-6344-three-plan-envelopes") result.displayStatus = record.displayStatusHistory?.[0]?.displayStatus ?? record.displayStatus;

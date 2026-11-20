@@ -1,3 +1,5 @@
+import * as treeRuntime from './tree-runtime-fixture.mjs';
+import {applyHarbornTreeContacts} from '../public/harborn-tree-contacts.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -62,9 +64,9 @@ test('actual district adapter and cached scenario changes show M3 once without a
  const original=meshes(model).filter(m=>m.userData.id==='63-6249');assert.equal(original.length,1);assert.equal(original[0].geometry.index.count/3,32);
  const positions=original[0].geometry.attributes.position.array.slice();
  const appearance=createModelAppearance(THREE),district=json('districts').find(d=>d.id==='downtown');
- const state={THREE,district,id:'downtown',nextModel:model,refinementData:{...refinements,assets:[asset]},refinementInDistrict,overrides:json('overrides'),projectById:new Map(projects.map(p=>[p.id,p])),groupById:new Map(),groupByMesh:new Map(),appearance,resolveModelLifecycle,displayStatusForLifecycle,inactiveLifecycle,token:1,loadToken:1,window:{},splitSourceOverlaps,loadAsset:load,model,modelMeshes:[],draftToggle:{checked:false},selectedStudyProjectId:null,treeMeshes:[],markers:[],detailMeshes:[],transitGroup:{},markerGroup:{},syncStatusLegend(){},applyModelVisibility,$:id=>({checked:id==='#unknownStatusToggle'})};
+ const state={...treeRuntime,THREE,applyHarbornTreeContacts,district,id:'downtown',nextModel:model,refinementData:{...refinements,assets:[asset]},refinementInDistrict,overrides:json('overrides'),projectById:new Map(projects.map(p=>[p.id,p])),groupById:new Map(),groupByMesh:new Map(),appearance,resolveModelLifecycle,displayStatusForLifecycle,inactiveLifecycle,token:1,loadToken:1,window:{},splitSourceOverlaps,loadAsset:load,model,modelMeshes:[],draftToggle:{checked:false},selectedStudyProjectId:null,treeMeshes:[],markers:[],detailMeshes:[],transitGroup:{},markerGroup:{},syncStatusLegend(){},applyModelVisibility,$:id=>({checked:id==='#unknownStatusToggle'})};
  vm.runInNewContext(app.split('\n').filter(s=>s.startsWith('function classify(')||s.startsWith('function lifecycleFor(')).join('\n'),state);
- const eagerStart=app.indexOf('const additionAssets='),eagerEnd=app.indexOf(' const detail=await loadAsset',eagerStart);assert(eagerStart>0&&eagerEnd>eagerStart);
+ const eagerStart=app.indexOf('const additionAssets='),eagerEnd=app.indexOf(' const nextDetailMeshes=[];',eagerStart);assert(eagerStart>0&&eagerEnd>eagerStart);
  await vm.runInNewContext('(async()=>{'+app.slice(eagerStart,eagerEnd)+'})()',state);
  const passStart=app.indexOf('const nextFutureMeshes=[],nextModelMeshes=[];'),passEnd=app.indexOf(';nextContext.traverse',passStart);assert(passStart>0&&passEnd>passStart);
  vm.runInNewContext(app.slice(passStart,passEnd+1)+'modelMeshes=nextModelMeshes;',state);

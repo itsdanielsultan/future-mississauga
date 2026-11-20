@@ -1,6 +1,6 @@
 export const CITY_DATA_TERMS_URL = 'https://mississauga.maps.arcgis.com/sharing/rest/content/items/961c790805c14d8da258ec91bf4117e3/data';
 
-// Keep the source terms in the source disclosure, without a gate or assent copy.
+// Show a direct terms link alongside the attribution for City-derived data.
 export function cityDataNotice() {
   const element = document.createElement('p');
   element.className = 'city-data-terms'; element.setAttribute('aria-label', 'City data terms');

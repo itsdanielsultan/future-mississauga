@@ -1,100 +1,133 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {createReadStream} from 'node:fs';
-import {readFile, stat} from 'node:fs/promises';
-import {resolve} from 'node:path';
+import {open, readFile, readdir, stat} from 'node:fs/promises';
+import {dirname, join} from 'node:path';
+import {fileURLToPath, pathToFileURL} from 'node:url';
 import {Readable} from 'node:stream';
+import {legacyAtlasPath} from '../cloudflare/media-worker.mjs';
 
-const preview = 'https://future-mississauga-preview.thedanielsultan.workers.dev/';
-const root = resolve(process.argv[2] || 'public');
-
-async function request(path, options = {}) {
-  return fetch(new URL(path, preview), {
-    ...options,
-    redirect: 'manual',
-    signal: AbortSignal.timeout(120000)
-  });
-}
+const release = join(dirname(dirname(fileURLToPath(import.meta.url))), '.cloudflare-release');
+const staticRoot = join(release, 'assets');
+const preview = 'https://future-mississauga-preview.thedanielsultan.workers.dev';
+const args = new Set(process.argv.slice(2));
+for (const value of args) assert(['--staged', '--full'].includes(value), 'Unknown argument: ' + value);
+const offline = args.has('--staged');
+const full = args.has('--full');
+const routes = JSON.parse(await readFile(join(release, 'media-routes.json')));
+const inventory = JSON.parse(await readFile(join(release, 'inventory.json')));
+const blobPath = key => join(release, 'media', key);
+const encodePath = path => path.split('/').map(encodeURIComponent).join('/');
 
 async function digest(stream) {
   const hash = createHash('sha256');
-  for await (const chunk of stream) hash.update(chunk);
+  for await (const bytes of stream) hash.update(bytes);
   return hash.digest('hex');
 }
-
-async function checkFile(path, {checkRanges = false} = {}) {
-  const source = resolve(root, path);
-  const info = await stat(source);
-  const head = await request(path, {method: 'HEAD'});
-  assert.equal(head.status, 200, path + ' HEAD');
-  assert.doesNotMatch(head.headers.get('content-type') || '', /text\/html/i, path + ' served HTML');
-  const ranged = checkRanges && info.size > 25 * 1024 * 1024;
-  if (ranged) {
-    const sample = await request(path, {headers: {Range: 'bytes=0-15'}});
-    assert.equal(sample.status, 206, path + ' range');
-    assert.equal(sample.headers.get('content-range'), 'bytes 0-15/' + info.size, path);
-    const bytes = Buffer.from(await sample.arrayBuffer());
-    const [prefix] = await Array.fromAsync(createReadStream(source, {start: 0, end: 15}));
-    assert.deepEqual(bytes, prefix, path + ' prefix');
-    const invalid = await request(path, {headers: {Range: 'bytes=' + info.size + '-'}});
-    assert.equal(invalid.status, 416, path + ' invalid range');
-    await invalid.body?.cancel();
+async function sample(path, size) {
+  const file = await open(path);
+  try {
+    const prefix = Buffer.alloc(Math.min(size, 16));
+    const {bytesRead} = await file.read(prefix, 0, prefix.length, 0);
+    assert.equal(bytesRead, prefix.length, path);
+    return prefix;
+  } finally {
+    await file.close();
   }
-  const body = await request(path);
-  assert.equal(body.status, 200, path + ' GET');
-  const actual = await digest(Readable.fromWeb(body.body));
-  const expected = await digest(createReadStream(source));
-  assert.equal(actual, expected, path + ' SHA-256');
-  console.log('Verified ' + path);
 }
-
-async function checkPage(path, required) {
-  const response = await request(path);
+// Use precisely the generated Worker and the generated release when remote
+// deployment is still pending. The live mode below uses only public HTTPS.
+async function localFetcher() {
+  const {default: worker} = await import(pathToFileURL(join(release, 'worker.mjs')));
+  const env = {
+    ASSETS: {
+      async fetch(req) {
+        const name = decodeURIComponent(new URL(req.url).pathname);
+        const local = join(staticRoot, name);
+        const file = await stat(local).catch(() => null);
+        if (!file?.isFile()) return new Response(null, {status:404});
+        const body = req.method === 'HEAD' ? null : Readable.toWeb(createReadStream(local));
+        return new Response(body, {headers:{'Content-Length':String(file.size)}});
+      }
+    },
+    MEDIA: {
+      async get(key, options) {
+        const file = blobPath(key);
+        const info = await stat(file).catch(() => null);
+        if (!info?.isFile()) return null;
+        const range = options?.range;
+        const stream = createReadStream(file, range && {start:range.offset, end:range.offset + range.length - 1});
+        return {body:Readable.toWeb(stream), size:info.size};
+      }
+    }
+  };
+  return req => worker.fetch(req, env);
+}
+const fetcher = offline ? await localFetcher() : fetch;
+function request(path, options, query = '') {
+  const url = new URL(encodePath(path), preview);
+  url.search = query;
+  return fetcher(new Request(url, {
+    redirect:'manual', signal:AbortSignal.timeout(120000), ...options
+  }));
+}
+async function each(items, fn) {
+  const queue = items.values();
+  await Promise.all(Array.from({length:4}, async () => {
+    for (const item of queue) await fn(item);
+  }));
+}
+async function list(relative = '') {
+  const result = [];
+  for (const d of await readdir(join(staticRoot, relative), {withFileTypes:true})) {
+    const path = join(relative, d.name);
+    if (d.isDirectory()) result.push(...await list(path));
+    else if (d.isFile()) result.push(path);
+  }
+  return result;
+}
+const paths = await list();
+assert.equal(paths.length, inventory.staticFiles);
+const htmlPages = paths.filter(path => path.endsWith('.html'));
+await each(paths, async path => {
+  const html = path.endsWith('.html');
+  const response = await request('/' + path, {method:html || full ? 'GET' : 'HEAD'});
   assert.equal(response.status, 200, path);
-  assert.match(response.headers.get('content-type') || '', /text\/html/i, path);
-  const html = await response.text();
-  for (const fragment of required) assert.ok(html.includes(fragment), path + ' missing ' + fragment);
-  return html;
-}
-
-const home = await checkPage('/', ['data-plate-state="existing"', 'data-plate-state="future"', 'id="heroImage"']);
-await checkPage('/index.html', ['id="heroImage"']);
-await checkPage('/neighbourhoods.html', ['place-port-credit.html', 'place-downtown.html']);
-await checkPage('/place-port-credit.html', ['building-port-credit-lighthouse.html?from=port-credit']);
-await checkPage('/building-port-credit-lighthouse.html?from=port-credit', ['data-neighbourhood-return']);
-await checkPage('/explore.html?district=port-credit', ['type="importmap"', 'three/addons/']);
-await checkPage('/downloads.html', ['Mississauga-Atlas.pdf']);
-await checkFile('atlas-home-print.css');
-await checkFile('home-compare.js');
-
-const localHome = await readFile(resolve(root, 'index.html'), 'utf8');
-function scenarioTag(html, state) {
-  return (html.match(/<button\b[^>]*>/gi) || []).find(tag => tag.includes('data-plate-state="' + state + '"'));
-}
-const editions = new Set();
-for (const state of ['existing', 'future']) {
-  const switchTag = scenarioTag(home, state);
-  const expectedTag = scenarioTag(localHome, state);
-  assert.ok(expectedTag, 'Reviewed homepage missing ' + state);
-  assert.ok(switchTag, 'Missing homepage control for ' + state);
-  for (const field of ['small', 'large', 'original', 'print']) {
-    const attribute = new RegExp('data-' + field + '="([^"]+)"');
-    const match = attribute.exec(switchTag);
-    assert.ok(match, 'Missing ' + field + ' for ' + state);
-    const path = match[1];
-    assert.equal(path, attribute.exec(expectedTag)?.[1], 'Published artwork differs from the reviewed ' + state + ' ' + field);
-    assert.match(path, /^(?:gallery|downloads)\/edition-20261120\/[A-Za-z0-9._-]+$/, 'Unexpected artwork path');
-    assert.ok(!editions.has(path), 'Duplicate scenario asset: ' + path);
-    editions.add(path);
-    await checkFile(path, {checkRanges: true});
+  if (html || full) {
+    assert.equal(await digest(response.body), await digest(createReadStream(join(staticRoot, path))), path);
   }
-}
-await checkFile('models/citywide.glb', {checkRanges: true});
-await checkFile('models/aldo-1422-study.glb', {checkRanges: true});
-await checkFile('downloads/edition-20261120/Mississauga-Atlas.pdf', {checkRanges: true});
-await checkFile('downloads/Downtown-Mississauga-print.pdf', {checkRanges: true});
-const missing = await request('downloads/no-such-future-mississauga-file-20261120.pdf');
-assert.equal(missing.status, 404, 'A nonexistent download must return 404');
-await missing.body?.cancel();
-
-console.log('Cloudflare preview serves the reviewed site and files.');
+});
+const homepage = await request('/');
+assert.equal(homepage.status, 200);
+assert.equal(await digest(homepage.body), await digest(createReadStream(join(staticRoot, 'index.html'))));
+await each(Object.entries(routes), async ([path, file]) => {
+  const query = path === legacyAtlasPath ? 'edition=c9f219e7094e834a' : '';
+  const info = await stat(blobPath(file.key));
+  assert.equal(info.size, file.bytes, path);
+  assert.equal(await digest(createReadStream(blobPath(file.key))), file.key, path + ' staged media identity');
+  const head = await request(path, {method:'HEAD'}, query);
+  assert.equal(head.status, 200, path);
+  assert.equal(Number(head.headers.get('content-length')), file.bytes, path);
+  assert.equal(head.headers.get('content-type'), file.type, path);
+  const end = Math.min(file.bytes, 16) - 1;
+  const prefix = await request(path, {headers:{Range:'bytes=0-' + end}}, query);
+  assert.equal(prefix.status, 206, path + ' range request');
+  assert.equal(prefix.headers.get('content-range'), 'bytes 0-' + end + '/' + file.bytes, path);
+  assert.deepEqual(Buffer.from(await prefix.arrayBuffer()), await sample(blobPath(file.key), file.bytes), path);
+  if (full) {
+    const whole = await request(path, {}, query);
+    assert.equal(whole.status, 200, path);
+    assert.equal(await digest(whole.body), file.key, path + ' full download');
+  }
+});
+assert.equal(new Set(Object.values(routes).map(entry => entry.key)).size, inventory.r2Objects);
+const latestAtlas = await request(legacyAtlasPath, {method:'HEAD'});
+assert.equal(latestAtlas.status, 307);
+assert.equal(new URL(latestAtlas.headers.get('location'), preview).pathname, inventory.currentAtlas);
+const missing = await request('/downloads/no-such-future-mississauga-document.pdf');
+assert.equal(missing.status, 404);
+console.log(JSON.stringify({
+  target:offline ? 'local release package' : preview, fullFileDownloads:full,
+  staticFiles:paths.length, pagesWithExactBytes:htmlPages.length, mediaPaths:Object.keys(routes).length,
+  distinctMediaObjects:inventory.r2Objects, mediaBytes:inventory.r2Bytes, missingFileStatus:missing.status
+}, null, 2));

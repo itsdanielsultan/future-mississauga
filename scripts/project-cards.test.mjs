@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {projectDetailsHTML,projectStatus,completionRowsHTML} from '../public/project-cards.js';
+import {projectDetailsHTML,projectStatus,completionRowsHTML,projectDistrictLabel} from '../public/project-cards.js';
 const projects=JSON.parse(fs.readFileSync(new URL('../public/data/projects.json',import.meta.url)));
 test('the existing 41 Bay home has no fabricated completion date or repeated caveat',()=>{
  const project=projects.find(p=>p.id==='merner-41-bay'),before=JSON.stringify(project);
@@ -58,4 +58,10 @@ test('Harborn has a concise summary while its evidence and uncertainty stay in t
  assert.match(disclosure,/Approval and construction are not established\./);
  assert.match(disclosure,/separate statistics sheet lists thirteen homes/);
  assert.equal(JSON.stringify(project),before);
+});
+
+test('specific neighbourhood names take precedence over a broad research grouping',()=>{
+ assert.equal(projectDistrictLabel({district:'Sheridan / Clarkson',researchArea:'citywide'}),'Sheridan / Clarkson');
+ assert.equal(projectDistrictLabel({district:'port-credit',researchArea:'citywide'}),'Port Credit');
+ assert.equal(projectDistrictLabel({researchArea:'cooksville'}),'Cooksville');
 });

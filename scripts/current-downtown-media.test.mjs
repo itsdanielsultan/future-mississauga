@@ -63,20 +63,28 @@ test('local previews and reserved original URLs retain exact accepted dimensions
  assert.equal(local.reduce((n,a)=>n+a.bytes,0),6199452);assert.equal(remote.reduce((n,a)=>n+a.bytes,0),305391894);
 });
 
-test('current markup selects native replacements while all Nov1 media remains byte-exact',()=>{
- const home=fs.readFileSync(new URL('index.html',pub),'utf8'),social=fs.readFileSync(new URL('social.html',pub),'utf8');
+test('November 13 portrait markup selects native replacements while all Nov1 media remains byte-exact',()=>{
+ const home=fs.readFileSync(new URL('index.html',pub),'utf8'),social=fs.readFileSync(new URL('./fixtures/social-20261113.html',import.meta.url),'utf8');
  const revision=read('data/presentation-media-20261109.json');
- for(const file of ['downtown-existing.png','downtown-future.png']){const row=revision.images.find(r=>r.identity==='wide/'+file);assert(home.includes(row.responsivePreviews.find(a=>a.mimeType==='image/avif'&&a.dimensions[0]===3200).url));}
+ for(const file of ['downtown-existing.png','downtown-future.png']){const row=revision.images.find(r=>r.identity==='wide/'+file);const candidate=row.responsivePreviews.find(a=>a.mimeType==='image/avif'&&a.dimensions[0]===3200);assert(fs.existsSync(new URL(candidate.url,pub)));const state=file.replace('downtown-','').replace('.png','');
+  const nativePreview='gallery/edition-20261120/home-'+state+'-2560.webp';
+  assert(fs.existsSync(new URL(nativePreview,pub)));
+  assert(fs.readFileSync(new URL('compare.html',pub),'utf8').includes(nativePreview));}
  const cards=[...social.matchAll(/<article\b[^>]*>[\s\S]*?<\/article>/g)].map(m=>m[0]);
  const native=read('data/native-media-20261102.json'),replacements=new Map(native.images.map(row=>[row.identity,row]));
  assert.equal(cards.filter(c=>c.includes('gallery/downtown-20261101/')).length,downtown.images.filter(row=>row.kind==='portraits'&&!replacements.has(row.kind+'/'+row.file)).length);
- for(const row of downtown.images.filter(row=>row.kind==='portraits')){const newer=replacements.get(row.kind+'/'+row.file);if(newer){const card=cards.find(c=>c.includes(newer.displayMaster.url));assert(card,row.file);assert(card.includes(newer.download.url));assert(card.includes('data-osm="'+newer.caption.openStreetMap+'"'));}}
+ for(const row of downtown.images.filter(row=>row.kind==='portraits')){const newer=read('data/downtown-current-media-20261113.json').images.find(image=>image.identity===row.kind+'/'+row.file)||replacements.get(row.kind+'/'+row.file);if(newer){const card=cards.find(c=>c.includes(newer.displayMaster.url));assert(card,row.file);assert(card.includes(newer.download.url));assert(card.includes('data-osm="'+newer.caption.openStreetMap+'"'));}}
  for(const c of cards.filter(c=>c.includes('gallery/downtown-20261101/'))){assert.match(c,/Rendered 1 November 2026/);const row=downtown.images.find(r=>c.includes(r.preview.url));assert(c.includes('data-osm="'+row.sourceAttribution.openStreetMap+'"'));}
  const share=read('data/share-preview-20261101.json');assert.equal(share.sourceSHA256,downtown.images.find(r=>r.kind==='wide'&&r.file==='downtown-future.png').download.sha256);
  const bytes=fs.readFileSync(new URL(share.url,pub));assert.equal(createHash('sha256').update(bytes).digest('hex'),share.sha256);
- const activeShare=replacements.get('wide/downtown-future.png').responsivePreviews.find(a=>a.mimeType==='image/jpeg'&&a.dimensions[0]===1200);
- for(const name of ['index.html','explore.html','social.html']){const html=fs.readFileSync(new URL(name,pub),'utf8');const og=html.match(/<meta property="og:image" content="([^"]+)"/)[1],twitter=html.match(/<meta name="twitter:image" content="([^"]+)"/)[1];assert.equal(og,twitter,name);const expectedShare=name==='index.html'?revision.images.find(r=>r.identity==='wide/downtown-future.png').responsivePreviews.find(a=>a.mimeType==='image/jpeg'&&a.dimensions[0]===1200):activeShare;assert(og.startsWith(base+(name==='index.html'?'gallery/revision-20261109/':'gallery/native-share-20261102/')));const bytes=fs.readFileSync(new URL(og.slice(base.length),pub));assert.equal(createHash('sha256').update(bytes).digest('hex'),expectedShare.sha256,name);assert(!html.includes('share-preview-compact'));}
- const versions={'gallery':'20261112-ui1','social-preview':'20261112-ui1','image-experience':'20261112-ui1','media-catalog':'20261109-delivery1','document-preview':'20261112-ui1'};
+ const shares=read('data/edition-shares.json');
+ for(const name of ['index','explore','social']){
+  const html=fs.readFileSync(new URL(name+'.html',pub),'utf8');
+  for(const key of ['og:image','twitter:image'])assert(html.includes('="'+key+'" content="'+base+shares[name].url+'"'),name);
+  const bytes=fs.readFileSync(new URL(shares[name].url,pub));
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),shares[name].sha256,name);
+ }
+ const versions={'gallery':'20261113-design2','social-preview':'20261113-design2','image-experience':'20261113-design2','media-catalog':'20261113-design2','document-preview':'20261120-reader'};
  for(const name of fs.readdirSync(pub).filter(n=>n.endsWith('.html'))){const html=fs.readFileSync(new URL(name,pub),'utf8');for(const match of html.matchAll(/(gallery|social-preview|image-experience)\.js\?v=([^"']+)/g))assert.equal(match[2],versions[match[1]],name+' '+match[1]);}
  for(const name of ['gallery.js','social-preview.js','image-experience.js']){const js=fs.readFileSync(new URL(name,pub),'utf8');for(const match of js.matchAll(/(media-catalog|document-preview)\.js\?v=([^"']+)/g))assert.equal(match[2],versions[match[1]],name+' '+match[1]);}
 });

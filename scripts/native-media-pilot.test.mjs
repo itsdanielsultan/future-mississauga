@@ -7,7 +7,8 @@ import {normalizeCleanMedia,mediaPreviewInfo,comparisonPair,matchedComparisonBin
 const pub=new URL('../public/',import.meta.url),base='https://futuremississauga.com/';
 const read=file=>JSON.parse(fs.readFileSync(new URL(file,pub),'utf8'));
 const native=read('data/native-media-20261102.json'),clarkson=native.images.filter(row=>row.identity.includes('/clarkson-')),entry=native.images.find(row=>row.identity==='wide/clarkson-future.png');
-const fullFetcher=async path=>new Response(fs.readFileSync(new URL(path,pub),'utf8'));
+// This historical pilot suite isolates November 2 and November 9; the current fourteen-view edition has its own integration suite.
+const fullFetcher=async path=>path==='data/downtown-current-media-20261113.json'?new Response('',{status:404}):new Response(fs.readFileSync(new URL(path,pub),'utf8'));
 // Exercise the accepted November 2 pilot independently of the later presentation
 // overlay. A separate test below checks the complete current edition.
 const fetcher=path=>path==='data/presentation-media-20261109.json'?Promise.resolve(new Response('',{status:404})):fullFetcher(path);
@@ -33,9 +34,9 @@ test('seven corrected Clarkson views retain 42 exact new pixel files and no priv
  assert.equal(preview.src,entry.displayMaster.url);assert.equal(preview.download,entry.download.url);
 });
 
-test('only three Clarkson Social cards select clean v2 pixels with separate downloads and visible credits',()=>{
- const html=fs.readFileSync(new URL('social.html',pub),'utf8'),cards=[...html.matchAll(/<article\b[^>]*>[\s\S]*?<\/article>/g)].map(match=>match[0]);
- const current=cards.filter(card=>card.includes('gallery/native-20261102/portraits-clarkson-'));assert.equal(current.length,3);assert.equal(cards.length,24);
+test('the November 13 markup selects three Clarkson Social cards with clean v2 pixels with separate downloads and visible credits',()=>{
+ const html=fs.readFileSync(new URL('./fixtures/social-20261113.html',import.meta.url),'utf8'),cards=[...html.matchAll(/<article\b[^>]*>[\s\S]*?<\/article>/g)].map(match=>match[0]);
+ const current=cards.filter(card=>card.includes('gallery/native-20261102/portraits-clarkson-'));assert.equal(current.length,3);const coverage=[...read('data/coverage-media-20261113.json').images,...read('data/east-credit-media-20261113.json').images,...read('data/meadowvale-media-20261113.json').images].filter(row=>row.identity.startsWith('portraits/'));assert.equal(cards.length,24+coverage.length);assert.equal(cards.filter(card=>!card.includes('gallery/missing-areas-20261113/')).length,24);
  for(const row of clarkson.filter(row=>row.identity.startsWith('portraits/'))){
   const card=current.find(card=>card.includes(row.displayMaster.url));assert(card,row.identity);
   assert(card.includes('class="image-link" href="'+row.displayMaster.url+'"'));const downloads=(card.match(/<a\b[^>]*>/g)||[]).filter(link=>(link.match(/\bclass="([^"]*)"/)?.[1]||'').split(/\s+/).includes('save'));assert.equal(downloads.length,1);assert(downloads[0].includes('href="'+row.download.url+'"'));assert(/\sdownload(?:\s|=|>)/.test(downloads[0]));

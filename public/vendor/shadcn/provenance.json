@@ -1,0 +1,35 @@
+{
+  "component": "Button",
+  "style": "new-york-v4",
+  "registry": "https://ui.shadcn.com/r/styles/new-york-v4/button.json",
+  "upstreamFile": "registry/new-york-v4/ui/button.tsx",
+  "license": "MIT",
+  "upstreamLicense": "https://github.com/shadcn-ui/ui/blob/main/LICENSE.md",
+  "adaptation": "Button class and variant recipes compiled for static HTML anchors and buttons.",
+  "compiler": "tailwindcss 4.3.5",
+  "build": "npm run build:ui",
+  "controls": [
+    {
+      "selectors": [
+        ".site-map-action",
+        "#showAllPictures:not([hidden])",
+        "#showAllBuildings:not([hidden])"
+      ],
+      "variant": "outline"
+    },
+    {
+      "selectors": [
+        "#interactButton:not([hidden])"
+      ],
+      "variant": "default"
+    },
+    {
+      "selectors": [
+        ".profile-actions .profile-action"
+      ],
+      "variant": "ghost"
+    }
+  ],
+  "sha256": "8475f774c4a81a2130f5b9d19d5664e76eefd4c2de6ce513d6d2942fef9ce59e",
+  "runtimeJavaScriptBytes": 0
+}

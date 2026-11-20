@@ -5,13 +5,14 @@ import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {normalizeCleanMedia} from '../public/clean-media.js';
-import {validatePictureMedia,validateRefinedPictureStructure,validateNativeSocialCard,validateNativeSharePreviews} from './validate-picture-media.mjs';
+import {validatePictureMedia,validateRefinedPictureStructure,validateNativeSocialCard,validateNativeSharePreviews,validateEditionShare} from './validate-picture-media.mjs';
 
 const site=fileURLToPath(new URL('../public/',import.meta.url));
 const json=async path=>JSON.parse(await readFile(join(site,path),'utf8'));
 const native=await json('data/native-media-20261102.json');
 const rows=native.images.map(row=>normalizeCleanMedia(row,'https://futuremississauga.com/'));
-const page=await readFile(join(site,'social.html'),'utf8');
+const awaitCurrentCatalogue=await readFile(join(site,'data/downtown-current-media-20261113.json'),'utf8');
+const page=await readFile(new URL('./fixtures/social-20261113.html',import.meta.url),'utf8');
 const cards=page.match(/<article\b[\s\S]*?<\/article>/g);
 
 test('the build validates all current native cards and retained historical image proofs',async()=>{
@@ -21,7 +22,7 @@ test('the build validates all current native cards and retained historical image
 });
 
 test('current card validation rejects stale pixels, crossed actions, dimensions and duplicate cards',()=>{
- const row=rows.find(row=>row.identity==='portraits/downtown-landmark-future.png');
+ const current=JSON.parse(awaitCurrentCatalogue),row=normalizeCleanMedia(current.images.find(row=>row.identity==='portraits/downtown-landmark-future.png'),'https://futuremississauga.com/');
  const card=validateNativeSocialCard(cards,row);
  const corruptions=[
   card.replace(row.preview.url,'gallery/old-thumbnail.avif'),
@@ -31,6 +32,10 @@ test('current card validation rejects stale pixels, crossed actions, dimensions 
   card.replace('class="image-link"','download class="image-link"'),
   card.replace('data-display-width="3240"','data-display-width="1200"'),
   card.replace('data-osm="true"','data-osm="false"'),
+  card.replace('data-area-title="Downtown"','data-area-title="Port Credit"'),
+  card.replace('data-view-title="Absolute World"','data-view-title="City Centre interchange"'),
+  card.replace('<h2>Absolute World</h2>','<h2>Downtown</h2>'),
+  card.replace('<span class="media-caption__area">Downtown</span>','<span class="media-caption__area">Port Credit</span>'),
   card.replace('href="https://www.openstreetmap.org/copyright"','href="sources.html"'),
  ];
  for(const changed of corruptions){assert.notEqual(changed,card,'Each corruption must change the actual card');assert.throws(()=>validateNativeSocialCard([changed],row));}
@@ -47,23 +52,25 @@ test('current source credits remain required for Clarkson and Lakeview',()=>{
  }
 });
 
-test('share metadata must use the exact current native JPEG for both services',async()=>{
+const legacyShare=await readFile(new URL('./fixtures/share-20261102.html',import.meta.url),'utf8');
+const revisedShare=await readFile(new URL('./fixtures/share-20261109.html',import.meta.url),'utf8');
+test('dated native share tags must match both services',async()=>{
  const row=rows.find(row=>row.identity==='wide/downtown-future.png');
  const old=await json('data/share-preview-20261101.json');
- await assert.rejects(validateNativeSharePreviews(site,[page.replace(/<meta property="og:image" content="[^"]+"/,'<meta property="og:image" content="https://futuremississauga.com/'+old.url+'"')],row));
- await assert.rejects(validateNativeSharePreviews(site,[page.replace(/<meta name="twitter:image"[^>]+>/,'')],row),/share metadata/);
+ await assert.rejects(validateNativeSharePreviews(site,[legacyShare.replace(/<meta property="og:image" content="[^"]+"/,'<meta property="og:image" content="https://futuremississauga.com/'+old.url+'"')],row));
+ await assert.rejects(validateNativeSharePreviews(site,[legacyShare.replace(/<meta name="twitter:image"[^>]+>/,'')],row),/share metadata/);
 });
 
-test('homepage share uses the exact presentation JPEG while other pages retain the native edition',async()=>{
- const home=await readFile(join(site,'index.html'),'utf8'),explore=await readFile(join(site,'explore.html'),'utf8');
+test('November 9 and November 2 share images retain their original identity and headers',async()=>{
+ const home=revisedShare;
  const original=rows.find(row=>row.identity==='wide/downtown-future.png');
  const revision=await json('data/presentation-media-20261109.json');
  const revised=normalizeCleanMedia(revision.images.find(row=>row.identity==='wide/downtown-future.png'),'https://futuremississauga.com/');
  const options={edition:'revision-20261109'};
  await validateNativeSharePreviews(site,[home],revised,options);
- await validateNativeSharePreviews(site,[page,explore],original);
+ await validateNativeSharePreviews(site,[legacyShare],original);
  await assert.rejects(validateNativeSharePreviews(site,[home],original));
- await assert.rejects(validateNativeSharePreviews(site,[page,explore],revised,options));
+ await assert.rejects(validateNativeSharePreviews(site,[legacyShare],revised,options));
  for(const change of [
   row=>{row.displayMaster.sha256='0'.repeat(64);},
   row=>{row.responsivePreviews.find(a=>a.format==='image/jpeg'&&a.width===1200).bytes++;},
@@ -72,6 +79,16 @@ test('homepage share uses the exact presentation JPEG while other pages retain t
   row=>{row.responsivePreviews.find(a=>a.format==='image/jpeg'&&a.width===1200).url='https://example.com/other.jpg';},
  ]){const changed=structuredClone(revised);change(changed);await assert.rejects(validateNativeSharePreviews(site,[home],changed,options));}
  await assert.rejects(validateNativeSharePreviews(site,[home.replace('property="og:image:height" content="750"','property="og:image:height" content="800"')],revised,options),/metadata height/);
+});
+
+test('each current section shares artwork from its own edition',async()=>{
+ const all=await json('data/edition-shares.json');
+ assert.deepEqual(Object.keys(all).sort(),['compare','downloads','explore','film','gallery','index','social','updates']);
+ for(const [name,record] of Object.entries(all)){
+  const html=await readFile(join(site,name+'.html'),'utf8');
+  await validateEditionShare(site,name,html,record);
+  await assert.rejects(validateEditionShare(site,name,html.replace('property="og:image"', 'property="retired-image"'),record));
+ }
 });
 
 async function changedData(name,mutate,check){

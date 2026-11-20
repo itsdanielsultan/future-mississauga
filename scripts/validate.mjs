@@ -133,7 +133,7 @@ export async function validateDocumentLinks(site = join(ROOT, 'public')) {
   }
   return report;
 }
-export async function validate(site = join(ROOT, 'public'), {enforcePublicationSize = true} = {}) {
+export async function validate(site = join(ROOT, 'public'), {enforcePublicationSize = true, target = 'pages'} = {}) {
   site = resolve(site);
   const files = await walk(site);
   let bytes = 0;
@@ -145,7 +145,7 @@ export async function validate(site = join(ROOT, 'public'), {enforcePublicationS
     assert(!forbidden.test(name), 'Forbidden private/raw file in published output: ' + name);
     const size = (await stat(file)).size;
     bytes += size;
-    assert(size < 100_000_000, 'File exceeds conservative 100 MB Git threshold: ' + name);
+    if (target !== 'cloudflare') assert(size < 100_000_000, 'File exceeds conservative 100 MB Git threshold: ' + name);
     if (!['.html', '.css', '.js', '.mjs', '.json', '.md', '.txt', '.csv'].includes(extname(file))) continue;
     const text = await readFile(file, 'utf8');
     assert(!/["'`]\s*\/media\/|https?:\/\/[^/\s"'<>]*(?:chatgpt|openai|oaiusercontent)[^/\s"'<>]*\/media\//i.test(text), 'Host-specific media dependency remains: ' + name);

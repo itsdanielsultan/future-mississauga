@@ -267,6 +267,90 @@
         "modelDate": "Accepted exterior revision dated 1 November 2026; photograph capture dates and design-era diagram remain separate.",
         "acceptanceSHA256": "ddf2babd839b69e1884be3c1c1e97c35368d3842e194f75743793f1dd60d48c0"
       }
+    },
+    {
+      "id": "mcity-pair-v6-20261112",
+      "projectId": "mcity-1-2",
+      "updatedOn": "2026-11-12",
+      "viewIds": [
+        "mcity-pair"
+      ],
+      "scope": "M1 low pavilion added with estimated roof height; M2 remains at its 1 November 2026 revision.",
+      "modelAssets": [
+        {
+          "id": "mcity-m1",
+          "url": "models/studies-20261112/mcity-m1-pavilion-v6-27dadcecf559.glb.gz",
+          "sha256": "27dadcecf5593ccc9b257bc4832acf5eb8562aa9bd92c96b5a19491fd0f012ba",
+          "downloadSHA256": "478be2c24b1b8b8a0cbb649c6c75fa11df7658b29a7a40d186da34aa37773ae9",
+          "bytes": 3796003,
+          "decodedBytes": 21971656,
+          "modelReviewDate": "2026-11-12"
+        },
+        {
+          "id": "mcity-m2",
+          "url": "models/studies-20261101/mcity-m2-likeness-v5.glb.gz",
+          "sha256": "e5a8a29b8f5553e4f92418c11c4ef63397cded152d7d06ba48d690e1e18597fd",
+          "downloadSHA256": "1f6d68734e2486165984f0e56605638fc0ea705a4cb326afbe33b0a4dde0ef20",
+          "bytes": 3662186,
+          "decodedBytes": 21373484,
+          "modelReviewDate": "2026-11-01"
+        }
+      ],
+      "media": [],
+      "evidence": {
+        "modelDate": "Qualified geometry revision dated 12 November 2026; source-reference dates remain separate.",
+        "acceptanceSHA256": "7dd657c6295d10e0175425954b98c7d569bdfb8f888995b5367c902ccdba346f"
+      }
+    },
+    {
+      "id": "mcity-m1-v6-20261112",
+      "projectId": "mcity-1-2",
+      "updatedOn": "2026-11-12",
+      "viewIds": [
+        "mcity-m1"
+      ],
+      "scope": "Footprint-informed low pavilion added; estimated roof height and existing ground-level podium gaps remain qualified.",
+      "modelAssets": [
+        {
+          "id": "mcity-m1",
+          "url": "models/studies-20261112/mcity-m1-pavilion-v6-27dadcecf559.glb.gz",
+          "sha256": "27dadcecf5593ccc9b257bc4832acf5eb8562aa9bd92c96b5a19491fd0f012ba",
+          "downloadSHA256": "478be2c24b1b8b8a0cbb649c6c75fa11df7658b29a7a40d186da34aa37773ae9",
+          "bytes": 3796003,
+          "decodedBytes": 21971656,
+          "modelReviewDate": "2026-11-12"
+        }
+      ],
+      "media": [],
+      "evidence": {
+        "modelDate": "Qualified geometry revision dated 12 November 2026; source-reference dates remain separate.",
+        "acceptanceSHA256": "7dd657c6295d10e0175425954b98c7d569bdfb8f888995b5367c902ccdba346f"
+      }
+    },
+    {
+      "id": "mcity-m5-v6-20261112",
+      "projectId": "mcity-5",
+      "updatedOn": "2026-11-12",
+      "viewIds": [
+        "mcity-m5"
+      ],
+      "scope": "Ten upper park-facing podium groups revised from completed-design imagery. Other groups and materials are unchanged; dimensions remain estimated.",
+      "modelAssets": [
+        {
+          "id": "mcity-m5-v6",
+          "url": "models/studies-20261112/mcity-m5-podium-v6-ccc3178d661b.glb.gz",
+          "sha256": "ccc3178d661b6d3a77b14af474b235be0cae37faf31f5d6c0e3e9fc5e1c950b6",
+          "downloadSHA256": "d8847e7267ee38de9138f7aac388fb59865cb3ef139b4c0f66adb66127ab1af5",
+          "bytes": 453289,
+          "decodedBytes": 1832764,
+          "modelReviewDate": "2026-11-12"
+        }
+      ],
+      "media": [],
+      "evidence": {
+        "modelDate": "Qualified geometry revision dated 12 November 2026; source-reference dates remain separate.",
+        "acceptanceSHA256": "7dd657c6295d10e0175425954b98c7d569bdfb8f888995b5367c902ccdba346f"
+      }
     }
   ],
   "coverageGaps": [

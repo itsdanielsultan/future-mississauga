@@ -7,6 +7,7 @@ import {
   documentPageURL,
   documentPreviewKey,
   isDocumentPreviewCandidate,
+  requestedDocumentPage,
 } from '../public/document-preview.js';
 
 const site = 'https://futuremississauga.com/sources.html';
@@ -90,4 +91,12 @@ test('registered documents match exact paths after loading without a filename co
   const index = createDocumentPreviewIndex({documents: [custom]}, site);
   assert.equal(isDocumentPreviewCandidate(custom.url + '?cache=1', site, index), true);
   assert.equal(isDocumentPreviewCandidate('downloads/reviewed-edition-old.pdf', site, index), false);
+});
+
+
+test('a place opens its exact numbered atlas page and malformed page fragments fall back to the cover', () => {
+  assert.equal(requestedDocumentPage(site + '#page=17', 63), 17);
+  for (const suffix of ['', '#page=0', '#page=-1', '#page=64', '#page=1.5', '#page=x']) {
+    assert.equal(requestedDocumentPage(site + suffix, 63), 1);
+  }
 });

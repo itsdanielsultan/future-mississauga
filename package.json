@@ -13,7 +13,9 @@
     "dev": "node scripts/serve.mjs",
     "preview": "node scripts/serve.mjs --site dist",
     "build:ui": "node scripts/build-ui.mjs",
-    "prebuild": "npm run build:ui"
+    "build:catalogue": "node scripts/build-building-catalogue.mjs",
+    "prebuild": "node scripts/build-map-stations.mjs && npm run build:catalogue && npm run build:ui",
+    "build:cloudflare": "node scripts/prepare-cloudflare.mjs"
   },
   "devDependencies": {
     "@tailwindcss/cli": "4.3.5",

@@ -6,6 +6,7 @@ import {readFile} from 'node:fs/promises';
 import {execFileSync} from 'node:child_process';
 import {projectDetailsHTML,projectStatus} from '../public/project-cards.js';
 import {statusMetadataScope,withoutReviewedStatusMetadata as withoutStatus} from './status-metadata-scope.mjs';
+import {restoreNamedProjectRegister} from './named-project-review-scope.mjs';
 
 // This is a content-only review of the October 28/29 replies. Source drawings,
 // municipal meshes, historical audits and source-publication holds are separate.
@@ -122,7 +123,7 @@ function csv(text){
  const [header,...values]=rows;return {header,rows:values.map(values=>Object.fromEntries(header.map((key,i)=>[key,values[i]])))};
 }
 test('download register mirrors the reviewed records and preserves every other row',async()=>{
- const current=csv(restore26Register(await read('public/downloads/project-register.csv'))),before=csv(original('public/downloads/project-register.csv'));
+ const current=csv(restoreNamedProjectRegister(restore26Register(await read('public/downloads/project-register.csv')))),before=csv(original('public/downloads/project-register.csv'));
  const statusColumns=['lifecycle','approvalStage','lifecycleReviewedOn','lifecycleNote'];
  assert.deepEqual(current.header,[...before.header,...statusColumns]);assert.deepEqual(current.rows.map(r=>r.id),before.rows.map(r=>r.id));
  for(const row of current.rows){

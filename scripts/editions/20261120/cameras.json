@@ -1,0 +1,5698 @@
+{
+  "scenes": {
+    "460dec347682187160d8910d237fe8f4d974e1c171fafa8b48c161f38404325e": {
+      "blend": "media-framing-corrections-2026-11-13/downtown-current-v1/captures/downtown-existing/import/downtown-existing-native-packed.blend",
+      "bytes": 373562807,
+      "importProof": "media-framing-corrections-2026-11-13/downtown-current-v1/captures/downtown-existing/import/import-proof.json",
+      "importSHA256": "e4a0eb3e3d4ea05fb1b3d204e5f5f5781ccc556ddcef6f83bd8f5e55f8fb90cf",
+      "sourceGLBSHA256": "0fd6691734b1e5e537292f717880f45fb1887ae73be22c125385bffa691f5fa4"
+    },
+    "d4d4289208c149cec1fdc1561d0e3f8ed2f8c6ff825406f137e81dfb29e613e7": {
+      "blend": "media-framing-corrections-2026-11-13/downtown-current-v1/captures/downtown-future/import/downtown-future-native-packed.blend",
+      "bytes": 417417515,
+      "importProof": "media-framing-corrections-2026-11-13/downtown-current-v1/captures/downtown-future/import/import-proof.json",
+      "importSHA256": "0bc31e477fa2adf581b8cfa9b62072af9ac95ed7c8f8da581de1088a278d74b7",
+      "sourceGLBSHA256": "3d544484d736a756c1d98b10d4f4664841f6b3a51db10a7a3d01df57deb6a871"
+    },
+    "172e6e53249966eee36424c05c20b502f22427cfa489e1b39dcc97ea50022e94": {
+      "blend": "scene-presentation-correction-2026-11-01/native-context-capture/final-fairview-v2/fairview-pair/after-import/citywide-existing-native-packed.blend",
+      "bytes": 346185210,
+      "importProof": "scene-presentation-correction-2026-11-01/native-context-capture/final-fairview-v2/fairview-pair/after-import/import-proof.json",
+      "importSHA256": "fa0aa73b8d20a4ba903afe11dcca39a9652712654d50801447199e43fadafefc",
+      "sourceGLBSHA256": "ef65efb0c72734f469a849fe4768266285387e13e6f42d4a63a2996730bf7149"
+    },
+    "72d14ce340056591856a6083435f6b4d0578442d32e6df4d8003dbb3a2c4e8ee": {
+      "blend": "scene-presentation-correction-2026-11-01/native-context-capture/final-fairview-v2/fairview-pair/before-import/citywide-existing-native-packed.blend",
+      "bytes": 345864670,
+      "importProof": "scene-presentation-correction-2026-11-01/native-context-capture/final-fairview-v2/fairview-pair/before-import/import-proof.json",
+      "importSHA256": "1ea63d9e0cd20af130f9ccabd58529ae7ef4af187c57db49a559840cb46361f7",
+      "sourceGLBSHA256": "599eb68485069dedb00a9c38eacd517146896d220dfa170a63d395e876eff07a"
+    },
+    "bd6195e15d426bb29896d0f44634f163e3d9b65c9c5bf7dad60fdc038ef70cbc": {
+      "blend": "missing-area-gallery-2026-11-12/imports-v2/churchill-meadows/churchill-meadows-future-native-packed.blend",
+      "bytes": 321602123,
+      "importProof": "missing-area-gallery-2026-11-12/imports-v2/churchill-meadows/import-proof.json",
+      "importSHA256": "68e3e674438a79d2be112d0fdbf5f33e862e607820057567e73571981997677a",
+      "sourceGLBSHA256": "ee03ab1926557132af9d4e573ec371daea5137ff74e488da4e97232ce0694153"
+    },
+    "2ddcd71fc738f9782ca024fbdb6b4c4084bafdc72aa732ace975bd3a09b9c696": {
+      "blend": "scene-presentation-correction-2026-11-01/native-context-capture/final-clarkson-v1/clarkson-existing-import/clarkson-existing-native-packed.blend",
+      "bytes": 299796897,
+      "importProof": "scene-presentation-correction-2026-11-01/native-context-capture/final-clarkson-v1/clarkson-existing-import/import-proof.json",
+      "importSHA256": "d936a01823d5fef9b27d6ec4ddfae97ec86394c3ff71679f5540c1633742f0ab",
+      "sourceGLBSHA256": "95b9fc1177238112a9cb57c47972b7148b6d5bf95d65a6e8b2d8d75048c4f68a"
+    },
+    "6a0d5cf716feb3451390cd8f8f63324c90c154d6ccbb24e5870d08b147a16162": {
+      "blend": "scene-presentation-correction-2026-11-01/native-context-capture/final-clarkson-v1/clarkson-future-import/clarkson-future-native-packed.blend",
+      "bytes": 299972747,
+      "importProof": "scene-presentation-correction-2026-11-01/native-context-capture/final-clarkson-v1/clarkson-future-import/import-proof.json",
+      "importSHA256": "6da59dc5b72c3ff9ebea88e39fd1b8b21f599ccf2f07f60206a867baf5545dba",
+      "sourceGLBSHA256": "c091fda92238ec95b580582c29113eb22aea6bbf5836cbf44f29c26d12a8cc39"
+    },
+    "9ed03c3c41a6770fd3f74a3775562a5c29d81985697cdb5e51690c7d46e86fae": {
+      "blend": "scene-presentation-correction-2026-11-01/native-context-capture/final-held-v1/native-captures/cooksville-future/import/cooksville-future-native-packed.blend",
+      "bytes": 374470599,
+      "importProof": "scene-presentation-correction-2026-11-01/native-context-capture/final-held-v1/native-captures/cooksville-future/import/import-proof.json",
+      "importSHA256": "528227255a1a4f0707fa312589d5fa963cb2f3a5d879d7a299db42df0a058dfa",
+      "sourceGLBSHA256": "deb0b2862edf3bd1e25f226a3494f7ec9ac2be3c03f1e6a436d1c441e9569479"
+    },
+    "ec2094e4c9be47651557b3a76b5466eb86a0b09e194e36252500568691af5ea7": {
+      "blend": "scene-presentation-correction-2026-11-01/native-context-capture/final-districts-v1/batch/downtown-future/import/downtown-future-native-packed.blend",
+      "bytes": 414904313,
+      "importProof": "scene-presentation-correction-2026-11-01/native-context-capture/final-districts-v1/batch/downtown-future/import/import-proof.json",
+      "importSHA256": "4c5a0570dd1309cd9667c59e91d13daf043fe2fe42f0805c4f9dbf9ac276bce0",
+      "sourceGLBSHA256": "1c1a479e9f0cf7b1af999c26154acc352e51f1f9e5c513347a5fc4dda9278804"
+    },
+    "b17c35c803a5a2202399bfad910f18c3129b9b1b0e826729eb13a775cbf58fbd": {
+      "blend": "media-framing-corrections-2026-11-13/downtown-current-v1/captures/downtown-construction/import/downtown-construction-native-packed.blend",
+      "bytes": 388914930,
+      "importProof": "media-framing-corrections-2026-11-13/downtown-current-v1/captures/downtown-construction/import/import-proof.json",
+      "importSHA256": "8730f879b2dcb1248d6f61eba7abef2e5076f03a39eb8b72e157ef94e906242f",
+      "sourceGLBSHA256": "0a417a5223db6c1d543f826a49aae8d0bcc4949261a96167ae854719ead3e9b5"
+    },
+    "680685890e457f913086c9ea886424c6ac2aa39b69d418241e7d308ed86baa3a": {
+      "blend": "missing-area-gallery-2026-11-12/east-credit-voya-import/east-credit-creditview-future-native-packed.blend",
+      "bytes": 352028016,
+      "importProof": "missing-area-gallery-2026-11-12/east-credit-voya-import/import-proof.json",
+      "importSHA256": "4c1ec67a2ee59a54f8ffc57ffaa9c7d8d4d6b47bc877bbef1aa46cb54d87597a",
+      "sourceGLBSHA256": "581be9d94391d324076fb3dae22388e5d8c9778d74a66b9988cfce25b3f83f96"
+    },
+    "2e255ffa8476d98414a3cd2644c8c69433d39509f9ac5c7d87f6b9a18262b803": {
+      "blend": "scene-presentation-correction-2026-11-01/native-context-capture/final-districts-v1/batch/erin-mills-future/import/erin-mills-future-native-packed.blend",
+      "bytes": 436603953,
+      "importProof": "scene-presentation-correction-2026-11-01/native-context-capture/final-districts-v1/batch/erin-mills-future/import/import-proof.json",
+      "importSHA256": "22da7d4a1ac28dcd5a9d463f3b79460d07a597d8f2afd5547d8e4ae8c1c2ea16",
+      "sourceGLBSHA256": "bb02ee00b5779a7bfa586b3bdf5a99c64471d1ffc251d568551fd3de1ee04466"
+    },
+    "199ed122bf17d66335237a624bf3725a424d7ae36dc9ed6d6db53b2694cd9416": {
+      "blend": "scene-presentation-correction-2026-11-01/lakeview-final-native-water-v1/existing/lakeview-existing-water-exclusive-final-v1.blend",
+      "bytes": 271215296,
+      "importProof": "scene-presentation-correction-2026-11-01/lakeview-final-native-water-v1/existing/derived-import-proof.json",
+      "importSHA256": "84afcff322a228c0b359ccf056c45077e352895b4627a80c74c1a5d376c23b1a",
+      "sourceGLBSHA256": "9fe7f9a31bd3269b958f777877514b4c4e0b145dee5a712019817621091361e5"
+    },
+    "18621f596c4a2f7f8504ddc8df898f10259292174f0f094b8606f1db1556c879": {
+      "blend": "scene-presentation-correction-2026-11-01/lakeview-final-native-water-v1/future/lakeview-future-water-exclusive-final-v1.blend",
+      "bytes": 275967670,
+      "importProof": "scene-presentation-correction-2026-11-01/lakeview-final-native-water-v1/future/derived-import-proof.json",
+      "importSHA256": "b5b9b603e46032f8c470ea3ab38ce3a3f7dcb266d2dbcffa9c2f90c72ce31a7a",
+      "sourceGLBSHA256": "0986d6d2e023f6de2cf81ee2b26edf338dfdca70aae258f383926e4d71c76eb9"
+    },
+    "79b755f5761fa28e048011d4c180fcafb5f3d56b6b1976610927225c3c3a8199": {
+      "blend": "missing-area-gallery-2026-11-12/qualified-imports/lisgar/lisgar-future-native-packed.blend",
+      "bytes": 326498937,
+      "importProof": "missing-area-gallery-2026-11-12/qualified-imports/lisgar/import-proof.json",
+      "importSHA256": "46613ec6feea574dfeddb876e2ce38e04dd64a61b3671edd3213aca329216673",
+      "sourceGLBSHA256": "c31993b2bf9b4f68cd3a154eacbb79fec961408ac965baae225c5b400af49a3e"
+    },
+    "3ce2f56d973b3c04f5eb21e3fad919d2a70bb2b8d7f6da76f0cc039b745e20a2": {
+      "blend": "missing-area-gallery-2026-11-12/qualified-imports/lorne-park/lorne-park-future-native-packed.blend",
+      "bytes": 213423533,
+      "importProof": "missing-area-gallery-2026-11-12/qualified-imports/lorne-park/import-proof.json",
+      "importSHA256": "ea3b3cf8ad53e76f9761f1360745699417849b517943702bfdd927ac8b3a4bb0",
+      "sourceGLBSHA256": "ad5daffd0b4d94f15424f007a2727d4d81e3949ed7998542f7e5a770e626c8ac"
+    },
+    "911e1ceb3f8a37e491be2ae0ac1ddc52428ce238628f21c52111be43abbeb9bb": {
+      "blend": "missing-area-gallery-2026-11-12/meadowvale-final-v1/import/meadowvale-village-future-native-packed.blend",
+      "bytes": 285864465,
+      "importProof": "missing-area-gallery-2026-11-12/meadowvale-final-v1/import/import-proof.json",
+      "importSHA256": "2b936747b699c79ad3d8d45a7d1195ae2252096c3acd562237a49b33cc0301aa",
+      "sourceGLBSHA256": "444df4f0a4f74109b4cbba8bc5a96b6405e0bbce0b3770772d9aae6ad3de3aa7"
+    },
+    "67173c15c884803080aa7192a48143a4f9485be8cf2bf7e5b2c592738ee0f616": {
+      "blend": "scene-presentation-correction-2026-11-01/lakeview-water-diagnosis-v1/derived-v1/port-credit-existing/port-credit-existing-water-exclusive-v1.blend",
+      "bytes": 271053689,
+      "importProof": "scene-presentation-correction-2026-11-01/lakeview-water-diagnosis-v1/derived-v1/port-credit-existing/derived-import-proof.json",
+      "importSHA256": "03001ac6ed9f494ab452c7b16c6e3b675d91731498d2629312b4cc93f978868d",
+      "sourceGLBSHA256": "dae345f5aed865ba02ab9e3c0da2004e1f2eb6fdd52a478d10652d8ea442689b"
+    },
+    "9c3cd86023ad034a78d6e3c2e6789ad1a32371e36690dbc84b92d2683767ee5f": {
+      "blend": "scene-presentation-correction-2026-11-01/lakeview-water-diagnosis-v1/derived-v1/port-credit-future/port-credit-future-water-exclusive-v1.blend",
+      "bytes": 272160842,
+      "importProof": "scene-presentation-correction-2026-11-01/lakeview-water-diagnosis-v1/derived-v1/port-credit-future/derived-import-proof.json",
+      "importSHA256": "a7bb2d45aecb94441dcb6dea65d997f39a4476bd74b0d06d0c237e0efa78ec07",
+      "sourceGLBSHA256": "c53c5ed09c6dfdce0cd3d48179157dfc372f8a5f888844f0a550db1b6bffc40c"
+    },
+    "56df6cad009078c7cac5a00bf8a0716db817629f92d27419d2695510b3fcf7df": {
+      "blend": "scene-presentation-correction-2026-11-01/native-context-capture/final-districts-v1/batch/streetsville-future/import/streetsville-future-native-packed.blend",
+      "bytes": 391334038,
+      "importProof": "scene-presentation-correction-2026-11-01/native-context-capture/final-districts-v1/batch/streetsville-future/import/import-proof.json",
+      "importSHA256": "70c76e4552d473425fc6acf4283e78e45d532a739cfa168fe557b4b41384aa60",
+      "sourceGLBSHA256": "c8db1a04a59204d8a8dfdff905bce921d596ec0c6d6f296eef1c36bc832a97a2"
+    },
+    "f2e6ef5e937d4316020f631a870f866aa9585a2b8fc45768890c845575ec32c0": {
+      "blend": "scene-presentation-correction-2026-11-01/native-context-capture/final-districts-v1/batch/uptown-future/import/uptown-future-native-packed.blend",
+      "bytes": 367996848,
+      "importProof": "scene-presentation-correction-2026-11-01/native-context-capture/final-districts-v1/batch/uptown-future/import/import-proof.json",
+      "importSHA256": "8fbd86544b7c69da871d8e956e15e79ad48a0b2b75fe18c656d1e58a82e3b386",
+      "sourceGLBSHA256": "5e7f8b6ff2ebbe4367c639028cb0ecdf29afea372eac579f2f08c645cd325054"
+    },
+    "b6f01bb2d695161241afc7cf9f86f6e4994873523352a2c3195bc869bec8cbaa": {
+      "blend": "scene-presentation-correction-2026-11-01/native-context-capture/final-districts-v1/batch/airport-corporate-future/import/airport-corporate-future-native-packed.blend",
+      "bytes": 298721960,
+      "importProof": "scene-presentation-correction-2026-11-01/native-context-capture/final-districts-v1/batch/airport-corporate-future/import/import-proof.json",
+      "importSHA256": "2ac823b2c364a378f887c065e85cb32a3395e1e60dade0a961e939f3542915d9",
+      "sourceGLBSHA256": "fa47f5488e68df5e2105d0ce7cbab7d2ed59c99c058b4195648f8f339dde31a2"
+    },
+    "32274d38196eb21d682ec06a7a2a8883df7bd2326d00171d4e9815ce6d606848": {
+      "blend": "scene-presentation-correction-2026-11-01/native-context-capture/final-held-v1/native-captures/citywide-future/import/citywide-future-native-packed.blend",
+      "bytes": 329010737,
+      "importProof": "scene-presentation-correction-2026-11-01/native-context-capture/final-held-v1/native-captures/citywide-future/import/import-proof.json",
+      "importSHA256": "79dffccf9daed6c1802909701bdc350d82c52e62e2c98bfe7f18343e776bcafc",
+      "sourceGLBSHA256": "7ffa5335d86cad14117657bfb475d6684ea735aec291e4445c94afeb8555edac"
+    },
+    "ee2d630bfee8ee1bd10e45a9b650a4a2f2ea82c229804805bea0ff1c1c839829": {
+      "blend": "scene-presentation-correction-2026-11-01/native-context-capture/final-districts-v1/batch/dixie-applewood-future/import/dixie-applewood-future-native-packed.blend",
+      "bytes": 327943806,
+      "importProof": "scene-presentation-correction-2026-11-01/native-context-capture/final-districts-v1/batch/dixie-applewood-future/import/import-proof.json",
+      "importSHA256": "8bfacc47fd67725da372abf5fc3aa7808b1768671df1191ea79bb52bcd7fc4e2",
+      "sourceGLBSHA256": "e0ea304fd4750f7e6cbe22c2a7637aa52cbeec69186787ba8591a8700b2ad367"
+    },
+    "181540fa2a37023d7316b966f68dd8f70234fead0afb96b9ad6f4ae965baf315": {
+      "blend": "scene-presentation-correction-2026-11-01/native-context-capture/final-districts-v1/batch/erindale-future/import/erindale-future-native-packed.blend",
+      "bytes": 441391095,
+      "importProof": "scene-presentation-correction-2026-11-01/native-context-capture/final-districts-v1/batch/erindale-future/import/import-proof.json",
+      "importSHA256": "b050eff9070718b64e410c0b43e58ddba244ef45ef334594c728e6a3a25425bd",
+      "sourceGLBSHA256": "3b0cdd51e07b6c488c3c046bb45b0144baa0abc5de065bf22d810f682e39ecfe"
+    },
+    "58a7d6ca2a87c2fc115cd007dfa9458c6647ac97fe773341ae1f968093dcf5c7": {
+      "blend": "scene-presentation-correction-2026-11-01/native-context-capture/final-districts-v1/batch/heartland-future/import/heartland-future-native-packed.blend",
+      "bytes": 360681018,
+      "importProof": "scene-presentation-correction-2026-11-01/native-context-capture/final-districts-v1/batch/heartland-future/import/import-proof.json",
+      "importSHA256": "0c873d1a9b9a8b306000dba13d9fb413e4268ef6358ecde591bfa1dcadb66769",
+      "sourceGLBSHA256": "d31e3ba89665061241a1a1c298d41c213cb3ab57aa352eb81304501bd6ce4b6e"
+    },
+    "ccd3f78aa6c64c7764eac92b6f632e608578e5c8594253749688aa3676e9d3eb": {
+      "blend": "scene-presentation-correction-2026-11-01/native-context-capture/final-districts-v1/batch/malton-future/import/malton-future-native-packed.blend",
+      "bytes": 222505887,
+      "importProof": "scene-presentation-correction-2026-11-01/native-context-capture/final-districts-v1/batch/malton-future/import/import-proof.json",
+      "importSHA256": "6725161d2c44315113fb1c652f3913577d14634a0fc479fad2b217b8e71a8d40",
+      "sourceGLBSHA256": "479ac78bd240669410afc8ae0b5da7fefa3fe078be5324e801222de5b1556d68"
+    },
+    "c8a1c8578d0cde32dc2ec38cb973826d63f9cc25485ab2658147d8073f9fb8f3": {
+      "blend": "scene-presentation-correction-2026-11-01/native-context-capture/final-districts-v1/batch/meadowvale-future/import/meadowvale-future-native-packed.blend",
+      "bytes": 431719935,
+      "importProof": "scene-presentation-correction-2026-11-01/native-context-capture/final-districts-v1/batch/meadowvale-future/import/import-proof.json",
+      "importSHA256": "d2eb493af8820e56f436f584ec1fd840b0a90887c3b75fc4e25df3fc39882675",
+      "sourceGLBSHA256": "c34ca0104d363d690f741fc50d3be851a81707682fd64fd652054bc74befded4"
+    }
+  },
+  "views": [
+    {
+      "identity": "home/downtown-existing.png",
+      "source": "460dec347682187160d8910d237fe8f4d974e1c171fafa8b48c161f38404325e",
+      "renderer": "render-885f16b46a39.py",
+      "samples": 48,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 1.8,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.55,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.3,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "home/downtown-existing.png",
+        "title": "Downtown",
+        "area": "Downtown",
+        "district": "downtown",
+        "scenario": "existing",
+        "camera": {
+          "location": [
+            -2760.0,
+            -3370.0,
+            1925.0
+          ],
+          "rotationEuler": [
+            1.1727452278137207,
+            -3.787719915493426e-09,
+            0.6146630644798279
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 1797.75,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            -0.07488889247179031,
+            0.03574346378445625
+          ],
+          "clip": [
+            0.1,
+            150000
+          ]
+        },
+        "cameraQualifications": [
+          "Exact October 23 Downtown camera, sensor shift and frame, applied to the November 13 frozen city scene."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
+      "identity": "home/downtown-future.png",
+      "source": "d4d4289208c149cec1fdc1561d0e3f8ed2f8c6ff825406f137e81dfb29e613e7",
+      "renderer": "render-885f16b46a39.py",
+      "samples": 48,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 1.8,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.55,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.3,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "home/downtown-future.png",
+        "title": "Downtown",
+        "area": "Downtown",
+        "district": "downtown",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -2760.0,
+            -3370.0,
+            1925.0
+          ],
+          "rotationEuler": [
+            1.1727452278137207,
+            -3.787719915493426e-09,
+            0.6146630644798279
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 1797.75,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            -0.07488889247179031,
+            0.03574346378445625
+          ],
+          "clip": [
+            0.1,
+            150000
+          ]
+        },
+        "cameraQualifications": [
+          "Exact October 23 Downtown camera, sensor shift and frame, applied to the November 13 frozen city scene."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
+      "identity": "neighbourhood/fairview/after",
+      "source": "172e6e53249966eee36424c05c20b502f22427cfa489e1b39dcc97ea50022e94",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "neighbourhood/fairview/after",
+        "title": "Fairview",
+        "area": "Fairview",
+        "district": "citywide",
+        "scenario": "existing",
+        "camera": {
+          "location": [
+            -4930.0,
+            -900.0,
+            605.0
+          ],
+          "rotationEuler": [
+            0.9663816495240751,
+            6.295796994848502e-08,
+            -0.5290305109263194
+          ],
+          "quaternionWXYZ": [
+            0.8547180891036987,
+            0.44844773411750793,
+            -0.12146750092506409,
+            -0.23151081800460815
+          ],
+          "type": "ORTHO",
+          "lens": 50,
+          "orthoScale": 740,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36,
+          "sensorHeight": 24,
+          "shift": [
+            0,
+            0
+          ],
+          "clip": [
+            0.1,
+            100000
+          ],
+          "target": [
+            -4550.0,
+            -250.0,
+            85.0
+          ]
+        },
+        "cameraQualifications": "Same actual native perspective capture camera and loaded generic context in both phases. Final orthographic camera is the exact recovered historic world camera; source geometry and materials unchanged.",
+        "resolution": [
+          1800,
+          1100
+        ],
+        "geographicScope": "neighbourhood"
+      }
+    },
+    {
+      "identity": "neighbourhood/fairview/before",
+      "source": "72d14ce340056591856a6083435f6b4d0578442d32e6df4d8003dbb3a2c4e8ee",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "neighbourhood/fairview/before",
+        "title": "Fairview",
+        "area": "Fairview",
+        "district": "citywide",
+        "scenario": "existing",
+        "camera": {
+          "location": [
+            -4930.0,
+            -900.0,
+            605.0
+          ],
+          "rotationEuler": [
+            0.9663816495240751,
+            6.295796994848502e-08,
+            -0.5290305109263194
+          ],
+          "quaternionWXYZ": [
+            0.8547180891036987,
+            0.44844773411750793,
+            -0.12146750092506409,
+            -0.23151081800460815
+          ],
+          "type": "ORTHO",
+          "lens": 50,
+          "orthoScale": 740,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36,
+          "sensorHeight": 24,
+          "shift": [
+            0,
+            0
+          ],
+          "clip": [
+            0.1,
+            100000
+          ],
+          "target": [
+            -4550.0,
+            -250.0,
+            85.0
+          ]
+        },
+        "cameraQualifications": "Same actual native perspective capture camera and loaded generic context in both phases. Final orthographic camera is the exact recovered historic world camera; source geometry and materials unchanged.",
+        "resolution": [
+          1800,
+          1100
+        ],
+        "geographicScope": "neighbourhood"
+      }
+    },
+    {
+      "identity": "portraits/churchill-meadows-future.png",
+      "source": "bd6195e15d426bb29896d0f44634f163e3d9b65c9c5bf7dad60fdc038ef70cbc",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": true,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          0.95,
+          0.86
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.6,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/churchill-meadows-future.png",
+        "title": "Churchill Meadows",
+        "area": "Churchill Meadows",
+        "district": "churchill-meadows",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -12880.0,
+            -5621.07958984375,
+            1295.92919921875
+          ],
+          "rotationEuler": [
+            0.9075712561607361,
+            -0.0,
+            0.0
+          ],
+          "type": "PERSP",
+          "lens": 38.059137628358556,
+          "orthoScale": 6,
+          "sensorFit": "VERTICAL",
+          "sensorWidth": 36,
+          "sensorHeight": 24,
+          "shift": [
+            0,
+            0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Original honest neighbourhood coverage view with reviewed reduced world fill0.6; no source or material edits.",
+          "Coverage image, not detailed architecture hero."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ],
+        "geographicScope": "bounded_study_crop"
+      }
+    },
+    {
+      "identity": "portraits/clarkson-existing.png",
+      "source": "2ddcd71fc738f9782ca024fbdb6b4c4084bafdc72aa732ace975bd3a09b9c696",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/clarkson-existing.png",
+        "title": "Clarkson",
+        "area": "Clarkson",
+        "district": "clarkson",
+        "scenario": "existing",
+        "camera": {
+          "location": [
+            -2565.0,
+            -11155.0,
+            1950.0
+          ],
+          "rotationEuler": [
+            1.1195236444473267,
+            8.90864839675487e-08,
+            0.6132075786590576
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2100.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison.",
+          "Portrait uses native portrait pixel frame at inherited camera scale; new composition must pass visual review, not asserted identical to historic portrait framing."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "portraits/clarkson-future.png",
+      "source": "6a0d5cf716feb3451390cd8f8f63324c90c154d6ccbb24e5870d08b147a16162",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/clarkson-future.png",
+        "title": "Clarkson",
+        "area": "Clarkson",
+        "district": "clarkson",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -2565.0,
+            -11155.0,
+            1950.0
+          ],
+          "rotationEuler": [
+            1.1195236444473267,
+            8.90864839675487e-08,
+            0.6132075786590576
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2100.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison.",
+          "Portrait uses native portrait pixel frame at inherited camera scale; new composition must pass visual review, not asserted identical to historic portrait framing."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "portraits/clarkson-portrait-future.png",
+      "source": "6a0d5cf716feb3451390cd8f8f63324c90c154d6ccbb24e5870d08b147a16162",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/clarkson-portrait-future.png",
+        "title": "Clarkson",
+        "area": "Clarkson",
+        "district": "clarkson",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -3945.0,
+            -10580.0,
+            1720.0
+          ],
+          "rotationEuler": [
+            1.025679111480713,
+            -3.738021092658528e-08,
+            0.3080528676509857
+          ],
+          "type": "PERSP",
+          "lens": 52.0,
+          "orthoScale": 2100.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison.",
+          "Portrait uses native portrait pixel frame at inherited camera scale; new composition must pass visual review, not asserted identical to historic portrait framing."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "portraits/cooksville-future.png",
+      "source": "9ed03c3c41a6770fd3f74a3775562a5c29d81985697cdb5e51690c7d46e86fae",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/cooksville-future.png",
+        "title": "Cooksville",
+        "area": "Cooksville",
+        "district": "cooksville",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -1155.0,
+            -4300.0,
+            3930.0
+          ],
+          "rotationEuler": [
+            0.813826322555542,
+            -2.113767116895815e-08,
+            0.6086893081665039
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2900.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison.",
+          "Portrait uses native portrait pixel frame at inherited camera scale; new composition must pass visual review, not asserted identical to historic portrait framing."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "portraits/cooksville-portrait-future.png",
+      "source": "9ed03c3c41a6770fd3f74a3775562a5c29d81985697cdb5e51690c7d46e86fae",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/cooksville-portrait-future.png",
+        "title": "Cooksville",
+        "area": "Cooksville",
+        "district": "cooksville",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -2825.0,
+            -2980.0,
+            1390.0
+          ],
+          "rotationEuler": [
+            1.025679111480713,
+            -3.738021092658528e-08,
+            0.3080528676509857
+          ],
+          "type": "PERSP",
+          "lens": 52.0,
+          "orthoScale": 2900.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison.",
+          "Portrait uses native portrait pixel frame at inherited camera scale; new composition must pass visual review, not asserted identical to historic portrait framing."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "portraits/downtown-existing.png",
+      "source": "460dec347682187160d8910d237fe8f4d974e1c171fafa8b48c161f38404325e",
+      "renderer": "render-885f16b46a39.py",
+      "samples": 24,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/downtown-existing.png",
+        "title": "Downtown",
+        "area": "Downtown",
+        "district": "downtown",
+        "scenario": "existing",
+        "camera": {
+          "location": [
+            -4200.0,
+            -2400.0,
+            1450.0
+          ],
+          "rotationEuler": [
+            1.0577527284622192,
+            2.4463322034762314e-08,
+            0.5833730101585388
+          ],
+          "matrixWorld": [
+            [
+              0.8346093893051147,
+              -0.27037057280540466,
+              0.4799238443374634,
+              -4200.0
+            ],
+            [
+              0.5508422255516052,
+              0.4096524119377136,
+              -0.7271572947502136,
+              -2400.0
+            ],
+            [
+              -2.4463322034762314e-08,
+              0.8712546229362488,
+              0.49083125591278076,
+              1450.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "type": "PERSP",
+          "lens": 38.059139251708984,
+          "orthoScale": 6.0,
+          "sensorFit": "VERTICAL",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1.0,
+            160000.0
+          ]
+        },
+        "cameraQualifications": [
+          "New source-context camera; low-resolution actual native context trial passed. Final models/frame review remains required."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "portraits/downtown-future.png",
+      "source": "d4d4289208c149cec1fdc1561d0e3f8ed2f8c6ff825406f137e81dfb29e613e7",
+      "renderer": "render-885f16b46a39.py",
+      "samples": 24,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/downtown-future.png",
+        "title": "Downtown",
+        "area": "Downtown",
+        "district": "downtown",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -4200.0,
+            -2400.0,
+            1450.0
+          ],
+          "rotationEuler": [
+            1.0577527284622192,
+            2.4463322034762314e-08,
+            0.5833730101585388
+          ],
+          "matrixWorld": [
+            [
+              0.8346093893051147,
+              -0.27037057280540466,
+              0.4799238443374634,
+              -4200.0
+            ],
+            [
+              0.5508422255516052,
+              0.4096524119377136,
+              -0.7271572947502136,
+              -2400.0
+            ],
+            [
+              -2.4463322034762314e-08,
+              0.8712546229362488,
+              0.49083125591278076,
+              1450.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "type": "PERSP",
+          "lens": 38.059139251708984,
+          "orthoScale": 6.0,
+          "sensorFit": "VERTICAL",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1.0,
+            160000.0
+          ]
+        },
+        "cameraQualifications": [
+          "New source-context camera; low-resolution actual native context trial passed. Final models/frame review remains required."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "portraits/downtown-junction-future.png",
+      "source": "ec2094e4c9be47651557b3a76b5466eb86a0b09e194e36252500568691af5ea7",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/downtown-junction-future.png",
+        "title": "Downtown",
+        "area": "Downtown",
+        "district": "downtown",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -4936.0,
+            350.0,
+            1050.0
+          ],
+          "rotationEuler": [
+            0.8808136582374573,
+            7.533493828759674e-08,
+            0.6000502705574036
+          ],
+          "type": "PERSP",
+          "lens": 55.0,
+          "orthoScale": 2350.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison.",
+          "Portrait uses native portrait pixel frame at inherited camera scale; new composition must pass visual review, not asserted identical to historic portrait framing."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "portraits/downtown-landmark-future.png",
+      "source": "d4d4289208c149cec1fdc1561d0e3f8ed2f8c6ff825406f137e81dfb29e613e7",
+      "renderer": "render-885f16b46a39.py",
+      "samples": 24,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/downtown-landmark-future.png",
+        "title": "Downtown",
+        "area": "Downtown",
+        "district": "downtown",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -4007.0,
+            1263.0,
+            490.0
+          ],
+          "rotationEuler": [
+            1.2387851476669312,
+            -4.277236698158049e-08,
+            2.10252046585083
+          ],
+          "type": "PERSP",
+          "lens": 55.0,
+          "orthoScale": 2350.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison.",
+          "Portrait uses native portrait pixel frame at inherited camera scale; new composition must pass visual review, not asserted identical to historic portrait framing."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "portraits/downtown-portrait-future.png",
+      "source": "d4d4289208c149cec1fdc1561d0e3f8ed2f8c6ff825406f137e81dfb29e613e7",
+      "renderer": "render-885f16b46a39.py",
+      "samples": 24,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/downtown-portrait-future.png",
+        "title": "Downtown",
+        "area": "Downtown",
+        "district": "downtown",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -4510.0,
+            -2970.0,
+            1775.0
+          ],
+          "rotationEuler": [
+            1.0903023481369019,
+            -4.4030654677840175e-09,
+            0.21336868405342102
+          ],
+          "type": "PERSP",
+          "lens": 52.0,
+          "orthoScale": 2350.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison.",
+          "Portrait uses native portrait pixel frame at inherited camera scale; new composition must pass visual review, not asserted identical to historic portrait framing."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "portraits/downtown-skyline-construction.png",
+      "source": "b17c35c803a5a2202399bfad910f18c3129b9b1b0e826729eb13a775cbf58fbd",
+      "renderer": "render-885f16b46a39.py",
+      "samples": 24,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/downtown-skyline-construction.png",
+        "title": "Downtown",
+        "area": "Downtown",
+        "district": "downtown",
+        "scenario": "construction",
+        "camera": {
+          "location": [
+            -6500.0,
+            -2200.0,
+            140.0
+          ],
+          "rotationEuler": [
+            1.5572456121444702,
+            2.4435218293206162e-08,
+            -0.45607200264930725
+          ],
+          "matrixWorld": [
+            [
+              0.8977894186973572,
+              0.00596791272982955,
+              -0.44038456678390503,
+              -6500.0
+            ],
+            [
+              -0.44042500853538513,
+              0.012165305204689503,
+              -0.8977069854736328,
+              -2200.0
+            ],
+            [
+              -2.4435218293206162e-08,
+              0.9999082088470459,
+              0.013550300151109695,
+              140.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "type": "PERSP",
+          "lens": 56.455562591552734,
+          "orthoScale": 6.0,
+          "sensorFit": "VERTICAL",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1.0,
+            160000.0
+          ]
+        },
+        "cameraQualifications": [
+          "New source-context camera; low-resolution actual native context trial passed. Final models/frame review remains required."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "portraits/downtown-skyline-existing.png",
+      "source": "460dec347682187160d8910d237fe8f4d974e1c171fafa8b48c161f38404325e",
+      "renderer": "render-885f16b46a39.py",
+      "samples": 24,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/downtown-skyline-existing.png",
+        "title": "Downtown",
+        "area": "Downtown",
+        "district": "downtown",
+        "scenario": "existing",
+        "camera": {
+          "location": [
+            -6500.0,
+            -2200.0,
+            140.0
+          ],
+          "rotationEuler": [
+            1.5572456121444702,
+            2.4435218293206162e-08,
+            -0.45607200264930725
+          ],
+          "matrixWorld": [
+            [
+              0.8977894186973572,
+              0.00596791272982955,
+              -0.44038456678390503,
+              -6500.0
+            ],
+            [
+              -0.44042500853538513,
+              0.012165305204689503,
+              -0.8977069854736328,
+              -2200.0
+            ],
+            [
+              -2.4435218293206162e-08,
+              0.9999082088470459,
+              0.013550300151109695,
+              140.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "type": "PERSP",
+          "lens": 56.455562591552734,
+          "orthoScale": 6.0,
+          "sensorFit": "VERTICAL",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1.0,
+            160000.0
+          ]
+        },
+        "cameraQualifications": [
+          "New source-context camera; low-resolution actual native context trial passed. Final models/frame review remains required."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "portraits/downtown-skyline-future.png",
+      "source": "d4d4289208c149cec1fdc1561d0e3f8ed2f8c6ff825406f137e81dfb29e613e7",
+      "renderer": "render-885f16b46a39.py",
+      "samples": 24,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/downtown-skyline-future.png",
+        "title": "Downtown",
+        "area": "Downtown",
+        "district": "downtown",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -6500.0,
+            -2200.0,
+            140.0
+          ],
+          "rotationEuler": [
+            1.5572456121444702,
+            2.4435218293206162e-08,
+            -0.45607200264930725
+          ],
+          "matrixWorld": [
+            [
+              0.8977894186973572,
+              0.00596791272982955,
+              -0.44038456678390503,
+              -6500.0
+            ],
+            [
+              -0.44042500853538513,
+              0.012165305204689503,
+              -0.8977069854736328,
+              -2200.0
+            ],
+            [
+              -2.4435218293206162e-08,
+              0.9999082088470459,
+              0.013550300151109695,
+              140.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "type": "PERSP",
+          "lens": 56.455562591552734,
+          "orthoScale": 6.0,
+          "sensorFit": "VERTICAL",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1.0,
+            160000.0
+          ]
+        },
+        "cameraQualifications": [
+          "New source-context camera; low-resolution actual native context trial passed. Final models/frame review remains required."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "portraits/east-credit-creditview-future.png",
+      "source": "680685890e457f913086c9ea886424c6ac2aa39b69d418241e7d308ed86baa3a",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          0.95,
+          0.86
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.6,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/east-credit-creditview-future.png",
+        "title": "East Credit & Creditview",
+        "area": "Creditview residential and park context",
+        "district": "east-credit-creditview",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -8800,
+            -1450,
+            680
+          ],
+          "rotationEuler": [
+            1.0275347189515331,
+            0,
+            -0.6747409422235526
+          ],
+          "type": "PERSP",
+          "lens": 38.059137628358556,
+          "orthoScale": 6,
+          "sensorFit": "VERTICAL",
+          "sensorWidth": 36,
+          "sensorHeight": 24,
+          "shift": [
+            0,
+            0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Current public municipal source context, not current exterior survey. Existing source-qualified3m blue MiWay109 service markings may be visible; not water or road edge geometry.",
+          "Subject-focused native perspective; no source geometry/material edits, no image crop or upscale. Low-resolution framing and tree/building contact review pending."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ],
+        "geographicScope": "bounded_creditview_residential_context_west_of_highway403"
+      }
+    },
+    {
+      "identity": "portraits/erin-mills-future.png",
+      "source": "2e255ffa8476d98414a3cd2644c8c69433d39509f9ac5c7d87f6b9a18262b803",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/erin-mills-future.png",
+        "title": "Erin Mills",
+        "area": "Erin Mills",
+        "district": "erin-mills",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -8333.3486328125,
+            -7363.15771484375,
+            2251.969970703125
+          ],
+          "rotationEuler": [
+            1.119523525238037,
+            -8.554389552273278e-08,
+            0.6132075190544128
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 3380.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison.",
+          "Portrait uses native portrait pixel frame at inherited camera scale; new composition must pass visual review, not asserted identical to historic portrait framing."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "portraits/lakeview-existing.png",
+      "source": "199ed122bf17d66335237a624bf3725a424d7ae36dc9ed6d6db53b2694cd9416",
+      "renderer": "render-ec07f6df2d6c.py",
+      "samples": 96,
+      "trial": false,
+      "waterShadowDisabled": true,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/lakeview-existing.png",
+        "title": "Lakeview",
+        "area": "Lakeview",
+        "district": "lakeview",
+        "scenario": "existing",
+        "camera": {
+          "location": [
+            2650.0,
+            -5580.0,
+            2060.0
+          ],
+          "rotationEuler": [
+            1.0961143970489502,
+            -3.869120490662681e-08,
+            0.32175058126449585
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2800.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison.",
+          "Portrait uses native portrait pixel frame at inherited camera scale; new composition must pass visual review, not asserted identical to historic portrait framing."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "portraits/lakeview-future.png",
+      "source": "18621f596c4a2f7f8504ddc8df898f10259292174f0f094b8606f1db1556c879",
+      "renderer": "render-ec07f6df2d6c.py",
+      "samples": 96,
+      "trial": false,
+      "waterShadowDisabled": true,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/lakeview-future.png",
+        "title": "Lakeview",
+        "area": "Lakeview",
+        "district": "lakeview",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            2650.0,
+            -5580.0,
+            2060.0
+          ],
+          "rotationEuler": [
+            1.0961143970489502,
+            -3.869120490662681e-08,
+            0.32175058126449585
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2800.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison.",
+          "Portrait uses native portrait pixel frame at inherited camera scale; new composition must pass visual review, not asserted identical to historic portrait framing."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "portraits/lakeview-portrait-future.png",
+      "source": "18621f596c4a2f7f8504ddc8df898f10259292174f0f094b8606f1db1556c879",
+      "renderer": "render-bcc343046762.py",
+      "samples": 96,
+      "trial": false,
+      "waterShadowDisabled": true,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/lakeview-portrait-future.png",
+        "title": "Lakeview",
+        "area": "Lakeview",
+        "district": "lakeview",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            2026.846923828125,
+            -4453.66015625,
+            2649.426025390625
+          ],
+          "rotationEuler": [
+            0.7853981633974483,
+            -3.214886135083361e-08,
+            0.2606024146080017
+          ],
+          "type": "PERSP",
+          "lens": 56,
+          "orthoScale": 2800.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            -0.051851839489409954
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Bounded portrait-only optical lens shift moves the viewed region210native pixels downward. Camera location, rotation,56mm lens, dimensions, source and lighting remain unchanged.",
+          "Project bounds are checked using actual Blender camera projection; this is framing evidence, not an occlusion or survey claim."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ],
+        "geographicScope": "Lakeview Village, coastal neighbourhoods and source-backed project context; bounded camera framing to avoid finite inland scene boundary."
+      }
+    },
+    {
+      "identity": "portraits/lisgar-future.png",
+      "source": "79b755f5761fa28e048011d4c180fcafb5f3d56b6b1976610927225c3c3a8199",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": true,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          0.95,
+          0.86
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.6,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/lisgar-future.png",
+        "title": "Lisgar & Argentia",
+        "area": "Lisgar & Argentia",
+        "district": "lisgar",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -16000.0,
+            -3144.23046875,
+            1686.7359619140625
+          ],
+          "rotationEuler": [
+            0.9075712561607361,
+            -0.0,
+            0.0
+          ],
+          "type": "PERSP",
+          "lens": 38.059137628358556,
+          "orthoScale": 6,
+          "sensorFit": "VERTICAL",
+          "sensorWidth": 36,
+          "sensorHeight": 24,
+          "shift": [
+            0,
+            0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Candidate uses current native neighbourhoodFrame contract, 38 degree south view with ground-frame corners contained in 82 percent of exact source study rectangle. Imported scene is full native visible context; source not clipped to camera.",
+          "Camera matches source viewer framing mathematically; wide and portrait are individually framed, not cropped.",
+          "Broader Lisgar/Argentia study crop includes Glen Erin project in Meadowvale. Qualified public derivatives only: proposed16-storey slab48.15m is not roofheight; retained13-storey roof and exteriors estimated. Raw plans/photos remain private.",
+          "Exact approved preview camera; native full-resolution rerender without source edits or resampling."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ],
+        "geographicScope": "bounded_study_crop"
+      }
+    },
+    {
+      "identity": "portraits/lorne-park-future.png",
+      "source": "3ce2f56d973b3c04f5eb21e3fad919d2a70bb2b8d7f6da76f0cc039b745e20a2",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": true,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          0.95,
+          0.86
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.6,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/lorne-park-future.png",
+        "title": "Aldo Drive area, Lorne Park · 900 m study",
+        "area": "Aldo Drive area, Lorne Park",
+        "district": "lorne-park",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -3565,
+            -5516,
+            140
+          ],
+          "rotationEuler": [
+            1.1087292061182512,
+            0,
+            2.352872243279092
+          ],
+          "type": "PERSP",
+          "lens": 38.059137628358556,
+          "orthoScale": 6,
+          "sensorFit": "VERTICAL",
+          "sensorWidth": 36,
+          "sensorHeight": 24,
+          "shift": [
+            0,
+            0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Northeast street-front camera on qualified historical2019 native design and2020 finish study. Current built condition and ground interpolation unverified. Exact original source excluded; approved derivative only.",
+          "Exact approved preview camera; native full-resolution rerender without source edits or resampling."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ],
+        "geographicScope": "aldo_drive_local_view_within_900m_source_study"
+      }
+    },
+    {
+      "identity": "portraits/meadowvale-village-future.png",
+      "source": "911e1ceb3f8a37e491be2ae0ac1ddc52428ce238628f21c52111be43abbeb9bb",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          0.95,
+          0.86
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.6,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/meadowvale-village-future.png",
+        "title": "Meadowvale Village",
+        "area": "Meadowvale Village",
+        "district": "meadowvale-village",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -11748.101276956613,
+            2527.4906949793344,
+            1058.8609710693358
+          ],
+          "rotationEuler": [
+            0.9075712561607361,
+            -0.0,
+            0.0
+          ],
+          "type": "PERSP",
+          "lens": 38.059137628358556,
+          "orthoScale": 6,
+          "sensorFit": "VERTICAL",
+          "sensorWidth": 36,
+          "sensorHeight": 24,
+          "shift": [
+            0,
+            0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Original neighbourhood camera direction retained; target shifted552m east and711m south; distance reduced to70percent to keep municipal source boundary outside frame.",
+          "No new geometry, scene export, crop or resampling; exact same successful native import.",
+          "Root accepted exact native composition and bounded source seam repair. Remaining pale creek-bank regions retain supplied terrain classification."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ],
+        "geographicScope": "bounded_study_crop"
+      }
+    },
+    {
+      "identity": "portraits/port-credit-existing.png",
+      "source": "67173c15c884803080aa7192a48143a4f9485be8cf2bf7e5b2c592738ee0f616",
+      "renderer": "render-499f6e3c7fd6.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/port-credit-existing.png",
+        "title": "Port Credit",
+        "area": "Port Credit",
+        "district": "port-credit",
+        "scenario": "existing",
+        "camera": {
+          "location": [
+            1750.0,
+            -4850.0,
+            2140.0
+          ],
+          "rotationEuler": [
+            1.0131158828735352,
+            -2.5438353645768075e-08,
+            1.3405768871307373
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2250.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison.",
+          "Portrait uses native portrait pixel frame at inherited camera scale; new composition must pass visual review, not asserted identical to historic portrait framing."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "portraits/port-credit-future.png",
+      "source": "9c3cd86023ad034a78d6e3c2e6789ad1a32371e36690dbc84b92d2683767ee5f",
+      "renderer": "render-499f6e3c7fd6.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/port-credit-future.png",
+        "title": "Port Credit",
+        "area": "Port Credit",
+        "district": "port-credit",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            1750.0,
+            -4850.0,
+            2140.0
+          ],
+          "rotationEuler": [
+            1.0131158828735352,
+            -2.5438353645768075e-08,
+            1.3405768871307373
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2250.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison.",
+          "Portrait uses native portrait pixel frame at inherited camera scale; new composition must pass visual review, not asserted identical to historic portrait framing."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "portraits/port-credit-portrait-future.png",
+      "source": "9c3cd86023ad034a78d6e3c2e6789ad1a32371e36690dbc84b92d2683767ee5f",
+      "renderer": "render-499f6e3c7fd6.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/port-credit-portrait-future.png",
+        "title": "Port Credit",
+        "area": "Port Credit",
+        "district": "port-credit",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            1700.0,
+            -4830.0,
+            1930.0
+          ],
+          "rotationEuler": [
+            1.045182704925537,
+            -1.2683118200129684e-07,
+            1.333422064781189
+          ],
+          "type": "PERSP",
+          "lens": 52.0,
+          "orthoScale": 2250.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison.",
+          "Portrait uses native portrait pixel frame at inherited camera scale; new composition must pass visual review, not asserted identical to historic portrait framing."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "portraits/port-credit-skyline-future.png",
+      "source": "9c3cd86023ad034a78d6e3c2e6789ad1a32371e36690dbc84b92d2683767ee5f",
+      "renderer": "render-499f6e3c7fd6.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/port-credit-skyline-future.png",
+        "title": "Port Credit",
+        "area": "Port Credit",
+        "district": "port-credit",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            2757.7294921875,
+            -4627.5048828125,
+            1300.0
+          ],
+          "rotationEuler": [
+            1.3371458053588867,
+            1.6381083867145207e-07,
+            1.441521406173706
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2300.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Original angle, scale, lens and native3240x4050 preserved. Camera aim shifted220m upward in camera plane by ground-plane translation to place the actual finite offshore water edge outside the frame.",
+          "Single Future skyline-portrait identity only. No Existing mate or other accepted camera changed. CPU screen71misses/36edge misses becomes14misses/0edge misses; actual preview still requires review."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ],
+        "geographicScope": "Port Credit skyline and existing coastal source context, framed inward from finite water extent"
+      }
+    },
+    {
+      "identity": "portraits/streetsville-future.png",
+      "source": "56df6cad009078c7cac5a00bf8a0716db817629f92d27419d2695510b3fcf7df",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/streetsville-future.png",
+        "title": "Streetsville",
+        "area": "Streetsville",
+        "district": "streetsville",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -9016.361328125,
+            -3692.0205078125,
+            1843.52490234375
+          ],
+          "rotationEuler": [
+            1.119523525238037,
+            1.076092637219972e-08,
+            0.6132075786590576
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2730.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison.",
+          "Portrait uses native portrait pixel frame at inherited camera scale; new composition must pass visual review, not asserted identical to historic portrait framing."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "portraits/uptown-future.png",
+      "source": "f2e6ef5e937d4316020f631a870f866aa9585a2b8fc45768890c845575ec32c0",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/uptown-future.png",
+        "title": "Uptown & Hurontario",
+        "area": "Uptown & Hurontario",
+        "district": "uptown",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -4158.24365234375,
+            -1118.239990234375,
+            2005.18994140625
+          ],
+          "rotationEuler": [
+            1.1195236444473267,
+            8.90864839675487e-08,
+            0.6132075786590576
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2576.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison.",
+          "Portrait uses native portrait pixel frame at inherited camera scale; new composition must pass visual review, not asserted identical to historic portrait framing."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "portraits/uptown-portrait-future.png",
+      "source": "f2e6ef5e937d4316020f631a870f866aa9585a2b8fc45768890c845575ec32c0",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "portraits/uptown-portrait-future.png",
+        "title": "Uptown & Hurontario",
+        "area": "Uptown & Hurontario",
+        "district": "uptown",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -5538.24365234375,
+            -543.239990234375,
+            1775.18994140625
+          ],
+          "rotationEuler": [
+            1.025679111480713,
+            -3.738021092658528e-08,
+            0.3080528676509857
+          ],
+          "type": "PERSP",
+          "lens": 52.0,
+          "orthoScale": 2576.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison.",
+          "Portrait uses native portrait pixel frame at inherited camera scale; new composition must pass visual review, not asserted identical to historic portrait framing."
+        ],
+        "resolution": [
+          3240,
+          4050
+        ]
+      }
+    },
+    {
+      "identity": "wide/airport-corporate-future.png",
+      "source": "b6f01bb2d695161241afc7cf9f86f6e4994873523352a2c3195bc869bec8cbaa",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/airport-corporate-future.png",
+        "title": "Airport & Corporate",
+        "area": "Airport & Corporate",
+        "district": "airport-corporate",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -954.417724609375,
+            4701.01611328125,
+            5409.48828125
+          ],
+          "rotationEuler": [
+            0.6108652381980153,
+            0,
+            0.6132075786590576
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 1800,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Private camera-only replacement for held historical framing. Exact frozen scene, geometry, authored materials and common lighting unchanged.",
+          "New native camera render at original6144x3840; no image crop, source addition or existing-master pixel reuse.",
+          "CPU actualscene693ray screen including104edgehits; not proof ofeverypixel.",
+          "Office-core focus southeast oflegacyPearson-centredaim; sourceCitystreets Spectrum/Satellite/Explorer locate intendedbusinessarea. Elevation55degrees, originalazimuth35.13degrees. Smallergeographiccoverage is explicit."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ],
+        "geographicScope": "Airport Corporate office core and immediate native context; not wholeairportoverview"
+      }
+    },
+    {
+      "identity": "wide/churchill-meadows-future.png",
+      "source": "bd6195e15d426bb29896d0f44634f163e3d9b65c9c5bf7dad60fdc038ef70cbc",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": true,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          0.95,
+          0.86
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.6,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/churchill-meadows-future.png",
+        "title": "Churchill Meadows",
+        "area": "Churchill Meadows",
+        "district": "churchill-meadows",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -12880.0,
+            -5621.07958984375,
+            1295.92919921875
+          ],
+          "rotationEuler": [
+            0.9075712561607361,
+            -0.0,
+            0.0
+          ],
+          "type": "PERSP",
+          "lens": 38.059137628358556,
+          "orthoScale": 6,
+          "sensorFit": "VERTICAL",
+          "sensorWidth": 36,
+          "sensorHeight": 24,
+          "shift": [
+            0,
+            0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Original honest neighbourhood coverage view with reviewed reduced world fill0.6; no source or material edits.",
+          "Coverage image, not detailed architecture hero."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ],
+        "geographicScope": "bounded_study_crop"
+      }
+    },
+    {
+      "identity": "wide/citywide-future.png",
+      "source": "32274d38196eb21d682ec06a7a2a8883df7bd2326d00171d4e9815ce6d606848",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/citywide-future.png",
+        "title": "All Mississauga",
+        "area": "All Mississauga",
+        "district": "citywide",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            6879.857421875,
+            -8454.865234375,
+            19130.17578125
+          ],
+          "rotationEuler": [
+            0.6805946230888367,
+            -6.28381968681424e-09,
+            0.858712911605835
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 28578.783203125,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            0.10000000149011612,
+            150000.0
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered full municipal extent camera, not Central Mississauga crop. Final actual native coverage must be visually checked."
+        ],
+        "resolution": [
+          3840,
+          2400
+        ]
+      }
+    },
+    {
+      "identity": "wide/clarkson-existing.png",
+      "source": "2ddcd71fc738f9782ca024fbdb6b4c4084bafdc72aa732ace975bd3a09b9c696",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/clarkson-existing.png",
+        "title": "Clarkson",
+        "area": "Clarkson",
+        "district": "clarkson",
+        "scenario": "existing",
+        "camera": {
+          "location": [
+            -2565.0,
+            -11155.0,
+            1950.0
+          ],
+          "rotationEuler": [
+            1.1195236444473267,
+            8.90864839675487e-08,
+            0.6132075786590576
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2100.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
+      "identity": "wide/clarkson-future.png",
+      "source": "6a0d5cf716feb3451390cd8f8f63324c90c154d6ccbb24e5870d08b147a16162",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/clarkson-future.png",
+        "title": "Clarkson",
+        "area": "Clarkson",
+        "district": "clarkson",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -2565.0,
+            -11155.0,
+            1950.0
+          ],
+          "rotationEuler": [
+            1.1195236444473267,
+            8.90864839675487e-08,
+            0.6132075786590576
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2100.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison."
+        ],
+        "resolution": [
+          3840,
+          2400
+        ]
+      }
+    },
+    {
+      "identity": "wide/clarkson-portrait-future.png",
+      "source": "6a0d5cf716feb3451390cd8f8f63324c90c154d6ccbb24e5870d08b147a16162",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/clarkson-portrait-future.png",
+        "title": "Clarkson",
+        "area": "Clarkson",
+        "district": "clarkson",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -3945.0,
+            -10580.0,
+            1720.0
+          ],
+          "rotationEuler": [
+            1.025679111480713,
+            -3.738021092658528e-08,
+            0.3080528676509857
+          ],
+          "type": "PERSP",
+          "lens": 52.0,
+          "orthoScale": 2100.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison."
+        ],
+        "resolution": [
+          3840,
+          2400
+        ]
+      }
+    },
+    {
+      "identity": "wide/clarkson-skyline-future.png",
+      "source": "6a0d5cf716feb3451390cd8f8f63324c90c154d6ccbb24e5870d08b147a16162",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/clarkson-skyline-future.png",
+        "title": "Clarkson",
+        "area": "Clarkson",
+        "district": "clarkson",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -3750.0,
+            -14050.0,
+            1620.0
+          ],
+          "rotationEuler": [
+            1.3290215730667114,
+            4.5336436826914905e-09,
+            0.16514869034290314
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2500.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison."
+        ],
+        "resolution": [
+          3840,
+          1400
+        ]
+      }
+    },
+    {
+      "identity": "wide/cooksville-future.png",
+      "source": "9ed03c3c41a6770fd3f74a3775562a5c29d81985697cdb5e51690c7d46e86fae",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/cooksville-future.png",
+        "title": "Cooksville",
+        "area": "Cooksville",
+        "district": "cooksville",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -1155.0,
+            -4300.0,
+            3930.0
+          ],
+          "rotationEuler": [
+            0.813826322555542,
+            -2.113767116895815e-08,
+            0.6086893081665039
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2900.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
+      "identity": "wide/cooksville-portrait-future.png",
+      "source": "9ed03c3c41a6770fd3f74a3775562a5c29d81985697cdb5e51690c7d46e86fae",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/cooksville-portrait-future.png",
+        "title": "Cooksville",
+        "area": "Cooksville",
+        "district": "cooksville",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -2825.0,
+            -2980.0,
+            1390.0
+          ],
+          "rotationEuler": [
+            1.025679111480713,
+            -3.738021092658528e-08,
+            0.3080528676509857
+          ],
+          "type": "PERSP",
+          "lens": 52.0,
+          "orthoScale": 2900.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
+      "identity": "wide/dixie-applewood-future.png",
+      "source": "ee2d630bfee8ee1bd10e45a9b650a4a2f2ea82c229804805bea0ff1c1c839829",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/dixie-applewood-future.png",
+        "title": "Dixie & Applewood",
+        "area": "Dixie & Applewood",
+        "district": "dixie-applewood",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            1666.236083984375,
+            -1683.59716796875,
+            2899.72314453125
+          ],
+          "rotationEuler": [
+            1.119523525238037,
+            -8.554389552273278e-08,
+            0.6132075190544128
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2400,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Private camera-only replacement for held historical framing. Exact frozen scene, geometry, authored materials and common lighting unchanged.",
+          "New native camera render at original6144x3840; no image crop, source addition or existing-master pixel reuse.",
+          "CPU actualscene693ray screen including104edgehits; not proof ofeverypixel.",
+          "Originalviewazimuth/elevation retained; viewshiftedwestand tightened to interiorDixie/Applewood toexclude municipal-edge cutouts."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ],
+        "geographicScope": "InteriorDixie/Applewood district focus with immediate native context"
+      }
+    },
+    {
+      "identity": "wide/downtown-existing.png",
+      "source": "460dec347682187160d8910d237fe8f4d974e1c171fafa8b48c161f38404325e",
+      "renderer": "render-885f16b46a39.py",
+      "samples": 24,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 1.8,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.55,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.3,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/downtown-existing.png",
+        "title": "Downtown",
+        "area": "Downtown",
+        "district": "downtown",
+        "scenario": "existing",
+        "camera": {
+          "location": [
+            -3900.0,
+            -1400.0,
+            1150.0
+          ],
+          "rotationEuler": [
+            1.1271812915802002,
+            -2.9152687375244568e-08,
+            0.7690063714981079
+          ],
+          "type": "PERSP",
+          "lens": 48,
+          "orthoScale": 6.0,
+          "sensorFit": "VERTICAL",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1.0,
+            160000.0
+          ]
+        },
+        "cameraQualifications": [
+          "Presentation-only revision, 9 November 2026. Accepted native geometry and authored facades preserved. Exact same camera and lighting across scenarios."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
+      "identity": "wide/downtown-future.png",
+      "source": "d4d4289208c149cec1fdc1561d0e3f8ed2f8c6ff825406f137e81dfb29e613e7",
+      "renderer": "render-885f16b46a39.py",
+      "samples": 24,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 1.8,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.55,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.3,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/downtown-future.png",
+        "title": "Downtown",
+        "area": "Downtown",
+        "district": "downtown",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -3900.0,
+            -1400.0,
+            1150.0
+          ],
+          "rotationEuler": [
+            1.1271812915802002,
+            -2.9152687375244568e-08,
+            0.7690063714981079
+          ],
+          "type": "PERSP",
+          "lens": 48,
+          "orthoScale": 6.0,
+          "sensorFit": "VERTICAL",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1.0,
+            160000.0
+          ]
+        },
+        "cameraQualifications": [
+          "Presentation-only revision, 9 November 2026. Accepted native geometry and authored facades preserved. Exact same camera and lighting across scenarios."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
+      "identity": "wide/downtown-junction-future.png",
+      "source": "ec2094e4c9be47651557b3a76b5466eb86a0b09e194e36252500568691af5ea7",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/downtown-junction-future.png",
+        "title": "Downtown",
+        "area": "Downtown",
+        "district": "downtown",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -4936.0,
+            350.0,
+            1050.0
+          ],
+          "rotationEuler": [
+            0.8808136582374573,
+            7.533493828759674e-08,
+            0.6000502705574036
+          ],
+          "type": "PERSP",
+          "lens": 55.0,
+          "orthoScale": 2350.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
+      "identity": "wide/downtown-landmark-future.png",
+      "source": "d4d4289208c149cec1fdc1561d0e3f8ed2f8c6ff825406f137e81dfb29e613e7",
+      "renderer": "render-885f16b46a39.py",
+      "samples": 24,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/downtown-landmark-future.png",
+        "title": "Downtown",
+        "area": "Downtown",
+        "district": "downtown",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -4007,
+            1263,
+            490
+          ],
+          "rotationEuler": [
+            1.2387851476669312,
+            -4.277236698158049e-08,
+            2.10252046585083
+          ],
+          "type": "PERSP",
+          "lens": 55,
+          "orthoScale": 6,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36,
+          "sensorHeight": 24,
+          "shift": [
+            0,
+            0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Explicit native camera from active catalogue."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
+      "identity": "wide/downtown-portrait-future.png",
+      "source": "d4d4289208c149cec1fdc1561d0e3f8ed2f8c6ff825406f137e81dfb29e613e7",
+      "renderer": "render-885f16b46a39.py",
+      "samples": 24,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/downtown-portrait-future.png",
+        "title": "Downtown",
+        "area": "Downtown",
+        "district": "downtown",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -4510.0,
+            -2970.0,
+            1775.0
+          ],
+          "rotationEuler": [
+            1.0903023481369019,
+            -4.4030654677840175e-09,
+            0.21336868405342102
+          ],
+          "matrixWorld": [
+            [
+              0.9773231148719788,
+              -0.09787607938051224,
+              0.1877758502960205,
+              -4510.0
+            ],
+            [
+              0.21175338327884674,
+              0.45173564553260803,
+              -0.8666576147079468,
+              -2970.0
+            ],
+            [
+              4.4030654677840175e-09,
+              0.8867667317390442,
+              0.4622172713279724,
+              1775.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "type": "PERSP",
+          "lens": 65.40880584716797,
+          "orthoScale": 6.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            -0.02784905582666397,
+            -0.06878930330276489
+          ],
+          "clip": [
+            0.10000000149011612,
+            150000.0
+          ]
+        },
+        "cameraQualifications": [
+          "New source-context camera; low-resolution actual native context trial passed. Final models/frame review remains required."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
+      "identity": "wide/downtown-skyline-construction.png",
+      "source": "b17c35c803a5a2202399bfad910f18c3129b9b1b0e826729eb13a775cbf58fbd",
+      "renderer": "render-885f16b46a39.py",
+      "samples": 24,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 1.8,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.55,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.3,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/downtown-skyline-construction.png",
+        "title": "Downtown",
+        "area": "Downtown",
+        "district": "downtown",
+        "scenario": "construction",
+        "camera": {
+          "location": [
+            -7200.0,
+            -2200.0,
+            160.0
+          ],
+          "rotationEuler": [
+            1.5595078468322754,
+            -6.212012237938325e-08,
+            -0.6596286296844482
+          ],
+          "type": "PERSP",
+          "lens": 100,
+          "orthoScale": 6.0,
+          "sensorFit": "VERTICAL",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0,
+            0.12
+          ],
+          "clip": [
+            1.0,
+            160000.0
+          ]
+        },
+        "cameraQualifications": [
+          "Presentation-only revision, 9 November 2026. Accepted native geometry and authored facades preserved. Exact same camera and lighting across scenarios."
+        ],
+        "resolution": [
+          6144,
+          2240
+        ]
+      }
+    },
+    {
+      "identity": "wide/downtown-skyline-existing.png",
+      "source": "460dec347682187160d8910d237fe8f4d974e1c171fafa8b48c161f38404325e",
+      "renderer": "render-885f16b46a39.py",
+      "samples": 24,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 1.8,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.55,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.3,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/downtown-skyline-existing.png",
+        "title": "Downtown",
+        "area": "Downtown",
+        "district": "downtown",
+        "scenario": "existing",
+        "camera": {
+          "location": [
+            -7200.0,
+            -2200.0,
+            160.0
+          ],
+          "rotationEuler": [
+            1.5595078468322754,
+            -6.212012237938325e-08,
+            -0.6596286296844482
+          ],
+          "type": "PERSP",
+          "lens": 100,
+          "orthoScale": 6.0,
+          "sensorFit": "VERTICAL",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0,
+            0.12
+          ],
+          "clip": [
+            1.0,
+            160000.0
+          ]
+        },
+        "cameraQualifications": [
+          "Presentation-only revision, 9 November 2026. Accepted native geometry and authored facades preserved. Exact same camera and lighting across scenarios."
+        ],
+        "resolution": [
+          6144,
+          2240
+        ]
+      }
+    },
+    {
+      "identity": "wide/downtown-skyline-future.png",
+      "source": "d4d4289208c149cec1fdc1561d0e3f8ed2f8c6ff825406f137e81dfb29e613e7",
+      "renderer": "render-885f16b46a39.py",
+      "samples": 24,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 1.8,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.55,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.3,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/downtown-skyline-future.png",
+        "title": "Downtown",
+        "area": "Downtown",
+        "district": "downtown",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -7200.0,
+            -2200.0,
+            160.0
+          ],
+          "rotationEuler": [
+            1.5595078468322754,
+            -6.212012237938325e-08,
+            -0.6596286296844482
+          ],
+          "type": "PERSP",
+          "lens": 100,
+          "orthoScale": 6.0,
+          "sensorFit": "VERTICAL",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0,
+            0.12
+          ],
+          "clip": [
+            1.0,
+            160000.0
+          ]
+        },
+        "cameraQualifications": [
+          "Presentation-only revision, 9 November 2026. Accepted native geometry and authored facades preserved. Exact same camera and lighting across scenarios."
+        ],
+        "resolution": [
+          6144,
+          2240
+        ]
+      }
+    },
+    {
+      "identity": "wide/east-credit-creditview-future.png",
+      "source": "680685890e457f913086c9ea886424c6ac2aa39b69d418241e7d308ed86baa3a",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          0.95,
+          0.86
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.6,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/east-credit-creditview-future.png",
+        "title": "East Credit & Creditview",
+        "area": "Creditview residential and park context",
+        "district": "east-credit-creditview",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -8800,
+            -1450,
+            680
+          ],
+          "rotationEuler": [
+            1.0275347189515331,
+            0,
+            -0.6747409422235526
+          ],
+          "type": "PERSP",
+          "lens": 38.059137628358556,
+          "orthoScale": 6,
+          "sensorFit": "VERTICAL",
+          "sensorWidth": 36,
+          "sensorHeight": 24,
+          "shift": [
+            0,
+            0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Current public municipal source context, not current exterior survey. Existing source-qualified3m blue MiWay109 service markings may be visible; not water or road edge geometry.",
+          "Subject-focused native perspective; no source geometry/material edits, no image crop or upscale. Low-resolution framing and tree/building contact review pending."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ],
+        "geographicScope": "bounded_creditview_residential_context_west_of_highway403"
+      }
+    },
+    {
+      "identity": "wide/erin-mills-future.png",
+      "source": "2e255ffa8476d98414a3cd2644c8c69433d39509f9ac5c7d87f6b9a18262b803",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/erin-mills-future.png",
+        "title": "Erin Mills",
+        "area": "Erin Mills",
+        "district": "erin-mills",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -8333.3486328125,
+            -7363.15771484375,
+            2251.969970703125
+          ],
+          "rotationEuler": [
+            1.119523525238037,
+            -8.554389552273278e-08,
+            0.6132075190544128
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 3380.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
+      "identity": "wide/erindale-future.png",
+      "source": "181540fa2a37023d7316b966f68dd8f70234fead0afb96b9ad6f4ae965baf315",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/erindale-future.png",
+        "title": "Erindale & Sheridan",
+        "area": "Erindale & Sheridan",
+        "district": "erindale",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -4861.84765625,
+            -7949.49609375,
+            2135.800048828125
+          ],
+          "rotationEuler": [
+            1.119523525238037,
+            -8.554389552273278e-08,
+            0.6132075190544128
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 3250.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
+      "identity": "wide/heartland-future.png",
+      "source": "58a7d6ca2a87c2fc115cd007dfa9458c6647ac97fe773341ae1f968093dcf5c7",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/heartland-future.png",
+        "title": "Heartland & Gateway",
+        "area": "Heartland & Gateway",
+        "district": "heartland",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -6177.1767578125,
+            88.200927734375,
+            2332.18994140625
+          ],
+          "rotationEuler": [
+            1.119523525238037,
+            -7.44755865866864e-08,
+            0.6132074594497681
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 3510.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
+      "identity": "wide/lakeview-existing.png",
+      "source": "199ed122bf17d66335237a624bf3725a424d7ae36dc9ed6d6db53b2694cd9416",
+      "renderer": "render-0018f5c6cdc2.py",
+      "samples": 96,
+      "trial": false,
+      "waterShadowDisabled": true,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/lakeview-existing.png",
+        "title": "Lakeview",
+        "area": "Lakeview",
+        "district": "lakeview",
+        "scenario": "existing",
+        "camera": {
+          "location": [
+            2650.0,
+            -5580.0,
+            2060.0
+          ],
+          "rotationEuler": [
+            1.0961143970489502,
+            -3.869120490662681e-08,
+            0.32175058126449585
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2772.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison.",
+          "Bounded 1% narrower orthographic frame to exclude a small inland source coverage pocket at the image edge. Camera position, rotation, lighting and scene remain unchanged."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
+      "identity": "wide/lakeview-future.png",
+      "source": "18621f596c4a2f7f8504ddc8df898f10259292174f0f094b8606f1db1556c879",
+      "renderer": "render-0018f5c6cdc2.py",
+      "samples": 96,
+      "trial": false,
+      "waterShadowDisabled": true,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/lakeview-future.png",
+        "title": "Lakeview",
+        "area": "Lakeview",
+        "district": "lakeview",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            2650.0,
+            -5580.0,
+            2060.0
+          ],
+          "rotationEuler": [
+            1.0961143970489502,
+            -3.869120490662681e-08,
+            0.32175058126449585
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2772.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison.",
+          "Bounded 1% narrower orthographic frame to exclude a small inland source coverage pocket at the image edge. Camera position, rotation, lighting and scene remain unchanged."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
+      "identity": "wide/lakeview-portrait-future.png",
+      "source": "18621f596c4a2f7f8504ddc8df898f10259292174f0f094b8606f1db1556c879",
+      "renderer": "render-ec07f6df2d6c.py",
+      "samples": 96,
+      "trial": false,
+      "waterShadowDisabled": true,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/lakeview-portrait-future.png",
+        "title": "Lakeview",
+        "area": "Lakeview",
+        "district": "lakeview",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            2111.6591796875,
+            -5237.4306640625,
+            1760.0
+          ],
+          "rotationEuler": [
+            1.0823227167129517,
+            -3.214886135083361e-08,
+            0.2606024146080017
+          ],
+          "type": "PERSP",
+          "lens": 65,
+          "orthoScale": 2800.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Private camera-only option after actual original diagnostic showed inland municipal edge. Original native output dimensions and common lighting retained.",
+          "Selected option: sameangle-lens65-left200-down100. CPU exact-source ray counts: {'misses': 4, 'edgeMisses': 0, 'largestEdgeCluster': 0}. No final camera acceptance yet."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ],
+        "geographicScope": "Lakeview Village, coastal neighbourhoods and source-backed project context; bounded camera framing to avoid finite inland scene boundary."
+      }
+    },
+    {
+      "identity": "wide/lakeview-skyline-future.png",
+      "source": "18621f596c4a2f7f8504ddc8df898f10259292174f0f094b8606f1db1556c879",
+      "renderer": "render-ec07f6df2d6c.py",
+      "samples": 96,
+      "trial": false,
+      "waterShadowDisabled": true,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/lakeview-skyline-future.png",
+        "title": "Lakeview",
+        "area": "Lakeview",
+        "district": "lakeview",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            2272.0654296875,
+            -8433.08203125,
+            1620.0
+          ],
+          "rotationEuler": [
+            1.3290215730667114,
+            4.5336436826914905e-09,
+            0.16514869034290314
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2800.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Private camera-only option after actual original diagnostic showed inland municipal edge. Original native output dimensions and common lighting retained.",
+          "Selected option: sameangle-left250-down100. CPU exact-source ray counts: {'misses': 2, 'edgeMisses': 0, 'largestEdgeCluster': 0}. No final camera acceptance yet."
+        ],
+        "resolution": [
+          6144,
+          2240
+        ],
+        "geographicScope": "Lakeview Village, coastal neighbourhoods and source-backed project context; bounded camera framing to avoid finite inland scene boundary."
+      }
+    },
+    {
+      "identity": "wide/lisgar-future.png",
+      "source": "79b755f5761fa28e048011d4c180fcafb5f3d56b6b1976610927225c3c3a8199",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": true,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          0.95,
+          0.86
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.6,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/lisgar-future.png",
+        "title": "Lisgar & Argentia",
+        "area": "Lisgar & Argentia",
+        "district": "lisgar",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -16000.0,
+            -2754.3046875,
+            1382.0926513671875
+          ],
+          "rotationEuler": [
+            0.9075711369514465,
+            -0.0,
+            0.0
+          ],
+          "type": "PERSP",
+          "lens": 38.059137628358556,
+          "orthoScale": 6,
+          "sensorFit": "VERTICAL",
+          "sensorWidth": 36,
+          "sensorHeight": 24,
+          "shift": [
+            0,
+            0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Candidate uses current native neighbourhoodFrame contract, 38 degree south view with ground-frame corners contained in 82 percent of exact source study rectangle. Imported scene is full native visible context; source not clipped to camera.",
+          "Camera matches source viewer framing mathematically; wide and portrait are individually framed, not cropped.",
+          "Broader Lisgar/Argentia study crop includes Glen Erin project in Meadowvale. Qualified public derivatives only: proposed16-storey slab48.15m is not roofheight; retained13-storey roof and exteriors estimated. Raw plans/photos remain private.",
+          "Exact approved preview camera; native full-resolution rerender without source edits or resampling."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ],
+        "geographicScope": "bounded_study_crop"
+      }
+    },
+    {
+      "identity": "wide/lorne-park-future.png",
+      "source": "3ce2f56d973b3c04f5eb21e3fad919d2a70bb2b8d7f6da76f0cc039b745e20a2",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": true,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          0.95,
+          0.86
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.6,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/lorne-park-future.png",
+        "title": "Aldo Drive area, Lorne Park · 900 m study",
+        "area": "Aldo Drive area, Lorne Park",
+        "district": "lorne-park",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -3565,
+            -5516,
+            140
+          ],
+          "rotationEuler": [
+            1.1087292061182512,
+            0,
+            2.352872243279092
+          ],
+          "type": "PERSP",
+          "lens": 38.059137628358556,
+          "orthoScale": 6,
+          "sensorFit": "VERTICAL",
+          "sensorWidth": 36,
+          "sensorHeight": 24,
+          "shift": [
+            0,
+            0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Northeast street-front camera on qualified historical2019 native design and2020 finish study. Current built condition and ground interpolation unverified. Exact original source excluded; approved derivative only.",
+          "Exact approved preview camera; native full-resolution rerender without source edits or resampling."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ],
+        "geographicScope": "aldo_drive_local_view_within_900m_source_study"
+      }
+    },
+    {
+      "identity": "wide/malton-future.png",
+      "source": "ccd3f78aa6c64c7764eac92b6f632e608578e5c8594253749688aa3676e9d3eb",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/malton-future.png",
+        "title": "Malton",
+        "area": "Malton",
+        "district": "malton",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -4449.869278065879,
+            17231.182192582583,
+            2045.0
+          ],
+          "rotationEuler": [
+            1.1065936088562012,
+            1.1646816844290697e-08,
+            2.8198421001434326
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2360,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "CPU-only camera revision candidate pending the ordinary preview and root decision. No visual acceptance or render authorization implied.",
+          "Original azimuth, elevation, camera altitude, common lighting and6144x3840 dimensions retained. Orthographic scale2400m to2360m; ground-plane translation only.",
+          "Camera-plane shift180m left and100m up moves the aim approximately100m east and269m south, closer to the existing Malton study centre.",
+          "Dense ray confirmation removes the connected bottom-right miss cluster. Three isolated dense perimeter misses remain; numerical coverage does not certify every pixel or aesthetics."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ],
+        "geographicScope": "Malton district interior and immediate native context; tighter framing of the same focus"
+      }
+    },
+    {
+      "identity": "wide/meadowvale-future.png",
+      "source": "c8a1c8578d0cde32dc2ec38cb973826d63f9cc25485ab2658147d8073f9fb8f3",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/meadowvale-future.png",
+        "title": "Meadowvale & Lisgar",
+        "area": "Meadowvale & Lisgar",
+        "district": "meadowvale",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -10717.779296875,
+            -4035.8330078125,
+            2746.139892578125
+          ],
+          "rotationEuler": [
+            1.119523525238037,
+            -5.537074798667163e-08,
+            0.6132074594497681
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 3680.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
+      "identity": "wide/meadowvale-village-future.png",
+      "source": "911e1ceb3f8a37e491be2ae0ac1ddc52428ce238628f21c52111be43abbeb9bb",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          0.95,
+          0.86
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.6,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/meadowvale-village-future.png",
+        "title": "Meadowvale Village",
+        "area": "Meadowvale Village",
+        "district": "meadowvale-village",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -11698.101276956613,
+            3009.2290323816783,
+            916.8714173889159
+          ],
+          "rotationEuler": [
+            0.9075712561607361,
+            -0.0,
+            0.0
+          ],
+          "type": "PERSP",
+          "lens": 38.059137628358556,
+          "orthoScale": 6,
+          "sensorFit": "VERTICAL",
+          "sensorWidth": 36,
+          "sensorHeight": 24,
+          "shift": [
+            0,
+            0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Original neighbourhood camera direction retained; target shifted552m east and711m south; distance reduced to70percent to keep municipal source boundary outside frame.",
+          "No new geometry, scene export, crop or resampling; exact same successful native import.",
+          "Diagnostic camera moved 50 m east and 300 m north, perspective distance85percent, to reduce plain foreground without image cropping.",
+          "Root accepted exact native composition and bounded source seam repair. Remaining pale creek-bank regions retain supplied terrain classification."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ],
+        "geographicScope": "bounded_study_crop"
+      }
+    },
+    {
+      "identity": "wide/port-credit-existing.png",
+      "source": "67173c15c884803080aa7192a48143a4f9485be8cf2bf7e5b2c592738ee0f616",
+      "renderer": "render-499f6e3c7fd6.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/port-credit-existing.png",
+        "title": "Port Credit",
+        "area": "Port Credit",
+        "district": "port-credit",
+        "scenario": "existing",
+        "camera": {
+          "location": [
+            1750.0,
+            -4850.0,
+            2140.0
+          ],
+          "rotationEuler": [
+            1.0131158828735352,
+            -2.5438353645768075e-08,
+            1.3405768871307373
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2250.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
+      "identity": "wide/port-credit-future.png",
+      "source": "9c3cd86023ad034a78d6e3c2e6789ad1a32371e36690dbc84b92d2683767ee5f",
+      "renderer": "render-499f6e3c7fd6.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/port-credit-future.png",
+        "title": "Port Credit",
+        "area": "Port Credit",
+        "district": "port-credit",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            1750.0,
+            -4850.0,
+            2140.0
+          ],
+          "rotationEuler": [
+            1.0131158828735352,
+            -2.5438353645768075e-08,
+            1.3405768871307373
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2250.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
+      "identity": "wide/port-credit-portrait-future.png",
+      "source": "9c3cd86023ad034a78d6e3c2e6789ad1a32371e36690dbc84b92d2683767ee5f",
+      "renderer": "render-499f6e3c7fd6.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/port-credit-portrait-future.png",
+        "title": "Port Credit",
+        "area": "Port Credit",
+        "district": "port-credit",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            1700.0,
+            -4830.0,
+            1930.0
+          ],
+          "rotationEuler": [
+            1.045182704925537,
+            -1.2683118200129684e-07,
+            1.333422064781189
+          ],
+          "type": "PERSP",
+          "lens": 52.0,
+          "orthoScale": 2250.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
+      "identity": "wide/port-credit-skyline-future.png",
+      "source": "9c3cd86023ad034a78d6e3c2e6789ad1a32371e36690dbc84b92d2683767ee5f",
+      "renderer": "render-499f6e3c7fd6.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/port-credit-skyline-future.png",
+        "title": "Port Credit",
+        "area": "Port Credit",
+        "district": "port-credit",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            3700.0,
+            -4750.0,
+            1300.0
+          ],
+          "rotationEuler": [
+            1.3371458053588867,
+            1.6381083867145207e-07,
+            1.441521406173706
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2300.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison."
+        ],
+        "resolution": [
+          6144,
+          2240
+        ]
+      }
+    },
+    {
+      "identity": "wide/streetsville-future.png",
+      "source": "56df6cad009078c7cac5a00bf8a0716db817629f92d27419d2695510b3fcf7df",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/streetsville-future.png",
+        "title": "Streetsville",
+        "area": "Streetsville",
+        "district": "streetsville",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -9016.361328125,
+            -3692.0205078125,
+            1843.52490234375
+          ],
+          "rotationEuler": [
+            1.119523525238037,
+            1.076092637219972e-08,
+            0.6132075786590576
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2730.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
+      "identity": "wide/uptown-future.png",
+      "source": "f2e6ef5e937d4316020f631a870f866aa9585a2b8fc45768890c845575ec32c0",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/uptown-future.png",
+        "title": "Uptown & Hurontario",
+        "area": "Uptown & Hurontario",
+        "district": "uptown",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -4158.24365234375,
+            -1118.239990234375,
+            2005.18994140625
+          ],
+          "rotationEuler": [
+            1.1195236444473267,
+            8.90864839675487e-08,
+            0.6132075786590576
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2576.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
+      "identity": "wide/uptown-portrait-future.png",
+      "source": "f2e6ef5e937d4316020f631a870f866aa9585a2b8fc45768890c845575ec32c0",
+      "renderer": "render-eebfbaf06da3.py",
+      "samples": 20,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 2.4,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.8,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.15,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "wide/uptown-portrait-future.png",
+        "title": "Uptown & Hurontario",
+        "area": "Uptown & Hurontario",
+        "district": "uptown",
+        "scenario": "future",
+        "camera": {
+          "location": [
+            -5538.24365234375,
+            -543.239990234375,
+            1775.18994140625
+          ],
+          "rotationEuler": [
+            1.025679111480713,
+            -3.738021092658528e-08,
+            0.3080528676509857
+          ],
+          "type": "PERSP",
+          "lens": 52.0,
+          "orthoScale": 2576.0,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            0.0,
+            0.0
+          ],
+          "clip": [
+            1,
+            160000
+          ]
+        },
+        "cameraQualifications": [
+          "Recovered legacy camera orientation/frame. Existing/future share the same future-view camera for a true matched comparison."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    }
+  ]
+}

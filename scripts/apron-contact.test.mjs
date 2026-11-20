@@ -9,7 +9,7 @@ const THREE=await import('../public/vendor/three.module.js');
 const {GLTFLoader}=await import('../public/vendor/addons/loaders/GLTFLoader.js');
 const {MeshoptDecoder}=await import('../public/vendor/meshopt_decoder.mjs');
 const read=p=>readFileSync(new URL('../public/'+p,import.meta.url));
-const contract=JSON.parse(read('data/harborn-terrain-v4.json'));
+const contract=JSON.parse(read('data/harborn-terrain-v5-20261112.json'));
 const openingFixture=JSON.parse(readFileSync(new URL('./fixtures/harborn-opening-rays.json',import.meta.url)));
 globalThis.self??=globalThis;globalThis.createImageBitmap??=async()=>({width:16,height:8,close(){}});
 const load=(url,binding)=>loadBoundTerrainAsset(new GLTFLoader().setMeshoptDecoder(MeshoptDecoder),url,x=>x,binding,async url=>new Response(read(url)));

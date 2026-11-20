@@ -1,4 +1,5 @@
 import {loadNeighbourContext,disposeContextGroup,setCoverageMask,geometryBytes} from './neighbour-context.js?v=20261102-shadow3';
+import {createUptownContextReplacement} from './uptown-context-replacement.js?v=20261113-uptown2';
 import {prepareFlatShadowReceiver} from './flat-shadow-receiver.js?v=20261102-shadow3';
 
 // Coarse-pointer and memory-constrained devices still get source-backed city
@@ -13,7 +14,7 @@ export function cityContextBudget({coarsePointer=globalThis.matchMedia?.('(any-p
 // On-demand geographic orientation from the existing published city overview.
 // Geometry is never moved or rescaled. Display masks prevent overlap with the
 // selected detailed study; source attribution and fallback faces are retained.
-export function createCityContext({THREE,scene,renderer,loader,contextURLs,classify,overrides,styleExisting,districts=[],resourceBudget=cityContextBudget(),onChange=()=>{},onStatus=()=>{},onMetrics=()=>{}}) {
+export function createCityContext({THREE,scene,renderer,loader,contextURLs,classify,overrides,styleExisting,districts=[],uptownReplacementAsset=null,splitSourceOverlaps=null,resourceBudget=cityContextBudget(),onChange=()=>{},onStatus=()=>{},onMetrics=()=>{}}) {
   const root=new THREE.Group();root.name='Surrounding city overview';root.visible=false;scene.add(root);
   const baseWater=new THREE.Group();baseWater.name='Original lake water';baseWater.visible=false;scene.add(baseWater);
   const lakeURL='models/context-parts/citywide-context-01.glb',coastalAreas=new Set(['port-credit','lakeview','clarkson']);
@@ -21,6 +22,10 @@ export function createCityContext({THREE,scene,renderer,loader,contextURLs,class
   const planes=[new THREE.Plane(),new THREE.Plane(),new THREE.Plane(),new THREE.Plane()];
   renderer.localClippingEnabled=true;
   let pending,ready=false,wanted=false,current,epoch=0,staged;
+  const uptownReplacement=uptownReplacementAsset?createUptownContextReplacement({THREE,asset:uptownReplacementAsset,splitSourceOverlaps}):null;
+  let replacementScenario='future',visibleReplacementAssets=new Set(),replacementAudit=[];
+  function syncSourceReplacements(){return uptownReplacement?.update(root,{district:current?.id,scenario:replacementScenario,visibleAssetIds:visibleReplacementAssets});}
+  function prepareSourceReplacements(group){if(current?.id==='uptown'&&uptownReplacement){const audit=uptownReplacement.prepare(group);replacementAudit.push(...audit);syncSourceReplacements();}}
   const overviewBuildings=[];let neighbours,neighbourPending,neighbourToken=0;
   const colourFor=name=>/shore|river|lakeontario/.test(name)?0x638b98:/road|bridge/.test(name)?0x8b9190:/wood/.test(name)?0x698555:/park/.test(name)?0x9aaa7c:0xc4c7bb;
   const isWanted=()=>wanted&&current?.id!=='citywide';
@@ -61,7 +66,7 @@ export function createCityContext({THREE,scene,renderer,loader,contextURLs,class
     planes[0].set(new THREE.Vector3(-1,0,0),b[0]);planes[1].set(new THREE.Vector3(1,0,0),-b[2]);
     planes[2].set(new THREE.Vector3(0,0,-1),b[1]);planes[3].set(new THREE.Vector3(0,0,1),-b[3]);
     overviewBuildings.forEach(o=>setCoverageMask(THREE,o.material,[b,...(neighbours?.districtId===current.id?neighbours.bounds:[])]));
-    root.visible=isWanted()&&ready;updateWater();
+    root.visible=isWanted()&&ready;updateWater();prepareSourceReplacements(root);syncSourceReplacements();
   }
   function releaseNeighbours(){
     neighbourToken++;disposeContextGroup(neighbours?.root);neighbours=null;onChange();
@@ -97,7 +102,7 @@ export function createCityContext({THREE,scene,renderer,loader,contextURLs,class
     const active=()=>token===neighbourToken&&current.id===district.id&&isWanted();
     const promise=Promise.resolve(previous).catch(()=>{}).then(()=>loadNeighbourContext({THREE,district,districts,loader,classify,overrides,styleExisting,...resourceBudget.neighbours,maxGeometryBytes:Math.max(0,Math.min(resourceBudget.neighbours.maxGeometryBytes,resourceBudget.maxGeometryBytes-residentBytes(root))),isCurrent:active})).then(result=>{
       if(!active()){disposeContextGroup(result.root);return;}
-      neighbours={...result,districtId:district.id};root.add(result.root);updateMasks();
+      neighbours={...result,districtId:district.id};root.add(result.root);prepareSourceReplacements(result.root);updateMasks();
       onMetrics({...result.metrics,contextGeometryBytes:residentBytes(root)});
       onStatus('Nearby existing buildings and wider city loaded. Detail varies with the available source models.');onChange();
     }).catch(()=>{if(active()){onStatus('Wider city loaded. Nearby building detail could not load; switch this option off and on to retry.');onChange();}}).finally(()=>{if(neighbourPending?.token===token)neighbourPending=null;});
@@ -143,7 +148,7 @@ export function createCityContext({THREE,scene,renderer,loader,contextURLs,class
         if(rejected&&active())throw rejected.reason;
         if(!active())return;
         while(batch.children.length)root.add(batch.children[0]);
-        overviewBuildings.push(...buildingMeshes);ready=true;updateMasks();onChange();
+        overviewBuildings.push(...buildingMeshes);prepareSourceReplacements(root);ready=true;updateMasks();onChange();
       }finally{
         disposeContextGroup(batch);if(staged===batch)staged=null;
       }
@@ -155,7 +160,7 @@ export function createCityContext({THREE,scene,renderer,loader,contextURLs,class
   // Only committed detailed files extend camera coverage. The city overview
   // deliberately omits low-rise detail and cannot stand in for these bounds.
   const detailedReady=()=>isWanted()&&ready&&neighbours?.districtId===current?.id;
-  return {setDistrict,async setEnabled(enabled){wanted=Boolean(enabled);explicitlyDisabled=!wanted;if(!wanted){release();await ensureBaseWater();return;}await ensure();updateMasks();},get enabled(){return wanted;},get ready(){return ready;},
+  return {setDistrict,updateSourceReplacements(scenario,visibleAssetIds){replacementScenario=scenario;visibleReplacementAssets=new Set(visibleAssetIds||[]);return syncSourceReplacements();},get sourceReplacementAudit(){return {cuts:replacementAudit.map(x=>({...x})),visibility:syncSourceReplacements()};},async setEnabled(enabled){wanted=Boolean(enabled);explicitlyDisabled=!wanted;if(!wanted){release();await ensureBaseWater();return;}await ensure();updateMasks();},get enabled(){return wanted;},get ready(){return ready;},
     get detailedBounds(){return detailedReady()?neighbours.bounds.map(b=>[...b]):[];},
     get detailedGround(){if(!detailedReady())return null;const floors=(neighbours.metrics.files||[]).map(id=>districts.find(d=>d.id===id)?.geometryBounds?.[0]?.[1]).filter(Number.isFinite);return floors.length?Math.min(...floors):null;},
     get detailedCeiling(){if(!detailedReady())return null;const levels=(neighbours.metrics.files||[]).map(id=>{const d=districts.find(d=>d.id===id);return d?.sourceCropCenter?.[1]??d?.center?.[1];}).filter(Number.isFinite);return levels.length?Math.max(...levels):null;}};

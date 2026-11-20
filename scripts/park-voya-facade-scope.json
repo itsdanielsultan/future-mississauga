@@ -1,0 +1,807 @@
+{
+  "state": "ROOT_ACCEPTED_SOURCE_QUALIFIED_FACADE_CORRECTIONS",
+  "handoffSHA256": "81e6fdbce5053b8585e3f936057b4fd02c5c6c8b3bcfdd2daa433c7e67021cf1",
+  "assets": {
+    "wf-26park-current-plan": {
+      "oldValues": {
+        "modelQuality": "Source-informed south facade and podium study",
+        "sources": [
+          {
+            "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152435/Site-Plan-and-Site-Statistics-OZ-OPA-26-13-W1-August-2026.pdf",
+            "title": "Site Plan and Site Statistics — OZ/OPA 26-13 W1",
+            "publisher": "City of Mississauga / Kohn Partnership Architects",
+            "drawingDate": "2026-07-30",
+            "use": "Horizontal envelopes, written dimensions and existing-building references",
+            "localSourceSha256": "a0484182dc77a93edb1824fb6c305f6cfafcbbd289fb093273bb34a45d69da8f"
+          },
+          {
+            "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152356/Elevations-OZ-OPA-26-13-W1-August-2026.pdf",
+            "title": "South Elevation — OZ/OPA 26-13 W1",
+            "publisher": "City of Mississauga / Kohn Partnership Architects",
+            "drawingDate": "2026-07-30",
+            "use": "Absolute floor and roof elevations",
+            "localSourceSha256": "d3f36f663d9801fd5ec4dfd51bfca8043f983cdb126945796801439c04714375"
+          },
+          {
+            "url": "https://data.mississauga.ca/pages/mississauga-3d",
+            "title": "City 3D source tile 92",
+            "publisher": "City of Mississauga",
+            "use": "Existing components 92-828 and 92-3995 for coordinate registration"
+          }
+        ],
+        "sha256": "c9769467d130d1ddbf4e6b6a35c06b7e58abbf54c180c10bd3b4d6f0acf03a30",
+        "triangles": 23028,
+        "bounds": [
+          [
+            -983.1935424804688,
+            8.800000190734863,
+            3619.265380859375
+          ],
+          [
+            -912.15576171875,
+            98.75,
+            3698.478759765625
+          ]
+        ],
+        "url": "models/studies-20261101/26-park-south-facade-c9769467d130.glb.gz",
+        "modelFidelity": "Preserved registered envelope with A4.00 south frame groups, separate balconies, material hierarchy and source-visible podium treatment",
+        "bytes": 271188,
+        "geometryCoverage": "Only the supplied south elevation and short front returns detailed. Other elevations remain schematic.",
+        "downloadSHA256": "8eb2cd0baf4f4fe0166566ca00f1f20e2d8fdde5e80ebc010cb7062d48c9dccd",
+        "decodedSHA256": "c9769467d130d1ddbf4e6b6a35c06b7e58abbf54c180c10bd3b4d6f0acf03a30",
+        "decodedBytes": 1970412,
+        "triangleCount": 23028,
+        "modelReviewDate": "2026-11-01",
+        "modelCaveat": "Source-informed south facade and podium study based on Kohn drawings dated July 30, 2026. The registered core and labelled floor/roof levels are retained. Other elevations remain schematic. Bay widths, minor relief, guards, slab thickness and finishes are illustrative. Inherited placement has a working +/-2 m horizontal allowance; architectural ASL minus70 datum compatibility is not independently certified. Proposed application-stage design, not as-built."
+      },
+      "newValues": {
+        "modelQuality": "Source-informed four-elevation facade and podium study",
+        "sources": [
+          {
+            "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152435/Site-Plan-and-Site-Statistics-OZ-OPA-26-13-W1-August-2026.pdf",
+            "title": "Site Plan and Site Statistics — OZ/OPA 26-13 W1",
+            "publisher": "City of Mississauga / Kohn Partnership Architects",
+            "drawingDate": "2026-07-30",
+            "use": "Horizontal envelopes, written dimensions and existing-building references",
+            "localSourceSha256": "a0484182dc77a93edb1824fb6c305f6cfafcbbd289fb093273bb34a45d69da8f"
+          },
+          {
+            "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152356/Elevations-OZ-OPA-26-13-W1-August-2026.pdf",
+            "title": "South Elevation — OZ/OPA 26-13 W1",
+            "publisher": "City of Mississauga / Kohn Partnership Architects",
+            "drawingDate": "2026-07-30",
+            "use": "Absolute floor and roof elevations",
+            "localSourceSha256": "d3f36f663d9801fd5ec4dfd51bfca8043f983cdb126945796801439c04714375"
+          },
+          {
+            "url": "https://data.mississauga.ca/pages/mississauga-3d",
+            "title": "City 3D source tile 92",
+            "publisher": "City of Mississauga",
+            "use": "Existing components 92-828 and 92-3995 for coordinate registration"
+          },
+          {
+            "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152354/Elevations-2-OZ-OPA-26-13-W1-August-2026.pdf",
+            "title": "A4.01 North elevation",
+            "publisher": "City of Mississauga / Kohn Partnership Architects",
+            "drawingDate": "2026-07-30",
+            "localSourceSha256": "dc88c5fc10173f4f4712d48c3732f249c51e1addba032f7fe5e475f3082cac67",
+            "use": "Visible elevation/plan hierarchy; not a construction or as-built record"
+          },
+          {
+            "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152355/Elevations-3-OZ-OPA-26-13-W1-August-2026.pdf",
+            "title": "A4.02 East and west elevations",
+            "publisher": "City of Mississauga / Kohn Partnership Architects",
+            "drawingDate": "2026-07-30",
+            "localSourceSha256": "d1c89f4692f36ee5b5daf94bf3140156d6a91d861395b915185955c7560126b2",
+            "use": "Visible elevation/plan hierarchy; not a construction or as-built record"
+          },
+          {
+            "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152410/Level-MPH-Roof-Floor-Plan-OZ-OPA-26-13-W1-August-2026.pdf",
+            "title": "A2.06 Mechanical penthouse and roof plan",
+            "publisher": "City of Mississauga / Kohn Partnership Architects",
+            "drawingDate": "2026-07-30",
+            "localSourceSha256": "8bc1621b88163ae2e982e845a0a4fd9e63a119790464651c806699c85693f33b",
+            "use": "Visible elevation/plan hierarchy; not a construction or as-built record"
+          },
+          {
+            "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152409/Level-7-Level-8-to-26-Floor-Plan-OZ-OPA-26-13-W1-August-2026.pdf",
+            "title": "A2.05 Levels 7 and 8-26 plans",
+            "publisher": "City of Mississauga / Kohn Partnership Architects",
+            "drawingDate": "2026-07-30",
+            "localSourceSha256": "e5a43c505fc1e234db243eed77be75021f84cd22022d2989b6a2bc02b2421f0f",
+            "use": "Visible elevation/plan hierarchy; not a construction or as-built record"
+          },
+          {
+            "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152345/AXO-Views-OZ-OPA-26-13-W1-August-2026.pdf",
+            "title": "Application axonometric views",
+            "publisher": "City of Mississauga / Kohn Partnership Architects",
+            "drawingDate": "2026-07-30",
+            "localSourceSha256": "763b86e25640e35ba65c60336beca4783a081f09317d4d0dd0341644cbe675dd",
+            "use": "Visible elevation/plan hierarchy; not a construction or as-built record"
+          }
+        ],
+        "sha256": "c214c94f4ebc7f6165ceb59efd9e9c05473e9a95a9b70e5ce13f822e6fc80228",
+        "triangles": 58968,
+        "bounds": [
+          [
+            -983.2738037109375,
+            8.800000190734863,
+            3619.185546875
+          ],
+          [
+            -912.15576171875,
+            98.75,
+            3698.508056640625
+          ]
+        ],
+        "url": "models/studies-20261113/26-park-four-side-4d791535afe0.glb.gz",
+        "modelFidelity": "Preserved registered core and floor/roof levels with source-specific four-side visible facade treatment",
+        "bytes": 673678,
+        "geometryCoverage": "South baseline retained; north, east and west visible facade/podium hierarchy added from distinct July 30, 2026 primary elevations. Mechanical enclosure remains source-supported plain mass.",
+        "downloadSHA256": "c214c94f4ebc7f6165ceb59efd9e9c05473e9a95a9b70e5ce13f822e6fc80228",
+        "decodedSHA256": "4d791535afe0744de87dc150e31bd24d86e65be6176be3f79a2aba28bc7fc620",
+        "decodedBytes": 5065652,
+        "triangleCount": 58968,
+        "modelReviewDate": "2026-11-13",
+        "modelCaveat": "Kohn application drawings dated July 30, 2026 inform the four visible elevations. The registered core, floor/roof levels and inherited south geometry remain exact. Bay widths, facade depth, guards, slab thickness, finishes and shallow podium treatment are illustrative; small plan recesses and garage interiors remain simplified. Inherited horizontal fit has a working +/-2 m allowance; architectural ASL minus 70 datum compatibility is not independently certified. Proposed application-stage design, not as-built.",
+        "sourceCandidateSHA256": "fa33e66cd53ad58ffd789c1ef554f3df17ad3444d947d4c85e49bf92eba53b73"
+      },
+      "absentKeys": [
+        "sourceCandidateSHA256"
+      ],
+      "priorFingerprint": "964a946c88ce0965fa3e3b8d6eee93e2d45ceb89ce3565c39670b7b0b554f785",
+      "newFingerprint": "fa54a0c5522b0e90cec4113d872e4763b55e684af6c30929734304a9a42f39ad",
+      "oldURL": "models/studies-20261101/26-park-south-facade-c9769467d130.glb.gz",
+      "newURL": "models/studies-20261113/26-park-four-side-4d791535afe0.glb.gz",
+      "publicRawURL": "models/studies-20261113/26-park-four-side-4d791535afe0.glb"
+    },
+    "voya-towers-plan-derived": {
+      "oldValues": {
+        "modelFidelity": "developer key-plan and reference-derived connected sculpted podium and tower envelopes",
+        "sources": [
+          {
+            "url": "https://drive.google.com/file/d/115Ov9j6l_W9jU44khuYdgLmyBYevCrkq/view",
+            "publisher": "Amacon / Parkside Village, public developer presentation via VIP Condos Toronto",
+            "claim": "Page 7 typical curved floorplate with suite areas; page 3 community map establishes Voya parcel and adjacent Avia. Original 42/36 counts superseded by 2024 variance."
+          },
+          {
+            "url": "https://drive.google.com/file/d/1gp8KweoV7p11d59d8FJswPzO-7LBousF/view",
+            "publisher": "Amacon / Parkside Village, public typical floor plans",
+            "claim": "Detailed suite plans cross-check curved balcony expression and approximate advertised room dimensions."
+          },
+          {
+            "url": "https://www.mississauga.ca/apps/#/property-preview/compliance-report-coa-text/66203/329571",
+            "publisher": "City of Mississauga",
+            "claim": "June 27, 2024 decision A258/24 approves 44/38 storeys and 10-storey podium."
+          },
+          {
+            "url": "https://os-prod-api.mississauga.ca/api/v1/plan-build/compliance/report/coa-prop?coaId=66203&realPropId=329571",
+            "publisher": "City of Mississauga",
+            "claim": "Public response preserves the signed decision and exact addresses 4116 / 4128 Parkside Village Drive."
+          },
+          {
+            "url": "https://urbantoronto.ca/forum/threads/toronto-voya-142-25m-44s-amacon-turner-fleischer.32225/page-10",
+            "publisher": "UrbanToronto",
+            "claim": "Engineering-drawing observer reports 142.25 m taller maximum and upper floors at 10 feet; August 9 discussion of July 26 photo confirms both structures topped, with roof finishing incomplete. Shorter maximum is not directly stated."
+          },
+          {
+            "url": "https://urbantoronto.ca/forum/attachments/1785965443342-jpeg.755864/",
+            "publisher": "Tim MacDonald via UrbanToronto",
+            "claim": "July 26, 2026 photograph verifies paired curved towers, relative heights, podium relationship and incomplete taller roof finish."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-79.654,43.585,-79.645,43.59",
+            "publisher": "OpenStreetMap contributors",
+            "claim": "Avia footprint 1376190041 provides four ground controls; new apartment footprint 1502720098 provides taller-tower positional check, identified by parcel and adjoining development context. No height tags."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/changeset/181696491",
+            "publisher": "OpenStreetMap contributors",
+            "claim": "Footprint added April 23, 2026 using Esri World Imagery. Imagery date not specified."
+          },
+          {
+            "url": "https://www.lifeatparkside.com/voya",
+            "publisher": "Amacon / Parkside Village",
+            "claim": "Official park-side curved terrace expression, city-side rectilinear facade, connected base and ground/fifth-floor amenities."
+          },
+          {
+            "url": "https://www.lifeatparkside.com/_files/ugd/fc95b3_94cf7a7c8b4940f795c0925758a098f2.pdf",
+            "publisher": "Amacon / Parkside Village",
+            "claim": "Official brochure: exterior perspectives, top-down terrace view, first/fifth-floor amenity plans. Artist concepts, not as-built survey."
+          },
+          {
+            "url": "https://drive.google.com/file/d/1pfkjmAscByYQIsNJNI0pTIQH45OyE-x5/view",
+            "publisher": "Amacon / Parkside Village via public broker document link",
+            "claim": "Voya 1 podium suite plans and level-specific key plans; geometry traced from pages 1,2,18,80,81. Approximate marketing dimensions, 2021 issue."
+          },
+          {
+            "url": "https://drive.google.com/file/d/1JCBCyTtws8cyU2IbI28OzBQWHhz7h8dJ/view",
+            "publisher": "Amacon plans, public Cityview Realty compilation",
+            "claim": "Voya 2 floorplan booklet February 23, 2022, developer sheets dated February 17/22; keyplans pages 17,20,21,23,46 support the second half of connected podium."
+          },
+          {
+            "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Parcel/FeatureServer/0",
+            "publisher": "City of Mississauga",
+            "claim": "Current parcel CITY_PIN 32957100, 8525.91 square metres; georeferenced outer limit for footprint reconstruction."
+          },
+          {
+            "url": "https://urbantoronto.ca/forum/attachments/1785965443342-jpeg.755864/",
+            "publisher": "Tim MacDonald via UrbanToronto",
+            "claim": "July 26, 2026 aerial construction photograph independently verifies continuous sculpted podium, roof gardens and curved slabs. Used as visual reference only."
+          },
+          {
+            "url": "https://www.lifeatparkside.com/voya",
+            "publisher": "Amacon",
+            "claim": "Voya directly backs the park; free-flowing park-facing balconies contrast with a rectilinear city-facing facade."
+          },
+          {
+            "url": "https://www.lifeatparkside.com/post/introducing-voya-at-parkside-village",
+            "publisher": "Amacon",
+            "claim": "June 2021 introduction specifically names adjacent Zonta Meadows and contrasting curved park/linear city facades."
+          },
+          {
+            "url": "https://drive.google.com/file/d/1gp8KweoV7p11d59d8FJswPzO-7LBousF/view",
+            "publisher": "Amacon via public developer-plan mirror",
+            "claim": "Voya 1 typical suite plans explicitly distinguish balcony outlines on levels 12,13,14. Recovered suite-area drawings, not survey/BIM."
+          },
+          {
+            "url": "https://drive.google.com/file/d/1JCBCyTtws8cyU2IbI28OzBQWHhz7h8dJ/view",
+            "publisher": "Amacon plans via Cityview public mirror",
+            "claim": "February 2022 Voya 2 suite plans distinguish the second tower outline and several transition-level balcony outlines."
+          },
+          {
+            "url": "https://urbantoronto.ca/forum/attachments/1785965443342-jpeg.755864/",
+            "publisher": "Tim MacDonald via UrbanToronto",
+            "claim": "July 26, 2026 aerial reference confirms connected sculpted base and park-side curved balcony expression; no image texture is included."
+          }
+        ],
+        "bytes": 1104356,
+        "triangleCount": 55168,
+        "url": "models/refinement/voya-towers-plan-derived.glb",
+        "sha256": "2402b603d47c3ba0770eb55847632a9c1a32c7a0117d914fe810705652e181f6",
+        "downloadSHA256": "2402b603d47c3ba0770eb55847632a9c1a32c7a0117d914fe810705652e181f6"
+      },
+      "newValues": {
+        "modelFidelity": "Source-plan tower/podium controls retained with official-reference city-facing vertical frame and spandrel interpretation",
+        "sources": [
+          {
+            "url": "https://drive.google.com/file/d/115Ov9j6l_W9jU44khuYdgLmyBYevCrkq/view",
+            "publisher": "Amacon / Parkside Village, public developer presentation via VIP Condos Toronto",
+            "claim": "Page 7 typical curved floorplate with suite areas; page 3 community map establishes Voya parcel and adjacent Avia. Original 42/36 counts superseded by 2024 variance."
+          },
+          {
+            "url": "https://drive.google.com/file/d/1gp8KweoV7p11d59d8FJswPzO-7LBousF/view",
+            "publisher": "Amacon / Parkside Village, public typical floor plans",
+            "claim": "Detailed suite plans cross-check curved balcony expression and approximate advertised room dimensions."
+          },
+          {
+            "url": "https://www.mississauga.ca/apps/#/property-preview/compliance-report-coa-text/66203/329571",
+            "publisher": "City of Mississauga",
+            "claim": "June 27, 2024 decision A258/24 approves 44/38 storeys and 10-storey podium."
+          },
+          {
+            "url": "https://os-prod-api.mississauga.ca/api/v1/plan-build/compliance/report/coa-prop?coaId=66203&realPropId=329571",
+            "publisher": "City of Mississauga",
+            "claim": "Public response preserves the signed decision and exact addresses 4116 / 4128 Parkside Village Drive."
+          },
+          {
+            "url": "https://urbantoronto.ca/forum/threads/toronto-voya-142-25m-44s-amacon-turner-fleischer.32225/page-10",
+            "publisher": "UrbanToronto",
+            "claim": "Engineering-drawing observer reports 142.25 m taller maximum and upper floors at 10 feet; August 9 discussion of July 26 photo confirms both structures topped, with roof finishing incomplete. Shorter maximum is not directly stated."
+          },
+          {
+            "url": "https://urbantoronto.ca/forum/attachments/1785965443342-jpeg.755864/",
+            "publisher": "Tim MacDonald via UrbanToronto",
+            "claim": "July 26, 2026 photograph verifies paired curved towers, relative heights, podium relationship and incomplete taller roof finish."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-79.654,43.585,-79.645,43.59",
+            "publisher": "OpenStreetMap contributors",
+            "claim": "Avia footprint 1376190041 provides four ground controls; new apartment footprint 1502720098 provides taller-tower positional check, identified by parcel and adjoining development context. No height tags."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/changeset/181696491",
+            "publisher": "OpenStreetMap contributors",
+            "claim": "Footprint added April 23, 2026 using Esri World Imagery. Imagery date not specified."
+          },
+          {
+            "url": "https://www.lifeatparkside.com/voya",
+            "publisher": "Amacon / Parkside Village",
+            "claim": "Official park-side curved terrace expression, city-side rectilinear facade, connected base and ground/fifth-floor amenities."
+          },
+          {
+            "url": "https://www.lifeatparkside.com/_files/ugd/fc95b3_94cf7a7c8b4940f795c0925758a098f2.pdf",
+            "publisher": "Amacon / Parkside Village",
+            "claim": "Official brochure: exterior perspectives, top-down terrace view, first/fifth-floor amenity plans. Artist concepts, not as-built survey."
+          },
+          {
+            "url": "https://drive.google.com/file/d/1pfkjmAscByYQIsNJNI0pTIQH45OyE-x5/view",
+            "publisher": "Amacon / Parkside Village via public broker document link",
+            "claim": "Voya 1 podium suite plans and level-specific key plans; geometry traced from pages 1,2,18,80,81. Approximate marketing dimensions, 2021 issue."
+          },
+          {
+            "url": "https://drive.google.com/file/d/1JCBCyTtws8cyU2IbI28OzBQWHhz7h8dJ/view",
+            "publisher": "Amacon plans, public Cityview Realty compilation",
+            "claim": "Voya 2 floorplan booklet February 23, 2022, developer sheets dated February 17/22; keyplans pages 17,20,21,23,46 support the second half of connected podium."
+          },
+          {
+            "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Parcel/FeatureServer/0",
+            "publisher": "City of Mississauga",
+            "claim": "Current parcel CITY_PIN 32957100, 8525.91 square metres; georeferenced outer limit for footprint reconstruction."
+          },
+          {
+            "url": "https://urbantoronto.ca/forum/attachments/1785965443342-jpeg.755864/",
+            "publisher": "Tim MacDonald via UrbanToronto",
+            "claim": "July 26, 2026 aerial construction photograph independently verifies continuous sculpted podium, roof gardens and curved slabs. Used as visual reference only."
+          },
+          {
+            "url": "https://www.lifeatparkside.com/voya",
+            "publisher": "Amacon",
+            "claim": "Voya directly backs the park; free-flowing park-facing balconies contrast with a rectilinear city-facing facade."
+          },
+          {
+            "url": "https://www.lifeatparkside.com/post/introducing-voya-at-parkside-village",
+            "publisher": "Amacon",
+            "claim": "June 2021 introduction specifically names adjacent Zonta Meadows and contrasting curved park/linear city facades."
+          },
+          {
+            "url": "https://drive.google.com/file/d/1gp8KweoV7p11d59d8FJswPzO-7LBousF/view",
+            "publisher": "Amacon via public developer-plan mirror",
+            "claim": "Voya 1 typical suite plans explicitly distinguish balcony outlines on levels 12,13,14. Recovered suite-area drawings, not survey/BIM."
+          },
+          {
+            "url": "https://drive.google.com/file/d/1JCBCyTtws8cyU2IbI28OzBQWHhz7h8dJ/view",
+            "publisher": "Amacon plans via Cityview public mirror",
+            "claim": "February 2022 Voya 2 suite plans distinguish the second tower outline and several transition-level balcony outlines."
+          },
+          {
+            "url": "https://urbantoronto.ca/forum/attachments/1785965443342-jpeg.755864/",
+            "publisher": "Tim MacDonald via UrbanToronto",
+            "claim": "July 26, 2026 aerial reference confirms connected sculpted base and park-side curved balcony expression; no image texture is included."
+          },
+          {
+            "url": "https://www.lifeatparkside.com/post/voya-takes-shape-as-construction-reaches-new-heights",
+            "publisher": "Amacon / Parkside Village",
+            "claim": "Official construction photos explicitly captured August 2025, published November 1, 2025. City-facing vertical frames and window/spandrel expression only; not current as-built or finished roof evidence."
+          }
+        ],
+        "bytes": 313275,
+        "triangleCount": 69160,
+        "url": "models/refinement-20261113/voya-cityside-0abaf6709101.glb.gz",
+        "sha256": "ef03b46d0496107746c47b181cb860ec605f264d0ec51f618578cb967a04ea80",
+        "downloadSHA256": "ef03b46d0496107746c47b181cb860ec605f264d0ec51f618578cb967a04ea80",
+        "decodedSHA256": "0abaf6709101d072caece4e418755c682576b9dd32b49fd0004a32b2673bff79",
+        "decodedBytes": 2288528,
+        "triangles": 69160,
+        "preserveMaterials": true,
+        "preserveSourceNormals": true,
+        "modelReviewDate": "2026-11-13",
+        "geometryCoverage": "Seven labelled plate controls plus retained typical outlines; bounded additive city-facing tower facade. Roof schedule, exact taller/shorter mechanical profiles and other facade schedules remain unresolved.",
+        "modelCaveat": "Existing source-plan shapes and registered tower datums are retained. City-facing piers, spandrels and glazing divisions interpret the official artist concept and August 2025 construction photos; their spacing and relief are approximate. No final roof or equipment geometry is asserted. The shorter height remains inferred with +/-6 m allowance; existing horizontal allowances are retained. This is an illustrative source-based model, not an as-built survey.",
+        "credit": "Design reference: Amacon / Parkside Village. Independent authored model: Daniel Sultan / Future Mississauga. Inherited registration sources include City of Mississauga and OpenStreetMap contributors.",
+        "sourceCandidateSHA256": "65d5c5888077f25f889dfc374c6a58062d3f4af2e273578f72442998ff4ac239"
+      },
+      "absentKeys": [
+        "decodedSHA256",
+        "decodedBytes",
+        "triangles",
+        "preserveMaterials",
+        "preserveSourceNormals",
+        "modelReviewDate",
+        "geometryCoverage",
+        "modelCaveat",
+        "credit",
+        "sourceCandidateSHA256"
+      ],
+      "priorFingerprint": "c6ca4f8fdd6a5b6246c5af4510f730618f4e4cf8e1a7cccadd02280e5e2caa46",
+      "newFingerprint": "4f10be9458550fa8cb90fba88a03e3fe3525eea29bcd524cd4a4e8ac9004c81e",
+      "oldURL": "models/refinement/voya-towers-plan-derived.glb",
+      "newURL": "models/refinement-20261113/voya-cityside-0abaf6709101.glb.gz",
+      "publicRawURL": "models/refinement-20261113/voya-cityside-0abaf6709101.glb"
+    }
+  },
+  "versions": {
+    "models/studies-20261113/26-park-four-side-4d791535afe0.glb": "4d791535afe0744de87dc150e31bd24d86e65be6176be3f79a2aba28bc7fc620",
+    "models/studies-20261113/26-park-four-side-4d791535afe0.glb.gz": "c214c94f4ebc7f6165ceb59efd9e9c05473e9a95a9b70e5ce13f822e6fc80228",
+    "models/refinement-20261113/voya-cityside-0abaf6709101.glb": "0abaf6709101d072caece4e418755c682576b9dd32b49fd0004a32b2673bff79",
+    "models/refinement-20261113/voya-cityside-0abaf6709101.glb.gz": "ef03b46d0496107746c47b181cb860ec605f264d0ec51f618578cb967a04ea80"
+  },
+  "files": {
+    "models/studies-20261113/26-park-four-side-4d791535afe0.glb": {
+      "bytes": 5065652,
+      "sha256": "4d791535afe0744de87dc150e31bd24d86e65be6176be3f79a2aba28bc7fc620"
+    },
+    "models/studies-20261113/26-park-four-side-4d791535afe0.glb.gz": {
+      "bytes": 673678,
+      "sha256": "c214c94f4ebc7f6165ceb59efd9e9c05473e9a95a9b70e5ce13f822e6fc80228"
+    },
+    "models/refinement-20261113/voya-cityside-0abaf6709101.glb": {
+      "bytes": 2288528,
+      "sha256": "0abaf6709101d072caece4e418755c682576b9dd32b49fd0004a32b2673bff79"
+    },
+    "models/refinement-20261113/voya-cityside-0abaf6709101.glb.gz": {
+      "bytes": 313275,
+      "sha256": "ef03b46d0496107746c47b181cb860ec605f264d0ec51f618578cb967a04ea80"
+    },
+    "voya-appearance.js": {
+      "bytes": 16279,
+      "sha256": "7d1315bf81f716f33002a21ad0595a2a284beb414c8db418f1a2a6dbdb97aedc"
+    }
+  },
+  "historicalFiles": {
+    "models/studies-20261101/26-park-south-facade-c9769467d130.glb.gz": {
+      "bytes": 271188,
+      "sha256": "8eb2cd0baf4f4fe0166566ca00f1f20e2d8fdde5e80ebc010cb7062d48c9dccd"
+    },
+    "models/refinement/voya-towers-plan-derived.glb": {
+      "bytes": 1104356,
+      "sha256": "2402b603d47c3ba0770eb55847632a9c1a32c7a0117d914fe810705652e181f6"
+    }
+  },
+  "publicDerivatives": {
+    "wf-26park-current-plan": {
+      "sourceCandidateSHA256": "fa33e66cd53ad58ffd789c1ef554f3df17ad3444d947d4c85e49bf92eba53b73",
+      "sourceCanonicalJSONSHA256": "ac29aed6360eaa5c838d77b1f73b4b11db1d3465a35a211fc42b3eb58a3b9013",
+      "publicSHA256": "4d791535afe0744de87dc150e31bd24d86e65be6176be3f79a2aba28bc7fc620",
+      "binaryChunksSHA256": "2c349abd4ec021fbef95880cda7f83a91a76ecdbb713ddfed9c6ae2570784833",
+      "metadataChanges": [
+        {
+          "path": [
+            "extras",
+            "privateReviewOnly"
+          ],
+          "before": true,
+          "after": false
+        },
+        {
+          "path": [
+            "extras",
+            "title"
+          ],
+          "before": "26 Park four-side source study v1, Nov12 private",
+          "after": "26 Park four-side source study v1, November 2026"
+        },
+        {
+          "path": [
+            "extras",
+            "rights"
+          ],
+          "before": "Private authored study; sourcePDFs/images remainprivate, no implied source redistribution or construction/asbuilt claim.",
+          "after": "Independent authored study; sourcePDFs/images remainprivate, no implied source redistribution or construction/asbuilt claim."
+        },
+        {
+          "path": [
+            "nodes",
+            4,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            5,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            6,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            7,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            8,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            9,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            10,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            11,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            12,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            13,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            14,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            15,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            16,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            17,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            18,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            19,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            20,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            21,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            22,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            23,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            24,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            25,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            26,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            27,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            28,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            29,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            30,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            31,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            32,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            33,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        },
+        {
+          "path": [
+            "nodes",
+            34,
+            "extras",
+            "interpretation"
+          ],
+          "before": "Independent private exterior study; source pixels notembedded",
+          "after": "Independent exterior study; source pixels notembedded"
+        }
+      ],
+      "publicURL": "models/studies-20261113/26-park-four-side-4d791535afe0.glb.gz",
+      "transportSHA256": "c214c94f4ebc7f6165ceb59efd9e9c05473e9a95a9b70e5ce13f822e6fc80228",
+      "transportBytes": 673678
+    },
+    "voya-towers-plan-derived": {
+      "sourceCandidateSHA256": "65d5c5888077f25f889dfc374c6a58062d3f4af2e273578f72442998ff4ac239",
+      "sourceCanonicalJSONSHA256": "4db9afa7094bc1c2530e309e376001c017a7f64bbd21dcb6d0d7db1b0acccf9f",
+      "publicSHA256": "0abaf6709101d072caece4e418755c682576b9dd32b49fd0004a32b2673bff79",
+      "binaryChunksSHA256": "14ea002d0da18bfe786b16d44159074a83a5a092614f0af9685e4bbdcdbbd172",
+      "metadataChanges": [
+        {
+          "path": [
+            "extras",
+            "revision"
+          ],
+          "before": "private cityside expression v1,2026-11-12",
+          "after": "cityside expression v1,2026-11-12"
+        }
+      ],
+      "publicURL": "models/refinement-20261113/voya-cityside-0abaf6709101.glb.gz",
+      "transportSHA256": "ef03b46d0496107746c47b181cb860ec605f264d0ec51f618578cb967a04ea80",
+      "transportBytes": 313275
+    }
+  }
+}

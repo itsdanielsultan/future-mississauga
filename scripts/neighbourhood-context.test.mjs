@@ -304,3 +304,12 @@ test('represented projects stay in ready Citywide while missing models still rou
   context.projectMeshes = () => [{}]; context.window.atlasReady = null; assert.equal(route(project), downtown);
   context.current = downtown; context.window.atlasReady = 'downtown'; assert.equal(route(project), downtown);
 });
+
+test('overlapping crop coverage keeps a named building district consistent with its shared route',()=>{
+ const downtown={id:'downtown',name:'Downtown',bounds:[-100,-100,100,100],radius:100};
+ const cooksville={id:'cooksville',name:'Cooksville',bounds:[-100,-100,100,100],radius:80};
+ const context={current:downtown,window:{atlasReady:'downtown'},districts:[downtown,cooksville],projectMeshes:()=>[{}],inDistrict:()=>true,normalizeSearch:value=>String(value||'').toLowerCase()};
+ const route=runInNewContext('('+routingSource+')',context);
+ assert.equal(route({id:'alba',district:'cooksville',position:[0,0,0]}),cooksville);
+ assert.equal(route({id:'other',position:[0,0,0]}),downtown);
+});

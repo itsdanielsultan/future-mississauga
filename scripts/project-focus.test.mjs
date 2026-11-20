@@ -1,4 +1,5 @@
 import test from 'node:test';
+import {usesCloseProjectView} from '../public/viewer-camera.js';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {gunzipSync} from 'node:zlib';
@@ -13,10 +14,10 @@ const {createCoverageController,groundFootprint,footprintCovered}=await import('
 const read=p=>readFileSync(new URL('../public/'+p,import.meta.url));
 const districts=JSON.parse(read('data/districts.json')),project=JSON.parse(read('data/projects.json')).find(p=>p.id==='harborn-50-60');
 const asset=JSON.parse(read('data/refinement-models.json')).assets.find(a=>a.projectId===project.id),bytes=gunzipSync(read(asset.url));
-assert.equal(createHash('sha256').update(bytes).digest('hex'),'0e5224cfbe2598d3eab0094599e5e225e874e260ff3d8a4cf5a03cf085d30d25');
+assert.equal(createHash('sha256').update(bytes).digest('hex'),'4a0c1d523114d42ad0802e994f81cdf11de16632463f39a87b3f5e947d300e01');
 globalThis.self??=globalThis;globalThis.createImageBitmap??=async()=>({width:16,height:8,close(){}});
 const model=(await new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'')).scene,meshes=[];
-model.traverse(m=>{if(m.isMesh){m.userData.localReview=asset.localReview;meshes.push(m);}});model.updateMatrixWorld(true);
+model.traverse(m=>{if(m.isMesh){m.userData.localReview=asset.localReview;m.userData.assetId=asset.id;meshes.push(m);}});model.updateMatrixWorld(true);
 const sourceAttributes=meshes.map(m=>Object.fromEntries(Object.entries(m.geometry.attributes).map(([k,a])=>[k,Array.from(a.array??a.data.array)])));
 const actual=new THREE.Box3().setFromObject(model),centre=actual.getCenter(new THREE.Vector3()),size=actual.getSize(new THREE.Vector3());
 const app=read('app.js').toString(),source=app.slice(app.indexOf('function frameProject(p,meshes){'),app.indexOf('async function focusProject(p)'));
@@ -25,12 +26,12 @@ function harness(width,height,panelWidth=360){
  camera.position.set(-2210.4702576575787,372.3301178355683,2461.0729134054077);
  const direction=camera.position.clone().sub(controls.target).normalize(),related=districts.filter(d=>['cooksville','erindale','downtown','port-credit','dixie-applewood'].includes(d.id)),coverage=createCoverageController({THREE,camera,controls});
  const ground=Math.min(...related.map(d=>d.geometryBounds[0][1])),ceiling=Math.max(...related.map(d=>d.center[1]));coverage.setCoverage({district:related.find(d=>d.id==='cooksville'),rectangles:related.map(d=>d.bounds),ground,ceiling});
- const state={THREE,model,context:null,meshes,p:{...project,position:[9999,9999,9999]},camera,controls,cameraCoverage:coverage,canvas:{getBoundingClientRect:()=>({width,height})},$:()=>({hidden:false,getBoundingClientRect:()=>({width:panelWidth})}),getComputedStyle:()=>({position:width>700?'absolute':'static'})};
+ const state={THREE,usesCloseProjectView,model,context:null,meshes,p:{...project,position:[9999,9999,9999]},camera,controls,cameraCoverage:coverage,canvas:{getBoundingClientRect:()=>({width,height})},$:()=>({hidden:false,getBoundingClientRect:()=>({width:panelWidth})}),getComputedStyle:()=>({position:width>700?'absolute':'static'})};
  const frame=runInNewContext(source+';frameProject(p,meshes)',state);camera.position.copy(frame.position);controls.target.copy(frame.target);camera.lookAt(controls.target);camera.updateMatrixWorld(true);
  return {camera,controls,coverage,frame,direction,ground,ceiling};
 }
 test('Harborn focus uses the loaded model and stays in its central bounds on desktop and phone',()=>{
- assert.equal(meshes.length,207);assert.equal(asset.localReview,true);
+ assert.equal(meshes.length,207);assert.equal(asset.localReview,false);assert.equal(usesCloseProjectView(project,meshes),true);
  for(const [width,height]of [[1910,838],[390,650]]){
   const {camera,controls,frame,direction}=harness(width,height);
   if(width>700)assert(camera.position.distanceTo(controls.target)<330,'loaded detailed asset must not inherit generic minimum framing distance');
@@ -60,7 +61,7 @@ test('a new constrained low-rise frame preserves its requested elevation rather 
 });
 
 test('focus applies the loaded study asset’s close-zoom policy without changing the project record',()=>{
- const source=app.match(/controls\.minDistance=p\.localReview\|\|meshes\.some\(mesh=>mesh\.userData\.localReview\)\?20:100;/)[0],controls={};
- runInNewContext(source,{p:project,meshes,controls});assert.equal(controls.minDistance,20);assert.equal(project.localReview,undefined);
- runInNewContext(source,{p:{},meshes:[],controls});assert.equal(controls.minDistance,100);
+ const source=app.match(/controls\.minDistance=usesCloseProjectView\(p,meshes\)\?20:100;/)[0],controls={};
+ runInNewContext(source,{p:project,meshes,controls,usesCloseProjectView});assert.equal(controls.minDistance,20);assert.equal(project.localReview,undefined);
+ runInNewContext(source,{p:{},meshes:[],controls,usesCloseProjectView});assert.equal(controls.minDistance,100);
 });

@@ -1,3 +1,5 @@
+import {DOWNTOWN_CURRENT_MANIFEST_SHA256} from '../public/downtown-current-media-policy.js';
+import {MEADOWVALE_MANIFEST_SHA256,MEADOWVALE_IDENTITIES} from '../public/meadowvale-media-policy.js';
 // Media lineage and actual local preview bytes are checked here. The publisher supplies
 // separately fetched public PNG hashes; a local build never invents remote verification.
 import assert from 'node:assert/strict';
@@ -5,6 +7,9 @@ import {readFile} from 'node:fs/promises';
 import {join} from 'node:path';
 import {createHash} from 'node:crypto';
 import {normalizeCleanMedia,imageAttribution,mediaScenarioLabel} from '../public/clean-media.js';
+import {EAST_CREDIT_MANIFEST_SHA256,EAST_CREDIT_IDENTITIES} from '../public/east-credit-media-policy.js';
+import {COVERAGE_MANIFEST_SHA256,COVERAGE_IDENTITIES} from '../public/coverage-media-policy.js';
+import {portraitViewTitle} from '../public/gallery-catalogue.js';
 const load=async(site,name)=>JSON.parse(await readFile(join(site,name),'utf8'));
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const target='f72cbaaa6760b0f2b64de449f189d80bb80731c2';
@@ -77,7 +82,7 @@ function lineage(row,old,e){
  else assert.equal(e.displayMaster.sha256,e.download.sha256);
 }
 const escapeHTML=value=>String(value).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
-export function validateNativeSocialCard(articles,row){
+export function validateNativeSocialCard(articles,row,{headingLevel=2,sourceLink}={}){
  const matching=articles.filter(card=>card.includes('data-display-url="'+escapeHTML(row.displayMaster.url)+'"'));
  assert.equal(matching.length,1,'Exactly one current Social card required: '+assetKey(row));
  const card=matching[0],links=card.match(/<a\b[^>]*>/g)??[];
@@ -90,12 +95,17 @@ export function validateNativeSocialCard(articles,row){
  for(const [name,value] of Object.entries({'data-osm':row.caption.openStreetMap,'data-display-width':row.displayMaster.width,'data-display-height':row.displayMaster.height}))assert(card.includes(name+'="'+value+'"'),assetKey(row)+' '+name);
  const images=card.match(/<img\b[^>]*>/g)??[];assert.equal(images.length,1);
  for(const [name,value] of Object.entries({src:row.preview.url,width:row.preview.width,height:row.preview.height}))assert(images[0].includes(name+'="'+escapeHTML(value)+'"'),assetKey(row)+' image '+name);
- assert(card.includes('<h2>'+escapeHTML(row.title)+'</h2>'));assert(card.includes('>'+escapeHTML(mediaScenarioLabel(row))+'</span>'));
+ const viewTitle=row.coverageAddition?row.caption.subtitle||'Wide aerial':portraitViewTitle(row.file);
+ assert(card.includes('data-area-title="'+escapeHTML(row.title)+'"'),'Exact Social area identity required: '+assetKey(row));
+ assert(card.includes('<span class="media-caption__area">'+escapeHTML(row.coverageAddition?viewTitle:row.title)+'</span>'),'Visible Social area required: '+assetKey(row));
+ assert(card.includes('data-view-title="'+escapeHTML(viewTitle)+'"'),'Exact Social view identity required: '+assetKey(row));
+ assert(card.includes('<h'+headingLevel+'>'+escapeHTML(row.coverageAddition?row.title:viewTitle)+'</h'+headingLevel+'>'),'Distinct Social view heading required: '+assetKey(row));
+ assert(card.includes('>'+escapeHTML(mediaScenarioLabel(row))+'</span>'));
  const credit=imageAttribution(row);assert(card.includes(escapeHTML(credit.cityCredit)));
  assert.equal(card.includes('href="https://www.openstreetmap.org/copyright"'),credit.openStreetMap);
- assert.equal(card.includes('© OpenStreetMap contributors'),credit.openStreetMap);
+ assert.equal(card.includes('© OpenStreetMap'),credit.openStreetMap);
  for(const text of credit.requiredModelCredits)assert(card.includes(escapeHTML(text)),assetKey(row)+' required model credit');
- assert(card.includes('href="'+escapeHTML(credit.sourcesURL)+'"'));
+ assert(card.includes('href="'+escapeHTML(sourceLink || credit.sourcesURL)+'"'));
  return card;
 }
 export async function validateNativeSharePreviews(site,pages,row,{edition='native-20261102'}={}){
@@ -116,8 +126,26 @@ export async function validateNativeSharePreviews(site,pages,row,{edition='nativ
    const tag=page.match(new RegExp('<meta property="og:image:'+key+'" content="([^"]+)"'));
    if(tag)assert.equal(tag[1],String(value),'Share metadata '+key+' must match the actual JPEG');
   }
-  const bytes=await readFile(join(site,local));assert.equal(bytes.length,source.bytes);assert.equal(sha(bytes),source.sha256);assert.deepEqual(jpegSize(bytes),[source.width,source.height]);
  }
+const bytes=await readFile(join(site,local));assert.equal(bytes.length,source.bytes);assert.equal(sha(bytes),source.sha256);assert.deepEqual(jpegSize(bytes),[source.width,source.height]);
+}
+export async function validateEditionShare(site, name, html, record) {
+ assert.equal(record.url, 'gallery/edition-20261120/share/' + name + '.jpg');
+ const absolute = 'https://futuremississauga.com/' + record.url;
+ for (const [attribute, key, value] of [
+  ['property','og:image',absolute], ['name','twitter:image',absolute],
+  ['property','og:image:width',record.width], ['property','og:image:height',record.height],
+  ['property','og:image:type','image/jpeg'],
+ ]) {
+  const tags = [...html.matchAll(new RegExp('<meta '+attribute+'="'+key+'" content="([^"]+)"','g'))];
+  assert.equal(tags.length, 1, name+' share metadata '+key);
+  assert.equal(tags[0][1], String(value), name+' share metadata '+key);
+ }
+ const source = await readFile(join(site,record.source));
+ assert.equal(sha(source), record.sourceSHA256, name+' share artwork changed');
+ const jpeg = await readFile(join(site,record.url));
+ assert.equal(sha(jpeg), record.sha256, name+' share image bytes changed');
+ assert.deepEqual(jpegSize(jpeg), [record.width,record.height]);
 }
 export async function validateRefinedPictureStructure(site){
  const pictures=await load(site,'data/picture-assets.json');
@@ -132,13 +160,41 @@ export async function validateRefinedPictureStructure(site){
  assert.equal(Object.keys(pictures.images).length,33);assert.equal(social.images.length,24);
  assert.deepEqual(Object.keys(pictures.images),Object.keys(before.images));assert.deepEqual(social.images.map(r=>r.file),oldSocial.images.map(r=>r.file));
  assert.equal(pictures.presentationDerivativeCount,33);assert.equal(social.presentationDerivativeCount,24);assert(social.nativePortraitRendering);
- const page=await readFile(join(site,'social.html'),'utf8');const articles=page.match(/<article\b[\s\S]*?<\/article>/g)??[];assert.equal(articles.length,24);
+ const page=await readFile(join(site,'social.html'),'utf8');const articles=page.match(/<article\b[\s\S]*?<\/article>/g)??[];const coverageText=await readFile(join(site,'data/coverage-media-20261113.json'),'utf8');assert.equal(sha(coverageText),COVERAGE_MANIFEST_SHA256,'Coverage catalogue must keep its independent accepted pin');
+ const coverage=JSON.parse(coverageText);assert.deepEqual(coverage.images.map(row=>row.identity).sort(),[...COVERAGE_IDENTITIES].sort());
+ const eastCreditText=await readFile(join(site,'data/east-credit-media-20261113.json'),'utf8');assert.equal(sha(eastCreditText),EAST_CREDIT_MANIFEST_SHA256,'East Credit must keep its separate accepted pin');
+ const eastCredit=JSON.parse(eastCreditText);assert.deepEqual(eastCredit.images.map(row=>row.identity).sort(),[...EAST_CREDIT_IDENTITIES].sort());
+ const meadowvaleText=await readFile(join(site,'data/meadowvale-media-20261113.json'),'utf8');assert.equal(sha(meadowvaleText),MEADOWVALE_MANIFEST_SHA256,'Meadowvale must keep its separate accepted pin');
+ const meadowvale=JSON.parse(meadowvaleText);assert.deepEqual(meadowvale.images.map(row=>row.identity).sort(),[...MEADOWVALE_IDENTITIES].sort());
+ const coveragePortraits=[...coverage.images,...eastCredit.images,...meadowvale.images].map(row=>normalizeCleanMedia(row,'https://futuremississauga.com/',{coverage:true})).filter(row=>row.kind==='portraits');
+ const plateEdition = await load(site,'data/city-plates-20261120.json');
+ const portraits = new Map(plateEdition.plates.filter(p => p.id.startsWith('portraits/')).map(p => [p.id,p]));
+ async function validatePortrait(row) {
+   const id = 'portraits/' + row.file;
+   const plate = portraits.get(id);
+   assert(plate, 'Missing published portrait edition: ' + id);
+   assert(plate.displayMaster?.url && plate.download?.url, 'Incomplete portrait edition: ' + id);
+   for (const item of [plate.displayMaster,plate.download]) {
+     assert(/^gallery\/edition-20261120\/originals\/[\w-]+\.(?:png|webp)$/.test(item.url), id+' local original');
+     const bytes = await readFile(join(site,item.url));
+     assert.equal(bytes.length,item.bytes,id+' byte size');
+     assert.equal(sha(bytes),item.sha256,id+' original bytes');
+   }
+   const card = validateNativeSocialCard(articles, {...row, displayMaster:plate.displayMaster, download:plate.download,
+     preview:{url:plate.thumbnail,width:plate.width,height:plate.height}}, {headingLevel:3,sourceLink:'sources.html'});
+   assert(card.includes(plate.thumbnail+' 512w, '+plate.webImage+' '+plate.width+'w'), id+' responsive preview');
+   assert(card.includes('data-plate="'+id+'"'), id+' current file mapping');
+ }
+ assert.equal(articles.length,24+coveragePortraits.length);
+ for(const row of coveragePortraits) await validatePortrait(row);
  const current=await load(site,'data/native-media-20261102.json');
  assert.equal(current.schema,'future-mississauga-native-media-catalog/v2');
  assert((current.state==='LOCAL_STAGED_ONLY'&&current.publication===false)||(current.state==='READY_FOR_PUBLICATION'&&current.publication===true),'Native catalogue state mismatch');
  assert.deepEqual(current.images.map(row=>row.identity).sort(),manifest.entries.map(assetKey).sort(),'Current native identities must exactly cover the historical 57 logical views');
  const currentRows=current.images.map(row=>normalizeCleanMedia(row,'https://futuremississauga.com/'));
  const currentPortraits=new Map(currentRows.filter(row=>row.kind==='portraits').map(row=>[row.file,row]));
+ const refreshedRaw=await readFile(join(site,'data/downtown-current-media-20261113.json'),'utf8');assert.equal(sha(refreshedRaw),DOWNTOWN_CURRENT_MANIFEST_SHA256);
+ const refreshedPortraits=new Map(JSON.parse(refreshedRaw).images.map(row=>normalizeCleanMedia(row,'https://futuremississauga.com/')).filter(row=>row.kind==='portraits').map(row=>[row.file,row]));
  let totalPreviewBytes=0,newFrames=0;
  for(const e of manifest.entries){
   const row=e.kind==='wide'?pictures.images[e.file]:social.images.find(r=>r.file===e.file);
@@ -153,7 +209,7 @@ export async function validateRefinedPictureStructure(site){
    assert.equal(row.preview,e.preview.url);assert.equal(row.previewSHA256,e.preview.sha256);assert.equal(row.previewBytes,e.preview.bytes);
    assert.equal(row.previewWidth,e.preview.width);assert.equal(row.previewHeight,e.preview.height);
    const latest=currentPortraits.get(e.file);assert(latest,'Current native portrait missing: '+e.file);
-   validateNativeSocialCard(articles,latest);
+   await validatePortrait(refreshedPortraits.get(e.file)||latest);
    for(const p of [latest.preview,latest.responsive]){
     assert(p.url.startsWith('gallery/native-20261102/')&&!p.url.includes('..'));
     const bytes=await readFile(join(site,p.url));assert.equal(bytes.length,p.bytes);assert.equal(sha(bytes),p.sha256);assert.deepEqual(avifSize(bytes),[p.width,p.height]);
@@ -166,16 +222,20 @@ export async function validateRefinedPictureStructure(site){
  for(const r of ix.images){const row=r.kind==='wide'?pictures.images[r.file]:social.images.find(p=>p.file===r.file);assert.equal(r.sha256,row.sha256);assert.deepEqual(r.nativeOriginal,row.nativeOriginal);assert.deepEqual(r.renderInfo,row.renderInfo);}
  for(const r of sources.images){const e=manifest.entries.find(p=>p.kind===r.kind&&p.file===r.file);assert.equal(r.sourceAttribution.openStreetMap,e.sourceAttribution.openStreetMap);assert(r.sourceAttribution.creditLines.length>=3);assert(!r.sourceAttribution.creditLines.join(' ').includes('OpenStreetMap contributors'));}
  const share=manifest.sharePreview,bytes=await readFile(join(site,share.url));assert.equal(share.format,'image/jpeg');assert.equal(bytes.length,share.bytes);assert.equal(sha(bytes),share.sha256);assert.deepEqual(jpegSize(bytes),[1200,750]);
- const home=await readFile(join(site,'index.html'),'utf8');const currentShare=await load(site,'data/share-preview-20261101.json');
+ const currentShare=await load(site,'data/share-preview-20261101.json');
  const oldShare=await readFile(join(site,currentShare.url));assert.equal(oldShare.length,currentShare.bytes);assert.equal(sha(oldShare),currentShare.sha256);assert.deepEqual(jpegSize(oldShare),[currentShare.width,currentShare.height]);
  const revision=await load(site,'data/presentation-media-20261109.json');
  assert.equal(revision.schema,'future-mississauga-native-media-catalog/v2');
  assert.equal(revision.images.length,5);assert.equal(new Set(revision.images.map(row=>row.identity)).size,5);
  const revisionRows=revision.images.map(row=>normalizeCleanMedia(row,'https://futuremississauga.com/'));
  for(const row of revisionRows)assert(currentRows.some(old=>old.identity===row.identity),'Presentation overlay must preserve a registered native identity');
- await validateNativeSharePreviews(site,[home],revisionRows.find(row=>row.identity==='wide/downtown-future.png'),{edition:'revision-20261109'});
- const explore=await readFile(join(site,'explore.html'),'utf8');
- await validateNativeSharePreviews(site,[page,explore],currentRows.find(row=>row.identity==='wide/downtown-future.png'));
+ // The frozen native JPEGs remain independently verified. Public pages share their current section art.
+ await validateNativeSharePreviews(site,[],revisionRows.find(row=>row.identity==='wide/downtown-future.png'),{edition:'revision-20261109'});
+ await validateNativeSharePreviews(site,[],currentRows.find(row=>row.identity==='wide/downtown-future.png'));
+ const editionShares=await load(site,'data/edition-shares.json');
+ for(const [name,record] of Object.entries(editionShares)) {
+  await validateEditionShare(site,name,await readFile(join(site,name+'.html'),'utf8'),record);
+ }
  assert(!/\/Users\/|\/private\/|file:\/\/|\/home\/|\/var\/|\/tmp\//.test(JSON.stringify([manifest,sources,ix])),'Private paths leaked');
  return {publicationEvidence:'NOT_CHECKED_BY_LOCAL_STRUCTURE_PREFLIGHT',entries:Object.entries(pictures.images),originalImageVerification:{nativeMasterURLsPreserved:true,presentationDerivatives:33,separatePublicHashProofRequired:true,remoteBytesFetchedByThisStaticCheck:false},portraitGallery:{nativePortraitRecords:24,presentationDerivatives:24,localAVIFPreviews:24,dimensionsVerified:true,separatePublicHashProofRequired:true},displayPreviewSummary:{totalWide:33,totalPortraits:24,format:'AVIF',bytes:totalPreviewBytes},presentation:{images:57,publicAssets:manifest.assets.length,nativeCameraRefinements:newFrames,originalSourceDatesPreserved:true,nativeMasterURLsPreserved:true}};
 }

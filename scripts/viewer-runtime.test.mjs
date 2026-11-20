@@ -26,3 +26,11 @@ test('static, hidden and lost-context views stop frames and resume with pending 
   scheduler.invalidate();assert.equal(pending.size,0);
   visible=true;animating=false;scheduler.invalidate();frame();assert.equal(draws,3);assert.equal(pending.size,0);
 });
+
+
+test('dragging a Retina map reduces the drawing buffer and resting restores the full frame',()=>{
+  const screen={width:1280,height:720,pixelRatio:2};
+  assert.equal(drawingPolicy({...screen,moving:true}).pixelRatio,1);
+  assert.equal(drawingPolicy(screen).pixelRatio,2);
+  assert.equal(drawingPolicy({...screen,pixelRatio:1,moving:true}).pixelRatio,1);
+});

@@ -1,0 +1,425 @@
+{
+  "schema": "future-mississauga-matched-view-proof/v1",
+  "state": "VERIFIED_MATCHED_FRAMING_EQUAL_NATIVE_DIMENSIONS",
+  "members": [
+    {
+      "identity": "wide/downtown-existing.png",
+      "scenario": "existing",
+      "district": "downtown",
+      "geographicScope": "named_district_scene",
+      "cleanPNG": {
+        "sha256": "0121ce85c04bb2050f67a7387ce11706e6bc5cf19dad7da7ea30733b2a1cbd8a",
+        "bytes": 25580836,
+        "dimensions": [
+          6144,
+          3840
+        ],
+        "mimeType": "image/png",
+        "nativePixelsNoUpscaling": true,
+        "crop": false,
+        "captionBaked": false
+      },
+      "responsiveImages": [
+        {
+          "bytes": 224806,
+          "sha256": "23162d487535818e82c16102f22d34a458084105f98f3924af3357cac5b6b7d7",
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "0121ce85c04bb2050f67a7387ce11706e6bc5cf19dad7da7ea30733b2a1cbd8a",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "bytes": 362266,
+          "sha256": "3b718f90c97a686863a8b7d1a1710138f7d22197ba3cdb538871ff66a5204010",
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "0121ce85c04bb2050f67a7387ce11706e6bc5cf19dad7da7ea30733b2a1cbd8a",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "bytes": 1020907,
+          "sha256": "2c1ee48b4a497c034e84487a6fff70a37213e51cfc0e34b0990b3b4a79c35e2d",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "0121ce85c04bb2050f67a7387ce11706e6bc5cf19dad7da7ea30733b2a1cbd8a",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "bytes": 1845472,
+          "sha256": "07bd84012f58d8473b51a1fea0fb74ac00b31231e6958a0392db908e1e29f2a3",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "0121ce85c04bb2050f67a7387ce11706e6bc5cf19dad7da7ea30733b2a1cbd8a",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        }
+      ],
+      "sourceSceneSHA256": "0fd6691734b1e5e537292f717880f45fb1887ae73be22c125385bffa691f5fa4",
+      "renderStartedUTC": "2026-11-13T06:16:43.022042+00:00",
+      "renderCompletedUTC": "2026-11-13T06:17:53.280863+00:00",
+      "cameraQualifications": [
+        "Presentation-only revision, 9 November 2026. Accepted native geometry and authored facades preserved. Exact same camera and lighting across scenarios."
+      ],
+      "evidenceSHA256": {
+        "sceneProof": "d1655da5e2538919c15b40ae534727e2554107c8afd11ae9b3a2068bc6a8b84e",
+        "creditProof": "2a6c19665b9fe3446b5b8563e3b300329dc90669f3d66c639009d4bbe44b7121",
+        "renderProof": "e7f1baf192f632e6241357bcc65c9d92a4022a1f89285e214796bcbd0dde00f5",
+        "sourceRevision": "d421ae93200787d2c29782fcbf493c58f031633d5968e69d3a77ede43a8744b3",
+        "importProof": "e4a0eb3e3d4ea05fb1b3d204e5f5f5781ccc556ddcef6f83bd8f5e55f8fb90cf",
+        "nativeInventory": "0c90821b24cbe4286be5f4fe883d03271ec9de67249440543650962bd915caf8",
+        "compositionProof": "ea9a0ccc3c053de55ac37c052829a74dad6e94ce1999c4807e80e48881d1396f",
+        "packageScript": "89aa15266caa06b2ee85cac9b44f071bc9a5b7c609681e1c4c2e76ae9f09aa3b",
+        "footerScript": "bcda208cbf7c0002f56eb4cf68b9f3c0b26a0f04ad03422d65a5a8c88ac4c9b6",
+        "packageContract": "8656dc119c0e91505f719b2e2f4b041142b3b7ae378aab0abd52ff5a91c09771",
+        "footerWordingRevision": "e7a31fe3ae865a0904207e449a564d9e66fe23733bb1ce554f2502d83768df1a"
+      },
+      "displayMaterialPolicy": {
+        "kind": "massing-status-preserved-facades",
+        "northDegrees": 66.08264806109014,
+        "legend": [
+          {
+            "label": "Existing",
+            "color": "#b8b9b6"
+          }
+        ],
+        "qualification": "Presentation override only on identified municipal non-existing massing and exact pinned semantic slots. Existing vertex colours, textures and authored facades preserved. Unknown is never labelled approved.",
+        "materialProofSHA256": "f8e916adb2d956b1a8afa098db160cdc72372f909125f18a5716d99e7718d8fd",
+        "geometrySHA256": "d3ab226ecb6d7020208e754da35d8526c9939be498b2badd35bac73f8696db82",
+        "sourceGeometryUnchanged": true,
+        "authoredFacadesPreserved": true
+      }
+    },
+    {
+      "identity": "wide/downtown-future.png",
+      "scenario": "future",
+      "district": "downtown",
+      "geographicScope": "named_district_scene",
+      "cleanPNG": {
+        "sha256": "04f83b2d517813b828dd28d82f62c8b09f1d50ea5dd8b6d291649b263c911dab",
+        "bytes": 26072259,
+        "dimensions": [
+          6144,
+          3840
+        ],
+        "mimeType": "image/png",
+        "nativePixelsNoUpscaling": true,
+        "crop": false,
+        "captionBaked": false
+      },
+      "responsiveImages": [
+        {
+          "bytes": 229564,
+          "sha256": "f5a56254692cd4172e98f9b43530dacc323fc209b44247547403cbf0b2553904",
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "04f83b2d517813b828dd28d82f62c8b09f1d50ea5dd8b6d291649b263c911dab",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "bytes": 370296,
+          "sha256": "be2c5d7bc541ad582b8fc17831679271804144e217709d4b9b240b76723c75c1",
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "04f83b2d517813b828dd28d82f62c8b09f1d50ea5dd8b6d291649b263c911dab",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "bytes": 1041736,
+          "sha256": "e214d63649b3a47dcab189351fb45c735dd4bad7977d4eab636eea36cdbb0f3e",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/avif",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "04f83b2d517813b828dd28d82f62c8b09f1d50ea5dd8b6d291649b263c911dab",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        },
+        {
+          "bytes": 1895140,
+          "sha256": "c5ee1bca3dfd784112846d53689ae97c15f82baa032163214ea188bbdb7f4396",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/jpeg",
+          "role": "responsivePreview",
+          "captionBaked": false,
+          "resized": true,
+          "crop": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "04f83b2d517813b828dd28d82f62c8b09f1d50ea5dd8b6d291649b263c911dab",
+          "resampling": "Lanczos",
+          "aspectQualification": "Native aspect retained to deterministic integer height rounding."
+        }
+      ],
+      "sourceSceneSHA256": "3d544484d736a756c1d98b10d4f4664841f6b3a51db10a7a3d01df57deb6a871",
+      "renderStartedUTC": "2026-11-13T06:22:05.282940+00:00",
+      "renderCompletedUTC": "2026-11-13T07:12:04.913794+00:00",
+      "cameraQualifications": [
+        "Presentation-only revision, 9 November 2026. Accepted native geometry and authored facades preserved. Exact same camera and lighting across scenarios."
+      ],
+      "evidenceSHA256": {
+        "sceneProof": "071ef54e34365032dd628ae8770dc472883099cb69a348cb0ae78795f9280d40",
+        "creditProof": "b48720da7bcad09c59862db5b8a7411576700ec3566ff60963b126ed4dd251d0",
+        "renderProof": "f5e351ec0acec9a02fb1f05ab7f2df8214e77634862d2484e54a70b7c432c2b5",
+        "sourceRevision": "d421ae93200787d2c29782fcbf493c58f031633d5968e69d3a77ede43a8744b3",
+        "importProof": "0bc31e477fa2adf581b8cfa9b62072af9ac95ed7c8f8da581de1088a278d74b7",
+        "nativeInventory": "e9b072bfc2c191b5c8ea198babde6b3b206f0a297012044432ed8c45791f869d",
+        "compositionProof": "c66c59622be46cf589623874967248165386f5f9696dd5e88f6558de88ef1712",
+        "packageScript": "89aa15266caa06b2ee85cac9b44f071bc9a5b7c609681e1c4c2e76ae9f09aa3b",
+        "footerScript": "bcda208cbf7c0002f56eb4cf68b9f3c0b26a0f04ad03422d65a5a8c88ac4c9b6",
+        "packageContract": "8656dc119c0e91505f719b2e2f4b041142b3b7ae378aab0abd52ff5a91c09771",
+        "footerWordingRevision": "e7a31fe3ae865a0904207e449a564d9e66fe23733bb1ce554f2502d83768df1a"
+      },
+      "displayMaterialPolicy": {
+        "kind": "massing-status-preserved-facades",
+        "northDegrees": 66.08264806109014,
+        "legend": [
+          {
+            "label": "Existing",
+            "color": "#b8b9b6"
+          },
+          {
+            "label": "Under construction",
+            "color": "#85b4bf"
+          },
+          {
+            "label": "Proposed",
+            "color": "#d8b7ac"
+          },
+          {
+            "label": "Status unverified",
+            "color": "#b89bc3"
+          }
+        ],
+        "qualification": "Presentation override only on identified municipal non-existing massing and exact pinned semantic slots. Existing vertex colours, textures and authored facades preserved. Unknown is never labelled approved.",
+        "materialProofSHA256": "14670a9daebf98a44d4e4b40952b6ee87c86e0e07304cda31ee5e84d1185b170",
+        "geometrySHA256": "34343fa7923f38de7b8f700bc02d6fae1bcf5fc6f565485188ac49d9f150e8d5",
+        "sourceGeometryUnchanged": true,
+        "authoredFacadesPreserved": true
+      }
+    }
+  ],
+  "shared": {
+    "camera": {
+      "location": [
+        -3900.0,
+        -1400.0,
+        1150.0
+      ],
+      "rotationEuler": [
+        1.1271812915802002,
+        -2.9152687375244568e-08,
+        0.7690063714981079
+      ],
+      "type": "PERSP",
+      "lens": 48,
+      "orthoScale": 6.0,
+      "sensorFit": "VERTICAL",
+      "sensorWidth": 36.0,
+      "sensorHeight": 24.0,
+      "shift": [
+        0.0,
+        0.0
+      ],
+      "clip": [
+        1.0,
+        160000.0
+      ]
+    },
+    "lightingAndColourManagement": {
+      "sunRotationEuler": [
+        0.6108652381980153,
+        -0.3490658503988659,
+        -0.6981317007977318
+      ],
+      "sunEnergy": 1.8,
+      "sunAngle": 0.08,
+      "sunColour": [
+        1,
+        1,
+        1
+      ],
+      "worldColour": [
+        0.8,
+        0.86,
+        1,
+        1
+      ],
+      "worldStrength": 0.55,
+      "viewTransform": "AgX",
+      "look": "AgX - Medium High Contrast",
+      "exposure": -0.3,
+      "gamma": 1
+    },
+    "background": "#e8f2f7",
+    "aspectRatio": {
+      "numerator": 8,
+      "denominator": 5
+    },
+    "pixelAspect": [
+      1,
+      1
+    ],
+    "samples": 96,
+    "blenderVersion": "5.2.2 LTS",
+    "sourceFreeze": {
+      "state": "FINAL_FROZEN",
+      "frozenUTC": "2026-11-13T05:57:49.385857+00:00",
+      "threeRevision": "186",
+      "sourceFilesManifestSHA256": "56c0223bdd9156b785840a817cf5426f51b9afd8542a804d514c5ba2cff85595",
+      "completeRevisionCanonicalJSON_SHA256": "4e80cf723b9060b0bc91f0f8842b43781f1ae989be5581a9067e379218d5667a",
+      "sourceRevisionFileSHA256": "d421ae93200787d2c29782fcbf493c58f031633d5968e69d3a77ede43a8744b3"
+    },
+    "north": {
+      "screenUnitRightDown": [
+        0.9141312168018365,
+        -0.4054184486039009
+      ],
+      "bearingClockwiseFromScreenUpDegrees": 66.08264806109014,
+      "method": "Actual projection of world north at image-centre ray; lens shift, sensor fit, pixel frame accounted for",
+      "worldNorthBlender": [
+        0,
+        1,
+        0
+      ]
+    },
+    "displayMaterialPolicy": "Same lifecycle-driven massing palette; detailed source facades retained. Source scene geometries differ by scenario."
+  },
+  "checks": {
+    "cameraParametersExactlyEqual": true,
+    "lightingParametersExactlyEqual": true,
+    "sourceFreezeExactlyEqual": true,
+    "aspectRatioExactlyEqual": true,
+    "normalizedCameraFramingEqual": true,
+    "nativePixelDimensionsEqual": true,
+    "separateActualNativeScenarioExportsVerified": true,
+    "cleanPNGHashesAndDimensionsVerified": true,
+    "cleanOriginalFrameCompositionRGBVerified": true,
+    "nativeMastersResizedOrCroppedByThisReview": false
+  },
+  "commonResponsiveFormats": [
+    {
+      "dimensions": [
+        1200,
+        750
+      ],
+      "mimeType": "image/avif",
+      "memberSHA256": [
+        "23162d487535818e82c16102f22d34a458084105f98f3924af3357cac5b6b7d7",
+        "f5a56254692cd4172e98f9b43530dacc323fc209b44247547403cbf0b2553904"
+      ],
+      "equalPixelDimensions": true,
+      "identicalImagePixelsClaimed": false
+    },
+    {
+      "dimensions": [
+        1200,
+        750
+      ],
+      "mimeType": "image/jpeg",
+      "memberSHA256": [
+        "3b718f90c97a686863a8b7d1a1710138f7d22197ba3cdb538871ff66a5204010",
+        "be2c5d7bc541ad582b8fc17831679271804144e217709d4b9b240b76723c75c1"
+      ],
+      "equalPixelDimensions": true,
+      "identicalImagePixelsClaimed": false
+    },
+    {
+      "dimensions": [
+        3200,
+        2000
+      ],
+      "mimeType": "image/avif",
+      "memberSHA256": [
+        "2c1ee48b4a497c034e84487a6fff70a37213e51cfc0e34b0990b3b4a79c35e2d",
+        "e214d63649b3a47dcab189351fb45c735dd4bad7977d4eab636eea36cdbb0f3e"
+      ],
+      "equalPixelDimensions": true,
+      "identicalImagePixelsClaimed": false
+    },
+    {
+      "dimensions": [
+        3200,
+        2000
+      ],
+      "mimeType": "image/jpeg",
+      "memberSHA256": [
+        "07bd84012f58d8473b51a1fea0fb74ac00b31231e6958a0392db908e1e29f2a3",
+        "c5ee1bca3dfd784112846d53689ae97c15f82baa032163214ea188bbdb7f4396"
+      ],
+      "equalPixelDimensions": true,
+      "identicalImagePixelsClaimed": false
+    }
+  ],
+  "qualification": [
+    "Exact shared camera, aspect and lighting; different scenario geometry and pixels.",
+    "Native PNGs retain accepted scene bytes. Responsive formats are uniformly resized and lossy, with integer height rounding.",
+    "Source dates and study limits remain distinct from the actual render timestamp.",
+    "Registered native lighting wrapper is represented by reviewed Cycles lighting; this does not claim WebGL pixel equality."
+  ],
+  "generator": {
+    "file": "revise_downtown_footer_v2.py",
+    "sha256": "e7a31fe3ae865a0904207e449a564d9e66fe23733bb1ce554f2502d83768df1a"
+  },
+  "proofID": "fm-matched-view-07193358e4ba605c8aa93a08"
+}

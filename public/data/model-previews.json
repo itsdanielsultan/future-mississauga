@@ -5,19 +5,19 @@
     {
       "id": "mcity-m1",
       "title": "M City M1",
-      "url": "models/studies-20261101/mcity-m1-likeness-v5.glb.gz",
-      "bytes": 3730812,
-      "decodedBytes": 21567616,
-      "sha256": "2395254cbc740cba2bb3bae74bbb00cc4039ea1997414635bb368b93cea92521",
-      "downloadSHA256": "630368744c2ba9f8252004d87bf31d31f66397c3cc037b21db65f43e6da7f9ca",
+      "url": "models/studies-20261112/mcity-m1-pavilion-v6-27dadcecf559.glb.gz",
+      "bytes": 3796003,
+      "decodedBytes": 21971656,
+      "sha256": "27dadcecf5593ccc9b257bc4832acf5eb8562aa9bd92c96b5a19491fd0f012ba",
+      "downloadSHA256": "478be2c24b1b8b8a0cbb649c6c75fa11df7658b29a7a40d186da34aa37773ae9",
       "downloadName": "M_City_M1_Exterior_Study.glb",
       "sourceSHA256": "af8f08bd86bff83adcde4b8f4c4144d999969031e9567128bcd98d927a207dc5",
       "sourceArchiveSHA256": "2215122874e043c6a56e4ddf4fcc9935402ca7d48fdd0262a5949e79dd56dc83",
-      "representation": "Approximate completed exterior with source-traced floor plates and selected podium surface details. Floor phase and dimensions remain qualified.",
+      "representation": "Approximate completed exterior with source-traced floor plates and an added footprint-informed pavilion. Roof height, floor phase and dimensions remain qualified.",
       "cityDataTerms": true,
-      "triangles": 363263,
-      "meshCount": 183,
-      "modelReviewDate": "2026-11-01"
+      "triangles": 367975,
+      "meshCount": 192,
+      "modelReviewDate": "2026-11-12"
     },
     {
       "id": "mcity-m2",
@@ -262,6 +262,64 @@
       "triangles": 89856,
       "meshCount": 56,
       "modelReviewDate": "2026-11-01"
+    },
+    {
+      "id": "mcity-m5-v6",
+      "projectId": "mcity-5",
+      "title": "M City M5",
+      "url": "models/studies-20261112/mcity-m5-podium-v6-ccc3178d661b.glb.gz",
+      "bytes": 453289,
+      "decodedBytes": 1832764,
+      "sha256": "ccc3178d661b6d3a77b14af474b235be0cae37faf31f5d6c0e3e9fc5e1c950b6",
+      "downloadSHA256": "d8847e7267ee38de9138f7aac388fb59865cb3ef139b4c0f66adb66127ab1af5",
+      "downloadName": "M_City_M5_Exterior_Study_Rev06.glb",
+      "representation": "Approximate completed-design study with revised upper park-facing podium groups. Dimensions and placement remain unverified.",
+      "cityDataTerms": false,
+      "triangles": 91644,
+      "meshCount": 56,
+      "modelReviewDate": "2026-11-12"
+    },
+    {
+      "id": "harborn-50-60",
+      "title": "50 and 60 Harborn Road",
+      "url": "models/studies-20261112/harborn-length-v5-4a0c1d523114.glb.gz",
+      "bytes": 551117,
+      "decodedBytes": 1810104,
+      "sha256": "4a0c1d523114d42ad0802e994f81cdf11de16632463f39a87b3f5e947d300e01",
+      "downloadSHA256": "a2bc7660c114e4670e076670507ec173b6b05a49a53ccff8cce53b4407215284",
+      "representation": "Twelve proposed townhomes arranged in two blocks.",
+      "cityDataTerms": true,
+      "triangles": 55521,
+      "modelReviewDate": "2026-11-13",
+      "meshCount": 207
+    },
+    {
+      "id": "port-credit-26-park",
+      "title": "26 Park Street East",
+      "url": "models/studies-20261113/26-park-four-side-4d791535afe0.glb.gz",
+      "bytes": 673678,
+      "decodedBytes": 5065652,
+      "sha256": "4d791535afe0744de87dc150e31bd24d86e65be6176be3f79a2aba28bc7fc620",
+      "downloadSHA256": "c214c94f4ebc7f6165ceb59efd9e9c05473e9a95a9b70e5ce13f822e6fc80228",
+      "representation": "South baseline retained; north, east and west visible facade/podium hierarchy added from distinct July 30, 2026 primary elevations. Mechanical enclosure remains source-supported plain mass.",
+      "cityDataTerms": true,
+      "triangles": 58968,
+      "modelReviewDate": "2026-11-13",
+      "meshCount": 112
+    },
+    {
+      "id": "voya",
+      "title": "Voya",
+      "url": "models/refinement-20261113/voya-cityside-0abaf6709101.glb.gz",
+      "bytes": 313275,
+      "decodedBytes": 2288528,
+      "sha256": "0abaf6709101d072caece4e418755c682576b9dd32b49fd0004a32b2673bff79",
+      "downloadSHA256": "ef03b46d0496107746c47b181cb860ec605f264d0ec51f618578cb967a04ea80",
+      "representation": "Seven labelled plate controls plus retained typical outlines; bounded additive city-facing tower facade. Roof schedule, exact taller/shorter mechanical profiles and other facade schedules remain unresolved.",
+      "cityDataTerms": true,
+      "triangles": 69160,
+      "modelReviewDate": "2026-11-13",
+      "meshCount": 103
     }
   ],
   "views": [
@@ -269,7 +327,7 @@
       "subtitle": "Completed buildings · Approximate exterior",
       "summary": "An approximate exterior study using CORE’s floor-plate diagram and completed-building photographs.",
       "credit": "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
-      "limits": "Floor sequence, heights, crown details and podium dimensions remain approximate. Added glazing and bands cover selected surfaces; they do not reconstruct the full podium. M1’s low faceted pavilion remains coarse or absent.",
+      "limits": "Floor sequence, heights, crown details and podium dimensions remain approximate. The added low pavilion follows a City footprint and photographic references; its roof height is estimated within about 2 m. Existing ground-level podium gaps remain unresolved. This is not a measured as-built model.",
       "rights": "Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
       "cameraDirection": [
         -1,
@@ -310,7 +368,7 @@
       "subtitle": "Completed buildings · Approximate exterior",
       "summary": "An approximate exterior study using CORE’s floor-plate diagram and completed-building photographs.",
       "credit": "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
-      "limits": "Floor sequence, heights, crown details and podium dimensions remain approximate. Added glazing and bands cover selected surfaces; they do not reconstruct the full podium. M1’s low faceted pavilion remains coarse or absent.",
+      "limits": "Floor sequence, heights, crown details and podium dimensions remain approximate. The added low pavilion follows a City footprint and photographic references; its roof height is estimated within about 2 m. Existing ground-level podium gaps remain unresolved. This is not a measured as-built model.",
       "rights": "Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
       "cameraDirection": [
         -1,
@@ -748,7 +806,7 @@
       "subtitle": "Future design · Approximate exterior",
       "summary": "An illustrative view of the overlapping tower volumes, facade frames and masonry podium.",
       "credit": "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design: IBI Group / Arcadis. Design references: M City and Urban Capital.",
-      "limits": "The 117.87 m height and 34 m width are comparison dimensions, not verified measurements. Placement, podium bays, frame depths, glazing and finishes remain approximate. This view does not show current construction.",
+      "limits": "Height, width, placement and podium dimensions remain approximate. The upper park-facing podium uses seven unequal groups interpreted from an undated completed-design rendering. The 40.5 m frontage, 20.48 m podium datum and 1.2 m balcony projection are estimates. This view does not show current construction.",
       "rights": "Independent research visualization; no official endorsement. Source renderings, drawings and private correspondence are not included. Architectural design and source material retain separate rights.",
       "cameraDirection": [
         1,
@@ -757,7 +815,7 @@
       ],
       "cityURL": "explore.html?district=downtown&project=mcity-5",
       "assets": [
-        "mcity-m5-v5"
+        "mcity-m5-v6"
       ],
       "sources": [
         {
@@ -781,6 +839,239 @@
           "note": "Page 20 plan key dated 16 March 2022 informs footprint topology; no source pages are redistributed."
         }
       ]
+    },
+    {
+      "id": "harborn-50-60",
+      "projectId": "harborn-50-60",
+      "title": "50 and 60 Harborn Road",
+      "subtitle": "Proposed townhomes · Approximate exterior",
+      "assets": [
+        "harborn-50-60"
+      ],
+      "offerDownloads": false,
+      "summary": "Twelve proposed townhomes arranged in two blocks.",
+      "credit": "Architecture: DelDom Design & Construction. Proposed grading: SKIRA & Associates Ltd. Study: Daniel Sultan / Future Mississauga.",
+      "limits": "The received design provides block lengths of 40.31 m and 32.33 m. Floor and roof levels follow the drawings; placement, facade details and proposed grading remain illustrative. This standalone view shows the source grading before its city-terrain adjustment.",
+      "rights": "Independent research visualization; no official endorsement. Architectural design and source documents retain separate rights. Source drawings, photographs and private correspondence are not included.",
+      "sources": [
+        {
+          "title": "City application updated September 21, 2026: twelve townhomes for RGA Masonry",
+          "url": "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/50-and-60-harborn-road-oz-opa-26-12-w7-and-21t-m-26-2-w7/"
+        },
+        {
+          "title": "A100 site plan: seven homes in Building A and five in B, June 10 revision published August 2026",
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/26170851/Site-Plan-OZ-OPA-26-12-W7-and-21T-M-26-2-W7-August-2026.pdf"
+        },
+        {
+          "title": "A201: mansard roof, floor and context-grade elevations",
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/26170752/Building-A-B-North-Elevation-OZ-OPA-26-12-W7-and-21T-M-26-2-W7-August-2026.pdf"
+        },
+        {
+          "title": "Wahba survey, October 4, 2023: UTM zone 17 NAD83 reference",
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/26170900/Topographic-Survey-OZ-OPA-26-12-W7-and-21T-M-26-2-W7-August-2026.pdf"
+        },
+        {
+          "title": "City parcels for 50 and 60 Harborn Road, pins 10567800 and 10567700",
+          "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Parcel/FeatureServer/0"
+        },
+        {
+          "title": "City 2024 mapped existing house footprints for future-only replacement",
+          "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Building_Footprints_2024/FeatureServer/0"
+        }
+      ],
+      "cameraDirection": [
+        0.75,
+        0.65,
+        1
+      ],
+      "fitToBounds": true,
+      "cityURL": "explore.html?district=cooksville&project=harborn-50-60"
+    },
+    {
+      "id": "port-credit-26-park",
+      "projectId": "port-credit-26-park",
+      "title": "26 Park Street East",
+      "subtitle": "Proposed design · Approximate exterior",
+      "assets": [
+        "port-credit-26-park"
+      ],
+      "offerDownloads": false,
+      "summary": "The July 2026 proposal, with the tower, podium and four elevations shown together.",
+      "credit": "Design reference: Kohn Partnership Architects / City of Mississauga. Independent authored model: Daniel Sultan / Future Mississauga.",
+      "limits": "Kohn application drawings dated July 30, 2026 inform the four visible elevations. The registered core, floor/roof levels and inherited south geometry remain exact. Bay widths, facade depth, guards, slab thickness, finishes and shallow podium treatment are illustrative; small plan recesses and garage interiors remain simplified. Inherited horizontal fit has a working +/-2 m allowance; architectural ASL minus 70 datum compatibility is not independently certified. Proposed application-stage design, not as-built.",
+      "rights": "Independent research visualization; no official endorsement. Architectural design and source documents retain separate rights. Source drawings, photographs and private correspondence are not included.",
+      "sources": [
+        {
+          "title": "Site Plan and Site Statistics — OZ/OPA 26-13 W1",
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152435/Site-Plan-and-Site-Statistics-OZ-OPA-26-13-W1-August-2026.pdf",
+          "note": "Horizontal envelopes, written dimensions and existing-building references"
+        },
+        {
+          "title": "South Elevation — OZ/OPA 26-13 W1",
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152356/Elevations-OZ-OPA-26-13-W1-August-2026.pdf",
+          "note": "Absolute floor and roof elevations"
+        },
+        {
+          "title": "City 3D source tile 92",
+          "url": "https://data.mississauga.ca/pages/mississauga-3d",
+          "note": "Existing components 92-828 and 92-3995 for coordinate registration"
+        },
+        {
+          "title": "A4.01 North elevation",
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152354/Elevations-2-OZ-OPA-26-13-W1-August-2026.pdf",
+          "note": "Visible elevation/plan hierarchy; not a construction or as-built record"
+        },
+        {
+          "title": "A4.02 East and west elevations",
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152355/Elevations-3-OZ-OPA-26-13-W1-August-2026.pdf",
+          "note": "Visible elevation/plan hierarchy; not a construction or as-built record"
+        },
+        {
+          "title": "A2.06 Mechanical penthouse and roof plan",
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152410/Level-MPH-Roof-Floor-Plan-OZ-OPA-26-13-W1-August-2026.pdf",
+          "note": "Visible elevation/plan hierarchy; not a construction or as-built record"
+        },
+        {
+          "title": "A2.05 Levels 7 and 8-26 plans",
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152409/Level-7-Level-8-to-26-Floor-Plan-OZ-OPA-26-13-W1-August-2026.pdf",
+          "note": "Visible elevation/plan hierarchy; not a construction or as-built record"
+        },
+        {
+          "title": "Application axonometric views",
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152345/AXO-Views-OZ-OPA-26-13-W1-August-2026.pdf",
+          "note": "Visible elevation/plan hierarchy; not a construction or as-built record"
+        }
+      ],
+      "cameraDirection": [
+        1,
+        0.5,
+        1
+      ],
+      "fitToBounds": true,
+      "cityURL": "explore.html?district=port-credit&project=port-credit-26-park"
+    },
+    {
+      "id": "voya",
+      "projectId": "voya",
+      "title": "Voya",
+      "subtitle": "Approximate completed exterior",
+      "assets": [
+        "voya"
+      ],
+      "offerDownloads": false,
+      "summary": "The paired towers and connected podium, including the park-facing balconies and city-facing facade.",
+      "credit": "Design reference: Amacon / Parkside Village. Independent authored model: Daniel Sultan / Future Mississauga. Inherited registration sources include City of Mississauga and OpenStreetMap contributors.",
+      "limits": "Existing source-plan shapes and registered tower datums are retained. City-facing piers, spandrels and glazing divisions interpret the official artist concept and August 2025 construction photos; their spacing and relief are approximate. No final roof or equipment geometry is asserted. The shorter height remains inferred with +/-6 m allowance; existing horizontal allowances are retained. This is an illustrative source-based model, not an as-built survey.",
+      "rights": "Independent research visualization; no official endorsement. Architectural design and source documents retain separate rights. Source drawings, photographs and private correspondence are not included.",
+      "sources": [
+        {
+          "title": "Amacon / Parkside Village, public developer presentation via VIP Condos Toronto",
+          "url": "https://drive.google.com/file/d/115Ov9j6l_W9jU44khuYdgLmyBYevCrkq/view",
+          "note": "Page 7 typical curved floorplate with suite areas; page 3 community map establishes Voya parcel and adjacent Avia. Original 42/36 counts superseded by 2024 variance."
+        },
+        {
+          "title": "Amacon / Parkside Village, public typical floor plans",
+          "url": "https://drive.google.com/file/d/1gp8KweoV7p11d59d8FJswPzO-7LBousF/view",
+          "note": "Detailed suite plans cross-check curved balcony expression and approximate advertised room dimensions."
+        },
+        {
+          "title": "City of Mississauga",
+          "url": "https://www.mississauga.ca/apps/#/property-preview/compliance-report-coa-text/66203/329571",
+          "note": "June 27, 2024 decision A258/24 approves 44/38 storeys and 10-storey podium."
+        },
+        {
+          "title": "City of Mississauga",
+          "url": "https://os-prod-api.mississauga.ca/api/v1/plan-build/compliance/report/coa-prop?coaId=66203&realPropId=329571",
+          "note": "Public response preserves the signed decision and exact addresses 4116 / 4128 Parkside Village Drive."
+        },
+        {
+          "title": "UrbanToronto",
+          "url": "https://urbantoronto.ca/forum/threads/toronto-voya-142-25m-44s-amacon-turner-fleischer.32225/page-10",
+          "note": "Engineering-drawing observer reports 142.25 m taller maximum and upper floors at 10 feet; August 9 discussion of July 26 photo confirms both structures topped, with roof finishing incomplete. Shorter maximum is not directly stated."
+        },
+        {
+          "title": "Tim MacDonald via UrbanToronto",
+          "url": "https://urbantoronto.ca/forum/attachments/1785965443342-jpeg.755864/",
+          "note": "July 26, 2026 photograph verifies paired curved towers, relative heights, podium relationship and incomplete taller roof finish."
+        },
+        {
+          "title": "OpenStreetMap contributors",
+          "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-79.654,43.585,-79.645,43.59",
+          "note": "Avia footprint 1376190041 provides four ground controls; new apartment footprint 1502720098 provides taller-tower positional check, identified by parcel and adjoining development context. No height tags."
+        },
+        {
+          "title": "OpenStreetMap contributors",
+          "url": "https://api.openstreetmap.org/api/0.6/changeset/181696491",
+          "note": "Footprint added April 23, 2026 using Esri World Imagery. Imagery date not specified."
+        },
+        {
+          "title": "Amacon / Parkside Village",
+          "url": "https://www.lifeatparkside.com/voya",
+          "note": "Official park-side curved terrace expression, city-side rectilinear facade, connected base and ground/fifth-floor amenities."
+        },
+        {
+          "title": "Amacon / Parkside Village",
+          "url": "https://www.lifeatparkside.com/_files/ugd/fc95b3_94cf7a7c8b4940f795c0925758a098f2.pdf",
+          "note": "Official brochure: exterior perspectives, top-down terrace view, first/fifth-floor amenity plans. Artist concepts, not as-built survey."
+        },
+        {
+          "title": "Amacon / Parkside Village via public broker document link",
+          "url": "https://drive.google.com/file/d/1pfkjmAscByYQIsNJNI0pTIQH45OyE-x5/view",
+          "note": "Voya 1 podium suite plans and level-specific key plans; geometry traced from pages 1,2,18,80,81. Approximate marketing dimensions, 2021 issue."
+        },
+        {
+          "title": "Amacon plans, public Cityview Realty compilation",
+          "url": "https://drive.google.com/file/d/1JCBCyTtws8cyU2IbI28OzBQWHhz7h8dJ/view",
+          "note": "Voya 2 floorplan booklet February 23, 2022, developer sheets dated February 17/22; keyplans pages 17,20,21,23,46 support the second half of connected podium."
+        },
+        {
+          "title": "City of Mississauga",
+          "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Parcel/FeatureServer/0",
+          "note": "Current parcel CITY_PIN 32957100, 8525.91 square metres; georeferenced outer limit for footprint reconstruction."
+        },
+        {
+          "title": "Tim MacDonald via UrbanToronto",
+          "url": "https://urbantoronto.ca/forum/attachments/1785965443342-jpeg.755864/",
+          "note": "July 26, 2026 aerial construction photograph independently verifies continuous sculpted podium, roof gardens and curved slabs. Used as visual reference only."
+        },
+        {
+          "title": "Amacon",
+          "url": "https://www.lifeatparkside.com/voya",
+          "note": "Voya directly backs the park; free-flowing park-facing balconies contrast with a rectilinear city-facing facade."
+        },
+        {
+          "title": "Amacon",
+          "url": "https://www.lifeatparkside.com/post/introducing-voya-at-parkside-village",
+          "note": "June 2021 introduction specifically names adjacent Zonta Meadows and contrasting curved park/linear city facades."
+        },
+        {
+          "title": "Amacon via public developer-plan mirror",
+          "url": "https://drive.google.com/file/d/1gp8KweoV7p11d59d8FJswPzO-7LBousF/view",
+          "note": "Voya 1 typical suite plans explicitly distinguish balcony outlines on levels 12,13,14. Recovered suite-area drawings, not survey/BIM."
+        },
+        {
+          "title": "Amacon plans via Cityview public mirror",
+          "url": "https://drive.google.com/file/d/1JCBCyTtws8cyU2IbI28OzBQWHhz7h8dJ/view",
+          "note": "February 2022 Voya 2 suite plans distinguish the second tower outline and several transition-level balcony outlines."
+        },
+        {
+          "title": "Tim MacDonald via UrbanToronto",
+          "url": "https://urbantoronto.ca/forum/attachments/1785965443342-jpeg.755864/",
+          "note": "July 26, 2026 aerial reference confirms connected sculpted base and park-side curved balcony expression; no image texture is included."
+        },
+        {
+          "title": "Amacon / Parkside Village",
+          "url": "https://www.lifeatparkside.com/post/voya-takes-shape-as-construction-reaches-new-heights",
+          "note": "Official construction photos explicitly captured August 2025, published November 1, 2025. City-facing vertical frames and window/spandrel expression only; not current as-built or finished roof evidence."
+        }
+      ],
+      "cameraDirection": [
+        1,
+        0.5,
+        1
+      ],
+      "fitToBounds": true,
+      "cityURL": "explore.html?district=downtown&project=voya"
     }
   ]
 }

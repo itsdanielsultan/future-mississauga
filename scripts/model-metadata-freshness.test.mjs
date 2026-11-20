@@ -20,13 +20,13 @@ function returningBrowser(current,stale){
 }
 
 test('a direct M5 study visit bypasses an older cached catalogue without a prior map visit',async()=>{
- const stale=structuredClone(catalogue);stale.views=stale.views.filter(v=>v.id!=='mcity-m5');stale.assets=stale.assets.filter(a=>a.id!=='mcity-m5-v5');
+ const stale=structuredClone(catalogue);stale.views=stale.views.filter(v=>v.id!=='mcity-m5');stale.assets=stale.assets.filter(a=>!['mcity-m5-v5','mcity-m5-v6'].includes(a.id));
  const browser=returningBrowser(catalogue,stale);
  const result=await runInNewContext('(async()=>{'+entry+';return {view,manifest};})()',{
   fetch:browser.fetch,document:{getElementById(){throw new Error('No UI access before metadata is loaded');}},location:{search:'?model=mcity-m5'},URLSearchParams,selectPreview
  });
  assert.equal(result.view.id,'mcity-m5');
- assert.equal(result.manifest.assets.find(a=>a.id==='mcity-m5-v5').sha256,'af9d51546ca35a1fbc850b2afc3cbf1565010ee7c196f03df7e8cf6679ff829a');
+ assert.equal(result.manifest.assets.find(a=>a.id==='mcity-m5-v6').sha256,'ccc3178d661b6d3a77b14af474b235be0cae37faf31f5d6c0e3e9fc5e1c950b6');
  assert.equal(browser.requests.length,1);assert.equal(browser.requests[0].options.cache,'no-store');
  assert.match(browser.requests[0].url,/model-previews\.json\?v=20261102-coherent1$/);
 });
@@ -35,7 +35,7 @@ test('a cached earlier revision list cannot hide the accepted M5 revision',async
  const stale=structuredClone(revisions);stale.revisions=stale.revisions.filter(r=>r.projectId!=='mcity-5');
  const browser=returningBrowser(revisions,stale);
  const current=await loadModelRevisions(browser.fetch);
- assert.equal(modelRevisionForProject(current,catalogue,'mcity-5','mcity-m5').updatedOn,'2026-11-01');
+ assert.equal(modelRevisionForProject(current,catalogue,'mcity-5','mcity-m5').updatedOn,'2026-11-12');
  assert.equal(browser.requests[0].options.cache,'no-store');
  assert.match(browser.requests[0].url,/model-revisions\.json\?v=20261102-coherent1$/);
  assert(browser.requests[0].options.signal instanceof AbortSignal);

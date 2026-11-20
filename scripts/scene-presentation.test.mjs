@@ -64,8 +64,8 @@ test('Save Image copies the rendered scene once and draws its presentation below
   const ctx = {fillRect(){}, drawImage(...args){copied.push(args);events.push('copy');}, fillText(){}};
   const output = {getContext(){return ctx;},toBlob(callback,type){assert.equal(type,'image/png');callback(new Blob(['test']));}};
   const document = {fonts:{load:async()=>{}},createTextNode:text=>text,createElement:tag=>tag==='canvas'?output:{click(){events.push('download');}}};
-  const run = {Blob,document,canvas,exporting:false,contextLost:false,current:{id:'downtown',name:'Downtown'},window:{atlasReady:'downtown'},selectedStudyProjectId:null,compare:false,mode:'future',appearance:{mode:'natural'},displayedSources:{designCredits:[]},THREE,camera:{},controls:{target:{}},STATUS_CLASSIFICATION_EDITION:'test',exportImageURL:null,
-    $:selector=>selector==='#exportBtn'?button:status,clearExportImage(){},render(){events.push('render');},
+  const run = {Blob,document,canvas,exporting:false,contextLost:false,current:{id:'downtown',name:'Downtown'},window:{atlasReady:'downtown'},selectedStudyProjectId:null,compare:false,mode:'future',appearance:{mode:'natural'},framedProject:null,renderer:{},displayedSources:{designCredits:[]},THREE,camera:{},controls:{target:{}},STATUS_CLASSIFICATION_EDITION:'test',exportImageURL:null,
+    $:selector=>selector==='#exportBtn'?button:status,captureViewerImage({render}){render();return {canvas,reduced:false};},clearExportImage(){},render(){events.push('render');},
     currentStatusLegend:()=>[],presentationLayout:()=>({height:104,scale:1}),exportCreditLines:()=>[],projectNorth:()=>null,
     drawPresentationFooter(context,options){assert.equal(context,ctx);assert.equal(options.top,canvas.height);events.push('footer');},
     withPNGMetadata:async blob=>blob,URL:{createObjectURL:()=> 'blob:test'}};

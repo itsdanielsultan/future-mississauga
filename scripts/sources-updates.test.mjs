@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import {createHash} from 'node:crypto';
+import {gunzipSync} from 'node:zlib';
 import {revealUpdateHash} from '../public/updates.js';
 
 const publicRoot = new URL('../public/', import.meta.url);
@@ -13,9 +14,9 @@ const updates = read('updates.html');
 test('Sources removes the false tab strip while preserving real download and source destinations', () => {
   assert.doesNotMatch(sources, /sources-jumps|sources\.js/);
   assert.equal(fs.existsSync(new URL('sources.js', publicRoot)), false);
-  const catalogue = JSON.parse(read('data/document-previews-20261109.json'));
+  const catalogue = JSON.parse(read('data/document-previews-20261120.json'));
   const currentAtlas = catalogue.documents.at(-1);
-  assert.equal(currentAtlas.pages, 35);
+  assert.equal(currentAtlas.pages, 63);
   const currentPDF = fs.readFileSync(new URL(currentAtlas.url, publicRoot));
   assert.equal(createHash('sha256').update(currentPDF).digest('hex'), currentAtlas.sourceSHA256);
   assert(catalogue.documents.some(doc => doc.url === 'downloads/Future-Mississauga-Atlas-20261101-3ec6b565b82d.pdf'));
@@ -32,12 +33,99 @@ test('Sources removes the false tab strip while preserving real download and sou
     'https://www.ontario.ca/page/open-government-licence-ontario',
     'https://www.openstreetmap.org/copyright', 'https://opendatacommons.org/licenses/odbl/1-0/'
   ]) assert(sources.includes('href="'+href+'"'), href);
-  const atlas = [...sources.matchAll(/<a\b[^>]+href="downloads\/Future-Mississauga-Atlas[^>]+>/g)].map(m=>m[0]);
+  const atlas = [...sources.matchAll(/<a\b[^>]+href="downloads\/edition-20261120\/Mississauga-Atlas\.pdf[^>]*>/g)].map(m=>m[0]);
   assert(atlas.some(tag=>/data-document-preview/.test(tag) && !/\sdownload(?:\s|>)/.test(tag)));
   assert(atlas.some(tag=>/data-download/.test(tag) && /\sdownload(?:\s|>)/.test(tag)));
   assert.match(sources, /Contains information licensed under the Open Government Licence – Ontario\./);
   assert.match(sources, /© OpenStreetMap · ODbL 1\.0/);
   assert.match(sources, /Credits do not grant permission to reuse the original work/);
+});
+
+test('current source cards preview and download the matching city editions', () => {
+  const current = JSON.parse(read('data/city-plates-20261120.json')).plates;
+  const historical = JSON.parse(read('data/native-media-20261102.json')).images;
+  for (const [id, identity] of [['citywide-image', 'wide/citywide-future.png'],
+                                ['portrait-images', 'portraits/port-credit-portrait-future.png']]) {
+    const card = sources.split('id="' + id + '"')[1].split('</article>')[0];
+    const plate = current.find(item => item.id === identity);
+    const old = historical.find(item => item.identity === identity);
+    assert(card.includes('data-edition-plate="' + identity + '"'));
+    assert(card.includes('src="' + plate.thumbnail + '"') && card.includes(plate.webImage + ' ' + plate.width + 'w'));
+    assert(card.includes('href="' + plate.displayMaster.url + '"') && card.includes('aria-haspopup="dialog"'));
+    assert(card.includes('data-preview-download="' + plate.download.url + '"'));
+    assert(card.includes('href="' + plate.download.url + '" download data-download'));
+    assert(!card.includes(old.displayMaster.url) && !card.includes(old.download.url));
+    for (const asset of [plate.displayMaster, plate.download]) {
+      const contents = fs.readFileSync(new URL(asset.url, publicRoot));
+      assert.equal(contents.length, asset.bytes);
+      assert.equal(createHash('sha256').update(contents).digest('hex'), asset.sha256);
+    }
+    for (const credit of plate.attribution.requiredModelCredits) assert(card.includes(credit));
+  }
+  const downtown = sources.split('id="downtown-print"')[1].split('</p>')[0];
+  assert(downtown.includes('20 November 2026'));
+  for (const url of ['gallery/edition-20261120/originals/home-downtown-future-print.png',
+                     'downloads/edition-20261120/Downtown-future-print.pdf']) {
+    assert(downtown.includes('href="' + url + '" download data-download'));
+    assert(fs.existsSync(new URL(url, publicRoot)));
+  }
+});
+
+test('all active building booklets have matching downloads, page previews, searchable text and credits', () => {
+  const catalogue = JSON.parse(read('data/document-previews-20261120.json'));
+  const texts = JSON.parse(gunzipSync(Buffer.from(read('document-page-text-20261120.txt'), 'base64')));
+  const downloads = read('downloads.html');
+  const booklets = catalogue.documents.filter(doc => doc.url.startsWith('downloads/edition-20261120/') && doc.url.endsWith('-review.pdf'));
+  assert.equal(booklets.length, 11);
+  for (const book of booklets) {
+    const pdf = fs.readFileSync(new URL(book.url, publicRoot));
+    assert.equal(createHash('sha256').update(pdf).digest('hex'), book.sourceSHA256, book.title);
+    assert.equal(book.pages, 4);
+    assert(downloads.includes(`href="${book.url}" data-document-preview`));
+    assert(downloads.includes(`href="${book.url}" download data-download`));
+    const text = texts[catalogue.documents.indexOf(book)];
+    assert.equal(text.length, book.pages);
+    for (let index = 0; index < book.pages; index++) {
+      const image = `${book.base}${book.prefix}${String(index + 1).padStart(2, '0')}.avif`;
+      assert(fs.statSync(new URL(image, publicRoot)).size > 0, image);
+      assert(text[index].includes(book.title), book.title);
+    }
+    assert.match(text[3], /References and credits/);
+    assert.match(text[3], /View in Google Maps/);
+  }
+});
+
+test('the Sources atlas cover opens the same current document as its separate download', () => {
+  const document = JSON.parse(read('data/document-previews-20261120.json')).documents.at(-1);
+  const card = sources.match(/<article\b[^>]*id="picture-atlas"[\s\S]*?<\/article>/)?.[0];
+  assert(card, 'the atlas is a visual resource');
+  const preview = card.match(/<a\b[^>]*data-document-preview[^>]*>[\s\S]*?<\/a>/)?.[0];
+  assert(preview?.includes('href="' + document.url + '"'));
+  assert(!/\sdownload(?:\s|>)/.test(preview), 'activating the cover previews the document');
+  const cover = document.base + document.prefix + '01.avif';
+  assert(preview.includes('src="' + cover + '"'));
+  assert(fs.existsSync(new URL(cover, publicRoot)));
+  assert(card.includes('href="' + document.url + '" download data-download'));
+});
+
+test('the November 9 update keeps its own dated skyline and atlas as the current release changes', () => {
+  const row = JSON.parse(read('data/presentation-media-20261109.json')).images.find(row => row.identity === 'wide/downtown-skyline-future.png');
+  const story = updates.match(/<article\b[^>]*id="november-9-downtown"[\s\S]*?<\/article>/)?.[0];
+  assert(story?.includes('href="' + row.displayMaster.url + '"'));
+  assert(story.includes('data-preview-download="' + row.download.url + '"'));
+  assert(!/<a[^>]*\sdownload(?:\s|>)/.test(story), 'ordinary image activation remains a preview');
+  for (const image of row.responsivePreviews.filter(image => image.mimeType === 'image/avif')) {
+    assert(story.includes(image.url + ' ' + image.dimensions[0] + 'w'));
+    assert.equal(createHash('sha256').update(fs.readFileSync(new URL(image.url, publicRoot))).digest('hex'), image.sha256);
+  }
+  const atlas = JSON.parse(read('data/document-previews-20261109.json')).documents.at(-1);
+  assert(story.includes('href="' + atlas.url + '" data-document-preview'));
+  assert(story.includes('datetime="2026-11-09"'));
+  assert(updates.includes('Preview the 1 November atlas'));
+  assert.doesNotMatch(updates, /appeal periods remain open through October 28/i);
+  assert.match(updates, /The official-plan amendment took effect on 29 October 2026/);
+  assert.match(updates, /10 November register lists the zoning amendment as in force/);
+  assert.match(updates, /Construction permission and timing remain unverified/);
 });
 
 test('Updates binds its accepted native image and historical images to dates, credits, and shared previews', () => {
@@ -92,7 +180,7 @@ test('Updates binds its accepted native image and historical images to dates, cr
 });
 
 test('October archive keeps existing deep links and dated records accessible', () => {
-  assert.match(updates, /<details class="update-archive" id="october-2026"><summary>October 2026 archive<\/summary>/);
+  assert.match(updates, /<section class="update-archive" id="october-2026"[^>]*><h2 id="october-title">October 2026 archive<\/h2>/);
   for (const id of ['october-28-citywide','october-23-clearer-views','october-23-east-credit','october-22-meadowvale-village','october-22-exchange-base','october-22-source-repair','october-21-viewer','local-accuracy-review']) assert(updates.includes('id="'+id+'"'), id);
   assert.match(updates, /src="updates\.js\?v=20261102-coherent1"/);
   const ids = [...updates.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);

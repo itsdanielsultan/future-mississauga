@@ -1,3 +1,7 @@
+import * as treeRuntime from './tree-runtime-fixture.mjs';
+import {restoreRegistryReconciliationData} from './registry-reconciliation-scope.mjs';
+import {applyHarbornTreeContacts} from '../public/harborn-tree-contacts.js';
+import {restoreMcityV6Projects,restoreMcityV6Catalogue,restoreMcityV6Revisions} from './mcity-v6-scope.mjs';
 import {restorePreOHNVersions} from './offshore-context-scope.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -6,6 +10,7 @@ import {register} from 'node:module';
 import vm from 'node:vm';
 import {createHash} from 'node:crypto';
 import {HARBORN_SCOPE,restoreHarbornRefinements,restoreHarbornVersions,harbornFingerprint} from './harborn-v4-scope.mjs';
+import {restoreNamedProjectJSON,beforeNamedProjectReview,restoreNamedProjectCollection} from './named-project-review-scope.mjs';
 import {applyModelVisibility} from '../public/model-visibility.js';
 import {createModelAppearance} from '../public/model-appearance.js';
 import {refinementInDistrict} from '../public/refinement-loading.js';
@@ -17,7 +22,7 @@ const {GLTFLoader}=await import('../public/vendor/addons/loaders/GLTFLoader.js')
 const {MeshoptDecoder}=await import('../public/vendor/meshopt_decoder.mjs');
 const {splitSourceOverlaps}=await import('../public/source-layer-cut.js');
 const read=p=>readFileSync(new URL('../public/'+p,import.meta.url));
-const contract=JSON.parse(read('data/harborn-terrain-v4.json'));
+const contract=JSON.parse(read('data/harborn-terrain-v5-20261112.json'));
 const fetcher=async url=>new Response(read(url));
 // Node lacks a bitmap decoder. The geometry test preserves all exact GLB bytes
 // and parses materials, while image decoding itself is covered by browser QA.
@@ -55,14 +60,14 @@ test('effective clipping masks exclude hidden ground from the height sampler',()
 });
 test('accepted Harborn metadata is a single exact exception and leaves planning/source facts and every other model unchanged',()=>{
  const data=JSON.parse(read('data/refinement-models.json')),versions=JSON.parse(read('data/model-asset-versions.json'));assert.equal(harbornFingerprint(restoreHarbornRefinements(structuredClone(data))),HARBORN_SCOPE.priorRefinementsFingerprint);assert.equal(harbornFingerprint(restoreHarbornVersions(restorePreOHNVersions(versions))),HARBORN_SCOPE.priorVersionsFingerprint);
- for(const[f,hash]of Object.entries(HARBORN_SCOPE.facts))assert.equal(createHash('sha256').update(read('data/'+f)).digest('hex'),hash,f);const a=data.assets.find(a=>a.id===contract.assetId);assert.deepEqual(a.modes,['future']);assert.equal(a.status,'Proposed');assert.deepEqual(a.replacementFootprintsXZ,HARBORN_SCOPE.oldValues.replacementFootprintsXZ??a.replacementFootprintsXZ);assert.deepEqual(a.viewerDistricts,['citywide','cooksville']);assert(a.preserveMaterials&&a.preserveSourceNormals);assert.equal(contract.privateReviewOnly,false);assert.equal(contract.maxEdgeDistanceM,.35);
+ for(const[f,hash]of Object.entries(HARBORN_SCOPE.facts)){const bytes=read('data/'+f),restore={'projects.json':rows=>restoreNamedProjectCollection('projects',restoreMcityV6Projects(rows)),'model-previews.json':restoreMcityV6Catalogue,'model-revisions.json':restoreMcityV6Revisions}[f];if(restore){const prior=beforeNamedProjectReview('public/data/'+f);assert.equal(createHash('sha256').update(prior).digest('hex'),hash,f+' protected baseline');assert.deepEqual(restore(JSON.parse(bytes)),JSON.parse(prior),f);}else assert.equal(createHash('sha256').update(restoreRegistryReconciliationData(f,bytes)).digest('hex'),hash,f);}const a=data.assets.find(a=>a.id===contract.assetId);assert.deepEqual(a.modes,['future']);assert.equal(a.status,'Proposed');assert.deepEqual(a.replacementFootprintsXZ,HARBORN_SCOPE.oldValues.replacementFootprintsXZ??a.replacementFootprintsXZ);assert.deepEqual(a.viewerDistricts,['citywide','cooksville']);assert(a.preserveMaterials&&a.preserveSourceNormals);assert.equal(contract.privateReviewOnly,false);assert.equal(contract.maxEdgeDistanceM,.35);
  assert.equal(createHash('sha256').update(read(HARBORN_SCOPE.oldValues.url)).digest('hex'),HARBORN_SCOPE.oldValues.sha256);
 });
 test('actual direct city adapter applies and restores the terrain without visiting a study',async()=>{
  const district='cooksville',context=new THREE.Group(),seen=new Set();for(const binding of contract.ground.filter(b=>b.district===district)){if(seen.has(binding.url))continue;seen.add(binding.url);context.add((await load(binding.url,binding)).scene);}const rawModel=read('models/cooksville.glb'),model=(await new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).parseAsync(rawModel.buffer.slice(rawModel.byteOffset,rawModel.byteOffset+rawModel.byteLength),'')).scene;
  const data=JSON.parse(read('data/refinement-models.json')),asset=data.assets.find(a=>a.id===contract.assetId),projects=JSON.parse(read('data/projects.json')),appearance=createModelAppearance(THREE),app=read('app.js').toString();
- const state={THREE,district:JSON.parse(read('data/districts.json')).find(d=>d.id===district),id:district,nextModel:model,nextContext:context,terrainSpec:{contract,weights:read(contract.weights.url)},nextTerrainController:null,prepareHarbornTerrain,refinementData:{assets:[asset]},refinementInDistrict,overrides:JSON.parse(read('data/overrides.json')),projectById:new Map(projects.map(p=>[p.id,p])),groupById:new Map(),groupByMesh:new Map(),appearance,resolveModelLifecycle,displayStatusForLifecycle,inactiveLifecycle,token:1,loadToken:1,window:{},splitSourceOverlaps,loadAsset:url=>load(url,contract.candidate),model,modelMeshes:[],draftToggle:{checked:false},selectedStudyProjectId:null,treeMeshes:[],markers:[],detailMeshes:[],transitGroup:{},markerGroup:{},syncStatusLegend(){},applyModelVisibility,$:id=>({checked:id==='#unknownStatusToggle'})};
- vm.runInNewContext(app.split('\n').filter(s=>s.startsWith('function classify(')||s.startsWith('function lifecycleFor(')).join('\n'),state);const start=app.indexOf('const additionAssets='),end=app.indexOf(' const detail=await loadAsset',start);await vm.runInNewContext('(async()=>{'+app.slice(start,end)+'})()',state);assert(state.nextTerrainController);state.window.atlasHarbornTerrain=state.nextTerrainController;
+ const state={...treeRuntime,THREE,applyHarbornTreeContacts,district:JSON.parse(read('data/districts.json')).find(d=>d.id===district),id:district,nextModel:model,nextContext:context,terrainSpec:{contract,weights:read(contract.weights.url)},nextTerrainController:null,prepareHarbornTerrain,refinementData:{assets:[asset]},refinementInDistrict,overrides:JSON.parse(read('data/overrides.json')),projectById:new Map(projects.map(p=>[p.id,p])),groupById:new Map(),groupByMesh:new Map(),appearance,resolveModelLifecycle,displayStatusForLifecycle,inactiveLifecycle,token:1,loadToken:1,window:{},splitSourceOverlaps,loadAsset:url=>load(url,contract.candidate),model,modelMeshes:[],draftToggle:{checked:false},selectedStudyProjectId:null,treeMeshes:[],markers:[],detailMeshes:[],transitGroup:{},markerGroup:{},syncStatusLegend(){},applyModelVisibility,$:id=>({checked:id==='#unknownStatusToggle'})};
+ vm.runInNewContext(app.split('\n').filter(s=>s.startsWith('function classify(')||s.startsWith('function lifecycleFor(')).join('\n'),state);const start=app.indexOf('const additionAssets='),end=app.indexOf(' const nextDetailMeshes=[];',start);await vm.runInNewContext('(async()=>{'+app.slice(start,end)+'})()',state);assert(state.nextTerrainController);state.window.atlasHarbornTerrain=state.nextTerrainController;
  const pass=app.indexOf('const nextFutureMeshes=[],nextModelMeshes=[];'),passEnd=app.indexOf(';nextContext.traverse',pass);vm.runInNewContext(app.slice(pass,passEnd+1)+'modelMeshes=nextModelMeshes;',state);vm.runInNewContext(app.slice(app.indexOf('let visibilityCacheKey='),app.indexOf('let statusLegendSignature=')),state);
  const models=state.modelMeshes.filter(m=>m.userData.assetId===contract.assetId);assert.equal(models.length,207);for(const selected of [null,asset.projectId]){state.selectedStudyProjectId=selected;for(const mode of ['future','existing','construction','future']){vm.runInNewContext('applyVisibility('+JSON.stringify(mode)+')',state);assert.equal(models.filter(m=>m.visible).length,mode==='future'?207:0);assert.equal(state.nextTerrainController.active,mode==='future');}}
  state.nextTerrainController.dispose();appearance.dispose();

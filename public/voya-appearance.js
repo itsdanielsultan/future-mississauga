@@ -1,7 +1,7 @@
 // Bounded material-class interpretation of the developer's Voya exterior render:
 // https://www.lifeatparkside.com/voya . Illustrative values, not measured finishes.
 // Exact source identities and architecture roles qualify; colours never do.
-export const VOYA_ARCHITECTURAL_SOURCE=Object.freeze({assetId:'voya-towers-plan-derived',projectId:'voya',sha256:'2402b603d47c3ba0770eb55847632a9c1a32c7a0117d914fe810705652e181f6'});
+export const VOYA_ARCHITECTURAL_SOURCE=Object.freeze({assetId:'voya-towers-plan-derived',projectId:'voya',sha256:'ef03b46d0496107746c47b181cb860ec605f264d0ec51f618578cb967a04ea80'});
 export const VOYA_ARCHITECTURAL_PALETTE=Object.freeze({
  glass:Object.freeze({color:0x46545b,roughness:.36,metalness:.12,vertexColors:false}),
  band:Object.freeze({color:0xe3e4df,roughness:.8,metalness:0,vertexColors:false}),

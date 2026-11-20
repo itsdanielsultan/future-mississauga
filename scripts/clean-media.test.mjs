@@ -30,6 +30,15 @@ function fixture(identity='wide/clarkson-future.png'){
   caption:{title:area,area,creator:'Daniel Sultan',scenario,geographicScope,cityCredit:'City of Mississauga · Ontario data',openStreetMap:true,sourcesURL:base+'sources.html',requiredModelCredits,fullCredits:[],renderTimestampUTC:timestamp,sourceDates:'Mixed; source dates remain separate from the actual render timestamp.'}};
 }
 
+function expandedPortraitFixture(identity='portraits/clarkson-future.png'){
+ const input=fixture(identity);
+ input.nativeSceneDimensions=input.displayMaster.dimensions=[3240,4050];
+ Object.assign(input.download,{role:'nativeSceneOnExpandedWhiteCanvas',dimensions:[3600,4500],sceneDimensions:[3240,4050],sceneBounds:[180,0,3420,4050],footerBounds:[0,4050,3600,4500],sideMarginsPx:[180,180],sceneOverlay:false});
+ for(const preview of input.responsivePreviews)preview.dimensions=[preview.dimensions[0],Math.round(4050*preview.dimensions[0]/3240)];
+ input.provenance={postingLayout:{sha256:'e'.repeat(64)}};
+ return input;
+}
+
 test('the clean-gallery allowlist is exactly the 57 active wide/social identities, with Fairview separate',()=>{
  assert.deepEqual([...ACTIVE_PICTURE_IDENTITIES].sort(),history.images.map(row=>row.kind+'/'+row.file).sort());
  assert.equal(ACTIVE_PICTURE_IDENTITIES.length,57);
@@ -60,6 +69,46 @@ test('crop, upscaling, false equality, footer gaps/overlaps and mismatched hashe
   x=>x.responsivePreviews[0].dimensions=[5000,3125],x=>x.responsivePreviews[0].dimensions=[1200,740],x=>x.responsivePreviews[0].sourceSHA256='e'.repeat(64),
   x=>x.responsivePreviews[0].crop=true,x=>x.responsivePreviews[0].captionBaked=true,x=>x.responsivePreviews[0].resized=false,x=>x.responsivePreviews.pop()
  ]){const input=fixture();mutate(input);assert.throws(()=>normalizeCleanMedia(input,base));}
+});
+
+test('expanded portrait downloads preserve the native clean scene and separate preview dimensions',()=>{
+ const identities=ACTIVE_PICTURE_IDENTITIES.filter(identity=>identity.startsWith('portraits/'));assert.equal(identities.length,24);
+ for(const identity of identities){
+  const input=expandedPortraitFixture(identity),before=structuredClone(input),row=normalizeCleanMedia(input,base),preview=mediaPreviewInfo(row);
+  assert.deepEqual(input,before,'normalization does not alter the delivery record');
+  assert.deepEqual(row.nativeSceneDimensions,[3240,4050]);assert.deepEqual([row.displayMaster.width,row.displayMaster.height],[3240,4050]);
+  assert.deepEqual([row.download.width,row.download.height],[3600,4500]);
+  assert.deepEqual(row.cleanPresentation,{role:'nativeSceneOnExpandedWhiteCanvas',sceneDimensions:[3240,4050],sceneBounds:[180,0,3420,4050],footerBounds:[0,4050,3600,4500],sideMarginsPx:[180,180],sceneSourceSHA256:input.displayMaster.sha256,allScenePixelsExact:true,sceneCrop:false,sceneResize:false,sceneOverlay:false});
+  assert.equal(preview.src,input.displayMaster.url);assert.equal(preview.download,input.download.url);assert.deepEqual([preview.width,preview.height],[3240,4050]);
+  assert.equal(row.responsive.width,3200);assert.equal(row.responsive.height,4000);assert.equal(row.renderInfo.renderTimestampUTC,input.renderTimestampUTC);
+  assert.equal(row.renderInfo.sourceSceneSHA256,input.sourceSceneSHA256);assert.equal(row.renderInfo.sourceProofSHA256s.postingLayout,input.provenance.postingLayout.sha256);
+ }
+});
+
+test('expanded portraits reject corrupt bounds, margins, dimensions and pixel-preservation declarations',()=>{
+ const mutations=[
+  x=>x.download.sceneBounds=[179,0,3419,4050],x=>x.download.sceneBounds=[180,1,3420,4051],x=>x.download.sceneBounds=[180,0,3421,4050],x=>x.download.sceneBounds=[180,0,3420,4049],x=>x.download.sceneBounds=[180,0,3420,4050,1],
+  x=>x.download.footerBounds=[0,4049,3600,4500],x=>x.download.footerBounds=[0,4051,3600,4500],x=>x.download.footerBounds=[180,4050,3420,4500],x=>x.download.footerBounds=[0,4050,3600,4501],
+  x=>x.download.sideMarginsPx=[179,181],x=>x.download.sideMarginsPx=[180,180,0],x=>delete x.download.sideMarginsPx,
+  x=>x.download.dimensions=[3601,4500],x=>x.download.dimensions=[3600,4499],x=>x.download.sceneDimensions=[3240,4049],x=>x.nativeSceneDimensions=[3240,4049],x=>x.displayMaster.dimensions=[3600,4500],
+  x=>x.download.mimeType='image/jpeg',x=>x.download.sceneOverlay=true,x=>delete x.download.sceneOverlay,x=>x.download.sceneCrop=true,x=>x.download.sceneResize=true,x=>x.download.allScenePixelsExact=false,x=>x.download.sceneSourceSHA256='0'.repeat(64)
+ ];
+ for(const mutate of mutations){const input=expandedPortraitFixture();mutate(input);assert.throws(()=>normalizeCleanMedia(input,base));}
+});
+
+test('expanded canvas role is portrait-only and cannot relax the appended-footer contract',()=>{
+ for(const identity of ['wide/clarkson-future.png','wide/clarkson-portrait-future.png','wide/citywide-future.png',...ACTIVE_NEIGHBOURHOOD_IDENTITIES]){
+  const input=expandedPortraitFixture(identity);assert.throws(()=>normalizeCleanMedia(input,base,{neighbourhood:identity.startsWith('neighbourhood/')}),/native portrait scene/);
+ }
+ for(const role of ['nativeSceneWithAppendedCreditFooter','nativeSceneOnExpandedCanvas','responsivePreview','cleanNativeScene',undefined]){
+  const input=expandedPortraitFixture();input.download.role=role;assert.throws(()=>normalizeCleanMedia(input,base));
+ }
+ const nonPortraitScene=fixture('portraits/clarkson-future.png');nonPortraitScene.download.role='nativeSceneOnExpandedWhiteCanvas';
+ assert.throws(()=>normalizeCleanMedia(nonPortraitScene,base),/native portrait scene/);
+ const legacy=fixture('portraits/clarkson-future.png');assert.equal(normalizeCleanMedia(legacy,base).download.width,3840);
+ for(const mutate of [x=>x.download.dimensions=[4200,2700],x=>x.download.sceneBounds=[180,0,4020,2400],x=>x.download.footerBounds=[0,2399,3840,2700]]){
+  const bad=structuredClone(legacy);mutate(bad);assert.throws(()=>normalizeCleanMedia(bad,base),/footer must extend/);
+ }
 });
 
 test('small native scenes get proportional previews without upscaling',()=>{
@@ -173,11 +222,12 @@ test('clean caption reuses its title region and preserves the separate download 
  const previous=globalThis.document,doc=docHarness();globalThis.document=doc;
  try{
   const copy=doc.createElement('div'),title=doc.createElement('h3'),download=doc.createElement('a');download.href='original-download.png';
-  copy.querySelector=()=>title;copy.querySelectorAll=()=>[download];
-  const image={closest:selector=>selector==='.picture-card,.social-grid article'?{querySelector:()=>copy}:null};
+  copy.querySelector=selector=>selector==='h2,h3,strong,b'?title:null;copy.querySelectorAll=()=>[download];
+  const image={closest:selector=>selector==='.picture-card,.social-grid article'?{dataset:{viewTitle:'Wide aerial',areaTitle:'Clarkson'},querySelector:()=>copy}:null};
   updateCleanImageCaption(image,normalizeCleanMedia(fixture(),base));
   assert.equal(copy.children[0],title);assert.equal(title.textContent,'Clarkson');assert.equal(copy.children.filter(n=>n===title).length,1);
-  assert.equal(copy.children[1].textContent,'by Daniel Sultan');assert.equal(copy.children[2].textContent,'Future scenario');assert.equal(copy.children.at(-1),download);
+  assert.equal(copy.children[1].textContent,'Wide aerial');assert.equal(copy.children[2].textContent,'Future scenario');assert.equal(copy.children.at(-1),download);
+  assert(!copy.children.some(n=>n.className==='media-caption__creator'||n.className==='media-caption__key'));
  }finally{globalThis.document=previous;}
 });
 
@@ -241,7 +291,7 @@ test('Updates keeps its dated story copy and two grid children while one source 
 test('standalone construction preview keeps the dated scenario explicit without duplicating selector or card labels',async()=>{
  const {previewTitle}=await import('../public/image-preview.js');
  const row=normalizeCleanMedia(fixture('wide/downtown-skyline-construction.png'),base),info=mediaPreviewInfo(row);
- assert.equal(previewTitle(info),'Downtown · Dated construction');
+ assert.equal(previewTitle(info),'Downtown · Construction snapshot');
  assert.equal(previewTitle(info,{views:true}),'Downtown');
  assert.equal(info.title,'Downtown');
  assert.equal(previewTitle(mediaPreviewInfo(normalizeCleanMedia(fixture('wide/downtown-future.png'),base))),'Downtown');

@@ -1,0 +1,219 @@
+{
+  "schema": "future-mississauga-woodland-integration/v1",
+  "state": "LOCAL_INTEGRATED_NOT_PUBLISHED",
+  "handoffSHA256": "0f033a24f29b10f847385951f83c52ea6a6fe957995bf4cfff9c8b5bef48bb20",
+  "transplantSHA256": "30bcd036bcc6646cec4484f5de9ba52a45cdba86024ae0d9f7cae2b31c9058f1",
+  "ownerAcceptanceSHA256": "5ebf60c6f37c45a96017daeec0dbd120e8677f4dd4fed01d131ce3639bc777be",
+  "oldLandscapeManifestSHA256": "ea945d4b1ab8c0334234fadd732aec5de131edc90f311889ec9a7eee7b3cf5a4",
+  "oldAssetDeliveryMapSHA256": "77f914fef1dc1093514868caf75c45b53d430d8bf3a952c36b59d32be1e951ad",
+  "assets": [
+    {
+      "url": "data/lakeview-trees-20261113-fd61a3d731ea.json.gz",
+      "bytes": 534491,
+      "sha256": "fd61a3d731ea92170b55c24b84085fe60d9bf3986d371052717e38aab072187e",
+      "decodedPayloadSHA256": "ed1caba370c390dbcc159a7b3247c85e795bad65215afb060e93ab4edd1debfa",
+      "historicalURL": "data/lakeview-trees.json.gz",
+      "historicalSHA256": "514039d06c8fd2c599bf9c46b6a9e2987887114f99d44c8784b836bfcdac7cbd",
+      "historicalBytes": 529940
+    },
+    {
+      "url": "data/lakeview-tree-adjustments-baseline-20261113-a72fb9a811ff.json.gz",
+      "bytes": 5541,
+      "sha256": "a72fb9a811ffdb6c7dd5dd51c9013b9c1475b08fbb3f207d5d6225629470b6a5",
+      "decodedPayloadSHA256": "7cc6ba8d7652869a3cd180d17f1cb375de93fbf17a760000c4208f6011d5069d",
+      "historicalURL": "data/lakeview-tree-adjustments-baseline.json.gz",
+      "historicalSHA256": "1d7ff0fe06dad351d9c74db46919a052305429c5dc1b4d75d5896b740e559f22",
+      "historicalBytes": 3358
+    },
+    {
+      "url": "data/lakeview-tree-adjustments-future-20261113-aa30f671f0b7.json.gz",
+      "bytes": 5739,
+      "sha256": "aa30f671f0b73efbb19a46ea5b97a94147351db5b61a83a8095b0f135cb5510d",
+      "decodedPayloadSHA256": "c439df5e5dc06b8c48aba0e803b8d428048725b29cbc58b234fc19b6fda97721",
+      "historicalURL": "data/lakeview-tree-adjustments-future.json.gz",
+      "historicalSHA256": "5239d7144fce9fd8c62f065db975c52dd2495944b230f644747cdc9374b714b2",
+      "historicalBytes": 3602
+    },
+    {
+      "url": "data/port-credit-trees-20261113-7da10306e173.json.gz",
+      "bytes": 664607,
+      "sha256": "7da10306e173fd64c24397217779724d005d513bffd3034fefcf629f17481696",
+      "decodedPayloadSHA256": "9f556c4250e0b8f5ed1c9fd25ec435612c7051909d325f08e45dcf4b587f4fa4",
+      "historicalURL": "data/port-credit-trees.json.gz",
+      "historicalSHA256": "c1abeabf39ae4fb05242c6ca6e080c7bef04eef7f39900a232fcbeb789d3d38a",
+      "historicalBytes": 664063
+    },
+    {
+      "url": "data/port-credit-tree-adjustments-baseline-20261113-157a87196b75.json.gz",
+      "bytes": 6319,
+      "sha256": "157a87196b7517cb1cc3cab24ca6b1162074d6977b499421c8a9b641e4460a40",
+      "decodedPayloadSHA256": "5dfdfcd2649f182b8817d54b087aaa58a1d3813b1456e07cde5413f39532e33a",
+      "historicalURL": "data/port-credit-tree-adjustments-baseline.json.gz",
+      "historicalSHA256": "7f85ecdfe08e49f8ed0856397ac504b09aff9dc598e7791c2fc92f01031ee9d9",
+      "historicalBytes": 5642
+    },
+    {
+      "url": "data/port-credit-tree-adjustments-future-20261113-12ffad669306.json.gz",
+      "bytes": 6546,
+      "sha256": "12ffad66930655a6359719a51cf9ae38880a4343d26eae56f284ab51a6dcc30a",
+      "decodedPayloadSHA256": "b41a9ea9ae8bd1a59accb9fb9e1ff1f055155bd278b4780338b28c6b7edf7d7b",
+      "historicalURL": "data/port-credit-tree-adjustments-future.json.gz",
+      "historicalSHA256": "6634d2255a0952aa8705d9cc4b91766a9ec745b2b460ee30e25047b8ed79a06b",
+      "historicalBytes": 5867
+    }
+  ],
+  "landscapeManifestSHA256": "9c604cff36e7d7ce1f020028f9f4c536bfb111a6756732f73012da160b4bfcf2",
+  "appSHA256": "2e24a5fa19c3dac0d46cd60ddcffc4e3c10f7d38a0d54f9603a8d8941e861377",
+  "unrelatedManifestCanonicalSHA256": "639622c4de05e26869714976f709c47b1d591e7123ba16f4e1002a9c486539f3",
+  "beforeTrees": {
+    "lakeview": {
+      "baseline": {
+        "file": "outputs/models/supplemental/revamp-landscape/lakeview-trees-baseline-corrected.json",
+        "sha256": "7826d676b15843bfebcd3abb703d1563dd226e8c069399db832e1cc6493c561b",
+        "counts": {
+          "trimInventoryIllustration": 391,
+          "suppressInventoryCrownKeepPoint": 32,
+          "suppressIllustrativeWoodlandInstance": 737
+        },
+        "treeRecords": 51848,
+        "roadCrossingClearance": {
+          "reviewedAt": "2026-09-22T00:58:56.682212+00:00",
+          "clearanceM": 0.15,
+          "sourceXYZUnchanged": true,
+          "verticalCrownHeightUnchanged": true,
+          "priorReductionsPreserved": true,
+          "counts": {
+            "narrowedIllustrativeCrown": 1
+          },
+          "audit": "outputs/research/road-crossings/Tree-deck-clearance.json",
+          "caveat": "Crown dimensions and woodland points are illustrative. A suppressed crown does not mean a surveyed tree was removed. No bridge underside or structural thickness is inferred."
+        },
+        "url": "data/lakeview-tree-adjustments-baseline.json.gz",
+        "adjustmentsOnly": true
+      },
+      "future": {
+        "file": "outputs/models/supplemental/revamp-landscape/lakeview-trees-future-corrected.json",
+        "sha256": "abcc4883e77bd1ad5838b6730884abfe475ee6d8d9494e82681323001494c7a3",
+        "counts": {
+          "trimInventoryIllustration": 401,
+          "suppressInventoryCrownKeepPoint": 36,
+          "suppressIllustrativeWoodlandInstance": 755
+        },
+        "treeRecords": 51848,
+        "roadCrossingClearance": {
+          "reviewedAt": "2026-09-22T00:58:56.682212+00:00",
+          "clearanceM": 0.15,
+          "sourceXYZUnchanged": true,
+          "verticalCrownHeightUnchanged": true,
+          "priorReductionsPreserved": true,
+          "counts": {
+            "narrowedIllustrativeCrown": 1
+          },
+          "audit": "outputs/research/road-crossings/Tree-deck-clearance.json",
+          "caveat": "Crown dimensions and woodland points are illustrative. A suppressed crown does not mean a surveyed tree was removed. No bridge underside or structural thickness is inferred."
+        },
+        "url": "data/lakeview-tree-adjustments-future.json.gz",
+        "adjustmentsOnly": true,
+        "pierHouseClearance": {
+          "reviewedAt": "2026-09-27",
+          "projectId": "lakeview-pier-house",
+          "assetId": "pier-house-townhome-reference",
+          "assetSHA256": "d54087418b93f9baa585036443739a9b66ddfaef752e452ad6b2622df3964447",
+          "scenario": "future landscape variant",
+          "appliesToScenarios": [
+            "construction",
+            "future"
+          ],
+          "suppressedIllustrativeCrownIDs": [
+            2000138486,
+            2000138487,
+            2000138846,
+            2000138992
+          ],
+          "suppressedCrowns": 4,
+          "sourcePositionsUnchanged": true,
+          "otherTreeRecordsUnchanged": true,
+          "baselineUnchanged": true,
+          "method": "Only four illustrative woodland crowns with conservative canopy-footprint intersections are suppressed entirely (scale0), not shrunk or moved.",
+          "audit": "outputs/research/Pier-House-tree-clearance-revision.json",
+          "caveat": "These are symbolic woodland fill, not surveyed trees; no claim of actual tree removal. Prior dated audit counts remain intact."
+        }
+      }
+    },
+    "port-credit": {
+      "baseline": {
+        "file": "outputs/models/supplemental/revamp-landscape/port-credit-trees-baseline-corrected.json",
+        "sha256": "f9ece3236dc01fdb2e5b80aa29ac981bfe7e5003d20628187840d31dfc202069",
+        "counts": {
+          "trimInventoryIllustration": 440,
+          "suppressInventoryCrownKeepPoint": 31,
+          "suppressIllustrativeWoodlandInstance": 1340
+        },
+        "treeRecords": 73412,
+        "roadCrossingClearance": {
+          "reviewedAt": "2026-09-22T00:58:56.682212+00:00",
+          "clearanceM": 0.15,
+          "sourceXYZUnchanged": true,
+          "verticalCrownHeightUnchanged": true,
+          "priorReductionsPreserved": true,
+          "counts": {
+            "narrowedIllustrativeCrown": 2
+          },
+          "audit": "outputs/research/road-crossings/Tree-deck-clearance.json",
+          "caveat": "Crown dimensions and woodland points are illustrative. A suppressed crown does not mean a surveyed tree was removed. No bridge underside or structural thickness is inferred."
+        },
+        "url": "data/port-credit-tree-adjustments-baseline.json.gz",
+        "adjustmentsOnly": true
+      },
+      "future": {
+        "file": "outputs/models/supplemental/revamp-landscape/port-credit-trees-future-corrected.json",
+        "sha256": "7c51fee8b06ffff3e04b8626f2303451ca7de144750e5305e65e1eae622490f2",
+        "counts": {
+          "trimInventoryIllustration": 450,
+          "suppressInventoryCrownKeepPoint": 35,
+          "suppressIllustrativeWoodlandInstance": 1384
+        },
+        "treeRecords": 73412,
+        "roadCrossingClearance": {
+          "reviewedAt": "2026-09-22T00:58:56.682212+00:00",
+          "clearanceM": 0.15,
+          "sourceXYZUnchanged": true,
+          "verticalCrownHeightUnchanged": true,
+          "priorReductionsPreserved": true,
+          "counts": {
+            "narrowedIllustrativeCrown": 2
+          },
+          "audit": "outputs/research/road-crossings/Tree-deck-clearance.json",
+          "caveat": "Crown dimensions and woodland points are illustrative. A suppressed crown does not mean a surveyed tree was removed. No bridge underside or structural thickness is inferred."
+        },
+        "url": "data/port-credit-tree-adjustments-future.json.gz",
+        "adjustmentsOnly": true,
+        "pierHouseClearance": {
+          "reviewedAt": "2026-09-27",
+          "projectId": "lakeview-pier-house",
+          "assetId": "pier-house-townhome-reference",
+          "assetSHA256": "d54087418b93f9baa585036443739a9b66ddfaef752e452ad6b2622df3964447",
+          "scenario": "future landscape variant",
+          "appliesToScenarios": [
+            "construction",
+            "future"
+          ],
+          "suppressedIllustrativeCrownIDs": [
+            2000138486,
+            2000138487,
+            2000138846,
+            2000138992
+          ],
+          "suppressedCrowns": 4,
+          "sourcePositionsUnchanged": true,
+          "otherTreeRecordsUnchanged": true,
+          "baselineUnchanged": true,
+          "method": "Only four illustrative woodland crowns with conservative canopy-footprint intersections are suppressed entirely (scale0), not shrunk or moved.",
+          "audit": "outputs/research/Pier-House-tree-clearance-revision.json",
+          "caveat": "These are symbolic woodland fill, not surveyed trees; no claim of actual tree removal. Prior dated audit counts remain intact."
+        }
+      }
+    }
+  },
+  "canonicalHashEncoding": "ECMAScript JSON.stringify with recursively sorted object keys"
+}

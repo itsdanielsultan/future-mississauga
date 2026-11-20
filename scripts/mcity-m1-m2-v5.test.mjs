@@ -1,3 +1,5 @@
+import {restoreRegistryReconciliationData} from './registry-reconciliation-scope.mjs';
+import {restoreMcityV6Refinements,restoreMcityV6Catalogue,restoreMcityV6Projects,restoreMcityV6Revisions} from './mcity-v6-scope.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -14,7 +16,7 @@ register('./recovery-three-loader.mjs',import.meta.url);
 const THREE=await import('../public/vendor/three.module.js');
 const {GLTFLoader}=await import('../public/vendor/addons/loaders/GLTFLoader.js');
 const read=p=>readFileSync(new URL('../public/'+p,import.meta.url)),json=p=>JSON.parse(read('data/'+p+'.json')),sha=b=>createHash('sha256').update(b).digest('hex');
-const refinements=json('refinement-models'),catalogue=json('model-previews'),revisions=json('model-revisions'),projects=json('projects');
+const refinements=restoreMcityV6Refinements(json('refinement-models')),catalogue=restoreMcityV6Catalogue(json('model-previews')),revisions=restoreMcityV6Revisions(json('model-revisions')),projects=restoreMcityV6Projects(json('projects'));
 const meshes=root=>{const list=[];root.traverse(o=>{if(o.isMesh)list.push(o)});return list;};
 const dispose=root=>root.traverse(o=>{o.geometry?.dispose();for(const m of [o.material].flat().filter(Boolean))m.dispose();});
 const load=async url=>{const raw=gunzipSync(read(url));return new GLTFLoader().parseAsync(raw.buffer.slice(raw.byteOffset,raw.byteOffset+raw.byteLength),'');};
@@ -23,10 +25,10 @@ const fetcher=async url=>{const b=read(url);return {ok:true,arrayBuffer:async()=
 test('M1/M2 same-ID revision keeps exact masks, lifecycle and every unrelated fact',()=>{
  const prior=restoreM1M2Refinements(structuredClone(refinements));restoreM1M2Catalogue(structuredClone(catalogue));restoreM1M2Revisions(structuredClone(revisions));
  assert.equal(modelScopeFingerprint(restoreM1M2Projects(structuredClone(projects))),scope.priorProjectsFingerprint);
- for(const [file,pin]of Object.entries(scope.facts))assert.equal(sha(read('data/'+file)),pin);
+ for(const [file,pin]of Object.entries(scope.facts))assert.equal(sha(restoreRegistryReconciliationData(file,read('data/'+file))),pin);
  for(const spec of scope.refinements){const a=refinements.assets.find(a=>a.id===spec.id),old=prior.assets.find(a=>a.id===spec.id);for(const key of ['replacesSourceIds','replacementModes','replacementTriangleKeys','replacementGeometry','lifecycle','modes','geometryDrawingDates','sourceArchiveSHA256'])assert.deepEqual(a[key],old[key],key);assert.deepEqual(a.sources.slice(0,old.sources.length),old.sources);assert.deepEqual(a.sources.slice(-2).map(s=>new URL(s.url).hostname),['www.corearchitects.com','www.rjc.ca']);assert.equal(a.lifecycle,'existing');assert.deepEqual(a.modes,['existing','construction','future']);assert.equal(a.registration.rotationYDegrees,old.registration.rotationYDegrees);assert.deepEqual(a.registration.translation,old.registration.translation);assert.deepEqual(a.registration.podiumVerticalCorrections,old.registration.podiumVerticalCorrections);assert.equal(sha(read(old.url)),old.downloadSHA256);}
  assert.equal(scope.refinements.reduce((n,s)=>n+refinements.assets.find(a=>a.id===s.id).replacementTriangleKeys.length,0),404);
- const html=projectDetailsHTML(projects.find(p=>p.id==='mcity-1-2'));assert.match(html,/low faceted pavilion is coarse or absent/);assert.doesNotMatch(html,/Rev02|Rev03|unchanged inferred tower geometry/);
+ const html=projectDetailsHTML(projects.find(p=>p.id==='mcity-1-2'));assert.match(html,/added low pavilion has an estimated roof height/);assert.doesNotMatch(html,/Rev02|Rev03|unchanged inferred tower geometry/);
 });
 
 for(const spec of scope.refinements)test(spec.id+' keeps accepted PBR, source normals, original levels and podium geometry',async()=>{

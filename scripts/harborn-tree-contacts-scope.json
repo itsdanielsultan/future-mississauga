@@ -1,0 +1,22 @@
+{
+  "schema": "harborn-tree-contact-integration-scope/v1",
+  "moduleSHA256": "e0284c42a59ab0987df0960e77a154662df17b68c4126163d351f55060a3f827",
+  "assetId": "harborn-50-60-current-plan",
+  "syntheticIds": [
+    2000120531,
+    2000120711,
+    2000120712,
+    2000121368
+  ],
+  "qualifiedHandoffSHA256": "2da6d75ad880e068e726d6594daf84c72bb3371fe5ccb9cbc60056bd6993a096",
+  "exactBeforeAuditSHA256": "d10bfa0f39a5fc4194f79de1297b1810fabaa6e78ed9ee1174dbc58804c58c49",
+  "exactAfterAuditSHA256": "2c13378e77a192c62ab9c123b9b050ee5f9b6d984a6260eca48eb74155287124",
+  "nativeQAProofSHA256": "c910beb91b085516cb3e90d8e38e0bd2b75552cd7fb7db86ff7bca064d7d85e2",
+  "nativeValidatedStates": 16,
+  "sourceTreeFiles": {
+    "data/cooksville-tree-adjustments-baseline.json.gz": "65afd592bed71e0d930ce51aae970578cbea0b0176d20095d30c9a6bcf14b1c1",
+    "data/cooksville-tree-adjustments-future.json.gz": "7361a9bbb45eaa3532855464f6303ba88dd5325543984254ec73951ada57fe10",
+    "data/cooksville-trees.json.gz": "0b7fe217ce13e90a64cb992818b9637f6d0e3eae16b37921cbf23e0f3cff4794"
+  },
+  "qualification": "A-rear before andafter image hashes identical: diagnostic camera does not show an affected crown. B-rear matched images visibly demonstrate suppression. Exact BVH independently proves A-rear incident and after-suppression0pairs."
+}

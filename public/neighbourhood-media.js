@@ -1,5 +1,5 @@
 import {shortDate,shortResolution} from './image-provenance.js?v=20261101-gallery1';
-import {normalizeCleanMedia,mediaPreviewInfo,imageAttribution} from './clean-media.js?v=20261109-feedback1';
+import {normalizeCleanMedia,mediaPreviewInfo,imageAttribution} from './clean-media.js?v=20261113-design2';
 import {matchedFairviewBinding} from './fairview-media.js?v=20261102-fairview1';
 
 export function studyImagePreview(manifest, url, baseURL, {proof,proofSHA256}={}) {
@@ -23,6 +23,7 @@ export function studyImagePreview(manifest, url, baseURL, {proof,proofSHA256}={}
   const updated = shortDate(manifest.updatedOn);
   return {
     title: manifest.title+' · '+row.caption,
+    area: manifest.title, viewTitle: row.caption,
     src: row.url, download: row.url, preview: row.url,
     width: row.width, height: row.height,
     meta: [updated ? 'Updated '+updated : '',shortResolution(row.width)].filter(Boolean).join(' · '),
@@ -47,7 +48,7 @@ export async function resolveStudyImage(url) {
   }
   // Current URLs may be immutable hosted PNGs. Only the shared catalogue's
   // atomically validated Fairview pair can provide their display/download roles.
-  const {resolveMedia}=await import('./media-catalog.js?v=20261109-delivery1');
+  const {resolveMedia}=await import('./media-catalog.js?v=20261113-design2');
   const row=await resolveMedia(url);
   return row?.kind==='neighbourhood'&&row.comparisonProof?.comparisonKind==='native-neighbourhood-pilot-visibility'?mediaPreviewInfo(row):null;
 }

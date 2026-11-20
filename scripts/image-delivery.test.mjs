@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import {assetURL} from '../public/asset-delivery.js';
 import {deliveryPaths} from '../public/asset-delivery-map.js';
 import {normalizeCleanMedia} from '../public/clean-media.js';
+import {galleryViews} from '../public/gallery-catalogue.js';
 import {previewDownloadURL} from '../public/image-preview.js';
 import {isDeliveredImageURL,prepareImageLinks,saveManagedImage,installManagedImageDownloads} from '../public/file-actions.js';
 const base='https://futuremississauga.com/',pub=new URL('../public/',import.meta.url);
@@ -45,13 +46,28 @@ test('hosted metadata lookup and credited fallback accept only exact pinned imag
  }
 });
 
-test('static fallback links use approved hosted URLs and retain native catalogue paths separately',()=>{
- const html=fs.readFileSync(new URL('index.html',pub),'utf8');let count=0;
- for(const match of html.matchAll(/(?:href|data-preview-download)="([^"]+)"/g)){
-  if(!match[1].startsWith('https://assets.futuremississauga.com/'))continue;
-  assert(assets.some(asset=>assetURL(asset.url)===match[1]),match[1]);count++;
+test('the featured aerial uses its local credited file and gallery downloads retain the approved delivery routes',()=>{
+ const html=fs.readFileSync(new URL('compare.html',pub),'utf8');
+ const figure=html.match(/<figure class="hero"[^>]*>[\s\S]*?<\/figure>/)[0];
+ const downloads=[...figure.matchAll(/href="([^"]+)" download/g)].map(match=>match[1]);
+ const edition = JSON.parse(fs.readFileSync(new URL('data/city-plates-20261120.json',pub)));
+ const stages = edition.plates.filter(plate => /^wide\/downtown-skyline-(?:existing|construction|future)\.png$/.test(plate.id));
+ assert.equal(stages.length,3);
+ assert.deepEqual(downloads,[stages.find(plate => plate.id.endsWith('-future.png')).download.url]);
+ for (const plate of stages) {
+  assert(fs.existsSync(new URL(plate.displayMaster.url,pub)));
+  assert(fs.existsSync(new URL(plate.download.url,pub)));
  }
- assert.equal(count,7);
+ assert(fs.existsSync(new URL(downloads[0],pub)));
+ for(const match of html.matchAll(/(?:href|data-preview-download)="(https:\/\/assets\.futuremississauga\.com\/[^"]+)"/g)){
+  assert(assets.some(asset=>assetURL(asset.url)===match[1]),match[1]);
+ }
+ for(const view of ['existingSkyline','constructionSkyline','skyline']){
+  const row=rows.find(row=>row.kind==='wide'&&row.file==='downtown'+galleryViews[view].suffix);
+  assert(row,'the '+view+' switch has an approved current image');
+  assert(html.includes('value="'+view+'"'));
+  assert(isDeliveredImageURL(assetURL(row.download.url)));
+ }
  assert(assets.every(asset=>asset.url.startsWith('gallery/revision-20261109/')));
  assert(!/href="gallery\/revision-20261109\/[^"\n]+\.png"/.test(html));
 });

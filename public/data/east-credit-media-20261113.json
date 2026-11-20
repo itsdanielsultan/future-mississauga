@@ -1,0 +1,383 @@
+{
+  "schema": "future-mississauga-east-credit-media/v1",
+  "state": "VISUALLY_ACCEPTED_LOCAL_STAGING",
+  "publication": false,
+  "images": [
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "state": "FINAL_SOURCE_MEDIA_PREPARED_VISUAL_REVIEW_REQUIRED",
+      "identity": "wide/east-credit-creditview-future.png",
+      "title": "East Credit & Creditview",
+      "scenario": "future",
+      "displayMaster": {
+        "bytes": 22746337,
+        "sha256": "4bb954fdf218a2bdb0765af6844866a787b446e79c50e25adfe41f1e3ef52412",
+        "dimensions": [
+          6144,
+          3840
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false,
+        "url": "gallery/missing-areas-20261113/wide-east-credit-creditview-future-cleanNativeScene-4bb954fdf218.png"
+      },
+      "download": {
+        "bytes": 22846422,
+        "sha256": "91af8240863c14b820f0fb1bc6e586f2a163dd22427fab38e80b79e0155c1ecc",
+        "dimensions": [
+          6144,
+          4415
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneWithAppendedCreditFooter",
+        "sceneDimensions": [
+          6144,
+          3840
+        ],
+        "sceneBounds": [
+          0,
+          0,
+          6144,
+          3840
+        ],
+        "footerBounds": [
+          0,
+          3840,
+          6144,
+          4415
+        ],
+        "sceneSourceSHA256": "4bb954fdf218a2bdb0765af6844866a787b446e79c50e25adfe41f1e3ef52412",
+        "allScenePixelsExact": true,
+        "sceneCrop": false,
+        "sceneResize": false,
+        "url": "gallery/missing-areas-20261113/wide-east-credit-creditview-future-nativeSceneWithAppendedCreditFooter-91af8240863c.png"
+      },
+      "responsivePreviews": [
+        {
+          "bytes": 336137,
+          "sha256": "86f87a691d74affdc0f082af0bebeebf5d4667de8aad7456a435b02d1ea854f5",
+          "role": "responsivePreview",
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "4bb954fdf218a2bdb0765af6844866a787b446e79c50e25adfe41f1e3ef52412",
+          "url": "gallery/missing-areas-20261113/wide-east-credit-creditview-future-responsivePreview-86f87a691d74.avif"
+        },
+        {
+          "bytes": 449541,
+          "sha256": "0ef2aded544261620650bec93173bc5f2e209e8ddd37169a423393157d211a99",
+          "role": "responsivePreview",
+          "dimensions": [
+            1200,
+            750
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "4bb954fdf218a2bdb0765af6844866a787b446e79c50e25adfe41f1e3ef52412",
+          "url": "gallery/missing-areas-20261113/wide-east-credit-creditview-future-responsivePreview-0ef2aded5442.jpg"
+        },
+        {
+          "bytes": 1254877,
+          "sha256": "891c899dcfbec7a3bae385d2461b6e331d13067e5837dd42dd495088ace909e2",
+          "role": "responsivePreview",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "4bb954fdf218a2bdb0765af6844866a787b446e79c50e25adfe41f1e3ef52412",
+          "url": "gallery/missing-areas-20261113/wide-east-credit-creditview-future-responsivePreview-891c899dcfbe.avif"
+        },
+        {
+          "bytes": 2099483,
+          "sha256": "e5e6e7499236056854c84871251456b8850c1bcd4882786c7e035934afe002e8",
+          "role": "responsivePreview",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "4bb954fdf218a2bdb0765af6844866a787b446e79c50e25adfe41f1e3ef52412",
+          "url": "gallery/missing-areas-20261113/wide-east-credit-creditview-future-responsivePreview-e5e6e7499236.jpg"
+        }
+      ],
+      "caption": {
+        "title": "East Credit & Creditview",
+        "area": "East Credit & Creditview",
+        "creator": "Daniel Sultan",
+        "scenario": "future",
+        "geographicScope": "bounded_creditview_residential_context_west_of_highway403",
+        "cityCredit": "City of Mississauga \u00b7 Ontario data",
+        "openStreetMap": true,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "requiredModelCredits": [],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "\u00a9 OpenStreetMap contributors. https://www.openstreetmap.org/copyright",
+          "Design reference: Amacon / Parkside Village. Independent authored model: Daniel Sultan / Future Mississauga. Inherited registration sources include City of Mississauga and OpenStreetMap contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026."
+        ],
+        "renderTimestampUTC": "2026-11-13T05:51:29.657410+00:00",
+        "sourceDates": "Mixed; source data dates unchanged. Actual new render timestamp is separate.",
+        "placement": "One responsive HTML caption adjacent to the clean picture, including the modal. Mandatory model credits remain visible."
+      },
+      "sourceSceneSHA256": "581be9d94391d324076fb3dae22388e5d8c9778d74a66b9988cfce25b3f83f96",
+      "renderTimestampUTC": "2026-11-13T05:51:29.657410+00:00",
+      "nativeSceneDimensions": [
+        6144,
+        3840
+      ],
+      "sourceFreezeState": "FINAL_FROZEN",
+      "finalSourceAdoption": null,
+      "sourcePresentationWarnings": [
+        {
+          "object": "LakeOntarioUnified",
+          "material": "",
+          "kind": "opaqueDepthWriteDisabled",
+          "renderOrder": -1,
+          "note": "Source underlay ordering is not encoded by glTF; inspect overlapping source water/terrain offline before acceptance."
+        }
+      ],
+      "provenance": {
+        "sceneProof": {
+          "bytes": 2673,
+          "sha256": "ca4cf9429e7d12cb51dcfce35e54e50ed03bda47abe07e8790c0714942853dc8"
+        },
+        "creditProof": {
+          "bytes": 6130,
+          "sha256": "fd4e69a6b3e8fb7c1992e7f29c45d1dbc71fe77981609568047f4deb515d20fc"
+        },
+        "layoutProof": {
+          "bytes": 3707,
+          "sha256": "e1e1c2c881b6605c7f49ef357f1cfbea9ad7c46b8445474e4ba3c57a8e12ac8d"
+        },
+        "packageScript": {
+          "bytes": 8023,
+          "sha256": "d6af18fd37ee76e7d2948f7caaf821fbcdc9d9fc228426d460f5ef165070e54d"
+        },
+        "deliveryManifest": {
+          "bytes": 9820,
+          "sha256": "84659211bcc3d97428b40e46b870f74bd712047d3cc34a0f72898947d98e59f5"
+        },
+        "sourcePackage": {
+          "sha256": "ca98d7310f53022c2c7e4f5dbf7a89c65259e85ccf9da23f093f72f6566ad4b5",
+          "bytes": 9281
+        }
+      },
+      "publication": false,
+      "historicalURLsRebound": false,
+      "originalSourceFreezeState": "FINAL_FROZEN"
+    },
+    {
+      "schema": "future-mississauga-current-native-media/v2",
+      "state": "FINAL_SOURCE_MEDIA_PREPARED_VISUAL_REVIEW_REQUIRED",
+      "identity": "portraits/east-credit-creditview-future.png",
+      "title": "East Credit & Creditview",
+      "scenario": "future",
+      "displayMaster": {
+        "bytes": 12587513,
+        "sha256": "cf27f7a53bb343932fd6b5eb566ad9de8f4b1d4da1273efefb214c383fa63576",
+        "dimensions": [
+          3240,
+          4050
+        ],
+        "mimeType": "image/png",
+        "role": "cleanNativeScene",
+        "captionBaked": false,
+        "url": "gallery/missing-areas-20261113/portraits-east-credit-creditview-future-cleanNativeScene-cf27f7a53bb3.png"
+      },
+      "download": {
+        "bytes": 12767948,
+        "sha256": "481893b6d35c3d5bf465c0b90b24d7a2eaa59f332847d32e5898fbc4cf231d60",
+        "dimensions": [
+          3600,
+          4500
+        ],
+        "mimeType": "image/png",
+        "role": "nativeSceneOnExpandedWhiteCanvas",
+        "sceneDimensions": [
+          3240,
+          4050
+        ],
+        "sceneBounds": [
+          180,
+          0,
+          3420,
+          4050
+        ],
+        "footerBounds": [
+          0,
+          4050,
+          3600,
+          4500
+        ],
+        "sceneSourceSHA256": "cf27f7a53bb343932fd6b5eb566ad9de8f4b1d4da1273efefb214c383fa63576",
+        "allScenePixelsExact": true,
+        "sceneCrop": false,
+        "sceneResize": false,
+        "url": "gallery/missing-areas-20261113/portraits-east-credit-creditview-future-nativeSceneOnTrue4x5WhiteCanvas-481893b6d35c.png",
+        "sideMarginsPx": [
+          180,
+          180
+        ],
+        "sceneOverlay": false
+      },
+      "responsivePreviews": [
+        {
+          "bytes": 479007,
+          "sha256": "6c8a6198420d42651510a0a59e1e3046fa252da439a80d8cfc606ef00ae031e1",
+          "role": "responsivePreview",
+          "dimensions": [
+            1200,
+            1500
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "cf27f7a53bb343932fd6b5eb566ad9de8f4b1d4da1273efefb214c383fa63576",
+          "url": "gallery/missing-areas-20261113/portraits-east-credit-creditview-future-responsivePreview-6c8a6198420d.avif"
+        },
+        {
+          "bytes": 706815,
+          "sha256": "5d9528cd042d82c048c90451ffd0df9e14992f3d14f47be66a0b3ca47d9a6ee3",
+          "role": "responsivePreview",
+          "dimensions": [
+            1200,
+            1500
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "cf27f7a53bb343932fd6b5eb566ad9de8f4b1d4da1273efefb214c383fa63576",
+          "url": "gallery/missing-areas-20261113/portraits-east-credit-creditview-future-responsivePreview-5d9528cd042d.jpg"
+        },
+        {
+          "bytes": 1379320,
+          "sha256": "55739cafc5bf8a70d47e6986727be2b46d63d60237084ad9d0d8b0e634791a5a",
+          "role": "responsivePreview",
+          "dimensions": [
+            3200,
+            4000
+          ],
+          "mimeType": "image/avif",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "cf27f7a53bb343932fd6b5eb566ad9de8f4b1d4da1273efefb214c383fa63576",
+          "url": "gallery/missing-areas-20261113/portraits-east-credit-creditview-future-responsivePreview-55739cafc5bf.avif"
+        },
+        {
+          "bytes": 2976936,
+          "sha256": "89d44f7ec2f7afc5fa0eed2c2c72f094760350005c9e3e9b21be1f34315aa461",
+          "role": "responsivePreview",
+          "dimensions": [
+            3200,
+            4000
+          ],
+          "mimeType": "image/jpeg",
+          "resized": true,
+          "crop": false,
+          "captionBaked": false,
+          "lossyEncoding": true,
+          "sourceSHA256": "cf27f7a53bb343932fd6b5eb566ad9de8f4b1d4da1273efefb214c383fa63576",
+          "url": "gallery/missing-areas-20261113/portraits-east-credit-creditview-future-responsivePreview-89d44f7ec2f7.jpg"
+        }
+      ],
+      "caption": {
+        "title": "East Credit & Creditview",
+        "area": "East Credit & Creditview",
+        "creator": "Daniel Sultan",
+        "scenario": "future",
+        "geographicScope": "bounded_creditview_residential_context_west_of_highway403",
+        "cityCredit": "City of Mississauga \u00b7 Ontario data",
+        "openStreetMap": true,
+        "sourcesURL": "https://futuremississauga.com/sources.html",
+        "requiredModelCredits": [],
+        "fullCredits": [
+          "City of Mississauga municipal geographic and 3D source data. https://data.mississauga.ca/pages/mississauga-3d",
+          "Contains information licensed under the Open Government Licence - Ontario. https://www.ontario.ca/page/open-government-licence-ontario",
+          "Model assembly and visualization: Daniel Sultan / Future Mississauga. https://futuremississauga.com/sources.html",
+          "\u00a9 OpenStreetMap contributors. https://www.openstreetmap.org/copyright",
+          "Design reference: Amacon / Parkside Village. Independent authored model: Daniel Sultan / Future Mississauga. Inherited registration sources include City of Mississauga and OpenStreetMap contributors.",
+          "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026."
+        ],
+        "renderTimestampUTC": "2026-11-13T05:52:36.828877+00:00",
+        "sourceDates": "Mixed; source data dates unchanged. Actual new render timestamp is separate.",
+        "placement": "One responsive HTML caption adjacent to the clean picture, including the modal. Mandatory model credits remain visible."
+      },
+      "sourceSceneSHA256": "581be9d94391d324076fb3dae22388e5d8c9778d74a66b9988cfce25b3f83f96",
+      "renderTimestampUTC": "2026-11-13T05:52:36.828877+00:00",
+      "nativeSceneDimensions": [
+        3240,
+        4050
+      ],
+      "sourceFreezeState": "FINAL_FROZEN",
+      "finalSourceAdoption": null,
+      "sourcePresentationWarnings": [
+        {
+          "object": "LakeOntarioUnified",
+          "material": "",
+          "kind": "opaqueDepthWriteDisabled",
+          "renderOrder": -1,
+          "note": "Source underlay ordering is not encoded by glTF; inspect overlapping source water/terrain offline before acceptance."
+        }
+      ],
+      "provenance": {
+        "sceneProof": {
+          "bytes": 2683,
+          "sha256": "9b440faffd82f9c2b2f8f0f2c3e05e8f6a2619832a3879c291a9d54213facfaf"
+        },
+        "creditProof": {
+          "bytes": 6130,
+          "sha256": "fd4e69a6b3e8fb7c1992e7f29c45d1dbc71fe77981609568047f4deb515d20fc"
+        },
+        "layoutProof": {
+          "bytes": 3105,
+          "sha256": "922350f8cc94d6aea59d427357778f91a1593ccc870256c8be9fe9ec6a7848f0"
+        },
+        "packageScript": {
+          "bytes": 8023,
+          "sha256": "d6af18fd37ee76e7d2948f7caaf821fbcdc9d9fc228426d460f5ef165070e54d"
+        },
+        "deliveryManifest": {
+          "bytes": 10903,
+          "sha256": "635148064ffe8c062fdbce5c78fba05cf8c5d637cc0c94559b182e25559f1ed5"
+        },
+        "sourcePackage": {
+          "sha256": "ca98d7310f53022c2c7e4f5dbf7a89c65259e85ccf9da23f093f72f6566ad4b5",
+          "bytes": 9281
+        }
+      },
+      "publication": false,
+      "historicalURLsRebound": false,
+      "originalSourceFreezeState": "FINAL_FROZEN"
+    }
+  ],
+  "comparisonProofs": [],
+  "sourcePackageSHA256": "ca98d7310f53022c2c7e4f5dbf7a89c65259e85ccf9da23f093f72f6566ad4b5",
+  "sourceCaptureHistoryPreserved": true
+}

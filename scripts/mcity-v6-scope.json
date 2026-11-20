@@ -1,0 +1,426 @@
+{
+  "handoffSHA256": "7dd657c6295d10e0175425954b98c7d569bdfb8f888995b5367c902ccdba346f",
+  "publicDerivatives": [
+    {
+      "model": "M1",
+      "sourceCandidateSHA256": "c1f7f93fe6f39e4c1eb036f8a8a74859fc3245b791c7050f7a30110aa737d795",
+      "sourceBytes": 21973196,
+      "publicSHA256": "27dadcecf5593ccc9b257bc4832acf5eb8562aa9bd92c96b5a19491fd0f012ba",
+      "downloadSHA256": "478be2c24b1b8b8a0cbb649c6c75fa11df7658b29a7a40d186da34aa37773ae9",
+      "url": "models/studies-20261112/mcity-m1-pavilion-v6-27dadcecf559.glb.gz",
+      "bytes": 3796003,
+      "decodedBytes": 21971656,
+      "BINChunkSHA256": "e5a86498ed419b5d6d577d8eeb261772c97aa6a20e08fdbd4838813d3fc04f7a",
+      "sourceAndPublicBINExact": true,
+      "meshes": 192,
+      "triangles": 367975,
+      "bounds": [
+        [
+          -5674.391518552545,
+          83.39438772201538,
+          343.3714500007317
+        ],
+        [
+          -5569.98898433367,
+          284.25999450683594,
+          449.09374256956755
+        ]
+      ],
+      "drawPrimitives": 192,
+      "transparentPrimitivesRetained": 133,
+      "allNormals": true
+    },
+    {
+      "model": "M5",
+      "sourceCandidateSHA256": "894e4cd143dba533d485c75dffb96f13c37a623f31a2bfe2d7a50038f063dab5",
+      "sourceBytes": 1832720,
+      "publicSHA256": "ccc3178d661b6d3a77b14af474b235be0cae37faf31f5d6c0e3e9fc5e1c950b6",
+      "downloadSHA256": "d8847e7267ee38de9138f7aac388fb59865cb3ef139b4c0f66adb66127ab1af5",
+      "url": "models/studies-20261112/mcity-m5-podium-v6-ccc3178d661b.glb.gz",
+      "bytes": 453289,
+      "decodedBytes": 1832764,
+      "BINChunkSHA256": "a87bcbd51c6db78b887c59e0ad2b0d95798852f17501ab00651a1784c2be9eb7",
+      "sourceAndPublicBINExact": true,
+      "meshes": 56,
+      "triangles": 91644,
+      "bounds": [
+        [
+          -5691.06396484375,
+          84.19877624511719,
+          605.9493408203125
+        ],
+        [
+          -5640.46435546875,
+          202.07044982910156,
+          661.8663330078125
+        ]
+      ],
+      "drawPrimitives": 56,
+      "transparentPrimitivesRetained": 2,
+      "allNormals": false
+    }
+  ],
+  "refinements": [
+    {
+      "id": "mcity-m1-20261025-exterior-study",
+      "oldValues": {
+        "url": "models/studies-20261101/mcity-m1-likeness-v5.glb.gz",
+        "modelFidelity": "Approximate completed M1 exterior using CORE floor-plate outlines and selected photo-informed podium surfaces.",
+        "sourceRevision": "05",
+        "bounds": [
+          [
+            -5669.689412453971,
+            84.71000000834465,
+            343.3714500007317
+          ],
+          [
+            -5569.98898433367,
+            284.25999450683594,
+            449.09374256956755
+          ]
+        ],
+        "sha256": "2395254cbc740cba2bb3bae74bbb00cc4039ea1997414635bb368b93cea92521",
+        "downloadSHA256": "630368744c2ba9f8252004d87bf31d31f66397c3cc037b21db65f43e6da7f9ca",
+        "bytes": 3730812,
+        "decodedBytes": 21567616,
+        "triangles": 363263,
+        "drawPrimitives": 183,
+        "transparentPrimitivesRetained": 132,
+        "registration": {
+          "family": "M1",
+          "rotationYDegrees": -40.88624229608553,
+          "translation": [
+            -5599.4176685531365,
+            85.05999755859375,
+            370.8613563643046
+          ],
+          "representation": "Source-informed exterior plates and selected podium surfaces. Floor phase, dimensions and placement remain approximate.",
+          "podiumVerticalCorrections": {
+            "M1_P00": -0.34999847412109375,
+            "M1_P01": -0.029998779296875,
+            "M1_P02": -0.339996337890625,
+            "M1_P03": -0.04999542236328125
+          },
+          "preserveSemanticPartitions": true,
+          "entryPodiumComponents": {
+            "M1": "M1_P03",
+            "M2": "M2_P07"
+          },
+          "revision": "05"
+        },
+        "caveat": "Approximate completed exterior study. CORE A–G exterior plates scaled from design diagram; inherited floor phase and total heights are not photo-verified. Bounded photo-informed glazing/fascia on retained City podium masses, with low M1 faceted pavilion/terrace subvolumes unresolved. Crown remains prior approximate geometry. No measured as-built claim.",
+        "modelReviewDate": "2026-11-01"
+      },
+      "newValues": {
+        "url": "models/studies-20261112/mcity-m1-pavilion-v6-27dadcecf559.glb.gz",
+        "modelFidelity": "Approximate completed M1 exterior with source-traced tower plates, selected podium surfaces and a footprint-informed low pavilion.",
+        "sourceRevision": "06",
+        "bounds": [
+          [
+            -5674.391518552545,
+            83.39438772201538,
+            343.3714500007317
+          ],
+          [
+            -5569.98898433367,
+            284.25999450683594,
+            449.09374256956755
+          ]
+        ],
+        "sha256": "27dadcecf5593ccc9b257bc4832acf5eb8562aa9bd92c96b5a19491fd0f012ba",
+        "downloadSHA256": "478be2c24b1b8b8a0cbb649c6c75fa11df7658b29a7a40d186da34aa37773ae9",
+        "bytes": 3796003,
+        "decodedBytes": 21971656,
+        "triangles": 367975,
+        "drawPrimitives": 192,
+        "transparentPrimitivesRetained": 133,
+        "registration": {
+          "family": "M1",
+          "rotationYDegrees": -40.88624229608553,
+          "translation": [
+            -5599.4176685531365,
+            85.05999755859375,
+            370.8613563643046
+          ],
+          "representation": "Source-informed exterior plates and selected podium surfaces. Floor phase, dimensions and placement remain approximate.",
+          "podiumVerticalCorrections": {
+            "M1_P00": -0.34999847412109375,
+            "M1_P01": -0.029998779296875,
+            "M1_P02": -0.339996337890625,
+            "M1_P03": -0.04999542236328125
+          },
+          "preserveSemanticPartitions": true,
+          "entryPodiumComponents": {
+            "M1": "M1_P03",
+            "M2": "M2_P07"
+          },
+          "revision": "06"
+        },
+        "caveat": "Floor sequence, heights, crown details and podium dimensions remain approximate. The added low pavilion follows a City footprint and photographic references; its roof height is estimated within about 2 m. Existing ground-level podium gaps remain unresolved. This is not a measured as-built model.",
+        "modelReviewDate": "2026-11-12"
+      },
+      "absentKeys": [],
+      "newFingerprint": "d9872686e6b04d66e8316bc0983c2c38059ce3e10d01b49239d4706a85f255c8"
+    },
+    {
+      "id": "mcity-m5-authored-detail-20261101",
+      "oldValues": {
+        "url": "models/studies-20261101/mcity-m5-exterior-v5-af9d51546ca3.glb.gz",
+        "sha256": "4162051b4d6706a65b3f5f0606ce31dfd9500c41f6ea766f1a40eb15ac519b6f",
+        "downloadSHA256": "4162051b4d6706a65b3f5f0606ce31dfd9500c41f6ea766f1a40eb15ac519b6f",
+        "bytes": 375477,
+        "triangleCount": 89856,
+        "bounds": [
+          [
+            -5691.06396484375,
+            84.19877624511719,
+            605.9493408203125
+          ],
+          [
+            -5640.46044921875,
+            202.07044982910156,
+            661.8663330078125
+          ]
+        ],
+        "modelFidelity": "Approximate completed-design exterior with overlapping tower volumes, broad facade frames, clear podium guards and a masonry podium with recessed entrance glazing.",
+        "qualification": [
+          "Tower footprint topology follows a developer marketing-plan key dated 16 March 2022; frame layout and depths are interpreted from official design renderings.",
+          "The 117.871679 m vertical extent, 34 m comparison width and approximately 15 m placement tolerance remain unverified architectural dimensions.",
+          "Podium bays, facade phases, glazing and finishes are approximate. No surveyed or as-built accuracy is claimed.",
+          "Future completed-design only. The dated Spring 2026 construction report is unchanged; no November 2026 construction stage is inferred."
+        ],
+        "sourceRevision": "M5 exterior study revision 5, 1 November 2026. Reference drawing and image dates are separate.",
+        "decodedSHA256": "af9d51546ca35a1fbc850b2afc3cbf1565010ee7c196f03df7e8cf6679ff829a",
+        "decodedBytes": 1505248,
+        "modelReviewDate": "2026-11-01",
+        "modelRevisionId": "mcity-m5-v5-20261101"
+      },
+      "newValues": {
+        "url": "models/studies-20261112/mcity-m5-podium-v6-ccc3178d661b.glb.gz",
+        "sha256": "d8847e7267ee38de9138f7aac388fb59865cb3ef139b4c0f66adb66127ab1af5",
+        "downloadSHA256": "d8847e7267ee38de9138f7aac388fb59865cb3ef139b4c0f66adb66127ab1af5",
+        "bytes": 453289,
+        "triangleCount": 91644,
+        "bounds": [
+          [
+            -5691.06396484375,
+            84.19877624511719,
+            605.9493408203125
+          ],
+          [
+            -5640.46435546875,
+            202.07044982910156,
+            661.8663330078125
+          ]
+        ],
+        "modelFidelity": "Approximate completed-design exterior with overlapping tower volumes and a revised upper park-facing podium; the tower, lobby, entrance and terrace are unchanged.",
+        "qualification": [
+          "Tower footprint topology follows a developer marketing-plan key dated 16 March 2022; frame layout and depths are interpreted from official design renderings.",
+          "The 117.871679 m vertical extent, 34 m comparison width and approximately 15 m placement tolerance remain unverified architectural dimensions.",
+          "Only ten upper park-front podium groups were revised from an undated official completed-design rendering. Seven unequal major groups are a perspective interpretation. The 40.5 m frontage, 20.48 m podium datum and 1.2 m balcony projection remain estimates; no issued elevation or as-built dimensions are available.",
+          "Future completed-design only. The dated Spring 2026 construction report is unchanged; no November 2026 construction stage is inferred."
+        ],
+        "sourceRevision": "M5 upper podium study revision 6, 12 November 2026. Reference drawing and image dates are separate.",
+        "decodedSHA256": "ccc3178d661b6d3a77b14af474b235be0cae37faf31f5d6c0e3e9fc5e1c950b6",
+        "decodedBytes": 1832764,
+        "modelReviewDate": "2026-11-12",
+        "modelRevisionId": "mcity-m5-v6-20261112"
+      },
+      "absentKeys": [],
+      "newFingerprint": "fd72fae0273016163e8b8c12e10d8ba8a903ae2f2ef5335ec159915392a2808e"
+    }
+  ],
+  "assets": [
+    {
+      "id": "mcity-m1",
+      "oldValues": {
+        "url": "models/studies-20261101/mcity-m1-likeness-v5.glb.gz",
+        "bytes": 3730812,
+        "decodedBytes": 21567616,
+        "sha256": "2395254cbc740cba2bb3bae74bbb00cc4039ea1997414635bb368b93cea92521",
+        "downloadSHA256": "630368744c2ba9f8252004d87bf31d31f66397c3cc037b21db65f43e6da7f9ca",
+        "representation": "Approximate completed exterior with source-traced floor plates and selected podium surface details. Floor phase and dimensions remain qualified.",
+        "triangles": 363263,
+        "meshCount": 183,
+        "modelReviewDate": "2026-11-01"
+      },
+      "newValues": {
+        "url": "models/studies-20261112/mcity-m1-pavilion-v6-27dadcecf559.glb.gz",
+        "bytes": 3796003,
+        "decodedBytes": 21971656,
+        "sha256": "27dadcecf5593ccc9b257bc4832acf5eb8562aa9bd92c96b5a19491fd0f012ba",
+        "downloadSHA256": "478be2c24b1b8b8a0cbb649c6c75fa11df7658b29a7a40d186da34aa37773ae9",
+        "representation": "Approximate completed exterior with source-traced floor plates and an added footprint-informed pavilion. Roof height, floor phase and dimensions remain qualified.",
+        "triangles": 367975,
+        "meshCount": 192,
+        "modelReviewDate": "2026-11-12"
+      },
+      "absentKeys": [],
+      "newFingerprint": "034db3054d78feb270a32fdfe3cc781547e808b6b50e8fa8c9af356c3d591532"
+    }
+  ],
+  "addedAssets": [
+    {
+      "id": "mcity-m5-v6",
+      "projectId": "mcity-5",
+      "title": "M City M5",
+      "url": "models/studies-20261112/mcity-m5-podium-v6-ccc3178d661b.glb.gz",
+      "bytes": 453289,
+      "decodedBytes": 1832764,
+      "sha256": "ccc3178d661b6d3a77b14af474b235be0cae37faf31f5d6c0e3e9fc5e1c950b6",
+      "downloadSHA256": "d8847e7267ee38de9138f7aac388fb59865cb3ef139b4c0f66adb66127ab1af5",
+      "downloadName": "M_City_M5_Exterior_Study_Rev06.glb",
+      "representation": "Approximate completed-design study with revised upper park-facing podium groups. Dimensions and placement remain unverified.",
+      "cityDataTerms": false,
+      "triangles": 91644,
+      "meshCount": 56,
+      "modelReviewDate": "2026-11-12"
+    }
+  ],
+  "views": [
+    {
+      "id": "mcity-pair",
+      "oldValues": {
+        "limits": "Floor sequence, heights, crown details and podium dimensions remain approximate. Added glazing and bands cover selected surfaces; they do not reconstruct the full podium. M1’s low faceted pavilion remains coarse or absent."
+      },
+      "newValues": {
+        "limits": "Floor sequence, heights, crown details and podium dimensions remain approximate. The added low pavilion follows a City footprint and photographic references; its roof height is estimated within about 2 m. Existing ground-level podium gaps remain unresolved. This is not a measured as-built model."
+      },
+      "absentKeys": [],
+      "newFingerprint": "771909e10b98ce7bdeb5c8090864421bd801a54873a956cd143f5796c61060d1"
+    },
+    {
+      "id": "mcity-m1",
+      "oldValues": {
+        "limits": "Floor sequence, heights, crown details and podium dimensions remain approximate. Added glazing and bands cover selected surfaces; they do not reconstruct the full podium. M1’s low faceted pavilion remains coarse or absent."
+      },
+      "newValues": {
+        "limits": "Floor sequence, heights, crown details and podium dimensions remain approximate. The added low pavilion follows a City footprint and photographic references; its roof height is estimated within about 2 m. Existing ground-level podium gaps remain unresolved. This is not a measured as-built model."
+      },
+      "absentKeys": [],
+      "newFingerprint": "24c9080b764bdd9ba6a51f47d4e2028b24e90fc623ea13642ece2ec8773683d3"
+    },
+    {
+      "id": "mcity-m5",
+      "oldValues": {
+        "limits": "The 117.87 m height and 34 m width are comparison dimensions, not verified measurements. Placement, podium bays, frame depths, glazing and finishes remain approximate. This view does not show current construction.",
+        "assets": [
+          "mcity-m5-v5"
+        ]
+      },
+      "newValues": {
+        "limits": "Height, width, placement and podium dimensions remain approximate. The upper park-facing podium uses seven unequal groups interpreted from an undated completed-design rendering. The 40.5 m frontage, 20.48 m podium datum and 1.2 m balcony projection are estimates. This view does not show current construction.",
+        "assets": [
+          "mcity-m5-v6"
+        ]
+      },
+      "absentKeys": [],
+      "newFingerprint": "eed654566a684cd429dd6bc20b26afc3c828b26c154bc8270db3a86b5986085f"
+    }
+  ],
+  "addedRevisions": [
+    {
+      "id": "mcity-pair-v6-20261112",
+      "projectId": "mcity-1-2",
+      "updatedOn": "2026-11-12",
+      "viewIds": [
+        "mcity-pair"
+      ],
+      "scope": "M1 low pavilion added with estimated roof height; M2 remains at its 1 November 2026 revision.",
+      "modelAssets": [
+        {
+          "id": "mcity-m1",
+          "url": "models/studies-20261112/mcity-m1-pavilion-v6-27dadcecf559.glb.gz",
+          "sha256": "27dadcecf5593ccc9b257bc4832acf5eb8562aa9bd92c96b5a19491fd0f012ba",
+          "downloadSHA256": "478be2c24b1b8b8a0cbb649c6c75fa11df7658b29a7a40d186da34aa37773ae9",
+          "bytes": 3796003,
+          "decodedBytes": 21971656,
+          "modelReviewDate": "2026-11-12"
+        },
+        {
+          "id": "mcity-m2",
+          "url": "models/studies-20261101/mcity-m2-likeness-v5.glb.gz",
+          "sha256": "e5a8a29b8f5553e4f92418c11c4ef63397cded152d7d06ba48d690e1e18597fd",
+          "downloadSHA256": "1f6d68734e2486165984f0e56605638fc0ea705a4cb326afbe33b0a4dde0ef20",
+          "bytes": 3662186,
+          "decodedBytes": 21373484,
+          "modelReviewDate": "2026-11-01"
+        }
+      ],
+      "media": [],
+      "evidence": {
+        "modelDate": "Qualified geometry revision dated 12 November 2026; source-reference dates remain separate.",
+        "acceptanceSHA256": "7dd657c6295d10e0175425954b98c7d569bdfb8f888995b5367c902ccdba346f"
+      }
+    },
+    {
+      "id": "mcity-m1-v6-20261112",
+      "projectId": "mcity-1-2",
+      "updatedOn": "2026-11-12",
+      "viewIds": [
+        "mcity-m1"
+      ],
+      "scope": "Footprint-informed low pavilion added; estimated roof height and existing ground-level podium gaps remain qualified.",
+      "modelAssets": [
+        {
+          "id": "mcity-m1",
+          "url": "models/studies-20261112/mcity-m1-pavilion-v6-27dadcecf559.glb.gz",
+          "sha256": "27dadcecf5593ccc9b257bc4832acf5eb8562aa9bd92c96b5a19491fd0f012ba",
+          "downloadSHA256": "478be2c24b1b8b8a0cbb649c6c75fa11df7658b29a7a40d186da34aa37773ae9",
+          "bytes": 3796003,
+          "decodedBytes": 21971656,
+          "modelReviewDate": "2026-11-12"
+        }
+      ],
+      "media": [],
+      "evidence": {
+        "modelDate": "Qualified geometry revision dated 12 November 2026; source-reference dates remain separate.",
+        "acceptanceSHA256": "7dd657c6295d10e0175425954b98c7d569bdfb8f888995b5367c902ccdba346f"
+      }
+    },
+    {
+      "id": "mcity-m5-v6-20261112",
+      "projectId": "mcity-5",
+      "updatedOn": "2026-11-12",
+      "viewIds": [
+        "mcity-m5"
+      ],
+      "scope": "Ten upper park-facing podium groups revised from completed-design imagery. Other groups and materials are unchanged; dimensions remain estimated.",
+      "modelAssets": [
+        {
+          "id": "mcity-m5-v6",
+          "url": "models/studies-20261112/mcity-m5-podium-v6-ccc3178d661b.glb.gz",
+          "sha256": "ccc3178d661b6d3a77b14af474b235be0cae37faf31f5d6c0e3e9fc5e1c950b6",
+          "downloadSHA256": "d8847e7267ee38de9138f7aac388fb59865cb3ef139b4c0f66adb66127ab1af5",
+          "bytes": 453289,
+          "decodedBytes": 1832764,
+          "modelReviewDate": "2026-11-12"
+        }
+      ],
+      "media": [],
+      "evidence": {
+        "modelDate": "Qualified geometry revision dated 12 November 2026; source-reference dates remain separate.",
+        "acceptanceSHA256": "7dd657c6295d10e0175425954b98c7d569bdfb8f888995b5367c902ccdba346f"
+      }
+    }
+  ],
+  "project": {
+    "id": "mcity-1-2",
+    "oldValues": {
+      "modelCaveat": "Published height and storey conventions differ, including 60, 61 and 63-storey counts. Floor phase, heights, crown details and podium dimensions remain approximate. M1’s low faceted pavilion remains coarse or absent; selected podium surface additions do not reconstruct it. This is not a measured as-built model.",
+      "geometryCoverage": "Approximate completed exteriors with source-traced floor plates and selected podium glazing and bands."
+    },
+    "newValues": {
+      "modelCaveat": "Published height and storey conventions differ, including 60, 61 and 63-storey counts. Floor phase, heights, crown details and podium dimensions remain approximate. M1’s added low pavilion follows a City footprint and photographs; roof height is estimated within about 2 m. Existing ground-level podium gaps remain unresolved. This is not a measured as-built model.",
+      "geometryCoverage": "Approximate completed exteriors with source-traced floor plates, selected podium surfaces and a footprint-informed M1 pavilion."
+    },
+    "absentKeys": [],
+    "newFingerprint": "70d324de1f8e76e3d08894ff42f6966ab93d9a9c054e9e51fe83156e1ec1910e"
+  },
+  "csvOldRow": "mcity-1-2,M City M1 and M2,Confederation Parkway and Burnhamthorpe Road West,completed,2024,\"[61, 61]\",\"[199.2, 200]\",2023–2024,,,Approximate completed exteriors with source-traced floor plates and selected podium glazing and bands.,\"Published height and storey conventions differ, including 60, 61 and 63-storey counts. Floor phase, heights, crown details and podium dimensions remain approximate. M1’s low faceted pavilion remains coarse or absent; selected podium surface additions do not reconstruct it. This is not a measured as-built model.\",\"[{\"\"url\"\": \"\"https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/\"\", \"\"title\"\": \"\"M City project\"\", \"\"publisher\"\": \"\"City of Mississauga\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"Eight-tower community; M1/M2 occupied; M3/M5/M4 target completion Q 4 2026/2027/2028.\"\"]}, {\"\"url\"\": \"\"https://www.mcitycondos.com/construction.php\"\", \"\"title\"\": \"\"Construction updates, Spring 2026\"\", \"\"publisher\"\": \"\"Rogers Real Estate Development / Urban Capital\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"M3 crown complete and phased occupancy underway; M4 slab at 41; M5 slab at 27.\"\"]}, {\"\"url\"\": \"\"https://www.skyscrapercenter.com/complex/2859\"\", \"\"title\"\": \"\"M City complex\"\", \"\"publisher\"\": \"\"Council on Tall Buildings and Urban Habitat\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"M3 260.3 m; M4 215.6 m; M1 199.2 m; M2 200 m; M6 194 m and M5 123 m are explicitly estimates.\"\"]}, {\"\"url\"\": \"\"https://urbantoronto.ca/database/projects/m-city\"\", \"\"title\"\": \"\"M City\"\", \"\"publisher\"\": \"\"UrbanToronto\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"M1/M2 completed; database uses 60 storeys and 197.81 m, differing from City 61-storey marketing.\"\"]}]\",existing,,2026-11-01,\"Existing towers, with occupancy recorded in 2023 and 2024. Approximate exterior studies do not change their status.\"",
+  "csvNewRow": "mcity-1-2,M City M1 and M2,Confederation Parkway and Burnhamthorpe Road West,completed,2024,\"[61, 61]\",\"[199.2, 200]\",2023–2024,,,\"Approximate completed exteriors with source-traced floor plates, selected podium surfaces and a footprint-informed M1 pavilion.\",\"Published height and storey conventions differ, including 60, 61 and 63-storey counts. Floor phase, heights, crown details and podium dimensions remain approximate. M1’s added low pavilion follows a City footprint and photographs; roof height is estimated within about 2 m. Existing ground-level podium gaps remain unresolved. This is not a measured as-built model.\",\"[{\"\"url\"\": \"\"https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/\"\", \"\"title\"\": \"\"M City project\"\", \"\"publisher\"\": \"\"City of Mississauga\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"Eight-tower community; M1/M2 occupied; M3/M5/M4 target completion Q 4 2026/2027/2028.\"\"]}, {\"\"url\"\": \"\"https://www.mcitycondos.com/construction.php\"\", \"\"title\"\": \"\"Construction updates, Spring 2026\"\", \"\"publisher\"\": \"\"Rogers Real Estate Development / Urban Capital\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"M3 crown complete and phased occupancy underway; M4 slab at 41; M5 slab at 27.\"\"]}, {\"\"url\"\": \"\"https://www.skyscrapercenter.com/complex/2859\"\", \"\"title\"\": \"\"M City complex\"\", \"\"publisher\"\": \"\"Council on Tall Buildings and Urban Habitat\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"M3 260.3 m; M4 215.6 m; M1 199.2 m; M2 200 m; M6 194 m and M5 123 m are explicitly estimates.\"\"]}, {\"\"url\"\": \"\"https://urbantoronto.ca/database/projects/m-city\"\", \"\"title\"\": \"\"M City\"\", \"\"publisher\"\": \"\"UrbanToronto\"\", \"\"accessed\"\": \"\"2026-09-20\"\", \"\"claims\"\": [\"\"M1/M2 completed; database uses 60 storeys and 197.81 m, differing from City 61-storey marketing.\"\"]}]\",existing,,2026-11-01,\"Existing towers, with occupancy recorded in 2023 and 2024. Approximate exterior studies do not change their status.\"",
+  "addedVersions": {
+    "models/studies-20261112/mcity-m1-pavilion-v6-27dadcecf559.glb.gz": "478be2c24b1b8b8a0cbb649c6c75fa11df7658b29a7a40d186da34aa37773ae9",
+    "models/studies-20261112/mcity-m5-podium-v6-ccc3178d661b.glb.gz": "d8847e7267ee38de9138f7aac388fb59865cb3ef139b4c0f66adb66127ab1af5"
+  }
+}

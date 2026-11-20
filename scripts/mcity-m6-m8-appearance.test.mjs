@@ -1,3 +1,6 @@
+import * as treeRuntime from './tree-runtime-fixture.mjs';
+import {restoreRegistryReconciliationData} from './registry-reconciliation-scope.mjs';
+import {applyHarbornTreeContacts} from '../public/harborn-tree-contacts.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -26,7 +29,7 @@ const dispose=root=>root.traverse(o=>{o.geometry?.dispose();for(const m of [o.ma
 
 test('M6/M7-M8 appearance revisions preserve all planning facts and exact replacement policy',()=>{
  restoreM6M8Appearance(structuredClone(refinements));
- for(const [path,pin]of Object.entries(protectedScope.facts)){if(path==='data/projects.json')assert.equal(modelScopeFingerprint(restoreM1M2Projects(structuredClone(projects))),M1_M2_V5_SCOPE.priorProjectsFingerprint);else assert.equal(sha(path==='downloads/project-register.csv'?restoreM1M2Register(read(path).toString()):read(path)),pin,path);}
+ for(const [path,pin]of Object.entries(protectedScope.facts)){if(path==='data/projects.json')assert.equal(modelScopeFingerprint(restoreM1M2Projects(structuredClone(projects))),M1_M2_V5_SCOPE.priorProjectsFingerprint);else assert.equal(sha(path==='downloads/project-register.csv'?restoreM1M2Register(read(path).toString()):restoreRegistryReconciliationData(path,read(path))),pin,path);}
  for(const spec of M6_M8_APPEARANCE){const row=refinements.assets.find(a=>a.id===spec.id),p=projects.find(p=>p.id===row.projectId);
   assert.equal(row.lifecycle,'proposed');assert.deepEqual(row.modes,['future']);assert.deepEqual(row.replacementModes,['future']);assert.deepEqual(row.replacesSourceIds,spec.oldRecord.replacesSourceIds);
   assert.equal(row.sourceDate,spec.oldRecord.sourceDate);assert.equal(row.statusEvidenceDate,'2026-10-29');assert.equal(row.sourceOriginalsIncluded,false);assert(row.preserveMaterials&&row.preserveSourceNormals&&row.uncertainGeometry);assert.match(row.credit,/Hariri Pontarini Architects/);
@@ -56,9 +59,9 @@ for(const spec of M6_M8_APPEARANCE)test(spec.id+' keeps every protected original
 test('actual map adapter shows dated M6/M7-M8 only in Future and masks the five City envelopes once',async()=>{
  const app=read('app.js').toString(),model=(await load('models/downtown.glb')).scene,sourceIds=assets.flatMap(a=>a.replacesSourceIds),original=meshes(model).filter(m=>sourceIds.includes(m.userData.id));assert.equal(original.length,5);
  const sourcePositions=original.map(m=>m.geometry.attributes.position.array.slice()),appearance=createModelAppearance(THREE),district=json('districts').find(d=>d.id==='downtown');
- const state={THREE,district,id:'downtown',nextModel:model,refinementData:{...refinements,assets},refinementInDistrict,overrides:json('overrides'),projectById:new Map(projects.map(p=>[p.id,p])),groupById:new Map(),groupByMesh:new Map(),appearance,resolveModelLifecycle,displayStatusForLifecycle,inactiveLifecycle,token:1,loadToken:1,window:{},splitSourceOverlaps,loadAsset:load,model,modelMeshes:[],draftToggle:{checked:false},selectedStudyProjectId:null,treeMeshes:[],markers:[],detailMeshes:[],transitGroup:{},markerGroup:{},syncStatusLegend(){},applyModelVisibility,$:id=>({checked:id==='#unknownStatusToggle'})};
+ const state={...treeRuntime,THREE,applyHarbornTreeContacts,district,id:'downtown',nextModel:model,refinementData:{...refinements,assets},refinementInDistrict,overrides:json('overrides'),projectById:new Map(projects.map(p=>[p.id,p])),groupById:new Map(),groupByMesh:new Map(),appearance,resolveModelLifecycle,displayStatusForLifecycle,inactiveLifecycle,token:1,loadToken:1,window:{},splitSourceOverlaps,loadAsset:load,model,modelMeshes:[],draftToggle:{checked:false},selectedStudyProjectId:null,treeMeshes:[],markers:[],detailMeshes:[],transitGroup:{},markerGroup:{},syncStatusLegend(){},applyModelVisibility,$:id=>({checked:id==='#unknownStatusToggle'})};
  vm.runInNewContext(app.split('\n').filter(s=>s.startsWith('function classify(')||s.startsWith('function lifecycleFor(')).join('\n'),state);
- const eagerStart=app.indexOf('const additionAssets='),eagerEnd=app.indexOf(' const detail=await loadAsset',eagerStart);assert(eagerStart>0&&eagerEnd>eagerStart);await vm.runInNewContext('(async()=>{'+app.slice(eagerStart,eagerEnd)+'})()',state);
+ const eagerStart=app.indexOf('const additionAssets='),eagerEnd=app.indexOf(' const nextDetailMeshes=[];',eagerStart);assert(eagerStart>0&&eagerEnd>eagerStart);await vm.runInNewContext('(async()=>{'+app.slice(eagerStart,eagerEnd)+'})()',state);
  const passStart=app.indexOf('const nextFutureMeshes=[],nextModelMeshes=[];'),passEnd=app.indexOf(';nextContext.traverse',passStart);assert(passStart>0&&passEnd>passStart);vm.runInNewContext(app.slice(passStart,passEnd+1)+'modelMeshes=nextModelMeshes;',state);
  const visibilityStart=app.indexOf('let visibilityCacheKey='),visibilityEnd=app.indexOf('let statusLegendSignature=');assert(visibilityStart>0&&visibilityEnd>visibilityStart);vm.runInNewContext(app.slice(visibilityStart,visibilityEnd),state);
  for(const m of original){assert.equal(m.userData.sourceReplacements.length,1);assert.equal(m.userData.sourceReplacements[0].assetId,assets.find(a=>a.replacesSourceIds.includes(m.userData.id)).id);}

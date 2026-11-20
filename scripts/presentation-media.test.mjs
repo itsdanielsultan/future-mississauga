@@ -12,7 +12,8 @@ const file=path=>fs.readFileSync(new URL(path,pub));
 
 test('revised downtown images retain native resolution, clean pixels and precise lifecycle metadata',()=>{
  assert.equal(manifest.images.length,5);
- assert.equal(manifest.publication,false);
+ assert.equal(manifest.publication,true);
+ assert.equal(manifest.state,'PUBLISHED');
  const allowed=new Set(['Existing','Under construction','Approved planning','Proposed','Status unverified']);
  for(const entry of manifest.images){
   const row=normalizeCleanMedia(entry,base);
@@ -41,7 +42,7 @@ test('presentation metadata cannot silently lose its preservation evidence or in
 
 test('current catalogue selects the revision, binds its comparison and keeps older pixels independently addressable',async()=>{
  const savedFetch=globalThis.fetch,savedLocation=globalThis.location;
- const fetcher=async url=>{try{return new Response(file(url));}catch{return new Response('',{status:404});}};
+ const fetcher=async url=>{if(url==='data/downtown-current-media-20261113.json')return new Response('',{status:404});try{return new Response(file(url));}catch{return new Response('',{status:404});}};
  globalThis.fetch=fetcher;globalThis.location={href:base};
  try{
   const {mediaCatalog,indexMedia}=await import('../public/media-catalog.js?test=presentation-revision');
@@ -61,7 +62,9 @@ test('skyline film and poster share the revised image edition and equal scenario
  assert.equal(film.durationSeconds,12);
  assert.equal(film.validation.posterMatchesDecodedFirstFrameExactly,true);
  for(const key of ['film','poster','credits']){const asset=film[key],bytes=file(root+asset.file);assert.equal(bytes.length,asset.bytes);assert.equal(sha(bytes),asset.sha256);}
- const home=file('index.html').toString();assert(home.includes(root+film.film.file));assert(home.includes(root+film.poster.file));
+ const current=read('data/downtown-film-20261120.json'),home=file('film.html').toString();assert(home.includes(current.film.url));assert(home.includes(current.poster.url));
+ for(const key of ['film','poster','credits']){const asset=current[key],bytes=file(asset.url);assert.equal(bytes.length,asset.bytes);assert.equal(sha(bytes),asset.sha256);}
+ assert.equal(current.historicalFilmPreserved,true);
  assert(!home.includes('gallery/Downtown-transformation.mp4'));
  assert(!home.includes('Route details &amp; model limits'));
 });

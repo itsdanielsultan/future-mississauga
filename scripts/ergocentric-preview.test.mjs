@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import {gunzipSync} from 'node:zlib';
 import {selectPreview,verifiedModelBytes} from '../public/model-preview-loading.js';
-import {modelDownloadAssets,configureStudyActions,visibleReferenceCreditHTML,studyViewerMessage} from '../public/model-study-presentation.js';
+import {configureStudyCredits,visibleReferenceCreditHTML} from '../public/model-study-presentation.js';
 import {modelRevisionForProject,mediaModelRevision} from '../public/model-revisions.js';
 const read=path=>JSON.parse(fs.readFileSync(new URL(`../public/${path}`,import.meta.url)));
 const catalogue=read('data/model-previews.json'),registry=read('data/model-revisions.json');
@@ -52,15 +52,12 @@ test('reversing only the three publication metadata edits reproduces the exact p
   assert.equal(original.length,100916);assert.equal(hash(original),geometrySHA);
 });
 
-test('the individual study offers no standalone model or compressed-download action',()=>{
-  assert.equal(view.offerDownloads,false);assert.deepEqual(modelDownloadAssets(view,[asset]),[]);
-  for(const prior of catalogue.views.filter(item=>item.id!==view.id)) assert.deepEqual(modelDownloadAssets(prior,['existing action']),['existing action']);
-  const selectors=['#modelDownloads','#compressedDownloads','.download-options','#downloadNote','.sidebar > p.credit:not([id]):not([data-visible-reference-credit])','.sidebar > p:has(a[download])'];
-  const elements=new Map(selectors.map(selector=>[selector,{hidden:false}]));let inserted='';
-  const root={querySelectorAll:selector=>[elements.get(selector)],querySelector:selector=>selector==='#studyCredit'?{insertAdjacentHTML:(_position,html)=>{inserted=html;}}:null};
-  configureStudyActions(view,root);
-  assert.ok([...elements.values()].every(element=>element.hidden));assert.match(inserted,/David Lasker\/Cityscape Photography/);
-  for(const message of ['This browser cannot unpack the model. Use the compressed download below or a newer browser.','3D graphics are unavailable. You can still download the model and credits.','Graphics could not be restored. Reload the viewer or use the model download.']) assert.doesNotMatch(studyViewerMessage(view,message),/download/i);
+test('the individual study retains its visible photo credit',()=>{
+  assert.equal(view.offerDownloads,false);
+  let inserted='';
+  const root={querySelector:selector=>selector==='#studyCredit'?{insertAdjacentHTML:(_position,html)=>{inserted=html;}}:null};
+  configureStudyCredits(view,root);
+  assert.match(inserted,/David Lasker\/Cityscape Photography/);
 });
 
 test('credit stays visible beside the study and the city route targets only Citywide',()=>{

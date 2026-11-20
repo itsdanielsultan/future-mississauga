@@ -50,7 +50,7 @@ test('generic review and reference dates never become dates for unrelated buildi
 });
 
 test('revision records match actual GLB, compressed download and all eight derivative image files',()=>{
-  assert.deepEqual(registry.revisions.map(r=>r.id),['sgm-maritz-6710-20261027','ergocentric-275-superior-20261028','mcity-m5-v5-20261101','mcity-pair-v5-20261101','mcity-m1-v5-20261101','mcity-m2-v5-20261101']);
+  assert.deepEqual(registry.revisions.map(r=>r.id),['sgm-maritz-6710-20261027','ergocentric-275-superior-20261028','mcity-m5-v5-20261101','mcity-pair-v5-20261101','mcity-m1-v5-20261101','mcity-m2-v5-20261101','mcity-pair-v6-20261112','mcity-m1-v6-20261112','mcity-m5-v6-20261112']);
   const asset=record.modelAssets[0],compressed=fs.readFileSync(new URL(`../public/${asset.url}`,import.meta.url)),decoded=gunzipSync(compressed);
   assert.equal(compressed.length,asset.bytes);assert.equal(sha(compressed),asset.downloadSHA256);
   assert.equal(decoded.length,asset.decodedBytes);assert.equal(sha(decoded),asset.sha256);

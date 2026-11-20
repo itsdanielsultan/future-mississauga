@@ -12,8 +12,9 @@
     if (target.closest('[data-download]') || anchor?.matches('.save,.download-icon,.file-download,.media-preview__download,.document-download') || /^Download\b/i.test(anchor?.textContent.trim() || '')) return null;
     if (anchor) {
       const url = new URL(anchor.href, location.href);
+      if (/\.html?$/i.test(url.pathname)) return null;
       const knownPDF = anchor.hasAttribute('data-document-preview') ||
-        (url.origin === location.origin && /\/downloads\/(Future-Mississauga-Atlas(?:-\d{8}-[a-f0-9]{12})?|City-of-Mississauga-Open-Data-Terms)\.pdf$/.test(url.pathname)) ||
+        (url.origin === location.origin && /\/downloads\/(edition-20261120\/(?:Mississauga-Atlas|[a-z0-9-]+-review)|Future-Mississauga-Atlas(?:-\d{8}-[a-f0-9]{12})?|City-of-Mississauga-Open-Data-Terms)\.pdf$/.test(url.pathname)) ||
         (url.hostname === 'github.com' && url.pathname.startsWith('/itsdanielsultan/future-mississauga/releases/download/') && url.pathname.endsWith('-review.pdf'));
       if (knownPDF) return anchor;
     }
@@ -45,7 +46,7 @@
   }
   document.addEventListener('click', capture, true);
   function start() {
-    import('./image-experience.js?v=20261112-ui1').then(() => {
+    import('./image-experience.js?v=20261120-plates').then(() => {
       document.removeEventListener('click', capture, true);
       const trigger = pending; pending = null;
       trigger?.removeAttribute('aria-busy');

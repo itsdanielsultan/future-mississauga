@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import vm from 'node:vm';
+import {downtownAerial} from '../public/downtown-aerial.js';
+import {editionPreview} from '../public/edition-pictures.js';
 import {assetURL} from '../public/asset-delivery.js';
 import {assertNativeMediaTransport} from './native-media-transport.mjs';
 import {normalizeCleanMedia,matchedComparisonBinding,mediaScenarioLabel} from '../public/clean-media.js';
@@ -38,17 +40,20 @@ test('both refreshed construction skylines retain their dated construction scena
  const rows=normalized.filter(row=>row.kind==='wide'||row.kind==='portraits').filter(row=>row.file==='downtown-skyline-construction.png');
  assert.equal(rows.length,2);
  for(const row of rows){
-  assert.equal(row.caption.scenario,'construction');assert.equal(mediaScenarioLabel(row),'Dated construction');
+  assert.equal(row.caption.scenario,'construction');assert.equal(mediaScenarioLabel(row),'Construction snapshot');
   assert.equal(row.renderInfo.sourceDatesMixed,true);assert.equal(row.renderInfo.sourceModelDate,null);
   assert.equal(row.renderInfo.renderDate,'2026-11-01');
  }
- assert(text('gallery.js').includes("constructionSkyline:'Dated construction skyline'"));
+ assert.match(text('gallery-catalogue.js'),/constructionSkyline: \{suffix:'-skyline-construction.png', label:'Construction snapshot'/);
 });
 
-test('each current Social article points to the clean master and a separate footer download',()=>{
- const cards=[...text('social.html').matchAll(/<article\b[^>]*>[\s\S]*?<\/article>/g)].map(match=>match[0]);
- assert.equal(cards.length,24);
- for(const row of native.images.filter(row=>row.identity.startsWith('portraits/'))){
+test('each November 13 Social article points to the clean master and a separate footer download',()=>{
+ const cards=[...fs.readFileSync(new URL('./fixtures/social-20261113.html',import.meta.url),'utf8').matchAll(/<article\b[^>]*>[\s\S]*?<\/article>/g)].map(match=>match[0]);
+ const coverage=[...JSON.parse(text('data/coverage-media-20261113.json')).images,...JSON.parse(text('data/east-credit-media-20261113.json')).images,...JSON.parse(text('data/meadowvale-media-20261113.json')).images].filter(row=>row.identity.startsWith('portraits/'));
+ assert.equal(cards.length,24+coverage.length);
+ for(const row of coverage){const matching=cards.filter(card=>card.includes('data-display-url="'+row.displayMaster.url+'"'));assert.equal(matching.length,1);assert(matching[0].includes('href="'+row.download.url+'"'));}
+ const refreshed=new Map(JSON.parse(text('data/downtown-current-media-20261113.json')).images.map(row=>[row.identity,row]));
+ for(const row of native.images.filter(row=>row.identity.startsWith('portraits/')).map(row=>refreshed.get(row.identity)||row)){
   const card=cards.find(value=>value.includes('data-display-url="'+row.displayMaster.url+'"'));
   assert(card,row.identity);
   assert(card.includes('class="image-link" href="'+row.displayMaster.url+'"'));
@@ -57,7 +62,7 @@ test('each current Social article points to the clean master and a separate foot
   assert(card.includes('src="'+preview.url+'"'));
   assert(card.includes('City of Mississauga · Ontario data'));
   assert.doesNotMatch(card,/social-note|Rendered|Earlier render/);
-  assert.equal(card.includes('© OpenStreetMap contributors'),row.caption.openStreetMap);
+  assert.equal(card.includes('© OpenStreetMap'),row.caption.openStreetMap);
  }
 });
 
@@ -75,9 +80,9 @@ test('every activated comparison has a byte-exact proof and equal resolution der
 function image(){return {dataset:{},src:'old.avif',srcset:'old.avif 3200w',sizes:'100vw',removeAttribute(name){delete this[name];},getAttribute(name){return this[name]??null;},closest(selector){return selector==='.picture-compare'?{}:null;}};}
 
 test('gallery selection explicitly resets the density of a reused comparison image',()=>{
- const source=text('gallery.js').match(/function showComparison\(id\)[\s\S]*?(?=\n\$\('#comparisonDistrict'\))/)[0];
+ const source=text('compare-page.js').match(/function showComparison\(id\)[\s\S]*?(?=\n\$\('#comparisonDistrict'\))/)[0];
  const before=image(),after=image(),pair=normalized.filter(row=>['wide/clarkson-existing.png','wide/clarkson-future.png'].includes(row.identity)).sort((a,b)=>a.caption.scenario.localeCompare(b.caption.scenario));
- vm.runInNewContext(source+"\nshowComparison('clarkson');",{$:selector=>selector==='#beforePicture img'?before:after,districts:[{id:'clarkson',name:'Clarkson'}],pictures:{},comparisonPair:()=>pair});
+ vm.runInNewContext(source+"\nshowComparison('clarkson');",{$:selector=>selector==='#beforePicture img'?before:after,districts:[{id:'clarkson',name:'Clarkson'}],pictures:{},edition:new Map(),comparisonPair:()=>pair,assetURL,updateCleanImageCaption(){}});
  for(const [node,row]of [[before,pair[0]],[after,pair[1]]]){
   assert.equal(node.src,row.responsive.url);assert.equal(node.srcset,row.responsive.url+' 1x');assert.equal(node.sizes,undefined);
  }
@@ -100,15 +105,37 @@ test('ordinary inline images cap their source candidates at the largest AVIF; na
  assert(!node.srcset.includes(row.displayMaster.url));assert.equal(row.displayMaster.width,6144);
 });
 
-test('each homepage panorama pairs the current scene, clean preview and footer download by its logical key',()=>{
- const source=text('gallery.js').match(/function refreshPanorama\(figure,row\)\{[\s\S]*?\n\}/)[0];
- const html=text('index.html');
- for(const scenario of ['existing','construction','future']){
-  const file='downtown-skyline-'+scenario+'.png',row=revised.find(row=>row.kind==='wide'&&row.file===file);
-  const image={},preview={},download={},figure={querySelector:selector=>selector==='img'?image:selector==='a[download]'?download:preview};
-  vm.runInNewContext(source+'\nrefreshPanorama(figure,row);',{figure,row:{...row,display:row.preview},assetURL});
-  assert.equal(image.src,row.preview.url);assert.equal(preview.href,assetURL(row.displayMaster.url));assert.equal(download.href,assetURL(row.download.url));
-  assert(html.includes('data-picture="'+file+'"'));
+test('all three featured aerials use one bearing and pair responsive images with full credited downloads',()=>{
+ const html=text('compare.html'), home=downtownAerial.skyline;
+ const plates=JSON.parse(text('data/city-plates-20261120.json')).plates;
+ const current=Object.fromEntries(Object.entries(downtownAerial).map(([view,frame])=>{
+  const plate=plates.find(p=>p.id==='wide/downtown-skyline-'+frame.scenario+'.png');
+  return [view,{...editionPreview(frame,plate),responsive:plate.displayMaster.url,previewWidth:plate.width}];
+ }));
+ const proposed=current.skyline;
+ assert(html.includes('src="'+proposed.preview+'"'));assert(html.includes(proposed.responsive+' '+proposed.width+'w'));
+ assert(html.includes('href="'+proposed.download+'" download'));
+ const source=text('compare-page.js').match(/function showSkyline\(\) \{[\s\S]*?\n\}/)[0];
+ for(const [view,frame] of Object.entries(downtownAerial)){
+  const node=()=>({dataset:{}, setAttribute(){}, append(){},replaceChildren(){}});
+  const image=node(),button=node(),download=node(),caption={...node(),querySelector:()=>download};
+  const figure={querySelector:selector=>({img:image,button,figcaption:caption})[selector]};
+  vm.runInNewContext(source+'\nshowSkyline();',{frames:downtownAerial,$:selector=>selector==='.hero'?figure:{value:view},
+   document:{createElement:node},presentationCaption:()=>[node(),node()],renderImageAttribution(){}});
+  assert.equal(image.src,frame.preview);assert.equal(image.srcset,frame.preview+' 1200w, '+frame.responsive+' 3200w');
+  assert.equal(download.href,frame.download);assert.equal(button.dataset.view,view);assert.equal(frame.src,frame.download);
+  const editionFrame=current[view];
+  vm.runInNewContext(source+'\nshowSkyline();',{frames:current,$:selector=>selector==='.hero'?figure:{value:view},
+   document:{createElement:node},presentationCaption:()=>[node(),node()],renderImageAttribution(){}});
+  assert.equal(image.srcset,editionFrame.preview+' '+editionFrame.previewWidth+'w, '+editionFrame.responsive+' '+editionFrame.width+'w');
+  assert.equal(download.href,editionFrame.download);assert.equal(editionFrame.presentation.northDegrees,home.presentation.northDegrees);
+  assert.equal(frame.presentation.northDegrees,home.presentation.northDegrees);
+  for(const path of [frame.preview,frame.responsive,frame.download]){
+   const bytes=fs.readFileSync(new URL(path,pub));
+   assert(path.includes(createHash('sha256').update(bytes).digest('hex').slice(0,12)));
+   if(path.endsWith('.png')){assert.equal(bytes.readUInt32BE(16),frame.width);assert.equal(bytes.readUInt32BE(20),frame.downloadHeight);assert(frame.downloadHeight>frame.height);}
+  }
+  assert(html.includes('value="'+view+'"'));assert(text('gallery-catalogue.js').includes('-skyline-'+frame.scenario+'.png'));
  }
 });
 

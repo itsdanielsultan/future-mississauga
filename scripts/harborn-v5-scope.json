@@ -1,0 +1,102 @@
+{
+  "state": "ACCEPTED_QUALIFIED_LENGTH_AND_NATIVE_CONTACT_CORRECTION",
+  "id": "harborn-50-60-current-plan",
+  "handoffSHA256": "3f92f88e03f0867bcc3d28827e30ef40b7563a851cb7824d5928d91371da434f",
+  "oldValues": {
+    "name": "50 and 60 Harborn Road — twelve proposed townhomes",
+    "url": "models/studies-20261101/harborn-grading-v4-0e5224cfbe25.glb.gz",
+    "reviewDate": "2026-10-10",
+    "modelCaveat": "Twelve proposed townhomes from the received design. Facades, roofs and entrances are illustrated; dimensions and placement remain approximate. The proposed grading is illustrative.",
+    "bytes": 551356,
+    "sha256": "b3b0636313d4dc3346884f293653f7d31df855246b69ac2c70b4ab4ae0561fe1",
+    "qa": {
+      "sourceCandidateSHA256": "0e5224cfbe2598d3eab0094599e5e225e874e260ff3d8a4cf5a03cf085d30d25",
+      "sourceGeometryImmutable": true,
+      "nativeContactAcceptancePending": false
+    },
+    "localReview": true,
+    "displayGroundAdaptation": {
+      "method": "Only the declared outer grading band follows the actual native ground. All building geometry and protected entrance and garage approaches remain fixed.",
+      "sourceContractSHA256": "f90136ed251f285a8de5365c5ff752cdc7eaed9c307bde9bc1269d505b17be44",
+      "nearestDryEdgeLimitM": 0.35,
+      "privateContactReviewPending": false
+    },
+    "downloadSHA256": "b3b0636313d4dc3346884f293653f7d31df855246b69ac2c70b4ab4ae0561fe1",
+    "decodedBytes": 1809744,
+    "terrainAdapter": "harborn-v4",
+    "decodedSHA256": "0e5224cfbe2598d3eab0094599e5e225e874e260ff3d8a4cf5a03cf085d30d25"
+  },
+  "newValues": {
+    "name": "50 and 60 Harborn Road - twelve proposed townhomes",
+    "url": "models/studies-20261112/harborn-length-v5-4a0c1d523114.glb.gz",
+    "reviewDate": "2026-11-13",
+    "modelCaveat": "Twelve proposed townhomes from the received design. Written block lengths of40.31m and32.33m control the revised facades and roofs; source floor and roof levels retained. Placement and proposed grading remain illustrative.",
+    "bytes": 551117,
+    "sha256": "a2bc7660c114e4670e076670507ec173b6b05a49a53ccff8cce53b4407215284",
+    "qa": {
+      "sourceCandidateSHA256": "4a0c1d523114d42ad0802e994f81cdf11de16632463f39a87b3f5e947d300e01",
+      "sourceGeometryImmutable": true,
+      "nativeContactAcceptancePending": false,
+      "nativeContactReviewed": "2026-11-13"
+    },
+    "localReview": false,
+    "displayGroundAdaptation": {
+      "method": "Only the declared outer grading band follows the actual native ground. All building geometry and protected entrance and garage approaches remain fixed.",
+      "sourceContractSHA256": "d44f1079e5f9bd6cd06f2c9ef1fd0b84c57fbc736901e5c6adbc8535d9e45e79",
+      "nearestDryEdgeLimitM": 0.35,
+      "privateContactReviewPending": false
+    },
+    "downloadSHA256": "a2bc7660c114e4670e076670507ec173b6b05a49a53ccff8cce53b4407215284",
+    "decodedBytes": 1810104,
+    "terrainAdapter": "harborn-v5",
+    "decodedSHA256": "4a0c1d523114d42ad0802e994f81cdf11de16632463f39a87b3f5e947d300e01",
+    "sourceDimensionsM": {
+      "blockA_length": 40.31,
+      "blockB_length": 32.33
+    }
+  },
+  "absentKeys": [
+    "sourceDimensionsM"
+  ],
+  "priorFingerprint": "8312a5bbf499e176aeed62d097dc29cd566e011ed7755f4373cb439ab02fdd19",
+  "newFingerprint": "463e435ee84f2c68ffa19056652e74331f2663221cedad5f78dd575f66906383",
+  "files": {
+    "harborn-terrain.js": {
+      "bytes": 16860,
+      "sha256": "f7bcec4aee1cd03a1ce79a8437356a34d8cf928276e54d8ef5b35831e858d541"
+    },
+    "data/harborn-terrain-v5-20261112.json": {
+      "bytes": 13788,
+      "sha256": "bf6328c2243514ada9ccda4916afd03d1fcb8ead934992544734681b94c942fe"
+    },
+    "models/studies-20261112/harborn-length-v5-4a0c1d523114.glb.gz": {
+      "bytes": 551117,
+      "sha256": "a2bc7660c114e4670e076670507ec173b6b05a49a53ccff8cce53b4407215284"
+    }
+  },
+  "retainedFiles": {
+    "apron-contact.js": {
+      "bytes": 22912,
+      "sha256": "b7cd85b1961bedc679ee6b672e976a3d3234c1e4e2a601aec17fc45ae28204c5"
+    },
+    "data/harborn-terrain-v4.json": {
+      "bytes": 13350,
+      "sha256": "74a5524ec2d80e1ece32a7ce7a0e8f170ef8f2b0fb032376412886c2cec6aa43"
+    },
+    "models/studies-20261101/harborn-tie-v4-4dfd05d9de20.bin": {
+      "bytes": 569640,
+      "sha256": "4dfd05d9de20d67ac49d2f79b77199d547c6dff8a46d6011fccc8bf63e029368"
+    },
+    "models/studies-20261101/harborn-grading-v4-0e5224cfbe25.glb.gz": {
+      "bytes": 551356,
+      "sha256": "b3b0636313d4dc3346884f293653f7d31df855246b69ac2c70b4ab4ae0561fe1"
+    },
+    "models/refinement/harborn-50-60-current-plan.glb": {
+      "bytes": 3668,
+      "sha256": "478f0825d4c1b57127959682a75405065ac2917665dfce7ff69c1c424320b622"
+    }
+  },
+  "versions": {
+    "models/studies-20261112/harborn-length-v5-4a0c1d523114.glb.gz": "a2bc7660c114e4670e076670507ec173b6b05a49a53ccff8cce53b4407215284"
+  }
+}

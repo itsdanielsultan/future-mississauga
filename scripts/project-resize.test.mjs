@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 import {runInNewContext} from 'node:vm';
 import * as THREE from '../public/vendor/three.module.js';
 import {createCoverageController} from '../public/coverage-controller.js';
+import {usesCloseProjectView} from '../public/viewer-camera.js';
 const app=readFileSync(new URL('../public/app.js',import.meta.url),'utf8');
 const frame=app.slice(app.indexOf('function frameProject(p,meshes){'),app.indexOf('async function focusProject(p)'));
 const resize=app.slice(app.indexOf('function resize(){'),app.indexOf('new ResizeObserver(resize)'));
@@ -12,7 +13,7 @@ function harness(){
  const camera=new THREE.PerspectiveCamera(35,1280/800,1,160000);camera.position.set(240,360,500);
  const target=new THREE.Vector3(0,100,0),controls={target,cursor:new THREE.Vector3(),update(){camera.lookAt(target);camera.updateMatrixWorld(true);}};controls.update();
  const wrap={clientWidth:1280,clientHeight:800},selection={hidden:false,getBoundingClientRect:()=>({width:350})};let size=new THREE.Vector2(1280,800);
- const state={THREE,model,context:null,camera,controls,wrap,framedProject:{id:'pair',localReview:true},current:{id:'downtown'},window:{atlasReady:'downtown'},innerHeight:800,homeFraming:null,
+ const state={THREE,usesCloseProjectView,model,context:null,camera,controls,wrap,framedProject:{id:'pair',localReview:true},current:{id:'downtown'},window:{atlasReady:'downtown'},innerHeight:800,homeFraming:null,
   canvas:{getBoundingClientRect:()=>({width:wrap.clientWidth,height:wrap.clientHeight})},$:()=>selection,
   getComputedStyle:()=>({position:wrap.clientWidth>700?'absolute':'static'}),projectMeshes:()=>meshes,
   document:{documentElement:{style:{setProperty(){}}}},getDrawingPolicy:()=>({pixelRatio:1}),cancelCameraFlight(){},invalidate(){},

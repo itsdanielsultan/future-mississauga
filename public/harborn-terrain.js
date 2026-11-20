@@ -11,9 +11,9 @@ let privateContractPromise;
 export function getHarbornTerrainContract(district, fetcher = fetch) {
   if (!['cooksville','citywide'].includes(district)) return Promise.resolve(null);
   if (!privateContractPromise) privateContractPromise=(async()=>{
-    const response=await fetcher('data/harborn-terrain-v4.json?v=74a5524ec2d8',{cache:'no-store',signal:AbortSignal.timeout(15000)});
+    const response=await fetcher('data/harborn-terrain-v5-20261112.json?v=bf6328c22435',{cache:'no-store',signal:AbortSignal.timeout(15000)});
     assert(response.ok,'private contract unavailable');const bytes=new Uint8Array(await response.arrayBuffer());
-    assert(await sha256(bytes)==='74a5524ec2d80e1ece32a7ce7a0e8f170ef8f2b0fb032376412886c2cec6aa43','private contract changed');
+    assert(await sha256(bytes)==='bf6328c2243514ada9ccda4916afd03d1fcb8ead934992544734681b94c942fe','private contract changed');
     const contract=JSON.parse(new TextDecoder().decode(bytes)),r=await fetcher(contract.weights.url,{cache:'no-store',signal:AbortSignal.timeout(15000)});
     assert(r.ok,'tie weights unavailable');const weights=new Uint8Array(await r.arrayBuffer());
     assert(weights.byteLength===contract.weights.bytes&&await sha256(weights)===contract.weights.sha256,'tie weights changed');

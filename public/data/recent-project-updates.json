@@ -533,29 +533,66 @@
     {
       "projectId": "lorne-1110-townhomes",
       "name": "1110 Lorne Park Road · six townhomes",
-      "change": "The City records an approved six-townhome scheme and later removal of its holding symbol. It is an older missing named project, not a newly verified October2026 construction start. Current delivery and exact architecture remain unconfirmed.",
+      "change": "The City approved the six-townhome zoning application OZ-OPA 19/006 on January 6, 2022 and holding-removal application H-OZ/22/002 on February 28, 2024. Current construction, completion and exact architecture remain unverified.",
       "status": "Approved earlier townhouse scheme · current construction unverified",
-      "evidenceDate": "2026-10-12",
+      "evidenceDate": "2026-11-13",
       "sourceURLs": [
         "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27OZ-OPA+%2F+19+%2F+006%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
-        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27H-OZ%2F22%2F002%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json"
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27H-OZ%2F22%2F002%27&outFields=%2A&returnGeometry=true&outSR=26917&f=json",
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Rezoning_Applications/FeatureServer/0/query?where=PLNG_APP_ID+IN+%28171778%2C179586%29&outFields=%2A&returnGeometry=false&f=json"
       ],
       "geometryAction": "No proposed source record found in the application envelope plus 5m search halo. Existing mapped context is present. Keep a clearly labelled research locator; do not invent a proposed footprint or hide these neighboring buildings."
     },
     {
       "projectId": "port-credit-active-transportation-bridge",
       "name": "Port Credit Active Transportation Bridge",
-      "change": "A walking and cycling connection from Front Street North to Port Credit Memorial Park. The City still labels it in progress and documents the girder launch. No public opening confirmation was recovered.",
+      "change": "A walking and cycling connection from Front Street North to Port Credit Memorial Park. The City forecasts construction through spring 2027; a public opening has not been confirmed.",
       "status": "Under construction · public opening not verified",
-      "evidenceDate": "2026-10-20",
+      "evidenceDate": "2026-11-13",
       "sourceURLs": [
         "https://www.mississauga.ca/projects-and-strategies/city-projects/port-credit-active-transportation-bridge/",
         "https://www.mississauga.ca/wp-content/uploads/2025/10/07091944/Port-Credit-Active-Transportation-Bridge-Construction-Notice.pdf",
         "https://www.mississauga.ca/wp-content/uploads/2025/04/21153106/Canadian-Navigable-Waters-Act.pdf",
         "https://mississauga.bidsandtenders.ca/Module/Tenders/en/Tender/Detail/c80b6aab-2288-46ce-bfa2-a87d54423955",
-        "https://urbantoronto.ca/forum/threads/new-pedestrian-cycling-bridge-over-credit-river-north-of-lakeshore.43473/"
+        "https://urbantoronto.ca/forum/threads/new-pedestrian-cycling-bridge-over-credit-river-north-of-lakeshore.43473/",
+        "https://nwar-rlen.tc.canada.ca/documents/ess/applications/12237/53614/UnclassifiedApplication.pdf"
       ],
-      "geometryAction": "The City tender confirms a 66 m clear span. Final drawings are still needed for the deck height, width, abutment positions and alignment before the bridge is modelled."
+      "geometryAction": "The tender supports a 66 m clear span. The April 16, 2025 Transport Canada submission states 2.33 m vertical clearance above ordinary high water mark. This is not an absolute deck elevation or an as-built verification. Final drawings remain needed for deck width, vertical datum, abutment positions and alignment."
+    },
+    {
+      "projectId": "john-69",
+      "name": "69–117 John Street",
+      "change": "The City lists OZ/OPA 24 16 for 69 and 117 John Street as cancelled, verified November 13, 2026. The October 2025 drawings remain a historical proposal for 32, 31 and 24 storeys with an eight-storey podium.",
+      "status": "Application cancelled",
+      "evidenceDate": "2026-11-13",
+      "sourceURLs": [
+        "https://www.mississauga.ca/apps/#/property/view/development-applications",
+        "https://www.mississauga.ca/wp-content/uploads/2025/09/19121510/Cover-Letter-OZ-OPA-24-16-OZ-OPA-24-16-W7-October-2025.pdf"
+      ],
+      "geometryAction": "The cancelled proposal is excluded from the Future view. Existing context remains. The older City components, at 63, 93 and 96 m, do not represent the October 2025 revised design. The City does not display a cancellation date."
+    },
+    {
+      "projectId": "tenth-data",
+      "name": "Tenth Line data centre",
+      "change": "Prologis proposes a two-storey data centre. The 40 MW proposal is affected by the City’s September 16, 2026 interim control bylaw pausing new major digital infrastructure facilities for up to one year. It has not been reported cancelled. The latest City-listed resubmission has an October 15, 2026 cover letter; its A.400 elevations are revision 3, issued July 4, 2026 for site-plan review.",
+      "status": "Temporarily paused under September 2026 interim control bylaw",
+      "evidenceDate": "2026-11-13",
+      "sourceURLs": [
+        "https://www.mississauga.ca/wp-content/uploads/2026/01/03152834/Cover-Letter-Transmittal-List-OZ-25-21-W9-October-2026.pdf",
+        "https://www.mississauga.ca/wp-content/uploads/2026/01/03152809/Overall-Building-Elevations-Data-Centre-OZ-25-21-W9-October-2026.pdf"
+      ],
+      "geometryAction": "Address coordinates are approximate map pins. City snapshot meshes are source massing, not construction drawings; latest approvals and final detailed architecture may differ. Temporarily paused proposal; do not depict as approved or under construction. Retain only with that status visible. The October package does not establish a geometry change or the end of the pause. Sheet A.400 is not released for construction. Its 7700 Tenth Line West address differs from the application title, 0 Tenth Line West, and the registry address, 7564 Tenth Line West; this remains unresolved."
+    },
+    {
+      "projectId": "lakeshore-857-859",
+      "name": "857–859 Lakeshore Road East",
+      "change": "The designer reported a redesign on October 5, 2026; the latest drawings remain unavailable. The City lists SP 24/051 as the active transfer of historical SP 18/110. This does not confirm final design approval.",
+      "status": "Redesign in progress; latest drawings unavailable",
+      "evidenceDate": "2026-11-13",
+      "sourceURLs": [
+        "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=APP_FILE_NO+%3D+%27SP+24%2F051%27&outFields=%2A&returnGeometry=false&f=json"
+      ],
+      "geometryAction": "Historical records describe a four-storey scheme and a 13.72 m flat roof request in 2022. Those dimensions are not adopted as the current redesign. Active is a workflow category; the August 25, 2026 growth snapshot separately labels the file Withheld. No current construction or completion is verified."
     }
   ],
   "geometryAssets": [

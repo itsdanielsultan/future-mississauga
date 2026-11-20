@@ -25,7 +25,14 @@ test('Every public model payload decodes to its pinned GLB and only reachable ge
     const decoded=await verifiedModelBytes(asset,async()=>new Response(encoded));
     assert.equal(sha(decoded),asset.sha256);assert.equal(decoded.length,asset.decodedBytes);
     const bytes=Buffer.from(decoded), json=JSON.parse(bytes.subarray(20,20+bytes.readUInt32LE(12)).toString());
-    assert.equal(json.images?.length||0,0);assert.equal(json.animations?.length||0,0);assert.equal(json.skins?.length||0,0);
+    if(asset.id==='harborn-50-60'){
+      const binary=bytes.subarray(28+bytes.readUInt32LE(12));
+      assert.deepEqual(json.images.map(image=>{assert.equal(image.uri,undefined);assert.equal(image.mimeType,'image/png');const view=json.bufferViews[image.bufferView];return {bytes:view.byteLength,sha256:sha(binary.subarray(view.byteOffset,view.byteOffset+view.byteLength))};}),[
+        {bytes:96,sha256:'9b5bc7534f993b1882c23269d359d972bf25a871fe30aefb5dc695f1f541889d'},
+        {bytes:84,sha256:'36acc10abe9893d057d23fd11e5b1859858edd73ef2a634a4d1729fda389679b'}
+      ],'Only the two exact swatches already embedded in the accepted city asset');
+    }else assert.equal(json.images?.length||0,0);
+    assert.equal(json.animations?.length||0,0);assert.equal(json.skins?.length||0,0);
     assert.equal(json.buffers.length,1);assert.equal(json.buffers[0].uri,undefined);
     const reachable=new Set();const walk=i=>{assert(!reachable.has(i));reachable.add(i);for(const c of json.nodes[i].children||[])walk(c);};
     for(const i of json.scenes[json.scene||0].nodes)walk(i);
@@ -34,7 +41,7 @@ test('Every public model payload decodes to its pinned GLB and only reachable ge
   }
 });
 
-test('Artform download preserves the exact accepted Rev03 bytes',async()=>{
+test('Artform viewer preserves the exact accepted Rev03 bytes',async()=>{
   const a=manifest.assets.find(a=>a.id==='artform');
   assert.equal(a.sha256,'8bcba67694f6f80553a505ca037fa5bbc3451d7cadd11c554b9221625c50964e');
   assert.equal(a.sourceArchiveSHA256,'2a4bfb61e489aecc0eca530a6b0bdd19621d36a01c049f3a677ed40a0be1a54c');
@@ -50,7 +57,7 @@ test('Decoded HTTP responses are accepted only with matching decoded bytes',asyn
 
 test('HTTP errors, corrupt archives and substituted assets fail closed',async()=>{
   const a=manifest.assets[0];
-  await assert.rejects(verifiedModelBytes(a,async()=>new Response('',{status:404})),/downloaded/);
+  await assert.rejects(verifiedModelBytes(a,async()=>new Response('',{status:404})),/could not be loaded/);
   const data=await readFile(new URL(a.url,root));data[100]^=1;
   await assert.rejects(verifiedModelBytes(a,async()=>new Response(data)),/integrity/);
   const other=await readFile(new URL(manifest.assets[1].url,root));

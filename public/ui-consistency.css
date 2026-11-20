@@ -58,17 +58,13 @@ html body.viewer-page .viewer-tools-content { border-radius: var(--ui-control-ra
 html body.viewer-page .viewer-tools-content .ui-button { justify-content: flex-start !important; }
 
 /* Matching image and document toolbars. The media itself keeps its native ratio. */
-html body .media-preview .media-preview__header,
 html body .document-preview header { gap: var(--ui-space-2); padding: var(--ui-space-2) var(--ui-space-3); }
-html body .media-preview .media-preview__footer { gap: var(--ui-space-2) var(--ui-space-3); padding: var(--ui-space-2) var(--ui-space-3); }
-html body .media-preview__view { gap: var(--ui-space-1); }
 html body .document-toolbar { gap: var(--ui-space-2) var(--ui-space-3); padding: var(--ui-space-1) var(--ui-space-3); }
 html body .document-toolbar .document-pagination { grid-template-columns: 44px 120px 44px; gap: var(--ui-space-1); }
 html body .document-toolbar .document-pagination .ui-select { --control-height: var(--ui-icon-height); }
 html body .document-toolbar .document-zoom { gap: var(--ui-space-1); }
 html body :is(.media-preview, .document-preview) { border-radius: var(--ui-control-radius); }
 html body .document-preview button[data-close] { font-size: 28px; }
-html body .media-preview .media-preview__close { font-size: 28px; }
 html body .resource-row { gap: var(--ui-space-3); padding-block: var(--ui-space-3); }
 html body .atlas-caption { gap: var(--ui-space-3); padding-top: var(--ui-space-2); }
 html body .file-action-pair, html body .document-action-pair { white-space: normal; }
@@ -86,19 +82,15 @@ html body .file-action-pair > a:first-child { min-width: 0; }
   html body.viewer-page .view-head { gap: var(--ui-space-2); }
 }
 @media (max-width: 600px) {
-  html body.viewer-page .view-head { padding-top: var(--ui-space-2); gap: var(--ui-space-2) var(--ui-space-1); }
-  html body.viewer-page .model-search { grid-column: 1 / -1; padding-right: 92px; }
-  html body.viewer-page .view-actions { grid-column: 1 / -1; justify-self: end; width: 84px; }
-  html body.viewer-page .viewer-tools > summary { width: 84px; justify-content: center; }
+  html body.viewer-page .view-head { --viewer-tools-width: 84px; padding-top: var(--ui-space-2); gap: var(--ui-space-2) var(--ui-space-1); }
+  html body.viewer-page .model-search { grid-column: 1 / -1; width: calc(100% - var(--viewer-tools-width) - var(--ui-space-1)); padding-right: 0; }
+  html body.viewer-page .view-actions { grid-column: 1 / -1; justify-self: end; width: var(--viewer-tools-width); }
+  html body.viewer-page .viewer-tools > summary { width: var(--viewer-tools-width); justify-content: center; }
   html body.viewer-page .navigation-tools { inset: var(--ui-space-1); }
   html .home-page .gallery-grid,
   html body .social-page .social-grid { gap: var(--ui-space-4); }
-  html body .media-preview .media-preview__header,
-  html body .media-preview .media-preview__footer,
   html body .document-preview header { padding: var(--ui-space-2); gap: var(--ui-space-1); }
   html body .document-toolbar { padding: var(--ui-space-1) var(--ui-space-2); }
-  html body .media-preview__footer a { font-size: 14px; min-height: var(--ui-icon-height); }
-  html body .media-preview__view { width: 100%; }
   html body .resource-row { gap: var(--ui-space-2); }
   html body.building-pages .building-formats { gap: var(--ui-space-3); }
   html body:has(#modelChooser) .controls {

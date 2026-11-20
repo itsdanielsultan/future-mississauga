@@ -1,6 +1,6 @@
 // Technical source coverage, never an administrative neighbourhood boundary.
 // No geometry, loading policy or projection type is changed by these controls.
-import {defaultViewDirection} from './viewer-camera.js?v=20261023-usability1';
+import {defaultViewDirection} from './viewer-camera.js?v=20261120-plate';
 
 const EPSILON = 1e-7;
 const validBounds = b => Array.isArray(b) && b.length === 4 && b.every(Number.isFinite) && b[2] > b[0] && b[3] > b[1];

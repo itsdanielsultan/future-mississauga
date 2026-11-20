@@ -13,7 +13,7 @@ const app=readFileSync(new URL('../public/app.js',import.meta.url),'utf8');
 const assets=cityModelStudies(read('refinement-models.json').assets,read('model-previews.json'));
 const districts=read('districts.json');
 const classify=app.split('\n').filter(line=>line.startsWith('function classify(')||line.startsWith('function lifecycleFor(')).join('\n');
-const eagerStart=app.indexOf('const additionAssets='),eager=app.slice(eagerStart,app.indexOf(" const detail=await loadAsset",eagerStart));
+const eagerStart=app.indexOf('const additionAssets='),eager=app.slice(eagerStart,app.indexOf(" const nextDetailMeshes=[];",eagerStart));
 const passStart=app.indexOf('const nextFutureMeshes=[],nextModelMeshes=[];'),pass=app.slice(passStart,app.indexOf(';nextContext.traverse',passStart)+1);
 const lazy=app.slice(app.indexOf('async function ensureOptionalRefinements(){'),app.indexOf('function modelDownloads(p)'));
 

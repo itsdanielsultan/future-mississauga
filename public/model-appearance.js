@@ -1,4 +1,4 @@
-import {voyaArchitecturalRole,VOYA_ARCHITECTURAL_PALETTE} from './voya-appearance.js?v=20261102-voya1';
+import {voyaArchitecturalRole,VOYA_ARCHITECTURAL_PALETTE} from './voya-appearance.js?v=20261113-design2';
 import {semanticMaterialSlots} from './semantic-material-slots.js?v=20261102-coherent1';
 import {planningAppearanceKey,planningAppearanceColour} from './planning-appearance.js?v=20261109-feedback1';
 import {prepareFlatShadowReceiver} from './flat-shadow-receiver.js?v=20261102-shadow3';

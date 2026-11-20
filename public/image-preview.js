@@ -1,7 +1,8 @@
-import {assetURL} from './asset-delivery.js?v=20261109-delivery1';
-import {isDirectDownload,prepareImageLinks,isDeliveredImageURL,installManagedImageDownloads} from './file-actions.js?v=20261112-ui1';
+import {assetURL} from './asset-delivery.js?v=20261113-delivery2';
+import {isDirectDownload,prepareImageLinks,isDeliveredImageURL,installManagedImageDownloads} from './file-actions.js?v=20261113-design2';
 import {cityMapLinkForSection} from './image-provenance.js?v=20261101-gallery1';
-import {mediaPreviewInfo,imageAttribution,mediaScenarioLabel} from './clean-media.js?v=20261109-feedback1';
+import {mediaPreviewInfo,imageAttribution,mediaScenarioLabel} from './clean-media.js?v=20261113-design2';
+import {bindImageViewport} from './image-viewport.js?v=20261120-plates';
 export {shortResolution,shortDate} from './image-provenance.js?v=20261101-gallery1';
 // A shared image viewer. Downloads remain separate, explicit links.
 
@@ -13,19 +14,22 @@ export function renderImageAttribution(container,attribution={},doc=document){
  for(const credit of attribution.requiredModelCredits||[])addText(credit);
  const sources=doc.createElement('a');sources.textContent='Sources';
  let url;try{url=new URL(attribution.sourcesURL||'sources.html',location.href);}catch{}
- sources.href=url&&['http:','https:'].includes(url.protocol)&&!url.username&&!url.password?url.href:'sources.html';nodes.push(sources);
+ const localSources = url?.hostname === 'futuremississauga.com' && url.pathname === '/sources.html';
+ if (localSources) sources.href = 'sources.html' + url.search + url.hash;
+ else sources.href = url && ['http:','https:'].includes(url.protocol) && !url.username && !url.password ? url.href : 'sources.html';
+ if(new URL(sources.href,location.href).pathname!==location.pathname)nodes.push(sources);
  container.replaceChildren(...nodes);
 }
 
 // Reuse the existing caption region. Only accepted clean-v2 pixels take this path;
 // historical cards retain their original text and all dedicated downloads survive.
 const comparisonMedia=new WeakMap();
-export function presentationCaption(info,doc=document){
+const pageDestination = anchor => anchor && /\.html?$/i.test(new URL(anchor.href, document.baseURI).pathname);
+export function presentationCaption(info,doc=document,{creator=true,legend=true}={}){
  const nodes=[],presentation=info.presentation;
- if(info.creator){const byline=doc.createElement('span');byline.className='media-caption__creator';byline.textContent='by '+info.creator;nodes.push(byline);}
- if(presentation){
-  const key=doc.createElement('span');key.className='media-caption__key';key.setAttribute('aria-label','Massing colours; detailed facades retain their materials');
-  const label=doc.createElement('span');label.className='media-caption__key-label';label.textContent='Massing colours · Detailed finishes retained';key.append(label);
+ if(info.creator&&creator){const byline=doc.createElement('span');byline.className='media-caption__creator';byline.textContent='by '+info.creator;nodes.push(byline);}
+ if(presentation&&legend){
+  const key=doc.createElement('span');key.className='media-caption__key';key.setAttribute('aria-label','Building status colours');
   for(const item of presentation.legend){const label=doc.createElement('span'),swatch=doc.createElement('i');swatch.style.backgroundColor=item.color;swatch.setAttribute('aria-hidden','true');label.append(swatch,doc.createTextNode(item.label));key.append(label);}
   const north=doc.createElement('span');north.className='media-caption__north';north.setAttribute('aria-label','North');
   const arrow=doc.createElement('span');arrow.textContent='↑';arrow.style.transform=`rotate(${presentation.northDegrees}deg)`;arrow.setAttribute('aria-hidden','true');north.append(arrow,doc.createTextNode('N'));key.append(north);nodes.push(key);
@@ -58,7 +62,7 @@ function updateComparisonCaption(panel,image,row){
 export function updateCleanImageCaption(image,row){
  const comparison=image.closest('.picture-compare');
  if(comparison){updateComparisonCaption(comparison,image,row);return;}
- if(!row.cleanPresentation)return;
+ if(!row.cleanPresentation || pageDestination(image.closest('a')))return;
  const info=mediaPreviewInfo(row),storyCopy=image.closest('.update-story')?.querySelector('.update-story-copy');
  if(storyCopy){
   // The dated story already has its own title and narrative. Keep the two-column
@@ -70,17 +74,26 @@ export function updateCleanImageCaption(image,row){
  const card=image.closest('.picture-card,.social-grid article'),figure=image.closest('figure');
  let copy=card?.querySelector('.card-caption > div,.card-copy')||figure?.querySelector('figcaption');
  if(!copy){copy=document.createElement('div');copy.className='media-caption';(image.closest('a,button,picture')||image).after(copy);}
- const title=copy.querySelector('h2,h3,strong,b')||document.createElement('strong');title.textContent=info.title;
+ const title=copy.querySelector('h2,h3,strong,b')||document.createElement('strong');
+ const viewTitle=card?.dataset?.viewTitle||figure?.dataset?.viewTitle||info.viewTitle;
+ const areaTitle=card?.dataset?.areaTitle||figure?.dataset?.areaTitle||info.area||info.title;
+ const genericView=/^(wide aerial|neighbourhood perspective|skyline|existing skyline|dated construction skyline)$/i.test(viewTitle||'');
+ title.textContent=info.subtitle?info.title:genericView?areaTitle:viewTitle||info.title;
+ const area=document.createElement('span');area.className='media-caption__area';area.textContent=info.subtitle||(genericView?viewTitle:areaTitle);area.hidden=!area.textContent||area.textContent===title.textContent;
  const scenario=document.createElement('span');scenario.className='media-caption__scenario';scenario.textContent=mediaScenarioLabel(row);
  const credits=document.createElement('span');credits.className='media-caption__credits';renderImageAttribution(credits,info.attribution);
  const downloads=[...copy.querySelectorAll('a[download],.save,[data-download]')];
- copy.classList.add('media-caption');copy.replaceChildren(title,...presentationCaption(info),scenario,credits,...downloads);
+ const meta=copy.querySelector('.card-meta,[data-render-info]');if(meta)meta.textContent=info.meta||'';
+ const identityOutside=figure?.dataset?.captionIdentity==='outside';
+ copy.classList.add('media-caption');copy.replaceChildren(...(identityOutside?[]:[title,area]),...presentationCaption(info,document,{creator:!card,legend:!card}),scenario,...(meta?[meta]:[]),...(!card||info.attribution.requiredModelCredits?.length?[credits]:[]),...downloads);
 }
 
 const previewCounter = Symbol.for('future-mississauga.preview-counter');
 export function previewTitle(info,{views=false}={}){
- const title=info.title||'Picture';
- return !views&&info.scenario==='construction'?title+' · Dated construction':title;
+ const area=info.area||info.title||'Picture';
+ const detail=info.subtitle||info.viewTitle;
+ const title=detail&&detail!==area?area+' · '+detail:area;
+ return !views&&info.scenario==='construction'?title+' · Construction snapshot':title;
 }
 export function createImagePreview({views = false} = {}) {
   installManagedImageDownloads();
@@ -91,49 +104,81 @@ export function createImagePreview({views = false} = {}) {
   dialog.setAttribute('aria-labelledby', id+'Title');
   dialog.innerHTML = `<div class="media-preview__shell">
     <header class="media-preview__header"><div><h2 id="${id}Title"></h2><p class="media-preview__meta"></p></div>
-    <label class="media-preview__view" ${views?'':'hidden'}>View <select class="ui-select" aria-label="Picture view"></select></label>
     <button type="button" class="media-preview__close ui-button" aria-label="Close picture" data-variant="ghost" data-size="icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></header>
-    <div class="media-preview__stage" aria-busy="true"><img alt=""><p class="media-preview__status" role="status" hidden></p></div>
-    <footer class="media-preview__footer"><div class="media-preview__identity"></div><a class="media-preview__download ui-button" download data-variant="primary">Download PNG</a><a class="media-preview__explore" hidden>View in city map</a><span class="media-preview__credits"><a class="media-preview__osm" href="https://www.openstreetmap.org/copyright" hidden>OpenStreetMap</a><a href="sources.html">Sources &amp; credits</a></span></footer>
+    <div class="media-preview__toolbar">
+     <div class="media-preview__browse" role="group" aria-label="Browse pictures" hidden><button type="button" class="ui-button" data-browse="-1" data-variant="ghost" data-size="icon" aria-label="Previous picture">←</button><button type="button" class="ui-button" data-browse="1" data-variant="ghost" data-size="icon" aria-label="Next picture">→</button></div>
+     <label class="media-preview__view" ${views?'':'hidden'}>View <select class="ui-select" aria-label="Picture view"></select></label>
+     <div class="media-preview__zoom" role="group" aria-label="Image zoom">
+      <button type="button" class="ui-button" data-zoom="out" data-variant="ghost" data-size="icon" aria-label="Zoom out" title="Zoom out"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+      <button type="button" class="ui-button" data-zoom="in" data-variant="ghost" data-size="icon" aria-label="Zoom in" title="Zoom in"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M5 12h14M12 5v14"/></svg></button>
+      <button type="button" class="ui-button" data-zoom="fit" data-variant="ghost" aria-label="Fit image">Fit</button>
+      <output class="media-preview__scale" aria-live="polite"></output>
+     </div>
+     <a class="media-preview__download ui-button" download data-variant="outline" data-size="icon" aria-label="Download image" title="Download image"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12m-5-5 5 5 5-5M5 20h14"/></svg></a>
+    </div>
+    <div class="media-preview__stage" tabindex="0" role="group" aria-label="Image preview" aria-busy="true"><img alt="" draggable="false"><p class="media-preview__status" role="status" hidden></p></div>
+    <footer class="media-preview__footer"><div class="media-preview__identity"></div><a class="media-preview__explore" hidden>View in city map</a><span class="media-preview__credits"></span></footer>
     </div>`;
   document.body.append(dialog);
   const image=dialog.querySelector('img'), stage=dialog.querySelector('.media-preview__stage'), status=dialog.querySelector('[role="status"]'), select=dialog.querySelector('select');
+  let sequence=null;
+  const step=direction=>sequence?.(direction);
+  const browse=dialog.querySelector('.media-preview__browse');
+  for(const button of dialog.querySelectorAll('[data-browse]'))button.addEventListener('click',()=>step(Number(button.dataset.browse)));
+  const viewport=bindImageViewport({stage,image,onNavigate:step,zoomIn:dialog.querySelector('[data-zoom="in"]'),zoomOut:dialog.querySelector('[data-zoom="out"]'),fitButton:dialog.querySelector('[data-zoom="fit"]'),readout:dialog.querySelector('output')});
   let opener=null, request=0, backdropDown=false, onView=null;
+  const historyWindow = dialog.ownerDocument?.defaultView;
+  let historyKey, lastPicture;
+  historyWindow?.addEventListener('popstate', () => {
+    if (historyKey && historyWindow.history.state?.atlasPicture === historyKey) {
+      if (!dialog.open && lastPicture) show(lastPicture, opener);
+    } else if (dialog.open) dialog.close();
+  });
   const inside=e=>{const r=dialog.getBoundingClientRect();return e.clientX>=r.left&&e.clientX<=r.right&&e.clientY>=r.top&&e.clientY<=r.bottom;};
   dialog.querySelector('button').onclick=()=>dialog.close();
   dialog.addEventListener('pointerdown',e=>backdropDown=e.target===dialog&&!inside(e));
   dialog.addEventListener('click',e=>{if(backdropDown&&e.target===dialog&&!inside(e))dialog.close();backdropDown=false;});
-  dialog.addEventListener('close',()=>{request++;document.documentElement.classList.remove('picture-preview-open');opener?.focus({preventScroll:true});});
+  dialog.addEventListener('close',()=>{
+    if (dialog.open) return;
+    if (historyKey && historyWindow?.history.state?.atlasPicture === historyKey) historyWindow.history.back();
+    request++;document.documentElement.classList.remove('picture-preview-open');opener?.focus({preventScroll:true});});
   dialog.addEventListener('keydown',e=>{
     if(e.key!=='Tab')return;
-    const items=[...dialog.querySelectorAll('button,select,a[href]')].filter(x=>!x.disabled&&x.getClientRects().length);
+    const items=[...dialog.querySelectorAll('button,select,a[href],[tabindex="0"]')].filter(x=>!x.disabled&&x.getClientRects().length);
     if(e.shiftKey&&document.activeElement===items[0]){e.preventDefault();items.at(-1)?.focus();}
     else if(!e.shiftKey&&document.activeElement===items.at(-1)){e.preventDefault();items[0]?.focus();}
   });
   select.onchange=()=>onView?.(select.value);
   function show(info, trigger) {
     const token=++request;
+    lastPicture = info;
+    if (!dialog.open && historyWindow && (!historyKey || historyWindow.history.state?.atlasPicture !== historyKey)) {
+      historyKey = crypto.randomUUID();
+      historyWindow.history.pushState({...historyWindow.history.state, atlasPicture: historyKey}, '');
+    }
     if(trigger)opener=trigger;
     dialog.querySelector('h2').textContent=previewTitle(info,{views});
     const meta=dialog.querySelector('.media-preview__meta');meta.textContent=info.meta||'';meta.hidden=!info.meta;
     const download=dialog.querySelector('[download]');download.href=assetURL(info.download);download.download=new URL(info.download,location.href).pathname.split('/').pop();
-    const format=download.download.split('.').pop().toUpperCase();download.textContent=['PNG','JPG','JPEG','SVG','AVIF','WEBP'].includes(format)?'Download '+format:'Download image';
+    const format=download.download.split('.').pop().toUpperCase();const downloadLabel=['PNG','JPG','JPEG','SVG','AVIF','WEBP'].includes(format)?'Download '+format:'Download image';download.setAttribute('aria-label',downloadLabel);download.title=downloadLabel;
     const explore=dialog.querySelector('.media-preview__explore');explore.hidden=!info.explore;if(info.explore)explore.href=info.explore;
     renderImageAttribution(dialog.querySelector('.media-preview__credits'),info.attribution||{openStreetMap:info.osm});
-    const identity=dialog.querySelector('.media-preview__identity'),area=document.createElement('strong');area.textContent=info.title||'Future Mississauga';identity.replaceChildren(area,...presentationCaption(info));
+    const identity=dialog.querySelector('.media-preview__identity');identity.replaceChildren(...presentationCaption(info));identity.hidden=!identity.childElementCount;
     dialog.classList.toggle('media-preview--portrait',info.height>info.width);
     dialog.style.setProperty('--media-aspect',String((info.width||1200)/(info.height||750))); 
     image.alt=info.alt||info.title||'Picture';image.width=info.width||1200;image.height=info.height||750;
-    image.removeAttribute('srcset');image.hidden=false;image.src=assetURL(info.preview||info.src);
+    image.removeAttribute('srcset');image.hidden=false;image.removeAttribute('data-scene-with-footer');image.src=assetURL(info.preview||info.src);
     stage.setAttribute('aria-busy','true');status.textContent='Loading full-resolution image…';status.hidden=false;
     const native=new Image();
-    native.onload=()=>{if(token!==request)return;image.src=assetURL(info.src);image.hidden=false;status.hidden=true;stage.setAttribute('aria-busy','false');};
+    native.onload=()=>{if(token!==request)return;image.toggleAttribute('data-scene-with-footer',info.appendedFooter===true);image.src=assetURL(info.src);image.hidden=false;status.hidden=true;stage.setAttribute('aria-busy','false');};
     native.onerror=()=>{if(token!==request)return;status.textContent='The full-resolution image could not load. Please try the download.';stage.setAttribute('aria-busy','false');};
     native.src=assetURL(info.src);
+    const resetView=Boolean(trigger)||!dialog.open;
     if(!dialog.open)dialog.showModal();
+    viewport.setImage(info,{resetView});
     document.documentElement.classList.add('picture-preview-open');
   }
-  return {dialog,show,setViews(items,value,callback){select.replaceChildren(...items.map(x=>{const o=document.createElement('option');o.value=x.value;o.textContent=x.label;return o;}));select.value=value;onView=callback;select.closest('label').hidden=items.length<2;}};
+  return {dialog,show,setSequence(callback){sequence=callback;browse.hidden=!callback;},setViews(items,value,callback){select.replaceChildren(...items.map(x=>{const o=document.createElement('option');o.value=x.value;o.textContent=x.label;return o;}));select.value=value;onView=callback;select.closest('label').hidden=items.length<2;}};
 }
 
 // Show the known file immediately; optional metadata can refine the same open view.
@@ -174,7 +219,8 @@ export function installImagePreviews(resolve = async (image,anchor) => {
   document.addEventListener('click',async event=>{
     if(event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
     const trigger=event.target.closest('a,button'),anchor=trigger?.matches('a')?trigger:null;
-    if(isDirectDownload(anchor))return;
+    if(isDirectDownload(anchor)||pageDestination(anchor))return;
+    if(anchor&&(anchor.hasAttribute('data-document-preview')||/\.pdf(?:[?#]|$)/i.test(anchor.href)))return;
     const clickedImage=event.target.closest('main img')||trigger?.querySelector('img');
     const fileLink=anchor&&/\.(png|jpe?g|webp|avif|svg)(\?|$)/i.test(anchor.href);
     if(!clickedImage&&!fileLink)return;
@@ -182,17 +228,40 @@ export function installImagePreviews(resolve = async (image,anchor) => {
     if((clickedImage||anchor).closest('dialog,.picture-compare,.social-grid,[data-open],.site-brand'))return;
     event.preventDefault();event.stopPropagation();
     const section=(clickedImage||anchor).closest('article,section');
-    const image=clickedImage||[...section?.querySelectorAll('img')||[]].find(img=>new URL(img.src).pathname===new URL(anchor.href).pathname);
+    const image=clickedImage||[...section?.querySelectorAll('img')||[]].find(img=>[img.src,img.closest('a')?.href].filter(Boolean).some(url=>new URL(url,location.href).href===anchor.href));
     if (!generic) { generic=createImagePreview(); openGeneric=createResolvedPreview(generic); }
+    const collection=anchor?.dataset.editionPlate && anchor.closest('[data-picture-area]');
+    if(collection){
+      const pictures=[...collection.querySelectorAll('a[data-edition-plate]')];
+      let index=pictures.indexOf(anchor);
+      const show=()=>{
+        const link=pictures[index], photo=link.querySelector('img');
+        openGeneric({
+          area:collection.dataset.pictureArea,viewTitle:link.dataset.previewTitle,
+          alt:photo.alt,src:link.href,preview:photo.currentSrc||photo.src,
+          width:Number(link.dataset.previewWidth),height:Number(link.dataset.previewHeight),
+          download:previewDownloadURL(link,link.href),explore:collection.dataset.pictureMap
+        },()=>resolve(photo,link),anchor);
+      };
+      generic.setSequence(pictures.length>1?direction=>{
+        index=(index+direction+pictures.length)%pictures.length;
+        show();
+      }:null);
+      show();
+      return;
+    }
+    generic.setSequence(null);
     const heading=section?.querySelector('h2,h3')?.textContent?.trim();
     const title=image?.dataset.previewTitle||anchor?.dataset.previewTitle||heading||(image?.alt?.length<=70?image.alt:'Image preview');
+    const viewTitle=image?.closest('figure')?.querySelector('figcaption')?.textContent?.trim();
     const src=fileLink?anchor.href:image?.currentSrc||image?.src;
-    openGeneric({title:title||'Picture',alt:image?.alt||title,src,download:previewDownloadURL(anchor,src),width:image?.naturalWidth||1200,height:image?.naturalHeight||800,preview:image?.currentSrc||image?.src,explore:cityMapLinkForSection(section,location.href)},()=>resolve(image,anchor),anchor||image?.closest('button')||image);
+    openGeneric({title:title||'Picture',viewTitle,alt:image?.alt||title,src,download:previewDownloadURL(anchor,src),width:Number(image?.dataset.nativeWidth)||image?.naturalWidth||1200,height:Number(image?.dataset.nativeHeight)||image?.naturalHeight||800,preview:image?.currentSrc||image?.src,explore:cityMapLinkForSection(section,location.href)},()=>resolve(image,anchor),anchor||image?.closest('button')||image);
 
   });
   const enhance=()=>document.querySelectorAll('main img').forEach(image=>{
     if(image.closest('dialog,.picture-compare,.social-grid,[data-open],.site-brand'))return;
     const anchor=image.closest('a');
+    if(pageDestination(anchor)||anchor&&(anchor.hasAttribute('data-document-preview')||/\.pdf(?:[?#]|$)/i.test(anchor.href)))return;
     if(anchor){anchor.setAttribute('aria-haspopup','dialog');anchor.setAttribute('aria-label','Preview '+(image.alt||'picture'));}
     else if(!image.closest('button')){const button=document.createElement('button');button.type='button';button.className='image-preview-trigger';button.setAttribute('aria-label','Preview '+(image.alt||'picture'));button.setAttribute('aria-haspopup','dialog');image.replaceWith(button);button.append(image);}
   });

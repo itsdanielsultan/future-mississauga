@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
+import {gunzipSync} from 'node:zlib';
 import {register} from 'node:module';
 register('./recovery-three-loader.mjs',import.meta.url);
 const THREE=await import('../public/vendor/three.module.js');
@@ -13,10 +14,12 @@ const {VOYA_ARCHITECTURAL_SOURCE:source,VOYA_ARCHITECTURAL_ROLES:roles,VOYA_ARCH
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const geometryState=geometry=>({attributes:Object.fromEntries(Object.entries(geometry.attributes).map(([key,a])=>[key,{count:a.count,itemSize:a.itemSize,normalized:a.normalized,sha256:sha(Buffer.from(a.array.buffer,a.array.byteOffset,a.array.byteLength))}])),index:sha(Buffer.from(geometry.index.array.buffer,geometry.index.array.byteOffset,geometry.index.array.byteLength))});
 const sourceMaterialState=material=>{const state=material.toJSON();delete state.uuid;return state;};
-async function meshes(){
- const bytes=readFileSync(new URL('../public/models/refinement/voya-towers-plan-derived.glb',import.meta.url));assert.equal(sha(bytes),source.sha256);
+async function meshes({all=false}={}){
+ const asset=JSON.parse(readFileSync(new URL('../public/data/refinement-models.json',import.meta.url))).assets.find(row=>row.id===source.assetId);
+ const transfer=readFileSync(new URL('../public/'+asset.url,import.meta.url));assert.equal(sha(transfer),source.sha256);assert.equal(asset.downloadSHA256,source.sha256);
+ const bytes=gunzipSync(transfer);assert.equal(sha(bytes),asset.decodedSHA256);
  const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder),{scene}=await loader.parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');scene.updateMatrixWorld(true);
- const found=[];scene.traverse(mesh=>{if(mesh.isMesh){Object.assign(mesh.userData,{assetId:source.assetId,sourceAssetSHA256:source.sha256,lifecycle:'under_construction',displayStatus:'Under Construction'});found.push(mesh)}});return found;
+ const found=[];scene.traverse(mesh=>{if(mesh.isMesh){Object.assign(mesh.userData,{assetId:source.assetId,sourceAssetSHA256:source.sha256,lifecycle:'under_construction',displayStatus:'Under Construction'});found.push(mesh)}});assert.equal(found.length,103);return all?found:found.filter(mesh=>voyaArchitecturalRole(mesh));
 }
 
 test('every one of the95 pinned Voya source meshes matches exactly one architectural role',async()=>{
@@ -63,4 +66,13 @@ test('each exact source identity, mesh name, ID and full architecture role is re
 
 test('late Voya meshes inherit status and restore the same role finish without capturing a display material',async()=>{
  const mesh=(await meshes())[0],original=mesh.material,appearance=createModelAppearance(THREE,{initial:'status'});appearance.register(mesh);assert.equal(mesh.material.color.getHex(),0x85b4bf);appearance.register(mesh,{authored:true});appearance.setMode('natural');assert.equal(mesh.material.color.getHex(),palette.glass.color);appearance.unregister(mesh);assert.equal(mesh.material,original);appearance.dispose();
+});
+
+
+test('eight additive city-facing groups keep their exact explicit PBR through planning-status cycles',async()=>{
+ const additions=(await meshes({all:true})).filter(mesh=>!voyaArchitecturalRole(mesh));assert.equal(additions.length,8);
+ const appearance=createModelAppearance(THREE),saved=additions.map(mesh=>({mesh,material:mesh.material,materialState:sourceMaterialState(mesh.material),geometry:geometryState(mesh.geometry)}));
+ for(const mesh of additions){appearance.register(mesh,{authored:true});assert.equal(voyaArchitecturalRole(mesh),null);}
+ for(const mode of ['status','natural','status','natural']){appearance.setMode(mode);for(const savedMesh of saved){assert.deepEqual(geometryState(savedMesh.mesh.geometry),savedMesh.geometry);if(mode==='natural'){assert.equal(savedMesh.mesh.material,savedMesh.material);assert.deepEqual(sourceMaterialState(savedMesh.mesh.material),savedMesh.materialState);}}}
+ appearance.dispose();for(const savedMesh of saved)assert.equal(savedMesh.mesh.material,savedMesh.material);
 });

@@ -53,7 +53,7 @@ test('50 High panel credits Chamberlain and preserves approval and dated demolit
 test('50 High accuracy notes match its concise model panel without changing its status or sources',async()=>{
  const html=await read('public/accuracy-review.html');
  const row=[...html.toString().matchAll(/<tr\b[^>]*>[\s\S]*?<\/tr>/g)].map(m=>m[0]).find(r=>r.includes('project=port-credit-50-high'));
- assert(row);assert.match(row,/<td>Approved<small>Zoning by-law passed; later approvals not confirmed/);assert.match(row,/15 linked sources/);
+ assert(row);assert.match(row,/<td\b[^>]*>Approved<small>Zoning by-law passed; later approvals not confirmed/);assert.match(row,/15 linked sources/);
  const notes=row.match(/<details><summary>Model notes<\/summary>([\s\S]*?)<\/details>/)?.[1];assert(notes);
  const panel=projectDetailsHTML(p,{asset:a}).match(/<section aria-label="Model details"><h4>The model<\/h4>([\s\S]*?)<\/section>/)?.[1];
  assert.equal(notes,panel);
