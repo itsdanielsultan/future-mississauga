@@ -1,0 +1,830 @@
+{
+  "schema": "future-mississauga-building-thumbnails/v1",
+  "policy": "Current thumbnails bind to exact public model assemblies. Historical images and URLs retain their original bindings.",
+  "current": [
+    {
+      "id": "mcity-m2",
+      "title": "M City M2",
+      "image": {
+        "url": "assets/study-thumbnails-20261109/mcity-m2.png",
+        "width": 800,
+        "height": 600,
+        "sha256": "5b23332b55c44c1ca52583fbe97bcdfec38b84a588d6b920723357f837109cbe"
+      },
+      "assets": [
+        {
+          "id": "mcity-m2",
+          "sha256": "e5a8a29b8f5553e4f92418c11c4ef63397cded152d7d06ba48d690e1e18597fd",
+          "url": "models/studies-20261101/mcity-m2-likeness-v5.glb.gz"
+        }
+      ],
+      "provenance": {
+        "kind": "historical-public-thumbnail",
+        "commit": "5165398ea009b6cfa22e017ce5505ea61af6a65e",
+        "committedOn": "2026-11-09",
+        "captureDate": null,
+        "note": "Subject and assembly associated with the same public commit. Original capture-level provenance is unavailable; the commit date is not a render date."
+      }
+    },
+    {
+      "id": "artform",
+      "title": "Artform",
+      "image": {
+        "url": "assets/study-thumbnails-20261109/artform.png",
+        "width": 800,
+        "height": 600,
+        "sha256": "d39793b6ba5523d9fe58ba02c41be06579be0dfe88a512d31899a5f616d11410"
+      },
+      "assets": [
+        {
+          "id": "artform",
+          "sha256": "8bcba67694f6f80553a505ca037fa5bbc3451d7cadd11c554b9221625c50964e",
+          "url": "models/studies-20261025/artform-rev03.glb.gz"
+        }
+      ],
+      "provenance": {
+        "kind": "historical-public-thumbnail",
+        "commit": "5165398ea009b6cfa22e017ce5505ea61af6a65e",
+        "committedOn": "2026-11-09",
+        "captureDate": null,
+        "note": "Subject and assembly associated with the same public commit. Original capture-level provenance is unavailable; the commit date is not a render date."
+      }
+    },
+    {
+      "id": "edge-1",
+      "title": "Edge 1",
+      "image": {
+        "url": "assets/study-thumbnails-20261109/edge-1.png",
+        "width": 800,
+        "height": 600,
+        "sha256": "c298c0ee11b85d6c9f93ba3804c0b7a27386102c71354629673174d6a58b3d3a"
+      },
+      "assets": [
+        {
+          "id": "edge-1",
+          "sha256": "86a5c78d3c8fecd9ef59318bc425c9a81707ef88a94efa46da68d8c9ea0d892c",
+          "url": "https://raw.githubusercontent.com/itsdanielsultan/future-mississauga/38192a27c882e7c7e0a4020396b800f9a70a34a0/model-assets/20261025/edge-1.glb.gz"
+        }
+      ],
+      "provenance": {
+        "kind": "historical-public-thumbnail",
+        "commit": "5165398ea009b6cfa22e017ce5505ea61af6a65e",
+        "committedOn": "2026-11-09",
+        "captureDate": null,
+        "note": "Subject and assembly associated with the same public commit. Original capture-level provenance is unavailable; the commit date is not a render date."
+      }
+    },
+    {
+      "id": "oro",
+      "title": "Oro at Edge Towers",
+      "image": {
+        "url": "assets/study-thumbnails-20261109/oro.png",
+        "width": 800,
+        "height": 600,
+        "sha256": "a9b9d53507caa3865ef037d6231e07fcf9b43e842d8dda7baab09b74af1a028e"
+      },
+      "assets": [
+        {
+          "id": "oro",
+          "sha256": "0059745c862636c78751a5c0e3f8d5471bf4d2950fda97cec4cc23d2b8a55d9b",
+          "url": "https://raw.githubusercontent.com/itsdanielsultan/future-mississauga/38192a27c882e7c7e0a4020396b800f9a70a34a0/model-assets/20261025/oro.glb.gz"
+        }
+      ],
+      "provenance": {
+        "kind": "historical-public-thumbnail",
+        "commit": "5165398ea009b6cfa22e017ce5505ea61af6a65e",
+        "committedOn": "2026-11-09",
+        "captureDate": null,
+        "note": "Subject and assembly associated with the same public commit. Original capture-level provenance is unavailable; the commit date is not a render date."
+      }
+    },
+    {
+      "id": "avia-1",
+      "title": "Avia 1",
+      "image": {
+        "url": "assets/study-thumbnails-20261109/avia-1.png",
+        "width": 800,
+        "height": 600,
+        "sha256": "1c735892f680ae4e6f1a4338801de4f2652f727b5f8cf3c57e94aed08d628c80"
+      },
+      "assets": [
+        {
+          "id": "avia-1",
+          "sha256": "310bc43540e655b1d35adc667a2e5dde577ca994dae8a35801761c72e7929b0d",
+          "url": "https://raw.githubusercontent.com/itsdanielsultan/future-mississauga/38192a27c882e7c7e0a4020396b800f9a70a34a0/model-assets/20261025/avia-1.glb.gz"
+        },
+        {
+          "id": "avia-podium",
+          "sha256": "95db991a0aff042cebf5712620632dea77837380b3ee264ab2c613de50638f3b",
+          "url": "https://raw.githubusercontent.com/itsdanielsultan/future-mississauga/38192a27c882e7c7e0a4020396b800f9a70a34a0/model-assets/20261025/avia-podium.glb.gz"
+        }
+      ],
+      "provenance": {
+        "kind": "historical-public-thumbnail",
+        "commit": "5165398ea009b6cfa22e017ce5505ea61af6a65e",
+        "committedOn": "2026-11-09",
+        "captureDate": null,
+        "note": "Subject and assembly associated with the same public commit. Original capture-level provenance is unavailable; the commit date is not a render date."
+      }
+    },
+    {
+      "id": "avia-2",
+      "title": "Avia 2",
+      "image": {
+        "url": "assets/study-thumbnails-20261109/avia-2.png",
+        "width": 800,
+        "height": 600,
+        "sha256": "a1d8a74b50c80becf2cf1d10b807d7c414c1b093bbdf7d1e05f6115dfa4e58d4"
+      },
+      "assets": [
+        {
+          "id": "avia-2",
+          "sha256": "2cdcf0eed1c0b419556fa87013c886d6453f48ecf5058e6a4f09a722791706b9",
+          "url": "https://raw.githubusercontent.com/itsdanielsultan/future-mississauga/38192a27c882e7c7e0a4020396b800f9a70a34a0/model-assets/20261025/avia-2.glb.gz"
+        },
+        {
+          "id": "avia-podium",
+          "sha256": "95db991a0aff042cebf5712620632dea77837380b3ee264ab2c613de50638f3b",
+          "url": "https://raw.githubusercontent.com/itsdanielsultan/future-mississauga/38192a27c882e7c7e0a4020396b800f9a70a34a0/model-assets/20261025/avia-podium.glb.gz"
+        }
+      ],
+      "provenance": {
+        "kind": "historical-public-thumbnail",
+        "commit": "5165398ea009b6cfa22e017ce5505ea61af6a65e",
+        "committedOn": "2026-11-09",
+        "captureDate": null,
+        "note": "Subject and assembly associated with the same public commit. Original capture-level provenance is unavailable; the commit date is not a render date."
+      }
+    },
+    {
+      "id": "sgm-maritz-6710",
+      "title": "6710 Maritz Drive",
+      "image": {
+        "url": "assets/study-thumbnails-20261109/sgm-maritz-6710.png",
+        "width": 800,
+        "height": 600,
+        "sha256": "3b567a731bd7950d001a1c1305bf64ebbd92a63cf0598205304fd71ae42e9f88"
+      },
+      "assets": [
+        {
+          "id": "sgm-maritz-6710",
+          "sha256": "8b67989cd54e9ecbdf66f866de5c6e2a2828d338952471ba83b862849f7c58a4",
+          "url": "models/studies-20261027/sgm-maritz-6710-exterior-study.glb.gz"
+        }
+      ],
+      "provenance": {
+        "kind": "historical-public-thumbnail",
+        "commit": "5165398ea009b6cfa22e017ce5505ea61af6a65e",
+        "committedOn": "2026-11-09",
+        "captureDate": null,
+        "note": "Subject and assembly associated with the same public commit. Original capture-level provenance is unavailable; the commit date is not a render date."
+      }
+    },
+    {
+      "id": "ergocentric-275-superior",
+      "title": "275 Superior Boulevard",
+      "image": {
+        "url": "assets/study-thumbnails-20261109/ergocentric-275-superior.png",
+        "width": 800,
+        "height": 600,
+        "sha256": "9868422b805a984ce24056cd2330b1973c0b7aa25e058edcf4ad4e6388f7051d"
+      },
+      "assets": [
+        {
+          "id": "ergocentric-275-superior",
+          "sha256": "1be0160ad175e161e8d2f023d03f91cbc908ec9baa4f4787aae7c5ba6f1e2df4",
+          "url": "models/studies-20261028/ergocentric-275-superior.glb.gz"
+        }
+      ],
+      "provenance": {
+        "kind": "historical-public-thumbnail",
+        "commit": "5165398ea009b6cfa22e017ce5505ea61af6a65e",
+        "committedOn": "2026-11-09",
+        "captureDate": null,
+        "note": "Subject and assembly associated with the same public commit. Original capture-level provenance is unavailable; the commit date is not a render date."
+      }
+    },
+    {
+      "id": "edge-2",
+      "title": "Edge 2",
+      "image": {
+        "url": "assets/building-thumbnails-20261113/edge-2-63775250566a.png",
+        "width": 1724,
+        "height": 1282,
+        "sha256": "63775250566abc024fc7d9005e49d9efcd1ee5cce3a2c24c2582cab22524d768"
+      },
+      "assets": [
+        {
+          "id": "edge-2",
+          "url": "https://raw.githubusercontent.com/itsdanielsultan/future-mississauga/38192a27c882e7c7e0a4020396b800f9a70a34a0/model-assets/20261025/edge-2.glb.gz",
+          "sha256": "c52246555b05cf32473d857fc6cf60abd39c101754bd18f488c44cf5eaa8472c"
+        }
+      ],
+      "provenance": {
+        "kind": "native-public-viewer-capture",
+        "capturedAtUTC": "2026-11-13T06:01:42.635Z",
+        "route": "model.html?model=edge-2",
+        "background": "#e8f2f7",
+        "camera": {
+          "aspect": 1.344773790951638,
+          "far": 339.30971669530766,
+          "fov": 35,
+          "near": 174.7195929083271,
+          "position": [
+            173.8410970650827,
+            70.19246045647596,
+            -175.8090562205823
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ]
+        },
+        "fullModelVisible": true,
+        "geometryEdited": false,
+        "method": "Fresh render of unchanged public scene and camera exported from native backing canvas; camera-space model-bound clipping; no resize or postprocessing."
+      }
+    },
+    {
+      "id": "port-credit-26-park",
+      "title": "26 Park Street East",
+      "image": {
+        "url": "assets/building-thumbnails-20261113/port-credit-26-park-8ea51bc0d4e8.png",
+        "width": 1724,
+        "height": 1282,
+        "sha256": "8ea51bc0d4e895d0984eb2954c81224dd4156b275d84eabd03b888e142407d95"
+      },
+      "assets": [
+        {
+          "id": "port-credit-26-park",
+          "url": "models/studies-20261113/26-park-four-side-4d791535afe0.glb.gz",
+          "sha256": "4d791535afe0744de87dc150e31bd24d86e65be6176be3f79a2aba28bc7fc620"
+        }
+      ],
+      "provenance": {
+        "kind": "native-public-viewer-capture",
+        "capturedAtUTC": "2026-11-13T05:58:11.835Z",
+        "route": "model.html?model=port-credit-26-park",
+        "background": "#e8f2f7",
+        "camera": {
+          "position": [
+            162.62702817207284,
+            81.31351408603642,
+            162.62702817207287
+          ],
+          "quaternion": [
+            -0.15622985705189124,
+            0.3771722397422857,
+            0.06471252563850327,
+            0.9105743365364628
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "fov": 35,
+          "aspect": 1.344773790951638,
+          "near": 163.7680571571342,
+          "far": 324.11302735908436
+        },
+        "fullModelVisible": true,
+        "geometryEdited": false,
+        "method": "Existing public renderer freshly renders its unchanged scene and camera once; immediate native canvas PNG export. No crop, resize or postprocessing."
+      }
+    },
+    {
+      "id": "voya",
+      "title": "Voya",
+      "image": {
+        "url": "assets/building-thumbnails-20261113/voya-2e2bebf681f3.png",
+        "width": 1724,
+        "height": 1282,
+        "sha256": "2e2bebf681f3a2f49137e47a877567959faed95c415db9b52347655ab614d8d0"
+      },
+      "assets": [
+        {
+          "id": "voya",
+          "url": "models/refinement-20261113/voya-cityside-0abaf6709101.glb.gz",
+          "sha256": "0abaf6709101d072caece4e418755c682576b9dd32b49fd0004a32b2673bff79"
+        }
+      ],
+      "provenance": {
+        "kind": "native-public-viewer-capture",
+        "capturedAtUTC": "2026-11-13T05:58:30.129Z",
+        "route": "model.html?model=voya",
+        "background": "#e8f2f7",
+        "camera": {
+          "position": [
+            245.10711189434457,
+            122.55355594717227,
+            245.1071118943446
+          ],
+          "quaternion": [
+            -0.1562298570518912,
+            0.3771722397422857,
+            0.06471252563850326,
+            0.9105743365364628
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "fov": 35,
+          "aspect": 1.344773790951638,
+          "near": 247.70649161689647,
+          "far": 487.6148440661373
+        },
+        "fullModelVisible": true,
+        "geometryEdited": false,
+        "method": "Existing public renderer freshly renders its unchanged scene and camera once; immediate native canvas PNG export. No crop, resize or postprocessing."
+      }
+    },
+    {
+      "id": "harborn-50-60",
+      "title": "50 and 60 Harborn Road",
+      "image": {
+        "url": "assets/building-thumbnails-20261113/harborn-50-60-8237fa134c20.png",
+        "width": 1724,
+        "height": 1282,
+        "sha256": "8237fa134c20ff358a2ab6dc417510793b12c48e106318b27f4b3d4d76bb8d12"
+      },
+      "assets": [
+        {
+          "id": "harborn-50-60",
+          "url": "models/studies-20261112/harborn-length-v5-4a0c1d523114.glb.gz",
+          "sha256": "4a0c1d523114d42ad0802e994f81cdf11de16632463f39a87b3f5e947d300e01"
+        }
+      ],
+      "provenance": {
+        "kind": "native-public-viewer-capture",
+        "capturedAtUTC": "2026-11-13T05:59:01.067Z",
+        "route": "model.html?model=harborn-50-60",
+        "background": "#e8f2f7",
+        "camera": {
+          "position": [
+            82.27986329881739,
+            71.30921485897507,
+            109.70648439842316
+          ],
+          "quaternion": [
+            -0.22528302076373222,
+            0.30718209593290063,
+            0.07509434025457741,
+            0.9215462877987018
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "fov": 35,
+          "aspect": 1.344773790951638,
+          "near": 91.38459122238464,
+          "far": 217.74640203022994
+        },
+        "fullModelVisible": true,
+        "geometryEdited": false,
+        "method": "Existing public renderer freshly renders its unchanged scene and camera once; immediate native canvas PNG export. No crop, resize or postprocessing."
+      }
+    },
+    {
+      "id": "mcity-m1",
+      "title": "M City M1",
+      "image": {
+        "url": "assets/building-thumbnails-20261113/mcity-m1-b1b2b9c311ad.png",
+        "width": 1724,
+        "height": 1282,
+        "sha256": "b1b2b9c311ad21e2685fa3b2b16270a19afeae5af90d2c3e47ca2a38e1e41e5d"
+      },
+      "assets": [
+        {
+          "id": "mcity-m1",
+          "url": "models/studies-20261112/mcity-m1-pavilion-v6-27dadcecf559.glb.gz",
+          "sha256": "27dadcecf5593ccc9b257bc4832acf5eb8562aa9bd92c96b5a19491fd0f012ba"
+        }
+      ],
+      "provenance": {
+        "kind": "native-public-viewer-capture",
+        "capturedAtUTC": "2026-11-13T06:00:22.070Z",
+        "route": "model.html?model=mcity-m1",
+        "background": "#e8f2f7",
+        "camera": {
+          "position": [
+            -269.1540697966691,
+            148.03473838816797,
+            349.9002907356698
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "fov": 35,
+          "aspect": 1.344773790951638,
+          "near": 316.52043396303173,
+          "far": 614.6904132991117
+        },
+        "fullModelVisible": true,
+        "geometryEdited": false,
+        "method": "One render of the existing public scene and camera after final depth-precision correction, directly encoded from the native backing canvas. Separate native browser screenshot proves visible framing."
+      }
+    },
+    {
+      "id": "mcity-m5",
+      "title": "M City M5",
+      "image": {
+        "url": "assets/building-thumbnails-20261113/mcity-m5-30cc3091346a.png",
+        "width": 1724,
+        "height": 1282,
+        "sha256": "30cc3091346a92bf6ee56bafd041fb7917c023cd7708f4bd8473ebae6a6a0c1e"
+      },
+      "assets": [
+        {
+          "id": "mcity-m5-v6",
+          "url": "models/studies-20261112/mcity-m5-podium-v6-ccc3178d661b.glb.gz",
+          "sha256": "ccc3178d661b6d3a77b14af474b235be0cae37faf31f5d6c0e3e9fc5e1c950b6"
+        }
+      ],
+      "provenance": {
+        "kind": "native-public-viewer-capture",
+        "capturedAtUTC": "2026-11-13T06:00:22.070Z",
+        "route": "model.html?model=mcity-m5",
+        "background": "#e8f2f7",
+        "camera": {
+          "position": [
+            224.53181235322265,
+            58.37827121183787,
+            -96.54867931188572
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "fov": 35,
+          "aspect": 1.344773790951638,
+          "near": 170.8246230477987,
+          "far": 331.74559009729023
+        },
+        "fullModelVisible": true,
+        "geometryEdited": false,
+        "method": "One render of the existing public scene and camera after final depth-precision correction, directly encoded from the native backing canvas. Separate native browser screenshot proves visible framing."
+      }
+    },
+    {
+      "id": "mcity-pair",
+      "title": "M City M1 and M2",
+      "image": {
+        "url": "assets/building-thumbnails-20261113/mcity-pair-386904c2f401.png",
+        "width": 1724,
+        "height": 1282,
+        "sha256": "386904c2f401ec3b94ac809b18e8d04f248cce4c50cd6c375c4aa567e7b365b6"
+      },
+      "assets": [
+        {
+          "id": "mcity-m1",
+          "url": "models/studies-20261112/mcity-m1-pavilion-v6-27dadcecf559.glb.gz",
+          "sha256": "27dadcecf5593ccc9b257bc4832acf5eb8562aa9bd92c96b5a19491fd0f012ba"
+        },
+        {
+          "id": "mcity-m2",
+          "url": "models/studies-20261101/mcity-m2-likeness-v5.glb.gz",
+          "sha256": "e5a8a29b8f5553e4f92418c11c4ef63397cded152d7d06ba48d690e1e18597fd"
+        }
+      ],
+      "provenance": {
+        "kind": "native-public-viewer-capture",
+        "capturedAtUTC": "2026-11-13T06:00:22.070Z",
+        "route": "model.html?model=mcity-pair",
+        "background": "#e8f2f7",
+        "camera": {
+          "position": [
+            -338.5597960788382,
+            186.207887843361,
+            440.1277349024896
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "fov": 35,
+          "aspect": 1.344773790951638,
+          "near": 398.140342660483,
+          "far": 773.1982694349715
+        },
+        "fullModelVisible": true,
+        "geometryEdited": false,
+        "method": "One render of the existing public scene and camera after final depth-precision correction, directly encoded from the native backing canvas. Separate native browser screenshot proves visible framing."
+      }
+    }
+  ],
+  "historical": [
+    {
+      "id": "mcity-pair",
+      "title": "M City M1 and M2",
+      "image": {
+        "url": "assets/study-thumbnails-20261109/mcity-pair.png",
+        "width": 800,
+        "height": 600,
+        "sha256": "caba4edaa326813da7a9ae994a88ed0f8ca76d63d5200040e9177942ef358a23"
+      },
+      "assets": [
+        {
+          "id": "mcity-m1",
+          "sha256": "2395254cbc740cba2bb3bae74bbb00cc4039ea1997414635bb368b93cea92521",
+          "url": "models/studies-20261101/mcity-m1-likeness-v5.glb.gz"
+        },
+        {
+          "id": "mcity-m2",
+          "sha256": "e5a8a29b8f5553e4f92418c11c4ef63397cded152d7d06ba48d690e1e18597fd",
+          "url": "models/studies-20261101/mcity-m2-likeness-v5.glb.gz"
+        }
+      ],
+      "provenance": {
+        "kind": "historical-public-thumbnail",
+        "commit": "5165398ea009b6cfa22e017ce5505ea61af6a65e",
+        "committedOn": "2026-11-09",
+        "captureDate": null,
+        "note": "Subject and assembly associated with the same public commit. Original capture-level provenance is unavailable; the commit date is not a render date."
+      }
+    },
+    {
+      "id": "mcity-m1",
+      "title": "M City M1",
+      "image": {
+        "url": "assets/study-thumbnails-20261109/mcity-m1.png",
+        "width": 800,
+        "height": 600,
+        "sha256": "aa8b08c65dae35d7e05ab2523c07c6333a67d9f339bed017d9678c89a26b56b5"
+      },
+      "assets": [
+        {
+          "id": "mcity-m1",
+          "sha256": "2395254cbc740cba2bb3bae74bbb00cc4039ea1997414635bb368b93cea92521",
+          "url": "models/studies-20261101/mcity-m1-likeness-v5.glb.gz"
+        }
+      ],
+      "provenance": {
+        "kind": "historical-public-thumbnail",
+        "commit": "5165398ea009b6cfa22e017ce5505ea61af6a65e",
+        "committedOn": "2026-11-09",
+        "captureDate": null,
+        "note": "Subject and assembly associated with the same public commit. Original capture-level provenance is unavailable; the commit date is not a render date."
+      }
+    },
+    {
+      "id": "mcity-m2",
+      "title": "M City M2",
+      "image": {
+        "url": "assets/study-thumbnails-20261109/mcity-m2.png",
+        "width": 800,
+        "height": 600,
+        "sha256": "5b23332b55c44c1ca52583fbe97bcdfec38b84a588d6b920723357f837109cbe"
+      },
+      "assets": [
+        {
+          "id": "mcity-m2",
+          "sha256": "e5a8a29b8f5553e4f92418c11c4ef63397cded152d7d06ba48d690e1e18597fd",
+          "url": "models/studies-20261101/mcity-m2-likeness-v5.glb.gz"
+        }
+      ],
+      "provenance": {
+        "kind": "historical-public-thumbnail",
+        "commit": "5165398ea009b6cfa22e017ce5505ea61af6a65e",
+        "committedOn": "2026-11-09",
+        "captureDate": null,
+        "note": "Subject and assembly associated with the same public commit. Original capture-level provenance is unavailable; the commit date is not a render date."
+      }
+    },
+    {
+      "id": "artform",
+      "title": "Artform",
+      "image": {
+        "url": "assets/study-thumbnails-20261109/artform.png",
+        "width": 800,
+        "height": 600,
+        "sha256": "d39793b6ba5523d9fe58ba02c41be06579be0dfe88a512d31899a5f616d11410"
+      },
+      "assets": [
+        {
+          "id": "artform",
+          "sha256": "8bcba67694f6f80553a505ca037fa5bbc3451d7cadd11c554b9221625c50964e",
+          "url": "models/studies-20261025/artform-rev03.glb.gz"
+        }
+      ],
+      "provenance": {
+        "kind": "historical-public-thumbnail",
+        "commit": "5165398ea009b6cfa22e017ce5505ea61af6a65e",
+        "committedOn": "2026-11-09",
+        "captureDate": null,
+        "note": "Subject and assembly associated with the same public commit. Original capture-level provenance is unavailable; the commit date is not a render date."
+      }
+    },
+    {
+      "id": "edge-1",
+      "title": "Edge 1",
+      "image": {
+        "url": "assets/study-thumbnails-20261109/edge-1.png",
+        "width": 800,
+        "height": 600,
+        "sha256": "c298c0ee11b85d6c9f93ba3804c0b7a27386102c71354629673174d6a58b3d3a"
+      },
+      "assets": [
+        {
+          "id": "edge-1",
+          "sha256": "86a5c78d3c8fecd9ef59318bc425c9a81707ef88a94efa46da68d8c9ea0d892c",
+          "url": "https://raw.githubusercontent.com/itsdanielsultan/future-mississauga/38192a27c882e7c7e0a4020396b800f9a70a34a0/model-assets/20261025/edge-1.glb.gz"
+        }
+      ],
+      "provenance": {
+        "kind": "historical-public-thumbnail",
+        "commit": "5165398ea009b6cfa22e017ce5505ea61af6a65e",
+        "committedOn": "2026-11-09",
+        "captureDate": null,
+        "note": "Subject and assembly associated with the same public commit. Original capture-level provenance is unavailable; the commit date is not a render date."
+      }
+    },
+    {
+      "id": "edge-2",
+      "title": "Edge 2",
+      "image": {
+        "url": "assets/study-thumbnails-20261109/edge-2.png",
+        "width": 800,
+        "height": 600,
+        "sha256": "a661c9978b87a1fe9ed36b598483f9a3a0ef0899c159739047e6361b8ba1f04b"
+      },
+      "assets": [
+        {
+          "id": "edge-2",
+          "sha256": "c52246555b05cf32473d857fc6cf60abd39c101754bd18f488c44cf5eaa8472c",
+          "url": "https://raw.githubusercontent.com/itsdanielsultan/future-mississauga/38192a27c882e7c7e0a4020396b800f9a70a34a0/model-assets/20261025/edge-2.glb.gz"
+        }
+      ],
+      "provenance": {
+        "kind": "historical-public-thumbnail",
+        "commit": "5165398ea009b6cfa22e017ce5505ea61af6a65e",
+        "committedOn": "2026-11-09",
+        "captureDate": null,
+        "note": "Subject and assembly associated with the same public commit. Original capture-level provenance is unavailable; the commit date is not a render date."
+      }
+    },
+    {
+      "id": "oro",
+      "title": "Oro at Edge Towers",
+      "image": {
+        "url": "assets/study-thumbnails-20261109/oro.png",
+        "width": 800,
+        "height": 600,
+        "sha256": "a9b9d53507caa3865ef037d6231e07fcf9b43e842d8dda7baab09b74af1a028e"
+      },
+      "assets": [
+        {
+          "id": "oro",
+          "sha256": "0059745c862636c78751a5c0e3f8d5471bf4d2950fda97cec4cc23d2b8a55d9b",
+          "url": "https://raw.githubusercontent.com/itsdanielsultan/future-mississauga/38192a27c882e7c7e0a4020396b800f9a70a34a0/model-assets/20261025/oro.glb.gz"
+        }
+      ],
+      "provenance": {
+        "kind": "historical-public-thumbnail",
+        "commit": "5165398ea009b6cfa22e017ce5505ea61af6a65e",
+        "committedOn": "2026-11-09",
+        "captureDate": null,
+        "note": "Subject and assembly associated with the same public commit. Original capture-level provenance is unavailable; the commit date is not a render date."
+      }
+    },
+    {
+      "id": "avia-1",
+      "title": "Avia 1",
+      "image": {
+        "url": "assets/study-thumbnails-20261109/avia-1.png",
+        "width": 800,
+        "height": 600,
+        "sha256": "1c735892f680ae4e6f1a4338801de4f2652f727b5f8cf3c57e94aed08d628c80"
+      },
+      "assets": [
+        {
+          "id": "avia-1",
+          "sha256": "310bc43540e655b1d35adc667a2e5dde577ca994dae8a35801761c72e7929b0d",
+          "url": "https://raw.githubusercontent.com/itsdanielsultan/future-mississauga/38192a27c882e7c7e0a4020396b800f9a70a34a0/model-assets/20261025/avia-1.glb.gz"
+        },
+        {
+          "id": "avia-podium",
+          "sha256": "95db991a0aff042cebf5712620632dea77837380b3ee264ab2c613de50638f3b",
+          "url": "https://raw.githubusercontent.com/itsdanielsultan/future-mississauga/38192a27c882e7c7e0a4020396b800f9a70a34a0/model-assets/20261025/avia-podium.glb.gz"
+        }
+      ],
+      "provenance": {
+        "kind": "historical-public-thumbnail",
+        "commit": "5165398ea009b6cfa22e017ce5505ea61af6a65e",
+        "committedOn": "2026-11-09",
+        "captureDate": null,
+        "note": "Subject and assembly associated with the same public commit. Original capture-level provenance is unavailable; the commit date is not a render date."
+      }
+    },
+    {
+      "id": "avia-2",
+      "title": "Avia 2",
+      "image": {
+        "url": "assets/study-thumbnails-20261109/avia-2.png",
+        "width": 800,
+        "height": 600,
+        "sha256": "a1d8a74b50c80becf2cf1d10b807d7c414c1b093bbdf7d1e05f6115dfa4e58d4"
+      },
+      "assets": [
+        {
+          "id": "avia-2",
+          "sha256": "2cdcf0eed1c0b419556fa87013c886d6453f48ecf5058e6a4f09a722791706b9",
+          "url": "https://raw.githubusercontent.com/itsdanielsultan/future-mississauga/38192a27c882e7c7e0a4020396b800f9a70a34a0/model-assets/20261025/avia-2.glb.gz"
+        },
+        {
+          "id": "avia-podium",
+          "sha256": "95db991a0aff042cebf5712620632dea77837380b3ee264ab2c613de50638f3b",
+          "url": "https://raw.githubusercontent.com/itsdanielsultan/future-mississauga/38192a27c882e7c7e0a4020396b800f9a70a34a0/model-assets/20261025/avia-podium.glb.gz"
+        }
+      ],
+      "provenance": {
+        "kind": "historical-public-thumbnail",
+        "commit": "5165398ea009b6cfa22e017ce5505ea61af6a65e",
+        "committedOn": "2026-11-09",
+        "captureDate": null,
+        "note": "Subject and assembly associated with the same public commit. Original capture-level provenance is unavailable; the commit date is not a render date."
+      }
+    },
+    {
+      "id": "sgm-maritz-6710",
+      "title": "6710 Maritz Drive",
+      "image": {
+        "url": "assets/study-thumbnails-20261109/sgm-maritz-6710.png",
+        "width": 800,
+        "height": 600,
+        "sha256": "3b567a731bd7950d001a1c1305bf64ebbd92a63cf0598205304fd71ae42e9f88"
+      },
+      "assets": [
+        {
+          "id": "sgm-maritz-6710",
+          "sha256": "8b67989cd54e9ecbdf66f866de5c6e2a2828d338952471ba83b862849f7c58a4",
+          "url": "models/studies-20261027/sgm-maritz-6710-exterior-study.glb.gz"
+        }
+      ],
+      "provenance": {
+        "kind": "historical-public-thumbnail",
+        "commit": "5165398ea009b6cfa22e017ce5505ea61af6a65e",
+        "committedOn": "2026-11-09",
+        "captureDate": null,
+        "note": "Subject and assembly associated with the same public commit. Original capture-level provenance is unavailable; the commit date is not a render date."
+      }
+    },
+    {
+      "id": "ergocentric-275-superior",
+      "title": "275 Superior Boulevard",
+      "image": {
+        "url": "assets/study-thumbnails-20261109/ergocentric-275-superior.png",
+        "width": 800,
+        "height": 600,
+        "sha256": "9868422b805a984ce24056cd2330b1973c0b7aa25e058edcf4ad4e6388f7051d"
+      },
+      "assets": [
+        {
+          "id": "ergocentric-275-superior",
+          "sha256": "1be0160ad175e161e8d2f023d03f91cbc908ec9baa4f4787aae7c5ba6f1e2df4",
+          "url": "models/studies-20261028/ergocentric-275-superior.glb.gz"
+        }
+      ],
+      "provenance": {
+        "kind": "historical-public-thumbnail",
+        "commit": "5165398ea009b6cfa22e017ce5505ea61af6a65e",
+        "committedOn": "2026-11-09",
+        "captureDate": null,
+        "note": "Subject and assembly associated with the same public commit. Original capture-level provenance is unavailable; the commit date is not a render date."
+      }
+    },
+    {
+      "id": "mcity-m5",
+      "title": "M City M5",
+      "image": {
+        "url": "assets/study-thumbnails-20261109/mcity-m5.png",
+        "width": 800,
+        "height": 600,
+        "sha256": "f94e4ed2661c836466f7ba89273830de888ef43996b94dbeba309068afab059a"
+      },
+      "assets": [
+        {
+          "id": "mcity-m5-v5",
+          "sha256": "af9d51546ca35a1fbc850b2afc3cbf1565010ee7c196f03df7e8cf6679ff829a",
+          "url": "models/studies-20261101/mcity-m5-exterior-v5-af9d51546ca3.glb.gz"
+        }
+      ],
+      "provenance": {
+        "kind": "historical-public-thumbnail",
+        "commit": "5165398ea009b6cfa22e017ce5505ea61af6a65e",
+        "committedOn": "2026-11-09",
+        "captureDate": null,
+        "note": "Subject and assembly associated with the same public commit. Original capture-level provenance is unavailable; the commit date is not a render date."
+      }
+    }
+  ]
+}

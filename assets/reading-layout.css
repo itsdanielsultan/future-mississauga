@@ -1,0 +1,37 @@
+/* Portrait gallery layout. Building presentation lives in building-navigation.css. */
+html .social-site { background: #fff; color: var(--site-ink); }
+html .social-page {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: clamp(24px, 4vw, 48px);
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+html .social-page h1 { max-width: 20ch; margin: 0 0 18px; font: 500 clamp(42px, 4.7vw, 64px)/1.08 'Bricolage Grotesque', sans-serif; letter-spacing: -.04em; text-wrap: balance; }
+html .social-page .hero { padding: 64px 0 36px; }
+html .social-page .hero .lede { max-width: 60ch; margin: 0 0 16px; font-size: 20px; line-height: 1.55; }
+html .social-page .hero .social-note { max-width: 65ch; line-height: 1.65; }
+html .social-page .gallery-controls { flex-wrap: wrap; gap: 16px 32px; padding-bottom: 32px; }
+html .social-page .gallery-controls label { gap: 16px; min-width: 0; }
+html .social-page .gallery-controls select { min-height: 48px; padding-right: 46px; }
+html .social-page .social-grid { gap: 48px 32px; }
+html .social-page .social-context { gap: 32px 64px; margin-top: 64px; padding: 48px 0 64px; }
+html .social-page .social-context h2 { max-width: 26ch; font-size: 30px; }
+html .social-page .social-context p { max-width: 65ch; line-height: 1.65; }
+@media (max-width: 760px) {
+  html .social-page { padding-inline: clamp(20px, 4vw, 24px); }
+  html .social-page h1 { font-size: clamp(38px, 9vw, 52px); }
+  html .social-page .hero { padding: 40px 0 28px; }
+  html .social-page .hero .lede { font-size: 18px; }
+  html .social-page .gallery-controls { gap: 16px 24px; padding-bottom: 28px; }
+  html .social-page .gallery-controls select { width: min(100%, 260px); }
+  html .social-page .social-grid { gap: 36px 24px; }
+  html .social-page .social-context { grid-template-columns: 1fr; gap: 24px; margin-top: 48px; padding: 32px 0 48px; }
+}
+@media (max-width: 480px) {
+  html .social-page .gallery-controls { align-items: start; }
+  html .social-page .gallery-controls label { flex: 1 1 100%; }
+  html .social-page .gallery-controls select { width: 100%; }
+  html .social-page .gallery-controls p { padding-bottom: 0; }
+}

@@ -1,0 +1,1077 @@
+{
+  "schema": "future-mississauga-model-previews/v1",
+  "reviewDate": "2026-10-25",
+  "assets": [
+    {
+      "id": "mcity-m1",
+      "title": "M City M1",
+      "url": "models/studies-20261112/mcity-m1-pavilion-v6-27dadcecf559.glb.gz",
+      "bytes": 3796003,
+      "decodedBytes": 21971656,
+      "sha256": "27dadcecf5593ccc9b257bc4832acf5eb8562aa9bd92c96b5a19491fd0f012ba",
+      "downloadSHA256": "478be2c24b1b8b8a0cbb649c6c75fa11df7658b29a7a40d186da34aa37773ae9",
+      "downloadName": "M_City_M1_Exterior_Study.glb",
+      "sourceSHA256": "af8f08bd86bff83adcde4b8f4c4144d999969031e9567128bcd98d927a207dc5",
+      "sourceArchiveSHA256": "2215122874e043c6a56e4ddf4fcc9935402ca7d48fdd0262a5949e79dd56dc83",
+      "representation": "Approximate completed exterior with source-traced floor plates and an added footprint-informed pavilion. Roof height, floor phase and dimensions remain qualified.",
+      "cityDataTerms": true,
+      "triangles": 367975,
+      "meshCount": 192,
+      "modelReviewDate": "2026-11-12"
+    },
+    {
+      "id": "mcity-m2",
+      "title": "M City M2",
+      "url": "models/studies-20261101/mcity-m2-likeness-v5.glb.gz",
+      "bytes": 3662186,
+      "decodedBytes": 21373484,
+      "sha256": "e5a8a29b8f5553e4f92418c11c4ef63397cded152d7d06ba48d690e1e18597fd",
+      "downloadSHA256": "1f6d68734e2486165984f0e56605638fc0ea705a4cb326afbe33b0a4dde0ef20",
+      "downloadName": "M_City_M2_Exterior_Study.glb",
+      "sourceSHA256": "cfd3815278c1495fc91eb4b54afe37601ba63e03bed1c6172b37f22ab3d3a08e",
+      "sourceArchiveSHA256": "2215122874e043c6a56e4ddf4fcc9935402ca7d48fdd0262a5949e79dd56dc83",
+      "representation": "Approximate completed exterior with source-traced floor plates and selected podium surface details. Floor phase and dimensions remain qualified.",
+      "cityDataTerms": true,
+      "triangles": 353191,
+      "meshCount": 182,
+      "modelReviewDate": "2026-11-01"
+    },
+    {
+      "id": "artform",
+      "title": "Artform",
+      "url": "models/studies-20261025/artform-rev03.glb.gz",
+      "bytes": 1888394,
+      "decodedBytes": 15798312,
+      "sha256": "8bcba67694f6f80553a505ca037fa5bbc3451d7cadd11c554b9221625c50964e",
+      "downloadSHA256": "cf708ba198b87b9373b5c74a2311dccde96a72fb17f05dbef693f889c40e3da7",
+      "downloadName": "Artform_Exterior_Study_rev03.glb",
+      "sourceArchiveSHA256": "2a4bfb61e489aecc0eca530a6b0bdd19621d36a01c049f3a677ed40a0be1a54c",
+      "sourceLibraryId": "libfile_cf9399f695088191aca3b9244b708b21",
+      "sourceMember": "Artform_Rev03_20261025/models/Artform_Exterior_Study_rev03.glb",
+      "representation": "Exact accepted Rev03 GLB bytes after lossless gzip decompression. Local model coordinates; no surveyed city registration claimed."
+    },
+    {
+      "id": "edge-1",
+      "file": "edge-1.glb.gz",
+      "downloadName": "Edge1_COMPLETED_RECONSTRUCTION.glb",
+      "bytes": 806531,
+      "decodedBytes": 9893572,
+      "sha256": "86a5c78d3c8fecd9ef59318bc425c9a81707ef88a94efa46da68d8c9ea0d892c",
+      "downloadSHA256": "b3dda7fd020c450a4748f679350700530b020223ae1477791e1f3a4e47bf8f73",
+      "sourcePart": "Edge_Towers_Oro_Rev03_20261025_Part_1_of_2.zip",
+      "sourcePartBytes": 10739145,
+      "sourcePartSHA256": "68f92acc3e51861d6051178a737e479fb48de32b590dcd0dd511bb5895eb58e3",
+      "sourceLibraryId": "libfile_7610808308708191a4310a95bd0ff71c",
+      "sourceLibraryVersion": 0,
+      "sourceMember": "Edge_Towers_Oro_Rev03_20261025/inputs/accepted_rev02/Edge1_COMPLETED_RECONSTRUCTION.glb",
+      "canonicalPackageSHA256": "76a13cc2e82bf5b3b986279b1dc2db9b925b72332e914b5cfecd5f58779ad6e0",
+      "canonicalPackageNote": "Catalogue identity; current verification uses the listed independently packaged ZIP part.",
+      "cityDataTerms": false,
+      "meshCount": 306,
+      "triangles": 193064,
+      "title": "Edge 1",
+      "url": "https://raw.githubusercontent.com/itsdanielsultan/future-mississauga/38192a27c882e7c7e0a4020396b800f9a70a34a0/model-assets/20261025/edge-1.glb.gz",
+      "repositoryFile": "model-assets/20261025/edge-1.glb.gz",
+      "representation": "Exact accepted GLB bytes after lossless gzip decompression. Standalone local coordinates; no surveyed city registration claimed.",
+      "repositoryCommit": "38192a27c882e7c7e0a4020396b800f9a70a34a0",
+      "batchOpaque": true
+    },
+    {
+      "id": "edge-2",
+      "file": "edge-2.glb.gz",
+      "downloadName": "Edge2_COMPLETED_RECONSTRUCTION_Rev02.glb",
+      "bytes": 808218,
+      "decodedBytes": 11365640,
+      "sha256": "c52246555b05cf32473d857fc6cf60abd39c101754bd18f488c44cf5eaa8472c",
+      "downloadSHA256": "7290fccd134581a2983b8b5a5c1782f8f278337bf6a4bd269d0a870854e842af",
+      "sourcePart": "Edge_Towers_Oro_Rev03_20261025_Part_1_of_2.zip",
+      "sourcePartBytes": 10739145,
+      "sourcePartSHA256": "68f92acc3e51861d6051178a737e479fb48de32b590dcd0dd511bb5895eb58e3",
+      "sourceLibraryId": "libfile_7610808308708191a4310a95bd0ff71c",
+      "sourceLibraryVersion": 0,
+      "sourceMember": "Edge_Towers_Oro_Rev03_20261025/inputs/accepted_rev02/Edge2_COMPLETED_RECONSTRUCTION_Rev02.glb",
+      "canonicalPackageSHA256": "76a13cc2e82bf5b3b986279b1dc2db9b925b72332e914b5cfecd5f58779ad6e0",
+      "canonicalPackageNote": "Catalogue identity; current verification uses the listed independently packaged ZIP part.",
+      "cityDataTerms": false,
+      "meshCount": 356,
+      "triangles": 225104,
+      "title": "Edge 2",
+      "url": "https://raw.githubusercontent.com/itsdanielsultan/future-mississauga/38192a27c882e7c7e0a4020396b800f9a70a34a0/model-assets/20261025/edge-2.glb.gz",
+      "repositoryFile": "model-assets/20261025/edge-2.glb.gz",
+      "representation": "Exact accepted GLB bytes after lossless gzip decompression. Standalone local coordinates; no surveyed city registration claimed.",
+      "repositoryCommit": "38192a27c882e7c7e0a4020396b800f9a70a34a0",
+      "batchOpaque": true
+    },
+    {
+      "id": "oro",
+      "file": "oro.glb.gz",
+      "downloadName": "Oro_Edge3_INTENDED_2020_Rev03.glb",
+      "bytes": 1343731,
+      "decodedBytes": 18130012,
+      "sha256": "0059745c862636c78751a5c0e3f8d5471bf4d2950fda97cec4cc23d2b8a55d9b",
+      "downloadSHA256": "7e776ce636ded95567fddd61bac724d1286b5fa4c67451f6a757e87ca229591e",
+      "sourcePart": "Edge_Towers_Oro_Rev03_20261025_Part_2_of_2.zip",
+      "sourcePartBytes": 10886210,
+      "sourcePartSHA256": "0f4b0c3aacef3f35086025bfa7974f92f4e5b68781933fe03b90ff5220c9e29d",
+      "sourceLibraryId": "libfile_3f2ef7f52da081919c02a4c9424beb8a",
+      "sourceLibraryVersion": 0,
+      "sourceMember": "Edge_Towers_Oro_Rev03_20261025/models/Oro_Edge3_INTENDED_2020_Rev03.glb",
+      "canonicalPackageSHA256": "76a13cc2e82bf5b3b986279b1dc2db9b925b72332e914b5cfecd5f58779ad6e0",
+      "canonicalPackageNote": "Catalogue identity; current verification uses the listed independently packaged ZIP part.",
+      "cityDataTerms": false,
+      "meshCount": 487,
+      "triangles": 358368,
+      "title": "Oro",
+      "url": "https://raw.githubusercontent.com/itsdanielsultan/future-mississauga/38192a27c882e7c7e0a4020396b800f9a70a34a0/model-assets/20261025/oro.glb.gz",
+      "repositoryFile": "model-assets/20261025/oro.glb.gz",
+      "representation": "Exact accepted GLB bytes after lossless gzip decompression. Standalone local coordinates; no surveyed city registration claimed.",
+      "repositoryCommit": "38192a27c882e7c7e0a4020396b800f9a70a34a0",
+      "batchOpaque": true
+    },
+    {
+      "id": "avia-1",
+      "file": "avia-1.glb.gz",
+      "downloadName": "Avia_Avia1_Rev02_May2026_podium.glb",
+      "bytes": 2023602,
+      "decodedBytes": 11857708,
+      "sha256": "310bc43540e655b1d35adc667a2e5dde577ca994dae8a35801761c72e7929b0d",
+      "downloadSHA256": "ea0d6763b0a224e3434b38f6890a48121c392c44ef632dfe9eddf38692b9a709",
+      "sourcePart": "Avia_Rev02_20261025_Part_2_of_3.zip",
+      "sourcePartBytes": 13016663,
+      "sourcePartSHA256": "a39797ed91181e3f27e2543ebd91350944b398f413cefabcc5a8b2e61f6c57f1",
+      "sourceLibraryId": "libfile_f5ac86cc843c8191ac553e91ec8a2cb2",
+      "sourceLibraryVersion": 0,
+      "sourceMember": "avia_1_2_rev02/models/Avia_Avia1_Rev02_May2026_podium.glb",
+      "canonicalPackageSHA256": "ebfb203a8637a90ca3b4f69a47b95f9a8e56f4f4fd0fc4576b8942aa149030d6",
+      "canonicalPackageNote": "Catalogue identity; current verification uses the listed independently packaged ZIP part.",
+      "cityDataTerms": true,
+      "meshCount": 350,
+      "triangles": 216580,
+      "title": "Avia 1 tower",
+      "url": "https://raw.githubusercontent.com/itsdanielsultan/future-mississauga/38192a27c882e7c7e0a4020396b800f9a70a34a0/model-assets/20261025/avia-1.glb.gz",
+      "repositoryFile": "model-assets/20261025/avia-1.glb.gz",
+      "representation": "Exact accepted GLB bytes after lossless gzip decompression. Standalone local coordinates; no surveyed city registration claimed.",
+      "repositoryCommit": "38192a27c882e7c7e0a4020396b800f9a70a34a0",
+      "batchOpaque": true
+    },
+    {
+      "id": "avia-2",
+      "file": "avia-2.glb.gz",
+      "downloadName": "Avia_Avia2_Rev02_May2026_podium.glb",
+      "bytes": 1302478,
+      "decodedBytes": 8244160,
+      "sha256": "2cdcf0eed1c0b419556fa87013c886d6453f48ecf5058e6a4f09a722791706b9",
+      "downloadSHA256": "922864d5ac258236f57b45623b7e17532219231e5bbdf4cf37002899e32f6508",
+      "sourcePart": "Avia_Rev02_20261025_Part_3_of_3.zip",
+      "sourcePartBytes": 13011742,
+      "sourcePartSHA256": "b299adc81402e895aaa99bfde02b09238a903d16bfe315e9aeecc74a99304c2f",
+      "sourceLibraryId": "libfile_948359a27f6c819188d846368c310cf8",
+      "sourceLibraryVersion": 0,
+      "sourceMember": "avia_1_2_rev02/models/Avia_Avia2_Rev02_May2026_podium.glb",
+      "canonicalPackageSHA256": "ebfb203a8637a90ca3b4f69a47b95f9a8e56f4f4fd0fc4576b8942aa149030d6",
+      "canonicalPackageNote": "Catalogue identity; current verification uses the listed independently packaged ZIP part.",
+      "cityDataTerms": true,
+      "meshCount": 493,
+      "triangles": 149436,
+      "title": "Avia 2 tower",
+      "url": "https://raw.githubusercontent.com/itsdanielsultan/future-mississauga/38192a27c882e7c7e0a4020396b800f9a70a34a0/model-assets/20261025/avia-2.glb.gz",
+      "repositoryFile": "model-assets/20261025/avia-2.glb.gz",
+      "representation": "Exact accepted GLB bytes after lossless gzip decompression. Standalone local coordinates; no surveyed city registration claimed.",
+      "repositoryCommit": "38192a27c882e7c7e0a4020396b800f9a70a34a0",
+      "batchOpaque": true
+    },
+    {
+      "id": "avia-podium",
+      "file": "avia-podium.glb.gz",
+      "downloadName": "Avia_SharedPodium_Rev02_May2026_podium.glb",
+      "bytes": 1069995,
+      "decodedBytes": 6988436,
+      "sha256": "95db991a0aff042cebf5712620632dea77837380b3ee264ab2c613de50638f3b",
+      "downloadSHA256": "988884bc5f28cf89c70974f898d937e94d1bd6c3c6d9f0f4910fb82f883743cd",
+      "sourcePart": "Avia_Rev02_20261025_Part_3_of_3.zip",
+      "sourcePartBytes": 13011742,
+      "sourcePartSHA256": "b299adc81402e895aaa99bfde02b09238a903d16bfe315e9aeecc74a99304c2f",
+      "sourceLibraryId": "libfile_948359a27f6c819188d846368c310cf8",
+      "sourceLibraryVersion": 0,
+      "sourceMember": "avia_1_2_rev02/models/Avia_SharedPodium_Rev02_May2026_podium.glb",
+      "canonicalPackageSHA256": "ebfb203a8637a90ca3b4f69a47b95f9a8e56f4f4fd0fc4576b8942aa149030d6",
+      "canonicalPackageNote": "Catalogue identity; current verification uses the listed independently packaged ZIP part.",
+      "cityDataTerms": true,
+      "meshCount": 306,
+      "triangles": 128692,
+      "title": "Shared Avia podium",
+      "url": "https://raw.githubusercontent.com/itsdanielsultan/future-mississauga/38192a27c882e7c7e0a4020396b800f9a70a34a0/model-assets/20261025/avia-podium.glb.gz",
+      "repositoryFile": "model-assets/20261025/avia-podium.glb.gz",
+      "representation": "Exact accepted GLB bytes after lossless gzip decompression. Standalone local coordinates; no surveyed city registration claimed.",
+      "repositoryCommit": "38192a27c882e7c7e0a4020396b800f9a70a34a0",
+      "batchOpaque": true
+    },
+    {
+      "id": "sgm-maritz-6710",
+      "title": "6710 Maritz Drive",
+      "file": "sgm-maritz-6710-exterior-study.glb.gz",
+      "url": "models/studies-20261027/sgm-maritz-6710-exterior-study.glb.gz",
+      "downloadName": "6710-Maritz-facade-study.glb",
+      "bytes": 35809,
+      "decodedBytes": 292136,
+      "sha256": "8b67989cd54e9ecbdf66f866de5c6e2a2828d338952471ba83b862849f7c58a4",
+      "downloadSHA256": "e36e3f7a5814d4904bc3a0b0bd41bef8d34b03dfaf53eba3b6b1edf2dd0a83df",
+      "meshCount": 29,
+      "triangles": 4196,
+      "cityDataTerms": true,
+      "representation": "Exact checked combined GLB after lossless gzip decompression. City map coordinates retained; original municipal massing with a partial facade refinement.",
+      "sourceModelId": "23-3369",
+      "modelReviewDate": "2026-10-27"
+    },
+    {
+      "id": "ergocentric-275-superior",
+      "title": "275 Superior Boulevard",
+      "file": "ergocentric-275-superior.glb.gz",
+      "url": "models/studies-20261028/ergocentric-275-superior.glb.gz",
+      "compression": "gzip",
+      "bytes": 18362,
+      "decodedBytes": 100940,
+      "sha256": "1be0160ad175e161e8d2f023d03f91cbc908ec9baa4f4787aae7c5ba6f1e2df4",
+      "downloadSHA256": "2073d1b0373039fb4317e70aef33af2dd0abdd5bb12835955765f9647bd55c02",
+      "meshCount": 8,
+      "cityDataTerms": true,
+      "sourceModelId": "32-897",
+      "modelReviewDate": "2026-10-28",
+      "representation": "Complete City baseline with an approximate partial facade study. Original City map coordinates retained; no source photographs or textures are embedded.",
+      "publicGeometry": true,
+      "publicationScope": "Public interactive study; a standalone model download is not offered.",
+      "scopeDecisionSHA256": "b9033f35f87d1bd9a3c3a668a46ae066a59c84921452592d7b4eb385f7607324",
+      "modelCreatedUTC": "2026-10-28T12:52:11.137762+00:00",
+      "triangles": 1472,
+      "geometrySourceSHA256": "c3bf9ec74a0d8cf57fc96cb8230b1dc2f59cbacd9163c9deff3881adfb9f632e",
+      "metadataDerivativeProofSHA256": "faf0c4a8cfb1f9d456234b78bc81900bc170cb3d94552d999f20eb43bf543942",
+      "metadataDerivativeNote": "Publication-state metadata was updated for public interactive display. Geometry, transforms, materials, credits and limits are unchanged from the authored model."
+    },
+    {
+      "id": "mcity-m5-v5",
+      "projectId": "mcity-5",
+      "title": "M City M5",
+      "url": "models/studies-20261101/mcity-m5-exterior-v5-af9d51546ca3.glb.gz",
+      "bytes": 375477,
+      "decodedBytes": 1505248,
+      "sha256": "af9d51546ca35a1fbc850b2afc3cbf1565010ee7c196f03df7e8cf6679ff829a",
+      "downloadSHA256": "4162051b4d6706a65b3f5f0606ce31dfd9500c41f6ea766f1a40eb15ac519b6f",
+      "downloadName": "M_City_M5_Exterior_Study_Rev05.glb",
+      "representation": "Approximate independently authored completed-design study. Metric dimensions and placement remain unverified.",
+      "cityDataTerms": false,
+      "triangles": 89856,
+      "meshCount": 56,
+      "modelReviewDate": "2026-11-01"
+    },
+    {
+      "id": "mcity-m5-v6",
+      "projectId": "mcity-5",
+      "title": "M City M5",
+      "url": "models/studies-20261112/mcity-m5-podium-v6-ccc3178d661b.glb.gz",
+      "bytes": 453289,
+      "decodedBytes": 1832764,
+      "sha256": "ccc3178d661b6d3a77b14af474b235be0cae37faf31f5d6c0e3e9fc5e1c950b6",
+      "downloadSHA256": "d8847e7267ee38de9138f7aac388fb59865cb3ef139b4c0f66adb66127ab1af5",
+      "downloadName": "M_City_M5_Exterior_Study_Rev06.glb",
+      "representation": "Approximate completed-design study with revised upper park-facing podium groups. Dimensions and placement remain unverified.",
+      "cityDataTerms": false,
+      "triangles": 91644,
+      "meshCount": 56,
+      "modelReviewDate": "2026-11-12"
+    },
+    {
+      "id": "harborn-50-60",
+      "title": "50 and 60 Harborn Road",
+      "url": "models/studies-20261112/harborn-length-v5-4a0c1d523114.glb.gz",
+      "bytes": 551117,
+      "decodedBytes": 1810104,
+      "sha256": "4a0c1d523114d42ad0802e994f81cdf11de16632463f39a87b3f5e947d300e01",
+      "downloadSHA256": "a2bc7660c114e4670e076670507ec173b6b05a49a53ccff8cce53b4407215284",
+      "representation": "Twelve proposed townhomes arranged in two blocks.",
+      "cityDataTerms": true,
+      "triangles": 55521,
+      "modelReviewDate": "2026-11-13",
+      "meshCount": 207
+    },
+    {
+      "id": "port-credit-26-park",
+      "title": "26 Park Street East",
+      "url": "models/studies-20261113/26-park-four-side-4d791535afe0.glb.gz",
+      "bytes": 673678,
+      "decodedBytes": 5065652,
+      "sha256": "4d791535afe0744de87dc150e31bd24d86e65be6176be3f79a2aba28bc7fc620",
+      "downloadSHA256": "c214c94f4ebc7f6165ceb59efd9e9c05473e9a95a9b70e5ce13f822e6fc80228",
+      "representation": "South baseline retained; north, east and west visible facade/podium hierarchy added from distinct July 30, 2026 primary elevations. Mechanical enclosure remains source-supported plain mass.",
+      "cityDataTerms": true,
+      "triangles": 58968,
+      "modelReviewDate": "2026-11-13",
+      "meshCount": 112
+    },
+    {
+      "id": "voya",
+      "title": "Voya",
+      "url": "models/refinement-20261113/voya-cityside-0abaf6709101.glb.gz",
+      "bytes": 313275,
+      "decodedBytes": 2288528,
+      "sha256": "0abaf6709101d072caece4e418755c682576b9dd32b49fd0004a32b2673bff79",
+      "downloadSHA256": "ef03b46d0496107746c47b181cb860ec605f264d0ec51f618578cb967a04ea80",
+      "representation": "Seven labelled plate controls plus retained typical outlines; bounded additive city-facing tower facade. Roof schedule, exact taller/shorter mechanical profiles and other facade schedules remain unresolved.",
+      "cityDataTerms": true,
+      "triangles": 69160,
+      "modelReviewDate": "2026-11-13",
+      "meshCount": 103
+    }
+  ],
+  "views": [
+    {
+      "subtitle": "Completed buildings · Approximate exterior",
+      "summary": "An approximate exterior study using CORE’s floor-plate diagram and completed-building photographs.",
+      "credit": "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+      "limits": "Floor sequence, heights, crown details and podium dimensions remain approximate. The added low pavilion follows a City footprint and photographic references; its roof height is estimated within about 2 m. Existing ground-level podium gaps remain unresolved. This is not a measured as-built model.",
+      "rights": "Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
+      "cameraDirection": [
+        -1,
+        0.55,
+        1.3
+      ],
+      "sources": [
+        {
+          "title": "CORE Architects — M City Phase 1",
+          "url": "https://www.corearchitects.com/project/m-city-phase-1/"
+        },
+        {
+          "title": "RJC Engineers — M1 & M2",
+          "url": "https://www.rjc.ca/project-details/m1-m2-condos.html"
+        },
+        {
+          "title": "City of Mississauga — M City",
+          "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
+        },
+        {
+          "title": "City source data and terms",
+          "url": "https://data.mississauga.ca/pages/mississauga-3d"
+        },
+        {
+          "title": "M City architecture gallery",
+          "url": "https://mcitycondos.com/m1-m2-gallery-architecture.php",
+          "note": "Reference only; images are not redistributed."
+        }
+      ],
+      "id": "mcity-pair",
+      "title": "M City M1 and M2",
+      "assets": [
+        "mcity-m1",
+        "mcity-m2"
+      ]
+    },
+    {
+      "subtitle": "Completed buildings · Approximate exterior",
+      "summary": "An approximate exterior study using CORE’s floor-plate diagram and completed-building photographs.",
+      "credit": "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+      "limits": "Floor sequence, heights, crown details and podium dimensions remain approximate. The added low pavilion follows a City footprint and photographic references; its roof height is estimated within about 2 m. Existing ground-level podium gaps remain unresolved. This is not a measured as-built model.",
+      "rights": "Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
+      "cameraDirection": [
+        -1,
+        0.55,
+        1.3
+      ],
+      "sources": [
+        {
+          "title": "CORE Architects — M City Phase 1",
+          "url": "https://www.corearchitects.com/project/m-city-phase-1/"
+        },
+        {
+          "title": "RJC Engineers — M1 & M2",
+          "url": "https://www.rjc.ca/project-details/m1-m2-condos.html"
+        },
+        {
+          "title": "City of Mississauga — M City",
+          "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
+        },
+        {
+          "title": "City source data and terms",
+          "url": "https://data.mississauga.ca/pages/mississauga-3d"
+        },
+        {
+          "title": "M City architecture gallery",
+          "url": "https://mcitycondos.com/m1-m2-gallery-architecture.php",
+          "note": "Reference only; images are not redistributed."
+        }
+      ],
+      "id": "mcity-m1",
+      "title": "M City M1",
+      "assets": [
+        "mcity-m1"
+      ]
+    },
+    {
+      "subtitle": "Completed buildings · Approximate exterior",
+      "summary": "An approximate exterior study using CORE’s floor-plate diagram and completed-building photographs.",
+      "credit": "Model study: Daniel Sultan / Future Mississauga. Architectural design: CORE Architects. City of Mississauga source podium geometry.",
+      "limits": "Floor sequence, heights, crown details and podium dimensions remain approximate. Added glazing and bands cover selected surfaces; they do not reconstruct the full podium.",
+      "rights": "Independent research visualization; no official endorsement. City data terms remain applicable. Architectural design and source photographs retain separate rights. No source photographs, Street View pixels or private correspondence are included.",
+      "cameraDirection": [
+        -1,
+        0.55,
+        1.3
+      ],
+      "sources": [
+        {
+          "title": "CORE Architects — M City Phase 1",
+          "url": "https://www.corearchitects.com/project/m-city-phase-1/"
+        },
+        {
+          "title": "RJC Engineers — M1 & M2",
+          "url": "https://www.rjc.ca/project-details/m1-m2-condos.html"
+        },
+        {
+          "title": "City of Mississauga — M City",
+          "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
+        },
+        {
+          "title": "City source data and terms",
+          "url": "https://data.mississauga.ca/pages/mississauga-3d"
+        },
+        {
+          "title": "M City architecture gallery",
+          "url": "https://mcitycondos.com/m1-m2-gallery-architecture.php",
+          "note": "Reference only; images are not redistributed."
+        }
+      ],
+      "id": "mcity-m2",
+      "title": "M City M2",
+      "assets": [
+        "mcity-m2"
+      ]
+    },
+    {
+      "id": "artform",
+      "title": "Artform",
+      "subtitle": "86 Dundas Street East · Approximate exterior · Rev03",
+      "assets": [
+        "artform"
+      ],
+      "summary": "A completed-building exterior study informed by historical plans and dated photographs. April 2026 observations inform the warm masonry, frontage openings and recessed colonnade. Rev03 removes only exact duplicate opaque surfaces.",
+      "credit": "Model study: Daniel Sultan / Future Mississauga. Architectural design: Studio JCI. Developer: EMBLEM. Reference photographs: Edward Skira and Tim MacDonald / UrbanToronto; Google Street View, April 2026.",
+      "limits": "Passage depth, rear continuation, hidden faces and finished heights remain unverified. Zoning maxima are not measured as-built heights. Ground, interiors and surrounding site works are excluded; this standalone study is not a surveyed placement on the city map.",
+      "rights": "Independent study; no architect, owner or photographer endorsement. Model geometry and generated views are separate from the architectural design and reference-image rights. Original photographs, Google image pixels and planning PDFs are not included.",
+      "cameraDirection": [
+        -1,
+        0.65,
+        1.3
+      ],
+      "sources": [
+        {
+          "title": "EMBLEM — Artform",
+          "url": "https://www.emblemdevcorp.com/projects/artform"
+        },
+        {
+          "title": "City of Mississauga — Artform / Studio JCI submission",
+          "url": "https://campaign.mississauga.ca/mississauga-urban-design-awards/"
+        },
+        {
+          "title": "Historical plan — July 2020 City PDC agenda",
+          "url": "https://www7.mississauga.ca/documents/committees/pdc/2020/2020_07_13_PDC_Agenda.pdf",
+          "note": "Pages 83–84; historical design, not as-built drawings."
+        },
+        {
+          "title": "Edward Skira — December 2024 reference photograph",
+          "url": "https://urbantoronto.ca/forum/attachments/img_5543-jpg.617963/",
+          "note": "Reference only; not redistributed."
+        },
+        {
+          "title": "Tim MacDonald — February 2024 reference photograph",
+          "url": "https://urbantoronto.ca/forum/attachments/1708437291750-jpeg.541842/",
+          "note": "Dated construction-stage reference; not proof of final details."
+        }
+      ]
+    },
+    {
+      "id": "edge-1",
+      "title": "Edge 1",
+      "summary": "An exterior study of the completed Edge 1 tower and podium, informed by historic plans and later photographs.",
+      "credit": "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+      "limits": "Plan/photo-informed reconstruction, not measured as-built geometry. Facade modules, podium details, roofs and colours include inferred dimensions and appearance.",
+      "rights": "Original model geometry and uniform PBR materials. Architectural design rights remain with owners/designers. Referenced photographs, Google imagery and architectural PDFs are not included; source access is not a blanket redistribution licence. Independent research visualization; no official endorsement.",
+      "sources": [
+        {
+          "title": "Solmar — Edge / Oro design credits",
+          "url": "https://www.solmar.ca/news",
+          "note": "Developer-published 2017 Edge and 2021 Oro articles identify the architectural team."
+        },
+        {
+          "title": "Architectural plans · July 2020",
+          "url": "https://www7.mississauga.ca/Departments/Marketing/documents/building-planning/16-Elm/Architectural-Plans-July-2020.pdf",
+          "note": "Historic intended design; not issued as-built drawings."
+        },
+        {
+          "title": "Wind study · July 2020",
+          "url": "https://www7.mississauga.ca/Departments/Marketing/documents/building-planning/16-Elm/Wind-Study-July-2020.pdf",
+          "note": "Secondary design-height evidence; published values conflict."
+        },
+        {
+          "title": "Solmar · Oro at Edge Towers",
+          "url": "https://www.solmar.ca/oro-at-edge-towers",
+          "note": "Construction-status source reviewed for the accepted 25 October 2026 study."
+        },
+        {
+          "title": "UrbanToronto · Edge and Oro reference photographs",
+          "url": "https://urbantoronto.ca/forum/threads/oro-edge-towers-m-50s-solmar-rosario-varacalli.19140/page-48",
+          "note": "Contributor photographs used as research references; images are not included."
+        }
+      ],
+      "cameraDirection": [
+        0.676385933,
+        0.273106841,
+        -0.684042925
+      ],
+      "subtitle": "Completed buildings · Approximate exterior · Rev03 package",
+      "assets": [
+        "edge-1"
+      ],
+      "downloadNote": "The GLB contains the displayed tower and podium study. Keep the credits and limitations with any shared copy."
+    },
+    {
+      "id": "edge-2",
+      "title": "Edge 2",
+      "summary": "An exterior study of the completed Edge 2 tower and podium, informed by historic plans and later photographs. The Elm Drive frontage reflects the May 2026 appearance reference.",
+      "credit": "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors. May 2026 frontage references include Google Street View and photographs by drum118.",
+      "limits": "Plan/photo-informed reconstruction, not measured as-built geometry. Facade modules, podium details, roofs and colours include inferred dimensions and appearance.",
+      "rights": "Original model geometry and uniform PBR materials. Architectural design rights remain with owners/designers. Referenced photographs, Google imagery and architectural PDFs are not included; source access is not a blanket redistribution licence. Independent research visualization; no official endorsement.",
+      "sources": [
+        {
+          "title": "Solmar — Edge / Oro design credits",
+          "url": "https://www.solmar.ca/news",
+          "note": "Developer-published 2017 Edge and 2021 Oro articles identify the architectural team."
+        },
+        {
+          "title": "Architectural plans · July 2020",
+          "url": "https://www7.mississauga.ca/Departments/Marketing/documents/building-planning/16-Elm/Architectural-Plans-July-2020.pdf",
+          "note": "Historic intended design; not issued as-built drawings."
+        },
+        {
+          "title": "Wind study · July 2020",
+          "url": "https://www7.mississauga.ca/Departments/Marketing/documents/building-planning/16-Elm/Wind-Study-July-2020.pdf",
+          "note": "Secondary design-height evidence; published values conflict."
+        },
+        {
+          "title": "Solmar · Oro at Edge Towers",
+          "url": "https://www.solmar.ca/oro-at-edge-towers",
+          "note": "Construction-status source reviewed for the accepted 25 October 2026 study."
+        },
+        {
+          "title": "UrbanToronto · Edge and Oro reference photographs",
+          "url": "https://urbantoronto.ca/forum/threads/oro-edge-towers-m-50s-solmar-rosario-varacalli.19140/page-48",
+          "note": "Contributor photographs used as research references; images are not included."
+        },
+        {
+          "title": "Google Street View · Elm Drive, May 2026",
+          "url": "https://www.google.com/maps/place/EDGE+TOWERS-+TOWER+%23+2/@43.5901857,-79.6319598,141a,75y,148.55h,127.96t/data=!3m7!1e1!3m5!1sR611EPPLfxkLL56JqG6cCA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-37.95683850876205%26panoid%3DR611EPPLfxkLL56JqG6cCA%26yaw%3D148.5546!7i16384!8i8192!4m13!1m2!2m1!1sEdge+Towers+Mississauga!3m9!1s0x882b47003c618187:0xbb15703159fff6c0!8m2!3d43.5899417!4d-79.6317541!10e5!14m1!1BCgIgARICCAI!15sChdFZGdlIFRvd2VycyBNaXNzaXNzYXVnYZIBE2NvbmRvbWluaXVtX2NvbXBsZXjgAQA!16s%2Fg%2F11x98_wlnj?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "note": "Edge 2 frontage appearance reference; no image pixels included."
+        }
+      ],
+      "cameraDirection": [
+        0.676385933,
+        0.273106841,
+        -0.684042925
+      ],
+      "subtitle": "Completed buildings · Approximate exterior · Rev03 package",
+      "assets": [
+        "edge-2"
+      ],
+      "downloadNote": "The GLB contains the displayed tower and podium study. Keep the credits and limitations with any shared copy."
+    },
+    {
+      "id": "oro",
+      "title": "Oro at Edge Towers",
+      "summary": "Full intended Oro design from July 2020, including its podium. Oro was still under construction when the accepted study was reviewed in October 2026; this is not its unfinished physical state.",
+      "credit": "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Roy Varacalli and Cusimano Architect. Developer: Solmar Development Corp. References: July 2020 architectural plans and wind study; Solmar; UrbanToronto contributors.",
+      "limits": "Historic intended design, not current construction progress or measured as-built geometry. Roof details, facade dimensions and colours include model interpretation.",
+      "rights": "Original model geometry and uniform PBR materials. Architectural design rights remain with owners/designers. Referenced photographs, Google imagery and architectural PDFs are not included; source access is not a blanket redistribution licence. Independent research visualization; no official endorsement.",
+      "sources": [
+        {
+          "title": "Solmar — Edge / Oro design credits",
+          "url": "https://www.solmar.ca/news",
+          "note": "Developer-published 2017 Edge and 2021 Oro articles identify the architectural team."
+        },
+        {
+          "title": "Architectural plans · July 2020",
+          "url": "https://www7.mississauga.ca/Departments/Marketing/documents/building-planning/16-Elm/Architectural-Plans-July-2020.pdf",
+          "note": "Historic intended design; not issued as-built drawings."
+        },
+        {
+          "title": "Wind study · July 2020",
+          "url": "https://www7.mississauga.ca/Departments/Marketing/documents/building-planning/16-Elm/Wind-Study-July-2020.pdf",
+          "note": "Secondary design-height evidence; published values conflict."
+        },
+        {
+          "title": "Solmar · Oro at Edge Towers",
+          "url": "https://www.solmar.ca/oro-at-edge-towers",
+          "note": "Construction-status source reviewed for the accepted 25 October 2026 study."
+        },
+        {
+          "title": "UrbanToronto · Edge and Oro reference photographs",
+          "url": "https://urbantoronto.ca/forum/threads/oro-edge-towers-m-50s-solmar-rosario-varacalli.19140/page-48",
+          "note": "Contributor photographs used as research references; images are not included."
+        }
+      ],
+      "cameraDirection": [
+        0.676385933,
+        0.273106841,
+        -0.684042925
+      ],
+      "subtitle": "Intended July 2020 design · Approximate exterior · Rev03",
+      "assets": [
+        "oro"
+      ],
+      "downloadNote": "The GLB contains the displayed tower and podium study. Keep the credits and limitations with any shared copy."
+    },
+    {
+      "id": "avia-1",
+      "title": "Avia 1",
+      "summary": "Avia 1 is shown with the full shared podium, including the northwest frontage refinement informed by May 2026 Street View. The other tower is omitted from this view.",
+      "credit": "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+      "limits": "Appearance study, not measured as-built geometry. Source heights are retained; published height and storey counts conflict. Podium bay spacing, entry position and colours are inferred. Source elevation is not a certified survey datum.",
+      "rights": "Retains City-derived envelope geometry plus original procedural facade detail and uniform PBR materials. Keep the City attribution and supplied terms with redistributed assets. Source photography and Google imagery are not included. Independent research visualization; no official endorsement.",
+      "sources": [
+        {
+          "title": "Amacon — Avia design team, 2019",
+          "url": "https://amacon.com/2019/06/welcome-to-avia-at-parkside-village/"
+        },
+        {
+          "title": "Amacon — Avia and Avia 2, 2025",
+          "url": "https://amacon.com/2025/07/celebrating-avia-and-the-ongoing-evolution-of-parkside-village/"
+        },
+        {
+          "title": "Turner Fleischer Architects Inc.",
+          "url": "https://www.turnerfleischer.com/"
+        },
+        {
+          "title": "Life at Parkside · Avia",
+          "url": "https://www.lifeatparkside.com/avia",
+          "note": "Completed exterior appearance reference."
+        },
+        {
+          "title": "UrbanToronto · Avia reference photographs",
+          "url": "https://urbantoronto.ca/forum/threads/toronto-parkside-village-avia-1-2-m-50s-amacon-turner-fleischer.19213/page-25",
+          "note": "KAR246 photograph, claimed capture 12 October 2025; reference image not included."
+        },
+        {
+          "title": "Google Street View · Square One Drive, May 2026",
+          "url": "https://www.google.com/maps/place/Avia+1/@43.5884839,-79.6507813,160a,75y,137.8h,90t/data=!3m7!1e1!3m5!1sdgfpSwhAYBmyM5slS536vg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DdgfpSwhAYBmyM5slS536vg%26yaw%3D137.79565!7i16384!8i8192!4m13!1m2!2m1!1sAvia+1+Mississauga!3m9!1s0x882b410071f8bf45:0xc19a4ee179094cbf!8m2!3d43.58826!4d-79.6504999!10e5!14m1!1BCgIgARICCAI!15sChJBdmlhIDEgTWlzc2lzc2F1Z2GSARNjb25kb21pbml1bV9jb21wbGV44AEA!16s%2Fg%2F11ymjzljys?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "note": "Northwest shared-podium appearance reference; exact facade dimensions and colours are inferred."
+        },
+        {
+          "title": "City of Mississauga 3D source data",
+          "url": "https://data.mississauga.ca/pages/mississauga-3d"
+        }
+      ],
+      "cameraDirection": [
+        -0.681501585,
+        0.128511728,
+        -0.720444533
+      ],
+      "subtitle": "Completed buildings · Approximate exterior · Rev02 · Shared podium included",
+      "assets": [
+        "avia-1",
+        "avia-podium"
+      ],
+      "downloadNote": "Download both the tower and shared podium GLBs to reproduce this preview. The other tower is omitted. Keep their original positions when importing them together."
+    },
+    {
+      "id": "avia-2",
+      "title": "Avia 2",
+      "summary": "Avia 2 is shown with the full shared podium, including the northwest frontage refinement informed by May 2026 Street View. The other tower is omitted from this view.",
+      "credit": "Model study prepared for Daniel Sultan / Future Mississauga. Architectural design: Turner Fleischer Architects Inc. Developer: Amacon. Source envelope: City of Mississauga, captured node 63-6237. Appearance references: Life at Parkside; KAR246 / UrbanToronto; Google Street View, May 2026.",
+      "limits": "Appearance study, not measured as-built geometry. Source heights are retained; published height and storey counts conflict. Podium bay spacing, entry position and colours are inferred. Source elevation is not a certified survey datum.",
+      "rights": "Retains City-derived envelope geometry plus original procedural facade detail and uniform PBR materials. Keep the City attribution and supplied terms with redistributed assets. Source photography and Google imagery are not included. Independent research visualization; no official endorsement.",
+      "sources": [
+        {
+          "title": "Amacon — Avia design team, 2019",
+          "url": "https://amacon.com/2019/06/welcome-to-avia-at-parkside-village/"
+        },
+        {
+          "title": "Amacon — Avia and Avia 2, 2025",
+          "url": "https://amacon.com/2025/07/celebrating-avia-and-the-ongoing-evolution-of-parkside-village/"
+        },
+        {
+          "title": "Turner Fleischer Architects Inc.",
+          "url": "https://www.turnerfleischer.com/"
+        },
+        {
+          "title": "Life at Parkside · Avia",
+          "url": "https://www.lifeatparkside.com/avia",
+          "note": "Completed exterior appearance reference."
+        },
+        {
+          "title": "UrbanToronto · Avia reference photographs",
+          "url": "https://urbantoronto.ca/forum/threads/toronto-parkside-village-avia-1-2-m-50s-amacon-turner-fleischer.19213/page-25",
+          "note": "KAR246 photograph, claimed capture 12 October 2025; reference image not included."
+        },
+        {
+          "title": "Google Street View · Square One Drive, May 2026",
+          "url": "https://www.google.com/maps/place/Avia+1/@43.5884839,-79.6507813,160a,75y,137.8h,90t/data=!3m7!1e1!3m5!1sdgfpSwhAYBmyM5slS536vg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DdgfpSwhAYBmyM5slS536vg%26yaw%3D137.79565!7i16384!8i8192!4m13!1m2!2m1!1sAvia+1+Mississauga!3m9!1s0x882b410071f8bf45:0xc19a4ee179094cbf!8m2!3d43.58826!4d-79.6504999!10e5!14m1!1BCgIgARICCAI!15sChJBdmlhIDEgTWlzc2lzc2F1Z2GSARNjb25kb21pbml1bV9jb21wbGV44AEA!16s%2Fg%2F11ymjzljys?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "note": "Northwest shared-podium appearance reference; exact facade dimensions and colours are inferred."
+        },
+        {
+          "title": "City of Mississauga 3D source data",
+          "url": "https://data.mississauga.ca/pages/mississauga-3d"
+        }
+      ],
+      "cameraDirection": [
+        -0.681501585,
+        0.128511728,
+        -0.720444533
+      ],
+      "subtitle": "Completed buildings · Approximate exterior · Rev02 · Shared podium included",
+      "assets": [
+        "avia-2",
+        "avia-podium"
+      ],
+      "downloadNote": "Download both the tower and shared podium GLBs to reproduce this preview. The other tower is omitted. Keep their original positions when importing them together."
+    },
+    {
+      "id": "sgm-maritz-6710",
+      "title": "6710 Maritz Drive",
+      "subtitle": "Approximate facade study",
+      "assets": [
+        "sgm-maritz-6710"
+      ],
+      "summary": "Folded entrance glazing and pale precast frontage added to the City building model.",
+      "credit": "Design: SG&M Architects Inc. (formerly Sirlin Giller & Malek Architects). Model creation: Daniel Sultan / Future Mississauga. Municipal baseline: City of Mississauga.",
+      "limits": "Partial facade study. Dimensions, glazing divisions and finishes are approximate. The photograph date is unknown. The roof, rear and unseen parts retain City massing; an outer City side slab partly obscures the side treatment.",
+      "rights": "Derived model published with SG&M design credit. Keep the design and model credits, City attribution and supplied terms with redistributed assets. Source photographs and renderings are not included. Independent visualization; no official endorsement.",
+      "sources": [
+        {
+          "title": "SG&M Architects Inc.",
+          "url": "https://sgm-arch.com/industrial/",
+          "note": "Photograph and material reference supplied privately. The photograph capture date is unknown."
+        },
+        {
+          "title": "City of Mississauga 3D source data",
+          "url": "https://data.mississauga.ca/pages/mississauga-3d",
+          "note": "Baseline building massing, source 23-3369."
+        }
+      ],
+      "cameraDirection": [
+        1,
+        0.18,
+        0.2
+      ],
+      "downloadNote": "The GLB includes the complete City baseline and the partial facade refinement in their original map coordinates. Keep the credits and City data terms with the model.",
+      "fitToBounds": true,
+      "comparisonURL": "reference-updates.html#sgm-maritz-6710"
+    },
+    {
+      "id": "ergocentric-275-superior",
+      "projectId": "ergocentric-275-superior",
+      "title": "275 Superior Boulevard",
+      "subtitle": "Approximate facade study",
+      "assets": [
+        "ergocentric-275-superior"
+      ],
+      "offerDownloads": false,
+      "summary": "A partial facade study at the northeast end of 275 Superior Boulevard.",
+      "credit": "Model creation: Daniel Sultan / Future Mississauga. Municipal baseline: City of Mississauga.",
+      "visibleReferenceCredit": {
+        "label": "David Lasker/Cityscape Photography",
+        "url": "https://davidlaskerphotography.com/"
+      },
+      "limits": "Frontage details interpret an earlier photograph and a 2024 City footprint. Dimensions, glazing, ribs and canopy details are approximate. The roof, rear and unseen bays retain City massing. The photograph capture date is unknown; this is not current as-built verification.",
+      "rights": "The photograph is not reproduced or used as a texture. Interactive display does not establish permission for separate model redistribution. Independent visualization; no official endorsement.",
+      "sources": [
+        {
+          "title": "David Lasker/Cityscape Photography",
+          "url": "https://davidlaskerphotography.com/",
+          "note": "Photographic reference, published in 2020; capture date unknown. The source photograph is not included."
+        },
+        {
+          "title": "City of Mississauga 3D source data",
+          "url": "https://data.mississauga.ca/pages/mississauga-3d",
+          "note": "Building source 32-897; approximate entrance plan informed by the 2024 municipal footprint."
+        }
+      ],
+      "cameraDirection": [
+        0.96,
+        0.22,
+        0.28
+      ],
+      "fitToBounds": true,
+      "cityURL": "explore.html?district=citywide&project=ergocentric-275-superior"
+    },
+    {
+      "id": "mcity-m5",
+      "projectId": "mcity-5",
+      "title": "M City M5",
+      "subtitle": "Future design · Approximate exterior",
+      "summary": "An illustrative view of the overlapping tower volumes, facade frames and masonry podium.",
+      "credit": "Independent interpretation: Daniel Sultan / Future Mississauga. Architectural design: IBI Group / Arcadis. Design references: M City and Urban Capital.",
+      "limits": "Height, width, placement and podium dimensions remain approximate. The upper park-facing podium uses seven unequal groups interpreted from an undated completed-design rendering. The 40.5 m frontage, 20.48 m podium datum and 1.2 m balcony projection are estimates. This view does not show current construction.",
+      "rights": "Independent research visualization; no official endorsement. Source renderings, drawings and private correspondence are not included. Architectural design and source material retain separate rights.",
+      "cameraDirection": [
+        1,
+        0.26,
+        -0.43
+      ],
+      "cityURL": "explore.html?district=downtown&project=mcity-5",
+      "assets": [
+        "mcity-m5-v6"
+      ],
+      "sources": [
+        {
+          "title": "M City / IBI Group",
+          "url": "https://mcitycondos.com/assets/brochures/M5-M-City-Condominiums.pdf",
+          "note": "Official design reference; 36 storeys, six-storey masonry podium and seventh-floor amenities."
+        },
+        {
+          "title": "M City",
+          "url": "https://mcitycondos.com/m5-condominiums.php",
+          "note": "Official completed-design imagery, used as reference only."
+        },
+        {
+          "title": "Urban Capital",
+          "url": "https://www.urbancapital.ca/m5-mississauga",
+          "note": "Primary exterior design reference."
+        },
+        {
+          "title": "M City developer plan, public mirror",
+          "url": "https://urbantoronto.ca/forum/attachments/m5-vip-hot-list-and-floor-plans-august-6-2022-pdf.419597/",
+          "note": "Page 20 plan key dated 16 March 2022 informs footprint topology; no source pages are redistributed."
+        }
+      ]
+    },
+    {
+      "id": "harborn-50-60",
+      "projectId": "harborn-50-60",
+      "title": "50 and 60 Harborn Road",
+      "subtitle": "Proposed townhomes · Approximate exterior",
+      "assets": [
+        "harborn-50-60"
+      ],
+      "offerDownloads": false,
+      "summary": "Twelve proposed townhomes arranged in two blocks.",
+      "credit": "Architecture: DelDom Design & Construction. Proposed grading: SKIRA & Associates Ltd. Study: Daniel Sultan / Future Mississauga.",
+      "limits": "The received design provides block lengths of 40.31 m and 32.33 m. Floor and roof levels follow the drawings; placement, facade details and proposed grading remain illustrative. This standalone view shows the source grading before its city-terrain adjustment.",
+      "rights": "Independent research visualization; no official endorsement. Architectural design and source documents retain separate rights. Source drawings, photographs and private correspondence are not included.",
+      "sources": [
+        {
+          "title": "City application updated September 21, 2026: twelve townhomes for RGA Masonry",
+          "url": "https://www.mississauga.ca/services-and-programs/planning-and-development/development-applications/active-development-applications/50-and-60-harborn-road-oz-opa-26-12-w7-and-21t-m-26-2-w7/"
+        },
+        {
+          "title": "A100 site plan: seven homes in Building A and five in B, June 10 revision published August 2026",
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/26170851/Site-Plan-OZ-OPA-26-12-W7-and-21T-M-26-2-W7-August-2026.pdf"
+        },
+        {
+          "title": "A201: mansard roof, floor and context-grade elevations",
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/26170752/Building-A-B-North-Elevation-OZ-OPA-26-12-W7-and-21T-M-26-2-W7-August-2026.pdf"
+        },
+        {
+          "title": "Wahba survey, October 4, 2023: UTM zone 17 NAD83 reference",
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/26170900/Topographic-Survey-OZ-OPA-26-12-W7-and-21T-M-26-2-W7-August-2026.pdf"
+        },
+        {
+          "title": "City parcels for 50 and 60 Harborn Road, pins 10567800 and 10567700",
+          "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Parcel/FeatureServer/0"
+        },
+        {
+          "title": "City 2024 mapped existing house footprints for future-only replacement",
+          "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Building_Footprints_2024/FeatureServer/0"
+        }
+      ],
+      "cameraDirection": [
+        0.75,
+        0.65,
+        1
+      ],
+      "fitToBounds": true,
+      "cityURL": "explore.html?district=cooksville&project=harborn-50-60"
+    },
+    {
+      "id": "port-credit-26-park",
+      "projectId": "port-credit-26-park",
+      "title": "26 Park Street East",
+      "subtitle": "Proposed design · Approximate exterior",
+      "assets": [
+        "port-credit-26-park"
+      ],
+      "offerDownloads": false,
+      "summary": "The July 2026 proposal, with the tower, podium and four elevations shown together.",
+      "credit": "Design reference: Kohn Partnership Architects / City of Mississauga. Independent authored model: Daniel Sultan / Future Mississauga.",
+      "limits": "Kohn application drawings dated July 30, 2026 inform the four visible elevations. The registered core, floor/roof levels and inherited south geometry remain exact. Bay widths, facade depth, guards, slab thickness, finishes and shallow podium treatment are illustrative; small plan recesses and garage interiors remain simplified. Inherited horizontal fit has a working +/-2 m allowance; architectural ASL minus 70 datum compatibility is not independently certified. Proposed application-stage design, not as-built.",
+      "rights": "Independent research visualization; no official endorsement. Architectural design and source documents retain separate rights. Source drawings, photographs and private correspondence are not included.",
+      "sources": [
+        {
+          "title": "Site Plan and Site Statistics — OZ/OPA 26-13 W1",
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152435/Site-Plan-and-Site-Statistics-OZ-OPA-26-13-W1-August-2026.pdf",
+          "note": "Horizontal envelopes, written dimensions and existing-building references"
+        },
+        {
+          "title": "South Elevation — OZ/OPA 26-13 W1",
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152356/Elevations-OZ-OPA-26-13-W1-August-2026.pdf",
+          "note": "Absolute floor and roof elevations"
+        },
+        {
+          "title": "City 3D source tile 92",
+          "url": "https://data.mississauga.ca/pages/mississauga-3d",
+          "note": "Existing components 92-828 and 92-3995 for coordinate registration"
+        },
+        {
+          "title": "A4.01 North elevation",
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152354/Elevations-2-OZ-OPA-26-13-W1-August-2026.pdf",
+          "note": "Visible elevation/plan hierarchy; not a construction or as-built record"
+        },
+        {
+          "title": "A4.02 East and west elevations",
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152355/Elevations-3-OZ-OPA-26-13-W1-August-2026.pdf",
+          "note": "Visible elevation/plan hierarchy; not a construction or as-built record"
+        },
+        {
+          "title": "A2.06 Mechanical penthouse and roof plan",
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152410/Level-MPH-Roof-Floor-Plan-OZ-OPA-26-13-W1-August-2026.pdf",
+          "note": "Visible elevation/plan hierarchy; not a construction or as-built record"
+        },
+        {
+          "title": "A2.05 Levels 7 and 8-26 plans",
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152409/Level-7-Level-8-to-26-Floor-Plan-OZ-OPA-26-13-W1-August-2026.pdf",
+          "note": "Visible elevation/plan hierarchy; not a construction or as-built record"
+        },
+        {
+          "title": "Application axonometric views",
+          "url": "https://www.mississauga.ca/wp-content/uploads/2026/08/18152345/AXO-Views-OZ-OPA-26-13-W1-August-2026.pdf",
+          "note": "Visible elevation/plan hierarchy; not a construction or as-built record"
+        }
+      ],
+      "cameraDirection": [
+        1,
+        0.5,
+        1
+      ],
+      "fitToBounds": true,
+      "cityURL": "explore.html?district=port-credit&project=port-credit-26-park"
+    },
+    {
+      "id": "voya",
+      "projectId": "voya",
+      "title": "Voya",
+      "subtitle": "Approximate completed exterior",
+      "assets": [
+        "voya"
+      ],
+      "offerDownloads": false,
+      "summary": "The paired towers and connected podium, including the park-facing balconies and city-facing facade.",
+      "credit": "Design reference: Amacon / Parkside Village. Independent authored model: Daniel Sultan / Future Mississauga. Inherited registration sources include City of Mississauga and OpenStreetMap contributors.",
+      "limits": "Existing source-plan shapes and registered tower datums are retained. City-facing piers, spandrels and glazing divisions interpret the official artist concept and August 2025 construction photos; their spacing and relief are approximate. No final roof or equipment geometry is asserted. The shorter height remains inferred with +/-6 m allowance; existing horizontal allowances are retained. This is an illustrative source-based model, not an as-built survey.",
+      "rights": "Independent research visualization; no official endorsement. Architectural design and source documents retain separate rights. Source drawings, photographs and private correspondence are not included.",
+      "sources": [
+        {
+          "title": "Amacon / Parkside Village, public developer presentation via VIP Condos Toronto",
+          "url": "https://drive.google.com/file/d/115Ov9j6l_W9jU44khuYdgLmyBYevCrkq/view",
+          "note": "Page 7 typical curved floorplate with suite areas; page 3 community map establishes Voya parcel and adjacent Avia. Original 42/36 counts superseded by 2024 variance."
+        },
+        {
+          "title": "Amacon / Parkside Village, public typical floor plans",
+          "url": "https://drive.google.com/file/d/1gp8KweoV7p11d59d8FJswPzO-7LBousF/view",
+          "note": "Detailed suite plans cross-check curved balcony expression and approximate advertised room dimensions."
+        },
+        {
+          "title": "City of Mississauga",
+          "url": "https://www.mississauga.ca/apps/#/property-preview/compliance-report-coa-text/66203/329571",
+          "note": "June 27, 2024 decision A258/24 approves 44/38 storeys and 10-storey podium."
+        },
+        {
+          "title": "City of Mississauga",
+          "url": "https://os-prod-api.mississauga.ca/api/v1/plan-build/compliance/report/coa-prop?coaId=66203&realPropId=329571",
+          "note": "Public response preserves the signed decision and exact addresses 4116 / 4128 Parkside Village Drive."
+        },
+        {
+          "title": "UrbanToronto",
+          "url": "https://urbantoronto.ca/forum/threads/toronto-voya-142-25m-44s-amacon-turner-fleischer.32225/page-10",
+          "note": "Engineering-drawing observer reports 142.25 m taller maximum and upper floors at 10 feet; August 9 discussion of July 26 photo confirms both structures topped, with roof finishing incomplete. Shorter maximum is not directly stated."
+        },
+        {
+          "title": "Tim MacDonald via UrbanToronto",
+          "url": "https://urbantoronto.ca/forum/attachments/1785965443342-jpeg.755864/",
+          "note": "July 26, 2026 photograph verifies paired curved towers, relative heights, podium relationship and incomplete taller roof finish."
+        },
+        {
+          "title": "OpenStreetMap contributors",
+          "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-79.654,43.585,-79.645,43.59",
+          "note": "Avia footprint 1376190041 provides four ground controls; new apartment footprint 1502720098 provides taller-tower positional check, identified by parcel and adjoining development context. No height tags."
+        },
+        {
+          "title": "OpenStreetMap contributors",
+          "url": "https://api.openstreetmap.org/api/0.6/changeset/181696491",
+          "note": "Footprint added April 23, 2026 using Esri World Imagery. Imagery date not specified."
+        },
+        {
+          "title": "Amacon / Parkside Village",
+          "url": "https://www.lifeatparkside.com/voya",
+          "note": "Official park-side curved terrace expression, city-side rectilinear facade, connected base and ground/fifth-floor amenities."
+        },
+        {
+          "title": "Amacon / Parkside Village",
+          "url": "https://www.lifeatparkside.com/_files/ugd/fc95b3_94cf7a7c8b4940f795c0925758a098f2.pdf",
+          "note": "Official brochure: exterior perspectives, top-down terrace view, first/fifth-floor amenity plans. Artist concepts, not as-built survey."
+        },
+        {
+          "title": "Amacon / Parkside Village via public broker document link",
+          "url": "https://drive.google.com/file/d/1pfkjmAscByYQIsNJNI0pTIQH45OyE-x5/view",
+          "note": "Voya 1 podium suite plans and level-specific key plans; geometry traced from pages 1,2,18,80,81. Approximate marketing dimensions, 2021 issue."
+        },
+        {
+          "title": "Amacon plans, public Cityview Realty compilation",
+          "url": "https://drive.google.com/file/d/1JCBCyTtws8cyU2IbI28OzBQWHhz7h8dJ/view",
+          "note": "Voya 2 floorplan booklet February 23, 2022, developer sheets dated February 17/22; keyplans pages 17,20,21,23,46 support the second half of connected podium."
+        },
+        {
+          "title": "City of Mississauga",
+          "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/arcgis/rest/services/Parcel/FeatureServer/0",
+          "note": "Current parcel CITY_PIN 32957100, 8525.91 square metres; georeferenced outer limit for footprint reconstruction."
+        },
+        {
+          "title": "Tim MacDonald via UrbanToronto",
+          "url": "https://urbantoronto.ca/forum/attachments/1785965443342-jpeg.755864/",
+          "note": "July 26, 2026 aerial construction photograph independently verifies continuous sculpted podium, roof gardens and curved slabs. Used as visual reference only."
+        },
+        {
+          "title": "Amacon",
+          "url": "https://www.lifeatparkside.com/voya",
+          "note": "Voya directly backs the park; free-flowing park-facing balconies contrast with a rectilinear city-facing facade."
+        },
+        {
+          "title": "Amacon",
+          "url": "https://www.lifeatparkside.com/post/introducing-voya-at-parkside-village",
+          "note": "June 2021 introduction specifically names adjacent Zonta Meadows and contrasting curved park/linear city facades."
+        },
+        {
+          "title": "Amacon via public developer-plan mirror",
+          "url": "https://drive.google.com/file/d/1gp8KweoV7p11d59d8FJswPzO-7LBousF/view",
+          "note": "Voya 1 typical suite plans explicitly distinguish balcony outlines on levels 12,13,14. Recovered suite-area drawings, not survey/BIM."
+        },
+        {
+          "title": "Amacon plans via Cityview public mirror",
+          "url": "https://drive.google.com/file/d/1JCBCyTtws8cyU2IbI28OzBQWHhz7h8dJ/view",
+          "note": "February 2022 Voya 2 suite plans distinguish the second tower outline and several transition-level balcony outlines."
+        },
+        {
+          "title": "Tim MacDonald via UrbanToronto",
+          "url": "https://urbantoronto.ca/forum/attachments/1785965443342-jpeg.755864/",
+          "note": "July 26, 2026 aerial reference confirms connected sculpted base and park-side curved balcony expression; no image texture is included."
+        },
+        {
+          "title": "Amacon / Parkside Village",
+          "url": "https://www.lifeatparkside.com/post/voya-takes-shape-as-construction-reaches-new-heights",
+          "note": "Official construction photos explicitly captured August 2025, published November 1, 2025. City-facing vertical frames and window/spandrel expression only; not current as-built or finished roof evidence."
+        }
+      ],
+      "cameraDirection": [
+        1,
+        0.5,
+        1
+      ],
+      "fitToBounds": true,
+      "cityURL": "explore.html?district=downtown&project=voya"
+    }
+  ]
+}

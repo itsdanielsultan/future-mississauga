@@ -1,0 +1,21 @@
+/* Shared footer and image captions. Page layouts live in their own stylesheets. */
+html .compact-footer{margin:0;padding:24px var(--page-gutter);border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 30px;background:#fff;color:var(--muted);font:13px/1.6 'Lato',sans-serif}
+.compact-footer .footer-identity{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.compact-footer .footer-identity a{color:var(--site-ink);font-weight:700;text-decoration:none}
+.compact-footer>a{color:var(--site-accent);white-space:nowrap}
+html .compact-footer .footer-attribution{flex:1 0 100%;max-width:none;margin:0;font-size:13px;line-height:1.7}
+
+/* Clean scene captions keep attribution next to the image, with a separate save action. */
+html .media-caption,html .home-page .hero figcaption.media-caption{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px 20px;align-items:start}
+html .media-caption>:is(h2,h3,strong){grid-column:1;margin:0;font:700 22px/1.3 'Lato',sans-serif;letter-spacing:-.01em;color:var(--site-ink)}
+html .media-caption__scenario{grid-column:1;font-size:14px!important;line-height:1.5;letter-spacing:0!important;color:var(--site-muted)}
+html .media-caption__credits{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-top:5px;font:14px/1.5 var(--site-font-body);color:var(--site-muted)}
+html .media-caption__credits :is(span,a){font-size:14px!important;line-height:1.5;letter-spacing:0!important}
+html .media-caption__credits span,html .home-page .card-caption .media-caption__credits span{color:var(--site-muted)}
+html .media-caption__credits a{color:var(--site-accent)}
+html .media-caption>a:is([download],[data-download],.save){grid-column:2;grid-row:1/span 2;align-self:center}
+@media(max-width:600px){html .media-caption>:is(h2,h3,strong){font-size:22px}}
+
+html .media-caption__area{grid-column:1;font-size:15px;color:var(--site-muted)}
+html .media-caption .card-meta{grid-column:1/-1;font-size:14px;color:var(--site-muted);margin:0}
+@media(max-width:600px){html .compact-footer{padding:24px var(--page-gutter);gap:12px}}

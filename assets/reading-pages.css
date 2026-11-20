@@ -1,0 +1,113 @@
+/* Shared reading rhythm for the supporting pages. */
+html .reading-page {
+  --reading-width: 1280px;
+  --reading-gutter: clamp(24px, 4vw, 48px);
+  --reading-measure: 65ch;
+  --reading-rule: var(--site-line);
+  --reading-muted: var(--site-muted);
+  --reading-accent: var(--site-accent);
+  margin: 0;
+  background: #fff;
+  color: var(--site-ink, var(--site-ink));
+}
+.reading-page main, .reading-page main * { box-sizing: border-box; }
+html .reading-page :is(.recent-updates) {
+  width: 100%;
+  max-width: var(--reading-width);
+  margin: 0 auto;
+  padding: 64px var(--reading-gutter) 80px;
+  font: 400 17px/1.65 'Lato', sans-serif;
+}
+html .reading-page :is(.recent-updates) > * { min-width: 0; }
+html .reading-page :is(.update-intro) h1 {
+  max-width: 18ch;
+  margin: 0 0 24px;
+  font: 500 clamp(42px, 4.7vw, 64px)/1.08 'Bricolage Grotesque', sans-serif;
+  letter-spacing: -.04em;
+  text-wrap: balance;
+}
+html .reading-page :is(.recent-updates) h2 {
+  font: 500 clamp(28px, 2.5vw, 36px)/1.18 'Bricolage Grotesque', sans-serif;
+  letter-spacing: -.03em;
+  text-wrap: balance;
+}
+html .reading-page :is(.recent-updates) a { color: var(--reading-accent); text-underline-offset: .22em; }
+html .reading-page :is(.recent-updates) :focus-visible { outline: 2px solid var(--reading-accent); outline-offset: 5px; }
+html .reading-page :is(.render-intro, .lede) { max-width: 60ch; font-size: 20px; line-height: 1.55; }
+html .reading-page .page-date { margin: 0 0 24px; color: var(--reading-muted); font-size: 14px; line-height: 1.5; }
+html .reading-page :is(.render-basis, .change-intro, .limit, .credits, .review-footer) { max-width: var(--reading-measure); line-height: 1.65; }
+html .reading-page :is(.render-pair figcaption, .image-pair figcaption, .limit, .credits, .review-footer, .note, .count, .update-note, .update-bottom p, .update-render figcaption, .state) { color: var(--reading-muted); }
+html .reading-page :is(.render-note, .local-note) { max-width: var(--reading-measure); padding: 20px 0; margin: 28px 0; border: 0; border-top: 1px solid var(--reading-rule); border-bottom: 1px solid var(--reading-rule); border-radius: 0; background: #fff; color: var(--reading-muted); font-size: 15px; line-height: 1.65; }
+html .reading-page :is(.render-project, .model-change, .work, .stats) { border-color: var(--reading-rule); }
+html .reading-page :is(.render-project, .model-change, .work) { scroll-margin-top: calc(var(--site-header-height, 80px) + 24px); }
+html .reading-page :is(.render-jump, .jump-list) { font: 400 15px/1.6 'Lato', sans-serif; gap: 12px 28px; }
+html .reading-page :is(.render-pair, .image-pair) { gap: 32px; }
+html .reading-page :is(.render-pair figure, .image-pair figure, .coverage > *) { min-width: 0; }
+html .reading-page :is(.render-pair img, .image-frame) { background: #eef5f8; border-radius: 4px; }
+html .reading-page :is(.render-pair figcaption, .image-pair figcaption) { margin-top: 12px; font-size: 14px; line-height: 1.55; }
+html .reading-page .eyebrow { color: var(--reading-muted); font-size: 14px; font-weight: 400; text-transform: none; letter-spacing: 0; line-height: 1.5; }
+html .reading-page .latest-studies { padding-top: 0; }
+
+/* Keep images broad while giving the accompanying prose a readable measure. */
+
+/* Coverage notes use a heading rail; the register remains a full-width table. */
+
+@media (max-width: 900px) {
+  html .reading-page :is(.recent-updates) { padding-top: 48px; }
+}
+@media (max-width: 760px) {
+  html .reading-page { --reading-gutter: clamp(20px, 4vw, 24px); }
+  html .reading-page :is(.recent-updates) { padding: 40px var(--reading-gutter) 64px; font-size: 16px; }
+  html .reading-page :is(.update-intro) h1 { max-width: 18ch; font-size: clamp(38px, 9vw, 52px); }
+  html .reading-page :is(.render-intro, .lede) { font-size: 18px; }
+  html .reading-page :is(.render-pair, .image-pair) { grid-template-columns: 1fr; gap: 28px; }
+  html .reading-page .section-head { display: block; }
+  html .reading-page .section-head .state { white-space: normal; }
+}
+
+/* Standalone end notes follow the same reading measure as project prose. */
+
+/* The accuracy register starts with the project; coverage notes stay available below. */
+html .reading-page .accuracy-main{width:100%;max-width:1280px;margin:auto;padding:32px clamp(20px,4vw,48px) 64px;font:400 16px/1.6 Lato,sans-serif}
+html .reading-page .accuracy-main h1{max-width:none;margin:0 0 14px;font:600 clamp(34px,4vw,48px)/1.14 Lato,sans-serif;letter-spacing:-.025em}
+html .reading-page .accuracy-main h2{font:600 27px/1.25 Lato,sans-serif;letter-spacing:-.015em;margin:0 0 16px}
+html .reading-page .accuracy-main h3{font:600 21px/1.3 Lato,sans-serif;letter-spacing:0}
+html .reading-page .accuracy-main>.lede{max-width:65ch;font-size:18px;margin:0 0 12px;color:var(--site-muted)}
+html .reading-page .accuracy-back{margin:0 0 32px;font-size:15px}
+html .reading-page .accuracy-main a{color:var(--site-accent);text-underline-offset:4px}
+html .reading-page .project-register{padding:0;margin:0 0 32px}
+html .reading-page .project-register>.register-about{margin:0 0 20px;font-size:14px;max-width:75ch;color:var(--site-muted)}
+html .reading-page .project-register>.register-about summary{padding:4px 0;cursor:pointer;color:var(--site-accent)}
+html .reading-page .accuracy-main .controls{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:16px;margin:24px 0 16px;align-items:end}
+html .reading-page .accuracy-main .controls label{display:grid;gap:8px;font-size:14px;min-width:0}
+html .reading-page .accuracy-main .controls :is(select,input){width:100%;min-width:0}
+html .reading-page .accuracy-main .controls .count{grid-column:1/-1;font-size:14px;color:var(--site-muted);margin:0}
+html .reading-page .accuracy-main .table-scroll{width:100%;overflow-x:auto;margin:0 0 24px;overscroll-behavior-inline:contain}
+html .reading-page .accuracy-main table{width:100%;border-collapse:collapse;min-width:0;table-layout:fixed}
+html .reading-page .accuracy-main :is(th,td){border:0;border-bottom:1px solid var(--site-line);padding:20px 14px;font-size:15px;line-height:1.6;vertical-align:top;text-align:left;overflow-wrap:anywhere}
+html .reading-page .accuracy-main th{background:none;font-size:14px;font-weight:700;padding-top:12px;padding-bottom:12px}
+html .reading-page .accuracy-main th:first-child{width:29%}
+html .reading-page .accuracy-main th:nth-child(2){width:24%}
+html .reading-page .accuracy-main th:nth-child(3){width:20%}
+html .reading-page .accuracy-main :is(td,th):first-child{padding-left:0}
+html .reading-page .accuracy-main td small{display:block;margin-top:6px;color:var(--site-muted);font-size:14px;line-height:1.5}
+html .reading-page .accuracy-main td details summary{min-height:32px;cursor:pointer;color:var(--site-accent)}
+html .reading-page .accuracy-main td details p{margin:12px 0;max-width:60ch;font-size:14px;line-height:1.6}
+html .reading-page .accuracy-background{margin-top:40px;padding:20px 0;border-top:1px solid var(--site-line)}
+html .reading-page .accuracy-background>summary{font-size:20px;line-height:1.4;cursor:pointer;color:var(--site-accent);padding:4px 0 12px}
+html .reading-page .accuracy-background>.page-date{margin:12px 0;font-size:14px}
+html .reading-page .accuracy-background>.lede{font-size:17px;max-width:65ch}
+html .reading-page .accuracy-background .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:24px 0;margin:20px 0}
+html .reading-page .accuracy-background .stat strong{font:600 30px/1.2 Lato,sans-serif}
+html .reading-page .accuracy-background .stat span{font-size:14px;line-height:1.5}
+html .reading-page .accuracy-background .coverage{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;padding:24px 0}
+html .reading-page .accuracy-background .coverage figure{margin:0}
+html .reading-page .accuracy-background .coverage img{display:block;width:100%;height:auto}
+html .reading-page .accuracy-background .map-choice{display:flex;align-items:center;gap:14px;margin:0 0 16px;font-size:14px}
+html .reading-page .accuracy-background :is(figcaption,.note){font-size:14px;line-height:1.6;color:var(--site-muted)}
+html .reading-page .accuracy-background .work{display:block;padding:24px 0;border-top:1px solid var(--site-line)}
+html .reading-page .accuracy-background .work p{max-width:75ch;margin:12px 0}
+html .reading-page .accuracy-background .work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+html .reading-page .accuracy-main [hidden]{display:none!important}
+@media(max-width:900px){html .reading-page .accuracy-main .controls{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){html .reading-page .accuracy-main{padding:24px 20px 48px}html .reading-page .accuracy-main h1{font-size:34px}html .reading-page .accuracy-main>.lede{font-size:16px}html .reading-page .accuracy-main .controls{gap:14px}html .reading-page .accuracy-main .table-scroll{overflow:visible}html .reading-page .accuracy-main :is(table,tbody,tr,td){display:block;width:100%}html .reading-page .accuracy-main thead{display:none}html .reading-page .accuracy-main tr{padding:20px 0;border-top:1px solid var(--site-line)}html .reading-page .accuracy-main td{padding:6px 0;border:0;font-size:15px}html .reading-page .accuracy-main td:first-child{padding-top:0;font-size:19px;font-weight:600}html .reading-page .accuracy-main td:not(:first-child)::before{content:attr(data-label);display:block;font-size:13px;color:var(--site-muted);margin:2px 0 4px}html .reading-page .accuracy-main td:last-child::before{display:none}html .reading-page .accuracy-main td small{font-weight:400}html .reading-page .accuracy-background .stats{grid-template-columns:1fr;gap:18px}html .reading-page .accuracy-background .stat{display:block}html .reading-page .accuracy-background .coverage{grid-template-columns:1fr;gap:24px}html .reading-page .accuracy-background .work-grid{grid-template-columns:1fr}html .reading-page .accuracy-background .map-choice{align-items:stretch;flex-direction:column;gap:8px}}

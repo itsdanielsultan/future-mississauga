@@ -1,0 +1,46 @@
+{
+  "dimensions": [
+    1920,
+    824
+  ],
+  "durationSeconds": 12,
+  "historicalFilmPreserved": true,
+  "frames": [
+    {
+      "scenario": "existing",
+      "startSeconds": 0,
+      "sourceImageSHA256": "2d2dddba2a699c96403c4a1e73f980a9f4f24b8e30e79faf600c2452e8d743d4",
+      "sourceSceneSHA256": "0fd6691734b1e5e537292f717880f45fb1887ae73be22c125385bffa691f5fa4",
+      "renderedUTC": "2026-11-20T09:06:27.833360+00:00"
+    },
+    {
+      "scenario": "construction",
+      "startSeconds": 4,
+      "sourceImageSHA256": "c9a6e94d25ad39c6e4e88c78ed35df4fea96470cc707bb448bad06c0b3169888",
+      "sourceSceneSHA256": "0a417a5223db6c1d543f826a49aae8d0bcc4949261a96167ae854719ead3e9b5",
+      "renderedUTC": "2026-11-20T09:07:24.215535+00:00"
+    },
+    {
+      "scenario": "future",
+      "startSeconds": 8,
+      "sourceImageSHA256": "8a44d7dce7d327143b0dfe4f02797e49d05ff4685bd5aa5768b4445117e4afcd",
+      "sourceSceneSHA256": "3d544484d736a756c1d98b10d4f4664841f6b3a51db10a7a3d01df57deb6a871",
+      "renderedUTC": "2026-11-20T09:08:19.965186+00:00"
+    }
+  ],
+  "film": {
+    "url": "gallery/edition-20261120/Downtown-film.mp4",
+    "bytes": 498004,
+    "sha256": "da8c4040c8af0d44b197e4e93533c943a6041276bd57b71ea4019d594d04f30c"
+  },
+  "poster": {
+    "url": "gallery/edition-20261120/Downtown-film-poster.webp",
+    "bytes": 129218,
+    "sha256": "c76deb27702c921b32e529c9875ed4498cec823f41874fc3e2c3e6bf900e85a4"
+  },
+  "credits": {
+    "url": "gallery/edition-20261120/Downtown-film-credits.txt",
+    "bytes": 2868,
+    "sha256": "b032cc2f008a4d9cd1bc8a4226cce8e391a9fa1c8fa70558c417b44f51961f91"
+  }
+}

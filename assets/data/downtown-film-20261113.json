@@ -1,0 +1,48 @@
+{
+  "schema": "future-mississauga-skyline-film/v1",
+  "title": "Downtown",
+  "creator": "Daniel Sultan",
+  "durationSeconds": 12.0,
+  "fps": 30,
+  "frameCount": 360,
+  "dimensions": [
+    1920,
+    824
+  ],
+  "audio": false,
+  "transitions": "Cuts between matched views; no synthesized building shapes",
+  "timelineFrames": [
+    {
+      "scenario": "existing",
+      "start": 0,
+      "endExclusive": 120
+    },
+    {
+      "scenario": "construction",
+      "start": 120,
+      "endExclusive": 240
+    },
+    {
+      "scenario": "future",
+      "start": 240,
+      "endExclusive": 360
+    }
+  ],
+  "sourceManifestSHA256": "fbe3fbe243d812907aeec824673303f2b382a0b02d3d4c6f1425163a476cc747",
+  "historicalFilmPreserved": true,
+  "film": {
+    "url": "gallery/refreshed-film-20261113-v2/Downtown-skyline-2026-11-13.mp4",
+    "bytes": 551474,
+    "sha256": "65bf8bd0aff3d0bb3e8481fc23e829ff44a84df248b04ae2d4166a40b1b08bae"
+  },
+  "poster": {
+    "url": "gallery/refreshed-film-20261113-v2/Downtown-skyline-2026-11-13-poster.png",
+    "bytes": 697351,
+    "sha256": "cdec5be3318c86443efe42bd301bff600c89d753b79a074b4c735b53b8e5f644"
+  },
+  "credits": {
+    "url": "gallery/refreshed-film-20261113-v2/Downtown-skyline-2026-11-13-credits.txt",
+    "bytes": 2774,
+    "sha256": "a3ead31d3972f48473e3d2326e2a92db25ddba12c08a803b2a467504c321e96a"
+  }
+}
