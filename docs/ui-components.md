@@ -44,10 +44,8 @@ and ghost. Standard controls are 48px high; `data-size="icon"` makes a 44px squa
 Controls use an 8px radius and 20px icons. Native selects remain native elements,
 with their browser menus, keyboard support and existing event handlers intact.
 Selects fill their layout cell without expanding it; long selected labels can
-truncate visually while the native menu retains their full text. Pressed toggle
-buttons have a pale-blue fill, darker blue text and a blue border.
-The theme uses the existing Lato font, blue accent and slate text. It does not
-change media, model colours or page composition.
+truncate visually while the native menu retains their full text. The atlas styles in `public/atlas-edition.css` set the final typography, outer margins, and quiet grey selected states for published pages. The opening spread and building cards have their own responsive composition rules in `atlas-home-print.css` and `atlas-buildings.css`.
+
 
 The opt-in component selectors are unlayered and scoped to `html body`, with
 four repeated component classes. Site sizing uses five repeated classes so it

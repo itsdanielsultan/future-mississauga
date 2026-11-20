@@ -3,6 +3,7 @@ import os
 import runpy
 import sys
 import traceback
+from pathlib import Path
 import bpy
 
 os.environ['FM_MODEL_ARCHIVE'] = ARCHIVE
@@ -19,6 +20,8 @@ def render_next():
         sys.argv = ['blender', '--', *job['arguments']]
         runpy.run_path(job['script'], run_name='__main__')
     except Exception:
+        output = Path(job['arguments'][2])
+        (output.parent / (output.name + '-error.log')).write_text(traceback.format_exc())
         traceback.print_exc()
         raise
     return 0.25
