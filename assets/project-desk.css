@@ -1,0 +1,46 @@
+html[data-update-edition="timeline"] #edition-notes,
+html[data-update-edition="notes"] #project-timeline,
+#main.project-desk [hidden] { display:none !important }
+#main.publication .desk-link {
+  display:inline-flex; align-items:center; gap:8px; width:fit-content; min-height:40px;
+  margin-inline-start:-8px; padding:6px 8px; border:0; border-radius:8px; color:var(--ink);
+  background:transparent; box-shadow:none; font:550 1rem/1.4 var(--face); text-decoration:none;
+}
+#main.publication .desk-link:hover,#main.publication .desk-link:focus-visible { background:var(--link-hover); text-decoration:none }
+#main .timeline-month { display:grid; grid-template-columns:minmax(125px,.38fr) minmax(0,1fr); column-gap:32px; margin:0; padding:0 }
+#main .timeline-month + .timeline-month { margin-block-start:48px }
+#main .timeline-month ol { margin:0; padding:0; list-style:none }
+#main .timeline-month li { display:grid; grid-template-columns:70px minmax(0,1fr); gap:16px; padding:20px 0; border-block-start:1px solid var(--line) }
+#main .timeline-month li:first-child {padding-block-start:0; border:0}
+#main .timeline-month time { color:var(--muted); font:500 1rem/1.5 var(--face); font-variant-numeric:tabular-nums; white-space:nowrap }
+#main.publication :is(.timeline-month,.desk-card,.desk-sections,.desk-replies) :is(h2,h3) { margin:0; color:var(--ink); font:550 clamp(21px,2vw,28px)/1.18 var(--face); letter-spacing:-.035em }
+#main.publication .timeline-month li h3 { font-size:20px }
+#main.publication :is(.timeline-month,.desk-card,.desk-sections,.desk-replies) p { max-width:58ch; margin:8px 0 0; color:var(--muted); font:400 1rem/1.5 var(--face); text-align:left }
+#main .desk-back { margin:0 0 24px }
+#main .desk-about,#main .desk-columns { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,.82fr); gap:clamp(32px,5vw,72px); align-items:start }
+#main .desk-plate { margin:0; overflow:hidden; border:1px solid var(--line); border-radius:12px; background:white }
+#main .desk-plate img { display:block; width:100%; height:auto }
+#main .desk-plate figcaption { display:flex; align-items:baseline; justify-content:space-between; gap:16px; margin:0; padding:14px 18px; color:var(--ink); font:550 17px/1.4 var(--face) }
+#main .desk-plate figcaption span { color:var(--muted); font-weight:400 }
+#main .desk-sections section + section,#main .desk-reply + .desk-reply { margin-top:24px; padding-top:24px; border-top:1px solid var(--line) }
+#main .desk-card { padding:clamp(20px,3vw,34px); border:1px solid var(--line); border-radius:14px; background:var(--panel) }
+#main .desk-card form { display:grid; gap:12px; margin:20px 0 0 }
+#main .desk-card label {display:block; color:var(--ink); font:550 16px/1.4 var(--face)}
+#main .desk-card :is(textarea,input:not([type="checkbox"])) { width:100%; padding:12px; border:1px solid #969895; border-radius:8px; color:var(--ink); background:white; font:400 16px/1.5 var(--face) }
+#main .desk-card textarea {min-height:92px;resize:vertical}
+#main .desk-button { width:fit-content; min-height:44px; padding:8px 16px; background:var(--ink); color:white; border:0; border-radius:8px; font:550 16px/1.4 var(--face); cursor:pointer }
+#main .desk-button:hover { background:#414344 }
+#main .desk-button:disabled {opacity:.65}
+#main .desk-reply,#main .desk-review {margin-top:24px; overflow-wrap:anywhere}
+#main .desk-review {border-top:1px solid var(--line); padding-top:24px}
+#main .desk-admin {margin-top:40px; max-width:72ch}
+#main .desk-admin input[type="checkbox"] {width:18px;height:18px;vertical-align:middle;margin-right:8px}
+#main .desk-reply p { white-space:pre-line }
+@media(max-width:780px) {
+  #main .desk-about,#main .desk-columns {grid-template-columns:1fr}
+  #main .timeline-month {display:block}
+  #main .timeline-month ol {margin-top:20px}
+}
+@media(max-width:480px) {
+  #main .timeline-month li {grid-template-columns:54px 1fr; gap:12px}
+}

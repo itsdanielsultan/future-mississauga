@@ -34,3 +34,26 @@
 .place-main .place-lead figcaption { align-items:center; padding-block:8px; color:var(--ink); }
 @media(max-width:800px){.place-vertical > div{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:620px){.place-mast { gap:8px; }.place-mast nav {gap:6px 16px;}.place-other:not(.place-vertical) > div { gap:24px; }.place-lead figcaption{align-items:center;font-size:.94rem;}.place-other figcaption{font-size:.94rem;}}
+
+/* Give each picture one frame with its title and actions. */
+.place-main .place-index { gap:24px; }
+.place-main .place-card, .place-main .place-lead, .place-main .place-other figure {
+  overflow:hidden; min-width:0; border:1px solid var(--line); border-radius:12px; background:var(--surface,#fff);
+}
+.place-main .place-card { display:flex; flex-direction:column; padding:0; }
+.place-main .place-card > span { width:100%; margin:0; padding:12px 16px; align-items:center; }
+.place-main .place-card:hover > span { background:var(--hover,#e9eae8); text-decoration:none; }
+.place-main .place-card > img { height:auto; aspect-ratio:8/5; }
+.place-main .place-lead > a { display:block; }
+.place-main .place-lead figcaption, .place-main .place-other figcaption {
+  margin:0; padding:12px 16px; line-height:1.4; font-size:16px;
+}
+.place-main .place-other > div { gap:24px; }
+.place-directory-group + .place-directory-group { margin-top:clamp(32px,4.5vw,64px); }
+@media(max-width:620px) {
+  .place-main .place-index { gap:8px; }
+  .place-main .place-card { display:grid; grid-template-columns:minmax(86px,30%) minmax(0,1fr); gap:0; align-items:stretch; }
+  .place-main .place-card > img { height:100%; object-fit:cover; }
+  .place-main .place-card > span { justify-content:space-between; }
+  .place-main .place-other > div, .place-main .place-vertical > div { gap:12px; }
+}

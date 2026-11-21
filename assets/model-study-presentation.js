@@ -6,6 +6,7 @@ export function visibleReferenceCreditHTML(view) {
   let url;
   try { url = new URL(credit.url); } catch { return ''; }
   if (url.protocol !== 'https:') return '';
+  if (url.href === 'https://davidlaskerphotography.com/') url = new URL('https://www.cityscapephotography.ca/');
   return `<p class="credit" data-visible-reference-credit>Photo reference: <a href="${escapeHTML(url.href)}" target="_blank" rel="noopener noreferrer">${escapeHTML(credit.label)}</a></p>`;
 }
 

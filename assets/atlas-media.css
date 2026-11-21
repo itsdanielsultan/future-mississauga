@@ -1,6 +1,6 @@
 /* Exhibition pages share one rail. All four formats keep their native media and controls. */
 body[data-atlas-media] {
-  --wall: #fff;
+  --wall: var(--paper);
   --wall-ink: #242628;
   --wall-muted: #595d61;
   --wall-line: #dedfdf;
@@ -239,7 +239,7 @@ html body[data-atlas-media] .compare-tools .compare-place { width: min(100%,250p
 html body[data-atlas-media] main .place-destinations:not([hidden]) { display: flex; align-items: center; flex-wrap: wrap; gap: 0 18px; margin: 0; padding: 0; }
 html body[data-atlas-media] #placeDestinations:not([hidden]) { margin-top: 8px; }
 html body[data-atlas-media] .place-destinations a { display: inline-flex; align-items: center; gap: 5px; min-height: 44px; color: var(--wall-ink); font: 500 14px/1.35 var(--face); text-decoration: none; }
-html body[data-atlas-media] .place-destinations a:hover { text-decoration: underline; text-underline-offset: 3px; }
+html body[data-atlas-media] .place-destinations a:hover { background:var(--link-hover); }
 html body[data-atlas-media] #pictureCompare {
   width: 100%; height: auto; aspect-ratio: auto; padding: 0; margin: 0;
   border: 0; border-radius: 3px; background: #f0f1ee;
@@ -371,3 +371,55 @@ html body[data-atlas-media] [data-compare-panel="stages"] .skyline-window { marg
 html body[data-atlas-media] .portrait-collection { margin:0; border:0; padding:0; }
 html body[data-atlas-media] .portrait-collection:not([hidden]) ~ .portrait-collection:not([hidden]) { margin-top:clamp(32px,4vw,58px); border-top:1px solid var(--wall-line); padding-top:clamp(24px,3vw,40px); }
 html body[data-atlas-media] .portrait-collection-title { margin:0 0 clamp(16px,2vw,28px); font:550 clamp(23px,2.2vw,34px)/1.16 var(--face); letter-spacing:-.035em; }
+
+/* Keep each work, its caption and its download together on one surface. */
+html body[data-atlas-media] :is(.picture-card,.social-grid article) {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  overflow: clip;
+  background: var(--surface,#fff);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+html body[data-atlas-media] :is(.picture-card > button,.social-grid .image-link) {
+  border-radius: 0;
+  background: #e8e9e5;
+}
+html body[data-atlas-media] :is(.picture-card > button,.social-grid .image-link):focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: -4px;
+}
+html body[data-atlas-media] :is(.gallery-grid .card-caption,.social-grid .card-text) {
+  flex: 1;
+  align-items: center;
+  padding: 16px;
+  gap: 12px;
+}
+html body[data-atlas-media] main :is(.card-text,.card-caption) > a[download] {
+  align-self: center;
+  border-radius: 8px;
+}
+html body[data-atlas-media] main :is(.card-text,.card-caption) > a[download] svg { width:20px; height:20px; }
+html body[data-atlas-media] :is(.card-caption,.card-copy) .media-caption__scenario {
+  margin-top: 4px;
+  font-size: 15px !important;
+}
+html body[data-atlas-media] .social-context {
+  align-items: baseline;
+  gap: 16px 24px;
+  padding-block: 24px 0;
+}
+html body[data-atlas-media] .portrait-results.is-filtered {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:var(--wall-gap);
+}
+html body[data-atlas-media] .portrait-results.is-filtered :is(.portrait-collection,.social-grid) { display:contents; }
+html body[data-atlas-media] .portrait-results.is-filtered .portrait-collection-title { display:none; }
+@media(max-width:900px) {
+  html body[data-atlas-media] .portrait-results.is-filtered { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:560px) {
+  html body[data-atlas-media] .portrait-results.is-filtered { grid-template-columns:1fr; gap:16px; }
+}

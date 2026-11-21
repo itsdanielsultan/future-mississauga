@@ -35,8 +35,7 @@ if (typeof document !== 'undefined') {
 
 // Keep the visible reading section marked as the visitor follows or scrolls past it.
 if (typeof document !== 'undefined' && document.querySelector) {
-  const index = document.querySelector('.publication-index');
-  if (index) {
+  for (const index of document.querySelectorAll('.publication-index')) {
     const entries = Array.from(index.querySelectorAll('a[href^="#"]'), link => ({
       link, section:document.getElementById(link.hash.slice(1))
     })).filter(entry => entry.section);
@@ -44,7 +43,7 @@ if (typeof document !== 'undefined' && document.querySelector) {
     let queued = false;
     function markSection() {
       queued = false;
-      if (!entries.length) return;
+      if (!entries.length || !index.getClientRects().length) return;
       const root = document.scrollingElement || document.documentElement;
       const inset = parseFloat(getComputedStyle(root).scrollPaddingTop) || header?.getBoundingClientRect().height || 0;
       let current = entries[0];
@@ -65,6 +64,7 @@ if (typeof document !== 'undefined' && document.querySelector) {
       }
     }
     markSection();
+    window.addEventListener('hashchange', scheduleMark);
     window.addEventListener('scroll', scheduleMark, {passive:true});
     window.addEventListener('resize', scheduleMark);
     window.addEventListener('pageshow', scheduleMark);

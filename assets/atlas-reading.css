@@ -1,6 +1,6 @@
 /* The reading pages share the margins of the atlas and a quieter text measure. */
 html body:has(#main.publication) {
-  background: #fff;
+  background: var(--paper);
 }
 html body #main.publication {
   --publication-rule: #d8d9d7;
@@ -18,7 +18,7 @@ html body #main.publication {
   max-width: none;
   margin: 0;
   padding: var(--page-top) var(--rail, 5vw) clamp(60px, 8vw, 100px);
-  background: white;
+  background: var(--paper);
   color: var(--publication-ink);
   font: 400 16px/1.6 var(--publication-type);
 }

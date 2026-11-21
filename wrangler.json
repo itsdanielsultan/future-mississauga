@@ -3,19 +3,29 @@
   "main": "worker.mjs",
   "compatibility_date": "2026-11-01",
   "workers_dev": true,
+  "preview_urls": true,
   "assets": {
     "directory": "./assets",
     "binding": "ASSETS",
     "html_handling": "none",
     "not_found_handling": "none",
     "run_worker_first": [
-      "/downloads/Future-Mississauga-Atlas.pdf"
+      "/downloads/Future-Mississauga-Atlas.pdf",
+      "/api/suggestions",
+      "/api/suggestions/*"
     ]
   },
   "r2_buckets": [
     {
       "binding": "MEDIA",
       "bucket_name": "future-mississauga-media"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "SUGGESTIONS_DB",
+      "database_name": "future-mississauga-suggestions",
+      "database_id": "73f78311-1acd-421d-a9cb-ddf5e4d6d359"
     }
   ]
 }
