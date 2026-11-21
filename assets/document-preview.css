@@ -16,9 +16,38 @@ html.document-preview-open{overflow:hidden}dialog.document-preview{box-sizing:bo
 .document-page-links :is(button,a):hover{background:rgb(80 88 83 / .09)}
 .document-page-links :is(button,a):focus-visible{outline:2px solid #4e5852;outline-offset:-2px;background:rgb(80 88 83 / .08)}
 .document-status[data-ready=true]{position:absolute;width:1px;height:1px;min-height:0;overflow:hidden;clip-path:inset(50%);padding:0;border:0}
+.document-status:not([data-ready=true]){position:absolute;bottom:0;left:0;right:0;background:#fff;z-index:1}
 @media(min-width:375px) and (max-width:600px){
   .document-preview .document-toolbar{flex-wrap:nowrap;justify-content:space-between;column-gap:8px;padding:8px}
-  .document-toolbar .document-pagination{grid-template-columns:44px 92px 44px;gap:4px}
+  .document-preview .document-toolbar .document-pagination{grid-template-columns:44px minmax(0,92px) 44px;gap:4px}
   .document-toolbar .document-pagination select{padding-inline:18px!important}
-  .document-toolbar .document-zoom{gap:4px}
+  .document-preview .document-toolbar .document-zoom{gap:4px}
 }
+
+/* Keep the toolbar still while pages scroll as one document. */
+.document-preview .document-canvas { display:grid; gap:14px; min-width:0; margin:0 auto; }
+.document-preview .document-page-frame { position:relative; width:100%; background:#fff; box-shadow:0 1px 8px #1e272213; }
+.document-preview .document-stage img { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; box-shadow:none; }
+.document-preview .document-stage img:not([src]) { visibility:hidden; }
+html body dialog.document-preview .document-toolbar .document-pagination select.ui-select {
+  align-items:center;
+  justify-content:center;
+  line-height:normal;
+  padding:0 22px!important;
+  background-position:right 7px center!important;
+  background-size:14px 14px!important;
+}
+.document-preview .document-stage { overflow-anchor:none; scrollbar-gutter:stable; }
+
+/* Two-digit page numbers and totals must fit beside the phone's dropdown arrow. */
+@media (min-width:375px) and (max-width:600px) {
+  html body dialog.document-preview .document-toolbar .document-pagination select.ui-select {
+    padding:0 17px!important;
+    background-position:right 4px center!important;
+    background-size:12px 12px!important;
+  }
+}
+
+.document-shell { grid-template-columns:minmax(0,1fr); }
+.document-stage,.document-toolbar,.document-header { min-width:0; }
+@media(max-width:374px) { .document-preview .document-toolbar { display:flex;flex-wrap:wrap;justify-content:center;gap:4px 8px; } }

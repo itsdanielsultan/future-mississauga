@@ -161,5 +161,71 @@ export const buildingMapProfiles = {
       "clarkson-creekside-1639",
       "Creekside Apartments"
     ]
+  ],
+  "burnhamthorpe-community-centre": [
+    [
+      "burnhamthorpe-community-centre",
+      "Burnhamthorpe Community Centre"
+    ]
+  ],
+  "glen-erin-6719": [
+    [
+      "glen-erin-6719",
+      "6719 Glen Erin Drive"
+    ]
+  ],
+  "hazelhurst-business-park": [
+    [
+      "hazelhurst-business-park",
+      "Hazelhurst Business Park"
+    ]
+  ],
+  "lakeview-deco-opus": [
+    [
+      "lakeview-deco-opus",
+      "South Banks / Lakeview Village"
+    ]
+  ],
+  "merner-41-bay": [
+    [
+      "merner-41-bay",
+      "41 Bay Street"
+    ]
+  ],
+  "merner-42-john": [
+    [
+      "merner-42-john",
+      "42 John Street South"
+    ]
+  ],
+  "south-common-community-centre": [
+    [
+      "south-common-community-centre",
+      "South Common Community Centre and Library"
+    ]
+  ],
+  "square-one-block22": [
+    [
+      "square-one-block22",
+      "Square One, Block 22"
+    ]
+  ],
+  "st-hilarys-anglican-church": [
+    [
+      "st-hilarys-anglican-church",
+      "St Hilary’s Anglican Church"
+    ]
+  ],
+  "bradley-barn": [
+    [
+      "bradley-barn",
+      "Bradley Barn"
+    ]
+  ],
+  "benares-visitor-centre": [
+    [
+      "benares-visitor-centre",
+      "Benares Visitor Centre"
+    ]
   ]
 };

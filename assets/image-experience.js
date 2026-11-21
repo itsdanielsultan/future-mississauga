@@ -1,11 +1,19 @@
 import {installSocialPreview} from './social-preview.js?v=20261120-plates';
-import {installDocumentPreviews} from './document-preview.js?v=20261120-reader';
+import {installDocumentPreviews} from './document-preview.js?v=20261121-pagination';
 import {installImagePreviews,updateCleanImageCaption,previewDownloadURL} from './image-preview.js?v=20261120-plates';
 import {mediaPreviewInfo} from './clean-media.js?v=20261113-design2';
 import {resolveStudyImage} from './neighbourhood-media.js?v=20261113-design2';
 import {resolveMedia,installResponsiveImages} from './media-on-demand.js';
-import {loadEditionPlates,editionPreview} from './edition-pictures.js';
+import {loadEditionPlates,editionPreview,publicationResolution} from './edition-pictures.js';
 installImagePreviews(async(image,anchor)=>{
+  if(anchor?.dataset?.revisionPanel){
+    const width=Number(anchor.dataset.previewWidth),height=Number(anchor.dataset.previewHeight);
+    const section=anchor.closest('.model-change');
+    return {src:anchor.href,preview:image.currentSrc||image.src,download:previewDownloadURL(anchor,null),width,height,
+      placeTitle:section?.querySelector('h2')?.textContent,meta:anchor.dataset.previewTitle,creditsInImage:true,
+      attribution:{requiredModelCredits:[section?.querySelector('.study-source .credits,.credits')?.textContent?.trim()].filter(Boolean)},
+      resolution:publicationResolution({width,height}),downloadDimensions:width+' × '+height};
+  }
   if(anchor?.dataset.editionPlate){
     const plate=(await loadEditionPlates()).get(anchor.dataset.editionPlate);
     return plate && editionPreview({creator:'Daniel Sultan',attribution:plate.attribution},plate);

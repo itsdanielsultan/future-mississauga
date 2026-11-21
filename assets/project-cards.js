@@ -167,6 +167,10 @@ function sourceItems(project,override,asset){
     seen.add(key);return true;
   });
 }
+export function publicProjectLinks(project) {
+  return sourceItems(project, overrides[project.id], null)
+    .filter(source => validURL(source.url));
+}
 function sourcesHTML(sources,credit){
   if(!sources.length&&!credit)return '';
   return `<section class="project-card-sources" aria-label="Sources and credits"><h4>Sources & credits</h4>${credit?`<p class="project-card-credit">${escapeHTML(credit)}</p>`:''}${sources.length?`<ul>${sources.map(s=>{

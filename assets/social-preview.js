@@ -16,9 +16,11 @@ export function installSocialPreview(root=document){
     visible[(index+direction+visible.length)%visible.length].click();
    }:null);
    const viewTitle=card.dataset.viewTitle||card.querySelector('h3')?.textContent||'Picture',area=card.dataset.areaTitle||'';
-   show({title:viewTitle,viewTitle,area,src:card.dataset.displayUrl||link.href,download:card.querySelector('.save').href,preview:thumb.currentSrc||thumb.src,width:Number(card.dataset.displayWidth)||3240,height:Number(card.dataset.displayHeight)||4050,osm:card.dataset.osm!=='false'},async()=>{
+   const scenario=card.dataset.plate?.match(/-(existing|construction|future)\.png$/)?.[1];
+   const explore=scenario && card.dataset.district ? 'explore.html?'+new URLSearchParams({district:card.dataset.district,scenario,appearance:'status'}) : '';
+   show({title:viewTitle,viewTitle,area,explore,src:card.dataset.displayUrl||link.href,download:card.querySelector('.save').href,preview:thumb.currentSrc||thumb.src,width:Number(card.dataset.displayWidth)||3240,height:Number(card.dataset.displayHeight)||4050,osm:card.dataset.osm!=='false'},async()=>{
     const plate = (await plates).get(card.dataset.plate);
-    if (plate?.signedMaster) return editionPreview({title:area,viewTitle,area,attribution:plate.attribution},plate);
+    if (plate?.signedMaster) return editionPreview({title:area,viewTitle,area,explore,attribution:plate.attribution},plate);
     const row=await resolveMedia(card.dataset.originalThumb || thumb.src);
     const info = row ? {...mediaPreviewInfo({...row,viewTitle,area}),viewTitle,area} : null;
     return info || plate ? editionPreview(info || {title:viewTitle,viewTitle,area},plate) : null;

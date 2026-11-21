@@ -5,7 +5,7 @@ import {arrangeViewerControls} from './viewer-layout.js?v=20261102-coherent1';
 import {bindBuildingFeedback} from './building-feedback.js?v=20261028-improvements1';
 import {loadModelRevisions,modelRevisionForProject} from './model-revisions.js?v=20261113-design2';
 import {assetURL} from './asset-delivery.js?v=20261113-delivery2';
-import {drawingPolicy,createFrameScheduler} from './viewer-runtime.js?v=20261025-mobile1';
+import {drawingPolicy,createFrameScheduler,afterFirstGPUFrame} from './viewer-runtime.js?v=20261025-mobile1';
 import {captureViewerImage} from './viewer-image-export.js?v=20261113-design2';
 import {withPNGMetadata} from './png-metadata.js?v=20261023-cardfooter1';
 import {prepareOffshoreContext,isPreparedOffshore} from './offshore-context.js?v=20261102-ohn2';
@@ -16,10 +16,11 @@ import {neighbourhoodFrame,defaultViewDirection,usesCloseProjectView} from './vi
 import {createCoverageController} from './coverage-controller.js?v=20261120-plate';
 import {prepareMappedSurface} from './surface-rendering.js?v=20261023-usability1';
 import {createCityContext} from './city-context.js?v=20261113-uptown2-20261102-shadow3';
-import {createModelAppearance} from './model-appearance.js?v=20261113-design2';
-import {prepareAppearancePreference,saveAppearance} from './appearance-preference.js?v=20261113-design2';
-import {planningStatusLegendFor} from './planning-appearance.js?v=20261109-feedback1';
-import {projectNorth, presentationLayout, drawPresentationFooter} from './scene-presentation.js?v=20261102-coherent1';
+import {createModelAppearance} from './model-appearance.js?v=20261121-source-bodies';
+import {exchangeSourceDigest,exchangeStageAsset} from './tower-stage-finish.js?v=20261121-stages';
+import {prepareAppearancePreference,saveAppearance} from './appearance-preference.js?v=20261121-stages';
+import {planningStatusLegendFor} from './planning-appearance.js?v=20261121-print-key';
+import {projectNorth, presentationLayout, drawPresentationFooter} from './scene-presentation.js?v=20261121-print-key';
 import {adoptContextModelVisibility} from './context-model-visibility.js?v=20261017-contact1';
 import {loadModelAsset,shouldLoadRefinement,refinementInDistrict,createOptionalRefinementLoader} from './refinement-loading.js?v=20261028-improvements1';
 import {cityModelStudies,presentCityStudyProjects,loadCityStudy,bindStudyReplacement} from './city-model-studies.js?v=20261113-design2';
@@ -33,7 +34,8 @@ import {geometryBytes} from './neighbour-context.js?v=20261102-shadow3';
 import {applyModelVisibility} from './model-visibility.js?v=20261101-status2';
 import {createSearchIndex,searchProjects,normalizeSearch} from './viewer-search.js?v=20260927-model-search1';
 import {bindComparison} from './comparison.js?v=20261023-usability1';
-import {createExistingStyleIndex,applyExistingStyle} from './existing-materials.js?v=20260926-soft-grey';
+import {municipalUpperFaces} from './data/municipal-upper-facets.js';
+import {createExistingStyleIndex,applyExistingStyle,municipalDisplayGeometry,existingEnvelopeColour} from './existing-materials.js?v=20261121-source-bodies';
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
@@ -99,14 +101,14 @@ const [coreData, modelRevisions, modelCatalogue, layerManifests, neighbourhoodDa
 ]);
 const [districts,projects,groups,overrides,stats,transitData,refinementData,existingStyle,modelAssetVersions] = coreData;
 const [contextAssets,transitLayers,landscapeLayers] = layerManifests;
-const existingStyleIndex = createExistingStyleIndex(existingStyle);
+const existingStyleIndex = createExistingStyleIndex(existingStyle,municipalUpperFaces);
 bindBuildingFeedback(document,()=>({viewURL:location.href,scenario:compare?'comparison':mode,district:current?.id}));
 if (modelCatalogue) {
  refinementData.assets=cityModelStudies(refinementData.assets,modelCatalogue);
  presentCityStudyProjects(projects);
 }
 for(const asset of [...(transitLayers.assets||[]),...(landscapeLayers.assets||[]),...(refinementData.assets||[]),...districts.map(d=>({url:'models/'+d.id+'.glb',sha256:d.sha256}))])if(asset.url&&(asset.downloadSHA256||asset.sha256))assetVersions.set(new URL(asset.url,document.baseURI).href,(asset.downloadSHA256||asset.sha256).slice(0,16));
-for(const [url,version] of Object.entries({"models/exchange-textured-phase-aware.glb": "2ebd17feb79c7429"}))assetVersions.set(new URL(url,document.baseURI).href,version);
+assetVersions.set(new URL(exchangeStageAsset.url,document.baseURI).href,exchangeStageAsset.sha256.slice(0,16));
 for(const asset of Object.values(landscapeLayers.treeSources||{}))if(asset.url&&(asset.downloadSHA256||asset.sha256))assetVersions.set(new URL(asset.url,document.baseURI).href,(asset.downloadSHA256||asset.sha256).slice(0,16));
 for(const variants of Object.values(landscapeLayers.trees||{}))for(const asset of Object.values(variants))if(asset.url&&asset.sha256)assetVersions.set(new URL(asset.url,document.baseURI).href,asset.sha256.slice(0,16));
 for(const [url,hash] of Object.entries(modelAssetVersions.sha256))assetVersions.set(new URL(url,document.baseURI).href,hash.slice(0,16));
@@ -156,7 +158,7 @@ function fitStudyArea(bearingDirection=null){
 
 function reset(bearingDirection=null){framedProject=null;if(!current)return;homeFraming='neighbourhood';homeDirection=bearingDirection?.clone().normalize()??defaultViewDirection(THREE,current.id);if(current.id==='citywide'){fitStudyArea(homeDirection);return;}markers.forEach(marker=>{marker.userData.focusHidden=false;});markerFocusVersion++;cancelCameraFlight();settleControls();const frame=neighbourhoodFrame(THREE,current,camera.aspect,camera.fov,homeDirection);controls.target.copy(frame.target);controls.cursor.copy(frame.target);controls.maxTargetRadius=Infinity;controls.minDistance=Math.min(60,frame.position.distanceTo(frame.target)*.9);controls.maxDistance=Math.max(current.radius*8,12000);camera.position.copy(frame.position);controls.update();applyVisibility(mode);invalidate();}
 
-const appearance=createModelAppearance(THREE,{initial:prepareAppearancePreference(document.querySelector('#appearanceSelect'))});
+const appearance=createModelAppearance(THREE,{initial:prepareAppearancePreference(document.querySelector('#appearanceSelect')),classifyMunicipal:mesh=>municipalDisplayGeometry(THREE,mesh,existingStyleIndex),existingEnvelopeColour});
 function lifecycleFor(data){const override=overrides[data.id]||{};return resolveModelLifecycle(data,override,projectById.get(override.projectId||data.projectId)||groupById.get(override.projectId||data.projectId)||groupByMesh.get(data.id)||{});}
 function classify(data){return displayStatusForLifecycle(lifecycleFor(data));}
 let visibilityCacheKey='',lastLayerVisibilityKey='',lastModelVisibility=null,markerFocusVersion=0;
@@ -347,7 +349,7 @@ async function loadDistrict(id,searchRequest,{preserveSearch=false,placeContext=
  const loadAsset=async url=>{const binding=terrainSpec&&(url===terrainSpec.contract.candidate.url?terrainSpec.contract.candidate:terrainSpec.contract.ground.find(b=>b.district===id&&b.url===url));const asset=binding?await loadBoundTerrainAsset(loader,url,versionedTreeURL,binding):await loadModelAsset(loader,url,versionedTreeURL);if(abandoned||token!==loadToken){dispose(asset.scene);throw new DOMException('A newer district was selected.','AbortError');}visibleAttribution.registerAsset(asset.scene,url,modelAssetVersions.sha256[url]||assetVersions.get(new URL(url,document.baseURI).href));pending.add(asset.scene);return asset;};
  const loadDistrictContext=async()=>{const root=new THREE.Group();pending.add(root);const urls=contextAssets[id]||['models/'+id+'-context.glb'];const items=await Promise.all(urls.map(loadAsset));items.forEach((item,index)=>{prepareOffshoreContext(THREE,item.scene,{district:id,url:urls[index],sha256:modelAssetVersions.sha256[urls[index]]});root.add(item.scene);});return {scene:root};};
  const loadingPlace=id==='citywide' && placeContext==='fairview' ? {id:'fairview',name:'Fairview'} : district;
- controls.enabled=false;$('#sceneWrap').setAttribute('aria-busy','true');$('#districtSelect').value=id;window.atlasReady=null;$('#exportBtn').disabled=true;$('#shareMapBtn').disabled=true;$('#exportStatus').hidden=true;if(!contextLost){$('#loading').hidden=false;$('#loading').style.display='grid';$('#loading').textContent='Loading '+loadingPlace.name+'…';}$('#districtTitle').textContent=loadingPlace.name;
+ controls.enabled=false;$('#sceneWrap').setAttribute('aria-busy','true');$('#districtSelect').value=id;window.atlasReady=null;$('#exportBtn').disabled=true;$('#shareMapBtn').disabled=true;$('#exportStatus').hidden=true;if(!contextLost){$('#loading').hidden=false;$('#loading').style.display='grid';const label=document.createElement('span');label.className='map-loading-label';label.textContent='Loading '+loadingPlace.name+'…';$('#loading').replaceChildren(label);}$('#districtTitle').textContent=loadingPlace.name;
  window.dispatchEvent(new CustomEvent('atlas-district-loading',{detail:loadingPlace}));
  const galleryLink=$('#mapGalleryLink');
  if(galleryLink) {
@@ -358,18 +360,27 @@ async function loadDistrict(id,searchRequest,{preserveSearch=false,placeContext=
  const [districtModel,districtContext,detail,airport,native]=await Promise.all([
   loadAsset('models/'+id+'.glb'),loadDistrictContext(),loadAsset('models/'+id+'-details.glb'),
   ['airport-corporate','malton','citywide'].includes(id)?loadAsset('models/pearson-airfield-context.glb'):null,
-  ['downtown','cooksville','uptown','heartland','citywide'].includes(id)?loadAsset('models/exchange-textured-phase-aware.glb'):null
+  ['downtown','cooksville','uptown','heartland','citywide'].includes(id)?loadAsset(exchangeStageAsset.url):null
  ]);
  if(token!==loadToken)return;
  const nextModel=districtModel.scene,nextContext=districtContext.scene;
  if(airport)nextContext.add(airport.scene);
  if(native){
   nextModel.traverse(o=>{if(['63-6155','63-6156'].includes(o.userData.id))o.userData.replacedByNative=true;});
-  native.scene.traverse(o=>{if(o.isMesh){o.userData.Status=o.userData.atlasStatus||'Under Construction';o.userData.projectId='exchange-district';o.userData.nativeTexture=true;}});
+  native.scene.traverse(o=>{
+   if(!o.isMesh)return;
+   const data=o.userData;
+   data.Status=data.atlasStatus||'Under Construction';
+   data.projectId='exchange-district';
+   data.nativeTexture=true;
+   data.sourceAssetSHA256=exchangeSourceDigest;
+   // Phase subsets share the City's normal buffers. Recomputing one subset erases lighting on the others.
+   data.preserveSourceNormals=o.geometry.hasAttribute('normal');
+  });
   for(const supplement of [native.scene]){supplement.updateMatrixWorld(true);supplement.traverse(o=>{if(o.isMesh){const box=new THREE.Box3().setFromObject(o),bounds=district.bounds;o.userData.outsideDistrict=district.id!=='citywide'&&(box.max.x<bounds[0]||box.min.x>bounds[2]||box.max.z<bounds[1]||box.min.z>bounds[3]);}});}nextModel.add(native.scene);
  }
 
- const additionAssets=(refinementData.assets||[]).filter(a=>refinementInDistrict(a,district));
+ const additionAssets=(refinementData.assets||[]).filter(a=>a.id!=='exchange-recorded-topped-structures' && refinementInDistrict(a,district));
  window.atlasLocalCuts=splitSourceOverlaps(THREE,nextModel,additionAssets);
  const requiredAssets=additionAssets.filter(asset=>!asset.localOptional && (!asset.terrainAdapter||terrainSpec));
  // Bound simultaneous GLB decodes and apply replacements in their registered order.
@@ -387,12 +398,12 @@ async function loadDistrict(id,searchRequest,{preserveSearch=false,placeContext=
  const nextDetailMeshes=[];detail.scene.traverse(o=>{if(o.isMesh){nextDetailMeshes.push(o);o.receiveShadow=true;o.castShadow=true;o.userData.preserveFinish=true;}});nextContext.add(detail.scene);
  for(const manifest of [transitLayers,landscapeLayers]){for(const asset of manifest.assets||[]){if((asset.districtId||asset.district)!==id)continue;const extra=await loadAsset(asset.url);if(token!==loadToken){return;}extra.scene.traverse(o=>{if(o.isMesh){o.userData.layerCategory=o.userData.layerCategory||asset.system||'Landscape';o.userData.preserveFinish=true;if(o.userData.geometryRole==='service-guide'){const colour={GO:0x25825e,Transitway:0x1175b6,HML:0xd6ac39}[o.userData.layerCategory];o.material=new THREE.MeshBasicMaterial({color:colour??0x67726d,depthTest:true,depthWrite:true,toneMapped:false,side:THREE.DoubleSide});o.renderOrder=0;o.castShadow=false;o.receiveShadow=false;}else{o.castShadow=true;o.receiveShadow=true;if(manifest===landscapeLayers)prepareMappedSurface(o);}nextDetailMeshes.push(o);}});nextContext.add(extra.scene);}}
  adoptContextModelVisibility(nextModel,nextContext,o=>{if(!o.userData.preserveFinish){const name=o.name.toLowerCase(),water=/shore|river|lakeontario/.test(name),colour=water?0x638b98:/road|bridge/.test(name)?0x8b9190:/wood/.test(name)?0x698555:/park/.test(name)?0x9aaa7c:0xc4c7bb;o.material=new THREE.MeshStandardMaterial({color:colour,roughness:water?.35:.9,side:THREE.DoubleSide,flatShading:true});}});
- const nextFutureMeshes=[],nextModelMeshes=[];nextModel.traverse(o=>{if(o.isMesh){nextModelMeshes.push(o);const d=o.userData,ov=overrides[d.id]||{};d.lifecycle=lifecycleFor(d);d.displayStatus=classify(d);d.hiddenObsolete=Boolean(ov.excludeSuperseded||ov.excludeDuplicate||d.replacedByNative||d.outsideDistrict);d.uncertain=(d.uncertainAsset||ov.includeInVerifiedScenario===false)&&!d.hiddenObsolete;d.recordedProgress=d.recordedProgress||(refinementData.constructionEvidence||[]).some(x=>x.renderAction==='full-structural-envelope'&&(x.sourceIds||[]).includes(d.id));d.projectId=ov.projectId||d.projectId;appearance.register(o,{authored:Boolean(d.nativeTexture)});o.castShadow=true;o.receiveShadow=true;if(!d.preserveSourceNormals)o.geometry.computeVertexNormals();if(d.displayStatus!=='Existing')nextFutureMeshes.push(o);if(d.hiddenObsolete)o.visible=false;}});nextContext.traverse(o=>{if(o.isMesh){if(isPreparedOffshore(o))return;o.receiveShadow=true;if(!o.userData.preserveFinish){const name=o.name.toLowerCase(),colour=/shore|river|lakeontario/.test(name)?0x638b98:/road|bridge/.test(name)?0x8b9190:/wood/.test(name)?0x698555:/park/.test(name)?0x9aaa7c:0xc4c7bb;o.material=new THREE.MeshStandardMaterial({color:colour,roughness:/shore|river|lakeontario/.test(name)?.35:.9,side:THREE.DoubleSide,flatShading:true});}else{o.material.side=THREE.DoubleSide;}}});if(landscapeLayers.trees?.[id]){await addTrees(id,nextContext,token,'baseline');await addTrees(id,nextContext,token,'future');}else await addTrees(id,nextContext,token);if(token!==loadToken){return;}window.atlasHarbornTerrain?.dispose();dispose(model);dispose(context);window.atlasHarbornTerrain=nextTerrainController;model=nextModel;context=nextContext;futureMeshes=nextFutureMeshes;modelMeshes=nextModelMeshes;detailMeshes=nextDetailMeshes;treeMeshes=[];nextContext.traverse(o=>{if(o.isInstancedMesh)treeMeshes.push(o);});scene.add(context,model);visibleAttribution.refresh();committed=true;makeMarkers();applyVisibility(mode);$('#meshCount').textContent=district.id==='citywide'?'City overview · local detail loads nearby':'City model · source dates vary';$('#contextNote').textContent=district.id==='citywide'?'Buildings and trees load as you move closer to a neighbourhood.':'Pins mark researched sites whose current building shape still needs checking.';if(!contextLost)$('#loading').style.display='none';renderProjects();window.atlasReady=id;updateNeighbourhood();if(id!=='citywide'&&$('#cityContextToggle').checked&&!surroundingCity.enabled)void $('#cityContextToggle').onchange({target:$('#cityContextToggle')});controls.enabled=!contextLost;$('#exportBtn').disabled=contextLost||exporting;wrap.setAttribute('aria-busy','false');invalidate();
+ const nextFutureMeshes=[],nextModelMeshes=[];nextModel.traverse(o=>{if(o.isMesh){nextModelMeshes.push(o);const d=o.userData,ov=overrides[d.id]||{};d.lifecycle=lifecycleFor(d);d.displayStatus=classify(d);d.hiddenObsolete=Boolean(ov.excludeSuperseded||ov.excludeDuplicate||d.replacedByNative||d.outsideDistrict);d.uncertain=(d.uncertainAsset||ov.includeInVerifiedScenario===false)&&!d.hiddenObsolete;d.recordedProgress=d.recordedProgress||(refinementData.constructionEvidence||[]).some(x=>x.renderAction==='full-structural-envelope'&&(x.sourceIds||[]).includes(d.id));d.projectId=ov.projectId||d.projectId;appearance.register(o,{authored:Boolean(d.nativeTexture)});o.castShadow=true;o.receiveShadow=true;if(!d.preserveSourceNormals)o.geometry.computeVertexNormals();if(d.displayStatus!=='Existing')nextFutureMeshes.push(o);if(d.hiddenObsolete)o.visible=false;}});nextContext.traverse(o=>{if(o.isMesh){if(isPreparedOffshore(o))return;o.receiveShadow=true;if(!o.userData.preserveFinish){const name=o.name.toLowerCase(),colour=/shore|river|lakeontario/.test(name)?0x638b98:/road|bridge/.test(name)?0x8b9190:/wood/.test(name)?0x698555:/park/.test(name)?0x9aaa7c:0xc4c7bb;o.material=new THREE.MeshStandardMaterial({color:colour,roughness:/shore|river|lakeontario/.test(name)?.35:.9,side:THREE.DoubleSide,flatShading:true});}else{o.material.side=THREE.DoubleSide;}}});if(landscapeLayers.trees?.[id]){await addTrees(id,nextContext,token,'baseline');await addTrees(id,nextContext,token,'future');}else await addTrees(id,nextContext,token);if(token!==loadToken){return;}window.atlasHarbornTerrain?.dispose();dispose(model);dispose(context);window.atlasHarbornTerrain=nextTerrainController;model=nextModel;context=nextContext;futureMeshes=nextFutureMeshes;modelMeshes=nextModelMeshes;detailMeshes=nextDetailMeshes;treeMeshes=[];nextContext.traverse(o=>{if(o.isInstancedMesh)treeMeshes.push(o);});scene.add(context,model);visibleAttribution.refresh();committed=true;makeMarkers();applyVisibility(mode);$('#meshCount').textContent=district.id==='citywide'?'City overview · local detail loads nearby':'City model · source dates vary';$('#contextNote').textContent=district.id==='citywide'?'Buildings and trees load as you move closer to a neighbourhood.':'Pins mark researched sites whose current building shape still needs checking.';renderProjects();window.atlasReady=id;updateNeighbourhood();if(id!=='citywide'&&$('#cityContextToggle').checked&&!surroundingCity.enabled)void $('#cityContextToggle').onchange({target:$('#cityContextToggle')});controls.enabled=!contextLost;$('#shareMapBtn').disabled=contextLost;$('#exportBtn').disabled=contextLost||exporting;invalidate();
  // A linked station or saved camera can be shown as soon as the base map is ready.
  const detailsReady = ensureOptionalRefinements();
  if (waitForDetails) await detailsReady;
  else detailsReady.catch(error => console.warn('Additional building detail is unavailable.', error));
- if(token!==loadToken)return;invalidate();if(searchRequest===undefined&&!preserveSearch)navigateMap({district:id});window.dispatchEvent(new CustomEvent('atlas-district',{detail:current}));}catch(e){if(token===loadToken&&e.name!=='AbortError'){$('#loading').replaceChildren(document.createTextNode('This model could not load. '));const retry=document.createElement('button');retry.className='ui-button';retry.dataset.variant='outline';retry.textContent='Try again';retry.onclick=()=>loadDistrict(id);$('#loading').append(retry);console.error(e);}}finally{abandoned=true;if(!committed){nextTerrainController?.dispose();const roots=[...pending].filter(g=>!g.parent||!pending.has(g.parent));roots.forEach(dispose);}if(token===loadToken){controls.enabled=committed&&!contextLost;$('#shareMapBtn').disabled=!controls.enabled;$('#exportBtn').disabled=!committed||exporting||contextLost;$('#sceneWrap').setAttribute('aria-busy','false');}}}
+ if(token!==loadToken)return;invalidate();if(searchRequest===undefined&&!preserveSearch)navigateMap({district:id});window.dispatchEvent(new CustomEvent('atlas-district',{detail:current}));}catch(e){if(token===loadToken&&e.name!=='AbortError'){$('#loading').replaceChildren(document.createTextNode('This model could not load. '));const retry=document.createElement('button');retry.className='ui-button';retry.dataset.variant='outline';retry.textContent='Try again';retry.onclick=()=>loadDistrict(id);$('#loading').append(retry);console.error(e);}}finally{abandoned=true;if(!committed){nextTerrainController?.dispose();const roots=[...pending].filter(g=>!g.parent||!pending.has(g.parent));roots.forEach(dispose);}if(token===loadToken){controls.enabled=committed&&!contextLost;$('#shareMapBtn').disabled=!controls.enabled;$('#exportBtn').disabled=!committed||exporting||contextLost;if(!committed)$('#sceneWrap').setAttribute('aria-busy','false');}}}
 const neighbourhoodAsset=neighbourhoodData?.assets?.find(a=>a.district==='citywide');
 if(neighbourhoodAsset){
  assetVersions.set(new URL(neighbourhoodAsset.url,document.baseURI).href,neighbourhoodAsset.sha256.slice(0,16));
@@ -492,12 +503,22 @@ function setMotionResolution(moving) {
  const ratio=getDrawingPolicy().pixelRatio;
  if (renderer.getPixelRatio()!==ratio) {renderer.setPixelRatio(ratio);invalidateCamera();}
 }
+let draggingMap=false;
+function restoreDetailAfterMovement(){
+ clearTimeout(restoreDetailTimer);
+ restoreDetailTimer=setTimeout(()=>setMotionResolution(false),180);
+}
 controls.addEventListener('start',()=>{
+ draggingMap=true;
  clearTimeout(restoreDetailTimer);setMotionResolution(true);
 });
 controls.addEventListener('end',()=>{
- clearTimeout(restoreDetailTimer);
- restoreDetailTimer=setTimeout(()=>setMotionResolution(false),180);
+ draggingMap=false;
+ restoreDetailAfterMovement();
+});
+controls.addEventListener('change',()=>{
+ // Damping can carry a fast rotation past release. Restore print detail after it settles.
+ if(movingCamera && !draggingMap)restoreDetailAfterMovement();
 });
 controls.addEventListener('start',()=>{homeFraming=null;leaveProjectFraming();});
 canvas.addEventListener('pointerdown',leaveProjectFraming,{capture:true});
@@ -629,13 +650,16 @@ for (const control of [$('#scenarioSelect'), $('#compareToggle')]) {
 // cancels pending loads and reapplies the project only after its area is ready.
 restoreMapOnHistory(window);
 $('#scenarioSelect').onchange=e=>{scenarioInteractions++;setMode(e.target.value);};$('#resetBtn').onclick=restoreMapView;$('#sourcesBtn').onclick=()=>$('#about').showModal();$('#closeAbout').onclick=()=>$('#about').close();
+function currentMapShareURL(address) {
+ const query = new URLSearchParams(location.search);
+ return sharedMapURL(address,{district:current.id,project:query.get('project'),
+  building:query.get('building'),context:query.get('context'),scenario:compare?'comparison':mode,
+  station:query.get('station'),appearance:appearance.mode,
+  split,target:controls.target.toArray(),position:camera.position.toArray()});
+}
 $('#shareMapBtn').onclick=async()=>{
  if (!current || !controls.enabled) return;
- const query = new URLSearchParams(location.search);
- const url=sharedMapURL(location.href,{district:current.id,project:query.get('project'),
-  building:query.get('building'),context:query.get('context'),scenario:compare?'comparison':mode,
-  station:query.get('station'),
-  split,target:controls.target.toArray(),position:camera.position.toArray()});
+ const url=currentMapShareURL(location.href);
  const status=$('#exportStatus');
  try {
   await navigator.clipboard.writeText(url.href);
@@ -675,6 +699,7 @@ $('#exportBtn').onclick=async()=>{
   if(!current||window.atlasReady!==current.id)throw new Error('The map is still loading');
   const scenario=selectedStudyProjectId?selectedStudyLabel(projectById.get(selectedStudyProjectId)):compare?'Existing city / future scenario':({existing:'Existing city',construction:'Dated construction',future:'Future scenario'})[mode];
   const place=framedProject?.name||current.name,title=framedProject?current.name+' · '+place:current.name,filename='future-mississauga-'+current.id+(framedProject?'-'+framedProject.id:'')+'-'+(compare?'comparison':mode)+'.png',savedAppearance=appearance.mode;
+  const savedViewURL=currentMapShareURL('https://futuremississauga.com/explore.html').href;
   const capture=captureViewerImage({renderer,render,createCanvas:()=>document.createElement('canvas'),Vector2:THREE.Vector2,Vector4:THREE.Vector4}),sceneImage=capture.canvas;
   const out=document.createElement('canvas');out.width=sceneImage.width;const legend=currentStatusLegend(),layout=presentationLayout(out.width,legend),ctx=out.getContext('2d'),fontSize=Math.max(7,12*layout.scale),inset=28*layout.scale,lineHeight=fontSize*1.5,maxWidth=out.width-inset*2;
   const captions=exportCreditLines(displayedSources),designCredits=displayedSources.designCredits||[];
@@ -690,7 +715,7 @@ $('#exportBtn').onclick=async()=>{
   ctx.textAlign='left';designCredits.forEach((credit,index)=>ctx.fillText(credit,inset,creditY+(index+1)*lineHeight,maxWidth));
   const encoded=await new Promise((resolve,reject)=>out.toBlob(value=>value?resolve(value):reject(new Error('PNG encoding failed')),'image/png'));
   if(contextLost)throw new Error('Graphics context unavailable');
-  const blob=await withPNGMetadata(encoded,{'Title':title,'Source':captions.join('\n'),'Licence URL':'https://www.ontario.ca/page/open-government-licence-ontario','Sources URL':'https://futuremississauga.com/sources.html','Appearance':savedAppearance==='status'?'Planning status':'Natural','Status classification':STATUS_CLASSIFICATION_EDITION,'Status classification source':'https://futuremississauga.com/data/project-lifecycle-20261101.json'});
+  const blob=await withPNGMetadata(encoded,{'Title':title,'View URL':savedViewURL,'Scene pixels':sceneImage.width+'x'+sceneImage.height,'Source':captions.join('\n'),'Licence URL':'https://www.ontario.ca/page/open-government-licence-ontario','Sources URL':'https://futuremississauga.com/sources.html','Appearance':savedAppearance==='status'?'Planning status':'Natural','Status classification':STATUS_CLASSIFICATION_EDITION,'Status classification source':'https://futuremississauga.com/data/project-lifecycle-20261121.json'});
   if(contextLost)throw new Error('Graphics context unavailable');
   const download=document.createElement('a'),open=document.createElement('a');
   exportImageURL=URL.createObjectURL(blob);
@@ -704,22 +729,40 @@ $('#exportBtn').onclick=async()=>{
   exporting=false;button.removeAttribute('aria-busy');button.disabled=contextLost||!current||window.atlasReady!==current.id;
  }
 };
+// A complete scene can still be waiting for the GPU to draw its first frame.
+// Keep the district poster visible through that first paint, including in file mode.
+let pendingMapReveal = null;
+function revealDrawnDistrict() {
+ if (contextLost || !current || window.atlasReady !== current.id ||
+     wrap.getAttribute('aria-busy') !== 'true' || pendingMapReveal?.token === loadToken) return;
+ const reveal = {token:loadToken};
+ pendingMapReveal = reveal;
+ afterFirstGPUFrame(renderer.getContext(),
+  () => !contextLost && pendingMapReveal === reveal && loadToken === reveal.token,
+  () => {
+   pendingMapReveal = null;
+   const loading = $('#loading');
+   loading.hidden = true;
+   loading.style.display = 'none';
+   wrap.setAttribute('aria-busy','false');
+  });
+}
 function drawFrame(){
  if(cameraFlight){const f=cameraFlight,t=Math.min(1,(performance.now()-f.start)/f.duration),e=t*t*(3-2*t);camera.position.lerpVectors(f.fromPosition,f.position,e);controls.target.lerpVectors(f.fromTarget,f.target,e);controls.update();if(t===1){controls.enableDamping=f.damping;cameraFlight=null;}}
- const changed=controls.update();render();return changed||Boolean(cameraFlight);
+ const changed=controls.update();render();revealDrawnDistrict();return changed||Boolean(cameraFlight);
 }
 frameScheduler=createFrameScheduler({draw:drawFrame,canDraw:()=>!contextLost&&!document.hidden&&canvasVisible});
 function tick(){invalidate();}
 document.addEventListener('visibilitychange',()=>{if(document.hidden)frameScheduler.pause();else invalidate();});
 new IntersectionObserver(entries=>{canvasVisible=entries[0].isIntersecting;if(canvasVisible)invalidate();else frameScheduler.pause();},{rootMargin:'100px'}).observe(wrap);
 canvas.addEventListener('webglcontextlost',event=>{
- event.preventDefault();contextLost=true;clearTimeout(restoreDetailTimer);movingCamera=false;cancelCameraFlight();frameScheduler.pause();controls.enabled=false;$('#exportBtn').disabled=true;
+ event.preventDefault();contextLost=true;pendingMapReveal=null;clearTimeout(restoreDetailTimer);movingCamera=false;cancelCameraFlight();frameScheduler.pause();controls.enabled=false;$('#shareMapBtn').disabled=true;$('#exportBtn').disabled=true;
  const loading=$('#loading');loading.hidden=false;loading.style.display='grid';loading.replaceChildren(document.createTextNode('The map was paused to free graphics memory. Waiting to reconnect…'));
  const retry=document.createElement('button');retry.className='ui-button';retry.dataset.variant='outline';retry.type='button';retry.textContent='Reload map';retry.onclick=()=>location.reload();loading.append(retry);wrap.setAttribute('aria-busy','false');
 });
 canvas.addEventListener('webglcontextrestored',()=>{
- contextLost=false;controls.enabled=window.atlasReady===current?.id;$('#exportBtn').disabled=!controls.enabled;
- if(controls.enabled){$('#loading').style.display='none';wrap.setAttribute('aria-busy','false');}
+ contextLost=false;controls.enabled=window.atlasReady===current?.id;$('#shareMapBtn').disabled=!controls.enabled;$('#exportBtn').disabled=!controls.enabled||exporting;
+ if(controls.enabled){$('#loading').textContent='Restoring '+current.name+'…';wrap.setAttribute('aria-busy','true');}
  resize();invalidate();
 });
 window.addEventListener('pageshow',()=>{resize();invalidate();});

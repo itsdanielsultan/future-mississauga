@@ -1,18 +1,54 @@
-import {syncComparisonLinks} from './skyline-scenarios.js';
+import {syncComparisonLinks} from './skyline-scenarios.js?v=20261120-player2';
 const player = document.querySelector('.screening-video');
 const chapters = document.querySelector('.film-chapters');
 
 if (player && chapters) {
   const buttons = [...chapters.querySelectorAll('[data-second]')];
   const address = () => window.fmLocal?.historyURL() || new URL(document.URL);
+  const controls = document.querySelector('.film-controls');
+  const play = controls.querySelector('.film-play');
+  const scrub = controls.querySelector('.film-seek');
+  const clock = controls.querySelector('.film-time');
+  const mapLink = document.querySelector('.site-map-action');
+  const pictures = document.querySelector('.film-fallback a');
   let pending = null;
+  let selectedChapter;
 
   function markStage() {
-    const active = buttons.filter(button => Number(button.dataset.second) <= player.currentTime).at(-1);
-    for (const button of buttons) {
-      if (button === active) button.setAttribute('aria-current', 'step');
-      else button.removeAttribute('aria-current');
+    const active = buttons.filter(button => Number(button.dataset.second) <= (pending ?? player.currentTime)).at(-1);
+    if (active !== selectedChapter) {
+      selectedChapter?.removeAttribute('aria-current');
+      active?.setAttribute('aria-current', 'step');
+      selectedChapter = active;
+      syncComparisonLinks(document, address(), active?.dataset.scenario);
+      if (active && pictures) pictures.href = 'index.html?scenario=' + active.dataset.scenario + '#skyline';
+      if (active && mapLink) {
+        const destination = new URL('explore.html', document.baseURI);
+        destination.searchParams.set('district', 'downtown');
+        destination.searchParams.set('scenario', active.dataset.scenario);
+        destination.searchParams.set('appearance', 'status');
+        mapLink.href = destination.href;
+      }
     }
+    if (Number.isFinite(player.duration)) {
+      const time = second => Math.floor(second / 60) + ':' + String(Math.floor(second % 60)).padStart(2, '0');
+      scrub.max = player.duration;
+      scrub.value = player.currentTime;
+      clock.textContent = time(player.currentTime) + ' / ' + time(player.duration);
+      scrub.setAttribute('aria-valuetext', time(player.currentTime) + ' of ' + time(player.duration));
+      scrub.style.setProperty('--played', (100 * player.currentTime / player.duration) + '%');
+    }
+  }
+  function markPlayback() {
+    const playing = !player.paused && !player.ended;
+    play.dataset.playing = String(playing);
+    const label = playing ? 'Pause film' : player.ended ? 'Replay film' : 'Play film';
+    play.title = label;
+    play.setAttribute('aria-label', label);
+  }
+  function togglePlayback() {
+    if (player.paused || player.ended) player.play().catch(markPlayback);
+    else player.pause();
   }
   function rememberFrame() {
     if (pending !== null || !Number.isFinite(player.duration)) return;
@@ -20,6 +56,7 @@ if (player && chapters) {
     const time = Math.round(player.currentTime * 100) / 100;
     if (time) url.searchParams.set('t', String(time));
     else url.searchParams.delete('t');
+    if (selectedChapter) url.searchParams.set('stage',selectedChapter.dataset.scenario);
     if (url.href === address().href) return;
     if (window.fmLocal) window.fmLocal.writeHistory('replaceState', history.state, '', url);
     else history.replaceState(history.state, '', url);
@@ -34,7 +71,8 @@ if (player && chapters) {
   function restore() {
     const url = address();
     syncComparisonLinks(document, url);
-    const value = Number(url.searchParams.get('t'));
+    const selected = buttons.find(button => button.dataset.scenario === url.searchParams.get('stage'));
+    const value = Number(url.searchParams.get('t') ?? selected?.dataset.second ?? 0);
     pending = Number.isFinite(value) ? value : 0;
     seek();
   }
@@ -42,12 +80,18 @@ if (player && chapters) {
     pending = Number(button.dataset.second);
     seek();
   });
+  play.addEventListener('click', togglePlayback);
+  player.addEventListener('click', () => { if (!player.controls) togglePlayback(); });
+  scrub.addEventListener('input', () => {
+    if (Number.isFinite(player.duration)) player.currentTime = Number(scrub.value);
+    markStage();
+  });
+  for (const event of ['play', 'pause', 'ended']) player.addEventListener(event, markPlayback);
   player.addEventListener('keydown', event => {
     if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
-    if (event.key.toLowerCase() === 'k') {
+    if (event.key.toLowerCase() === 'k' || event.key === ' ') {
       event.preventDefault();
-      if (player.paused) player.play().catch(() => {});
-      else player.pause();
+      togglePlayback();
     } else if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
       if (!Number.isFinite(player.duration)) return;
       event.preventDefault();
@@ -63,7 +107,8 @@ if (player && chapters) {
   function updateExpansion() {
     const expanded = document.fullscreenElement === film || film.classList.contains('full-window');
     expand.setAttribute('aria-expanded', String(expanded));
-    expand.textContent = expanded ? 'Close expanded film' : 'Expand film';
+    expand.title = expanded ? 'Exit full screen' : 'Enter full screen';
+    expand.setAttribute('aria-label', expand.title);
   }
   function setWindow(expanded) {
     film.classList.toggle('full-window', expanded);
@@ -122,14 +167,19 @@ if (player && chapters) {
     const failed = Boolean(player.error || (source && player.networkState === HTMLMediaElement.NETWORK_NO_SOURCE));
     chapters.hidden = failed;
     fallback.hidden = !failed;
+    controls.hidden = failed;
+    player.controls = failed;
   }
   player.addEventListener('error', showAvailability);
   player.querySelector('source')?.addEventListener('error', () => {
     chapters.hidden = true;
     fallback.hidden = false;
+    controls.hidden = true;
+    player.controls = true;
   });
   player.addEventListener('loadedmetadata', showAvailability);
   showAvailability();
   restore();
   markStage();
+  markPlayback();
 }

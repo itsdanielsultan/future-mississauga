@@ -1,0 +1,3275 @@
+{
+  "edition": "20261121",
+  "creator": "Daniel Sultan",
+  "coordinates": "Native Blender scene coordinates in metres. +Z is up and +Y is north. XYZ Euler angles are in radians. Lens and sensor dimensions are in millimetres. Shift is in sensor units. North is measured clockwise from screen up.",
+  "views": [
+    {
+      "id": "home/downtown-construction.png",
+      "district": "downtown",
+      "scenario": "construction",
+      "sceneSHA256": "0a417a5223db6c1d543f826a49aae8d0bcc4949261a96167ae854719ead3e9b5",
+      "nativeImageSHA256": "8381b92f73375292b00c38aa7bd365937a14de8241c1185a4c712f65c3bf10dd",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -2760.0,
+          -3370.0,
+          1925.0
+        ],
+        "rotationEuler": [
+          1.1727452278137207,
+          -3.787719915493426e-09,
+          0.6146630644798279
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 1797.75,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          -0.07488889247179031,
+          0.03574346378445625
+        ],
+        "clip": [
+          0.1,
+          150000
+        ]
+      },
+      "northDegrees": 61.163028861012606,
+      "signedPNG": "../gallery/edition-20261121/originals/home-downtown-construction-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "22269c6544249d6a4905b8a61d0c2968c91b2df2209e8af1ee5e9461a66d0b5c"
+    },
+    {
+      "id": "home/downtown-existing.png",
+      "district": "downtown",
+      "scenario": "existing",
+      "sceneSHA256": "0fd6691734b1e5e537292f717880f45fb1887ae73be22c125385bffa691f5fa4",
+      "nativeImageSHA256": "344dbba7bc43e5ae796e3374ca2922e30a65f03e84a95501e3f918d1a70037e9",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -2760.0,
+          -3370.0,
+          1925.0
+        ],
+        "rotationEuler": [
+          1.1727452278137207,
+          -3.787719915493426e-09,
+          0.6146630644798279
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 1797.75,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          -0.07488889247179031,
+          0.03574346378445625
+        ],
+        "clip": [
+          0.1,
+          150000
+        ]
+      },
+      "northDegrees": 61.163028861012606,
+      "signedPNG": "../gallery/edition-20261121/originals/home-downtown-existing-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "1b72575a7b31f2081646614fc62e1c971a63ce8f5715e35ad2a225875d22bccd"
+    },
+    {
+      "id": "home/downtown-future.png",
+      "district": "downtown",
+      "scenario": "future",
+      "sceneSHA256": "3d544484d736a756c1d98b10d4f4664841f6b3a51db10a7a3d01df57deb6a871",
+      "nativeImageSHA256": "f536cd3edae050d954d6d3722373c2127cb29d18d88c6e3e43cb5d4994aea8be",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -2760.0,
+          -3370.0,
+          1925.0
+        ],
+        "rotationEuler": [
+          1.1727452278137207,
+          -3.787719915493426e-09,
+          0.6146630644798279
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 1797.75,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          -0.07488889247179031,
+          0.03574346378445625
+        ],
+        "clip": [
+          0.1,
+          150000
+        ]
+      },
+      "northDegrees": 61.163028861012606,
+      "signedPNG": "../gallery/edition-20261121/originals/home-downtown-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "93e294e529e4883e3481a1fea13406c0cefcd4077b4a66f12780c457bbc7fd86"
+    },
+    {
+      "id": "neighbourhood/fairview/after",
+      "district": "citywide",
+      "scenario": "existing",
+      "sceneSHA256": "ef65efb0c72734f469a849fe4768266285387e13e6f42d4a63a2996730bf7149",
+      "nativeImageSHA256": "abe09b9f6f068fe597d349831418fe9cb322220d426895d29abd5df827b01f79",
+      "nativePixels": [
+        1800,
+        1100
+      ],
+      "camera": {
+        "location": [
+          -4930.0,
+          -900.0,
+          605.0
+        ],
+        "rotationEuler": [
+          0.9663816495240751,
+          6.295796994848502e-08,
+          -0.5290305109263194
+        ],
+        "type": "ORTHO",
+        "lens": 50,
+        "orthoScale": 740,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36,
+        "sensorHeight": 24,
+        "shift": [
+          0,
+          0
+        ],
+        "clip": [
+          0.1,
+          100000
+        ],
+        "quaternionWXYZ": [
+          0.8547180891036987,
+          0.44844773411750793,
+          -0.12146750092506409,
+          -0.23151081800460815
+        ],
+        "target": [
+          -4550.0,
+          -250.0,
+          85.0
+        ]
+      },
+      "northDegrees": 314.1883866495705,
+      "signedPNG": "../gallery/edition-20261121/originals/neighbourhood-fairview-after-print.png",
+      "signedPixels": [
+        1800,
+        1100
+      ],
+      "signedSHA256": "3989763193398c67e8abdd307e38cba9c0370863a1d408d89da778e491ba5d32"
+    },
+    {
+      "id": "neighbourhood/fairview/before",
+      "district": "citywide",
+      "scenario": "existing",
+      "sceneSHA256": "599eb68485069dedb00a9c38eacd517146896d220dfa170a63d395e876eff07a",
+      "nativeImageSHA256": "e6a2923d3d45747b4954103af45c841ce7c7a7128833d82cc7230de460dd1c98",
+      "nativePixels": [
+        1800,
+        1100
+      ],
+      "camera": {
+        "location": [
+          -4930.0,
+          -900.0,
+          605.0
+        ],
+        "rotationEuler": [
+          0.9663816495240751,
+          6.295796994848502e-08,
+          -0.5290305109263194
+        ],
+        "type": "ORTHO",
+        "lens": 50,
+        "orthoScale": 740,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36,
+        "sensorHeight": 24,
+        "shift": [
+          0,
+          0
+        ],
+        "clip": [
+          0.1,
+          100000
+        ],
+        "quaternionWXYZ": [
+          0.8547180891036987,
+          0.44844773411750793,
+          -0.12146750092506409,
+          -0.23151081800460815
+        ],
+        "target": [
+          -4550.0,
+          -250.0,
+          85.0
+        ]
+      },
+      "northDegrees": 314.1883866495705,
+      "signedPNG": "../gallery/edition-20261121/originals/neighbourhood-fairview-before-print.png",
+      "signedPixels": [
+        1800,
+        1100
+      ],
+      "signedSHA256": "78c5c45e9385eedd9abd9437bc1702fe0160d80be6521bfe2adb45f5bbc2ef7b"
+    },
+    {
+      "id": "portraits/churchill-meadows-future.png",
+      "district": "churchill-meadows",
+      "scenario": "future",
+      "sceneSHA256": "ee03ab1926557132af9d4e573ec371daea5137ff74e488da4e97232ce0694153",
+      "nativeImageSHA256": "d58280594da1fbf55e286b928b8bd57406739812f59e2e26aae5956e0eac3f3c",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -12880.0,
+          -5621.07958984375,
+          1295.92919921875
+        ],
+        "rotationEuler": [
+          0.9075712561607361,
+          -0.0,
+          0.0
+        ],
+        "type": "PERSP",
+        "lens": 38.059137628358556,
+        "orthoScale": 6,
+        "sensorFit": "VERTICAL",
+        "sensorWidth": 36,
+        "sensorHeight": 24,
+        "shift": [
+          0,
+          0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 0.0,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-churchill-meadows-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "f4233c418633d30ca6a34fffa13d6c5e144075ef7f2f4952a1b4eab91995066c"
+    },
+    {
+      "id": "portraits/clarkson-existing.png",
+      "district": "clarkson",
+      "scenario": "existing",
+      "sceneSHA256": "95b9fc1177238112a9cb57c47972b7148b6d5bf95d65a6e8b2d8d75048c4f68a",
+      "nativeImageSHA256": "e49d09ab3a309ffb95b8ffc0e687ca55683cf5c9fe3b2b95639f7289ce0d629a",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -2565.0,
+          -11155.0,
+          1950.0
+        ],
+        "rotationEuler": [
+          1.1195236444473267,
+          8.90864839675487e-08,
+          0.6132075786590576
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2100.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 58.217048081321934,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-clarkson-existing-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "4f426f1a7a0f48fe73c2416a709be4ea768a3d52e6c5fd373e0ddb6b21544d2b"
+    },
+    {
+      "id": "portraits/clarkson-future.png",
+      "district": "clarkson",
+      "scenario": "future",
+      "sceneSHA256": "c091fda92238ec95b580582c29113eb22aea6bbf5836cbf44f29c26d12a8cc39",
+      "nativeImageSHA256": "92828ae44b239bbf2361e517d74bb74739489332e5bd4e0511ea6d2b368b85f1",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -2565.0,
+          -11155.0,
+          1950.0
+        ],
+        "rotationEuler": [
+          1.1195236444473267,
+          8.90864839675487e-08,
+          0.6132075786590576
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2100.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 58.217048081321934,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-clarkson-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "2161d2f391a93b341fde00981526ec8e09e9d7eefd8e77b2d296aea831fe752c"
+    },
+    {
+      "id": "portraits/clarkson-portrait-future.png",
+      "district": "clarkson",
+      "scenario": "future",
+      "sceneSHA256": "c091fda92238ec95b580582c29113eb22aea6bbf5836cbf44f29c26d12a8cc39",
+      "nativeImageSHA256": "3433b7a261f6680381d32a39b53bf3737e6e0f41cd31200453f8ba79b520f6d9",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -3945.0,
+          -10580.0,
+          1720.0
+        ],
+        "rotationEuler": [
+          1.025679111480713,
+          -3.738021092658528e-08,
+          0.3080528676509857
+        ],
+        "type": "PERSP",
+        "lens": 52.0,
+        "orthoScale": 2100.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 31.531823519556667,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-clarkson-portrait-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "bb7733fa2271c8f88e2211d0f5409bcc18bb6c16086f461b4660ea7b5579d104"
+    },
+    {
+      "id": "portraits/cooksville-future.png",
+      "district": "cooksville",
+      "scenario": "future",
+      "sceneSHA256": "deb0b2862edf3bd1e25f226a3494f7ec9ac2be3c03f1e6a436d1c441e9569479",
+      "nativeImageSHA256": "c496f2ab8030a63a1edde7195b9a260b33c30629ca2a8e0d275e749124e45baa",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -1155.0,
+          -4300.0,
+          3930.0
+        ],
+        "rotationEuler": [
+          0.813826322555542,
+          -2.113767116895815e-08,
+          0.6086893081665039
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2900.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 45.432834257801346,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-cooksville-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "83cb16b3cfeb921d65b61ed99f85b9f9cecb2414d0b3a0b827e3d0668c6e58dc"
+    },
+    {
+      "id": "portraits/cooksville-portrait-future.png",
+      "district": "cooksville",
+      "scenario": "future",
+      "sceneSHA256": "deb0b2862edf3bd1e25f226a3494f7ec9ac2be3c03f1e6a436d1c441e9569479",
+      "nativeImageSHA256": "83e496b23117b034c4948f04e348e9ce328e3eb2a66887bd7909d0da8e9465d2",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -2825.0,
+          -2980.0,
+          1390.0
+        ],
+        "rotationEuler": [
+          1.025679111480713,
+          -3.738021092658528e-08,
+          0.3080528676509857
+        ],
+        "type": "PERSP",
+        "lens": 52.0,
+        "orthoScale": 2900.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 31.5333647341468,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-cooksville-portrait-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "831c8adc353e2c0a85d0dd947552ad7e511e0bf18857ea5e46c103d587efbc2d"
+    },
+    {
+      "id": "portraits/downtown-existing.png",
+      "district": "downtown",
+      "scenario": "existing",
+      "sceneSHA256": "0fd6691734b1e5e537292f717880f45fb1887ae73be22c125385bffa691f5fa4",
+      "nativeImageSHA256": "7fb33b6b50a3490e712179e099bd4546d98f18919934efccd9a01fe1ceba20e0",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -4200.0,
+          -2400.0,
+          1450.0
+        ],
+        "rotationEuler": [
+          1.0577527284622192,
+          2.4463322034762314e-08,
+          0.5833730101585388
+        ],
+        "type": "PERSP",
+        "lens": 38.059139251708984,
+        "orthoScale": 6.0,
+        "sensorFit": "VERTICAL",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1.0,
+          160000.0
+        ],
+        "matrixWorld": [
+          [
+            0.8346093893051147,
+            -0.27037057280540466,
+            0.4799238443374634,
+            -4200.0
+          ],
+          [
+            0.5508422255516052,
+            0.4096524119377136,
+            -0.7271572947502136,
+            -2400.0
+          ],
+          [
+            -2.4463322034762314e-08,
+            0.8712546229362488,
+            0.49083125591278076,
+            1450.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "northDegrees": 53.36344859933973,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-downtown-existing-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "53242506fad98aae070b70d44684113e5fece6d090cff7d0d4971efd76474642"
+    },
+    {
+      "id": "portraits/downtown-future.png",
+      "district": "downtown",
+      "scenario": "future",
+      "sceneSHA256": "3d544484d736a756c1d98b10d4f4664841f6b3a51db10a7a3d01df57deb6a871",
+      "nativeImageSHA256": "f6663d56101e4b2024a1e129092c086a31ab92ceba3aed0bf67d25a6bcf39591",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -4200.0,
+          -2400.0,
+          1450.0
+        ],
+        "rotationEuler": [
+          1.0577527284622192,
+          2.4463322034762314e-08,
+          0.5833730101585388
+        ],
+        "type": "PERSP",
+        "lens": 38.059139251708984,
+        "orthoScale": 6.0,
+        "sensorFit": "VERTICAL",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1.0,
+          160000.0
+        ],
+        "matrixWorld": [
+          [
+            0.8346093893051147,
+            -0.27037057280540466,
+            0.4799238443374634,
+            -4200.0
+          ],
+          [
+            0.5508422255516052,
+            0.4096524119377136,
+            -0.7271572947502136,
+            -2400.0
+          ],
+          [
+            -2.4463322034762314e-08,
+            0.8712546229362488,
+            0.49083125591278076,
+            1450.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "northDegrees": 53.36344859933973,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-downtown-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "3595c64e16b14f800ada1f293fa6227f452dd1f8f3e5544728f4b38d449aac50"
+    },
+    {
+      "id": "portraits/downtown-junction-future.png",
+      "district": "downtown",
+      "scenario": "future",
+      "sceneSHA256": "1c1a479e9f0cf7b1af999c26154acc352e51f1f9e5c513347a5fc4dda9278804",
+      "nativeImageSHA256": "e53c873b7366c5156b5713fd108b7bb1765babc835eb74817affa71b3db6082d",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -4936.0,
+          350.0,
+          1050.0
+        ],
+        "rotationEuler": [
+          0.8808136582374573,
+          7.533493828759674e-08,
+          0.6000502705574036
+        ],
+        "type": "PERSP",
+        "lens": 55.0,
+        "orthoScale": 2350.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 47.06656089153944,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-downtown-junction-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "0055279ce132c12288a1d84557a8a76a85f488211e82890a389b7931fecfd8b7"
+    },
+    {
+      "id": "portraits/downtown-landmark-future.png",
+      "district": "downtown",
+      "scenario": "future",
+      "sceneSHA256": "3d544484d736a756c1d98b10d4f4664841f6b3a51db10a7a3d01df57deb6a871",
+      "nativeImageSHA256": "ff14aaf71850eb7f28fd9b678be1b0c80aec7caaa14d89c4890ceaf9712cce88",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -4007.0,
+          1263.0,
+          490.0
+        ],
+        "rotationEuler": [
+          1.2387851476669312,
+          -4.277236698158049e-08,
+          2.10252046585083
+        ],
+        "type": "PERSP",
+        "lens": 55.0,
+        "orthoScale": 2350.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 100.85364489952781,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-downtown-landmark-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "20caffffe4ab27b6c137791bf933da3093a4ac18a15f45bb3defc114adb866b3"
+    },
+    {
+      "id": "portraits/downtown-portrait-future.png",
+      "district": "downtown",
+      "scenario": "future",
+      "sceneSHA256": "3d544484d736a756c1d98b10d4f4664841f6b3a51db10a7a3d01df57deb6a871",
+      "nativeImageSHA256": "dd63654721b88ec567848001d082d5bd154b59f116e09159523267b44226e637",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -4510.0,
+          -2970.0,
+          1775.0
+        ],
+        "rotationEuler": [
+          1.0903023481369019,
+          -4.4030654677840175e-09,
+          0.21336868405342102
+        ],
+        "type": "PERSP",
+        "lens": 52.0,
+        "orthoScale": 2350.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 25.11289671663218,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-downtown-portrait-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "b3ce57d9f4c42091534c9f009e48bd457f725ad143e7638f12ac22b38bb94189"
+    },
+    {
+      "id": "portraits/downtown-skyline-construction.png",
+      "district": "downtown",
+      "scenario": "construction",
+      "sceneSHA256": "0a417a5223db6c1d543f826a49aae8d0bcc4949261a96167ae854719ead3e9b5",
+      "nativeImageSHA256": "12705a445154071ae73c9fa9b672354d7df2d8ece14f0f3a56e95bcdde347f81",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -2760.0,
+          -3370.0,
+          1925.0
+        ],
+        "rotationEuler": [
+          1.1727452278137207,
+          -3.787719915493426e-09,
+          0.6146630644798279
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2100,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          -0.055,
+          0.0357
+        ],
+        "clip": [
+          0.1,
+          150000
+        ]
+      },
+      "northDegrees": 60.94539590092285,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-downtown-skyline-construction-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "4537974d464a0bcf028a681be414b6cdf2142c894229b115108dc3887dd61a13"
+    },
+    {
+      "id": "portraits/downtown-skyline-existing.png",
+      "district": "downtown",
+      "scenario": "existing",
+      "sceneSHA256": "0fd6691734b1e5e537292f717880f45fb1887ae73be22c125385bffa691f5fa4",
+      "nativeImageSHA256": "d8a671d1731a70e9230976ccfb215dfc63fc8b0165832ba9094d494452a321e6",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -2760.0,
+          -3370.0,
+          1925.0
+        ],
+        "rotationEuler": [
+          1.1727452278137207,
+          -3.787719915493426e-09,
+          0.6146630644798279
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2100,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          -0.055,
+          0.0357
+        ],
+        "clip": [
+          0.1,
+          150000
+        ]
+      },
+      "northDegrees": 60.94539590092285,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-downtown-skyline-existing-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "a19d427a1771cd27279e06b0514bc7b26bf1e98c9cdb5a526ee4fbaf0c7c953f"
+    },
+    {
+      "id": "portraits/downtown-skyline-future.png",
+      "district": "downtown",
+      "scenario": "future",
+      "sceneSHA256": "3d544484d736a756c1d98b10d4f4664841f6b3a51db10a7a3d01df57deb6a871",
+      "nativeImageSHA256": "f23f64618cfa04369c7d3b9ca464f8f0f853a7e5fd6e58c9635eabb136d51777",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -2760.0,
+          -3370.0,
+          1925.0
+        ],
+        "rotationEuler": [
+          1.1727452278137207,
+          -3.787719915493426e-09,
+          0.6146630644798279
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2100,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          -0.055,
+          0.0357
+        ],
+        "clip": [
+          0.1,
+          150000
+        ]
+      },
+      "northDegrees": 60.94539590092285,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-downtown-skyline-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "f090cbc9cb86a5d6a869b4216a23830757e6308d700b8fccc6b9aed6650afdfd"
+    },
+    {
+      "id": "portraits/east-credit-creditview-future.png",
+      "district": "east-credit-creditview",
+      "scenario": "future",
+      "sceneSHA256": "581be9d94391d324076fb3dae22388e5d8c9778d74a66b9988cfce25b3f83f96",
+      "nativeImageSHA256": "06aa0e645183b69259edd1f52b7b40fecad53ee9f0bf07be2e7177e7d29d5b4c",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -8800,
+          -1450,
+          680
+        ],
+        "rotationEuler": [
+          1.0275347189515331,
+          0,
+          -0.6747409422235526
+        ],
+        "type": "PERSP",
+        "lens": 38.059137628358556,
+        "orthoScale": 6,
+        "sensorFit": "VERTICAL",
+        "sensorWidth": 36,
+        "sensorHeight": 24,
+        "shift": [
+          0,
+          0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 302.86726622186876,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-east-credit-creditview-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "7ae061eaaefa31f3124952e328520b39f01c17effd1788b5098483fc7266ae75"
+    },
+    {
+      "id": "portraits/erin-mills-future.png",
+      "district": "erin-mills",
+      "scenario": "future",
+      "sceneSHA256": "bb02ee00b5779a7bfa586b3bdf5a99c64471d1ffc251d568551fd3de1ee04466",
+      "nativeImageSHA256": "50805b97c16943c427f3456f9fba6b70e9f97fdebbc262c73742d2433620c1df",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -8333.3486328125,
+          -7363.15771484375,
+          2251.969970703125
+        ],
+        "rotationEuler": [
+          1.119523525238037,
+          -8.554389552273278e-08,
+          0.6132075190544128
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 3380.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 58.215114772817344,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-erin-mills-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "512403f5d4e5d7928cea0a4cd8acab8501e205cbdc9f866e15e0d4f7c4491955"
+    },
+    {
+      "id": "portraits/lakeview-existing.png",
+      "district": "lakeview",
+      "scenario": "existing",
+      "sceneSHA256": "9fe7f9a31bd3269b958f777877514b4c4e0b145dee5a712019817621091361e5",
+      "nativeImageSHA256": "06b73c2aeb8ff595bddd9a3a705eec6aba83f9ebad873b78b60fb10a908f6b5c",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          2650.0,
+          -5580.0,
+          2060.0
+        ],
+        "rotationEuler": [
+          1.0961143970489502,
+          -3.869120490662681e-08,
+          0.32175058126449585
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2800.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 36.110160853329546,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-lakeview-existing-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "4e2ad68fe5e97189dcf691546d869c3346a037eb13a3204e3ddc1ea6ce2f6c29"
+    },
+    {
+      "id": "portraits/lakeview-future.png",
+      "district": "lakeview",
+      "scenario": "future",
+      "sceneSHA256": "0986d6d2e023f6de2cf81ee2b26edf338dfdca70aae258f383926e4d71c76eb9",
+      "nativeImageSHA256": "05f303eecbe74e717a6578392bf8a60675beaa18ba5e7338c782649e4e91ff29",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          2650.0,
+          -5580.0,
+          2060.0
+        ],
+        "rotationEuler": [
+          1.0961143970489502,
+          -3.869120490662681e-08,
+          0.32175058126449585
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2800.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 36.110160853329546,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-lakeview-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "86cbeabeaeb0c06faf93e076f7403c509be23ae32bf4906bae20680af771ffcd"
+    },
+    {
+      "id": "portraits/lakeview-portrait-future.png",
+      "district": "lakeview",
+      "scenario": "future",
+      "sceneSHA256": "0986d6d2e023f6de2cf81ee2b26edf338dfdca70aae258f383926e4d71c76eb9",
+      "nativeImageSHA256": "dc55dfe6616e169554634e08578d6e06d5b4394d64e6de3ae9fdd3f651baa92d",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          2026.846923828125,
+          -4453.66015625,
+          2649.426025390625
+        ],
+        "rotationEuler": [
+          0.7853981633974483,
+          -3.214886135083361e-08,
+          0.2606024146080017
+        ],
+        "type": "PERSP",
+        "lens": 56,
+        "orthoScale": 2800.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          -0.051851839489409954
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 20.044620449406295,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-lakeview-portrait-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "7c34beabc5b9e46483c9319172422ac6504e73fad77300dfd5f39e083c5f3494"
+    },
+    {
+      "id": "portraits/lisgar-future.png",
+      "district": "lisgar",
+      "scenario": "future",
+      "sceneSHA256": "c31993b2bf9b4f68cd3a154eacbb79fec961408ac965baae225c5b400af49a3e",
+      "nativeImageSHA256": "6cd1f7a80d5c7d27fd8a44c48341a59538e755d5cea6390e70a2874a3baed17e",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -16000.0,
+          -3144.23046875,
+          1686.7359619140625
+        ],
+        "rotationEuler": [
+          0.9075712561607361,
+          -0.0,
+          0.0
+        ],
+        "type": "PERSP",
+        "lens": 38.059137628358556,
+        "orthoScale": 6,
+        "sensorFit": "VERTICAL",
+        "sensorWidth": 36,
+        "sensorHeight": 24,
+        "shift": [
+          0,
+          0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 0.0,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-lisgar-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "e600c741a7925c4112e33c2687907701c2b44adf9d8f447b05b0e5accb2dbd1b"
+    },
+    {
+      "id": "portraits/lorne-park-future.png",
+      "district": "lorne-park",
+      "scenario": "future",
+      "sceneSHA256": "ad5daffd0b4d94f15424f007a2727d4d81e3949ed7998542f7e5a770e626c8ac",
+      "nativeImageSHA256": "8db330617a537be7b16866629afcacbf649e81fefc9c0f9d553cf0eb135203da",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -2315.772921,
+          -9980.611197,
+          6274.611197
+        ],
+        "rotationEuler": [
+          0.6283185307179586,
+          0,
+          0.3141592653589793
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 740,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0,
+          0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 21.878420505190093,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-lorne-park-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "dcb2892ffdcd991fa54bbff549d48c6093578f79fbdb0d01d1fe5730ecdb5791"
+    },
+    {
+      "id": "portraits/meadowvale-village-future.png",
+      "district": "meadowvale-village",
+      "scenario": "future",
+      "sceneSHA256": "444df4f0a4f74109b4cbba8bc5a96b6405e0bbce0b3770772d9aae6ad3de3aa7",
+      "nativeImageSHA256": "967113aafc668b1456f0377c77316972e29caa2130e4f3712b1fa67f93076241",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -11748.101276956613,
+          2527.4906949793344,
+          1058.8609710693358
+        ],
+        "rotationEuler": [
+          0.9075712561607361,
+          -0.0,
+          0.0
+        ],
+        "type": "PERSP",
+        "lens": 38.059137628358556,
+        "orthoScale": 6,
+        "sensorFit": "VERTICAL",
+        "sensorWidth": 36,
+        "sensorHeight": 24,
+        "shift": [
+          0,
+          0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 0.0,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-meadowvale-village-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "adbaeadadaa0ce797621bbdda1373907a221e5134a6416790128ca763ef1ad48"
+    },
+    {
+      "id": "portraits/port-credit-existing.png",
+      "district": "port-credit",
+      "scenario": "existing",
+      "sceneSHA256": "dae345f5aed865ba02ab9e3c0da2004e1f2eb6fdd52a478d10652d8ea442689b",
+      "nativeImageSHA256": "13edf3bfd7e7867821da67b289d2bae3943bf744aa5bd859fdda9119f4fe876b",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          1750.0,
+          -4850.0,
+          2140.0
+        ],
+        "rotationEuler": [
+          1.0131158828735352,
+          -2.5438353645768075e-08,
+          1.3405768871307373
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2250.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          -0.0675
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 81.96370610405597,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-port-credit-existing-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "e0f7d2ee9584b871ec9ca739505694e4851d673ff93f512dda16f1fb3b1a11d1"
+    },
+    {
+      "id": "portraits/port-credit-future.png",
+      "district": "port-credit",
+      "scenario": "future",
+      "sceneSHA256": "c53c5ed09c6dfdce0cd3d48179157dfc372f8a5f888844f0a550db1b6bffc40c",
+      "nativeImageSHA256": "3819d8a09509e1742fec486ce1751aa218b349f590445a84c5cddc63e452cb01",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          1750.0,
+          -4850.0,
+          2140.0
+        ],
+        "rotationEuler": [
+          1.0131158828735352,
+          -2.5438353645768075e-08,
+          1.3405768871307373
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2250.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          -0.0675
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 81.96370610405597,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-port-credit-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "12129e31f769438348c4d5fe1eee058a8c71173128bd80c265b285167c8f53ae"
+    },
+    {
+      "id": "portraits/port-credit-portrait-future.png",
+      "district": "port-credit",
+      "scenario": "future",
+      "sceneSHA256": "c53c5ed09c6dfdce0cd3d48179157dfc372f8a5f888844f0a550db1b6bffc40c",
+      "nativeImageSHA256": "ce1874deebdbc15c702d29d5f496cd9353a531987c81c93e9fb2e7b97e7db728",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          1700.0,
+          -4830.0,
+          1930.0
+        ],
+        "rotationEuler": [
+          1.045182704925537,
+          -1.2683118200129684e-07,
+          1.333422064781189
+        ],
+        "type": "PERSP",
+        "lens": 52.0,
+        "orthoScale": 2250.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          -0.0675
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 82.52759149373804,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-port-credit-portrait-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "c2a40a4e80c7be277f744177b9248446b7987d34bfd9826d81a6e9dd1fc0fdab"
+    },
+    {
+      "id": "portraits/port-credit-skyline-future.png",
+      "district": "port-credit",
+      "scenario": "future",
+      "sceneSHA256": "c53c5ed09c6dfdce0cd3d48179157dfc372f8a5f888844f0a550db1b6bffc40c",
+      "nativeImageSHA256": "f34fa102f2f53eedc40104fedde8b3a790ee437ee7068fab342ff03577685384",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          2757.7294921875,
+          -4627.5048828125,
+          1300.0
+        ],
+        "rotationEuler": [
+          1.3371458053588867,
+          1.6381083867145207e-07,
+          1.441521406173706
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2300.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          -0.025
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 88.22631129944989,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-port-credit-skyline-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "dd57586071f25e914226944a131af370baecbc53099b20ad351c58c4bc18e9cf"
+    },
+    {
+      "id": "portraits/streetsville-future.png",
+      "district": "streetsville",
+      "scenario": "future",
+      "sceneSHA256": "c8db1a04a59204d8a8dfdff905bce921d596ec0c6d6f296eef1c36bc832a97a2",
+      "nativeImageSHA256": "58b3456ff74999db95de60e76dc38d7017c06050a38eb95ae41663c31c98615b",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -9016.361328125,
+          -3692.0205078125,
+          1843.52490234375
+        ],
+        "rotationEuler": [
+          1.119523525238037,
+          1.076092637219972e-08,
+          0.6132075786590576
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2730.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 58.210636784281405,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-streetsville-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "3ba4fc44553285f5dc23ab9466e711fd1285d71cb86638329aa6b6ea759c88cb"
+    },
+    {
+      "id": "portraits/uptown-future.png",
+      "district": "uptown",
+      "scenario": "future",
+      "sceneSHA256": "5e7f8b6ff2ebbe4367c639028cb0ecdf29afea372eac579f2f08c645cd325054",
+      "nativeImageSHA256": "36eabb257a11cec906f203170551e8b7c5ae9bb7f61881dc19d3a5c687ac83dc",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -4158.24365234375,
+          -1118.239990234375,
+          2005.18994140625
+        ],
+        "rotationEuler": [
+          1.1195236444473267,
+          8.90864839675487e-08,
+          0.6132075786590576
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2576.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 58.20948012288221,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-uptown-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "f363cf05e442e764be91d901ba3fa819ea41162cf2e7e09f000f1840affb9f9a"
+    },
+    {
+      "id": "portraits/uptown-portrait-future.png",
+      "district": "uptown",
+      "scenario": "future",
+      "sceneSHA256": "5e7f8b6ff2ebbe4367c639028cb0ecdf29afea372eac579f2f08c645cd325054",
+      "nativeImageSHA256": "71622491befde9f94657915554c491935a40ef9d7bc47aff3176f7407eba3100",
+      "nativePixels": [
+        3240,
+        4050
+      ],
+      "camera": {
+        "location": [
+          -5538.24365234375,
+          -543.239990234375,
+          1775.18994140625
+        ],
+        "rotationEuler": [
+          1.025679111480713,
+          -3.738021092658528e-08,
+          0.3080528676509857
+        ],
+        "type": "PERSP",
+        "lens": 52.0,
+        "orthoScale": 2576.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 31.53135520336167,
+      "signedPNG": "../gallery/edition-20261121/originals/portraits-uptown-portrait-future-print.png",
+      "signedPixels": [
+        3240,
+        4050
+      ],
+      "signedSHA256": "a8c343b316e81d81a7850e1b5237dac0f5611059c9df74980b352037007b56af"
+    },
+    {
+      "id": "wide/airport-corporate-future.png",
+      "district": "airport-corporate",
+      "scenario": "future",
+      "sceneSHA256": "fa47f5488e68df5e2105d0ce7cbab7d2ed59c99c058b4195648f8f339dde31a2",
+      "nativeImageSHA256": "8e53fa39564ef56813712c9e0e264b293dd1e2912c9d8aa811249018ae63cde3",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -954.417724609375,
+          4701.01611328125,
+          5409.48828125
+        ],
+        "rotationEuler": [
+          0.6108652381980153,
+          0,
+          0.6132075786590576
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 1800,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 40.67092943593411,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-airport-corporate-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "1302bbfabb8e236c0c4fc3c02cdc051e1415d2d3550405a35306d61f9822ce17"
+    },
+    {
+      "id": "wide/churchill-meadows-future.png",
+      "district": "churchill-meadows",
+      "scenario": "future",
+      "sceneSHA256": "ee03ab1926557132af9d4e573ec371daea5137ff74e488da4e97232ce0694153",
+      "nativeImageSHA256": "b7c9853acb221ea820d6ead5da05c101d57ecfe9b3f33840b1e9f4847c5ba78b",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -12880.0,
+          -5621.07958984375,
+          1295.92919921875
+        ],
+        "rotationEuler": [
+          0.9075712561607361,
+          -0.0,
+          0.0
+        ],
+        "type": "PERSP",
+        "lens": 38.059137628358556,
+        "orthoScale": 6,
+        "sensorFit": "VERTICAL",
+        "sensorWidth": 36,
+        "sensorHeight": 24,
+        "shift": [
+          0,
+          0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 0.0,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-churchill-meadows-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "1775a7057ad02b60874167216a1eda187abbe4dcc247f9b254c36328480b1ecf"
+    },
+    {
+      "id": "wide/citywide-future.png",
+      "district": "citywide",
+      "scenario": "future",
+      "sceneSHA256": "7ffa5335d86cad14117657bfb475d6684ea735aec291e4445c94afeb8555edac",
+      "nativeImageSHA256": "a9989708fd4373542cc178deb4f05ff95c3d55798f79fcdacd8f98895ed83fc8",
+      "nativePixels": [
+        3840,
+        2400
+      ],
+      "camera": {
+        "location": [
+          6879.857421875,
+          -8454.865234375,
+          19130.17578125
+        ],
+        "rotationEuler": [
+          0.6805946230888367,
+          -6.28381968681424e-09,
+          0.858712911605835
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 33151.388515624996,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          -0.045
+        ],
+        "clip": [
+          0.10000000149011612,
+          150000.0
+        ]
+      },
+      "northDegrees": 49.86191908922103,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-citywide-future-print.png",
+      "signedPixels": [
+        3840,
+        2400
+      ],
+      "signedSHA256": "a1b6b754fe92143efba7a8d16de0a659ceb38e813877e319c4184f5d73378804"
+    },
+    {
+      "id": "wide/clarkson-existing.png",
+      "district": "clarkson",
+      "scenario": "existing",
+      "sceneSHA256": "95b9fc1177238112a9cb57c47972b7148b6d5bf95d65a6e8b2d8d75048c4f68a",
+      "nativeImageSHA256": "c9d459991956e26f89ae0f414b930fdb114f8992b69360deb10be7c8f1d07e60",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -2565.0,
+          -11155.0,
+          1950.0
+        ],
+        "rotationEuler": [
+          1.1195236444473267,
+          8.90864839675487e-08,
+          0.6132075786590576
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2100.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 58.20806805344421,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-clarkson-existing-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "12ea217d19a58444177cdcc31d1b55bedb144e4e6855f8774095e0115529b606"
+    },
+    {
+      "id": "wide/clarkson-future.png",
+      "district": "clarkson",
+      "scenario": "future",
+      "sceneSHA256": "c091fda92238ec95b580582c29113eb22aea6bbf5836cbf44f29c26d12a8cc39",
+      "nativeImageSHA256": "116f986c22b2396a6def9842c234add4605f4b7d61e5dc6c6023d77206499b8c",
+      "nativePixels": [
+        3840,
+        2400
+      ],
+      "camera": {
+        "location": [
+          -2565.0,
+          -11155.0,
+          1950.0
+        ],
+        "rotationEuler": [
+          1.1195236444473267,
+          8.90864839675487e-08,
+          0.6132075786590576
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2100.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 58.20806805344421,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-clarkson-future-print.png",
+      "signedPixels": [
+        3840,
+        2400
+      ],
+      "signedSHA256": "1a759d8a4f3673105730578746c91d711fce0b2c0c3ea26688d037206c55e7e6"
+    },
+    {
+      "id": "wide/clarkson-portrait-future.png",
+      "district": "clarkson",
+      "scenario": "future",
+      "sceneSHA256": "c091fda92238ec95b580582c29113eb22aea6bbf5836cbf44f29c26d12a8cc39",
+      "nativeImageSHA256": "ccf09abd18c355ac295e1e5c5de006a51497352d53b5571ac8cc71f1c84f101c",
+      "nativePixels": [
+        3840,
+        2400
+      ],
+      "camera": {
+        "location": [
+          -3945.0,
+          -10580.0,
+          1720.0
+        ],
+        "rotationEuler": [
+          1.025679111480713,
+          -3.738021092658528e-08,
+          0.3080528676509857
+        ],
+        "type": "PERSP",
+        "lens": 52.0,
+        "orthoScale": 2100.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 31.53297941783046,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-clarkson-portrait-future-print.png",
+      "signedPixels": [
+        3840,
+        2400
+      ],
+      "signedSHA256": "79b9fc27d80469f0cfc425633debe0b9670b33323f080e061933f7d6dc3abab3"
+    },
+    {
+      "id": "wide/clarkson-skyline-future.png",
+      "district": "clarkson",
+      "scenario": "future",
+      "sceneSHA256": "c091fda92238ec95b580582c29113eb22aea6bbf5836cbf44f29c26d12a8cc39",
+      "nativeImageSHA256": "7c04522be8f2426cb3746f87f8660d3bb09634e690b7477c142ab30a7708b1a3",
+      "nativePixels": [
+        3840,
+        1400
+      ],
+      "camera": {
+        "location": [
+          -3750.0,
+          -14050.0,
+          1620.0
+        ],
+        "rotationEuler": [
+          1.3290215730667114,
+          4.5336436826914905e-09,
+          0.16514869034290314
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2500.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 34.85464562815281,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-clarkson-skyline-future-print.png",
+      "signedPixels": [
+        3840,
+        1400
+      ],
+      "signedSHA256": "b079efafe8d11a536f03a0bc507fe9fc3fc8fde43229b350c0b1dee98ac9527f"
+    },
+    {
+      "id": "wide/cooksville-future.png",
+      "district": "cooksville",
+      "scenario": "future",
+      "sceneSHA256": "deb0b2862edf3bd1e25f226a3494f7ec9ac2be3c03f1e6a436d1c441e9569479",
+      "nativeImageSHA256": "c008df329e07cbd8214c1f8c69b35f9e6466e74a7a35ed16f1a11cbbf52ac940",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -1155.0,
+          -4300.0,
+          3930.0
+        ],
+        "rotationEuler": [
+          0.813826322555542,
+          -2.113767116895815e-08,
+          0.6086893081665039
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2900.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 45.43403410946911,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-cooksville-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "e9ac934a61cc3fca4df4f268e29ffcd98edaa86cbc0c32e378ce092e34345e97"
+    },
+    {
+      "id": "wide/cooksville-portrait-future.png",
+      "district": "cooksville",
+      "scenario": "future",
+      "sceneSHA256": "deb0b2862edf3bd1e25f226a3494f7ec9ac2be3c03f1e6a436d1c441e9569479",
+      "nativeImageSHA256": "8f7bab064f080f1c2609d7a10a78fbaf8063a0c7ad9aa5b660e26449fcf72a36",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -2825.0,
+          -2980.0,
+          1390.0
+        ],
+        "rotationEuler": [
+          1.025679111480713,
+          -3.738021092658528e-08,
+          0.3080528676509857
+        ],
+        "type": "PERSP",
+        "lens": 52.0,
+        "orthoScale": 2900.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 31.535491192522727,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-cooksville-portrait-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "db13cbaf8b07a8cff5e6915ecc5524f5d7e8416d41d2977ccd1835b22eb36391"
+    },
+    {
+      "id": "wide/dixie-applewood-future.png",
+      "district": "dixie-applewood",
+      "scenario": "future",
+      "sceneSHA256": "e0ea304fd4750f7e6cbe22c2a7637aa52cbeec69186787ba8591a8700b2ad367",
+      "nativeImageSHA256": "0c72dc92778e41696a30e6980448a9e860e53d140c230dd1892447fdd8771102",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          1666.236083984375,
+          -1683.59716796875,
+          2899.72314453125
+        ],
+        "rotationEuler": [
+          1.119523525238037,
+          -8.554389552273278e-08,
+          0.6132075190544128
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2400,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 58.20954944183734,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-dixie-applewood-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "76f34fb25a3db972df35652c1d23667de93c3b885552526d4f60be3abadabba1"
+    },
+    {
+      "id": "wide/downtown-existing.png",
+      "district": "downtown",
+      "scenario": "existing",
+      "sceneSHA256": "0fd6691734b1e5e537292f717880f45fb1887ae73be22c125385bffa691f5fa4",
+      "nativeImageSHA256": "e68001e558026c6161fdaebadc318baf1ac5407484018780f38be0fb3f48322f",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -3900.0,
+          -1400.0,
+          1150.0
+        ],
+        "rotationEuler": [
+          1.1271812915802002,
+          -2.9152687375244568e-08,
+          0.7690063714981079
+        ],
+        "type": "PERSP",
+        "lens": 48,
+        "orthoScale": 6.0,
+        "sensorFit": "VERTICAL",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1.0,
+          160000.0
+        ]
+      },
+      "northDegrees": 66.08264806109014,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-downtown-existing-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "5463b3a6bb52d826ffa365d3d250dab87eb72e0163cc86b9c569f3d90d786132"
+    },
+    {
+      "id": "wide/downtown-future.png",
+      "district": "downtown",
+      "scenario": "future",
+      "sceneSHA256": "3d544484d736a756c1d98b10d4f4664841f6b3a51db10a7a3d01df57deb6a871",
+      "nativeImageSHA256": "85f17315447014f15fe9d921c42df2f451de788fa6bbf1742206413ccd6ef15f",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -3900.0,
+          -1400.0,
+          1150.0
+        ],
+        "rotationEuler": [
+          1.1271812915802002,
+          -2.9152687375244568e-08,
+          0.7690063714981079
+        ],
+        "type": "PERSP",
+        "lens": 48,
+        "orthoScale": 6.0,
+        "sensorFit": "VERTICAL",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1.0,
+          160000.0
+        ]
+      },
+      "northDegrees": 66.08264806109014,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-downtown-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "ea86416ac68566f2ed56fc6c6c142db21035d5b3037d23bfbc40f46c98ea13f3"
+    },
+    {
+      "id": "wide/downtown-junction-future.png",
+      "district": "downtown",
+      "scenario": "future",
+      "sceneSHA256": "1c1a479e9f0cf7b1af999c26154acc352e51f1f9e5c513347a5fc4dda9278804",
+      "nativeImageSHA256": "f0574f00283747589ff7a30ef38d73cb116a12bce1b70fc831003836c04784ff",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -4936.0,
+          350.0,
+          1050.0
+        ],
+        "rotationEuler": [
+          0.8808136582374573,
+          7.533493828759674e-08,
+          0.6000502705574036
+        ],
+        "type": "PERSP",
+        "lens": 55.0,
+        "orthoScale": 2350.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 47.067767816342666,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-downtown-junction-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "3f84d6a6112931eb197d6c7ea2c90383357686ceab4f9b969f5faabeba35deca"
+    },
+    {
+      "id": "wide/downtown-landmark-future.png",
+      "district": "downtown",
+      "scenario": "future",
+      "sceneSHA256": "3d544484d736a756c1d98b10d4f4664841f6b3a51db10a7a3d01df57deb6a871",
+      "nativeImageSHA256": "905cf7e2f6492644a23cf3d5288f0ff9469dc22d0557fad39bd42dac6743a57d",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -4007,
+          1263,
+          490
+        ],
+        "rotationEuler": [
+          1.2387851476669312,
+          -4.277236698158049e-08,
+          2.10252046585083
+        ],
+        "type": "PERSP",
+        "lens": 55,
+        "orthoScale": 6,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36,
+        "sensorHeight": 24,
+        "shift": [
+          0,
+          0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 100.85503953994879,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-downtown-landmark-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "d5433de83b16bfd7f3e81fd41a333c61c25bb0bebf945e03c97628f26929a6eb"
+    },
+    {
+      "id": "wide/downtown-portrait-future.png",
+      "district": "downtown",
+      "scenario": "future",
+      "sceneSHA256": "3d544484d736a756c1d98b10d4f4664841f6b3a51db10a7a3d01df57deb6a871",
+      "nativeImageSHA256": "a8c3aba6b259d7fc502e375ca5d6d38d987ee8dc1eb7ae52f49713933b688636",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -4510.0,
+          -2970.0,
+          1775.0
+        ],
+        "rotationEuler": [
+          1.0903023481369019,
+          -4.4030654677840175e-09,
+          0.21336868405342102
+        ],
+        "type": "PERSP",
+        "lens": 65.40880584716797,
+        "orthoScale": 6.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          -0.02784905582666397,
+          -0.06878930330276489
+        ],
+        "clip": [
+          0.10000000149011612,
+          150000.0
+        ],
+        "matrixWorld": [
+          [
+            0.9773231148719788,
+            -0.09787607938051224,
+            0.1877758502960205,
+            -4510.0
+          ],
+          [
+            0.21175338327884674,
+            0.45173564553260803,
+            -0.8666576147079468,
+            -2970.0
+          ],
+          [
+            4.4030654677840175e-09,
+            0.8867667317390442,
+            0.4622172713279724,
+            1775.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "northDegrees": 24.91450587107272,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-downtown-portrait-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "f4ad9fad499c733ca2d7a230fe93e01aa0caa8b69ccbfa3cf88245d7189f3828"
+    },
+    {
+      "id": "wide/downtown-skyline-construction.png",
+      "district": "downtown",
+      "scenario": "construction",
+      "sceneSHA256": "0a417a5223db6c1d543f826a49aae8d0bcc4949261a96167ae854719ead3e9b5",
+      "nativeImageSHA256": "1d14b1e9c247477f1d04a85bb8a842ea8b2ed77748f88f8c3689fc85c8099c8e",
+      "nativePixels": [
+        6144,
+        3456
+      ],
+      "camera": {
+        "location": [
+          -2760.0,
+          -3370.0,
+          1925.0
+        ],
+        "rotationEuler": [
+          1.1727452278137207,
+          -3.787719915493426e-09,
+          0.6146630644798279
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 1797.75,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          -0.07488889247179031,
+          0.03574346378445625
+        ],
+        "clip": [
+          0.1,
+          150000
+        ]
+      },
+      "northDegrees": 61.228497030578694,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-downtown-skyline-construction-print.png",
+      "signedPixels": [
+        6144,
+        3456
+      ],
+      "signedSHA256": "01298a077dd35e50598d05b55a4a1ca426650d41c9e60fcd6cfcb06c2378494d"
+    },
+    {
+      "id": "wide/downtown-skyline-existing.png",
+      "district": "downtown",
+      "scenario": "existing",
+      "sceneSHA256": "0fd6691734b1e5e537292f717880f45fb1887ae73be22c125385bffa691f5fa4",
+      "nativeImageSHA256": "ea8b5af73c09e8f4572719056ed0fbbcfee52a73b672dd76d659df517aa22b6c",
+      "nativePixels": [
+        6144,
+        3456
+      ],
+      "camera": {
+        "location": [
+          -2760.0,
+          -3370.0,
+          1925.0
+        ],
+        "rotationEuler": [
+          1.1727452278137207,
+          -3.787719915493426e-09,
+          0.6146630644798279
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 1797.75,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          -0.07488889247179031,
+          0.03574346378445625
+        ],
+        "clip": [
+          0.1,
+          150000
+        ]
+      },
+      "northDegrees": 61.228497030578694,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-downtown-skyline-existing-print.png",
+      "signedPixels": [
+        6144,
+        3456
+      ],
+      "signedSHA256": "6a507076b9076c07a8695cbfa54d7ae88829d041286826d5f7e5928c35086eef"
+    },
+    {
+      "id": "wide/downtown-skyline-future.png",
+      "district": "downtown",
+      "scenario": "future",
+      "sceneSHA256": "3d544484d736a756c1d98b10d4f4664841f6b3a51db10a7a3d01df57deb6a871",
+      "nativeImageSHA256": "07ccb9a8ebb3d36bf087580c5e64e57644c5120a775aa44984bee40f41f38924",
+      "nativePixels": [
+        6144,
+        3456
+      ],
+      "camera": {
+        "location": [
+          -2760.0,
+          -3370.0,
+          1925.0
+        ],
+        "rotationEuler": [
+          1.1727452278137207,
+          -3.787719915493426e-09,
+          0.6146630644798279
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 1797.75,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          -0.07488889247179031,
+          0.03574346378445625
+        ],
+        "clip": [
+          0.1,
+          150000
+        ]
+      },
+      "northDegrees": 61.228497030578694,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-downtown-skyline-future-print.png",
+      "signedPixels": [
+        6144,
+        3456
+      ],
+      "signedSHA256": "a5c7bf95ae800089ff56f4eda33fe598cb384d28f97db706e16cca99d5f68ad1"
+    },
+    {
+      "id": "wide/east-credit-creditview-future.png",
+      "district": "east-credit-creditview",
+      "scenario": "future",
+      "sceneSHA256": "581be9d94391d324076fb3dae22388e5d8c9778d74a66b9988cfce25b3f83f96",
+      "nativeImageSHA256": "7910db6aa800fa8d0a642df03ce65b91c14363dcec0a61e6ed390969420ae891",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -8800,
+          -1450,
+          680
+        ],
+        "rotationEuler": [
+          1.0275347189515331,
+          0,
+          -0.6747409422235526
+        ],
+        "type": "PERSP",
+        "lens": 38.059137628358556,
+        "orthoScale": 6,
+        "sensorFit": "VERTICAL",
+        "sensorWidth": 36,
+        "sensorHeight": 24,
+        "shift": [
+          0,
+          0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 302.87025797381636,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-east-credit-creditview-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "d92502a44c7bbd199e7ff824d8c4e4d89d62aa0a36a8f21ca69ec2f44c4eef8c"
+    },
+    {
+      "id": "wide/erin-mills-future.png",
+      "district": "erin-mills",
+      "scenario": "future",
+      "sceneSHA256": "bb02ee00b5779a7bfa586b3bdf5a99c64471d1ffc251d568551fd3de1ee04466",
+      "nativeImageSHA256": "4dfba3933556ac26a71ccedadd89b78568cc8cf6443d7eb8bb8c6896726c1d7e",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -8333.3486328125,
+          -7363.15771484375,
+          2251.969970703125
+        ],
+        "rotationEuler": [
+          1.119523525238037,
+          -8.554389552273278e-08,
+          0.6132075190544128
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 3380.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 58.20695543657979,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-erin-mills-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "e54bf313ce8ed9e43080502335d6214b280103c65175a6d23a2305e0fd75420b"
+    },
+    {
+      "id": "wide/erindale-future.png",
+      "district": "erindale",
+      "scenario": "future",
+      "sceneSHA256": "3b0cdd51e07b6c488c3c046bb45b0144baa0abc5de065bf22d810f682e39ecfe",
+      "nativeImageSHA256": "bf33d67d9b167ace83ddf66b627b328cae77db43c5874e4b41d1a3f5459659ad",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -4861.84765625,
+          -7949.49609375,
+          2135.800048828125
+        ],
+        "rotationEuler": [
+          1.119523525238037,
+          -8.554389552273278e-08,
+          0.6132075190544128
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 3250.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 58.23351025259012,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-erindale-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "de0327de2a437eff811c99701336b4dbc8c52be2d357793a2cf955be9c472ca4"
+    },
+    {
+      "id": "wide/heartland-future.png",
+      "district": "heartland",
+      "scenario": "future",
+      "sceneSHA256": "d31e3ba89665061241a1a1c298d41c213cb3ab57aa352eb81304501bd6ce4b6e",
+      "nativeImageSHA256": "fb1d740de7b739a57db15488557e45ca1957ac44bf4ecb78351baaeccbc4d583",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -6177.1767578125,
+          88.200927734375,
+          2332.18994140625
+        ],
+        "rotationEuler": [
+          1.119523525238037,
+          -7.44755865866864e-08,
+          0.6132074594497681
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 3510.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 58.21511806560153,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-heartland-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "d154eb40409243c27c76dd4d46e82e4a2f6a8935aed969bb350d1cfeb60779dc"
+    },
+    {
+      "id": "wide/lakeview-existing.png",
+      "district": "lakeview",
+      "scenario": "existing",
+      "sceneSHA256": "9fe7f9a31bd3269b958f777877514b4c4e0b145dee5a712019817621091361e5",
+      "nativeImageSHA256": "b192c489eb8e625bada3886b8f83d3c21d6e8c9d37d3069583d915000a3c9d1f",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          2650.0,
+          -5580.0,
+          2060.0
+        ],
+        "rotationEuler": [
+          1.0961143970489502,
+          -3.869120490662681e-08,
+          0.32175058126449585
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2772.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 36.11101372319979,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-lakeview-existing-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "ea66b4c4b3b56181dc0efc8563b6e0bc93e0c000f4c62bfd41050debadd24ead"
+    },
+    {
+      "id": "wide/lakeview-future.png",
+      "district": "lakeview",
+      "scenario": "future",
+      "sceneSHA256": "0986d6d2e023f6de2cf81ee2b26edf338dfdca70aae258f383926e4d71c76eb9",
+      "nativeImageSHA256": "ce09164d29be3f5232edef0886c548c7c6f1c560b6ff1243b174b9834597c7ac",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          2650.0,
+          -5580.0,
+          2060.0
+        ],
+        "rotationEuler": [
+          1.0961143970489502,
+          -3.869120490662681e-08,
+          0.32175058126449585
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2772.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 36.11101372319979,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-lakeview-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "0a154a9247bab31479983ba02149f5c661696839a37d3be5315d2e690c671e31"
+    },
+    {
+      "id": "wide/lakeview-portrait-future.png",
+      "district": "lakeview",
+      "scenario": "future",
+      "sceneSHA256": "0986d6d2e023f6de2cf81ee2b26edf338dfdca70aae258f383926e4d71c76eb9",
+      "nativeImageSHA256": "7ce219d05e1e59c2af2e3ad8cd3c2cfed3232b0d56dc378172b809c3d83fa1f4",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          2111.6591796875,
+          -5237.4306640625,
+          1760.0
+        ],
+        "rotationEuler": [
+          1.0823227167129517,
+          -3.214886135083361e-08,
+          0.2606024146080017
+        ],
+        "type": "PERSP",
+        "lens": 65,
+        "orthoScale": 2800.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 29.608553370389302,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-lakeview-portrait-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "edb18817ecea1a6d9647cc3da908bebc103abb76e4ef92c0a4730c6291ee2241"
+    },
+    {
+      "id": "wide/lakeview-skyline-future.png",
+      "district": "lakeview",
+      "scenario": "future",
+      "sceneSHA256": "0986d6d2e023f6de2cf81ee2b26edf338dfdca70aae258f383926e4d71c76eb9",
+      "nativeImageSHA256": "79075451b1b093427eb631387ec01a0e14821509955e3e56e4268570133cdc19",
+      "nativePixels": [
+        6144,
+        2240
+      ],
+      "camera": {
+        "location": [
+          2272.0654296875,
+          -8433.08203125,
+          1620.0
+        ],
+        "rotationEuler": [
+          1.3290215730667114,
+          4.5336436826914905e-09,
+          0.16514869034290314
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2800.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 34.822709939176946,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-lakeview-skyline-future-print.png",
+      "signedPixels": [
+        6144,
+        2240
+      ],
+      "signedSHA256": "c904d9db6416419a220abe26827e2ce332114c4e688518aecca5ae929564d451"
+    },
+    {
+      "id": "wide/lisgar-future.png",
+      "district": "lisgar",
+      "scenario": "future",
+      "sceneSHA256": "c31993b2bf9b4f68cd3a154eacbb79fec961408ac965baae225c5b400af49a3e",
+      "nativeImageSHA256": "4f853b1ec8188c9c4bfe3ea1e1ca35d9dc6c2702a1fe576f4c811796b97bf544",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -16000.0,
+          -2754.3046875,
+          1382.0926513671875
+        ],
+        "rotationEuler": [
+          0.9075711369514465,
+          -0.0,
+          0.0
+        ],
+        "type": "PERSP",
+        "lens": 38.059137628358556,
+        "orthoScale": 6,
+        "sensorFit": "VERTICAL",
+        "sensorWidth": 36,
+        "sensorHeight": 24,
+        "shift": [
+          0,
+          0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 0.0,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-lisgar-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "622903989dcb051f56be831a3aded42fec6bf3a8b61b222b31b9f35ef952c76a"
+    },
+    {
+      "id": "wide/lorne-park-future.png",
+      "district": "lorne-park",
+      "scenario": "future",
+      "sceneSHA256": "ad5daffd0b4d94f15424f007a2727d4d81e3949ed7998542f7e5a770e626c8ac",
+      "nativeImageSHA256": "07627331342571fdadaffedcd34de631e7f8251212b25c32e41cba4774d5825f",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -2315.772921,
+          -9980.611197,
+          6274.611197
+        ],
+        "rotationEuler": [
+          0.6283185307179586,
+          0,
+          0.3141592653589793
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 850,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0,
+          0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 21.880274256489884,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-lorne-park-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "ce5c8aec1ce4007000b565d4b99ab106a6ca13bd1080af386ad883ec9d426415"
+    },
+    {
+      "id": "wide/malton-future.png",
+      "district": "malton",
+      "scenario": "future",
+      "sceneSHA256": "479ac78bd240669410afc8ae0b5da7fefa3fe078be5324e801222de5b1556d68",
+      "nativeImageSHA256": "0f7dd667f95903ba285d72e10e90eee5c9e1351fa97b067babef920658b57051",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -4449.869278065879,
+          17231.182192582583,
+          2045.0
+        ],
+        "rotationEuler": [
+          1.1065936088562012,
+          1.1646816844290697e-08,
+          2.8198421001434326
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2360,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 143.32203104654866,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-malton-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "0576875e4528238f5c98efd34172237e230faee4b32c893689e7b3e324afdd62"
+    },
+    {
+      "id": "wide/meadowvale-future.png",
+      "district": "meadowvale",
+      "scenario": "future",
+      "sceneSHA256": "c34ca0104d363d690f741fc50d3be851a81707682fd64fd652054bc74befded4",
+      "nativeImageSHA256": "e28a15262fe51f91daa1ba021edbc117f6e0c765edafb33eaea02b2924213731",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -10717.779296875,
+          -4035.8330078125,
+          2746.139892578125
+        ],
+        "rotationEuler": [
+          1.119523525238037,
+          -5.537074798667163e-08,
+          0.6132074594497681
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 3680.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 58.211024843071414,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-meadowvale-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "ba500db09d34a0c96c9888d851b733f3281d0f8b7185fd21a4d78f4826378ebd"
+    },
+    {
+      "id": "wide/meadowvale-village-future.png",
+      "district": "meadowvale-village",
+      "scenario": "future",
+      "sceneSHA256": "444df4f0a4f74109b4cbba8bc5a96b6405e0bbce0b3770772d9aae6ad3de3aa7",
+      "nativeImageSHA256": "77f0281880a91c539dbec407aa99029350abc24b165795c3081152d272de0252",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -11698.101276956613,
+          3009.2290323816783,
+          916.8714173889159
+        ],
+        "rotationEuler": [
+          0.9075712561607361,
+          -0.0,
+          0.0
+        ],
+        "type": "PERSP",
+        "lens": 38.059137628358556,
+        "orthoScale": 6,
+        "sensorFit": "VERTICAL",
+        "sensorWidth": 36,
+        "sensorHeight": 24,
+        "shift": [
+          0,
+          0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 0.0,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-meadowvale-village-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "9df7a4eb0f493de5fad8692d95a9d325f780bc62beb515be762f9dc6b0515ad2"
+    },
+    {
+      "id": "wide/port-credit-existing.png",
+      "district": "port-credit",
+      "scenario": "existing",
+      "sceneSHA256": "dae345f5aed865ba02ab9e3c0da2004e1f2eb6fdd52a478d10652d8ea442689b",
+      "nativeImageSHA256": "7959d3322357093fcf273e6304d2065493e4286032e01a689c7bbff8b3abf247",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          1750.0,
+          -4850.0,
+          2140.0
+        ],
+        "rotationEuler": [
+          1.0131158828735352,
+          -2.5438353645768075e-08,
+          1.3405768871307373
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2250.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          -0.125
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 83.7057648753497,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-port-credit-existing-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "1817a994dbd77f909fd12bc419f46db4902e1bc40a976bb7625a373be25f6f76"
+    },
+    {
+      "id": "wide/port-credit-future.png",
+      "district": "port-credit",
+      "scenario": "future",
+      "sceneSHA256": "c53c5ed09c6dfdce0cd3d48179157dfc372f8a5f888844f0a550db1b6bffc40c",
+      "nativeImageSHA256": "f71ac431d2a99dcee82de1456737b07306b19f506eca68af0e49ad7b5fb5fb99",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          1750.0,
+          -4850.0,
+          2140.0
+        ],
+        "rotationEuler": [
+          1.0131158828735352,
+          -2.5438353645768075e-08,
+          1.3405768871307373
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2250.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          -0.125
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 83.7057648753497,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-port-credit-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "2ae2ac1fa1751a7c4d9dfb5d08a6815a0fd014818d9f2d50803e99bef9f75150"
+    },
+    {
+      "id": "wide/port-credit-portrait-future.png",
+      "district": "port-credit",
+      "scenario": "future",
+      "sceneSHA256": "c53c5ed09c6dfdce0cd3d48179157dfc372f8a5f888844f0a550db1b6bffc40c",
+      "nativeImageSHA256": "6b4a57705ce6a84766d8cc19db856dbd0dd6eade5972b394f74244e59a702017",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          1700.0,
+          -4830.0,
+          1930.0
+        ],
+        "rotationEuler": [
+          1.045182704925537,
+          -1.2683118200129684e-07,
+          1.333422064781189
+        ],
+        "type": "PERSP",
+        "lens": 52.0,
+        "orthoScale": 2250.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          -0.125
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 82.05667853599192,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-port-credit-portrait-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "fd641e692a62e4185ac1d7cfca232b8ee7a246c1a73ee089a9bfb65e152a08b0"
+    },
+    {
+      "id": "wide/port-credit-skyline-future.png",
+      "district": "port-credit",
+      "scenario": "future",
+      "sceneSHA256": "c53c5ed09c6dfdce0cd3d48179157dfc372f8a5f888844f0a550db1b6bffc40c",
+      "nativeImageSHA256": "bdb6f72bf857116f6947df9df65aa1afe230a11e7758eca25e36707a0e8759af",
+      "nativePixels": [
+        6144,
+        2240
+      ],
+      "camera": {
+        "location": [
+          3700.0,
+          -4750.0,
+          1300.0
+        ],
+        "rotationEuler": [
+          1.3371458053588867,
+          1.6381083867145207e-07,
+          1.441521406173706
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2300.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          -0.1
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 88.52268003018594,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-port-credit-skyline-future-print.png",
+      "signedPixels": [
+        6144,
+        2240
+      ],
+      "signedSHA256": "824295402513b7b34951873ce6dacf1d5378f78e865133a4f8a000e330e7367c"
+    },
+    {
+      "id": "wide/streetsville-future.png",
+      "district": "streetsville",
+      "scenario": "future",
+      "sceneSHA256": "c8db1a04a59204d8a8dfdff905bce921d596ec0c6d6f296eef1c36bc832a97a2",
+      "nativeImageSHA256": "1021602118e6a62efdb7f9d966d3937d734f70db5a62209227778d519d69e0fd",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -9016.361328125,
+          -3692.0205078125,
+          1843.52490234375
+        ],
+        "rotationEuler": [
+          1.119523525238037,
+          1.076092637219972e-08,
+          0.6132075786590576
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2730.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 58.2062959228233,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-streetsville-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "079fbccc449198e4352734a44203525ad534a9cd14ced575dc4068ae6d5bb60a"
+    },
+    {
+      "id": "wide/uptown-future.png",
+      "district": "uptown",
+      "scenario": "future",
+      "sceneSHA256": "5e7f8b6ff2ebbe4367c639028cb0ecdf29afea372eac579f2f08c645cd325054",
+      "nativeImageSHA256": "80c154ab49c141a2d2552b90d71b55657b202f802f720a78e7a15624391e3044",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -4158.24365234375,
+          -1118.239990234375,
+          2005.18994140625
+        ],
+        "rotationEuler": [
+          1.1195236444473267,
+          8.90864839675487e-08,
+          0.6132075786590576
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "orthoScale": 2576.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 58.21500262993453,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-uptown-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "a2e9973396e1b72cfcb91257b5d9eaa1bf8fc1bb090420e8422d9e0d35d1729d"
+    },
+    {
+      "id": "wide/uptown-portrait-future.png",
+      "district": "uptown",
+      "scenario": "future",
+      "sceneSHA256": "5e7f8b6ff2ebbe4367c639028cb0ecdf29afea372eac579f2f08c645cd325054",
+      "nativeImageSHA256": "b421907d74ca7a84bcc1d4d5b6eb2d8011aeb73e9f012d0206942f6fec27a947",
+      "nativePixels": [
+        6144,
+        3840
+      ],
+      "camera": {
+        "location": [
+          -5538.24365234375,
+          -543.239990234375,
+          1775.18994140625
+        ],
+        "rotationEuler": [
+          1.025679111480713,
+          -3.738021092658528e-08,
+          0.3080528676509857
+        ],
+        "type": "PERSP",
+        "lens": 52.0,
+        "orthoScale": 2576.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          1,
+          160000
+        ]
+      },
+      "northDegrees": 31.53490608387716,
+      "signedPNG": "../gallery/edition-20261121/originals/wide-uptown-portrait-future-print.png",
+      "signedPixels": [
+        6144,
+        3840
+      ],
+      "signedSHA256": "0e0aa1d462b00bb848fee3c02b267f5e0960f0b15426f27891aa91b8d090cb21"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "durationSeconds": 12,
+  "historicalFilmPreserved": true,
+  "frames": [
+    {
+      "scenario": "existing",
+      "startSeconds": 0,
+      "sourceImageSHA256": "ea8b5af73c09e8f4572719056ed0fbbcfee52a73b672dd76d659df517aa22b6c",
+      "sourceSceneSHA256": "0fd6691734b1e5e537292f717880f45fb1887ae73be22c125385bffa691f5fa4",
+      "presentationSHA256": "d5517ae26fbdd2bb8fa095e1ed8a2185c43f06f9e415a00e8fbe962ddef5bafa",
+      "renderedUTC": "2026-11-21T05:23:55.856728+00:00",
+      "signedImageURL": "gallery/edition-20261121/originals/wide-downtown-skyline-existing-print.png",
+      "signedImageSHA256": "6a507076b9076c07a8695cbfa54d7ae88829d041286826d5f7e5928c35086eef"
+    },
+    {
+      "scenario": "construction",
+      "startSeconds": 4,
+      "sourceImageSHA256": "1d14b1e9c247477f1d04a85bb8a842ea8b2ed77748f88f8c3689fc85c8099c8e",
+      "sourceSceneSHA256": "0a417a5223db6c1d543f826a49aae8d0bcc4949261a96167ae854719ead3e9b5",
+      "presentationSHA256": "e42c78c0bf054d8e14d94704a86186fa86510c45db85c4ca062dd0feb2e5e62f",
+      "renderedUTC": "2026-11-21T05:34:41.302826+00:00",
+      "signedImageURL": "gallery/edition-20261121/originals/wide-downtown-skyline-construction-print.png",
+      "signedImageSHA256": "01298a077dd35e50598d05b55a4a1ca426650d41c9e60fcd6cfcb06c2378494d"
+    },
+    {
+      "scenario": "future",
+      "startSeconds": 8,
+      "sourceImageSHA256": "07ccb9a8ebb3d36bf087580c5e64e57644c5120a775aa44984bee40f41f38924",
+      "sourceSceneSHA256": "3d544484d736a756c1d98b10d4f4664841f6b3a51db10a7a3d01df57deb6a871",
+      "presentationSHA256": "f297257d5a9984bfaf66e854d26458e16b8ffe834f8adfcb42a6fdd3bd6757a2",
+      "renderedUTC": "2026-11-21T05:43:59.932179+00:00",
+      "signedImageURL": "gallery/edition-20261121/originals/wide-downtown-skyline-future-print.png",
+      "signedImageSHA256": "a5c7bf95ae800089ff56f4eda33fe598cb384d28f97db706e16cca99d5f68ad1"
+    }
+  ],
+  "film": {
+    "url": "gallery/edition-20261121/Downtown-film.mp4",
+    "bytes": 1628643,
+    "sha256": "49e03ab7ba61db8437cd6fa40d918e622fa519c73f3ba3a99be5fa5315cb6481"
+  },
+  "poster": {
+    "url": "gallery/edition-20261121/Downtown-film-poster.webp",
+    "bytes": 419410,
+    "sha256": "c8404ee82285c99b9580980059a1d498b0e6378e9f486bcb015eb7c2421795f2"
+  },
+  "credits": {
+    "url": "gallery/edition-20261121/Downtown-film-credits.txt",
+    "bytes": 2601,
+    "sha256": "a9892114db6d4d70903e8a6ab92cd36318ccb6f4542c1fef57099c6ed2371eea"
+  },
+  "frameCount": 288,
+  "fps": 24
+}

@@ -1,15 +1,7 @@
-import {statusColours,LIFECYCLE_LABELS} from './model-status-materials.js?v=20261101-status2';
-const legendItem=(key,material,color)=>Object.freeze({key,label:LIFECYCLE_LABELS[key],color:color||'#'+statusColours[material].toString(16).padStart(6,'0')});
-export const STATUS_LEGEND=Object.freeze([
-  legendItem('existing','Existing','#b8b9b6'),legendItem('under_construction','Under Construction'),
-  legendItem('approved','Approved'),legendItem('proposed','Proposed'),legendItem('unknown','Uncertain')
-]);
-export function statusLegendFor(lifecycles=[],{appearance='status'}={}){
-  if(appearance!=='status')return [];
-  const shown=new Set(lifecycles.map(value=>value==='mixed'?'unknown':value));
-  const items=[...STATUS_LEGEND,legendItem('on_hold','On Hold'),legendItem('cancelled','Cancelled')];
-  return items.filter(item=>shown.has(item.key));
-}
+import {PLANNING_LEGEND, planningStatusLegendFor} from './planning-appearance.js?v=20261121-print-key';
+
+export const STATUS_LEGEND = Object.freeze(PLANNING_LEGEND.filter(item => !['on_hold', 'cancelled'].includes(item.key)));
+export const statusLegendFor = planningStatusLegendFor;
 
 // NDC coordinates need pixel aspect scaling before they become a compass bearing.
 export function northBearingFromNDC(anchor, north, width, height) {

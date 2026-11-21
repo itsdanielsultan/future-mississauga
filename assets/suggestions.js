@@ -54,14 +54,18 @@
           get('public-replies').replaceChildren();
           feedback.textContent = '';
           composer.hidden = false;
-          status.textContent = data.items.length ? '' : 'Daniel hasn’t published a reply yet.';
+          get('published-replies').hidden = data.items.length === 0;
+          status.textContent = '';
         }
         data.items.forEach(showReply);
         cursor = data.next;
       } while (cursor);
     } catch {
       if (!cursor) {
-        feedback.textContent = 'The suggestion desk is currently closed. Please check back later.';
+        feedback.replaceChildren(document.createTextNode('The form is temporarily unavailable. '));
+        const contact = element('a','Contact Daniel');
+        contact.href = 'contact.html';
+        feedback.append(contact);
         status.textContent = 'Published replies are currently unavailable.';
       } else status.textContent = 'Some earlier replies could not be loaded. Refresh to try again.';
     }

@@ -146,7 +146,7 @@
     "address": "448 Burnhamthorpe Road West",
     "lat": 43.58331855425176,
     "lon": -79.6461356481136,
-    "status": "Under construction; structure topped",
+    "status": "Under construction; occupied in phases. Full completion unverified.",
     "statusDate": "2026-07-15",
     "storeys": [
       77
@@ -157,6 +157,18 @@
     "summary": "The crown is complete and first residents are moving in while interior work continues.",
     "modelCaveat": "The 260.29 m maximum is retained. Residential floor spacing is an illustrative 3.05 m; facade patterns, crown, pavilion, podium and placement remain approximate. This is an exterior interpretation, not a surveyed or as-built model.",
     "sources": [
+      {
+        "title": "M City development milestones, October 27, 2026",
+        "publisher": "Connect CRE Canada",
+        "url": "https://www.connectcre.ca/stories/urban-capital-acquires-final-m-city-lands-from-rogers-family/",
+        "accessed": "2026-11-21"
+      },
+      {
+        "title": "M3 unit 5107: listing describes a registered unit; no corporation number supplied",
+        "publisher": "REALTOR.ca / MLS W14146060",
+        "url": "https://www.realtor.ca/real-estate/30476130/5107-448-burnhamthorpe-road-w-mississauga-city-centre",
+        "accessed": "2026-11-21"
+      },
       {
         "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/",
         "title": "M City project",
@@ -283,7 +295,7 @@
         "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
       ]
     },
-    "lastStatusReview": "2026-09-20",
+    "lastStatusReview": "2026-11-21",
     "researchArea": "downtown",
     "district": "Downtown",
     "meshIds": [
@@ -319,7 +331,10 @@
       "source": "https://www.mcitycondos.com/construction.php"
     },
     "targetCompletionSource": "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/",
-    "crownModelled": true
+    "crownModelled": true,
+    "lifecycle": "under_construction",
+    "lifecycleReviewedOn": "2026-11-21",
+    "lifecycleNote": "The developer confirms phased move-ins and continuing commissioning. An individual suite is advertised as registered; an address-matched corporation record or completion announcement for the whole tower has not been located."
   },
   {
     "id": "mcity-4",
@@ -1221,7 +1236,7 @@
     "heightM": [
       169.75
     ],
-    "summary": "A 2026 site plan application proposes 518 homes on a 5,779 m² parcel.",
+    "summary": "The City lists a 47-storey rental tower with 518 homes at Rathburn Road West and Duke of York Boulevard. Its site plan is under review.",
     "modelCaveat": "Schematic reconstruction of the submitted T 1 building from a published architects–Alliance roof/site plan. Adjacent Block 5 towers are conceptual and are not included. Roof-zone heights follow printed labels; horizontal outlines are digitised from a raster. Three public intersection controls establish location; estimated ±5 m placement and ±1 m plan-contour uncertainty. Facades and entrances are not reconstructed.",
     "sources": [
       {
@@ -1270,6 +1285,15 @@
         "url": "https://cdn.skyrisecities.com/sites/default/files/images/articles/2026/04/60745/60745-196038.jpg",
         "publisher": "architects—Alliance via UrbanToronto",
         "claim": "Tower 1 current application site plan distinguishes retained parking and conceptual future phases."
+      },
+      {
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=APP_FILE_NO%3D%27SP+25%2F42+W4%27&outFields=APP_FILE_NO%2CSIMPLE_STATUS%2CSITE_ADDRESS%2CDESCRIPTION%2CAPPROVAL_DATE%2CRES_APTS%2CAPPLICATION_DATE&returnGeometry=false&f=pjson",
+        "title": "Block 5 Tower 1 site plan, SP 25/42 W4",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-11-21",
+        "claims": [
+          "Filed August 13, 2025 under 100 City Centre Drive. The municipal record lists 47 storeys and 518 rental units. Its status is active and the approval field is blank."
+        ]
       }
     ],
     "geometrySources": [],
@@ -1288,7 +1312,7 @@
         "https://urbantoronto.ca/forum/threads/toronto-square-one-block-5-tower-1-169-75m-47s-oxford-properties-a%E2%80%94a.43139/"
       ]
     },
-    "lastStatusReview": "2026-09-20",
+    "lastStatusReview": "2026-11-21",
     "researchArea": "downtown",
     "district": "Downtown",
     "meshIds": [],
@@ -1301,7 +1325,12 @@
       -5876.309235804294,
       89.27076721191406,
       -524.3075018313255
-    ]
+    ],
+    "sitePlan": "SP 25/42 W4",
+    "lifecycle": "proposed",
+    "lifecycleReviewedOn": "2026-11-21",
+    "statusEvidenceDate": "2026-11-21",
+    "lifecycleNote": "Active site plan SP 25/42 W4. The City has recorded no approval date."
   },
   {
     "id": "square-one-block22",
@@ -1519,8 +1548,8 @@
     "address": "151 City Centre Drive precinct",
     "lat": 43.590564588777,
     "lon": -79.63998164269084,
-    "status": "under-construction-partly-completed",
-    "statusDate": "2026-09-20",
+    "status": "EX1, EX2 and EXS are in residential use. EX3 is under construction.",
+    "statusDate": "2026-11",
     "storeys": [
       60,
       42,
@@ -1533,9 +1562,33 @@
       null,
       96
     ],
-    "summary": "Four-tower mixed-use district with stepped, rotated volumes and illuminated crowns.",
-    "modelCaveat": "The four towers have different completion states. CVU/CTBUH calls the tallest tower EX 4 and the shortest EX 3; current marketing uses EX 3 and EXS. These are aliases, not extra towers. Source full geometry is a supplied design and is not as-built proof. Native material nodes cross phases; EXS requires triangle-level spatial classification. EX 3 now follows the architect’s 66-storey description. The former 72-storey/232 m form is historical; current metre height is unverified. Its future blue crown is a retained design interpretation, not proof of completion.",
+    "summary": "EX1, EX2 and EXS are in residential use. EX3 is under construction.",
+    "modelCaveat": "The City’s textured model supplies the geometry. EX3’s current 66-storey design is represented with a source-derived shaft; its precise as-built height is unverified. The future blue crown is a design illustration. CVU/CTBUH calls the tallest and shortest towers EX4 and EX3; current marketing calls them EX3 and EXS.",
     "sources": [
+      {
+        "title": "EX1, municipal address 4015 The Exchange: PSCC 1217 registered September 15, 2026",
+        "publisher": "Condominium Authority of Ontario",
+        "url": "https://www.condoauthorityontario.ca/condo-registry-details/?id=ff38531f-56bb-f111-aaad-70a8a5ac79b5",
+        "accessed": "2026-11-21"
+      },
+      {
+        "title": "EX2, 2 Erskine Road: completed tenancy on August 26, 2026 (W13683156)",
+        "publisher": "Toronto Regional Real Estate Board listing via Condos.ca",
+        "url": "https://condos.ca/mississauga/2-erskine-road-mississauga/unit-2404-W13683156",
+        "accessed": "2026-11-21"
+      },
+      {
+        "title": "EX2: November 2026 closed suite leases, including unit 810",
+        "publisher": "Strata",
+        "url": "https://strata.ca/mississauga/exchange-district-condos-phase-2-ex2",
+        "accessed": "2026-11-21"
+      },
+      {
+        "title": "EX3: late October 2026 site photographs and a contributor’s report on the concrete work",
+        "publisher": "UrbanToronto contributors",
+        "url": "https://urbantoronto.ca/forum/threads/toronto-exchange-district-condos-m-66s-camrost-felcorp-arcadis.29739/page-78",
+        "accessed": "2026-11-21"
+      },
       {
         "url": "https://urbantoronto.ca/news/2024/12/mississaugas-high-point-passes-exchange-district-condos.57488",
         "title": "Mississauga's High Point Passes Exchange District Condos",
@@ -1662,28 +1715,33 @@
         "position": "south",
         "heightM": 201,
         "storeys": 60,
-        "status": "architecturally-topped-out",
+        "status": "registered and in residential use",
         "actualCompletionDate": null,
-        "targetCompletionDate": "2026",
+        "targetCompletionDate": null,
         "sources": [
+          "https://www.condoauthorityontario.ca/condo-registry-details/?id=ff38531f-56bb-f111-aaad-70a8a5ac79b5",
           "https://www.skyscrapercenter.com/building/exchange-district-condos-ex1/40025",
           "https://urbantoronto.ca/news/2025/05/colour-coming-mississauga-skyline-exchange-district-crowns.58641"
         ],
-        "statusReviewed": "2026-09-20"
+        "statusReviewed": "2026-11-21",
+        "lifecycle": "existing"
       },
       {
         "name": "EX2",
         "position": "east",
         "heightM": 136,
         "storeys": 42,
-        "status": "architecturally-topped-out",
+        "status": "in residential use",
         "actualCompletionDate": null,
-        "targetCompletionDate": "2026",
+        "targetCompletionDate": null,
         "sources": [
+          "https://condos.ca/mississauga/2-erskine-road-mississauga/unit-2404-W13683156",
+          "https://strata.ca/mississauga/exchange-district-condos-phase-2-ex2",
           "https://www.skyscrapercenter.com/building/exchange-district-condos-ex2/40026",
           "https://urbantoronto.ca/news/2025/05/colour-coming-mississauga-skyline-exchange-district-crowns.58641"
         ],
-        "statusReviewed": "2026-09-20"
+        "statusReviewed": "2026-11-21",
+        "lifecycle": "existing"
       },
       {
         "name": "EX3",
@@ -1693,22 +1751,24 @@
         "aliases": [
           "CTBUH EX4"
         ],
-        "status": "topped-out; mechanical roof forming",
+        "status": "Concrete topping reported; enclosure and roof work",
         "actualCompletionDate": null,
         "targetCompletionDate": "2027",
         "sources": [
+          "https://urbantoronto.ca/forum/threads/toronto-exchange-district-condos-m-66s-camrost-felcorp-arcadis.29739/page-78",
           "https://www.skyscrapercenter.com/building/exchange-district-condos-ex4/40024",
           "https://www.maedcollective.com/projects/exchange-district-ex3"
         ],
         "scheduleCaveat": "CVU lists whole-building completion in 2027. Interior designer MAED lists its lobby/amenity/corridor scope for estimated November 2026; this does not establish whole-building completion.",
-        "statusReviewed": "2026-09-26",
+        "statusReviewed": "2026-11-21",
         "historicalDesign": {
           "heightM": 232,
           "storeys": 72,
           "note": "Superseded catalogue/design values; not the revised measured height."
         },
         "statusEvidenceDate": "2026-08-28",
-        "heightCaveat": "Current exact architectural height unverified. Future model removes one native six-floor module; not a surveyed metre height."
+        "heightCaveat": "Current exact architectural height unverified. Future model removes one native six-floor module; not a surveyed metre height.",
+        "lifecycle": "under_construction"
       },
       {
         "name": "EXS",
@@ -1725,7 +1785,8 @@
           "https://rentexs.com/",
           "https://urbantoronto.ca/news/2025/05/colour-coming-mississauga-skyline-exchange-district-crowns.58641"
         ],
-        "statusReviewed": "2026-09-20"
+        "statusReviewed": "2026-11-21",
+        "lifecycle": "existing"
       }
     ],
     "coordinateSource": "Mean of the matched municipal mesh component centroids; a navigation focus, not a legal survey.",
@@ -1735,17 +1796,17 @@
       "actual": null,
       "target": "Phased; see individual towers",
       "targetIsGuaranteed": false,
-      "note": "All four towers were above grade by December 2024. EXS is completed and leasing; EX1/EX2 are architecturally topped out; EX3 is under construction. The entire district must not be labelled completed.",
-      "reviewed": "2026-09-20",
+      "note": "EX1, EX2 and EXS are in residential use. EX3 is under construction.",
+      "reviewed": "2026-11-21",
       "sources": [
-        "https://urbantoronto.ca/news/2025/05/colour-coming-mississauga-skyline-exchange-district-crowns.58641",
-        "https://rentexs.com/",
-        "https://www.skyscrapercenter.com/building/exchange-district-condos-ex1/40025",
-        "https://www.skyscrapercenter.com/building/exchange-district-condos-ex2/40026",
-        "https://www.skyscrapercenter.com/building/exchange-district-condos-ex4/40024"
+        "https://www.condoauthorityontario.ca/condo-registry-details/?id=ff38531f-56bb-f111-aaad-70a8a5ac79b5",
+        "https://condos.ca/mississauga/2-erskine-road-mississauga/unit-2404-W13683156",
+        "https://strata.ca/mississauga/exchange-district-condos-phase-2-ex2",
+        "https://urbantoronto.ca/forum/threads/toronto-exchange-district-condos-m-66s-camrost-felcorp-arcadis.29739/page-78",
+        "https://rentexs.com/"
       ]
     },
-    "lastStatusReview": "2026-09-26",
+    "lastStatusReview": "2026-11-21",
     "researchArea": "downtown",
     "district": "Downtown",
     "meshIds": [
@@ -1774,7 +1835,18 @@
     "supplementalAssetIds": [
       "exchange-recorded-topped-structures"
     ],
-    "recordedProgressModel": "Original EX1/EX2 tower geometry with the restored shared podium and a small approximate ground fit; dated construction illustration"
+    "recordedProgressModel": "EX1, EX2 and EXS appear in the existing view. The construction view adds the EX3 shaft as a design-envelope approximation. The illustrated EX3 crown is reserved for the future view.",
+    "lifecycle": "mixed",
+    "lifecycleNote": "EX1 is registered and EX2 has completed residential leases. EX3 is still under construction.",
+    "lifecycleReviewedOn": "2026-11-21",
+    "statusEvidenceDate": "2026-11",
+    "lifecycleSourceRefs": [
+      "https://www.condoauthorityontario.ca/condo-registry-details/?id=ff38531f-56bb-f111-aaad-70a8a5ac79b5",
+      "https://condos.ca/mississauga/2-erskine-road-mississauga/unit-2404-W13683156",
+      "https://strata.ca/mississauga/exchange-district-condos-phase-2-ex2",
+      "https://urbantoronto.ca/forum/threads/toronto-exchange-district-condos-m-66s-camrost-felcorp-arcadis.29739/page-78",
+      "https://rentexs.com/"
+    ]
   },
   {
     "id": "exchange-south",
@@ -1979,6 +2051,24 @@
         "claims": [
           "SP 21-119 describes two rental buildings of 40 and 60 storeys, an eight-storey podium and ground-floor retail.",
           "Withheld is a workflow status, not a cancellation."
+        ]
+      },
+      {
+        "url": "https://pub-mississauga.escribemeetings.com/FileStream.ashx?DocumentId=75635",
+        "title": "180 Burnhamthorpe, Committee of Adjustment decision A265/25",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-11-21",
+        "claims": [
+          "The signed September 2025 decision concerns bicycle parking for two high-rise buildings. It does not settle the disputed tower design."
+        ]
+      },
+      {
+        "url": "https://pub-mississauga.escribemeetings.com/FileStream.ashx?DocumentId=82895",
+        "title": "March 2026 rental funding report",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-11-21",
+        "claims": [
+          "The developer reported an underground parking permit application in January 2026. Issuance was still pending at the time of the report."
         ]
       }
     ],
@@ -2633,6 +2723,15 @@
         ],
         "verification": "read",
         "limitations": "Thread title uses 56 rather than City 55 storeys. No current start or completion date verified."
+      },
+      {
+        "url": "https://www7.mississauga.ca/documents/committees/pdc/2020/2020_02_3_PDC_Minutes.pdf",
+        "title": "Parkside Village holding application, February 2020 committee minutes",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-11-21",
+        "claims": [
+          "The three-block Amacon application appears under H-OZ 10/001 W4. These minutes do not establish present construction on Block 11 or current tower heights."
+        ]
       }
     ],
     "geometrySources": [],
@@ -2930,6 +3029,15 @@
         "url": "https://keystonecondos.ca/wp-content/uploads/SitePlan-large.jpg",
         "publisher": "Kaneff",
         "claim": "Primary site-plan image distinguishes paired stepped-corner towers, west/east relation, driveway and connected podium."
+      },
+      {
+        "url": "https://kaneff.com/apartments/keystone-condos/",
+        "title": "Keystone rental building",
+        "publisher": "Kaneff Group",
+        "accessed": "2026-11-21",
+        "claims": [
+          "The owner lists rental suites at 204 Burnhamthorpe Road East."
+        ]
       }
     ],
     "geometrySources": [],
@@ -3176,6 +3284,15 @@
         "claims": [
           "SP 22-139 at 335 Burnhamthorpe is phase 1 with two towers on a shared podium; SP 25-44 at 355 Burnhamthorpe describes three residential buildings.",
           "Withheld is a workflow status, not a cancellation."
+        ]
+      },
+      {
+        "url": "https://www.ymcagta.org/health-and-fitness/mississauga-YMCA-q-and-as",
+        "title": "Mississauga YMCA relocation",
+        "publisher": "YMCA of Greater Toronto",
+        "accessed": "2026-11-21",
+        "claims": [
+          "The operator is still using 325 Burnhamthorpe and anticipates moving to Square One in early 2027."
         ]
       }
     ],
@@ -3554,6 +3671,15 @@
         "use": "Approximate base grades",
         "license": "https://www.ontario.ca/page/open-government-licence-ontario",
         "attribution": "Contains information licensed under the Open Government Licence – Ontario."
+      },
+      {
+        "url": "https://www.mississauga.ca/publication/oz-25-17-w1-notice-of-passing-of-a-zoning-by-law-amendment-ward-1/",
+        "title": "Zoning amendment OZ 25-17 W1, notice of passing",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-11-21",
+        "claims": [
+          "This is the City’s publication page for the same January 2026 notice south of Lakeshore Road West and west of Mississauga Road South."
+        ]
       }
     ],
     "geometrySources": [
@@ -3697,7 +3823,7 @@
     "lifecycle": "mixed",
     "lifecycleReviewedOn": "2026-11-01",
     "lifecycleConfidence": "high mixed-phase principle; component-stage review needed",
-    "lifecycleNote": "Completed residences and future blocks have different statuses. Retained SP 22/103 townhouse components remain proposed until their delivery is verified.",
+    "lifecycleNote": "Brightwater includes completed homes, Bridge House under construction and future blocks. The SP 22/103 townhouse components remain proposed until their delivery is documented.",
     "lifecycleSourceRefs": [
       "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+22%2F103%27&outFields=%2A&returnGeometry=false",
       "https://experiencebrightwater.ca/",
@@ -3896,8 +4022,8 @@
     "district": "Port Credit",
     "lat": 43.5443182981248,
     "lon": -79.58969513154716,
-    "status": "Planning; construction start not verified",
-    "statusDate": "2025-12-31",
+    "status": "Under construction",
+    "statusDate": "2026-11-17",
     "storeys": [
       6,
       15,
@@ -3918,8 +4044,8 @@
         "heightM": null
       }
     ],
-    "summary": "Three connected volumes of six, fifteen and nineteen storeys with glazed bridges. Earlier marketing reported 468 homes; the year-end 2025 investor development table lists 440. This unit-count discrepancy is retained rather than treated as proof of an architectural revision.",
-    "modelCaveat": "Construction commencement was not confirmed. No official cancellation was found. Latest explicit reviewed forecast is 2030 occupancy in the year-end 2025 planning table. Source geometry remains a phase-matching issue; a financial unit count is not an exact footprint or facade source.",
+    "summary": "Three blocks of 6, 15 and 19 storeys are planned around shared spaces and an elevated pedestrian bridge. Port Credit West Village Partners announced the start of construction in November 2026.",
+    "modelCaveat": "The developer shows three connected buildings of 6, 15 and 19 storeys. Their match to the City model is based on shape and height. The announcement establishes that work has started. It gives no measurements of work already built.",
     "sources": [
       {
         "url": "https://renx.ca/index.php/brightwater-community-is-progressing-in-all-facets",
@@ -3961,6 +4087,15 @@
         "publisher": "Port Credit West Village Partners",
         "accessed": "2026-09-20",
         "claims": "Official marketed design retains 6-, 15- and 19-storey buildings; the page does not establish a completion date."
+      },
+      {
+        "url": "https://sensomagazine.ca/en/construction/mississauga-bridge-house-brightwater-port-credit-construction/",
+        "title": "Bridge House construction begins in Port Credit",
+        "publisher": "Senso Magazine, reporting Port Credit West Village Partners",
+        "accessed": "2026-11-21",
+        "claims": [
+          "The development partners announced the start of construction. architects—Alliance designed the project."
+        ]
       }
     ],
     "geometrySources": [],
@@ -3977,15 +4112,15 @@
     ],
     "actualCompletionDate": null,
     "targetCompletionDate": "2030",
-    "statusEvidenceDate": "2026-02-18",
-    "dateUncertainty": "2030 is forecast occupancy in the year-end 2025 development table, published February 2026. It supersedes earlier 2026, 2027 and 2028 marketing/financial forecasts in this review. The August 2026 earnings release did not establish a newer phase schedule or construction start.",
+    "statusEvidenceDate": "2026-11-17",
+    "dateUncertainty": "2030 was the target in the year-end 2025 financial report. The November 2026 construction announcement supplies no revised occupancy date.",
     "researchArea": "waterfront",
     "completion": {
       "actual": null,
       "target": "2030",
       "targetIsGuaranteed": false,
-      "note": "No actual or target completion date verified.",
-      "reviewed": "2026-09-20",
+      "note": "The year-end 2025 filing forecast 2030 occupancy. The construction announcement gives no updated target.",
+      "reviewed": "2026-11-21",
       "sources": []
     },
     "meshIds": [
@@ -4012,16 +4147,19 @@
       "93-748"
     ],
     "geometryCoverage": "Geometry conflict or version uncertainty; inspect evidence",
-    "lifecycle": "proposed",
-    "lifecycleReviewedOn": "2026-11-01",
-    "lifecycleConfidence": "medium; existing source record, not all facts freshly rechecked",
-    "lifecycleNote": "The dated developer filing places Bridge House in planning. A construction start has not been verified.",
+    "lifecycle": "under_construction",
+    "lifecycleReviewedOn": "2026-11-21",
+    "lifecycleConfidence": "Developer announcement. Municipal shape match is inferred.",
+    "lifecycleNote": "Port Credit West Village Partners announced that construction had started. The three-building design appears in blue in the future view.",
     "lifecycleSourceRefs": [
+      "https://sensomagazine.ca/en/construction/mississauga-bridge-house-brightwater-port-credit-construction/",
+      "https://experiencebrightwater.ca/bridge-house/",
       "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+21%2F130%27&outFields=%2A&returnGeometry=false",
       "https://renx.ca/index.php/brightwater-community-is-progressing-in-all-facets",
       "https://experiencebrightwater.ca/",
       "https://newsfile.futunn.com/public/NN-PersistNoticeAttachment/7781/20260218/SEDAR_PLUS/CSA_SEDAR_PLUS_NOTICE_RECORD_ID_2321819.pdf"
-    ]
+    ],
+    "lastStatusReview": "2026-11-21"
   },
   {
     "id": "lakeview-master",
@@ -4287,7 +4425,7 @@
     "lat": 43.572180123733276,
     "lon": -79.55547610954383,
     "status": "Under construction",
-    "statusDate": "2026-08",
+    "statusDate": "2026-11",
     "storeys": [
       19
     ],
@@ -4299,15 +4437,17 @@
         "heightM": null
       }
     ],
-    "summary": "Two nineteen-storey terraced wings around an open courtyard. Tridel reported Level 8 formwork in August 2026 and currently advertises Fall 2028 occupancy, subject to change. The future view shows the planned completed form.",
+    "summary": "Two 19-storey wings step down around an open courtyard. In November 2026, Tridel reported forming at Level 11 and windows reaching Level 5. The future view shows the planned finished buildings.",
     "modelCaveat": "Approximate independent reconstruction from Tridel site-plan/terrace artwork, registered to City SP 21/168 parcel. Two 19-storey wings and courtyard are source-supported. 61.7 m display maximum (60.8 m roof plus 0.9 m parapet) is an estimate, not a published height; height tolerance ±6 m, placement ±5 m and outline ±3 m are interpretive bounds. 5 m entrance level, 3.10 m upper floor spacing, balcony/slab/parapet thicknesses, terrace taper spacing and exterior detailing are inferred. This shows the planned finished form of a project under construction, not a measured current construction stage.",
     "sources": [
       {
         "url": "https://www.tridel.com/lakeviewvillagecondos/news/",
-        "title": "Harbourwalk construction update, August 2026",
+        "title": "Harbourwalk construction updates, August and November 2026",
         "publisher": "Tridel",
-        "accessed": "2026-09-27",
-        "claims": "Three cranes installed; forming reached Level 8; underground mechanical/electrical/masonry works and early ground-floor window installation were under way."
+        "accessed": "2026-11-21",
+        "claims": [
+          "Tridel reported Level 8 forming in August. Its November update puts forming at Level 11 and window installation at Level 5."
+        ]
       },
       {
         "url": "https://urbantoronto.ca/database/projects/harbourwalk-lakeview-village.48912",
@@ -4397,7 +4537,7 @@
     "includeInModel": true,
     "actualCompletionDate": null,
     "targetCompletionDate": "Fall 2028",
-    "statusEvidenceDate": "2026-08",
+    "statusEvidenceDate": "2026-11",
     "dateUncertainty": "Current Tridel suite pages advertise Fall 2028 occupancy, subject to change. This supersedes the earlier Summer 2028 marketing forecast. The City district-energy overview separately anticipates initial occupied buildings in early 2029; these may be different milestones. Neither date is guaranteed or an actual completion date.",
     "researchArea": "waterfront",
     "completion": {
@@ -4896,8 +5036,8 @@
       "harbourwalk-entrance-column-17-432"
     ],
     "geometryCoverage": "Modelled reference reconstruction: parcel-registered stepped wings and open courtyard; dimensions approximate",
-    "constructionStage": "Forming reached Level 8; ground-floor window installation underway.",
-    "lastStatusReview": "2026-09-27",
+    "constructionStage": "November 2026: forming at Level 11 and windows reaching Level 5.",
+    "lastStatusReview": "2026-11-21",
     "estimatedHeightM": 61.7,
     "heightUncertaintyM": 6,
     "recordedProgress": false,
@@ -4924,9 +5064,9 @@
       "unitsCaveat": "City application record reports 865 apartments; older marketing descriptions have 863. This does not establish final registered unit count."
     },
     "lifecycle": "under_construction",
-    "lifecycleReviewedOn": "2026-11-01",
+    "lifecycleReviewedOn": "2026-11-21",
     "lifecycleConfidence": "high",
-    "lifecycleNote": "Under construction. The August 2026 developer update reported work at Level 8; the model shows the planned finished form.",
+    "lifecycleNote": "Tridel reported Level 11 forming and Level 5 windows in November 2026. The model shows the planned finished form.",
     "lifecycleSourceRefs": [
       "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?f=json&where=APP_FILE_NO%3D%27SP+21%2F168%27&outFields=%2A&returnGeometry=false",
       "https://www.tridel.com/lakeviewvillagecondos/news/",
@@ -5811,6 +5951,15 @@
         "accessed": "2026-09-20",
         "claims": [
           "88 Park and 46 Park remain coming-soon projects."
+        ]
+      },
+      {
+        "url": "https://www7.mississauga.ca/Departments/PB/OfficialDocs/OLT-22-004843-MAR-13-2025-ORD.pdf",
+        "title": "88 Park Street East tribunal order, March 2025",
+        "publisher": "Ontario Land Tribunal",
+        "accessed": "2026-11-21",
+        "claims": [
+          "The order identifies 88 Park Street East and Edenshaw by address and case number. The initial appealed heights in the case heading describe the original filing."
         ]
       }
     ],
@@ -16926,7 +17075,7 @@
     "address": "1225 Dundas Street East",
     "lat": 43.606434312466,
     "lon": -79.58832320738,
-    "status": "Council passed · appeal period open",
+    "status": "Council passed the planning amendments. Appeal outcome and construction remain unverified.",
     "statusDate": "2026-09-29",
     "application": "OZ 22 20",
     "storeys": [
@@ -17143,7 +17292,7 @@
       "source": "https://www.mississauga.ca/wp-content/uploads/2026/10/08091543/OZ-OPA-22-20-W3-Notice-of-Passing-public-notice.pdf"
     },
     "statusEvidenceDate": "2026-10-10",
-    "lastStatusReview": "2026-10-10",
+    "lastStatusReview": "2026-11-21",
     "unitCountCaveat": "Council material reports 553 apartments plus 34 townhomes, while the May site and ground sheets show four northern rows with 8, 6, 6 and 8 homes, alongside differing residential and parking schedules. The model follows the visible plan forms; a current approved unit schedule is still needed to reconcile those counts.",
     "geometryDrawingDate": "2026-05-27",
     "hasSupplementalModel": true,
@@ -17154,7 +17303,10 @@
       "1225-dundas-may2026-plan-envelope.glb"
     ],
     "geometrySourceDate": "2026-05-27",
-    "geometryReviewDate": "2026-10-10"
+    "geometryReviewDate": "2026-10-10",
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-21",
+    "lifecycleNote": "Council passed the planning amendments on September 29, 2026. The notices set an October appeal deadline. No later disposition or construction start was confirmed."
   },
   {
     "id": "hurontario-3115",
@@ -17163,7 +17315,7 @@
     "address": "3115 Hurontario Street",
     "lat": 43.582854803457,
     "lon": -79.619274474503,
-    "status": "Council passed · appeal period and holding conditions remain",
+    "status": "Council passed the planning amendments. Appeal outcome and construction remain unverified.",
     "statusDate": "2026-09-29",
     "application": "OZ 22 24",
     "storeys": [
@@ -17400,7 +17552,10 @@
       "source": "https://www.mississauga.ca/wp-content/uploads/2026/10/08092020/OZ-OPA-22-24-W7-OPA-17-Notice-of-Passing-public-notice.pdf"
     },
     "statusEvidenceDate": "2026-10-10",
-    "lastStatusReview": "2026-10-10"
+    "lastStatusReview": "2026-11-21",
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-21",
+    "lifecycleNote": "Council passed the planning amendments on September 29, 2026. The notices set an October appeal deadline. No later disposition or construction start was confirmed."
   },
   {
     "id": "beverley-5",
@@ -18981,6 +19136,15 @@
         ],
         "verification": "read",
         "limitations": "Approved maximum permissions are distinct from the newer 24-storey site-plan proposal. Do not infer cancellation from a smaller submitted design."
+      },
+      {
+        "url": "https://pub-mississauga.escribemeetings.com/FileStream.ashx?DocumentId=82895",
+        "title": "March 2026 rental incentive report",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-11-21",
+        "claims": [
+          "The project’s allocation table identifies 358 total homes and a forecast construction period."
+        ]
       }
     ],
     "geometrySources": [],
@@ -19496,6 +19660,15 @@
           "596 Lolita listed coming soon."
         ],
         "verification": "search-index"
+      },
+      {
+        "url": "https://pub-mississauga.escribemeetings.com/FileStream.ashx?DocumentId=82895",
+        "title": "Rental construction report, March 2026",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-11-21",
+        "claims": [
+          "The City reports the December 2024 building permit and identifies construction as ongoing. This report does not provide a measured height."
+        ]
       }
     ],
     "geometrySources": [],
@@ -19539,8 +19712,8 @@
     "address": "45 Agnes Street / 3051 Cook Street",
     "lat": 43.58017602688943,
     "lon": -79.6189073114279,
-    "status": "Retained proposal; current construction stage unverified",
-    "statusDate": "2026-09-20",
+    "status": "Site plan approved",
+    "statusDate": "2026-03-05",
     "storeys": [
       28
     ],
@@ -19550,9 +19723,18 @@
     "towers": [],
     "application": "",
     "sitePlan": "SP 21 102",
-    "summary": "The long-running 28-storey scheme is now associated with JD Development and Reid’s Heritage. A current UrbanToronto thread and 2026 site photography corroborate that it remains an identifiable project.",
-    "modelCaveat": "Old age is not cancellation. Storey-count differences in photo captions are not sufficient to revise geometry. Site-plan identity SP 21-102 links the City model to the site.",
+    "summary": "A 28-storey rental building with 338 homes and ground-floor commercial space. The City approved its site plan on March 5, 2026.",
+    "modelCaveat": "Site plan SP 21/102 links the two retained municipal components to 3051 Cook Street. The source geometry is schematic. A construction start has not been verified.",
     "sources": [
+      {
+        "title": "Approved site plan for 3051 Cook Street, SP 21/102",
+        "publisher": "City of Mississauga",
+        "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=APP_FILE_NO%3D%27SP+21%2F102%27&outFields=APP_FILE_NO%2CSIMPLE_STATUS%2CSITE_ADDRESS%2CDESCRIPTION%2CAPPROVAL_DATE%2CRES_APTS&returnGeometry=false&f=pjson",
+        "accessed": "2026-11-21",
+        "claims": [
+          "Approval dated March 5, 2026 for 338 rental apartments in a 28-storey building with 235 m² of ground-floor commercial space."
+        ]
+      },
       {
         "url": "https://urbantoronto.ca/forum/threads/toronto-45-agnes-street-92-05m-28s-jd-development-group-tregebov-cogan.5105/page-5",
         "title": "45 Agnes development record",
@@ -19582,6 +19764,15 @@
           "2026 dated site record; caption varies between 28 and 29 storeys."
         ],
         "verification": "search-index"
+      },
+      {
+        "url": "https://www.mississauga.ca/wp-content/uploads/2020/12/17113501/OZ-13-017-OPA-70-Public-Notice.pdf",
+        "title": "Official Plan Amendment 70, 45 Agnes Street",
+        "publisher": "City of Mississauga",
+        "accessed": "2026-11-21",
+        "claims": [
+          "City records document a 28-storey residential scheme under OZ 13/017 W7. The historical amendment does not establish work on site today."
+        ]
       }
     ],
     "geometrySources": [],
@@ -19602,8 +19793,8 @@
       "actual": null,
       "target": null,
       "targetIsGuaranteed": false,
-      "note": "No actual completion date or target completion date published in the sources reviewed for this proposed project.",
-      "reviewed": "2026-09-20",
+      "note": "A completion or occupancy date has not been verified.",
+      "reviewed": "2026-11-21",
       "sources": []
     },
     "meshIds": [
@@ -19619,7 +19810,13 @@
       "63-6235",
       "63-6236"
     ],
-    "geometryCoverage": "Source geometry available; current detail may differ"
+    "geometryCoverage": "Source geometry available; current detail may differ",
+    "lifecycle": "approved",
+    "approvalStage": "Site plan approved",
+    "statusEvidenceDate": "2026-03-05",
+    "lastStatusReview": "2026-11-21",
+    "lifecycleReviewedOn": "2026-11-21",
+    "lifecycleNote": "The City approved the 28-storey rental building on March 5, 2026. Construction has not been confirmed."
   },
   {
     "id": "kirwin-3016",
@@ -21801,6 +21998,15 @@
         "title": "St. Hilary’s Anglican Church, Cooksville, photographic references; City of Mississauga mapped context.",
         "publisher": "Building study source acknowledgement",
         "accessed": "2026-10-09"
+      },
+      {
+        "url": "https://www.toronto.anglican.ca/churches/st-hilary-cooksville/",
+        "title": "St. Hilary (Cooksville) parish listing",
+        "publisher": "Anglican Diocese of Toronto",
+        "accessed": "2026-11-21",
+        "claims": [
+          "The diocese identifies the parish at 2055 Hurontario Street. It does not provide measured roof dimensions."
+        ]
       }
     ],
     "meshIds": [],
@@ -22500,10 +22706,10 @@
     ],
     "lat": 43.525788888723106,
     "lon": -79.65216838595086,
-    "status": "Council passed · appeal period and holding conditions remain",
+    "status": "Council passed the planning amendments. Appeal outcome and construction remain unverified.",
     "statusDate": "2026-09-29",
     "statusEvidenceDate": "2026-10-10",
-    "lastStatusReview": "2026-10-10",
+    "lastStatusReview": "2026-11-21",
     "storeys": [
       10,
       4
@@ -22624,7 +22830,10 @@
         "publisher": "Ontario Ministry of Natural Resources",
         "accessed": "2026-10-10"
       }
-    ]
+    ],
+    "lifecycle": "approved",
+    "lifecycleReviewedOn": "2026-11-21",
+    "lifecycleNote": "Council passed the planning amendments on September 29, 2026. The notices set an October appeal deadline. No later disposition or construction start was confirmed."
   },
   {
     "id": "harborn-50-60",
@@ -23280,6 +23489,15 @@
         "title": "Public project source",
         "accessed": "2026-10-12",
         "claims": "Expansion completedApril2024, announcedMay16,2024"
+      },
+      {
+        "url": "https://nrc.canada.ca/en/research-development/nrc-facilities/advanced-materials-research-facility",
+        "title": "Advanced materials research facility, Mississauga",
+        "publisher": "National Research Council Canada",
+        "accessed": "2026-11-21",
+        "claims": [
+          "The NRC identifies the operating research facility and links to its opening announcement."
+        ]
       }
     ],
     "actualCompletionDate": "April 2024 - expansion",
@@ -23455,6 +23673,15 @@
         "title": "West End Buddhist Temple",
         "accessed": "2026-10-12",
         "claims": []
+      },
+      {
+        "url": "https://old.westendbuddhist.com/standby4/index.php/contact-us",
+        "title": "Temple contact and location",
+        "publisher": "West End Buddhist Temple and Meditation Centre",
+        "accessed": "2026-11-21",
+        "claims": [
+          "The temple gives its address as 3133 Cawthra Road. This confirms the building identity, not its measured roof geometry."
+        ]
       }
     ],
     "actualCompletionDate": null,

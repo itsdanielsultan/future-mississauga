@@ -6,11 +6,21 @@ export const PLANNING_NEUTRAL_COLOUR=0xd3d8db;
 export const PLANNING_APPEARANCE=Object.freeze([
   Object.freeze({key:'existing',label:'Existing',color:'#b8b9b6'}),
   Object.freeze({key:'under_construction',label:'Under construction',color:'#85b4bf'}),
-  Object.freeze({key:'approved',label:'Approved planning',color:'#c49b52'}),
+  Object.freeze({key:'approved',label:'Approved planning',color:'#d8b7ac'}),
   Object.freeze({key:'proposed',label:'Proposed',color:'#d8b7ac'}),
   Object.freeze({key:'unknown',label:'Status unverified',color:'#b89bc3'}),
   Object.freeze({key:'on_hold',label:'On hold',color:'#aaa09a'}),
   Object.freeze({key:'cancelled',label:'Cancelled',color:'#908783'})
+]);
+// The signed map key groups two legal stages that deliberately share a colour.
+const stageEntry = key => PLANNING_APPEARANCE.find(item => item.key === key);
+export const PLANNING_LEGEND = Object.freeze([
+  stageEntry('existing'),
+  stageEntry('under_construction'),
+  Object.freeze({key:'planned', label:'Proposed / approved', color:stageEntry('proposed').color}),
+  Object.freeze({...stageEntry('unknown'), label:'Uncertain'}),
+  stageEntry('on_hold'),
+  stageEntry('cancelled')
 ]);
 export function planningGroupForLifecycle(lifecycle){
   if(lifecycle==='mixed')return 'unknown';
@@ -26,6 +36,7 @@ export function planningAppearanceColour(key){
 }
 export function planningStatusLegendFor(lifecycles=[],{appearance='status'}={}){
   if(appearance!=='status')return [];
-  const shown=new Set(lifecycles.map(planningGroupForLifecycle));
-  return PLANNING_APPEARANCE.filter(item=>shown.has(item.key));
+  const shown = new Set(lifecycles.map(planningGroupForLifecycle));
+  if (shown.has('approved') || shown.has('proposed')) shown.add('planned');
+  return PLANNING_LEGEND.filter(item => shown.has(item.key));
 }

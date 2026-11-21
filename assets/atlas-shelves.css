@@ -1,0 +1,22 @@
+.shelf-heading, .places-intro:has(+ [data-picture-shelf]) { display:flex; align-items:center; gap:12px; }
+.shelf-heading h2, .places-intro:has(+ [data-picture-shelf]) h2 { margin-right:auto; }
+.shelf-controls { display:flex; align-items:center; gap:4px; }
+.shelf-controls[hidden] { display:none; }
+html body main .shelf-controls button {
+  display:grid; place-items:center; width:44px; height:44px; min-height:44px; padding:0;
+  border:1px solid var(--line); border-radius:8px; background:var(--paper); color:var(--ink);
+  font:500 21px/1 var(--face); cursor:pointer;
+}
+html body main .shelf-controls button:disabled { color:var(--muted); opacity:.42; cursor:default; }
+html body main .shelf-controls button:is(:hover,:focus-visible):not(:disabled) { background:var(--link-hover); }
+html body main [data-picture-shelf] {
+  display:grid; grid-auto-flow:column; grid-template-columns:none; grid-template-rows:1fr;
+  grid-auto-columns:min(310px,75vw); align-items:stretch; gap:16px; min-width:0; max-width:100%;
+  overflow-x:auto; overscroll-behavior-x:contain; scrollbar-width:thin;
+  scroll-snap-type:x proximity; padding:3px 0 10px; margin:12px 0 0;
+}
+html body main [data-picture-shelf] > * { min-width:0; scroll-snap-align:start; }
+html body main [data-picture-shelf] :focus-visible { outline-offset:-3px; }
+@media(max-width:600px){
+  html body main [data-picture-shelf] { grid-auto-columns:min(75vw,285px); gap:12px; }
+}

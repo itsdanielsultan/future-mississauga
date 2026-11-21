@@ -14,7 +14,7 @@
       const url = new URL(anchor.href, location.href);
       if (/\.html?$/i.test(url.pathname)) return null;
       const knownPDF = anchor.hasAttribute('data-document-preview') ||
-        (url.origin === location.origin && /\/downloads\/(edition-20261120\/(?:Mississauga-Atlas|[a-z0-9-]+-review)|Future-Mississauga-Atlas(?:-\d{8}-[a-f0-9]{12})?|City-of-Mississauga-Open-Data-Terms)\.pdf$/.test(url.pathname)) ||
+        (url.origin === location.origin && /\/downloads\/(edition-20261121\/(?:Mississauga-Atlas|[a-z0-9-]+-review)|Future-Mississauga-Atlas(?:-\d{8}-[a-f0-9]{12})?|City-of-Mississauga-Open-Data-Terms)\.pdf$/.test(url.pathname)) ||
         (url.hostname === 'github.com' && url.pathname.startsWith('/itsdanielsultan/future-mississauga/releases/download/') && url.pathname.endsWith('-review.pdf'));
       if (knownPDF) return anchor;
     }

@@ -337,17 +337,17 @@ html body.atlas-map-page :is(.viewer-options,.project-register,.transit-section)
 }
 
 html body.atlas-map-page .navigation-tools .navigation-modes {
-  gap:2px; padding:3px; border-radius:7px; background:var(--switch-tray,#f4f4f5);
+  inset:0 auto auto 0; gap:2px; padding:3px; border-radius:7px; background:var(--switch-tray,#f4f4f5);
 }
 html body.atlas-map-page .navigation-tools .navigation-modes button {
-  min-height:38px; border:0; border-radius:4px; padding:0 12px; color:var(--map-ink);
+  min-height:44px; border:0; border-radius:4px; padding:0 12px; color:var(--map-ink);
   background:transparent; font:500 15px/1.3 var(--face);
 }
 html body.atlas-map-page .navigation-tools .navigation-modes button[aria-pressed=true] {
   color:var(--switch-text,#25262a); background:var(--switch-selected,#e3e4e6);
 }
 html body.atlas-map-page #resetBtn {
-  position:absolute; inset:0 auto auto 0; min-height:44px; padding:0 12px;
+  position:absolute; inset:auto auto 0 0; min-height:44px; padding:0 12px;
   border:1px solid #a6a7a0; border-radius:5px; background:white; color:var(--map-ink);
   font:500 15px/1.3 var(--face); box-shadow:0 1px 3px #1819121c;
 }
@@ -359,6 +359,16 @@ html body.atlas-map-page #loading {
   background-image:linear-gradient(#ffffffc9,#ffffffcd),var(--loading-image);
   background-size:cover; background-position:center; color:var(--ink);
   align-content:center; justify-items:center; gap:8px; font:520 16px/1.4 var(--face);
+}
+html body.atlas-map-page #loading:has(.map-loading-label) {
+  background-image:linear-gradient(#f8f8f438,#f8f8f448),var(--loading-image);
+}
+.map-loading-label {
+  padding:8px 14px;
+  border:1px solid #d4d3cd;
+  border-radius:8px;
+  background:#f8f8f5;
+  color:var(--ink);
 }
 html body.atlas-map-page #loading a { display:inline-flex; align-items:center; min-height:44px; color:inherit; }
 html body.atlas-map-page #exportStatus input { width:min(100%,36rem); min-height:44px; font:inherit; }

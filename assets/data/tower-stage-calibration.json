@@ -1,0 +1,134 @@
+{
+  "version": "2026-11-21.2",
+  "sources": {
+    "mcity-1-2": [
+      "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/",
+      "https://www.corearchitects.com/project/m-city-phase-1/"
+    ],
+    "mcity-3-4-5": [
+      "https://www.mcitycondos.com/construction.php",
+      "https://verticalurbanism.org/news-article/in-mississaugas-m-city-the-next-building-tops-out-at-260-meters/"
+    ],
+    "mcity-6-7-8": [
+      "https://www.hariripontarini.com/projects/m-city-block-2-3"
+    ],
+    "exchange-district": [
+      "https://www.condoauthorityontario.ca/condo-registry-details/?id=ff38531f-56bb-f111-aaad-70a8a5ac79b5",
+      "https://condos.ca/mississauga/2-erskine-road-mississauga/unit-2404-W13683156",
+      "https://strata.ca/mississauga/exchange-district-condos-phase-2-ex2",
+      "https://rentexs.com/",
+      "https://urbantoronto.ca/forum/threads/toronto-exchange-district-condos-m-66s-camrost-felcorp-arcadis.29739/page-78",
+      "https://www.maedcollective.com/projects/exchange-district-ex3"
+    ]
+  },
+  "materials": {
+    "existing": "#929799",
+    "under_construction": "#85b4bf",
+    "approved": "#d8b7ac",
+    "proposed": "#d8b7ac",
+    "unknown": "#b89bc3"
+  },
+  "maskClasses": {
+    "existing": 7,
+    "under_construction": 8,
+    "proposed": 9,
+    "approved": 9,
+    "unknown": 10
+  },
+  "exchange": {
+    "wholeAssetSHA256": "13395ad62fded98828e0ce74cfba8ab7ca7beaaf128d59330104f40620ad13b4",
+    "podiumCeilingY": 106.5,
+    "verticalCosineMax": 0.35,
+    "crownMaterial": "node1311_region4|node1316_region1|node1318_region0",
+    "footprintEvidence": "Phase-split EXS and construction meshes; source podium is below 106.5 m in model coordinates. Retain crowns, upward faces, saturated finishes and the entire shared low podium.",
+    "publicFile": "models/studies-20261121/exchange-all-20261121.glb.gz",
+    "publicSHA256": "41990250f340c985eac2a51d8e4f6b72cd6435b0dca86b0678c031c86961fb2b"
+  },
+  "assets": {
+    "exchange-recorded-topped-structures": {
+      "project": "exchange-district",
+      "sha256": [
+        "3f522738b6aee3444192ff8a937b7c247029df5f1c3b882e283fde7079b4cf2c"
+      ]
+    },
+    "mcity-m1-20261025-exterior-study": {
+      "project": "mcity-1-2",
+      "sha256": [
+        "478be2c24b1b8b8a0cbb649c6c75fa11df7658b29a7a40d186da34aa37773ae9",
+        "630368744c2ba9f8252004d87bf31d31f66397c3cc037b21db65f43e6da7f9ca"
+      ]
+    },
+    "mcity-m2-20261025-exterior-study": {
+      "project": "mcity-1-2",
+      "sha256": [
+        "1f6d68734e2486165984f0e56605638fc0ea705a4cb326afbe33b0a4dde0ef20"
+      ]
+    },
+    "mcity-m3-likeness-20261101-v7": {
+      "project": "mcity-3",
+      "sha256": [
+        "46069389dca1b1f6f129b0a88d96f19ff8c00aa6d2fb2d87ddf05e0106c0c78f"
+      ]
+    },
+    "mcity-m4-future-detail-20261101": {
+      "project": "mcity-4",
+      "sha256": [
+        "c29a55cdc94e15748a826087415fecbb84be0a0bd324f15dac1023450cb943a2"
+      ]
+    },
+    "mcity-m4-spring2026-detail-20261101": {
+      "project": "mcity-4",
+      "sha256": [
+        "3383b5178f56a75fb709a1d201d812e6887cdd3f4255728bb8c2bc1701eaac60"
+      ]
+    },
+    "mcity-m5-authored-detail-20261101": {
+      "project": "mcity-5",
+      "sha256": [
+        "4162051b4d6706a65b3f5f0606ce31dfd9500c41f6ea766f1a40eb15ac519b6f",
+        "d8847e7267ee38de9138f7aac388fb59865cb3ef139b4c0f66adb66127ab1af5"
+      ]
+    },
+    "mcity-m6-20261101-dated-exterior": {
+      "project": "mcity-6",
+      "sha256": [
+        "cad1af48cf240c74696e9d60a59694d7423092801e1f30f0bc9cc044e6976493"
+      ]
+    },
+    "mcity-m7-m8-20261101-dated-exteriors": {
+      "project": "mcity-7-8",
+      "sha256": [
+        "ab9f1a2ebe1df2f2eb3260d2acd853ba56cc7d50a02ef2d9106ea79b9103b198"
+      ]
+    }
+  },
+  "protectedParts": "podium|pavilion|landscap|shared|entrance|retail|lobby|grade|garden|roof|crown|soffit|canopy|mechanical|parapet|terrace|amenity",
+  "towerMaterials": {
+    "mcity-1-2": "slab edge|glazing|opaque transom|laminated (balcony|guard)|opaque window.wall infill",
+    "mcity-3": "^(glazing|clear.guard|dark.guard|slab.grey|white.metal)$",
+    "mcity-4": "^(glass|glass.light|white.metal)$",
+    "mcity-5": "^(window|shadow.window|guard.glass|slab|white.frame)$",
+    "mcity-6": "glass|glazing|spandrel|white panels|slab edge",
+    "mcity-7-8": "glass|glazing|spandrel|white metal panels|slab edges"
+  },
+  "phaseEvidence": {
+    "existing": [
+      "M1",
+      "M2",
+      "EXS",
+      "EX1",
+      "EX2"
+    ],
+    "under_construction": [
+      "M3",
+      "M4",
+      "M5",
+      "EX3"
+    ],
+    "proposed": [
+      "M6",
+      "M7",
+      "M8"
+    ]
+  }
+}

@@ -3,7 +3,7 @@ import {editionPreview} from './edition-pictures.js';
 // Divider images keep the scene unobstructed. Every switch replaces all old
 // candidates, including the larger candidate left by another neighbourhood.
 export function setPairImage(image, area, name, state) {
-  const prefix = 'gallery/edition-20261120/';
+  const prefix = 'gallery/edition-20261121/';
   const downtown = area === 'downtown';
   const file = 'wide-' + area + '-' + state + '.webp';
   const small = prefix + (downtown ? 'home-' + state + '-1200.webp' : 'thumbnails/' + file);

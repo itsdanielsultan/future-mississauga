@@ -1,30 +1,42 @@
 // The comparison tools need the unlabelled scene. Picture galleries display the
 // signed edition, including its byline, at every resolution.
-let edition;
-export function loadEditionPlates() {
-  if (!edition) {
-    edition = fetch('data/city-plates-20261120.json').then(response => {
+const editions = new Map();
+export function loadEditionPlates(source = 'data/city-plates-20261121.json') {
+  if (!editions.has(source)) {
+    const edition = fetch(source).then(response => {
       if (!response.ok) throw new Error('Edition unavailable');
       return response.json();
     }).then(({plates}) => new Map(plates.filter(plate => plate.webImage && plate.displayMaster?.url && plate.download?.url)
-      .map(plate => [plate.id, plate]))).catch(() => new Map());
+      .map(plate => [plate.id, plate]))).catch(() => {
+        editions.delete(source);
+        return new Map();
+      });
+    editions.set(source,edition);
   }
-  return edition;
+  return editions.get(source);
 }
 
 export function editionPreview(info, plate) {
   if (!plate) return info;
   const full = plate.signedMaster || plate.displayMaster;
-  let attribution = info.attribution || plate.attribution;
-  if (plate.signedMaster && attribution?.requiredModelCredits) {
-    // The full Ontario notice is printed inside every signed resolution.
-    // Keep the source link and individual architecture/photography credits in the viewer.
-    const ontarioNotice = /^Contains information licensed under the Open Government Licence\s*[–-]\s*Ontario\.?$/i;
-    attribution = {...attribution, requiredModelCredits:attribution.requiredModelCredits.filter(line=>!ontarioNotice.test(line.trim()))};
-  }
-  return {...info, attribution, preview:plate.signedPreview?.url || plate.webImage, src:full.url, download:plate.download.url,
-    width:full.width, height:full.height, appendedFooter:false, meta:'',
+  const size=publicationResolution(plate.download);
+  const scenario=plate.label?.split(' · ').at(-1)?.replace('With proposed projects','With proposals').replace('Construction snapshot','Under construction');
+  const view=(info.viewTitle || '').replace(/^(?:Future|Existing) (aerial|skyline)$/i,'$1')
+    .replace(/^Wide aerial$/i,'Aerial').replace(/^(?:Future perspective|Neighbourhood perspective)$/i,'Closer view')
+    .replace(/^(?:Dated construction skyline|Construction snapshot)$/i,'Skyline');
+  const namedView=view && ![plate.area,scenario].some(name => name?.toLowerCase()===view.toLowerCase());
+  const description=[namedView ? view.charAt(0).toUpperCase()+view.slice(1) : '',scenario].filter(Boolean).join(' · ');
+  return {...info, attribution:plate.attribution || info.attribution, preview:plate.signedPreview?.url || plate.webImage, src:full.url, download:plate.download.url,
+    width:full.width, height:full.height, appendedFooter:false, meta:description, placeTitle:plate.area, resolution:size,
+    downloadDimensions:plate.download.width+' × '+plate.download.height, creditsInImage:Boolean(plate.signedMaster && plate.signedPreview),
     creator:plate.signedMaster ? null : info.creator, presentation:plate.signedMaster ? null : info.presentation};
+}
+
+// Use the downloadable artwork's long edge, including for portrait images.
+export function publicationResolution(file) {
+  const edge=Math.max(file?.width || 0,file?.height || 0);
+  if (!edge) return '';
+  return edge<1024 ? edge+' px' : Math.round(edge/1024*2)/2+'K';
 }
 
 export function plateCaption(area, view, scenario, selectedArea = false) {

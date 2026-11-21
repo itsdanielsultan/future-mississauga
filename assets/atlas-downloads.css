@@ -81,6 +81,16 @@
   border-radius: 10px;
 }
 .dl-media-card { display: flex; flex-direction: column; }
+@media (min-width: 621px) {
+  .dl-media-card.dl-film {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(0,2fr);
+    align-items: center;
+  }
+  .downloads-main .dl-film .dl-art { aspect-ratio: 16 / 9; }
+  .dl-film .dl-media-copy { padding-inline: var(--dl-gap); }
+}
 .downloads-main .dl-art { position: relative; display: grid; width: 100%; aspect-ratio: 8/5; background: var(--soft); }
 .dl-art img { width: 100%; height: 100%; object-fit: contain; }
 .dl-media-card:last-child .dl-art { background: #d5d6d1; }

@@ -128,6 +128,12 @@ function attachReadingRail(rail) {
     lastClick = entries.find(entry => entry.link === link);
     if (expanded) menu(false);
     select(lastClick);
+    // Move keyboard reading to the chosen section even after its menu link is hidden.
+    const section = lastClick?.section;
+    if (section) requestAnimationFrame(() => {
+      if (!section.hasAttribute('tabindex')) section.tabIndex = -1;
+      section.focus({preventScroll:true});
+    });
   });
   for (const type of ['pointerdown','focusin']) document.addEventListener(type, event => {
     if (expanded && !rail.contains(event.target)) menu(false);

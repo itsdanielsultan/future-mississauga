@@ -6,3 +6,10 @@
 .media-caption__north{margin-left:auto;color:var(--site-ink)}
 .media-caption__north>span{display:inline-block;font:24px/1 sans-serif;margin-right:2px}
 .file-download-status{display:block;grid-column:1/-1;flex-basis:100%;font:14px/1.5 var(--site-font-body);color:var(--site-muted)}
+
+html .media-preview a.media-preview__download[data-resolution] {
+  display:inline-flex; align-items:center; justify-content:center; width:auto; min-width:44px; gap:6px; padding-inline:10px;
+}
+html .media-preview a.media-preview__download[data-resolution]::before {
+  content:attr(data-resolution); font-size:14px; line-height:1; font-variant-numeric:tabular-nums;
+}
