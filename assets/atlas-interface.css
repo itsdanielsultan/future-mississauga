@@ -182,7 +182,7 @@ html body .compact-footer .footer-identity span { color: #c7d0d0; }
   html .home-page .hero figcaption { gap: 6px 12px; }
   html .home-page .hero .media-caption__key { gap: 2px 8px; }
 }
-@media (max-width: 900px) {
+@media (max-width: 1060px) {
   html body header.site-header { justify-content: space-between; position: sticky; }
   html header.site-header[data-menu-ready] .site-menu-toggle { display: inline-grid; place-items: center; min-height: 44px; min-width: 44px; padding: 0; border: 1px solid #4b585f; border-radius: 5px; background: transparent; color: white; }
   html body header.site-header[data-menu-ready] .site-nav:not([data-open]) { display: none; }

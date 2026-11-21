@@ -1,0 +1,78 @@
+/* The three directories share one title, rail and content alignment. */
+:root {
+  --reading-heading-gap:clamp(26px,3.5vw,44px);
+  --reading-column:clamp(132px,13vw,192px);
+  --reading-gap:clamp(28px,4vw,72px);
+}
+#main:is(.journal-index,.sources-page,.downloads-main) > header:first-child {
+  display:block; height:auto; margin:0 0 var(--reading-heading-gap); padding:0; border:0;
+}
+@media(max-width:740px) { :root { --reading-heading-gap:20px; } }
+
+/* One moving background follows the active section on every reading page. */
+[data-reading-rail] {
+  display:block; padding:0; gap:0; overflow:visible;
+  position: sticky; top: calc(var(--site-header-height,64px) + 16px);
+  z-index: 4; align-self: start; min-width: 0;
+  color: var(--ink,#242624); font: 500 15px/1.35 var(--face,sans-serif);
+}
+[data-rail-viewport] {
+  max-height: calc(100vh - var(--site-header-height,64px) - 36px);
+  max-height: calc(100dvh - var(--site-header-height,64px) - 36px);
+  overflow: auto; overscroll-behavior: contain; scrollbar-width: thin;
+  scrollbar-color: #c3c6c0 transparent;
+}
+[data-rail-track] { position: relative; isolation: isolate; display: grid; gap: 2px; padding: 3px; }
+[data-rail-month] { display:block; margin:14px 10px 4px; font-size: 14px; color: var(--quiet,#61655f); font-weight: 550; }
+[data-rail-month]:first-of-type { margin-top: 2px; }
+main [data-reading-rail] [data-rail-track] a {
+  position: relative; display: flex; align-items:center; min-height: 40px;
+  padding: 8px 10px; border: 0; border-radius: 6px; box-shadow: none;
+  background: transparent; color: var(--quiet,#555a55); text-decoration:none;
+  font: inherit; line-height: 1.35;
+}
+main [data-reading-rail] [data-rail-track] a:is(:hover,:focus-visible) {
+  background: var(--switch-hover,#eaebe7); color: var(--ink,#242624); text-decoration:none;
+}
+main [data-reading-rail] [data-rail-track] a[aria-current="location"] {
+  background: var(--switch-selected,#dedfdb); color:var(--ink,#242624);
+}
+main [data-reading-rail] [data-marker-ready] a[aria-current="location"] { background: transparent; }
+[data-reading-rail] .reading-rail-marker {
+  position:absolute; z-index:-1; inset:0 auto auto 0; opacity:0; pointer-events:none;
+  border-radius:6px; background:var(--switch-selected,#dedfdb);
+  width:var(--marker-width,0); height:var(--marker-height,0);
+  transform:translate3d(var(--marker-x,0),var(--marker-y,0),0);
+}
+[data-marker-ready] .reading-rail-marker {
+  opacity:1; transition:transform 290ms cubic-bezier(.22,.8,.25,1),width 220ms ease,height 220ms ease;
+}
+[data-reading-rail] .reading-rail-toggle { display: none; }
+[data-reading-rail] :focus-visible { outline:2px solid var(--ink,#242624); outline-offset:-2px; }
+@media(max-width:740px) {
+  [data-reading-rail] { position:static; font-size: 16px; }
+  [data-rail-viewport] { max-height:none; }
+  [data-reading-rail][data-rail-ready] { position:sticky; top:var(--site-header-height,60px); margin:0; background:var(--paper,#f7f7f5); }
+  [data-rail-ready] .reading-rail-toggle {
+    display:flex; align-items:center; width:100%; gap:12px; min-height:48px; padding:8px 12px;
+    border:1px solid var(--line,#d8dad5); border-radius:7px; background:var(--paper,#f7f7f5); color:var(--ink,#242624);
+    text-align:start; font:inherit; cursor:pointer;
+  }
+  .reading-rail-toggle span { color:var(--quiet,#5e625d); }
+  .reading-rail-toggle strong { flex:1; font-weight:580; }
+  .reading-rail-toggle i {
+    height:8px; width:8px; border-right:1.5px solid; border-bottom:1.5px solid;
+    margin:-4px 3px 0 0; transform:rotate(45deg);
+  }
+  [data-rail-open] .reading-rail-toggle i { transform:rotate(225deg); margin-top:4px; }
+  [data-rail-ready] [data-rail-viewport] { display:none; }
+  [data-rail-open] [data-rail-viewport] {
+    display:block; position:absolute; inset:calc(100% + 5px) 0 auto;
+    max-height:min(46vh,350px); max-height:min(46dvh,350px);
+    background:var(--paper,#f7f7f5); border:1px solid var(--line,#d8dad5); border-radius:8px;
+    box-shadow:0 7px 20px rgb(30 34 29 / .12); padding:3px;
+  }
+  main [data-reading-rail] [data-rail-track] a { min-height:44px; }
+  html body main#main [data-rail-section][id] { scroll-margin-block-start:58px; }
+}
+@media(prefers-reduced-motion:reduce) { [data-marker-ready] .reading-rail-marker { transition:none; } }

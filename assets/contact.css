@@ -1,0 +1,37 @@
+#main.contact-page .contact-grid {
+  display:grid; grid-template-columns:minmax(0,1.18fr) minmax(0,1fr); align-items:start;
+  gap:clamp(20px,3.4vw,48px);
+}
+#main.contact-page .contact-email {
+  padding:clamp(22px,3.6vw,48px); border:1px solid var(--line);
+  border-radius:12px; background:var(--panel);
+}
+#main.contact-page h2 {
+  margin:0; color:var(--ink); font:550 clamp(22px,2vw,30px)/1.2 var(--face); letter-spacing:-.035em;
+}
+#main.contact-page .contact-email p {
+  max-width:34ch; margin:12px 0 24px; color:var(--muted); font:400 1rem/1.5 var(--face);
+}
+#main.contact-page .contact-address {
+  display:inline-flex; align-items:center; justify-content:space-between; gap:14px;
+  max-width:100%; min-height:44px; padding:8px 12px; box-sizing:border-box;
+  border:1px solid var(--line); border-radius:7px; background:var(--paper);
+  color:var(--ink); font:550 1rem/1.35 var(--face); text-decoration:none;
+}
+#main.contact-page .contact-address span:first-child { min-width:0; overflow-wrap:anywhere; }
+#main.contact-page .contact-address:is(:hover,:focus-visible) { background:var(--link-hover); }
+#main.contact-page .contact-links { display:grid; }
+#main.contact-page .contact-links a {
+  display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 20px;
+  align-content:center; min-height:82px; box-sizing:border-box; padding:16px;
+  border:0; border-bottom:1px solid var(--line); border-radius:0;
+  color:var(--ink); background:transparent; text-decoration:none;
+}
+#main.contact-page .contact-links a:is(:hover,:focus-visible) { border-radius:7px; background:var(--link-hover); }
+#main.contact-page .contact-links strong { font:550 clamp(18px,1.55vw,22px)/1.3 var(--face); letter-spacing:-.025em; }
+#main.contact-page .contact-links span { grid-column:1; color:var(--muted); font:400 1rem/1.45 var(--face); }
+#main.contact-page .contact-links i { grid-area:1 / 2 / span 2; align-self:center; font:500 20px/1 var(--face); }
+@media (max-width:700px) {
+  #main.contact-page .contact-grid { grid-template-columns:1fr; gap:16px; }
+  #main.contact-page .contact-links a { padding-inline:8px; }
+}
