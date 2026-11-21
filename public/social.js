@@ -1,4 +1,4 @@
-import {loadEditionPlates} from './edition-pictures.js';
+import {loadEditionPlates,plateCaption} from './edition-pictures.js';
 const retryPreview = image => {
   if (image.dataset.retried) return;
   image.dataset.retried = 'true';
@@ -20,9 +20,18 @@ const empty = document.querySelector('#portraitEmpty');
 const currentURL = () => window.fmLocal?.historyURL() || new URL(document.URL);
 function updatePortraits() {
   let count = 0;
+  const filtered = area.value !== 'all';
+  document.querySelector('.portrait-results')?.classList.toggle('is-filtered',filtered);
+  document.querySelector('main h1').textContent=filtered ? area.selectedOptions[0].text+' portraits' : 'Portrait gallery';
   for (const card of cards) {
     card.hidden = area.value !== 'all' && card.dataset.district !== area.value;
-    if (!card.hidden) count++;
+    if (!card.hidden) {
+      count++;
+      const caption=plateCaption(card.dataset.areaTitle,card.dataset.viewTitle,
+        card.dataset.plate.split('-').pop().split('.')[0],filtered);
+      card.querySelector('.card-copy h3').textContent=caption.title;
+      card.querySelector('.media-caption__scenario').textContent=caption.detail;
+    }
   }
   for (const group of document.querySelectorAll('.portrait-collection')) {
     group.hidden = !group.querySelector('article:not([hidden])');
@@ -60,12 +69,15 @@ for (const card of cards) {
   const image = card.querySelector('img');
   if (!card.dataset.originalThumb) card.dataset.originalThumb = image.getAttribute('src');
   image.sizes = '(max-width: 560px) calc(100vw - 32px), (max-width: 900px) 46vw, (max-width: 1440px) 30vw, 430px';
-  image.srcset = plate.thumbnail + ' 512w, ' + plate.webImage + ' ' + plate.width + 'w';
-  image.src = plate.thumbnail;
-  card.dataset.displayUrl = plate.displayMaster.url;
-  card.dataset.displayWidth = plate.displayMaster.width;
-  card.dataset.displayHeight = plate.displayMaster.height;
-  card.querySelector('.image-link').href = plate.displayMaster.url;
+  const small = plate.signedThumbnail || {url:plate.thumbnail,width:512};
+  const large = plate.signedPreview || {url:plate.webImage,width:plate.width};
+  const master = plate.signedMaster || plate.displayMaster;
+  image.srcset = small.url + ' ' + small.width + 'w, ' + large.url + ' ' + large.width + 'w';
+  image.src = small.url;
+  card.dataset.displayUrl = master.url;
+  card.dataset.displayWidth = master.width;
+  card.dataset.displayHeight = master.height;
+  card.querySelector('.image-link').href = master.url;
   card.querySelector('.save').href = plate.download.url;
   const meta = card.querySelector('[data-render-info]');
   if (meta) meta.textContent = '';

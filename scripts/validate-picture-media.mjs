@@ -9,6 +9,7 @@ import {createHash} from 'node:crypto';
 import {normalizeCleanMedia,imageAttribution,mediaScenarioLabel} from '../public/clean-media.js';
 import {EAST_CREDIT_MANIFEST_SHA256,EAST_CREDIT_IDENTITIES} from '../public/east-credit-media-policy.js';
 import {COVERAGE_MANIFEST_SHA256,COVERAGE_IDENTITIES} from '../public/coverage-media-policy.js';
+import {plateCaption} from '../public/edition-pictures.js';
 import {portraitViewTitle} from '../public/gallery-catalogue.js';
 const load=async(site,name)=>JSON.parse(await readFile(join(site,name),'utf8'));
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
@@ -174,16 +175,41 @@ export async function validateRefinedPictureStructure(site){
    const plate = portraits.get(id);
    assert(plate, 'Missing published portrait edition: ' + id);
    assert(plate.displayMaster?.url && plate.download?.url, 'Incomplete portrait edition: ' + id);
-   for (const item of [plate.displayMaster,plate.download]) {
-     assert(/^gallery\/edition-20261120\/originals\/[\w-]+\.(?:png|webp)$/.test(item.url), id+' local original');
-     const bytes = await readFile(join(site,item.url));
+   const master=plate.signedMaster || plate.displayMaster;
+   const small=plate.signedThumbnail || {url:plate.thumbnail,width:512};
+   const large=plate.signedPreview || {url:plate.webImage,width:plate.width,height:plate.height};
+   const verified=[plate.displayMaster,plate.download,plate.signedMaster,plate.signedThumbnail,plate.signedPreview].filter(Boolean);
+   for (const item of verified) {
+     assert(/^gallery\/edition-20261120\/(originals|signed)\/[\w-]+\.(?:png|webp)$/.test(item.url), id+' local published artwork');
+     const bytes=await readFile(join(site,item.url));
      assert.equal(bytes.length,item.bytes,id+' byte size');
-     assert.equal(sha(bytes),item.sha256,id+' original bytes');
+     assert.equal(sha(bytes),item.sha256,id+' published bytes');
+     if (item===plate.download && plate.signedMaster) {
+       assert(bytes.includes(Buffer.from('Daniel Sultan / Future Mississauga')),id+' signed PNG author');
+       for (const credit of plate.attribution.requiredModelCredits) assert(bytes.includes(Buffer.from(credit)),id+' embedded model credit');
+     }
    }
-   const card = validateNativeSocialCard(articles, {...row, displayMaster:plate.displayMaster, download:plate.download,
-     preview:{url:plate.thumbnail,width:plate.width,height:plate.height}}, {headingLevel:3,sourceLink:'sources.html'});
-   assert(card.includes(plate.thumbnail+' 512w, '+plate.webImage+' '+plate.width+'w'), id+' responsive preview');
-   assert(card.includes('data-plate="'+id+'"'), id+' current file mapping');
+   const matches=articles.filter(card=>card.includes('data-plate="'+id+'"'));
+   assert.equal(matches.length,1,id+' must appear once');
+   const card=matches[0];
+   const area=row.title, view=row.coverageAddition?row.caption.subtitle||'Wide aerial':portraitViewTitle(row.file);
+   const caption=plateCaption(area,view,row.caption.scenario);
+   for (const [name,value] of Object.entries({'data-display-url':master.url,'data-display-width':master.width,
+      'data-display-height':master.height,'data-area-title':area,'data-view-title':view,'data-osm':row.caption.openStreetMap})) {
+     assert(card.includes(name+'="'+escapeHTML(value)+'"'),id+' '+name);
+   }
+   assert(card.includes('<h3>'+escapeHTML(caption.title)+'</h3>'),id+' visible subject');
+   assert(card.includes('<span class="media-caption__scenario">'+escapeHTML(caption.detail)+'</span>'),id+' visible scenario');
+   const image=card.match(/<img\b[^>]+>/)[0];
+   assert(image.includes('src="'+small.url+'"') && image.includes('srcset="'+small.url+' '+small.width+'w, '+large.url+' '+large.width+'w"'),id+' responsive candidates');
+   assert(image.includes('width="'+large.width+'"') && image.includes('height="'+large.height+'"'),id+' natural ratio');
+   const links=card.match(/<a\b[^>]+>/g);
+   const preview=links.find(link=>link.includes('class="image-link"')), download=links.find(link=>link.includes('class="save ui-button"'));
+   assert(preview?.includes('href="'+master.url+'"') && preview.includes('aria-haspopup="dialog"') && !/\sdownload(?:\s|=|>)/.test(preview),id+' opens credited artwork');
+   assert(download?.includes('href="'+plate.download.url+'"') && /\sdownload(?:\s|=|>)/.test(download),id+' downloads credited original');
+   const credit=imageAttribution(row);
+   assert.equal(plate.attribution.openStreetMap,Boolean(credit.openStreetMap),id+' mapping credit');
+   assert.deepEqual(plate.attribution.requiredModelCredits,row.caption.requiredModelCredits,id+' model credits');
  }
  assert.equal(articles.length,24+coveragePortraits.length);
  for(const row of coveragePortraits) await validatePortrait(row);

@@ -1,21 +1,24 @@
 import {createServer} from 'node:http';
 import {spawn} from 'node:child_process';
 import {createReadStream} from 'node:fs';
-import {stat} from 'node:fs/promises';
+import {readFile,stat} from 'node:fs/promises';
 import {dirname, resolve, join, extname, sep} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {loadLocalAssetMap} from './local-asset-map.mjs';
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 function option(name, fallback) { const i = process.argv.indexOf(name); return i < 0 ? fallback : process.argv[i + 1]; }
-const base = resolve(root, option('--site', 'public'));
+const release = process.argv.includes('--release') ? resolve(root,'.cloudflare-release') : null;
+const base = release ? join(release,'assets') : resolve(root, option('--site', 'public'));
+const media = release ? JSON.parse(await readFile(join(release,'media-routes.json'),'utf8')) : {};
+const currentAtlas = release ? JSON.parse(await readFile(join(release,'inventory.json'),'utf8')).currentAtlas : null;
 const port = Number(option('--port', '4173'));
 const prefix = option('--base', '/').replace(/\/?$/, '/');
 const mapPaths=process.argv.flatMap((value,index)=>value==='--asset-map'?[process.argv[index+1]]:[]);
 const localAssets=new Map();
 for(const mapPath of mapPaths)for(const [url,asset] of await loadLocalAssetMap(mapPath)){if(localAssets.has(url))throw Error('Duplicate staged asset URL.');localAssets.set(url,asset);}
 const types = {'.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.woff2': 'font/woff2', '.ttf': 'font/ttf', '.svg': 'image/svg+xml', '.webp': 'image/webp', '.avif': 'image/avif', '.glb': 'model/gltf-binary', '.gz': 'application/gzip', '.pdf': 'application/pdf', '.mp4': 'video/mp4', '.md': 'text/plain; charset=utf-8', '.csv': 'text/csv; charset=utf-8'};
-function sendFile(request, response, file, size) {
-  const headers = {'Content-Type': types[extname(file)] || 'application/octet-stream',
+function sendFile(request, response, file, size, mime = types[extname(file)]) {
+  const headers = {'Content-Type': mime || 'application/octet-stream',
     'Content-Length': size, 'Accept-Ranges': 'bytes', 'Cache-Control': 'no-cache'};
   let start = 0, end = size - 1;
   const range = request.method === 'GET' && request.headers.range;
@@ -41,6 +44,15 @@ const server = createServer(async (request, response) => {
   try {
     const path = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);
     if (!path.startsWith(prefix)) { response.writeHead(404); response.end(); return; }
+    const publicPath = '/' + path.slice(prefix.length);
+    if (release && publicPath==='/downloads/Future-Mississauga-Atlas.pdf' && !new URL(request.url,'http://localhost').search) {
+      response.writeHead(307,{Location:prefix+currentAtlas.slice(1)}); response.end(); return;
+    }
+    if (release && Object.hasOwn(media,publicPath)) {
+      const object=media[publicPath];
+      sendFile(request,response,join(release,'media',object.key),object.bytes,object.type);
+      return;
+    }
     const mapped=localAssets.get(path.slice(prefix.length));
     if(mapped){
       sendFile(request, response, mapped.path, mapped.bytes);

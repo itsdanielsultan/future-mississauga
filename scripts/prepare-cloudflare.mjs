@@ -65,9 +65,21 @@ try{
   const downloads = await readFile(join(src, 'downloads.html'), 'utf8');
   const atlas = downloads.match(/href="(downloads\/edition-\d{8}\/Mississauga-Atlas\.pdf)"/)?.[1];
   assert(atlas && (await stat(join(src, atlas))).isFile(), 'Download directory must identify the current atlas');
+  const archive=JSON.parse(await readFile(join(root,'cloudflare/published-media.json'),'utf8'));
+  for (const [key, file] of Object.entries(archive)) {
+    assert(/^[a-f0-9]{64}$/.test(key) && file.key === key && Number.isSafeInteger(file.bytes) && file.bytes > 0 && Object.values(mime).includes(file.type),'Invalid published media record');
+  }
+  await writeFile(join(stage,'published-media.json'),JSON.stringify({...archive,...Object.fromEntries(objects)},null,2)+'\n');
   const source=await readFile(join(root,'cloudflare/media-worker.mjs'),'utf8');
-  await writeFile(join(stage,'worker.mjs'),source+'\nexport default serveMedia('+JSON.stringify(files)+','+JSON.stringify('/'+atlas)+');\n');
-  const config={name:'future-mississauga-preview',main:'worker.mjs',compatibility_date:'2026-11-01',workers_dev:true,assets:{directory:'./assets',binding:'ASSETS',html_handling:'none',not_found_handling:'none',run_worker_first:[legacyAtlasPath]},r2_buckets:[{binding:'MEDIA',bucket_name:'future-mississauga-media'}]};
+  await writeFile(join(stage,'worker.mjs'),source+'\nexport default serveMedia('+JSON.stringify(files)+','+JSON.stringify('/'+atlas)+','+JSON.stringify(archive)+');\n');
+  await copyFile(join(root,'cloudflare/suggestions.mjs'),join(stage,'suggestions.mjs'));
+  await copyFile(join(root,'cloudflare/suggestions.sql'),join(stage,'suggestions.sql'));
+  const config={name:'future-mississauga-preview',main:'worker.mjs',compatibility_date:'2026-11-01',workers_dev:true,preview_urls:true,assets:{directory:'./assets',binding:'ASSETS',html_handling:'none',not_found_handling:'none',run_worker_first:[legacyAtlasPath,'/api/suggestions','/api/suggestions/*']},r2_buckets:[{binding:'MEDIA',bucket_name:'future-mississauga-media'}]};
+  const suggestionsDb = process.env.FM_SUGGESTIONS_DATABASE_ID || '73f78311-1acd-421d-a9cb-ddf5e4d6d359';
+  if (suggestionsDb) {
+    assert(/^[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}$/i.test(suggestionsDb),'Invalid suggestions database ID');
+    config.d1_databases = [{binding:'SUGGESTIONS_DB',database_name:'future-mississauga-suggestions',database_id:suggestionsDb}];
+  }
   await writeFile(join(stage,'wrangler.json'),JSON.stringify(config,null,2)+'\n');
   const summary={staticFiles:count,staticBytes:bytes,r2Objects:objects.size,r2Bytes,maximumProjectStorage:budget,currentAtlas:'/'+atlas};
   await writeFile(join(stage,'inventory.json'),JSON.stringify(summary,null,2)+'\n');

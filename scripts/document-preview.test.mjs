@@ -100,3 +100,15 @@ test('a place opens its exact numbered atlas page and malformed page fragments f
     assert.equal(requestedDocumentPage(site + suffix, 63), 1);
   }
 });
+
+test('print-quality reader pages use the same checked edition as their fitted preview', () => {
+  const current = {...newAtlas, base: 'document-previews/edition/',
+    zoomBase: 'document-previews/edition/zoom/', sourceSHA256: '1234567890abcdef'};
+  const fit = new URL(documentPageURL(catalog, current, 2, site));
+  const zoom = new URL(documentPageURL(catalog, current, 2, site, true));
+  assert.equal(zoom.pathname, fit.pathname.replace('/edition/', '/edition/zoom/'));
+  assert.equal(fit.searchParams.get('edition'), '1234567890ab');
+  assert.equal(zoom.search, fit.search);
+  assert.equal(documentPageURL(catalog, historical, 2, site, true),
+    documentPageURL(catalog, historical, 2, site));
+});

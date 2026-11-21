@@ -214,11 +214,17 @@ def write_mac_entry(destination, home):
     # Downloading an attachment puts the HTML alone in Downloads. This entry
     # opens the entire installed edition regardless of the downloaded filename.
     address = home.as_uri()
+    from urllib.parse import quote
+    sibling = quote(home.parent.name, safe='') + '/'
     bootstrap = ('<base href="' + escape(home.parent.as_uri() + '/') + '">'
-                 '<script id="open-installed-edition">'
-                 'if(location.protocol==="file:"){const page=new URL(' + json.dumps(home.name) + ',document.baseURI);'
-                 'page.search=location.search;page.hash=location.hash;location.replace(page.href);}'
-                 '</script>')
+                 '<script id="open-installed-edition">if(location.protocol==="file:"){'
+                 'const openPage=base=>{const page=new URL(' + json.dumps(home.name) + ',base);'
+                 'page.search=location.search;page.hash=location.hash;location.replace(page.href)};'
+                 'const sibling=new URL(' + json.dumps(sibling) + ',location.href);'
+                 'if(sibling.href===document.baseURI){openPage(sibling)}else{'
+                 'const icon=new Image();icon.onload=()=>openPage(sibling);'
+                 'icon.onerror=()=>openPage(document.baseURI);'
+                 'icon.src=new URL("assets/favicon-32.png",sibling).href}}</script>')
     # A regular link remains usable in previewers that suppress local navigation.
     direct = '<a class="open-edition" href="' + escape(address) + '">Open the full website on this Mac ↗</a>'
     html = re.sub(r'<head\b[^>]*>',lambda m:m[0]+bootstrap,home.read_text(),count=1,flags=re.I)
@@ -254,7 +260,11 @@ def local_page(rel, html, modules, output, localize):
             return name+'='+quote+re.sub(r'https?://[^,\s]+',lambda u:localize(u[0]),value)+quote
         return m[0]
     # Limit HTML rewriting to attributes on tags, not JS source or content.
-    html=re.sub(r'<(?!script\b)([A-Za-z][^>]*?)>',lambda m:'<'+ATTR.sub(attr,m[1])+'>',html)
+    def rewrite_tag(match):
+        tag = match[1]
+        online_only = html_attrs(tag).get('data-online-only') == 'true'
+        return '<' + ATTR.sub(lambda field: field[0] if online_only and field[1] == 'href' else attr(field), tag) + '>'
+    html=re.sub(r'<(?!script\b)([A-Za-z][^>]*?)>',rewrite_tag,html)
     graph = module_script(rel, used, modules, output)
     runtime='<script src="_local/files.js"></script><script src="_local/runtime.js"></script>'+graph
     html=re.sub(r'<head\b[^>]*>',lambda m:m[0]+runtime,html,count=1,flags=re.I)

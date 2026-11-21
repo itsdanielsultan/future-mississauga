@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import vm from 'node:vm';
 import {downtownAerial} from '../public/downtown-aerial.js';
-import {editionPreview} from '../public/edition-pictures.js';
+import {setPairImage, stageFrame, setStageImage} from '../public/compare-frames.js';
 import {assetURL} from '../public/asset-delivery.js';
 import {assertNativeMediaTransport} from './native-media-transport.mjs';
 import {normalizeCleanMedia,matchedComparisonBinding,mediaScenarioLabel} from '../public/clean-media.js';
@@ -79,12 +79,20 @@ test('every activated comparison has a byte-exact proof and equal resolution der
 
 function image(){return {dataset:{},src:'old.avif',srcset:'old.avif 3200w',sizes:'100vw',removeAttribute(name){delete this[name];},getAttribute(name){return this[name]??null;},closest(selector){return selector==='.picture-compare'?{}:null;}};}
 
-test('gallery selection explicitly resets the density of a reused comparison image',()=>{
- const source=text('compare-page.js').match(/function showComparison\(id\)[\s\S]*?(?=\n\$\('#comparisonDistrict'\))/)[0];
- const before=image(),after=image(),pair=normalized.filter(row=>['wide/clarkson-existing.png','wide/clarkson-future.png'].includes(row.identity)).sort((a,b)=>a.caption.scenario.localeCompare(b.caption.scenario));
- vm.runInNewContext(source+"\nshowComparison('clarkson');",{$:selector=>selector==='#beforePicture img'?before:after,districts:[{id:'clarkson',name:'Clarkson'}],pictures:{},edition:new Map(),comparisonPair:()=>pair,assetURL,updateCleanImageCaption(){}});
- for(const [node,row]of [[before,pair[0]],[after,pair[1]]]){
-  assert.equal(node.src,row.responsive.url);assert.equal(node.srcset,row.responsive.url+' 1x');assert.equal(node.sizes,undefined);
+test('selecting a neighbourhood replaces both comparison resolutions and the labels',()=>{
+ const before=image(),after=image();
+ for(const [area,name,smallWidth,largeWidth] of [['downtown','Downtown',1200,2560],['clarkson','Clarkson',640,1600],['lakeview','Lakeview',640,1600]]) {
+  for(const [node,state] of [[before,'existing'],[after,'future']]) {
+   setPairImage(node,area,name,state);
+   const root='gallery/edition-20261120/';
+   const file='wide-'+area+'-'+state+'.webp';
+   const small=root+(area==='downtown'?'home-'+state+'-1200.webp':'thumbnails/'+file);
+   const large=root+(area==='downtown'?'home-'+state+'-2560.webp':file);
+   assert.equal(node.src,small);
+   assert.equal(node.srcset,small+' '+smallWidth+'w, '+large+' '+largeWidth+'w');
+   assert.equal(node.sizes,'(min-width:1440px) 1320px, 92vw');
+   assert(node.alt.includes(name)); assert(fs.existsSync(new URL(large,pub)));
+  }
  }
 });
 
@@ -110,25 +118,23 @@ test('all three featured aerials use one bearing and pair responsive images with
  const plates=JSON.parse(text('data/city-plates-20261120.json')).plates;
  const current=Object.fromEntries(Object.entries(downtownAerial).map(([view,frame])=>{
   const plate=plates.find(p=>p.id==='wide/downtown-skyline-'+frame.scenario+'.png');
-  return [view,{...editionPreview(frame,plate),responsive:plate.displayMaster.url,previewWidth:plate.width}];
+  return [view,stageFrame(frame,plate)];
  }));
  const proposed=current.skyline;
  assert(html.includes('src="'+proposed.preview+'"'));assert(html.includes(proposed.responsive+' '+proposed.width+'w'));
  assert(html.includes('href="'+proposed.download+'" download'));
- const source=text('compare-page.js').match(/function showSkyline\(\) \{[\s\S]*?\n\}/)[0];
  for(const [view,frame] of Object.entries(downtownAerial)){
-  const node=()=>({dataset:{}, setAttribute(){}, append(){},replaceChildren(){}});
-  const image=node(),button=node(),download=node(),caption={...node(),querySelector:()=>download};
-  const figure={querySelector:selector=>({img:image,button,figcaption:caption})[selector]};
-  vm.runInNewContext(source+'\nshowSkyline();',{frames:downtownAerial,$:selector=>selector==='.hero'?figure:{value:view},
-   document:{createElement:node},presentationCaption:()=>[node(),node()],renderImageAttribution(){}});
+  const node=()=>({dataset:{},setAttribute(){}});
+  const image=node(),button=node(),download=node(),elements={image,opener:button,download};
+  assert.equal(stageFrame(frame,undefined),frame);
+  setStageImage(elements,view,frame,frame.scenario);
   assert.equal(image.src,frame.preview);assert.equal(image.srcset,frame.preview+' 1200w, '+frame.responsive+' 3200w');
   assert.equal(download.href,frame.download);assert.equal(button.dataset.view,view);assert.equal(frame.src,frame.download);
   const editionFrame=current[view];
-  vm.runInNewContext(source+'\nshowSkyline();',{frames:current,$:selector=>selector==='.hero'?figure:{value:view},
-   document:{createElement:node},presentationCaption:()=>[node(),node()],renderImageAttribution(){}});
+  setStageImage(elements,view,editionFrame,frame.scenario);
   assert.equal(image.srcset,editionFrame.preview+' '+editionFrame.previewWidth+'w, '+editionFrame.responsive+' '+editionFrame.width+'w');
-  assert.equal(download.href,editionFrame.download);assert.equal(editionFrame.presentation.northDegrees,home.presentation.northDegrees);
+  assert.equal(download.href,editionFrame.download);if(editionFrame.presentation) assert.equal(editionFrame.presentation.northDegrees,home.presentation.northDegrees);
+  else assert(editionFrame.src.includes('/signed/'));
   assert.equal(frame.presentation.northDegrees,home.presentation.northDegrees);
   for(const path of [frame.preview,frame.responsive,frame.download]){
    const bytes=fs.readFileSync(new URL(path,pub));

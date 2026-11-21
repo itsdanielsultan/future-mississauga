@@ -88,15 +88,17 @@ select.ui-select {
   width: var(--control-width, 100%);
   min-width: 0;
   max-width: 100%;
-  padding-inline-end: 48px;
-  background-position: right 16px center;
-  background-size: 16px;
+  padding-inline-end: 40px;
+  background-position: right 12px center;
+  background-size: 18px;
+  padding-inline-start: 12px;
+  line-height: 1.25;
   text-overflow: ellipsis;
 }
 select.ui-select:dir(rtl) {
-  padding-inline-start: 16px;
-  padding-inline-end: 48px;
-  background-position: left 16px center;
+  padding-inline-start: 12px;
+  padding-inline-end: 40px;
+  background-position: left 12px center;
 }
 :is(.ui-button, .ui-input, .ui-select):focus-visible {
   outline: 3px solid var(--ui-primary);

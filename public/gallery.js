@@ -1,21 +1,40 @@
-import {loadEditionPlates,editionPreview} from './edition-pictures.js';
+import {loadEditionPlates,editionPreview,plateCaption} from './edition-pictures.js';
 import {assetURL} from './asset-delivery.js?v=20261113-delivery2';
-import {createImagePreview,updateCleanImageCaption} from './image-preview.js?v=20261120-plates';
+import {createImagePreview} from './image-preview.js?v=20261120-plates';
 import {mediaPreviewInfo} from './clean-media.js?v=20261113-design2';
-import {refreshPictureAssets} from './media-catalog.js?v=20261113-design2';
+import {refreshPictureAssets} from './media-on-demand.js';
 import {buildGalleryCatalogue,filterGallery,galleryViews} from './gallery-catalogue.js?v=20261113-design2';
 const $=s=>document.querySelector(s);
-const [districts,pictures]=await Promise.all(['districts','picture-assets'].map(x=>fetch('data/'+x+'.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('Pictures unavailable');return r.json();})));
-const [edition] = await Promise.all([loadEditionPlates(), refreshPictureAssets(pictures)]);
+async function readData(name) {
+  const response=await fetch('data/'+name+'.json');
+  if (!response.ok) throw new Error('Pictures unavailable');
+  return response.json();
+}
+const [districts,edition]=await Promise.all([readData('districts'),loadEditionPlates()]);
+let pictures;
+if (edition.size) {
+  pictures={images:{}};
+  for (const [id,plate] of edition) {
+    if (!id.startsWith('wide/')) continue;
+    const file=id.slice(5);
+    const scenario=file.slice(0,-4).split('-').pop();
+    const subtitle=file==='downtown-portrait-future.png'?'Exchange District':null;
+    pictures.images[file]={caption:{area:plate.area,scenario,subtitle},download:plate.download,display:plate.displayMaster};
+  }
+} else {
+  pictures=await readData('picture-assets');
+  await refreshPictureAssets(pictures);
+}
 const plateFor = name => edition.get('wide/' + name);
 const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const original=name=>assetURL(plateFor(name)?.download.url || pictures.images[name].download?.url || pictures.images[name].url);
+// A direct download is available only when there is a credited publication.
+const original=name=>plateFor(name)?.download?.url || pictures.images[name]?.download?.url;
 function thumbnailAttributes(name) {
   const plate = plateFor(name);
   if (!plate) return 'src="' + escape(assetURL(pictures.images[name].display.url)) + '" width="1600" height="1000"';
-  const thumb = escape(assetURL(plate.thumbnail));
-  const preview = escape(assetURL(plate.webImage));
-  return 'src="' + thumb + '" srcset="' + thumb + ' 640w, ' + preview + ' ' + plate.width + 'w" sizes="(max-width: 560px) calc(100vw - 32px), (max-width: 1440px) 46vw, 650px" width="' + plate.width + '" height="' + plate.height + '"';
+  const small=plate.signedThumbnail || {url:plate.thumbnail,width:640};
+  const large=plate.signedPreview || {url:plate.webImage,width:plate.width,height:plate.height};
+  return 'src="' + escape(assetURL(small.url)) + '" srcset="' + escape(assetURL(small.url)) + ' ' + small.width + 'w, ' + escape(assetURL(large.url)) + ' ' + large.width + 'w" sizes="(max-width: 560px) calc(100vw - 32px), (max-width: 1440px) 46vw, 650px" width="' + large.width + '" height="' + large.height + '"';
 }
 const downloadIcon='<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12m-5-5 5 5 5-5M5 20h14"/></svg>';
 const catalogue=buildGalleryCatalogue(districts,pictures.images),grid=$('#galleryGrid');
@@ -58,7 +77,13 @@ function updatePlaceLinks() {
 function renderGallery(){
  updatePlaceLinks();
  const {matches,visible}=filterGallery(catalogue,{area:area.value,view:viewFilter.value,search:search.value});
- const card = row => `<article class="picture-card" data-view-title="${escape(row.viewTitle)}" data-area-title="${escape(row.area)}" data-file="${escape(row.file)}"><button data-open="${escape(row.district)}" data-view="${row.view}" aria-label="Preview ${escape(row.area+' '+row.viewTitle+' '+row.scenario)}"><img ${thumbnailAttributes(row.file)} alt="${escape(row.area+' · '+row.viewTitle+' · '+row.scenario)}" loading="lazy" decoding="async"></button><div class="card-caption"><div><span class="media-caption__area">${escape(row.area)}</span><h3>${escape(row.viewTitle)}</h3><span class="media-caption__scenario">${row.scenario}</span></div><a href="${escape(original(row.file))}" download class="icon-button ui-button" aria-label="Download ${escape(row.area+' '+row.viewTitle+' '+row.scenario)} PNG" data-variant="ghost" data-size="icon" title="Download PNG">${downloadIcon}</a></div></article>`;
+ const card = row => {
+   const caption=plateCaption(row.area,row.viewTitle,row.scenario,area.value!=='all');
+   const fullName=[row.area,row.viewTitle,row.scenario].join(' · ');
+   const url=original(row.file);
+   const save=url ? `<a href="${escape(assetURL(url))}" download class="icon-button ui-button" aria-label="Download ${escape(fullName)} PNG" data-variant="ghost" data-size="icon" title="Download PNG">${downloadIcon}</a>` : '';
+   return `<article class="picture-card" data-view-title="${escape(row.viewTitle)}" data-area-title="${escape(row.area)}" data-file="${escape(row.file)}"><button data-open="${escape(row.district)}" data-view="${row.view}" aria-label="Preview ${escape(fullName)}"><img ${thumbnailAttributes(row.file)} alt="${escape(fullName)}" loading="lazy" decoding="async"></button><div class="card-caption"><div><h3>${escape(caption.title)}</h3><span class="media-caption__scenario">${escape(caption.detail)}</span></div>${save}</div></article>`;
+ };
  const collections = [
    ['close', 'Landmarks and closer views'],
    ['aerial', 'Neighbourhood aerials'],
@@ -67,11 +92,10 @@ function renderGallery(){
  const groups = collections.map(([type, title]) => ({
    title, cards: visible.filter(row => row.type === type)
  })).filter(group => group.cards.length);
- grid.innerHTML = groups.map(group => {
+ grid.innerHTML = area.value!=='all' ? visible.map(card).join('') : groups.map(group => {
    const heading = groups.length > 1 ? '<h2 class="gallery-collection-title">' + group.title + '</h2>' : '';
    return heading + group.cards.map(card).join('');
  }).join('');
- for(const image of grid.querySelectorAll('img')){const row=pictures.images[image.closest('article').dataset.file];updateCleanImageCaption(image,row);}
  $('#galleryResult').textContent=`${matches.length} image${matches.length===1?'':'s'}`;
  $('#galleryEmpty').hidden=matches.length>0;
 }
@@ -101,7 +125,9 @@ function showPicture(view){
  const viewTitle=info.caption?.subtitle||viewNames[view],area=info.caption?.area||d.name;
  const scenario = info.caption?.scenario;
  const suffix = ['existing','construction','future'].includes(scenario) ? '&scenario=' + scenario : '';
- preview.show({...editionPreview(mediaPreviewInfo({...info,viewTitle,area}),plateFor(file)),viewTitle,area,explore:'explore.html?district='+d.id+suffix},opener);
+ const plate=plateFor(file);
+ const details=plate ? {title:area,area,viewTitle,scenario,attribution:plate.attribution} : mediaPreviewInfo({...info,viewTitle,area});
+ preview.show({...editionPreview(details,plate),viewTitle,area,explore:'explore.html?district='+d.id+suffix},opener);
 }
 document.addEventListener('click',event=>{
  const button=event.target.closest('[data-open]');if(!button||event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;

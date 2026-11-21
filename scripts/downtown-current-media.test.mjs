@@ -81,7 +81,7 @@ test('current film uses the exact accepted public trio and leaves old film asset
  assert.equal(sha(await readFile(new URL(archive.film.url,pub))),'65bf8bd0aff3d0bb3e8481fc23e829ff44a84df248b04ae2d4166a40b1b08bae');
  assert.deepEqual(current.frames.map(r=>r.startSeconds),[0,4,8]);
  assert.equal(new Set(current.frames.map(r=>r.sourceImageSHA256)).size,3);
- assert.deepEqual(current.dimensions,[1920,824]);assert.equal(current.durationSeconds,12);assert.equal(current.historicalFilmPreserved,true);
+ assert.deepEqual(current.dimensions,[1920,1080]);assert.equal(current.durationSeconds,12);assert.equal(current.historicalFilmPreserved,true);
  for(const key of ['film','poster','credits']){const asset=current[key],bytes=await readFile(new URL(asset.url,pub));assert.equal(bytes.length,asset.bytes);assert.equal(sha(bytes),asset.sha256);assert(home.includes(asset.url));}
  assert((await readFile(new URL('gallery/revision-20261109/Downtown-skyline-2026-11-09.mp4',pub))).length>0);
 });

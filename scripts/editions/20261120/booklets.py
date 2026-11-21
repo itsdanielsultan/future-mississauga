@@ -2,7 +2,7 @@
 from pathlib import Path
 from io import BytesIO
 from xml.sax.saxutils import escape
-import hashlib, json, sys
+import hashlib, json, math, re
 import fitz
 from PIL import Image
 from reportlab.pdfgen import canvas
@@ -18,6 +18,8 @@ public = here.parents[2] / 'public'
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('workspace', type=Path)
 parser.add_argument('--originals', type=Path, required=True, help='Folder containing the 11 originally published review PDFs')
+parser.add_argument('--receipts', type=Path, help='Use the freshly rendered city-image receipts before the city catalogue is published')
+parser.add_argument('--only', nargs='+', default=[])
 args = parser.parse_args()
 work = args.workspace.resolve()
 fonts = Path(os.environ.get('FM_INTER_FONTS', Path.home() / 'Library/Fonts'))
@@ -33,8 +35,8 @@ for (family, face) in [('Atlas', 'Inter-Regular.ttf'), ('Atlas Medium', 'Inter-S
 projects = {r['id']: r for r in load(public / 'data/projects.json')}
 records = load(here / 'study-booklets.json')
 model_studies = {r['url']: r for r in load(public / 'data/building-study-media.json') if r['kind'] == 'review'}
-plates = {r['id']: r for r in load(work / 'edition.json')['plates']}
-captions = {r['id']: r['caption'] for r in load(work / 'selected.json')}
+plates = {r['id']: r for r in load(public / 'data/city-plates-20261120.json')['plates']}
+captions = {r['id']: r['caption'] for r in load(here / 'selected.json')}
 booklets = {'aldo-1422-study': ('lorne-park', 'Lorne Park', 'A historical house design shown in the 2020 renderings. The entrance faces Aldo Drive.'), 'burnhamthorpe-community-centre': ('dixie-applewood', 'Dixie and Applewood', 'City design boards and photographs of the completed building establish the roof decks and the shape of the exterior.'), 'glen-erin-6719': ('meadowvale', 'Meadowvale', 'The March 2026 plan shows a stepped, 16-storey apartment building beside 28 townhomes and the existing apartment tower.'), 'hazelhurst-business-park': ('clarkson', 'Clarkson', 'The study reconstructs the building shells from the developer’s leasing brochure and the municipal building footprints.'), 'lakeview-deco-opus': ('lakeview', 'Lakeview', 'The marketing plan shows 17 numbered townhome blocks. The roofs, façades and heights are estimates.'), 'merner-41-bay': ('port-credit', 'Port Credit', 'A low cross-gable meets the neighbouring ridges at right angles. The study uses four elevations and completed exterior photographs supplied by Merner Row Design.'), 'merner-42-john': ('port-credit', 'Port Credit', 'The March 2025 drawings show a proposed addition. The model follows the four elevations and the existing street frontage.'), 'merner-42-peter': ('port-credit', 'Port Credit', 'Exterior photographs guide the dormers, front elevation and porch roof. The main house follows its mapped footprint.'), 'south-common-community-centre': ('erin-mills', 'Erin Mills', 'The study shows the intended finished exterior, including the library, connecting spine and pool wing.'), 'square-one-block22': ('downtown', 'Downtown', 'A dated 2021 roof plan gives the towers and podium their shape. The present project is on hold while revisions are considered.'), 'st-hilarys-anglican-church': ('cooksville', 'Cooksville', 'Two exterior photographs establish the steep A-frame nave and its triangular glazed front. The lower wings follow the City model.')}
 (W, H, M) = (842, 595, 34)
 (ink, secondary, rule) = ('#252829', '#55595A', '#D6D9D6')
@@ -58,8 +60,6 @@ def line(c, x1, y, x2):
 def link(c, label, url, x, y):
     write(c, label, x, y, 12, 'Atlas Medium')
     length = pdfmetrics.stringWidth(label, 'Atlas Medium', 12)
-    c.setStrokeColor(HexColor('#737978'))
-    c.line(x, y - 3, x + length, y - 3)
     c.linkURL(url, (x - 2, y - 6, x + length + 2, y + 15), relative=0, thickness=0)
     return length
 
@@ -79,6 +79,11 @@ def image(c, source, scene=False):
         if not scene:
             c.setFillColor(HexColor('#%02x%02x%02x' % original.getpixel((0, 0))))
             c.rect(M, 73, W - M * 2, H - 153, fill=1, stroke=0)
+        placed_scale = min((W - 2*M) / original.width, (H - 153) / original.height)
+        if 72 / placed_scale < 300:
+            raise ValueError(f'{source}: below 300 pixels per printed inch')
+        if 72 / placed_scale > 365:
+            original.thumbnail((math.ceil(original.width * placed_scale * 365 / 72), math.ceil(original.height * placed_scale * 365 / 72)), Image.Resampling.LANCZOS)
         jpg = BytesIO()
         original.save(jpg, 'JPEG', quality=92, subsampling=0, optimize=True)
         jpg.seek(0)
@@ -87,7 +92,7 @@ receipts_file = work / 'booklet-assembly.json'
 receipts = load(receipts_file) if receipts_file.is_file() else {}
 for row in records:
     (key, name) = (row['id'], row['title'])
-    if sys.argv[1:] and key not in sys.argv[1:]:
+    if args.only and key not in args.only:
         continue
     m = work / 'booklet-models'
     proof = load(m / (key + '.json'))
@@ -96,7 +101,11 @@ for row in records:
     (area_id, area_name, summary) = booklets[key]
     context_key = f'wide/{area_id}-future.png'
     plate = plates[context_key]
-    context = public / plate['webImage']
+    receipt = load(args.receipts / (context_key.replace('/', '-').removesuffix('.png') + '.json')) if args.receipts else plate
+    master = receipt['displayMaster']
+    context = public / master['url']
+    if sha(context) != master['sha256']:
+        raise ValueError(f'{key}: source image differs from its render receipt')
     credits = captions[context_key]
     old = args.originals / row['original'].rsplit('/', 1)[1]
     assert sha(old) == model_studies[row['original']]['sha256']
@@ -104,6 +113,8 @@ for row in records:
         blocks = [b[4].strip().split('\n') for b in original[-1].get_text('blocks') if b[6] == 0]
         caveat = ' '.join(blocks[-2]).removeprefix('Approximate geographic placement in municipal building context. ')
         acknowledgement = ' '.join((x for x in blocks[-1] if not x.isnumeric())).strip().rstrip('.') + '.'
+    if key == 'aldo-1422-study':
+        caveat = 'The upper flat roof has a plain black finish. The slopes below it are shingled. The position of the house is approximate.'
     if key == 'merner-41-bay':
         caveat = 'The ridge-to-porch dimension is 24 ft 6 in. Smaller openings, hidden details and the grade around the house remain approximate.'
     path = public / row['url']

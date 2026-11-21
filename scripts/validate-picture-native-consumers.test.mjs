@@ -83,7 +83,8 @@ test('November 9 and November 2 share images retain their original identity and 
 
 test('each current section shares artwork from its own edition',async()=>{
  const all=await json('data/edition-shares.json');
- assert.deepEqual(Object.keys(all).sort(),['compare','downloads','explore','film','gallery','index','social','updates']);
+ const sections=(await readdir(site)).filter(name=>name.endsWith('.html') && !/^(building|place)-/.test(name)).map(name=>name.slice(0,-5));
+ assert.deepEqual(Object.keys(all).sort(),sections.sort());
  for(const [name,record] of Object.entries(all)){
   const html=await readFile(join(site,name+'.html'),'utf8');
   await validateEditionShare(site,name,html,record);

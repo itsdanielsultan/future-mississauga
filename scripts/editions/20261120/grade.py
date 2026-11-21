@@ -8,6 +8,7 @@ from PIL import Image, ImageFilter
 import geometry_mask
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('workspace', type=Path)
+parser.add_argument('--only', nargs='+', help='Apply the shared treatment only to the specified camera identities')
 args = parser.parse_args()
 w = args.workspace.resolve()
 out = w / 'toned'
@@ -38,7 +39,7 @@ def process(pr, fr):
     mask = geometry_mask.categories(pr, fr)
     pixels = np.array(Image.open(fr['image']['path']).convert('RGBA'))
     weights = []
-    for label in range(1, 6):
+    for label in range(1, 7):
         if not (mask == label).any():
             continue
         coverage = Image.fromarray(np.uint8(mask == label) * 255).filter(ImageFilter.GaussianBlur(0.65))
@@ -49,9 +50,16 @@ def process(pr, fr):
         delta = grade[0, luminosity].copy()
         for (label, coverage) in weights:
             alpha = coverage[y:y + 100, :, None].astype('float32') / 255.0
-            delta += alpha * (grade[label, luminosity] - grade[0, luminosity])
-        if 'skyline' in stem:
-            delta *= 0.78
+            if label == 6:
+                # Retain reflections and building detail in this cartographic overlay.
+                # Neutral glass takes the construction colour while saturated finishes stay authored.
+                saturation = np.ptp(pix.astype('float32'), axis=2)
+                neutral = np.clip((76 - saturation) / 48, 0, 1)[:, :, None]
+                shade = np.array([-0.16, 0.041, 0.12], dtype='float32')
+                change = shade * np.clip(luminosity.astype('float32') + 36, 66, 220)[:, :, None]
+                delta += alpha * neutral * change
+            else:
+                delta += alpha * (grade[label, luminosity] - grade[0, luminosity])
         weight = np.clip(luminosity.astype('float32') / 36, 0, 1)
         pix[:] = np.rint(np.clip(pix + delta * weight[:, :, None], 0, 255)).astype('uint8')
     temp = target.with_suffix('.writing')
@@ -63,12 +71,11 @@ def process(pr, fr):
     temp.replace(record)
     print('MATCHED', stem, flush=True)
 if __name__ == '__main__':
-    import sys
-    for f in sorted((w / 'native').glob('*downtown*/render-proof.json'), key=lambda p: ('home-' not in p.parent.name, p.parent.name)):
-        pr = json.loads(f.read_text())
-        if pr['state'] != 'RENDERED_VISUAL_REVIEW_REQUIRED':
+    selected = set(args.only or [])
+    for receipt in sorted((w / 'native').glob('*/render-proof.json')):
+        native = json.loads(receipt.read_text())
+        if native['state'] != 'RENDERED_VISUAL_REVIEW_REQUIRED':
             continue
-        if any((r.get('projectId') == 'voya' for r in pr.get('derivedDisplayMaterials', {}).get('changedSlots', []))):
-            continue
-        for fr in pr['images']:
-            process(pr, fr)
+        for frame in native['images']:
+            if not selected or frame['identity'] in selected:
+                process(native, frame)

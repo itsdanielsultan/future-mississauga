@@ -5,7 +5,7 @@ import {indirectSourceRegions} from './source-attribution-regions.js?v=20261023-
 const OSM = /OpenStreetMap|\bOSM\b|openstreetmap\.org/i;
 const MARITZ_DESIGN_CREDIT = 'Design: SG&M Architects Inc. (formerly Sirlin Giller & Malek Architects).';
 const ERGOCENTRIC_PHOTO_CREDIT = 'Photographic reference: David Lasker/Cityscape Photography · davidlaskerphotography.com';
-const ERGOCENTRIC_PHOTO_LINK = {label:'David Lasker/Cityscape Photography',url:'https://davidlaskerphotography.com/'};
+const ERGOCENTRIC_PHOTO_LINK = {label:'David Lasker/Cityscape Photography',url:'https://www.cityscapephotography.ca/'};
 export function usesOpenStreetMap(data = {}, name = '') {
   return /^OSM-/i.test(name) || /^osm-beach-/i.test(data.id || '') ||
     OSM.test(String(data.source || '')) ||

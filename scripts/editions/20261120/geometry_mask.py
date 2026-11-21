@@ -1,4 +1,4 @@
-"""Rasterize the visible geometry classes used for the November Downtown colour match."""
+"""Rasterize visible city materials and their verified development status."""
 from pathlib import Path
 import ctypes as C
 import gzip
@@ -79,6 +79,16 @@ def mesh(source, semantic):
                             selected[ix[np.all((centers[ix] >= lo - 0.06) & (centers[ix] <= hi + 0.06), axis=1)]] = 1
                 if node.get('name') in semantic:
                     selected.fill(semantic[node['name']])
+                elif e.get('lifecycle') == 'under_construction' and e.get('assetId') and not e.get('preserveFinish'):
+                    # Detailed towers keep their architectural finishes. Use only the actual glass
+                    # faces for the map key. Their plinths, upper roofs and balcony slabs stay intact.
+                    object_name = node.get('name', '').casefold()
+                    material_name = d['materials'][part['material']].get('name', '').casefold() if 'material' in part else ''
+                    base = any(part_name in object_name for part_name in ('podium', 'grade', 'plinth', 'roof', 'crown', 'landscap', 'existing-exs'))
+                    glazed = any(kind in material_name for kind in ('glass', 'glazing', 'window', 'glazed'))
+                    voya_shaft = object_name in ('voya-taller-body', 'voya-shorter-body')
+                    if not base and (glazed or voya_shaft):
+                        selected.fill(6)
                 yield (world, face, selected)
         for child in node.get('children', []):
             yield from visit(child, a)

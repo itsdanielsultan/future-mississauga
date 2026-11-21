@@ -28,15 +28,18 @@ test('only the approved credited frontage PNGs are public, with exact dimensions
 });
 
 test('the study retains exact photography credit, link and City terms beside the views',()=>{
-  assert.ok(section);assert.match(section,/Photography reference: <a href="https:\/\/davidlaskerphotography\.com\/">David Lasker\/Cityscape Photography<\/a>/);
+  assert.ok(section);assert.match(section,/Photography reference: <a href="https:\/\/www\.cityscapephotography\.ca\/">David Lasker\/Cityscape Photography<\/a>/);
   assert.ok(section.includes(CITY_DATA_TERMS_URL));assert.equal(manifest.cityDataTermsURL,CITY_DATA_TERMS_URL);
   assert.match(section,/Model: Daniel Sultan \/ Future Mississauga/);
   assert.match(section,/href="study-notes\.html#ergocentric-275-superior"/);
   const notes=fs.readFileSync(new URL('study-notes.html',root),'utf8');
   const frontage=notes.match(/<article id="ergocentric-275-superior">[\s\S]*?<\/article>/)?.[0];
   assert.match(frontage,/photograph’s date is unknown[\s\S]*roof and rear remain unchanged/);
-  assert.equal((section.match(/class="file-download"/g)||[]).length,2);
-  for(const row of manifest.images){assert.ok(section.includes('<a href="'+row.url+'"><div'));assert.ok(section.includes('href="'+row.url+'" download data-download'));}
+  assert.match(section,/gallery\/edition-20261120\/buildings\/ergocentric-275-superior\.webp/);
+  for(const row of manifest.images){
+    assert.ok(section.includes('<a href="'+row.url+'"><div'));
+    assert(!section.includes('href="'+row.url+'" download data-download'),'Historical reference pictures are view-only');
+  }
 });
 
 test('275 Superior reflects the corrected scope without a static-only claim or public reference photo',()=>{

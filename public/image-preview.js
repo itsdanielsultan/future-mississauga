@@ -143,6 +143,10 @@ export function createImagePreview({views = false} = {}) {
     if (historyKey && historyWindow?.history.state?.atlasPicture === historyKey) historyWindow.history.back();
     request++;document.documentElement.classList.remove('picture-preview-open');opener?.focus({preventScroll:true});});
   dialog.addEventListener('keydown',e=>{
+    if (sequence && !e.defaultPrevented && !e.ctrlKey && !e.altKey && !e.metaKey &&
+        ['ArrowLeft','ArrowRight'].includes(e.key) && !e.target.closest('select,input,textarea,.media-preview__stage')) {
+      e.preventDefault();step(e.key==='ArrowRight'?1:-1);return;
+    }
     if(e.key!=='Tab')return;
     const items=[...dialog.querySelectorAll('button,select,a[href],[tabindex="0"]')].filter(x=>!x.disabled&&x.getClientRects().length);
     if(e.shiftKey&&document.activeElement===items[0]){e.preventDefault();items.at(-1)?.focus();}
@@ -159,8 +163,17 @@ export function createImagePreview({views = false} = {}) {
     if(trigger)opener=trigger;
     dialog.querySelector('h2').textContent=previewTitle(info,{views});
     const meta=dialog.querySelector('.media-preview__meta');meta.textContent=info.meta||'';meta.hidden=!info.meta;
-    const download=dialog.querySelector('[download]');download.href=assetURL(info.download);download.download=new URL(info.download,location.href).pathname.split('/').pop();
-    const format=download.download.split('.').pop().toUpperCase();const downloadLabel=['PNG','JPG','JPEG','SVG','AVIF','WEBP'].includes(format)?'Download '+format:'Download image';download.setAttribute('aria-label',downloadLabel);download.title=downloadLabel;
+    const download=dialog.querySelector('[download]');
+    download.hidden = !info.download;
+    if (info.download) {
+      download.href=assetURL(info.download);
+      download.download=new URL(info.download,location.href).pathname.split('/').pop();
+      const format=download.download.split('.').pop().toUpperCase();
+      const label=['PNG','JPG','JPEG','SVG','AVIF','WEBP'].includes(format)?'Download '+format:'Download image';
+      download.setAttribute('aria-label',label);download.title=label;
+    } else {
+      download.removeAttribute('href');
+    }
     const explore=dialog.querySelector('.media-preview__explore');explore.hidden=!info.explore;if(info.explore)explore.href=info.explore;
     renderImageAttribution(dialog.querySelector('.media-preview__credits'),info.attribution||{openStreetMap:info.osm});
     const identity=dialog.querySelector('.media-preview__identity');identity.replaceChildren(...presentationCaption(info));identity.hidden=!identity.childElementCount;
@@ -171,7 +184,7 @@ export function createImagePreview({views = false} = {}) {
     stage.setAttribute('aria-busy','true');status.textContent='Loading full-resolution image…';status.hidden=false;
     const native=new Image();
     native.onload=()=>{if(token!==request)return;image.toggleAttribute('data-scene-with-footer',info.appendedFooter===true);image.src=assetURL(info.src);image.hidden=false;status.hidden=true;stage.setAttribute('aria-busy','false');};
-    native.onerror=()=>{if(token!==request)return;status.textContent='The full-resolution image could not load. Please try the download.';stage.setAttribute('aria-busy','false');};
+    native.onerror=()=>{if(token!==request)return;status.textContent=info.download?'The full-resolution image could not load. You can still open the download.':'The full-resolution image could not load.';stage.setAttribute('aria-busy','false');};
     native.src=assetURL(info.src);
     const resetView=Boolean(trigger)||!dialog.open;
     if(!dialog.open)dialog.showModal();
@@ -214,7 +227,7 @@ export function previewDownloadURL(anchor, fallback, baseURL = location.href) {
 let generic, openGeneric;
 export function installImagePreviews(resolve = async (image,anchor) => {
   const src=image?.currentSrc||image?.src||anchor.href;
-  return {src,download:previewDownloadURL(anchor,src)};
+  return {src,download:previewDownloadURL(anchor,null)};
 }) {
   document.addEventListener('click',async event=>{
     if(event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
@@ -255,7 +268,7 @@ export function installImagePreviews(resolve = async (image,anchor) => {
     const title=image?.dataset.previewTitle||anchor?.dataset.previewTitle||heading||(image?.alt?.length<=70?image.alt:'Image preview');
     const viewTitle=image?.closest('figure')?.querySelector('figcaption')?.textContent?.trim();
     const src=fileLink?anchor.href:image?.currentSrc||image?.src;
-    openGeneric({title:title||'Picture',viewTitle,alt:image?.alt||title,src,download:previewDownloadURL(anchor,src),width:Number(image?.dataset.nativeWidth)||image?.naturalWidth||1200,height:Number(image?.dataset.nativeHeight)||image?.naturalHeight||800,preview:image?.currentSrc||image?.src,explore:cityMapLinkForSection(section,location.href)},()=>resolve(image,anchor),anchor||image?.closest('button')||image);
+    openGeneric({title:title||'Picture',viewTitle,alt:image?.alt||title,src,download:previewDownloadURL(anchor,null),width:Number(image?.dataset.nativeWidth)||image?.naturalWidth||1200,height:Number(image?.dataset.nativeHeight)||image?.naturalHeight||800,preview:image?.currentSrc||image?.src,explore:cityMapLinkForSection(section,location.href)},()=>resolve(image,anchor),anchor||image?.closest('button')||image);
 
   });
   const enhance=()=>document.querySelectorAll('main img').forEach(image=>{

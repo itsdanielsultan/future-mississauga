@@ -16,7 +16,11 @@ test('Sources removes the false tab strip while preserving real download and sou
   assert.equal(fs.existsSync(new URL('sources.js', publicRoot)), false);
   const catalogue = JSON.parse(read('data/document-previews-20261120.json'));
   const currentAtlas = catalogue.documents.at(-1);
-  assert.equal(currentAtlas.pages, 63);
+  assert.equal(currentAtlas.pages, JSON.parse(read('data/city-plates-20261120.json')).atlasPages);
+  assert(sources.includes(currentAtlas.pages + ' pages · PDF'));
+  assert.equal(currentAtlas.zoomWidth, 2880);
+  assert(currentAtlas.pageSections.some(section => section.label === 'How to read the city'));
+  assert(currentAtlas.pageLinks[2].filter(link => link.page > 2).length >= 20);
   const currentPDF = fs.readFileSync(new URL(currentAtlas.url, publicRoot));
   assert.equal(createHash('sha256').update(currentPDF).digest('hex'), currentAtlas.sourceSHA256);
   assert(catalogue.documents.some(doc => doc.url === 'downloads/Future-Mississauga-Atlas-20261101-3ec6b565b82d.pdf'));

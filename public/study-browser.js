@@ -9,8 +9,9 @@ if (browser) {
   const search = browser.querySelector('[type="search"]'), area = browser.querySelector('[data-study-area]'), choice = browser.querySelector('[data-study-choice]'), count = browser.querySelector('[role="status"]');
   const previous = browser.querySelector('[data-study-previous]'), next = browser.querySelector('[data-study-next]');
   const currentNote = document.querySelector('[data-current-study-note]');
+  const directoryLinks = [...document.querySelectorAll('[data-study-link]')];
   function linkedStudy() {
-    if (!location.hash) return rows.find(row => !row.section.hasAttribute('data-archive-study'))?.id;
+    if (!location.hash) return (rows.find(row => row.section.hasAttribute('data-landing-study')) || rows.find(row => !row.section.hasAttribute('data-archive-study')))?.id;
     let anchor;
     try { anchor = decodeURIComponent(location.hash.slice(1)); } catch { return null; }
     const target = document.getElementById(anchor);
@@ -28,6 +29,13 @@ if (browser) {
       currentNote.href = selected ? 'study-notes.html#note-' + encodeURIComponent(selected) : 'study-notes.html#pdf-study-notes';
     }
     for (const row of rows) row.section.hidden = row.id !== selected;
+    const visibleIds = new Set(matches.map(row => row.id));
+    for (const link of directoryLinks) {
+      const id = link.dataset.studyLink;
+      link.closest('li').hidden = !visibleIds.has(id);
+      if (id === selected) link.setAttribute('aria-current', 'true');
+      else link.removeAttribute('aria-current');
+    }
     const index = matches.findIndex(row => row.id === selected);
     previous.disabled = index <= 0; next.disabled = index < 0 || index >= matches.length - 1;
     count.textContent = matches.length ? `Study ${index + 1} of ${matches.length}` : 'No studies match. Try a different name or area.';
@@ -38,6 +46,20 @@ if (browser) {
   area.addEventListener('change', () => render({historyMode: 'replaceState'}));
   choice.addEventListener('change', () => {selected = choice.value; render({historyMode: 'pushState'});});
   for (const [button, direction] of [[previous, -1], [next, 1]]) button.addEventListener('click', () => {const options = [...choice.options], i = options.findIndex(option => option.value === selected); selected = options[i + direction]?.value || selected; render({historyMode: 'pushState'});});
+  for (const link of directoryLinks) {
+    link.addEventListener('click', event => {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      selected = link.dataset.studyLink;
+      render({historyMode: 'pushState'});
+      const section = document.getElementById(selected);
+      if (!section) return;
+      const heading = section.querySelector('h2');
+      heading.tabIndex = -1;
+      heading.focus({preventScroll:true});
+      section.scrollIntoView({block:'start'});
+    });
+  }
   addEventListener('hashchange', () => { search.value = ''; area.value = ''; selected = linkedStudy(); render({missingLink: !selected}); });
   browser.addEventListener('submit', event => event.preventDefault());
   render({missingLink: !selected});

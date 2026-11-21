@@ -11,6 +11,7 @@ import tempfile
 from PIL import Image
 
 from studio import build_raster, model_geometry, render_view
+from plate import signed_plate
 
 
 def digest(data):
@@ -47,9 +48,15 @@ def main():
     parser.add_argument('--private-inputs', type=Path, help='Local JSON mapping the seven study IDs to source GLB files.')
     parser.add_argument('--output', type=Path, required=True, help='Directory for the full WebP images and cards/ folder.')
     parser.add_argument('--check', action='store_true', help='Verify outputs against the published camera and image receipts.')
+    parser.add_argument('--record', action='store_true', help='Update image receipts for the current website output.')
     parser.add_argument('studies', nargs='*')
     args = parser.parse_args()
     profiles = json.loads((here / 'studies.json').read_text())
+    feature_file = args.public / 'data/building-features.json'
+    features = json.loads(feature_file.read_text())
+    catalogue = {r['id']: r for r in json.loads((args.public / 'data/building-catalogue.json').read_text())['entries']}
+    if args.record and args.check:
+        parser.error('Use either --check or --record for a run.')
     private_files = json.loads(args.private_inputs.read_text()) if args.private_inputs else {}
     args.output.mkdir(parents=True, exist_ok=True)
     (args.output / 'cards').mkdir(exist_ok=True)
@@ -63,16 +70,31 @@ def main():
                 parts.extend(model_geometry(get_glb(source, work, args.public, private_files)))
             master = args.output / (name + '.webp')
             card = args.output / 'cards' / master.name
-            count = render_view(parts, study['camera'], master, raster, frontage=study.get('frameDetailedFrontage', False))
+            count = render_view(parts, study['camera'], master, raster, frontage=study.get('frameDetailedFrontage', False), roof_sheen=name == 'aldo-1422-study')
             if count != study['triangles']:
                 raise ValueError(f'{name} geometry count changed')
             with Image.open(master) as image:
-                image.resize((560, 420), Image.Resampling.LANCZOS).save(card, quality=87, method=5)
+                image.resize((640, 480), Image.Resampling.LANCZOS).save(card, quality=90, method=5)
+                credit = catalogue[name].get('credit')
+                reference = 'Photograph reference: ' + credit['label'] + ' · ' + credit['url'] if credit else ''
+                plate = signed_plate(image.convert('RGB'), features[name].get('displayName') or catalogue[name]['title'],
+                                     byline='Render by Daniel Sultan', reference=reference)
+            plate.save(master, 'WEBP', quality=94, method=4)
+            if args.record:
+                for file, field in [(master, 'displayImage'), (card, 'cardImage')]:
+                    with Image.open(file) as image:
+                        record = dict(url=file.resolve().relative_to(args.public.resolve()).as_posix(),
+                                      width=image.width, height=image.height, sha256=digest(file.read_bytes()))
+                    study[field] = record
+                    features[name][field] = record
             if args.check:
                 for file, record in [(master, study['displayImage']), (card, study['cardImage'])]:
                     if digest(file.read_bytes()) != record['sha256']:
                         raise ValueError(f'{name}: mismatched {file.name} bytes')
             print(name, count, flush=True)
+    if args.record:
+        (here / 'studies.json').write_text(json.dumps(profiles, indent=2, ensure_ascii=False) + '\n')
+        feature_file.write_text(json.dumps(features, indent=2, ensure_ascii=False) + '\n')
 
 
 if __name__ == '__main__':

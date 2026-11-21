@@ -5,6 +5,7 @@ import vm from 'node:vm';
 import {downtownAerial} from '../public/downtown-aerial.js';
 import {assetURL} from '../public/asset-delivery.js';
 import {mediaPreviewInfo,comparisonPair} from '../public/clean-media.js';
+import {plateCaption} from '../public/edition-pictures.js';
 import {buildGalleryCatalogue,filterGallery,galleryViews} from '../public/gallery-catalogue.js';
 
 const pub = new URL('../public/', import.meta.url);
@@ -71,7 +72,7 @@ function harness({bootstrap = true, failedImport = false} = {}) {
     createImagePreview: () => ({show: info => shows.push(info), setViews() {},setSequence() {}}),
     installSkylineScenarios(select, mapLink, render) { select.addEventListener("change", render); render(); },
     downtownAerial, presentationCaption: () => [node(),node()], renderImageAttribution() {},
-    mediaPreviewInfo, comparisonPair, assetURL, buildGalleryCatalogue,filterGallery,galleryViews,updateCleanImageCaption(){},bindComparison() {},
+    mediaPreviewInfo, comparisonPair, assetURL, plateCaption, buildGalleryCatalogue,filterGallery,galleryViews,updateCleanImageCaption(){},bindComparison() {},
     loadGallery: () => {
       loads++;
       initialization = failedImport ? Promise.reject(new Error('Module unavailable')) : vm.runInContext('(async () => {' + source + '\n})()', context);

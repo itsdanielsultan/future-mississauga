@@ -1,12 +1,17 @@
+import {handleSuggestions} from './suggestions.mjs';
+
 // The builder supplies only public, immutable object names. Each request makes
 // at most one R2 read. The static asset service handles all other paths first.
 export const legacyAtlasPath = '/downloads/Future-Mississauga-Atlas.pdf';
 
-export function serveMedia(files, currentAtlasPath) {
+export function serveMedia(files, currentAtlasPath, publishedMedia = {}) {
+  const byDigest = new Map(Object.entries(publishedMedia));
+  for (const file of Object.values(files)) byDigest.set(file.key, file);
   return {
     async fetch(request, env) {
       const url = new URL(request.url);
       const path = url.pathname === '/' ? '/index.html' : url.pathname;
+      if (path === '/api/suggestions' || path.startsWith('/api/suggestions/')) return handleSuggestions(request, env);
       // Dated links identify the original atlas. Its undated bookmark follows
       // the same current edition advertised by the download directory.
       if (currentAtlasPath && path === legacyAtlasPath && !url.search && ['GET','HEAD'].includes(request.method)) {
@@ -15,7 +20,8 @@ export function serveMedia(files, currentAtlasPath) {
           headers:{Location:new URL(currentAtlasPath, url).href, 'Cache-Control':'public, max-age=300'}
         });
       }
-      const file = Object.hasOwn(files, path) && files[path];
+      const digest = path.match(/^\/media\/sha256\/([a-f0-9]{64})$/)?.[1];
+      const file = digest ? byDigest.get(digest) : Object.hasOwn(files, path) && files[path];
       if (!file) {
         if (path === '/index.html') {
           url.pathname = path;
@@ -25,7 +31,7 @@ export function serveMedia(files, currentAtlasPath) {
       }
       if (!['GET','HEAD'].includes(request.method)) return new Response(null, {status:405,headers:{Allow:'GET, HEAD'}});
       const etag = '"' + file.key + '"';
-      const headers = new Headers({'Content-Type':file.type,'Accept-Ranges':'bytes','ETag':etag,'Cache-Control':'public, max-age=3600, must-revalidate','Content-Length':String(file.bytes)});
+      const headers = new Headers({'Content-Type':file.type,'Accept-Ranges':'bytes','ETag':etag,'Cache-Control':digest ? 'public, max-age=31536000, immutable' : 'public, max-age=3600, must-revalidate','Content-Length':String(file.bytes)});
       const match = request.headers.get('If-None-Match');
       if (match && match.split(',').some(v => ['*',etag].includes(v.trim().replace(/^W\//,'')))) {
         headers.delete('Content-Length');

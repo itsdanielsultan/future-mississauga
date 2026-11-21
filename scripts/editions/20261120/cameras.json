@@ -1403,7 +1403,7 @@
           -0.3490658503988659,
           -0.6981317007977318
         ],
-        "sunEnergy": 2.4,
+        "sunEnergy": 1.8,
         "sunAngle": 0.08,
         "sunColour": [
           1,
@@ -1416,10 +1416,10 @@
           1,
           1
         ],
-        "worldStrength": 0.8,
+        "worldStrength": 0.55,
         "viewTransform": "AgX",
         "look": "AgX - Medium High Contrast",
-        "exposure": 0.15,
+        "exposure": -0.3,
         "gamma": 1
       },
       "background": "#e8f2f7",
@@ -1431,58 +1431,32 @@
         "scenario": "construction",
         "camera": {
           "location": [
-            -6500.0,
-            -2200.0,
-            140.0
+            -2760.0,
+            -3370.0,
+            1925.0
           ],
           "rotationEuler": [
-            1.5572456121444702,
-            2.4435218293206162e-08,
-            -0.45607200264930725
+            1.1727452278137207,
+            -3.787719915493426e-09,
+            0.6146630644798279
           ],
-          "matrixWorld": [
-            [
-              0.8977894186973572,
-              0.00596791272982955,
-              -0.44038456678390503,
-              -6500.0
-            ],
-            [
-              -0.44042500853538513,
-              0.012165305204689503,
-              -0.8977069854736328,
-              -2200.0
-            ],
-            [
-              -2.4435218293206162e-08,
-              0.9999082088470459,
-              0.013550300151109695,
-              140.0
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ],
-          "type": "PERSP",
-          "lens": 56.455562591552734,
-          "orthoScale": 6.0,
-          "sensorFit": "VERTICAL",
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2100,
+          "sensorFit": "AUTO",
           "sensorWidth": 36.0,
           "sensorHeight": 24.0,
           "shift": [
-            0.0,
-            0.0
+            -0.055,
+            0.0357
           ],
           "clip": [
-            1.0,
-            160000.0
+            0.1,
+            150000
           ]
         },
         "cameraQualifications": [
-          "New source-context camera; low-resolution actual native context trial passed. Final models/frame review remains required."
+          "Oblique October 23 Downtown reference camera. All three development stages share this position, lighting and framing within each aspect ratio."
         ],
         "resolution": [
           3240,
@@ -1503,7 +1477,7 @@
           -0.3490658503988659,
           -0.6981317007977318
         ],
-        "sunEnergy": 2.4,
+        "sunEnergy": 1.8,
         "sunAngle": 0.08,
         "sunColour": [
           1,
@@ -1516,10 +1490,10 @@
           1,
           1
         ],
-        "worldStrength": 0.8,
+        "worldStrength": 0.55,
         "viewTransform": "AgX",
         "look": "AgX - Medium High Contrast",
-        "exposure": 0.15,
+        "exposure": -0.3,
         "gamma": 1
       },
       "background": "#e8f2f7",
@@ -1531,58 +1505,32 @@
         "scenario": "existing",
         "camera": {
           "location": [
-            -6500.0,
-            -2200.0,
-            140.0
+            -2760.0,
+            -3370.0,
+            1925.0
           ],
           "rotationEuler": [
-            1.5572456121444702,
-            2.4435218293206162e-08,
-            -0.45607200264930725
+            1.1727452278137207,
+            -3.787719915493426e-09,
+            0.6146630644798279
           ],
-          "matrixWorld": [
-            [
-              0.8977894186973572,
-              0.00596791272982955,
-              -0.44038456678390503,
-              -6500.0
-            ],
-            [
-              -0.44042500853538513,
-              0.012165305204689503,
-              -0.8977069854736328,
-              -2200.0
-            ],
-            [
-              -2.4435218293206162e-08,
-              0.9999082088470459,
-              0.013550300151109695,
-              140.0
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ],
-          "type": "PERSP",
-          "lens": 56.455562591552734,
-          "orthoScale": 6.0,
-          "sensorFit": "VERTICAL",
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2100,
+          "sensorFit": "AUTO",
           "sensorWidth": 36.0,
           "sensorHeight": 24.0,
           "shift": [
-            0.0,
-            0.0
+            -0.055,
+            0.0357
           ],
           "clip": [
-            1.0,
-            160000.0
+            0.1,
+            150000
           ]
         },
         "cameraQualifications": [
-          "New source-context camera; low-resolution actual native context trial passed. Final models/frame review remains required."
+          "Oblique October 23 Downtown reference camera. All three development stages share this position, lighting and framing within each aspect ratio."
         ],
         "resolution": [
           3240,
@@ -1603,7 +1551,7 @@
           -0.3490658503988659,
           -0.6981317007977318
         ],
-        "sunEnergy": 2.4,
+        "sunEnergy": 1.8,
         "sunAngle": 0.08,
         "sunColour": [
           1,
@@ -1616,10 +1564,10 @@
           1,
           1
         ],
-        "worldStrength": 0.8,
+        "worldStrength": 0.55,
         "viewTransform": "AgX",
         "look": "AgX - Medium High Contrast",
-        "exposure": 0.15,
+        "exposure": -0.3,
         "gamma": 1
       },
       "background": "#e8f2f7",
@@ -1631,58 +1579,32 @@
         "scenario": "future",
         "camera": {
           "location": [
-            -6500.0,
-            -2200.0,
-            140.0
+            -2760.0,
+            -3370.0,
+            1925.0
           ],
           "rotationEuler": [
-            1.5572456121444702,
-            2.4435218293206162e-08,
-            -0.45607200264930725
+            1.1727452278137207,
+            -3.787719915493426e-09,
+            0.6146630644798279
           ],
-          "matrixWorld": [
-            [
-              0.8977894186973572,
-              0.00596791272982955,
-              -0.44038456678390503,
-              -6500.0
-            ],
-            [
-              -0.44042500853538513,
-              0.012165305204689503,
-              -0.8977069854736328,
-              -2200.0
-            ],
-            [
-              -2.4435218293206162e-08,
-              0.9999082088470459,
-              0.013550300151109695,
-              140.0
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ],
-          "type": "PERSP",
-          "lens": 56.455562591552734,
-          "orthoScale": 6.0,
-          "sensorFit": "VERTICAL",
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 2100,
+          "sensorFit": "AUTO",
           "sensorWidth": 36.0,
           "sensorHeight": 24.0,
           "shift": [
-            0.0,
-            0.0
+            -0.055,
+            0.0357
           ],
           "clip": [
-            1.0,
-            160000.0
+            0.1,
+            150000
           ]
         },
         "cameraQualifications": [
-          "New source-context camera; low-resolution actual native context trial passed. Final models/frame review remains required."
+          "Oblique October 23 Downtown reference camera. All three development stages share this position, lighting and framing within each aspect ratio."
         ],
         "resolution": [
           3240,
@@ -1914,6 +1836,10 @@
           3240,
           4050
         ]
+      },
+      "pinnedPlan": {
+        "path": "scene-presentation-correction-2026-11-01/final-held-capture-checklist/held-twelve-render-plan-v2.json",
+        "sha256": "a34be6e6c4afaaf4aa1f75435887c7973a3eeff242257d740263c52bfeb0ecd5"
       }
     },
     {
@@ -1989,6 +1915,10 @@
           3240,
           4050
         ]
+      },
+      "pinnedPlan": {
+        "path": "scene-presentation-correction-2026-11-01/final-held-capture-checklist/held-twelve-render-plan-v2.json",
+        "sha256": "a34be6e6c4afaaf4aa1f75435887c7973a3eeff242257d740263c52bfeb0ecd5"
       }
     },
     {
@@ -2065,6 +1995,10 @@
           4050
         ],
         "geographicScope": "Lakeview Village, coastal neighbourhoods and source-backed project context; bounded camera framing to avoid finite inland scene boundary."
+      },
+      "pinnedPlan": {
+        "path": "scene-presentation-correction-2026-11-01/lakeview-final-native-water-v1/portrait-camera-v2/portrait-camera-plan-v2.json",
+        "sha256": "4aabc1a7d91401759d58fd13decd24470d4bbe60c3b4d5f0f13335150df8e701"
       }
     },
     {
@@ -2180,7 +2114,7 @@
       "background": "#e8f2f7",
       "job": {
         "identity": "portraits/lorne-park-future.png",
-        "title": "Aldo Drive area, Lorne Park · 900 m study",
+        "title": "Aldo Drive area, Lorne Park \u00b7 900 m study",
         "area": "Aldo Drive area, Lorne Park",
         "district": "lorne-park",
         "scenario": "future",
@@ -4011,36 +3945,36 @@
         "scenario": "construction",
         "camera": {
           "location": [
-            -7200.0,
-            -2200.0,
-            160.0
+            -2760.0,
+            -3370.0,
+            1925.0
           ],
           "rotationEuler": [
-            1.5595078468322754,
-            -6.212012237938325e-08,
-            -0.6596286296844482
+            1.1727452278137207,
+            -3.787719915493426e-09,
+            0.6146630644798279
           ],
-          "type": "PERSP",
-          "lens": 100,
-          "orthoScale": 6.0,
-          "sensorFit": "VERTICAL",
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 1797.75,
+          "sensorFit": "AUTO",
           "sensorWidth": 36.0,
           "sensorHeight": 24.0,
           "shift": [
-            0,
-            0.12
+            -0.07488889247179031,
+            0.03574346378445625
           ],
           "clip": [
-            1.0,
-            160000.0
+            0.1,
+            150000
           ]
         },
         "cameraQualifications": [
-          "Presentation-only revision, 9 November 2026. Accepted native geometry and authored facades preserved. Exact same camera and lighting across scenarios."
+          "Oblique October 23 Downtown reference camera. All three development stages share this position, lighting and framing within each aspect ratio."
         ],
         "resolution": [
           6144,
-          2240
+          3456
         ]
       }
     },
@@ -4085,36 +4019,36 @@
         "scenario": "existing",
         "camera": {
           "location": [
-            -7200.0,
-            -2200.0,
-            160.0
+            -2760.0,
+            -3370.0,
+            1925.0
           ],
           "rotationEuler": [
-            1.5595078468322754,
-            -6.212012237938325e-08,
-            -0.6596286296844482
+            1.1727452278137207,
+            -3.787719915493426e-09,
+            0.6146630644798279
           ],
-          "type": "PERSP",
-          "lens": 100,
-          "orthoScale": 6.0,
-          "sensorFit": "VERTICAL",
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 1797.75,
+          "sensorFit": "AUTO",
           "sensorWidth": 36.0,
           "sensorHeight": 24.0,
           "shift": [
-            0,
-            0.12
+            -0.07488889247179031,
+            0.03574346378445625
           ],
           "clip": [
-            1.0,
-            160000.0
+            0.1,
+            150000
           ]
         },
         "cameraQualifications": [
-          "Presentation-only revision, 9 November 2026. Accepted native geometry and authored facades preserved. Exact same camera and lighting across scenarios."
+          "Oblique October 23 Downtown reference camera. All three development stages share this position, lighting and framing within each aspect ratio."
         ],
         "resolution": [
           6144,
-          2240
+          3456
         ]
       }
     },
@@ -4159,36 +4093,36 @@
         "scenario": "future",
         "camera": {
           "location": [
-            -7200.0,
-            -2200.0,
-            160.0
+            -2760.0,
+            -3370.0,
+            1925.0
           ],
           "rotationEuler": [
-            1.5595078468322754,
-            -6.212012237938325e-08,
-            -0.6596286296844482
+            1.1727452278137207,
+            -3.787719915493426e-09,
+            0.6146630644798279
           ],
-          "type": "PERSP",
-          "lens": 100,
-          "orthoScale": 6.0,
-          "sensorFit": "VERTICAL",
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 1797.75,
+          "sensorFit": "AUTO",
           "sensorWidth": 36.0,
           "sensorHeight": 24.0,
           "shift": [
-            0,
-            0.12
+            -0.07488889247179031,
+            0.03574346378445625
           ],
           "clip": [
-            1.0,
-            160000.0
+            0.1,
+            150000
           ]
         },
         "cameraQualifications": [
-          "Presentation-only revision, 9 November 2026. Accepted native geometry and authored facades preserved. Exact same camera and lighting across scenarios."
+          "Oblique October 23 Downtown reference camera. All three development stages share this position, lighting and framing within each aspect ratio."
         ],
         "resolution": [
           6144,
-          2240
+          3456
         ]
       }
     },
@@ -4563,6 +4497,10 @@
           6144,
           3840
         ]
+      },
+      "pinnedPlan": {
+        "path": "scene-presentation-correction-2026-11-01/lakeview-final-native-water-v1/wide-camera-v2/two-wide-camera-plan-v2.json",
+        "sha256": "9d07d17b2756505ed5c701c71e7ba2143ecc261c3bf85866667dce54816c57c2"
       }
     },
     {
@@ -4638,6 +4576,10 @@
           6144,
           3840
         ]
+      },
+      "pinnedPlan": {
+        "path": "scene-presentation-correction-2026-11-01/lakeview-final-native-water-v1/wide-camera-v2/two-wide-camera-plan-v2.json",
+        "sha256": "9d07d17b2756505ed5c701c71e7ba2143ecc261c3bf85866667dce54816c57c2"
       }
     },
     {
@@ -4714,6 +4656,10 @@
           3840
         ],
         "geographicScope": "Lakeview Village, coastal neighbourhoods and source-backed project context; bounded camera framing to avoid finite inland scene boundary."
+      },
+      "pinnedPlan": {
+        "path": "scene-presentation-correction-2026-11-01/final-held-capture-checklist/held-twelve-render-plan-v2.json",
+        "sha256": "a34be6e6c4afaaf4aa1f75435887c7973a3eeff242257d740263c52bfeb0ecd5"
       }
     },
     {
@@ -4790,6 +4736,10 @@
           2240
         ],
         "geographicScope": "Lakeview Village, coastal neighbourhoods and source-backed project context; bounded camera framing to avoid finite inland scene boundary."
+      },
+      "pinnedPlan": {
+        "path": "scene-presentation-correction-2026-11-01/final-held-capture-checklist/held-twelve-render-plan-v2.json",
+        "sha256": "a34be6e6c4afaaf4aa1f75435887c7973a3eeff242257d740263c52bfeb0ecd5"
       }
     },
     {
@@ -4905,7 +4855,7 @@
       "background": "#e8f2f7",
       "job": {
         "identity": "wide/lorne-park-future.png",
-        "title": "Aldo Drive area, Lorne Park · 900 m study",
+        "title": "Aldo Drive area, Lorne Park \u00b7 900 m study",
         "area": "Aldo Drive area, Lorne Park",
         "district": "lorne-park",
         "scenario": "future",

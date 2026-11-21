@@ -1,20 +1,21 @@
 // The URL is the map's shareable location. Keep the scenario when opening a building.
-export function nextMapLocation(current, {district, project, context, scenario, building}) {
+export function nextMapLocation(current, {district, project, context, scenario, building, station}) {
   const url = new URL(current);
   if (district) {
     url.searchParams.set('district', district);
     url.searchParams.delete('project');
     url.searchParams.delete('context');
     url.searchParams.delete('building');
+    url.searchParams.delete('station');
   }
-  for (const [key, value] of Object.entries({project, context, scenario, building})) {
+  for (const [key, value] of Object.entries({project, context, scenario, building, station})) {
     if (value === undefined) continue;
     if (value) url.searchParams.set(key, value);
     else url.searchParams.delete(key);
   }
   if (!url.searchParams.get('project')) url.searchParams.delete('building');
   const previous = new URL(current).searchParams;
-  if (['district','project','context','building'].some(key=>previous.get(key)!==url.searchParams.get(key))) url.searchParams.delete('view');
+  if (['district','project','context','building','station'].some(key=>previous.get(key)!==url.searchParams.get(key))) url.searchParams.delete('view');
   if (scenario && scenario !== 'comparison') url.searchParams.delete('split');
   return url;
 }
@@ -38,13 +39,14 @@ export function navigateMap(view) {
   }
 }
 
-export function sharedMapURL(address, {district, project, building, context, scenario, split, target, position}) {
+export function sharedMapURL(address, {district, project, building, context, station, scenario, split, target, position}) {
   const page = new URL(address);
   const url = page.protocol === 'file:' ? new URL('https://futuremississauga.com/explore.html') : new URL(page.pathname, page);
   url.searchParams.set('district',district);
   if (project) url.searchParams.set('project',project);
   if (project && building) url.searchParams.set('building',building);
   if (context) url.searchParams.set('context',context);
+  if (station) url.searchParams.set('station',station);
   url.searchParams.set('scenario',scenario);
   if (scenario === 'comparison') url.searchParams.set('split',String(Math.round(split*100)));
   url.searchParams.set('view',[...target,...position].map(value=>Number(value.toFixed(2))).join(','));

@@ -37,7 +37,10 @@ test('the actual shared resolver keeps explicit credited fallback and gives acce
    assert.equal(info.src,anchor.href);assert.equal(info.download,new URL(record.download.url,base).href);
    row={src:'accepted-clean.png',download:'accepted-credit.png'};assert.equal(await resolve(image,anchor),row);row=null;
    study={src:'accepted-study.png',download:'accepted-study-credit.png'};assert.equal(await resolve(image,anchor),study);study=null;
-   anchor.dataset.previewDownload='javascript:alert(1)';assert.equal((await resolve(image,anchor)).download,anchor.href);
+   anchor.dataset.previewDownload='javascript:alert(1)';
+   assert.equal((await resolve(image,anchor)).download,null,'uncredited images are preview-only');
+   delete anchor.dataset.previewDownload;
+   assert.equal((await resolve(image,anchor)).download,null);
   }
  }finally{if(previous===undefined)delete globalThis.location;else globalThis.location=previous}
 });
@@ -78,7 +81,9 @@ test('exact three Fairview preview anchors declare their matching footer downloa
  let found=0;
  for(const name of ['reference-updates.html','updates.html']){
   const html=read(name);
-  for(const row of rows){
+  for(const original of rows){
+   const plate=JSON.parse(read('data/city-plates-20261120.json')).plates.find(item=>item.id===original.identity);
+   const row=name==='reference-updates.html'?{...original,displayMaster:plate.signedMaster,download:plate.download}:original;
    const tags=[...html.matchAll(/<a\b[^>]*>/g)].map(m=>m[0]).filter(tag=>tag.includes('href="'+row.displayMaster.url+'"'));
    if(name==='updates.html'&&row.identity.endsWith('/before')){assert.equal(tags.length,0);continue}
    assert.equal(tags.length,1);found++;

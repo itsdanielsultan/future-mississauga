@@ -98,7 +98,7 @@ test('Maritz fallback, unrelated project and empty geometry do not claim facade 
 });
 
 const PHOTO_CREDIT='Photographic reference: David Lasker/Cityscape Photography · davidlaskerphotography.com';
-const PHOTO_LINK={label:'David Lasker/Cityscape Photography',url:'https://davidlaskerphotography.com/'};
+const PHOTO_LINK={label:'David Lasker/Cityscape Photography',url:'https://www.cityscapephotography.ca/'};
 function photoScene(){
   const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(35,1,1,1000);
   camera.position.set(0,0,100);camera.lookAt(0,0,0);

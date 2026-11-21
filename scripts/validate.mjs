@@ -153,7 +153,9 @@ export async function validate(site = join(ROOT, 'public'), {enforcePublicationS
     assert(!/-----BEGIN [A-Z ]*PRIVATE KEY-----|github_pat_[A-Za-z0-9_]+|gh[pousr]_[A-Za-z0-9]{30,}/.test(text), 'Credential-like material found: ' + name);
     if (['.html', '.css', '.js', '.mjs'].includes(extname(file))) {
       assert(!/https?:\/\/[^\s"'<>]*(?:openai|chatgpt|oaiusercontent|sites-runtime)[^\s"'<>]*/i.test(text), 'Hosted runtime dependency remains: ' + name);
-      assert(!/["'`]\/(?:api|auth|media)\//.test(text), 'Server-dependent request remains: ' + name);
+      // The suggestion form supports a static/offline closed state. Its sole online endpoint is supplied by this site's Worker.
+      const staticDependencies = name === 'suggestions.js' ? text.replace("const endpoint = '/api/suggestions';", '') : text;
+      assert(!/["'`]\/(?:api|auth|media)\//.test(staticDependencies), 'Server-dependent request remains: ' + name);
     }
     if (extname(file) === '.html') {
       assert(!/(?:src|poster)\s*=\s*["']gallery\/originals\//.test(text), 'Full-size original used as a displayed HTML image: ' + name);

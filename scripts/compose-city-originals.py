@@ -81,36 +81,44 @@ def write_print(image, row, north, output, home):
     source_lines=wrapped(draw,short_credits+required,source_font,w-2*margin-2*pad)
     detail_height=round(17*unit)
     band=round(105*unit)+len(source_lines)*detail_height
-    if home:
-        y=h-margin-band
-        paper=image.copy()
-        draw=ImageDraw.Draw(paper); draw.rounded_rectangle((margin,y,w-margin,h-margin),radius=round(6*unit),fill='#ffffff')
-        x=margin+pad
-    else:
-        x=pad; y=h
-        paper=Image.new('RGB',(w,h+band),'white');paper.paste(image); draw=ImageDraw.Draw(paper)
+    # The artwork, including portraits, keeps its original camera crop and ratio.
+    # Draw onto the image copy so the separate comparison scene stays pristine.
+    paper=image.copy()
+    draw=ImageDraw.Draw(paper)
+    x=margin+pad
+    right=w-x
+    y=h-margin-band
+    draw.rounded_rectangle((margin,y,w-margin,h-margin),radius=round(6*unit),fill='white')
     draw.text((x,y+round(13*unit)),area,font=title_font,fill='#242528')
-    draw.text((x,y+round(54*unit)),'by Daniel Sultan' if home else label+'   ·   Daniel Sultan',font=label_font,fill='#4b4d4e')
-    if home:
-        legend=[('#bdbebc','Existing'),('#83b2bc','Under construction'),('#dcb8aa','Proposed / approved'),('#ac91b9','Uncertain')]
-        if phase=='existing':legend=legend[:1]
-        current=w*(.45 if len(legend)>1 else .78)
+    draw.text((x,y+round(54*unit)),'by Daniel Sultan',font=label_font,fill='#4b4d4e')
+    title_edge=x+draw.textlength(area,font=title_font)+24*unit
+    mid=y+48*unit
+    compass_x=right-20*unit
+    legend=[('#bdbebc','Existing'),('#83b2bc','Under construction'),('#dcb8aa','Proposed / approved'),('#ac91b9','Uncertain')]
+    if phase=='existing':legend=legend[:1]
+    if phase=='construction':legend=legend[:2]
+    key_width=sum(draw.textlength(word,font=detail_font)+47*unit for _,word in legend)
+    key_start=max(title_edge, min(w*.45,compass_x-key_width-42*unit))
+    if w>h and key_start+key_width<compass_x-24*unit:
         for colour,word in legend:
-            mid=y+round(48*unit)
-            draw.rounded_rectangle((current,mid-6*unit,current+14*unit,mid+6*unit),radius=2*unit,fill=colour)
-            draw.text((current+22*unit,mid),word,anchor='lm',font=detail_font,fill='#333432')
-            current+=draw.textlength(word,font=detail_font)+47*unit
-    compass(draw,w-(margin if home else 0)-pad-20*unit,y+43*unit,north,unit)
-    right=w-(margin if home else 0)-pad
+            draw.rounded_rectangle((key_start,mid-6*unit,key_start+14*unit,mid+6*unit),radius=2*unit,fill=colour)
+            draw.text((key_start+22*unit,mid),word,anchor='lm',font=detail_font,fill='#333432')
+            key_start+=draw.textlength(word,font=detail_font)+47*unit
+    elif draw.textlength(label,font=label_font)<compass_x-title_edge-60*unit:
+        draw.text((compass_x-46*unit,mid),label,font=label_font,fill='#4b4d4e',anchor='rm')
+    compass(draw,compass_x,y+43*unit,north,unit)
     draw.line((x,y+80*unit,right,y+80*unit),fill='#dcdddd',width=max(1,round(.7*unit)))
-    for n,line in enumerate(source_lines):draw.text((x,y+(89+n*17)*unit),line,font=source_font,fill='#505354')
-    if not required and w>h:draw.text((right,y+89*unit),'futuremississauga.com/sources.html',font=source_font,fill='#505354',anchor='ra')
+    for n,line in enumerate(source_lines):
+        draw.text((x,y+(89+n*17)*unit),line,font=source_font,fill='#505354')
+    source_url='futuremississauga.com/sources.html'
+    if draw.textlength(source_lines[0]+'    '+source_url,font=source_font)<right-x:
+        draw.text((right,y+89*unit),source_url,font=source_font,fill='#505354',anchor='ra')
     meta=PngImagePlugin.PngInfo()
     meta.add_itxt('Title',area+' · '+label)
     meta.add_itxt('Author','Daniel Sultan / Future Mississauga')
     meta.add_itxt('Description','\n'.join(row['caption'].get('fullCredits',[])+required))
     paper.save(output,format='PNG',compress_level=4,pnginfo=meta)
-    return paper.size
+    return paper
 
 
 def main():
@@ -142,8 +150,13 @@ def main():
         grade = json.loads(tone.read_text()) if tone.exists() else None
         if grade and grade['sourceSHA256'] != info['image']['sha256']:raise ValueError('Mismatched tower grading source: '+ident)
         grade_hash = grade['gradeSHA256'] if grade else None
-        recipe = 'a338e303b706ef26b474eb219122c786f16ce4cfafb59cc5f705f5c2af4dc629' if not ident.startswith('home/') else 'north-and-scenario-key-v1'
-        if record.is_file() and master.is_file() and download.is_file():
+        recipe = 'inset-attribution-v3'
+        signed_folder=folder.parent/'signed'
+        signed_folder.mkdir(exist_ok=True)
+        signed_master=signed_folder/(target+'-full.webp')
+        preview=signed_folder/(target+'.webp')
+        thumbnail=signed_folder/(target+'-thumb.webp')
+        if record.is_file() and master.is_file() and download.is_file() and signed_master.is_file() and preview.is_file() and thumbnail.is_file():
             old=json.loads(record.read_text())
             if old.get('sourceSHA256')==info['image']['sha256'] and old.get('recipe')==recipe and old.get('gradeSHA256')==grade_hash:return
         if sha(source)!=info['image']['sha256']:raise ValueError('Render digest mismatch for '+ident)
@@ -156,11 +169,22 @@ def main():
             im=background.convert('RGB')
         temp=master.with_name(master.name+'.tmp'); im.save(temp,'WebP',quality=92,method=3);temp.replace(master)
         temp=download.with_name(download.name+'.tmp')
-        print_size=write_print(im,rows[ident],info['north']['bearingClockwiseFromScreenUpDegrees'],temp,ident.startswith('home/'))
+        signed=write_print(im,rows[ident],info['north']['bearingClockwiseFromScreenUpDegrees'],temp,ident.startswith('home/'))
         temp.replace(download)
+        temp=signed_master.with_suffix('.partial')
+        signed.save(temp,format='WebP',quality=93,method=3)
+        temp.replace(signed_master)
+        renditions={'signedMaster':asset(signed_master,public,'image/webp',signed.size)}
+        for key,path,edge in [('signedPreview',preview,1600),('signedThumbnail',thumbnail,640)]:
+            reduced=signed.copy()
+            reduced.thumbnail((edge,edge),Image.Resampling.LANCZOS)
+            temp=path.with_suffix('.partial')
+            reduced.save(temp,format='WebP',quality=88,method=3)
+            temp.replace(path)
+            renditions[key]=asset(path,public,'image/webp',reduced.size)
         data=dict(id=ident,sourceSHA256=info['image']['sha256'],sourceSceneSHA256=proof['sourceGLB']['sha256'],
                   originalRender=info['renderCompletedUTC'],newNativeRender=True,recipe=recipe,gradeSHA256=grade_hash,
-                  displayMaster=asset(master,public,'image/webp',im.size),download=asset(download,public,'image/png',print_size))
+                  displayMaster=asset(master,public,'image/webp',im.size),download=asset(download,public,'image/png',signed.size), **renditions)
         tmp=record.with_suffix('.tmp');tmp.write_text(json.dumps(data,indent=2));tmp.replace(record)
         print('COMPOSED',ident,flush=True)
     selected = args.only or list(receipts)

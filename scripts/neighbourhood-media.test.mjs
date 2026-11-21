@@ -61,10 +61,12 @@ test('the Fairview study offers previews and separate download icons and opens t
   assert.deepEqual(current.images.map(row=>row.identity),['neighbourhood/fairview/before','neighbourhood/fairview/after']);
   for(const row of current.images){
     assert.equal(row.scenario,'existing');assert.equal(row.caption.comparisonState,row.identity.split('/').at(-1));
-    assert.ok(section.includes('<a href="'+row.displayMaster.url+'" data-preview-download="'+row.download.url+'"><div class="image-frame"><img'));
-    assert.ok(section.includes('href="'+row.download.url+'" download data-download'));
-    for(const preview of row.responsivePreviews.filter(asset=>asset.mimeType==='image/avif')){
-      assert.ok(section.includes(preview.url+' '+preview.dimensions[0]+'w'));
+    const edition=JSON.parse(fs.readFileSync(new URL('data/city-plates-20261120.json',root)));
+    const plate=edition.plates.find(item=>item.id===row.identity);
+    assert.ok(section.includes('href="'+plate.signedMaster.url+'" data-preview-download="'+plate.download.url+'"'));
+    assert.ok(section.includes('href="'+plate.download.url+'" download data-download'));
+    for(const preview of [plate.signedThumbnail,plate.signedPreview,plate.signedMaster]){
+      assert.ok(section.includes(preview.url+' '+preview.width+'w'));
       assert.equal(sha(fs.readFileSync(new URL(preview.url,root))),preview.sha256);
     }
     for(const credit of row.caption.requiredModelCredits)assert.ok(section.includes(credit));

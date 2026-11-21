@@ -8,14 +8,18 @@
     "node": ">=22"
   },
   "scripts": {
-    "check": "node scripts/check-publication.mjs",
-    "build": "node scripts/build.mjs",
+    "check": "npm run build && node scripts/verify-cloudflare-preview.mjs --staged",
+    "build": "node scripts/prepare-cloudflare.mjs",
     "dev": "node scripts/serve.mjs",
-    "preview": "node scripts/serve.mjs --site dist",
-    "build:ui": "node scripts/build-ui.mjs",
+    "preview": "node scripts/serve.mjs --release",
+    "build:ui": "node scripts/sync-footers.mjs && node scripts/build-ui.mjs",
     "build:catalogue": "node scripts/build-building-catalogue.mjs",
     "prebuild": "node scripts/build-map-stations.mjs && npm run build:catalogue && npm run build:ui",
-    "build:cloudflare": "node scripts/prepare-cloudflare.mjs"
+    "build:cloudflare": "node scripts/prepare-cloudflare.mjs",
+    "check:pages": "node scripts/check-publication.mjs",
+    "build:pages": "node scripts/build.mjs",
+    "preview:cloudflare": "wrangler dev --config .cloudflare-release/wrangler.json",
+    "preview:pages": "node scripts/serve.mjs --site dist"
   },
   "devDependencies": {
     "@tailwindcss/cli": "4.3.5",

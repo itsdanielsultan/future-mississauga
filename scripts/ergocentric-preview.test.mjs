@@ -62,7 +62,7 @@ test('the individual study retains its visible photo credit',()=>{
 
 test('credit stays visible beside the study and the city route targets only Citywide',()=>{
   const html=visibleReferenceCreditHTML(view);
-  assert.match(html,/Photo reference: <a href="https:\/\/davidlaskerphotography\.com\/"/);
+  assert.match(html,/Photo reference: <a href="https:\/\/www\.cityscapephotography\.ca\/"/);
   assert.match(html,/>David Lasker\/Cityscape Photography<\/a>/);
   assert.equal(asset.cityDataTerms,true);assert.match(view.credit,/City of Mississauga/);
   assert.equal(view.cityURL,'explore.html?district=citywide&project=ergocentric-275-superior');

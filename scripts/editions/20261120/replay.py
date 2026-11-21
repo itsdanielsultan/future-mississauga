@@ -87,6 +87,13 @@ def main():
         source_id = view['source']
         if source_id not in receipt_cache:
             receipt_cache[source_id] = checked_inputs(recipe['scenes'][source_id], source_id, archive)
+        pinned_plan = view.get('pinnedPlan')
+        if pinned_plan:
+            archived_plan = archive / pinned_plan['path']
+            verify(archived_plan, pinned_plan['sha256'])
+            recorded_job = next((row for row in read(archived_plan)['jobs'] if row['identity'] == name), None)
+            if recorded_job is None or recorded_job['camera'] != view['job']['camera']:
+                raise ValueError(f'Archived camera differs from the edition: {name}')
         if args.check:
             continue
         source = receipt_cache[source_id]
@@ -98,7 +105,11 @@ def main():
         receipt = inputs / 'import.json'
         plan = inputs / 'plan.json'
         receipt.write_text(json.dumps(source))
-        plan.write_text(json.dumps(dict(lighting=view['lighting'], background=view['background'], jobs=[view['job']])))
+        if pinned_plan:
+            # The waterfront adapters verify the complete original plan checksum.
+            shutil.copyfile(archived_plan, plan)
+        else:
+            plan.write_text(json.dumps(dict(lighting=view['lighting'], background=view['background'], jobs=[view['job']])))
         command = [args.blender, '--background', '--disable-autoexec', source['packedBlend']['path'],
                    '--python-exit-code', '1', '--python', str(HERE / 'renderers' / view['renderer']),
                    '--', str(receipt), str(plan), str(output), '--identities', name, '--samples', str(view['samples'])]

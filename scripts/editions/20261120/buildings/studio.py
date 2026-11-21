@@ -49,7 +49,7 @@ def model_geometry(raw_glb):
         colors = array(colors)
         linear = colors / 255
         colors[:] = 255 * np.where(linear <= .0031308, 12.92 * linear, 1.055 * np.power(linear, 1 / 2.4) - .055)
-        items.append((points, normals, colors, uv, texture, indices))
+        items.append((points, normals, colors, uv, texture, getattr(material, 'name', '') or '', indices))
     return items
 
 
@@ -62,8 +62,10 @@ def build_raster(directory):
     return library
 
 
-def render_view(items, direction, target, raster, frontage=False):
-    width, height = 1920, 1440
+def render_view(items, direction, target, raster, frontage=False, output_size=(1800, 1350), roof_sheen=False):
+    # Render large print masters at native resolution. Supersample smaller web images.
+    sampling = 4 / 3 if output_size[0] <= 2000 else 1.0
+    width, height = (round(length * sampling) for length in output_size)
     eye = unit(direction)
     right = unit(np.cross([0, 1, 0], eye))
     up = unit(np.cross(eye, right))
@@ -79,7 +81,7 @@ def render_view(items, direction, target, raster, frontage=False):
     span = maximum - minimum
     scale = min(width * .86 / max(span[0], 1e-9), height * .84 / max(span[1], 1e-9))
     offset = np.array([width / 2, height * .49]) - (minimum[:2] + maximum[:2]) / 2 * scale
-    colors = np.full((height, width, 3), [241, 241, 238], dtype=np.uint8)
+    colors = np.full((height, width, 3), [244, 244, 241], dtype=np.uint8)
     depth = np.full((height, width), -np.inf, dtype=np.float32)
 
     def draw(positions, illumination, surface, uv, texture, indices):
@@ -87,21 +89,32 @@ def render_view(items, direction, target, raster, frontage=False):
         texture_height, texture_width = texture.shape[:2] if texture.ndim == 3 else (0, 0)
         raster.draw(width, height, *pointers, texture_width, texture_height, indices.ctypes.data, len(indices))
 
-    for points, _, _, _, _, indices in items:
+    for points, _, _, _, _, _, indices in items:
         ground = points.copy()
         elevation = ground[:, 1] - low[1]
-        ground[:, 0] -= elevation * .22
-        ground[:, 2] -= elevation * .12
+        ground[:, 0] -= elevation * .19
+        ground[:, 2] -= elevation * .095
         ground[:, 1] = low[1]
         positions = (ground - centre) @ matrix
         positions[:, :2] = positions[:, :2] * scale + offset
-        draw(array(positions), array(np.ones(len(points))), array(np.tile([189, 192, 190], (len(points), 1))), array([]), array([], 'uint8'), indices)
-    colors = np.array(Image.fromarray(colors).filter(ImageFilter.GaussianBlur(width / 245)))
+        draw(array(positions), array(np.ones(len(points))), array(np.tile([194, 197, 194], (len(points), 1))), array([]), array([], 'uint8'), indices)
+    colors = np.array(Image.fromarray(colors).filter(ImageFilter.GaussianBlur(width / 215)))
     depth[:] = -np.inf
-    light = unit([-.65, 1, .75])
-    for (_, normals, surface, uv, texture, indices), positions in zip(items, projected):
+    light = unit([-.62, .9, .82])
+    for (_, normals, surface, uv, texture, material_name, indices), positions in zip(items, projected):
         positions[:, :2] = positions[:, :2] * scale + offset
-        illumination = .71 + .28 * np.maximum(0, normals @ light) + .06 * np.maximum(0, normals[:, 1])
+        sky = np.maximum(0, normals[:, 1])
+        illumination = .73 + .24 * np.maximum(0, normals @ light) + .06 * sky
+        # Aldo’s black membrane reflects the sky. Isolate the dark, flat upper roof
+        # so this adjustment cannot lighten the shingled slopes or the lower garage.
+        if roof_sheen and material_name.startswith('Plain black upper flat roof'):
+            half_vector = unit(eye + np.array([0, 1, 0]))
+            gloss = np.maximum(0, normals @ half_vector) ** 4
+            sky_reflection = 15 + 8 * sky + 5 * gloss
+            surface = array(surface + sky_reflection[:, None])
         draw(array(positions), array(illumination), surface, uv, texture, indices)
-    Image.fromarray(colors).resize((1440, 1080), Image.Resampling.LANCZOS).save(target, 'WEBP', quality=92, method=4)
+    image = Image.fromarray(colors)
+    if image.size != output_size:
+        image = image.resize(output_size, Image.Resampling.LANCZOS)
+    image.save(target, 'WEBP', quality=94, method=4)
     return sum(len(part[-1]) for part in items)

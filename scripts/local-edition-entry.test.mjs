@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {mkdtemp, readFile, writeFile, mkdir, rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import path from 'node:path';
-import {fileURLToPath} from 'node:url';
+import {fileURLToPath,pathToFileURL} from 'node:url';
 import {execFileSync} from 'node:child_process';
 import vm from 'node:vm';
 
@@ -41,11 +41,13 @@ test('a downloaded HTML keeps its styles and aerial, and opens the installed sit
   assert.match(text,/<style data-sheet="night.css" media="screen">/);
   const document = {baseURI:text.match(/<base href="([^"]+)"/)[1].replaceAll('&amp;', '&')};
   const script = text.match(/<script id="open-installed-edition">([^<]+)<\/script>/)[1];
-  const location = {protocol:'file:',search:'?scenario=existing',hash:'#skyline',replace(url){this.destination=url;}};
-  vm.runInNewContext(script,{URL,document,location});
+  const location = {href:pathToFileURL(downloaded).href,protocol:'file:',search:'?scenario=existing',hash:'#skyline',replace(url){this.destination=url;}};
+  vm.runInNewContext(script,{URL,document,location,Image:class {set src(value){this.onerror()}}});
   const opened = new URL(location.destination);
   assert.equal(fileURLToPath(opened),home);
   assert.equal(opened.search+opened.hash,'?scenario=existing#skyline');
+  vm.runInNewContext(script,{URL,document,location,Image:class {set src(value){this.onload()}}});
+  assert.equal(fileURLToPath(location.destination),path.join(downloads,'Site & models','index.html'));
   location.destination=null; location.protocol='https:';
   vm.runInNewContext(script,{URL,document,location});
   assert.equal(location.destination,null);

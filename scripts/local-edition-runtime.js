@@ -161,7 +161,10 @@
       const desc = Object.getOwnPropertyDescriptor(type.prototype, prop);
       if (!desc?.set || !desc.configurable) continue;
       Object.defineProperty(type.prototype, prop, {...desc,
-        set(value) { desc.set.call(this, prop === 'srcset' ? fixSet(String(value)) : localize(String(value))); },
+        set(value) {
+          if (prop === 'href' && this.dataset.onlineOnly === 'true') desc.set.call(this,value);
+          else desc.set.call(this, prop === 'srcset' ? fixSet(String(value)) : localize(String(value)));
+        },
       });
     }
   }
@@ -169,6 +172,7 @@
   function fixElement(el) {
     if (!(el instanceof Element)) return;
     for (const attr of attrs) {
+      if (attr === 'href' && el.dataset.onlineOnly === 'true') continue;
       const old = el.getAttribute(attr);
       if (!old || !/^https?:/i.test(old)) continue;
       const value = attr === 'srcset' ? fixSet(old) : localize(old);

@@ -18,7 +18,7 @@ body:is(.building-pages, .profile-page) main {
   --accent: var(--study-ink);
   color: var(--study-ink);
 }
-html body.building-pages, html body.profile-page { background: #fff; }
+html body.building-pages, html body.profile-page { background:var(--paper); }
 html body:is(.building-pages, .profile-page) main#main {
   box-sizing: border-box;
   width: 100%;
@@ -44,8 +44,8 @@ html body.building-pages:not(.model-selected) .intro > div,
 html body.building-pages :is(.building-intro, .reference-intro) {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(0, .95fr);
-  align-items: end;
-  gap: 20px var(--study-gap);
+  align-items: start;
+  gap: 16px var(--study-gap);
 }
 html body.building-pages:has(#modelChooser):not(.model-selected) .intro,
 html body.building-pages :is(.building-intro, .reference-intro) {
@@ -501,5 +501,102 @@ html body.building-pages .preview-layout { grid-template-columns: minmax(0, 1fr)
 
 html body.building-pages :is(.building-card,.building-area,.building-group)[hidden] { display:none; }
 html body.building-pages .building-group + .building-row { margin-top:24px; }
-html body.building-pages:not(.model-selected) .intro > div { align-items:start; }
+/* Align the first heading and put each introduction directly underneath it. */
+html body.building-pages:not(.model-selected) .intro > div,
+html body.building-pages :is(.building-intro,.reference-intro) {
+  grid-template-columns:minmax(0,1fr); align-items:start; gap:12px;
+}
+html body.building-pages:not(.model-selected) #main :is(.subtitle,.building-intro-copy,.reference-intro-copy) {
+  max-width:65ch; padding:0; margin:0; grid-column:1; grid-row:auto;
+}
+html body.building-pages:not(.model-selected) #main :is(.building-intro-copy,.reference-intro-copy) > p:first-child { margin:0; }
+html body.building-pages:not(.model-selected) #main :is(.building-intro,.reference-intro,.intro) { margin-block:0 24px; }
+html body.building-pages main#main .building-formats { margin-block:0 24px; }
 
+
+
+/* A common top row keeps the section title and switcher still on all three routes. */
+html body.building-pages:not(.model-selected) main#main .intro > div,
+html body.building-pages main#main :is(.building-intro,.reference-intro) {
+  display:grid; grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
+  align-items:center; min-height:84px; column-gap:var(--study-gap); row-gap:12px;
+}
+html body.building-pages:not(.model-selected) main#main .intro,
+html body.building-pages main#main :is(.building-intro,.reference-intro) {
+  margin:0 0 24px; padding:0; border:0;
+}
+html body.building-pages main#main :is(.building-intro-copy,.reference-intro-copy,.subtitle) {
+  align-self:center; margin:0; padding:0;
+}
+html body.building-pages main#main :is(.building-intro-copy p,.reference-intro-copy p,.subtitle) {
+  margin:0; font-size:17px; line-height:1.5; max-width:48ch;
+}
+html body.building-pages main#main .study-intro-line {
+  margin:8px 0 16px; max-width:68ch; color:var(--study-muted); font:400 16px/1.55 var(--face);
+}
+html body.building-pages main#main .study-links {
+  display:flex; flex-wrap:wrap; gap:4px 12px; align-items:center; margin:0 0 8px;
+}
+html body.building-pages main#main .study-links a,
+html body.building-pages main#main .render-actions a,
+body.profile-page :is(.profile-map-links,.profile-actions,.real-links) a {
+  display:inline-flex; min-height:44px; align-items:center; padding:8px 12px; border:0; border-radius:7px;
+  color:var(--study-ink); font:520 15px/1.4 var(--face); text-decoration:none;
+}
+html body.building-pages main#main .study-links a:hover,
+html body.building-pages main#main .render-actions a:hover,
+body.profile-page :is(.profile-map-links,.profile-actions,.real-links) a:hover { background:#e7e8e5; }
+html body.building-pages main#main :is(.render-pair,.image-pair) { margin:16px 0 24px; gap:16px; }
+html body.building-pages main#main :is(.render-pair,.image-pair) figure,
+body.profile-page .profile-model,body.profile-page .real-photo {
+  overflow:hidden; border-radius:12px; border:1px solid var(--study-rule); background:#fff; margin:0;
+}
+html body.building-pages main#main :is(.render-pair,.image-pair) figcaption,
+body.profile-page .profile-model figcaption,body.profile-page .real-photo figcaption {
+  display:flex; flex-wrap:wrap; align-items:center; gap:6px 10px; justify-content:flex-start; margin:0;
+  padding:12px 16px; color:var(--study-muted); font:450 15px/1.45 var(--face);
+}
+html body.building-pages main#main :is(.render-pair,.image-pair) figcaption > .file-download { margin-inline-start:auto; }
+html body.building-pages main#main .study-source { display:grid; gap:6px; margin:16px 0 0; max-width:70ch; }
+html body.building-pages main#main .study-source h3 { margin:0; font:570 16px/1.4 var(--face); }
+html body.building-pages main#main .study-source p { margin:0; font:400 15px/1.5 var(--face); color:var(--study-muted); }
+html body.building-pages main#main .render-actions { display:flex;flex-wrap:wrap;gap:4px 12px; margin:8px 0 0; }
+html body.building-pages main#main .study-list { grid-column:1/-1; border-top:1px solid var(--study-rule); margin-top:48px; padding:24px 0 0; }
+html body.building-pages main#main .study-list h2 { margin:0 0 16px; font:560 25px/1.15 var(--face); letter-spacing:-.03em; }
+html body.building-pages main#main .study-list ul { margin:0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,255px),1fr)); gap:4px 20px; }
+html body.building-pages main#main .study-list li { margin:0;padding:0; }
+html body.building-pages main#main .study-list a { display:flex;align-items:center;min-height:44px;border-radius:7px; padding:7px 12px;font:510 16px/1.4 var(--face);text-decoration:none; }
+html body.building-pages main#main .study-list a:is(:hover,[aria-current]) { background:#e7e8e5; }
+html body.building-pages .building-card .building-card-link :is(h2,h3,h4) { padding-inline:12px; margin:10px 0 12px; }
+html body.building-pages .building-card .building-card-link { display:block; height:auto; border:1px solid var(--study-rule); border-radius:12px; background:#fff; overflow:hidden; }
+html body.building-pages .building-card .building-card-link:hover { border-color:#a7aaa7; background:#eff0ed; }
+html body.building-pages .building-card .building-card-link:is(:hover,:focus-visible) :is(h2,h3,h4) { text-decoration:none; }
+html body.building-pages .building-card .building-card-image { border:0; border-radius:0; margin:0; }
+html body.building-pages .building-card .study-card-credit {margin:4px 8px 0; padding:4px; font-size:14px; text-decoration:none;}
+html body.building-pages .building-card .study-card-credit:hover {background:#e7e8e5;border-radius:5px;}
+html body.building-pages .study-browser { padding-top:16px; }
+html body.building-pages main#main > :is(.render-project,.model-change) { padding-top:16px; }
+html body.profile-page main#main .profile-intro p { display:flex;align-items:baseline; flex-wrap:wrap; }
+html body.profile-page main#main .profile-model img { max-height:none; border-radius:0; }
+html body.profile-page main#main .profile-facts :is(dt,dd) {font-size:15px;}
+html body.profile-page main#main .profile-real .real-photo figcaption {display:block;}
+@media(max-width:700px){
+  html body.building-pages:not(.model-selected) main#main .intro > div,
+  html body.building-pages main#main :is(.building-intro,.reference-intro) {
+    grid-template-columns:1fr; grid-template-rows:auto auto; min-height:0; align-content:start;
+  }
+  html body.building-pages main#main :is(.building-intro-copy,.reference-intro-copy,.subtitle) { min-height:4.5em; font-size:16px; }
+  html body.building-pages main#main :is(.building-intro-copy p,.reference-intro-copy p,.subtitle) { font-size:16px; }
+  html body.building-pages main#main .study-list { margin-top:32px; }
+}
+html body.building-pages main#main > :is(.render-project,.model-change) {scroll-margin-top:calc(var(--site-header-height,64px) + 16px);}
+html body.building-pages main#main .study-list li[hidden] {display:none;}
+html body.profile-page main#main .profile-real .real-photo figcaption {display:grid;gap:4px}
+html body.profile-page main#main .real-photo figcaption strong {color:var(--study-ink);font-weight:560}
+html body.profile-page main#main .real-photo.site-aerial {width:fit-content;max-width:100%}
+html body.profile-page main#main .real-photo.site-aerial img {width:auto;max-width:100%;height:auto}
+html body.building-pages main#main .revision-edition { display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:16px 0 8px; }
+html body.building-pages main#main .revision-edition h3 {font:560 16px/1.4 var(--face);margin:0;}
+html body.building-pages main#main .revision-edition a {display:inline-flex;align-items:center;min-height:44px;border-radius:7px;padding:8px 12px;text-decoration:none;font:520 15px/1.4 var(--face);}
+html body.building-pages main#main .revision-edition a:hover {background:#e7e8e5;}
+html body.building-pages main#main .revision-edition + .image-pair {margin-top:0;}

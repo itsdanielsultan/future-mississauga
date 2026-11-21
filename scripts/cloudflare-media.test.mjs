@@ -36,3 +36,21 @@ test('the undated atlas follows the current edition while dated links retain the
   assert.equal(archive.status, 200);
   assert.equal(await archive.text(), 'abcdef');
 });
+
+test('immutable links serve registered old bytes after the public filename changes', async () => {
+  const oldKey = 'a'.repeat(64), newKey = 'b'.repeat(64), calls = [];
+  const oldFile = {...file, key:oldKey};
+  const currentFile = {...file, key:newKey};
+  const worker = serveMedia({'/downloads/book.pdf':currentFile}, null, {[oldKey]:oldFile});
+  const env = {
+    ASSETS:{fetch:() => new Response(null,{status:404})},
+    MEDIA:{get:async key => {calls.push(key);return {size:6,body:'abcdef'};}},
+  };
+  const get = path => worker.fetch(new Request('https://preview.test' + path),env);
+  const archive = await get('/media/sha256/' + oldKey);
+  assert.equal(await archive.text(),'abcdef');
+  assert.match(archive.headers.get('Cache-Control'),/immutable/);
+  assert.equal((await get('/downloads/book.pdf')).headers.get('etag'),'"'+newKey+'"');
+  assert.equal((await get('/media/sha256/' + 'c'.repeat(64))).status,404);
+  assert.deepEqual(calls,[oldKey,newKey]);
+});

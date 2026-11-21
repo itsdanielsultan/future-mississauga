@@ -61,7 +61,8 @@ export function prepareImageLinks(root=document){
   anchor.removeAttribute('download');anchor.setAttribute('aria-haspopup','dialog');
   if(label==='Exterior PNG')anchor.textContent='Exterior view';
   if(label==='Neighbourhood PNG')anchor.textContent='Neighbourhood view';
-  const pair=document.createElement('span');pair.className='file-action-pair';anchor.replaceWith(pair);pair.append(anchor);
-  const download=document.createElement('a');download.href=anchor.href;download.download=url.pathname.split('/').pop();download.dataset.download='';download.className='file-download ui-button';download.dataset.variant='ghost';download.dataset.size='icon';download.setAttribute('aria-label',downloadLabel);download.title=downloadLabel;download.innerHTML=icon;pair.append(download);
+  // A preview has its own purpose. Only explicitly offered, credited files
+  // get a download action, so outside photographs remain preview-only.
+
  }
 }

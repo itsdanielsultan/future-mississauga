@@ -1,181 +1,106 @@
-import {loadEditionPlates,editionPreview} from './edition-pictures.js';
+import {setPairImage, stageFrame, setStageImage} from './compare-frames.js';
+import {loadEditionPlates} from './edition-pictures.js';
 import {downtownAerial} from './downtown-aerial.js?v=20261120-tone';
-import {installSkylineScenarios,syncComparisonLinks} from './skyline-scenarios.js?v=20261120-plates';
-import {createImagePreview,presentationCaption,updateCleanImageCaption} from './image-preview.js?v=20261120-plates';
+import {installSkylineScenarios, syncComparisonLinks} from './skyline-scenarios.js?v=20261120-plates';
+import {createImagePreview} from './image-preview.js?v=20261120-plates';
 import {bindComparison} from './comparison.js?v=20261023-usability1';
-import {assetURL} from './asset-delivery.js?v=20261113-delivery2';
-import {comparisonPair} from './clean-media.js?v=20261113-design2';
-import {refreshPictureAssets} from './media-catalog.js?v=20261113-design2';
-const $ = selector => document.querySelector(selector);
+
 const url = new URL(location.href);
-syncComparisonLinks(document, url);
-const stages = url.searchParams.get('mode') === 'stages' || url.searchParams.has('scenario') || location.hash === '#skyline' || location.hash.startsWith('#?scenario');
-for(const panel of document.querySelectorAll('[data-compare-panel]'))panel.hidden = (panel.dataset.comparePanel === 'stages') !== stages;
+const isStages = url.searchParams.get('mode') === 'stages' || url.searchParams.has('scenario')
+  || location.hash === '#skyline' || location.hash.startsWith('#?scenario');
+const activeMode = isStages ? 'stages' : 'pair';
+
+for (const panel of document.querySelectorAll('[data-compare-panel]')) {
+  panel.hidden = panel.dataset.comparePanel !== activeMode;
+}
 for (const link of document.querySelectorAll('[data-compare-mode]')) {
-  if (link.dataset.compareMode === (stages ? 'stages' : 'pair')) link.setAttribute('aria-current', 'page');
+  if (link.dataset.compareMode === activeMode) link.setAttribute('aria-current', 'page');
   else link.removeAttribute('aria-current');
 }
-if(stages){
-const plates = await loadEditionPlates();
-const frames = Object.fromEntries(Object.entries(downtownAerial).map(([key,frame]) => {
-  const plate = plates.get('wide/downtown-skyline-' + frame.scenario + '.png');
-  return [key, plate ? {...editionPreview(frame,plate), responsive:plate.displayMaster.url, previewWidth:plate.width} : frame];
-}));
-const preview = createImagePreview({views:true});
- const button = document.querySelector('[data-aerial-feature]');
- button.addEventListener('click',()=>{
-const labels = {existingSkyline:'Today', constructionSkyline:'Construction', skyline:'Proposed'};
-   const show = key => {
-     const frame = frames[key];
-     preview.show({...frame, explore:'explore.html?district=downtown&scenario=' + frame.scenario}, button);
-   };
-   preview.setSequence(direction=>{
-     const keys=Object.keys(labels),select=preview.dialog.querySelector('.media-preview__view select');
-     select.value=keys[(keys.indexOf(select.value)+direction+keys.length)%keys.length];select.dispatchEvent(new Event('change'));
-   });
-   preview.setViews(Object.entries(labels).map(([value,label]) => ({value,label})), button.dataset.view, show);
-   show(button.dataset.view);
- });
-function showSkyline() {
- const view = $('#skylineScenario').value;
- const frame = frames[view];
- const figure = $('.hero'), image = figure.querySelector('img'), button = figure.querySelector('button');
- const label = {existingSkyline:'Existing buildings', constructionSkyline:'Construction snapshot', skyline:'Proposed development'}[view];
- button.dataset.view = view;
- button.setAttribute('aria-label', 'Expand Downtown aerial · ' + label);
- image.srcset = frame.preview + ' ' + (frame.previewWidth || 1200) + 'w, ' + frame.responsive + ' ' + (frame.previewWidth ? frame.width : 3200) + 'w';
- image.src = frame.preview;
- image.alt = frame.alt;
- const caption = figure.querySelector('figcaption'), download = caption.querySelector('a[download]');
- download.href = frame.download;
- download.setAttribute('aria-label', 'Download Downtown aerial · ' + label + ' (credited PNG)');
- const [creator, key] = presentationCaption(frame);
- const byline = document.createElement('div');
- byline.className = 'aerial-byline';
- byline.append(creator);
- caption.className = 'aerial-caption';
- caption.replaceChildren(byline, key, download);
-}
-installSkylineScenarios($('#skylineScenario'), $('#skylineMapLink'), showSkyline);
+syncComparisonLinks(document, url);
 
-
-}else{
-let districts = [], pictures = null, edition = new Map();
-const selector = $('#comparisonDistrict');
-function splitValue(address) {
-  const raw = address.searchParams.get('split');
-  const number = Number(raw);
-  return raw !== null && raw.trim() && Number.isFinite(number) ? Math.min(100, Math.max(0, number)) : 50;
+async function showStages() {
+  const plates = await loadEditionPlates();
+  const frames = Object.fromEntries(Object.entries(downtownAerial).map(([key, source]) => {
+    const plate = plates.get('wide/downtown-skyline-' + source.scenario + '.png');
+    return [key, stageFrame(source, plate)];
+  }));
+  const select = document.getElementById('skylineScenario');
+  const opener = document.querySelector('[data-aerial-feature]');
+  const image = document.getElementById('scenarioImage');
+  const download = opener.closest('figure').querySelector('a[download]');
+  const labels = {existingSkyline:'Existing buildings', constructionSkyline:'Under construction', skyline:'With proposals'};
+  const preview = createImagePreview({views:true});
+  opener.addEventListener('click', () => {
+    const show = view => {
+      const frame = frames[view];
+      preview.show({...frame, explore:'explore.html?district=downtown&scenario=' + frame.scenario}, opener);
+    };
+    preview.setSequence(direction => {
+      const keys = Object.keys(labels);
+      const field = preview.dialog.querySelector('.media-preview__view select');
+      field.value = keys[(keys.indexOf(field.value) + direction + keys.length) % keys.length];
+      field.dispatchEvent(new Event('change'));
+    });
+    preview.setViews(Object.entries(labels).map(([value,label]) => ({value,label})), select.value, show);
+    show(select.value);
+  });
+  installSkylineScenarios(select, document.getElementById('skylineMapLink'), () => {
+    const view = select.value;
+    const frame = frames[view];
+    setStageImage({image, opener, download}, view, frame, labels[view]);
+  });
 }
-const divider = bindComparison({
-  panel: $('#pictureCompare'), clickToJump: true, handle: $('#compareDivider'), input: $('#pictureSlider'),
-  initial: splitValue(url),
-  onChange: value => { $('#beforePicture').style.clipPath = `inset(0 ${100 - value}% 0 0)`; },
-  onCommit: value => {
+
+function showPair() {
+  const picker = document.getElementById('comparisonDistrict');
+  const panel = document.getElementById('pictureCompare');
+  const before = document.getElementById('beforePicture');
+  const map = document.getElementById('comparisonMap');
+  const place = document.getElementById('comparisonPlace');
+  const range = bindComparison({
+    panel, clickToJump:true,
+    handle:document.getElementById('compareDivider'),
+    input:document.getElementById('pictureSlider'),
+    onChange:value => { before.style.clipPath = 'inset(0 ' + (100 - value) + '% 0 0)'; },
+    onCommit:value => {
+      const next = new URL(location.href);
+      next.searchParams.set('split', String(Math.round(value * 10) / 10));
+      history.replaceState(history.state, '', next);
+      syncComparisonLinks(document, next);
+    }
+  });
+  function showArea() {
+    const id = picker.value;
+    const name = picker.selectedOptions[0].textContent;
+    place.href = 'place-' + id + '.html';
+    place.textContent = 'Explore ' + name;
+    map.href = 'explore.html?district=' + id;
+    document.getElementById('skylineMapLink').href = map.href;
+    for (const [image, state] of [[panel.querySelector('img'), 'future'], [before.querySelector('img'), 'existing']]) {
+      setPairImage(image, id, name, state);
+    }
+  }
+  function restore() {
+    const current = new URL(location.href);
+    const area = current.searchParams.get('area');
+    picker.value = [...picker.options].some(option => option.value === area) ? area : 'downtown';
+    const saved = current.searchParams.get('split');
+    const split = Number(saved);
+    range.set(saved?.trim() && Number.isFinite(split) ? Math.min(100, Math.max(0, split)) : 50);
+    syncComparisonLinks(document, current);
+    showArea();
+  }
+  picker.addEventListener('change', () => {
     const next = new URL(location.href);
-    next.searchParams.set('split', String(Math.round(value * 10) / 10));
+    next.searchParams.set('area', picker.value);
     history.replaceState(history.state, '', next);
     syncComparisonLinks(document, next);
-  }
-});
-function showComparison(id){
- if (id === 'downtown') {
-   for (const [selector, state] of [['#pictureCompare > img','future'], ['#beforePicture img','existing']]) {
-     const image = $(selector);
-     const prefix = 'gallery/edition-20261120/home-' + state;
-     image.sizes = '(max-width: 900px) 92vw, 76vw';
-     image.srcset = prefix + '-1200.webp 1200w, ' + prefix + '-2560.webp 2560w';
-     image.src = prefix + '-1200.webp';
-     image.alt = 'Square One, ' + (state === 'future' ? 'with proposed developments' : 'existing buildings');
-   }
-   const caption=$('.media-caption--comparison');
-   if(caption)caption.hidden=true;
-   return;
- }
- if (!pictures) {
-   for (const [image, mode] of [[$('#pictureCompare > img'), 'future'], [$('#beforePicture img'), 'existing']]) {
-     const preview = 'gallery/edition-20261120/wide-' + id + '-' + mode + '.webp';
-     image.removeAttribute('srcset');
-     image.src = preview;
-     image.alt = selector.selectedOptions[0].textContent + (mode === 'future' ? ' with proposals' : ' existing buildings');
-   }
-   return;
- }
- const pair=comparisonPair(pictures,id);if(!pair)return;const name=districts.find(d=>d.id===id).name;
- const assign = (image, row, label, mode) => {
-   const plate = edition.get('wide/' + id + '-' + mode + '.png');
-   const source = plate?.webImage || (row.cleanPresentation ? row.responsive.url : row.display.url);
-   const url = assetURL(source);
-   image.removeAttribute('sizes');
-   image.srcset = url + ' 1x';
-   image.src = url;
-   image.alt = label;
-   updateCleanImageCaption(image, row);
- };
- const caption = $('.media-caption--comparison');
- if (caption) caption.hidden = false;
- assign($('#pictureCompare > img'), pair[1], name + ' future scenario', 'future');
- assign($('#beforePicture img'), pair[0], name + ' existing context', 'existing');
-}
-$('#comparisonDistrict').addEventListener('change', () => {
-  const next = new URL(location.href);
-  next.searchParams.set('area', $('#comparisonDistrict').value);
-  history.replaceState(history.state, '', next);
-  syncComparisonLinks(document, next);
-  selectPlace();
-});
-function selectPlace() {
-  const id = $('#comparisonDistrict').value;
-  const place = $('#comparisonPlace');
-  place.href = 'place-' + encodeURIComponent(id) + '.html';
-  place.textContent = 'Explore ' + $('#comparisonDistrict').selectedOptions[0].textContent;
-  $('#comparisonMap').href = 'explore.html?district=' + encodeURIComponent(id);
-  $('#skylineMapLink').href = $('#comparisonMap').href;
-  showComparison(id);
-}
-function restoreComparison() {
-  const address = new URL(location.href);
-  const requested = address.searchParams.get('area');
-  selector.value = [...selector.options].some(option => option.value === requested) ? requested : 'downtown';
-  divider.set(splitValue(address));
-  syncComparisonLinks(document, address);
-  selectPlace();
-}
-window.addEventListener('popstate', restoreComparison);
-restoreComparison();
-
-async function loadComparisonPictures() {
-  const [areas, assets, plates] = await Promise.all([
-    fetch('data/districts.json').then(response => response.json()),
-    fetch('data/picture-assets.json').then(response => response.json()),
-    loadEditionPlates()
-  ]);
-  await refreshPictureAssets(assets);
-  districts = areas; pictures = assets; edition = plates;
-  selectPlace();
-}
-// Each permitted area already has a local pair of edition images.
-loadComparisonPictures().catch(() => {});
+    showArea();
+  });
+  window.addEventListener('popstate', restore);
+  restore();
 }
 
-const share = $('[data-share-view]');
-const field = $('[data-share-field]');
-let copiedTimer;
-share.addEventListener('click', async () => {
-  const current = new URL(location.href);
-  const link = current.protocol === 'file:' ? new URL('https://futuremississauga.com/compare.html') : current;
-  link.search = current.search;
-  link.hash = current.hash;
-  field.value = link.href;
-  try {
-    await navigator.clipboard.writeText(link.href);
-    field.hidden = true;
-    share.textContent = 'Link copied';
-    clearTimeout(copiedTimer);
-    copiedTimer = setTimeout(() => { share.textContent = 'Copy comparison link'; }, 1800);
-  } catch {
-    field.hidden = false;
-    field.focus();
-    field.select();
-  }
-});
+if (isStages) await showStages();
+else showPair();

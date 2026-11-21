@@ -9,10 +9,19 @@ import {legacyAtlasPath} from '../cloudflare/media-worker.mjs';
 
 const release = join(dirname(dirname(fileURLToPath(import.meta.url))), '.cloudflare-release');
 const staticRoot = join(release, 'assets');
-const preview = 'https://future-mississauga-preview.thedanielsultan.workers.dev';
 const args = new Set(process.argv.slice(2));
-for (const value of args) assert(['--staged', '--full'].includes(value), 'Unknown argument: ' + value);
+const versionOption = [...args].find(value=>value.startsWith('--version-url='));
+if (versionOption) args.delete(versionOption);
+for (const value of args) assert(['--staged', '--full', '--live'].includes(value), 'Unknown argument: ' + value);
 const offline = args.has('--staged');
+assert([offline,args.has('--live'),!!versionOption].filter(Boolean).length <= 1, 'Select one verification target');
+let preview = args.has('--live') ? 'https://futuremississauga.com' : 'https://future-mississauga-preview.thedanielsultan.workers.dev';
+if (versionOption) {
+  const version = new URL(versionOption.slice('--version-url='.length));
+  assert(version.protocol==='https:' && /^[a-z0-9-]+-future-mississauga-preview\.thedanielsultan\.workers\.dev$/.test(version.hostname)
+    && !version.username && !version.password && !version.port && version.pathname==='/' && !version.search && !version.hash, 'Expected this project’s Cloudflare version address');
+  preview = version.origin;
+}
 const full = args.has('--full');
 const routes = JSON.parse(await readFile(join(release, 'media-routes.json')));
 const inventory = JSON.parse(await readFile(join(release, 'inventory.json')));
@@ -64,12 +73,24 @@ async function localFetcher() {
   return req => worker.fetch(req, env);
 }
 const fetcher = offline ? await localFetcher() : fetch;
-function request(path, options, query = '') {
+async function request(path, options, query = '') {
   const url = new URL(encodePath(path), preview);
   url.search = query;
-  return fetcher(new Request(url, {
-    redirect:'manual', signal:AbortSignal.timeout(120000), ...options
-  }));
+  for (let attempt = 0; ; attempt++) {
+    let wait = 1 + attempt;
+    try {
+      const response = await fetcher(new Request(url, {
+        redirect:'manual', signal:AbortSignal.timeout(120000), ...options
+      }));
+      if (offline || attempt >= 2 || ![429,502,503,504].includes(response.status)) return response;
+      const retryAfter = Number(response.headers.get('Retry-After'));
+      if (retryAfter > 0) wait = Math.min(retryAfter,60);
+      await response.body?.cancel();
+    } catch (error) {
+      if (offline || attempt >= 2) throw new Error('Could not fetch ' + path,{cause:error});
+    }
+    await new Promise(done => setTimeout(done, wait * 1000));
+  }
 }
 async function each(items, fn) {
   const queue = items.values();
@@ -121,6 +142,31 @@ await each(Object.entries(routes), async ([path, file]) => {
   }
 });
 assert.equal(new Set(Object.values(routes).map(entry => entry.key)).size, inventory.r2Objects);
+// Archived aliases can point at a newer file. The digest address stays stable.
+const publishedIndex = await readFile(join(release,'published-media.json'),'utf8').catch(error => {
+  if (error.code === 'ENOENT') return null;
+  throw error;
+});
+if (publishedIndex) {
+  const published = Object.values(JSON.parse(publishedIndex));
+  await each(published,async entry => {
+    const res = await request('/media/sha256/' + entry.key,{method:'HEAD'});
+    assert.equal(res.status,200,'Immutable public file ' + entry.key);
+    assert.equal(res.headers.get('ETag'),'"'+entry.key+'"');
+    assert.equal(Number(res.headers.get('Content-Length')),entry.bytes);
+    assert.match(res.headers.get('Cache-Control') || '',/immutable/);
+    // Verify bytes through the live route as well, including superseded objects.
+    if (!offline && !Object.values(routes).some(file => file.key === entry.key)) {
+      const prefix = await request('/media/sha256/'+entry.key,{headers:{Range:'bytes=0-0'}});
+      assert.equal(prefix.status,206);
+      assert.equal((await prefix.arrayBuffer()).byteLength,1);
+      if (full) {
+        const body = await request('/media/sha256/'+entry.key);
+        assert.equal(await digest(body.body),entry.key);
+      }
+    }
+  });
+}
 const latestAtlas = await request(legacyAtlasPath, {method:'HEAD'});
 assert.equal(latestAtlas.status, 307);
 assert.equal(new URL(latestAtlas.headers.get('location'), preview).pathname, inventory.currentAtlas);

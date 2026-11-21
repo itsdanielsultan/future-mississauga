@@ -19,12 +19,12 @@ def page(path,title,content,hero=None,area=None):
   h=re.sub(re.escape(marker)+r'[^"]*',lambda m:marker+e(title)+' | Future Mississauga',h)
  for tag,field in [('link','canonical'),('meta','og:url')]:
   h=re.sub('(<'+tag+r' (?:rel|property)="'+field+r'" (?:href|content)=")[^"]+',lambda m:m[1]+'https://futuremississauga.com/'+path,h)
- desc='See '+title+' in the Future Mississauga city model.'
+ desc='Browse the city’s neighbourhoods in 3D and in pictures.' if not area else 'Explore '+title+' in pictures and on the 3D city map.'
  for marker in ['<meta name="description" content="','<meta property="og:description" content="','<meta name="twitter:description" content="']:
   h=re.sub(re.escape(marker)+r'[^"]*',lambda _:marker+e(desc),h)
  if hero:
   for marker in ['<meta property="og:image" content="','<meta name="twitter:image" content="']:
-   h=re.sub(re.escape(marker)+r'[^"]*',lambda _:marker+'https://futuremississauga.com/'+hero['webImage'],h)
+   h=re.sub(re.escape(marker)+r'[^"]*',lambda _:marker+'https://futuremississauga.com/'+(hero.get('signedPreview') or {'url':hero['webImage']})['url'],h)
   h=re.sub(r'(<meta name="twitter:image:alt" content=")[^"]+', lambda m:m[1]+e(title+' in the city model'), h)
   for key,val in [('width',str(hero['width'])),('height',str(hero['height'])),('type','image/webp'),('alt',e(title+' in the city model'))]:
    h=re.sub(r'(<meta property="og:image:'+key+r'" content=")[^"]+',lambda m:m[1]+val,h)
@@ -42,15 +42,16 @@ def select(area):
  rows=[r for r in places if member(r,area)]
  return sorted(rows,key=lambda r:(r['id']!='wide/'+area+'-future.png','wide/' not in r['id'],'skyline' in r['id'],'future' not in r['id']))
 def image(row,alt,priority=False):
- full=row['webImage']
- thumb=Path(full).parent/'thumbnails'/Path(full).name
- width,height=row['width'],row['height']
+ preview=row.get('signedPreview') or {'url':row['webImage'],'width':row['width'],'height':row['height']}
+ full=preview['url']
+ thumb=Path(row.get('signedThumbnail',{}).get('url') or row['thumbnail'])
+ width,height=preview['width'],preview['height']
  srcset=''
  if (public/thumb).is_file():
   small_width=round(width*min(1,640/max(width,height)))
   sizes='(min-width:1400px) 1280px, 92vw' if priority else '(max-width:620px) 95vw, (max-width:800px) 45vw, 32vw'
   srcset=f' srcset="{e(str(thumb))} {small_width}w, {e(full)} {width}w" sizes="{sizes}"'
- return '<img src="'+e(full)+'"'+srcset+' width="'+str(row['width'])+'" height="'+str(row['height'])+'" alt="'+e(alt)+'" '+('fetchpriority="high"' if priority else 'loading="lazy"')+'>'
+ return '<img src="'+e(full)+'"'+srcset+' width="'+str(width)+'" height="'+str(height)+'" alt="'+e(alt)+'" '+('fetchpriority="high"' if priority else 'loading="lazy"')+'>'
 def area_link(id):return 'place-'+id+'.html'
 def map_link(id):
  return 'explore.html?district=citywide&context=fairview' if id=='fairview' else 'explore.html?district='+id
@@ -64,7 +65,7 @@ def view_label(row):
  return row['label']
 
 def picture_link(row,alt,priority=False):
- master=row['displayMaster']
+ master=row.get('signedMaster') or row['displayMaster']
  return (f'<a href="{e(master["url"])}" data-edition-plate="{e(row["id"])}"'
          f' data-preview-title="{e(view_label(row))}" data-preview-download="{e(row["download"]["url"])}"'
          f' data-preview-width="{master["width"]}" data-preview-height="{master["height"]}">'
@@ -113,11 +114,69 @@ for id,title in sorted(names.items(),key=lambda pair:pair[1]):
  body+=view_grid('Portrait views',[r for r in rows if r['id'].startswith('portraits/')],True)
  page(area_link(id),title,body,lead,id);cards[id]=card(id)
 hero=select('port-credit')[0]
-featured = ['downtown','port-credit','lakeview']
+regions = {
+ 'Central Mississauga':['downtown','fairview','cooksville','uptown'],
+ 'Along the lake':['clarkson','lorne-park','port-credit','lakeview'],
+ 'West and northwest':['churchill-meadows','erin-mills','erindale','lisgar','meadowvale','streetsville'],
+ 'North and east':['airport-corporate','dixie-applewood','east-credit-creditview','heartland','malton','meadowvale-village']
+}
+mapped=[id for ids in regions.values() for id in ids]
+if sorted(mapped)!=sorted(cards):
+ raise ValueError('The directory must list each neighbourhood exactly once.')
 def directory_group(title, ids):
  return '<section class="place-directory-group"><h2>'+e(title)+'</h2><div class="place-index">'+''.join(cards[id] for id in ids)+'</div></section>'
 directory = '<header class="place-mast"><h1>Neighbourhoods</h1>'+'<nav aria-label="More ways to explore">'+title_link('gallery.html','Image gallery')+title_link('explore.html','Open city map')+'</nav></header>'
-directory += directory_group('Downtown and the waterfront', featured)
-directory += directory_group('More neighbourhoods', [id for id in cards if id not in featured])
+directory += ''.join(directory_group(region,ids) for region,ids in regions.items())
 page('neighbourhoods.html','Neighbourhoods',directory,hero)
 print(len(cards),'neighbourhoods')
+
+# Static first paint and the interactive stage switcher use the same edition.
+proposed=next(r for r in places if r['id']=='wide/downtown-skyline-future.png')
+screen=proposed.get('signedPreview') or {'url':proposed['webImage'],'width':proposed['width']}
+original=proposed.get('signedMaster') or proposed['displayMaster']
+compare_path=public/'compare.html'
+compare=compare_path.read_text()
+def bind_stage_image(match):
+ tag=match[0]
+ values={
+  'src':screen['url'],
+  'srcset':f'{screen["url"]} {screen["width"]}w, {original["url"]} {original["width"]}w',
+  'width':str(original['width']), 'height':str(original['height'])
+ }
+ for name,value in values.items():
+  tag=re.sub(r'(?<= )'+name+r'="[^"]*"',lambda _:name+'="'+e(value)+'"',tag)
+ return tag
+compare,n=re.subn(r'<img id="scenarioImage"[^>]*>',bind_stage_image,compare)
+if n!=1: raise ValueError('Expected the Downtown stage image.')
+compare_path.write_text(compare)
+
+# Keep the picker independent of network lookups when a visitor changes areas.
+home_path=public/'index.html'
+home=home_path.read_text()
+def area_option(match):
+ id,attrs,label=match.groups()
+ row=next(r for r in places if r['id']==('neighbourhood/fairview/after' if id=='fairview' else f'wide/{id}-future.png'))
+ screen=row.get('signedPreview') or {'url':row['webImage'],'width':row['width']}
+ thumb=row.get('signedThumbnail') or {'url':row['thumbnail'],'width':640}
+ attrs=re.sub(r' data-(?:thumb|preview)(?:-width)?="[^"]*"','',attrs)
+ return (f'<option value="{e(id)}"{attrs} data-preview="{e(screen["url"])}" data-preview-width="{screen["width"]}"'
+         f' data-thumb="{e(thumb["url"])}" data-thumb-width="{thumb["width"]}">{label}</option>')
+def area_picker(match):
+ return re.sub(r'<option value="([^"]+)"([^>]*)>([^<]+)</option>',area_option,match[0])
+home=re.sub(r'<select class="ui-select" id="homeDistrict".*?</select>',area_picker,home,flags=re.S)
+def update_home_picture(match):
+ tag=match[0]
+ for row in places:
+  if not row['id'].startswith(('wide/','portraits/')):continue
+  stem=row['id'].replace('/','-').removesuffix('.png')
+  stem_url='gallery/edition-20261120/'+stem
+  signed_url='gallery/edition-20261120/signed/'+stem
+  plain_thumb=str(row['thumbnail'])
+  signed_thumb=signed_url+'-thumb.webp'
+  thumb=(row.get('signedThumbnail') or {'url':plain_thumb})['url']
+  display=(row.get('signedPreview') or {'url':row['webImage']})['url']
+  tag=tag.replace(signed_thumb,thumb).replace(plain_thumb,thumb)
+  tag=tag.replace(signed_url+'.webp',display).replace(stem_url+'.webp',display)
+ return tag
+home=re.sub(r'<img\b[^>]*>',update_home_picture,home)
+home_path.write_text(home)

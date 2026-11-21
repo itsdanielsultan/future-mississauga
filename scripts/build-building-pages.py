@@ -12,6 +12,8 @@ def load(name):
     return json.loads((DATA / name).read_text())
 
 def link(url, label, cls=""):
+    if url == 'https://davidlaskerphotography.com/':
+        return f'<a class="{cls}" href="https://www.cityscapephotography.ca/" data-source-record="{url}">{escape(label)}</a>'
     return f'<a class="{cls}" href="{escape(url, quote=True)}">{escape(label)}</a>'
 
 def picture(url, alt, size=None, lazy=False):
@@ -43,7 +45,9 @@ def real_life(entry, feature, street):
         credit = escape(photo['credit'])
         if photo.get('licenceURL'):
             credit += ' · ' + link(photo['licenceURL'], photo['licence'])
-        figures.append('<figure class="real-photo">' + picture(url,photo['alt'],photo.get('size'),True) + '<figcaption>' + escape(photo.get('title') or photo['alt']) + ' · ' + credit + ' · ' + link(source, 'Original photo ↗') + '</figcaption></figure>')
+        figure_class = 'real-photo site-aerial' if photo.get('kind') == 'site-aerial' else 'real-photo'
+        caption = '<strong>' + escape(photo.get('title') or photo['alt']) + '</strong><span>' + credit + ' · ' + link(source, photo.get('sourceLabel') or 'Original photo ↗') + '</span>'
+        figures.append(f'<figure class="{figure_class}">' + picture(url,photo['alt'],photo.get('size'),True) + '<figcaption>' + caption + '</figcaption></figure>')
     actions = []
     if portal:
         actions.append(link(portal['url'],portal['label']))
@@ -73,11 +77,11 @@ def make_page(entry, feature, header, footer):
     if status: facts+='<div><dt>Project stage</dt><dd>'+escape(status)+'</dd></div>'
     actions = ''.join(link(a['url'], {'city':'View in the 3D city','study':'See the exterior study','model':'Rotate the model'}[a['kind']], 'profile-action') for a in entry['links'])
     credit = entry.get('credit')
-    byline='3D study · Future Mississauga'
-    if credit: byline+=' · Reference: '+link(credit['url'], credit['label'])
+    byline='3D rendering by Daniel Sultan'
+    if credit: byline+=' · Photograph reference by '+link(credit['url'], credit['label'])
     main = f'''<main id="main" class="building-profile">
 <nav class="profile-breadcrumb" aria-label="Breadcrumb"><a href="model.html" data-directory-back>Buildings</a><span aria-hidden="true">/</span><a href="model.html?area={escape(urlencode({'a':entry['area']})[2:])}">{escape(entry['area'])}</a></nav>
-<header class="profile-intro"><h1>{escape(name)}</h1><p>{escape(addr)} <a class="profile-photo-jump" href="#realTitle">Real-world photos ↓</a></p></header>
+<header class="profile-intro"><h1>{escape(name)}</h1><p>{escape(addr)} <a class="profile-photo-jump" href="#realTitle">See the site ↓</a></p></header>
 <div class="profile-overview"><figure class="profile-model">{picture(img['url'],'3D study of '+name,[img['width'],img['height']])}<figcaption>{byline}</figcaption></figure>
 <section class="profile-facts" aria-labelledby="teamTitle"><h2 id="teamTitle">Building team</h2><dl>{facts}</dl>
 <nav class="profile-map-links" aria-label="Open the location">{link(google,'Google Maps ↗')}{link(apple,'Apple Maps ↗')}</nav>
@@ -230,6 +234,51 @@ def update_directory_routes(catalogue, features):
     gallery = ROOT/'gallery.html'
     gallery.write_text(re.sub(r'(id="placeBuildings" data-areas=")[^"]*', lambda m: m[1]+areas, gallery.read_text(), count=1))
 
+def update_revision_plates(features):
+    page = ROOT/'reference-updates.html'
+    extra_path = ROOT.parent/'scripts/editions/20261120/buildings/revisions.json'
+    editions = {key: value['displayImage']['url'] for key, value in features.items()}
+    editions.update({key: value['image']['url'] for key, value in json.loads(extra_path.read_text()).items()})
+    page_html = page.read_text()
+
+    def bind(match):
+        key, inner = match[1], match[2]
+        if '<img ' not in inner:
+            return match[0]
+        if key == 'fairview-neighbourhood':
+            for stage in ('before', 'after'):
+                original = 'gallery/edition-20261120/originals/neighbourhood-fairview-' + stage + '-print.png'
+                preview = 'gallery/edition-20261120/signed/neighbourhood-fairview-' + stage + '.webp'
+                inner = re.sub(r'https://github\.com/[^"]+/neighbourhood-fairview-' + stage + r'-(?:clean|download)-[0-9a-f]+\.png', original, inner)
+                old_image = r'gallery/native-[^"/]+/neighbourhood-fairview-' + stage + r'-[\w-]+\.(?:avif|webp)'
+                inner = re.sub(r'src="' + old_image + '"', 'src="' + preview + '"', inner)
+                sources = preview.replace('.webp','-thumb.webp') + ' 640w, ' + preview + ' 1600w, ' + preview.replace('.webp','-full.webp') + ' 1800w'
+                inner = re.sub(r'srcset="' + old_image + r'[^"]*"', 'srcset="' + sources + '"', inner)
+                master = preview.replace('.webp', '-full.webp')
+                # Keep image inspection distinct from saving the signed print.
+                inner = inner.replace(f'<a href="{original}" data-preview-download="{original}">',
+                                      f'<a href="{master}" data-preview-download="{original}" data-edition-plate="neighbourhood/fairview/{stage}">')
+                label = f'Download the {stage} view of Fairview'
+                if f'aria-label="{label}"' not in inner:
+                    pattern = r'(<figure><a href="'+re.escape(master)+r'"[\s\S]*?<figcaption\b[^>]*>[\s\S]*?)(</figcaption>)'
+                    action = f'<a class="file-download" href="{original}" download data-download aria-label="{label}">Download PNG</a>'
+                    inner = re.sub(pattern,lambda m:m[1]+action+m[2],inner,count=1)
+        else:
+            current = editions[key]
+            previous = r'<div class="revision-edition">.*?</div>'
+            inner = re.sub(previous, '', inner, flags=re.S)
+            title = re.search(r'<h2[^>]*>(.*?)</h2>', inner, re.S)[1]
+            reference = ('<div class="revision-edition"><h3>Earlier comparison</h3>'
+                         f'<a href="{escape(current,quote=True)}" data-preview-title="{title} · Current rendering" '
+                         f'data-preview-download="{escape(current,quote=True)}">Open current rendering →</a></div>')
+            inner = inner.replace('<div class="image-pair">', reference + '<div class="image-pair">', 1)
+        return match[0][:match.start(2)-match.start()] + inner + '</section>'
+
+    bound = re.sub(r'<section class="model-change" id="([^"]+)"[^>]*>(.*?)</section>', bind, page_html, flags=re.S)
+    if bound != page_html:
+        page.write_text(bound)
+
+
 def main():
     page=(ROOT/'model.html').read_text()
     header=re.search(r'<header class="site-header".*?</header>',page,re.S).group()
@@ -239,6 +288,7 @@ def main():
     update_featured_directory(catalogue, features)
     update_model_notes(features)
     update_directory_routes(catalogue, features)
+    update_revision_plates(features)
     for key,feature in features.items():
         make_page(catalogue[key],feature,header,footer)
     print(f'Built {len(features)} building profiles')

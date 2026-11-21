@@ -2,23 +2,33 @@
 import hashlib
 import json
 import re
-from html import escape
+from html import escape, unescape
 from pathlib import Path
 
 from PIL import Image
 
 public = Path(__file__).resolve().parents[1] / 'public'
 edition = Path('gallery/edition-20261120')
+signed = edition / 'signed'
 records = {}
 subjects = {
-    'index': (edition/'home-future-2560.webp', 'Square One and the proposed Downtown skyline'),
-    'compare': (edition/'wide-downtown-skyline-future.webp', 'Downtown with proposed buildings'),
+    'index': (signed/'home-downtown-future.webp', 'Square One and the proposed Downtown skyline'),
+    'compare': (signed/'wide-downtown-skyline-future.webp', 'Downtown with proposed buildings'),
     'film': (edition/'Downtown-film-poster.webp', 'A frame from the Downtown skyline film'),
-    'social': (edition/'portraits-downtown-landmark-future.webp', 'Absolute World in a vertical view of Downtown'),
-    'gallery': (edition/'wide-port-credit-future.webp', 'A model view of the Port Credit waterfront'),
-    'explore': (edition/'wide-citywide-future.webp', 'Mississauga in the interactive city model'),
-    'downloads': (Path('document-previews/edition-20261120/atlas-03.avif'), 'An interior page of the Mississauga atlas'),
-    'updates': (edition/'wide-downtown-junction-future.webp', 'The City Centre area of the Downtown model'),
+    'social': (signed/'portraits-downtown-landmark-future.webp', 'Absolute World in a vertical view of Downtown'),
+    'gallery': (signed/'wide-port-credit-future.webp', 'A model view of the Port Credit waterfront'),
+    'explore': (signed/'wide-citywide-future.webp', 'Mississauga in the interactive city model'),
+    'downloads': (Path('document-previews/edition-20261120/atlas-01.avif'), 'The cover of the Mississauga atlas'),
+    'updates': (signed/'wide-downtown-junction-future.webp', 'The City Centre area of the Downtown model'),
+    'model': (edition/'buildings/mcity-pair.webp', 'Daniel Sultan’s detailed model of the M City towers'),
+    'review-renders': (edition/'exteriors/aldo-1422-study-front.webp', 'The front elevation of 1422 Aldo Drive'),
+    'reference-updates': (edition/'building-revisions/benares-visitor-centre.webp', 'The Benares Visitor Centre model revision'),
+    'neighbourhoods': (signed/'wide-port-credit-future.webp', 'Port Credit and the river in the neighbourhood atlas'),
+    'about': (signed/'home-downtown-future.webp', 'Daniel Sultan’s Downtown Mississauga print'),
+    'suggestions': (signed/'wide-lakeview-future.webp', 'Lakeview and the waterfront in the city model'),
+    'sources': (Path('document-previews/edition-20261120/atlas-01.avif'), 'The cover of the documented Mississauga atlas'),
+    'accuracy-review': (signed/'wide-downtown-skyline-construction.webp', 'The dated construction stage in the Downtown comparison'),
+    'study-notes': (signed/'wide-downtown-landmark-future.webp', 'A closer model study of Absolute World'),
 }
 output = public/edition/'share'
 output.mkdir(parents=True, exist_ok=True)
@@ -37,10 +47,15 @@ for page, (source, description) in subjects.items():
                          width=width, height=height)
     html = file.read_text()
     html = re.sub(r'<meta (?:name="twitter:image(?::alt)?"|property="og:image(?::(?:alt|height|width|type))?")[^>]*>', '', html)
+    title = escape(unescape(re.search(r'<title>(.*?)</title>',html,re.S)[1]))
+    html = re.sub(r'<meta (?:name="twitter:title"|property="og:(?:url|title)")[^>]*>', '', html)
+    page_url = 'https://futuremississauga.com/' + ('' if page=='index' else page+'.html')
     url = 'https://futuremississauga.com/' + relative
     tags = (f'<meta property="og:image" content="{url}"><meta property="og:image:alt" content="{escape(description)}">'
             f'<meta property="og:image:width" content="{width}"><meta property="og:image:height" content="{height}">'
             f'<meta property="og:image:type" content="image/jpeg"><meta name="twitter:image" content="{url}">'
             f'<meta name="twitter:image:alt" content="{escape(description)}">')
-    file.write_text(html.replace('</head>', tags+'</head>', 1))
+    title_tags = (f'<meta property="og:title" content="{title}"><meta property="og:url" content="{page_url}">'
+                  f'<meta name="twitter:title" content="{title}">')
+    file.write_text(html.replace('</head>', title_tags+tags+'</head>', 1))
 (public/'data/edition-shares.json').write_text(json.dumps(records, indent=2)+'\n')

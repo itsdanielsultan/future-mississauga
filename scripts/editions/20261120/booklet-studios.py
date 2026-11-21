@@ -23,6 +23,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('workspace', type=Path)
     parser.add_argument('--approved-roof', type=Path, required=True, help='Authorised corrected 41 Bay model')
+    parser.add_argument('--only', nargs='+', default=[], help='Render one or more named studies')
     args = parser.parse_args()
     output = args.workspace.resolve() / 'booklet-models'
     output.mkdir(exist_ok=True, parents=True)
@@ -33,6 +34,8 @@ def main():
         raster = build_raster(temp)
         for book in books:
             name = book['id']
+            if args.only and name not in args.only:
+                continue
             models = [(row['id'], PUBLIC / row['url'], row['sha256']) for row in published if row['projectId'] == name]
             if name == 'merner-41-bay':
                 models = [(name, args.approved_roof, ROOF_MODEL_SHA256)]
@@ -57,7 +60,7 @@ def main():
             receipt = dict(project=name, sources=sources)
             for side, direction in angles.items():
                 path = output / f'{name}-{side}.webp'
-                receipt['triangles'] = render_view(geometry, direction, path, raster)
+                receipt['triangles'] = render_view(geometry, direction, path, raster, roof_sheen=name == "aldo-1422-study", output_size=(3600, 2700))
                 receipt[side] = digest(path.read_bytes())
             (output / f'{name}.json').write_text(json.dumps(receipt, indent=2)+'\n')
             print(name, receipt['triangles'], flush=True)

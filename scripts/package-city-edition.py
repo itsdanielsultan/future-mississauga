@@ -34,7 +34,7 @@ if args.part in ('all','catalog'):
         stem=plate['id'].replace('/','-').removesuffix('.png')
         receipt=json.loads((w/'original-receipts'/(stem+'.json')).read_text())
         assert plate['sourceSHA256']==receipt['sourceSHA256'] and receipt['newNativeRender']
-        plate.update({k:receipt[k] for k in ['sourceSceneSHA256','displayMaster','download']})
+        plate.update({k:receipt[k] for k in ['sourceSceneSHA256','displayMaster','download','signedPreview','signedThumbnail','signedMaster']})
         thumb=assets/'thumbnails'/(stem+'.webp')
         assert thumb.is_file()
         plate['thumbnail']=str(thumb.relative_to(pub))
@@ -42,7 +42,9 @@ if args.part in ('all','catalog'):
         if tone.is_file():plate['presentationSHA256']=json.loads(tone.read_text())['gradeSHA256']
     assert len(plates['plates'])==69
     update_json(pub/'data/city-plates-20261120.json',plates)
-    manifest=dict(dimensions=[1920,824],durationSeconds=12,historicalFilmPreserved=True,frames=[])
+    with Image.open(assets/'Downtown-film-poster.webp') as poster:
+        film_size=list(poster.size)
+    manifest=dict(dimensions=film_size,durationSeconds=12,historicalFilmPreserved=True,frames=[])
     for key,name in [('film','Downtown-film.mp4'),('poster','Downtown-film-poster.webp'),('credits','Downtown-film-credits.txt')]:
         file=assets/name
         manifest[key]=dict(url=str(file.relative_to(pub)),bytes=file.stat().st_size,sha256=digest(file))
