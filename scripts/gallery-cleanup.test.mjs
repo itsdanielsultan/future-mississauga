@@ -24,8 +24,8 @@ test('the finite gallery keeps every supplied image reachable with accurate view
     assert.equal(entry.area,districts.find(d=>d.id===entry.district).name);
     assert.equal(entry.file,entry.district+galleryViews[entry.view].suffix);
   }
-  assert.equal(rows.find(row=>row.view==='landmark').viewTitle,'Absolute World');
-  assert.equal(rows.find(row=>row.view==='junction').viewTitle,'City Centre interchange');
+  assert.equal(rows.find(row=>row.view==='landmark').viewTitle,'Absolute World towers');
+  assert.equal(rows.find(row=>row.view==='junction').viewTitle,'Hurontario Street at Highway 403');
 });
 
 test('gallery filters reveal every match from the whole collection and handle empty results',()=>{

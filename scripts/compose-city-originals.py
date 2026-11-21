@@ -12,6 +12,8 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, PngImagePlugin
 
 
+PRINT_KEY=json.loads((Path(__file__).resolve().parent/'editions/20261120/print-key.json').read_text())
+
 def sha(path):
     digest = hashlib.sha256()
     with path.open('rb') as stream:
@@ -57,14 +59,14 @@ def wrapped(draw, lines, face, width):
     return result
 
 
-def write_print(image, row, north, output, home):
+def write_print(image, row, north, output, home, shared_key=False):
     w,h=image.size
     unit=w/(1840 if w>h else 1170)
     margin=round(32*unit)
     pad=round(26*unit)
     title_font=font(round(31*unit),'SemiBold')
     label_font=font(round(15*unit))
-    detail_font=font(round(13*unit))
+    detail_font=label_font if shared_key else font(round(13*unit))
     source_font=font(round(12*unit))
     draw=ImageDraw.Draw(image)
     area='Downtown' if home else row['caption']['area'] or row['title']
@@ -80,7 +82,14 @@ def write_print(image, row, north, output, home):
     required=row['caption'].get('requiredModelCredits',[])
     source_lines=wrapped(draw,short_credits+required,source_font,w-2*margin-2*pad)
     detail_height=round(17*unit)
-    band=round(105*unit)+len(source_lines)*detail_height
+    legend=[(entry['colour'],entry['label']) for entry in PRINT_KEY] if shared_key else [('#bdbebc','Existing'),('#83b2bc','Under construction'),('#dcb8aa','Proposed / approved'),('#ac91b9','Uncertain')]
+    if phase=='existing':legend=legend[:1]
+    if phase=='construction':legend=legend[:2]
+    key_width=sum(draw.textlength(word,font=detail_font)+47*unit for _,word in legend)
+    title_width=draw.textlength(area,font=title_font)
+    stack_key=shared_key and title_width+key_width+148*unit>w-2*(margin+pad)
+    key_row=round(32*unit) if stack_key else 0
+    band=round(105*unit)+len(source_lines)*detail_height+key_row
     # The artwork, including portraits, keeps its original camera crop and ratio.
     # Draw onto the image copy so the separate comparison scene stays pristine.
     paper=image.copy()
@@ -94,12 +103,11 @@ def write_print(image, row, north, output, home):
     title_edge=x+draw.textlength(area,font=title_font)+24*unit
     mid=y+48*unit
     compass_x=right-20*unit
-    legend=[('#bdbebc','Existing'),('#83b2bc','Under construction'),('#dcb8aa','Proposed / approved'),('#ac91b9','Uncertain')]
-    if phase=='existing':legend=legend[:1]
-    if phase=='construction':legend=legend[:2]
-    key_width=sum(draw.textlength(word,font=detail_font)+47*unit for _,word in legend)
     key_start=max(title_edge, min(w*.45,compass_x-key_width-42*unit))
-    if w>h and key_start+key_width<compass_x-24*unit:
+    if stack_key:
+        key_start=x
+        mid=y+91*unit
+    if shared_key or (w>h and key_start+key_width<compass_x-24*unit):
         for colour,word in legend:
             draw.rounded_rectangle((key_start,mid-6*unit,key_start+14*unit,mid+6*unit),radius=2*unit,fill=colour)
             draw.text((key_start+22*unit,mid),word,anchor='lm',font=detail_font,fill='#333432')
@@ -107,12 +115,12 @@ def write_print(image, row, north, output, home):
     elif draw.textlength(label,font=label_font)<compass_x-title_edge-60*unit:
         draw.text((compass_x-46*unit,mid),label,font=label_font,fill='#4b4d4e',anchor='rm')
     compass(draw,compass_x,y+43*unit,north,unit)
-    draw.line((x,y+80*unit,right,y+80*unit),fill='#dcdddd',width=max(1,round(.7*unit)))
+    draw.line((x,y+80*unit+key_row,right,y+80*unit+key_row),fill='#dcdddd',width=max(1,round(.7*unit)))
     for n,line in enumerate(source_lines):
-        draw.text((x,y+(89+n*17)*unit),line,font=source_font,fill='#505354')
+        draw.text((x,y+(89+n*17)*unit+key_row),line,font=source_font,fill='#505354')
     source_url='futuremississauga.com/sources.html'
     if draw.textlength(source_lines[0]+'    '+source_url,font=source_font)<right-x:
-        draw.text((right,y+89*unit),source_url,font=source_font,fill='#505354',anchor='ra')
+        draw.text((right,y+89*unit+key_row),source_url,font=source_font,fill='#505354',anchor='ra')
     meta=PngImagePlugin.PngInfo()
     meta.add_itxt('Title',area+' · '+label)
     meta.add_itxt('Author','Daniel Sultan / Future Mississauga')
@@ -132,8 +140,9 @@ def main():
     folder=public/'gallery'/('edition-'+args.edition)/'originals';folder.mkdir(parents=True,exist_ok=True)
     cache=work/'original-receipts';cache.mkdir(exist_ok=True)
     rows={r['id']:r for r in json.loads((work/'selected.json').read_text())}
-    for scenario in ('existing','future'):
-        rows['home/downtown-'+scenario+'.png']=rows['wide/downtown-'+scenario+'.png']
+    for scenario in ('existing','construction','future'):
+        gallery_name = 'downtown-skyline-construction' if scenario == 'construction' else 'downtown-' + scenario
+        rows['home/downtown-'+scenario+'.png']=rows['wide/'+gallery_name+'.png']
     receipts={}
     for proof_file in (work/'native').glob('*/render-proof.json'):
         proof=json.loads(proof_file.read_text())
@@ -150,15 +159,19 @@ def main():
         grade = json.loads(tone.read_text()) if tone.exists() else None
         if grade and grade['sourceSHA256'] != info['image']['sha256']:raise ValueError('Mismatched tower grading source: '+ident)
         grade_hash = grade['gradeSHA256'] if grade else None
-        recipe = 'inset-attribution-v3'
+        shared_key = args.edition != '20261120'
+        recipe = 'inset-attribution-map-key-v5' if shared_key else 'inset-attribution-v3'
         signed_folder=folder.parent/'signed'
         signed_folder.mkdir(exist_ok=True)
         signed_master=signed_folder/(target+'-full.webp')
         preview=signed_folder/(target+'.webp')
         thumbnail=signed_folder/(target+'-thumb.webp')
-        if record.is_file() and master.is_file() and download.is_file() and signed_master.is_file() and preview.is_file() and thumbnail.is_file():
+        clean_preview=folder.parent/(target+'.webp')
+        clean_thumbnail=folder.parent/'thumbnails'/(target+'.webp')
+        clean_ready=ident.startswith('home/') or (clean_preview.is_file() and clean_thumbnail.is_file())
+        if clean_ready and record.is_file() and master.is_file() and download.is_file() and signed_master.is_file() and preview.is_file() and thumbnail.is_file():
             old=json.loads(record.read_text())
-            if old.get('sourceSHA256')==info['image']['sha256'] and old.get('recipe')==recipe and old.get('gradeSHA256')==grade_hash:return
+            if old.get('sourceSHA256')==info['image']['sha256'] and old.get('recipe')==recipe and old.get('gradeSHA256')==grade_hash and old.get('download',{}).get('url')==download.relative_to(public).as_posix():return
         if sha(source)!=info['image']['sha256']:raise ValueError('Render digest mismatch for '+ident)
         if grade:
             source=tone.with_suffix('.png')
@@ -168,8 +181,17 @@ def main():
             background=Image.new('RGBA',rgba.size,proof['background']);background.alpha_composite(rgba.convert('RGBA'))
             im=background.convert('RGB')
         temp=master.with_name(master.name+'.tmp'); im.save(temp,'WebP',quality=92,method=3);temp.replace(master)
+        if not ident.startswith('home/'):
+            clean_thumbnail.parent.mkdir(parents=True,exist_ok=True)
+            with Image.open(master) as stored:
+                clean=stored.convert('RGB')
+            for destination,edge,quality in ((clean_preview,1600,89),(clean_thumbnail,640,79)):
+                clean.thumbnail((edge,edge),Image.Resampling.LANCZOS)
+                temp=destination.with_suffix('.partial')
+                clean.save(temp,'WEBP',quality=quality,method=4)
+                temp.replace(destination)
         temp=download.with_name(download.name+'.tmp')
-        signed=write_print(im,rows[ident],info['north']['bearingClockwiseFromScreenUpDegrees'],temp,ident.startswith('home/'))
+        signed=write_print(im,rows[ident],info['north']['bearingClockwiseFromScreenUpDegrees'],temp,ident.startswith('home/'),shared_key)
         temp.replace(download)
         temp=signed_master.with_suffix('.partial')
         signed.save(temp,format='WebP',quality=93,method=3)

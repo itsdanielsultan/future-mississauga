@@ -11,8 +11,6 @@ import fitz
 from PIL import Image
 
 PUBLIC = Path(__file__).resolve().parents[1] / "public"
-CATALOGUE = PUBLIC / "data/document-previews-20261120.json"
-PAGE_TEXT = PUBLIC / "document-page-text-20261120.txt"
 
 
 def write_atomic(path, content):
@@ -100,21 +98,43 @@ def rebuild(document, force):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("titles", nargs="*", help="Optional document IDs such as atlas or merner-41-bay")
+    parser.add_argument("--edition", default="20261120")
+    parser.add_argument("--previous-edition", help="Carry forward the earlier catalogue, including its PDF links and page text")
     parser.add_argument("--force", action="store_true", help="Regenerate previews even if the source hash matches")
     args = parser.parse_args()
-    catalogue = json.loads(CATALOGUE.read_text())
-    texts = json.loads(gzip.decompress(base64.b64decode(PAGE_TEXT.read_bytes())))
+    target_catalogue = PUBLIC / f"data/document-previews-{args.edition}.json"
+    target_text = PUBLIC / f"document-page-text-{args.edition}.txt"
+    source_edition = args.previous_edition if not target_catalogue.exists() else args.edition
+    if not source_edition:
+        parser.error("Supply --previous-edition when building a successor reader for the first time")
+    source_catalogue = PUBLIC / f"data/document-previews-{source_edition}.json"
+    source_text = PUBLIC / f"document-page-text-{source_edition}.txt"
+    catalogue = json.loads(source_catalogue.read_text())
+    texts = json.loads(gzip.decompress(base64.b64decode(source_text.read_bytes())))
+    if len(texts) != len(catalogue["documents"]):
+        raise ValueError("The prior reader catalogue and accessible page text have different lengths")
+    edition_base = f"document-previews/edition-{args.edition}/"
+    if source_edition != args.edition:
+        if args.titles:
+            parser.error("The first build of a successor reader must include every current document")
+        earlier = [doc for doc in catalogue["documents"] if doc.get("base") == f"document-previews/edition-{source_edition}/"]
+        if not earlier:
+            raise ValueError("The earlier edition has no registered current documents")
+        for prior in earlier:
+            catalogue["documents"].append(dict(title=prior["title"], prefix=prior["prefix"], base=edition_base,
+                                               url=f'downloads/edition-{args.edition}/' + Path(prior["url"]).name))
+            texts.append([])
     selected = set(args.titles)
     current = {doc["prefix"].rstrip("-"): index for index, doc in enumerate(catalogue["documents"])
-               if doc.get("base") == "document-previews/edition-20261120/"}
+               if doc.get("base") == edition_base}
     if selected - current.keys():
         parser.error("Unknown document ID: " + ", ".join(sorted(selected - current.keys())))
     for name, index in current.items():
         if not selected or name in selected:
             texts[index] = rebuild(catalogue["documents"][index], args.force)
             print(f'{name}: {len(texts[index])} pages', flush=True)
-    write_atomic(CATALOGUE, (json.dumps(catalogue, indent=2) + "\n").encode())
-    write_atomic(PAGE_TEXT, base64.b64encode(gzip.compress(json.dumps(texts, ensure_ascii=False).encode(), mtime=0)))
+    write_atomic(target_catalogue, (json.dumps(catalogue, indent=2) + "\n").encode())
+    write_atomic(target_text, base64.b64encode(gzip.compress(json.dumps(texts, ensure_ascii=False).encode(), mtime=0)))
     if 'atlas' in current and (not selected or 'atlas' in selected):
         atlas = catalogue['documents'][current['atlas']]
         sources = PUBLIC / 'sources.html'

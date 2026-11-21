@@ -13,15 +13,22 @@ from reportlab.lib.colors import HexColor
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.platypus import Paragraph
 import argparse, os
+import fcntl
+from datetime import datetime
 here = Path(__file__).resolve().parent
 public = here.parents[2] / 'public'
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('workspace', type=Path)
 parser.add_argument('--originals', type=Path, required=True, help='Folder containing the 11 originally published review PDFs')
 parser.add_argument('--receipts', type=Path, help='Use the freshly rendered city-image receipts before the city catalogue is published')
+parser.add_argument('--edition', default='20261120')
+parser.add_argument('--force', action='store_true', help='Rebuild even when the verified inputs and PDF match this edition')
 parser.add_argument('--only', nargs='+', default=[])
 args = parser.parse_args()
 work = args.workspace.resolve()
+edition_date = datetime.strptime(args.edition, '%Y%m%d').strftime('%d %B %Y')
+output_directory = public / 'downloads' / ('edition-' + args.edition)
+output_directory.mkdir(parents=True, exist_ok=True)
 fonts = Path(os.environ.get('FM_INTER_FONTS', Path.home() / 'Library/Fonts'))
 base = 'https://futuremississauga.com/'
 
@@ -32,6 +39,7 @@ def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 for (family, face) in [('Atlas', 'Inter-Regular.ttf'), ('Atlas Medium', 'Inter-SemiBold.ttf')]:
     pdfmetrics.registerFont(TTFont(family, str(fonts / face)))
+font_inputs={name:sha(fonts/name) for name in ['Inter-Regular.ttf','Inter-SemiBold.ttf']}
 projects = {r['id']: r for r in load(public / 'data/projects.json')}
 records = load(here / 'study-booklets.json')
 model_studies = {r['url']: r for r in load(public / 'data/building-study-media.json') if r['kind'] == 'review'}
@@ -71,7 +79,7 @@ def frame(c, page, name, section):
     line(c, M, H - 65, W - M)
     line(c, M, 37, W - M)
     write(c, 'Future Mississauga  ·  Daniel Sultan', M, 19, 9.5, color=secondary)
-    write(c, f'20 November 2026     /     {page}', W - M, 19, 9.5, right=True, color=secondary)
+    write(c, f'{edition_date}     /     {page}', W - M, 19, 9.5, right=True, color=secondary)
 
 def image(c, source, scene=False):
     with Image.open(source) as image:
@@ -89,6 +97,8 @@ def image(c, source, scene=False):
         jpg.seek(0)
         c.drawImage(ImageReader(jpg), M, 73, W - M * 2, H - 153, preserveAspectRatio=True, anchor='c')
 receipts_file = work / 'booklet-assembly.json'
+receipt_lock=(work/'booklet-assembly.lock').open('a')
+fcntl.flock(receipt_lock,fcntl.LOCK_EX)
 receipts = load(receipts_file) if receipts_file.is_file() else {}
 for row in records:
     (key, name) = (row['id'], row['title'])
@@ -109,6 +119,14 @@ for row in records:
     credits = captions[context_key]
     old = args.originals / row['original'].rsplit('/', 1)[1]
     assert sha(old) == model_studies[row['original']]['sha256']
+    path = output_directory / Path(row['url']).name
+    inputs = dict(edition=args.edition, recipe=sha(Path(__file__)), fonts=font_inputs, studio=proof, project=project,
+                  book=row, neighbourhood=master['sha256'], summary=summary, caption=credits, referencePDF=sha(old))
+    fingerprint = hashlib.sha256(json.dumps(inputs,sort_keys=True).encode()).hexdigest()
+    previous=receipts.get(key,{})
+    if not args.force and previous.get('inputSHA256')==fingerprint and path.is_file() and sha(path)==previous.get('pdf'):
+        print('Verified',key,flush=True)
+        continue
     with fitz.open(old) as original:
         blocks = [b[4].strip().split('\n') for b in original[-1].get_text('blocks') if b[6] == 0]
         caveat = ' '.join(blocks[-2]).removeprefix('Approximate geographic placement in municipal building context. ')
@@ -117,12 +135,11 @@ for row in records:
         caveat = 'The upper flat roof has a plain black finish. The slopes below it are shingled. The position of the house is approximate.'
     if key == 'merner-41-bay':
         caveat = 'The ridge-to-porch dimension is 24 ft 6 in. Smaller openings, hidden details and the grade around the house remain approximate.'
-    path = public / row['url']
     output = BytesIO()
     c = canvas.Canvas(output, pagesize=(W, H), pageCompression=1, invariant=1)
     c.setTitle(name + ' | Future Mississauga')
     c.setAuthor('Daniel Sultan')
-    c.setSubject('Building study, 20 November 2026')
+    c.setSubject('Building study, ' + edition_date)
     angles = ['reverse', 'front'] if key in {'merner-42-john', 'south-common-community-centre'} else ['front', 'reverse']
     for (page, (angle, label)) in enumerate(zip(angles, ['Exterior study', 'Opposite view']), 1):
         frame(c, page, name, label)
@@ -134,7 +151,8 @@ for row in records:
         c.showPage()
     frame(c, 3, name, 'Neighbourhood')
     image(c, context, scene=True)
-    write(c, area_name + ' with proposed projects', M, 51, 12, 'Atlas Medium')
+    context_label = area_name + (' neighbourhood' if key=='aldo-1422-study' and args.edition!='20261120' else ' with proposed projects')
+    write(c, context_label, M, 51, 12, 'Atlas Medium')
     write(c, 'Area overview  ·  City of Mississauga' + ('  ·  © OpenStreetMap' if credits.get('openStreetMap') else ''), W - M, 51, 9.5, right=True, color=secondary)
     c.showPage()
     frame(c, 4, name, 'About this study')
@@ -165,6 +183,9 @@ for row in records:
         target = path.with_suffix('.tmp')
         pdf.save(target, garbage=4, deflate=True, no_new_id=True)
     target.replace(path)
-    receipts[key] = {'pdf': sha(path), 'context': str(context.relative_to(public)), 'contextSHA256': sha(context), 'creditedStudy': sha(old), 'studio': {angle: proof[angle] for angle in angles}, 'firstView': angles[0], 'sources': proof['sources']}
+    receipts[key] = {'pdf': sha(path), 'inputSHA256':fingerprint, 'context': str(context.relative_to(public)), 'contextSHA256': sha(context), 'creditedStudy': sha(old), 'studio': {angle: proof[angle] for angle in angles}, 'firstView': angles[0], 'sources': proof['sources']}
     print(key, path.stat().st_size, flush=True)
-receipts_file.write_text(json.dumps(receipts, indent=2) + '\n')
+temporary_receipts=receipts_file.with_suffix('.partial')
+temporary_receipts.write_text(json.dumps(receipts, indent=2) + '\n')
+temporary_receipts.replace(receipts_file)
+receipt_lock.close()

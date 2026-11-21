@@ -160,8 +160,8 @@ export function createImagePreview({views = false} = {}) {
       historyKey = crypto.randomUUID();
       historyWindow.history.pushState({...historyWindow.history.state, atlasPicture: historyKey}, '');
     }
-    if(trigger)opener=trigger;
-    dialog.querySelector('h2').textContent=previewTitle(info,{views});
+    if(trigger && !dialog.open)opener=trigger;
+    dialog.querySelector('h2').textContent=info.placeTitle || previewTitle(info,{views});
     const meta=dialog.querySelector('.media-preview__meta');meta.textContent=info.meta||'';meta.hidden=!info.meta;
     const download=dialog.querySelector('[download]');
     download.hidden = !info.download;
@@ -170,13 +170,20 @@ export function createImagePreview({views = false} = {}) {
       download.download=new URL(info.download,location.href).pathname.split('/').pop();
       const format=download.download.split('.').pop().toUpperCase();
       const label=['PNG','JPG','JPEG','SVG','AVIF','WEBP'].includes(format)?'Download '+format:'Download image';
-      download.setAttribute('aria-label',label);download.title=label;
+      download.setAttribute('aria-label',label);download.title=info.downloadDimensions?label+' ('+info.downloadDimensions+')':label;
     } else {
       download.removeAttribute('href');
     }
     const explore=dialog.querySelector('.media-preview__explore');explore.hidden=!info.explore;if(info.explore)explore.href=info.explore;
-    renderImageAttribution(dialog.querySelector('.media-preview__credits'),info.attribution||{openStreetMap:info.osm});
+    const credits=dialog.querySelector('.media-preview__credits');
+    renderImageAttribution(credits,info.attribution||{openStreetMap:info.osm});
+    credits.hidden=Boolean(info.creditsInImage);
     const identity=dialog.querySelector('.media-preview__identity');identity.replaceChildren(...presentationCaption(info));identity.hidden=!identity.childElementCount;
+    dialog.querySelector('.media-preview__footer').hidden=explore.hidden && credits.hidden && identity.hidden;
+    if(info.creditsInImage)image.setAttribute('aria-description',Array.from(credits.children,child => child.textContent.replace(/[.\s]+$/,'')).join('. '));
+    else image.removeAttribute('aria-description');
+    if(info.resolution)download.dataset.resolution=info.resolution;
+    else delete download.dataset.resolution;
     dialog.classList.toggle('media-preview--portrait',info.height>info.width);
     dialog.style.setProperty('--media-aspect',String((info.width||1200)/(info.height||750))); 
     image.alt=info.alt||info.title||'Picture';image.width=info.width||1200;image.height=info.height||750;
@@ -218,6 +225,11 @@ export function previewDownloadURL(anchor, fallback, baseURL = location.href) {
   try {
     const base=new URL(baseURL),url=new URL(declared,base);
     const local=url.origin===base.origin;
+    if(base.protocol==='file:'&&url.protocol==='file:'){
+      const root=new URL('.',base).pathname;
+      const inside=url.hostname===base.hostname && url.pathname.startsWith(root);
+      return inside && !url.search && !url.hash && /\.png$/i.test(url.pathname)?url.href:fallback;
+    }
     const hosted=url.protocol==='https:'&&url.hostname==='github.com'&&!url.port&&/^\/itsdanielsultan\/future-mississauga\/releases\/download\/[^/]+\/[^/]+\.png$/i.test(url.pathname);
     if(!['http:','https:'].includes(url.protocol)||url.username||url.password||url.search||url.hash||!url.pathname.toLowerCase().endsWith('.png')||(!local&&!hosted&&!isDeliveredImageURL(url.href)))return fallback;
     return url.href;
@@ -243,9 +255,9 @@ export function installImagePreviews(resolve = async (image,anchor) => {
     const section=(clickedImage||anchor).closest('article,section');
     const image=clickedImage||[...section?.querySelectorAll('img')||[]].find(img=>[img.src,img.closest('a')?.href].filter(Boolean).some(url=>new URL(url,location.href).href===anchor.href));
     if (!generic) { generic=createImagePreview(); openGeneric=createResolvedPreview(generic); }
-    const collection=anchor?.dataset.editionPlate && anchor.closest('[data-picture-area]');
+    const collection=(anchor?.dataset.editionPlate || anchor?.dataset?.revisionPanel) && anchor.closest('[data-picture-area]');
     if(collection){
-      const pictures=[...collection.querySelectorAll('a[data-edition-plate]')];
+      const pictures=[...collection.querySelectorAll('a[data-edition-plate],a[data-revision-panel]')];
       let index=pictures.indexOf(anchor);
       const show=()=>{
         const link=pictures[index], photo=link.querySelector('img');
@@ -253,7 +265,7 @@ export function installImagePreviews(resolve = async (image,anchor) => {
           area:collection.dataset.pictureArea,viewTitle:link.dataset.previewTitle,
           alt:photo.alt,src:link.href,preview:photo.currentSrc||photo.src,
           width:Number(link.dataset.previewWidth),height:Number(link.dataset.previewHeight),
-          download:previewDownloadURL(link,link.href),explore:collection.dataset.pictureMap
+          download:previewDownloadURL(link,link.href),explore:collection.dataset.pictureMap||cityMapLinkForSection(section,location.href)
         },()=>resolve(photo,link),anchor);
       };
       generic.setSequence(pictures.length>1?direction=>{
@@ -268,7 +280,7 @@ export function installImagePreviews(resolve = async (image,anchor) => {
     const title=image?.dataset.previewTitle||anchor?.dataset.previewTitle||heading||(image?.alt?.length<=70?image.alt:'Image preview');
     const viewTitle=image?.closest('figure')?.querySelector('figcaption')?.textContent?.trim();
     const src=fileLink?anchor.href:image?.currentSrc||image?.src;
-    openGeneric({title:title||'Picture',viewTitle,alt:image?.alt||title,src,download:previewDownloadURL(anchor,null),width:Number(image?.dataset.nativeWidth)||image?.naturalWidth||1200,height:Number(image?.dataset.nativeHeight)||image?.naturalHeight||800,preview:image?.currentSrc||image?.src,explore:cityMapLinkForSection(section,location.href)},()=>resolve(image,anchor),anchor||image?.closest('button')||image);
+    openGeneric({title:title||'Picture',viewTitle,alt:image?.alt||title,src,download:previewDownloadURL(anchor,null),width:Number(anchor?.dataset.previewWidth)||Number(image?.dataset.nativeWidth)||image?.naturalWidth||1200,height:Number(anchor?.dataset.previewHeight)||Number(image?.dataset.nativeHeight)||image?.naturalHeight||800,preview:image?.currentSrc||image?.src,explore:cityMapLinkForSection(section,location.href)},()=>resolve(image,anchor),anchor||image?.closest('button')||image);
 
   });
   const enhance=()=>document.querySelectorAll('main img').forEach(image=>{

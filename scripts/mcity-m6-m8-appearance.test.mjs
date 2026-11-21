@@ -1,3 +1,4 @@
+import {readBeforePlanningReview} from './planning-review-guard.mjs';
 import * as treeRuntime from './tree-runtime-fixture.mjs';
 import {restoreRegistryReconciliationData} from './registry-reconciliation-scope.mjs';
 import {applyHarbornTreeContacts} from '../public/harborn-tree-contacts.js';
@@ -18,7 +19,7 @@ const THREE=await import('../public/vendor/three.module.js');
 const {GLTFLoader}=await import('../public/vendor/addons/loaders/GLTFLoader.js');
 const {MeshoptDecoder}=await import('../public/vendor/meshopt_decoder.mjs');
 const {splitSourceOverlaps}=await import('../public/source-layer-cut.js');
-const read=p=>readFileSync(new URL('../public/'+p,import.meta.url)),json=p=>JSON.parse(read('data/'+p+'.json'));
+const read=p=>readBeforePlanningReview(new URL('../public/'+p,import.meta.url)),json=p=>JSON.parse(read('data/'+p+'.json'));
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const refinements=json('refinement-models'),projects=json('projects'),versions=json('model-asset-versions');
 const protectedScope=JSON.parse(readFileSync(new URL('./mcity-m6-m8-appearance-protected.json',import.meta.url)));

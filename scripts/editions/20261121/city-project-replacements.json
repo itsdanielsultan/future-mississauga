@@ -1,0 +1,573 @@
+{
+  "edition": "20261121",
+  "models": {
+    "exchange-construction-20261121": {
+      "project": "exchange-district",
+      "path": "exchange-phase/exchange-construction-20261121.glb",
+      "sha256": "0600dc4d0870b9845683878151fa53e892c36c41e1d1d832891da2a1021cdb74",
+      "triangles": 94888,
+      "stage": "construction"
+    },
+    "exchange-existing-20261121": {
+      "project": "exchange-district",
+      "path": "exchange-phase/exchange-existing-20261121.glb",
+      "sha256": "482836e20a16d1466c90d7b786c1f88e6e1bd109ac80311ce2c3730e4c23da8c",
+      "triangles": 66638,
+      "stage": "existing"
+    },
+    "exchange-future-20261121": {
+      "project": "exchange-district",
+      "path": "exchange-phase/exchange-future-20261121.glb",
+      "sha256": "19d7f23e3eca1c60bb6dca57927e691b48e28e2709f6eb0ffdcef572e05452cc",
+      "triangles": 95008,
+      "stage": "future"
+    },
+    "mcity-m1-20261025-exterior-study": {
+      "assetId": "mcity-m1-20261025-exterior-study",
+      "path": "scene-refresh/mcity-m1-20261025-exterior-study.glb",
+      "sha256": "a458a26f3964ebd1cf95b858c32449643d64679e061c0d8c7a62d1e19fa1f518",
+      "triangles": 367975,
+      "sourceGLB": "models/studies-20261112/mcity-m1-pavilion-v6-27dadcecf559.glb.gz",
+      "publicDecodedSHA256": "27dadcecf5593ccc9b257bc4832acf5eb8562aa9bd92c96b5a19491fd0f012ba",
+      "publicDownloadSHA256": "478be2c24b1b8b8a0cbb649c6c75fa11df7658b29a7a40d186da34aa37773ae9",
+      "worldBounds": [
+        [
+          -5674.391518552545,
+          83.39438772201538,
+          343.3714500007317
+        ],
+        [
+          -5569.98898433367,
+          284.25999450683594,
+          449.09374256956755
+        ]
+      ]
+    },
+    "harborn-50-60-current-plan": {
+      "assetId": "harborn-50-60-current-plan",
+      "path": "scene-refresh/harborn-50-60-current-plan.glb",
+      "sha256": "0f43dd0c6bc28f8b03c1ce753c13bce57b6d7610af8941e0bc0e8e06ac5386fb",
+      "triangles": 55521,
+      "sourceGLB": "models/studies-20261112/harborn-length-v5-4a0c1d523114.glb.gz",
+      "publicDecodedSHA256": "4a0c1d523114d42ad0802e994f81cdf11de16632463f39a87b3f5e947d300e01",
+      "publicDownloadSHA256": "a2bc7660c114e4670e076670507ec173b6b05a49a53ccff8cce53b4407215284",
+      "worldBounds": [
+        [
+          -2200.983642578125,
+          27.762649536132812,
+          2062.882080078125
+        ],
+        [
+          -2124.5361328125,
+          41.47999954223633,
+          2140.607177734375
+        ]
+      ]
+    },
+    "mcity-m5-authored-detail-20261101": {
+      "assetId": "mcity-m5-authored-detail-20261101",
+      "path": "scene-refresh/mcity-m5-authored-detail-20261101.glb",
+      "sha256": "08440fa40c3923aa9218ea1287db60c90b840f195929573c5443361fdffabbad",
+      "triangles": 91644,
+      "sourceGLB": "models/studies-20261112/mcity-m5-podium-v6-ccc3178d661b.glb.gz",
+      "publicDecodedSHA256": "ccc3178d661b6d3a77b14af474b235be0cae37faf31f5d6c0e3e9fc5e1c950b6",
+      "publicDownloadSHA256": "d8847e7267ee38de9138f7aac388fb59865cb3ef139b4c0f66adb66127ab1af5",
+      "worldBounds": [
+        [
+          -5691.06396484375,
+          84.19877624511719,
+          605.9493408203125
+        ],
+        [
+          -5640.46435546875,
+          202.07044982910156,
+          661.8663330078125
+        ]
+      ]
+    },
+    "voya-towers-plan-derived": {
+      "assetId": "voya-towers-plan-derived",
+      "path": "scene-refresh/voya-towers-plan-derived.glb",
+      "sha256": "861e52f27bf022eccfa4c0448b46be3768ebda2747ac62b6dc70e6dcfa0fed1f",
+      "triangles": 69160,
+      "sourceGLB": "models/refinement-20261113/voya-cityside-0abaf6709101.glb.gz",
+      "publicDecodedSHA256": "0abaf6709101d072caece4e418755c682576b9dd32b49fd0004a32b2673bff79",
+      "publicDownloadSHA256": "ef03b46d0496107746c47b181cb860ec605f264d0ec51f618578cb967a04ea80",
+      "worldBounds": [
+        [
+          -6125.9072265625,
+          85.7265853881836,
+          37.58510971069336
+        ],
+        [
+          -6004.06201171875,
+          229.577392578125,
+          126.92327117919922
+        ]
+      ]
+    },
+    "wf-26park-current-plan": {
+      "assetId": "wf-26park-current-plan",
+      "path": "scene-refresh/wf-26park-current-plan.glb",
+      "sha256": "3e8bfd17b34f098e35e2b6a70b8675e817156f3c7cbd529f516a1579a889344d",
+      "triangles": 58968,
+      "sourceGLB": "models/studies-20261113/26-park-four-side-4d791535afe0.glb.gz",
+      "publicDecodedSHA256": "4d791535afe0744de87dc150e31bd24d86e65be6176be3f79a2aba28bc7fc620",
+      "publicDownloadSHA256": "c214c94f4ebc7f6165ceb59efd9e9c05473e9a95a9b70e5ce13f822e6fc80228",
+      "worldBounds": [
+        [
+          -983.2738037109375,
+          8.800000190734863,
+          3619.185546875
+        ],
+        [
+          -912.15576171875,
+          98.75,
+          3698.508056640625
+        ]
+      ]
+    },
+    "bridge-house-20261121": {
+      "project": "bridge-house",
+      "componentIds": [
+        "93-742",
+        "93-743",
+        "93-744",
+        "93-745",
+        "93-746",
+        "93-747",
+        "93-748"
+      ],
+      "lifecycle": "under_construction",
+      "path": "scene-refresh/bridge-house-20261121.glb",
+      "sha256": "ed329865843fd639c7326837b0a5bb2db0bd379ded0587c91a7474b4c2c182d4",
+      "triangles": 212
+    }
+  },
+  "views": {
+    "wide/downtown-skyline-construction.png": {
+      "sourceBlendSHA256": "b17c35c803a5a2202399bfad910f18c3129b9b1b0e826729eb13a775cbf58fbd",
+      "replacements": [
+        {
+          "model": "exchange-construction-20261121",
+          "oldMeshCount": 24
+        }
+      ]
+    },
+    "wide/downtown-skyline-existing.png": {
+      "sourceBlendSHA256": "460dec347682187160d8910d237fe8f4d974e1c171fafa8b48c161f38404325e",
+      "replacements": [
+        {
+          "model": "exchange-existing-20261121",
+          "oldMeshCount": 6
+        }
+      ]
+    },
+    "wide/downtown-skyline-future.png": {
+      "sourceBlendSHA256": "d4d4289208c149cec1fdc1561d0e3f8ed2f8c6ff825406f137e81dfb29e613e7",
+      "replacements": [
+        {
+          "model": "exchange-future-20261121",
+          "oldMeshCount": 24
+        }
+      ]
+    },
+    "home/downtown-construction.png": {
+      "sourceBlendSHA256": "b17c35c803a5a2202399bfad910f18c3129b9b1b0e826729eb13a775cbf58fbd",
+      "replacements": [
+        {
+          "model": "exchange-construction-20261121",
+          "oldMeshCount": 24
+        }
+      ]
+    },
+    "home/downtown-existing.png": {
+      "sourceBlendSHA256": "460dec347682187160d8910d237fe8f4d974e1c171fafa8b48c161f38404325e",
+      "replacements": [
+        {
+          "model": "exchange-existing-20261121",
+          "oldMeshCount": 6
+        }
+      ]
+    },
+    "home/downtown-future.png": {
+      "sourceBlendSHA256": "d4d4289208c149cec1fdc1561d0e3f8ed2f8c6ff825406f137e81dfb29e613e7",
+      "replacements": [
+        {
+          "model": "exchange-future-20261121",
+          "oldMeshCount": 24
+        }
+      ]
+    },
+    "neighbourhood/fairview/after": {
+      "sourceBlendSHA256": "172e6e53249966eee36424c05c20b502f22427cfa489e1b39dcc97ea50022e94",
+      "replacements": [
+        {
+          "model": "mcity-m1-20261025-exterior-study",
+          "oldPins": [
+            "630368744c2ba9f8252004d87bf31d31f66397c3cc037b21db65f43e6da7f9ca"
+          ]
+        }
+      ]
+    },
+    "neighbourhood/fairview/before": {
+      "sourceBlendSHA256": "72d14ce340056591856a6083435f6b4d0578442d32e6df4d8003dbb3a2c4e8ee",
+      "replacements": [
+        {
+          "model": "mcity-m1-20261025-exterior-study",
+          "oldPins": [
+            "630368744c2ba9f8252004d87bf31d31f66397c3cc037b21db65f43e6da7f9ca"
+          ]
+        }
+      ]
+    },
+    "portraits/cooksville-future.png": {
+      "sourceBlendSHA256": "9ed03c3c41a6770fd3f74a3775562a5c29d81985697cdb5e51690c7d46e86fae",
+      "replacements": [
+        {
+          "model": "exchange-future-20261121",
+          "oldMeshCount": 0
+        },
+        {
+          "model": "harborn-50-60-current-plan",
+          "oldPins": [
+            "b3b0636313d4dc3346884f293653f7d31df855246b69ac2c70b4ab4ae0561fe1"
+          ]
+        }
+      ]
+    },
+    "portraits/cooksville-portrait-future.png": {
+      "sourceBlendSHA256": "9ed03c3c41a6770fd3f74a3775562a5c29d81985697cdb5e51690c7d46e86fae",
+      "replacements": [
+        {
+          "model": "harborn-50-60-current-plan",
+          "oldPins": [
+            "b3b0636313d4dc3346884f293653f7d31df855246b69ac2c70b4ab4ae0561fe1"
+          ]
+        }
+      ]
+    },
+    "portraits/downtown-existing.png": {
+      "sourceBlendSHA256": "460dec347682187160d8910d237fe8f4d974e1c171fafa8b48c161f38404325e",
+      "replacements": [
+        {
+          "model": "exchange-existing-20261121",
+          "oldMeshCount": 6
+        }
+      ]
+    },
+    "portraits/downtown-future.png": {
+      "sourceBlendSHA256": "d4d4289208c149cec1fdc1561d0e3f8ed2f8c6ff825406f137e81dfb29e613e7",
+      "replacements": [
+        {
+          "model": "exchange-future-20261121",
+          "oldMeshCount": 24
+        }
+      ]
+    },
+    "portraits/downtown-junction-future.png": {
+      "sourceBlendSHA256": "ec2094e4c9be47651557b3a76b5466eb86a0b09e194e36252500568691af5ea7",
+      "replacements": [
+        {
+          "model": "mcity-m1-20261025-exterior-study",
+          "oldPins": [
+            "630368744c2ba9f8252004d87bf31d31f66397c3cc037b21db65f43e6da7f9ca"
+          ]
+        },
+        {
+          "model": "mcity-m5-authored-detail-20261101",
+          "oldPins": [
+            "4162051b4d6706a65b3f5f0606ce31dfd9500c41f6ea766f1a40eb15ac519b6f"
+          ]
+        },
+        {
+          "model": "voya-towers-plan-derived",
+          "oldPins": [
+            "2402b603d47c3ba0770eb55847632a9c1a32c7a0117d914fe810705652e181f6"
+          ]
+        }
+      ]
+    },
+    "portraits/downtown-landmark-future.png": {
+      "sourceBlendSHA256": "d4d4289208c149cec1fdc1561d0e3f8ed2f8c6ff825406f137e81dfb29e613e7",
+      "replacements": [
+        {
+          "model": "exchange-future-20261121",
+          "oldMeshCount": 24
+        }
+      ]
+    },
+    "portraits/downtown-portrait-future.png": {
+      "sourceBlendSHA256": "d4d4289208c149cec1fdc1561d0e3f8ed2f8c6ff825406f137e81dfb29e613e7",
+      "replacements": [
+        {
+          "model": "exchange-future-20261121",
+          "oldMeshCount": 24
+        }
+      ]
+    },
+    "portraits/downtown-skyline-construction.png": {
+      "sourceBlendSHA256": "b17c35c803a5a2202399bfad910f18c3129b9b1b0e826729eb13a775cbf58fbd",
+      "replacements": [
+        {
+          "model": "exchange-construction-20261121",
+          "oldMeshCount": 24
+        }
+      ]
+    },
+    "portraits/downtown-skyline-existing.png": {
+      "sourceBlendSHA256": "460dec347682187160d8910d237fe8f4d974e1c171fafa8b48c161f38404325e",
+      "replacements": [
+        {
+          "model": "exchange-existing-20261121",
+          "oldMeshCount": 6
+        }
+      ]
+    },
+    "portraits/downtown-skyline-future.png": {
+      "sourceBlendSHA256": "d4d4289208c149cec1fdc1561d0e3f8ed2f8c6ff825406f137e81dfb29e613e7",
+      "replacements": [
+        {
+          "model": "exchange-future-20261121",
+          "oldMeshCount": 24
+        }
+      ]
+    },
+    "portraits/port-credit-future.png": {
+      "sourceBlendSHA256": "9c3cd86023ad034a78d6e3c2e6789ad1a32371e36690dbc84b92d2683767ee5f",
+      "replacements": [
+        {
+          "model": "wf-26park-current-plan",
+          "oldPins": [
+            "8eb2cd0baf4f4fe0166566ca00f1f20e2d8fdde5e80ebc010cb7062d48c9dccd"
+          ]
+        },
+        {
+          "model": "bridge-house-20261121",
+          "oldMeshCount": 7
+        }
+      ]
+    },
+    "portraits/port-credit-portrait-future.png": {
+      "sourceBlendSHA256": "9c3cd86023ad034a78d6e3c2e6789ad1a32371e36690dbc84b92d2683767ee5f",
+      "replacements": [
+        {
+          "model": "wf-26park-current-plan",
+          "oldPins": [
+            "8eb2cd0baf4f4fe0166566ca00f1f20e2d8fdde5e80ebc010cb7062d48c9dccd"
+          ]
+        },
+        {
+          "model": "bridge-house-20261121",
+          "oldMeshCount": 7
+        }
+      ]
+    },
+    "portraits/port-credit-skyline-future.png": {
+      "sourceBlendSHA256": "9c3cd86023ad034a78d6e3c2e6789ad1a32371e36690dbc84b92d2683767ee5f",
+      "replacements": [
+        {
+          "model": "wf-26park-current-plan",
+          "oldPins": [
+            "8eb2cd0baf4f4fe0166566ca00f1f20e2d8fdde5e80ebc010cb7062d48c9dccd"
+          ]
+        },
+        {
+          "model": "bridge-house-20261121",
+          "oldMeshCount": 7
+        }
+      ]
+    },
+    "portraits/uptown-future.png": {
+      "sourceBlendSHA256": "f2e6ef5e937d4316020f631a870f866aa9585a2b8fc45768890c845575ec32c0",
+      "replacements": [
+        {
+          "model": "exchange-future-20261121",
+          "oldMeshCount": 0
+        }
+      ]
+    },
+    "wide/citywide-future.png": {
+      "sourceBlendSHA256": "32274d38196eb21d682ec06a7a2a8883df7bd2326d00171d4e9815ce6d606848",
+      "replacements": [
+        {
+          "model": "exchange-future-20261121",
+          "oldMeshCount": 24
+        },
+        {
+          "model": "wf-26park-current-plan",
+          "oldPins": [
+            "8eb2cd0baf4f4fe0166566ca00f1f20e2d8fdde5e80ebc010cb7062d48c9dccd"
+          ]
+        },
+        {
+          "model": "harborn-50-60-current-plan",
+          "oldPins": [
+            "b3b0636313d4dc3346884f293653f7d31df855246b69ac2c70b4ab4ae0561fe1"
+          ]
+        },
+        {
+          "model": "mcity-m1-20261025-exterior-study",
+          "oldPins": [
+            "630368744c2ba9f8252004d87bf31d31f66397c3cc037b21db65f43e6da7f9ca"
+          ]
+        },
+        {
+          "model": "mcity-m5-authored-detail-20261101",
+          "oldPins": [
+            "4162051b4d6706a65b3f5f0606ce31dfd9500c41f6ea766f1a40eb15ac519b6f"
+          ]
+        },
+        {
+          "model": "voya-towers-plan-derived",
+          "oldPins": [
+            "2402b603d47c3ba0770eb55847632a9c1a32c7a0117d914fe810705652e181f6"
+          ]
+        },
+        {
+          "model": "bridge-house-20261121",
+          "oldMeshCount": 7
+        }
+      ]
+    },
+    "wide/cooksville-future.png": {
+      "sourceBlendSHA256": "9ed03c3c41a6770fd3f74a3775562a5c29d81985697cdb5e51690c7d46e86fae",
+      "replacements": [
+        {
+          "model": "harborn-50-60-current-plan",
+          "oldPins": [
+            "b3b0636313d4dc3346884f293653f7d31df855246b69ac2c70b4ab4ae0561fe1"
+          ]
+        }
+      ]
+    },
+    "wide/cooksville-portrait-future.png": {
+      "sourceBlendSHA256": "9ed03c3c41a6770fd3f74a3775562a5c29d81985697cdb5e51690c7d46e86fae",
+      "replacements": [
+        {
+          "model": "exchange-future-20261121",
+          "oldMeshCount": 0
+        },
+        {
+          "model": "harborn-50-60-current-plan",
+          "oldPins": [
+            "b3b0636313d4dc3346884f293653f7d31df855246b69ac2c70b4ab4ae0561fe1"
+          ]
+        }
+      ]
+    },
+    "wide/downtown-existing.png": {
+      "sourceBlendSHA256": "460dec347682187160d8910d237fe8f4d974e1c171fafa8b48c161f38404325e",
+      "replacements": [
+        {
+          "model": "exchange-existing-20261121",
+          "oldMeshCount": 6
+        }
+      ]
+    },
+    "wide/downtown-future.png": {
+      "sourceBlendSHA256": "d4d4289208c149cec1fdc1561d0e3f8ed2f8c6ff825406f137e81dfb29e613e7",
+      "replacements": [
+        {
+          "model": "exchange-future-20261121",
+          "oldMeshCount": 24
+        }
+      ]
+    },
+    "wide/downtown-junction-future.png": {
+      "sourceBlendSHA256": "ec2094e4c9be47651557b3a76b5466eb86a0b09e194e36252500568691af5ea7",
+      "replacements": [
+        {
+          "model": "mcity-m1-20261025-exterior-study",
+          "oldPins": [
+            "630368744c2ba9f8252004d87bf31d31f66397c3cc037b21db65f43e6da7f9ca"
+          ]
+        },
+        {
+          "model": "mcity-m5-authored-detail-20261101",
+          "oldPins": [
+            "4162051b4d6706a65b3f5f0606ce31dfd9500c41f6ea766f1a40eb15ac519b6f"
+          ]
+        },
+        {
+          "model": "voya-towers-plan-derived",
+          "oldPins": [
+            "2402b603d47c3ba0770eb55847632a9c1a32c7a0117d914fe810705652e181f6"
+          ]
+        }
+      ]
+    },
+    "wide/downtown-landmark-future.png": {
+      "sourceBlendSHA256": "d4d4289208c149cec1fdc1561d0e3f8ed2f8c6ff825406f137e81dfb29e613e7",
+      "replacements": [
+        {
+          "model": "exchange-future-20261121",
+          "oldMeshCount": 24
+        }
+      ]
+    },
+    "wide/downtown-portrait-future.png": {
+      "sourceBlendSHA256": "d4d4289208c149cec1fdc1561d0e3f8ed2f8c6ff825406f137e81dfb29e613e7",
+      "replacements": [
+        {
+          "model": "exchange-future-20261121",
+          "oldMeshCount": 24
+        }
+      ]
+    },
+    "wide/port-credit-future.png": {
+      "sourceBlendSHA256": "9c3cd86023ad034a78d6e3c2e6789ad1a32371e36690dbc84b92d2683767ee5f",
+      "replacements": [
+        {
+          "model": "wf-26park-current-plan",
+          "oldPins": [
+            "8eb2cd0baf4f4fe0166566ca00f1f20e2d8fdde5e80ebc010cb7062d48c9dccd"
+          ]
+        },
+        {
+          "model": "bridge-house-20261121",
+          "oldMeshCount": 7
+        }
+      ]
+    },
+    "wide/port-credit-portrait-future.png": {
+      "sourceBlendSHA256": "9c3cd86023ad034a78d6e3c2e6789ad1a32371e36690dbc84b92d2683767ee5f",
+      "replacements": [
+        {
+          "model": "wf-26park-current-plan",
+          "oldPins": [
+            "8eb2cd0baf4f4fe0166566ca00f1f20e2d8fdde5e80ebc010cb7062d48c9dccd"
+          ]
+        },
+        {
+          "model": "bridge-house-20261121",
+          "oldMeshCount": 7
+        }
+      ]
+    },
+    "wide/port-credit-skyline-future.png": {
+      "sourceBlendSHA256": "9c3cd86023ad034a78d6e3c2e6789ad1a32371e36690dbc84b92d2683767ee5f",
+      "replacements": [
+        {
+          "model": "wf-26park-current-plan",
+          "oldPins": [
+            "8eb2cd0baf4f4fe0166566ca00f1f20e2d8fdde5e80ebc010cb7062d48c9dccd"
+          ]
+        },
+        {
+          "model": "bridge-house-20261121",
+          "oldMeshCount": 7
+        }
+      ]
+    },
+    "wide/uptown-future.png": {
+      "sourceBlendSHA256": "f2e6ef5e937d4316020f631a870f866aa9585a2b8fc45768890c845575ec32c0",
+      "replacements": [
+        {
+          "model": "exchange-future-20261121",
+          "oldMeshCount": 0
+        }
+      ]
+    }
+  }
+}

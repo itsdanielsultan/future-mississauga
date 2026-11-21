@@ -5,8 +5,8 @@ export const galleryViews = Object.freeze({
   existing: {suffix:'-existing.png', label:'Wide aerial', type:'aerial'},
   existingSkyline: {suffix:'-skyline-existing.png', label:'Existing skyline', type:'skyline'},
   constructionSkyline: {suffix:'-skyline-construction.png', label:'Construction snapshot', type:'skyline'},
-  landmark: {suffix:'-landmark-future.png', label:'Absolute World', type:'close'},
-  junction: {suffix:'-junction-future.png', label:'City Centre interchange', type:'close'}
+  landmark: {suffix:'-landmark-future.png', label:'Absolute World towers', type:'close'},
+  junction: {suffix:'-junction-future.png', label:'Hurontario Street at Highway 403', type:'close'}
 });
 
 const selection = [
@@ -15,8 +15,8 @@ const selection = [
 ];
 
 export function portraitViewTitle(file) {
-  if(file==='downtown-landmark-future.png')return 'Absolute World';
-  if(file==='downtown-junction-future.png')return 'City Centre interchange';
+  if(file==='downtown-landmark-future.png')return 'Absolute World towers';
+  if(file==='downtown-junction-future.png')return 'Hurontario Street at Highway 403';
   if(file==='downtown-portrait-future.png')return 'Exchange District';
   if(file.includes('-skyline-'))return 'Skyline';
   if(file.includes('-portrait-'))return 'Neighbourhood perspective';

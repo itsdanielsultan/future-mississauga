@@ -1,3 +1,4 @@
+import {validateReviewedEdition} from './validate-planning-review.mjs';
 import {validateLabelledImages} from './validate-labelled-images.mjs';
 import {validateDocumentPreviews} from './validate-document-previews.mjs';
 import {validateCurrentCitywideMedia} from './validate-current-citywide-media.mjs';
@@ -139,6 +140,7 @@ export async function validate(site = join(ROOT, 'public'), {enforcePublicationS
   let bytes = 0;
   const names = new Set(files.map(p => relative(site, p).split(sep).join('/')));
   for (const required of ['index.html', 'explore.html', 'social.html', 'social.css', 'social.js', 'site-ui.css', 'site-ui.js', 'media-player.js', 'comparison.js', 'app.js', 'gallery.js', 'data/picture-assets.json', 'data/social-pictures.json', 'data/districts.json', 'downloads/Future-Mississauga-Atlas.pdf', 'downloads/project-register.csv', 'licenses/CREDITS.md']) assert(names.has(required), 'Missing public dependency: ' + required);
+  const planningReview = validateReviewedEdition(site);
   const districtMetadata = validateDistrictMetadata(JSON.parse(await readFile(join(site,'data/districts.json'),'utf8')));
   for (const file of files) {
     const name = relative(site, file).split(sep).join('/');
@@ -187,7 +189,7 @@ export async function validate(site = join(ROOT, 'public'), {enforcePublicationS
   const documentLinks = await validateDocumentLinks(site);
   const modelPreviews = names.has('data/model-previews.json') ? await validateModelPreviews(site) : null;
   const cityModelStudies = await validateCityModelStudies(site);
-  const report = {labelledImages, documentPreviews, currentCitywideMedia, currentPictureMedia, modelPreviews, cityModelStudies, files: files.length, publishedBytes: bytes, originalPNGs: entries.length, originalImageVerification, halfSizeDisplayPNGs: displayPreviewSummary?.halfSize ?? entries.length, displayPreviewSummary, portraitGallery, loadedModelAssets, refinementBounds, ...documentLinks, districtMetadata, localPNGchecksumsVerified: true, noHostedRuntime: true, noPrivateArtifacts: true};
+  const report = {planningReview, labelledImages, documentPreviews, currentCitywideMedia, currentPictureMedia, modelPreviews, cityModelStudies, files: files.length, publishedBytes: bytes, originalPNGs: entries.length, originalImageVerification, halfSizeDisplayPNGs: displayPreviewSummary?.halfSize ?? entries.length, displayPreviewSummary, portraitGallery, loadedModelAssets, refinementBounds, ...documentLinks, districtMetadata, localPNGchecksumsVerified: true, noHostedRuntime: true, noPrivateArtifacts: true};
   console.log(JSON.stringify(report, null, 2));
   return report;
 }

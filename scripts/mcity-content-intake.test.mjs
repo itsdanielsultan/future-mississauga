@@ -1,8 +1,8 @@
+import {readBeforePlanningReview} from './planning-review-guard.mjs';
 import {restoreM1M2Revisions} from './mcity-m1-m2-v5-scope.mjs';
 import {withoutAcceptedModelFields as withoutModel,acceptedModelProjectIds} from './mcity-asset-scope.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFile} from 'node:fs/promises';
 import {execFileSync} from 'node:child_process';
 import {projectDetailsHTML,projectStatus} from '../public/project-cards.js';
 import {statusMetadataScope,withoutReviewedStatusMetadata as withoutStatus} from './status-metadata-scope.mjs';
@@ -11,7 +11,7 @@ import {restoreNamedProjectRegister} from './named-project-review-scope.mjs';
 // This is a content-only review of the October 28/29 replies. Source drawings,
 // municipal meshes, historical audits and source-publication holds are separate.
 const base='dc9bb6a53020ad77ef407affff56a8b94a585aab';
-const read=path=>readFile(new URL('../'+path,import.meta.url),'utf8');
+const read=path=>readBeforePlanningReview(new URL('../'+path,import.meta.url),'utf8');
 const original=path=>execFileSync('git',['show',base+':'+path],{maxBuffer:64*1024*1024,encoding:'utf8'});
 const projects=JSON.parse(await read('public/data/projects.json'));
 const baseline=JSON.parse(original('public/data/projects.json'));

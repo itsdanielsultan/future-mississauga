@@ -31,7 +31,7 @@ html .image-preview-trigger{display:block;padding:0;border:0;background:transpar
 html main a:has(>img){cursor:zoom-in}
 html .compare-captions span,#compareLabels span{transition:opacity .12s}
 html .compare-captions span[data-covered],html #compareLabels span[data-covered]{opacity:0;visibility:hidden}
-html select{appearance:none!important;-webkit-appearance:none!important;background-image:url('assets/chevron-down.svg')!important;background-position:right 14px center!important;background-repeat:no-repeat!important;background-size:16px 16px!important;padding-right:42px!important;min-height:44px}
+html select:not([multiple]):is(:not([size]),[size="1"]){appearance:none!important;-webkit-appearance:none!important;background-image:url('assets/chevron-down.svg')!important;background-position:right 14px center!important;background-repeat:no-repeat!important;background-size:16px 16px!important;padding-right:42px!important;min-height:44px}
 html .skyline-film:is(:fullscreen,.is-theater),html .skyline-player:fullscreen{background:#16212c!important}
 html .skyline-film:is(:fullscreen,.is-theater) .skyline-player{background:#16212c}
 html .skyline-film .film-caption span:last-child{color:var(--site-muted)}

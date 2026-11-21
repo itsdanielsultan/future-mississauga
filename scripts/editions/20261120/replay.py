@@ -55,12 +55,17 @@ def main():
     parser.add_argument('--archive', type=Path, help='Owner’s original model workspace, starting at work/')
     parser.add_argument('--workspace', type=Path, help='Output directory for rendered scenes and receipts')
     parser.add_argument('--view', action='append', help='Repeat to select specific camera identities')
+    parser.add_argument('--edition', choices=('20261120','20261121'), default='20261120')
+    parser.add_argument('--project-models', type=Path, help='November 21 registered replacement models, with exchange-phase and scene-refresh subdirectories')
     parser.add_argument('--proof-edge', type=int, help='Render a small camera proof into a separate folder')
     parser.add_argument('--blender', default='blender', help='Blender executable')
+    parser.add_argument('--threads', type=int, default=0, help='Limit CPU render threads when sharing the workstation')
     parser.add_argument('--list', action='store_true')
     parser.add_argument('--prepare', action='store_true', help='Create a Blender Scripting workspace job instead of launching Blender')
     parser.add_argument('--check', action='store_true', help='Validate private source pins without rendering')
     args = parser.parse_args()
+    if args.threads < 0:
+        parser.error('--threads must be zero or positive')
     recipe = read(HERE / 'cameras.json')
     known = {view['identity']: view for view in recipe['views']}
     requested = args.view or list(known)
@@ -76,6 +81,7 @@ def main():
         parser.error('--proof-edge must be positive')
     archive = args.archive.resolve()
     receipt_cache = {}
+    corrected = read(HERE.parent/'20261121'/'city-project-replacements.json') if args.edition=='20261121' else {'views':{}}
     if not args.check:
         workspace = args.workspace.resolve()
         output_group = workspace / ('proofs' if args.proof_edge else 'native')
@@ -94,6 +100,20 @@ def main():
             recorded_job = next((row for row in read(archived_plan)['jobs'] if row['identity'] == name), None)
             if recorded_job is None or recorded_job['camera'] != view['job']['camera']:
                 raise ValueError(f'Archived camera differs from the edition: {name}')
+        replacements = []
+        revision = corrected['views'].get(name)
+        if revision:
+            if not args.project_models:
+                parser.error(f'Supply --project-models for the source corrections in {name}')
+            assert source_id == revision['sourceBlendSHA256'], name
+            for entry in revision['replacements']:
+                model = dict(corrected['models'][entry['model']])
+                model.update({key:value for key,value in entry.items() if key!='model'})
+                if not model.get('removeOnly'):
+                    source_model = (args.project_models / model['path']).resolve()
+                    verify(source_model, model['sha256'])
+                    model['path'] = str(source_model)
+                replacements.append(model)
         if args.check:
             continue
         source = receipt_cache[source_id]
@@ -110,9 +130,16 @@ def main():
             shutil.copyfile(archived_plan, plan)
         else:
             plan.write_text(json.dumps(dict(lighting=view['lighting'], background=view['background'], jobs=[view['job']])))
-        command = [args.blender, '--background', '--disable-autoexec', source['packedBlend']['path'],
+        threading = ['--threads', str(args.threads)] if args.threads else []
+        command = [args.blender, '--background', '--factory-startup', '--disable-autoexec', *threading, source['packedBlend']['path'],
                    '--python-exit-code', '1', '--python', str(HERE / 'renderers' / view['renderer']),
                    '--', str(receipt), str(plan), str(output), '--identities', name, '--samples', str(view['samples'])]
+        if revision:
+            additions = inputs / 'project-replacements.json'
+            additions.write_text(json.dumps(dict(identity=name, sourceBlendSHA256=source_id,
+                                                 baseRenderer=view['renderer'], replacements=replacements),indent=2)+'\n')
+            command[command.index('--python')+1] = str(HERE/'renderers'/'render-corrected-projects.py')
+            command.extend(['--project-replacements',str(additions)])
         if args.proof_edge:
             command.extend(['--max-preview-edge', str(args.proof_edge)])
         if view['trial']:

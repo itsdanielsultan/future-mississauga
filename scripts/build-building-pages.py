@@ -49,7 +49,7 @@ def real_life(entry, feature, street):
         caption = '<strong>' + escape(photo.get('title') or photo['alt']) + '</strong><span>' + credit + ' · ' + link(source, photo.get('sourceLabel') or 'Original photo ↗') + '</span>'
         figures.append(f'<figure class="{figure_class}">' + picture(url,photo['alt'],photo.get('size'),True) + '<figcaption>' + caption + '</figcaption></figure>')
     actions = []
-    if portal:
+    if portal and not any(portal['url'] == photo.get('sourceImage') for photo in photos):
         actions.append(link(portal['url'],portal['label']))
     if street:
         actions.append(link(street, 'Look around in Street View'))
@@ -66,7 +66,7 @@ def make_page(entry, feature, header, footer):
     grouped = {}
     for role in roles:
         label = role['role']
-        if re.search(r'photograph|photo reference|structural engineer', label, re.I):
+        if re.search(r'photographer|photo references?', label, re.I):
             continue
         label = 'Developers' if label.lower() == 'co-developer' else label
         grouped.setdefault(label, []).append(link(role['source'], role['name']))
@@ -79,7 +79,9 @@ def make_page(entry, feature, header, footer):
     credit = entry.get('credit')
     byline='3D rendering by Daniel Sultan'
     if credit: byline+=' · Photograph reference by '+link(credit['url'], credit['label'])
-    main = f'''<main id="main" class="building-profile">
+    if feature.get('modelScope'):
+        byline='<span>'+escape(feature['modelScope'])+'</span><span>'+byline+'</span>'
+    main = f'''<main id="main" class="building-profile" tabindex="-1">
 <nav class="profile-breadcrumb" aria-label="Breadcrumb"><a href="model.html" data-directory-back>Buildings</a><span aria-hidden="true">/</span><a href="model.html?area={escape(urlencode({'a':entry['area']})[2:])}">{escape(entry['area'])}</a></nav>
 <header class="profile-intro"><h1>{escape(name)}</h1><p>{escape(addr)} <a class="profile-photo-jump" href="#realTitle">See the site ↓</a></p></header>
 <div class="profile-overview"><figure class="profile-model">{picture(img['url'],'3D study of '+name,[img['width'],img['height']])}<figcaption>{byline}</figcaption></figure>
@@ -87,6 +89,7 @@ def make_page(entry, feature, header, footer):
 <nav class="profile-map-links" aria-label="Open the location">{link(google,'Google Maps ↗')}{link(apple,'Apple Maps ↗')}</nav>
 <nav class="profile-actions" aria-label="Explore the model">{actions}</nav></section></div>
 {real_life(entry,feature,street)}</main>'''
+    header = header.replace('data-section="buildings" aria-current="page"', 'data-section="buildings" aria-current="location"')
     title=escape(name)+' | Future Mississauga'; description=escape('The building team, location, real-world views and 3D study of '+name+'.',quote=True)
     canonical='https://futuremississauga.com/building-'+key+'.html'
     head=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title}</title><meta name="description" content="{description}"><link rel="canonical" href="{canonical}"><meta property="og:url" content="{canonical}"><meta property="og:title" content="{title}"><meta property="og:type" content="article"><meta property="og:image" content="https://futuremississauga.com/{escape(img['url'])}"><meta property="og:image:alt" content="3D model of {escape(name,quote=True)}"><link rel="icon" href="assets/favicon.svg"><link rel="stylesheet" href="site-ui.css?v=20261113-design2"><link rel="stylesheet" href="atlas-interface.css?v=20261120-buildings"><link rel="stylesheet" href="atlas-edition.css?v=20261120-publication"><link rel="stylesheet" href="atlas-buildings.css?v=20261120-publication"></head><body class="profile-page"><a class="site-skip" href="#main">Skip to content</a>'''
@@ -96,6 +99,8 @@ BUILDING_FAMILIES = {
     'M City': ('mcity-pair', 'mcity-m1', 'mcity-m2', 'mcity-m5'),
     'Edge Towers': ('edge-1', 'edge-2', 'oro'),
     'Avia': ('avia-1', 'avia-2'),
+    'Benares Historic House': ('benares-house', 'benares-visitor-centre'),
+    'Bradley Museum': ('bradley-log-cabin', 'bradley-barn', 'anchorage'),
 }
 
 
@@ -104,8 +109,6 @@ def update_featured_directory(catalogue, features):
         feature, entry = features[key], catalogue[key]
         img = feature.get('cardImage') or feature.get('displayImage') or entry['image']
         tile = picture(img['url'], '', [img['width'], img['height']], lazy=True)
-        credit = entry.get('credit')
-        attribution = link(credit['url'], credit['label'], 'study-card-credit') if credit else ''
         name = escape(feature.get('displayName') or entry['title'])
         kinds = ' '.join(item['kind'] for item in entry['links'])
         search = ' '.join(str(entry.get(field) or '') for field in ('title', 'address', 'location'))
@@ -113,7 +116,7 @@ def update_featured_directory(catalogue, features):
                 f'data-views="{escape(kinds,quote=True)}" data-search="{escape(search,quote=True)}">'
                 f'<a class="building-card-link" href="building-{escape(key)}.html">'
                 f'<span class="building-card-image">{tile}</span><{level}>{name}</{level}></a>'
-                f'{attribution}</article>')
+                '</article>')
 
     def card_row(keys, level):
         return '<div class="building-row">' + ''.join(entry_card(key, level) for key in keys) + '</div>'
@@ -236,9 +239,17 @@ def update_directory_routes(catalogue, features):
 
 def update_revision_plates(features):
     page = ROOT/'reference-updates.html'
-    extra_path = ROOT.parent/'scripts/editions/20261120/buildings/revisions.json'
-    editions = {key: value['displayImage']['url'] for key, value in features.items()}
-    editions.update({key: value['image']['url'] for key, value in json.loads(extra_path.read_text()).items()})
+    editions = {key: value['displayImage'] for key, value in features.items()}
+    versions = {Path(image['url']).parts[1] for image in editions.values()}
+    if len(versions) != 1 or not re.fullmatch(r'edition-\d{8}', next(iter(versions))):
+        raise ValueError('Building pictures must select one dated edition.')
+    edition = versions.pop()
+    receipts = Path(__file__).resolve().parent/'editions'/edition.removeprefix('edition-')/'landmark-plates.json'
+    for key, value in json.loads(receipts.read_text()).items():
+        image = value['image']
+        if not image['url'].startswith('gallery/'+edition+'/'):
+            raise ValueError(f'{key} landmark receipt belongs to another edition')
+        editions[key] = image
     page_html = page.read_text()
 
     def bind(match):
@@ -247,8 +258,8 @@ def update_revision_plates(features):
             return match[0]
         if key == 'fairview-neighbourhood':
             for stage in ('before', 'after'):
-                original = 'gallery/edition-20261120/originals/neighbourhood-fairview-' + stage + '-print.png'
-                preview = 'gallery/edition-20261120/signed/neighbourhood-fairview-' + stage + '.webp'
+                original = 'gallery/' + edition + '/originals/neighbourhood-fairview-' + stage + '-print.png'
+                preview = 'gallery/' + edition + '/signed/neighbourhood-fairview-' + stage + '.webp'
                 inner = re.sub(r'https://github\.com/[^"]+/neighbourhood-fairview-' + stage + r'-(?:clean|download)-[0-9a-f]+\.png', original, inner)
                 old_image = r'gallery/native-[^"/]+/neighbourhood-fairview-' + stage + r'-[\w-]+\.(?:avif|webp)'
                 inner = re.sub(r'src="' + old_image + '"', 'src="' + preview + '"', inner)
@@ -265,13 +276,16 @@ def update_revision_plates(features):
                     inner = re.sub(pattern,lambda m:m[1]+action+m[2],inner,count=1)
         else:
             current = editions[key]
-            previous = r'<div class="revision-edition">.*?</div>'
-            inner = re.sub(previous, '', inner, flags=re.S)
+            inner = re.sub(r'<div class="revision-edition">.*?</div>', '', inner, flags=re.S)
             title = re.search(r'<h2[^>]*>(.*?)</h2>', inner, re.S)[1]
-            reference = ('<div class="revision-edition"><h3>Earlier comparison</h3>'
-                         f'<a href="{escape(current,quote=True)}" data-preview-title="{title} · Current rendering" '
-                         f'data-preview-download="{escape(current,quote=True)}">Open current rendering →</a></div>')
-            inner = inner.replace('<div class="image-pair">', reference + '<div class="image-pair">', 1)
+            reference = ('<div class="revision-edition"><h3>Current study</h3>'
+                         f'<a href="{escape(current["url"], quote=True)}" data-preview-title="{title} · Current rendering" '
+                         f'data-preview-width="{int(current["width"])}" data-preview-height="{int(current["height"])}">'
+                         'Open current rendering →</a></div>')
+            pair = r'<div\b[^>]*\bclass="(?:[^"]* )?image-pair(?: [^"]*)?"[^>]*>'
+            inner, inserted = re.subn(pair, lambda opening: reference + opening[0], inner, count=1)
+            if inserted != 1:
+                raise ValueError(f'Missing before and after pair for {key}.')
         return match[0][:match.start(2)-match.start()] + inner + '</section>'
 
     bound = re.sub(r'<section class="model-change" id="([^"]+)"[^>]*>(.*?)</section>', bind, page_html, flags=re.S)
@@ -289,6 +303,8 @@ def main():
     update_model_notes(features)
     update_directory_routes(catalogue, features)
     update_revision_plates(features)
+    from build_study_directories import update_study_directories
+    update_study_directories(catalogue, features)
     for key,feature in features.items():
         make_page(catalogue[key],feature,header,footer)
     print(f'Built {len(features)} building profiles')

@@ -1,0 +1,53 @@
+{
+  "reviewed": "2026-11-21",
+  "sourceSHA256": "2ebd17feb79c742925cc7b27eb0a91840a9b0027ddcdf5a5bf427c1d85c411ce",
+  "phaseReferenceSHA256": "3f522738b6aee3444192ff8a937b7c247029df5f1c3b882e283fde7079b4cf2c",
+  "trianglesByPhase": {
+    "EXS": 15639,
+    "podium": 6400,
+    "EX1": 27410,
+    "EXS design roof": 108,
+    "EX2": 15125,
+    "EX2 facade": 2064,
+    "EX3": 28250,
+    "EX3 crown": 12
+  },
+  "coordinatesMoved": 0,
+  "materialTexturesReplaced": 0,
+  "units": "metres",
+  "sources": [
+    "https://www.condoauthorityontario.ca/condo-registry-details/?id=ff38531f-56bb-f111-aaad-70a8a5ac79b5",
+    "https://condos.ca/mississauga/2-erskine-road-mississauga/unit-2404-W13683156",
+    "https://strata.ca/mississauga/exchange-district-condos-phase-2-ex2",
+    "https://rentexs.com/",
+    "https://urbantoronto.ca/forum/threads/toronto-exchange-district-condos-m-66s-camrost-felcorp-arcadis.29739/page-78",
+    "https://www.maedcollective.com/projects/exchange-district-ex3"
+  ],
+  "scenarios": {
+    "all": {
+      "file": "exchange-all-20261121.glb",
+      "sha256": "13395ad62fded98828e0ce74cfba8ab7ca7beaaf128d59330104f40620ad13b4",
+      "nodes": 46,
+      "triangles": 95008,
+      "gzipSHA256": "41990250f340c985eac2a51d8e4f6b72cd6435b0dca86b0678c031c86961fb2b"
+    },
+    "existing": {
+      "file": "exchange-existing-20261121.glb",
+      "sha256": "482836e20a16d1466c90d7b786c1f88e6e1bd109ac80311ce2c3730e4c23da8c",
+      "nodes": 37,
+      "triangles": 66638
+    },
+    "construction": {
+      "file": "exchange-construction-20261121.glb",
+      "sha256": "0600dc4d0870b9845683878151fa53e892c36c41e1d1d832891da2a1021cdb74",
+      "nodes": 42,
+      "triangles": 94888
+    },
+    "future": {
+      "file": "exchange-future-20261121.glb",
+      "sha256": "19d7f23e3eca1c60bb6dca57927e691b48e28e2709f6eb0ffdcef572e05452cc",
+      "nodes": 46,
+      "triangles": 95008
+    }
+  }
+}

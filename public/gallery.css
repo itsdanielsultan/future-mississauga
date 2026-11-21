@@ -45,7 +45,7 @@ body{margin:0}
 .home-page .gallery-result{font-size:14px;color:var(--site-muted);margin:0 0 24px}
 .home-page .gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 24px}
 .home-page .picture-card{min-width:0}
-.home-page .picture-card>button{border:0;padding:0;display:block;width:100%;cursor:zoom-in;border-radius:6px;overflow:hidden;background:#edf5fa}
+.home-page .picture-card>[data-open]{border:0;padding:0;display:block;width:100%;cursor:zoom-in;border-radius:6px;overflow:hidden;background:#edf5fa}
 .home-page .picture-card img{display:block;width:100%;aspect-ratio:1.6;height:auto;object-fit:contain;transform:none}
 .home-page .card-caption{display:flex;align-items:start;justify-content:space-between;gap:12px;margin-top:16px}
 .home-page .card-caption>div{min-width:0;flex:1}

@@ -1,5 +1,8 @@
 """Build the 12-second, signed Downtown film from the three matched Blender views."""
 import argparse
+from datetime import datetime
+import hashlib
+from io import BytesIO
 import json
 import os
 import subprocess
@@ -15,9 +18,12 @@ SIZE = (1920, 1080)
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('workspace', type=Path)
-    work = parser.parse_args().workspace.resolve()
+    parser.add_argument('--edition', default='20261120')
+    args = parser.parse_args()
+    date = datetime.strptime(args.edition, '%Y%m%d')
+    work = args.workspace.resolve()
     public = Path(__file__).resolve().parents[3] / 'public'
-    target = public / 'gallery/edition-20261120'
+    target = public / 'gallery' / ('edition-' + args.edition)
     local = work / 'film'
     local.mkdir(exist_ok=True)
     fonts = Path(os.environ.get('FM_INTER_FONTS', Path.home() / 'Library/Fonts'))
@@ -26,6 +32,7 @@ def main():
     inputs = []
     native_cameras = []
     credits = []
+    sources = []
     for stage, label in STAGES:
         stem = 'wide-downtown-skyline-' + stage
         native = json.loads((work / 'native' / stem / 'render-proof.json').read_text())
@@ -36,7 +43,14 @@ def main():
         receipt = json.loads((work / 'original-receipts' / (stem + '.json')).read_text())
         if receipt['sourceSHA256'] != frame['image']['sha256']:
             raise ValueError('Signed plate is from a different Blender render.')
-        with Image.open(public / receipt['download']['url']) as plate:
+        signed = public / receipt['download']['url']
+        signed_bytes = signed.read_bytes()
+        signed_digest = hashlib.sha256(signed_bytes).hexdigest()
+        if signed_digest != receipt['download']['sha256']:
+            raise ValueError('Signed plate bytes differ from their receipt.')
+        sources.append(dict(stage=stage, sceneSHA256=native['sourceGLB']['sha256'],
+                            nativeSHA256=frame['image']['sha256'], signedSHA256=signed_digest))
+        with Image.open(BytesIO(signed_bytes)) as plate:
             if not plate.info.get('Author', '').startswith('Daniel Sultan'):
                 raise ValueError('Film requires signed artwork.')
             credit = plate.info.get('Description', '')
@@ -49,10 +63,8 @@ def main():
         image.save(png, compress_level=2)
         inputs.extend(['-loop', '1', '-framerate', '24', '-t', '4.30', '-i', str(png)])
         if stage == 'existing':
-            poster = target / 'Downtown-film-poster.webp'
-            temp = poster.with_suffix('.writing')
-            image.save(temp, format='WEBP', quality=92, method=5)
-            temp.replace(poster)
+            poster = local / 'Downtown-film-poster.webp'
+            image.save(poster, format='WEBP', quality=92, method=5)
     if native_cameras[1:] != native_cameras[:-1]:
         raise ValueError('The three stages must share one camera.')
     output = local / 'Downtown-film-final.mp4'
@@ -63,11 +75,29 @@ def main():
                     '-filter_complex', filters, '-map', '[out]', '-frames:v', '288',
                     '-an', '-c:v', 'libx264', '-threads', '4', '-crf', '17', '-movflags',
                     '+faststart', str(output)], check=True)
-    output.replace(target / 'Downtown-film.mp4')
-    (target / 'Downtown-film-credits.txt').write_text(
-        'Downtown · by Daniel Sultan\n20 November 2026\n\n'
+    metadata = json.loads(subprocess.check_output(['ffprobe','-v','error','-select_streams','v:0',
+        '-show_entries','stream=width,height,nb_frames,r_frame_rate:format=duration','-of','json',str(output)]))
+    stream = metadata['streams'][0]
+    if ((stream['width'],stream['height']) != SIZE or int(stream['nb_frames']) != 288 or
+            stream['r_frame_rate'] != '24/1' or float(metadata['format']['duration']) != 12):
+        raise ValueError('Unexpected final skyline film dimensions or timing.')
+    credit_file = local / 'Downtown-film-credits.txt'
+    credit_file.write_text(
+        f'Downtown · by Daniel Sultan\n{date.day} {date:%B %Y}\n\n'
         'Three matched oblique views of the verified Downtown scenes.\n\n' +
         '\n'.join(dict.fromkeys(credits)) + '\n')
+    for source in sources:
+        stem = 'wide-downtown-skyline-' + source['stage']
+        current = json.loads((work / 'original-receipts' / (stem + '.json')).read_text())['download']
+        if (current['sha256'] != source['signedSHA256'] or
+                hashlib.sha256((public / current['url']).read_bytes()).hexdigest() != source['signedSHA256']):
+            raise ValueError('Signed artwork changed during the encode: ' + stem)
+    output.replace(target / 'Downtown-film.mp4')
+    poster.replace(target / poster.name)
+    credit_file.replace(target / credit_file.name)
+    receipt = dict(edition=args.edition, frames=sources, dimensions=list(SIZE), durationSeconds=12,
+                   frameCount=288, filmSHA256=hashlib.sha256((target/'Downtown-film.mp4').read_bytes()).hexdigest())
+    (local/'final-encoding.json').write_text(json.dumps(receipt, indent=2)+'\n')
 
 
 if __name__ == '__main__':

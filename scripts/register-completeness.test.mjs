@@ -1,11 +1,11 @@
+import {readBeforePlanningReview} from './planning-review-guard.mjs';
 import {restoreRegistryReconciliationRegister} from './registry-reconciliation-scope.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {registerCompletenessScope as scope,restoreRegisterCompletion} from './register-completeness-scope.mjs';
 
-const read=path=>readFileSync(new URL('../public/'+path,import.meta.url),'utf8');
+const read=path=>readBeforePlanningReview(new URL('../public/'+path,import.meta.url),'utf8');
 const csv=read('downloads/project-register.csv'),projects=JSON.parse(read('data/projects.json'));
 function cells(line){
  const values=[];let value='',quoted=false;

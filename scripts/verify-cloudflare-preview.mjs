@@ -55,6 +55,12 @@ async function localFetcher() {
         const local = join(staticRoot, name);
         const file = await stat(local).catch(() => null);
         if (!file?.isFile()) return new Response(null, {status:404});
+        const range=req.headers.get('Range')?.match(/^bytes=(\d+)-(\d+)$/);
+        if(range){
+          const start=Number(range[1]),end=Number(range[2]);
+          assert(start>=0&&end>=start&&end<file.size);
+          return new Response(Readable.toWeb(createReadStream(local,{start,end})),{status:206,headers:{'Content-Length':String(end-start+1),'Content-Range':`bytes ${start}-${end}/${file.size}`}});
+        }
         const body = req.method === 'HEAD' ? null : Readable.toWeb(createReadStream(local));
         return new Response(body, {headers:{'Content-Length':String(file.size)}});
       }
@@ -141,7 +147,7 @@ await each(Object.entries(routes), async ([path, file]) => {
     assert.equal(await digest(whole.body), file.key, path + ' full download');
   }
 });
-assert.equal(new Set(Object.values(routes).map(entry => entry.key)).size, inventory.r2Objects);
+assert.equal(new Set(Object.values(routes).map(entry => entry.key)).size, inventory.mediaObjects ?? inventory.r2Objects);
 // Archived aliases can point at a newer file. The digest address stays stable.
 const publishedIndex = await readFile(join(release,'published-media.json'),'utf8').catch(error => {
   if (error.code === 'ENOENT') return null;

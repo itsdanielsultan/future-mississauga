@@ -46,7 +46,7 @@ test('all95 real meshes retain exact source materials, vertex colours, geometry,
   for(const scenario of ['existing','construction','future']){
    applyModelVisibility(all,scenario,{unknownStatuses:true});const visibility=all.map(m=>m.visible);
    for(let n=0;n<2;n++){
-    appearance.setMode('status');const uniform=all[0].material;assert.equal(uniform.color.getHex(),0x85b4bf);assert(all.every(m=>m.material===uniform),'All95 use the same current planning group');
+    appearance.setMode('status');const uniform=all[0].material;assert.equal(uniform.color.getHex(),0x85b4bf);for(const {mesh,natural} of saved) assert.equal(mesh.material,mesh.name.startsWith('voya-podium-')||voyaArchitecturalRole(mesh)==='band'?natural:uniform,'Podium finishes and gardens stay architectural in planning view');
     appearance.setMode('natural');saved.forEach(({mesh,natural})=>assert.equal(mesh.material,natural));assert.deepEqual(all.map(m=>m.visible),visibility);
    }
   }
@@ -73,6 +73,6 @@ test('eight additive city-facing groups keep their exact explicit PBR through pl
  const additions=(await meshes({all:true})).filter(mesh=>!voyaArchitecturalRole(mesh));assert.equal(additions.length,8);
  const appearance=createModelAppearance(THREE),saved=additions.map(mesh=>({mesh,material:mesh.material,materialState:sourceMaterialState(mesh.material),geometry:geometryState(mesh.geometry)}));
  for(const mesh of additions){appearance.register(mesh,{authored:true});assert.equal(voyaArchitecturalRole(mesh),null);}
- for(const mode of ['status','natural','status','natural']){appearance.setMode(mode);for(const savedMesh of saved){assert.deepEqual(geometryState(savedMesh.mesh.geometry),savedMesh.geometry);if(mode==='natural'){assert.equal(savedMesh.mesh.material,savedMesh.material);assert.deepEqual(sourceMaterialState(savedMesh.mesh.material),savedMesh.materialState);}}}
+ for(const mode of ['status','natural','status','natural']){appearance.setMode(mode);for(const savedMesh of saved){assert.deepEqual(geometryState(savedMesh.mesh.geometry),savedMesh.geometry);assert.equal(savedMesh.mesh.material,savedMesh.material);assert.deepEqual(sourceMaterialState(savedMesh.mesh.material),savedMesh.materialState);}}
  appearance.dispose();for(const savedMesh of saved)assert.equal(savedMesh.mesh.material,savedMesh.material);
 });

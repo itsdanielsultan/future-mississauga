@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {drawingPolicy, createFrameScheduler} from '../public/viewer-runtime.js';
+import {drawingPolicy, createFrameScheduler, afterFirstGPUFrame} from '../public/viewer-runtime.js';
 
 test('touch rendering remains bounded through Duo folding and browser-bar changes', () => {
   for (const [width, heights] of [[382,[580,618]],[594,[368,406]],[669,[867,902]],[951,[585,620]],[385,[571,609]]]) {
@@ -33,4 +33,30 @@ test('dragging a Retina map reduces the drawing buffer and resting restores the 
   assert.equal(drawingPolicy({...screen,moving:true}).pixelRatio,1);
   assert.equal(drawingPolicy(screen).pixelRatio,2);
   assert.equal(drawingPolicy({...screen,pixelRatio:1,moving:true}).pixelRatio,1);
+});
+
+test('the map poster covers a pending GPU draw and a previous district cannot uncover a new one', () => {
+  const pending = [];
+  const seen = [];
+  let ready = false, sameDistrict = true, cleaned = 0;
+  const gl = {
+    SYNC_GPU_COMMANDS_COMPLETE:1, TIMEOUT_EXPIRED:2,
+    fenceSync:()=>({}), flush(){}, isContextLost:()=>false,
+    clientWaitSync:()=>ready ? 3 : 2, deleteSync:()=>{cleaned++;},
+  };
+  const present = name => afterFirstGPUFrame(gl, () => sameDistrict, () => seen.push(name), fn => pending.push(fn));
+  present('Downtown');
+  pending.shift()();
+  assert.deepEqual(seen, []);
+  sameDistrict = false;
+  pending.shift()();
+  assert.deepEqual(seen, []);
+  assert.equal(cleaned, 1);
+  sameDistrict = true;
+  present('Port Credit');
+  ready = true;
+  assert.deepEqual(seen, []);
+  pending.shift()();
+  assert.deepEqual(seen, ['Port Credit']);
+  assert.equal(cleaned, 2);
 });

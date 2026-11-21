@@ -39,11 +39,11 @@ test('the saved Gemma and Lakeview phase records resolve independently in the mi
  }
 });
 
-test('precise approval classification retains its historical palette and does not imply construction',()=>{
+test('approval shares the print planning colour and remains a separate recorded stage',()=>{
  const approved=assets.find(asset=>asset.id==='30-eglinton-west-approved-envelope');assert.equal(approved.lifecycle,'approved');
  const lifecycle=resolveModelLifecycle({Status:approved.status,lifecycle:approved.lifecycle},{},projects.find(project=>project.id===approved.projectId));
- assert.equal(lifecycle,'approved');assert.equal(statusColours[statusMaterialKey(displayStatusForLifecycle(lifecycle))],0xc49b52);
- assert.notEqual(statusColours.Approved,statusColours.Proposed);assert.notEqual(statusColours.Approved,statusColours.Uncertain);
+ assert.equal(lifecycle,'approved');assert.equal(statusColours[statusMaterialKey(displayStatusForLifecycle(lifecycle))],0xd8b7ac);
+ assert.equal(statusColours.Approved,statusColours.Proposed);assert.notEqual(statusColours.Approved,statusColours.Uncertain);
  const mesh=model(lifecycle,{uncertain:true});applyModelVisibility([mesh],'future',{unknownStatuses:false});assert(mesh.visible);
  for(const which of ['existing','construction']){applyModelVisibility([mesh],which);assert.equal(mesh.visible,false);}
 });
@@ -70,10 +70,12 @@ test('inactive designs require their exact historical-study selection and never 
  }
 });
 
-test('historical picture legends preserve their precise approved, proposed and confidence keys',()=>{
- assert.deepEqual(STATUS_LEGEND.map(item=>item.key),['existing','under_construction','approved','proposed','unknown']);
- assert.equal(STATUS_LEGEND.find(item=>item.key==='approved').color,'#c49b52');
- assert.equal(STATUS_LEGEND.find(item=>item.key==='unknown').label,'Status unverified');
+test('screen and saved-picture legends preserve the four signed print colours',()=>{
+ assert.deepEqual(STATUS_LEGEND.map(item=>item.key),['existing','under_construction','planned','unknown']);
+ for (const states of [['approved'],['proposed'],['approved','proposed']]) {
+   assert.deepEqual(statusLegendFor(states),[{key:'planned',label:'Proposed / approved',color:'#d8b7ac'}]);
+ }
+ assert.equal(STATUS_LEGEND.find(item=>item.key==='unknown').label,'Uncertain');
  const html=readFileSync(new URL('../public/explore.html',import.meta.url),'utf8');
  assert.match(html,/id="unknownStatusToggle"/);assert.doesNotMatch(html,/Proposed \/ approved|Needs checking|uncertainToggle/);
  assert.doesNotMatch(html,/Detailed studies retain their architectural materials/);

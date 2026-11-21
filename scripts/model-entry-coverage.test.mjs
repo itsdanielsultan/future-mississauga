@@ -2,6 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {runInNewContext} from 'node:vm';
+import {createHash} from 'node:crypto';
+import {gunzipSync} from 'node:zlib';
+import {exchangeStageAsset,exchangeSourceDigest} from '../public/tower-stage-finish.js';
 import * as THREE from '../public/vendor/three.module.js';
 import {cityModelStudies,bindStudyReplacement} from '../public/city-model-studies.js';
 import {createOptionalRefinementLoader,shouldLoadRefinement,refinementInDistrict} from '../public/refinement-loading.js';
@@ -14,6 +17,23 @@ const assets=cityModelStudies(read('refinement-models.json').assets,read('model-
 const districts=read('districts.json');
 const classify=app.split('\n').filter(line=>line.startsWith('function classify(')||line.startsWith('function lifecycleFor(')).join('\n');
 const eagerStart=app.indexOf('const additionAssets='),eager=app.slice(eagerStart,app.indexOf(" const nextDetailMeshes=[];",eagerStart));
+const baseStart=app.indexOf('const [districtModel,districtContext,detail,airport,native]=');
+const nativeAttachment=app.slice(baseStart,eagerStart);
+const exchangeDownload=readFileSync(new URL('../public/'+exchangeStageAsset.url,import.meta.url));
+assert.equal(createHash('sha256').update(exchangeDownload).digest('hex'),exchangeStageAsset.sha256);
+const exchangeGLB=gunzipSync(exchangeDownload);
+const exchangeScene=JSON.parse(exchangeGLB.subarray(20,20+exchangeGLB.readUInt32LE(12)));
+function exchangeFixture() {
+ const root=new THREE.Group();
+ for(const node of exchangeScene.nodes.filter(n=>n.mesh!==undefined)){
+  const mesh=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshStandardMaterial());
+  const position=exchangeScene.meshes[node.mesh].primitives[0].attributes.POSITION;
+  const extent=exchangeScene.accessors[position];
+  mesh.position.fromArray(extent.min).lerp(new THREE.Vector3().fromArray(extent.max),.5);
+  mesh.name=node.name;mesh.userData=structuredClone(node.extras);root.add(mesh);
+ }
+ return root;
+}
 const passStart=app.indexOf('const nextFutureMeshes=[],nextModelMeshes=[];'),pass=app.slice(passStart,app.indexOf(';nextContext.traverse',passStart)+1);
 const lazy=app.slice(app.indexOf('async function ensureOptionalRefinements(){'),app.indexOf('function modelDownloads(p)'));
 
@@ -29,7 +49,17 @@ async function enter(district,selectedStudyProjectId,appearanceMode,{terrain='re
   const x=(Math.max(b[0][0],district.bounds[0])+Math.min(b[1][0],district.bounds[2]))/2,z=(Math.max(b[0][2],district.bounds[1])+Math.min(b[1][2],district.bounds[3]))/2;
   mesh.position.set(x,b[0][1],z);scene.add(mesh);return {scene};
  };
- const state={THREE,district,id:district.id,current:district,model:target,nextModel:target,token:1,loadToken:1,window:{atlasReady:district.id},refinementData:{assets,constructionEvidence:[]},overrides:read('overrides.json'),projectById:new Map(read('projects.json').map(p=>[p.id,p])),groupById:new Map(),groupByMesh:new Map(),appearance,resolveModelLifecycle,displayStatusForLifecycle,refinementInDistrict,shouldLoadRefinement,selectedStudyProjectId,draftToggle:{checked:false},studyStatusRequest:0,optionalRefinementLoaders:new WeakMap(),createOptionalRefinementLoader,bindStudyReplacement,splitSourceOverlaps:()=>[],loadAsset:async url=>make(assets.find(a=>a.url===url)),loadCityStudy:async(_three,_loader,asset)=>make(asset),loadModelAsset:async(_loader,url)=>make(assets.find(a=>a.url===url)),loader:{},versionedTreeURL:x=>x,dispose:()=>{},visibleAttribution:{registerAsset(){},refresh(){}},invalidate(){},showStudyLoadStatus(){},mode:'future',visibilityCacheKey:'',lastLayerVisibilityKey:'',console};
+ const loadAsset=async url=>{
+  if(url===exchangeStageAsset.url){requests.push(url);return {scene:exchangeFixture()};}
+  if(url==='models/'+district.id+'.glb')return {scene:target};
+  if(url==='models/'+district.id+'-details.glb'||url==='models/pearson-airfield-context.glb')return {scene:new THREE.Group()};
+  return make(assets.find(a=>a.url===url));
+ };
+ for(const id of ['63-6155','63-6156']){
+  const mesh=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshStandardMaterial());
+  mesh.userData.id=id;target.add(mesh);
+ }
+ const state={THREE,district,id:district.id,current:district,model:target,nextModel:target,token:1,loadToken:1,window:{atlasReady:district.id},refinementData:{assets,constructionEvidence:[]},overrides:read('overrides.json'),projectById:new Map(read('projects.json').map(p=>[p.id,p])),groupById:new Map(),groupByMesh:new Map(),appearance,resolveModelLifecycle,displayStatusForLifecycle,refinementInDistrict,shouldLoadRefinement,selectedStudyProjectId,draftToggle:{checked:false},studyStatusRequest:0,optionalRefinementLoaders:new WeakMap(),createOptionalRefinementLoader,bindStudyReplacement,splitSourceOverlaps:()=>[],loadAsset,loadDistrictContext:async()=>({scene:nextContext}),exchangeStageAsset,exchangeSourceDigest,loadCityStudy:async(_three,_loader,asset)=>make(asset),loadModelAsset:async(_loader,url)=>make(assets.find(a=>a.url===url)),loader:{},versionedTreeURL:x=>x,dispose:()=>{},visibleAttribution:{registerAsset(){},refresh(){}},invalidate(){},showStudyLoadStatus(){},mode:'future',visibilityCacheKey:'',lastLayerVisibilityKey:'',console};
  Object.assign(state,{nextContext,terrainSpec,nextTerrainController:null,pending:new Set(),
   prepareHarbornTerrain:async(_three,options)=>{
    assert.equal(options.context,nextContext);assert.equal(options.contract,terrainSpec.contract);
@@ -40,11 +70,23 @@ async function enter(district,selectedStudyProjectId,appearanceMode,{terrain='re
   },dispose:object=>disposed.push(object),console:{...console,warn(){}}});
  state.applyVisibility=which=>applyModelVisibility(state.modelMeshes,which,{referenceStudies:false,selectedStudyProjectId,unknownStatuses:true});
  runInNewContext(classify,state);
- await runInNewContext('(async()=>{'+eager+'})()',state);
+ await runInNewContext('(async()=>{'+nativeAttachment+eager+'})()',state);
  runInNewContext(pass+';modelMeshes=nextModelMeshes;futureMeshes=nextFutureMeshes;',state);
  state.applyVisibility('future');
  await runInNewContext(lazy+';ensureOptionalRefinements()',state);
  const visible=()=>[...new Set(state.modelMeshes.filter(m=>m.visible).map(m=>m.userData.assetId))].sort();
+ const exchangeMeshes=state.modelMeshes.filter(mesh=>mesh.userData.projectId==='exchange-district'&&mesh.userData.phase);
+ if(exchangeMeshes.length){
+  assert.equal(exchangeMeshes.length,exchangeScene.nodes.filter(node=>node.mesh!==undefined).length);
+  assert(exchangeMeshes.every(mesh=>mesh.userData.sourceAssetSHA256===exchangeSourceDigest));
+  const sourceNormals=exchangeScene.meshes.map(m=>m.primitives[0].attributes.NORMAL);
+  assert(new Set(sourceNormals).size<sourceNormals.length,'phase meshes reuse original normal accessors');
+  assert(exchangeMeshes.every(mesh=>mesh.geometry.getAttribute('normal').version===0),
+   'registering a phase must preserve the lighting normals used by the other towers');
+  assert(target.children.filter(mesh=>['63-6155','63-6156'].includes(mesh.userData.id)).every(mesh=>mesh.userData.hiddenObsolete));
+  const phases=[...new Set(exchangeMeshes.map(mesh=>mesh.userData.phase))];
+  for(const phase of ['EX1','EX2','EXS','EX3','EX3 crown'])assert(phases.includes(phase));
+ }
  const before=visible();appearance.setMode(appearanceMode==='natural'?'status':'natural');state.applyVisibility('future');assert.deepEqual(visible(),before,'appearance toggle preserves eligible visible detail');
  const attached=state.modelMeshes.map(m=>m.userData.assetId);
  for(const candidate of prepared)assert.equal(candidate.parent===target,terrain!=='rejected','only prepared terrain joins the model');
@@ -53,8 +95,11 @@ async function enter(district,selectedStudyProjectId,appearanceMode,{terrain='re
 }
 
 test('direct map entry, area selection and study deep links expose the same eligible default detail',async()=>{
- for(const id of ['downtown','citywide','cooksville','heartland']){
-  const district=districts.find(d=>d.id===id),expected=assets.filter(a=>refinementInDistrict(a,district)&&shouldLoadRefinement(a)).map(a=>a.id).sort();
+ for(const id of ['downtown','citywide','cooksville','heartland','uptown','streetsville']){
+  const district=districts.find(d=>d.id===id);
+  const expected=assets.filter(a=>a.id!=='exchange-recorded-topped-structures'&&refinementInDistrict(a,district)&&shouldLoadRefinement(a)).map(a=>a.id);
+  if(id!=='streetsville')expected.push(exchangeStageAsset.url);
+  expected.sort();
   const direct=await enter(district,null,'natural');assert.deepEqual(direct.loaded,expected,id+' loads every eligible default asset');
   for(const [route,selected,mode]of[['district selection',null,'status'],['M City study link','mcity-1-2','natural'],['Avia study link','avia','status']]){
    const result=await enter(district,selected,mode);assert.deepEqual(result,direct,id+' '+route+' preserves default coverage');

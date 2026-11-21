@@ -1,3 +1,5 @@
+import {activeArtworkEdition} from './active-artwork-edition.mjs';
+const artworkEdition=activeArtworkEdition();
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {serveMedia} from '../cloudflare/media-worker.mjs';
@@ -26,7 +28,7 @@ test('changed range validators get a full response with the original public cont
 
 test('the undated atlas follows the current edition while dated links retain their original bytes', async () => {
   const old = '/downloads/Future-Mississauga-Atlas.pdf';
-  const latest = '/downloads/edition-20261120/Mississauga-Atlas.pdf';
+  const latest = `/downloads/edition-${artworkEdition}/Mississauga-Atlas.pdf`;
   const handler = serveMedia({[old]:file}, latest);
   const env = {MEDIA:{get:async()=>({size:6,body:'abcdef'})}};
   const current = await handler.fetch(new Request('https://preview.test'+old), env);

@@ -1,3 +1,5 @@
+import {activeArtworkEdition} from './active-artwork-edition.mjs';
+import {validateAuthoredBuildingArtwork} from './validate-authored-building-artwork.mjs';
 import {DOWNTOWN_CURRENT_MANIFEST_SHA256} from '../public/downtown-current-media-policy.js';
 import {MEADOWVALE_MANIFEST_SHA256,MEADOWVALE_IDENTITIES} from '../public/meadowvale-media-policy.js';
 // Media lineage and actual local preview bytes are checked here. The publisher supplies
@@ -96,7 +98,9 @@ export function validateNativeSocialCard(articles,row,{headingLevel=2,sourceLink
  for(const [name,value] of Object.entries({'data-osm':row.caption.openStreetMap,'data-display-width':row.displayMaster.width,'data-display-height':row.displayMaster.height}))assert(card.includes(name+'="'+value+'"'),assetKey(row)+' '+name);
  const images=card.match(/<img\b[^>]*>/g)??[];assert.equal(images.length,1);
  for(const [name,value] of Object.entries({src:row.preview.url,width:row.preview.width,height:row.preview.height}))assert(images[0].includes(name+'="'+escapeHTML(value)+'"'),assetKey(row)+' image '+name);
- const viewTitle=row.coverageAddition?row.caption.subtitle||'Wide aerial':portraitViewTitle(row.file);
+ // November 13 printed this caption before the gallery adopted its expanded place name.
+ const portraitTitle=row.file==='downtown-landmark-future.png'?'Absolute World':portraitViewTitle(row.file);
+ const viewTitle=row.coverageAddition?row.caption.subtitle||'Wide aerial':portraitTitle;
  assert(card.includes('data-area-title="'+escapeHTML(row.title)+'"'),'Exact Social area identity required: '+assetKey(row));
  assert(card.includes('<span class="media-caption__area">'+escapeHTML(row.coverageAddition?viewTitle:row.title)+'</span>'),'Visible Social area required: '+assetKey(row));
  assert(card.includes('data-view-title="'+escapeHTML(viewTitle)+'"'),'Exact Social view identity required: '+assetKey(row));
@@ -131,7 +135,9 @@ export async function validateNativeSharePreviews(site,pages,row,{edition='nativ
 const bytes=await readFile(join(site,local));assert.equal(bytes.length,source.bytes);assert.equal(sha(bytes),source.sha256);assert.deepEqual(jpegSize(bytes),[source.width,source.height]);
 }
 export async function validateEditionShare(site, name, html, record) {
- assert.equal(record.url, 'gallery/edition-20261120/share/' + name + '.jpg');
+ const folder=record.source.match(/^(?:gallery|document-previews)\/(edition-\d{8})\//)?.[1];
+ assert.ok(folder,name+' requires edition artwork');
+ assert.equal(record.url, 'gallery/'+folder+'/share/' + name + '.jpg');
  const absolute = 'https://futuremississauga.com/' + record.url;
  for (const [attribute, key, value] of [
   ['property','og:image',absolute], ['name','twitter:image',absolute],
@@ -168,7 +174,8 @@ export async function validateRefinedPictureStructure(site){
  const meadowvaleText=await readFile(join(site,'data/meadowvale-media-20261113.json'),'utf8');assert.equal(sha(meadowvaleText),MEADOWVALE_MANIFEST_SHA256,'Meadowvale must keep its separate accepted pin');
  const meadowvale=JSON.parse(meadowvaleText);assert.deepEqual(meadowvale.images.map(row=>row.identity).sort(),[...MEADOWVALE_IDENTITIES].sort());
  const coveragePortraits=[...coverage.images,...eastCredit.images,...meadowvale.images].map(row=>normalizeCleanMedia(row,'https://futuremississauga.com/',{coverage:true})).filter(row=>row.kind==='portraits');
- const plateEdition = await load(site,'data/city-plates-20261120.json');
+ const publishedEdition=activeArtworkEdition(site);
+ const plateEdition=await load(site,'data/city-plates-'+publishedEdition+'.json');
  const portraits = new Map(plateEdition.plates.filter(p => p.id.startsWith('portraits/')).map(p => [p.id,p]));
  async function validatePortrait(row) {
    const id = 'portraits/' + row.file;
@@ -180,7 +187,7 @@ export async function validateRefinedPictureStructure(site){
    const large=plate.signedPreview || {url:plate.webImage,width:plate.width,height:plate.height};
    const verified=[plate.displayMaster,plate.download,plate.signedMaster,plate.signedThumbnail,plate.signedPreview].filter(Boolean);
    for (const item of verified) {
-     assert(/^gallery\/edition-20261120\/(originals|signed)\/[\w-]+\.(?:png|webp)$/.test(item.url), id+' local published artwork');
+     assert(item.url.startsWith('gallery/edition-'+publishedEdition+'/') && /\/(originals|signed)\/[\w-]+\.(?:png|webp)$/.test(item.url), id+' local published artwork');
      const bytes=await readFile(join(site,item.url));
      assert.equal(bytes.length,item.bytes,id+' byte size');
      assert.equal(sha(bytes),item.sha256,id+' published bytes');
@@ -259,11 +266,13 @@ export async function validateRefinedPictureStructure(site){
  await validateNativeSharePreviews(site,[],revisionRows.find(row=>row.identity==='wide/downtown-future.png'),{edition:'revision-20261109'});
  await validateNativeSharePreviews(site,[],currentRows.find(row=>row.identity==='wide/downtown-future.png'));
  const editionShares=await load(site,'data/edition-shares.json');
+ const authoredBuildings=publishedEdition==='20261121'?await validateAuthoredBuildingArtwork(site,{active:true}):null;
  for(const [name,record] of Object.entries(editionShares)) {
+  assert(record.url.startsWith('gallery/edition-'+publishedEdition+'/share/'),name+' uses the active edition');
   await validateEditionShare(site,name,await readFile(join(site,name+'.html'),'utf8'),record);
  }
  assert(!/\/Users\/|\/private\/|file:\/\/|\/home\/|\/var\/|\/tmp\//.test(JSON.stringify([manifest,sources,ix])),'Private paths leaked');
- return {publicationEvidence:'NOT_CHECKED_BY_LOCAL_STRUCTURE_PREFLIGHT',entries:Object.entries(pictures.images),originalImageVerification:{nativeMasterURLsPreserved:true,presentationDerivatives:33,separatePublicHashProofRequired:true,remoteBytesFetchedByThisStaticCheck:false},portraitGallery:{nativePortraitRecords:24,presentationDerivatives:24,localAVIFPreviews:24,dimensionsVerified:true,separatePublicHashProofRequired:true},displayPreviewSummary:{totalWide:33,totalPortraits:24,format:'AVIF',bytes:totalPreviewBytes},presentation:{images:57,publicAssets:manifest.assets.length,nativeCameraRefinements:newFrames,originalSourceDatesPreserved:true,nativeMasterURLsPreserved:true}};
+ return {authoredBuildings,publicationEvidence:'NOT_CHECKED_BY_LOCAL_STRUCTURE_PREFLIGHT',entries:Object.entries(pictures.images),originalImageVerification:{nativeMasterURLsPreserved:true,presentationDerivatives:33,separatePublicHashProofRequired:true,remoteBytesFetchedByThisStaticCheck:false},portraitGallery:{nativePortraitRecords:24,presentationDerivatives:24,localAVIFPreviews:24,dimensionsVerified:true,separatePublicHashProofRequired:true},displayPreviewSummary:{totalWide:33,totalPortraits:24,format:'AVIF',bytes:totalPreviewBytes},presentation:{images:57,publicAssets:manifest.assets.length,nativeCameraRefinements:newFrames,originalSourceDatesPreserved:true,nativeMasterURLsPreserved:true}};
 }
 export async function validatePictureMedia(site){
  const pictures=await load(site,'data/picture-assets.json');

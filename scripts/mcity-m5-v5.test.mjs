@@ -1,3 +1,4 @@
+import {readBeforePlanningReview} from './planning-review-guard.mjs';
 import {restoreMcityV6Refinements,restoreMcityV6Catalogue,restoreMcityV6Projects,restoreMcityV6Revisions} from './mcity-v6-scope.mjs';
 import {restorePreOHNVersions} from './offshore-context-scope.mjs';
 import {restoreHarbornVersions} from './harborn-v4-scope.mjs';
@@ -17,7 +18,7 @@ import {createModelAppearance} from '../public/model-appearance.js';
 register('./recovery-three-loader.mjs',import.meta.url);
 const THREE=await import('../public/vendor/three.module.js');
 const {GLTFLoader}=await import('../public/vendor/addons/loaders/GLTFLoader.js');
-const read=name=>readFileSync(new URL('../public/'+name,import.meta.url));
+const read=name=>readBeforePlanningReview(new URL('../public/'+name,import.meta.url));
 const json=name=>JSON.parse(read('data/'+name));
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const stable=value=>Array.isArray(value)?value.map(stable):value&&typeof value==='object'?Object.fromEntries(Object.keys(value).sort().map(key=>[key,stable(value[key])])):value;

@@ -11,7 +11,7 @@ geometry_before=geometry_fingerprint()
 semantic_assets=json.loads((Path(__file__).parent/'semantic-slots.json').read_text())
 source_materials={m.name:{'diffuse':list(m.diffuse_color),'nodes':[(n.name,n.type,[(v.name,list(v.default_value) if hasattr(v.default_value,'__len__') else v.default_value) for v in n.inputs if hasattr(v,'default_value') and (isinstance(v.default_value,(int,float)) or hasattr(v.default_value,'__len__'))]) for n in m.node_tree.nodes] if m.use_nodes else []} for m in bpy.data.materials}
 material_before=hashlib.sha256(json.dumps(source_materials,sort_keys=True).encode()).hexdigest()
-palette={'existing':'#b8b9b6','under_construction':'#85b4bf','approved':'#c49b52','proposed':'#d8b7ac','unknown':'#b89bc3','mixed':'#b89bc3'}
+palette={'existing':'#b8b9b6','under_construction':'#85b4bf','approved':'#d8b7ac','proposed':'#d8b7ac','unknown':'#b89bc3','mixed':'#b89bc3'}
 legacy={'Existing':'existing','Under Construction':'under_construction','Approved':'approved','Proposed':'proposed','Uncertain':'unknown'}
 changed=[];preserved=0;created={}
 def status_material(lifecycle):

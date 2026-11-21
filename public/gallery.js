@@ -1,143 +1,121 @@
 import {loadEditionPlates,editionPreview,plateCaption} from './edition-pictures.js';
-import {assetURL} from './asset-delivery.js?v=20261113-delivery2';
 import {createImagePreview} from './image-preview.js?v=20261120-plates';
-import {mediaPreviewInfo} from './clean-media.js?v=20261113-design2';
-import {refreshPictureAssets} from './media-on-demand.js';
-import {buildGalleryCatalogue,filterGallery,galleryViews} from './gallery-catalogue.js?v=20261113-design2';
-const $=s=>document.querySelector(s);
-async function readData(name) {
-  const response=await fetch('data/'+name+'.json');
-  if (!response.ok) throw new Error('Pictures unavailable');
-  return response.json();
-}
-const [districts,edition]=await Promise.all([readData('districts'),loadEditionPlates()]);
-let pictures;
-if (edition.size) {
-  pictures={images:{}};
-  for (const [id,plate] of edition) {
-    if (!id.startsWith('wide/')) continue;
-    const file=id.slice(5);
-    const scenario=file.slice(0,-4).split('-').pop();
-    const subtitle=file==='downtown-portrait-future.png'?'Exchange District':null;
-    pictures.images[file]={caption:{area:plate.area,scenario,subtitle},download:plate.download,display:plate.displayMaster};
-  }
-} else {
-  pictures=await readData('picture-assets');
-  await refreshPictureAssets(pictures);
-}
-const plateFor = name => edition.get('wide/' + name);
-const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-// A direct download is available only when there is a credited publication.
-const original=name=>plateFor(name)?.download?.url || pictures.images[name]?.download?.url;
-function thumbnailAttributes(name) {
-  const plate = plateFor(name);
-  if (!plate) return 'src="' + escape(assetURL(pictures.images[name].display.url)) + '" width="1600" height="1000"';
-  const small=plate.signedThumbnail || {url:plate.thumbnail,width:640};
-  const large=plate.signedPreview || {url:plate.webImage,width:plate.width,height:plate.height};
-  return 'src="' + escape(assetURL(small.url)) + '" srcset="' + escape(assetURL(small.url)) + ' ' + small.width + 'w, ' + escape(assetURL(large.url)) + ' ' + large.width + 'w" sizes="(max-width: 560px) calc(100vw - 32px), (max-width: 1440px) 46vw, 650px" width="' + large.width + '" height="' + large.height + '"';
-}
-const downloadIcon='<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12m-5-5 5 5 5-5M5 20h14"/></svg>';
-const catalogue=buildGalleryCatalogue(districts,pictures.images),grid=$('#galleryGrid');
-const area=$('#galleryArea'),viewFilter=$('#galleryView'),search=$('#gallerySearch');
-for(const district of districts.filter(d=>catalogue.some(row=>row.district===d.id)).sort((a,b)=>a.name.localeCompare(b.name))){
- const option=document.createElement('option');option.value=district.id;option.textContent=district.name;area.append(option);
-}
-const entryURL = new URL(location.href);
-for (const [control, key] of [[area, 'area'], [viewFilter, 'view']]) {
-  const value = entryURL.searchParams.get(key);
-  if (value && [...control.options].some(option => option.value === value)) control.value = value;
-}
-search.value = entryURL.searchParams.get('q') || '';
+import {filterGallery} from './gallery-catalogue.js?v=20261113-design2';
 
-function rememberGallery() {
-  const url = new URL(location.href);
-  for (const [key, value] of [['area', area.value], ['view', viewFilter.value], ['q', search.value.trim()]]) {
-    if (value && (!['area', 'view'].includes(key) || value !== 'all')) url.searchParams.set(key, value);
+const $ = selector => document.querySelector(selector);
+const grid = $('#galleryGrid');
+const area = $('#galleryArea'), type = $('#galleryView'), search = $('#gallerySearch');
+const cards = [...grid.querySelectorAll('.picture-card')].map(card => {
+  const link = card.querySelector('[data-open]'), data = card.dataset;
+  return {card,link,file:data.file,district:link.dataset.open,area:data.areaTitle,view:link.dataset.view,
+    viewTitle:data.viewTitle,type:data.type,scenario:data.scenario};
+});
+const byLink = new Map(cards.map(row => [row.link,row]));
+const titles = {aerial:'Future aerial',portrait:'Future perspective',skyline:'Future skyline',existing:'Existing aerial',
+  existingSkyline:'Existing skyline',constructionSkyline:'Construction snapshot',landmark:'Absolute World towers',
+  junction:'Hurontario Street at Highway 403'};
+const address = () => window.fmLocal?.historyURL() || new URL(location.href);
+
+function showPlace() {
+  const selected = area.value !== 'all';
+  const name = area.selectedOptions[0].textContent;
+  $('#galleryTitle').textContent = selected ? name : 'Image gallery';
+  $('#placeDestinations').hidden = !selected;
+  const portrait = $('.media-sections a[href^="social.html"]');
+  if (portrait) portrait.href = selected ? 'social.html?area='+encodeURIComponent(area.value) : 'social.html';
+  if (!selected) return;
+  $('#placeMap').href = 'explore.html?district='+encodeURIComponent(area.value);
+  const buildings = $('#placeBuildings');
+  buildings.hidden = !buildings.dataset.areas.split(' ').includes(area.value);
+  buildings.href = 'model.html?area='+encodeURIComponent(name);
+  const compare = $('#placeCompare');
+  compare.hidden = !['downtown','port-credit','lakeview','clarkson'].includes(area.value);
+  compare.href = 'compare.html?area='+encodeURIComponent(area.value);
+}
+function renderGallery() {
+  const {matches} = filterGallery(cards,{area:area.value,view:type.value,search:search.value});
+  const visible = new Set(matches), sections = new Set(matches.map(row=>row.type));
+  for (const row of cards) {
+    row.card.hidden = !visible.has(row);
+    if (!row.card.hidden) {
+      const caption = plateCaption(row.area,row.viewTitle,row.scenario,area.value!=='all');
+      row.card.querySelector('h3').textContent = caption.title;
+      row.card.querySelector('.media-caption__scenario').textContent = caption.detail;
+    }
+  }
+  for (const heading of grid.querySelectorAll('[data-gallery-group]')) {
+    heading.hidden = area.value!=='all' || sections.size<2 || !sections.has(heading.dataset.galleryGroup);
+  }
+  showPlace();
+  $('#galleryResult').textContent = matches.length+' image'+(matches.length===1?'':'s');
+  $('#galleryEmpty').hidden = matches.length>0;
+}
+function restore() {
+  const url = address();
+  for (const [control,key] of [[area,'area'],[type,'view']]) {
+    const value = url.searchParams.get(key);
+    control.value = [...control.options].some(option=>option.value===value) ? value : 'all';
+  }
+  if (url.hash==='#perspectives') type.value='close';
+  search.value = url.searchParams.get('q') || '';
+  renderGallery();
+}
+function remember() {
+  const url = address();
+  for (const [key,value] of [['area',area.value],['view',type.value],['q',search.value.trim()]]) {
+    if (value && (key==='q' || value!=='all')) url.searchParams.set(key,value);
     else url.searchParams.delete(key);
   }
   url.searchParams.delete('all');
-  if (url.hash === '#perspectives' && viewFilter.value !== 'close') url.hash = '';
-  history.replaceState(history.state, '', url);
+  if (url.hash==='#perspectives' && type.value!=='close') url.hash='';
+  if (window.fmLocal) window.fmLocal.writeHistory('replaceState',history.state,'',url);
+  else history.replaceState(history.state,'',url);
+  renderGallery();
 }
-function updatePlaceLinks() {
-  const district = districts.find(item => item.id === area.value);
-  const links = $('#placeDestinations');
-  links.hidden = !district;
-  $('#galleryTitle').textContent = district ? district.name : 'Image gallery';
-  const portraitLink = document.querySelector('.media-sections a[href^="social.html"]');
-  if (portraitLink) portraitLink.href = district ? 'social.html?area=' + encodeURIComponent(district.id) : 'social.html';
-  if (!district) return;
-  $('#placeMap').href = 'explore.html?district=' + encodeURIComponent(district.id);
-  $('#placeBuildings').hidden = !($('#placeBuildings').dataset.areas || '').split(' ').includes(district.id);
-  $('#placeBuildings').href = 'model.html?area=' + encodeURIComponent(district.name);
-  const compare = $('#placeCompare');
-  compare.hidden = !['downtown', 'port-credit', 'lakeview', 'clarkson'].includes(district.id);
-  if (!compare.hidden) compare.href = 'compare.html?area=' + encodeURIComponent(district.id);
-}
-function renderGallery(){
- updatePlaceLinks();
- const {matches,visible}=filterGallery(catalogue,{area:area.value,view:viewFilter.value,search:search.value});
- const card = row => {
-   const caption=plateCaption(row.area,row.viewTitle,row.scenario,area.value!=='all');
-   const fullName=[row.area,row.viewTitle,row.scenario].join(' · ');
-   const url=original(row.file);
-   const save=url ? `<a href="${escape(assetURL(url))}" download class="icon-button ui-button" aria-label="Download ${escape(fullName)} PNG" data-variant="ghost" data-size="icon" title="Download PNG">${downloadIcon}</a>` : '';
-   return `<article class="picture-card" data-view-title="${escape(row.viewTitle)}" data-area-title="${escape(row.area)}" data-file="${escape(row.file)}"><button data-open="${escape(row.district)}" data-view="${row.view}" aria-label="Preview ${escape(fullName)}"><img ${thumbnailAttributes(row.file)} alt="${escape(fullName)}" loading="lazy" decoding="async"></button><div class="card-caption"><div><h3>${escape(caption.title)}</h3><span class="media-caption__scenario">${escape(caption.detail)}</span></div>${save}</div></article>`;
- };
- const collections = [
-   ['close', 'Landmarks and closer views'],
-   ['aerial', 'Neighbourhood aerials'],
-   ['skyline', 'Skylines']
- ];
- const groups = collections.map(([type, title]) => ({
-   title, cards: visible.filter(row => row.type === type)
- })).filter(group => group.cards.length);
- grid.innerHTML = area.value!=='all' ? visible.map(card).join('') : groups.map(group => {
-   const heading = groups.length > 1 ? '<h2 class="gallery-collection-title">' + group.title + '</h2>' : '';
-   return heading + group.cards.map(card).join('');
- }).join('');
- $('#galleryResult').textContent=`${matches.length} image${matches.length===1?'':'s'}`;
- $('#galleryEmpty').hidden=matches.length>0;
-}
-for(const control of [area,viewFilter,search])control.addEventListener(control===search?'input':'change',()=>{rememberGallery();renderGallery();});
-$('#clearGallery').addEventListener('click', () => {
-  area.value = 'all'; viewFilter.value = 'all'; search.value = '';
-  rememberGallery(); renderGallery(); search.focus();
+for (const control of [area,type,search]) control.addEventListener(control===search?'input':'change',remember);
+$('#clearGallery').addEventListener('click',()=>{
+  area.value='all';type.value='all';search.value='';remember();search.focus();
 });
-function alignGalleryHash(){
- const hash=location.hash;if(!['#pictures','#perspectives'].includes(hash))return;
- Promise.all([document.fonts?.ready,globalThis.fmMediaReady]).then(()=>{
-  requestAnimationFrame(()=>requestAnimationFrame(()=>{
-   if(location.hash===hash&&!window.fmGalleryNavigation?.manual)document.querySelector(hash)?.scrollIntoView({block:'start',behavior:'instant'});
-  }));
- });
+function alignHash() {
+  const hash=location.hash;
+  if (!['#pictures','#perspectives'].includes(hash)) return;
+  Promise.all([document.fonts?.ready,globalThis.fmMediaReady]).then(()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    if(location.hash===hash&&!window.fmGalleryNavigation?.manual) document.querySelector(hash)?.scrollIntoView({block:'start',behavior:'instant'});
+  })));
 }
-function applyHash(){if(location.hash==='#perspectives'){viewFilter.value='close';renderGallery();}alignGalleryHash();}
-window.addEventListener('hashchange',applyHash);
-window.addEventListener('fm:media-ready',alignGalleryHash);
-renderGallery();applyHash();
+window.addEventListener('hashchange',()=>{restore();alignHash();});
+window.addEventListener('popstate',restore);
+window.addEventListener('fm:media-ready',alignHash);
+$('.gallery-filters').hidden=false;
+restore();alignHash();
 
-const preview=createImagePreview({views:true});let openDistrict=null,opener=null;
-const viewFiles=Object.fromEntries(Object.entries(galleryViews).map(([key,value])=>[key,value.suffix]));
-const viewNames={aerial:'Future aerial',portrait:'Future perspective',skyline:'Future skyline',existing:'Existing aerial',existingSkyline:'Existing skyline',constructionSkyline:'Construction snapshot',landmark:'Absolute World',junction:'City Centre interchange'};
-function showPicture(view){
- const d=openDistrict,file=d.id+viewFiles[view],info=pictures.images[file];
- const viewTitle=info.caption?.subtitle||viewNames[view],area=info.caption?.area||d.name;
- const scenario = info.caption?.scenario;
- const suffix = ['existing','construction','future'].includes(scenario) ? '&scenario=' + scenario : '';
- const plate=plateFor(file);
- const details=plate ? {title:area,area,viewTitle,scenario,attribution:plate.attribution} : mediaPreviewInfo({...info,viewTitle,area});
- preview.show({...editionPreview(details,plate),viewTitle,area,explore:'explore.html?district='+d.id+suffix},opener);
+const edition = await loadEditionPlates('data/city-plates-'+grid.dataset.edition+'.json');
+if (!cards.length || cards.some(row=>!edition.get('wide/'+row.file)?.signedMaster)) throw Error('Current gallery previews unavailable');
+const preview = createImagePreview({views:true});
+function showCard(row) {
+  const choices = cards.filter(other=>other.district===row.district);
+  const showView = view => {
+    const selected = choices.find(choice=>choice.view===view);
+    if (!selected) return;
+    const plate = edition.get('wide/'+selected.file);
+    const scenario=selected.file.slice(0,-4).split('-').pop();
+    const {area,viewTitle} = selected;
+    preview.show({...editionPreview({title:area,area,viewTitle,scenario,attribution:plate.attribution},plate),area,viewTitle,
+      explore:'explore.html?district='+selected.district+'&scenario='+scenario+'&appearance=status'},row.link);
+  };
+  const visible = cards.filter(item=>!item.card.hidden);
+  preview.setSequence(visible.length>1 ? direction=>{
+    const next = visible[(visible.indexOf(row)+direction+visible.length)%visible.length];
+    showCard(next);
+  } : null);
+  preview.setViews(choices.map(choice=>({value:choice.view,label:titles[choice.view]})),row.view,showView);
+  showView(row.view);
 }
-document.addEventListener('click',event=>{
- const button=event.target.closest('[data-open]');if(!button||event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
- const shown=[...grid.querySelectorAll('button[data-open]')];
- preview.setSequence(shown.length>1?direction=>{
-  const index=shown.indexOf(button);
-  shown[(index+direction+shown.length)%shown.length].click();
- }:null);
- opener=button;openDistrict=districts.find(d=>d.id===button.dataset.open);if(!openDistrict)return;
- const available=Object.keys(viewFiles).filter(view=>pictures.images[openDistrict.id+viewFiles[view]]);
- const view=available.includes(button.dataset.view)?button.dataset.view:'aerial';
- preview.setViews(available.map(value=>({value,label:viewNames[value]})),view,showPicture);showPicture(view);
+grid.addEventListener('click',event=>{
+  if (event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey) return;
+  const link=event.target.closest('[data-open]');
+  const row=byLink.get(link);
+  if (!row) return;
+  event.preventDefault();
+  showCard(row);
 });

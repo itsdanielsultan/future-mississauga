@@ -1,48 +1,62 @@
-# Future Mississauga design
+# Future Mississauga design guide
 
-## Design decisions
+These are the design decisions and checks for the site. Each release needs its own results.
 
-The homepage opens with the Downtown print and four direct ways into the work. Keep the surrounding sections short. A reader can explore their neighbourhood, open an individual building, watch the skyline film and read the atlas directly from the homepage.
+## Interface
 
-Use the oblique Square One camera, with light ground, legible grey towers and distinct planning colours. The inset title, author, legend, compass and attribution belong in the print. For a before-and-after view, keep the camera and framing identical.
+**Links and selection.** Give hover and current links a soft rounded grey surface. Keep a visible keyboard focus outline. Use a right arrow for navigation, an up-right arrow for an external destination and a down arrow for a file when a cue helps.
 
-Align page titles, navigation, previews and captions to the same outer margins. Use a subtle rounded grey rectangle for the current section and neighbouring options. Keep text accents neutral. Give internal links a right arrow, external destinations an up-right arrow and downloads a down arrow where a directional cue is helpful.
+**Motion.** Move one grey rectangle between choices in about 180 milliseconds. Preserve scroll position and page geometry. With reduced motion enabled, place it immediately.
 
-Show the entire collection when a visitor enters Buildings, Gallery or the accuracy register. Load images as they approach the screen. Buildings are detailed studies, grouped by area and project, with a consistent thumbnail grid. A profile names the contributors, links to Google and Apple Maps, and credits any photograph shown on the page. Preserve the selected place, scenario and filters when the reader returns.
+**Spacing and type.** Use the shared page gutters and title spacing. Start with 8 px between related details, 16 px within cards, 24 px between cards and 48 px between sections. Reserve two lines for building titles. Compare actual baselines at the same viewport width.
 
-## Page details
+**Icons and menus.** Keep controls at least 44 px high. Give the chevron its own space and centre the menu label vertically. Check native select text, long names, keyboard focus and the narrowest supported screen.
 
-Start with the visitor’s question. The homepage heading is “What’s being built in Mississauga?” Give each destination one clear preview and a direct link. The full directory lives one click away. In a building profile, identify the building, designer and developer, show the real site with its photograph credit, and give map links. Keep each research qualification beside the building or drawing it concerns.
+**Surfaces and footer.** Use warm paper tones, charcoal text and grey borders. The compact footer carries the project name and byline and reaches the bottom on short pages. Put attribution inside signed artwork and beside the map. Sources and Contact belong in the header.
 
-Use the shared page margins and heading spacing from `atlas-edition.css`. Buildings, Exterior studies and Model revisions share a title baseline. Related controls share one height and equal padding. A selected link sits in a rounded grey rectangle. Moving between sections slides the selection into place. Respect reduced motion. Keep a visible keyboard focus ring, and give links a grey hover surface without underlining. Place the footer at the lower edge of a short page and after the content on a long page.
+## Artwork and print
 
-Keep Sources and Contact in the main navigation. The footer carries the project identity and required data credits. Contact is the place to email Daniel, share a suggestion or learn about the creator.
+**Camera and light.** Use the approved oblique Downtown view, looking down about 23°. Lock the camera, lens, crop and light across comparison stages. Check the existing buildings and streets stay in the same place.
 
-On Updates, group verified dates by month. List every documented day in the rail, then give each day a title, one sentence and a link to its story. The grey selection slides as the reader scrolls. The detail page explains the work, credits contributors when appropriate and leads back to that date. Private correspondence can establish a fact without becoming a published quotation.
+**Towers and details.** Use a slightly darker grey for existing towers than for the ground and small buildings. Check the same building in the print, gallery, film and live map. At Exchange, the light façade bands, dark windows and pale shared podium should stay visible.
 
-Use the same reading pattern on Sources. Group records by the question they answer. Each source card identifies the provider, the part of the model it informed and a direct link to the relevant record. On Downloads, keep each preview, file description, format, size and action together. Distinguish the current atlas from historical editions.
+**Planning colours.** Use grey for existing and completed buildings, blue for construction, pink for proposed and approved projects, and violet for uncertain projects. Keep the exact planning status in the project record. Use the same four swatches on maps, images and print. Use building IDs to check the actual visible surfaces. A correct legend can sit beside a wrongly coloured tower. Sample the shaft in the exported image and compare its tone with the approved view. Preserve genuine glass, concrete podiums and roof finishes.
 
-Use a short place name and scenario under a gallery picture. Put full model licences in Sources and keep required notices with the published image. Give each signed downloadable the inset author line. Reserve clean, unlabelled scenes for side-by-side comparisons. Keep neutral grey towers distinct from light ground. Apply lifecycle colours only to evidenced buildings and preserve architectural detail at podium level. Avoid touch gestures that interfere with scrolling the page.
+**What the stages show.** Today shows buildings already in use. Dated construction adds the work visible in dated evidence. A future view may show the full planned shape of a project that has just broken ground. Keep each tower in a mixed development tied to its own evidence.
 
-Build print pages from freshly rendered, native-size scenes. Measure resolution at the final printed size. Include linked contents, page numbers, selectable text and a readable source index. Generating a new thumbnail from an old print does not count as re-rendering a view.
+**Model version.** Check the actual geometry in every affected camera against the current building model. Record the date of the survey separately from the file update. State where a roof, height or façade remains approximate.
 
-## Checks for each release
+**Specific corrections.** Check the podium behind the M towers near Rathburn Road and the upper roof at 1422 Aldo Drive. Verify bridge decks against available drawings and approach grades. At 275 Superior, photographs support the entrance. The roof and other elevations use municipal massing.
 
-| Journey | Expected result |
-| --- | --- |
-| Open the homepage on a phone or laptop | The opening identifies the project and provides direct entries to its major collections. |
-| Switch the Downtown cover | The picture, credited PNG and print PDF match the selected scenario. |
-| Choose Lakeview in Compare and open its neighbourhood | The destination is Lakeview. Back restores the selected comparison. |
-| Browse Buildings | Every detailed study is visible without expansion. A return from a profile restores its filter. |
-| Open a gallery picture | The byline stays with the artwork. Keyboard navigation, swipe and outside-click dismissal work. |
-| Open the atlas, zoom and follow a contents link | The detailed reader and download show the same numbered page. |
-| Switch chapters in the skyline film | Each labelled stage starts at its designated time. The stages share a camera. |
-| Open the downloaded Mac edition | Styles, navigation, model and print files work from the local folder. |
+**Authorship.** Keep the place name and “by Daniel Sultan” inside every downloadable finished render. An inset footer can also carry a key, compass and required attribution. In comparisons, keep the clean view on screen and link the signed image. Credit outside photographs beside the actual image.
 
-The site was opened on desktop and phone layouts. Browser checks included all twenty neighbourhoods, both galleries, all building profiles, the map, the skyline film and the atlas. The complete Mac edition opens through `outputs/Future-Mississauga.html` in the project workspace, using the accompanying `Future-Mississauga` folder.
+**Every deliverable.** A native render, an exported PDF and an image resized for the web are distinct steps. Track the model, camera, stage, dimensions and source master for each current asset. Keep historical artwork dated. Open each derivative at its final destination.
 
-The November 20 edition provides a measured reference for future exports. Its 71 native Blender views include two homepage covers. The Downtown comparison uses the same 22.81° downward angle in each stage. Across the 56-page atlas, model images measure 309–330 pixels per printed inch. The eleven four-page building booklets measure 365 and the two Downtown prints measure 384. The reader offers 1,200-pixel page images and 2,880-pixel zoom images. Check those figures at the final placed size when a new edition changes the layout.
+Build current print pages from native model renders. Target at least 300 pixels per printed inch at final placement. Keep the contents, source index, labels and page numbers readable. A new thumbnail or credit strip alone does not establish a new render.
 
-## Evidence still needed
+## Page checks
 
-The fourth Greenpark tower's footprint and height pairing, exact Voya roof details, Port Credit bridge drawings and LRT turnout alignment depend on further source evidence. Keep these qualifications with their individual records.
+| Page | Design decision | What to check |
+| --- | --- | --- |
+| Homepage | Keep “What’s being built in Mississauga?” and the one-sentence introduction. Place the full-width oblique Downtown picture first and the six ways to explore directly below. Give each major collection a visual preview. Credit Daniel near the opening and explain why he made the model at the end. | From the homepage, reach a neighbourhood, an individual building, Compare, the film, the gallery, the atlas and the 3D map. |
+| Compare and film | Compare has two choices, Before and after and Skyline film. Keep all three signed Downtown stages on the homepage. Use the same camera in each stage and place film controls below the signed frame. | Choose Lakeview, open its neighbourhood and return. Test the slider, each stage, film chapters, play, seeking, fullscreen and the short-page footer. |
+| Neighbourhoods and map | Show one area picker, one useful preview and a clear map action. Keep the chosen area and stage through navigation. Make pan, rotate and reset discoverable. | Change the area near the bottom of the page. The page stays in place and the map opens at that area. Check touch movement and keyboard reset. |
+| Buildings | Use All buildings, Building studies and Before and after. Keep their heading baselines and sticky switcher aligned. Show all detailed models and pictured study cards from the start, grouped by area, project or subject. Keep simple city massing in the map. | At 320, 390 and 1280 px, compare headings, filter padding and one- and two-line cards. Search for 275 Superior, open its profile, then return to the same search and card. |
+| Building profiles | Put the building and address first, followed by verified team roles, model and real-life view. Label a dated aerial as an aerial. Give the original photo or gallery link when available. Keep photo credit with the image and its source record. | Open Google Maps and Apple Maps for the same address. Check Street View when coordinates are available. Verify the artist and photo source independently of architect, builder and developer. |
+| Building studies | List every study with an image. Its own view shows the subject, pictures, sources and one path into the PDF reader. A revision can keep dated earlier evidence beside today’s work. | Open a bookmarked study and a directory card. Read and download the PDF, test image preview, then return to the same card. Retired references retain their archived status. |
+| Gallery and portraits | Keep the picture, short place and scenario, and signed download together. Use a shared crop and image-to-caption gap. Keep extended licences in Sources. | Check portrait and landscape, keyboard arrows, touch swiping, Escape and outside-click dismissal. Match the signed image to its preview. |
+| Downloads and atlas | Group files by what a visitor wants to read, study or print. Show subject, format, size and one aligned action. Distinguish historical editions. | Scroll through consecutive pages at phone and desktop widths. Check the centred page selector, filename, bytes and first page. Follow the atlas contents; zoom into labels and compare the reader page to the downloaded PDF. |
+| Updates | Group documented days by month. Move one grey rectangle along the left rail with scrolling. Each day links to a short story and can credit contributors with verified, publishable information. | Open a day, read its summary, then return to the same date. Check adjacent months, phone navigation, keyboard focus and reduced motion. |
+| Sources and study notes | Use a short section rail and readable records. Identify the provider, the exact drawing, dataset or photograph, its contribution and its source link. Keep research limits beside the affected project. | Follow one section link and its original provider record. Check the selected section as you scroll and verify that limits describe the building in view. |
+| Contact, creator and suggestions | Use Contact for email, creator information and suggestions. Identify any verified coverage by its outlet. A suggestion is public only after Daniel approves it and adds his response. | Find Contact in the header. Follow its links and verify the suggestion moderation flow in a non-public test. Keep private correspondence out of public copy. |
+| Offline edition | The saved HTML opens the complete styled site with its matching files. Keep the launch page, directory and file links together. | Open the saved edition on a Mac. Follow a building and study, view a local image and read a PDF. Identify features that require an internet connection. |
+
+## Release checks
+
+**Open the actual page.** Check at 320, 390 and 1280 px with a mouse, keyboard and touch where available. Measure heading baselines, card heights, control padding and scroll restoration. Inspect each representative page visually.
+
+**Follow a complete journey.** Use the homepage to reach a detail page, view its image or PDF, then go back. Open deep links directly as well. A local build, hosted preview and live page each need their own check.
+
+**Check the actual exports.** Compare the native render and signed output, then inspect the full-size PNG, reader, downloaded PDF and film. Measure pixels per printed inch at final placement. Record which files were rebuilt.
+
+**Keep evidence with the decision.** Record the page, viewport, checked destination and result. Missing elevations at 275 Superior, the fourth Greenpark tower pairing, exact Voya roof details, Port Credit bridge drawings and LRT turnout alignment remain individual evidence questions.

@@ -80,12 +80,15 @@ test('each interactive model has an addressable source note and complete downloa
 });
 
 test('image, document, film and credit downloads remain available',async()=>{
- const [review,reference,home,model,map,image,document]=await Promise.all([
-  'review-renders.html','reference-updates.html','film.html','model.html','app.js','image-preview.js','document-preview.js'
+ const [review,reference,film,downloads,model,map,image,document]=await Promise.all([
+  'review-renders.html','reference-updates.html','film.html','downloads.html','model.html','app.js','image-preview.js','document-preview.js'
  ].map(read));
  assert.match(review,/\.pdf["']/);assert.match(review,/\.png["']/);
  assert.match(reference,/Download PNG/);
- assert.match(home,/<a[^>]+href="[^"]+\.mp4"[^>]+download=/);
+ const filmSource=film.match(/<source\b[^>]*src="([^"]+\.mp4)"/)?.[1];
+ assert.ok(filmSource);
+ assert.doesNotMatch(film,/<a\b[^>]*href="[^"]+\.mp4"[^>]*>/);
+ assert.ok([...downloads.matchAll(/<a\b[^>]+>/g)].some(([tag])=>tag.includes('href="'+filmSource+'"')&&/\sdownload(?:\s|=|>)/.test(tag)));
  assert.match(model,/href="downloads\/Model-study-credits\.txt" download/);
  assert.match(map,/download\.textContent='Download PNG'/);
  assert.match(image,/download\.download=/);

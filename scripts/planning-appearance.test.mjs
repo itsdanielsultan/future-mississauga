@@ -38,7 +38,7 @@ test('planning colours never change lifecycle, confidence, filters or authored n
       assert.equal(x.material.color.getHex(),planningAppearanceColour(planningAppearanceKey(facts[i])));
       assert.deepEqual(x.userData,facts[i]);
     });
-    assert.notEqual(meshes[2].material,meshes[3].material,'approved and proposed remain visually distinct');
+    assert.notEqual(meshes[2].material,meshes[3].material,'approved and proposed retain their own recorded stage');
     assert.deepEqual(meshes.map(x=>x.visible),visibility);
     a.setMode('natural');meshes.forEach((x,i)=>assert.equal(x.material,originals[i]));
   }
@@ -54,16 +54,18 @@ test('screen and saved-image legends use the same recorded-stage colours as thei
   const a=createModelAppearance(THREE),meshes=['existing','under_construction','approved','proposed','unknown'].map(makeMesh);
   meshes.forEach(x=>a.register(x));a.setMode('status');
   const legend=planningStatusLegendFor(meshes.map(x=>x.userData.lifecycle),{appearance:a.mode});
-  assert.deepEqual(legend.map(x=>x.key),['existing','under_construction','approved','proposed','unknown']);
+  const printKey = JSON.parse(readFileSync(new URL('./editions/20261120/print-key.json', import.meta.url)));
+  assert.deepEqual(legend.map(({label,color})=>({label,colour:color})), printKey.map(({label,colour})=>({label,colour})));
   for(const item of legend){
-    const shown=meshes.filter(x=>planningAppearanceKey(x.userData)===item.key);assert(shown.length);
+    const shown=meshes.filter(x=>item.key==='planned' ? ['approved','proposed'].includes(planningAppearanceKey(x.userData)) : planningAppearanceKey(x.userData)===item.key);
+    assert.equal(shown.length,item.key==='planned'?2:1);
     shown.forEach(x=>assert.equal('#'+x.material.color.getHexString(),item.color));
   }
   for(const width of [390,1400]){
     const labels=[],swatches=[],ctx={save(){},restore(){},translate(){},scale(){},beginPath(){},moveTo(){},lineTo(){},stroke(){},fillRect(x,y,w,h){if(w===16)swatches.push(this.fillStyle);},fillText(text){labels.push(text);}};
     drawPresentationFooter(ctx,{width,top:0,title:'Downtown',scenario:'Future scenario',bearing:null,legend});
     assert.deepEqual(swatches,legend.map(x=>x.color));
-    assert.deepEqual(labels.slice(-5),['Existing','Under construction','Approved planning','Proposed','Status unverified']);
+    assert.deepEqual(labels.slice(-4),printKey.map(item=>item.label));
   }
   a.setMode('natural');assert.deepEqual(planningStatusLegendFor(meshes.map(x=>x.userData.lifecycle),{appearance:a.mode}),[]);a.dispose();
 });
@@ -73,7 +75,7 @@ test('the actual app shares its visible planning legend with export and does not
   const source=app.split('\n').find(line=>line.startsWith('function currentStatusLegend()'));
   const context={planningStatusLegendFor,appearance:{mode:'status'},modelMeshes:[{visible:true,userData:{lifecycle:'approved'}},{visible:true,userData:{lifecycle:'proposed'}},{visible:true,userData:{lifecycle:'unknown'}},{visible:false,userData:{lifecycle:'under_construction'}}]};
   runInNewContext(source,context);
-  assert.deepEqual(context.currentStatusLegend().map(x=>x.key),['approved','proposed','unknown']);
+  assert.deepEqual(context.currentStatusLegend().map(x=>x.key),['planned','unknown']);
   context.appearance.mode='natural';assert.deepEqual(context.currentStatusLegend(),[]);
   assert.match(app,/const legend=currentStatusLegend\(\),layout=presentationLayout/);
   assert.match(app,/drawPresentationFooter\(ctx,\{[^\n]*legend,/);

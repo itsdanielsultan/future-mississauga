@@ -1,3 +1,4 @@
+import {readBeforePlanningReview} from './planning-review-guard.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -7,7 +8,7 @@ import {registryReconciliationScope as scope,registryReconciliationIds,restoreRe
 import {resolveModelLifecycle,displayStatusForLifecycle} from '../public/model-status-materials.js';
 import {applyModelVisibility} from '../public/model-visibility.js';
 import {projectStatus} from '../public/project-cards.js';
-const root=new URL('../',import.meta.url),read=path=>readFileSync(new URL(path,root),'utf8'),json=path=>JSON.parse(read(path));
+const root=new URL('../',import.meta.url),read=path=>readBeforePlanningReview(new URL(path,root),'utf8'),json=path=>JSON.parse(read(path));
 const projects=json('public/data/projects.json'),project=id=>projects.find(p=>p.id===id),overrides=json('public/data/overrides.json');
 const baseline='1bab6c6c165fcbfd180d3583e1075d78f512ba03';
 const prior=path=>JSON.parse(execFileSync('git',['show',baseline+':'+path],{encoding:'utf8',maxBuffer:32*1024*1024}));
@@ -37,7 +38,7 @@ test('four exact source corrections preserve every other project and all geometr
  assert.throws(()=>restoreRegistryReconciliationJSON(JSON.stringify(changed,null,2)),/protected project fields/);
  const corrupt=structuredClone(project('john-69'));corrupt.applicationStatus.cancellationDate='2024-12-17';
  assert.throws(()=>restoreRegistryReconciliationRecord('projects',corrupt),/exact reviewed source fields/);
- for(const [file,hash] of Object.entries(scope.unchangedFiles))assert.equal(sha(readFileSync(new URL(file,root))),hash,file);
+ for(const [file,hash] of Object.entries(scope.unchangedFiles))assert.equal(sha(readBeforePlanningReview(new URL(file,root))),hash,file);
 });
 
 test('the seven-row override guard preserves the original byte pin and rejects exclusion or source drift',()=>{

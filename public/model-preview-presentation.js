@@ -1,4 +1,4 @@
-import {createModelAppearance} from './model-appearance.js?v=20261113-design2';
+import {ALDO_ROOF_SOURCE,createModelAppearance} from './model-appearance.js?v=20261121-roof';
 import {VOYA_ARCHITECTURAL_SOURCE,voyaArchitecturalRole} from './voya-appearance.js?v=20261113-design2';
 
 // A standalone model is centred at the origin. Tighten the depth range around
@@ -10,13 +10,13 @@ export function previewClipping(centreDepth,radius){
 }
 
 export function applyPreviewAppearance(THREE,scene,asset){
-  const source=VOYA_ARCHITECTURAL_SOURCE;
-  if(asset.id!=='voya'||asset.downloadSHA256!==source.sha256)return null;
+  const source=asset.id==='voya'?VOYA_ARCHITECTURAL_SOURCE:asset.id===ALDO_ROOF_SOURCE.assetId?ALDO_ROOF_SOURCE:null;
+  if(!source||asset.downloadSHA256!==source.sha256)return null;
   const appearance=createModelAppearance(THREE);
   scene.traverse(mesh=>{
     if(!mesh.isMesh)return;
     Object.assign(mesh.userData,{assetId:source.assetId,projectId:source.projectId,sourceAssetSHA256:asset.downloadSHA256});
-    if(voyaArchitecturalRole(mesh))appearance.register(mesh,{authored:true});
+    if(source===ALDO_ROOF_SOURCE||voyaArchitecturalRole(mesh))appearance.register(mesh,{authored:true});
   });
   return appearance;
 }

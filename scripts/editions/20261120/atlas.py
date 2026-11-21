@@ -33,7 +33,7 @@ SECTIONS = [
     ('port-credit', 'Port Credit at the river', 'Look for the mouth of the Credit River and the change in scale between the waterfront and the streets inland.'),
     ('lakeview', 'The Lakeview waterfront', 'The shoreline gives the new blocks a clear edge. Trace the streets from established Lakeview toward the water.'),
     ('clarkson', 'The blocks of Clarkson', 'Read the larger sites beside the finer streets and houses to see the different scales within Clarkson.'),
-    ('lorne-park', 'Inside Lorne Park', 'Individual houses and winding residential streets give this view a finer grain than the Downtown plates.'),
+    ('lorne-park', 'Lorne Park around Aldo Drive', 'Aldo Drive sits among winding residential streets. The detailed municipal study spans about 900 metres.'),
     ('erindale', 'Across Erindale and Sheridan', 'Read the larger building footprints against the surrounding residential streets.'),
     ('erin-mills', 'Erin Mills from above', 'Follow the major roads between centres, then look for the smaller streets in the blocks between them.'),
     ('streetsville', 'Streetsville along the Credit', 'The Credit River helps locate Streetsville within the wider city.'),
@@ -150,15 +150,19 @@ def titlebar(c, title, note=''):
         text(c, note, W-M, H-39, 10.5, color=MUTED, right=True)
 
 
-def view_label(row):
+def view_label(row, edition):
     name = row['id']
+    if row['caption'].get('geographicScope')=='aldo_drive_residential_streets_within_900m_study':
+        return 'Neighbourhood study'
     scenario = {'existing': 'Existing buildings', 'future': 'With proposals', 'construction': 'Under construction'}.get(row['caption']['scenario'], '')
     if 'fairview' in name:
         return 'Earlier model' if name.endswith('before') else 'Revised neighbourhood'
     if '-junction-' in name:
-        return 'Street junction · ' + scenario
+        subject = 'Hurontario Street at Highway 403' if edition != '20261120' and '/downtown-junction-' in name else 'Street junction'
+        return subject + ' · ' + scenario
     if '-landmark-' in name:
-        return 'Landmark view · ' + scenario
+        subject = 'Absolute World towers' if edition != '20261120' and '/downtown-landmark-' in name else 'Landmark view'
+        return subject + ' · ' + scenario
     if '-skyline-' in name:
         return 'Skyline · ' + scenario
     if '-portrait-' in name:
@@ -206,6 +210,20 @@ def placed_image(c, source, box, crop=False):
         c.drawImage(ImageReader(stream), x+(w-dw)/2, y+(h-dh)/2, dw, dh)
 
 
+def neighbourhood_opener(c, page, row, source, bearing, number, edition):
+    # The entire camera frame stays above a compact band, like a signed map print.
+    c.setFillColor(HexColor(PAPER))
+    c.rect(0,0,W,H,stroke=0,fill=1)
+    placed_image(c,source,(0,100,W,H-100))
+    text(c,page.title,M,71,21,True)
+    text(c,view_label(row, edition),W-M-51,72,11.5,right=True,color=MUTED)
+    north_arrow(c,bearing,W-M-20,73)
+    wrap(c,page.caption,M,55,W-2*M,11.5,14)
+    line(c,26)
+    text(c,'Future Mississauga  ·  Daniel Sultan',M,12,9.5,color=MUTED)
+    text(c,str(number),W-M,12,9.5,color=MUTED,right=True)
+
+
 def build(args):
     work = args.workspace.resolve()
     work.mkdir(parents=True, exist_ok=True)
@@ -248,7 +266,8 @@ def build(args):
                 return frame['north']['bearingClockwiseFromScreenUpDegrees']
         return published[key].get('northDegrees')
     guide_image = next(r for r in rows if r['id'] == 'wide/downtown-portrait-future.png')
-    printed = args.proof if args.proof else PUBLIC/'downloads/edition-20261120/Mississauga-Atlas.pdf'
+    printed = args.proof if args.proof else PUBLIC/'downloads'/('edition-'+args.edition)/'Mississauga-Atlas.pdf'
+    printed.parent.mkdir(parents=True,exist_ok=True)
     target = printed.with_suffix('.partial')
     c=Canvas(str(target),pagesize=(W,H),pageCompression=1,invariant=1)
     c.setTitle('Future Mississauga · City and neighbourhood atlas')
@@ -305,7 +324,9 @@ def build(args):
             credits(guide_image,n)
             x=459
             text(c,'Reading the colours',x,466,19,True)
-            for i,(label,colour,detail) in enumerate(STATUS):
+            palette=STATUS if args.edition=='20261120' else [
+                (entry['label'],entry['colour'],entry['description']) for entry in read(HERE/'print-key.json')]
+            for i,(label,colour,detail) in enumerate(palette):
                 y=425-74*i
                 c.setFillColor(HexColor(colour))
                 c.roundRect(x,y-1,15,15,3,fill=1,stroke=0)
@@ -319,15 +340,19 @@ def build(args):
             placed_image(c,args.studios/(page.district+'-front.webp'),(M,114,W-2*M,H-179))
             wrap(c,caption,M,95,W-2*M,13,17)
             text(c,attribution,M,44,9.2,color=MUTED)
-            c.linkURL(ARCHIVE+'downloads/edition-20261120/'+page.district+'-review.pdf',(M,109,W-M,H-60),thickness=0)
+            c.linkURL(ARCHIVE+'downloads/edition-'+args.edition+'/'+page.district+'-review.pdf',(M,109,W-M,H-60),thickness=0)
             folio(c,n)
+        elif page.kind=='hero' and args.edition!='20261120':
+            row=page.views[0]
+            credits(row,n)
+            neighbourhood_opener(c,page,row,master(row),bearing(row),n,args.edition)
         else:
             titlebar(c, page.title)
             for r in page.views:
                 credits(r,n)
             if page.kind=='hero' or len(page.views)==1:
                 r = page.views[0]
-                label=view_label(r)
+                label=view_label(r, args.edition)
                 placed_image(c,master(r),(M,107,W-2*M,H-167))
                 text(c,label,M,83,13,True)
                 north_arrow(c,bearing(r),W-M-22,86)
@@ -338,7 +363,7 @@ def build(args):
                 for i,r in enumerate(page.views):
                     x=M+i*(cell+14)
                     placed_image(c,master(r),(x,96,cell,H-166))
-                    text(c,view_label(r),x,72,11,True)
+                    text(c,view_label(r, args.edition),x,72,11,True)
                     north_arrow(c,bearing(r),x+cell-22,75)
             else:
                 rowh=(H-120)/len(page.views)
@@ -347,7 +372,7 @@ def build(args):
                 for i,r in enumerate(page.views):
                     top=H-62-i*rowh
                     placed_image(c,master(r),(M,top-rowh+7,art_width,rowh-14),crop=True)
-                    label = view_label(r).removeprefix('Skyline · ') if panoramic else view_label(r)
+                    label = view_label(r, args.edition).removeprefix('Skyline · ') if panoramic else view_label(r, args.edition)
                     wrap(c,label,M+art_width+18,top-9,W-2*M-art_width-18,13,17,color=INK)
                     north_arrow(c,bearing(r),M+art_width+30,top-63)
             folio(c,n)
@@ -405,7 +430,7 @@ def build(args):
     destination=work/'edition.json'
     destination.write_text(json.dumps(data,indent=2)+'\n')
     if not args.receipts and not args.proof:
-        target=PUBLIC/'data/city-plates-20261120.json'
+        target=PUBLIC/'data'/('city-plates-'+args.edition+'.json')
         temp=target.with_suffix('.tmp')
         temp.write_text(json.dumps(data,indent=2)+'\n')
         temp.replace(target)
@@ -415,6 +440,7 @@ def build(args):
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('workspace',type=Path)
+    parser.add_argument('--edition',default='20261120')
     parser.add_argument('--studios',type=Path,help='Fresh full-resolution front and reverse building illustrations')
     parser.add_argument('--receipts',type=Path,help='Use the freshly rendered signed city-image receipts')
     parser.add_argument('--proof',type=Path,help='Write a proof PDF outside the site and preserve the current catalogue')

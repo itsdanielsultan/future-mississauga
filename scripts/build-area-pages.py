@@ -3,11 +3,12 @@ import json
 from html import escape as e
 from pathlib import Path
 import re
+import sys
 public=Path(__file__).resolve().parents[1]/'public'
 def data(name):return json.loads((public/'data'/(name+'.json')).read_text())
 areas=data('districts'); names={r['id']:r['name'] for r in areas if r['id']!='citywide'}
 names.update({'fairview':'Fairview','lorne-park':'Lorne Park','lisgar':'Lisgar & Argentia'})
-places=data('city-plates-20261120')['plates'];features=data('building-features');buildings=[r for r in data('building-catalogue')['entries'] if r['id'] in features]
+places=data('city-plates-20261121')['plates'];features=data('building-features');buildings=[r for r in data('building-catalogue')['entries'] if r['id'] in features]
 source=(public/'index.html').read_text()
 head=source.split('</head>')[0]
 header=re.search(r'<header class="site-header".*?</header>',source,re.S)[0]
@@ -31,15 +32,29 @@ def page(path,title,content,hero=None,area=None):
  h=re.sub(r'<script[^>]+src="(?:home-routes|downtown-aerial)[^"]+"[^>]*></script>','',h)
  h=re.sub(r'<link[^>]+href="atlas-home-print\.css[^"]*"[^>]*>', '', h)
  h=re.sub(r'<link[^>]+rel="preload"[^>]*>','',h)
- nav=re.sub(r'(data-section="places")(?! aria-current)',r'\1 aria-current="page"',header)
+ h=re.sub(r'<link[^>]+href="atlas-shelves\.css[^"]*"[^>]*>','',h)
+ active = 'location' if area else 'page'
+ nav=header.replace('data-section="places"','data-section="places" aria-current="'+active+'"',1)
  collection=' data-picture-area="'+e(title)+'" data-picture-map="'+e(map_link(area))+'"' if area else ''
- (public/path).write_text(h+'<link rel="stylesheet" href="atlas-places.css?v=20261120"></head><body class="atlas-places"><a class="site-skip" href="#main">Skip to content</a>'+nav+'<main id="main" class="place-main"'+collection+'>'+content+'</main>'+footer+'<script type="module" src="site-ui.js?v=20261120-plates"></script></body></html>\n')
+ rail_css='' if area else '<link rel="stylesheet" href="reading-rail.css?v=20261120-rail">'
+ rail_script='' if area else '<script type="module" src="reading-rail.js?v=20261120-rail"></script>'
+ main_class='place-main' if area else 'place-main place-directory'
+ if not area:
+  # The directory has a dedicated social card, independent of its neighbourhood thumbnails.
+  share=data('edition-shares')['neighbourhoods']
+  for marker in ['<meta property="og:image" content="','<meta name="twitter:image" content="']:
+   h=re.sub(re.escape(marker)+r'[^"]*',lambda _:marker+'https://futuremississauga.com/'+share['url'],h)
+  for field,val in [('width',str(share['width'])),('height',str(share['height'])),('type','image/jpeg')]:
+   h=re.sub(r'(<meta property="og:image:'+field+r'" content=")[^"]+',lambda m:m[1]+val,h)
+ (public/path).write_text(h+rail_css+'<link rel="stylesheet" href="atlas-shelves.css?v=20261120"><link rel="stylesheet" href="atlas-places.css?v=20261120-regions"></head><body class="atlas-places"><a class="site-skip" href="#main">Skip to content</a>'+nav+'<main id="main" tabindex="-1" class="'+main_class+'"'+collection+'>'+content+'</main>'+footer+'<script type="module" src="site-ui.js?v=20261120-plates"></script>'+rail_script+'<script type="module" src="atlas-shelves.js?v=20261120"></script></body></html>\n')
 def member(row,area):
  if area=='fairview':return '/fairview/' in row['id']
  file=row['id'].split('/')[-1]
  return sorted([a for a in names if file.startswith(a+'-')],key=len,reverse=True)[:1]==[area]
 def select(area):
  rows=[r for r in places if member(r,area)]
+ if area=='fairview':
+  return sorted(rows,key=lambda row: row['id']!='neighbourhood/fairview/after')
  return sorted(rows,key=lambda r:(r['id']!='wide/'+area+'-future.png','wide/' not in r['id'],'skyline' in r['id'],'future' not in r['id']))
 def image(row,alt,priority=False):
  preview=row.get('signedPreview') or {'url':row['webImage'],'width':row['width'],'height':row['height']}
@@ -54,10 +69,14 @@ def image(row,alt,priority=False):
  return '<img src="'+e(full)+'"'+srcset+' width="'+str(width)+'" height="'+str(height)+'" alt="'+e(alt)+'" '+('fetchpriority="high"' if priority else 'loading="lazy"')+'>'
 def area_link(id):return 'place-'+id+'.html'
 def map_link(id):
- return 'explore.html?district=citywide&context=fairview' if id=='fairview' else 'explore.html?district='+id
+ district='citywide&context=fairview' if id=='fairview' else id
+ return 'explore.html?district='+district+'&scenario=future&appearance=status'
 
 def view_label(row):
  name=row['id'].split('/')[-1]
+ if name in ('downtown-landmark-future.png','downtown-junction-future.png'):
+  subject='Absolute World towers' if '-landmark-' in name else 'Hurontario Street at Highway 403'
+  return subject+' · '+row['label'].split(' · ')[-1]
  if '-portrait-' in name:
   return 'Closer view · '+row['label']
  if 'landmark-' not in name and 'junction-' not in name and 'skyline-' not in name and row['id'].startswith(('wide/','portraits/')):
@@ -78,11 +97,13 @@ def view_grid(title,rows,portrait=False):
  for r in rows:
   label=view_label(r)
   frames.append('<figure>'+picture_link(r,label+' in '+r['area'])+'<figcaption>'+e(label)+'</figcaption></figure>')
- return '<section class="'+layout+'"><h2>'+e(title)+'</h2><div>'+''.join(frames)+'</div></section>'
+ return '<section class="'+layout+'"><h2>'+e(title)+'</h2><div data-picture-shelf>'+''.join(frames)+'</div></section>'
 
 def title_link(url,label):return '<a class="place-action" href="'+e(url)+'">'+e(label)+' <span aria-hidden="true">→</span></a>'
 def card(id):
- row=select(id)[0];return '<a class="place-card" href="'+area_link(id)+'">'+image(row,'')+'<span>'+e(names[id])+'<i aria-hidden="true">→</i></span></a>'
+ row=select(id)[0]
+ thumb=row.get('signedThumbnail') or {'url':row['thumbnail']}
+ return '<a class="place-card" id="area-'+e(id)+'" href="'+area_link(id)+'"><img loading="lazy" decoding="async" src="'+e(thumb['url'])+'" width="112" height="72" alt=""><span>'+e(names[id])+'<i aria-hidden="true">→</i></span></a>'
 landings={
  'downtown':('mcity-1-2','M City in 3D'),
  'port-credit':('port-credit-lighthouse','Lighthouse site in 3D'),
@@ -97,8 +118,8 @@ for id,title in sorted(names.items(),key=lambda pair:pair[1]):
  links=title_link(map_link(id),'Open 3D map')
  if id in {'downtown','port-credit','lakeview','clarkson'}:
   links+=title_link('compare.html?area='+id,'Compare views')
- body='<header class="place-mast"><div><a class="place-back" href="neighbourhoods.html">Neighbourhoods</a><h1>'+e(title)+'</h1></div><nav aria-label="Explore this neighbourhood">'+links+'</nav></header>'
- body+='<figure class="place-lead">'+picture_link(lead,title+' in the Mississauga model',True)+'<figcaption><span>'+e(lead['label'])+'</span><a href="downloads/edition-20261120/Mississauga-Atlas.pdf#page='+str(lead['page'])+'" data-document-preview>Atlas, page '+str(lead['page'])+' →</a></figcaption></figure>'
+ body='<header class="place-mast"><div><a class="place-back" data-back-to-region href="neighbourhoods.html#area-'+e(id)+'"><span aria-hidden="true">←</span> Neighbourhoods</a><h1>'+e(title)+'</h1></div><nav aria-label="Explore this neighbourhood">'+links+'</nav></header>'
+ body+='<figure class="place-lead">'+picture_link(lead,title+' in the Mississauga model',True)+'<figcaption><span>'+e(lead['label'])+'</span><a href="downloads/edition-20261121/Mississauga-Atlas.pdf#page='+str(lead['page'])+'" data-document-preview>Atlas, page '+str(lead['page'])+' →</a></figcaption></figure>'
  if id in landings:
   project,label=landings[id]
   query='&context=' if project=='port-credit-lighthouse' else '&project='
@@ -108,8 +129,9 @@ for id,title in sorted(names.items(),key=lambda pair:pair[1]):
   for b in studies:
    pageid='building-'+b['id']+'.html'
    if not (public/pageid).is_file():continue
-   img=b.get('image'); li+='<a class="place-study" id="study-'+e(b['id'])+'" href="'+pageid+'?from='+id+'">'+('<img loading="lazy" src="'+e(img['url'])+'" alt="">' if img else '')+'<span>'+e(b['title'])+'<small>'+e(b.get('address') or title)+'</small></span><i aria-hidden="true">→</i></a>'
-  if li:body+='<section class="place-studies"><h2>Buildings in '+e(title)+'</h2><div>'+li+'</div></section>'
+   img=features[b['id']]['cardImage']
+   li+='<a class="place-study" id="study-'+e(b['id'])+'" href="'+pageid+'?from='+id+'"><img loading="lazy" src="'+e(img['url'])+'" width="'+str(img['width'])+'" height="'+str(img['height'])+'" alt=""><span>'+e(b['title'])+'</span><i aria-hidden="true">→</i></a>'
+  if li:body+='<section class="place-studies"><h2>Buildings in '+e(title)+'</h2><div data-picture-shelf>'+li+'</div></section>'
  body+=view_grid('Other views',[r for r in rows[1:] if r['id'].startswith('wide/') or id=='fairview'])
  body+=view_grid('Portrait views',[r for r in rows if r['id'].startswith('portraits/')],True)
  page(area_link(id),title,body,lead,id);cards[id]=card(id)
@@ -123,32 +145,18 @@ regions = {
 mapped=[id for ids in regions.values() for id in ids]
 if sorted(mapped)!=sorted(cards):
  raise ValueError('The directory must list each neighbourhood exactly once.')
+def region_id(title):
+ return title.lower().replace(' ','-')
 def directory_group(title, ids):
- return '<section class="place-directory-group"><h2>'+e(title)+'</h2><div class="place-index">'+''.join(cards[id] for id in ids)+'</div></section>'
-directory = '<header class="place-mast"><h1>Neighbourhoods</h1>'+'<nav aria-label="More ways to explore">'+title_link('gallery.html','Image gallery')+title_link('explore.html','Open city map')+'</nav></header>'
-directory += ''.join(directory_group(region,ids) for region,ids in regions.items())
+ return '<section id="'+region_id(title)+'" class="place-directory-group"><h2>'+e(title)+'</h2><div class="place-index">'+''.join(cards[id] for id in ids)+'</div></section>'
+rail='<nav data-reading-rail data-rail-label="Region" aria-label="Neighbourhood regions"><div data-rail-viewport><div data-rail-track>'+''.join('<a href="#'+region_id(title)+'">'+e(title)+'</a>' for title in regions)+'</div></div></nav>'
+directory='<header class="place-mast"><h1>Neighbourhoods</h1></header>' 
+directory+='<div class="place-directory-layout">'+rail+'<div class="place-regions">'+''.join(directory_group(region,ids) for region,ids in regions.items())+'</div></div>'
 page('neighbourhoods.html','Neighbourhoods',directory,hero)
 print(len(cards),'neighbourhoods')
 
-# Static first paint and the interactive stage switcher use the same edition.
-proposed=next(r for r in places if r['id']=='wide/downtown-skyline-future.png')
-screen=proposed.get('signedPreview') or {'url':proposed['webImage'],'width':proposed['width']}
-original=proposed.get('signedMaster') or proposed['displayMaster']
-compare_path=public/'compare.html'
-compare=compare_path.read_text()
-def bind_stage_image(match):
- tag=match[0]
- values={
-  'src':screen['url'],
-  'srcset':f'{screen["url"]} {screen["width"]}w, {original["url"]} {original["width"]}w',
-  'width':str(original['width']), 'height':str(original['height'])
- }
- for name,value in values.items():
-  tag=re.sub(r'(?<= )'+name+r'="[^"]*"',lambda _:name+'="'+e(value)+'"',tag)
- return tag
-compare,n=re.subn(r'<img id="scenarioImage"[^>]*>',bind_stage_image,compare)
-if n!=1: raise ValueError('Expected the Downtown stage image.')
-compare_path.write_text(compare)
+if '--places-only' in sys.argv:
+ sys.exit(0)
 
 # Keep the picker independent of network lookups when a visitor changes areas.
 home_path=public/'index.html'
@@ -169,8 +177,8 @@ def update_home_picture(match):
  for row in places:
   if not row['id'].startswith(('wide/','portraits/')):continue
   stem=row['id'].replace('/','-').removesuffix('.png')
-  stem_url='gallery/edition-20261120/'+stem
-  signed_url='gallery/edition-20261120/signed/'+stem
+  stem_url='gallery/edition-20261121/'+stem
+  signed_url='gallery/edition-20261121/signed/'+stem
   plain_thumb=str(row['thumbnail'])
   signed_thumb=signed_url+'-thumb.webp'
   thumb=(row.get('signedThumbnail') or {'url':plain_thumb})['url']

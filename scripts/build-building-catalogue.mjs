@@ -77,12 +77,30 @@ for (const project of [...projects].sort((a,b) => a.name.localeCompare(b.name)))
   entries.set(project.id, {id:project.id, projectId:project.id, title:project.name, area:areas.get(district), areaId:district, address:project.address || '', description:'', image:null, credit:null, links:[{label:'City map',url:`explore.html?district=${district}&project=${project.id}`,kind:'city'}]});
 }
 const directoryPictures = JSON.parse(await read('data/directory-pictures.json'));
+const profiles = JSON.parse(await read('data/building-features.json'));
 for (const picture of directoryPictures.entries) {
   const entry = entries.get(picture.id);
-  if (entry && !entry.image) {
+  // An authored landmark thumbnail takes precedence over a panel image extracted from its study.
+  if (entry && (!entry.image || picture.kind === 'study')) {
     entry.image = picture.image;
     entry.imageKind = picture.kind;
     entry.imageLabel = picture.label;
+  }
+}
+for (const [id, profile] of Object.entries(profiles)) {
+  const entry = entries.get(id);
+  if (entry && profile.cardImage) {
+    entry.image = profile.cardImage;
+    entry.imageKind = 'study';
+    entry.imageLabel = 'Detailed building model';
+  }
+}
+// A detailed model can require the citywide viewer even when the address has a known district.
+for (const entry of entries.values()) {
+  const location = projectById.get(entry.projectId)?.researchArea;
+  if (entry.areaId === 'citywide' && location !== 'citywide' && areas.has(location)) {
+    entry.areaId = location;
+    entry.area = areas.get(location);
   }
 }
 const data = {schema: 'future-mississauga-building-catalogue/v1', entries: [...entries.values()]};

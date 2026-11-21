@@ -1,66 +1,101 @@
 export function studyMatches(row, query, area) {
-  return (!area || row.area === area) && query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean).every(term => `${row.title} ${row.area}`.toLocaleLowerCase().includes(term));
+  const words = query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
+  const text = [row.title, row.area, row.address].filter(Boolean).join(' ').toLocaleLowerCase();
+  return (!area || row.area === area) && words.every(word => text.includes(word));
 }
 
-const browser = typeof document === 'undefined' ? null : document.querySelector('[data-study-browser]');
-if (browser) {
-  const sections = [...document.querySelectorAll('.render-project,.model-change')];
-  const rows = sections.map(section => ({section, id: section.id, title: section.querySelector('h2')?.textContent.trim() || section.id, area: section.dataset.area || (section.querySelector('.eyebrow')?.textContent.trim().split(' · ')[0] || 'Mississauga').replace(/^City Centre$/, 'Downtown')}));
-  const search = browser.querySelector('[type="search"]'), area = browser.querySelector('[data-study-area]'), choice = browser.querySelector('[data-study-choice]'), count = browser.querySelector('[role="status"]');
-  const previous = browser.querySelector('[data-study-previous]'), next = browser.querySelector('[data-study-next]');
-  const currentNote = document.querySelector('[data-current-study-note]');
-  const directoryLinks = [...document.querySelectorAll('[data-study-link]')];
-  function linkedStudy() {
-    if (!location.hash) return (rows.find(row => row.section.hasAttribute('data-landing-study')) || rows.find(row => !row.section.hasAttribute('data-archive-study')))?.id;
+function installStudyDirectory(form) {
+  const main = form.closest('main');
+  const directory = main.querySelector('.study-list');
+  const search = form.querySelector('[type="search"]');
+  const area = form.querySelector('[data-study-area]');
+  const status = form.querySelector('[role="status"]');
+  const sections = [...main.querySelectorAll('.render-project, .model-change')];
+  const groups = [...directory.querySelectorAll('.study-directory-group')];
+  const items = [...directory.querySelectorAll('[data-study-link]')].map(link => ({
+    id: link.dataset.studyLink, link, area: link.dataset.area,
+    title: link.querySelector('span').textContent, address: link.dataset.address
+  }));
+  for (const name of [...new Set(items.map(item => item.area))].sort((a,b) => a.localeCompare(b))) {
+    area.add(new Option(name, name));
+  }
+  const getSection = () => {
     let anchor;
     try { anchor = decodeURIComponent(location.hash.slice(1)); } catch { return null; }
-    const target = document.getElementById(anchor);
-    return target?.closest('.render-project,.model-change')?.id || null;
-  }
-  let selected = linkedStudy();
-  [...new Set(rows.filter(row => !row.section.hasAttribute('data-archive-study')).map(row => row.area))].sort((a, b) => a.localeCompare(b)).forEach(name => area.add(new Option(name, name)));
-  function render({historyMode, missingLink = false} = {}) {
-    const matches = rows.filter(row => (!row.section.hasAttribute('data-archive-study') || (row.id === selected && location.hash === '#' + row.id)) && studyMatches(row, search.value, area.value));
-    if (!missingLink && !matches.some(row => row.id === selected)) selected = matches[0]?.id;
-    choice.replaceChildren(...matches.map(row => new Option(row.title, row.id)));
-    if (missingLink) choice.prepend(new Option('Choose a study', ''));
-    choice.value = selected || ''; choice.disabled = !matches.length;
-    if (currentNote) {
-      currentNote.href = selected ? 'study-notes.html#note-' + encodeURIComponent(selected) : 'study-notes.html#pdf-study-notes';
-    }
-    for (const row of rows) row.section.hidden = row.id !== selected;
-    const visibleIds = new Set(matches.map(row => row.id));
-    for (const link of directoryLinks) {
-      const id = link.dataset.studyLink;
-      link.closest('li').hidden = !visibleIds.has(id);
-      if (id === selected) link.setAttribute('aria-current', 'true');
-      else link.removeAttribute('aria-current');
-    }
-    const index = matches.findIndex(row => row.id === selected);
-    previous.disabled = index <= 0; next.disabled = index < 0 || index >= matches.length - 1;
-    count.textContent = matches.length ? `Study ${index + 1} of ${matches.length}` : 'No studies match. Try a different name or area.';
-    if (missingLink) count.textContent = 'This study link is unavailable. Choose a study above.';
-    if (historyMode && selected && location.hash !== '#' + encodeURIComponent(selected)) history[historyMode](history.state, '', '#' + encodeURIComponent(selected));
-  }
-  search.addEventListener('input', () => render({historyMode: 'replaceState'}));
-  area.addEventListener('change', () => render({historyMode: 'replaceState'}));
-  choice.addEventListener('change', () => {selected = choice.value; render({historyMode: 'pushState'});});
-  for (const [button, direction] of [[previous, -1], [next, 1]]) button.addEventListener('click', () => {const options = [...choice.options], i = options.findIndex(option => option.value === selected); selected = options[i + direction]?.value || selected; render({historyMode: 'pushState'});});
-  for (const link of directoryLinks) {
-    link.addEventListener('click', event => {
-      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-      event.preventDefault();
-      selected = link.dataset.studyLink;
-      render({historyMode: 'pushState'});
-      const section = document.getElementById(selected);
-      if (!section) return;
-      const heading = section.querySelector('h2');
-      heading.tabIndex = -1;
-      heading.focus({preventScroll:true});
-      section.scrollIntoView({block:'start'});
+    return anchor ? document.getElementById(anchor)?.closest('.render-project, .model-change') : null;
+  };
+
+  function filter() {
+    const query = search.value;
+    const matches = items.filter(item => {
+      const visible = studyMatches(item, query, area.value);
+      item.link.parentElement.hidden = !visible;
+      return visible;
     });
+    for (const group of groups) group.hidden = !group.querySelector('li:not([hidden])');
+    status.textContent = matches.length ? matches.length + (matches.length === 1 ? ' study' : ' studies') : 'No studies match. Try another name or area.';
   }
-  addEventListener('hashchange', () => { search.value = ''; area.value = ''; selected = linkedStudy(); render({missingLink: !selected}); });
-  browser.addEventListener('submit', event => event.preventDefault());
-  render({missingLink: !selected});
+
+  function show() {
+    const selected = getSection();
+    main.classList.toggle('study-open', Boolean(selected));
+    directory.hidden = form.hidden = Boolean(selected);
+    for (const section of sections) section.hidden = section !== selected;
+    if (!selected) {
+      const url = new URL(location.href);
+      search.value = url.searchParams.get('q') || '';
+      area.value = url.searchParams.get('area') || '';
+      filter();
+    }
+    return selected;
+  }
+
+  function changeFilter() {
+    const url = new URL(location.href);
+    for (const [key,value] of [['q',search.value],['area',area.value]]) {
+      if (value) url.searchParams.set(key,value); else url.searchParams.delete(key);
+    }
+    history.replaceState(history.state,'',url);
+    filter();
+  }
+  function focusCard() {
+    const saved = history.state?.studyIndex;
+    const card = items.find(item => item.id === saved?.id)?.link;
+    if (!card || card.parentElement.hidden) return;
+    card.focus({preventScroll:true});
+    window.scrollBy({top:card.getBoundingClientRect().top - saved.top,behavior:'instant'});
+  }
+
+  form.addEventListener('submit', event => event.preventDefault());
+  search.addEventListener('input', changeFilter);
+  area.addEventListener('change', changeFilter);
+  directory.addEventListener('click', event => {
+    const link = event.target.closest('[data-study-link]');
+    if (!link || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    const current = new URL(location.href);
+    history.replaceState({...history.state, studyIndex:{id:link.dataset.studyLink, top:link.getBoundingClientRect().top}},'',current);
+    current.hash = link.hash;
+    history.pushState({studyFromDirectory:true},'',current);
+    const selected = show();
+    const heading = selected.querySelector('h2');
+    heading.tabIndex = -1;
+    heading.focus({preventScroll:true});
+    selected.scrollIntoView({block:'start',behavior:'instant'});
+  });
+  main.addEventListener('click', event => {
+    if (!event.target.closest('[data-study-back]') || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    if (history.state?.studyFromDirectory) {
+      event.preventDefault();
+      history.back();
+    }
+  });
+  window.addEventListener('popstate', () => {
+    if (!show()) requestAnimationFrame(focusCard);
+  });
+  window.addEventListener('hashchange', show);
+  show();
 }
+
+const form = typeof document !== 'undefined' && document.querySelector('[data-study-browser]');
+if (form) installStudyDirectory(form);

@@ -1,3 +1,5 @@
+import {activeArtworkEdition} from './active-artwork-edition.mjs';
+const artworkEdition=activeArtworkEdition();
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile,mkdtemp,writeFile,rm} from 'node:fs/promises';
@@ -77,7 +79,7 @@ test('the eighty-four-file staging map accepts only the two reviewed Downtown na
 
 test('current film uses the exact accepted public trio and leaves old film assets intact',async()=>{
  const archive=JSON.parse(await readFile(new URL('data/downtown-film-20261113.json',pub),'utf8'));
- const current=JSON.parse(await readFile(new URL('data/downtown-film-20261120.json',pub),'utf8')),home=await readFile(new URL('film.html',pub),'utf8')+await readFile(new URL('sources.html',pub),'utf8');
+ const current=JSON.parse(await readFile(new URL(`data/downtown-film-${artworkEdition}.json`,pub),'utf8')),home=await readFile(new URL('film.html',pub),'utf8')+await readFile(new URL('sources.html',pub),'utf8');
  assert.equal(sha(await readFile(new URL(archive.film.url,pub))),'65bf8bd0aff3d0bb3e8481fc23e829ff44a84df248b04ae2d4166a40b1b08bae');
  assert.deepEqual(current.frames.map(r=>r.startSeconds),[0,4,8]);
  assert.equal(new Set(current.frames.map(r=>r.sourceImageSHA256)).size,3);

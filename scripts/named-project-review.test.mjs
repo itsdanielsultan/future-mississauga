@@ -1,3 +1,4 @@
+import {readBeforePlanningReview} from './planning-review-guard.mjs';
 import {restoreRegistryReconciliationUpdates} from './registry-reconciliation-scope.mjs';
 import {restoreMcityV6Projects,restoreMcityV6Register} from './mcity-v6-scope.mjs';
 import test from 'node:test';
@@ -7,7 +8,7 @@ import {createHash} from 'node:crypto';
 import {projectStatus,projectDetailsHTML} from '../public/project-cards.js';
 import {resolveModelLifecycle} from '../public/model-status-materials.js';
 import {namedProjectReviewFields as scope,beforeNamedProjectReview,restoreNamedProjectReview,restoreNamedProjectJSON,restoreNamedProjectRegister,namedProjectReviewIds} from './named-project-review-scope.mjs';
-const read=path=>fs.readFileSync(new URL('../'+path,import.meta.url),'utf8');
+const read=path=>readBeforePlanningReview(new URL('../'+path,import.meta.url),'utf8');
 const projects=JSON.parse(read('public/data/projects.json'));
 const beforeProjects=JSON.parse(beforeNamedProjectReview('public/data/projects.json'));
 const manifest=JSON.parse(read('public/data/refinement-models.json'));

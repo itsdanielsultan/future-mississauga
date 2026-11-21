@@ -5,12 +5,15 @@ from html import escape, unescape
 from pathlib import Path
 
 public = Path(__file__).resolve().parents[1] / "public"
-plates = {p["id"]: p for p in json.loads((public / "data/city-plates-20261120.json").read_text())["plates"]}
+plates = {p["id"]: p for p in json.loads((public / "data/city-plates-20261121.json").read_text())["plates"]}
 page = public / "social.html"
 
 def bind(card):
     markup = card.group()
     plate = plates[re.search(r'data-plate="([^"]+)"', markup)[1]]
+    named = {"portraits/downtown-landmark-future.png":"Absolute World towers","portraits/downtown-junction-future.png":"Hurontario Street at Highway 403"}
+    if plate["id"] in named:
+        markup = re.sub(r'data-view-title="[^"]+"','data-view-title="'+named[plate["id"]]+'"',markup)
     if "displayMaster" not in plate or "download" not in plate:
         raise ValueError("Missing portrait originals for " + plate["id"])
     master, download = plate.get("signedMaster",plate["displayMaster"]), plate["download"]
@@ -37,7 +40,11 @@ def bind(card):
     markup = re.sub(r'<div class="card-copy[^"]*">.*?</div>',lambda _: summary,markup,count=1)
     markup = re.sub(r'aria-label="Preview [^"]+"', 'aria-label="' + escape("Preview " + title) + '"', markup, count=1)
     markup = re.sub(r'aria-label="Download [^"]+"', 'aria-label="' + escape("Download " + title + " PNG") + '"', markup, count=1)
-    markup = re.sub(r'title="Download [^"]+"', 'title="Download signed PNG"', markup, count=1)
+    edge = max(download["width"], download["height"])
+    # Match the gallery's half-K display. The tooltip always gives exact pixels.
+    size = f"{int(edge / 512 + .5) / 2:g}K" if edge >= 1024 else f"{edge} px"
+    markup = re.sub(r' data-resolution="[^"]*"', '', markup, count=1)
+    markup = re.sub(r'title="Download [^"]+"', f'data-resolution="{size}" title="Download signed PNG ({download["width"]} × {download["height"]})"', markup, count=1)
     markup = markup.replace('href="https://futuremississauga.com/sources.html"', 'href="sources.html"')
 
     def picture(tag):
@@ -54,16 +61,10 @@ def bind(card):
 result, count = re.subn(r'<article\b[^>]* data-plate="portraits/[^"]+".*?</article>', bind, page.read_text(), flags=re.S)
 if count != sum(key.startswith("portraits/") for key in plates):
     raise ValueError(f"Matched {count} portrait cards")
-# Keep full notices in each signed file and in one readable credit beneath the collection.
-start = result.index('<section class="social-context"')
-end = result.index('</section>',start)+len('</section>')
-collection_credit = ('<section class="social-context" aria-labelledby="socialContextTitle"><h2 id="socialContextTitle">Sharing a portrait</h2>'
-                    '<div><p>Keep the artist’s signature with the image.</p><p>City of Mississauga · '
-                    '<a href="https://www.openstreetmap.org/copyright">© OpenStreetMap</a> · '
-                    '<a href="sources.html#data">Sources and licences</a></p></div></section>')
-result = result[:start] + collection_credit + result[end:]
 if '<div class="portrait-results">' not in result:
     result = result.replace('<section class="portrait-collection">','<div class="portrait-results"><section class="portrait-collection">',1)
     result = result.replace('<section class="social-context"', '</div><section class="social-context"',1)
+# The signed originals carry the notices, and the site footer links the map credit.
+result = re.sub(r'<section class="social-context"[^>]*>.*?</section>', '', result, count=1, flags=re.S)
 page.write_text(result)
 print(f"Bound {count} portrait thumbnails, full scenes and credited downloads")

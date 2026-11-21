@@ -1,3 +1,5 @@
+import {activeArtworkEdition} from './active-artwork-edition.mjs';
+const artworkEdition=activeArtworkEdition();
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -14,9 +16,9 @@ const updates = read('updates.html');
 test('Sources removes the false tab strip while preserving real download and source destinations', () => {
   assert.doesNotMatch(sources, /sources-jumps|sources\.js/);
   assert.equal(fs.existsSync(new URL('sources.js', publicRoot)), false);
-  const catalogue = JSON.parse(read('data/document-previews-20261120.json'));
+  const catalogue = JSON.parse(read(`data/document-previews-${artworkEdition}.json`));
   const currentAtlas = catalogue.documents.at(-1);
-  assert.equal(currentAtlas.pages, JSON.parse(read('data/city-plates-20261120.json')).atlasPages);
+  assert.equal(currentAtlas.pages, JSON.parse(read(`data/city-plates-${artworkEdition}.json`)).atlasPages);
   assert(sources.includes(currentAtlas.pages + ' pages · PDF'));
   assert.equal(currentAtlas.zoomWidth, 2880);
   assert(currentAtlas.pageSections.some(section => section.label === 'How to read the city'));
@@ -37,7 +39,7 @@ test('Sources removes the false tab strip while preserving real download and sou
     'https://www.ontario.ca/page/open-government-licence-ontario',
     'https://www.openstreetmap.org/copyright', 'https://opendatacommons.org/licenses/odbl/1-0/'
   ]) assert(sources.includes('href="'+href+'"'), href);
-  const atlas = [...sources.matchAll(/<a\b[^>]+href="downloads\/edition-20261120\/Mississauga-Atlas\.pdf[^>]*>/g)].map(m=>m[0]);
+  const atlas = [...sources.matchAll(/<a\b[^>]*>/g)].map(m=>m[0]).filter(tag=>tag.includes('href="'+currentAtlas.url+'"'));
   assert(atlas.some(tag=>/data-document-preview/.test(tag) && !/\sdownload(?:\s|>)/.test(tag)));
   assert(atlas.some(tag=>/data-download/.test(tag) && /\sdownload(?:\s|>)/.test(tag)));
   assert.match(sources, /Contains information licensed under the Open Government Licence – Ontario\./);
@@ -46,7 +48,7 @@ test('Sources removes the false tab strip while preserving real download and sou
 });
 
 test('current source cards preview and download the matching city editions', () => {
-  const current = JSON.parse(read('data/city-plates-20261120.json')).plates;
+  const current = JSON.parse(read(`data/city-plates-${artworkEdition}.json`)).plates;
   const historical = JSON.parse(read('data/native-media-20261102.json')).images;
   for (const [id, identity] of [['citywide-image', 'wide/citywide-future.png'],
                                 ['portrait-images', 'portraits/port-credit-portrait-future.png']]) {
@@ -54,12 +56,17 @@ test('current source cards preview and download the matching city editions', () 
     const plate = current.find(item => item.id === identity);
     const old = historical.find(item => item.identity === identity);
     assert(card.includes('data-edition-plate="' + identity + '"'));
-    assert(card.includes('src="' + plate.thumbnail + '"') && card.includes(plate.webImage + ' ' + plate.width + 'w'));
-    assert(card.includes('href="' + plate.displayMaster.url + '"') && card.includes('aria-haspopup="dialog"'));
+    const signed=artworkEdition==='20261121';
+    const thumb=signed?plate.signedThumbnail:{url:plate.thumbnail};
+    const preview=signed?plate.signedPreview:{url:plate.webImage,width:plate.width};
+    const master=signed?plate.signedMaster:plate.displayMaster;
+    assert(card.includes('src="' + thumb.url + '"') && card.includes(preview.url + ' ' + preview.width + 'w'));
+    if(signed)assert(card.includes(thumb.url+' '+thumb.width+'w'));
+    assert(card.includes('href="' + master.url + '"') && card.includes('aria-haspopup="dialog"'));
     assert(card.includes('data-preview-download="' + plate.download.url + '"'));
     assert(card.includes('href="' + plate.download.url + '" download data-download'));
     assert(!card.includes(old.displayMaster.url) && !card.includes(old.download.url));
-    for (const asset of [plate.displayMaster, plate.download]) {
+    for (const asset of [master, plate.download]) {
       const contents = fs.readFileSync(new URL(asset.url, publicRoot));
       assert.equal(contents.length, asset.bytes);
       assert.equal(createHash('sha256').update(contents).digest('hex'), asset.sha256);
@@ -67,19 +74,19 @@ test('current source cards preview and download the matching city editions', () 
     for (const credit of plate.attribution.requiredModelCredits) assert(card.includes(credit));
   }
   const downtown = sources.split('id="downtown-print"')[1].split('</p>')[0];
-  assert(downtown.includes('20 November 2026'));
-  for (const url of ['gallery/edition-20261120/originals/home-downtown-future-print.png',
-                     'downloads/edition-20261120/Downtown-future-print.pdf']) {
+  assert(downtown.includes(artworkEdition.slice(6)+' November 2026'));
+  for (const url of [`gallery/edition-${artworkEdition}/originals/home-downtown-future-print.png`,
+                     `downloads/edition-${artworkEdition}/Downtown-future-print.pdf`]) {
     assert(downtown.includes('href="' + url + '" download data-download'));
     assert(fs.existsSync(new URL(url, publicRoot)));
   }
 });
 
 test('all active building booklets have matching downloads, page previews, searchable text and credits', () => {
-  const catalogue = JSON.parse(read('data/document-previews-20261120.json'));
-  const texts = JSON.parse(gunzipSync(Buffer.from(read('document-page-text-20261120.txt'), 'base64')));
+  const catalogue = JSON.parse(read(`data/document-previews-${artworkEdition}.json`));
+  const texts = JSON.parse(gunzipSync(Buffer.from(read(`document-page-text-${artworkEdition}.txt`), 'base64')));
   const downloads = read('downloads.html');
-  const booklets = catalogue.documents.filter(doc => doc.url.startsWith('downloads/edition-20261120/') && doc.url.endsWith('-review.pdf'));
+  const booklets = catalogue.documents.filter(doc => doc.url.startsWith(`downloads/edition-${artworkEdition}/`) && doc.url.endsWith('-review.pdf'));
   assert.equal(booklets.length, 11);
   for (const book of booklets) {
     const pdf = fs.readFileSync(new URL(book.url, publicRoot));
@@ -100,7 +107,7 @@ test('all active building booklets have matching downloads, page previews, searc
 });
 
 test('the Sources atlas cover opens the same current document as its separate download', () => {
-  const document = JSON.parse(read('data/document-previews-20261120.json')).documents.at(-1);
+  const document = JSON.parse(read(`data/document-previews-${artworkEdition}.json`)).documents.at(-1);
   const card = sources.match(/<article\b[^>]*id="picture-atlas"[\s\S]*?<\/article>/)?.[0];
   assert(card, 'the atlas is a visual resource');
   const preview = card.match(/<a\b[^>]*data-document-preview[^>]*>[\s\S]*?<\/a>/)?.[0];
@@ -108,6 +115,10 @@ test('the Sources atlas cover opens the same current document as its separate do
   assert(!/\sdownload(?:\s|>)/.test(preview), 'activating the cover previews the document');
   const cover = document.base + document.prefix + '01.avif';
   assert(preview.includes('src="' + cover + '"'));
+  if (artworkEdition==='20261121') {
+    const image=preview.match(/<img\b[^>]*>/)?.[0];
+    assert(image.includes('width="'+document.width+'"') && image.includes('height="'+document.height+'"'),'cover uses the document aspect ratio');
+  }
   assert(fs.existsSync(new URL(cover, publicRoot)));
   assert(card.includes('href="' + document.url + '" download data-download'));
 });

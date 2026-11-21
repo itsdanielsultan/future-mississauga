@@ -15,7 +15,7 @@ const destinations = [
 ];
 
 const navigation = /(<nav class="site-nav"[^>]*>)([\s\S]*?)(<\/nav>)/;
-const siteFooter = /(<footer class="compact-footer"><div class="footer-identity">[\s\S]*?<\/div>)[\s\S]*?(<p class="footer-attribution">[\s\S]*?<\/p>)(<\/footer>)/;
+const siteFooter = /(<footer class="compact-footer"><div class="footer-identity">[\s\S]*?<\/div>)[\s\S]*?(<\/footer>)/;
 const sitemap = [];
 for (const name of (await readdir(pages)).sort()) {
   if (!name.endsWith('.html')) continue;
@@ -31,10 +31,7 @@ for (const name of (await readdir(pages)).sort()) {
       return '<a href="'+href+'" data-section="'+key+'"'+active+'>'+label+'</a>';
     });
     return opening + links.join('') + closing;
-  }).replace(siteFooter, (_, identity, attribution, closing) => {
-    // The map has a conditional OpenStreetMap credit. Preserve it, along with each page's licence text.
-    return identity + attribution.replace(' · <a href="sources.html#data">Data licences</a>', '') + closing;
-  });
+  }).replace(siteFooter, '$1$2');
 
   // Give keyboard visitors a predictable landing point after the skip link.
   updated = updated.replace(/<main\b(?=[^>]*\bid="main")(?![^>]*\btabindex=)([^>]*)>/, '<main$1 tabindex="-1">');

@@ -1,6 +1,10 @@
 # November 20, 2026 render edition
 
-The 69 city plates and two homepage views use 28 packed Blender scenes. Each entry in `cameras.json` records its camera, lighting, render dimensions, sample count, and the checksums of the packed scene and its original import record. The final Downtown material rule preserves Voya’s concrete podium and planted roofs. The six dated Blender adapters retain the source checks used for the general city, Downtown and waterfront captures.
+The 69 city plates and three matched homepage views use 28 packed Blender scenes. Each entry in `cameras.json` records its camera, lighting, render dimensions, sample count, and the checksums of the packed scene and its original import record. The final Downtown material rule preserves Voya’s concrete podium and planted roofs. The six dated Blender adapters retain the source checks used for the general city, Downtown and waterfront captures.
+
+## November 21 project revisions
+
+For the November 21 edition, pass `--edition 20261121` and `--project-models "$REGISTERED_MODELS"` to `replay.py`. The model folder contains the owner’s `exchange-phase` and `scene-refresh` directories. The 34 affected cameras use the specific model revisions in `../20261121/city-project-replacements.json`. A render receipt records each original mesh the adapter hid, each replacement checksum and its triangle count. The packed source scenes remain available for earlier editions.
 
 ## Rebuild a city view
 
@@ -14,7 +18,7 @@ python3 "$recipe/replay.py" --archive "$MODEL_ARCHIVE" --workspace "$RENDER_WORK
   --view home/downtown-future.png --prepare
 ```
 
-Open the generated `render-in-blender.py` in Blender’s **Scripting** workspace and choose **Run Script**. The original edition used Blender 5.2.2 LTS, Cycles and Metal. For a small proof add `--proof-edge 320`. Proofs go in a separate output folder. To build the entire edition, omit `--view`. For a background workstation build, replace `--prepare` with `--blender /path/to/blender`. Completed native runs write the RGBA image, actual projected north and a render receipt. Local working copies with a sibling .png.restore.json use a lossless delta against their named baseline. Run python3 native_storage.py /path/to/scene-rgba.png to recover the exact native file. The release verifier checks the fully reconstructed SHA256 directly. The output folder for each view must be empty. On volumes with less than 4 GiB free, this edition uses one 8,192-pixel Cycles tile so the full-resolution frame can render without a large temporary EXR. This changes scratch storage only; the camera, sample count, lighting and native dimensions stay fixed.
+Open the generated `render-in-blender.py` in Blender’s **Scripting** workspace and choose **Run Script**. The original edition used Blender 5.2.2 LTS, Cycles and Metal. The matched construction cover uses Blender 5.3 with Cycles. Set FM_CYCLES_DEVICE=CPU to use the CPU on a headless Mac. For a small proof add `--proof-edge 320`. Proofs go in a separate output folder. To build the entire edition, omit `--view`. For a background workstation build, replace `--prepare` with `--blender /path/to/blender`. Completed native runs write the RGBA image, actual projected north and a render receipt. Local working copies with a sibling .png.restore.json use a lossless delta against their named baseline. Run python3 native_storage.py /path/to/scene-rgba.png to recover the exact native file. The release verifier checks the fully reconstructed SHA256 directly. The output folder for each view must be empty. On volumes with less than 4 GiB free, this edition uses one 8,192-pixel Cycles tile so the full-resolution frame can render without a large temporary EXR. This changes scratch storage only; the camera, sample count, lighting and native dimensions stay fixed.
 
 ## Produce the website images, film and atlas
 
@@ -22,6 +26,7 @@ The publication tools use Pillow with WebP and AVIF support, NumPy, ReportLab, p
 
 ```sh
 python3 "$recipe/grade.py" "$RENDER_WORK"
+python3 "$recipe/grade-cooksville.py" "$RENDER_WORK"
 python3 scripts/compose-city-originals.py "$RENDER_WORK"
 python3 "$recipe/atlas.py" "$RENDER_WORK" --studios "$RENDER_WORK/booklet-models" --receipts "$RENDER_WORK/original-receipts"
 python3 "$recipe/film.py" "$RENDER_WORK"
@@ -32,7 +37,7 @@ python3 scripts/build-edition-shares.py
 python3 "$recipe/verify-city.py" "$RENDER_WORK"
 ```
 
-Prepare the building illustrations in the next section first, since the atlas includes two of those studies. The atlas opens with a skyline cover, linked illustrated contents and reading key, followed by all 69 city views, two individual building studies and a page-by-page source index. It writes the page map used by the website and checks native image resolution at the actual print size. The current reader loads a detailed 2,880-pixel page as the reader zooms. The 1920 × 1080 compare film holds each of the three skyline stages for four seconds, with a quarter-second transition between the chapters and the author credit inside every frame. The packaging step creates the two homepage print PDFs and WebP covers and records the actual files served by the galleries.
+Prepare the building illustrations in the next section first, since the atlas includes two of those studies. The atlas opens with a skyline cover, linked illustrated contents and reading key, followed by all 69 city views, two individual building studies and a page-by-page source index. It writes the page map used by the website and checks native image resolution at the actual print size. The current reader loads a detailed 2,880-pixel page as the reader zooms. The 1920 × 1080 compare film holds each of the three skyline stages for four seconds, with a quarter-second transition between the chapters and the author credit inside every frame. The packaging step creates the three homepage print PDFs and WebP covers and records the actual files served by the galleries.
 
 ## Rebuild the building illustrations and booklets
 

@@ -2,11 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
-import {downtownAerial} from '../public/downtown-aerial.js';
-import {assetURL} from '../public/asset-delivery.js';
-import {mediaPreviewInfo,comparisonPair} from '../public/clean-media.js';
-import {plateCaption} from '../public/edition-pictures.js';
-import {buildGalleryCatalogue,filterGallery,galleryViews} from '../public/gallery-catalogue.js';
+import {plateCaption, editionPreview} from '../public/edition-pictures.js';
+import {filterGallery} from '../public/gallery-catalogue.js';
 
 const pub = new URL('../public/', import.meta.url);
 const source = fs.readFileSync(new URL('gallery.js', pub), 'utf8').replace(/^import .*;\n/gm, '');
@@ -14,7 +11,9 @@ const entry = fs.readFileSync(new URL('gallery-entry.js', pub), 'utf8');
 const galleryImports = [...entry.matchAll(/import\(\s*(['"])\.\/gallery\.js(?:\?[^'"]*)?\1\s*\)/g)];
 assert.equal(galleryImports.length, 1, 'the entry must import the gallery exactly once');
 const districtData = JSON.parse(fs.readFileSync(new URL('data/districts.json', pub)));
-const pictureData = JSON.parse(fs.readFileSync(new URL('data/picture-assets.json', pub)));
+const editionStamp = fs.readFileSync(new URL('gallery.html',pub),'utf8').match(/id="galleryGrid"[^>]*data-edition="(\d{8})"/)[1];
+const editionData=JSON.parse(fs.readFileSync(new URL('data/city-plates-'+editionStamp+'.json',pub))).plates;
+const selectedPlate=editionData.find(row=>row.id==='wide/downtown-skyline-future.png');
 const tick = () => new Promise(resolve => setImmediate(resolve));
 function deferred() {
   let resolve, reject;
@@ -43,11 +42,17 @@ function harness({bootstrap = true, failedImport = false} = {}) {
       click() { if (!this.disabled) click(this); },
     };
   }
-  const hero = node('button'); hero.dataset.open = 'downtown'; hero.dataset.view='skyline'; hero.setAttribute('data-aerial-feature', ''); buttons.push(hero);
-  const elements = new Map(['.hero', '#galleryGrid', '#perspectiveGrid', '#pictureCompare', '#compareDivider', '#pictureSlider', '#beforePicture', '#comparisonDistrict'].map(id => [id, node()]));
-  elements.get('.hero').querySelector=selector=>selector==='button'?hero:node();
-  for(const id of ['#galleryArea','#galleryView']){elements.set(id,node());elements.get(id).value='all';}
-  elements.set('#skylineScenario',node());elements.get('#skylineScenario').value='skyline';
+  const hero = node('a'); hero.href = selectedPlate.signedMaster.url; hero.dataset.open = 'downtown'; hero.dataset.view='skyline'; hero.setAttribute('data-aerial-feature', ''); buttons.push(hero);
+  const grid=node(),card=node();
+  card.dataset={file:'downtown-skyline-future.png',areaTitle:'Downtown',viewTitle:'Skyline',type:'skyline',scenario:'Future scenario'};
+  card.querySelector=selector=>selector==='[data-open]'?hero:node();
+  grid.querySelectorAll=selector=>selector==='.picture-card'?[card]:[];
+  grid.dataset.edition=editionStamp;
+  const elements = new Map([['#galleryGrid',grid]]);
+  for(const id of ['#galleryArea','#galleryView']) {
+    const control=node();control.value='all';control.options=[{value:'all',textContent:'All areas'}];control.selectedOptions=control.options;
+    elements.set(id,control);
+  }
   const document = {
     readyState: 'loading',
     querySelector: selector => {if(!elements.has(selector))elements.set(selector,node());return elements.get(selector);},
@@ -63,16 +68,18 @@ function harness({bootstrap = true, failedImport = false} = {}) {
   function click(target) {
     const event = {target, button: 0, defaultPrevented: false, preventDefault() { this.defaultPrevented = true; }, stopImmediatePropagation() { this.stopped = true; }};
     for (const row of listeners.get('click') || []) { row.callback(event); if (event.stopped) return; }
+    if(target===hero)grid.onclick?.(event);
     target.onclick?.(event);
   }
-  const context = vm.createContext({document, URL, location: {href:'https://futuremississauga.com/gallery.html',hash:'',reload() { reloads++; }},window:windowState,
-    fetch: path => data.promise.then(() => ({ok:true,json: async () => structuredClone(path.includes('districts') ? districtData : pictureData)})),
-    loadEditionPlates: async () => new Map(), editionPreview: info => info,
-    refreshPictureAssets: async () => { await metadata.promise; },
-    createImagePreview: () => ({show: info => shows.push(info), setViews() {},setSequence() {}}),
-    installSkylineScenarios(select, mapLink, render) { select.addEventListener("change", render); render(); },
-    downtownAerial, presentationCaption: () => [node(),node()], renderImageAttribution() {},
-    mediaPreviewInfo, comparisonPair, assetURL, plateCaption, buildGalleryCatalogue,filterGallery,galleryViews,updateCleanImageCaption(){},bindComparison() {},
+  let destination;
+  const context=vm.createContext({document,URL,setTimeout,clearTimeout,location:{href:'https://futuremississauga.com/gallery.html',hash:'',reload(){reloads++;},assign(href){destination=href;}},window:windowState,
+    loadEditionPlates:async url=>{
+      assert.equal(url,'data/city-plates-'+editionStamp+'.json');
+      await data.promise;await metadata.promise;
+      return new Map([[selectedPlate.id,selectedPlate]]);
+    }, editionPreview,
+    createImagePreview:()=>({show:info=>shows.push(info),setViews(){},setSequence(){}}),
+    plateCaption,filterGallery,
     loadGallery: () => {
       loads++;
       initialization = failedImport ? Promise.reject(new Error('Module unavailable')) : vm.runInContext('(async () => {' + source + '\n})()', context);
@@ -82,7 +89,7 @@ function harness({bootstrap = true, failedImport = false} = {}) {
   if (bootstrap) {
     vm.runInContext(entry.replace(galleryImports[0][0], 'loadGallery()'), context);
   } else context.loadGallery();
-  return {hero, buttons, shows, notices, data, metadata, click,
+  return {hero, buttons, shows, notices, data, metadata, click,get destination(){return destination;},
     interaction(type){for(const callback of windowListeners.get(type)||[])callback();},
     get manuallyMoved(){return windowState.fmGalleryNavigation?.manual;},
     get loads() { return loads; }, get reloads() { return reloads; },
@@ -121,7 +128,7 @@ test('an early click is kept through data and media metadata waits and opens exa
   h.data.resolve(); await tick(); assert.equal(h.shows.length, 0);
   h.metadata.resolve(); await tick();
   assert.equal(h.shows.length, 1); assert.equal(h.shows[0].area, 'Downtown');
-  assert.equal(h.shows[0].src, mediaPreviewInfo(pictureData.images['downtown-skyline-future.png']).src);
+  assert.equal(h.shows[0].src, selectedPlate.signedMaster.url);
   assert.equal(h.hero.attributes['aria-busy'], undefined);
   assert.equal(h.captureListeners, 0);
   h.click(h.hero); assert.equal(h.shows.length, 2);
@@ -146,10 +153,10 @@ for (const failedImport of [false, true]) test((failedImport ? 'module' : 'metad
   const h = harness({failedImport}); h.click(h.hero); h.ready();
   if (!failedImport) { h.data.resolve(); await tick(); h.metadata.reject(new Error('Metadata unavailable')); }
   await tick();
-  assert.equal(h.captureListeners, 0); assert.equal(h.hero.disabled, true);
+  assert.equal(h.captureListeners, 0); assert.equal(h.hero.disabled, false); assert.equal(h.destination, selectedPlate.signedMaster.url);
   assert.equal(h.hero.attributes['aria-busy'], undefined); assert.equal(h.shows.length, 0);
   assert.equal(h.notices.length, 1); assert.equal(h.notices[0].attributes.role, 'alert');
-  assert.match(h.notices[0].children[0], /Pictures could not load/);
+  assert.match(h.notices[0].children[0], /Open any image at full size/);
   h.notices[0].children[1].click(); assert.equal(h.reloads, 1);
 });
 
@@ -160,4 +167,17 @@ test('capture loads before any visible picture and gallery initialization has on
   const tag = tags[0][0];
   assert(html.indexOf(tag) < html.indexOf('id="galleryGrid"'));
   assert(!html.includes('src="gallery.js?'));
+});
+
+test('the page itself carries every signed landscape view before JavaScript runs', async()=>{
+  const {staticLandscapeGallery}=await import('./build-gallery.mjs');
+  const html=fs.readFileSync(new URL('gallery.html',pub),'utf8');
+  const gallery=staticLandscapeGallery(districtData,editionData);
+  assert.equal(gallery.count,editionData.filter(p=>p.id.startsWith('wide/')).length);
+  assert(html.includes(gallery.content));
+  assert(html.includes(gallery.options));
+  assert(!html.includes('Loading pictures'));
+  for(const p of editionData.filter(p=>p.id.startsWith('wide/'))){
+    for(const key of ['signedMaster','signedThumbnail','signedPreview','download'])assert(html.includes(p[key].url),p.id+' '+key);
+  }
 });

@@ -1,0 +1,4624 @@
+{
+  "edition": "20261121",
+  "creator": "Daniel Sultan",
+  "coordinates": "Local Blender studio coordinates in metres. XYZ Euler values are in radians. Lens and sensor sizes are in millimetres. The original camera matrix includes the object transform. Framing applies to nativePixels before the image footer.",
+  "views": [
+    {
+      "project": "ergocentric-275-superior",
+      "label": "Before · City model",
+      "originalCamera": "frontage-before-raw.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.1641542911529541,
+            -0.10503251105546951,
+            0.9808269739151001,
+            118.44522094726562
+          ],
+          [
+            0.9864346981048584,
+            0.01747879385948181,
+            -0.1632210910320282,
+            -14.48412036895752
+          ],
+          [
+            -1.5096030381300807e-07,
+            0.9943151473999023,
+            0.10647693276405334,
+            11.800000190734863
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          118.44522094726562,
+          -14.48412036895752,
+          11.800000190734863
+        ],
+        "rotationEuler": [
+          1.464117169380188,
+          1.5096030381300807e-07,
+          1.405895709991455
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 66.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2200,
+        1344
+      ],
+      "sourceGeometrySHA256": [
+        "bf875a9dc869bfe22727103a3e4658c3417acd43a109848867bc00a1dea5239a",
+        "c3bf9ec74a0d8cf57fc96cb8230b1dc2f59cbacd9163c9deff3881adfb9f632e"
+      ],
+      "recipeSHA256": "7738024de670a3f29460566a0d331c20903cbde0077e55f982c1d9e271131e87",
+      "nativeImageSHA256": "12d13ce7ede192088ab11a375afade905ad62c9ef32eedf3b544b7454be2a655",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/275-Superior-frontage-before.png",
+      "signedSHA256": "8fde2d0b83d26b45a49961377564920701516b1fbba22f7ac416c15d12ca988b"
+    },
+    {
+      "project": "ergocentric-275-superior",
+      "label": "After · Façade detail",
+      "originalCamera": "frontage-after-raw.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.1641542911529541,
+            -0.10503251105546951,
+            0.9808269739151001,
+            118.44522094726562
+          ],
+          [
+            0.9864346981048584,
+            0.01747879385948181,
+            -0.1632210910320282,
+            -14.48412036895752
+          ],
+          [
+            -1.5096030381300807e-07,
+            0.9943151473999023,
+            0.10647693276405334,
+            11.800000190734863
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          118.44522094726562,
+          -14.48412036895752,
+          11.800000190734863
+        ],
+        "rotationEuler": [
+          1.464117169380188,
+          1.5096030381300807e-07,
+          1.405895709991455
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 66.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2200,
+        1344
+      ],
+      "sourceGeometrySHA256": [
+        "bf875a9dc869bfe22727103a3e4658c3417acd43a109848867bc00a1dea5239a",
+        "c3bf9ec74a0d8cf57fc96cb8230b1dc2f59cbacd9163c9deff3881adfb9f632e"
+      ],
+      "recipeSHA256": "7738024de670a3f29460566a0d331c20903cbde0077e55f982c1d9e271131e87",
+      "nativeImageSHA256": "c77d7a073d943821206105c759e049c1d22f8b39ea4b2df96fd29ebf71117d17",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/275-Superior-frontage-after.png",
+      "signedSHA256": "ae66f65de220639fc1744f1d923ff3ebf9c819d03b607aaa78cf8ce3d33c0311"
+    },
+    {
+      "project": "sgm-maritz-6710",
+      "label": "Before · City model",
+      "originalCamera": "frontage-before-raw.png",
+      "camera": {
+        "type": "PERSP",
+        "matrixWorld": [
+          [
+            0.05976470559835434,
+            0.040568236261606216,
+            0.9973877668380737,
+            102.01664733886719
+          ],
+          [
+            0.9982125163078308,
+            -0.002428900683298707,
+            -0.059715330600738525,
+            -24.561115264892578
+          ],
+          [
+            1.0200660760517621e-08,
+            0.9991738200187683,
+            -0.04064088314771652,
+            3.5
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          102.01664733886719,
+          -24.561115264892578,
+          3.5
+        ],
+        "rotationEuler": [
+          1.6114484071731567,
+          -1.0200660760517621e-08,
+          1.5109959840774536
+        ],
+        "rotationMode": "XYZ",
+        "lens": 30.0,
+        "orthographicScale": 235.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2200,
+        1344
+      ],
+      "sourceGeometrySHA256": [
+        "8b67989cd54e9ecbdf66f866de5c6e2a2828d338952471ba83b862849f7c58a4",
+        "d7e421984a075ccabe504ed17f7d70614ab110e66277fd626a7dbb246e4fe28f"
+      ],
+      "recipeSHA256": "8fb0541d13ec9d140d27ba134acefe6def5172d0883e598237544a1a0a69e0c2",
+      "nativeImageSHA256": "943115637a41fdd04464a5f6792e5a472484b238a671fe446a424a1872916efa",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/6710-Maritz-frontage-before.png",
+      "signedSHA256": "4aa39f4cd07f259ab3b2d29fcfc22666739b3e7ddb52d9567597420eb242932c"
+    },
+    {
+      "project": "sgm-maritz-6710",
+      "label": "After · Façade detail",
+      "originalCamera": "frontage-after-raw.png",
+      "camera": {
+        "type": "PERSP",
+        "matrixWorld": [
+          [
+            0.05976470559835434,
+            0.040568236261606216,
+            0.9973877668380737,
+            102.01664733886719
+          ],
+          [
+            0.9982125163078308,
+            -0.002428900683298707,
+            -0.059715330600738525,
+            -24.561115264892578
+          ],
+          [
+            1.0200660760517621e-08,
+            0.9991738200187683,
+            -0.04064088314771652,
+            3.5
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          102.01664733886719,
+          -24.561115264892578,
+          3.5
+        ],
+        "rotationEuler": [
+          1.6114484071731567,
+          -1.0200660760517621e-08,
+          1.5109959840774536
+        ],
+        "rotationMode": "XYZ",
+        "lens": 30.0,
+        "orthographicScale": 235.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2200,
+        1344
+      ],
+      "sourceGeometrySHA256": [
+        "8b67989cd54e9ecbdf66f866de5c6e2a2828d338952471ba83b862849f7c58a4",
+        "d7e421984a075ccabe504ed17f7d70614ab110e66277fd626a7dbb246e4fe28f"
+      ],
+      "recipeSHA256": "8fb0541d13ec9d140d27ba134acefe6def5172d0883e598237544a1a0a69e0c2",
+      "nativeImageSHA256": "48322653a98896efa86c530ebecb34df0fe1ea28bf97026284a8b9688009e15c",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/6710-Maritz-frontage-after.png",
+      "signedSHA256": "08344a0b199c5014dcea98ab14dfd567406572e31ae57f6859f5fd59d0fbadc1"
+    },
+    {
+      "project": "gala-gateway",
+      "label": "Steel frame and stones",
+      "originalCamera": "Gala-Gateway-after-corner.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.8741573095321655,
+            0.14414151012897491,
+            -0.46375879645347595,
+            -5.0
+          ],
+          [
+            -0.4856428802013397,
+            0.2594548165798187,
+            -0.8347659707069397,
+            -9.0
+          ],
+          [
+            1.558521489641862e-08,
+            0.9549379348754883,
+            0.29680562019348145,
+            4.25
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -5.0,
+          -9.0,
+          4.25
+        ],
+        "rotationEuler": [
+          1.2694505453109741,
+          -1.558521489641862e-08,
+          -0.5070984363555908
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 7.800000190734863,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "589368f0278cdd83cefd85cd0dcbaa2ead98992c5046ff2af47038114eda49d2",
+        "a1ffc31931fe1700370a07893023fb4d4ddf55e37a5bfb3dcc46bef84b63a81b"
+      ],
+      "recipeSHA256": "c454408aad1385372caead8f3d95140c3de5f3101b35509f6232b85bf03b6082",
+      "nativeImageSHA256": "001602601629657f773c7959fd09ddb0a5293b60522aa2fbf9e8676120225f18",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Gala-Gateway-after-corner.png",
+      "signedSHA256": "c341b6a1b90e4b033fe413344faae60bc69c9d7e11f6c8f4095733fa62d4a641"
+    },
+    {
+      "project": "gala-gateway",
+      "label": "Front view",
+      "originalCamera": "Gala-Gateway-after-front.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.11914512515068054,
+            -0.9928768277168274,
+            -10.0
+          ],
+          [
+            0.0,
+            0.9928768277168274,
+            0.11914512515068054,
+            2.3000001907348633
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          0.0,
+          -10.0,
+          2.3000001907348633
+        ],
+        "rotationEuler": [
+          1.4513674974441528,
+          -0.0,
+          0.0
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 7.599999904632568,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "589368f0278cdd83cefd85cd0dcbaa2ead98992c5046ff2af47038114eda49d2",
+        "a1ffc31931fe1700370a07893023fb4d4ddf55e37a5bfb3dcc46bef84b63a81b"
+      ],
+      "recipeSHA256": "c454408aad1385372caead8f3d95140c3de5f3101b35509f6232b85bf03b6082",
+      "nativeImageSHA256": "567b918a521bbfb9230862b340c59c9228bcc2beffd70e63120f5105b6c71d05",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Gala-Gateway-after-front.png",
+      "signedSHA256": "2b56ef24a29fcfb1a64e18c732514ec02c788f81610c64b470634f012db9cd47"
+    },
+    {
+      "project": "winding-trail-1355",
+      "label": "Before · Front",
+      "originalCamera": "Winding-Trail-before-front.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            3.0
+          ],
+          [
+            0.0,
+            0.09480909258127213,
+            -0.9954954981803894,
+            -106.0
+          ],
+          [
+            0.0,
+            0.9954954981803894,
+            0.09480909258127213,
+            13.300000190734863
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          3.0,
+          -106.0,
+          13.300000190734863
+        ],
+        "rotationEuler": [
+          1.4758446216583252,
+          -0.0,
+          0.0
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 78.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "6852432a296389624a072012b0df6e846dcd57d2f46ebd33fbfe2a8373fafeda",
+        "be0e2dea0ae34ca37facfca4fdc5a44ca0b331fb26355ffc7335db003d5452b3",
+        "bf6901de0fe53fd803cbff8d70acdffbcde0f3b3b7a3d323c6c37b8a4e0b064b"
+      ],
+      "recipeSHA256": "aadd997956c5e4678b329e47cabb803fbef107ccb63895437e208f7bbaa20242",
+      "nativeImageSHA256": "ee674bea470ce941b7cb6d48978b803a31abf98eb3475d46bc19830926be4241",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Winding-Trail-before-front.png",
+      "signedSHA256": "565f4eb1783b7fac9b42867f02a21b39c043b01ef28c21c041fa5f066d2e6e9e"
+    },
+    {
+      "project": "winding-trail-1355",
+      "label": "After · Front",
+      "originalCamera": "Winding-Trail-after-front.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            3.0
+          ],
+          [
+            0.0,
+            0.09480909258127213,
+            -0.9954954981803894,
+            -106.0
+          ],
+          [
+            0.0,
+            0.9954954981803894,
+            0.09480909258127213,
+            13.300000190734863
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          3.0,
+          -106.0,
+          13.300000190734863
+        ],
+        "rotationEuler": [
+          1.4758446216583252,
+          -0.0,
+          0.0
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 78.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "6852432a296389624a072012b0df6e846dcd57d2f46ebd33fbfe2a8373fafeda",
+        "be0e2dea0ae34ca37facfca4fdc5a44ca0b331fb26355ffc7335db003d5452b3",
+        "bf6901de0fe53fd803cbff8d70acdffbcde0f3b3b7a3d323c6c37b8a4e0b064b"
+      ],
+      "recipeSHA256": "aadd997956c5e4678b329e47cabb803fbef107ccb63895437e208f7bbaa20242",
+      "nativeImageSHA256": "20d4711d6d8ed0d01c19b465edde5f0617952e19753c87f1cc77bb031fa28912",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Winding-Trail-after-front.png",
+      "signedSHA256": "9891a543179945eabd048c1e3602f8a99a31cd99483c0748ca4141d558f7d325"
+    },
+    {
+      "project": "winding-trail-1355",
+      "label": "Before · Roof and front",
+      "originalCamera": "Winding-Trail-before-corner.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.8106791973114014,
+            0.2114667296409607,
+            -0.5459679961204529,
+            -62.0
+          ],
+          [
+            -0.5854905843734741,
+            0.2928001582622528,
+            -0.7559555768966675,
+            -90.0
+          ],
+          [
+            5.399017410923079e-08,
+            0.9324966073036194,
+            0.36117878556251526,
+            46.29999923706055
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -62.0,
+          -90.0,
+          46.29999923706055
+        ],
+        "rotationEuler": [
+          1.2012646198272705,
+          -5.399017410923079e-08,
+          -0.6254850625991821
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 82.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "6852432a296389624a072012b0df6e846dcd57d2f46ebd33fbfe2a8373fafeda",
+        "be0e2dea0ae34ca37facfca4fdc5a44ca0b331fb26355ffc7335db003d5452b3",
+        "bf6901de0fe53fd803cbff8d70acdffbcde0f3b3b7a3d323c6c37b8a4e0b064b"
+      ],
+      "recipeSHA256": "aadd997956c5e4678b329e47cabb803fbef107ccb63895437e208f7bbaa20242",
+      "nativeImageSHA256": "7dd390624cbc8c9ff54242fe75a8b2314117576f259460cff9f05aa671d0f283",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Winding-Trail-before-corner.png",
+      "signedSHA256": "d30d832df36483a48d13d1431fa69657dab7bebfd94ab132dfd3838d30e1bb68"
+    },
+    {
+      "project": "winding-trail-1355",
+      "label": "After · Roof and front",
+      "originalCamera": "Winding-Trail-after-corner.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.8106791973114014,
+            0.2114667296409607,
+            -0.5459679961204529,
+            -62.0
+          ],
+          [
+            -0.5854905843734741,
+            0.2928001582622528,
+            -0.7559555768966675,
+            -90.0
+          ],
+          [
+            5.399017410923079e-08,
+            0.9324966073036194,
+            0.36117878556251526,
+            46.29999923706055
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -62.0,
+          -90.0,
+          46.29999923706055
+        ],
+        "rotationEuler": [
+          1.2012646198272705,
+          -5.399017410923079e-08,
+          -0.6254850625991821
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 82.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "6852432a296389624a072012b0df6e846dcd57d2f46ebd33fbfe2a8373fafeda",
+        "be0e2dea0ae34ca37facfca4fdc5a44ca0b331fb26355ffc7335db003d5452b3",
+        "bf6901de0fe53fd803cbff8d70acdffbcde0f3b3b7a3d323c6c37b8a4e0b064b"
+      ],
+      "recipeSHA256": "aadd997956c5e4678b329e47cabb803fbef107ccb63895437e208f7bbaa20242",
+      "nativeImageSHA256": "922b6f7b1cc823bcfc1c631f6a9906b5436b621d58f34c63cfac4c3912372f22",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Winding-Trail-after-corner.png",
+      "signedSHA256": "000b4e401f4304d6d61908399f1ab310e7e0e41751994d85b105b1457a4f66c8"
+    },
+    {
+      "project": "paisley-45",
+      "label": "Before",
+      "originalCamera": "Paisley-before-opposite-end.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.6041948199272156,
+            0.1638791561126709,
+            -0.779802680015564,
+            -91.0
+          ],
+          [
+            -0.7968366146087646,
+            -0.12425999343395233,
+            0.5912789702415466,
+            69.0
+          ],
+          [
+            2.466719806193396e-08,
+            0.9786230325698853,
+            0.20566216111183167,
+            36.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -91.0,
+          69.0,
+          36.0
+        ],
+        "rotationEuler": [
+          1.3636560440063477,
+          -2.466719806193396e-08,
+          -2.2195513248443604
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 75.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "800c7777c43e9b72a443704769fbf5649f7b955b54f75397b83268433caccdc4",
+        "c909073063ede3816bf21cdbe888e3999b519ed83f74b206fc7cd520d5eaa43a",
+        "e8d8c6b5eb6ba372b11ecadc0609c5dbcfbcc6464b77e130e80f582dd969cfa5"
+      ],
+      "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+      "nativeImageSHA256": "f20daf232daa1d1eeb5131f7227ce6457639213fc3df27d16f70e6a80ff71365",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Paisley-before-opposite-end.png",
+      "signedSHA256": "76ab3ae7bf08d2e51521b43129580241a68622324f2bf1150185fed93be2f446"
+    },
+    {
+      "project": "paisley-45",
+      "label": "After · Opposite end",
+      "originalCamera": "Paisley-after-opposite-end.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.6041948199272156,
+            0.1638791561126709,
+            -0.779802680015564,
+            -91.0
+          ],
+          [
+            -0.7968366146087646,
+            -0.12425999343395233,
+            0.5912789702415466,
+            69.0
+          ],
+          [
+            2.466719806193396e-08,
+            0.9786230325698853,
+            0.20566216111183167,
+            36.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -91.0,
+          69.0,
+          36.0
+        ],
+        "rotationEuler": [
+          1.3636560440063477,
+          -2.466719806193396e-08,
+          -2.2195513248443604
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 75.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "800c7777c43e9b72a443704769fbf5649f7b955b54f75397b83268433caccdc4",
+        "c909073063ede3816bf21cdbe888e3999b519ed83f74b206fc7cd520d5eaa43a",
+        "e8d8c6b5eb6ba372b11ecadc0609c5dbcfbcc6464b77e130e80f582dd969cfa5"
+      ],
+      "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+      "nativeImageSHA256": "04fac1d4bc6782ea749b333e87a58ff8a64f09c21fe612ede19d393bafe68cfa",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Paisley-after-opposite-end.png",
+      "signedSHA256": "2d32d23a51b159ebe5e1489f787f7c2311696010b6864d27b6297409e4df24b5"
+    },
+    {
+      "project": "sherobee-2200",
+      "label": "Before · Street side",
+      "originalCamera": "Sherobee-before-front.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.45754310488700867,
+            0.20891840755939484,
+            -0.8642958998680115,
+            -103.0
+          ],
+          [
+            -0.8891874551773071,
+            -0.10750160366296768,
+            0.4447348713874817,
+            53.0
+          ],
+          [
+            1.03509115945144e-07,
+            0.9720064401626587,
+            0.23495423793792725,
+            42.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -103.0,
+          53.0,
+          42.0
+        ],
+        "rotationEuler": [
+          1.3336248397827148,
+          -1.03509115945144e-07,
+          -2.0460264682769775
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 85.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "1936ade73d43bdde19ba2cae7455ff4a53283b1524be6e1bb4ef8204c6cb3e3d",
+        "b5b319a35f7b2ab433258215cf39f2d473fa95bf12083dc07bf0900e8787c1dc",
+        "e54d9144f0e25f8e9e737b9d4650d917a992ad79e1c09eb862ddfdbf773a7dc0"
+      ],
+      "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+      "nativeImageSHA256": "cfb03eae17e8c0badae1efca35b17641fe16ba256901e8b1ce42686933c04acf",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Sherobee-before-front.png",
+      "signedSHA256": "40cd957e9564911ebaa2df336904f8c2bd3dc7aca8ea20c30ee55a36e1798e83"
+    },
+    {
+      "project": "sherobee-2200",
+      "label": "After · Street side",
+      "originalCamera": "Sherobee-after-front.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.45754310488700867,
+            0.20891840755939484,
+            -0.8642958998680115,
+            -103.0
+          ],
+          [
+            -0.8891874551773071,
+            -0.10750160366296768,
+            0.4447348713874817,
+            53.0
+          ],
+          [
+            1.03509115945144e-07,
+            0.9720064401626587,
+            0.23495423793792725,
+            42.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -103.0,
+          53.0,
+          42.0
+        ],
+        "rotationEuler": [
+          1.3336248397827148,
+          -1.03509115945144e-07,
+          -2.0460264682769775
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 85.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "1936ade73d43bdde19ba2cae7455ff4a53283b1524be6e1bb4ef8204c6cb3e3d",
+        "b5b319a35f7b2ab433258215cf39f2d473fa95bf12083dc07bf0900e8787c1dc",
+        "e54d9144f0e25f8e9e737b9d4650d917a992ad79e1c09eb862ddfdbf773a7dc0"
+      ],
+      "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+      "nativeImageSHA256": "7f7f760679026b5d3d0094266688bae3636319df4c0f8e3063fbce7949229139",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Sherobee-after-front.png",
+      "signedSHA256": "2efecddf3889f1b3397cc66980838105a0f5a719450449593f70e0db37c79ee3"
+    },
+    {
+      "project": "sherobee-2200",
+      "label": "Before · Surrounding buildings",
+      "originalCamera": "Sherobee-before-context.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.640184223651886,
+            0.39403656125068665,
+            -0.659468948841095,
+            -180.0
+          ],
+          [
+            -0.7682214379310608,
+            -0.32836341857910156,
+            0.5495573878288269,
+            150.0
+          ],
+          [
+            2.096377187399412e-07,
+            0.8584361672401428,
+            0.5129203796386719,
+            152.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -180.0,
+          150.0,
+          152.0
+        ],
+        "rotationEuler": [
+          1.0322129726409912,
+          -2.096377187399412e-07,
+          -2.2655344009399414
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 235.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "1936ade73d43bdde19ba2cae7455ff4a53283b1524be6e1bb4ef8204c6cb3e3d",
+        "b5b319a35f7b2ab433258215cf39f2d473fa95bf12083dc07bf0900e8787c1dc",
+        "e54d9144f0e25f8e9e737b9d4650d917a992ad79e1c09eb862ddfdbf773a7dc0"
+      ],
+      "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+      "nativeImageSHA256": "b74db91aadfe82340f696f48d02cb128684ffec99ef0e7749826fb536c83f1bd",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Sherobee-before-context.png",
+      "signedSHA256": "b3a611a0a30803815a6678914a7379aadfb52b7f766c292eeb72c4362d35129c"
+    },
+    {
+      "project": "sherobee-2200",
+      "label": "After · Surrounding buildings",
+      "originalCamera": "Sherobee-after-context.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.640184223651886,
+            0.39403656125068665,
+            -0.659468948841095,
+            -180.0
+          ],
+          [
+            -0.7682214379310608,
+            -0.32836341857910156,
+            0.5495573878288269,
+            150.0
+          ],
+          [
+            2.096377187399412e-07,
+            0.8584361672401428,
+            0.5129203796386719,
+            152.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -180.0,
+          150.0,
+          152.0
+        ],
+        "rotationEuler": [
+          1.0322129726409912,
+          -2.096377187399412e-07,
+          -2.2655344009399414
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 235.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "1936ade73d43bdde19ba2cae7455ff4a53283b1524be6e1bb4ef8204c6cb3e3d",
+        "b5b319a35f7b2ab433258215cf39f2d473fa95bf12083dc07bf0900e8787c1dc",
+        "e54d9144f0e25f8e9e737b9d4650d917a992ad79e1c09eb862ddfdbf773a7dc0"
+      ],
+      "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+      "nativeImageSHA256": "5b0ae1ef7bd99683309589369098c245b24b6eeb3b9be16c3609ab52a6ae04ab",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Sherobee-after-context.png",
+      "signedSHA256": "ba407c3b50abc2d379430eb963eecd8c19f8a52d6a441563bde537cf837228d3"
+    },
+    {
+      "project": "conference-council-house",
+      "label": "Tower and birds",
+      "originalCamera": "Conference-Council-House-after-front.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.8320503234863281,
+            -0.045994848012924194,
+            0.5527899861335754,
+            4.0
+          ],
+          [
+            0.5547001361846924,
+            0.06899230182170868,
+            -0.8291850090026855,
+            -6.0
+          ],
+          [
+            -1.47188217169969e-08,
+            0.9965563416481018,
+            0.08291842043399811,
+            2.0500001907348633
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          4.0,
+          -6.0,
+          2.0500001907348633
+        ],
+        "rotationEuler": [
+          1.487782597541809,
+          1.47188217169969e-08,
+          0.5880025625228882
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 4.599999904632568,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "fb0a20343e325a1759318b8ba178b113ad7f15f8cb673d597a97ce20ef9f6301",
+        "fcb7e66391bd5369cf96e840b110b63ef2a59daf76eb0b83e52258caf526506e"
+      ],
+      "recipeSHA256": "aadd997956c5e4678b329e47cabb803fbef107ccb63895437e208f7bbaa20242",
+      "nativeImageSHA256": "65921b399c39ef7bb14821accc4da581090de85bf46aaac0d19a882fbb20fd3b",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Conference-Council-House-after-front.png",
+      "signedSHA256": "8f9fe0512dfad9ac07284b9c3e1d2b5778dd8d72cd28d5888cfbb1c195322568"
+    },
+    {
+      "project": "conference-council-house",
+      "label": "Roof and bird detail",
+      "originalCamera": "Conference-Council-House-after-detail.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.8574928641319275,
+            -0.08696547150611877,
+            0.5070926547050476,
+            3.0
+          ],
+          [
+            0.514495849609375,
+            0.14494255185127258,
+            -0.8451542258262634,
+            -5.0
+          ],
+          [
+            -7.026885384675552e-08,
+            0.9856107831001282,
+            0.1690305769443512,
+            3.049999952316284
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          3.0,
+          -5.0,
+          3.049999952316284
+        ],
+        "rotationEuler": [
+          1.400950312614441,
+          7.026885384675552e-08,
+          0.5404195785522461
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 2.4000000953674316,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "fb0a20343e325a1759318b8ba178b113ad7f15f8cb673d597a97ce20ef9f6301",
+        "fcb7e66391bd5369cf96e840b110b63ef2a59daf76eb0b83e52258caf526506e"
+      ],
+      "recipeSHA256": "aadd997956c5e4678b329e47cabb803fbef107ccb63895437e208f7bbaa20242",
+      "nativeImageSHA256": "b60050aeb2069df92de61fe0d1a9836d7485de268264afb7209bf80732e0767b",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Conference-Council-House-after-detail.png",
+      "signedSHA256": "eb3fda21535d7e7e9451d4eed8145827827f8c7b7cb837f276a4058faeec3847"
+    },
+    {
+      "project": "benares-house",
+      "label": "Before",
+      "originalCamera": "Benares-house-before-kitchen.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.27236053347587585,
+            -0.28131261467933655,
+            0.920153796672821,
+            50.15227127075195
+          ],
+          [
+            0.9621952772140503,
+            -0.07962872087955475,
+            0.2604601979255676,
+            19.098384857177734
+          ],
+          [
+            -6.970899590896806e-08,
+            0.9563066959381104,
+            0.2923653721809387,
+            18.5
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          50.15227127075195,
+          19.098384857177734,
+          18.5
+        ],
+        "rotationEuler": [
+          1.274096965789795,
+          6.970899590896806e-08,
+          1.8466417789459229
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 32.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "9a2e84ba7ee2aee7a0e1a85aec19f8317f24b4d9a72d5b7f3c241119a1f2c9de",
+        "b18f7920872e13da518edb8a56864db96e151951a608fb36a64894892253b379",
+        "bb83b48ddf429fb32ad10aaba9fbf0de957da201f28d796affd2f10cc7011bc8"
+      ],
+      "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+      "nativeImageSHA256": "fda48b721baab204d90809508c19021c72200ccd66e530545dedd85f183ba6af",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Benares-house-before-kitchen.png",
+      "signedSHA256": "4db5f0452085b1eea4f0673b9e3c08d0cfeaad7bee344f21c6f74bdf55ef0dcd"
+    },
+    {
+      "project": "benares-house",
+      "label": "After · Kitchen gable",
+      "originalCamera": "Benares-house-after-kitchen.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.27236053347587585,
+            -0.28131261467933655,
+            0.920153796672821,
+            50.15227127075195
+          ],
+          [
+            0.9621952772140503,
+            -0.07962872087955475,
+            0.2604601979255676,
+            19.098384857177734
+          ],
+          [
+            -6.970899590896806e-08,
+            0.9563066959381104,
+            0.2923653721809387,
+            18.5
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          50.15227127075195,
+          19.098384857177734,
+          18.5
+        ],
+        "rotationEuler": [
+          1.274096965789795,
+          6.970899590896806e-08,
+          1.8466417789459229
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 32.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "9a2e84ba7ee2aee7a0e1a85aec19f8317f24b4d9a72d5b7f3c241119a1f2c9de",
+        "b18f7920872e13da518edb8a56864db96e151951a608fb36a64894892253b379",
+        "bb83b48ddf429fb32ad10aaba9fbf0de957da201f28d796affd2f10cc7011bc8"
+      ],
+      "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+      "nativeImageSHA256": "3fff31dae4b7d94d516cf8eb84468a224f067d4c70318cf919313557269b7d2e",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Benares-house-after-kitchen.png",
+      "signedSHA256": "942bb22950063ea5e897fca8fcaf4ecdf9516dc136dd19d5ffecb4c68f6919a0"
+    },
+    {
+      "project": "benares-visitor-centre",
+      "label": "Before",
+      "originalCamera": "Benares-visitor-centre-before-front.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.8944272398948669,
+            -0.16112694144248962,
+            0.4171786904335022,
+            22.0
+          ],
+          [
+            0.4472135305404663,
+            0.32225385308265686,
+            -0.8343575596809387,
+            -44.0
+          ],
+          [
+            3.8939241164825944e-08,
+            0.9328400492668152,
+            0.3602907657623291,
+            21.799999237060547
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          22.0,
+          -44.0,
+          21.799999237060547
+        ],
+        "rotationEuler": [
+          1.2022167444229126,
+          -3.8939241164825944e-08,
+          0.4636475443840027
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 38.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "b96d4644c67f43f196f96ba81a2382bfe768345bd147bbeafc1c178fc9a9f4f6",
+        "bb83b48ddf429fb32ad10aaba9fbf0de957da201f28d796affd2f10cc7011bc8",
+        "d57494f5f741b19a55e914b33d4f5f1cb110e1fc958d02ce8577224ca3480ad4"
+      ],
+      "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+      "nativeImageSHA256": "fe538c18b5ae0a10c60278f9f0ec93b88a8db163825c711713e01f94d0974bce",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Benares-visitor-centre-before-front.png",
+      "signedSHA256": "99d2030b040d1d48baa62774f2b74d5b6d5f6a36cd58546ef8bb56613e9c26c9"
+    },
+    {
+      "project": "benares-visitor-centre",
+      "label": "After · Exterior",
+      "originalCamera": "Benares-visitor-centre-after-front.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.8944272398948669,
+            -0.16112694144248962,
+            0.4171786904335022,
+            22.0
+          ],
+          [
+            0.4472135305404663,
+            0.32225385308265686,
+            -0.8343575596809387,
+            -44.0
+          ],
+          [
+            3.8939241164825944e-08,
+            0.9328400492668152,
+            0.3602907657623291,
+            21.799999237060547
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          22.0,
+          -44.0,
+          21.799999237060547
+        ],
+        "rotationEuler": [
+          1.2022167444229126,
+          -3.8939241164825944e-08,
+          0.4636475443840027
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 38.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "b96d4644c67f43f196f96ba81a2382bfe768345bd147bbeafc1c178fc9a9f4f6",
+        "bb83b48ddf429fb32ad10aaba9fbf0de957da201f28d796affd2f10cc7011bc8",
+        "d57494f5f741b19a55e914b33d4f5f1cb110e1fc958d02ce8577224ca3480ad4"
+      ],
+      "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+      "nativeImageSHA256": "ddffed868f77886263e42cc6a5b897ee4492cefff3e4bf5b183ef24eb836061e",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Benares-visitor-centre-after-front.png",
+      "signedSHA256": "681f88f266e6803319eb88312d4bfbc6e69d1f4f5116b5bb83831a0866cda618"
+    },
+    {
+      "project": "anchorage",
+      "label": "Before",
+      "originalCamera": "Anchorage-before-front.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.9797580242156982,
+            0.07679224759340286,
+            -0.18487077951431274,
+            -8.19279956817627
+          ],
+          [
+            -0.20018555223941803,
+            -0.3758404552936554,
+            0.9048036932945251,
+            40.097599029541016
+          ],
+          [
+            -1.1617951933828863e-08,
+            0.9234970808029175,
+            0.38360539078712463,
+            20.500200271606445
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -8.19279956817627,
+          40.097599029541016,
+          20.500200271606445
+        ],
+        "rotationEuler": [
+          1.1770991086959839,
+          1.1617951933828863e-08,
+          -2.9400453567504883
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 25.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "eb08edd65cda1216281cb0615d0e145f1cdc1959454e5f139e52cf603485664d",
+        "f355e7959d1b310d2637cda526ae3287937c3270ad3a4f81864c2c31fd919cb8"
+      ],
+      "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+      "nativeImageSHA256": "e7f6b4d8b9fdd679d1edd9788d3b6ceda82bb072113a4221e04014acb4c08c57",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Anchorage-before-front.png",
+      "signedSHA256": "7d0581173a820e1de0d2ca7646e194356c108ed661db5e7ec1999b30479e3d1a"
+    },
+    {
+      "project": "anchorage",
+      "label": "After · Exterior",
+      "originalCamera": "Anchorage-after-front.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.9797580242156982,
+            0.07679224759340286,
+            -0.18487077951431274,
+            -8.19279956817627
+          ],
+          [
+            -0.20018555223941803,
+            -0.3758404552936554,
+            0.9048036932945251,
+            40.097599029541016
+          ],
+          [
+            -1.1617951933828863e-08,
+            0.9234970808029175,
+            0.38360539078712463,
+            20.500200271606445
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -8.19279956817627,
+          40.097599029541016,
+          20.500200271606445
+        ],
+        "rotationEuler": [
+          1.1770991086959839,
+          1.1617951933828863e-08,
+          -2.9400453567504883
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 25.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "eb08edd65cda1216281cb0615d0e145f1cdc1959454e5f139e52cf603485664d",
+        "f355e7959d1b310d2637cda526ae3287937c3270ad3a4f81864c2c31fd919cb8"
+      ],
+      "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+      "nativeImageSHA256": "4fc117e1070199d78952b59e02845d0a7ea6bad560747348a6064640dda1a51d",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Anchorage-after-front.png",
+      "signedSHA256": "fa360d302c12bcede11351073c6bad83030791e16398939fe08e4ef9265d128e"
+    },
+    {
+      "project": "bradley-log-cabin",
+      "label": "Before",
+      "originalCamera": "Bradley-log-cabin-before-front.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.4171828329563141,
+            0.31641241908073425,
+            -0.8519634008407593,
+            -29.364839553833008
+          ],
+          [
+            -0.9088225960731506,
+            -0.14524486660957336,
+            0.39108240604400635,
+            13.47953987121582
+          ],
+          [
+            2.2559401458011052e-08,
+            0.9374364614486694,
+            0.3481564223766327,
+            14.644499778747559
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -29.364839553833008,
+          13.47953987121582,
+          14.644499778747559
+        ],
+        "rotationEuler": [
+          1.2151925563812256,
+          -2.2559401458011052e-08,
+          -2.0011396408081055
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 20.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "73afad5f62061bf1db20a08ca042b9b143a7638036e65dfb512feeb306e5ac0a",
+        "fd6c034eabb2bf628f036dabc8d9c2cd25d4fcde0d00eb3d7b7aeaf10e2952ab"
+      ],
+      "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+      "nativeImageSHA256": "5d893809490482bcf5e9e450d2b0a5269d8dca1ff703687987ae8a14806b809c",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Bradley-log-cabin-before-front.png",
+      "signedSHA256": "d211a9a73d5f720f2b4f833b3c31e81ac50bc8c666c971d73747d37a3c7270f6"
+    },
+    {
+      "project": "bradley-log-cabin",
+      "label": "After · Roof and exterior",
+      "originalCamera": "Bradley-log-cabin-after-front.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.4171828329563141,
+            0.31641241908073425,
+            -0.8519634008407593,
+            -29.364839553833008
+          ],
+          [
+            -0.9088225960731506,
+            -0.14524486660957336,
+            0.39108240604400635,
+            13.47953987121582
+          ],
+          [
+            2.2559401458011052e-08,
+            0.9374364614486694,
+            0.3481564223766327,
+            14.644499778747559
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -29.364839553833008,
+          13.47953987121582,
+          14.644499778747559
+        ],
+        "rotationEuler": [
+          1.2151925563812256,
+          -2.2559401458011052e-08,
+          -2.0011396408081055
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 20.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "73afad5f62061bf1db20a08ca042b9b143a7638036e65dfb512feeb306e5ac0a",
+        "fd6c034eabb2bf628f036dabc8d9c2cd25d4fcde0d00eb3d7b7aeaf10e2952ab"
+      ],
+      "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+      "nativeImageSHA256": "98736a5cb0c52eb2c3181b4afaba421b4f0ae194c5dc9155897d8f43b81bc040",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Bradley-log-cabin-after-front.png",
+      "signedSHA256": "b9bccd552bf21fd91dd03a4bfb5e12785cddd1b9284e861a446461177bfef1df"
+    },
+    {
+      "project": "bradley-barn",
+      "label": "Before",
+      "originalCamera": "Bradley-barn-before-front.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.3978157043457031,
+            -0.33924955129623413,
+            0.8524391055107117,
+            27.663999557495117
+          ],
+          [
+            0.917465329170227,
+            0.14709965884685516,
+            -0.36962011456489563,
+            -11.995200157165527
+          ],
+          [
+            -4.289028154857988e-08,
+            0.9291239976882935,
+            0.36976826190948486,
+            15.031499862670898
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          27.663999557495117,
+          -11.995200157165527,
+          15.031499862670898
+        ],
+        "rotationEuler": [
+          1.192036747932434,
+          4.289028154857988e-08,
+          1.1616615056991577
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 21.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "332ee4f8e8de826cd1fd8b8bb2f0a8a00b9895ad1e87109d6ee56b3ec0506984",
+        "e7c1a2c1dfce5b800a1846afa5ef15525701a0162978bcd076a1dfe4b73dce6b"
+      ],
+      "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+      "nativeImageSHA256": "0bba079673db09ba938b927a024945ba010c3a0a05ae63c61bc24e275c0c6789",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Bradley-barn-before-front.png",
+      "signedSHA256": "5b8571c9ecf63198609777b5587c7cee7879b4a4ae6da68a77086db854e5cbd3"
+    },
+    {
+      "project": "bradley-barn",
+      "label": "After · Exterior",
+      "originalCamera": "Bradley-barn-after-front.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.3978157043457031,
+            -0.33924955129623413,
+            0.8524391055107117,
+            27.663999557495117
+          ],
+          [
+            0.917465329170227,
+            0.14709965884685516,
+            -0.36962011456489563,
+            -11.995200157165527
+          ],
+          [
+            -4.289028154857988e-08,
+            0.9291239976882935,
+            0.36976826190948486,
+            15.031499862670898
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          27.663999557495117,
+          -11.995200157165527,
+          15.031499862670898
+        ],
+        "rotationEuler": [
+          1.192036747932434,
+          4.289028154857988e-08,
+          1.1616615056991577
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 21.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "332ee4f8e8de826cd1fd8b8bb2f0a8a00b9895ad1e87109d6ee56b3ec0506984",
+        "e7c1a2c1dfce5b800a1846afa5ef15525701a0162978bcd076a1dfe4b73dce6b"
+      ],
+      "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+      "nativeImageSHA256": "c2f83e777588b320b8e6f730953dab009d3ec3d69b5738f64a948384ff05e0c0",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Bradley-barn-after-front.png",
+      "signedSHA256": "1925c2ff7187475eac77a4d3fbdfb3884a9a5dbb3ba7e3c3baf9c502bf621517"
+    },
+    {
+      "project": "leslie-log-house",
+      "label": "Before",
+      "originalCamera": "Leslie-log-house-before-front.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.5212247371673584,
+            0.3155170679092407,
+            -0.7929525375366211,
+            -25.737600326538086
+          ],
+          [
+            -0.8534194231033325,
+            0.19270172715187073,
+            -0.4842946231365204,
+            -15.719200134277344
+          ],
+          [
+            1.0052874443999826e-07,
+            0.929147481918335,
+            0.369709312915802,
+            14.945499420166016
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -25.737600326538086,
+          -15.719200134277344,
+          14.945499420166016
+        ],
+        "rotationEuler": [
+          1.192100167274475,
+          -1.0052874443999826e-07,
+          -1.0225108861923218
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 21.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "0d02c6b23b92ca55f96299124bd16b25e943b6a28ca0b4c57113b18fcc7631f7",
+        "209f562a766ae23ae90d10b3bfc186b8e2fd36b797cb6d0c5da521f3fd728d4b"
+      ],
+      "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+      "nativeImageSHA256": "285d54135a8f73ef92bf7e0b775838133a2d2c5d1ec28f291f81cc5ef00eba69",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Leslie-log-house-before-front.png",
+      "signedSHA256": "b65f55c3ffc166950be640da0978d443dcf61a412672ca7a2657f7b944c56aa3"
+    },
+    {
+      "project": "leslie-log-house",
+      "label": "After · Exterior",
+      "originalCamera": "Leslie-log-house-after-front.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.5212247371673584,
+            0.3155170679092407,
+            -0.7929525375366211,
+            -25.737600326538086
+          ],
+          [
+            -0.8534194231033325,
+            0.19270172715187073,
+            -0.4842946231365204,
+            -15.719200134277344
+          ],
+          [
+            1.0052874443999826e-07,
+            0.929147481918335,
+            0.369709312915802,
+            14.945499420166016
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -25.737600326538086,
+          -15.719200134277344,
+          14.945499420166016
+        ],
+        "rotationEuler": [
+          1.192100167274475,
+          -1.0052874443999826e-07,
+          -1.0225108861923218
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 21.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "0d02c6b23b92ca55f96299124bd16b25e943b6a28ca0b4c57113b18fcc7631f7",
+        "209f562a766ae23ae90d10b3bfc186b8e2fd36b797cb6d0c5da521f3fd728d4b"
+      ],
+      "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+      "nativeImageSHA256": "10bcccfb80b41387b8bc7c6e97db9e2ce8e3e893cb64127aac7def30604557c7",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Leslie-log-house-after-front.png",
+      "signedSHA256": "917d6b9ed254f44525ef1227bcc50a30df9f1c0abe6f87f8d9de7532545e1caa"
+    },
+    {
+      "project": "port-credit-lighthouse",
+      "label": "Neutral daylight",
+      "originalCamera": "Lighthouse-after-neutral-daylight.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.7970922589302063,
+            0.21768134832382202,
+            -0.5632572770118713,
+            -27.5
+          ],
+          [
+            -0.6038575172424316,
+            -0.2873394787311554,
+            0.7434999346733093,
+            30.5
+          ],
+          [
+            2.0034308434446757e-08,
+            0.9327651858329773,
+            0.36048460006713867,
+            23.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -27.5,
+          30.5,
+          23.0
+        ],
+        "rotationEuler": [
+          1.2020089626312256,
+          -2.0034308434446757e-08,
+          -2.4932608604431152
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 24.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "3fcce64a9b135318be74b202daae13d89405d79f8da1ae03dcba8bb11c97594f"
+      ],
+      "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+      "nativeImageSHA256": "4069b8d94c7019367eed7633799c5cd16597b061810c03e8ddc58c8b3ac5d4cf",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Lighthouse-after-neutral-daylight.png",
+      "signedSHA256": "1c07c446807787c728b5a3ef68f484098bca0f848bd8165ab8ed81e802714c9f"
+    },
+    {
+      "project": "port-credit-lighthouse",
+      "label": "Warm light",
+      "originalCamera": "Lighthouse-after-warm-light.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.7970922589302063,
+            0.21768134832382202,
+            -0.5632572770118713,
+            -27.5
+          ],
+          [
+            -0.6038575172424316,
+            -0.2873394787311554,
+            0.7434999346733093,
+            30.5
+          ],
+          [
+            2.0034308434446757e-08,
+            0.9327651858329773,
+            0.36048460006713867,
+            23.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -27.5,
+          30.5,
+          23.0
+        ],
+        "rotationEuler": [
+          1.2020089626312256,
+          -2.0034308434446757e-08,
+          -2.4932608604431152
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 24.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          5000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "3fcce64a9b135318be74b202daae13d89405d79f8da1ae03dcba8bb11c97594f"
+      ],
+      "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+      "nativeImageSHA256": "4ff0a774646a50ec0e87bec244c29afe06335438951ff6aad4eb4ce2846a7ef6",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Lighthouse-after-warm-light.png",
+      "signedSHA256": "00872514ef2ce76041b836c2f0e00581e33f94bb8b4936ecdfa95eaf97ffc711"
+    },
+    {
+      "project": "queen-228",
+      "label": "Before · City model",
+      "originalCamera": "Before-228-Queen-private-frontage.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.21019765734672546,
+            -0.4382154643535614,
+            0.8739474415779114,
+            -11009.939453125
+          ],
+          [
+            0.9776589274406433,
+            -0.0942167416214943,
+            0.1878996044397354,
+            -903.5255126953125
+          ],
+          [
+            -2.969469647950973e-08,
+            0.8939185738563538,
+            0.4482294023036957,
+            118.29710388183594
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -11009.939453125,
+          -903.5255126953125,
+          118.29710388183594
+        ],
+        "rotationEuler": [
+          1.1060127019882202,
+          2.969469647950973e-08,
+          1.7825734615325928
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 44.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2200,
+        1650
+      ],
+      "sourceGeometrySHA256": [
+        "5dab34f16ac68ab6a714c03187245488a27dcd633aa26b99bb70b33eff7b4b90"
+      ],
+      "recipeSHA256": "c5f0dfbcd724acac7e8dc0b02af6682b4927b343d57b54b87caa1e3848b0dd06",
+      "nativeImageSHA256": "975ffc1958d05ac898012bb446f33a83f5005ee7db272665fba1ceaa9fba6249",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Queen-228-before-frontage.png",
+      "signedSHA256": "f60fe8cec0316cdddd5b80ddd547385b0499d4bff84784d037dd3dfa388a0828"
+    },
+    {
+      "project": "queen-228",
+      "label": "After · Street frontage",
+      "originalCamera": "After-228-Queen-private-frontage.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.21019765734672546,
+            -0.4382154643535614,
+            0.8739474415779114,
+            -11009.939453125
+          ],
+          [
+            0.9776589274406433,
+            -0.0942167416214943,
+            0.1878996044397354,
+            -903.5255126953125
+          ],
+          [
+            -2.969469647950973e-08,
+            0.8939185738563538,
+            0.4482294023036957,
+            118.29710388183594
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -11009.939453125,
+          -903.5255126953125,
+          118.29710388183594
+        ],
+        "rotationEuler": [
+          1.1060127019882202,
+          2.969469647950973e-08,
+          1.7825734615325928
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 44.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2200,
+        1650
+      ],
+      "sourceGeometrySHA256": [
+        "11fa13c85abf1a99a57aa69497baaa422a7f75f6a1130ed26e81664572d372cd",
+        "5dab34f16ac68ab6a714c03187245488a27dcd633aa26b99bb70b33eff7b4b90"
+      ],
+      "recipeSHA256": "c5f0dfbcd724acac7e8dc0b02af6682b4927b343d57b54b87caa1e3848b0dd06",
+      "nativeImageSHA256": "85744f4b656de2424669b12d7960899c997f679b00ad1b07e8ebf64a5b99cf4b",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Queen-228-after-frontage.png",
+      "signedSHA256": "9de55595b864526d1948af41fe456b354bc48eec3387d1d3a327e2c476961f63"
+    },
+    {
+      "project": "nrc-2620-speakman",
+      "label": "Before · Northwest façade",
+      "originalCamera": "NRC-Northwest-close-Before.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.8064050674438477,
+            0.2614072263240814,
+            -0.5304499864578247,
+            -66.0
+          ],
+          [
+            -0.5913636088371277,
+            -0.3564646244049072,
+            0.7233409285545349,
+            93.0
+          ],
+          [
+            -1.112574494754881e-07,
+            0.8969945907592773,
+            0.4420415759086609,
+            66.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -66.0,
+          93.0,
+          66.0
+        ],
+        "rotationEuler": [
+          1.1129229068756104,
+          1.112574494754881e-07,
+          -2.5088438987731934
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 99.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          2000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1855
+      ],
+      "sourceGeometrySHA256": [
+        "0c0c8d2948df7513f0c7adf1c08a6fe9d24296c03bd453645449c8818f6724d1",
+        "c2c920fc3e726bdfc7337ba0f5838184661ecd57eae231154e18d7f2ea464c3e",
+        "f8ec41e7f58e73a4b66d58f5dbedf9d6569ec7c035db00417276a05de992048e"
+      ],
+      "recipeSHA256": "376c92510a50031bdef17a80b9cc03a689624c2d8fb7fe9b89e626a541a3c779",
+      "nativeImageSHA256": "b038ea8c2166a2355cc307727983b4a759173d7042b79e2f37a24a327d6df801",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/nrc-2620-speakman--NRC-Northwest-close-Before.png",
+      "signedSHA256": "69068c4ec60fb02a7fe029825114589785599c9cb3b0a2669a3a00a1e81f7472"
+    },
+    {
+      "project": "nrc-2620-speakman",
+      "label": "After · Northwest façade",
+      "originalCamera": "NRC-Northwest-close-After.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.8064050674438477,
+            0.2614072263240814,
+            -0.5304499864578247,
+            -66.0
+          ],
+          [
+            -0.5913636088371277,
+            -0.3564646244049072,
+            0.7233409285545349,
+            93.0
+          ],
+          [
+            -1.112574494754881e-07,
+            0.8969945907592773,
+            0.4420415759086609,
+            66.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -66.0,
+          93.0,
+          66.0
+        ],
+        "rotationEuler": [
+          1.1129229068756104,
+          1.112574494754881e-07,
+          -2.5088438987731934
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 99.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          2000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1855
+      ],
+      "sourceGeometrySHA256": [
+        "0c0c8d2948df7513f0c7adf1c08a6fe9d24296c03bd453645449c8818f6724d1",
+        "c2c920fc3e726bdfc7337ba0f5838184661ecd57eae231154e18d7f2ea464c3e",
+        "f8ec41e7f58e73a4b66d58f5dbedf9d6569ec7c035db00417276a05de992048e"
+      ],
+      "recipeSHA256": "376c92510a50031bdef17a80b9cc03a689624c2d8fb7fe9b89e626a541a3c779",
+      "nativeImageSHA256": "f639224776e30e8f8f159b920542dba1e119c7faacedb25425ab4902cf9701f3",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/nrc-2620-speakman--NRC-Northwest-close-After.png",
+      "signedSHA256": "2b1e9e8ee00a2286c9c0d92d9322ed3abac3c64e66628b00e807a105ee3aeb7c"
+    },
+    {
+      "project": "nrc-2620-speakman",
+      "label": "Before · Northeast surroundings",
+      "originalCamera": "NRC-Northeast-context-Before.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.7432941198348999,
+            -0.3201667070388794,
+            0.5873731374740601,
+            145.0
+          ],
+          [
+            0.6689648032188416,
+            -0.35574066638946533,
+            0.652636706829071,
+            150.0
+          ],
+          [
+            -4.914951290402314e-08,
+            0.878032922744751,
+            0.4786001741886139,
+            120.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          145.0,
+          150.0,
+          120.0
+        ],
+        "rotationEuler": [
+          1.0717365741729736,
+          4.914951290402314e-08,
+          2.4087774753570557
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 195.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          2000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1855
+      ],
+      "sourceGeometrySHA256": [
+        "0c0c8d2948df7513f0c7adf1c08a6fe9d24296c03bd453645449c8818f6724d1",
+        "c2c920fc3e726bdfc7337ba0f5838184661ecd57eae231154e18d7f2ea464c3e",
+        "f8ec41e7f58e73a4b66d58f5dbedf9d6569ec7c035db00417276a05de992048e"
+      ],
+      "recipeSHA256": "376c92510a50031bdef17a80b9cc03a689624c2d8fb7fe9b89e626a541a3c779",
+      "nativeImageSHA256": "a4000af3272dadfced00b3384edd3c1bbd9397395db83195d18a36b5f6dd3d1c",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/nrc-2620-speakman--NRC-Northeast-context-Before.png",
+      "signedSHA256": "1958014e1ee7207dd816900dd8080aea944c49ad1775f03f6e672b7cd49b1ecb"
+    },
+    {
+      "project": "nrc-2620-speakman",
+      "label": "After · Northeast surroundings",
+      "originalCamera": "NRC-Northeast-context-After.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.7432941198348999,
+            -0.3201667070388794,
+            0.5873731374740601,
+            145.0
+          ],
+          [
+            0.6689648032188416,
+            -0.35574066638946533,
+            0.652636706829071,
+            150.0
+          ],
+          [
+            -4.914951290402314e-08,
+            0.878032922744751,
+            0.4786001741886139,
+            120.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          145.0,
+          150.0,
+          120.0
+        ],
+        "rotationEuler": [
+          1.0717365741729736,
+          4.914951290402314e-08,
+          2.4087774753570557
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 195.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          2000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1855
+      ],
+      "sourceGeometrySHA256": [
+        "0c0c8d2948df7513f0c7adf1c08a6fe9d24296c03bd453645449c8818f6724d1",
+        "c2c920fc3e726bdfc7337ba0f5838184661ecd57eae231154e18d7f2ea464c3e",
+        "f8ec41e7f58e73a4b66d58f5dbedf9d6569ec7c035db00417276a05de992048e"
+      ],
+      "recipeSHA256": "376c92510a50031bdef17a80b9cc03a689624c2d8fb7fe9b89e626a541a3c779",
+      "nativeImageSHA256": "1ebcbc12cc1dc9841a1700c1e39d0cb9211c00b77429b0b559b2e946018dd5fc",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/nrc-2620-speakman--NRC-Northeast-context-After.png",
+      "signedSHA256": "c87fd3ee00aef59dc5a41b3897ab39a295312cb98fb96f368122e7ddf1c2672c"
+    },
+    {
+      "project": "utm-davis-meeting-place-canopy-study",
+      "label": "Before · Campus",
+      "originalCamera": "01-Before-Campus-Context.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.8502650856971741,
+            0.3043052852153778,
+            -0.4294735789299011,
+            -130.0
+          ],
+          [
+            -0.5263546705245972,
+            0.49156996607780457,
+            -0.693764865398407,
+            -162.0
+          ],
+          [
+            2.379603847302292e-09,
+            0.8159394860267639,
+            0.5781372785568237,
+            178.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -130.0,
+          -162.0,
+          178.0
+        ],
+        "rotationEuler": [
+          0.9543523788452148,
+          -2.379603847302292e-09,
+          -0.5543075799942017
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 210.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          3000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2800,
+        2000
+      ],
+      "sourceGeometrySHA256": [
+        "47601b5c46c4a94aa20eb6873e3c60b54daacd824496cbbff5ee21e925dd8043",
+        "898fa9f70b0b91d0e7d8bc66ddbf639f500f58f59dd14640fb0d0aa3204b0fc7"
+      ],
+      "recipeSHA256": "2a2355e29f7c2fe7710e859a3ba33097805d82cb099be19bbd92476fd4177f4e",
+      "nativeImageSHA256": "0f8a6e4346b2aef1f33319309083f423d3a7d0af586d63bbd6af49276410eeb7",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/01-Before-Campus-Context.png",
+      "signedSHA256": "c080159a6450654a66a2a0ec6f73ccf1f164bbcdabeb10574c7650ca59522ad8"
+    },
+    {
+      "project": "utm-davis-meeting-place-canopy-study",
+      "label": "After · Campus",
+      "originalCamera": "02-After-Campus-Context.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.8502650856971741,
+            0.3043052852153778,
+            -0.4294735789299011,
+            -130.0
+          ],
+          [
+            -0.5263546705245972,
+            0.49156996607780457,
+            -0.693764865398407,
+            -162.0
+          ],
+          [
+            2.379603847302292e-09,
+            0.8159394860267639,
+            0.5781372785568237,
+            178.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -130.0,
+          -162.0,
+          178.0
+        ],
+        "rotationEuler": [
+          0.9543523788452148,
+          -2.379603847302292e-09,
+          -0.5543075799942017
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 210.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          3000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2800,
+        2000
+      ],
+      "sourceGeometrySHA256": [
+        "47601b5c46c4a94aa20eb6873e3c60b54daacd824496cbbff5ee21e925dd8043",
+        "898fa9f70b0b91d0e7d8bc66ddbf639f500f58f59dd14640fb0d0aa3204b0fc7"
+      ],
+      "recipeSHA256": "2a2355e29f7c2fe7710e859a3ba33097805d82cb099be19bbd92476fd4177f4e",
+      "nativeImageSHA256": "aae712dd236e2779222cd0149ca3dc9438f4e869f886546251bca4538b804897",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/02-After-Campus-Context.png",
+      "signedSHA256": "b6ab3d3eac69b70b45a62b4b9ccb106fb3c8c3cf63bfbd13b994cb04c8e382f4"
+    },
+    {
+      "project": "utm-davis-meeting-place-canopy-study",
+      "label": "Canopy detail",
+      "originalCamera": "03-Canopy-Detail.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.7525767087936401,
+            0.32368072867393494,
+            -0.5734623670578003,
+            -80.0
+          ],
+          [
+            -0.6585046052932739,
+            0.369920939207077,
+            -0.6553855538368225,
+            -76.0
+          ],
+          [
+            8.283763719418857e-08,
+            0.8708555102348328,
+            0.4915391206741333,
+            64.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -80.0,
+          -76.0,
+          64.0
+        ],
+        "rotationEuler": [
+          1.0569400787353516,
+          -8.283763719418857e-08,
+          -0.7188299894332886
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 86.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          3000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2800,
+        2000
+      ],
+      "sourceGeometrySHA256": [
+        "47601b5c46c4a94aa20eb6873e3c60b54daacd824496cbbff5ee21e925dd8043",
+        "898fa9f70b0b91d0e7d8bc66ddbf639f500f58f59dd14640fb0d0aa3204b0fc7"
+      ],
+      "recipeSHA256": "2a2355e29f7c2fe7710e859a3ba33097805d82cb099be19bbd92476fd4177f4e",
+      "nativeImageSHA256": "aa6eceba03f1c400302a34dbb5fdef26d928152c89a42ef178f7b71ce2081dd6",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/03-Canopy-Detail.png",
+      "signedSHA256": "b89a93e2f3e6ba37b209ec0195f9de2e0af015f91184325c4de530b9c7164a71"
+    },
+    {
+      "project": "bell-gairdner-estate-study",
+      "label": "Before · North entrance",
+      "originalCamera": "Before-North-entry.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.6975850462913513,
+            0.1568634808063507,
+            -0.6991201043128967,
+            -3896.349365234375
+          ],
+          [
+            -0.7165020108222961,
+            -0.15272177755832672,
+            0.6806621551513672,
+            -11584.5927734375
+          ],
+          [
+            1.630310464406648e-07,
+            0.9757406711578369,
+            0.21892942488193512,
+            24.5
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -3896.349365234375,
+          -11584.5927734375,
+          24.5
+        ],
+        "rotationEuler": [
+          1.3500791788101196,
+          -1.630310464406648e-07,
+          -2.342817783355713
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 33.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.05000000074505806,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2200,
+        1550
+      ],
+      "sourceGeometrySHA256": [
+        "23d94f1594cbac78d9986895cabd3ac15b34aa9fd0d7f6ea5098b1c538c65af8",
+        "8012fae01dd3b6a8674eb8b45981da1c28babb2709578ec91e1afbd23685263d",
+        "92259bfdcb9c7fff94a20f0d4e755efca44e137694512272404b42a6b4a01292"
+      ],
+      "recipeSHA256": "e5c9e67465dfa51b0ea39aeaf4dc1094cd561f8ef47703c9cbafc647e9461750",
+      "nativeImageSHA256": "6ddfd513c2e5f9a14123824ab6e0c8e9ab7611b61250ab712ef2ff739a603d84",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/bell-gairdner-estate-study--Before-North-entry.png",
+      "signedSHA256": "45495ea816dd5bb872381d865a534b85a88617a6e6382f2f29f53ff7b411a671"
+    },
+    {
+      "project": "bell-gairdner-estate-study",
+      "label": "After · North entrance",
+      "originalCamera": "After-North-entry.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.6975850462913513,
+            0.1568634808063507,
+            -0.6991201043128967,
+            -3896.349365234375
+          ],
+          [
+            -0.7165020108222961,
+            -0.15272177755832672,
+            0.6806621551513672,
+            -11584.5927734375
+          ],
+          [
+            1.630310464406648e-07,
+            0.9757406711578369,
+            0.21892942488193512,
+            24.5
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -3896.349365234375,
+          -11584.5927734375,
+          24.5
+        ],
+        "rotationEuler": [
+          1.3500791788101196,
+          -1.630310464406648e-07,
+          -2.342817783355713
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 33.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.05000000074505806,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2200,
+        1550
+      ],
+      "sourceGeometrySHA256": [
+        "23d94f1594cbac78d9986895cabd3ac15b34aa9fd0d7f6ea5098b1c538c65af8",
+        "8012fae01dd3b6a8674eb8b45981da1c28babb2709578ec91e1afbd23685263d",
+        "92259bfdcb9c7fff94a20f0d4e755efca44e137694512272404b42a6b4a01292"
+      ],
+      "recipeSHA256": "e5c9e67465dfa51b0ea39aeaf4dc1094cd561f8ef47703c9cbafc647e9461750",
+      "nativeImageSHA256": "b019b2471161d3ecaa3bae71c894e05b69ac84eb0e4482e3d0cf09edc994da48",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/bell-gairdner-estate-study--After-North-entry.png",
+      "signedSHA256": "97aeeebc4066a946fb4b4ac974f82cdedd098cbef826bda4d2140bcd35f7659c"
+    },
+    {
+      "project": "bell-gairdner-estate-study",
+      "label": "Before · South garden",
+      "originalCamera": "Before-South-garden.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.5212196707725525,
+            -0.16558830440044403,
+            0.8372040390968323,
+            -3833.09033203125
+          ],
+          [
+            0.8534225821495056,
+            0.10113146901130676,
+            -0.511314332485199,
+            -11633.65625
+          ],
+          [
+            1.2838050622576702e-09,
+            0.9809958934783936,
+            0.19402851164340973,
+            23.5
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -3833.09033203125,
+          -11633.65625,
+          23.5
+        ],
+        "rotationEuler": [
+          1.3755292892456055,
+          -1.2838050622576702e-09,
+          1.0225168466567993
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 34.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.05000000074505806,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2200,
+        1550
+      ],
+      "sourceGeometrySHA256": [
+        "23d94f1594cbac78d9986895cabd3ac15b34aa9fd0d7f6ea5098b1c538c65af8",
+        "8012fae01dd3b6a8674eb8b45981da1c28babb2709578ec91e1afbd23685263d",
+        "92259bfdcb9c7fff94a20f0d4e755efca44e137694512272404b42a6b4a01292"
+      ],
+      "recipeSHA256": "e5c9e67465dfa51b0ea39aeaf4dc1094cd561f8ef47703c9cbafc647e9461750",
+      "nativeImageSHA256": "b33fe4420d6ef404f2e86f3bf3eb3ad8e8d24ae74b7fbb5ecb21babdfbb1d2cf",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/bell-gairdner-estate-study--Before-South-garden.png",
+      "signedSHA256": "72513b00eb86eb9fe027bd8388cc2a6ee70a391ab55c8bf90b119c738e03d41b"
+    },
+    {
+      "project": "bell-gairdner-estate-study",
+      "label": "After · South garden",
+      "originalCamera": "After-South-garden.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.5212196707725525,
+            -0.16558830440044403,
+            0.8372040390968323,
+            -3833.09033203125
+          ],
+          [
+            0.8534225821495056,
+            0.10113146901130676,
+            -0.511314332485199,
+            -11633.65625
+          ],
+          [
+            1.2838050622576702e-09,
+            0.9809958934783936,
+            0.19402851164340973,
+            23.5
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -3833.09033203125,
+          -11633.65625,
+          23.5
+        ],
+        "rotationEuler": [
+          1.3755292892456055,
+          -1.2838050622576702e-09,
+          1.0225168466567993
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 34.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.05000000074505806,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2200,
+        1550
+      ],
+      "sourceGeometrySHA256": [
+        "23d94f1594cbac78d9986895cabd3ac15b34aa9fd0d7f6ea5098b1c538c65af8",
+        "8012fae01dd3b6a8674eb8b45981da1c28babb2709578ec91e1afbd23685263d",
+        "92259bfdcb9c7fff94a20f0d4e755efca44e137694512272404b42a6b4a01292"
+      ],
+      "recipeSHA256": "e5c9e67465dfa51b0ea39aeaf4dc1094cd561f8ef47703c9cbafc647e9461750",
+      "nativeImageSHA256": "0359e15eab6fcbf46e6594dd6ed9770f81ce2af35c4515c97aeccb7ccb62ee08",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/bell-gairdner-estate-study--After-South-garden.png",
+      "signedSHA256": "15cd4aef09224e4b7269f3ba6ba55519012148b6ba6d6b79a2513e296fe0567a"
+    },
+    {
+      "project": "bell-gairdner-estate-study",
+      "label": "Before · Estate grounds",
+      "originalCamera": "Before-Estate-context.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.027092166244983673,
+            0.47732487320899963,
+            -0.8783091306686401,
+            -3937.25439453125
+          ],
+          [
+            -0.9996329545974731,
+            -0.012936539947986603,
+            0.023804020136594772,
+            -11585.90625
+          ],
+          [
+            -3.023893668796518e-08,
+            0.8786316514015198,
+            0.47750014066696167,
+            56.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -3937.25439453125,
+          -11585.90625,
+          56.0
+        ],
+        "rotationEuler": [
+          1.0729889869689941,
+          3.023893668796518e-08,
+          -1.5978918075561523
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 84.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.05000000074505806,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2200,
+        1550
+      ],
+      "sourceGeometrySHA256": [
+        "23d94f1594cbac78d9986895cabd3ac15b34aa9fd0d7f6ea5098b1c538c65af8",
+        "8012fae01dd3b6a8674eb8b45981da1c28babb2709578ec91e1afbd23685263d",
+        "92259bfdcb9c7fff94a20f0d4e755efca44e137694512272404b42a6b4a01292"
+      ],
+      "recipeSHA256": "e5c9e67465dfa51b0ea39aeaf4dc1094cd561f8ef47703c9cbafc647e9461750",
+      "nativeImageSHA256": "2503c89c5b47d21410e12eb0c6b1e025a40181de64c332297d30e16b9d3d2e27",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/bell-gairdner-estate-study--Before-Estate-context.png",
+      "signedSHA256": "d95294739e6e06d82008a4625d11245c808ecc42121cff51f1e56a6e24b79d97"
+    },
+    {
+      "project": "bell-gairdner-estate-study",
+      "label": "After · Estate grounds",
+      "originalCamera": "After-Estate-context.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.027092166244983673,
+            0.47732487320899963,
+            -0.8783091306686401,
+            -3937.25439453125
+          ],
+          [
+            -0.9996329545974731,
+            -0.012936539947986603,
+            0.023804020136594772,
+            -11585.90625
+          ],
+          [
+            -3.023893668796518e-08,
+            0.8786316514015198,
+            0.47750014066696167,
+            56.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -3937.25439453125,
+          -11585.90625,
+          56.0
+        ],
+        "rotationEuler": [
+          1.0729889869689941,
+          3.023893668796518e-08,
+          -1.5978918075561523
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 84.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.05000000074505806,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2200,
+        1550
+      ],
+      "sourceGeometrySHA256": [
+        "23d94f1594cbac78d9986895cabd3ac15b34aa9fd0d7f6ea5098b1c538c65af8",
+        "8012fae01dd3b6a8674eb8b45981da1c28babb2709578ec91e1afbd23685263d",
+        "92259bfdcb9c7fff94a20f0d4e755efca44e137694512272404b42a6b4a01292"
+      ],
+      "recipeSHA256": "e5c9e67465dfa51b0ea39aeaf4dc1094cd561f8ef47703c9cbafc647e9461750",
+      "nativeImageSHA256": "0a09638aded8c769dfa736595da12e657c1a960e5d9cdcd7c915d5329a65a6af",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/bell-gairdner-estate-study--After-Estate-context.png",
+      "signedSHA256": "e8d1e1f47c8148fd86ed0782a585a8945a7fdb50a259ed4cbeae14897bac95fc"
+    },
+    {
+      "project": "bell-gairdner-estate-study",
+      "label": "Estate grounds",
+      "originalCamera": "Estate-mapped-ground.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.7949512004852295,
+            -0.26303941011428833,
+            0.5466835498809814,
+            145.0
+          ],
+          [
+            0.6066734194755554,
+            -0.3446720242500305,
+            0.716343879699707,
+            202.0
+          ],
+          [
+            -1.4239704171359335e-07,
+            0.9011167883872986,
+            0.43357643485069275,
+            119.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          145.0,
+          202.0,
+          119.0
+        ],
+        "rotationEuler": [
+          1.1223384141921997,
+          1.4239704171359335e-07,
+          2.4897234439849854
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 250.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          3000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "55315d1f0c823c6cbbb67bb14e389244a3fc77880f5ce24d09a3092d9692991e",
+        "8012fae01dd3b6a8674eb8b45981da1c28babb2709578ec91e1afbd23685263d"
+      ],
+      "recipeSHA256": "5949e93c88eee8ebcb9631235a10f351e8f5696307aef22e1aa9db0edadf2290",
+      "nativeImageSHA256": "04570f3bd1c7f8f7010ebdb045a46b015776c3619a5eec0e482c80bcbc5fd455",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/bell-gairdner-estate-study--Estate-mapped-ground.png",
+      "signedSHA256": "3c16302774963dc2328881bacd087c196f687e170d269217cc2dfb3e46f4cbda"
+    },
+    {
+      "project": "bell-gairdner-estate-study",
+      "label": "House and grounds",
+      "originalCamera": "House-ground-contact.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.8535037636756897,
+            -0.18778184056282043,
+            0.48607537150382996,
+            58.0
+          ],
+          [
+            0.5210866332054138,
+            0.30757373571395874,
+            -0.796157717704773,
+            -110.0
+          ],
+          [
+            -4.600746450478255e-08,
+            0.9328110218048096,
+            0.36036595702171326,
+            48.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          58.0,
+          -110.0,
+          48.0
+        ],
+        "rotationEuler": [
+          1.2021361589431763,
+          4.600746450478255e-08,
+          0.5481235980987549
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 92.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          3000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1800
+      ],
+      "sourceGeometrySHA256": [
+        "55315d1f0c823c6cbbb67bb14e389244a3fc77880f5ce24d09a3092d9692991e",
+        "8012fae01dd3b6a8674eb8b45981da1c28babb2709578ec91e1afbd23685263d"
+      ],
+      "recipeSHA256": "5949e93c88eee8ebcb9631235a10f351e8f5696307aef22e1aa9db0edadf2290",
+      "nativeImageSHA256": "3aed6795d199042cc2ed2989e3350ed54ab440ad888b8869c3d24fb2c29accbc",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/bell-gairdner-estate-study--House-ground-contact.png",
+      "signedSHA256": "8c6687bc7c43f7979bb82ecf65a2877b46aa17fdf98fff799b58335999571408"
+    },
+    {
+      "project": "west-end-buddhist-temple-study",
+      "label": "Before · Front entrance",
+      "originalCamera": "Before-Temple-front.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.8158400654792786,
+            0.02796393632888794,
+            -0.5776011347770691,
+            -2293.731201171875
+          ],
+          [
+            -0.5782776474952698,
+            0.03945167362689972,
+            -0.8148856163024902,
+            1089.756103515625
+          ],
+          [
+            -7.827511439018053e-08,
+            0.9988300800323486,
+            0.048357173800468445,
+            69.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -2293.731201171875,
+          1089.756103515625,
+          69.0
+        ],
+        "rotationEuler": [
+          1.5224202871322632,
+          7.827511439018053e-08,
+          -0.6166159510612488
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 24.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.05000000074505806,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2200,
+        1550
+      ],
+      "sourceGeometrySHA256": [
+        "21ac9e7354a8ac9f2fc67236c92b414851598683dc854dc2e1e7dd18a612c5f4",
+        "3993856f9999cc1228b4a1fd22e14b15e835bdd6e127cac53900a1df29627745",
+        "7379b03d82ffc643c6bbe852680a63e63d92027cc79f6d6794856c64ec436baf",
+        "9995d86db511a9cdd10924a0b40d39e11ac622f94450b0f000175c3403ac6ac5"
+      ],
+      "recipeSHA256": "941b634735dfcd286a6a53393b62ad92bcf36d219a024610998579d7c0ed8b73",
+      "nativeImageSHA256": "cf986e56cdc3d47d95db5317b191b04fa967eba135a4d5f84eaa8e2c85ccf418",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/west-end-buddhist-temple-study--Before-Temple-front.png",
+      "signedSHA256": "f63bb5b3080db1035197665335cf390fd94f9f0ed813b6afde0bc5581c6cbea5"
+    },
+    {
+      "project": "west-end-buddhist-temple-study",
+      "label": "Before · Temple setting",
+      "originalCamera": "Before-Temple-context.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.45831379294395447,
+            0.44731247425079346,
+            -0.7680234313011169,
+            -2315.885986328125
+          ],
+          [
+            -0.8887904286384583,
+            0.23066113889217377,
+            -0.39603909850120544,
+            1100.252685546875
+          ],
+          [
+            -5.085759724465788e-08,
+            0.8641220927238464,
+            0.5032822489738464,
+            100.19999694824219
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -2315.885986328125,
+          1100.252685546875,
+          100.19999694824219
+        ],
+        "rotationEuler": [
+          1.0434033870697021,
+          5.085759724465788e-08,
+          -1.0946992635726929
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 58.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.05000000074505806,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2200,
+        1550
+      ],
+      "sourceGeometrySHA256": [
+        "21ac9e7354a8ac9f2fc67236c92b414851598683dc854dc2e1e7dd18a612c5f4",
+        "3993856f9999cc1228b4a1fd22e14b15e835bdd6e127cac53900a1df29627745",
+        "7379b03d82ffc643c6bbe852680a63e63d92027cc79f6d6794856c64ec436baf",
+        "9995d86db511a9cdd10924a0b40d39e11ac622f94450b0f000175c3403ac6ac5"
+      ],
+      "recipeSHA256": "941b634735dfcd286a6a53393b62ad92bcf36d219a024610998579d7c0ed8b73",
+      "nativeImageSHA256": "7720e790853c0a50971c98f51f4dc3837d46d0ba95638d8a4cc62cf7b2e3f8ea",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/west-end-buddhist-temple-study--Before-Temple-context.png",
+      "signedSHA256": "90d8ef34e7e961f1b7cbd56407d798523b142bdc55beb0c17aa33e17cbc24716"
+    },
+    {
+      "project": "west-end-buddhist-temple-study",
+      "label": "After · Front entrance",
+      "originalCamera": "After-Temple-front.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.8158400654792786,
+            0.02796393632888794,
+            -0.5776011347770691,
+            -2293.731201171875
+          ],
+          [
+            -0.5782776474952698,
+            0.03945167362689972,
+            -0.8148856163024902,
+            1089.756103515625
+          ],
+          [
+            -7.827511439018053e-08,
+            0.9988300800323486,
+            0.048357173800468445,
+            69.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -2293.731201171875,
+          1089.756103515625,
+          69.0
+        ],
+        "rotationEuler": [
+          1.5224202871322632,
+          7.827511439018053e-08,
+          -0.6166159510612488
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 24.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.05000000074505806,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2200,
+        1550
+      ],
+      "sourceGeometrySHA256": [
+        "21ac9e7354a8ac9f2fc67236c92b414851598683dc854dc2e1e7dd18a612c5f4",
+        "3993856f9999cc1228b4a1fd22e14b15e835bdd6e127cac53900a1df29627745",
+        "7379b03d82ffc643c6bbe852680a63e63d92027cc79f6d6794856c64ec436baf",
+        "9995d86db511a9cdd10924a0b40d39e11ac622f94450b0f000175c3403ac6ac5"
+      ],
+      "recipeSHA256": "941b634735dfcd286a6a53393b62ad92bcf36d219a024610998579d7c0ed8b73",
+      "nativeImageSHA256": "c660a558ed91a3b4853a5c36f08a3c8a7bdd2ec91e1c3c311150bfc6c3808efa",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/west-end-buddhist-temple-study--After-Temple-front.png",
+      "signedSHA256": "06fb1e1853082251c083ae46e6ab101f8f7956fba029d0adaf2638324b43bdad"
+    },
+    {
+      "project": "west-end-buddhist-temple-study",
+      "label": "After · Temple setting",
+      "originalCamera": "After-Temple-context.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.45831379294395447,
+            0.44731247425079346,
+            -0.7680234313011169,
+            -2315.885986328125
+          ],
+          [
+            -0.8887904286384583,
+            0.23066113889217377,
+            -0.39603909850120544,
+            1100.252685546875
+          ],
+          [
+            -5.085759724465788e-08,
+            0.8641220927238464,
+            0.5032822489738464,
+            100.19999694824219
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -2315.885986328125,
+          1100.252685546875,
+          100.19999694824219
+        ],
+        "rotationEuler": [
+          1.0434033870697021,
+          5.085759724465788e-08,
+          -1.0946992635726929
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 58.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.05000000074505806,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2200,
+        1550
+      ],
+      "sourceGeometrySHA256": [
+        "21ac9e7354a8ac9f2fc67236c92b414851598683dc854dc2e1e7dd18a612c5f4",
+        "3993856f9999cc1228b4a1fd22e14b15e835bdd6e127cac53900a1df29627745",
+        "7379b03d82ffc643c6bbe852680a63e63d92027cc79f6d6794856c64ec436baf",
+        "9995d86db511a9cdd10924a0b40d39e11ac622f94450b0f000175c3403ac6ac5"
+      ],
+      "recipeSHA256": "941b634735dfcd286a6a53393b62ad92bcf36d219a024610998579d7c0ed8b73",
+      "nativeImageSHA256": "12d752dcb4db4a1c72cd0aee86586be1e77d48b245e0c5130b810c0dfed9aa69",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/west-end-buddhist-temple-study--After-Temple-context.png",
+      "signedSHA256": "1fde8d12ec449090b4f530cc95b70b8ee26ccb72e1dd57d4925e56fca03fc2b1"
+    },
+    {
+      "project": "churchill-meadows-log-play-study",
+      "label": "Park setting",
+      "originalCamera": "churchill-meadows-log-play-study-After-Actual-Ground-01.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.8169678449630737,
+            -0.26951009035110474,
+            0.5098311901092529,
+            12.0
+          ],
+          [
+            0.5766832232475281,
+            0.381805956363678,
+            -0.7222607731819153,
+            -17.0
+          ],
+          [
+            -2.1189194399084954e-08,
+            0.8840749263763428,
+            0.46734514832496643,
+            12.25
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          12.0,
+          -17.0,
+          12.25
+        ],
+        "rotationEuler": [
+          1.0845109224319458,
+          2.1189194399084954e-08,
+          0.6146630048751831
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 15.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2600,
+        2000
+      ],
+      "sourceGeometrySHA256": [
+        "2a5b4b2dbc036fe1da4a5d79354f1b30548a5f0d89f3c831af1ec9988db250a4",
+        "6af952917de26b22e43c94a6988467c99969e029bc2881f2778edbbe7d982e42"
+      ],
+      "recipeSHA256": "12a65b747e0be4b5b5066be5cee5bf49f0f44597ce05270e4b2b5ef6c3b819e9",
+      "nativeImageSHA256": "8e4768692430f9225280f533f57c8e5d0bed844e5f0dd36d57d32af0be607356",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/churchill-meadows-log-play-study-After-Actual-Ground-01.png",
+      "signedSHA256": "7828826f9b8625c98de93b5d05ded73f9b3ce3da21d72fba97e092c757a39f8d"
+    },
+    {
+      "project": "churchill-meadows-log-play-study",
+      "label": "Close-up",
+      "originalCamera": "churchill-meadows-log-play-study-After-Actual-Ground-02.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            -0.678280234336853,
+            0.36157292127609253,
+            -0.6396881341934204,
+            -13.0
+          ],
+          [
+            -0.734803318977356,
+            -0.33375978469848633,
+            0.5904815793037415,
+            12.0
+          ],
+          [
+            -3.090895006607752e-08,
+            0.8705569505691528,
+            0.4920676648616791,
+            11.25
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -13.0,
+          12.0,
+          11.25
+        ],
+        "rotationEuler": [
+          1.056333065032959,
+          3.090895006607752e-08,
+          -2.316215991973877
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 15.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2600,
+        2000
+      ],
+      "sourceGeometrySHA256": [
+        "2a5b4b2dbc036fe1da4a5d79354f1b30548a5f0d89f3c831af1ec9988db250a4",
+        "6af952917de26b22e43c94a6988467c99969e029bc2881f2778edbbe7d982e42"
+      ],
+      "recipeSHA256": "12a65b747e0be4b5b5066be5cee5bf49f0f44597ce05270e4b2b5ef6c3b819e9",
+      "nativeImageSHA256": "2dda9f8d280e8c43f72f5ec78b599e5099d03f83eb281ed4035c25eeb1bea6ce",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/churchill-meadows-log-play-study-After-Actual-Ground-02.png",
+      "signedSHA256": "68dac6d03332d4db5a6f47921082f49c36a0fd6d38abe184b551fbf2e8ccfd03"
+    },
+    {
+      "project": "paul-coffey-castle-study",
+      "label": "Park setting",
+      "originalCamera": "paul-coffey-castle-study-After-Actual-Ground-01.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.8106791973114014,
+            -0.2599131762981415,
+            0.5246374011039734,
+            13.0
+          ],
+          [
+            0.5854906439781189,
+            0.35987988114356995,
+            -0.7264208197593689,
+            -18.0
+          ],
+          [
+            -8.91846383410666e-08,
+            0.8960645198822021,
+            0.44392386078834534,
+            13.25
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          13.0,
+          -18.0,
+          13.25
+        ],
+        "rotationEuler": [
+          1.110823392868042,
+          8.91846383410666e-08,
+          0.6254851222038269
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 15.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2600,
+        2000
+      ],
+      "sourceGeometrySHA256": [
+        "0701351b1fad9b5a72320801c16bc2368aa168ef21c8828e924f757cf6bf1d97",
+        "4cdcd0723653b073cb560a1c63cb92d20a7d462286e6b620af2edc149315df1a"
+      ],
+      "recipeSHA256": "12a65b747e0be4b5b5066be5cee5bf49f0f44597ce05270e4b2b5ef6c3b819e9",
+      "nativeImageSHA256": "1511006d68fbbbcedc9c6028f64e2eeedb0f926d6fdc84ef1d5b3b6b59e60398",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/paul-coffey-castle-study-After-Actual-Ground-01.png",
+      "signedSHA256": "577906f1fa68297605d54b08f2a3759cb195a07d500171315bd3359a84151456"
+    },
+    {
+      "project": "paul-coffey-castle-study",
+      "label": "Close-up",
+      "originalCamera": "paul-coffey-castle-study-After-Actual-Ground-02.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.7556891441345215,
+            0.29466715455055237,
+            -0.5848975777626038,
+            -13.0
+          ],
+          [
+            -0.6549304723739624,
+            0.3400006890296936,
+            -0.6748819351196289,
+            -15.0
+          ],
+          [
+            3.143671989391805e-08,
+            0.8930681943893433,
+            0.4499213397502899,
+            12.25
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -13.0,
+          -15.0,
+          12.25
+        ],
+        "rotationEuler": [
+          1.104119062423706,
+          -3.143671989391805e-08,
+          -0.7140905857086182
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 15.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2600,
+        2000
+      ],
+      "sourceGeometrySHA256": [
+        "0701351b1fad9b5a72320801c16bc2368aa168ef21c8828e924f757cf6bf1d97",
+        "4cdcd0723653b073cb560a1c63cb92d20a7d462286e6b620af2edc149315df1a"
+      ],
+      "recipeSHA256": "12a65b747e0be4b5b5066be5cee5bf49f0f44597ce05270e4b2b5ef6c3b819e9",
+      "nativeImageSHA256": "feb9b18131d7e023e76d791b8393ba84b714269f0e8601cbd85c38e8319fb1a3",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/paul-coffey-castle-study-After-Actual-Ground-02.png",
+      "signedSHA256": "b99d7205e79f7ee5be09dba24ee5c4c0af662751449e8b7e69423ab0b9804779"
+    },
+    {
+      "project": "fairwinds-park-ship-study",
+      "label": "Park setting",
+      "originalCamera": "fairwinds-park-ship-study-After-Actual-Ground-01.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.800000011920929,
+            -0.3086974620819092,
+            0.5144957304000854,
+            12.0
+          ],
+          [
+            0.6000000238418579,
+            0.4115966558456421,
+            -0.6859943270683289,
+            -16.0
+          ],
+          [
+            -2.568879331477092e-08,
+            0.8574929237365723,
+            0.5144957900047302,
+            14.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          12.0,
+          -16.0,
+          14.0
+        ],
+        "rotationEuler": [
+          1.0303767919540405,
+          2.568879331477092e-08,
+          0.6435011029243469
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 15.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2600,
+        2000
+      ],
+      "sourceGeometrySHA256": [
+        "06792afac15a3e762be7c53de74332fc50593e2ed03bfca3a4fd327a7bdce703",
+        "b126b080eddf3d8e5b8a052bcdf736e43b7384eb0fdef8fa06e78ce2734ddc78"
+      ],
+      "recipeSHA256": "12a65b747e0be4b5b5066be5cee5bf49f0f44597ce05270e4b2b5ef6c3b819e9",
+      "nativeImageSHA256": "84f871a09c151e8d54ba75a577986a3941464ce2607be7df1ed4566af6bbecc5",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/fairwinds-park-ship-study-After-Actual-Ground-01.png",
+      "signedSHA256": "5b12c55d701c1e175f6dc41d784d7f100f4e5cb3452eebb35884c2aa4304484f"
+    },
+    {
+      "project": "fairwinds-park-ship-study",
+      "label": "Close-up",
+      "originalCamera": "fairwinds-park-ship-study-After-Actual-Ground-02.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.7761141061782837,
+            0.2752131521701813,
+            -0.5673664212226868,
+            -13.0
+          ],
+          [
+            -0.6305925250053406,
+            0.3387240469455719,
+            -0.6982972621917725,
+            -16.0
+          ],
+          [
+            7.081226272021013e-08,
+            0.8997353911399841,
+            0.43643584847450256,
+            12.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -13.0,
+          -16.0,
+          12.0
+        ],
+        "rotationEuler": [
+          1.1191627979278564,
+          -7.081226272021013e-08,
+          -0.6823164224624634
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 15.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          1000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2600,
+        2000
+      ],
+      "sourceGeometrySHA256": [
+        "06792afac15a3e762be7c53de74332fc50593e2ed03bfca3a4fd327a7bdce703",
+        "b126b080eddf3d8e5b8a052bcdf736e43b7384eb0fdef8fa06e78ce2734ddc78"
+      ],
+      "recipeSHA256": "12a65b747e0be4b5b5066be5cee5bf49f0f44597ce05270e4b2b5ef6c3b819e9",
+      "nativeImageSHA256": "0ac3502a2502404d62ad3070f19cea4fecae09b7cb0f8b6c26b5b5bea00e52db",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/fairwinds-park-ship-study-After-Actual-Ground-02.png",
+      "signedSHA256": "69265398c0731b305f885c9868222b258ab10ae89debaabb0ee34c4f36f6e4d4"
+    },
+    {
+      "project": "clarkson-creekside-1639",
+      "label": "Before · Street view",
+      "originalCamera": "Before-Street-context.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.01648692600429058,
+            -0.442717581987381,
+            0.8965095281600952,
+            -3442.84423828125
+          ],
+          [
+            0.9998641014099121,
+            0.007300001569092274,
+            -0.014782717451453209,
+            -7533.38818359375
+          ],
+          [
+            4.785653473504681e-08,
+            0.8966314196586609,
+            0.44277775287628174,
+            78.06822204589844
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -3442.84423828125,
+          -7533.38818359375,
+          78.06822204589844
+        ],
+        "rotationEuler": [
+          1.1121020317077637,
+          -4.785653473504681e-08,
+          1.5543086528778076
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 96.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          3000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1700
+      ],
+      "sourceGeometrySHA256": [
+        "5d279c5036da829bb5cb6ea107a55926e2859c3dfeae90584e0f83ef3deb4097",
+        "b580293b03d3f3ad64bcbed97fdf1e444f139727a99b28b7626cd30c69519872"
+      ],
+      "recipeSHA256": "18cfd911d1b905d0aee0a20f5b15e3818e272f613120631faebd3d24ab67b0ce",
+      "nativeImageSHA256": "5036743960b4365ece79c7c9e5c47662b04d164b710a15d23e95c8f2a5f61315",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/Before-Street-context.png",
+      "signedSHA256": "1d44d06979921c889fdb9b76685c70cfd3b6ad67963df05746f55fa86deff96c"
+    },
+    {
+      "project": "clarkson-creekside-1639",
+      "label": "After · Street view",
+      "originalCamera": "After-Street-context.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.01648692600429058,
+            -0.442717581987381,
+            0.8965095281600952,
+            -3442.84423828125
+          ],
+          [
+            0.9998641014099121,
+            0.007300001569092274,
+            -0.014782717451453209,
+            -7533.38818359375
+          ],
+          [
+            4.785653473504681e-08,
+            0.8966314196586609,
+            0.44277775287628174,
+            78.06822204589844
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -3442.84423828125,
+          -7533.38818359375,
+          78.06822204589844
+        ],
+        "rotationEuler": [
+          1.1121020317077637,
+          -4.785653473504681e-08,
+          1.5543086528778076
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 96.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          3000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1700
+      ],
+      "sourceGeometrySHA256": [
+        "5d279c5036da829bb5cb6ea107a55926e2859c3dfeae90584e0f83ef3deb4097",
+        "b580293b03d3f3ad64bcbed97fdf1e444f139727a99b28b7626cd30c69519872"
+      ],
+      "recipeSHA256": "18cfd911d1b905d0aee0a20f5b15e3818e272f613120631faebd3d24ab67b0ce",
+      "nativeImageSHA256": "1bf7c200f84d4d0094f760bc4fbaa5b1549fe0b491c517831eff5da77598b6a2",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/After-Street-context.png",
+      "signedSHA256": "2aa8376077a2a2046cdee54e27298bc490a5fcd748b77b58ca1a48bc5068344a"
+    },
+    {
+      "project": "clarkson-creekside-1639",
+      "label": "After · Rear elevation",
+      "originalCamera": "After-Rear-plan-study.png",
+      "camera": {
+        "type": "ORTHO",
+        "matrixWorld": [
+          [
+            0.06291518360376358,
+            0.5028172135353088,
+            -0.8621000647544861,
+            -3646.12255859375
+          ],
+          [
+            -0.9980188608169556,
+            0.03169767186045647,
+            -0.05434683337807655,
+            -7538.4736328125
+          ],
+          [
+            4.3189910314822555e-08,
+            0.8638113737106323,
+            0.5038153529167175,
+            92.06822204589844
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "location": [
+          -3646.12255859375,
+          -7538.4736328125,
+          92.06822204589844
+        ],
+        "rotationEuler": [
+          1.0427863597869873,
+          -4.3189910314822555e-08,
+          -1.507839560508728
+        ],
+        "rotationMode": "XYZ",
+        "lens": 50.0,
+        "orthographicScale": 96.0,
+        "sensorFit": "AUTO",
+        "sensorWidth": 36.0,
+        "sensorHeight": 24.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "clip": [
+          0.10000000149011612,
+          3000.0
+        ],
+        "pixelAspect": [
+          1.0,
+          1.0
+        ]
+      },
+      "nativePixels": [
+        2400,
+        1700
+      ],
+      "sourceGeometrySHA256": [
+        "5d279c5036da829bb5cb6ea107a55926e2859c3dfeae90584e0f83ef3deb4097",
+        "b580293b03d3f3ad64bcbed97fdf1e444f139727a99b28b7626cd30c69519872"
+      ],
+      "recipeSHA256": "18cfd911d1b905d0aee0a20f5b15e3818e272f613120631faebd3d24ab67b0ce",
+      "nativeImageSHA256": "d658174af58e71ff75b15e606bcb58ee1888f6df48ddd9ee8ce546f089dbc33e",
+      "signedPNG": "../gallery/edition-20261121/revision-panels/After-Rear-plan-study.png",
+      "signedSHA256": "055dfe08181ec6a9962216d996807b8db15019465767117f593db2a45ea7b68f"
+    }
+  ]
+}

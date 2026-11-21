@@ -1,0 +1,185 @@
+[
+  {
+    "recipe": "bell-context/render_bell_context.py",
+    "recipeSHA256": "5949e93c88eee8ebcb9631235a10f351e8f5696307aef22e1aa9db0edadf2290",
+    "args": [],
+    "views": {
+      "Estate-mapped-ground.png": "bell-gairdner-estate-study--Estate-mapped-ground.png",
+      "House-ground-contact.png": "bell-gairdner-estate-study--House-ground-contact.png"
+    }
+  },
+  {
+    "recipe": "bell-gairdner-pilot/render_pilot.py",
+    "recipeSHA256": "e5c9e67465dfa51b0ea39aeaf4dc1094cd561f8ef47703c9cbafc647e9461750",
+    "args": [],
+    "replayBothVersions": true,
+    "views": {
+      "Before-North-entry.png": "bell-gairdner-estate-study--Before-North-entry.png",
+      "After-North-entry.png": "bell-gairdner-estate-study--After-North-entry.png",
+      "Before-South-garden.png": "bell-gairdner-estate-study--Before-South-garden.png",
+      "After-South-garden.png": "bell-gairdner-estate-study--After-South-garden.png",
+      "Before-Estate-context.png": "bell-gairdner-estate-study--Before-Estate-context.png",
+      "After-Estate-context.png": "bell-gairdner-estate-study--After-Estate-context.png"
+    }
+  },
+  {
+    "recipe": "buddhist-temple-pilot/render_pilot.py",
+    "recipeSHA256": "941b634735dfcd286a6a53393b62ad92bcf36d219a024610998579d7c0ed8b73",
+    "args": [],
+    "views": {
+      "Before-Temple-front.png": "west-end-buddhist-temple-study--Before-Temple-front.png",
+      "Before-Temple-context.png": "west-end-buddhist-temple-study--Before-Temple-context.png",
+      "After-Temple-front.png": "west-end-buddhist-temple-study--After-Temple-front.png",
+      "After-Temple-context.png": "west-end-buddhist-temple-study--After-Temple-context.png"
+    }
+  },
+  {
+    "recipe": "city-paula-study-2026-10-13/render_frontage.py",
+    "recipeSHA256": "c5f0dfbcd724acac7e8dc0b02af6682b4927b343d57b54b87caa1e3848b0dd06",
+    "args": [],
+    "views": {
+      "Before-228-Queen-private-frontage.png": "Queen-228-before-frontage.png",
+      "After-228-Queen-private-frontage.png": "Queen-228-after-frontage.png"
+    }
+  },
+  {
+    "recipe": "conference-council-house-private-study-2026-10-17/render-private-studies.py",
+    "recipeSHA256": "aadd997956c5e4678b329e47cabb803fbef107ccb63895437e208f7bbaa20242",
+    "args": [
+      "jobs",
+      "Conference-Council-House"
+    ],
+    "views": {
+      "Conference-Council-House-after-front.png": "Conference-Council-House-after-front.png",
+      "Conference-Council-House-after-detail.png": "Conference-Council-House-after-detail.png"
+    }
+  },
+  {
+    "recipe": "creekside/render_creekside.py",
+    "recipeSHA256": "18cfd911d1b905d0aee0a20f5b15e3818e272f613120631faebd3d24ab67b0ce",
+    "args": [],
+    "views": {
+      "Before-Street-context.png": "Before-Street-context.png",
+      "After-Street-context.png": "After-Street-context.png",
+      "After-Rear-plan-study.png": "After-Rear-plan-study.png"
+    }
+  },
+  {
+    "recipe": "ergocentric-275-superior-2026-10-28/render_candidate.py",
+    "recipeSHA256": "7738024de670a3f29460566a0d331c20903cbde0077e55f982c1d9e271131e87",
+    "args": [],
+    "views": {
+      "frontage-before-raw.png": "275-Superior-frontage-before.png",
+      "frontage-after-raw.png": "275-Superior-frontage-after.png"
+    }
+  },
+  {
+    "recipe": "gala-gateway-private-study-2026-10-17/render-private-studies.py",
+    "recipeSHA256": "c454408aad1385372caead8f3d95140c3de5f3101b35509f6232b85bf03b6082",
+    "args": [
+      "jobs",
+      "Gala-Gateway"
+    ],
+    "views": {
+      "Gala-Gateway-after-corner.png": "Gala-Gateway-after-corner.png",
+      "Gala-Gateway-after-front.png": "Gala-Gateway-after-front.png"
+    }
+  },
+  {
+    "recipe": "new-photo-model-followthrough-2026-10-14/render-private-studies.py",
+    "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+    "args": [
+      "jobs",
+      "Benares-house,Benares-visitor-centre,Paisley,Bradley-barn,Bradley-log-cabin,Anchorage,Leslie-log-house,Lighthouse"
+    ],
+    "views": {
+      "Paisley-before-opposite-end.png": "Paisley-before-opposite-end.png",
+      "Paisley-after-opposite-end.png": "Paisley-after-opposite-end.png",
+      "Benares-house-before-kitchen.png": "Benares-house-before-kitchen.png",
+      "Benares-house-after-kitchen.png": "Benares-house-after-kitchen.png",
+      "Benares-visitor-centre-before-front.png": "Benares-visitor-centre-before-front.png",
+      "Benares-visitor-centre-after-front.png": "Benares-visitor-centre-after-front.png",
+      "Anchorage-before-front.png": "Anchorage-before-front.png",
+      "Anchorage-after-front.png": "Anchorage-after-front.png",
+      "Bradley-log-cabin-before-front.png": "Bradley-log-cabin-before-front.png",
+      "Bradley-log-cabin-after-front.png": "Bradley-log-cabin-after-front.png",
+      "Bradley-barn-before-front.png": "Bradley-barn-before-front.png",
+      "Bradley-barn-after-front.png": "Bradley-barn-after-front.png",
+      "Leslie-log-house-before-front.png": "Leslie-log-house-before-front.png",
+      "Leslie-log-house-after-front.png": "Leslie-log-house-after-front.png",
+      "Lighthouse-after-neutral-daylight.png": "Lighthouse-after-neutral-daylight.png",
+      "Lighthouse-after-warm-light.png": "Lighthouse-after-warm-light.png"
+    }
+  },
+  {
+    "recipe": "nrc-pilot/render_nrc_pilot.py",
+    "recipeSHA256": "376c92510a50031bdef17a80b9cc03a689624c2d8fb7fe9b89e626a541a3c779",
+    "args": [],
+    "views": {
+      "NRC-Northwest-close-Before.png": "nrc-2620-speakman--NRC-Northwest-close-Before.png",
+      "NRC-Northwest-close-After.png": "nrc-2620-speakman--NRC-Northwest-close-After.png",
+      "NRC-Northeast-context-Before.png": "nrc-2620-speakman--NRC-Northeast-context-Before.png",
+      "NRC-Northeast-context-After.png": "nrc-2620-speakman--NRC-Northeast-context-After.png"
+    }
+  },
+  {
+    "recipe": "park-ground-registration/render_registered_landmarks.py",
+    "recipeSHA256": "12a65b747e0be4b5b5066be5cee5bf49f0f44597ce05270e4b2b5ef6c3b819e9",
+    "args": [],
+    "views": {
+      "churchill-meadows-log-play-study-After-Actual-Ground-01.png": "churchill-meadows-log-play-study-After-Actual-Ground-01.png",
+      "churchill-meadows-log-play-study-After-Actual-Ground-02.png": "churchill-meadows-log-play-study-After-Actual-Ground-02.png",
+      "paul-coffey-castle-study-After-Actual-Ground-01.png": "paul-coffey-castle-study-After-Actual-Ground-01.png",
+      "paul-coffey-castle-study-After-Actual-Ground-02.png": "paul-coffey-castle-study-After-Actual-Ground-02.png",
+      "fairwinds-park-ship-study-After-Actual-Ground-01.png": "fairwinds-park-ship-study-After-Actual-Ground-01.png",
+      "fairwinds-park-ship-study-After-Actual-Ground-02.png": "fairwinds-park-ship-study-After-Actual-Ground-02.png"
+    }
+  },
+  {
+    "recipe": "riley-utm-pilot/render_and_save.py",
+    "recipeSHA256": "2a2355e29f7c2fe7710e859a3ba33097805d82cb099be19bbd92476fd4177f4e",
+    "args": [],
+    "views": {
+      "01-Before-Campus-Context.png": "01-Before-Campus-Context.png",
+      "02-After-Campus-Context.png": "02-After-Campus-Context.png",
+      "03-Canopy-Detail.png": "03-Canopy-Detail.png"
+    }
+  },
+  {
+    "recipe": "sgm-maritz-2026-10-27/render_candidate.py",
+    "recipeSHA256": "8fb0541d13ec9d140d27ba134acefe6def5172d0883e598237544a1a0a69e0c2",
+    "args": [],
+    "views": {
+      "frontage-before-raw.png": "6710-Maritz-frontage-before.png",
+      "frontage-after-raw.png": "6710-Maritz-frontage-after.png"
+    }
+  },
+  {
+    "recipe": "sherobee-roof-review-2026-10-17/render-private-studies.py",
+    "recipeSHA256": "214ddd6b7dec1f0e9508267633bceb2d759c88719323433bf68d826509f5606e",
+    "args": [
+      "jobs",
+      "Sherobee"
+    ],
+    "views": {
+      "Sherobee-before-front.png": "Sherobee-before-front.png",
+      "Sherobee-after-front.png": "Sherobee-after-front.png",
+      "Sherobee-before-context.png": "Sherobee-before-context.png",
+      "Sherobee-after-context.png": "Sherobee-after-context.png"
+    }
+  },
+  {
+    "recipe": "winding-trail-private-study-2026-10-17/render-private-studies.py",
+    "recipeSHA256": "aadd997956c5e4678b329e47cabb803fbef107ccb63895437e208f7bbaa20242",
+    "args": [
+      "jobs",
+      "Winding-Trail"
+    ],
+    "views": {
+      "Winding-Trail-before-front.png": "Winding-Trail-before-front.png",
+      "Winding-Trail-after-front.png": "Winding-Trail-after-front.png",
+      "Winding-Trail-before-corner.png": "Winding-Trail-before-corner.png",
+      "Winding-Trail-after-corner.png": "Winding-Trail-after-corner.png"
+    }
+  }
+]

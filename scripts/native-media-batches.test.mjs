@@ -1,3 +1,5 @@
+import {activeArtworkEdition} from './active-artwork-edition.mjs';
+const artworkEdition=activeArtworkEdition();
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -84,7 +86,7 @@ test('selecting a neighbourhood replaces both comparison resolutions and the lab
  for(const [area,name,smallWidth,largeWidth] of [['downtown','Downtown',1200,2560],['clarkson','Clarkson',640,1600],['lakeview','Lakeview',640,1600]]) {
   for(const [node,state] of [[before,'existing'],[after,'future']]) {
    setPairImage(node,area,name,state);
-   const root='gallery/edition-20261120/';
+   const root=`gallery/edition-${artworkEdition}/`;
    const file='wide-'+area+'-'+state+'.webp';
    const small=root+(area==='downtown'?'home-'+state+'-1200.webp':'thumbnails/'+file);
    const large=root+(area==='downtown'?'home-'+state+'-2560.webp':file);
@@ -114,15 +116,20 @@ test('ordinary inline images cap their source candidates at the largest AVIF; na
 });
 
 test('all three featured aerials use one bearing and pair responsive images with full credited downloads',()=>{
- const html=text('compare.html'), home=downtownAerial.skyline;
- const plates=JSON.parse(text('data/city-plates-20261120.json')).plates;
+ const html=text('index.html'), home=downtownAerial.skyline;
+ const plates=JSON.parse(text(`data/city-plates-${artworkEdition}.json`)).plates;
  const current=Object.fromEntries(Object.entries(downtownAerial).map(([view,frame])=>{
   const plate=plates.find(p=>p.id==='wide/downtown-skyline-'+frame.scenario+'.png');
   return [view,stageFrame(frame,plate)];
  }));
- const proposed=current.skyline;
- assert(html.includes('src="'+proposed.preview+'"'));assert(html.includes(proposed.responsive+' '+proposed.width+'w'));
- assert(html.includes('href="'+proposed.download+'" download'));
+ for(const stage of ['existing','construction','future']){
+  const button=html.match(new RegExp('<button[^>]+data-plate-state="'+stage+'"[^>]*>'))?.[0];
+  assert(button,stage);
+  for(const key of ['small','large','original']){
+   const url=button.match(new RegExp('data-'+key+'="([^"]+)"'))[1];
+   assert(fs.existsSync(new URL(url,pub)),url);
+  }
+ }
  for(const [view,frame] of Object.entries(downtownAerial)){
   const node=()=>({dataset:{},setAttribute(){}});
   const image=node(),button=node(),download=node(),elements={image,opener:button,download};
@@ -141,7 +148,7 @@ test('all three featured aerials use one bearing and pair responsive images with
    assert(path.includes(createHash('sha256').update(bytes).digest('hex').slice(0,12)));
    if(path.endsWith('.png')){assert.equal(bytes.readUInt32BE(16),frame.width);assert.equal(bytes.readUInt32BE(20),frame.downloadHeight);assert(frame.downloadHeight>frame.height);}
   }
-  assert(html.includes('value="'+view+'"'));assert(text('gallery-catalogue.js').includes('-skyline-'+frame.scenario+'.png'));
+  assert(html.includes('data-plate-state="'+frame.scenario+'"'));assert(text('gallery-catalogue.js').includes('-skyline-'+frame.scenario+'.png'));
  }
 });
 

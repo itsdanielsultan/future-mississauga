@@ -103,11 +103,16 @@ def render_view(items, direction, target, raster, frontage=False, output_size=(1
     light = unit([-.62, .9, .82])
     for (_, normals, surface, uv, texture, material_name, indices), positions in zip(items, projected):
         positions[:, :2] = positions[:, :2] * scale + offset
+        upper_membrane = roof_sheen and material_name.startswith('Plain black upper flat roof')
+        if upper_membrane:
+            # The authored double-sided membrane has downward normals. Light the
+            # side seen by this camera, as a double-sided glTF surface requires.
+            normals = np.where((normals @ eye < 0)[:, None], -normals, normals)
         sky = np.maximum(0, normals[:, 1])
         illumination = .73 + .24 * np.maximum(0, normals @ light) + .06 * sky
         # Aldo’s black membrane reflects the sky. Isolate the dark, flat upper roof
         # so this adjustment cannot lighten the shingled slopes or the lower garage.
-        if roof_sheen and material_name.startswith('Plain black upper flat roof'):
+        if upper_membrane:
             half_vector = unit(eye + np.array([0, 1, 0]))
             gloss = np.maximum(0, normals @ half_vector) ** 4
             sky_reflection = 15 + 8 * sky + 5 * gloss

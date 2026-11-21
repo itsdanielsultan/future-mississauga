@@ -23,6 +23,8 @@ const src=join(root,'public'), output=join(root,'.cloudflare-release');
 const stage=await mkdtemp(join(root,'.cloudflare-stage-'));
 const assets=join(stage,'assets'),media=join(stage,'media'), files={}, objects=new Map();
 const maxBytes=25*1024**2, budget=8_000_000_000;
+const printDirectory=join(root,'cloudflare/static-prints');
+const staticPrints=new Set();
 const mime={'.glb':'model/gltf-binary','.png':'image/png','.webp':'image/webp','.pdf':'application/pdf','.mp4':'video/mp4','.gz':'application/gzip','.jpg':'image/jpeg'};
 let count=0, bytes=0;
 async function visit(folder){
@@ -57,7 +59,21 @@ try{
   await validate(src,{enforcePublicationSize:false,target:'cloudflare'});
   await mkdir(media);await mkdir(assets);
   await visit(src);
-  const r2Bytes=[...objects.values()].reduce((n,f)=>n+f.bytes,0);
+  // A few immutable PNGs fit Workers' per-file limit. Keep these originals in
+  // Git so the same named and digest links remain recoverable in future builds.
+  const prints=await readdir(printDirectory).catch(error=>{if(error.code==='ENOENT')return [];throw error});
+  if(prints.length)await mkdir(join(assets,'_city-originals'));
+  for(const name of prints.sort()){
+    assert(/^[a-f0-9]{64}\.png$/.test(name),name);
+    const key=name.slice(0,-4),from=join(printDirectory,name),size=(await stat(from)).size;
+    assert(size>0&&size<=maxBytes&&createHash('sha256').update(await readFile(from)).digest('hex')===key,name);
+    const record=objects.get(key);
+    if(record)assert(record.type==='image/png'&&record.bytes===size,name);
+    await copyReleaseFile(from,join(assets,'_city-originals',name),size);
+    staticPrints.add(key);count++;bytes+=size;
+  }
+  const r2Objects=[...objects.values()].filter(file=>!staticPrints.has(file.key));
+  const r2Bytes=r2Objects.reduce((n,f)=>n+f.bytes,0);
   assert(count<=20000,'Workers Free file count exceeded');
   assert(r2Bytes<=budget,'Project storage budget exceeded');
   await writeFile(join(stage,'objects.json'),JSON.stringify(Object.fromEntries(objects),null,2));
@@ -71,7 +87,7 @@ try{
   }
   await writeFile(join(stage,'published-media.json'),JSON.stringify({...archive,...Object.fromEntries(objects)},null,2)+'\n');
   const source=await readFile(join(root,'cloudflare/media-worker.mjs'),'utf8');
-  await writeFile(join(stage,'worker.mjs'),source+'\nexport default serveMedia('+JSON.stringify(files)+','+JSON.stringify('/'+atlas)+','+JSON.stringify(archive)+');\n');
+  await writeFile(join(stage,'worker.mjs'),source+'\nexport default serveMedia('+JSON.stringify(files)+','+JSON.stringify('/'+atlas)+','+JSON.stringify(archive)+','+JSON.stringify([...staticPrints])+');\n');
   await copyFile(join(root,'cloudflare/suggestions.mjs'),join(stage,'suggestions.mjs'));
   await copyFile(join(root,'cloudflare/suggestions.sql'),join(stage,'suggestions.sql'));
   const config={name:'future-mississauga-preview',main:'worker.mjs',compatibility_date:'2026-11-01',workers_dev:true,preview_urls:true,assets:{directory:'./assets',binding:'ASSETS',html_handling:'none',not_found_handling:'none',run_worker_first:[legacyAtlasPath,'/api/suggestions','/api/suggestions/*']},r2_buckets:[{binding:'MEDIA',bucket_name:'future-mississauga-media'}]};
@@ -81,7 +97,7 @@ try{
     config.d1_databases = [{binding:'SUGGESTIONS_DB',database_name:'future-mississauga-suggestions',database_id:suggestionsDb}];
   }
   await writeFile(join(stage,'wrangler.json'),JSON.stringify(config,null,2)+'\n');
-  const summary={staticFiles:count,staticBytes:bytes,r2Objects:objects.size,r2Bytes,maximumProjectStorage:budget,currentAtlas:'/'+atlas};
+  const summary={staticFiles:count,staticBytes:bytes,r2Objects:r2Objects.length,r2Bytes,mediaObjects:objects.size,staticPrints:[...staticPrints],maximumProjectStorage:budget,currentAtlas:'/'+atlas};
   await writeFile(join(stage,'inventory.json'),JSON.stringify(summary,null,2)+'\n');
   // Replace only directories made by this builder.
   if(await lstat(output).catch(()=>null)){

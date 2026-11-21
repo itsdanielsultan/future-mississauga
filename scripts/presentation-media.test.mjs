@@ -1,3 +1,5 @@
+import {activeArtworkEdition} from './active-artwork-edition.mjs';
+const artworkEdition=activeArtworkEdition();
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -62,7 +64,7 @@ test('skyline film and poster share the revised image edition and equal scenario
  assert.equal(film.durationSeconds,12);
  assert.equal(film.validation.posterMatchesDecodedFirstFrameExactly,true);
  for(const key of ['film','poster','credits']){const asset=film[key],bytes=file(root+asset.file);assert.equal(bytes.length,asset.bytes);assert.equal(sha(bytes),asset.sha256);}
- const current=read('data/downtown-film-20261120.json'),home=file('film.html').toString();assert(home.includes(current.film.url));assert(home.includes(current.poster.url));
+ const current=read(`data/downtown-film-${artworkEdition}.json`),home=file('film.html').toString();assert(home.includes(current.film.url));assert(home.includes(current.poster.url));
  for(const key of ['film','poster','credits']){const asset=current[key],bytes=file(asset.url);assert.equal(bytes.length,asset.bytes);assert.equal(sha(bytes),asset.sha256);}
  assert.equal(current.historicalFilmPreserved,true);
  assert(!home.includes('gallery/Downtown-transformation.mp4'));

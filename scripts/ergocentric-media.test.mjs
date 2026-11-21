@@ -35,9 +35,13 @@ test('the study retains exact photography credit, link and City terms beside the
   const notes=fs.readFileSync(new URL('study-notes.html',root),'utf8');
   const frontage=notes.match(/<article id="ergocentric-275-superior">[\s\S]*?<\/article>/)?.[0];
   assert.match(frontage,/photograph’s date is unknown[\s\S]*roof and rear remain unchanged/);
-  assert.match(section,/gallery\/edition-20261120\/buildings\/ergocentric-275-superior\.webp/);
+  assert.match(section,/gallery\/edition-2026112[01]\/buildings\/ergocentric-275-superior\.webp/);
   for(const row of manifest.images){
-    assert.ok(section.includes('<a href="'+row.url+'"><div'));
+    const edition=JSON.parse(fs.readFileSync(new URL('data/revision-panels-20261121.json',root)));
+    const render=edition.panels.find(panel=>panel.archive===row.url);
+    assert(render?.sourceHashes.includes(row.sourceModelSHA256));
+    assert(section.includes('href="'+render.display.url+'" data-revision-panel="ergocentric-275-superior"'));
+    assert(notes.includes('href="'+row.url+'"'));
     assert(!section.includes('href="'+row.url+'" download data-download'),'Historical reference pictures are view-only');
   }
 });

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {imageViewportGeometry} from '../public/image-viewport.js';
+import {imageViewportGeometry,bindImageViewport} from '../public/image-viewport.js';
 import {savedAppearance,prepareAppearancePreference,APPEARANCE_STORAGE_KEY} from '../public/appearance-preference.js';
 
 test('fit keeps complete landscape and portrait images inside a phone viewport',()=>{
@@ -24,4 +24,19 @@ test('Architectural starts by default and deliberate early choice survives engin
  select.value='status';listeners.change();assert.equal(data.get(APPEARANCE_STORAGE_KEY),'status');
  assert.equal(prepareAppearancePreference(select,storage),'status');
  assert.equal(savedAppearance({getItem(){throw new Error('unavailable')}}),'natural');
+});
+
+test('trackpad swipes advance once per gesture and move the image when zoomed in',()=>{
+ const handlers={},stage={clientWidth:600,clientHeight:500,classList:{toggle(){}},setAttribute(){},
+  getBoundingClientRect:()=>({width:600,height:500,left:0,top:0}),addEventListener:(key,fn)=>{handlers[key]=fn;}};
+ const control=()=>({setAttribute(){},addEventListener(){}}),image={style:{}},navigation=[];
+ const viewport=bindImageViewport({stage,image,zoomIn:control(),zoomOut:control(),fitButton:control(),readout:{},onNavigate:step=>navigation.push(step)});
+ viewport.setImage({width:1800,height:1400});
+ const wheel=(timeStamp,deltaX,deltaY,ctrlKey=false)=>handlers.wheel({timeStamp,deltaX,deltaY,deltaMode:0,ctrlKey,clientX:300,clientY:250,preventDefault(){}});
+ wheel(0,20,1);wheel(16,32,1);viewport.setImage({width:1800,height:1400});wheel(40,118,2);
+ assert.deepEqual(navigation,[1]);
+ wheel(350,-90,2);assert.deepEqual(navigation,[1,-1]);
+ wheel(600,0,-120,true);
+ wheel(930,90,4);
+ assert.deepEqual(navigation,[1,-1]);assert.match(image.style.transform,/translate\(-90px/);
 });

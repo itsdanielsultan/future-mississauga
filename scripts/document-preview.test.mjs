@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {gunzipSync} from 'node:zlib';
+import vm from 'node:vm';
 import test from 'node:test';
 import {
   createDocumentPreviewIndex,
@@ -101,6 +102,37 @@ test('a place opens its exact numbered atlas page and malformed page fragments f
   }
 });
 
+test('an explicit page stays selected when several final sheets fit in the same phone viewport', async () => {
+  const source = await readFile(new URL('../public/document-preview.js', import.meta.url),'utf8');
+  const handler = name => source.match(new RegExp('  function ' + name + '\\([^]*?\\n  \\}'))[0];
+  const stage = {
+    clientHeight: 540, scrollHeight: 196 * 56,
+    get scrollTop() {return this.offset ?? 0;},
+    set scrollTop(value) {this.offset = Math.max(0, Math.min(this.scrollHeight-this.clientHeight, value));},
+    getBoundingClientRect() {return {top:0};},
+  };
+  const pages = Array.from({length:56}, (_,index)=>({
+    getBoundingClientRect:()=>({top:index*196-stage.scrollTop+12}),
+  }));
+  const reader = vm.runInNewContext(`(function () {
+    let current=1, scrollFrame=0, selectedScrollTop=null;
+    ${handler('jump')}
+    ${handler('selectVisiblePage')}
+    return {jump, selectVisiblePage, get current(){return current;}};
+  })()`, {stage, pages, dialog:{open:true}, renderPage(){},syncPage(){}});
+  for (const page of [2,56,55,54,1,55]) {
+    reader.jump(page);
+    reader.selectVisiblePage();
+    assert.equal(reader.current,page);
+  }
+  stage.scrollTop -= 1000;
+  reader.selectVisiblePage();
+  assert.ok(reader.current < 54);
+  stage.scrollTop = stage.scrollHeight;
+  reader.selectVisiblePage();
+  assert.equal(reader.current,56);
+});
+
 test('print-quality reader pages use the same checked edition as their fitted preview', () => {
   const current = {...newAtlas, base: 'document-previews/edition/',
     zoomBase: 'document-previews/edition/zoom/', sourceSHA256: '1234567890abcdef'};
@@ -111,4 +143,18 @@ test('print-quality reader pages use the same checked edition as their fitted pr
   assert.equal(zoom.search, fit.search);
   assert.equal(documentPageURL(catalog, historical, 2, site, true),
     documentPageURL(catalog, historical, 2, site));
+});
+
+test('archival readers replace only page images for the same PDF and keep original text positions',()=>{
+  const old={url:'downloads/district-202610.pdf?edition=123456789abc',title:'October',pages:2,prefix:'oct-',width:800,pageLinks:{1:[{page:2}]}};
+  const sourceSHA256='123456789abc'+'0'.repeat(52);
+  const fresh={url:old.url,sourceSHA256,pages:2,prefix:'page-',base:'new/',zoomBase:'new/zoom/',width:1200,height:800,zoomWidth:2880};
+  const catalogue={base:'old/',documents:[old]};
+  const key=documentPreviewKey(old.url,site);
+  const bound=createDocumentPreviewIndex(catalogue,site,{documents:[fresh]}).get(key);
+  assert.equal(bound.i,0);assert.equal(bound.d.url,old.url);assert.deepEqual(bound.d.pageLinks,old.pageLinks);
+  assert.equal(documentPageURL(catalogue,bound.d,2,site,true),'https://futuremississauga.com/new/zoom/page-02.avif?edition=123456789abc');
+  for(const bad of [{...fresh,sourceSHA256:'e'.repeat(64)},{...fresh,pages:3},{...fresh,url:'https://another.example/downloads/district-202610.pdf'}]){
+    assert.equal(createDocumentPreviewIndex(catalogue,site,{documents:[bad]}).get(key).d,old);
+  }
 });

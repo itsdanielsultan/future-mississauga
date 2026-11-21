@@ -39,7 +39,7 @@ export function navigateMap(view) {
   }
 }
 
-export function sharedMapURL(address, {district, project, building, context, station, scenario, split, target, position}) {
+export function sharedMapURL(address, {district, project, building, context, station, scenario, appearance, split, target, position}) {
   const page = new URL(address);
   const url = page.protocol === 'file:' ? new URL('https://futuremississauga.com/explore.html') : new URL(page.pathname, page);
   url.searchParams.set('district',district);
@@ -48,6 +48,7 @@ export function sharedMapURL(address, {district, project, building, context, sta
   if (context) url.searchParams.set('context',context);
   if (station) url.searchParams.set('station',station);
   url.searchParams.set('scenario',scenario);
+  if (appearance === 'natural' || appearance === 'status') url.searchParams.set('appearance',appearance);
   if (scenario === 'comparison') url.searchParams.set('split',String(Math.round(split*100)));
   url.searchParams.set('view',[...target,...position].map(value=>Number(value.toFixed(2))).join(','));
   return url;

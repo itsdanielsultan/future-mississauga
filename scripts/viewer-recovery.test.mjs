@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {runInNewContext} from 'node:vm';
+import {afterFirstGPUFrame} from '../public/viewer-runtime.js';
 import * as THREE from '../public/vendor/three.module.js';
 import {shouldLoadRefinement,refinementInDistrict} from '../public/refinement-loading.js';
 import {prepareOffshoreContext,isPreparedOffshore} from '../public/offshore-context.js';
@@ -13,26 +14,27 @@ const section=(start,end)=>app.slice(app.indexOf(start),app.indexOf(end,app.inde
 const deferred=()=>{let resolve,reject;const promise=new Promise((a,b)=>{resolve=a;reject=b;});return {promise,resolve,reject};};
 const settle=()=>new Promise(resolve=>setImmediate(resolve));
 function element(){return {hidden:false,disabled:false,style:{},dataset:{},attributes:{},children:[],textContent:'',
- setAttribute(name,value){this.attributes[name]=value;},removeAttribute(name){delete this.attributes[name];},
+ setAttribute(name,value){this.attributes[name]=value;},getAttribute(name){return this.attributes[name];},removeAttribute(name){delete this.attributes[name];},
  replaceChildren(...children){this.children=children;},append(...children){this.children.push(...children);},
  classList:{toggle(){}},click(){}};}
 function dom(){const elements=new Map();return {elements,$:id=>{if(!elements.has(id))elements.set(id,element());return elements.get(id);}};}
 
 function exportHarness(){
- const {$}=dom(),fonts=deferred(),encoding=deferred(),metadata=deferred(),events=[],urls=[];
+ const {$}=dom(),fonts=deferred(),encoding=deferred(),metadata=deferred(),events=[],urls=[],savedMetadata=[];
  const output={width:0,height:0,getContext:()=>({fillRect(){},fillText(){},drawImage(){events.push('copy');}}),
   toBlob(callback){events.push('encode');encoding.promise.then(callback);}};
  const context={$,exporting:false,contextLost:false,current:{id:'downtown',name:'Downtown'},window:{atlasReady:'downtown'},
   appearance:{mode:'natural'},framedProject:null,renderer:{},selectedStudyProjectId:null,projectById:new Map(),selectedStudyLabel:()=>"Historical model study",compare:false,mode:'future',exportImageURL:null,
+  currentMapShareURL(address){const url=new URL(address);url.searchParams.set('district',context.current.id);url.searchParams.set('appearance',context.appearance.mode);return url;},
   document:{fonts:{load:()=>fonts.promise},createElement:type=>type==='canvas'?output:element(),createTextNode:text=>text},
   clearExportImage(){},render(){events.push('render');},canvas:{width:600,height:400},
   captureViewerImage({render}){render();return {canvas:{width:1200,height:800},reduced:false};},
   currentStatusLegend:()=>[],presentationLayout:()=>({height:60,scale:1}),exportCreditLines:()=>['City of Mississauga'],displayedSources:{osm:false},
   drawPresentationFooter(){},projectNorth:()=>null,THREE,camera:{},controls:{target:{}},
-  STATUS_CLASSIFICATION_EDITION:'2026-11-01',withPNGMetadata:()=>{events.push('metadata');return metadata.promise;},
+  STATUS_CLASSIFICATION_EDITION:'2026-11-01',withPNGMetadata:(_blob,info)=>{events.push('metadata');savedMetadata.push(info);return metadata.promise;},
   URL:{createObjectURL:blob=>{urls.push(blob);return 'blob:test';}}};
  runInNewContext(section("$('#exportBtn').onclick=async()=>{",'function drawFrame(){'),context);
- return {context,$,fonts,encoding,metadata,events,urls,start:()=>$('#exportBtn').onclick()};
+ return {context,$,fonts,encoding,metadata,events,urls,savedMetadata,start:()=>$('#exportBtn').onclick()};
 }
 
 for(const stage of ['fonts','encoding','metadata'])test(`context loss during ${stage} never offers a blank PNG or re-enables Save`,async()=>{
@@ -49,7 +51,11 @@ for(const stage of ['fonts','encoding','metadata'])test(`context loss during ${s
 test('a healthy export renders immediately before copying the non-preserved WebGL buffer',async()=>{
  const run=exportHarness(),done=run.start();run.fonts.resolve();await settle();
  assert.deepEqual(run.events,['render','copy','encode']);
+ // A subsequent map change must not alter the metadata of the captured frame.
+ run.context.appearance.mode='status';
  run.encoding.resolve({png:true});await settle();run.metadata.resolve({tagged:true});await done;
+ assert.equal(run.savedMetadata[0]['View URL'],'https://futuremississauga.com/explore.html?district=downtown&appearance=natural');
+ assert.equal(run.savedMetadata[0].Appearance,'Natural');
  assert.equal(run.urls.length,1);assert.equal(run.$('#exportBtn').disabled,false);
  assert.equal(run.$('#exportStatus').children[0],'Image ready.');
 });
@@ -90,9 +96,30 @@ test('committed municipal scene is interactive while optional studies are still 
  assert.deepEqual(run.cleanup,['citywide','neighbourhood'],'district navigation clears both previous detail roots once');
  assert.deepEqual(run.terrainRequests,['streetsville']);assert.equal(run.context.framedProject,null);
  assert.equal(run.context.window.atlasReady,'streetsville');assert.equal(run.context.controls.enabled,true);
- assert.equal(run.$('#exportBtn').disabled,false);assert.equal(run.$('#sceneWrap').attributes['aria-busy'],'false');
+ assert.equal(run.$('#exportBtn').disabled,false);
+ assert.equal(run.$('#shareMapBtn').disabled,false);
  assert(run.invalidations.includes('streetsville'),'committed baseline requests a frame before optional downloads finish');
- assert.equal(run.$('#loading').style.display,'none');run.optional.resolve();await done;
+
+ const frames=[],draws=[];
+ const gl={TIMEOUT_EXPIRED:1,SYNC_GPU_COMMANDS_COMPLETE:2,fenceSync:()=>({}),flush(){},deleteSync(){},isContextLost:()=>false};
+ let finished=false;
+ gl.clientWaitSync=()=>finished?0:gl.TIMEOUT_EXPIRED;
+ Object.assign(run.context,{
+  cameraFlight:null,render:()=>draws.push(run.context.window.atlasReady),renderer:{getContext:()=>gl},
+  afterFirstGPUFrame:(context,current,reveal)=>afterFirstGPUFrame(context,current,reveal,callback=>frames.push(callback))
+ });
+ run.context.controls.update=()=>false;
+ runInNewContext(section('let pendingMapReveal = null;', 'frameScheduler=createFrameScheduler'),run.context);
+ assert.equal(run.$('#sceneWrap').getAttribute('aria-busy'),'true');
+ assert.equal(run.$('#loading').style.display,'grid');
+ run.context.drawFrame();
+ assert.deepEqual(draws,['streetsville']);
+ frames.shift()();
+ assert.equal(run.$('#loading').style.display,'grid','an unfinished GPU frame remains covered');
+ finished=true;frames.shift()();
+ assert.equal(run.$('#sceneWrap').getAttribute('aria-busy'),'false');
+ assert.equal(run.$('#loading').style.display,'none');
+ run.optional.resolve();await done;
 });
 
 test('district files start together and building refinements load three at a time in registration order',async()=>{

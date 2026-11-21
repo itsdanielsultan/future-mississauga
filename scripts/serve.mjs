@@ -16,7 +16,7 @@ const prefix = option('--base', '/').replace(/\/?$/, '/');
 const mapPaths=process.argv.flatMap((value,index)=>value==='--asset-map'?[process.argv[index+1]]:[]);
 const localAssets=new Map();
 for(const mapPath of mapPaths)for(const [url,asset] of await loadLocalAssetMap(mapPath)){if(localAssets.has(url))throw Error('Duplicate staged asset URL.');localAssets.set(url,asset);}
-const types = {'.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.woff2': 'font/woff2', '.ttf': 'font/ttf', '.svg': 'image/svg+xml', '.webp': 'image/webp', '.avif': 'image/avif', '.glb': 'model/gltf-binary', '.gz': 'application/gzip', '.pdf': 'application/pdf', '.mp4': 'video/mp4', '.md': 'text/plain; charset=utf-8', '.csv': 'text/csv; charset=utf-8'};
+const types = {'.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.woff2': 'font/woff2', '.ttf': 'font/ttf', '.svg': 'image/svg+xml', '.webp': 'image/webp', '.avif': 'image/avif', '.glb': 'model/gltf-binary', '.gz': 'application/gzip', '.pdf': 'application/pdf', '.mp4': 'video/mp4', '.vtt': 'text/vtt; charset=utf-8', '.md': 'text/plain; charset=utf-8', '.csv': 'text/csv; charset=utf-8'};
 function sendFile(request, response, file, size, mime = types[extname(file)]) {
   const headers = {'Content-Type': mime || 'application/octet-stream',
     'Content-Length': size, 'Accept-Ranges': 'bytes', 'Cache-Control': 'no-cache'};

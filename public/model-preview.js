@@ -10,7 +10,7 @@ import {batchOpaqueStudy} from './model-preview-batching.js?v=20261025-1';
 import {buildingFeedbackHTML,bindBuildingFeedback} from './building-feedback.js?v=20261028-improvements1';
 import {loadModelRevisions,modelRevisionForProject} from './model-revisions.js?v=20261113-design2';
 import {configureStudyCredits} from './model-study-presentation.js?v=20261113-design2';
-import {applyPreviewAppearance,previewClipping} from './model-preview-presentation.js?v=20261113-thumbnails1';
+import {applyPreviewAppearance,previewClipping} from './model-preview-presentation.js?v=20261121-roof';
 
 const $ = id => document.getElementById(id);
 const response = await fetch('data/model-previews.json?v=20261102-coherent1', {cache:'no-store'});

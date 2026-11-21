@@ -1,3 +1,5 @@
+import {activeArtworkEdition} from './active-artwork-edition.mjs';
+const artworkEdition=activeArtworkEdition();
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -47,25 +49,27 @@ test('hosted metadata lookup and credited fallback accept only exact pinned imag
 });
 
 test('the featured aerial uses its local credited file and gallery downloads retain the approved delivery routes',()=>{
- const html=fs.readFileSync(new URL('compare.html',pub),'utf8');
- const figure=html.match(/<figure class="hero"[^>]*>[\s\S]*?<\/figure>/)[0];
- const downloads=[...figure.matchAll(/href="([^"]+)" download/g)].map(match=>match[1]);
- const edition = JSON.parse(fs.readFileSync(new URL('data/city-plates-20261120.json',pub)));
- const stages = edition.plates.filter(plate => /^wide\/downtown-skyline-(?:existing|construction|future)\.png$/.test(plate.id));
+ const html=fs.readFileSync(new URL('index.html',pub),'utf8');
+ const figure=html.match(/<figure class="city-plate"[^>]*>[\s\S]*?<\/figure>/)[0];
+ const archive=JSON.parse(fs.readFileSync(new URL(`data/city-plates-${artworkEdition}.json`,pub)));
+ const stages=archive.plates.filter(plate => /^wide\/downtown-skyline-(?:existing|construction|future)\.png$/.test(plate.id));
  assert.equal(stages.length,3);
- assert.deepEqual(downloads,[stages.find(plate => plate.id.endsWith('-future.png')).download.url]);
+ for(const stage of ['existing','construction','future']){
+  const button=figure.match(new RegExp('<button[^>]*data-plate-state="'+stage+'"[^>]*>'))[0];
+  const image=button.match(/data-original="([^"]+)"/)[1];
+  assert.match(image,new RegExp('^gallery/edition-[0-9]+/originals/home-downtown-'+stage+'-print\\.png$'));
+  assert(fs.existsSync(new URL(image,pub)));
+ }
  for (const plate of stages) {
   assert(fs.existsSync(new URL(plate.displayMaster.url,pub)));
   assert(fs.existsSync(new URL(plate.download.url,pub)));
  }
- assert(fs.existsSync(new URL(downloads[0],pub)));
  for(const match of html.matchAll(/(?:href|data-preview-download)="(https:\/\/assets\.futuremississauga\.com\/[^"]+)"/g)){
   assert(assets.some(asset=>assetURL(asset.url)===match[1]),match[1]);
  }
  for(const view of ['existingSkyline','constructionSkyline','skyline']){
   const row=rows.find(row=>row.kind==='wide'&&row.file==='downtown'+galleryViews[view].suffix);
   assert(row,'the '+view+' switch has an approved current image');
-  assert(html.includes('value="'+view+'"'));
   assert(isDeliveredImageURL(assetURL(row.download.url)));
  }
  assert(assets.every(asset=>asset.url.startsWith('gallery/revision-20261109/')));

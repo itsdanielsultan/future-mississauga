@@ -5,6 +5,7 @@ import {runInNewContext} from 'node:vm';
 import * as THREE from '../public/vendor/three.module.js';
 import {northBearingFromNDC, projectNorth} from '../public/scene-presentation.js';
 import {createModelAppearance} from '../public/model-appearance.js';
+import {sharedMapURL, readMapFrame} from '../public/map-location.js';
 import {batchOpaqueStudy} from '../public/model-preview-batching.js';
 
 test('north bearing uses screen pixels on wide and portrait images', () => {
@@ -64,12 +65,24 @@ test('Save Image copies the rendered scene once and draws its presentation below
   const ctx = {fillRect(){}, drawImage(...args){copied.push(args);events.push('copy');}, fillText(){}};
   const output = {getContext(){return ctx;},toBlob(callback,type){assert.equal(type,'image/png');callback(new Blob(['test']));}};
   const document = {fonts:{load:async()=>{}},createTextNode:text=>text,createElement:tag=>tag==='canvas'?output:{click(){events.push('download');}}};
-  const run = {Blob,document,canvas,exporting:false,contextLost:false,current:{id:'downtown',name:'Downtown'},window:{atlasReady:'downtown'},selectedStudyProjectId:null,compare:false,mode:'future',appearance:{mode:'natural'},framedProject:null,renderer:{},displayedSources:{designCredits:[]},THREE,camera:{},controls:{target:{}},STATUS_CLASSIFICATION_EDITION:'test',exportImageURL:null,
+  const run = {Blob,document,canvas,exporting:false,contextLost:false,current:{id:'downtown',name:'Downtown'},window:{atlasReady:'downtown'},selectedStudyProjectId:null,compare:false,mode:'future',appearance:{mode:'natural'},framedProject:null,renderer:{},displayedSources:{designCredits:[]},THREE,camera:{position:new THREE.Vector3(20,30,40)},controls:{target:new THREE.Vector3(1,2,3)},split:.5,location:{search:'?project=local-example'},URLSearchParams,sharedMapURL,STATUS_CLASSIFICATION_EDITION:'test',exportImageURL:null,
     $:selector=>selector==='#exportBtn'?button:status,captureViewerImage({render}){render();return {canvas,reduced:false};},clearExportImage(){},render(){events.push('render');},
     currentStatusLegend:()=>[],presentationLayout:()=>({height:104,scale:1}),exportCreditLines:()=>[],projectNorth:()=>null,
     drawPresentationFooter(context,options){assert.equal(context,ctx);assert.equal(options.top,canvas.height);events.push('footer');},
-    withPNGMetadata:async blob=>blob,URL:{createObjectURL:()=> 'blob:test'}};
-  runInNewContext(app.slice(start,end),run);
+    withPNGMetadata:async (blob,metadata)=>{
+      const view = new URL(metadata['View URL']);
+      assert.equal(view.origin,'https://futuremississauga.com');
+      assert.equal(view.searchParams.get('district'),'downtown');
+      assert.equal(view.searchParams.get('project'),'local-example');
+      assert.equal(view.searchParams.get('scenario'),'future');
+      assert.equal(view.searchParams.get('appearance'),'natural');
+      assert.deepEqual(readMapFrame(view.searchParams.get('view')),{target:[1,2,3],position:[20,30,40]});
+      assert.equal(metadata['Scene pixels'],'1600x900');
+      return blob;
+    },URL:{createObjectURL:()=> 'blob:test'}};
+  const shareStart = app.indexOf('function currentMapShareURL(address)');
+  const shareEnd = app.indexOf("$('#shareMapBtn').onclick=",shareStart);
+  runInNewContext(app.slice(shareStart,shareEnd) + app.slice(start,end),run);
   await button.onclick();
   assert.deepEqual(events,['render','copy','footer','download']);
   assert.equal(copied.length,1);assert.equal(copied[0][0],canvas);assert.deepEqual(copied[0].slice(1),[0,0]);

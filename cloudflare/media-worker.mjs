@@ -4,7 +4,27 @@ import {handleSuggestions} from './suggestions.mjs';
 // at most one R2 read. The static asset service handles all other paths first.
 export const legacyAtlasPath = '/downloads/Future-Mississauga-Atlas.pdf';
 
-export function serveMedia(files, currentAtlasPath, publishedMedia = {}) {
+function sliceAsset(body, {offset, length}) {
+  const reader=body.getReader();
+  return new ReadableStream({
+    async pull(controller) {
+      while (length) {
+        const {done,value}=await reader.read();
+        if (done) { controller.error(new Error('Incomplete static original')); return; }
+        if (offset >= value.length) { offset-=value.length; continue; }
+        const take=Math.min(length,value.length-offset);
+        controller.enqueue(value.subarray(offset,offset+take));
+        offset=0;length-=take;
+        if (!length) { controller.close(); await reader.cancel(); }
+        return;
+      }
+    },
+    cancel(reason) { return reader.cancel(reason); }
+  });
+}
+
+export function serveMedia(files, currentAtlasPath, publishedMedia = {}, staticPrints = []) {
+  const staticKeys = new Set(staticPrints);
   const byDigest = new Map(Object.entries(publishedMedia));
   for (const file of Object.values(files)) byDigest.set(file.key, file);
   return {
@@ -52,6 +72,24 @@ export function serveMedia(files, currentAtlasPath, publishedMedia = {}) {
         if (!range) return new Response(null,{status:416,headers:{'Content-Range':'bytes */'+file.bytes,'Accept-Ranges':'bytes'}});
         headers.set('Content-Range','bytes '+range.offset+'-'+(range.offset+range.length-1)+'/'+file.bytes);
         headers.set('Content-Length',String(range.length));
+      }
+      if (staticKeys.has(file.key)) {
+        const assetURL = new URL('/_city-originals/' + file.key + '.png', url);
+        const requestHeaders = range ? {Range:`bytes=${range.offset}-${range.offset + range.length - 1}`} : {};
+        const asset = await env.ASSETS.fetch(new Request(assetURL, {headers:requestHeaders}));
+        // The ASSETS binding can omit Content-Length on a verified streamed asset.
+        // The release manifest pins the exact bytes at this content-addressed URL.
+        const length = asset.headers.get('Content-Length');
+        const matchesLength = expected => length === null || Number(length) === expected;
+        const full = asset.status === 200 && matchesLength(file.bytes);
+        const partial = range && asset.status === 206 && matchesLength(range.length) &&
+          asset.headers.get('Content-Range') === headers.get('Content-Range');
+        if (!asset.body || (!full && !partial)) {
+          await asset.body?.cancel();
+          return new Response('File temporarily unavailable.', {status:503,headers:{'Cache-Control':'no-store','Retry-After':'60','X-City-Print-Status':String(asset.status)}});
+        }
+        const body=range && full ? sliceAsset(asset.body,range) : asset.body;
+        return new Response(body,{status:range ? 206 : 200,headers});
       }
       const item = await env.MEDIA.get(file.key,range ? {range} : undefined);
       if (!item || item.size !== file.bytes) return new Response('File temporarily unavailable.',{status:503,headers:{'Cache-Control':'no-store','Retry-After':'60'}});

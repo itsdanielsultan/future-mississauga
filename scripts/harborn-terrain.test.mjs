@@ -1,3 +1,4 @@
+import {readBeforePlanningReview} from './planning-review-guard.mjs';
 import * as treeRuntime from './tree-runtime-fixture.mjs';
 import {restoreRegistryReconciliationData} from './registry-reconciliation-scope.mjs';
 import {applyHarbornTreeContacts} from '../public/harborn-tree-contacts.js';
@@ -21,7 +22,7 @@ const THREE=await import('../public/vendor/three.module.js');
 const {GLTFLoader}=await import('../public/vendor/addons/loaders/GLTFLoader.js');
 const {MeshoptDecoder}=await import('../public/vendor/meshopt_decoder.mjs');
 const {splitSourceOverlaps}=await import('../public/source-layer-cut.js');
-const read=p=>readFileSync(new URL('../public/'+p,import.meta.url));
+const read=p=>readBeforePlanningReview(new URL('../public/'+p,import.meta.url));
 const contract=JSON.parse(read('data/harborn-terrain-v5-20261112.json'));
 const fetcher=async url=>new Response(read(url));
 // Node lacks a bitmap decoder. The geometry test preserves all exact GLB bytes

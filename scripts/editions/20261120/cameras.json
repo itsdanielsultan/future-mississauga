@@ -273,6 +273,80 @@
       }
     },
     {
+      "identity": "home/downtown-construction.png",
+      "source": "b17c35c803a5a2202399bfad910f18c3129b9b1b0e826729eb13a775cbf58fbd",
+      "renderer": "render-885f16b46a39.py",
+      "samples": 48,
+      "trial": false,
+      "waterShadowDisabled": false,
+      "lighting": {
+        "sunRotationEuler": [
+          0.6108652381980153,
+          -0.3490658503988659,
+          -0.6981317007977318
+        ],
+        "sunEnergy": 1.8,
+        "sunAngle": 0.08,
+        "sunColour": [
+          1,
+          1,
+          1
+        ],
+        "worldColour": [
+          0.8,
+          0.86,
+          1,
+          1
+        ],
+        "worldStrength": 0.55,
+        "viewTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.3,
+        "gamma": 1
+      },
+      "background": "#e8f2f7",
+      "job": {
+        "identity": "home/downtown-construction.png",
+        "title": "Downtown",
+        "area": "Downtown",
+        "district": "downtown",
+        "scenario": "construction",
+        "camera": {
+          "location": [
+            -2760.0,
+            -3370.0,
+            1925.0
+          ],
+          "rotationEuler": [
+            1.1727452278137207,
+            -3.787719915493426e-09,
+            0.6146630644798279
+          ],
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 1797.75,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
+          "shift": [
+            -0.07488889247179031,
+            0.03574346378445625
+          ],
+          "clip": [
+            0.1,
+            150000
+          ]
+        },
+        "cameraQualifications": [
+          "Exact October 23 Downtown camera, sensor shift and frame, applied to the November 13 frozen city scene."
+        ],
+        "resolution": [
+          6144,
+          3840
+        ]
+      }
+    },
+    {
       "identity": "home/downtown-future.png",
       "source": "d4d4289208c149cec1fdc1561d0e3f8ed2f8c6ff825406f137e81dfb29e613e7",
       "renderer": "render-885f16b46a39.py",
@@ -2114,27 +2188,27 @@
       "background": "#e8f2f7",
       "job": {
         "identity": "portraits/lorne-park-future.png",
-        "title": "Aldo Drive area, Lorne Park \u00b7 900 m study",
-        "area": "Aldo Drive area, Lorne Park",
+        "title": "Lorne Park",
+        "area": "Lorne Park",
         "district": "lorne-park",
         "scenario": "future",
         "camera": {
           "location": [
-            -3565,
-            -5516,
-            140
+            -2315.772921,
+            -9980.611197,
+            6274.611197
           ],
           "rotationEuler": [
-            1.1087292061182512,
+            0.6283185307179586,
             0,
-            2.352872243279092
+            0.3141592653589793
           ],
-          "type": "PERSP",
-          "lens": 38.059137628358556,
-          "orthoScale": 6,
-          "sensorFit": "VERTICAL",
-          "sensorWidth": 36,
-          "sensorHeight": 24,
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 740,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
           "shift": [
             0,
             0
@@ -2145,14 +2219,13 @@
           ]
         },
         "cameraQualifications": [
-          "Northeast street-front camera on qualified historical2019 native design and2020 finish study. Current built condition and ground interpolation unverified. Exact original source excluded; approved derivative only.",
-          "Exact approved preview camera; native full-resolution rerender without source edits or resampling."
+          "Neighbourhood overview of the captured municipal streets and homes around Lorne Park Road and Aldo Drive. The camera is centered on the neighbourhood rather than an individual model."
         ],
         "resolution": [
           3240,
           4050
         ],
-        "geographicScope": "aldo_drive_local_view_within_900m_source_study"
+        "geographicScope": "aldo_drive_residential_streets_within_900m_study"
       }
     },
     {
@@ -2290,7 +2363,7 @@
           "sensorHeight": 24.0,
           "shift": [
             0.0,
-            0.0
+            -0.0675
           ],
           "clip": [
             1,
@@ -2365,7 +2438,7 @@
           "sensorHeight": 24.0,
           "shift": [
             0.0,
-            0.0
+            -0.0675
           ],
           "clip": [
             1,
@@ -2440,7 +2513,7 @@
           "sensorHeight": 24.0,
           "shift": [
             0.0,
-            0.0
+            -0.0675
           ],
           "clip": [
             1,
@@ -2515,7 +2588,7 @@
           "sensorHeight": 24.0,
           "shift": [
             0.0,
-            0.0
+            -0.025
           ],
           "clip": [
             1,
@@ -2915,7 +2988,7 @@
     {
       "identity": "wide/citywide-future.png",
       "source": "32274d38196eb21d682ec06a7a2a8883df7bd2326d00171d4e9815ce6d606848",
-      "renderer": "render-eebfbaf06da3.py",
+      "renderer": "render-coastal-overview.py",
       "samples": 20,
       "trial": false,
       "waterShadowDisabled": false,
@@ -2964,13 +3037,13 @@
           ],
           "type": "ORTHO",
           "lens": 50.0,
-          "orthoScale": 28578.783203125,
+          "orthoScale": 33151.388515624996,
           "sensorFit": "AUTO",
           "sensorWidth": 36.0,
           "sensorHeight": 24.0,
           "shift": [
             0.0,
-            0.0
+            -0.045
           ],
           "clip": [
             0.10000000149011612,
@@ -4855,27 +4928,27 @@
       "background": "#e8f2f7",
       "job": {
         "identity": "wide/lorne-park-future.png",
-        "title": "Aldo Drive area, Lorne Park \u00b7 900 m study",
-        "area": "Aldo Drive area, Lorne Park",
+        "title": "Lorne Park",
+        "area": "Lorne Park",
         "district": "lorne-park",
         "scenario": "future",
         "camera": {
           "location": [
-            -3565,
-            -5516,
-            140
+            -2315.772921,
+            -9980.611197,
+            6274.611197
           ],
           "rotationEuler": [
-            1.1087292061182512,
+            0.6283185307179586,
             0,
-            2.352872243279092
+            0.3141592653589793
           ],
-          "type": "PERSP",
-          "lens": 38.059137628358556,
-          "orthoScale": 6,
-          "sensorFit": "VERTICAL",
-          "sensorWidth": 36,
-          "sensorHeight": 24,
+          "type": "ORTHO",
+          "lens": 50.0,
+          "orthoScale": 850,
+          "sensorFit": "AUTO",
+          "sensorWidth": 36.0,
+          "sensorHeight": 24.0,
           "shift": [
             0,
             0
@@ -4886,14 +4959,13 @@
           ]
         },
         "cameraQualifications": [
-          "Northeast street-front camera on qualified historical2019 native design and2020 finish study. Current built condition and ground interpolation unverified. Exact original source excluded; approved derivative only.",
-          "Exact approved preview camera; native full-resolution rerender without source edits or resampling."
+          "Neighbourhood overview of the captured municipal streets and homes around Lorne Park Road and Aldo Drive. The camera is centered on the neighbourhood rather than an individual model."
         ],
         "resolution": [
           6144,
           3840
         ],
-        "geographicScope": "aldo_drive_local_view_within_900m_source_study"
+        "geographicScope": "aldo_drive_residential_streets_within_900m_study"
       }
     },
     {
@@ -5184,7 +5256,7 @@
           "sensorHeight": 24.0,
           "shift": [
             0.0,
-            0.0
+            -0.125
           ],
           "clip": [
             1,
@@ -5258,7 +5330,7 @@
           "sensorHeight": 24.0,
           "shift": [
             0.0,
-            0.0
+            -0.125
           ],
           "clip": [
             1,
@@ -5332,7 +5404,7 @@
           "sensorHeight": 24.0,
           "shift": [
             0.0,
-            0.0
+            -0.125
           ],
           "clip": [
             1,
@@ -5406,7 +5478,7 @@
           "sensorHeight": 24.0,
           "shift": [
             0.0,
-            0.0
+            -0.1
           ],
           "clip": [
             1,

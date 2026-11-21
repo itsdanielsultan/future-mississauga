@@ -44,6 +44,7 @@ def get_glb(source, work, public, private_files):
 def main():
     here = Path(__file__).resolve().parent
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--studies-file', type=Path, default=here/'studies.json', help='Edition-specific source, camera and image records.')
     parser.add_argument('--public', type=Path, default=here.parents[3] / 'public')
     parser.add_argument('--private-inputs', type=Path, help='Local JSON mapping the seven study IDs to source GLB files.')
     parser.add_argument('--output', type=Path, required=True, help='Directory for the full WebP images and cards/ folder.')
@@ -51,7 +52,7 @@ def main():
     parser.add_argument('--record', action='store_true', help='Update image receipts for the current website output.')
     parser.add_argument('studies', nargs='*')
     args = parser.parse_args()
-    profiles = json.loads((here / 'studies.json').read_text())
+    profiles = json.loads(args.studies_file.read_text())
     feature_file = args.public / 'data/building-features.json'
     features = json.loads(feature_file.read_text())
     catalogue = {r['id']: r for r in json.loads((args.public / 'data/building-catalogue.json').read_text())['entries']}
@@ -93,7 +94,7 @@ def main():
                         raise ValueError(f'{name}: mismatched {file.name} bytes')
             print(name, count, flush=True)
     if args.record:
-        (here / 'studies.json').write_text(json.dumps(profiles, indent=2, ensure_ascii=False) + '\n')
+        args.studies_file.write_text(json.dumps(profiles, indent=2, ensure_ascii=False) + '\n')
         feature_file.write_text(json.dumps(features, indent=2, ensure_ascii=False) + '\n')
 
 

@@ -26,7 +26,13 @@ for label in [0, 1, 2]:
 common = grade[0].mean(axis=1)
 for (label, balance) in [(3, [0.5, -0.24, 0.74]), (4, [-0.56, 0.3, 0.54]), (5, [0.7, 0.1, -0.5])]:
     grade[label] = common[:, None] * 0.82 + np.array(balance)[None, :] * np.minimum(18, x / 6)[:, None]
-finger = hashlib.sha256(palette.read_bytes() + Path(__file__).read_bytes() + Path(geometry_mask.__file__).read_bytes() + geometry_mask.SOURCE.read_bytes()).hexdigest()
+finger = hashlib.sha256(palette.read_bytes() + Path(__file__).read_bytes() + Path(geometry_mask.__file__).read_bytes() + geometry_mask.SOURCE.read_bytes() + geometry_mask.TOWER_RULES.read_bytes() + geometry_mask.PLANNING_COMPONENTS.read_bytes() + geometry_mask.NATIVE_HEIGHT_RECORDS.read_bytes() + geometry_mask.MASSING_MATERIALS.read_bytes() + geometry_mask.MALL_FACETS.read_bytes() + geometry_mask.COMMERCIAL_FACETS.read_bytes()).hexdigest()
+stage_keys = {5:'approved',7:'existing',8:'under_construction',9:'proposed',10:'unknown'}
+stage_colours = {}
+for mask_id,stage in stage_keys.items():
+    colour = geometry_mask.tower_rules['materials'][stage].lstrip('#')
+    rgb = np.array([int(colour[k:k+2],16) for k in (0,2,4)],dtype='float32')
+    stage_colours[mask_id] = rgb / (rgb @ np.array([.2126,.7152,.0722],dtype='float32'))
 
 def process(pr, fr):
     stem = fr['identity'].removesuffix('.png').replace('/', '-')
@@ -39,7 +45,7 @@ def process(pr, fr):
     mask = geometry_mask.categories(pr, fr)
     pixels = np.array(Image.open(fr['image']['path']).convert('RGBA'))
     weights = []
-    for label in range(1, 7):
+    for label in range(1, 17):
         if not (mask == label).any():
             continue
         coverage = Image.fromarray(np.uint8(mask == label) * 255).filter(ImageFilter.GaussianBlur(0.65))
@@ -50,7 +56,28 @@ def process(pr, fr):
         delta = grade[0, luminosity].copy()
         for (label, coverage) in weights:
             alpha = coverage[y:y + 100, :, None].astype('float32') / 255.0
-            if label == 6:
+            if label >= 11:
+                # Match the actual published base colours on originally neutral surfaces.
+                # Native shading remains visible on each differently lit face.
+                lit = pix.astype('float32') + grade[0,luminosity]
+                factor = np.asarray(geometry_mask.massing_materials['multipliers'][str(label)], dtype='float32')
+                delta += alpha * (lit * factor - lit)
+            elif label in stage_colours:
+                # Luminance still comes from the native geometry, texture, shadow and light.
+                # Keep the photographic saturated crown finishes and blue/red/yellow details.
+                original = pix.astype('float32')
+                lit = original + grade[0,luminosity]
+                level = lit @ np.array([.2126,.7152,.0722],dtype='float32')
+                if label == 8:
+                    # The black glass at M3 otherwise reads almost neutral at skyline scale.
+                    # Give the dark end a little daylight while retaining the panel contrast.
+                    level = 36 + .86 * level
+                tinted = level[:,:,None] * stage_colours[label]
+                if label == 7:
+                    tinted *= .85
+                strength = np.clip((95-np.ptp(original,axis=2))/45,0,1) if label != 5 else 1.0
+                delta += alpha * (tinted-lit) * (strength[:,:,None] if isinstance(strength,np.ndarray) else strength) * .88
+            elif label == 6:
                 # Retain reflections and building detail in this cartographic overlay.
                 # Neutral glass takes the construction colour while saturated finishes stay authored.
                 saturation = np.ptp(pix.astype('float32'), axis=2)
@@ -65,7 +92,7 @@ def process(pr, fr):
     temp = target.with_suffix('.writing')
     Image.fromarray(pixels).save(temp, 'PNG', compress_level=1)
     temp.replace(target)
-    result = {'sourceSHA256': fr['image']['sha256'], 'gradeSHA256': hashlib.sha256(target.read_bytes()).hexdigest(), 'gradeRecipe': finger, 'cameraType': fr['camera']['type'], 'reference': 'October 23 approved Downtown print 2983a42697af', 'referenceSamplePixels': sum((row['pixels'] for row in config['classes'].values())), 'treatment': 'Measured reference luminance for common ground, targeted grey for tall existing municipal buildings, material-specific proposed/uncertain colour. Source architectural finishes remain discernible.', 'geometricMaskPixels': {str(label): int((mask == label).sum()) for (label, _) in weights}}
+    result = {'sourceSHA256': fr['image']['sha256'], 'gradeSHA256': hashlib.sha256(target.read_bytes()).hexdigest(), 'gradeRecipe': finger, 'towerStageRecipeSHA256': hashlib.sha256(geometry_mask.TOWER_RULES.read_bytes() + geometry_mask.PLANNING_COMPONENTS.read_bytes()).hexdigest(), 'nativeHeightSupplementSHA256': hashlib.sha256(geometry_mask.NATIVE_HEIGHT_RECORDS.read_bytes()).hexdigest(), 'massingMaterialSHA256': hashlib.sha256(geometry_mask.MASSING_MATERIALS.read_bytes() + geometry_mask.MALL_FACETS.read_bytes() + geometry_mask.COMMERCIAL_FACETS.read_bytes()).hexdigest(), 'cameraType': fr['camera']['type'], 'reference': 'October 23 approved Downtown print 2983a42697af', 'referenceSamplePixels': sum((row['pixels'] for row in config['classes'].values())), 'treatment': 'Matched ground and municipal tower luminance. Stage colour is applied to verified M City and Exchange facades. Architectural texture, roof caps and ground-level finishes remain visible.', 'geometricMaskPixels': {str(label): int((mask == label).sum()) for (label, _) in weights}}
     temp = record.with_suffix('.writing')
     temp.write_text(json.dumps(result, indent=2))
     temp.replace(record)

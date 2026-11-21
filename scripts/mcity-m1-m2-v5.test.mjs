@@ -1,8 +1,8 @@
+import {readBeforePlanningReview} from './planning-review-guard.mjs';
 import {restoreRegistryReconciliationData} from './registry-reconciliation-scope.mjs';
 import {restoreMcityV6Refinements,restoreMcityV6Catalogue,restoreMcityV6Projects,restoreMcityV6Revisions} from './mcity-v6-scope.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {gunzipSync} from 'node:zlib';
 import {register} from 'node:module';
@@ -15,7 +15,7 @@ import {projectDetailsHTML} from '../public/project-cards.js';
 register('./recovery-three-loader.mjs',import.meta.url);
 const THREE=await import('../public/vendor/three.module.js');
 const {GLTFLoader}=await import('../public/vendor/addons/loaders/GLTFLoader.js');
-const read=p=>readFileSync(new URL('../public/'+p,import.meta.url)),json=p=>JSON.parse(read('data/'+p+'.json')),sha=b=>createHash('sha256').update(b).digest('hex');
+const read=p=>readBeforePlanningReview(new URL('../public/'+p,import.meta.url)),json=p=>JSON.parse(read('data/'+p+'.json')),sha=b=>createHash('sha256').update(b).digest('hex');
 const refinements=restoreMcityV6Refinements(json('refinement-models')),catalogue=restoreMcityV6Catalogue(json('model-previews')),revisions=restoreMcityV6Revisions(json('model-revisions')),projects=restoreMcityV6Projects(json('projects'));
 const meshes=root=>{const list=[];root.traverse(o=>{if(o.isMesh)list.push(o)});return list;};
 const dispose=root=>root.traverse(o=>{o.geometry?.dispose();for(const m of [o.material].flat().filter(Boolean))m.dispose();});

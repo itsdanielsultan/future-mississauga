@@ -7,6 +7,27 @@ import {fileURLToPath,pathToFileURL} from 'node:url';
 import {execFileSync} from 'node:child_process';
 import vm from 'node:vm';
 
+test('the portable atlas bookmark opens the current print and preserves the original edition link', async () => {
+  const original = 'downloads/Future-Mississauga-Atlas.pdf';
+  const current = 'downloads/edition-20261121/Mississauga-Atlas.pdf';
+  const base = 'file:///City%20atlas/';
+  const window = {fmEditionFiles:{files:[original,current],routes:{},currentAtlas:current}};
+  const Element = class {};
+  const script = await readFile(new URL('local-edition-runtime.js',import.meta.url),'utf8');
+  vm.runInNewContext(script, {
+    URL, fetch, window, document:{baseURI:base+'downloads.html'}, Element,
+    HTMLImageElement:Element, HTMLSourceElement:Element, HTMLMediaElement:Element,
+    HTMLVideoElement:Element, HTMLAnchorElement:Element,
+    MutationObserver:class {observe() {}}
+  });
+  const localize = window.fmLocal.localize;
+  for (const url of [original,base+original,'https://futuremississauga.com/'+original]) {
+    assert.equal(new URL(localize(url+'#page=4'),base).href,base+current+'#page=4');
+    assert.equal(new URL(localize(url+'?edition=original#page=3'),base).href,base+original+'?edition=original#page=3');
+  }
+  assert.equal(localize('https://example.com/'+original),'https://example.com/'+original);
+});
+
 test('a downloaded HTML keeps its styles and aerial, and opens the installed site on this Mac', async t => {
   const folder = await mkdtemp(path.join(tmpdir(), 'atlas-entry-'));
   t.after(() => rm(folder, {recursive:true, force:true}));

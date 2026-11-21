@@ -3,7 +3,8 @@
 export function drawingPolicy({width, height, pixelRatio = 1, coarse = false, memory = 8, moving = false}) {
   const compact = coarse || memory <= 4;
   const pixelBudget = compact ? 1_500_000 : 4_000_000;
-  const ratio = Math.min(Math.max(1, pixelRatio), moving ? 1 : compact ? 1.5 : 2,
+  const movingLimit = compact ? .85 : 1;
+  const ratio = Math.min(Math.max(1, pixelRatio), moving ? movingLimit : compact ? 1.5 : 2,
     Math.sqrt(pixelBudget / Math.max(1, width * height)));
   return {pixelRatio: ratio, shadowSize: compact ? 2048 : 4096, compact};
 }
@@ -29,4 +30,24 @@ export function createFrameScheduler({draw, canDraw = () => true,
     pause() { if (handle !== null) cancel(handle); handle = null; },
     get frames() { return frames; },
   };
+}
+
+// Keep the poster up until the GPU has actually finished the district draw.
+// Polling a WebGL fence yields to input and avoids blocking on a slow first frame.
+export function afterFirstGPUFrame(gl, current, reveal, request = globalThis.requestAnimationFrame) {
+  const fence = gl.fenceSync?.(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
+  if (fence) gl.flush();
+  function check() {
+    if (!current()) {
+      if (fence && !gl.isContextLost()) gl.deleteSync(fence);
+      return;
+    }
+    if (fence && gl.clientWaitSync(fence, 0, 0) === gl.TIMEOUT_EXPIRED) {
+      request(check);
+      return;
+    }
+    if (fence) gl.deleteSync(fence);
+    reveal();
+  }
+  request(check);
 }

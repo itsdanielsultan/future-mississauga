@@ -19,6 +19,7 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "public"
 IMPORT = re.compile(r"""(\b(?:from\s*|import\s*(?:\(\s*)?))(['"])([^'"\n]+)\2""")
+JSON_IMPORT = re.compile(r"""\bimport\s+([\w$]+)\s+from\s+(['"])(\.[^'"\n]+\.json)\2\s+with\s*\{\s*type\s*:\s*(['"])json\4\s*\}\s*;?""")
 SCRIPT = re.compile(r"<script\b([^>]*)>([\s\S]*?)</script>", re.I)
 ATTR = re.compile(r"""([\w:-]+)\s*=\s*(["'])(.*?)\2""", re.S)
 MEDIA_MODULES = ["media-control-bar","media-play-button","media-time-range","media-time-display","media-loading-indicator"]
@@ -66,6 +67,15 @@ def resolved(owner, name):
 
 def converted(owner, code):
     deps = set()
+    # The local import map contains JavaScript blobs. Embed JSON modules into
+    # their consumers so opening a map directly in Finder needs no file fetch.
+    def json_module(match):
+        path = (SOURCE / resolved(owner, match[3])).resolve()
+        if not path.is_relative_to(SOURCE):
+            raise ValueError(f'Invalid local JSON module in {owner}')
+        payload = json.dumps(json.loads(path.read_text()), separators=(',', ':'))
+        return 'const ' + match[1] + ' = JSON.parse(' + json.dumps(payload) + ');'
+    code = JSON_IMPORT.sub(json_module, code)
     def change(m):
         name = m[3]
         if not (name.startswith(".") or name == "three" or name.startswith("three/addons/")):
@@ -207,6 +217,17 @@ def page_presentation(html, target):
             asset = max(candidates, key=lambda item: item[0])[1]
         tag = re.sub(r'\s+srcset="[^"]*"', '', tag, flags=re.I)
         return re.sub(r'\bsrc="[^"]*"', lambda _: 'src="' + data_uri(asset) + '"', tag, count=1, flags=re.I)
+    def timed_text(match):
+        tag = match[0]
+        src = html_attrs(tag).get('src', '')
+        if not src or urlsplit(src).scheme or not src.endswith('.vtt'):
+            return tag
+        asset = (target / unquote(src)).resolve()
+        if not asset.is_relative_to(target) or not asset.is_file():
+            raise ValueError(f'Missing local text track: {src}')
+        payload = base64.b64encode(asset.read_bytes()).decode('ascii')
+        return re.sub(r'\bsrc=(["\']).*?\1', 'src="data:text/vtt;base64,' + payload + '"', tag, count=1)
+    html = re.sub(r'<track\b[^>]+>',timed_text,html,flags=re.I)
     html = re.sub(r'<img\b[^>]+>',image,html,flags=re.I)
     return re.sub(r'<link\b[^>]+>',link,html,flags=re.I)
 
@@ -281,7 +302,17 @@ def main():
     if target==SOURCE or SOURCE in target.parents: raise ValueError("Use a separate destination.")
     extra=json.loads(args.assets.read_text()) if args.assets else {}
     routes=extra.get('routes',{})
-    source_files={str(f.relative_to(SOURCE)):f for f in SOURCE.rglob('*') if f.is_file()}
+    current_atlas = re.search(r'href="(downloads/edition-\d{8}/Mississauga-Atlas\.pdf)"',
+                              (SOURCE/'downloads.html').read_text())
+    if not current_atlas or not (SOURCE/current_atlas[1]).is_file():
+        raise ValueError('The Downloads page must identify the current atlas file')
+    # Renderers atomically replace these working files while new plates finish.
+    # Only the committed filename belongs in a portable edition.
+    source_files = {
+        str(f.relative_to(SOURCE)): f for f in SOURCE.rglob('*')
+        if f.is_file() and f.name != '.DS_Store'
+        and not f.name.endswith(('.tmp', '.part', '.partial', '.copying', '.rebuilding', '.restore-part'))
+    }
     for rel,source in extra.get('extraFiles',{}).items():
         if Path(rel).is_absolute() or '..' in Path(rel).parts:raise ValueError(rel)
         if rel not in source_files:source_files[rel]=Path(source)
@@ -310,6 +341,9 @@ def main():
     def localize(s):
         if s=='./' or s.startswith('./#'):return 'index.html'+s[2:]
         u=urlsplit(s)
+        if (not u.query and u.path.removeprefix('./').lstrip('/') == 'downloads/Future-Mississauga-Atlas.pdf'
+                and (not u.scheme and not u.netloc or u.hostname in ('futuremississauga.com','www.futuremississauga.com','futuremississauga.ca'))):
+            return current_atlas[1]+('#'+u.fragment if u.fragment else '')
         if u.scheme not in ('https','http'):return s
         remote=u.scheme+'://'+u.netloc+u.path
         rel=routes.get(remote)
@@ -351,7 +385,7 @@ def main():
         html=local_page(rel,source.read_text(),modules,output,localize)
         output(rel,page_presentation(html,target))
     output('_local/runtime.js',(ROOT/'scripts/local-edition-runtime.js').read_text())
-    output('_local/files.js','window.fmEditionFiles='+json.dumps({'files':sorted(source_files),'routes':routes,'transport':transport},separators=(',',':'))+';')
+    output('_local/files.js','window.fmEditionFiles='+json.dumps({'files':sorted(source_files),'routes':routes,'transport':transport,'currentAtlas':current_atlas[1]},separators=(',',':'))+';')
     for old in set(previous.get('files',[]))-generated:
         if not Path(old).is_absolute() and '..' not in Path(old).parts and (target/old).is_file():(target/old).unlink()
     write(inventory,json.dumps({'files':sorted(generated),'sources':copied},separators=(',',':')))

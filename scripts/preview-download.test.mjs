@@ -1,3 +1,5 @@
+import {activeArtworkEdition} from './active-artwork-edition.mjs';
+const artworkEdition=activeArtworkEdition();
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -19,6 +21,13 @@ test('declared downloads accept only same-origin PNGs or this repository’s imm
   assert.equal(previewDownloadURL({dataset:{previewDownload:declared}},fallback,base),fallback,declared);
  }
  assert.equal(previewDownloadURL(null,fallback,base),fallback);
+});
+
+test('a signed PNG remains downloadable in the local site folder',()=>{
+ const base='file:///Users/test/Future-Mississauga/reference-updates.html';
+ const png='gallery/edition-20261121/revision-panels/model.png';
+ assert.equal(previewDownloadURL({dataset:{previewDownload:png}},null,base),new URL(png,base).href);
+ assert.equal(previewDownloadURL({dataset:{previewDownload:'../unrelated.png'}},null,base),null);
 });
 
 test('the actual shared resolver keeps explicit credited fallback and gives accepted catalogue/study metadata precedence',async()=>{
@@ -82,7 +91,7 @@ test('exact three Fairview preview anchors declare their matching footer downloa
  for(const name of ['reference-updates.html','update-2026-10-28.html']){
   const html=read(name);
   for(const original of rows){
-   const plate=JSON.parse(read('data/city-plates-20261120.json')).plates.find(item=>item.id===original.identity);
+   const plate=JSON.parse(read(`data/city-plates-${artworkEdition}.json`)).plates.find(item=>item.id===original.identity);
    const row=name==='reference-updates.html'?{...original,displayMaster:plate.signedMaster,download:plate.download}:original;
    const tags=[...html.matchAll(/<a\b[^>]*>/g)].map(m=>m[0]).filter(tag=>tag.includes('href="'+row.displayMaster.url+'"'));
    if(name==='update-2026-10-28.html'&&row.identity.endsWith('/before')){assert.equal(tags.length,0);continue}

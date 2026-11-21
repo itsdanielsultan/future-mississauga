@@ -1,4 +1,5 @@
 """Build the downloads directory from the active reader edition and its signed prints."""
+import argparse
 from datetime import datetime
 from html import escape
 import json
@@ -7,10 +8,13 @@ import re
 from urllib.parse import urlsplit
 
 PUBLIC = Path(__file__).resolve().parents[1] / "public"
-catalogue = json.loads((PUBLIC / "data/document-previews-20261120.json").read_text())
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--edition", default="20261121", help="Publication date in YYYYMMDD format")
+stamp = datetime.strptime(parser.parse_args().edition, "%Y%m%d").strftime("%Y%m%d")
+directory = Path(f"downloads/edition-{stamp}")
+catalogue = json.loads((PUBLIC / f"data/document-previews-{stamp}.json").read_text())
 documents = catalogue["documents"]
-atlas = next(doc for doc in documents if doc["url"].endswith("/Mississauga-Atlas.pdf"))
-directory = Path(atlas["url"]).parent
+atlas = next(doc for doc in documents if doc["url"] == f"{directory}/Mississauga-Atlas.pdf")
 edition = directory.name
 published = datetime.strptime(edition, "edition-%Y%m%d")
 study_areas = {
@@ -27,6 +31,7 @@ study_areas = {
     "st-hilarys-anglican-church": "Cooksville",
 }
 archive_notes = {
+    "2026-11-20": "First 56-page city atlas",
     "2026-11-09": "Downtown skyline studies",
     "2026-11-01": "Revised citywide cover",
     "2026-10-28": "Citywide cover study",
@@ -102,9 +107,9 @@ def print_card(scenario, title):
 
 
 def film_card():
-    info = json.loads((PUBLIC / "data/downtown-film-20261120.json").read_text())
+    info = json.loads((PUBLIC / f"data/downtown-film-{stamp}.json").read_text())
     url = info["film"]["url"]
-    return ('<li class="dl-media-card"><a class="dl-art" href="film.html" aria-label="Watch the skyline film">'
+    return ('<li class="dl-media-card dl-film"><a class="dl-art" href="film.html" aria-label="Watch the skyline film">'
             + image(info["poster"]["url"], *info["dimensions"])
             + '<span class="dl-play" aria-hidden="true">▶</span></a><div class="dl-media-copy">'
             + f'<h3>Skyline film</h3><p>{info["durationSeconds"]}-second film</p><div class="dl-actions">'
@@ -132,6 +137,11 @@ def earlier_editions():
     entries = []
     for doc in documents:
         url = doc["url"]
+        past_edition = re.fullmatch(r"downloads/edition-(\d{8})/Mississauga-Atlas\.pdf", url)
+        if past_edition:
+            if doc is not atlas:
+                entries.append((datetime.strptime(past_edition[1], "%Y%m%d").date(), doc))
+            continue
         if not url.startswith("downloads/Future-Mississauga-Atlas"):
             continue
         dated = re.search(r"Atlas-(\d{8})-[0-9a-f]+\.pdf$", url)
@@ -156,14 +166,15 @@ def earlier_editions():
     return "".join(rows)
 
 
-studies = [doc for doc in documents if Path(doc["url"]).parent == directory and doc != atlas]
+studies = [doc for doc in documents if Path(doc["url"]).parent == directory and doc["url"].endswith("-review.pdf")]
 studies.sort(key=lambda doc: (study_areas[doc["prefix"].rstrip("-")], doc["title"]))
 main = [
     '<main id="main" class="downloads-main"><header class="dl-heading"><h1>Downloads</h1></header>',
     '<div class="dl-layout">', rail(), '<div class="dl-content">', atlas_card(),
     '<section id="downtown" class="dl-section" aria-labelledby="downtown-title"><h2 id="downtown-title">Downtown prints and film</h2>',
     '<ul class="dl-media-grid">', print_card("existing", "Downtown today"),
-    print_card("future", "Downtown with proposals"), film_card(), '</ul></section>',
+    print_card("construction", "Under construction"), print_card("future", "Downtown with proposals"),
+    film_card(), '</ul></section>',
     '<section id="building-studies" class="dl-section" aria-labelledby="studies-title"><div class="dl-section-heading">'
     '<h2 id="studies-title">Building booklets</h2><p>Two exterior views, a neighbourhood map and the sources behind each model.</p></div>',
     '<ul class="dl-booklets">', *(booklet_card(doc) for doc in studies), '</ul></section>',

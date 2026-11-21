@@ -1,4 +1,4 @@
-export const STATUS_CLASSIFICATION_EDITION='2026-11-01';
+export const STATUS_CLASSIFICATION_EDITION='2026-11-21';
 // Lifecycle, planning approval and geometry confidence are separate facts.
 // Geometry confidence never selects a development-status colour.
 export const LIFECYCLE_LABELS=Object.freeze({
@@ -10,7 +10,7 @@ const displayStatuses=Object.freeze({
   on_hold:'On Hold',cancelled:'Cancelled',unknown:'Uncertain',mixed:'Uncertain'
 });
 export const statusColours=Object.freeze({
-  Existing:0xffffff,'Under Construction':0x85b4bf,Approved:0xc49b52,Proposed:0xd8b7ac,
+  Existing:0xb8b9b6,'Under Construction':0x85b4bf,Approved:0xd8b7ac,Proposed:0xd8b7ac,
   'On Hold':0xaaa09a,Cancelled:0x908783,Uncertain:0xb89bc3
 });
 const valid=value=>Object.hasOwn(LIFECYCLE_LABELS,value);
@@ -21,11 +21,12 @@ export function legacyLifecycle(value){
   const exact={existing:'existing',completed:'existing','under construction':'under_construction',approved:'approved',proposed:'proposed',uncertain:'unknown','status unverified':'unknown',unknown:'unknown','on hold':'on_hold',cancelled:'cancelled','mixed phases':'mixed'};
   if(exact[status])return exact[status];
   if(/(?:on hold|paused)/.test(status))return 'on_hold';
-  if(/^(?:cancelled|canceled)\b/.test(status))return 'cancelled';
+  if(/^(?:application )?cancelled\b|^(?:application )?canceled\b/.test(status))return 'cancelled';
   if(/(?:mixed|partially built|partly completed|partially completed)/.test(status))return 'mixed';
   if(/(?:complet|occupied|existing|built)/.test(status)&&!/(?:part|unbuilt|incomplet|unverified|unconfirmed|unknown|not complete)/.test(status))return 'existing';
   if(/(?:under.?construction|topped|partially.occupied)/.test(status)&&!/(?:not under|no construction|construction unverified|construction not verified)/.test(status))return 'under_construction';
-  if(/^(?:proposed|proposal|planning|preconstruction)\b/.test(status))return 'proposed';
+  if(/^approved planning framework\b/.test(status))return 'approved';
+  if(/^(?:proposed|proposal|planning|preconstruction|retained proposal|under review|site plan under review|application retained|appealed)\b|\bapplication under review\b/.test(status))return 'proposed';
   return 'unknown';
 }
 

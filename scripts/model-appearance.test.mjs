@@ -1,13 +1,31 @@
+import {municipalDisplayGeometry,createExistingStyleIndex,existingEnvelopeColour} from '../public/existing-materials.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as THREE from '../public/vendor/three.module.js';
-import {createModelAppearance,NATURAL_MASSING_COLOUR} from '../public/model-appearance.js';
+import {ALDO_ROOF_SOURCE,createModelAppearance,NATURAL_MASSING_COLOUR} from '../public/model-appearance.js';
 import {statusColours} from '../public/model-status-materials.js';
 import {planningAppearanceColour} from '../public/planning-appearance.js';
 import {applyModelVisibility} from '../public/model-visibility.js';
 const mesh=(lifecycle,material=new THREE.MeshStandardMaterial({color:0x85b4bf}))=>{
  const object=new THREE.Mesh(new THREE.BoxGeometry(5,30,8),material);object.userData={lifecycle,uncertain:true};return object;
 };
+
+test('Aldo reflects daylight only on the verified upper roof membrane',()=>{
+ const roof=new THREE.MeshStandardMaterial({color:0x171717,roughness:.86,side:THREE.DoubleSide});
+ roof.name='Plain black upper flat roof - Kyle correction 2026-10-09';
+ const shingles=roof.clone();shingles.name='Sloped shingles';
+ const object=mesh('unknown',[shingles,roof]),other=mesh('unknown',roof);
+ const data={assetId:ALDO_ROOF_SOURCE.assetId,projectId:ALDO_ROOF_SOURCE.projectId,sourceAssetSHA256:ALDO_ROOF_SOURCE.sha256};
+ Object.assign(object.userData,data);Object.assign(other.userData,{...data,sourceAssetSHA256:'changed'});
+ const original=object.material,appearance=createModelAppearance(THREE);
+ appearance.register(object,{authored:true});appearance.register(other,{authored:true});
+ assert.equal(object.material[0],shingles);assert.equal(other.material,roof);
+ const display=object.material[1];assert.equal(display.color.getHex(),0x2c2c2c);
+ assert.equal(display.roughness,roof.roughness);assert.equal(roof.color.getHex(),0x171717);
+ appearance.setMode('status');appearance.setMode('natural');assert.equal(object.material[1],display);
+ let disposed=false;display.addEventListener('dispose',()=>{disposed=true;});
+ appearance.dispose();assert.equal(object.material,original);assert(disposed);
+});
 
 test('natural massing is neutral and authored architecture is restored exactly after status view',()=>{
  const a=createModelAppearance(THREE),voya=mesh('under_construction'),finish=new THREE.MeshPhysicalMaterial({color:0x26394f,roughness:.22,metalness:.35,transmission:.2}),exchange=mesh('under_construction',finish);
@@ -51,3 +69,75 @@ test('release restores originals and disposes only owned display materials once'
 });
 
 test('unknown appearance values cannot silently change the selected view',()=>{const a=createModelAppearance(THREE);assert.throws(()=>a.setMode('blue'),TypeError);assert.equal(a.mode,'natural');a.dispose();});
+
+test('district buildings distinguish a registered tower from houses in both appearances while preserving source colours',()=>{
+ const index=createExistingStyleIndex({records:[{id:'63-01',tile:63,bounds:[[0,0,0],[5,28,5]]}]});
+ const mesh=new THREE.Mesh(new THREE.BufferGeometry(),new THREE.MeshStandardMaterial());
+ mesh.geometry.setAttribute('position',new THREE.Float32BufferAttribute([1,1,1,2,1,1,1,15,1,18,2,18,19,2,18,18,8,18],3));
+ mesh.geometry.setAttribute('color',new THREE.Float32BufferAttribute(new Float32Array(18).fill(.8),3));
+ mesh.userData={tile:63,source:'City of Mississauga LOD2 2024 LiDAR',lifecycle:'existing'};
+ const original=mesh.geometry,positions=original.attributes.position,colours=original.attributes.color;
+ const appearance=createModelAppearance(THREE,{classifyMunicipal:object=>municipalDisplayGeometry(THREE,object,index)});
+ appearance.register(mesh);
+ assert.equal(mesh.geometry.attributes.position,positions);
+ assert.equal(mesh.userData.majorStyleFaces,1);
+ assert(mesh.geometry.attributes.color.getX(0)<mesh.geometry.attributes.color.getX(3));
+ assert(mesh.material.vertexColors);
+ const display=mesh.material;
+ appearance.setMode('status');assert.equal(mesh.material,display);
+ const project=mesh.clone();project.geometry=original;project.userData={tile:63,id:'63-01',lifecycle:'proposed'};
+ appearance.register(project);assert.equal(project.geometry,original);assert(!project.material.vertexColors);
+ const authored=mesh.clone();authored.geometry=original;appearance.register(authored,{authored:true});
+ assert.equal(authored.geometry,original);
+ appearance.dispose();assert.equal(mesh.geometry,original);assert.equal(original.attributes.color,colours);
+});
+
+test('only the exact measured upper triangle is grey when it shares two vertices with a low roof',()=>{
+ const tri='0/28000/0,0/46000/0,10000/28000/0';
+ const index=createExistingStyleIndex({records:[]},{'63:0:0':[tri]});
+ const geometry=new THREE.BufferGeometry();
+ geometry.setAttribute('position',new THREE.Float32BufferAttribute([0,28,0,0,46,0,10,28,0,10,28,12],3));
+ geometry.setIndex([0,1,2,0,2,3]);
+ const mesh=new THREE.Mesh(geometry,new THREE.MeshStandardMaterial());
+ mesh.userData={tile:63,source:'City of Mississauga LOD2 2024 LiDAR',lifecycle:'existing'};
+ municipalDisplayGeometry(THREE,mesh,index);
+ const display=mesh.geometry,colours=display.attributes.color;
+ const dark=colours.getX(display.index.getX(0)),pale=colours.getX(display.index.getX(3));
+ assert(dark<pale);
+ for(let c=0;c<6;c++)assert.equal(colours.getX(display.index.getX(c)),c<3?dark:pale);
+ assert.equal(geometry.attributes.position.count,4);assert.equal(display.attributes.position.count,6);
+});
+
+test('only seven measured bodies in the municipal city display use the calibrated existing tones',async()=>{
+ const {readFile}=await import('node:fs/promises');
+ const {createHash}=await import('node:crypto');
+ const source=JSON.parse(await readFile(new URL('./editions/20261121/plan-massing-materials.json',import.meta.url)));
+ const rows=JSON.parse(await readFile(new URL('../public/data/refinement-models.json',import.meta.url))).assets;
+ let matched=0;
+ for(const [assetId,rule] of Object.entries(source.existingTowerBodies)){
+  const asset=rows.find(row=>row.id===assetId);
+  const bytes=await readFile(new URL('../public/'+asset.url,import.meta.url));
+  const hash=createHash('sha256').update(bytes).digest('hex');
+  assert.equal(hash,rule.sourceAssetSHA256);
+  const gltf=JSON.parse(bytes.subarray(20,20+bytes.readUInt32LE(12)).toString());
+  const city=createModelAppearance(THREE,{existingEnvelopeColour}),studio=createModelAppearance(THREE);
+  for(const node of gltf.nodes.filter(node=>node.mesh!==undefined)){
+   const part=mesh('existing');part.name=THREE.PropertyBinding.sanitizeNodeName(node.name);
+   Object.assign(part.userData,{assetId,sourceAssetSHA256:hash,projectId:asset.projectId});
+   const selected=rule.nodes.includes(part.name);
+   const target=assetId==='block-nine-reference-derived'?'637079':'7e878b';
+   for(const mode of ['natural','status']){
+    city.setMode(mode);city.register(part);
+    assert.equal(part.material.color.getHexString(),selected?target:(mode==='natural'?'d3d8db':'b8b9b6'));
+   }
+   city.unregister(part);studio.register(part);
+   assert.equal(part.material.color.getHex(),NATURAL_MASSING_COLOUR);
+   studio.unregister(part);
+   if(selected){
+    matched++;part.userData.sourceAssetSHA256='unregistered';assert.equal(existingEnvelopeColour(part),null);
+   }
+  }
+  city.dispose();studio.dispose();
+ }
+ assert.equal(matched,7);
+});

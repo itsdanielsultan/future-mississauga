@@ -44,7 +44,8 @@ test('all public page headers share the main destinations and the same interface
     const footer = html.match(/<footer class="compact-footer"[^>]*>(.*?)<\/footer>/s)?.[1];
     assert.ok(footer, page);
     assert.doesNotMatch(footer, /<nav|href="(?:about|suggestions|downloads|sources)\.html/, page);
-    assert.match(footer, /footer-attribution/, page);
+    assert.match(footer, /class="footer-identity"/, page);
+    assert.doesNotMatch(footer, /footer-attribution/, page);
     const canonical = base + (page === 'index.html' ? '' : page);
     const declared = html.match(/<link\b(?=[^>]*rel="canonical")[^>]*>/i)?.[0].match(/href="([^"]+)"/)?.[1];
     const isPrivate = /<meta\b(?=[^>]*name="robots")(?=[^>]*content="[^"]*noindex)[^>]*>/i.test(html);

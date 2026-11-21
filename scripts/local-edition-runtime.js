@@ -16,9 +16,15 @@
     if (typeof value !== 'string' || !value) return value;
     let url;
     try { url = new URL(value, document.baseURI); } catch { return value; }
+    const atlasBookmark = 'downloads/Future-Mississauga-Atlas.pdf';
+    const projectHost = ['futuremississauga.com', 'www.futuremississauga.com', 'futuremississauga.ca'].includes(url.hostname);
+    if (!url.search && catalog.currentAtlas &&
+        (key(url) === atlasBookmark || (projectHost && url.pathname === '/' + atlasBookmark))) {
+      return new URL(catalog.currentAtlas, base).href + url.hash;
+    }
     const mapped = catalog.routes[url.origin + url.pathname];
     if (mapped) return new URL(mapped, base).href + url.search + url.hash;
-    if (['futuremississauga.com', 'www.futuremississauga.com', 'futuremississauga.ca'].includes(url.hostname)) {
+    if (projectHost) {
       const path = decodeURIComponent(url.pathname.slice(1)) || 'index.html';
       if (files.has(path)) return new URL(path, base).href + url.search + url.hash;
     }

@@ -1,3 +1,4 @@
+import {readBeforePlanningReview} from './planning-review-guard.mjs';
 import * as treeRuntime from './tree-runtime-fixture.mjs';
 import {applyHarbornTreeContacts} from '../public/harborn-tree-contacts.js';
 import test from 'node:test';
@@ -18,7 +19,7 @@ const THREE=await import('../public/vendor/three.module.js');
 const {GLTFLoader}=await import('../public/vendor/addons/loaders/GLTFLoader.js');
 const {MeshoptDecoder}=await import('../public/vendor/meshopt_decoder.mjs');
 const {splitSourceOverlaps}=await import('../public/source-layer-cut.js');
-const read=p=>readFileSync(new URL('../public/'+p,import.meta.url));
+const read=p=>readBeforePlanningReview(new URL('../public/'+p,import.meta.url));
 const json=p=>JSON.parse(read('data/'+p+'.json'));
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const stable=v=>Array.isArray(v)?v.map(stable):v&&typeof v==='object'?Object.fromEntries(Object.keys(v).sort().map(k=>[k,stable(v[k])])):v;

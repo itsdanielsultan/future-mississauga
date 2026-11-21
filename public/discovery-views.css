@@ -1,27 +1,99 @@
-html body[data-atlas-media] .skyline-window { display:grid; grid-template-columns:minmax(0,1fr); gap:16px; }
-html body[data-atlas-media] .skyline-toolbar { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin:0; padding:0; }
-.skyline-toolbar h2 { margin:0; font:550 clamp(20px,2vw,28px)/1.2 var(--face); letter-spacing:-.035em; }
-html body[data-atlas-media] .skyline-window figure.hero { grid-area:auto; width:100%; margin:0; }
-html body[data-atlas-media] .skyline-window .hero button[data-aerial-feature] { width:100%; overflow:hidden; border-radius:12px; }
-html body[data-atlas-media] .skyline-window .hero #scenarioImage { display:block; width:100%; height:auto; max-height:none; object-fit:contain; aspect-ratio:16/9; }
-html body[data-atlas-media] #pictureCompare { border-radius:12px; overflow:hidden; }
-.compare-credit { margin:12px 0 0; color:var(--wall-muted,var(--muted)); font:450 15px/1.45 var(--face); }
-html body[data-atlas-media] .screening-video { aspect-ratio:16/9; width:100%; height:auto; background:#1c1d1f; border-radius:12px; }
-html body[data-atlas-media] .film-chapters:not([hidden]) { gap:4px; border-radius:10px; padding:4px; background:#ebedea; }
-html body[data-atlas-media] .film-chapters button { min-height:44px; align-items:center; padding:8px 12px; border:0; border-radius:7px; }
-html body[data-atlas-media] .film-chapters button:hover { background:#e0e2df; }
-html body[data-atlas-media] .film-chapters button[aria-current] { color:var(--ink); background:#d7dad6; }
-@media(max-width:600px) {
-  html body[data-atlas-media] .film-chapters button { justify-content:center; padding:8px 6px; text-align:center; }
-  html body[data-atlas-media] .chapter-time { display:none; }
+/* The comparison controls, signed image and film use the same page edges. */
+html body[data-atlas-media] .skyline-window {
+  display:flex; flex-direction:column; align-items:stretch; gap:16px;
 }
-.film-actions { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
-html body[data-atlas-media] .screening figcaption { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+html body[data-atlas-media] .skyline-toolbar {
+  display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin:0; padding:0;
+}
+.skyline-toolbar h2 { margin:0; font:550 clamp(20px,2vw,28px)/1.2 var(--face); letter-spacing:-.035em; }
+html body[data-atlas-media] .skyline-window figure.hero { display:block; width:100%; margin:0; }
+html body[data-atlas-media] .skyline-window .hero button[data-aerial-feature] { display:block; width:100%; overflow:hidden; border-radius:12px; }
+html body[data-atlas-media] .skyline-window .hero #scenarioImage { display:block; width:100%; height:auto; max-height:none; object-fit:contain; aspect-ratio:16/9; }
+html body[data-atlas-media] .skyline-window .hero figcaption, html body[data-atlas-media] .screening figcaption {
+  display:flex; align-items:center; justify-content:space-between; width:100%; margin:8px 0 0; padding:0; gap:12px; border:0;
+}
+html body[data-atlas-media] .stage-neighbourhood {
+  display:inline-flex; align-items:center; gap:7px; min-height:44px; padding:0 10px; margin-left:-10px; border:0;
+  border-radius:6px; color:var(--ink); font:550 15px/1.35 var(--face); text-decoration:none;
+}
+html body[data-atlas-media] .stage-neighbourhood:is(:hover,:focus-visible) { background:var(--link-hover); text-decoration:none; }
+html body[data-atlas-media] #pictureCompare { border-radius:12px; overflow:hidden; }
+html body[data-atlas-media] main .compare-tools .compare-place {
+  display:flex; align-items:center; flex-direction:row; gap:12px; width:min(100%,350px); margin:0;
+  color:var(--ink); font:550 15px/1.35 var(--face);
+}
+html body[data-atlas-media] main #comparisonDistrict {
+  display:block; flex:1; width:auto; min-width:0; max-width:none; height:44px; min-height:44px;
+  line-height:42px; padding-block:0; padding-inline:12px 38px;
+}
+.comparison-caption { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0 12px; margin-top:8px; }
+html body[data-atlas-media] main .comparison-caption .compare-credit {
+  margin:0; color:var(--wall-muted,var(--muted)); font:450 15px/1.45 var(--face);
+}
+html body[data-atlas-media] main .comparison-caption .place-destinations {
+  margin:0 -10px 0 0; padding:0; border:0;
+}
+html body[data-atlas-media] .screening-video {
+  display:block; aspect-ratio:16/9; width:100%; height:auto; max-height:none; background:#212321; border-radius:10px 10px 0 0;
+}
+@media(min-width:741px) {
+  /* Keep the signature, playback strip and three chapters visible together. */
+  html body[data-atlas-media] .screening:not(:fullscreen):not(.full-window) {
+    width:min(100%,max(34rem,calc((100svh - 365px) * 16 / 9))); margin-inline:auto;
+  }
+}
+html body[data-atlas-media] .screening .film-controls:not([hidden]) {
+  display:flex; align-items:center; gap:12px; margin:0; padding:3px 8px; border:1px solid var(--wall-line);
+  border-radius:0 0 10px 10px; background:var(--paper); color:var(--ink);
+}
+.film-control {
+  flex:none; display:inline-grid; place-items:center; width:44px; height:44px; border:0; border-radius:6px;
+  background:transparent; color:inherit; padding:0; cursor:pointer;
+}
+.film-control:is(:hover,:focus-visible) { background:var(--link-hover); }
+.film-control:focus-visible, .film-seek:focus-visible { outline:2px solid currentColor; outline-offset:-2px; }
+.film-play:not([data-playing="true"]) [data-film-icon="pause"], .film-play[data-playing="true"] [data-film-icon="play"] { display:none; }
+.film-time { flex:none; font:500 14px/1.3 var(--face); font-variant-numeric:tabular-nums; white-space:nowrap; }
+html body[data-atlas-media] .film-seek {
+  flex:1; min-width:24px; width:100%; height:44px; margin:0; padding:0; border:0; box-shadow:none; border-radius:4px;
+  appearance:none; background:transparent; cursor:pointer;
+}
+.film-seek::-webkit-slider-runnable-track { height:4px; border-radius:3px; background:linear-gradient(to right,currentColor var(--played,0%),var(--wall-line) var(--played,0%)); }
+.film-seek::-moz-range-track { height:4px; border-radius:3px; background:var(--wall-line); }
+.film-seek::-moz-range-progress { height:4px; background:currentColor; }
+.film-seek::-webkit-slider-thumb { appearance:none; height:14px; width:14px; border-radius:50%; background:currentColor; margin-top:-5px; }
+.film-seek::-moz-range-thumb { height:14px; width:14px; border:0; border-radius:50%; background:currentColor; }
+html body[data-atlas-media] .film-chapters:not([hidden]) {
+  display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); position:relative; isolation:isolate;
+  gap:0; margin-top:12px; border:1px solid var(--line); border-radius:10px; padding:3px; background:var(--switch-tray);
+}
+html body[data-atlas-media] .film-chapters button {
+  min-height:44px; align-items:center; justify-content:center; padding:6px 12px; border:0; border-radius:6px;
+  color:var(--quiet); font:520 15px/1.35 var(--face); background:transparent;
+}
+html body[data-atlas-media] .film-chapters button:hover { background:var(--link-hover); }
+html body[data-atlas-media] .film-chapters button[aria-current] { color:var(--ink); background:transparent; }
+.film-chapters::before {
+  content:''; position:absolute; z-index:-1; top:3px; bottom:3px; left:3px; width:calc((100% - 6px) / 3);
+  background:var(--switch-selected); border-radius:6px; pointer-events:none;
+  transition:transform 220ms cubic-bezier(.22,.8,.25,1);
+}
+.film-chapters:has([data-second="4"][aria-current])::before { transform:translateX(100%); }
+.film-chapters:has([data-second="8"][aria-current])::before { transform:translateX(200%); }
+@media(prefers-reduced-motion:reduce) { .film-chapters::before { transition:none; } }
 html.film-window-open { overflow:hidden; }
 html body[data-atlas-media] .screening:is(.full-window,:fullscreen) {
   position:fixed; inset:0; z-index:1000; margin:0; width:100%; height:100%; max-width:none;
-  display:grid; grid-template-rows:minmax(0,1fr) auto auto; background:#191b1b; color:#f6f6f4; padding:16px;
+  display:grid; grid-template-rows:minmax(0,1fr) auto auto; align-content:center;
+  background:#191b1b; color:#f6f6f4; padding:clamp(8px,2vw,24px);
 }
 html body[data-atlas-media] .screening:is(.full-window,:fullscreen) video { width:100%; height:100%; min-height:0; }
-html body[data-atlas-media] .screening:is(.full-window,:fullscreen) figcaption { color:#f6f6f4; border-color:#505353; }
-html body[data-atlas-media] .screening:is(.full-window,:fullscreen) figcaption a { color:#f6f6f4; }
+html body[data-atlas-media] .screening:is(.full-window,:fullscreen) figcaption { display:none; }
+@media(max-width:600px) {
+  html body[data-atlas-media] main .skyline-formats { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  html body[data-atlas-media] .screening .film-controls:not([hidden]) { gap:8px; padding:2px 4px; }
+  html body[data-atlas-media] .film-chapters button { padding:6px 4px; text-align:center; font-size:14px; }
+  html body[data-atlas-media] .chapter-time { display:none; }
+}
+
+.previous-skyline:not(:target) {display:none;}

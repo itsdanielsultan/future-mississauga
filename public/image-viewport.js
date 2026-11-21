@@ -10,6 +10,7 @@ export function imageViewportGeometry(width,height,spaceWidth,spaceHeight,scale=
 export function bindImageViewport({stage,image,zoomIn,zoomOut,fitButton,readout,onNavigate}){
  let width=1200,height=750,scale=1,x=0,y=0,geometry=null,pointers=new Map(),gesture=null;
  let swipeStart=null;
+ let lastWheelTime=-Infinity, horizontalTravel=0, swiped=false;
  const available=()=>({width:Math.max(1,stage.clientWidth-24),height:Math.max(1,stage.clientHeight-24)});
  function render(){
   const space=available();geometry=imageViewportGeometry(width,height,space.width,space.height,scale,x,y);
@@ -54,7 +55,26 @@ export function bindImageViewport({stage,image,zoomIn,zoomOut,fitButton,readout,
   }
   pointers.delete(e.pointerId);if(stage.hasPointerCapture(e.pointerId))stage.releasePointerCapture(e.pointerId);startGesture();if(direction)onNavigate?.(direction);};
  stage.addEventListener('pointerup',finish);stage.addEventListener('pointercancel',finish);stage.addEventListener('lostpointercapture',e=>{pointers.delete(e.pointerId);startGesture();});
- stage.addEventListener('wheel',e=>{e.preventDefault();zoom(scale*Math.exp(-Math.max(-120,Math.min(120,e.deltaY))*.004),local(e));},{passive:false});
+ stage.addEventListener('wheel',e=>{
+  e.preventDefault();
+  if(e.timeStamp-lastWheelTime>170){horizontalTravel=0;swiped=false;}
+  lastWheelTime=e.timeStamp;
+  // A trackpad swipe delivers many wheel events, including a decaying tail.
+  // Keep one picture per gesture, even after its neighbour has finished loading.
+  if(swiped&&!e.ctrlKey)return;
+  const units=e.deltaMode===1?16:e.deltaMode===2?stage.clientWidth:1;
+  if(!e.ctrlKey&&Math.abs(e.deltaX)>Math.abs(e.deltaY)*1.4){
+   if(scale>1.001){x-=e.deltaX*units;render();return;}
+   horizontalTravel+=e.deltaX*units;
+   if(Math.abs(horizontalTravel)>=48){
+    swiped=true;
+    onNavigate?.(Math.sign(horizontalTravel));
+   }
+   return;
+  }
+  horizontalTravel=0;
+  zoom(scale*Math.exp(-Math.max(-120,Math.min(120,e.deltaY*units))*.004),local(e));
+ },{passive:false});
  stage.addEventListener('dblclick',e=>{e.preventDefault();scale>1.001?reset():zoom(Math.min(2.5,geometry.maxScale),local(e));});
  stage.addEventListener('keydown',e=>{
   if(e.target!==stage)return;

@@ -1,3 +1,5 @@
+import {activeArtworkEdition} from './active-artwork-edition.mjs';
+const artworkEdition=activeArtworkEdition();
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -61,7 +63,7 @@ test('the Fairview study offers previews and separate download icons and opens t
   assert.deepEqual(current.images.map(row=>row.identity),['neighbourhood/fairview/before','neighbourhood/fairview/after']);
   for(const row of current.images){
     assert.equal(row.scenario,'existing');assert.equal(row.caption.comparisonState,row.identity.split('/').at(-1));
-    const edition=JSON.parse(fs.readFileSync(new URL('data/city-plates-20261120.json',root)));
+    const edition=JSON.parse(fs.readFileSync(new URL(`data/city-plates-${artworkEdition}.json`,root)));
     const plate=edition.plates.find(item=>item.id===row.identity);
     assert.ok(section.includes('href="'+plate.signedMaster.url+'" data-preview-download="'+plate.download.url+'"'));
     assert.ok(section.includes('href="'+plate.download.url+'" download data-download'));

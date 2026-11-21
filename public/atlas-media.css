@@ -132,7 +132,7 @@ html body[data-atlas-media] .social-grid {
 }
 html body[data-atlas-media] .social-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
 html body[data-atlas-media] :is(.picture-card,.social-grid article) { min-width: 0; padding: 0; margin: 0; border: 0; background: transparent; }
-html body[data-atlas-media] :is(.picture-card > button,.social-grid .image-link) {
+html body[data-atlas-media] :is(.picture-card > [data-open],.social-grid .image-link) {
   display: block;
   position: relative;
   width: 100%;
@@ -143,9 +143,9 @@ html body[data-atlas-media] :is(.picture-card > button,.social-grid .image-link)
   overflow: hidden;
   cursor: zoom-in;
 }
-html body[data-atlas-media] .picture-card > button { aspect-ratio: 8/5; }
+html body[data-atlas-media] .picture-card > [data-open] { aspect-ratio: 8/5; }
 html body[data-atlas-media] .social-grid .image-link { aspect-ratio: 4/5; }
-html body[data-atlas-media] :is(.picture-card > button,.social-grid .image-link) img {
+html body[data-atlas-media] :is(.picture-card > [data-open],.social-grid .image-link) img {
   display: block;
   width: 100%;
   height: 100%;
@@ -155,7 +155,7 @@ html body[data-atlas-media] :is(.picture-card > button,.social-grid .image-link)
   border-radius: 0;
   transform: none;
 }
-html body[data-atlas-media] :is(.picture-card > button,.social-grid .image-link):hover { outline: 1px solid #8f9391; outline-offset: 2px; }
+html body[data-atlas-media] :is(.picture-card > [data-open],.social-grid .image-link):hover { outline: 1px solid #8f9391; outline-offset: 2px; }
 html body[data-atlas-media] :is(.gallery-grid .card-caption,.social-grid .card-text) {
   display: grid;
   grid-template-columns: minmax(0,1fr) 44px;
@@ -382,16 +382,17 @@ html body[data-atlas-media] :is(.picture-card,.social-grid article) {
   border: 1px solid var(--line);
   border-radius: 12px;
 }
-html body[data-atlas-media] :is(.picture-card > button,.social-grid .image-link) {
+html body[data-atlas-media] :is(.picture-card > [data-open],.social-grid .image-link) {
   border-radius: 0;
   background: #e8e9e5;
 }
-html body[data-atlas-media] :is(.picture-card > button,.social-grid .image-link):focus-visible {
+html body[data-atlas-media] :is(.picture-card > [data-open],.social-grid .image-link):focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: -4px;
 }
 html body[data-atlas-media] :is(.gallery-grid .card-caption,.social-grid .card-text) {
   flex: 1;
+  grid-template-columns: minmax(0,1fr) auto;
   align-items: center;
   padding: 16px;
   gap: 12px;
@@ -401,6 +402,14 @@ html body[data-atlas-media] main :is(.card-text,.card-caption) > a[download] {
   border-radius: 8px;
 }
 html body[data-atlas-media] main :is(.card-text,.card-caption) > a[download] svg { width:20px; height:20px; }
+html body[data-atlas-media] main :is(.card-text,.card-caption) > a[download][data-resolution]:not([data-resolution=""]) {
+  display:inline-flex; align-items:center; justify-content:center; gap:6px; width:auto; min-width:44px; padding-inline:9px;
+}
+html body[data-atlas-media] main a[download][data-resolution]::before {
+  content:attr(data-resolution); font:550 14px/1.2 var(--face,sans-serif); white-space:nowrap;
+}
+html .media-preview a[download][data-resolution] { display:inline-flex; align-items:center; gap:6px; width:auto; padding-inline:10px; }
+html body[data-atlas-media] main .media-sections a { justify-content:center; }
 html body[data-atlas-media] :is(.card-caption,.card-copy) .media-caption__scenario {
   margin-top: 4px;
   font-size: 15px !important;

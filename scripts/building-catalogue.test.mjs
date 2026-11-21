@@ -53,7 +53,7 @@ test('Accuracy register retains every dated record while allowing area and statu
   assert.equal(rows.length, projects.length);
   const ids = [...html.matchAll(/<tr\b[^>]*>[\s\S]*?project=([^"&]+)[\s\S]*?<\/tr>/g)].map(match => match[1]);
   assert.deepEqual(ids.sort(), projects.map(project => project.id).sort(), 'the register covers every public project exactly once');
-  assert(html.includes(`${projects.length} public projects in the city map`));
+  assert(html.includes(`id="matchCount" role="status">${projects.length} records</p>`));
   for (const id of ['projectFilter','evidenceFilter','accuracyArea','accuracyStatus','coverageVersion']) assert(html.includes(`id="${id}"`));
   assert(!html.includes('showAllRecords'));
   assert(html.includes('A ground check on a 25 m grid found 33 unsupported sample points.'));
@@ -85,16 +85,16 @@ test('Accuracy uses plain city-map categories and preserves the two added studie
   }
 });
 
-test('Accuracy fragment links reveal the coverage disclosure and entries inside it', async () => {
+test('Accuracy fragment links reach the open coverage section and its entries', async () => {
   const html = await read('accuracy-review.html');
-  assert(html.includes('<details class="accuracy-background" id="coverage-notes">'));
+  assert.match(html, /<section class="accuracy-background" id="coverage-notes"/);
   assert(html.indexOf('id="october-23-east-credit"') > html.indexOf('id="coverage-notes"'));
   const calls = [];
   const coverage = {
-    tagName: 'DETAILS', open: false, parentElement: null,
+    tagName: 'SECTION', parentElement: null,
     closest: selector => selector === '.accuracy-background' ? coverage : null,
     hasAttribute: () => false, setAttribute() {},
-    focus() { assert(coverage.open); },
+    focus() {},
     scrollIntoView() { calls.push('coverage'); }
   };
   const entry = {
@@ -103,9 +103,7 @@ test('Accuracy fragment links reveal the coverage disclosure and entries inside 
   };
   const doc = {getElementById: id => ({'coverage-notes':coverage, 'october-23-east-credit':entry})[id]};
   for (const id of ['coverage-notes','october-23-east-credit']) {
-    coverage.open = false;
     assert(revealUpdateHash('#'+id, doc));
-    assert(coverage.open);
   }
   assert.deepEqual(calls, ['coverage','entry']);
 });

@@ -1,15 +1,15 @@
+import {readBeforePlanningReview} from './planning-review-guard.mjs';
 import {registryReconciliationIds} from './registry-reconciliation-scope.mjs';
 import {withoutAcceptedModelFields as withoutModel,comparableMcityAssets,acceptedModelProjectIds} from './mcity-asset-scope.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {statusMetadataScope as scope, withoutReviewedStatusMetadata as withoutStatus} from './status-metadata-scope.mjs';
 import {mcityContentIds, withoutReviewedMcityContent as withoutMcity, withoutReviewedMcityNote as withoutMcityNote} from './mcity-content-scope.mjs';
 import {restoreNamedProjectReview,restoreNamedProjectRegister,namedProjectReviewIds} from './named-project-review-scope.mjs';
 import {publicModelCaveat} from '../public/project-cards.js';
 const base='dc9bb6a53020ad77ef407affff56a8b94a585aab';
-const read=f=>JSON.parse(fs.readFileSync(new URL('../public/data/'+f,import.meta.url)));
+const read=f=>JSON.parse(readBeforePlanningReview(new URL('../public/data/'+f,import.meta.url)));
 const prior=f=>JSON.parse(execFileSync('git',['show',base+':public/data/'+f],{maxBuffer:32*1024*1024}));
 const projects=read('projects.json'),groups=read('groups.json'),overrides=read('overrides.json'),manifest=read('refinement-models.json');
 const snapshot=read('project-lifecycle-20261101.json');
@@ -102,14 +102,14 @@ function parseCSV(text){
 }
 test('CSV preserves every original record and field while adding only reviewed lifecycle columns',()=>{
  const old=parseCSV(execFileSync('git',['show',base+':public/downloads/project-register.csv'],{encoding:'utf8',maxBuffer:16*1024*1024}));
- const current=parseCSV(restoreNamedProjectRegister(restore26Register(fs.readFileSync(new URL('../public/downloads/project-register.csv',import.meta.url),'utf8'))));
+ const current=parseCSV(restoreNamedProjectRegister(restore26Register(readBeforePlanningReview(new URL('../public/downloads/project-register.csv',import.meta.url),'utf8'))));
  const added=['lifecycle','approvalStage','lifecycleReviewedOn','lifecycleNote'];assert.deepEqual(current.headers,[...old.headers,...added]);
  const unchangedFields=r=>Object.fromEntries(old.headers.filter(k=>(!mcityContentIds.has(r.id)||!['status','statusDate','storeys','geometryCoverage','modelCaveat','sources'].includes(k))&&(!['ninth-6344','longview-44-45'].includes(r.id)||k!=='status')&&(!acceptedModelProjectIds.has(r.id)||!['modelCaveat','geometryCoverage'].includes(k))).map(k=>[k,r[k]]));
  assert.deepEqual(current.rows.map(unchangedFields),old.rows.map(unchangedFields));
  for(const r of current.rows)for(const k of added)assert.equal(r[k],scope.projects[r.id]?(restoreNamedProjectReview('projects',project(r.id))[k]||''):'');
 });
 test('accuracy table preserves source facts and uses the reviewed public wording',()=>{
- const current=fs.readFileSync(new URL('../public/accuracy-review.html',import.meta.url),'utf8');
+ const current=readBeforePlanningReview(new URL('../public/accuracy-review.html',import.meta.url),'utf8');
  const old=execFileSync('git',['show',base+':public/accuracy-review.html'],{encoding:'utf8',maxBuffer:4*1024*1024});
  const rowFor=(text,id)=>[...text.matchAll(/<tr\b[^>]*>[\s\S]*?<\/tr>/g)].map(m=>m[0]).find(r=>r.includes('project='+id+'"')||r.includes('project='+id+'&amp;'));
  for(const id of Object.keys(scope.projects)){

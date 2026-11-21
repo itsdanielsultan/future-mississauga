@@ -1,3 +1,5 @@
+import {activeArtworkEdition} from './active-artwork-edition.mjs';
+const artworkEdition=activeArtworkEdition();
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -67,7 +69,7 @@ test('November 13 portrait markup selects native replacements while all Nov1 med
  const home=fs.readFileSync(new URL('index.html',pub),'utf8'),social=fs.readFileSync(new URL('./fixtures/social-20261113.html',import.meta.url),'utf8');
  const revision=read('data/presentation-media-20261109.json');
  for(const file of ['downtown-existing.png','downtown-future.png']){const row=revision.images.find(r=>r.identity==='wide/'+file);const candidate=row.responsivePreviews.find(a=>a.mimeType==='image/avif'&&a.dimensions[0]===3200);assert(fs.existsSync(new URL(candidate.url,pub)));const state=file.replace('downtown-','').replace('.png','');
-  const nativePreview='gallery/edition-20261120/home-'+state+'-2560.webp';
+  const nativePreview=`gallery/edition-${artworkEdition}/home-`+state+'-2560.webp';
   assert(fs.existsSync(new URL(nativePreview,pub)));
   assert(fs.readFileSync(new URL('compare.html',pub),'utf8').includes(nativePreview));}
  const cards=[...social.matchAll(/<article\b[^>]*>[\s\S]*?<\/article>/g)].map(m=>m[0]);
@@ -84,7 +86,7 @@ test('November 13 portrait markup selects native replacements while all Nov1 med
   const bytes=fs.readFileSync(new URL(shares[name].url,pub));
   assert.equal(createHash('sha256').update(bytes).digest('hex'),shares[name].sha256,name);
  }
- const versions={'gallery':'20261113-design2','social-preview':'20261113-design2','image-experience':'20261113-design2','media-catalog':'20261113-design2','document-preview':'20261120-reader'};
+ const versions={'gallery':'20261113-design2','social-preview':'20261113-design2','image-experience':'20261113-design2','media-catalog':'20261113-design2','document-preview':'20261121-pagination'};
  for(const name of fs.readdirSync(pub).filter(n=>n.endsWith('.html'))){const html=fs.readFileSync(new URL(name,pub),'utf8');for(const match of html.matchAll(/(gallery|social-preview|image-experience)\.js\?v=([^"']+)/g))assert.equal(match[2],versions[match[1]],name+' '+match[1]);}
  for(const name of ['gallery.js','social-preview.js','image-experience.js']){const js=fs.readFileSync(new URL(name,pub),'utf8');for(const match of js.matchAll(/(media-catalog|document-preview)\.js\?v=([^"']+)/g))assert.equal(match[2],versions[match[1]],name+' '+match[1]);}
 });

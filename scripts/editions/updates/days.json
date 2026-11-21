@@ -1,5 +1,105 @@
 [
   {
+    "date": "2026-11-21",
+    "title": "Three views across Square One",
+    "summary": "See Downtown today, under construction and with proposed towers from the same angle.",
+    "details": [],
+    "records": [
+      {
+        "id": "november-21-three-views",
+        "heading": "One camera over Downtown",
+        "paragraphs": [
+          "Switch between the three stages on the homepage. The roads and existing buildings stay in place so you can see what each stage adds."
+        ],
+        "links": [
+          {
+            "label": "Explore the three views",
+            "url": "index.html?scenario=construction#skyline"
+          },
+          {
+            "label": "Watch the skyline film",
+            "url": "film.html"
+          }
+        ],
+        "picture": "<a class=\"journal-image\" href=\"index.html?scenario=construction#skyline\"><img src=\"gallery/edition-20261121/signed/home-downtown-construction.webp\" width=\"1600\" height=\"1000\" loading=\"lazy\" alt=\"The M City and Exchange District construction-stage skyline near Square One\"></a>",
+        "thumbnail": "gallery/edition-20261121/signed/home-downtown-construction-thumb.webp",
+        "caption": "Downtown under construction, by Daniel Sultan."
+      },
+      {
+        "id": "november-21-status",
+        "heading": "Which towers are built?",
+        "paragraphs": [
+          "EX1 and EX2 at Exchange District now appear in grey. EX1 has been registered and EX2 has recorded residential leases. EX3 is still under construction.",
+          "At Rathburn Road and Duke of York Boulevard, the City lists Block 5 Tower 1 as an active proposal. The pink tower appears in the future view."
+        ],
+        "links": [
+          {
+            "label": "See Exchange District on the map",
+            "url": "explore.html?district=downtown&project=exchange-district&scenario=future&appearance=status"
+          },
+          {
+            "label": "Ontario condominium registry",
+            "url": "https://www.condoauthorityontario.ca/condo-registry-details/?id=ff38531f-56bb-f111-aaad-70a8a5ac79b5"
+          },
+          {
+            "label": "EX2 residential lease",
+            "url": "https://condos.ca/mississauga/2-erskine-road-mississauga/unit-2404-W13683156"
+          },
+          {
+            "label": "Block 5 site-plan record",
+            "url": "https://services6.arcgis.com/hM5ymMLbxIyWTjn2/ArcGIS/rest/services/Site_Plan_Applications/FeatureServer/0/query?where=APP_FILE_NO%3D%27SP+25%2F42+W4%27&outFields=APP_FILE_NO%2CSIMPLE_STATUS%2CSITE_ADDRESS%2CDESCRIPTION%2CAPPROVAL_DATE%2CRES_APTS%2CAPPLICATION_DATE&returnGeometry=false&f=pjson"
+          }
+        ]
+      },
+      {
+        "id": "november-21-waterfront",
+        "heading": "Port Credit and the shoreline",
+        "paragraphs": [
+          "I moved the Port Credit camera so the waterfront buildings sit above the credit strip. The citywide view follows the Lake Ontario shoreline.",
+          "Bridge House has broken ground. The future view shows its three planned buildings in blue."
+        ],
+        "links": [
+          {
+            "label": "See Port Credit",
+            "url": "place-port-credit.html"
+          },
+          {
+            "label": "Bridge House construction announcement",
+            "url": "https://sensomagazine.ca/en/construction/mississauga-bridge-house-brightwater-port-credit-construction/"
+          }
+        ]
+      },
+      {
+        "id": "november-21-buildings",
+        "heading": "A closer look at the buildings",
+        "paragraphs": [
+          "The Buildings directory now includes 41 detailed profiles. Each has a real photograph, its location and the project credits I could verify."
+        ],
+        "links": [
+          {
+            "label": "Explore the buildings",
+            "url": "model.html"
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "label": "Read the atlas",
+        "url": "downloads/edition-20261121/Mississauga-Atlas.pdf",
+        "preview": true
+      }
+    ],
+    "cardImage": "gallery/edition-20261121/signed/home-downtown-construction-thumb.webp",
+    "share": {
+      "url": "gallery/edition-20261121/signed/home-downtown-construction-thumb.webp",
+      "width": 640,
+      "height": 400,
+      "type": "image/webp",
+      "alt": "Downtown under construction, looking across Square One"
+    }
+  },
+  {
     "date": "2026-11-20",
     "title": "A new atlas of Mississauga",
     "summary": "A 56-page atlas and a matched Downtown aerial bring the city’s changing neighbourhoods into print.",
@@ -24,11 +124,15 @@
           {
             "label": "Downtown prints and film",
             "url": "downloads.html#downtown"
+          },
+          {
+            "label": "Original 20 November image",
+            "url": "gallery/edition-20261120/originals/wide-downtown-skyline-construction-print.png"
           }
         ],
-        "picture": "<a class=\"journal-image\" href=\"compare.html?scenario=construction#skyline\" aria-label=\"Open the Downtown comparison\"><img src=\"gallery/edition-20261120/signed/wide-downtown-skyline-construction-thumb.webp\" srcset=\"gallery/edition-20261120/signed/wide-downtown-skyline-construction-thumb.webp 640w, gallery/edition-20261120/signed/wide-downtown-skyline-construction.webp 1600w\" sizes=\"(max-width:740px) 92vw, 48vw\" width=\"1600\" height=\"900\" loading=\"lazy\" alt=\"Buildings under construction around Square One, viewed from above\"></a>",
-        "thumbnail": "gallery/edition-20261120/signed/wide-downtown-skyline-construction-thumb.webp",
-        "caption": "Downtown construction near Square One. Model by Daniel Sultan."
+        "picture": "<a class=\"journal-image\" href=\"compare.html?scenario=construction#skyline\" aria-label=\"Open the Downtown comparison\"><img src=\"gallery/edition-20261121/signed/wide-downtown-skyline-construction-thumb.webp\" srcset=\"gallery/edition-20261121/signed/wide-downtown-skyline-construction-thumb.webp 640w, gallery/edition-20261121/signed/wide-downtown-skyline-construction.webp 1600w\" sizes=\"(max-width:740px) 92vw, 48vw\" width=\"1600\" height=\"900\" loading=\"lazy\" alt=\"Buildings under construction around Square One, viewed from above\"></a>",
+        "thumbnail": "gallery/edition-20261121/signed/wide-downtown-skyline-construction-thumb.webp",
+        "caption": "Current rendering of construction near Square One, by Daniel Sultan."
       },
       {
         "heading": "Explore 20 neighbourhoods",
@@ -59,17 +163,26 @@
             "url": "update-2026-11-01.html#november-1-m-city"
           }
         ]
+      },
+      {
+        "heading": "Looking for drawings",
+        "paragraphs": [
+          "I asked for drawings of 6835 and 6865 Century Avenue and 755 Queensway East to check their exteriors."
+        ],
+        "id": "november-20-drawings",
+        "links": []
       }
     ],
     "links": [
       {
-        "label": "Read the city atlas",
-        "url": "downloads.html"
+        "label": "Read the 20 November atlas",
+        "url": "downloads/edition-20261120/Mississauga-Atlas.pdf",
+        "preview": true
       }
     ],
-    "cardImage": "gallery/edition-20261120/signed/wide-downtown-skyline-construction-thumb.webp",
+    "cardImage": "gallery/edition-20261121/signed/wide-downtown-skyline-construction-thumb.webp",
     "share": {
-      "url": "gallery/edition-20261120/signed/wide-downtown-skyline-construction-thumb.webp",
+      "url": "gallery/edition-20261121/signed/wide-downtown-skyline-construction-thumb.webp",
       "width": 640,
       "height": 360,
       "type": "image/webp",
@@ -93,16 +206,16 @@
         "url": "building-mcity-m1.html"
       }
     ],
-    "cardImage": "gallery/edition-20261120/buildings/cards/mcity-pair.webp",
+    "cardImage": "gallery/edition-20261121/buildings/cards/mcity-pair.webp",
     "illustration": {
-      "image": "gallery/edition-20261120/buildings/mcity-pair.webp",
+      "image": "gallery/edition-20261121/buildings/mcity-pair.webp",
       "width": 1800,
       "height": 1350,
       "alt": "M City M1 and M2",
       "caption": "M City M1 and M2 in the November 20 edition. Model by Daniel Sultan."
     },
     "share": {
-      "url": "gallery/edition-20261120/buildings/mcity-pair.webp",
+      "url": "gallery/edition-20261121/buildings/mcity-pair.webp",
       "width": 1800,
       "height": 1350,
       "type": "image/webp",
@@ -126,16 +239,16 @@
         "url": "gallery.html"
       }
     ],
-    "cardImage": "gallery/edition-20261120/signed/wide-lorne-park-future-thumb.webp",
+    "cardImage": "gallery/edition-20261121/signed/wide-lorne-park-future-thumb.webp",
     "illustration": {
-      "image": "gallery/edition-20261120/signed/wide-lorne-park-future.webp",
+      "image": "gallery/edition-20261121/signed/wide-lorne-park-future.webp",
       "width": 1600,
       "height": 1000,
       "alt": "Lorne Park with proposed buildings",
       "caption": "Lorne Park with proposed buildings in the November 20 edition. Model by Daniel Sultan."
     },
     "share": {
-      "url": "gallery/edition-20261120/signed/wide-lorne-park-future.webp",
+      "url": "gallery/edition-20261121/signed/wide-lorne-park-future.webp",
       "width": 1600,
       "height": 1000,
       "type": "image/webp",
@@ -174,19 +287,19 @@
     "links": [
       {
         "label": "Open the Bay Street study",
-        "url": "downloads/edition-20261120/merner-41-bay-review.pdf"
+        "url": "downloads/edition-20261121/merner-41-bay-review.pdf"
       }
     ],
-    "cardImage": "gallery/edition-20261120/exteriors/merner-41-bay-front-640.webp",
+    "cardImage": "gallery/edition-20261121/exteriors/merner-41-bay-front-640.webp",
     "illustration": {
-      "image": "gallery/edition-20261120/exteriors/merner-41-bay-front.webp",
+      "image": "gallery/edition-20261121/exteriors/merner-41-bay-front.webp",
       "width": 1800,
       "height": 1350,
       "alt": "The front of 41 Bay Street",
       "caption": "The front of 41 Bay Street in the November 20 edition. Model by Daniel Sultan."
     },
     "share": {
-      "url": "gallery/edition-20261120/exteriors/merner-41-bay-front.webp",
+      "url": "gallery/edition-20261121/exteriors/merner-41-bay-front.webp",
       "width": 1800,
       "height": 1350,
       "type": "image/webp",
@@ -207,7 +320,7 @@
     "links": [
       {
         "label": "See the Bay Street booklet",
-        "url": "downloads/edition-20261120/merner-41-bay-review.pdf"
+        "url": "downloads/edition-20261121/merner-41-bay-review.pdf"
       }
     ]
   },
@@ -407,16 +520,16 @@
         "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/m-city/"
       }
     ],
-    "cardImage": "gallery/edition-20261120/signed/wide-downtown-future-thumb.webp",
+    "cardImage": "gallery/edition-20261121/signed/wide-downtown-future-thumb.webp",
     "illustration": {
-      "image": "gallery/edition-20261120/signed/wide-downtown-future.webp",
+      "image": "gallery/edition-20261121/signed/wide-downtown-future.webp",
       "width": 1600,
       "height": 1000,
       "alt": "The proposed Downtown skyline",
       "caption": "The proposed Downtown skyline in the November 20 edition. Model by Daniel Sultan."
     },
     "share": {
-      "url": "gallery/edition-20261120/signed/wide-downtown-future.webp",
+      "url": "gallery/edition-20261121/signed/wide-downtown-future.webp",
       "width": 1600,
       "height": 1000,
       "type": "image/webp",
@@ -500,9 +613,9 @@
         "url": "building-sgm-maritz-6710.html"
       }
     ],
-    "cardImage": "gallery/edition-20261120/signed/neighbourhood-fairview-after-thumb.webp",
+    "cardImage": "gallery/edition-20261121/signed/neighbourhood-fairview-after-thumb.webp",
     "share": {
-      "url": "gallery/edition-20261120/signed/neighbourhood-fairview-after-thumb.webp",
+      "url": "gallery/edition-20261121/signed/neighbourhood-fairview-after-thumb.webp",
       "width": 640,
       "height": 391,
       "type": "image/webp",
@@ -526,16 +639,16 @@
         "url": "building-oro.html"
       }
     ],
-    "cardImage": "gallery/edition-20261120/buildings/cards/oro.webp",
+    "cardImage": "gallery/edition-20261121/buildings/cards/oro.webp",
     "illustration": {
-      "image": "gallery/edition-20261120/buildings/oro.webp",
+      "image": "gallery/edition-20261121/buildings/oro.webp",
       "width": 1800,
       "height": 1350,
       "alt": "Oro at Edge Towers",
       "caption": "Oro at Edge Towers in the November 20 edition. Model by Daniel Sultan."
     },
     "share": {
-      "url": "gallery/edition-20261120/buildings/oro.webp",
+      "url": "gallery/edition-20261121/buildings/oro.webp",
       "width": 1800,
       "height": 1350,
       "type": "image/webp",
@@ -577,16 +690,16 @@
         "url": "building-avia-1.html"
       }
     ],
-    "cardImage": "gallery/edition-20261120/buildings/cards/avia-1.webp",
+    "cardImage": "gallery/edition-20261121/buildings/cards/avia-1.webp",
     "illustration": {
-      "image": "gallery/edition-20261120/buildings/avia-1.webp",
+      "image": "gallery/edition-20261121/buildings/avia-1.webp",
       "width": 1800,
       "height": 1350,
       "alt": "Avia 1",
       "caption": "Avia 1 in the November 20 edition. Model by Daniel Sultan."
     },
     "share": {
-      "url": "gallery/edition-20261120/buildings/avia-1.webp",
+      "url": "gallery/edition-20261121/buildings/avia-1.webp",
       "width": 1800,
       "height": 1350,
       "type": "image/webp",
@@ -647,16 +760,16 @@
         "url": "place-east-credit-creditview.html"
       }
     ],
-    "cardImage": "gallery/edition-20261120/signed/wide-east-credit-creditview-future-thumb.webp",
+    "cardImage": "gallery/edition-20261121/signed/wide-east-credit-creditview-future-thumb.webp",
     "illustration": {
-      "image": "gallery/edition-20261120/signed/wide-east-credit-creditview-future.webp",
+      "image": "gallery/edition-20261121/signed/wide-east-credit-creditview-future.webp",
       "width": 1600,
       "height": 1000,
       "alt": "East Credit and Creditview",
       "caption": "East Credit and Creditview in the November 20 edition. Model by Daniel Sultan."
     },
     "share": {
-      "url": "gallery/edition-20261120/signed/wide-east-credit-creditview-future.webp",
+      "url": "gallery/edition-20261121/signed/wide-east-credit-creditview-future.webp",
       "width": 1600,
       "height": 1000,
       "type": "image/webp",
@@ -740,16 +853,16 @@
         "url": "place-meadowvale-village.html"
       }
     ],
-    "cardImage": "gallery/edition-20261120/signed/wide-meadowvale-village-future-thumb.webp",
+    "cardImage": "gallery/edition-20261121/signed/wide-meadowvale-village-future-thumb.webp",
     "illustration": {
-      "image": "gallery/edition-20261120/signed/wide-meadowvale-village-future.webp",
+      "image": "gallery/edition-20261121/signed/wide-meadowvale-village-future.webp",
       "width": 1600,
       "height": 1000,
       "alt": "Meadowvale Village",
       "caption": "Meadowvale Village in the November 20 edition. Model by Daniel Sultan."
     },
     "share": {
-      "url": "gallery/edition-20261120/signed/wide-meadowvale-village-future.webp",
+      "url": "gallery/edition-20261121/signed/wide-meadowvale-village-future.webp",
       "width": 1600,
       "height": 1000,
       "type": "image/webp",
@@ -792,16 +905,16 @@
         "url": "place-lisgar.html"
       }
     ],
-    "cardImage": "gallery/edition-20261120/signed/wide-lisgar-future-thumb.webp",
+    "cardImage": "gallery/edition-20261121/signed/wide-lisgar-future-thumb.webp",
     "illustration": {
-      "image": "gallery/edition-20261120/signed/wide-lisgar-future.webp",
+      "image": "gallery/edition-20261121/signed/wide-lisgar-future.webp",
       "width": 1600,
       "height": 1000,
       "alt": "Lisgar and Argentia",
       "caption": "Lisgar and Argentia in the November 20 edition. Model by Daniel Sultan."
     },
     "share": {
-      "url": "gallery/edition-20261120/signed/wide-lisgar-future.webp",
+      "url": "gallery/edition-20261121/signed/wide-lisgar-future.webp",
       "width": 1600,
       "height": 1000,
       "type": "image/webp",
@@ -918,16 +1031,16 @@
         "url": "building-sherobee-2200.html"
       }
     ],
-    "cardImage": "gallery/edition-20261120/buildings/cards/sherobee-2200.webp",
+    "cardImage": "gallery/edition-20261121/buildings/cards/sherobee-2200.webp",
     "illustration": {
-      "image": "gallery/edition-20261120/buildings/sherobee-2200.webp",
+      "image": "gallery/edition-20261121/buildings/sherobee-2200.webp",
       "width": 1800,
       "height": 1350,
       "alt": "2200 Sherobee Road",
       "caption": "2200 Sherobee Road in the November 20 edition. Model by Daniel Sultan."
     },
     "share": {
-      "url": "gallery/edition-20261120/buildings/sherobee-2200.webp",
+      "url": "gallery/edition-20261121/buildings/sherobee-2200.webp",
       "width": 1800,
       "height": 1350,
       "type": "image/webp",
@@ -948,7 +1061,7 @@
     "links": [
       {
         "label": "See the South Common booklet",
-        "url": "downloads/edition-20261120/south-common-community-centre-review.pdf"
+        "url": "downloads/edition-20261121/south-common-community-centre-review.pdf"
       }
     ]
   },
@@ -969,16 +1082,16 @@
         "url": "https://www.mississauga.ca/projects-and-strategies/city-projects/park-524-525/"
       }
     ],
-    "cardImage": "gallery/edition-20261120/building-revisions/fairwinds-park-ship-study.webp",
+    "cardImage": "gallery/edition-20261121/building-revisions/fairwinds-park-ship-study.webp",
     "illustration": {
-      "image": "gallery/edition-20261120/building-revisions/fairwinds-park-ship-study.webp",
+      "image": "gallery/edition-20261121/building-revisions/fairwinds-park-ship-study.webp",
       "width": 1800,
       "height": 1350,
       "alt": "The boat-shaped shelter in Fairwinds Park",
       "caption": "The boat-shaped shelter in Fairwinds Park in the November 20 edition. Model by Daniel Sultan."
     },
     "share": {
-      "url": "gallery/edition-20261120/building-revisions/fairwinds-park-ship-study.webp",
+      "url": "gallery/edition-20261121/building-revisions/fairwinds-park-ship-study.webp",
       "width": 1800,
       "height": 1350,
       "type": "image/webp",
@@ -1006,16 +1119,16 @@
         "url": "neighbourhoods.html"
       }
     ],
-    "cardImage": "gallery/edition-20261120/signed/wide-clarkson-existing-thumb.webp",
+    "cardImage": "gallery/edition-20261121/signed/wide-clarkson-existing-thumb.webp",
     "illustration": {
-      "image": "gallery/edition-20261120/signed/wide-clarkson-existing.webp",
+      "image": "gallery/edition-20261121/signed/wide-clarkson-existing.webp",
       "width": 1600,
       "height": 1000,
       "alt": "Clarkson waterfront",
       "caption": "Clarkson waterfront in the November 20 edition. Model by Daniel Sultan."
     },
     "share": {
-      "url": "gallery/edition-20261120/signed/wide-clarkson-existing.webp",
+      "url": "gallery/edition-20261121/signed/wide-clarkson-existing.webp",
       "width": 1600,
       "height": 1000,
       "type": "image/webp",
@@ -1509,16 +1622,16 @@
         "url": "building-aldo-1422-study.html"
       }
     ],
-    "cardImage": "gallery/edition-20261120/exteriors/aldo-1422-study-reverse-640.webp",
+    "cardImage": "gallery/edition-20261121/exteriors/aldo-1422-study-reverse-640.webp",
     "illustration": {
-      "image": "gallery/edition-20261120/exteriors/aldo-1422-study-reverse.webp",
+      "image": "gallery/edition-20261121/exteriors/aldo-1422-study-reverse.webp",
       "width": 1800,
       "height": 1350,
       "alt": "The driveway side of 1422 Aldo Drive",
       "caption": "The driveway side of 1422 Aldo Drive in the November 20 edition. Model by Daniel Sultan."
     },
     "share": {
-      "url": "gallery/edition-20261120/exteriors/aldo-1422-study-reverse.webp",
+      "url": "gallery/edition-20261121/exteriors/aldo-1422-study-reverse.webp",
       "width": 1800,
       "height": 1350,
       "type": "image/webp",
@@ -1542,16 +1655,16 @@
         "url": "building-aldo-1422-study.html"
       }
     ],
-    "cardImage": "gallery/edition-20261120/exteriors/aldo-1422-study-front-640.webp",
+    "cardImage": "gallery/edition-20261121/exteriors/aldo-1422-study-front-640.webp",
     "illustration": {
-      "image": "gallery/edition-20261120/exteriors/aldo-1422-study-front.webp",
+      "image": "gallery/edition-20261121/exteriors/aldo-1422-study-front.webp",
       "width": 1800,
       "height": 1350,
       "alt": "The roof at 1422 Aldo Drive",
       "caption": "The roof at 1422 Aldo Drive in the November 20 edition. Model by Daniel Sultan."
     },
     "share": {
-      "url": "gallery/edition-20261120/exteriors/aldo-1422-study-front.webp",
+      "url": "gallery/edition-20261121/exteriors/aldo-1422-study-front.webp",
       "width": 1800,
       "height": 1350,
       "type": "image/webp",
@@ -1575,16 +1688,16 @@
         "url": "review-renders.html"
       }
     ],
-    "cardImage": "gallery/edition-20261120/exteriors/merner-42-peter-front-640.webp",
+    "cardImage": "gallery/edition-20261121/exteriors/merner-42-peter-front-640.webp",
     "illustration": {
-      "image": "gallery/edition-20261120/exteriors/merner-42-peter-front.webp",
+      "image": "gallery/edition-20261121/exteriors/merner-42-peter-front.webp",
       "width": 1800,
       "height": 1350,
       "alt": "The front of 42 Peter Street South",
       "caption": "The front of 42 Peter Street South in the November 20 edition. Model by Daniel Sultan."
     },
     "share": {
-      "url": "gallery/edition-20261120/exteriors/merner-42-peter-front.webp",
+      "url": "gallery/edition-20261121/exteriors/merner-42-peter-front.webp",
       "width": 1800,
       "height": 1350,
       "type": "image/webp",
@@ -1608,16 +1721,16 @@
         "url": "building-merner-42-peter.html"
       }
     ],
-    "cardImage": "gallery/edition-20261120/exteriors/merner-42-john-front-640.webp",
+    "cardImage": "gallery/edition-20261121/exteriors/merner-42-john-front-640.webp",
     "illustration": {
-      "image": "gallery/edition-20261120/exteriors/merner-42-john-front.webp",
+      "image": "gallery/edition-20261121/exteriors/merner-42-john-front.webp",
       "width": 1800,
       "height": 1350,
       "alt": "The front of 42 John Street South",
       "caption": "The front of 42 John Street South in the November 20 edition. Model by Daniel Sultan."
     },
     "share": {
-      "url": "gallery/edition-20261120/exteriors/merner-42-john-front.webp",
+      "url": "gallery/edition-20261121/exteriors/merner-42-john-front.webp",
       "width": 1800,
       "height": 1350,
       "type": "image/webp",
@@ -1767,16 +1880,16 @@
         "url": "place-cooksville.html"
       }
     ],
-    "cardImage": "gallery/edition-20261120/buildings/cards/voya.webp",
+    "cardImage": "gallery/edition-20261121/buildings/cards/voya.webp",
     "illustration": {
-      "image": "gallery/edition-20261120/buildings/voya.webp",
+      "image": "gallery/edition-20261121/buildings/voya.webp",
       "width": 1800,
       "height": 1350,
       "alt": "The Voya towers in the Downtown model",
       "caption": "The Voya towers in the Downtown model in the November 20 edition. Model by Daniel Sultan."
     },
     "share": {
-      "url": "gallery/edition-20261120/buildings/voya.webp",
+      "url": "gallery/edition-20261121/buildings/voya.webp",
       "width": 1800,
       "height": 1350,
       "type": "image/webp",

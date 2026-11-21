@@ -22,9 +22,11 @@ def digest(data):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('workspace', type=Path)
-    parser.add_argument('--approved-roof', type=Path, required=True, help='Authorised corrected 41 Bay model')
+    parser.add_argument('--approved-roof', type=Path, help='Authorised corrected 41 Bay model')
     parser.add_argument('--only', nargs='+', default=[], help='Render one or more named studies')
     args = parser.parse_args()
+    if (not args.only or 'merner-41-bay' in args.only) and not args.approved_roof:
+        parser.error('Rendering 41 Bay requires --approved-roof')
     output = args.workspace.resolve() / 'booklet-models'
     output.mkdir(exist_ok=True, parents=True)
     published = json.loads((PUBLIC / 'data/refinement-models.json').read_text())['assets']
@@ -55,9 +57,12 @@ def main():
             if not geometry:
                 raise ValueError(f'{name}: no mesh')
             angles = {'front': [-1, .59, 1.45], 'reverse': [1.18, .52, -1.05]}
+            if name == 'aldo-1422-study':
+                # The front entrance and garage face the street. The opposite side has a covered deck.
+                angles = {'front': [1.18, .52, -1.05], 'reverse': [-1, .59, 1.45]}
             if name == 'merner-42-peter':
                 angles = {'front': [1.18, .64, -1.3], 'reverse': [-1.6, .63, -.75]}
-            receipt = dict(project=name, sources=sources)
+            receipt = dict(project=name, sources=sources, cameraDirections=angles)
             for side, direction in angles.items():
                 path = output / f'{name}-{side}.webp'
                 receipt['triangles'] = render_view(geometry, direction, path, raster, roof_sheen=name == "aldo-1422-study", output_size=(3600, 2700))
