@@ -277,8 +277,15 @@ export function installImagePreviews(resolve = async (image,anchor) => {
     }
     generic.setSequence(null);
     const heading=section?.querySelector('h2,h3')?.textContent?.trim();
-    const title=image?.dataset.previewTitle||anchor?.dataset.previewTitle||heading||(image?.alt?.length<=70?image.alt:'Image preview');
-    const viewTitle=image?.closest('figure')?.querySelector('figcaption')?.textContent?.trim();
+    const explicitTitle=image?.dataset.previewTitle||anchor?.dataset.previewTitle;
+    const title=explicitTitle||heading||(image?.alt?.length<=70?image.alt:'Image preview');
+    const caption=image?.closest('figure')?.querySelector('figcaption');
+    let viewTitle;
+    if (!explicitTitle && caption) {
+      const description=caption.cloneNode(true);
+      description.querySelectorAll('a,button,input,select,label,nav,[role="group"],[hidden]').forEach(control=>control.remove());
+      viewTitle=description.textContent.trim();
+    }
     const src=fileLink?anchor.href:image?.currentSrc||image?.src;
     openGeneric({title:title||'Picture',viewTitle,alt:image?.alt||title,src,download:previewDownloadURL(anchor,null),width:Number(anchor?.dataset.previewWidth)||Number(image?.dataset.nativeWidth)||image?.naturalWidth||1200,height:Number(anchor?.dataset.previewHeight)||Number(image?.dataset.nativeHeight)||image?.naturalHeight||800,preview:image?.currentSrc||image?.src,explore:cityMapLinkForSection(section,location.href)},()=>resolve(image,anchor),anchor||image?.closest('button')||image);
 
@@ -287,7 +294,10 @@ export function installImagePreviews(resolve = async (image,anchor) => {
     if(image.closest('dialog,.picture-compare,.social-grid,[data-open],.site-brand'))return;
     const anchor=image.closest('a');
     if(pageDestination(anchor)||anchor&&(anchor.hasAttribute('data-document-preview')||/\.pdf(?:[?#]|$)/i.test(anchor.href)))return;
-    if(anchor){anchor.setAttribute('aria-haspopup','dialog');anchor.setAttribute('aria-label','Preview '+(image.alt||'picture'));}
+    if(anchor){
+      anchor.setAttribute('aria-haspopup','dialog');
+      if(!anchor.hasAttribute('aria-label'))anchor.setAttribute('aria-label','Preview '+(image.alt||'picture'));
+    }
     else if(!image.closest('button')){const button=document.createElement('button');button.type='button';button.className='image-preview-trigger';button.setAttribute('aria-label','Preview '+(image.alt||'picture'));button.setAttribute('aria-haspopup','dialog');image.replaceWith(button);button.append(image);}
   });
   prepareImageLinks();
