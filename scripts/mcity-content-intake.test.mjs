@@ -152,8 +152,8 @@ test('accuracy rows and dated update explain the same facts without changing unr
   assert(row);assert(row.includes(p.modelCaveat));assert(row.includes(p.evidenceUpdateNote));
   assert.match(row,/Plans under review/);assert.match(row,/4 linked sources \+ dated correspondence and drawings/);
  }
- const updates=await read('public/updates.html'),entry=updates.match(/<section[^>]+id="november-1-m-city"[^>]*>(.*?)<\/section>/s)?.[1];
- assert(entry);assert.match(updates, /id="latestNotesDate"[^>]*><time datetime="2026-11-01">1 November 2026<\/time>/);assert.match(updates, /id="november-1-m-city" aria-describedby="latestNotesDate"/);assert.match(entry,/October 23/);assert.match(entry,/October 29/);
+ const updates=await read('public/update-2026-11-01.html'),entry=updates.match(/<section[^>]+id="november-1-m-city"[^>]*>(.*?)<\/section>/s)?.[1];
+ assert(entry);assert.match(updates, /<time datetime="2026-11-01">November 1, 2026<\/time>/);assert.match(updates, /id="november-1-m-city"/);assert.match(entry,/October 23/);assert.match(entry,/October 29/);
  assert.match(entry,/Rogers retains no ownership, financing or development role in those lands/);
  assert.match(entry,/58 storeys and 889 homes/);assert.match(entry,/51 and 46 storeys, with 1,457 homes combined/);
  assert.doesNotMatch(entry,/mechanical penthouse/);assert.match(entry,/no building permits/);

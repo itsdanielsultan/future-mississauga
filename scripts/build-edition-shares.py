@@ -24,6 +24,7 @@ subjects = {
     'review-renders': (edition/'exteriors/aldo-1422-study-front.webp', 'The front elevation of 1422 Aldo Drive'),
     'reference-updates': (edition/'building-revisions/benares-visitor-centre.webp', 'The Benares Visitor Centre model revision'),
     'neighbourhoods': (signed/'wide-port-credit-future.webp', 'Port Credit and the river in the neighbourhood atlas'),
+    'contact': (signed/'home-downtown-existing.webp', 'Square One in Daniel Sultan’s existing-city model'),
     'about': (signed/'home-downtown-future.webp', 'Daniel Sultan’s Downtown Mississauga print'),
     'suggestions': (signed/'wide-lakeview-future.webp', 'Lakeview and the waterfront in the city model'),
     'sources': (Path('document-previews/edition-20261120/atlas-01.avif'), 'The cover of the documented Mississauga atlas'),

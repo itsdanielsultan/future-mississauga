@@ -16,6 +16,12 @@ Start with the visitor’s question. The homepage heading is “What’s being b
 
 Use the shared page margins and heading spacing from `atlas-edition.css`. Buildings, Exterior studies and Model revisions share a title baseline. Related controls share one height and equal padding. A selected link sits in a rounded grey rectangle. Moving between sections slides the selection into place. Respect reduced motion. Keep a visible keyboard focus ring, and give links a grey hover surface without underlining. Place the footer at the lower edge of a short page and after the content on a long page.
 
+Keep Sources and Contact in the main navigation. The footer carries the project identity and required data credits. Contact is the place to email Daniel, share a suggestion or learn about the creator.
+
+On Updates, group verified dates by month. List every documented day in the rail, then give each day a title, one sentence and a link to its story. The grey selection slides as the reader scrolls. The detail page explains the work, credits contributors when appropriate and leads back to that date. Private correspondence can establish a fact without becoming a published quotation.
+
+Use the same reading pattern on Sources. Group records by the question they answer. Each source card identifies the provider, the part of the model it informed and a direct link to the relevant record. On Downloads, keep each preview, file description, format, size and action together. Distinguish the current atlas from historical editions.
+
 Use a short place name and scenario under a gallery picture. Put full model licences in Sources and keep required notices with the published image. Give each signed downloadable the inset author line. Reserve clean, unlabelled scenes for side-by-side comparisons. Keep neutral grey towers distinct from light ground. Apply lifecycle colours only to evidenced buildings and preserve architectural detail at podium level. Avoid touch gestures that interfere with scrolling the page.
 
 Build print pages from freshly rendered, native-size scenes. Measure resolution at the final printed size. Include linked contents, page numbers, selectable text and a readable source index. Generating a new thumbnail from an old print does not count as re-rendering a view.

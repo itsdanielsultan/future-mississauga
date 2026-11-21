@@ -79,13 +79,13 @@ test('late accepted metadata replaces a declared download within the same previe
 
 test('exact three Fairview preview anchors declare their matching footer download without becoming download controls',()=>{
  let found=0;
- for(const name of ['reference-updates.html','updates.html']){
+ for(const name of ['reference-updates.html','update-2026-10-28.html']){
   const html=read(name);
   for(const original of rows){
    const plate=JSON.parse(read('data/city-plates-20261120.json')).plates.find(item=>item.id===original.identity);
    const row=name==='reference-updates.html'?{...original,displayMaster:plate.signedMaster,download:plate.download}:original;
    const tags=[...html.matchAll(/<a\b[^>]*>/g)].map(m=>m[0]).filter(tag=>tag.includes('href="'+row.displayMaster.url+'"'));
-   if(name==='updates.html'&&row.identity.endsWith('/before')){assert.equal(tags.length,0);continue}
+   if(name==='update-2026-10-28.html'&&row.identity.endsWith('/before')){assert.equal(tags.length,0);continue}
    assert.equal(tags.length,1);found++;
    assert(tags[0].includes('data-preview-download="'+row.download.url+'"'));
    assert.doesNotMatch(tags[0],/\s(?:download|data-download)(?:\s|=|>)/);

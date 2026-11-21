@@ -114,7 +114,8 @@ test('the Sources atlas cover opens the same current document as its separate do
 
 test('the November 9 update keeps its own dated skyline and atlas as the current release changes', () => {
   const row = JSON.parse(read('data/presentation-media-20261109.json')).images.find(row => row.identity === 'wide/downtown-skyline-future.png');
-  const story = updates.match(/<article\b[^>]*id="november-9-downtown"[\s\S]*?<\/article>/)?.[0];
+  const detail = read('update-2026-11-09.html');
+  const story = detail.match(/<section\b[^>]*id="november-9-downtown"[\s\S]*?<\/section>/)?.[0];
   assert(story?.includes('href="' + row.displayMaster.url + '"'));
   assert(story.includes('data-preview-download="' + row.download.url + '"'));
   assert(!/<a[^>]*\sdownload(?:\s|>)/.test(story), 'ordinary image activation remains a preview');
@@ -124,16 +125,18 @@ test('the November 9 update keeps its own dated skyline and atlas as the current
   }
   const atlas = JSON.parse(read('data/document-previews-20261109.json')).documents.at(-1);
   assert(story.includes('href="' + atlas.url + '" data-document-preview'));
-  assert(story.includes('datetime="2026-11-09"'));
-  assert(updates.includes('Preview the 1 November atlas'));
-  assert.doesNotMatch(updates, /appeal periods remain open through October 28/i);
-  assert.match(updates, /The official-plan amendment took effect on 29 October 2026/);
-  assert.match(updates, /10 November register lists the zoning amendment as in force/);
-  assert.match(updates, /Construction permission and timing remain unverified/);
+  assert(detail.includes('datetime="2026-11-09"'));
+  assert(read('update-2026-11-01.html').includes('Preview the 1 November atlas'));
+  const planning = read('update-2026-10-10.html');
+  assert.doesNotMatch(planning, /appeal periods remain open through October 28/i);
+  assert.match(planning, /The official-plan amendment took effect on 29 October 2026/);
+  assert.match(planning, /10 November register lists the zoning amendment as in force/);
+  assert.match(planning, /Construction permission and timing remain unverified/);
 });
 
 test('Updates binds its accepted native image and historical images to dates, credits, and shared previews', () => {
-  const stories = updates.slice(updates.indexOf('<div class="update-stories"'), updates.indexOf('<div class="update-notices"'));
+  const pages = ['update-2026-11-01.html','update-2026-10-28.html'].map(read);
+  const stories = pages.map(page => page.match(/<div class="journal-report">([\s\S]*?)<nav class="journal-neighbours"/)[1]).join('');
   const pins = new Map([
     ['assets/ergocentric-20261028/275-Superior-frontage-after.png','a8cf3366ea6dd27e8219c80f265fda1cc684396bfb48c424826fa2adf8abc5fd']
   ]);
@@ -149,7 +152,7 @@ test('Updates binds its accepted native image and historical images to dates, cr
   for(const [id,row]of [['november-1-citywide',citywide],['october-28-fairview',fairview]]){
     const avif=row.responsivePreviews.find(asset=>asset.mimeType==='image/avif'&&asset.dimensions[0]===1200);
     assert.equal(avif.sourceSHA256,row.displayMaster.sha256);pins.set(avif.url,avif.sha256);
-    const story=[...stories.matchAll(/<article\b[^>]*>[\s\S]*?<\/article>/g)].map(match=>match[0]).find(block=>block.includes('id="'+id+'"'));
+    const story=[...stories.matchAll(/<section\b[^>]*>[\s\S]*?<\/section>/g)].map(match=>match[0]).find(block=>block.includes('id="'+id+'"'));
     assert(story?.includes('src="'+avif.url+'"'));assert(story.includes('href="'+row.displayMaster.url+'"'));
     assert(!story.includes('href="'+row.download.url+'"'),'story image remains a clean preview');
     for(const asset of row.responsivePreviews.filter(asset=>asset.mimeType==='image/avif'))assert(story.includes(asset.url+' '+asset.dimensions[0]+'w'));
@@ -168,12 +171,12 @@ test('Updates binds its accepted native image and historical images to dates, cr
     assert(pins.has(src), src);
     assert.equal(createHash('sha256').update(fs.readFileSync(new URL(src, publicRoot))).digest('hex'), pins.get(src));
   }
-  const nativeStory=stories.match(/<article\b[^>]*id="november-1-model-detail"[^>]*>[\s\S]*?<\/article>/)?.[0];
+  const nativeStory=stories.match(/<section\b[^>]*id="november-1-model-detail"[^>]*>[\s\S]*?<\/section>/)?.[0];
   assert(nativeStory?.includes('src="'+preview.url+'"'));
   assert(nativeStory.includes('href="'+downtown.displayMaster.url+'"'),'native story opens the clean full-resolution image');
   assert(!nativeStory.includes('href="'+downtown.download.url+'"'),'image action does not download the footer version');
-  assert.match(stories, /datetime="2026-11-01"/);
-  assert.equal([...stories.matchAll(/datetime="2026-10-28"/g)].length, 2);
+  assert.match(pages[0], /datetime="2026-11-01"/);
+  assert.match(pages[1], /datetime="2026-10-28"/);
   assert.match(stories, /Existing homes around Fairview have been added/);
   assert.match(stories, /approximate facade study/);
   assert.match(stories, /David Lasker\/Cityscape Photography/);
@@ -184,9 +187,10 @@ test('Updates binds its accepted native image and historical images to dates, cr
 });
 
 test('October archive keeps existing deep links and dated records accessible', () => {
-  assert.match(updates, /<section class="update-archive" id="october-2026"[^>]*><h2 id="october-title">October 2026 archive<\/h2>/);
+  assert.match(updates, /id="october-2026"/);
+  assert.match(updates, /<h2 id="month-2026-10">October 2026<\/h2>/);
   for (const id of ['october-28-citywide','october-23-clearer-views','october-23-east-credit','october-22-meadowvale-village','october-22-exchange-base','october-22-source-repair','october-21-viewer','local-accuracy-review']) assert(updates.includes('id="'+id+'"'), id);
-  assert.match(updates, /src="updates\.js\?v=20261102-coherent1"/);
+  assert.match(updates, /src="journal-history\.js\?v=/);
   const ids = [...updates.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
   assert.equal(ids.length, new Set(ids).size, 'Every hash has one target');
 });

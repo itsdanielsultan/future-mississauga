@@ -15,7 +15,7 @@ if (header) {
   };
   document.addEventListener('pointerdown', closeWhenOutside);
   document.addEventListener('focusin', closeWhenOutside);
-  const compactLayout = window.matchMedia?.('(max-width: 900px)');
+  const compactLayout = window.matchMedia?.('(max-width: 1060px)');
   compactLayout?.addEventListener?.('change', () => menu(false));
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {

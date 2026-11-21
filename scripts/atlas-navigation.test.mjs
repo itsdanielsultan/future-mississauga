@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFile} from 'node:fs/promises';
+import {readFile, readdir} from 'node:fs/promises';
 import {nextMapLocation} from '../public/map-location.js';
 
 const site = new URL('../public/', import.meta.url);
@@ -34,11 +34,22 @@ test('every link in the building directory resolves to its own model, study or c
   }
 });
 test('all public page headers share the main destinations and the same interface stylesheet', async () => {
-  for (const page of ['index','neighbourhoods','place-downtown','gallery','compare','film','explore','model','review-renders','reference-updates','accuracy-review','social','updates','sources','study-notes']) {
-    const html = await read(page + '.html');
+  const pages = (await readdir(site)).filter(name => name.endsWith('.html'));
+  const sitemap = await read('sitemap.xml');
+  for (const page of pages) {
+    const html = await read(page);
     const nav = html.match(/<nav class="site-nav"[^>]*>(.*?)<\/nav>/s);
     assert.ok(nav, page);
-    assert.deepEqual([...nav[1].matchAll(/href="([^"]+)"/g)].map(m=>m[1]), ['neighbourhoods.html','model.html','compare.html','gallery.html','updates.html','downloads.html']);
+    assert.deepEqual([...nav[1].matchAll(/href="([^"]+)"/g)].map(m=>m[1]), ['neighbourhoods.html','model.html','compare.html','gallery.html','updates.html','downloads.html','sources.html','contact.html']);
+    const footer = html.match(/<footer class="compact-footer"[^>]*>(.*?)<\/footer>/s)?.[1];
+    assert.ok(footer, page);
+    assert.doesNotMatch(footer, /<nav|href="(?:about|suggestions|downloads|sources)\.html/, page);
+    assert.match(footer, /footer-attribution/, page);
+    const canonical = base + (page === 'index.html' ? '' : page);
+    const declared = html.match(/<link\b(?=[^>]*rel="canonical")[^>]*>/i)?.[0].match(/href="([^"]+)"/)?.[1];
+    const isPrivate = /<meta\b(?=[^>]*name="robots")(?=[^>]*content="[^"]*noindex)[^>]*>/i.test(html);
+    assert.equal(sitemap.includes('<loc>'+canonical+'</loc>'), declared===canonical && !isPrivate, page);
+    assert.match(html, /<main\b(?=[^>]*id="main")(?=[^>]*tabindex="-1")[^>]*>/, page);
     const header = html.match(/<header class="site-header"[^>]*>(.*?)<\/header>/s)[1];
     assert.match(header, /class="site-brand" href="index.html"/);
     assert.match(header, /class="site-map-action" href="explore\.html(?:[?][^"]*)?"/);
